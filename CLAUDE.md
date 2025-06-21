@@ -19,7 +19,10 @@ This project uses `uv` for Python package and environment management:
 
 ### Static Site Generation (CLI)
 - `python b.py` - Show help message
-- `python b.py generate` - Process markdown files and generate static HTML site
+- `python b.py generate` - Process markdown files and generate static HTML site (uses "winer" theme by default)
+- `python b.py generate --theme salas` - Generate site using the original "salas" theme
+- `python b.py generate --theme winer` - Generate site using the "winer" theme (scripting.com style)
+- `python b.py themes` - List available themes
 - `python b.py reset` - Delete all generated files
 - `python b.py deploy` - Deploy site to Fly.io
 
@@ -93,6 +96,38 @@ output/
   static/         # CSS, JS, assets (copied from source)
 ```
 
+## Theme System
+
+The site generator supports multiple themes, allowing you to switch between different designs and layouts:
+
+### Available Themes
+- **winer**: A clean, minimalist theme inspired by Dave Winer's scripting.com
+  - Features: Tab navigation, serif typography (Georgia), simple blog-style layout
+  - Header: Artistic gradient background with site title
+  - Style: Classic early web/blog aesthetic
+- **salas**: The original theme with modern design elements
+  - Features: Card-based layout, hamburger mobile menu, modern typography
+  - Header: Clean navigation bar with search
+  - Style: Contemporary responsive design
+
+### Theme Structure
+```
+themes/
+  winer/
+    templates/    # HTML templates for winer theme
+    static/       # CSS, JS, and assets for winer theme
+  salas/
+    templates/    # HTML templates for salas theme  
+    static/       # CSS, JS, and assets for salas theme
+```
+
+### Creating New Themes
+1. Create a new directory under `themes/` with your theme name
+2. Add `templates/` and `static/` subdirectories
+3. Copy templates from an existing theme as a starting point
+4. Customize the templates and styles
+5. Use `python b.py generate --theme YOUR_THEME_NAME` to test
+
 ## Development Guidelines
 
 - Use uv for dependency management
@@ -102,6 +137,7 @@ output/
 - Use Jinja2 templates for consistent HTML generation
 - Keep generated files separate from source content
 - Generated output goes to `output/` directory
+- Each theme should be self-contained in its own directory
 
 ## Initial Specification
 - a simple home page with a simple menu along the top

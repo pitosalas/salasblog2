@@ -13,17 +13,39 @@ import markdown
 import frontmatter
 from jinja2 import Environment, FileSystemLoader
 
+from utils import (
+    format_date,
+    create_excerpt,
+    parse_date_for_sorting,
+    process_markdown_to_html,
+    parse_frontmatter_file,
+    generate_url_from_filename,
+    sort_posts_by_date,
+    load_markdown_files_from_directory,
+    safe_get_filename_stem
+)
+
 
 class SiteGenerator:
-    def __init__(self):
+    def __init__(self, theme="winer"):
         self.root_dir = Path.cwd()
         self.content_dir = self.root_dir / "content"
         self.blog_dir = self.content_dir / "blog"
         self.raindrops_dir = self.content_dir / "raindrops"
         self.pages_dir = self.content_dir / "pages"
         self.output_dir = self.root_dir / "output"
-        self.templates_dir = self.root_dir / "templates"
-        self.static_dir = self.root_dir / "static"
+        
+        # Theme support
+        self.theme = theme
+        self.themes_dir = self.root_dir / "themes"
+        self.templates_dir = self.themes_dir / theme / "templates"
+        self.static_dir = self.themes_dir / theme / "static"
+        
+        # Fallback to old structure if theme doesn't exist
+        if not self.templates_dir.exists():
+            print(f"⚠️  Theme '{theme}' not found, falling back to default templates")
+            self.templates_dir = self.root_dir / "templates"
+            self.static_dir = self.root_dir / "static"
         
         # Initialize Jinja2 environment
         self.jinja_env = Environment(loader=FileSystemLoader(self.templates_dir))
@@ -32,18 +54,7 @@ class SiteGenerator:
     
     def format_date(self, date_str, format_str='%B %d, %Y'):
         """Custom Jinja2 filter for date formatting"""
-        if not date_str:
-            return ''
-        try:
-            # Try to parse the date string
-            if isinstance(date_str, str):
-                from datetime import datetime
-                # Assume ISO format YYYY-MM-DD
-                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
-                return date_obj.strftime(format_str)
-            return date_str
-        except:
-            return date_str
+        return format_date(date_str, format_str)
         
     def load_posts(self, content_type):
         """Load and parse markdown files from a directory"""
@@ -60,48 +71,38 @@ class SiteGenerator:
         if not content_dir.exists():
             return posts
         
-        for md_file in content_dir.glob("*.md"):
+        for md_file in load_markdown_files_from_directory(content_dir):
             try:
-                with open(md_file, 'r', encoding='utf-8') as f:
-                    post = frontmatter.load(f)
+                parsed = parse_frontmatter_file(md_file)
+                filename = safe_get_filename_stem(md_file)
                 
                 # Extract frontmatter data
                 post_data = {
-                    'title': post.metadata.get('title', md_file.stem),
-                    'date': post.metadata.get('date', ''),
-                    'type': post.metadata.get('type', content_type),
-                    'category': post.metadata.get('category', 'Uncategorized'),
-                    'content': markdown.markdown(post.content),
-                    'raw_content': post.content,
-                    'filename': md_file.stem,
-                    'url': f"/{md_file.stem}.html" if content_type == 'pages' else f"/{content_type}/{md_file.stem}.html"
+                    'title': parsed['metadata'].get('title', filename),
+                    'date': parsed['metadata'].get('date', ''),
+                    'type': parsed['metadata'].get('type', content_type),
+                    'category': parsed['metadata'].get('category', 'Uncategorized'),
+                    'content': parsed['html_content'],
+                    'raw_content': parsed['content'],
+                    'filename': filename,
+                    'url': generate_url_from_filename(filename, content_type)
                 }
                 
-                # Create excerpt from content (first 150 chars)
-                plain_content = post.content.replace('\n', ' ').strip()
-                post_data['excerpt'] = plain_content[:150] + ('...' if len(plain_content) > 150 else '')
+                # Create excerpt from content
+                post_data['excerpt'] = create_excerpt(parsed['content'])
                 
                 posts.append(post_data)
                 
             except Exception as e:
                 print(f"Error processing {md_file}: {e}")
         
-        # Sort by date (newest first) - handle date strings properly
-        def get_sort_date(post):
-            date_str = post['date']
-            if not date_str:
-                return datetime.min
-            try:
-                return datetime.strptime(str(date_str), '%Y-%m-%d')
-            except:
-                return datetime.min
-        
-        posts.sort(key=get_sort_date, reverse=True)
-        return posts
+        # Sort by date (newest first)
+        return sort_posts_by_date(posts)
     
     def show_help(self):
         """Show very short help message"""
-        print("b.py [generate|reset|deploy]")
+        print("b.py [generate|reset|deploy|themes] [--theme THEME_NAME]")
+        print("Themes: winer (scripting.com style), salas (original style)")
     
     def generate(self):
         """Process all markdown files and generate static HTML site"""
@@ -304,22 +305,48 @@ class SiteGenerator:
 
 
 def main():
-    generator = SiteGenerator()
+    # Check for theme parameter
+    theme = "winer"  # default theme
+    
+    # Look for --theme parameter
+    args = sys.argv[1:]
+    if "--theme" in args:
+        theme_index = args.index("--theme")
+        if theme_index + 1 < len(args):
+            theme = args[theme_index + 1]
+            # Remove theme args from argv
+            args = args[:theme_index] + args[theme_index + 2:]
+        else:
+            print("❌ --theme requires a theme name")
+            sys.exit(1)
+    
+    generator = SiteGenerator(theme=theme)
     
     # Handle command line arguments
-    if len(sys.argv) == 1:
+    if len(args) == 0:
         # No arguments - show help
         generator.show_help()
         return
     
-    command = sys.argv[1].lower()
+    command = args[0].lower()
     
     if command == "generate":
+        print(f"🎨 Using theme: {theme}")
         generator.generate()
     elif command == "reset":
         generator.reset()
     elif command == "deploy":
         generator.deploy()
+    elif command == "themes":
+        # List available themes
+        themes_dir = Path.cwd() / "themes"
+        if themes_dir.exists():
+            print("Available themes:")
+            for theme_dir in themes_dir.iterdir():
+                if theme_dir.is_dir():
+                    print(f"  - {theme_dir.name}")
+        else:
+            print("No themes directory found")
     elif command in ["help", "-h", "--help"]:
         generator.show_help()
     else:
