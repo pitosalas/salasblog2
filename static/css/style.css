@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Reset and base styles - Scripting.com inspired */
 * {
     margin: 0;
     padding: 0;
@@ -6,84 +6,106 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: Georgia, 'Times New Roman', serif;
     line-height: 1.6;
-    color: #333;
+    color: #000;
     background-color: #fff;
+    font-size: 14px;
 }
 
-/* Header and Navigation */
+/* Header with artistic image and title */
 .header {
     background: #fff;
-    border-bottom: 1px solid #e1e5e9;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    border-bottom: 1px solid #ccc;
 }
 
-.nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+.header-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea;stop-opacity:1" /><stop offset="100%" style="stop-color:%23764ba2;stop-opacity:1" /></linearGradient></defs><rect width="1200" height="300" fill="url(%23grad)"/><circle cx="200" cy="150" r="80" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="100" r="60" fill="rgba(255,255,255,0.1)"/><circle cx="1000" cy="200" r="100" fill="rgba(255,255,255,0.1)"/></svg>');
+    height: 180px;
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: 60px;
+    color: white;
+    text-align: center;
 }
 
-.nav-brand a {
-    font-size: 1.5rem;
+.site-title {
+    font-size: 48px;
     font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 8px;
+}
+
+.site-tagline {
+    font-size: 16px;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    opacity: 0.9;
+}
+
+/* Tab navigation */
+.nav-tabs {
+    background: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tab {
+    display: inline-block;
+    padding: 12px 20px;
     text-decoration: none;
+    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+    border-right: 1px solid #ddd;
+    background: #f8f8f8;
+    transition: background-color 0.2s;
+}
+
+.tab:first-child {
+    border-left: 1px solid #ddd;
+}
+
+.tab:hover {
+    background: #e8e8e8;
     color: #333;
 }
 
-.nav-menu {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2rem;
+.tab.active {
+    background: #fff;
+    color: #000;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
 }
 
-.nav-menu a {
-    text-decoration: none;
-    color: #666;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: #007acc;
-}
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.25rem;
-}
-
-.nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-/* Search */
+/* Search in nav */
 .search-container {
+    margin-left: auto;
     position: relative;
 }
 
 #search-input {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 200px;
-    font-size: 0.9rem;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    width: 180px;
+    background: #fff;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #999;
 }
 
 .search-results {
@@ -92,13 +114,13 @@ body {
     left: 0;
     right: 0;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-top: none;
-    border-radius: 0 0 4px 4px;
     max-height: 300px;
     overflow-y: auto;
     display: none;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .search-results.active {
@@ -106,13 +128,14 @@ body {
 }
 
 .search-result {
-    padding: 0.75rem;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .search-result:hover {
-    background: #f8f9fa;
+    background: #f5f5f5;
 }
 
 .search-result:last-child {
@@ -120,217 +143,205 @@ body {
 }
 
 .search-result h4 {
-    margin: 0 0 0.25rem 0;
-    font-size: 0.9rem;
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .search-result p {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 11px;
     color: #666;
 }
 
-/* Main content */
+/* Main content area */
 .main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem 1rem;
-    min-height: calc(100vh - 120px);
+    padding: 20px;
+    background: #fff;
 }
 
-/* Hero section */
-.hero {
-    text-align: center;
-    padding: 3rem 0;
-    border-bottom: 1px solid #e1e5e9;
-    margin-bottom: 3rem;
+/* Blog-style post listing */
+.blog-posts {
+    margin: 0;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #333;
+.blog-post {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
 }
 
-.hero-subtitle {
-    font-size: 1.2rem;
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.post-date {
     color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Content sections */
-.content-section {
-    margin-bottom: 3rem;
-}
-
-.content-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 0.5rem;
-}
-
-/* Post grid */
-.post-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.post-card {
-    background: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid #e1e5e9;
-}
-
-.post-card h3 {
-    margin-bottom: 0.5rem;
-}
-
-.post-card h3 a {
-    text-decoration: none;
-    color: #333;
-}
-
-.post-card h3 a:hover {
-    color: #007acc;
-}
-
-.post-meta {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.post-category {
-    background: #007acc;
-    color: white;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.8rem;
-    margin-left: 0.5rem;
-}
-
-.post-excerpt {
-    color: #666;
-    line-height: 1.5;
-}
-
-/* Raindrop list */
-.raindrop-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.raindrop-item {
-    padding: 1rem;
-    border-left: 4px solid #007acc;
-    background: #f8f9fa;
-}
-
-.raindrop-item h4 {
-    margin-bottom: 0.5rem;
-}
-
-.raindrop-item h4 a {
-    text-decoration: none;
-    color: #333;
-}
-
-.raindrop-item h4 a:hover {
-    color: #007acc;
-}
-
-.raindrop-item time {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* Individual post styles */
-.post, .raindrop {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.post-header, .raindrop-header {
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #e1e5e9;
-}
-
-.post-title, .raindrop-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.post-content, .raindrop-content {
-    margin-bottom: 2rem;
-    line-height: 1.7;
-}
-
-.post-content h1, .post-content h2, .post-content h3,
-.raindrop-content h1, .raindrop-content h2, .raindrop-content h3 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.post-content p, .raindrop-content p {
-    margin-bottom: 1rem;
-}
-
-.post-content ul, .post-content ol,
-.raindrop-content ul, .raindrop-content ol {
-    margin-bottom: 1rem;
-    padding-left: 2rem;
-}
-
-.post-content blockquote, .raindrop-content blockquote {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    border-left: 4px solid #007acc;
-    background: #f8f9fa;
+    font-size: 12px;
+    margin-bottom: 8px;
     font-style: italic;
 }
 
-.post-content code, .raindrop-content code {
-    background: #f4f4f4;
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    font-size: 0.9rem;
+.post-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.4;
 }
 
-.post-content pre, .raindrop-content pre {
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 5px;
+.post-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    color: #0066cc;
+}
+
+.post-content, .post-excerpt {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.post-content p {
+    margin-bottom: 12px;
+}
+
+.post-content a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+.post-content a:hover {
+    color: #004499;
+}
+
+/* Individual post page */
+.individual-post {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.individual-post .post-title {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.individual-post .post-date {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.individual-post .post-content {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Raindrops - more link-heavy style */
+.raindrops-list {
+    margin: 0;
+}
+
+.raindrop {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.raindrop:last-child {
+    border-bottom: none;
+}
+
+.raindrop-date {
+    color: #666;
+    font-size: 11px;
+    margin-bottom: 6px;
+    font-style: italic;
+}
+
+.raindrop-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.raindrop-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.raindrop-title a:hover {
+    color: #0066cc;
+}
+
+.raindrop-content {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+ul, ol {
+    margin-bottom: 12px;
+    padding-left: 30px;
+}
+
+blockquote {
+    margin: 15px 0;
+    padding: 10px 20px;
+    border-left: 3px solid #ccc;
+    background: #f9f9f9;
+    font-style: italic;
+    color: #666;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    background: #f5f5f5;
+    padding: 2px 4px;
+    font-size: 13px;
+}
+
+pre {
+    background: #f5f5f5;
+    padding: 15px;
     overflow-x: auto;
-    margin: 1rem 0;
+    margin: 15px 0;
+    border: 1px solid #ddd;
 }
 
-.post-content pre code, .raindrop-content pre code {
+pre code {
     background: none;
     padding: 0;
 }
 
-/* Navigation */
-.post-navigation, .raindrop-navigation {
+/* Navigation between posts */
+.post-navigation {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
-    border-top: 1px solid #e1e5e9;
-    margin-top: 2rem;
+    font-size: 12px;
 }
 
 .nav-link {
+    color: #0066cc;
     text-decoration: none;
-    color: #007acc;
-    font-weight: 500;
     max-width: 45%;
 }
 
@@ -338,96 +349,74 @@ body {
     text-decoration: underline;
 }
 
-.nav-prev {
-    text-align: left;
+.nav-prev::before {
+    content: "← ";
 }
 
-.nav-next {
-    text-align: right;
-}
-
-.back-to-raindrops {
-    display: inline-block;
-    margin-top: 1rem;
-    text-decoration: none;
-    color: #007acc;
-    font-weight: 500;
-}
-
-.back-to-raindrops:hover {
-    text-decoration: underline;
+.nav-next::after {
+    content: " →";
 }
 
 /* Footer */
 .footer {
-    background: #f8f9fa;
-    padding: 1rem 0;
+    background: #f8f8f8;
+    border-top: 1px solid #ccc;
+    padding: 15px 0;
     text-align: center;
-    border-top: 1px solid #e1e5e9;
+    font-size: 12px;
     color: #666;
+    margin-top: 40px;
 }
 
-/* Responsive design */
+/* Mobile responsive */
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 60px;
-        flex-direction: column;
-        background-color: white;
+    .site-title {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    
+    .site-tagline {
+        font-size: 14px;
+    }
+    
+    .header-image {
+        height: 120px;
+    }
+    
+    .nav-tabs {
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+    
+    .tab {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .search-container {
+        margin-left: 0;
+        margin-top: 5px;
         width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        gap: 0;
-        padding: 2rem 0;
+        order: 1;
     }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-menu li {
-        margin: 1rem 0;
-    }
-
-    .nav-toggle {
-        display: flex;
-    }
-
-    .nav-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .nav-toggle.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .post-title, .raindrop-title {
-        font-size: 2rem;
-    }
-
-    .post-grid {
-        grid-template-columns: 1fr;
-    }
-
+    
     #search-input {
-        width: 150px;
+        width: 100%;
     }
-
-    .post-navigation, .raindrop-navigation {
+    
+    .main {
+        padding: 15px;
+    }
+    
+    .individual-post .post-title {
+        font-size: 18px;
+    }
+    
+    .post-navigation {
         flex-direction: column;
-        gap: 1rem;
+        gap: 10px;
     }
-
+    
     .nav-link {
         max-width: 100%;
     }
@@ -435,18 +424,21 @@ body {
 
 @media (max-width: 480px) {
     .main {
-        padding: 1rem 0.5rem;
+        padding: 10px;
     }
+    
+    .site-title {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .tab {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+}
 
-    .nav {
-        padding: 0 0.5rem;
-    }
-
-    .hero {
-        padding: 2rem 0;
-    }
-
-    .post-card, .raindrop-item {
-        padding: 1rem;
-    }
+/* Remove previous grid styles and other incompatible styles */
+.hero, .content-section, .post-grid, .post-card, .raindrop-list, .raindrop-item {
+    display: none;
 }

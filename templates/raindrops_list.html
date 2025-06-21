@@ -3,27 +3,19 @@
 {% block title %}Raindrops{% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h1>Raindrops</h1>
-    <p class="page-subtitle">Quick thoughts, notes, and discoveries</p>
-</div>
-
-<section class="raindrops-list">
-    {% if posts %}
-        {% for post in posts %}
-        <article class="raindrop-list-item">
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <div class="raindrop-meta">
-                <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
-                <span class="raindrop-category">{{ post.category }}</span>
-            </div>
-            <p class="raindrop-content">{{ post.excerpt }}</p>
-        </article>
-        {% endfor %}
-    {% else %}
-        <div class="no-posts">
-            <p>No raindrops yet. Check back soon!</p>
-        </div>
+<div class="raindrops-list">
+    {% for post in posts %}
+    <article class="raindrop">
+        <div class="raindrop-date">{{ post.date | strftime('%m/%d/%Y') }}</div>
+        <h3 class="raindrop-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <div class="raindrop-content">{{ post.excerpt }}</div>
+    </article>
+    {% endfor %}
+    
+    {% if posts|length == 0 %}
+    <div style="text-align: center; color: #666; font-style: italic;">
+        No raindrops found.
+    </div>
     {% endif %}
-</section>
+</div>
 {% endblock %}

@@ -9,27 +9,20 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <a href="/">Salas Blog</a>
+        <div class="header-image">
+            <h1 class="site-title">SALAS BLOG</h1>
+            <p class="site-tagline">it's even worse than it appears</p>
+        </div>
+        <nav class="nav-tabs">
+            <a href="/" class="tab">blog</a>
+            <a href="/raindrops/" class="tab">raindrops</a>
+            {% for page in nav_pages %}
+            <a href="{{ page.url }}" class="tab">{{ page.title.lower() }}</a>
+            {% endfor %}
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
+                <div id="search-results" class="search-results"></div>
             </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/raindrops/">Raindrops</a></li>
-                {% for page in nav_pages %}
-                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
-                <li class="search-container">
-                    <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
-                    <div id="search-results" class="search-results"></div>
-                </li>
-            </ul>
         </nav>
     </header>
 
@@ -38,7 +31,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; {{ current_year }} Salas Blog. All rights reserved.</p>
+        <p>&copy; {{ current_year }} Salas Blog. it's even worse than it appears.</p>
     </footer>
 
     <script src="/static/js/script.js"></script>

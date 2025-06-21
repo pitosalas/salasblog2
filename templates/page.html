@@ -3,11 +3,11 @@
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h1>{{ page.title }}</h1>
-</div>
-
-<section class="page-content">
-    {{ page.content | safe }}
-</section>
+<article class="individual-post">
+    <h1 class="post-title">{{ page.title }}</h1>
+    
+    <div class="post-content">
+        {{ page.content | safe }}
+    </div>
+</article>
 {% endblock %}
