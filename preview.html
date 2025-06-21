@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Salas Blog</title>
+    <meta name="description" content="Personal blog and website">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="/">Salas Blog</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/raindrops/">Raindrops</a></li>
+                <li><a href="/about/">About</a></li>
+                <li class="search-container">
+                    <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
+                    <div id="search-results" class="search-results"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="hero">
+            <h1>Welcome to Salas Blog</h1>
+            <p class="hero-subtitle">Personal thoughts, projects, and discoveries</p>
+        </div>
+
+        <section class="content-section">
+            <h2>Recent Posts</h2>
+            <div class="post-grid">
+                <article class="post-card">
+                    <h3><a href="#">Getting Started with Static Site Generation</a></h3>
+                    <div class="post-meta">
+                        <time datetime="2024-01-15">January 15, 2024</time>
+                        <span class="post-category">Tech</span>
+                    </div>
+                    <p class="post-excerpt">Building a simple static site generator with Python and learning about the benefits of static sites...</p>
+                </article>
+                
+                <article class="post-card">
+                    <h3><a href="#">My Development Setup</a></h3>
+                    <div class="post-meta">
+                        <time datetime="2024-01-10">January 10, 2024</time>
+                        <span class="post-category">Development</span>
+                    </div>
+                    <p class="post-excerpt">A walkthrough of my current development environment, tools, and workflow that keeps me productive...</p>
+                </article>
+
+                <article class="post-card">
+                    <h3><a href="#">Learning Python</a></h3>
+                    <div class="post-meta">
+                        <time datetime="2024-01-05">January 5, 2024</time>
+                        <span class="post-category">Learning</span>
+                    </div>
+                    <p class="post-excerpt">My journey learning Python and some of the resources that have been most helpful along the way...</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Recent Raindrops</h2>
+            <div class="raindrop-list">
+                <article class="raindrop-item">
+                    <h4><a href="#">Quick Note on CSS Grid</a></h4>
+                    <time datetime="2024-01-20">January 20, 2024</time>
+                </article>
+                
+                <article class="raindrop-item">
+                    <h4><a href="#">Interesting Article on Web Performance</a></h4>
+                    <time datetime="2024-01-18">January 18, 2024</time>
+                </article>
+                
+                <article class="raindrop-item">
+                    <h4><a href="#">Tool Discovery: UV for Python</a></h4>
+                    <time datetime="2024-01-16">January 16, 2024</time>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Salas Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>

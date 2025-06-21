@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }}{% endblock %} - Salas Blog</title>
+    <meta name="description" content="{% block description %}Personal blog and website{% endblock %}">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="/">Salas Blog</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/raindrops/">Raindrops</a></li>
+                <li><a href="/about/">About</a></li>
+                <li class="search-container">
+                    <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
+                    <div id="search-results" class="search-results"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; {{ current_year }} Salas Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
