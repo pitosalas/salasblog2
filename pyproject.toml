@@ -1,0 +1,10 @@
+[project]
+name = "salasblog2"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "jinja2>=3.1.6",
+    "markdown>=3.8.2",
+    "python-frontmatter>=1.1.0",
+]

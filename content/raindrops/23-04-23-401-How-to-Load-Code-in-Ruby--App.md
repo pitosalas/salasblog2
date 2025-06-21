@@ -1,0 +1,19 @@
+---
+date: '2023-04-23T12:42:24.647000+00:00'
+excerpt: 'Let''s look into three options for code loading in Ruby: using load, require,
+  and autoload. This is a very useful review and also explains more about zeitwerk.'
+tags:
+- ruby
+- require
+- require-relative
+- autoload
+title: How to Load Code in Ruby | AppSignal Blog
+type: drop
+url: https://blog.appsignal.com/2023/04/19/how-to-load-code-in-ruby.html?utm_source=ruby-magic&utm_medium=email&utm_campaign=rss-email&utm_content=button
+---
+
+# How to Load Code in Ruby | AppSignal Blog
+
+**URL:** https://blog.appsignal.com/2023/04/19/how-to-load-code-in-ruby.html?utm_source=ruby-magic&utm_medium=email&utm_campaign=rss-email&utm_content=button
+
+**Excerpt:** Let's look into three options for code loading in Ruby: using load, require, and autoload. This is a very useful review and also explains more about zeitwerk.

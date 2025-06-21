@@ -22,7 +22,9 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/raindrops/">Raindrops</a></li>
-                <li><a href="/about/">About</a></li>
+                {% for page in nav_pages %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
                 <li class="search-container">
                     <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
                     <div id="search-results" class="search-results"></div>
