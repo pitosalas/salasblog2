@@ -10,7 +10,7 @@ A simple static site generator for personal blogs and websites, built with Pytho
 - **Template System**: Jinja2 templates with responsive design
 - **Search**: Client-side search with JSON index
 - **Static Output**: Complete static HTML site generation
-- **CLI Tool**: Simple command-line interface (b.py)
+- **CLI Tool**: Simple command-line interface (bg.py)
 - **Fly.io Ready**: Built-in deployment support
 
 ## Quick Start
@@ -29,7 +29,7 @@ A simple static site generator for personal blogs and websites, built with Pytho
 
 3. Generate site:
    ```bash
-   python b.py generate
+   python bg.py generate
    ```
 
 4. Preview locally:
@@ -40,10 +40,10 @@ A simple static site generator for personal blogs and websites, built with Pytho
 
 ## CLI Commands
 
-- `python b.py` - Show help
-- `python b.py generate` - Generate static site
-- `python b.py reset` - Delete generated files
-- `python b.py deploy` - Deploy to Fly.io
+- `python bg.py` - Show help
+- `python bg.py generate` - Generate static site
+- `python bg.py reset` - Delete generated files
+- `python bg.py deploy` - Deploy to Fly.io
 
 ## Content Structure
 
@@ -92,7 +92,7 @@ output/
 
 ```
 salasblog2/
-├── b.py                 # CLI tool
+├── bg.py                # CLI tool
 ├── content/            # Markdown content
 │   ├── blog/          # Blog posts
 │   ├── raindrops/     # Short notes  
@@ -121,4 +121,4 @@ See [CLAUDE.md](CLAUDE.md) for detailed development information.
 Configure for Fly.io deployment:
 
 1. Create `fly.toml`
-2. Run `python b.py deploy`
+2. Run `python bg.py deploy`

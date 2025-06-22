@@ -18,17 +18,17 @@ This project uses `uv` for Python package and environment management:
 ## Common Commands
 
 ### Static Site Generation (CLI)
-- `python b.py` - Show help message
-- `python b.py generate` - Process markdown files and generate static HTML site (uses "winer" theme by default)
-- `python b.py generate --theme salas` - Generate site using the original "salas" theme
-- `python b.py generate --theme winer` - Generate site using the "winer" theme (scripting.com style)
-- `python b.py themes` - List available themes
-- `python b.py reset` - Delete all generated files
-- `python b.py deploy` - Deploy site to Fly.io
+- `python bg.py` - Show help message
+- `python bg.py generate` - Process markdown files and generate static HTML site (uses "winer" theme by default)
+- `python bg.py generate --theme salas` - Generate site using the original "salas" theme
+- `python bg.py generate --theme winer` - Generate site using the "winer" theme (scripting.com style)
+- `python bg.py themes` - List available themes
+- `python bg.py reset` - Delete all generated files
+- `python bg.py deploy` - Deploy site to Fly.io
 
 ### Development
 - `uv sync` - Install/update dependencies
-- `uv run python b.py generate` - Generate site using uv
+- `uv run python bg.py generate` - Generate site using uv
 - `uv add <package>` - Add new dependency
 - `python -m http.server 8000 -d output` - Preview generated site locally
 
@@ -51,7 +51,7 @@ This project uses `uv` for Python package and environment management:
 This is a static site generator that processes Markdown files with frontmatter to create a personal website and blog. Key components:
 
 - **Static Site Generator**: Processes markdown files into HTML using Jinja2 templates
-- **CLI Tool (b.py)**: Main interface for site generation, deployment, and management  
+- **CLI Tool (bg.py)**: Main interface for site generation, deployment, and management  
 - **Markdown Processing**: All content stored as markdown files with YAML frontmatter
 - **Dynamic Navigation**: Automatically generates menu items from content/pages/ directory
 - **Content Types**: 
@@ -126,7 +126,7 @@ themes/
 2. Add `templates/` and `static/` subdirectories
 3. Copy templates from an existing theme as a starting point
 4. Customize the templates and styles
-5. Use `python b.py generate --theme YOUR_THEME_NAME` to test
+5. Use `python bg.py generate --theme YOUR_THEME_NAME` to test
 
 ## Development Guidelines
 
@@ -148,11 +148,11 @@ themes/
 - each markdown file is preceded by front matter
 - front matter variables are title, date, type, category
 - there will be a simple cli with some commands
-- the cli will be called b.py
-- b.py generate will process all the markdown, use the templates to generate a complete static html web site
-- b.py reset will delete all the generated HTML files
-- b.py by itself will print a very very short help message
-- b.py deploy will deploy the site to fly.io
+- the cli will be called bg.py
+- bg.py generate will process all the markdown, use the templates to generate a complete static html web site
+- bg.py reset will delete all the generated HTML files
+- bg.py by itself will print a very very short help message
+- bg.py deploy will deploy the site to fly.io
 
 ## Dependencies
 
@@ -164,7 +164,7 @@ Key Python packages used:
 ## Current Status
 
 ✅ **Complete Static Site Generator**
-✅ CLI tool (b.py) with generate/reset/deploy commands
+✅ CLI tool (bg.py) with generate/reset/deploy commands
 ✅ Markdown processing with frontmatter parsing
 ✅ Jinja2 template rendering system
 ✅ Dynamic navigation from content/pages/

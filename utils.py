@@ -4,6 +4,7 @@ These functions are completely independent and reusable.
 """
 import markdown
 import frontmatter
+import yaml
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
@@ -149,15 +150,88 @@ def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
         FileNotFoundError: If file doesn't exist
         UnicodeDecodeError: If file encoding is invalid
     """
-    with open(file_path, 'r', encoding='utf-8') as f:
-        post = frontmatter.load(f)
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            post = frontmatter.load(f)
+        
+        return {
+            'metadata': post.metadata,
+            'content': post.content,
+            'raw_content': post.content,
+            'html_content': process_markdown_to_html(post.content)
+        }
+    except (yaml.YAMLError, Exception) as e:
+        # Handle malformed YAML by attempting to fix common issues
+        return _parse_malformed_frontmatter(file_path, e)
+
+
+def _parse_malformed_frontmatter(file_path: Path, original_error: Exception) -> Dict[str, Any]:
+    """
+    Attempt to parse frontmatter with common YAML fixes.
     
-    return {
-        'metadata': post.metadata,
-        'content': post.content,
-        'raw_content': post.content,
-        'html_content': process_markdown_to_html(post.content)
-    }
+    Args:
+        file_path: Path to markdown file
+        original_error: The original parsing error
+        
+    Returns:
+        Dictionary with parsed data or fallback values
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Try to fix common YAML escaping issues
+        if content.startswith('---\n'):
+            parts = content.split('---\n', 2)
+            if len(parts) >= 3:
+                yaml_content = parts[1]
+                markdown_content = parts[2]
+                
+                # Fix common escaping issues
+                fixed_yaml = yaml_content.replace('\\"', '\\\\"')  # Fix unescaped quotes
+                
+                try:
+                    # Try parsing the fixed YAML
+                    import yaml
+                    metadata = yaml.safe_load(fixed_yaml) or {}
+                    
+                    return {
+                        'metadata': metadata,
+                        'content': markdown_content,
+                        'raw_content': markdown_content,
+                        'html_content': process_markdown_to_html(markdown_content)
+                    }
+                except:
+                    pass
+        
+        # Fallback: extract filename as title and use content as-is
+        filename_stem = file_path.stem
+        return {
+            'metadata': {
+                'title': filename_stem.replace('-', ' ').replace('_', ' ').title(),
+                'date': '',
+                'type': 'blog',
+                'category': 'Uncategorized'
+            },
+            'content': content,
+            'raw_content': content,
+            'html_content': process_markdown_to_html(content)
+        }
+        
+    except Exception:
+        # Ultimate fallback
+        filename_stem = file_path.stem
+        return {
+            'metadata': {
+                'title': filename_stem,
+                'date': '',
+                'type': 'blog', 
+                'category': 'Uncategorized'
+            },
+            'content': f"Error parsing file: {original_error}",
+            'raw_content': f"Error parsing file: {original_error}",
+            'html_content': f"<p>Error parsing file: {original_error}</p>"
+        }
 
 
 def generate_url_from_filename(filename: str, content_type: str) -> str:
