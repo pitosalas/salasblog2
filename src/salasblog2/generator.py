@@ -1,0 +1,314 @@
+"""
+Static site generator for Salas Blog.
+"""
+import os
+import shutil
+import subprocess
+from pathlib import Path
+from datetime import datetime
+import json
+import markdown
+import frontmatter
+from jinja2 import Environment, FileSystemLoader
+
+from .utils import (
+    format_date,
+    create_excerpt,
+    parse_date_for_sorting,
+    process_markdown_to_html,
+    parse_frontmatter_file,
+    generate_url_from_filename,
+    sort_posts_by_date,
+    load_markdown_files_from_directory,
+    safe_get_filename_stem
+)
+
+
+class SiteGenerator:
+    def __init__(self, theme="winer"):
+        self.root_dir = Path.cwd()
+        self.content_dir = self.root_dir / "content"
+        self.blog_dir = self.content_dir / "blog"
+        self.raindrops_dir = self.content_dir / "raindrops"
+        self.pages_dir = self.content_dir / "pages"
+        self.output_dir = self.root_dir / "output"
+        
+        # Theme support
+        self.theme = theme
+        self.themes_dir = self.root_dir / "themes"
+        self.templates_dir = self.themes_dir / theme / "templates"
+        self.static_dir = self.themes_dir / theme / "static"
+        
+        # Fallback to old structure if theme doesn't exist
+        if not self.templates_dir.exists():
+            print(f"⚠️  Theme '{theme}' not found, falling back to default templates")
+            self.templates_dir = self.root_dir / "templates"
+            self.static_dir = self.root_dir / "static"
+        
+        # Initialize Jinja2 environment
+        self.jinja_env = Environment(loader=FileSystemLoader(self.templates_dir))
+        self.jinja_env.filters['strftime'] = self.format_date
+        self.markdown_processor = markdown.Markdown(extensions=['meta', 'codehilite', 'toc'])
+    
+    def format_date(self, date_str, format_str='%B %d, %Y'):
+        """Custom Jinja2 filter for date formatting"""
+        return format_date(date_str, format_str)
+        
+    def load_posts(self, content_type):
+        """Load and parse markdown files from a directory"""
+        posts = []
+        if content_type == 'blog':
+            content_dir = self.blog_dir
+        elif content_type == 'raindrops':
+            content_dir = self.raindrops_dir
+        elif content_type == 'pages':
+            content_dir = self.pages_dir
+        else:
+            return posts
+        
+        if not content_dir.exists():
+            return posts
+        
+        for md_file in load_markdown_files_from_directory(content_dir):
+            try:
+                parsed = parse_frontmatter_file(md_file)
+                filename = safe_get_filename_stem(md_file)
+                
+                # Extract frontmatter data
+                post_data = {
+                    'title': parsed['metadata'].get('title', filename),
+                    'date': parsed['metadata'].get('date', ''),
+                    'type': parsed['metadata'].get('type', content_type),
+                    'category': parsed['metadata'].get('category', 'Uncategorized'),
+                    'content': parsed['html_content'],
+                    'raw_content': parsed['content'],
+                    'filename': filename,
+                    'url': generate_url_from_filename(filename, content_type)
+                }
+                
+                # Create excerpt from content
+                post_data['excerpt'] = create_excerpt(parsed['content'])
+                
+                posts.append(post_data)
+                
+            except Exception as e:
+                print(f"Error processing {md_file}: {e}")
+        
+        # Sort by date (newest first)
+        return sort_posts_by_date(posts)
+    
+    def generate_search_index(self, all_posts):
+        """Generate search index JSON"""
+        search_data = []
+        for post in all_posts:
+            search_item = {
+                'title': post['title'],
+                'url': post['url'],
+                'type': post['type'],
+                'excerpt': post['excerpt'],
+                'content': post['raw_content'][:500] + '...' if len(post['raw_content']) > 500 else post['raw_content']
+            }
+            search_data.append(search_item)
+        
+        search_file = self.output_dir / "search.json"
+        with open(search_file, 'w', encoding='utf-8') as f:
+            json.dump(search_data, f, indent=2, ensure_ascii=False)
+        print(f"✓ Generated search index: {search_file}")
+    
+    def copy_static_files(self):
+        """Copy static files to output directory"""
+        static_output_dir = self.output_dir / "static"
+        
+        # Remove existing static directory
+        if static_output_dir.exists():
+            shutil.rmtree(static_output_dir)
+        
+        # Copy theme static files
+        if self.static_dir.exists():
+            shutil.copytree(self.static_dir, static_output_dir)
+            print(f"✓ Copied static files from theme: {self.theme}")
+        else:
+            print(f"⚠️  No static files found for theme: {self.theme}")
+    
+    def render_template(self, template_name, context):
+        """Render a Jinja2 template with context"""
+        try:
+            template = self.jinja_env.get_template(template_name)
+            return template.render(context)
+        except Exception as e:
+            print(f"Error rendering template {template_name}: {e}")
+            return ""
+    
+    def generate_individual_posts(self, posts, content_type):
+        """Generate individual post pages"""
+        template_name = {
+            'blog': 'blog_post.html',
+            'raindrops': 'raindrop_post.html', 
+            'pages': 'page.html'
+        }.get(content_type, 'page.html')
+        
+        for post in posts:
+            context = {
+                'post': post,
+                'page': post,  # Some templates expect 'page' instead of 'post'
+                'site_title': 'Pito Salas Blog',
+                'navigation': self.get_navigation_items()
+            }
+            
+            html_content = self.render_template(template_name, context)
+            
+            if content_type == 'pages':
+                # Pages go in root output directory
+                output_file = self.output_dir / f"{post['filename']}.html"
+            else:
+                # Blog posts and raindrops go in subdirectories
+                output_subdir = self.output_dir / content_type
+                output_subdir.mkdir(exist_ok=True)
+                output_file = output_subdir / f"{post['filename']}.html"
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(html_content)
+        
+        print(f"✓ Generated {len(posts)} {content_type} pages")
+    
+    def generate_listing_pages(self, posts, content_type):
+        """Generate listing pages for blog and raindrops"""
+        if content_type == 'pages':
+            return  # Pages don't have listing pages
+        
+        template_name = f"{content_type}_list.html"
+        
+        context = {
+            'posts': posts,
+            'content_type': content_type,
+            'site_title': 'Pito Salas Blog',
+            'navigation': self.get_navigation_items()
+        }
+        
+        html_content = self.render_template(template_name, context)
+        
+        # Create subdirectory for listing
+        output_subdir = self.output_dir / content_type
+        output_subdir.mkdir(exist_ok=True)
+        output_file = output_subdir / "index.html"
+        
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+        
+        print(f"✓ Generated {content_type} listing page")
+    
+    def get_navigation_items(self):
+        """Get navigation items from pages directory"""
+        nav_items = []
+        
+        # Always include Home
+        nav_items.append({'title': 'Home', 'url': '/'})
+        
+        # Add pages as navigation items
+        pages = self.load_posts('pages')
+        for page in pages:
+            nav_items.append({
+                'title': page['title'],
+                'url': f"/{page['filename']}.html"
+            })
+        
+        # Add blog and raindrops
+        nav_items.append({'title': 'Blog', 'url': '/blog/'})
+        nav_items.append({'title': 'Link Blog', 'url': '/raindrops/'})
+        
+        return nav_items
+    
+    def generate_home_page(self, blog_posts, raindrops):
+        """Generate the home page"""
+        # Get recent posts for home page
+        recent_blog_posts = blog_posts[:5] if blog_posts else []
+        recent_raindrops = raindrops[:5] if raindrops else []
+        
+        context = {
+            'recent_posts': recent_blog_posts,
+            'recent_blog_posts': recent_blog_posts,
+            'recent_raindrops': recent_raindrops,
+            'site_title': 'Pito Salas Blog',
+            'navigation': self.get_navigation_items()
+        }
+        
+        html_content = self.render_template('home.html', context)
+        
+        output_file = self.output_dir / "index.html"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+        
+        print("✓ Generated home page")
+    
+    def reset_output(self):
+        """Remove all generated files"""
+        if self.output_dir.exists():
+            shutil.rmtree(self.output_dir)
+            print(f"✓ Deleted output directory: {self.output_dir}")
+        else:
+            print("✓ No output directory to delete")
+    
+    def list_themes(self):
+        """List available themes"""
+        if not self.themes_dir.exists():
+            print("No themes directory found")
+            return
+        
+        themes = [d.name for d in self.themes_dir.iterdir() 
+                 if d.is_dir() and (d / "templates").exists()]
+        
+        if themes:
+            print("Available themes:")
+            for theme in sorted(themes):
+                current = " (current)" if theme == self.theme else ""
+                print(f"  - {theme}{current}")
+        else:
+            print("No themes found")
+    
+    def deploy_to_fly(self):
+        """Deploy to Fly.io"""
+        try:
+            result = subprocess.run(['fly', 'deploy'], 
+                                  capture_output=True, text=True, check=True)
+            print("✓ Successfully deployed to Fly.io")
+            print(result.stdout)
+        except subprocess.CalledProcessError as e:
+            print(f"✗ Deployment failed: {e}")
+            print(f"Error output: {e.stderr}")
+        except FileNotFoundError:
+            print("✗ 'fly' command not found. Please install Fly CLI first.")
+    
+    def generate_site(self):
+        """Generate the complete static site"""
+        print(f"🚀 Generating site with theme: {self.theme}")
+        
+        # Create output directory
+        self.output_dir.mkdir(exist_ok=True)
+        
+        # Load all content
+        blog_posts = self.load_posts('blog')
+        raindrops = self.load_posts('raindrops')
+        pages = self.load_posts('pages')
+        
+        print(f"📊 Loaded {len(blog_posts)} blog posts, {len(raindrops)} raindrops, {len(pages)} pages")
+        
+        # Generate individual posts
+        self.generate_individual_posts(blog_posts, 'blog')
+        self.generate_individual_posts(raindrops, 'raindrops')
+        self.generate_individual_posts(pages, 'pages')
+        
+        # Generate listing pages
+        self.generate_listing_pages(blog_posts, 'blog')
+        self.generate_listing_pages(raindrops, 'raindrops')
+        
+        # Generate home page
+        self.generate_home_page(blog_posts, raindrops)
+        
+        # Generate search index
+        all_posts = blog_posts + raindrops + pages
+        self.generate_search_index(all_posts)
+        
+        # Copy static files
+        self.copy_static_files()
+        
+        print(f"✅ Site generation complete! Output: {self.output_dir}")

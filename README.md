@@ -5,13 +5,14 @@ A simple static site generator for personal blogs and websites, built with Pytho
 ## Features
 
 - **Markdown Processing**: YAML frontmatter + Markdown content
-- **Multiple Content Types**: Blog posts, raindrops (short notes), and custom pages
+- **Multiple Content Types**: Blog posts, link blog (bookmarks), and custom pages
 - **Dynamic Navigation**: Automatic menu generation from pages
 - **Template System**: Jinja2 templates with responsive design
 - **Search**: Client-side search with JSON index
 - **Static Output**: Complete static HTML site generation
 - **CLI Tool**: Simple command-line interface (bg.py)
 - **Fly.io Ready**: Built-in deployment support
+- **Raindrop.io Integration**: Automatic bookmark downloading and synchronization
 
 ## Quick Start
 
@@ -23,27 +24,39 @@ A simple static site generator for personal blogs and websites, built with Pytho
 2. Content directories are already set up:
    ```
    content/blog/      # Blog posts
-   content/raindrops/ # Short notes
+   content/raindrops/ # Link blog (bookmarks)
    content/pages/     # Custom pages (auto-generate menu items)
    ```
 
 3. Generate site:
    ```bash
-   python bg.py generate
+   salasblog2 generate
    ```
 
 4. Preview locally:
    ```bash
-   uv run python -m http.server 8000 -d output
+   python -m http.server 8000 -d output
    ```
    Visit `http://localhost:8000`
 
 ## CLI Commands
 
-- `python bg.py` - Show help
-- `python bg.py generate` - Generate static site
-- `python bg.py reset` - Delete generated files
-- `python bg.py deploy` - Deploy to Fly.io
+```bash
+salasblog2 <command> [options]
+```
+
+### Available Commands
+- `salasblog2 generate` - Generate static site
+- `salasblog2 reset` - Delete generated files
+- `salasblog2 deploy` - Deploy to Fly.io
+- `salasblog2 themes` - List available themes
+- `salasblog2 sync-raindrops` - Download new bookmarks from Raindrop.io (for link blog)
+- `salasblog2 help` - Show help message
+
+### Options
+- `--theme THEME` - Use specific theme (for generate command)
+- `--reset` - Reset link blog cache (for sync-raindrops command)
+- `--count N` - Limit link blog download (for sync-raindrops command)
 
 ## Content Structure
 
@@ -51,7 +64,7 @@ A simple static site generator for personal blogs and websites, built with Pytho
 content/
   blog/                    # Blog posts
     my-first-post.md
-  raindrops/              # Short notes/thoughts  
+  raindrops/              # Link blog (bookmarks)  
     quick-note.md
   pages/                  # Custom pages (auto-generate menu items)
     about.md
@@ -64,7 +77,7 @@ content/
 ---
 title: "Post Title"
 date: "2024-01-15"        # YYYY-MM-DD format
-type: "blog"              # blog, raindrop, or page
+type: "blog"              # blog, drop (link blog), or page
 category: "Tech"
 ---
 
@@ -83,7 +96,7 @@ output/
 │   ├── index.html        # Blog listing
 │   └── my-first-post.html
 ├── raindrops/
-│   ├── index.html        # Raindrops listing  
+│   ├── index.html        # Link blog listing  
 │   └── quick-note.html
 └── static/               # CSS, JS, assets
 ```
@@ -92,24 +105,31 @@ output/
 
 ```
 salasblog2/
-├── bg.py                # CLI tool
-├── content/            # Markdown content
-│   ├── blog/          # Blog posts
-│   ├── raindrops/     # Short notes  
-│   └── pages/         # Custom pages
-├── templates/         # Jinja2 templates
-│   ├── base.html      # Base layout with navigation
-│   ├── home.html      # Home page
-│   ├── blog_post.html # Individual blog post
-│   ├── raindrop_post.html # Individual raindrop
-│   ├── blog_list.html # Blog listing page
-│   ├── raindrops_list.html # Raindrops listing
-│   └── page.html      # Individual pages
-├── static/           # CSS, JS, assets
-│   ├── css/style.css # Main stylesheet
-│   └── js/script.js  # Search & mobile menu
-├── output/           # Generated site (excluded from git)
-└── pyproject.toml    # UV dependencies
+├── src/
+│   └── salasblog2/        # Main Python package
+│       ├── __init__.py
+│       ├── cli.py         # Unified CLI interface
+│       ├── generator.py   # Site generation logic
+│       ├── raindrop.py    # Raindrop.io integration
+│       └── utils.py       # Utility functions
+├── tests/                 # Test suite
+│   ├── __init__.py
+│   └── test_utils.py
+├── content/              # Markdown content
+│   ├── blog/            # Blog posts
+│   ├── raindrops/       # Short notes  
+│   └── pages/           # Custom pages
+├── themes/              # Theme system
+│   ├── winer/          # Winer theme
+│   │   ├── templates/  # HTML templates
+│   │   └── static/     # CSS, JS, assets
+│   └── salas/          # Salas theme
+│       ├── templates/
+│       └── static/
+├── output/              # Generated site (excluded from git)
+├── pyproject.toml       # Package configuration
+├── README.md
+└── CLAUDE.md
 ```
 
 ## Development

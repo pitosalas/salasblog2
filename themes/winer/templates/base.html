@@ -15,10 +15,9 @@
         </div>
         <nav class="nav-tabs">
             <a href="/" class="tab">blog</a>
-            <a href="/raindrops/" class="tab">raindrops</a>
-            {% for page in nav_pages %}
-            <a href="{{ page.url }}" class="tab">{{ page.title.lower() }}</a>
-            {% endfor %}
+            <a href="/raindrops/" class="tab">link blog</a>{% for page in navigation %}{% if page.title != 'Home' and page.title != 'Blog' and page.title != 'Link Blog' %}
+            <a href="{{ page.url }}" class="tab">{{ page.title.lower() }}</a>{% endif %}{% endfor %}
+            
             <div class="search-container">
                 <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
                 <div id="search-results" class="search-results"></div>

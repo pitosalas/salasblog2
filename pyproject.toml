@@ -1,13 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "salasblog2"
 version = "0.1.0"
-description = "Add your description here"
+description = "Static site generator with Raindrop.io integration"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Pito Salas"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP :: Site Management",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 requires-python = ">=3.12"
 dependencies = [
     "jinja2>=3.1.6",
     "markdown>=3.8.2",
     "python-frontmatter>=1.1.0",
+    "requests>=2.31.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.1.0",
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-multipart>=0.0.6",
 ]
+
+[project.scripts]
+salasblog2 = "salasblog2.cli:main"
+bg = "salasblog2.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/pitosalas/salasblog2"
+Repository = "https://github.com/pitosalas/salasblog2"
 
 [dependency-groups]
 dev = [

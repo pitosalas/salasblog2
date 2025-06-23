@@ -18,17 +18,17 @@ This project uses `uv` for Python package and environment management:
 ## Common Commands
 
 ### Static Site Generation (CLI)
-- `python bg.py` - Show help message
-- `python bg.py generate` - Process markdown files and generate static HTML site (uses "winer" theme by default)
-- `python bg.py generate --theme salas` - Generate site using the original "salas" theme
-- `python bg.py generate --theme winer` - Generate site using the "winer" theme (scripting.com style)
-- `python bg.py themes` - List available themes
-- `python bg.py reset` - Delete all generated files
-- `python bg.py deploy` - Deploy site to Fly.io
+- `salasblog2` - Show help message
+- `salasblog2 generate` - Process markdown files and generate static HTML site (uses "winer" theme by default)
+- `salasblog2 generate --theme salas` - Generate site using the original "salas" theme
+- `salasblog2 generate --theme winer` - Generate site using the "winer" theme (scripting.com style)
+- `salasblog2 themes` - List available themes
+- `salasblog2 reset` - Delete all generated files
+- `salasblog2 deploy` - Deploy site to Fly.io
 
 ### Development
 - `uv sync` - Install/update dependencies
-- `uv run python bg.py generate` - Generate site using uv
+- `uv run salasblog2 generate` - Generate site using uv
 - `uv add <package>` - Add new dependency
 - `python -m http.server 8000 -d output` - Preview generated site locally
 
@@ -48,20 +48,29 @@ This project uses `uv` for Python package and environment management:
 
 ## Architecture Notes
 
-This is a static site generator that processes Markdown files with frontmatter to create a personal website and blog. Key components:
+This is a well-structured Python package that provides a static site generator with Raindrop.io integration. Key components:
 
+### Package Structure (src/salasblog2/)
+- **cli.py**: Unified command-line interface with argparse subcommands
+- **generator.py**: Core SiteGenerator class for processing Markdown and generating HTML
+- **raindrop.py**: RaindropDownloader class for API integration
+- **utils.py**: Reusable utility functions for date formatting, markdown processing, etc.
+- **__init__.py**: Package metadata and version information
+
+### Key Features
 - **Static Site Generator**: Processes markdown files into HTML using Jinja2 templates
-- **CLI Tool (bg.py)**: Main interface for site generation, deployment, and management  
+- **Unified CLI**: Single `salasblog2` command with subcommands for all functionality
 - **Markdown Processing**: All content stored as markdown files with YAML frontmatter
 - **Dynamic Navigation**: Automatically generates menu items from content/pages/ directory
 - **Content Types**: 
   - Blog posts (content/blog/) with listing page
-  - Raindrops (content/raindrops/) with listing page  
+  - Link blog (content/raindrops/) with listing page  
   - Individual pages (content/pages/) with automatic menu generation
 - **Search Functionality**: Client-side search with JSON index
 - **Frontmatter Schema**: title, date, type, category fields for each content file
-- **Responsive Design**: Mobile-friendly CSS with hamburger menu
-- **Static Output**: Generates complete static HTML site for deployment
+- **Theme System**: Modular themes with templates and static assets
+- **Raindrop.io Integration**: Automated bookmark downloading and markdown conversion
+- **Installable Package**: Proper Python package with entry points
 
 ## Fly.io Deployment
 
@@ -75,7 +84,7 @@ The application is configured for deployment on Fly.io. Key files for deployment
 ```
 content/
   blog/           # Blog posts (.md files)
-  raindrops/      # Short notes/raindrops (.md files)  
+  raindrops/      # Link blog (bookmarks) (.md files)  
   pages/          # Individual pages (.md files) - auto-generate menu items
 ```
 
@@ -91,8 +100,8 @@ output/
     index.html    # Blog listing page
     post1.html    # Individual blog posts
   raindrops/
-    index.html    # Raindrops listing page  
-    note1.html    # Individual raindrops
+    index.html    # Link blog listing page  
+    note1.html    # Individual link blog posts
   static/         # CSS, JS, assets (copied from source)
 ```
 
@@ -154,12 +163,53 @@ themes/
 - bg.py by itself will print a very very short help message
 - bg.py deploy will deploy the site to fly.io
 
+## Raindrop.io Integration (rd_dl)
+
+The project includes `rd_dl`, a CLI tool for downloading bookmarks from Raindrop.io and integrating them with the static site generator.
+
+### rd_dl Overview
+- Fully embedded CLI tool for downloading bookmarks from Raindrop.io using their REST API
+- Outputs directly to `content/raindrops/` directory for seamless integration
+- Maintains idempotent operation - only downloads new bookmarks
+- Generates markdown files with aligned frontmatter format
+- Single self-contained file (`rd_dl.py`) with unified dependency management
+
+### rd_dl API Reference
+- Documentation: https://developer.raindrop.io
+- Authentication: Access token required (set RAINDROP_TOKEN environment variable)
+- Main endpoints: Collections, Raindrops, User, Tags, Filters, Import/Export
+
+### rd_dl Usage
+- `salasblog2 sync-raindrops` - Download new bookmarks from Raindrop.io (for link blog)
+- `salasblog2 sync-raindrops --reset` - Delete all existing link blog posts and rebuild from scratch
+- `salasblog2 sync-raindrops --count N` - Limit the number of link blog posts to download
+
+### rd_dl Implementation
+- Python CLI tool using uv for dependency management
+- Uses requests library for API calls
+- Handles authentication with access tokens
+- Remembers downloaded items via cache to avoid duplicates
+- Formats output as markdown with YAML frontmatter
+
+### rd_dl Specification
+- Pulls down all "raindrops" from Raindrop.io
+- Idempotent operation - same output when re-run
+- Results placed in `content/raindrops/` directory
+- Output formatted as markdown files named `YY-MM-DD-counter-title.md`
+- Frontmatter includes: title, date, tags, type: "drop", url, excerpt
+- Frontmatter format aligned with existing static site generator expectations
+
 ## Dependencies
 
 Key Python packages used:
 - `jinja2` - Template engine
 - `markdown` - Markdown to HTML conversion
 - `python-frontmatter` - YAML frontmatter parsing
+
+### Additional Dependencies (for rd_dl integration)
+- `requests>=2.31.0` - HTTP requests for Raindrop.io API
+- `pyyaml>=6.0` - YAML processing for frontmatter
+- `python-dotenv>=1.1.0` - Environment variable management
 
 ## Current Status
 
@@ -174,3 +224,8 @@ Key Python packages used:
 ✅ Client-side search functionality
 ✅ Search index generation (JSON)
 ✅ Static file copying and site generation
+✅ **Raindrop.io Integration (rd_dl)**
+✅ Raindrop.io bookmark downloading with API integration
+✅ Frontmatter format alignment between rd_dl and site generator
+✅ Direct output to content/raindrops/ directory
+✅ Idempotent bookmark synchronization with caching

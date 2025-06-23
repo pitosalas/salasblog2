@@ -8,7 +8,7 @@ from pathlib import Path
 import tempfile
 import os
 
-from utils import (
+from salasblog2.utils import (
     format_date,
     create_excerpt,
     parse_date_for_sorting,
