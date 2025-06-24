@@ -52,14 +52,27 @@ class BloggerAPI:
                 git_credentials = f"https://oauth2:{git_token}@github.com"
                 subprocess.run(['git', 'remote', 'set-url', 'origin', f"{git_credentials}/pitosalas/salasblog2.git"], check=True, cwd=self.root_dir)
             
-            # Check if upstream is set, if not set it
+            # Check if upstream is set and sync with remote
             try:
                 subprocess.run(['git', 'rev-parse', '--abbrev-ref', '--symbolic-full-name', '@{u}'], 
                              check=True, capture_output=True, cwd=self.root_dir)
                 logger.info("Git upstream already configured")
+                # Pull any remote changes
+                subprocess.run(['git', 'pull'], check=True, cwd=self.root_dir)
+                logger.info("Synced with remote repository")
             except subprocess.CalledProcessError:
-                # No upstream set, will be set on first push
-                logger.info("Git upstream will be set on first push")
+                # No upstream set, fetch and set up tracking
+                logger.info("Setting up git tracking with remote")
+                subprocess.run(['git', 'fetch', 'origin'], check=True, cwd=self.root_dir)
+                try:
+                    # Try to set upstream to existing remote branch
+                    subprocess.run(['git', 'branch', '--set-upstream-to=origin/main', 'main'], check=True, cwd=self.root_dir)
+                    # Pull to sync with remote
+                    subprocess.run(['git', 'pull'], check=True, cwd=self.root_dir)
+                    logger.info("Synced with existing remote main branch")
+                except subprocess.CalledProcessError:
+                    # Remote branch doesn't exist, will push and set upstream later
+                    logger.info("Remote main branch doesn't exist, will create on first push")
             
             self._git_initialized = True
             logger.info("Git repository setup completed")
@@ -342,12 +355,19 @@ class BloggerAPI:
             commit_msg = f"{operation} blog post: {filename}"
             subprocess.run(['git', 'commit', '-m', commit_msg], check=True, cwd=self.root_dir)
             
-            # Push to remote (set upstream on first push)
+            # Push to remote (handle conflicts)
             try:
                 subprocess.run(['git', 'push'], check=True, cwd=self.root_dir)
-            except subprocess.CalledProcessError:
-                # If regular push fails, try setting upstream
-                subprocess.run(['git', 'push', '--set-upstream', 'origin', 'main'], check=True, cwd=self.root_dir)
+            except subprocess.CalledProcessError as e:
+                logger.warning(f"Push failed, attempting to sync and retry: {e}")
+                try:
+                    # Try to pull and rebase, then push
+                    subprocess.run(['git', 'pull', '--rebase'], check=True, cwd=self.root_dir)
+                    subprocess.run(['git', 'push'], check=True, cwd=self.root_dir)
+                except subprocess.CalledProcessError:
+                    # Last resort: set upstream and force push
+                    logger.warning("Attempting force push with upstream")
+                    subprocess.run(['git', 'push', '--set-upstream', 'origin', 'main', '--force'], check=True, cwd=self.root_dir)
             
             logger.info(f"Successfully pushed {operation} of {filename} to GitHub")
             return True
