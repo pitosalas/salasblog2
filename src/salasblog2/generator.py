@@ -340,3 +340,79 @@ class SiteGenerator:
         self.copy_static_files()
         
         print(f"✅ Site generation complete! Output: {self.output_dir}")
+    
+    def incremental_regenerate_post(self, post_filename: str, content_type: str = 'blog'):
+        """Incrementally regenerate site after a single post change."""
+        print(f"🔄 Incremental regeneration for {content_type}: {post_filename}")
+        
+        # Create output directory if needed
+        self.output_dir.mkdir(exist_ok=True)
+        
+        # Load all content (needed for listings and search)
+        blog_posts = self.load_posts('blog')
+        raindrops = self.load_posts('raindrops') 
+        pages = self.load_posts('pages')
+        
+        # Find the specific post that changed
+        content_posts = {'blog': blog_posts, 'raindrops': raindrops, 'pages': pages}[content_type]
+        changed_post = next((p for p in content_posts if p['filename'] == post_filename.replace('.md', '')), None)
+        
+        if changed_post:
+            # Regenerate the individual post
+            self.generate_individual_posts([changed_post], content_type)
+            print(f"✓ Regenerated individual {content_type} post")
+        
+        # Regenerate the listing page for this content type
+        if content_type in ['blog', 'raindrops']:
+            self.generate_listing_pages(content_posts, content_type)
+            print(f"✓ Regenerated {content_type} listing page")
+        
+        # Regenerate home page (shows recent posts from blog and raindrops)
+        self.generate_home_page(blog_posts, raindrops)
+        print(f"✓ Regenerated home page")
+        
+        # Regenerate search index (includes all posts)
+        all_posts = blog_posts + raindrops + pages
+        self.generate_search_index(all_posts)
+        print(f"✓ Regenerated search index")
+        
+        print(f"✅ Incremental regeneration complete!")
+    
+    def incremental_regenerate_after_deletion(self, post_filename: str, content_type: str = 'blog'):
+        """Incrementally regenerate site after a post deletion."""
+        print(f"🗑️ Incremental regeneration after {content_type} deletion: {post_filename}")
+        
+        # Create output directory if needed  
+        self.output_dir.mkdir(exist_ok=True)
+        
+        # Remove the individual post file from output
+        if content_type == 'pages':
+            post_output_file = self.output_dir / f"{post_filename.replace('.md', '')}.html"
+        else:
+            post_output_file = self.output_dir / content_type / f"{post_filename.replace('.md', '')}.html"
+        
+        if post_output_file.exists():
+            post_output_file.unlink()
+            print(f"✓ Removed {content_type} output file: {post_output_file}")
+        
+        # Load remaining content
+        blog_posts = self.load_posts('blog')
+        raindrops = self.load_posts('raindrops')
+        pages = self.load_posts('pages')
+        
+        # Regenerate listing page for this content type
+        if content_type in ['blog', 'raindrops']:
+            content_posts = {'blog': blog_posts, 'raindrops': raindrops}[content_type]
+            self.generate_listing_pages(content_posts, content_type)
+            print(f"✓ Regenerated {content_type} listing page")
+        
+        # Regenerate home page
+        self.generate_home_page(blog_posts, raindrops)
+        print(f"✓ Regenerated home page")
+        
+        # Regenerate search index
+        all_posts = blog_posts + raindrops + pages
+        self.generate_search_index(all_posts)
+        print(f"✓ Regenerated search index")
+        
+        print(f"✅ Incremental deletion regeneration complete!")

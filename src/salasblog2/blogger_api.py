@@ -76,14 +76,14 @@ class BloggerAPI:
         
         # Regenerate site if published
         if publish:
-            logger.info("Regenerating site after operation")
+            logger.info("Incremental site regeneration after post creation")
             try:
                 generator = SiteGenerator()
-                generator.generate_site()
-                logger.info("Site regeneration completed")
+                generator.incremental_regenerate_post(filename, 'blog')
+                logger.info("Incremental site regeneration completed")
             except Exception as e:
-                logger.error(f"Site regeneration failed: {e}")
-                # Don't raise - operation was still successful
+                logger.error(f"Incremental site regeneration failed: {e}")
+                # Don't raise - post was still created successfully
         
         logger.info(f"blogger_newPost completed successfully, returning: {filename}")
         return filename
@@ -129,14 +129,14 @@ class BloggerAPI:
         
         # Regenerate site if published
         if publish:
-            logger.info("Regenerating site after operation")
+            logger.info("Incremental site regeneration after post edit")
             try:
                 generator = SiteGenerator()
-                generator.generate_site()
-                logger.info("Site regeneration completed")
+                generator.incremental_regenerate_post(postid, 'blog')
+                logger.info("Incremental site regeneration completed")
             except Exception as e:
-                logger.error(f"Site regeneration failed: {e}")
-                # Don't raise - operation was still successful
+                logger.error(f"Incremental site regeneration failed: {e}")
+                # Don't raise - post was still edited successfully
         
         logger.info("blogger_editPost completed successfully")
         return True
@@ -165,14 +165,14 @@ class BloggerAPI:
         
         # Regenerate site if published
         if publish:
-            logger.info("Regenerating site after operation")
+            logger.info("Incremental site regeneration after post deletion")
             try:
                 generator = SiteGenerator()
-                generator.generate_site()
-                logger.info("Site regeneration completed")
+                generator.incremental_regenerate_after_deletion(postid, 'blog')
+                logger.info("Incremental site regeneration completed")
             except Exception as e:
-                logger.error(f"Site regeneration failed: {e}")
-                # Don't raise - operation was still successful
+                logger.error(f"Incremental site regeneration failed: {e}")
+                # Don't raise - post was still deleted successfully
         
         logger.info("blogger_deletePost completed successfully")
         return True
