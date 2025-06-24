@@ -8,6 +8,8 @@ from pathlib import Path
 import frontmatter
 import re
 import logging
+import subprocess
+import os
 from .generator import SiteGenerator
 
 # Set up logging
@@ -21,7 +23,50 @@ class BloggerAPI:
         self.root_dir = Path.cwd()
         self.blog_dir = self.root_dir / "content" / "blog"
         self.blog_dir.mkdir(parents=True, exist_ok=True)
+        self._git_initialized = False
+        self._setup_git_repo()
         logger.info(f"BloggerAPI initialized, blog_dir: {self.blog_dir}")
+    
+    def _setup_git_repo(self):
+        """One-time git repository setup when BloggerAPI is initialized."""
+        try:
+            # Check if git repo exists
+            git_dir = self.root_dir / '.git'
+            if not git_dir.exists():
+                logger.info("Initializing git repository")
+                subprocess.run(['git', 'init'], check=True, cwd=self.root_dir)
+                subprocess.run(['git', 'remote', 'add', 'origin', 'https://github.com/pitosalas/salasblog2.git'], check=True, cwd=self.root_dir)
+                subprocess.run(['git', 'branch', '-M', 'main'], check=True, cwd=self.root_dir)
+            
+            # Configure git user (always do this in case env vars changed)
+            git_email = os.getenv('GIT_EMAIL', 'blog-api@salasblog2.com')
+            git_name = os.getenv('GIT_NAME', 'Salasblog2 API')
+            
+            subprocess.run(['git', 'config', 'user.email', git_email], check=True, cwd=self.root_dir)
+            subprocess.run(['git', 'config', 'user.name', git_name], check=True, cwd=self.root_dir)
+            
+            # Set up GitHub token authentication
+            git_token = os.getenv('GIT_TOKEN')
+            if git_token:
+                subprocess.run(['git', 'config', 'credential.helper', 'store'], check=True, cwd=self.root_dir)
+                git_credentials = f"https://oauth2:{git_token}@github.com"
+                subprocess.run(['git', 'remote', 'set-url', 'origin', f"{git_credentials}/pitosalas/salasblog2.git"], check=True, cwd=self.root_dir)
+            
+            # Check if upstream is set, if not set it
+            try:
+                subprocess.run(['git', 'rev-parse', '--abbrev-ref', '--symbolic-full-name', '@{u}'], 
+                             check=True, capture_output=True, cwd=self.root_dir)
+                logger.info("Git upstream already configured")
+            except subprocess.CalledProcessError:
+                # No upstream set, will be set on first push
+                logger.info("Git upstream will be set on first push")
+            
+            self._git_initialized = True
+            logger.info("Git repository setup completed")
+            
+        except Exception as e:
+            logger.error(f"Git setup failed: {e}")
+            self._git_initialized = False
     
     def create_filename_from_title(self, title: str) -> str:
         """Create a safe filename from post title."""
@@ -85,6 +130,13 @@ class BloggerAPI:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still created successfully
         
+        # Commit and push to GitHub
+        if publish:
+            logger.info("Committing new post to GitHub")
+            git_success = self.git_commit_and_push(filename, "Create")
+            if not git_success:
+                logger.warning("Git commit failed but post was created successfully")
+        
         logger.info(f"blogger_newPost completed successfully, returning: {filename}")
         return filename
     
@@ -138,6 +190,13 @@ class BloggerAPI:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still edited successfully
         
+        # Commit and push to GitHub
+        if publish:
+            logger.info("Committing edited post to GitHub")
+            git_success = self.git_commit_and_push(postid, "Edit")
+            if not git_success:
+                logger.warning("Git commit failed but post was edited successfully")
+        
         logger.info("blogger_editPost completed successfully")
         return True
     
@@ -173,6 +232,13 @@ class BloggerAPI:
             except Exception as e:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still deleted successfully
+        
+        # Commit and push to GitHub
+        if publish:
+            logger.info("Committing post deletion to GitHub")
+            git_success = self.git_commit_and_push(postid, "Delete")
+            if not git_success:
+                logger.warning("Git commit failed but post was deleted successfully")
         
         logger.info("blogger_deletePost completed successfully")
         return True
@@ -259,10 +325,42 @@ class BloggerAPI:
             logger.error(f"Failed to read post {postid}: {e}")
             raise
     
+    def git_commit_and_push(self, filename: str, operation: str) -> bool:
+        """Auto-commit and push blog post changes to GitHub."""
+        if not self._git_initialized:
+            logger.warning(f"Git not initialized, skipping {operation} of {filename}")
+            return False
+            
+        try:
+            # Git operations based on operation type
+            if operation.lower() == "delete":
+                subprocess.run(['git', 'rm', f'content/blog/{filename}'], check=True, cwd=self.root_dir)
+            else:
+                subprocess.run(['git', 'add', f'content/blog/{filename}'], check=True, cwd=self.root_dir)
+            
+            # Commit with descriptive message
+            commit_msg = f"{operation} blog post: {filename}"
+            subprocess.run(['git', 'commit', '-m', commit_msg], check=True, cwd=self.root_dir)
+            
+            # Push to remote (set upstream on first push)
+            try:
+                subprocess.run(['git', 'push'], check=True, cwd=self.root_dir)
+            except subprocess.CalledProcessError:
+                # If regular push fails, try setting upstream
+                subprocess.run(['git', 'push', '--set-upstream', 'origin', 'main'], check=True, cwd=self.root_dir)
+            
+            logger.info(f"Successfully pushed {operation} of {filename} to GitHub")
+            return True
+            
+        except subprocess.CalledProcessError as e:
+            logger.error(f"Git operation failed for {operation} of {filename}: {e}")
+            return False
+        except Exception as e:
+            logger.error(f"Unexpected error during git operation: {e}")
+            return False
+
     def _authenticate(self, username: str, password: str) -> bool:
         """Basic authentication check."""
-        import os
-        
         logger.debug(f"Authenticating user: {username}")
         
         # Check environment variables for credentials

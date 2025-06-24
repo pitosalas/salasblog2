@@ -179,9 +179,43 @@ themes/
 - `blogger.getUsersBlogs` - Get blog information
 - `blogger.getRecentPosts` - List recent posts
 - `blogger.getPost` - Get specific post
-- `blogger.newPost` - Create new post
-- `blogger.editPost` - Edit existing post
-- `blogger.deletePost` - Delete post
+- `blogger.newPost` - Create new post (auto-commits to GitHub)
+- `blogger.editPost` - Edit existing post (auto-commits to GitHub)
+- `blogger.deletePost` - Delete post (auto-commits to GitHub)
+
+## GitHub Integration
+
+### Automatic Git Operations
+All blog editor operations (create/edit/delete) automatically commit and push changes to the GitHub repository, ensuring:
+- ✅ **Persistent storage** - Posts survive instance restarts
+- ✅ **Version control** - Full history of all changes
+- ✅ **Single source of truth** - GitHub repo contains all content
+
+### Git Setup Requirements
+1. **Deploy key or Personal Access Token** configured in Fly.io secrets
+2. **Git credentials** set via environment variables:
+   - `GIT_EMAIL` - Email for git commits (default: blog-api@salasblog2.com)
+   - `GIT_NAME` - Name for git commits (default: Salasblog2 API)
+
+### Git Setup Commands
+```bash
+# Set up deploy key (recommended)
+ssh-keygen -t ed25519 -C "salasblog2-deploy"
+fly secrets set SSH_PRIVATE_KEY="$(cat ~/.ssh/id_ed25519)"
+
+# Or use Personal Access Token
+fly secrets set GIT_TOKEN="your_github_token"
+
+# Configure git credentials (optional, has defaults)
+fly secrets set GIT_EMAIL="your-email@domain.com"
+fly secrets set GIT_NAME="Your Name"
+```
+
+### Git Operation Flow
+1. **Blog editor creates/edits/deletes post** → File operation on Fly.io instance
+2. **Site regeneration** → Only affected pages updated (incremental)
+3. **Git commit and push** → Changes automatically pushed to GitHub
+4. **Persistence guaranteed** → All content stored in GitHub repository
 
 ## Raindrop.io Integration (rd_dl)
 
