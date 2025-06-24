@@ -67,8 +67,8 @@ class BloggerAPI:
                 try:
                     # Try to set upstream to existing remote branch
                     subprocess.run(['git', 'branch', '--set-upstream-to=origin/main', 'main'], check=True, cwd=self.root_dir)
-                    # Pull to sync with remote
-                    subprocess.run(['git', 'pull'], check=True, cwd=self.root_dir)
+                    # Pull to sync with remote (allow unrelated histories)
+                    subprocess.run(['git', 'pull', '--allow-unrelated-histories'], check=True, cwd=self.root_dir)
                     logger.info("Synced with existing remote main branch")
                 except subprocess.CalledProcessError:
                     # Remote branch doesn't exist, will push and set upstream later
@@ -361,8 +361,8 @@ class BloggerAPI:
             except subprocess.CalledProcessError as e:
                 logger.warning(f"Push failed, attempting to sync and retry: {e}")
                 try:
-                    # Try to pull and rebase, then push
-                    subprocess.run(['git', 'pull', '--rebase'], check=True, cwd=self.root_dir)
+                    # Try to pull and rebase, then push (allow unrelated histories)
+                    subprocess.run(['git', 'pull', '--rebase', '--allow-unrelated-histories'], check=True, cwd=self.root_dir)
                     subprocess.run(['git', 'push'], check=True, cwd=self.root_dir)
                 except subprocess.CalledProcessError:
                     # Last resort: set upstream and force push
