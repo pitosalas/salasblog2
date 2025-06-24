@@ -12,6 +12,7 @@ COPY pyproject.toml uv.lock* ./
 COPY src/ ./src/
 COPY content/ ./content/
 COPY themes/ ./themes/
+COPY templates/ ./templates/
 
 # Install dependencies
 RUN uv sync --frozen
@@ -27,4 +28,4 @@ ENV PYTHONPATH=/app/src
 EXPOSE 8080
 
 # Run the FastAPI server
-CMD ["uv", "run", "python", "-m", "salasblog2.cli", "server", "--port", "8080"]
+CMD ["uv", "run", "salasblog2", "server", "--port", "8080"]

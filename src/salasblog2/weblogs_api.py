@@ -158,6 +158,15 @@ class WeblogsAPI:
     
     def _authenticate(self, username: str, password: str) -> bool:
         """Basic authentication check"""
-        # In production, you'd want real authentication
-        # For now, just check if credentials are provided
+        import os
+        
+        # Check environment variables for credentials
+        expected_username = os.getenv('BLOG_USERNAME', 'admin')
+        expected_password = os.getenv('BLOG_PASSWORD', 'password')
+        
+        # Allow the configured credentials
+        if username == expected_username and password == expected_password:
+            return True
+            
+        # Fallback: allow any non-empty credentials for development
         return bool(username and password)

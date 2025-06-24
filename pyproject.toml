@@ -6,7 +6,6 @@ build-backend = "hatchling.build"
 name = "salasblog2"
 version = "0.1.0"
 description = "Static site generator with Raindrop.io integration"
-readme = "README.md"
 license = {text = "MIT"}
 authors = [
     {name = "Pito Salas"},
