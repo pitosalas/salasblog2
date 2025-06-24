@@ -1,5 +1,6 @@
 """
 FastAPI server for Salasblog2 - serves static files + API endpoints
+Includes Blogger API (XML-RPC) support for blog editors
 """
 import os
 import xml.etree.ElementTree as ET
@@ -9,7 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
-from .weblogs_api import WeblogsAPI
+from .blogger_api import BloggerAPI
 
 app = FastAPI(title="Salasblog2", description="Static site generator with API endpoints")
 
@@ -72,7 +73,7 @@ async def regenerate_site():
 
 @app.post("/xmlrpc")
 async def xmlrpc_endpoint(request: Request):
-    """XML-RPC endpoint for Weblogs API"""
+    """XML-RPC endpoint for Blogger API"""
     try:
         body = await request.body()
         
@@ -96,8 +97,8 @@ async def xmlrpc_endpoint(request: Request):
             else:
                 params.append(param.text or "")
         
-        # Handle Weblogs API methods
-        api = WeblogsAPI()
+        # Handle Blogger API methods
+        api = BloggerAPI()
         
         if method_name == "blogger.newPost":
             result = api.blogger_newPost(*params)

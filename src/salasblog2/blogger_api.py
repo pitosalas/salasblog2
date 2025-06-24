@@ -1,6 +1,6 @@
 """
-Weblogs API (XML-RPC) implementation for Salasblog2
-Supports basic blog posting functionality compatible with blog editors.
+Blogger API (XML-RPC) implementation for Salasblog2
+Supports Blogger API methods for compatibility with blog editors like Windows Live Writer and MarsEdit.
 """
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -10,8 +10,8 @@ import re
 from .generator import SiteGenerator
 
 
-class WeblogsAPI:
-    """Weblogs API implementation"""
+class BloggerAPI:
+    """Blogger API implementation supporting standard Blogger XML-RPC methods"""
     
     def __init__(self):
         self.root_dir = Path.cwd()
@@ -31,8 +31,19 @@ class WeblogsAPI:
     def blogger_newPost(self, appkey: str, blogid: str, username: str, password: str, 
                        content: str, publish: bool) -> str:
         """
-        Create a new blog post
-        Returns the post ID (filename)
+        Blogger API: blogger.newPost
+        Create a new blog post and return the post ID (filename)
+        
+        Args:
+            appkey: Application key (ignored)
+            blogid: Blog identifier 
+            username: Username for authentication
+            password: Password for authentication
+            content: Post content (first line becomes title)
+            publish: Whether to publish immediately
+            
+        Returns:
+            str: Post ID (filename)
         """
         # Basic auth check (you'd want real auth in production)
         if not self._authenticate(username, password):
@@ -69,7 +80,21 @@ class WeblogsAPI:
     
     def blogger_editPost(self, appkey: str, postid: str, username: str, password: str,
                         content: str, publish: bool) -> bool:
-        """Edit an existing blog post"""
+        """
+        Blogger API: blogger.editPost
+        Edit an existing blog post
+        
+        Args:
+            appkey: Application key (ignored)
+            postid: Post ID (filename)
+            username: Username for authentication
+            password: Password for authentication
+            content: New post content (first line becomes title)
+            publish: Whether to publish immediately
+            
+        Returns:
+            bool: True if successful
+        """
         if not self._authenticate(username, password):
             raise Exception("Authentication failed")
         
@@ -104,7 +129,20 @@ class WeblogsAPI:
     
     def blogger_deletePost(self, appkey: str, postid: str, username: str, password: str,
                           publish: bool) -> bool:
-        """Delete a blog post"""
+        """
+        Blogger API: blogger.deletePost
+        Delete a blog post
+        
+        Args:
+            appkey: Application key (ignored)
+            postid: Post ID (filename)
+            username: Username for authentication
+            password: Password for authentication
+            publish: Whether to regenerate site after deletion
+            
+        Returns:
+            bool: True if successful
+        """
         if not self._authenticate(username, password):
             raise Exception("Authentication failed")
         
@@ -123,7 +161,20 @@ class WeblogsAPI:
     
     def blogger_getRecentPosts(self, appkey: str, blogid: str, username: str, password: str,
                               numberOfPosts: int) -> list:
-        """Get recent blog posts"""
+        """
+        Blogger API: blogger.getRecentPosts
+        Get recent blog posts
+        
+        Args:
+            appkey: Application key (ignored)
+            blogid: Blog identifier
+            username: Username for authentication
+            password: Password for authentication
+            numberOfPosts: Maximum number of posts to return
+            
+        Returns:
+            list: List of post dictionaries with postid, title, content, dateCreated, userid
+        """
         if not self._authenticate(username, password):
             raise Exception("Authentication failed")
         
@@ -146,7 +197,18 @@ class WeblogsAPI:
         return posts
     
     def blogger_getUsersBlogs(self, appkey: str, username: str, password: str) -> list:
-        """Get user's blogs"""
+        """
+        Blogger API: blogger.getUsersBlogs
+        Get user's blogs
+        
+        Args:
+            appkey: Application key (ignored)
+            username: Username for authentication
+            password: Password for authentication
+            
+        Returns:
+            list: List of blog dictionaries with blogid, blogName, url
+        """
         if not self._authenticate(username, password):
             raise Exception("Authentication failed")
         
