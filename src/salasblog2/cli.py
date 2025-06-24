@@ -45,7 +45,6 @@ def cmd_server(args):
     print(f"🚀 Starting server on http://localhost:{args.port}")
     uvicorn.run(app, host="0.0.0.0", port=args.port, reload=args.reload)
 
-
 def cmd_help(args):
     """Show help message"""
     print("salasblog2 - Static site generator with Raindrop.io integration")

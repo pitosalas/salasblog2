@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block description %}The requested page could not be found{% endblock %}
+
+{% block content %}
+<div class="error-page">
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Page Not Found</h2>
+        <p class="error-message">
+            The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div class="error-actions">
+            <a href="/" class="error-link">← Back to Blog</a>
+            <a href="/raindrops/" class="error-link">Link Blog</a>
+        </div>
+        <div class="error-suggestions">
+            <p><strong>You might be looking for:</strong></p>
+            <ul>
+                <li>• <a href="/blog/">Recent blog posts</a></li>
+                <li>• <a href="/raindrops/">Link blog</a></li>
+                <li>• <a href="/about/">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+.error-page {
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Georgia, serif;
+}
+
+.error-container {
+    text-align: left;
+}
+
+.error-code {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #8B4513;
+    margin: 0 0 1rem 0;
+    line-height: 1;
+}
+
+.error-title {
+    font-size: 1.8rem;
+    margin: 0 0 1rem 0;
+    color: #2F4F4F;
+    font-weight: normal;
+}
+
+.error-message {
+    font-size: 1rem;
+    color: #2F4F4F;
+    margin: 1rem 0 2rem 0;
+    line-height: 1.5;
+}
+
+.error-actions {
+    margin: 2rem 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.error-link {
+    color: #8B4513;
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+.error-link:hover {
+    color: #A0522D;
+}
+
+.error-suggestions {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #FFF8DC;
+    border-left: 3px solid #8B4513;
+}
+
+.error-suggestions p {
+    margin: 0 0 1rem 0;
+    color: #2F4F4F;
+}
+
+.error-suggestions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.error-suggestions li {
+    margin: 0.5rem 0;
+    color: #2F4F4F;
+}
+
+.error-suggestions a {
+    color: #8B4513;
+    text-decoration: underline;
+}
+
+.error-suggestions a:hover {
+    color: #A0522D;
+}
+
+@media (max-width: 768px) {
+    .error-code {
+        font-size: 3rem;
+    }
+    
+    .error-title {
+        font-size: 1.5rem;
+    }
+    
+    .error-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+</style>
+{% endblock %}

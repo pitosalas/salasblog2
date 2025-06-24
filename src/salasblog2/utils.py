@@ -113,27 +113,22 @@ def parse_date_for_sorting(date_str: Optional[str]) -> datetime:
         return datetime.min
 
 
+# Module-level singleton for markdown processor
+_md_processor = None
+
+def get_markdown_processor():
+    """Get or create the singleton markdown processor."""
+    global _md_processor
+    if _md_processor is None:
+        _md_processor = markdown.Markdown(extensions=['meta', 'codehilite', 'toc'])
+    return _md_processor
+
 def process_markdown_to_html(content: str) -> str:
-    """
-    Convert markdown content to HTML.
-    
-    Args:
-        content: Markdown content string
-        
-    Returns:
-        HTML string
-        
-    Examples:
-        >>> process_markdown_to_html("# Hello World")
-        '<h1>Hello World</h1>'
-        >>> process_markdown_to_html("**bold text**")
-        '<p><strong>bold text</strong></p>'
-    """
+    """Convert markdown content to HTML."""
     if not content:
         return ''
     
-    md_processor = markdown.Markdown(extensions=['meta', 'codehilite', 'toc'])
-    return md_processor.convert(content)
+    return get_markdown_processor().convert(content)
 
 
 def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:

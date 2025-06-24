@@ -31,6 +31,13 @@ This project uses `uv` for Python package and environment management:
 - `uv run salasblog2 generate` - Generate site using uv
 - `uv add <package>` - Add new dependency
 - `python -m http.server 8000 -d output` - Preview generated site locally
+- `uvicorn src.salasblog2.server:app --host 0.0.0.0 --port 8000` - Run development server with API
+
+### Server & API
+- Server runs on port 8000 by default
+- XML-RPC endpoint: `/xmlrpc` (for blog editors like MarsEdit)
+- RSD discovery: `/rsd.xml` (for automatic blog API detection)
+- Authentication: Set `BLOG_USERNAME` and `BLOG_PASSWORD` environment variables
 
 ### Testing
 - `uv run pytest` - Run tests
@@ -53,6 +60,8 @@ This is a well-structured Python package that provides a static site generator w
 ### Package Structure (src/salasblog2/)
 - **cli.py**: Unified command-line interface with argparse subcommands
 - **generator.py**: Core SiteGenerator class for processing Markdown and generating HTML
+- **server.py**: FastAPI server with XML-RPC Blogger API support for blog editors (MarsEdit, etc.)
+- **blogger_api.py**: Blogger API implementation for XML-RPC compatibility
 - **raindrop.py**: RaindropDownloader class for API integration
 - **utils.py**: Reusable utility functions for date formatting, markdown processing, etc.
 - **__init__.py**: Package metadata and version information
@@ -60,6 +69,8 @@ This is a well-structured Python package that provides a static site generator w
 ### Key Features
 - **Static Site Generator**: Processes markdown files into HTML using Jinja2 templates
 - **Unified CLI**: Single `salasblog2` command with subcommands for all functionality
+- **FastAPI Server**: Development server with XML-RPC Blogger API support
+- **Blog Editor Integration**: Compatible with MarsEdit, Windows Live Writer, and other XML-RPC blog editors
 - **Markdown Processing**: All content stored as markdown files with YAML frontmatter
 - **Dynamic Navigation**: Automatically generates menu items from content/pages/ directory
 - **Content Types**: 
@@ -135,7 +146,7 @@ themes/
 2. Add `templates/` and `static/` subdirectories
 3. Copy templates from an existing theme as a starting point
 4. Customize the templates and styles
-5. Use `python bg.py generate --theme YOUR_THEME_NAME` to test
+5. Use `salasblog2 generate --theme YOUR_THEME_NAME` to test
 
 ## Development Guidelines
 
@@ -148,20 +159,29 @@ themes/
 - Generated output goes to `output/` directory
 - Each theme should be self-contained in its own directory
 
-## Initial Specification
-- a simple home page with a simple menu along the top
-- blog post pages have a menu
-- raindrop post pages have a menu
-- there will be a search function
-- the content is all in markdown format
-- each markdown file is preceded by front matter
-- front matter variables are title, date, type, category
-- there will be a simple cli with some commands
-- the cli will be called bg.py
-- bg.py generate will process all the markdown, use the templates to generate a complete static html web site
-- bg.py reset will delete all the generated HTML files
-- bg.py by itself will print a very very short help message
-- bg.py deploy will deploy the site to fly.io
+## Blog Editor Integration
+
+### Supported Blog Editors
+- **MarsEdit** (macOS)
+- **Windows Live Writer** (Windows)
+- **Other XML-RPC compatible editors**
+
+### Setup Instructions
+1. **Run the server**: `uvicorn src.salasblog2.server:app --host 0.0.0.0 --port 8000`
+2. **Configure blog editor**:
+   - **Blog URL**: `https://your-domain.com/` or `http://localhost:8000/`
+   - **XML-RPC URL**: `https://your-domain.com/xmlrpc` or `http://localhost:8000/xmlrpc`
+   - **API Type**: Blogger API
+   - **Username**: Set via `BLOG_USERNAME` env var (default: `admin`)
+   - **Password**: Set via `BLOG_PASSWORD` env var (default: `password`)
+
+### Supported API Methods
+- `blogger.getUsersBlogs` - Get blog information
+- `blogger.getRecentPosts` - List recent posts
+- `blogger.getPost` - Get specific post
+- `blogger.newPost` - Create new post
+- `blogger.editPost` - Edit existing post
+- `blogger.deletePost` - Delete post
 
 ## Raindrop.io Integration (rd_dl)
 
@@ -214,7 +234,10 @@ Key Python packages used:
 ## Current Status
 
 ✅ **Complete Static Site Generator**
-✅ CLI tool (bg.py) with generate/reset/deploy commands
+✅ CLI tool (salasblog2) with generate/reset/deploy commands
+✅ **FastAPI Server with XML-RPC Blogger API**
+✅ Blog editor integration (MarsEdit, Windows Live Writer, etc.)
+✅ Authentication system for API access
 ✅ Markdown processing with frontmatter parsing
 ✅ Jinja2 template rendering system
 ✅ Dynamic navigation from content/pages/

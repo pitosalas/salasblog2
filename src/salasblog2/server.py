@@ -4,6 +4,7 @@ Includes Blogger API (XML-RPC) support for blog editors
 """
 import os
 import xml.etree.ElementTree as ET
+import logging
 from pathlib import Path
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
@@ -11,6 +12,10 @@ from fastapi.responses import HTMLResponse, JSONResponse, Response
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
+
+# Set up logging
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Salasblog2", description="Static site generator with API endpoints")
 
@@ -71,50 +76,126 @@ async def regenerate_site():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Regeneration failed: {str(e)}")
 
+@app.get("/rsd.xml")
+async def serve_rsd(request: Request):
+    """Serve RSD (Really Simple Discovery) XML for blog API autodiscovery"""
+    # Get the base URL from the request
+    base_url = f"{request.url.scheme}://{request.url.netloc}"
+    
+    rsd_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rsd version="1.0" xmlns="http://archipelago.phrasewise.com/rsd">
+  <service>
+    <engineName>Salasblog2</engineName>
+    <engineLink>https://github.com/pitosalas/salasblog2</engineLink>
+    <homePageLink>{base_url}/</homePageLink>
+    <apis>
+      <api name="Blogger" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
+        <settings>
+          <docs>http://plant.blogger.com/api/index.html</docs>
+        </settings>
+      </api>
+    </apis>
+  </service>
+</rsd>"""
+    
+    return Response(
+        content=rsd_content,
+        media_type="application/rsd+xml",
+        headers={"Content-Type": "application/rsd+xml; charset=utf-8"}
+    )
+
+@app.get("/xmlrpc")
+async def xmlrpc_get_endpoint(request: Request):
+    """Handle GET requests to XML-RPC endpoint for debugging"""
+    logger.info("GET request received at /xmlrpc endpoint")
+    return Response(
+        content="XML-RPC endpoint ready. Use POST with XML-RPC payload.",
+        media_type="text/plain"
+    )
+
 @app.post("/xmlrpc")
 async def xmlrpc_endpoint(request: Request):
     """XML-RPC endpoint for Blogger API"""
     try:
         body = await request.body()
+        logger.info(f"Received XML-RPC request, body length: {len(body)}")
+        logger.debug(f"Raw XML-RPC body: {body.decode('utf-8')[:500]}...")
         
         # Parse XML-RPC request
         root = ET.fromstring(body.decode('utf-8'))
         method_name = root.find('.//methodName').text
+        logger.info(f"XML-RPC method: {method_name}")
         params = []
         
         # Extract parameters
         param_nodes = root.findall('.//param/value')
-        for param in param_nodes:
+        logger.info(f"Found {len(param_nodes)} parameters")
+        for i, param in enumerate(param_nodes):
             # Handle different value types
             if param.find('string') is not None:
-                params.append(param.find('string').text or "")
+                value = param.find('string').text or ""
+                params.append(value)
+                logger.debug(f"Param {i}: string = '{value[:100]}...'") 
             elif param.find('boolean') is not None:
-                params.append(param.find('boolean').text == '1')
+                value = param.find('boolean').text == '1'
+                params.append(value)
+                logger.debug(f"Param {i}: boolean = {value}")
             elif param.find('int') is not None:
-                params.append(int(param.find('int').text))
+                value = int(param.find('int').text)
+                params.append(value)
+                logger.debug(f"Param {i}: int = {value}")
             elif param.find('i4') is not None:
-                params.append(int(param.find('i4').text))
+                value = int(param.find('i4').text)
+                params.append(value)
+                logger.debug(f"Param {i}: i4 = {value}")
             else:
-                params.append(param.text or "")
+                value = param.text or ""
+                params.append(value)
+                logger.debug(f"Param {i}: text = '{value[:100]}...'")
         
         # Handle Blogger API methods
         api = BloggerAPI()
+        logger.info(f"Calling {method_name} with {len(params)} parameters")
         
-        if method_name == "blogger.newPost":
-            result = api.blogger_newPost(*params)
-        elif method_name == "blogger.editPost":
-            result = api.blogger_editPost(*params)
-        elif method_name == "blogger.deletePost":
-            result = api.blogger_deletePost(*params)
-        elif method_name == "blogger.getRecentPosts":
-            result = api.blogger_getRecentPosts(*params)
-        elif method_name == "blogger.getUsersBlogs":
-            result = api.blogger_getUsersBlogs(*params)
-        else:
-            raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")
+        try:
+            if method_name == "blogger.newPost":
+                logger.info("Executing blogger.newPost")
+                result = api.blogger_newPost(*params)
+            elif method_name == "blogger.editPost":
+                logger.info("Executing blogger.editPost")
+                result = api.blogger_editPost(*params)
+            elif method_name == "blogger.deletePost":
+                logger.info("Executing blogger.deletePost")
+                result = api.blogger_deletePost(*params)
+            elif method_name == "blogger.getRecentPosts":
+                logger.info("Executing blogger.getRecentPosts")
+                result = api.blogger_getRecentPosts(*params)
+            elif method_name == "blogger.getUsersBlogs":
+                logger.info("Executing blogger.getUsersBlogs")
+                result = api.blogger_getUsersBlogs(*params)
+            elif method_name == "blogger.getPost":
+                logger.info("Executing blogger.getPost")
+                result = api.blogger_getPost(*params)
+            else:
+                logger.error(f"Unknown method: {method_name}")
+                raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")
+        except Exception as e:
+            if "Authentication failed" in str(e):
+                logger.info("Authentication failed - returning XML-RPC fault with code 403")
+                fault_xml = create_xmlrpc_fault_with_code(403, "Incorrect username or password.")
+                return Response(
+                    content=fault_xml,
+                    media_type="text/xml",
+                    status_code=200
+                )
+            else:
+                raise
         
         # Create XML-RPC response
+        logger.info(f"Method {method_name} completed successfully, result type: {type(result)}")
+        logger.debug(f"Result: {str(result)[:200]}...")
         response_xml = create_xmlrpc_response(result)
+        logger.debug(f"XML response length: {len(response_xml)}")
         
         return Response(
             content=response_xml,
@@ -124,6 +205,7 @@ async def xmlrpc_endpoint(request: Request):
         
     except Exception as e:
         # Return XML-RPC fault
+        logger.error(f"XML-RPC error: {str(e)}", exc_info=True)
         fault_xml = create_xmlrpc_fault(str(e))
         return Response(
             content=fault_xml,
@@ -140,6 +222,12 @@ def create_xmlrpc_response(result):
         value = f"<boolean>{'1' if result else '0'}</boolean>"
     elif isinstance(result, int):
         value = f"<int>{result}</int>"
+    elif isinstance(result, dict):
+        # Handle single dictionary (for blogger.getPost)
+        struct_members = ""
+        for key, val in result.items():
+            struct_members += f"<member><name>{key}</name><value><string>{val}</string></value></member>"
+        value = f"<struct>{struct_members}</struct>"
     elif isinstance(result, list):
         array_items = ""
         for item in result:
@@ -184,10 +272,30 @@ def create_xmlrpc_fault(message):
     </fault>
 </methodResponse>"""
 
+def create_xmlrpc_fault_with_code(fault_code, message):
+    """Create XML-RPC fault response with specific fault code"""
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<methodResponse>
+  <fault>
+    <value>
+      <struct>
+        <member>
+          <name>faultCode</name>
+          <value><int>{fault_code}</int></value>
+        </member>
+        <member>
+          <name>faultString</name>
+          <value><string>{message}</string></value>
+        </member>
+      </struct>
+    </value>
+  </fault>
+</methodResponse>"""
+
 # Serve all other routes as static files or 404
 @app.get("/{path:path}")
 async def serve_static_or_404(path: str):
-    """Serve static files or 404"""
+    """Serve static files or custom 404 page"""
     # Try to serve as static file
     file_path = output_dir / path
     
@@ -206,7 +314,44 @@ async def serve_static_or_404(path: str):
             media_type=content_type
         )
     
-    raise HTTPException(status_code=404, detail="Page not found")
+    # Return custom 404 page
+    return await serve_404_page()
+
+async def serve_404_page():
+    """Serve custom 404 error page"""
+    # Try to find a generated 404 page first
+    error_404_path = output_dir / "404.html"
+    if error_404_path.exists():
+        return HTMLResponse(
+            content=error_404_path.read_text(encoding='utf-8'),
+            status_code=404
+        )
+    
+    # Fallback to simple 404 message
+    return HTMLResponse(
+        content="""
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>404 - Page Not Found</title>
+            <meta charset="utf-8">
+            <style>
+                body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+                h1 { color: #e74c3c; }
+                .btn { display: inline-block; background: #3498db; color: white; 
+                       padding: 10px 20px; text-decoration: none; border-radius: 5px; margin: 10px; }
+            </style>
+        </head>
+        <body>
+            <h1>404 - Page Not Found</h1>
+            <p>The page you're looking for doesn't exist.</p>
+            <a href="/" class="btn">Go Home</a>
+            <a href="/blog/" class="btn">Browse Blog</a>
+        </body>
+        </html>
+        """,
+        status_code=404
+    )
 
 if __name__ == "__main__":
     import uvicorn

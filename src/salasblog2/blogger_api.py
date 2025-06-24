@@ -7,19 +7,24 @@ from datetime import datetime
 from pathlib import Path
 import frontmatter
 import re
+import logging
 from .generator import SiteGenerator
+
+# Set up logging
+logger = logging.getLogger(__name__)
 
 
 class BloggerAPI:
-    """Blogger API implementation supporting standard Blogger XML-RPC methods"""
+    """Blogger API implementation for XML-RPC compatibility with blog editors."""
     
     def __init__(self):
         self.root_dir = Path.cwd()
         self.blog_dir = self.root_dir / "content" / "blog"
         self.blog_dir.mkdir(parents=True, exist_ok=True)
+        logger.info(f"BloggerAPI initialized, blog_dir: {self.blog_dir}")
     
     def create_filename_from_title(self, title: str) -> str:
-        """Create a safe filename from post title"""
+        """Create a safe filename from post title."""
         # Remove special characters and convert to lowercase
         safe_title = re.sub(r'[^\w\s-]', '', title.lower())
         safe_title = re.sub(r'[-\s]+', '-', safe_title)
@@ -30,32 +35,24 @@ class BloggerAPI:
     
     def blogger_newPost(self, appkey: str, blogid: str, username: str, password: str, 
                        content: str, publish: bool) -> str:
-        """
-        Blogger API: blogger.newPost
-        Create a new blog post and return the post ID (filename)
+        """Create a new blog post and return the post ID (filename)."""
+        logger.info(f"blogger_newPost called: appkey={appkey}, blogid={blogid}, username={username}, publish={publish}")
+        logger.debug(f"Content length: {len(content)}, content preview: {content[:100]}...")
         
-        Args:
-            appkey: Application key (ignored)
-            blogid: Blog identifier 
-            username: Username for authentication
-            password: Password for authentication
-            content: Post content (first line becomes title)
-            publish: Whether to publish immediately
-            
-        Returns:
-            str: Post ID (filename)
-        """
         # Basic auth check (you'd want real auth in production)
         if not self._authenticate(username, password):
+            logger.error("Authentication failed for newPost")
             raise Exception("Authentication failed")
         
         # Parse content to extract title
         lines = content.strip().split('\n')
         title = lines[0] if lines else "Untitled Post"
         body_content = '\n'.join(lines[1:]) if len(lines) > 1 else content
+        logger.info(f"Parsed title: '{title}', body length: {len(body_content)}")
         
         # Create filename
         filename = self.create_filename_from_title(title)
+        logger.info(f"Generated filename: {filename}")
         
         # Create frontmatter
         post = frontmatter.Post(body_content)
@@ -68,38 +65,43 @@ class BloggerAPI:
         
         # Write file
         file_path = self.blog_dir / filename
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(frontmatter.dumps(post))
+        logger.info(f"Writing post to: {file_path}")
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(frontmatter.dumps(post))
+            logger.info(f"Post written successfully to {file_path}")
+        except Exception as e:
+            logger.error(f"Failed to write post: {e}")
+            raise
         
         # Regenerate site if published
         if publish:
-            generator = SiteGenerator()
-            generator.generate_site()
+            logger.info("Regenerating site after operation")
+            try:
+                generator = SiteGenerator()
+                generator.generate_site()
+                logger.info("Site regeneration completed")
+            except Exception as e:
+                logger.error(f"Site regeneration failed: {e}")
+                # Don't raise - operation was still successful
         
+        logger.info(f"blogger_newPost completed successfully, returning: {filename}")
         return filename
     
     def blogger_editPost(self, appkey: str, postid: str, username: str, password: str,
                         content: str, publish: bool) -> bool:
-        """
-        Blogger API: blogger.editPost
-        Edit an existing blog post
+        """Edit an existing blog post."""
+        logger.info(f"blogger_editPost called: postid={postid}, username={username}, publish={publish}")
+        logger.debug(f"Content length: {len(content)}, content preview: {content[:100]}...")
         
-        Args:
-            appkey: Application key (ignored)
-            postid: Post ID (filename)
-            username: Username for authentication
-            password: Password for authentication
-            content: New post content (first line becomes title)
-            publish: Whether to publish immediately
-            
-        Returns:
-            bool: True if successful
-        """
         if not self._authenticate(username, password):
+            logger.error("Authentication failed for editPost")
             raise Exception("Authentication failed")
         
         file_path = self.blog_dir / postid
+        logger.info(f"Editing post at: {file_path}")
         if not file_path.exists():
+            logger.error(f"Post not found: {file_path}")
             raise Exception("Post not found")
         
         # Parse content to extract title
@@ -117,118 +119,167 @@ class BloggerAPI:
         }
         
         # Write file
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(frontmatter.dumps(post))
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(frontmatter.dumps(post))
+            logger.info(f"Post updated successfully: {file_path}")
+        except Exception as e:
+            logger.error(f"Failed to update post: {e}")
+            raise
         
         # Regenerate site if published
         if publish:
-            generator = SiteGenerator()
-            generator.generate_site()
+            logger.info("Regenerating site after operation")
+            try:
+                generator = SiteGenerator()
+                generator.generate_site()
+                logger.info("Site regeneration completed")
+            except Exception as e:
+                logger.error(f"Site regeneration failed: {e}")
+                # Don't raise - operation was still successful
         
+        logger.info("blogger_editPost completed successfully")
         return True
     
     def blogger_deletePost(self, appkey: str, postid: str, username: str, password: str,
                           publish: bool) -> bool:
-        """
-        Blogger API: blogger.deletePost
-        Delete a blog post
+        """Delete a blog post."""
+        logger.info(f"blogger_deletePost called: postid={postid}, username={username}, publish={publish}")
         
-        Args:
-            appkey: Application key (ignored)
-            postid: Post ID (filename)
-            username: Username for authentication
-            password: Password for authentication
-            publish: Whether to regenerate site after deletion
-            
-        Returns:
-            bool: True if successful
-        """
         if not self._authenticate(username, password):
+            logger.error("Authentication failed for deletePost")
             raise Exception("Authentication failed")
         
         file_path = self.blog_dir / postid
+        logger.info(f"Deleting post at: {file_path}")
         if not file_path.exists():
+            logger.error(f"Post not found: {file_path}")
             raise Exception("Post not found")
         
-        file_path.unlink()
+        try:
+            file_path.unlink()
+            logger.info(f"Post deleted successfully: {file_path}")
+        except Exception as e:
+            logger.error(f"Failed to delete post: {e}")
+            raise
         
         # Regenerate site if published
         if publish:
-            generator = SiteGenerator()
-            generator.generate_site()
+            logger.info("Regenerating site after operation")
+            try:
+                generator = SiteGenerator()
+                generator.generate_site()
+                logger.info("Site regeneration completed")
+            except Exception as e:
+                logger.error(f"Site regeneration failed: {e}")
+                # Don't raise - operation was still successful
         
+        logger.info("blogger_deletePost completed successfully")
         return True
     
     def blogger_getRecentPosts(self, appkey: str, blogid: str, username: str, password: str,
                               numberOfPosts: int) -> list:
-        """
-        Blogger API: blogger.getRecentPosts
-        Get recent blog posts
+        """Get recent blog posts."""
+        logger.info(f"blogger_getRecentPosts called: blogid={blogid}, username={username}, numberOfPosts={numberOfPosts}")
         
-        Args:
-            appkey: Application key (ignored)
-            blogid: Blog identifier
-            username: Username for authentication
-            password: Password for authentication
-            numberOfPosts: Maximum number of posts to return
-            
-        Returns:
-            list: List of post dictionaries with postid, title, content, dateCreated, userid
-        """
         if not self._authenticate(username, password):
+            logger.error("Authentication failed for getRecentPosts")
             raise Exception("Authentication failed")
         
         posts = []
-        for md_file in sorted(self.blog_dir.glob("*.md"), reverse=True)[:numberOfPosts]:
+        md_files = list(self.blog_dir.glob("*.md"))
+        logger.info(f"Found {len(md_files)} markdown files in {self.blog_dir}")
+        
+        for md_file in sorted(md_files, reverse=True)[:numberOfPosts]:
             try:
+                logger.debug(f"Processing file: {md_file}")
                 with open(md_file, 'r', encoding='utf-8') as f:
                     post = frontmatter.load(f)
                 
-                posts.append({
+                post_data = {
                     'postid': md_file.name,
                     'title': post.metadata.get('title', 'Untitled'),
                     'content': post.content,
                     'dateCreated': post.metadata.get('date', ''),
                     'userid': username
-                })
-            except Exception:
+                }
+                posts.append(post_data)
+                logger.debug(f"Added post: {post_data['title']}")
+            except Exception as e:
+                logger.warning(f"Failed to process file {md_file}: {e}")
                 continue
         
+        logger.info(f"Returning {len(posts)} posts")
         return posts
     
     def blogger_getUsersBlogs(self, appkey: str, username: str, password: str) -> list:
-        """
-        Blogger API: blogger.getUsersBlogs
-        Get user's blogs
+        """Get user's blogs."""
+        logger.info(f"blogger_getUsersBlogs called: username={username}")
         
-        Args:
-            appkey: Application key (ignored)
-            username: Username for authentication
-            password: Password for authentication
-            
-        Returns:
-            list: List of blog dictionaries with blogid, blogName, url
-        """
         if not self._authenticate(username, password):
+            logger.error("Authentication failed for getUsersBlogs")
             raise Exception("Authentication failed")
         
-        return [{
+        blogs = [{
             'blogid': 'salasblog2',
             'blogName': 'Salas Blog',
             'url': '/'
         }]
+        logger.info(f"Returning {len(blogs)} blogs")
+        return blogs
+    
+    def blogger_getPost(self, appkey: str, postid: str, username: str, password: str) -> dict:
+        """Get a specific blog post."""
+        logger.info(f"blogger_getPost called: postid={postid}, username={username}")
+        
+        if not self._authenticate(username, password):
+            logger.error("Authentication failed for getPost")
+            raise Exception("Authentication failed")
+        
+        file_path = self.blog_dir / postid
+        logger.info(f"Getting post at: {file_path}")
+        if not file_path.exists():
+            logger.error(f"Post not found: {file_path}")
+            raise Exception("Post not found")
+        
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                post = frontmatter.load(f)
+            
+            post_data = {
+                'postid': postid,
+                'title': post.metadata.get('title', 'Untitled'),
+                'content': post.content,
+                'dateCreated': post.metadata.get('date', ''),
+                'userid': username
+            }
+            logger.info(f"Retrieved post: {post_data['title']}")
+            return post_data
+        except Exception as e:
+            logger.error(f"Failed to read post {postid}: {e}")
+            raise
     
     def _authenticate(self, username: str, password: str) -> bool:
-        """Basic authentication check"""
+        """Basic authentication check."""
         import os
+        
+        logger.debug(f"Authenticating user: {username}")
         
         # Check environment variables for credentials
         expected_username = os.getenv('BLOG_USERNAME', 'admin')
         expected_password = os.getenv('BLOG_PASSWORD', 'password')
         
+        logger.debug(f"Expected username: {expected_username}")
+        
         # Allow the configured credentials
         if username == expected_username and password == expected_password:
+            logger.info("Authentication successful with configured credentials")
             return True
             
         # Fallback: allow any non-empty credentials for development
-        return bool(username and password)
+        fallback_auth = bool(username and password)
+        if fallback_auth:
+            logger.info("Authentication successful with fallback (development mode)")
+        else:
+            logger.warning("Authentication failed: empty credentials")
+        return fallback_auth

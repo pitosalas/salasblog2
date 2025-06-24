@@ -115,6 +115,31 @@ class SiteGenerator:
             json.dump(search_data, f, indent=2, ensure_ascii=False)
         print(f"✓ Generated search index: {search_file}")
     
+    def generate_404_page(self):
+        """Generate 404 error page"""
+        try:
+            template = self.jinja_env.get_template('404.html')
+            
+            context = {
+                'title': 'Page Not Found',
+                'site_title': 'Pito Salas Blog',
+                'navigation': self.get_navigation_items(),
+                'current_year': datetime.now().year
+            }
+            
+            html_content = template.render(**context)
+            
+            # Write to output directory
+            output_file = self.output_dir / "404.html"
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(html_content)
+            
+            print("✓ Generated 404 error page")
+            
+        except Exception as e:
+            print(f"⚠️  Could not generate 404 page: {e}")
+            # Continue without 404 page - server will use fallback
+    
     def copy_static_files(self):
         """Copy static files to output directory"""
         static_output_dir = self.output_dir / "static"
@@ -307,6 +332,9 @@ class SiteGenerator:
         # Generate search index
         all_posts = blog_posts + raindrops + pages
         self.generate_search_index(all_posts)
+        
+        # Generate 404 error page
+        self.generate_404_page()
         
         # Copy static files
         self.copy_static_files()
