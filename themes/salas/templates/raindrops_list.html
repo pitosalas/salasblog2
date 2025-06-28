@@ -6,6 +6,12 @@
 <div class="page-header">
     <h1>Link Blog</h1>
     <p class="page-subtitle">Interesting links and bookmarks</p>
+    {% if pagination and pagination.total_pages > 1 %}
+    <div class="pagination-info">
+        Page {{ pagination.current_page }} of {{ pagination.total_pages }} 
+        ({{ total_posts }} total posts)
+    </div>
+    {% endif %}
 </div>
 
 <section class="raindrops-list">
@@ -20,6 +26,31 @@
             <p class="raindrop-content">{{ post.excerpt }}</p>
         </article>
         {% endfor %}
+        
+        {% if pagination and pagination.total_pages > 1 %}
+        <nav class="pagination">
+            {% if pagination.has_prev %}
+                <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
+            {% endif %}
+            
+            <div class="pagination-numbers">
+                {% for page_url in pagination.page_urls %}
+                    {% set loop_index = loop.index %}
+                    {% if loop_index == pagination.current_page %}
+                        <span class="pagination-link current">{{ loop_index }}</span>
+                    {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+                        <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
+                    {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+                        <span class="pagination-ellipsis">…</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            
+            {% if pagination.has_next %}
+                <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
+            {% endif %}
+        </nav>
+        {% endif %}
     {% else %}
         <div class="no-posts">
             <p>No link blog posts yet. Check back soon!</p>

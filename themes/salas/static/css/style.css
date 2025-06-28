@@ -1,3 +1,6 @@
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Telex:wght@400&display=swap');
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -120,6 +123,7 @@ body {
 }
 
 .search-result h4 {
+    font-family: 'Telex', sans-serif;
     margin: 0 0 0.25rem 0;
     font-size: 0.9rem;
 }
@@ -147,6 +151,7 @@ body {
 }
 
 .hero h1 {
+    font-family: 'Telex', sans-serif;
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #333;
@@ -165,6 +170,7 @@ body {
 }
 
 .content-section h2 {
+    font-family: 'Telex', sans-serif;
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #333;
@@ -187,6 +193,7 @@ body {
 }
 
 .post-card h3 {
+    font-family: 'Telex', sans-serif;
     margin-bottom: 0.5rem;
 }
 
@@ -233,6 +240,7 @@ body {
 }
 
 .raindrop-item h4 {
+    font-family: 'Telex', sans-serif;
     margin-bottom: 0.5rem;
 }
 
@@ -275,6 +283,7 @@ body {
 
 .post-content h1, .post-content h2, .post-content h3,
 .raindrop-content h1, .raindrop-content h2, .raindrop-content h3 {
+    font-family: 'Telex', sans-serif;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -433,6 +442,67 @@ body {
     }
 }
 
+/* Pagination styles */
+.pagination-info {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+}
+
+.pagination-link {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #e1e5e9;
+    background: #fff;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pagination-link:hover {
+    background: #f8f9fa;
+    border-color: #007acc;
+    color: #007acc;
+}
+
+.pagination-link.current {
+    background: #007acc;
+    color: #fff;
+    border-color: #007acc;
+    font-weight: bold;
+}
+
+.pagination-link.prev,
+.pagination-link.next {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.pagination-ellipsis {
+    color: #666;
+    padding: 0.5rem 0.25rem;
+}
+
 @media (max-width: 480px) {
     .main {
         padding: 1rem 0.5rem;
@@ -448,5 +518,20 @@ body {
 
     .post-card, .raindrop-item {
         padding: 1rem;
+    }
+    
+    .pagination {
+        gap: 0.25rem;
+    }
+    
+    .pagination-link {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.9rem;
+        min-width: 35px;
+    }
+    
+    .pagination-link.prev,
+    .pagination-link.next {
+        padding: 0.4rem 0.8rem;
     }
 }

@@ -197,30 +197,65 @@ class SiteGenerator:
         print(f"✓ Generated {len(posts)} {content_type} pages")
     
     def generate_listing_pages(self, posts, content_type):
-        """Generate listing pages for blog and raindrops"""
+        """Generate paginated listing pages for blog and raindrops"""
         if content_type == 'pages':
             return  # Pages don't have listing pages
         
+        posts_per_page = 20  # Show 20 posts per page
+        total_posts = len(posts)
+        total_pages = (total_posts + posts_per_page - 1) // posts_per_page  # Ceiling division
+        
         template_name = f"{content_type}_list.html"
-        
-        context = {
-            'posts': posts,
-            'content_type': content_type,
-            'site_title': 'Pito Salas Blog',
-            'navigation': self.get_navigation_items()
-        }
-        
-        html_content = self.render_template(template_name, context)
         
         # Create subdirectory for listing
         output_subdir = self.output_dir / content_type
         output_subdir.mkdir(exist_ok=True)
-        output_file = output_subdir / "index.html"
         
-        with open(output_file, 'w', encoding='utf-8') as f:
-            f.write(html_content)
+        # Generate each page
+        for page_num in range(1, total_pages + 1):
+            start_idx = (page_num - 1) * posts_per_page
+            end_idx = start_idx + posts_per_page
+            page_posts = posts[start_idx:end_idx]
+            
+            # Build pagination context
+            pagination = {
+                'current_page': page_num,
+                'total_pages': total_pages,
+                'has_prev': page_num > 1,
+                'has_next': page_num < total_pages,
+                'prev_url': self._get_page_url(content_type, page_num - 1) if page_num > 1 else None,
+                'next_url': self._get_page_url(content_type, page_num + 1) if page_num < total_pages else None,
+                'page_urls': [self._get_page_url(content_type, p) for p in range(1, total_pages + 1)]
+            }
+            
+            context = {
+                'posts': page_posts,
+                'content_type': content_type,
+                'site_title': 'Pito Salas Blog',
+                'navigation': self.get_navigation_items(),
+                'pagination': pagination,
+                'total_posts': total_posts
+            }
+            
+            html_content = self.render_template(template_name, context)
+            
+            # First page goes to index.html, others to page-N.html
+            if page_num == 1:
+                output_file = output_subdir / "index.html"
+            else:
+                output_file = output_subdir / f"page-{page_num}.html"
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write(html_content)
         
-        print(f"✓ Generated {content_type} listing page")
+        print(f"✓ Generated {content_type} listing pages ({total_pages} pages, {total_posts} posts)")
+    
+    def _get_page_url(self, content_type, page_num):
+        """Get URL for a specific page number"""
+        if page_num == 1:
+            return f"/{content_type}/"
+        else:
+            return f"/{content_type}/page-{page_num}.html"
     
     def get_navigation_items(self):
         """Get navigation items from pages directory"""
