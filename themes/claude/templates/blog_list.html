@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Blog Posts</h1>
+    <p class="page-subtitle">All my blog posts and articles</p>
+    {% if pagination and pagination.total_pages > 1 %}
+    <div class="pagination-info">
+        Page {{ pagination.current_page }} of {{ pagination.total_pages }} 
+        ({{ total_posts }} total posts)
+    </div>
+    {% endif %}
+</div>
+
+<section class="posts-list">
+    {% if posts %}
+        {% set current_month = none %}
+        {% for post in posts %}
+            {% set post_month = post.date | strftime('%B %Y') %}
+            {% if post_month != current_month %}
+                {% set current_month = post_month %}
+                <div class="month-header">
+                    <h2>{{ post_month }}</h2>
+                </div>
+            {% endif %}
+        <article class="post-item">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <div class="post-meta">
+                <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
+                <span class="post-category">{{ post.category }}</span>
+            </div>
+            <p class="post-excerpt">{{ post.excerpt }}</p>
+            <a href="{{ post.url }}" class="read-more">Read more →</a>
+        </article>
+        {% endfor %}
+        
+        {% if pagination and pagination.total_pages > 1 %}
+        <nav class="pagination">
+            {% if pagination.has_prev %}
+                <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
+            {% endif %}
+            
+            <div class="pagination-numbers">
+                {% for page_url in pagination.page_urls %}
+                    {% set loop_index = loop.index %}
+                    {% if loop_index == pagination.current_page %}
+                        <span class="pagination-link current">{{ loop_index }}</span>
+                    {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+                        <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
+                    {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+                        <span class="pagination-ellipsis">…</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            
+            {% if pagination.has_next %}
+                <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
+            {% endif %}
+        </nav>
+        {% endif %}
+    {% else %}
+        <div class="no-posts">
+            <p>No blog posts yet. Check back soon!</p>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}

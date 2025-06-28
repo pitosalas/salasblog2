@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }}{% endblock %} - Salas Blog</title>
+    <meta name="description" content="{% block description %}Personal blog and website{% endblock %}">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/rsd.xml" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="/">Salas Blog</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/raindrops/">Link Blog</a></li>
+                <li class="nav-dropdown">
+                    <a href="/faq/" class="nav-dropdown-toggle">FAQ</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/faq/recommendations/">Recommendations</a></li>
+                        <li><a href="/faq/getting-a-job/">Getting a Job</a></li>
+                        <li><a href="/faq/keeping-up/">Keeping Up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/robots/" class="nav-dropdown-toggle">Robots</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/robots/brh/">BRH</a></li>
+                        <li><a href="/robots/dome/">Dome</a></li>
+                        <li><a href="/robots/articles/">Articles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/brandeis/" class="nav-dropdown-toggle">Brandeis</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/brandeis/teaching/">Teaching</a></li>
+                        <li><a href="/brandeis/research/">Research</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/about/" class="nav-dropdown-toggle">About</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/about/bio/">Bio</a></li>
+                        <li><a href="/about/resume/">Resume</a></li>
+                    </ul>
+                </li>
+                <li class="search-container">
+                    <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
+                    <div id="search-results" class="search-results"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; {{ current_year }} Salas Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
