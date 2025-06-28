@@ -9,15 +9,47 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse, Response
+from contextlib import asynccontextmanager
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
+from .git_sync import start_git_sync_service, stop_git_sync_service, get_git_sync_service
+
+# Global status tracking
+sync_status = {"running": False, "message": "Ready"}
+regen_status = {"running": False, "message": "Ready"}
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Salasblog2", description="Static site generator with API endpoints")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Manage FastAPI lifecycle - start/stop background services."""
+    # Startup
+    logger.info("Starting Salasblog2 server with background Git sync")
+    # Start the background Git sync service in a separate task
+    import asyncio
+    sync_task = asyncio.create_task(start_git_sync_service())
+    
+    yield
+    
+    # Shutdown
+    logger.info("Shutting down Salasblog2 server")
+    await stop_git_sync_service()
+    sync_task.cancel()
+    try:
+        await sync_task
+    except asyncio.CancelledError:
+        pass
+
+
+app = FastAPI(
+    title="Salasblog2", 
+    description="Static site generator with API endpoints and async Git sync",
+    lifespan=lifespan
+)
 
 # Get paths
 root_dir = Path(__file__).parent.parent.parent
@@ -46,33 +78,116 @@ async def serve_admin():
 @app.get("/api/sync-raindrops")
 async def sync_raindrops():
     """Trigger raindrop sync and regenerate site"""
+    import asyncio
+    from concurrent.futures import ThreadPoolExecutor
+    
+    def do_sync():
+        try:
+            sync_status["running"] = True
+            sync_status["message"] = "Downloading raindrops..."
+            
+            # Download new raindrops
+            downloader = RaindropDownloader()
+            new_filenames = downloader.download_raindrops()
+            
+            logger.info(f"Sync result: new_filenames = {new_filenames}")
+            
+            # Only regenerate if there are new raindrops
+            if new_filenames:
+                logger.info(f"Processing {len(new_filenames)} new raindrops")
+                
+                # Check if this is a first sync (no cache) with many files
+                env_timestamp = os.getenv("RAINDROP_LAST_SYNC")
+                cache_file = Path("content/.rd_cache.json")
+                is_first_sync = not env_timestamp and not cache_file.exists()
+                
+                if is_first_sync and len(new_filenames) > 10:
+                    # Full regeneration for first sync with many files
+                    sync_status["message"] = f"First sync: doing full site regeneration for {len(new_filenames)} raindrops..."
+                    logger.info(f"First sync with {len(new_filenames)} files - doing full regeneration")
+                    generator = SiteGenerator()
+                    generator.generate_site()
+                    result = {
+                        "status": "success",
+                        "message": f"First sync: regenerated entire site with {len(new_filenames)} new raindrops"
+                    }
+                else:
+                    # Incremental regeneration for small updates
+                    sync_status["message"] = f"Regenerating {len(new_filenames)} raindrop pages..."
+                    generator = SiteGenerator()
+                    
+                    for i, filename in enumerate(new_filenames, 1):
+                        sync_status["message"] = f"Regenerating {i}/{len(new_filenames)}: {filename[:30]}..."
+                        logger.info(f"Regenerating for: {filename}")
+                        generator.incremental_regenerate_post(filename, 'raindrops')
+                    
+                    result = {
+                        "status": "success",
+                        "message": f"Synced {len(new_filenames)} new raindrops and regenerated pages"
+                    }
+            else:
+                logger.info("No new raindrops found - skipping regeneration")
+                result = {
+                    "status": "success",
+                    "message": "No new raindrops to sync"
+                }
+            
+            sync_status["running"] = False
+            sync_status["message"] = result["message"]
+            return result
+            
+        except Exception as e:
+            sync_status["running"] = False
+            sync_status["message"] = f"Error: {str(e)}"
+            raise
+    
     try:
-        # Download new raindrops
-        downloader = RaindropDownloader()
-        downloader.download_raindrops()
+        # Check if already running
+        if sync_status["running"]:
+            return JSONResponse(content={
+                "status": "running",
+                "message": sync_status["message"]
+            })
         
-        # Regenerate site
-        generator = SiteGenerator()
-        generator.generate_site()
+        # Start async execution in background
+        async def run_sync():
+            loop = asyncio.get_event_loop()
+            await loop.run_in_executor(None, do_sync)
+        
+        asyncio.create_task(run_sync())
         
         return JSONResponse(content={
-            "status": "success",
-            "message": "Raindrops synced and site regenerated"
+            "status": "started",
+            "message": "Raindrop sync started. Check /api/sync-status for progress."
         })
     except Exception as e:
+        sync_status["running"] = False
+        sync_status["message"] = f"Error: {str(e)}"
         raise HTTPException(status_code=500, detail=f"Sync failed: {str(e)}")
+
+@app.get("/api/sync-status")
+async def get_sync_status():
+    """Get current raindrop sync status"""
+    return JSONResponse(content=sync_status)
 
 @app.get("/api/regenerate")
 async def regenerate_site():
     """Regenerate the static site"""
-    try:
+    import asyncio
+    
+    def do_regenerate():
         generator = SiteGenerator()
         generator.generate_site()
-        
-        return JSONResponse(content={
+        return {
             "status": "success", 
             "message": "Site regenerated successfully"
-        })
+        }
+    
+    try:
+        # Run regeneration in a thread pool to avoid blocking other requests
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(None, do_regenerate)
+        return JSONResponse(content=result)
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Regeneration failed: {str(e)}")
 
@@ -119,7 +234,6 @@ async def xmlrpc_endpoint(request: Request):
     try:
         body = await request.body()
         logger.info(f"Received XML-RPC request, body length: {len(body)}")
-        logger.debug(f"Raw XML-RPC body: {body.decode('utf-8')[:500]}...")
         
         # Parse XML-RPC request
         root = ET.fromstring(body.decode('utf-8'))
@@ -135,23 +249,18 @@ async def xmlrpc_endpoint(request: Request):
             if param.find('string') is not None:
                 value = param.find('string').text or ""
                 params.append(value)
-                logger.debug(f"Param {i}: string = '{value[:100]}...'") 
             elif param.find('boolean') is not None:
                 value = param.find('boolean').text == '1'
                 params.append(value)
-                logger.debug(f"Param {i}: boolean = {value}")
             elif param.find('int') is not None:
                 value = int(param.find('int').text)
                 params.append(value)
-                logger.debug(f"Param {i}: int = {value}")
             elif param.find('i4') is not None:
                 value = int(param.find('i4').text)
                 params.append(value)
-                logger.debug(f"Param {i}: i4 = {value}")
             else:
                 value = param.text or ""
                 params.append(value)
-                logger.debug(f"Param {i}: text = '{value[:100]}...'")
         
         # Handle Blogger API methods
         api = BloggerAPI()
@@ -193,9 +302,7 @@ async def xmlrpc_endpoint(request: Request):
         
         # Create XML-RPC response
         logger.info(f"Method {method_name} completed successfully, result type: {type(result)}")
-        logger.debug(f"Result: {str(result)[:200]}...")
         response_xml = create_xmlrpc_response(result)
-        logger.debug(f"XML response length: {len(response_xml)}")
         
         return Response(
             content=response_xml,
@@ -291,6 +398,53 @@ def create_xmlrpc_fault_with_code(fault_code, message):
     </value>
   </fault>
 </methodResponse>"""
+
+@app.get("/api/git-sync/status")
+async def git_sync_status():
+    """Get Git sync service status and pending operations count."""
+    try:
+        git_service = get_git_sync_service()
+        pending_count = git_service.get_pending_operations_count()
+        
+        return JSONResponse({
+            "status": "running" if git_service.is_running else "stopped",
+            "git_initialized": git_service.git_initialized,
+            "pending_operations": pending_count,
+            "sync_interval_seconds": git_service.sync_interval,
+            "max_operations_per_batch": git_service.max_operations_per_batch
+        })
+    except Exception as e:
+        logger.error(f"Failed to get Git sync status: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/git-sync/force")
+async def force_git_sync():
+    """Force immediate Git synchronization of pending operations."""
+    try:
+        git_service = get_git_sync_service()
+        
+        if git_service.get_pending_operations_count() == 0:
+            return JSONResponse({
+                "message": "No pending operations to sync",
+                "pending_operations": 0
+            })
+        
+        # Trigger immediate sync
+        success = git_service.force_sync_now()
+        
+        if success:
+            return JSONResponse({
+                "message": "Git sync triggered successfully",
+                "pending_operations": git_service.get_pending_operations_count()
+            })
+        else:
+            raise HTTPException(status_code=500, detail="Failed to trigger Git sync")
+            
+    except Exception as e:
+        logger.error(f"Failed to force Git sync: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 # Serve all other routes as static files or 404
 @app.get("/{path:path}")

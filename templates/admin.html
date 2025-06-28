@@ -7,11 +7,15 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; }
         .admin-section { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
-        button { padding: 10px 20px; margin: 10px 0; background: #007cba; color: white; border: none; border-radius: 3px; cursor: pointer; }
+        button { padding: 10px 20px; margin: 10px 0; background: #007cba; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; min-width: 140px; }
         button:hover { background: #005a87; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
         .status { margin: 10px 0; padding: 10px; border-radius: 3px; }
         .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
         .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .loading { background: #cce7ff; color: #004085; border: 1px solid #b3d7ff; }
+        .spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid #ccc; border-top: 2px solid #007cba; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 8px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
@@ -20,14 +24,14 @@
     <div class="admin-section">
         <h2>Raindrop Sync</h2>
         <p>Download new bookmarks from Raindrop.io and regenerate the site</p>
-        <button onclick="syncRaindrops()">Sync Raindrops</button>
+        <button id="sync-btn" onclick="syncRaindrops()">Sync Raindrops</button>
         <div id="sync-status"></div>
     </div>
     
     <div class="admin-section">
         <h2>Site Generation</h2>
         <p>Regenerate the static site from markdown files</p>
-        <button onclick="regenerateSite()">Regenerate Site</button>
+        <button id="regen-btn" onclick="regenerateSite()">Regenerate Site</button>
         <div id="regen-status"></div>
     </div>
     
@@ -39,26 +43,77 @@
 
     <script>
         async function syncRaindrops() {
+            const button = document.getElementById('sync-btn');
             const statusDiv = document.getElementById('sync-status');
-            statusDiv.innerHTML = '<div class="status">Syncing raindrops...</div>';
+            
+            // Show loading state
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner"></span>Starting...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Starting raindrop sync...</div>';
             
             try {
+                // Start the sync
                 const response = await fetch('/api/sync-raindrops');
                 const result = await response.json();
                 
-                if (response.ok) {
-                    statusDiv.innerHTML = '<div class="status success">✓ ' + result.message + '</div>';
+                if (response.ok && result.status === 'started') {
+                    // Poll for status updates
+                    pollSyncStatus(button, statusDiv);
+                } else if (result.status === 'running') {
+                    // Already running, start polling
+                    pollSyncStatus(button, statusDiv);
                 } else {
-                    statusDiv.innerHTML = '<div class="status error">✗ ' + result.detail + '</div>';
+                    statusDiv.innerHTML = '<div class="status error">✗ ' + (result.detail || result.message) + '</div>';
+                    button.disabled = false;
+                    button.innerHTML = 'Sync Raindrops';
                 }
             } catch (error) {
                 statusDiv.innerHTML = '<div class="status error">✗ Error: ' + error.message + '</div>';
+                button.disabled = false;
+                button.innerHTML = 'Sync Raindrops';
+            }
+        }
+        
+        async function pollSyncStatus(button, statusDiv) {
+            try {
+                const response = await fetch('/api/sync-status');
+                const status = await response.json();
+                
+                if (status.running) {
+                    // Still running, update status and poll again
+                    button.innerHTML = '<span class="spinner"></span>Syncing...';
+                    statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>' + status.message + '</div>';
+                    setTimeout(() => pollSyncStatus(button, statusDiv), 1000);
+                } else {
+                    // Finished
+                    button.disabled = false;
+                    button.innerHTML = 'Sync Raindrops';
+                    
+                    if (status.message.includes('Error:')) {
+                        statusDiv.innerHTML = '<div class="status error">✗ ' + status.message + '</div>';
+                    } else {
+                        statusDiv.innerHTML = '<div class="status success">✓ ' + status.message + '</div>';
+                        // Auto-clear success message after 5 seconds
+                        setTimeout(() => {
+                            statusDiv.innerHTML = '';
+                        }, 5000);
+                    }
+                }
+            } catch (error) {
+                button.disabled = false;
+                button.innerHTML = 'Sync Raindrops';
+                statusDiv.innerHTML = '<div class="status error">✗ Error checking status: ' + error.message + '</div>';
             }
         }
         
         async function regenerateSite() {
+            const button = document.getElementById('regen-btn');
             const statusDiv = document.getElementById('regen-status');
-            statusDiv.innerHTML = '<div class="status">Regenerating site...</div>';
+            
+            // Show loading state
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner"></span>Regenerating...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Regenerating static site from markdown files...</div>';
             
             try {
                 const response = await fetch('/api/regenerate');
@@ -66,11 +121,19 @@
                 
                 if (response.ok) {
                     statusDiv.innerHTML = '<div class="status success">✓ ' + result.message + '</div>';
+                    // Auto-clear success message after 5 seconds
+                    setTimeout(() => {
+                        statusDiv.innerHTML = '';
+                    }, 5000);
                 } else {
                     statusDiv.innerHTML = '<div class="status error">✗ ' + result.detail + '</div>';
                 }
             } catch (error) {
                 statusDiv.innerHTML = '<div class="status error">✗ Error: ' + error.message + '</div>';
+            } finally {
+                // Restore button state
+                button.disabled = false;
+                button.innerHTML = 'Regenerate Site';
             }
         }
     </script>

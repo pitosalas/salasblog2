@@ -5,11 +5,11 @@ import os
 import sys
 import json
 import requests
-import yaml
 import shutil
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
+from .utils import generate_raindrop_filename, format_raindrop_as_markdown
 
 # Load environment variables from .env file
 load_dotenv()
@@ -24,7 +24,7 @@ class RaindropDownloader:
             "Content-Type": "application/json",
         }
         self.drops_dir = Path("content/raindrops")
-        self.cache_file = Path(".rd_cache.json")
+        self.cache_file = Path("content/.rd_cache.json")  # Store in Git repo for persistence
 
     def authenticate(self):
         if not self.access_token:
@@ -40,21 +40,48 @@ class RaindropDownloader:
         print(f"Authenticated as: {response.json()['user']['fullName']}")
 
     def load_cache(self):
+        # Try to load from environment variable first (persists across restarts)
+        env_timestamp = os.getenv("RAINDROP_LAST_SYNC")
+        if env_timestamp:
+            print(f"Using cached timestamp from environment: {env_timestamp}")
+            return {"last_sync_timestamp": env_timestamp, "downloaded": set()}
+            
         if self.cache_file.exists():
             with open(self.cache_file, "r") as f:
-                return json.load(f)
-        return {"downloaded": set()}
+                cache = json.load(f)
+                # Convert old ID-based cache to new timestamp-based cache
+                if "downloaded" in cache and "last_sync_timestamp" not in cache:
+                    print("Converting old cache format to timestamp-based...")
+                    cache = {"last_sync_timestamp": None, "downloaded": set(cache["downloaded"])}
+                return cache
+        return {"last_sync_timestamp": None, "downloaded": set()}
 
     def save_cache(self, cache):
-        cache["downloaded"] = list(cache["downloaded"])
+        # Create a copy for serialization
+        cache_copy = cache.copy()
+        cache_copy["downloaded"] = list(cache_copy["downloaded"])
         with open(self.cache_file, "w") as f:
-            json.dump(cache, f)
+            json.dump(cache_copy, f, indent=2)
+        
+        # Also save timestamp to environment for backup
+        if cache.get("last_sync_timestamp"):
+            print(f"Cache saved - next sync will fetch raindrops newer than {cache['last_sync_timestamp']}")
 
-    def fetch_raindrops(self, max_items=None):
+    def fetch_raindrops(self, max_items=None, since_timestamp=None):
+        """
+        Fetch raindrops from Raindrop.io API with optional timestamp filtering.
+        
+        Args:
+            max_items: Maximum number of items to fetch (None for all)
+            since_timestamp: ISO timestamp to fetch only newer raindrops (None for all)
+        """
         all_raindrops = []
         page = 0
 
-        print("Fetching raindrops from all collections...")
+        if since_timestamp:
+            print(f"Fetching raindrops since {since_timestamp}...")
+        else:
+            print("Fetching raindrops from all collections...")
 
         while True:
             # Calculate how many items to fetch this page
@@ -68,10 +95,28 @@ class RaindropDownloader:
 
             print(f"  Fetching page {page + 1}...", end=" ")
 
+            # Build API parameters
+            params = {
+                "page": page, 
+                "perpage": perpage,
+                "sort": "-created"  # Sort by creation date, newest first
+            }
+            
+            # Add timestamp filter if provided
+            if since_timestamp:
+                # Convert ISO timestamp to Unix timestamp for API
+                try:
+                    since_dt = datetime.fromisoformat(since_timestamp.replace("Z", "+00:00"))
+                    since_unix = int(since_dt.timestamp())
+                    params["lastUpdate"] = since_unix
+                except Exception as e:
+                    print(f"\\nWarning: Invalid timestamp format {since_timestamp}: {e}")
+                    print("Proceeding without timestamp filter...")
+
             response = requests.get(
                 f"{self.base_url}/raindrops/0",
                 headers=self.headers,
-                params={"page": page, "perpage": perpage},
+                params=params,
             )
 
             if response.status_code != 200:
@@ -86,6 +131,16 @@ class RaindropDownloader:
                 print("(no more items)")
                 break
 
+            # If using timestamp filter, check if we've gone too far back
+            if since_timestamp and raindrops:
+                oldest_in_page = min(raindrops, key=lambda x: x["created"])["created"]
+                if oldest_in_page < since_timestamp:
+                    # Filter out items older than our timestamp
+                    filtered_raindrops = [r for r in raindrops if r["created"] >= since_timestamp]
+                    print(f"got {len(filtered_raindrops)} new items (filtered from {len(raindrops)})")
+                    all_raindrops.extend(filtered_raindrops)
+                    break  # No need to fetch more pages
+                    
             print(f"got {len(raindrops)} items")
             all_raindrops.extend(raindrops)
             page += 1
@@ -100,47 +155,7 @@ class RaindropDownloader:
     def create_raindrops_directory(self):
         self.drops_dir.mkdir(exist_ok=True)
 
-    def generate_filename(self, raindrop, counter):
-        created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
-        date_str = created.strftime("%y-%m-%d")
 
-        # Get title and clean it for filename
-        title = raindrop.get("title", "Untitled")[:30]
-        # Replace characters that aren't filename-safe
-        safe_title = "".join(
-            c for c in title if c.isalnum() or c in (" ", "-", "_")
-        ).strip()
-        safe_title = safe_title.replace(" ", "-")
-
-        return f"{date_str}-{counter}-{safe_title}.md"
-
-    def format_as_markdown(self, raindrop):
-        created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
-
-        # Format tags as space-separated string to match existing raindrop format
-        tags = raindrop.get("tags", [])
-        tags_str = " ".join(tags) if tags else ""
-
-        frontmatter = {
-            "date": created.isoformat(),
-            "excerpt": raindrop.get("excerpt", ""),
-            "tags": [tags_str] if tags_str else [],
-            "title": raindrop.get("title", "Untitled"),
-            "type": "drop", 
-            "url": raindrop.get("link", ""),
-        }
-
-        yaml_content = yaml.dump(frontmatter, default_flow_style=False)
-
-        content = f"---\\n{yaml_content}---\\n\\n# {raindrop.get('title', 'Untitled')}\\n\\n**URL:** {raindrop.get('link', '')}\\n"
-
-        if raindrop.get("excerpt"):
-            content += f"\\n**Excerpt:** {raindrop['excerpt']}\\n"
-
-        if raindrop.get("note"):
-            content += f"\\n**Notes:**\\n{raindrop['note']}\\n"
-
-        return content
 
     def reset_data(self):
         """Delete all raindrops and cache to start fresh"""
@@ -167,51 +182,92 @@ class RaindropDownloader:
 
         if reset:
             # If reset, fetch only what we need and start with empty cache
-            print("Fetching raindrops...")
+            print("Reset mode: Rebuilding raindrops from scratch...")
             raindrops = self.fetch_raindrops(max_items=count)
             new_drops = raindrops
             downloaded_ids = set()  # Start with empty cache
             print(f"Rebuilding {len(new_drops)} raindrops")
         else:
-            # Normal mode - fetch more to account for already downloaded items
-            print("Fetching raindrops...")
-            fetch_limit = (
-                count * 3 if count else None
-            )  # Fetch extra to account for duplicates
-            raindrops = self.fetch_raindrops(max_items=fetch_limit)
+            # Incremental mode - use timestamp-based filtering
+            last_sync = cache.get("last_sync_timestamp")
+            
+            if last_sync:
+                print(f"Incremental sync mode: fetching raindrops since {last_sync}")
+                # Fetch only new raindrops since last sync
+                raindrops = self.fetch_raindrops(max_items=count, since_timestamp=last_sync)
+                
+                # No need to check downloaded_ids since we're using timestamp filtering
+                new_drops = raindrops
+                downloaded_ids = set(cache.get("downloaded", []))
+                
+                if not new_drops:
+                    print("No new raindrops since last sync")
+                    return []
+                    
+                print(f"Found {len(new_drops)} new raindrops since last sync")
+            else:
+                print("First sync: fetching recent raindrops...")
+                # First time sync - fetch recent items and use ID-based deduplication as fallback
+                fetch_limit = count * 2 if count else 100  # Reasonable default for first sync
+                raindrops = self.fetch_raindrops(max_items=fetch_limit)
+                
+                downloaded_ids = set(cache.get("downloaded", []))
+                new_drops = [r for r in raindrops if str(r["_id"]) not in downloaded_ids]
+                
+                if not new_drops:
+                    print("No new raindrops to download")
+                    return []
+                    
+                print(f"Found {len(new_drops)} new raindrops")
+                
+                # Limit the number of drops if count is specified
+                if count is not None and count > 0:
+                    new_drops = new_drops[:count]
+                    print(f"Limiting to first {len(new_drops)} raindrops")
 
-            downloaded_ids = set(cache["downloaded"])
-            new_drops = [r for r in raindrops if str(r["_id"]) not in downloaded_ids]
+        # Track the newest timestamp for next incremental sync
+        newest_timestamp = None
+        if new_drops:
+            newest_timestamp = max(drop["created"] for drop in new_drops)
 
-            if not new_drops:
-                print("No new raindrops to download")
-                return
-
-            print(f"Found {len(new_drops)} new raindrops")
-
-            # Limit the number of drops if count is specified
-            if count is not None and count > 0:
-                new_drops = new_drops[:count]
-                print(f"Limiting to first {len(new_drops)} raindrops")
-
+        # Track created filenames for incremental regeneration
+        created_filenames = []
         counter = 1
         for i, raindrop in enumerate(new_drops, 1):
-            filename = self.generate_filename(raindrop, counter)
+            filename = generate_raindrop_filename(raindrop, counter)
             filepath = self.drops_dir / filename
 
             print(
                 f"  [{i}/{len(new_drops)}] Writing: {filename} - {raindrop.get('title', 'Untitled')[:50]}..."
             )
 
-            markdown_content = self.format_as_markdown(raindrop)
+            markdown_content = format_raindrop_as_markdown(raindrop)
 
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(markdown_content)
 
             downloaded_ids.add(str(raindrop["_id"]))
+            created_filenames.append(filename)
             counter += 1
 
+        # Update cache with new timestamp and IDs
         cache["downloaded"] = downloaded_ids
+        if newest_timestamp:
+            cache["last_sync_timestamp"] = newest_timestamp
+            print(f"Updated last sync timestamp to: {newest_timestamp}")
+        elif reset or not cache.get("last_sync_timestamp"):
+            # For first sync or reset, set timestamp to now to prevent re-downloading
+            from datetime import datetime
+            cache["last_sync_timestamp"] = datetime.now().isoformat() + "Z"
+            print(f"Set initial timestamp to: {cache['last_sync_timestamp']}")
+            
         self.save_cache(cache)
 
         print(f"Downloaded {len(new_drops)} raindrops to {self.drops_dir}")
+        
+        # Performance info
+        if cache.get("last_sync_timestamp"):
+            print(f"Next sync will only fetch raindrops newer than {cache['last_sync_timestamp']}")
+            
+        # Return list of created filenames for incremental regeneration
+        return created_filenames

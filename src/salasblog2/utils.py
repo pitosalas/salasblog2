@@ -2,6 +2,7 @@
 Pure utility functions for content processing and site generation.
 These functions are completely independent and reusable.
 """
+import re
 import markdown
 import frontmatter
 import yaml
@@ -120,7 +121,7 @@ def get_markdown_processor():
     """Get or create the singleton markdown processor."""
     global _md_processor
     if _md_processor is None:
-        _md_processor = markdown.Markdown(extensions=['meta', 'codehilite', 'toc'])
+        _md_processor = markdown.Markdown(extensions=['meta', 'toc'])
     return _md_processor
 
 def process_markdown_to_html(content: str) -> str:
@@ -310,3 +311,100 @@ def safe_get_filename_stem(file_path: Path) -> str:
         'complex-name'
     """
     return file_path.stem
+
+
+def create_filename_from_title(title: str) -> str:
+    """
+    Create a safe filename from post title with current date prefix.
+    
+    Args:
+        title: Post title to convert to filename
+        
+    Returns:
+        Safe filename with date prefix and .md extension
+        
+    Examples:
+        >>> create_filename_from_title("My Test Post!")
+        '2025-06-28-my-test-post.md'
+    """
+    # Remove special characters and convert to lowercase
+    safe_title = re.sub(r'[^\w\s-]', '', title.lower())
+    safe_title = re.sub(r'[-\s]+', '-', safe_title)
+    
+    # Add date prefix
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    return f"{date_str}-{safe_title}.md"
+
+
+def generate_raindrop_filename(raindrop: Dict[str, Any], counter: int) -> str:
+    """
+    Create markdown filename from raindrop data and counter.
+    
+    Args:
+        raindrop: Dictionary containing raindrop data with 'created' and 'title'
+        counter: Counter for uniqueness
+        
+    Returns:
+        Safe filename for raindrop markdown file
+        
+    Examples:
+        >>> raindrop = {"created": "2025-06-28T10:00:00Z", "title": "Test Bookmark"}
+        >>> generate_raindrop_filename(raindrop, 1)
+        '25-06-28-1-Test-Bookmark.md'
+    """
+    created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
+    date_str = created.strftime("%y-%m-%d")
+
+    # Get title and clean it for filename
+    title = raindrop.get("title", "Untitled")[:30]
+    # Replace characters that aren't filename-safe
+    safe_title = "".join(
+        c for c in title if c.isalnum() or c in (" ", "-", "_")
+    ).strip()
+    safe_title = safe_title.replace(" ", "-")
+
+    return f"{date_str}-{counter}-{safe_title}.md"
+
+
+def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
+    """
+    Convert raindrop data to markdown with YAML frontmatter.
+    
+    Args:
+        raindrop: Dictionary containing raindrop data
+        
+    Returns:
+        Formatted markdown content with frontmatter
+        
+    Examples:
+        >>> raindrop = {"created": "2025-06-28T10:00:00Z", "title": "Test", "link": "https://example.com"}
+        >>> markdown = format_raindrop_as_markdown(raindrop)
+        >>> "---" in markdown
+        True
+    """
+    created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
+
+    # Format tags as space-separated string to match existing raindrop format
+    tags = raindrop.get("tags", [])
+    tags_str = " ".join(tags) if tags else ""
+
+    frontmatter_data = {
+        "date": created.isoformat(),
+        "excerpt": raindrop.get("excerpt", ""),
+        "tags": [tags_str] if tags_str else [],
+        "title": raindrop.get("title", "Untitled"),
+        "type": "drop", 
+        "url": raindrop.get("link", ""),
+    }
+
+    yaml_content = yaml.dump(frontmatter_data, default_flow_style=False)
+
+    content = f"---\n{yaml_content}---\n\n# {raindrop.get('title', 'Untitled')}\n\n**URL:** {raindrop.get('link', '')}\n"
+
+    if raindrop.get("excerpt"):
+        content += f"\n**Excerpt:** {raindrop['excerpt']}\n"
+
+    if raindrop.get("note"):
+        content += f"\n**Notes:**\n{raindrop['note']}\n"
+
+    return content
