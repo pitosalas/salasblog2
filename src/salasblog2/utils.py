@@ -37,12 +37,35 @@ def format_date(date_str: Optional[str], format_str: str = '%B %d, %Y') -> str:
     
     try:
         if isinstance(date_str, str):
-            # Try to parse ISO format YYYY-MM-DD
-            date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+            # Handle ISO datetime format first
+            if 'T' in date_str:
+                date_obj = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+            else:
+                # Try to parse ISO format YYYY-MM-DD
+                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
             return date_obj.strftime(format_str)
         return str(date_str)
     except (ValueError, TypeError):
         return str(date_str) if date_str else ''
+
+
+def format_date_dd_mm_yyyy(date_str: Optional[str]) -> str:
+    """
+    Format a date string as dd-mm-yyyy.
+    
+    Args:
+        date_str: Date string in various formats
+        
+    Returns:
+        Formatted date string in dd-mm-yyyy format, or empty string if invalid
+        
+    Examples:
+        >>> format_date_dd_mm_yyyy("2025-01-15")
+        '15-01-2025'
+        >>> format_date_dd_mm_yyyy("2025-01-15T10:30:00Z")
+        '15-01-2025'
+    """
+    return format_date(date_str, '%d-%m-%Y')
 
 
 def create_excerpt(content: str, max_length: int = 150) -> str:
@@ -273,6 +296,49 @@ def sort_posts_by_date(posts: List[Dict[str, Any]], reverse: bool = True) -> Lis
     return sorted(posts, key=lambda post: parse_date_for_sorting(post.get('date')), reverse=reverse)
 
 
+def group_posts_by_month(posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Group posts by month and year.
+    
+    Args:
+        posts: List of post dictionaries with 'date' key (assumed to be sorted)
+        
+    Returns:
+        List of dictionaries with 'month_year', 'month_name', and 'posts' keys
+        
+    Examples:
+        >>> posts = [{'date': '2025-01-15', 'title': 'Post 1'}, {'date': '2025-01-10', 'title': 'Post 2'}]
+        >>> grouped = group_posts_by_month(posts)
+        >>> grouped[0]['month_name']
+        'January 2025'
+    """
+    if not posts:
+        return []
+    
+    groups = []
+    current_group = None
+    
+    for post in posts:
+        post_date = parse_date_for_sorting(post.get('date'))
+        if post_date == datetime.min:
+            continue
+            
+        month_year = post_date.strftime('%Y-%m')
+        month_name = post_date.strftime('%B %Y')
+        
+        if current_group is None or current_group['month_year'] != month_year:
+            current_group = {
+                'month_year': month_year,
+                'month_name': month_name,
+                'posts': []
+            }
+            groups.append(current_group)
+        
+        current_group['posts'].append(post)
+    
+    return groups
+
+
 def load_markdown_files_from_directory(directory_path: Path) -> List[Path]:
     """
     Get all markdown files from a directory.
@@ -383,28 +449,86 @@ def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
         True
     """
     created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
+    
+    # Parse lastUpdate if available
+    last_update = None
+    if raindrop.get("lastUpdate"):
+        try:
+            last_update = datetime.fromisoformat(raindrop["lastUpdate"].replace("Z", "+00:00")).isoformat()
+        except:
+            last_update = raindrop.get("lastUpdate")
 
     # Format tags as space-separated string to match existing raindrop format
     tags = raindrop.get("tags", [])
     tags_str = " ".join(tags) if tags else ""
 
+    # Build comprehensive frontmatter with all available fields
     frontmatter_data = {
+        # Core fields (existing)
         "date": created.isoformat(),
         "excerpt": raindrop.get("excerpt", ""),
         "tags": [tags_str] if tags_str else [],
         "title": raindrop.get("title", "Untitled"),
         "type": "drop", 
         "url": raindrop.get("link", ""),
+        
+        # Additional API fields
+        "raindrop_id": raindrop.get("_id"),
+        "raindrop_type": raindrop.get("type", ""),
+        "domain": raindrop.get("domain", ""),
+        "cover": raindrop.get("cover", ""),
+        "important": raindrop.get("important", False),
+        "broken": raindrop.get("broken", False),
+        "last_update": last_update,
+        
+        # Collection info
+        "collection_id": raindrop.get("collection", {}).get("$id") if raindrop.get("collection") else None,
+        
+        # User info
+        "user_id": raindrop.get("user", {}).get("$id") if raindrop.get("user") else None,
+        
+        # Media/covers
+        "media": raindrop.get("media", []),
+        
+        # Advanced features
+        "highlights": raindrop.get("highlights", []),
+        "creator_ref": raindrop.get("creatorRef"),
+        "file": raindrop.get("file"),
+        "cache": raindrop.get("cache"),
+        "reminder": raindrop.get("reminder"),
     }
+    
+    # Remove None values to keep frontmatter clean
+    frontmatter_data = {k: v for k, v in frontmatter_data.items() if v is not None and v != "" and v != []}
 
     yaml_content = yaml.dump(frontmatter_data, default_flow_style=False)
 
     content = f"---\n{yaml_content}---\n\n# {raindrop.get('title', 'Untitled')}\n\n**URL:** {raindrop.get('link', '')}\n"
+
+    # Add type and domain info if available
+    if raindrop.get("type"):
+        content += f"**Type:** {raindrop['type']}\n"
+    if raindrop.get("domain"):
+        content += f"**Domain:** {raindrop['domain']}\n"
 
     if raindrop.get("excerpt"):
         content += f"\n**Excerpt:** {raindrop['excerpt']}\n"
 
     if raindrop.get("note"):
         content += f"\n**Notes:**\n{raindrop['note']}\n"
+        
+    # Add highlights if available
+    if raindrop.get("highlights"):
+        content += f"\n**Highlights:**\n"
+        for highlight in raindrop["highlights"]:
+            content += f"- {highlight}\n"
+            
+    # Add important marker
+    if raindrop.get("important"):
+        content += f"\n⭐ **Marked as Important**\n"
+        
+    # Add broken link warning
+    if raindrop.get("broken"):
+        content += f"\n⚠️ **Warning: Link may be broken**\n"
 
     return content

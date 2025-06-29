@@ -67,7 +67,7 @@ async def serve_home():
         return HTMLResponse(content=home_file.read_text(encoding='utf-8'))
     raise HTTPException(status_code=404, detail="Site not generated yet")
 
-@app.get("/admin")
+@app.get("/whyaskwhy")
 async def serve_admin():
     """Serve the admin page"""
     admin_file = root_dir / "templates" / "admin.html"

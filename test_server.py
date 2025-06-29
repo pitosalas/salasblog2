@@ -28,7 +28,7 @@ def test_endpoints():
     # Test 2: Admin page
     print("2. Testing admin page...")
     try:
-        response = requests.get(f"{base_url}/admin", timeout=5)
+        response = requests.get(f"{base_url}/whyaskwhy", timeout=5)
         if response.status_code == 200 and "Salasblog2 Admin" in response.text:
             print("   ✅ Admin page loads correctly")
         else:

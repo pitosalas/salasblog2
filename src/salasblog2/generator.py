@@ -13,19 +13,21 @@ from jinja2 import Environment, FileSystemLoader
 
 from .utils import (
     format_date,
+    format_date_dd_mm_yyyy,
     create_excerpt,
     parse_date_for_sorting,
     process_markdown_to_html,
     parse_frontmatter_file,
     generate_url_from_filename,
     sort_posts_by_date,
+    group_posts_by_month,
     load_markdown_files_from_directory,
     safe_get_filename_stem
 )
 
 
 class SiteGenerator:
-    def __init__(self, theme="winer"):
+    def __init__(self, theme="claude"):
         self.root_dir = Path.cwd()
         self.content_dir = self.root_dir / "content"
         self.blog_dir = self.content_dir / "blog"
@@ -48,6 +50,8 @@ class SiteGenerator:
         # Initialize Jinja2 environment
         self.jinja_env = Environment(loader=FileSystemLoader(self.templates_dir))
         self.jinja_env.filters['strftime'] = self.format_date
+        self.jinja_env.filters['dd_mm_yyyy'] = format_date_dd_mm_yyyy
+        self.jinja_env.filters['group_by_month'] = group_posts_by_month
         self.markdown_processor = markdown.Markdown(extensions=['meta', 'codehilite', 'toc'])
     
     def format_date(self, date_str, format_str='%B %d, %Y'):
@@ -86,8 +90,41 @@ class SiteGenerator:
                     'url': generate_url_from_filename(filename, content_type)
                 }
                 
-                # Create excerpt from content
-                post_data['excerpt'] = create_excerpt(parsed['content'])
+                # Add raindrop-specific fields if they exist
+                if content_type == 'raindrops':
+                    # Extract notes from content if not in frontmatter
+                    note = parsed['metadata'].get('note', '')
+                    if not note and '**Notes:**' in parsed['content']:
+                        # Extract notes from content
+                        lines = parsed['content'].split('\n')
+                        note_start = False
+                        note_lines = []
+                        for line in lines:
+                            if line.strip() == '**Notes:**':
+                                note_start = True
+                                continue
+                            elif note_start and line.strip().startswith('**') and line.strip().endswith('**'):
+                                # Hit another section, stop collecting notes
+                                break
+                            elif note_start:
+                                note_lines.append(line)
+                        note = '\n'.join(note_lines).strip()
+                    
+                    post_data.update({
+                        'cover': parsed['metadata'].get('cover', ''),
+                        'domain': parsed['metadata'].get('domain', ''),
+                        'media': parsed['metadata'].get('media', []),
+                        'raindrop_type': parsed['metadata'].get('raindrop_type', ''),
+                        'important': parsed['metadata'].get('important', False),
+                        'broken': parsed['metadata'].get('broken', False),
+                        'tags': parsed['metadata'].get('tags', []),
+                        'raindrop_url': parsed['metadata'].get('url', ''),  # Original URL
+                        'note': note
+                    })
+                
+                # Create excerpt - prefer frontmatter excerpt, fallback to content
+                frontmatter_excerpt = parsed['metadata'].get('excerpt', '')
+                post_data['excerpt'] = frontmatter_excerpt if frontmatter_excerpt else create_excerpt(parsed['content'])
                 
                 posts.append(post_data)
                 

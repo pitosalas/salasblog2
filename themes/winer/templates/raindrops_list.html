@@ -11,18 +11,69 @@
     </div>
     {% endif %}
     
-    {% for post in posts %}
-    <article class="raindrop">
-        <div class="raindrop-date">{{ post.date | strftime('%m/%d/%Y') }}</div>
-        <h3 class="raindrop-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-        <div class="raindrop-content">{{ post.excerpt }}</div>
-    </article>
-    {% endfor %}
-    
     {% if posts|length == 0 %}
     <div style="text-align: center; color: #666; font-style: italic;">
         No link blog posts found.
     </div>
+    {% else %}
+    
+    {% set grouped_posts = posts | group_by_month %}
+    {% for month_group in grouped_posts %}
+    <section class="month-group">
+        <h2 class="month-header">{{ month_group.month_name }}</h2>
+        
+        {% for post in month_group.posts %}
+        <article class="raindrop">
+            <div class="raindrop-header">
+                <div class="raindrop-date">{{ post.date | dd_mm_yyyy }}</div>
+                {% if post.important %}
+                <span class="raindrop-important">⭐</span>
+                {% endif %}
+                {% if post.broken %}
+                <span class="raindrop-broken">⚠️</span>
+                {% endif %}
+            </div>
+            
+            <div class="raindrop-content">
+                {% if post.cover %}
+                <div class="raindrop-image">
+                    <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy" />
+                </div>
+                {% endif %}
+                
+                <div class="raindrop-text">
+                    <h3 class="raindrop-title">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h3>
+                    
+                    {% if post.domain %}
+                    <div class="raindrop-domain">
+                        <strong>Source:</strong> {{ post.domain }}
+                    </div>
+                    {% endif %}
+                    
+                    {% if post.excerpt %}
+                    <div class="raindrop-excerpt">{{ post.excerpt }}</div>
+                    {% endif %}
+                    
+                    {% if post.raindrop_url %}
+                    <div class="raindrop-url">
+                        <strong>URL:</strong> <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener">{{ post.raindrop_url }}</a>
+                    </div>
+                    {% endif %}
+                    
+                    {% if post.tags and post.tags[0] %}
+                    <div class="raindrop-tags">
+                        <strong>Tags:</strong> {{ post.tags[0] }}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </article>
+        {% endfor %}
+    </section>
+    {% endfor %}
+    
     {% endif %}
     
     {% if pagination and pagination.total_pages > 1 %}
@@ -50,4 +101,114 @@
     </nav>
     {% endif %}
 </div>
+
+<style>
+.month-group {
+    margin-bottom: 2em;
+}
+
+.month-header {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+.raindrop {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.raindrop-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.raindrop-date {
+    font-size: 0.9em;
+    color: #666;
+    font-weight: bold;
+}
+
+.raindrop-important, .raindrop-broken {
+    font-size: 1.2em;
+}
+
+.raindrop-content {
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+}
+
+.raindrop-image {
+    flex-shrink: 0;
+    width: 120px;
+}
+
+.raindrop-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.raindrop-text {
+    flex: 1;
+}
+
+.raindrop-title {
+    margin: 0 0 0.5em 0;
+    font-size: 1.1em;
+}
+
+.raindrop-title a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.raindrop-title a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.raindrop-domain, .raindrop-excerpt, .raindrop-url, .raindrop-tags {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+
+.raindrop-domain {
+    color: #666;
+}
+
+.raindrop-excerpt {
+    color: #444;
+    line-height: 1.4;
+}
+
+.raindrop-url a {
+    color: #3498db;
+    word-break: break-all;
+}
+
+.raindrop-tags {
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .raindrop-content {
+        flex-direction: column;
+    }
+    
+    .raindrop-image {
+        width: 100%;
+    }
+}
+</style>
 {% endblock %}

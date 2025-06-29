@@ -80,7 +80,7 @@ def main():
     
     # Generate command
     generate_parser = subparsers.add_parser('generate', help='Generate static site')
-    generate_parser.add_argument('--theme', default='winer', 
+    generate_parser.add_argument('--theme', default='claude', 
                                 help='Theme to use for site generation')
     generate_parser.set_defaults(func=cmd_generate)
     
