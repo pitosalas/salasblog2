@@ -29,13 +29,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-.venv/
-
-# UV
-.python-version
-
-# Generated site output
-output/
 
 # IDE
 .vscode/
@@ -53,13 +46,24 @@ output/
 ehthumbs.db
 Thumbs.db
 
+# Generated output
+output/
+
 # Logs
 *.log
+logs/
 
 # Temporary files
-*.tmp
-*.temp
+tmp/
+temp/
+.tmp
 
-# Backup files
-*.bak
-*.backup
+# Environment variables
+.env.local
+.env.production
+
+# Fly.io
+.fly/
+
+# Git credentials (if accidentally created)
+.git-credentials

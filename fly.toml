@@ -10,6 +10,9 @@ primary_region = 'bos'
 
 [env]
   PORT = '8080'
+  # Git configuration for manual operations
+  GIT_EMAIL = 'blog-api@salasblog2.com'
+  GIT_NAME = 'Salasblog2 Server'
 
 [mounts]
   source = "blog_data"
