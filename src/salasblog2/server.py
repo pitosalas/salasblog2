@@ -13,7 +13,7 @@ from contextlib import asynccontextmanager
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
-from .git_sync import start_git_sync_service, stop_git_sync_service, get_git_sync_service
+# from .git_sync import start_git_sync_service, stop_git_sync_service, get_git_sync_service  # DISABLED: Git integration disabled
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -24,25 +24,73 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 
+def _check_single_instance():
+    """Check if this is the only instance running and error if not."""
+    import os
+    import subprocess
+    
+    # Only check on Fly.io (has FLY_APP_NAME environment variable)
+    if not os.getenv('FLY_APP_NAME'):
+        logger.info("Not running on Fly.io, skipping instance check")
+        return
+    
+    try:
+        # Get list of machines for this app
+        result = subprocess.run(
+            ['fly', 'machines', 'list', '--json'],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+        
+        if result.returncode == 0:
+            import json
+            machines = json.loads(result.stdout)
+            
+            # Count running machines
+            running_machines = [m for m in machines if m.get('state') == 'started']
+            
+            if len(running_machines) > 1:
+                machine_ids = [m.get('id', 'unknown') for m in running_machines]
+                error_msg = f"CRITICAL: Multiple instances detected! Running machines: {machine_ids}. This app requires exactly 1 machine for data consistency."
+                logger.error(error_msg)
+                raise RuntimeError(error_msg)
+            else:
+                logger.info(f"Single instance check passed: {len(running_machines)} machine(s) running")
+        else:
+            logger.warning(f"Could not check machine count: {result.stderr}")
+            
+    except subprocess.TimeoutExpired:
+        logger.warning("Timeout checking machine count")
+    except FileNotFoundError:
+        logger.warning("fly CLI not available, cannot check machine count")
+    except Exception as e:
+        logger.warning(f"Error checking machine count: {e}")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Manage FastAPI lifecycle - start/stop background services."""
     # Startup
-    logger.info("Starting Salasblog2 server with background Git sync")
+    logger.info("Starting Salasblog2 server")
+    
+    # Check if we're the only instance running
+    _check_single_instance()
+    
     # Start the background Git sync service in a separate task
     import asyncio
-    sync_task = asyncio.create_task(start_git_sync_service())
+    # sync_task = asyncio.create_task(start_git_sync_service())  # DISABLED: Git integration disabled
     
     yield
     
     # Shutdown
     logger.info("Shutting down Salasblog2 server")
-    await stop_git_sync_service()
-    sync_task.cancel()
-    try:
-        await sync_task
-    except asyncio.CancelledError:
-        pass
+    # await stop_git_sync_service()  # DISABLED: Git integration disabled
+    # sync_task.cancel()  # DISABLED: Git integration disabled
+    # try:
+    #     await sync_task
+    # except asyncio.CancelledError:
+    #     pass
 
 
 app = FastAPI(
@@ -402,48 +450,23 @@ def create_xmlrpc_fault_with_code(fault_code, message):
 @app.get("/api/git-sync/status")
 async def git_sync_status():
     """Get Git sync service status and pending operations count."""
-    try:
-        git_service = get_git_sync_service()
-        pending_count = git_service.get_pending_operations_count()
-        
-        return JSONResponse({
-            "status": "running" if git_service.is_running else "stopped",
-            "git_initialized": git_service.git_initialized,
-            "pending_operations": pending_count,
-            "sync_interval_seconds": git_service.sync_interval,
-            "max_operations_per_batch": git_service.max_operations_per_batch
-        })
-    except Exception as e:
-        logger.error(f"Failed to get Git sync status: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    # DISABLED: Git integration disabled due to safety concerns
+    return JSONResponse({
+        "status": "disabled",
+        "git_initialized": False,
+        "pending_operations": 0,
+        "message": "Git integration has been disabled for safety reasons"
+    })
 
 
 @app.post("/api/git-sync/force")
 async def force_git_sync():
     """Force immediate Git synchronization of pending operations."""
-    try:
-        git_service = get_git_sync_service()
-        
-        if git_service.get_pending_operations_count() == 0:
-            return JSONResponse({
-                "message": "No pending operations to sync",
-                "pending_operations": 0
-            })
-        
-        # Trigger immediate sync
-        success = git_service.force_sync_now()
-        
-        if success:
-            return JSONResponse({
-                "message": "Git sync triggered successfully",
-                "pending_operations": git_service.get_pending_operations_count()
-            })
-        else:
-            raise HTTPException(status_code=500, detail="Failed to trigger Git sync")
-            
-    except Exception as e:
-        logger.error(f"Failed to force Git sync: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    # DISABLED: Git integration disabled due to safety concerns
+    return JSONResponse({
+        "message": "Git sync is disabled for safety reasons",
+        "status": "disabled"
+    })
 
 
 # Serve all other routes as static files or 404
