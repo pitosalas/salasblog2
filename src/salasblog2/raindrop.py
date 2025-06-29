@@ -24,7 +24,7 @@ class RaindropDownloader:
             "Content-Type": "application/json",
         }
         self.drops_dir = Path("content/raindrops")
-        self.cache_file = Path("content/.rd_cache.json")  # Store in Git repo for persistence
+        self.cache_file = Path("content/.rd_cache.json")
 
     def authenticate(self):
         if not self.access_token:

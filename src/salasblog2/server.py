@@ -13,7 +13,6 @@ from contextlib import asynccontextmanager
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
-# from .git_sync import start_git_sync_service, stop_git_sync_service, get_git_sync_service  # DISABLED: Git integration disabled
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -68,6 +67,67 @@ def _check_single_instance():
         logger.warning(f"Error checking machine count: {e}")
 
 
+def _setup_persistent_storage():
+    """Setup persistent storage by copying content to volume if needed."""
+    import shutil
+    from pathlib import Path
+    
+    # Paths
+    volume_path = Path('/data')
+    volume_content = volume_path / 'content'
+    app_content = Path('/app/content')
+    
+    # Only proceed if we have a mounted volume
+    if not volume_path.exists():
+        logger.info("No persistent volume detected, using ephemeral storage")
+        return
+        
+    logger.info("Persistent volume detected, setting up storage")
+    
+    # Create volume content directory if it doesn't exist
+    volume_content.mkdir(parents=True, exist_ok=True)
+    
+    # Copy initial content if volume is empty and app has content
+    if not any(volume_content.iterdir()) and app_content.exists():
+        logger.info("Volume is empty, copying initial content from app")
+        try:
+            # Copy all subdirectories from app content to volume content
+            for item in app_content.iterdir():
+                if item.is_dir():
+                    dest = volume_content / item.name
+                    if not dest.exists():
+                        shutil.copytree(item, dest)
+                        logger.info(f"Copied {item.name}/ to volume")
+                elif item.is_file():
+                    dest = volume_content / item.name
+                    if not dest.exists():
+                        shutil.copy2(item, dest)
+                        logger.info(f"Copied {item.name} to volume")
+        except Exception as e:
+            logger.error(f"Failed to copy content to volume: {e}")
+            return
+            
+    # Create symlink so app uses volume content
+    try:
+        # Remove existing app content if it's not already a symlink
+        if app_content.exists() and not app_content.is_symlink():
+            shutil.rmtree(app_content)
+            
+        # Create symlink from app content to volume content
+        if not app_content.exists():
+            app_content.symlink_to('/data/content')
+            logger.info("Created symlink: /app/content -> /data/content")
+            
+    except Exception as e:
+        logger.error(f"Failed to create content symlink: {e}")
+        
+    # Verify the setup
+    if app_content.is_symlink() and app_content.resolve() == volume_content:
+        logger.info("Persistent storage setup completed successfully")
+    else:
+        logger.warning("Persistent storage setup may have failed")
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Manage FastAPI lifecycle - start/stop background services."""
@@ -77,25 +137,20 @@ async def lifespan(app: FastAPI):
     # Check if we're the only instance running
     _check_single_instance()
     
-    # Start the background Git sync service in a separate task
+    # Setup persistent storage
+    _setup_persistent_storage()
+    
     import asyncio
-    # sync_task = asyncio.create_task(start_git_sync_service())  # DISABLED: Git integration disabled
     
     yield
     
     # Shutdown
     logger.info("Shutting down Salasblog2 server")
-    # await stop_git_sync_service()  # DISABLED: Git integration disabled
-    # sync_task.cancel()  # DISABLED: Git integration disabled
-    # try:
-    #     await sync_task
-    # except asyncio.CancelledError:
-    #     pass
 
 
 app = FastAPI(
     title="Salasblog2", 
-    description="Static site generator with API endpoints and async Git sync",
+    description="Static site generator with API endpoints",
     lifespan=lifespan
 )
 
@@ -447,26 +502,6 @@ def create_xmlrpc_fault_with_code(fault_code, message):
   </fault>
 </methodResponse>"""
 
-@app.get("/api/git-sync/status")
-async def git_sync_status():
-    """Get Git sync service status and pending operations count."""
-    # DISABLED: Git integration disabled due to safety concerns
-    return JSONResponse({
-        "status": "disabled",
-        "git_initialized": False,
-        "pending_operations": 0,
-        "message": "Git integration has been disabled for safety reasons"
-    })
-
-
-@app.post("/api/git-sync/force")
-async def force_git_sync():
-    """Force immediate Git synchronization of pending operations."""
-    # DISABLED: Git integration disabled due to safety concerns
-    return JSONResponse({
-        "message": "Git sync is disabled for safety reasons",
-        "status": "disabled"
-    })
 
 
 # Serve all other routes as static files or 404

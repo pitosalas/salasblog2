@@ -10,9 +10,10 @@ primary_region = 'bos'
 
 [env]
   PORT = '8080'
-  # Git configuration for blog post persistence
-  GIT_EMAIL = 'blog-api@salasblog2.com'
-  GIT_NAME = 'Salasblog2 API'
+
+[mounts]
+  source = "blog_data"
+  destination = "/data"
 
 [http_service]
   internal_port = 8080

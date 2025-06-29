@@ -1,7 +1,6 @@
 """
 Blogger API (XML-RPC) implementation for Salasblog2
 Supports Blogger API methods for compatibility with blog editors like Windows Live Writer and MarsEdit.
-Uses hybrid approach: immediate file operations + deferred Git sync for better performance.
 """
 import xml.etree.ElementTree as ET
 from datetime import datetime
@@ -11,7 +10,6 @@ import re
 import logging
 import os
 from .generator import SiteGenerator
-from .git_sync import get_git_sync_service
 from .utils import create_filename_from_title
 
 # Set up logging
@@ -25,8 +23,7 @@ class BloggerAPI:
         self.root_dir = Path.cwd()
         self.blog_dir = self.root_dir / "content" / "blog"
         self.blog_dir.mkdir(parents=True, exist_ok=True)
-        self.git_sync_service = get_git_sync_service()
-        logger.info(f"BloggerAPI initialized with hybrid Git sync, blog_dir: {self.blog_dir}")
+        logger.info(f"BloggerAPI initialized, blog_dir: {self.blog_dir}")
     
     def _parse_content(self, content: str) -> tuple[str, str]:
         """Parse blog content to extract title and body."""
@@ -114,10 +111,6 @@ class BloggerAPI:
             
             logger.info("All expected files verified after incremental regeneration")
     
-    def _queue_git_sync(self, operation: str, filename: str):
-        """Queue Git operation for async processing."""
-        logger.info(f"Queueing Git sync for {operation}d post")
-        self.git_sync_service.queue_operation(operation, filename)
     
     def _authenticate_or_raise(self, username: str, password: str):
         """Authenticate user or raise exception."""
@@ -154,7 +147,6 @@ class BloggerAPI:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still created successfully
             
-            self._queue_git_sync("create", filename)
         
         logger.info(f"blogger_newPost completed successfully, returning: {filename}")
         return filename
@@ -187,7 +179,6 @@ class BloggerAPI:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still edited successfully
             
-            self._queue_git_sync("edit", postid)
         
         logger.info("blogger_editPost completed successfully")
         return True
@@ -222,7 +213,6 @@ class BloggerAPI:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still deleted successfully
             
-            self._queue_git_sync("delete", postid)
         
         logger.info("blogger_deletePost completed successfully")
         return True
