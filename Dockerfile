@@ -20,14 +20,28 @@ RUN git clone -b persistent-volume https://github.com/pitosalas/salasblog2.git /
     cp /tmp/repo/.gitignore . 2>/dev/null || true && \
     rm -rf /tmp/repo && \
     git config user.email "blog-api@salasblog2.com" && \
-    git config user.name "Salasblog2 Server" && \
-    chmod +x scripts/setup-git.sh
+    git config user.name "Salasblog2 Server"
 
 # Install dependencies
 RUN uv sync --frozen
 
 # Generate the static site
 RUN uv run python -m salasblog2.cli generate
+
+# Create startup script for git authentication
+RUN echo '#!/bin/bash\n\
+# Setup git authentication if token provided\n\
+if [ -n "$GIT_TOKEN" ]; then\n\
+    echo "Setting up git authentication..."\n\
+    git config --global credential.helper store\n\
+    echo "https://oauth2:${GIT_TOKEN}@github.com" > ~/.git-credentials\n\
+    git remote set-url origin "https://oauth2:${GIT_TOKEN}@github.com/pitosalas/salasblog2.git"\n\
+    echo "Git authentication configured"\n\
+fi\n\
+\n\
+# Start the server\n\
+exec uv run salasblog2 server --port 8080' > /startup.sh && \
+chmod +x /startup.sh
 
 # Set environment variables
 ENV PORT=8080
@@ -36,5 +50,5 @@ ENV PYTHONPATH=/app/src
 # Expose port
 EXPOSE 8080
 
-# Run the FastAPI server with git setup
-CMD ["sh", "-c", "./scripts/setup-git.sh && uv run salasblog2 server --port 8080"]
+# Run the startup script
+CMD ["/startup.sh"]

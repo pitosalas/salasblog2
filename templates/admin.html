@@ -36,6 +36,20 @@
     </div>
     
     <div class="admin-section">
+        <h2>Data Synchronization</h2>
+        <p>Sync content between working directory (/app/content/) and persistent volume (/data/content/)</p>
+        <button id="sync-to-volume-btn" onclick="syncToVolume()">Sync to Volume</button>
+        <button id="sync-from-volume-btn" onclick="syncFromVolume()">Sync from Volume</button>
+        <button id="bidirectional-sync-btn" onclick="bidirectionalSync()">Bidirectional Sync</button>
+        <div id="data-sync-status"></div>
+        <small>
+            <strong>Sync to Volume:</strong> Copies newer files from working directory to volume<br>
+            <strong>Sync from Volume:</strong> Copies newer files from volume to working directory<br>
+            <strong>Bidirectional Sync:</strong> Performs both operations (recommended)
+        </small>
+    </div>
+    
+    <div class="admin-section">
         <h2>Weblogs API</h2>
         <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
         <p>Supports standard Blogger API methods for external blog clients.</p>
@@ -134,6 +148,49 @@
                 // Restore button state
                 button.disabled = false;
                 button.innerHTML = 'Regenerate Site';
+            }
+        }
+        
+        async function syncToVolume() {
+            await performSync('/api/sync-to-volume', 'sync-to-volume-btn', 'Sync to Volume', 'Syncing to volume...');
+        }
+        
+        async function syncFromVolume() {
+            await performSync('/api/sync-from-volume', 'sync-from-volume-btn', 'Sync from Volume', 'Syncing from volume...');
+        }
+        
+        async function bidirectionalSync() {
+            await performSync('/api/bidirectional-sync', 'bidirectional-sync-btn', 'Bidirectional Sync', 'Performing bidirectional sync...');
+        }
+        
+        async function performSync(endpoint, buttonId, buttonText, loadingText) {
+            const button = document.getElementById(buttonId);
+            const statusDiv = document.getElementById('data-sync-status');
+            
+            // Show loading state
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner"></span>' + loadingText;
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>' + loadingText + '</div>';
+            
+            try {
+                const response = await fetch(endpoint, { method: 'POST' });
+                const result = await response.json();
+                
+                if (response.ok) {
+                    statusDiv.innerHTML = '<div class="status success">✓ ' + result.message + '</div>';
+                    // Auto-clear success message after 5 seconds
+                    setTimeout(() => {
+                        statusDiv.innerHTML = '';
+                    }, 5000);
+                } else {
+                    statusDiv.innerHTML = '<div class="status error">✗ ' + result.detail + '</div>';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<div class="status error">✗ Error: ' + error.message + '</div>';
+            } finally {
+                // Restore button state
+                button.disabled = false;
+                button.innerHTML = buttonText;
             }
         }
     </script>

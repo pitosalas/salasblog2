@@ -5,8 +5,9 @@ Includes Blogger API (XML-RPC) support for blog editors
 import os
 import xml.etree.ElementTree as ET
 import logging
+import subprocess
 from pathlib import Path
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 from contextlib import asynccontextmanager
@@ -67,65 +68,6 @@ def _check_single_instance():
         logger.warning(f"Error checking machine count: {e}")
 
 
-def _setup_persistent_storage():
-    """Setup persistent storage by copying content to volume if needed."""
-    import shutil
-    from pathlib import Path
-    
-    # Paths
-    volume_path = Path('/data')
-    volume_content = volume_path / 'content'
-    app_content = Path('/app/content')
-    
-    # Only proceed if we have a mounted volume
-    if not volume_path.exists():
-        logger.info("No persistent volume detected, using ephemeral storage")
-        return
-        
-    logger.info("Persistent volume detected, setting up storage")
-    
-    # Create volume content directory if it doesn't exist
-    volume_content.mkdir(parents=True, exist_ok=True)
-    
-    # Copy initial content if volume is empty and app has content
-    if not any(volume_content.iterdir()) and app_content.exists():
-        logger.info("Volume is empty, copying initial content from app")
-        try:
-            # Copy all subdirectories from app content to volume content
-            for item in app_content.iterdir():
-                if item.is_dir():
-                    dest = volume_content / item.name
-                    if not dest.exists():
-                        shutil.copytree(item, dest)
-                        logger.info(f"Copied {item.name}/ to volume")
-                elif item.is_file():
-                    dest = volume_content / item.name
-                    if not dest.exists():
-                        shutil.copy2(item, dest)
-                        logger.info(f"Copied {item.name} to volume")
-        except Exception as e:
-            logger.error(f"Failed to copy content to volume: {e}")
-            return
-            
-    # Create symlink so app uses volume content
-    try:
-        # Remove existing app content if it's not already a symlink
-        if app_content.exists() and not app_content.is_symlink():
-            shutil.rmtree(app_content)
-            
-        # Create symlink from app content to volume content
-        if not app_content.exists():
-            app_content.symlink_to('/data/content')
-            logger.info("Created symlink: /app/content -> /data/content")
-            
-    except Exception as e:
-        logger.error(f"Failed to create content symlink: {e}")
-        
-    # Verify the setup
-    if app_content.is_symlink() and app_content.resolve() == volume_content:
-        logger.info("Persistent storage setup completed successfully")
-    else:
-        logger.warning("Persistent storage setup may have failed")
 
 
 @asynccontextmanager
@@ -137,8 +79,6 @@ async def lifespan(app: FastAPI):
     # Check if we're the only instance running
     _check_single_instance()
     
-    # Setup persistent storage
-    _setup_persistent_storage()
     
     import asyncio
     
@@ -177,6 +117,109 @@ async def serve_admin():
     if admin_file.exists():
         return HTMLResponse(content=admin_file.read_text(encoding='utf-8'))
     raise HTTPException(status_code=404, detail="Admin page not found")
+
+@app.post("/api/sync-to-volume")
+async def sync_to_volume():
+    """Sync content from /app/content/ to /data/content/"""
+    try:
+        # Ensure data directory exists
+        data_dir = Path("/data/content")
+        data_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Use rsync for bidirectional sync (newer files win)
+        result = subprocess.run([
+            "rsync", "-av", "--update", 
+            "/app/content/", "/data/content/"
+        ], capture_output=True, text=True, timeout=30)
+        
+        if result.returncode != 0:
+            logger.error(f"Sync to volume failed: {result.stderr}")
+            raise HTTPException(status_code=500, detail=f"Sync failed: {result.stderr}")
+        
+        logger.info("Successfully synced content to volume")
+        return JSONResponse(content={
+            "status": "success",
+            "message": "Content synced to volume successfully",
+            "output": result.stdout
+        })
+    except subprocess.TimeoutExpired:
+        raise HTTPException(status_code=500, detail="Sync operation timed out")
+    except Exception as e:
+        logger.error(f"Sync to volume error: {e}")
+        raise HTTPException(status_code=500, detail=f"Sync error: {str(e)}")
+
+@app.post("/api/sync-from-volume")
+async def sync_from_volume():
+    """Sync content from /data/content/ to /app/content/"""
+    try:
+        # Ensure app content directory exists
+        app_dir = Path("/app/content")
+        app_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Use rsync for bidirectional sync (newer files win)
+        result = subprocess.run([
+            "rsync", "-av", "--update", 
+            "/data/content/", "/app/content/"
+        ], capture_output=True, text=True, timeout=30)
+        
+        if result.returncode != 0:
+            logger.error(f"Sync from volume failed: {result.stderr}")
+            raise HTTPException(status_code=500, detail=f"Sync failed: {result.stderr}")
+        
+        logger.info("Successfully synced content from volume")
+        return JSONResponse(content={
+            "status": "success",
+            "message": "Content synced from volume successfully",
+            "output": result.stdout
+        })
+    except subprocess.TimeoutExpired:
+        raise HTTPException(status_code=500, detail="Sync operation timed out")
+    except Exception as e:
+        logger.error(f"Sync from volume error: {e}")
+        raise HTTPException(status_code=500, detail=f"Sync error: {str(e)}")
+
+@app.post("/api/bidirectional-sync")
+async def bidirectional_sync():
+    """Perform bidirectional sync between /app/content/ and /data/content/"""
+    try:
+        # Ensure both directories exist
+        app_dir = Path("/app/content")
+        data_dir = Path("/data/content")
+        app_dir.mkdir(parents=True, exist_ok=True)
+        data_dir.mkdir(parents=True, exist_ok=True)
+        
+        # First sync: app to data (newer files win)
+        result1 = subprocess.run([
+            "rsync", "-av", "--update", 
+            "/app/content/", "/data/content/"
+        ], capture_output=True, text=True, timeout=30)
+        
+        if result1.returncode != 0:
+            logger.error(f"Bidirectional sync (app->data) failed: {result1.stderr}")
+            raise HTTPException(status_code=500, detail=f"Sync failed: {result1.stderr}")
+        
+        # Second sync: data to app (newer files win)
+        result2 = subprocess.run([
+            "rsync", "-av", "--update", 
+            "/data/content/", "/app/content/"
+        ], capture_output=True, text=True, timeout=30)
+        
+        if result2.returncode != 0:
+            logger.error(f"Bidirectional sync (data->app) failed: {result2.stderr}")
+            raise HTTPException(status_code=500, detail=f"Sync failed: {result2.stderr}")
+        
+        logger.info("Successfully completed bidirectional sync")
+        return JSONResponse(content={
+            "status": "success",
+            "message": "Bidirectional sync completed successfully",
+            "app_to_data": result1.stdout,
+            "data_to_app": result2.stdout
+        })
+    except subprocess.TimeoutExpired:
+        raise HTTPException(status_code=500, detail="Sync operation timed out")
+    except Exception as e:
+        logger.error(f"Bidirectional sync error: {e}")
+        raise HTTPException(status_code=500, detail=f"Sync error: {str(e)}")
 
 @app.get("/api/sync-raindrops")
 async def sync_raindrops():
