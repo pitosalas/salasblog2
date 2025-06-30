@@ -21,7 +21,7 @@ RUN git clone -b persistent-volume https://github.com/pitosalas/salasblog2.git /
     rm -rf /tmp/repo && \
     git config user.email "blog-api@salasblog2.com" && \
     git config user.name "Salasblog2 Server" && \
-    rm -f /app/content && \
+    rm -rf /app/content && \
     mkdir -p /app/content
 
 # Install dependencies
