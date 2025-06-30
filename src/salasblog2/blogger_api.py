@@ -165,18 +165,19 @@ class BloggerAPI:
         # Authenticate user
         self._authenticate_or_raise(username, password)
         
-        # Verify post exists
+        # Check if post exists, create if it doesn't
         file_path = self.blog_dir / postid
         logger.info(f"Editing post at: {file_path}")
-        if not file_path.exists():
-            logger.error(f"Post not found: {file_path}")
+        is_new_post = not file_path.exists()
+        
+        if is_new_post:
+            logger.warning(f"Post not found: {file_path} - Creating new post with this filename")
             # Check if it might be a different file extension or similar name
             similar_files = list(self.blog_dir.glob(f"{postid.replace('.md', '')}*"))
             if similar_files:
                 suggestion = similar_files[0].name
-                self._create_fault(404, f"Post '{postid}' not found. Did you mean '{suggestion}'? You may need to refresh your post list in MarsEdit.")
-            else:
-                self._create_fault(404, f"Post '{postid}' not found. The post may have been deleted or moved. Please refresh your post list in MarsEdit.")
+                logger.warning(f"Similar file found: {suggestion} - but creating new post as requested")
+            logger.info(f"Creating new post from edit request: {postid}")
         
         # Parse content and update post
         title, body_content = self._parse_content(content)
@@ -186,10 +187,12 @@ class BloggerAPI:
         # Handle publishing workflow
         if publish:
             try:
-                self._regenerate_and_verify(postid, "edit")
+                # Use "create" operation for new posts, "edit" for existing ones
+                operation = "create" if is_new_post else "edit"
+                self._regenerate_and_verify(postid, operation)
             except Exception as e:
                 logger.error(f"Incremental site regeneration failed: {e}")
-                # Don't raise - post was still edited successfully
+                # Don't raise - post was still created/edited successfully
             
         
         logger.info("blogger_editPost completed successfully")
@@ -203,18 +206,18 @@ class BloggerAPI:
         # Authenticate user
         self._authenticate_or_raise(username, password)
         
-        # Verify post exists and delete it
+        # Check if post exists, warn if it doesn't but don't fail
         file_path = self.blog_dir / postid
         logger.info(f"Deleting post at: {file_path}")
         if not file_path.exists():
-            logger.error(f"Post not found: {file_path}")
+            logger.warning(f"Post not found for deletion: {file_path} - May have already been deleted")
             # Check if it might be a different file extension or similar name
             similar_files = list(self.blog_dir.glob(f"{postid.replace('.md', '')}*"))
             if similar_files:
                 suggestion = similar_files[0].name
-                self._create_fault(404, f"Post '{postid}' not found for deletion. Did you mean '{suggestion}'? You may need to refresh your post list in MarsEdit.")
-            else:
-                self._create_fault(404, f"Post '{postid}' not found for deletion. The post may have already been deleted or moved. Please refresh your post list in MarsEdit.")
+                logger.warning(f"Similar file found: {suggestion} - but requested file doesn't exist")
+            logger.info(f"Delete operation completed (file didn't exist): {postid}")
+            return True  # Return success since the desired end state is achieved
         
         try:
             file_path.unlink()
@@ -293,14 +296,14 @@ class BloggerAPI:
         file_path = self.blog_dir / postid
         logger.info(f"Getting post at: {file_path}")
         if not file_path.exists():
-            logger.error(f"Post not found: {file_path}")
+            logger.warning(f"Post not found: {file_path}")
             # Check if it might be a different file extension or similar name
             similar_files = list(self.blog_dir.glob(f"{postid.replace('.md', '')}*"))
             if similar_files:
                 suggestion = similar_files[0].name
-                self._create_fault(404, f"Post '{postid}' not found. Did you mean '{suggestion}'? You may need to refresh your post list in MarsEdit.")
+                self._create_fault(404, f"Post '{postid}' not found. Did you mean '{suggestion}'? Please refresh your post list in MarsEdit to see current posts.")
             else:
-                self._create_fault(404, f"Post '{postid}' not found. The post may have been deleted or moved. Please refresh your post list in MarsEdit.")
+                self._create_fault(404, f"Post '{postid}' not found. The post may have been deleted or moved. Please refresh your post list in MarsEdit to see current posts.")
         
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
