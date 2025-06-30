@@ -13,28 +13,21 @@ RUN pip install uv
 # Set working directory
 WORKDIR /app
 
-# Copy Python files
-COPY pyproject.toml uv.lock* ./
-COPY .gitignore ./
-COPY src/ ./src/
-COPY content/ ./content/
-COPY themes/ ./themes/
-COPY templates/ ./templates/
-COPY scripts/ ./scripts/
+# Clone the repository directly from persistent-volume branch
+RUN git clone -b persistent-volume https://github.com/pitosalas/salasblog2.git /tmp/repo && \
+    cp -r /tmp/repo/* . && \
+    cp -r /tmp/repo/.git . && \
+    cp /tmp/repo/.gitignore . 2>/dev/null || true && \
+    rm -rf /tmp/repo && \
+    git config user.email "blog-api@salasblog2.com" && \
+    git config user.name "Salasblog2 Server" && \
+    chmod +x scripts/setup-git.sh
 
 # Install dependencies
 RUN uv sync --frozen
 
 # Generate the static site
 RUN uv run python -m salasblog2.cli generate
-
-# Initialize git repository and configure
-RUN chmod +x scripts/setup-git.sh && \
-    git init && \
-    git config user.email "blog-api@salasblog2.com" && \
-    git config user.name "Salasblog2 Server" && \
-    git add . && \
-    git commit -m "Initial commit from Docker build"
 
 # Set environment variables
 ENV PORT=8080

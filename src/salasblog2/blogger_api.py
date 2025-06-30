@@ -9,6 +9,7 @@ import frontmatter
 import re
 import logging
 import os
+from xmlrpc.client import Fault
 from .generator import SiteGenerator
 from .utils import create_filename_from_title
 
@@ -112,11 +113,16 @@ class BloggerAPI:
             logger.info("All expected files verified after incremental regeneration")
     
     
+    def _create_fault(self, code: int, message: str):
+        """Create a proper XML-RPC fault for better error handling in blog editors."""
+        logger.error(f"XML-RPC Fault {code}: {message}")
+        raise Fault(code, message)
+    
     def _authenticate_or_raise(self, username: str, password: str):
-        """Authenticate user or raise exception."""
+        """Authenticate user or raise XML-RPC fault."""
         if not self._authenticate(username, password):
             logger.error("Authentication failed")
-            raise Exception("Authentication failed")
+            self._create_fault(401, "Authentication failed. Please check your username and password.")
     
     
     
@@ -164,7 +170,13 @@ class BloggerAPI:
         logger.info(f"Editing post at: {file_path}")
         if not file_path.exists():
             logger.error(f"Post not found: {file_path}")
-            raise Exception("Post not found")
+            # Check if it might be a different file extension or similar name
+            similar_files = list(self.blog_dir.glob(f"{postid.replace('.md', '')}*"))
+            if similar_files:
+                suggestion = similar_files[0].name
+                self._create_fault(404, f"Post '{postid}' not found. Did you mean '{suggestion}'? You may need to refresh your post list in MarsEdit.")
+            else:
+                self._create_fault(404, f"Post '{postid}' not found. The post may have been deleted or moved. Please refresh your post list in MarsEdit.")
         
         # Parse content and update post
         title, body_content = self._parse_content(content)
@@ -196,7 +208,13 @@ class BloggerAPI:
         logger.info(f"Deleting post at: {file_path}")
         if not file_path.exists():
             logger.error(f"Post not found: {file_path}")
-            raise Exception("Post not found")
+            # Check if it might be a different file extension or similar name
+            similar_files = list(self.blog_dir.glob(f"{postid.replace('.md', '')}*"))
+            if similar_files:
+                suggestion = similar_files[0].name
+                self._create_fault(404, f"Post '{postid}' not found for deletion. Did you mean '{suggestion}'? You may need to refresh your post list in MarsEdit.")
+            else:
+                self._create_fault(404, f"Post '{postid}' not found for deletion. The post may have already been deleted or moved. Please refresh your post list in MarsEdit.")
         
         try:
             file_path.unlink()
@@ -270,15 +288,19 @@ class BloggerAPI:
         """Get a specific blog post."""
         logger.info(f"blogger_getPost called: postid={postid}, username={username}")
         
-        if not self._authenticate(username, password):
-            logger.error("Authentication failed for getPost")
-            raise Exception("Authentication failed")
+        self._authenticate_or_raise(username, password)
         
         file_path = self.blog_dir / postid
         logger.info(f"Getting post at: {file_path}")
         if not file_path.exists():
             logger.error(f"Post not found: {file_path}")
-            raise Exception("Post not found")
+            # Check if it might be a different file extension or similar name
+            similar_files = list(self.blog_dir.glob(f"{postid.replace('.md', '')}*"))
+            if similar_files:
+                suggestion = similar_files[0].name
+                self._create_fault(404, f"Post '{postid}' not found. Did you mean '{suggestion}'? You may need to refresh your post list in MarsEdit.")
+            else:
+                self._create_fault(404, f"Post '{postid}' not found. The post may have been deleted or moved. Please refresh your post list in MarsEdit.")
         
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -295,7 +317,7 @@ class BloggerAPI:
             return post_data
         except Exception as e:
             logger.error(f"Failed to read post {postid}: {e}")
-            raise
+            self._create_fault(500, f"Unable to read post '{postid}'. The file may be corrupted or have invalid formatting. Error: {str(e)}")
     
 
     def _authenticate(self, username: str, password: str) -> bool:
