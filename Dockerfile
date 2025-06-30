@@ -41,6 +41,13 @@ if [ -n "$GIT_TOKEN" ]; then\n\
     echo "Git authentication configured"\n\
 fi\n\
 \n\
+# Ensure /app/content is a real directory, not a symlink\n\
+if [ -L "/app/content" ]; then\n\
+    echo "Removing symlink at /app/content..."\n\
+    rm -f /app/content\n\
+fi\n\
+mkdir -p /app/content\n\
+\n\
 # Sync content from volume if it exists (initial setup)\n\
 if [ -d "/data/content" ] && [ "$(ls -A /data/content 2>/dev/null)" ]; then\n\
     echo "Found existing content in volume, syncing to /app/content..."\n\
