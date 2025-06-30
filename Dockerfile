@@ -1,9 +1,9 @@
 # Multi-stage build for Salasblog2 FastAPI app
 FROM python:3.11-slim
 
-# Install system dependencies including git
+# Install system dependencies including git and rsync
 RUN apt-get update && \
-    apt-get install -y git && \
+    apt-get install -y git rsync && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -20,7 +20,9 @@ RUN git clone -b persistent-volume https://github.com/pitosalas/salasblog2.git /
     cp /tmp/repo/.gitignore . 2>/dev/null || true && \
     rm -rf /tmp/repo && \
     git config user.email "blog-api@salasblog2.com" && \
-    git config user.name "Salasblog2 Server"
+    git config user.name "Salasblog2 Server" && \
+    rm -f /app/content && \
+    mkdir -p /app/content
 
 # Install dependencies
 RUN uv sync --frozen
@@ -28,7 +30,7 @@ RUN uv sync --frozen
 # Generate the static site
 RUN uv run python -m salasblog2.cli generate
 
-# Create startup script for git authentication
+# Create startup script for git authentication and initial sync
 RUN echo '#!/bin/bash\n\
 # Setup git authentication if token provided\n\
 if [ -n "$GIT_TOKEN" ]; then\n\
@@ -37,6 +39,15 @@ if [ -n "$GIT_TOKEN" ]; then\n\
     echo "https://oauth2:${GIT_TOKEN}@github.com" > ~/.git-credentials\n\
     git remote set-url origin "https://oauth2:${GIT_TOKEN}@github.com/pitosalas/salasblog2.git"\n\
     echo "Git authentication configured"\n\
+fi\n\
+\n\
+# Sync content from volume if it exists (initial setup)\n\
+if [ -d "/data/content" ] && [ "$(ls -A /data/content 2>/dev/null)" ]; then\n\
+    echo "Found existing content in volume, syncing to /app/content..."\n\
+    rsync -av --update /data/content/ /app/content/\n\
+    echo "Initial sync from volume completed"\n\
+else\n\
+    echo "No existing content in volume found"\n\
 fi\n\
 \n\
 # Start the server\n\
