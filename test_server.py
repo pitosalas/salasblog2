@@ -25,11 +25,11 @@ def test_endpoints():
     except Exception as e:
         print(f"   ❌ Home page error: {e}")
     
-    # Test 2: Admin page
+    # Test 2: Admin page (should show login form or admin panel)
     print("2. Testing admin page...")
     try:
-        response = requests.get(f"{base_url}/whyaskwhy", timeout=5)
-        if response.status_code == 200 and "Salasblog2 Admin" in response.text:
+        response = requests.get(f"{base_url}/admin", timeout=5)
+        if response.status_code == 200 and ("Admin Login" in response.text or "Admin Panel" in response.text):
             print("   ✅ Admin page loads correctly")
         else:
             print(f"   ❌ Admin page issue: {response.status_code}")

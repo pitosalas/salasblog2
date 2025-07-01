@@ -7,9 +7,11 @@ import xml.etree.ElementTree as ET
 import logging
 import subprocess
 from pathlib import Path
-from fastapi import FastAPI, HTTPException, Request, Form
+from fastapi import FastAPI, HTTPException, Request, Form, Depends
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse, JSONResponse, Response
+from fastapi.responses import HTMLResponse, JSONResponse, Response, RedirectResponse
+from fastapi.security import HTTPBasic, HTTPBasicCredentials
+from starlette.middleware.sessions import SessionMiddleware
 from contextlib import asynccontextmanager
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
@@ -94,6 +96,9 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# Add session middleware for admin authentication
+app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET", "salasblog2-default-secret-key"))
+
 # Get paths
 root_dir = Path(__file__).parent.parent.parent
 output_dir = root_dir / "output"
@@ -101,6 +106,111 @@ output_dir = root_dir / "output"
 # Mount static files
 if output_dir.exists():
     app.mount("/static", StaticFiles(directory=output_dir / "static"), name="static")
+
+# Admin authentication helpers
+def get_admin_password():
+    """Get admin password from environment variable"""
+    return os.getenv("ADMIN_PASSWORD")
+
+def is_admin_authenticated(request: Request) -> bool:
+    """Check if admin is authenticated via session"""
+    return request.session.get("admin_authenticated", False)
+
+def create_login_form_html():
+    """Generate HTML for admin login form"""
+    return """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Login - Salas Blog</title>
+        <style>
+            body { 
+                font-family: Arial, sans-serif; 
+                background: #f5f5f5; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                min-height: 100vh; 
+                margin: 0; 
+            }
+            .login-container { 
+                background: white; 
+                padding: 40px; 
+                border-radius: 8px; 
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+                width: 100%; 
+                max-width: 400px; 
+            }
+            .login-container h1 { 
+                text-align: center; 
+                margin-bottom: 30px; 
+                color: #333; 
+            }
+            .form-group { 
+                margin-bottom: 20px; 
+            }
+            label { 
+                display: block; 
+                margin-bottom: 5px; 
+                color: #555; 
+                font-weight: bold; 
+            }
+            input[type="password"] { 
+                width: 100%; 
+                padding: 12px; 
+                border: 1px solid #ddd; 
+                border-radius: 4px; 
+                font-size: 16px; 
+                box-sizing: border-box; 
+            }
+            .login-btn { 
+                width: 100%; 
+                padding: 12px; 
+                background: #007cba; 
+                color: white; 
+                border: none; 
+                border-radius: 4px; 
+                font-size: 16px; 
+                cursor: pointer; 
+                transition: background-color 0.2s; 
+            }
+            .login-btn:hover { 
+                background: #005a87; 
+            }
+            .error { 
+                color: #e74c3c; 
+                margin-top: 10px; 
+                text-align: center; 
+            }
+            .back-link { 
+                text-align: center; 
+                margin-top: 20px; 
+            }
+            .back-link a { 
+                color: #007cba; 
+                text-decoration: none; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h1>Admin Login</h1>
+            <form method="post" action="/admin">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required autofocus>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div class="back-link">
+                <a href="/">← Back to Blog</a>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
 
 @app.get("/")
 async def serve_home():
@@ -110,13 +220,58 @@ async def serve_home():
         return HTMLResponse(content=home_file.read_text(encoding='utf-8'))
     raise HTTPException(status_code=404, detail="Site not generated yet")
 
-@app.get("/whyaskwhy")
-async def serve_admin():
-    """Serve the admin page"""
-    admin_file = root_dir / "templates" / "admin.html"
-    if admin_file.exists():
-        return HTMLResponse(content=admin_file.read_text(encoding='utf-8'))
-    raise HTTPException(status_code=404, detail="Admin page not found")
+@app.get("/admin")
+async def serve_admin_get(request: Request):
+    """Serve admin login form or admin page"""
+    admin_password = get_admin_password()
+    
+    # If no admin password is set, allow access without authentication
+    if not admin_password:
+        logger.warning("No ADMIN_PASSWORD set - allowing unrestricted admin access")
+        admin_file = root_dir / "templates" / "admin.html"
+        if admin_file.exists():
+            return HTMLResponse(content=admin_file.read_text(encoding='utf-8'))
+        raise HTTPException(status_code=404, detail="Admin page not found")
+    
+    # Check if admin is authenticated
+    if is_admin_authenticated(request):
+        admin_file = root_dir / "templates" / "admin.html"
+        if admin_file.exists():
+            return HTMLResponse(content=admin_file.read_text(encoding='utf-8'))
+        raise HTTPException(status_code=404, detail="Admin page not found")
+    
+    # Show login form
+    return HTMLResponse(content=create_login_form_html())
+
+@app.post("/admin")
+async def serve_admin_post(request: Request, password: str = Form(...)):
+    """Handle admin login"""
+    admin_password = get_admin_password()
+    
+    # If no admin password is set, redirect to admin page
+    if not admin_password:
+        return RedirectResponse(url="/admin", status_code=302)
+    
+    # Check password
+    if password == admin_password:
+        request.session["admin_authenticated"] = True
+        logger.info("Admin authentication successful")
+        return RedirectResponse(url="/admin", status_code=302)
+    else:
+        logger.warning("Admin authentication failed - incorrect password")
+        # Return login form with error
+        error_html = create_login_form_html().replace(
+            '<button type="submit" class="login-btn">Login</button>',
+            '<button type="submit" class="login-btn">Login</button>\n                <div class="error">Incorrect password. Please try again.</div>'
+        )
+        return HTMLResponse(content=error_html, status_code=401)
+
+@app.post("/admin/logout")
+async def admin_logout(request: Request):
+    """Logout admin user"""
+    request.session.pop("admin_authenticated", None)
+    logger.info("Admin logged out")
+    return RedirectResponse(url="/", status_code=302)
 
 @app.post("/api/sync-to-volume")
 async def sync_to_volume():
