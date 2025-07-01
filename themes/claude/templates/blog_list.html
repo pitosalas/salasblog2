@@ -31,7 +31,7 @@
                 <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
                 <span class="post-category">{{ post.category }}</span>
             </div>
-            <p class="post-excerpt">{{ post.excerpt }}</p>
+            <p class="post-excerpt">{{ post.excerpt | markdown | safe }}</p>
             <a href="{{ post.url }}" class="read-more">Read more →</a>
         </article>
         {% endfor %}

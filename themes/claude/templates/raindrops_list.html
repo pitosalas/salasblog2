@@ -53,12 +53,12 @@
                     {% endif %}
                     
                     {% if post.excerpt %}
-                    <div class="raindrop-excerpt">{{ post.excerpt }}</div>
+                    <div class="raindrop-excerpt">{{ post.excerpt | markdown | safe }}</div>
                     {% endif %}
                     
                     {% if post.note %}
                     <div class="raindrop-notes">
-                        <strong>Notes:</strong> {{ post.note }}
+                        <strong>Notes:</strong> {{ post.note | markdown | safe }}
                     </div>
                     {% endif %}
                     

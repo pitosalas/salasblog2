@@ -52,11 +52,27 @@ class SiteGenerator:
         self.jinja_env.filters['strftime'] = self.format_date
         self.jinja_env.filters['dd_mm_yyyy'] = format_date_dd_mm_yyyy
         self.jinja_env.filters['group_by_month'] = group_posts_by_month
+        self.jinja_env.filters['markdown'] = self.markdown_to_html
         self.markdown_processor = markdown.Markdown(extensions=['meta', 'codehilite', 'toc'])
     
     def format_date(self, date_str, format_str='%B %d, %Y'):
         """Custom Jinja2 filter for date formatting"""
         return format_date(date_str, format_str)
+    
+    def markdown_to_html(self, text):
+        """Custom Jinja2 filter for converting markdown to HTML"""
+        if not text:
+            return ''
+        
+        # Fix malformed markdown links with spaces around brackets/parentheses
+        # Convert "[ text ]( url )" to "[text](url)"
+        fixed_text = text
+        fixed_text = fixed_text.replace('[ ', '[')   # Remove space after opening bracket
+        fixed_text = fixed_text.replace(' ](', '](') # Remove space before closing bracket and opening paren
+        fixed_text = fixed_text.replace(']( ', '](') # Remove space after opening paren
+        fixed_text = fixed_text.replace(' )', ')')   # Remove space before closing paren
+        
+        return process_markdown_to_html(fixed_text)
         
     def load_posts(self, content_type):
         """Load and parse markdown files from a directory"""
