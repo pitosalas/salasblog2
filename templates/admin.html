@@ -338,7 +338,7 @@
                         );
                         
                         if (fileLines.length > 0) {
-                            const displayLines = fileLines.slice(0, 6);
+                            const displayLines = fileLines.slice(0, 25);
                             const operationCount = fileLines.length;
                             const transferredFiles = fileLines.filter(line => line.includes('>')).length;
                             const createdDirs = fileLines.filter(line => line.includes('created directory')).length;
@@ -354,7 +354,7 @@
                                 ${stats}
                                 <strong>Recent Operations:</strong><br>
                                 ${displayLines.map(line => `<div class="sync-operation">${line.trim()}</div>`).join('')}
-                                ${fileLines.length > 6 ? `<div style="margin-top: 6px; font-style: italic;">... and ${fileLines.length - 6} more operations</div>` : ''}
+                                ${fileLines.length > 25 ? `<div style="margin-top: 6px; font-style: italic;">... and ${fileLines.length - 25} more operations</div>` : ''}
                             </div>`;
                         } else if (lines.length > 0) {
                             // Show summary if no file operations found

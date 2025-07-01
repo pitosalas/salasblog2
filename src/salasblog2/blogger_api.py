@@ -28,10 +28,50 @@ class BloggerAPI:
     
     def _parse_content(self, content: str) -> tuple[str, str]:
         """Parse blog content to extract title and body."""
+        # Check if content contains XML-like structure with title
+        if '<title>' in content and '</title>' in content:
+            # Extract title from XML-like structure
+            import re
+            title_match = re.search(r'<title>(.*?)</title>', content, re.DOTALL)
+            if title_match:
+                title = title_match.group(1).strip()
+                # Remove title tags from content
+                body_content = re.sub(r'<title>.*?</title>\s*', '', content, flags=re.DOTALL).strip()
+                return title, body_content
+        
+        # Fallback to original behavior - use first line as title
         lines = content.strip().split('\n')
-        title = lines[0] if lines else "Untitled Post"
-        body_content = '\n'.join(lines[1:]) if len(lines) > 1 else content
+        
+        # If first line looks like a title (short, no periods, etc.)
+        if lines and len(lines) > 1:
+            first_line = lines[0].strip()
+            # Consider it a title if it's reasonably short and doesn't end with a period
+            if len(first_line) <= 100 and not first_line.endswith('.') and not first_line.startswith('#'):
+                title = first_line
+                body_content = '\n'.join(lines[1:])
+                return title, body_content
+        
+        # If we can't determine a clear title, use the content as-is with a generated title
+        title = "Blog Post"  # Generic title
+        body_content = content
         return title, body_content
+    
+    def _parse_content_or_struct(self, content) -> tuple[str, str]:
+        """Parse content whether it's a string or structured data."""
+        if isinstance(content, dict):
+            # Handle structured content (modern blog editors)
+            title = content.get('title', 'Untitled Post')
+            body = content.get('description', content.get('content', ''))
+            logger.info(f"Received structured content: title='{title}', body_length={len(body)}")
+            return title, body
+        elif isinstance(content, str):
+            # Handle string content (legacy format)
+            logger.info(f"Received string content, parsing: {len(content)} chars")
+            return self._parse_content(content)
+        else:
+            # Fallback
+            logger.warning(f"Unknown content type: {type(content)}, converting to string")
+            return self._parse_content(str(content))
     
     def _create_post_frontmatter(self, title: str, body_content: str) -> frontmatter.Post:
         """Create frontmatter post object with standard metadata."""
@@ -127,7 +167,7 @@ class BloggerAPI:
     
     
     def blogger_newPost(self, appkey: str, blogid: str, username: str, password: str, 
-                       content: str, publish: bool) -> str:
+                       content, publish: bool) -> str:
         """Create a new blog post and return the post ID (filename)."""
         logger.info(f"blogger_newPost called: appkey={appkey}, blogid={blogid}, username={username}, publish={publish}")
         
@@ -135,7 +175,7 @@ class BloggerAPI:
         self._authenticate_or_raise(username, password)
         
         # Parse content and create post
-        title, body_content = self._parse_content(content)
+        title, body_content = self._parse_content_or_struct(content)
         logger.info(f"Parsed title: '{title}', body length: {len(body_content)}")
         
         filename = create_filename_from_title(title)
@@ -158,7 +198,7 @@ class BloggerAPI:
         return filename
     
     def blogger_editPost(self, appkey: str, postid: str, username: str, password: str,
-                        content: str, publish: bool) -> bool:
+                        content, publish: bool) -> bool:
         """Edit an existing blog post."""
         logger.info(f"blogger_editPost called: postid={postid}, username={username}, publish={publish}")
         
@@ -180,7 +220,7 @@ class BloggerAPI:
             logger.info(f"Creating new post from edit request: {postid}")
         
         # Parse content and update post
-        title, body_content = self._parse_content(content)
+        title, body_content = self._parse_content_or_struct(content)
         post = self._create_post_frontmatter(title, body_content)
         self._write_post_file(file_path, post)
         

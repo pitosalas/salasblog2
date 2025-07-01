@@ -559,6 +559,29 @@ async def xmlrpc_endpoint(request: Request):
             elif param.find('i4') is not None:
                 value = int(param.find('i4').text)
                 params.append(value)
+            elif param.find('struct') is not None:
+                # Parse struct (dictionary) for structured content
+                struct_elem = param.find('struct')
+                struct_dict = {}
+                for member in struct_elem.findall('member'):
+                    name_elem = member.find('name')
+                    value_elem = member.find('value')
+                    if name_elem is not None and value_elem is not None:
+                        key = name_elem.text
+                        # Get the value from the value element
+                        if value_elem.find('string') is not None:
+                            val = value_elem.find('string').text or ""
+                        elif value_elem.find('boolean') is not None:
+                            val = value_elem.find('boolean').text == '1'
+                        elif value_elem.find('int') is not None:
+                            val = int(value_elem.find('int').text)
+                        elif value_elem.find('i4') is not None:
+                            val = int(value_elem.find('i4').text)
+                        else:
+                            val = value_elem.text or ""
+                        struct_dict[key] = val
+                params.append(struct_dict)
+                logger.info(f"Parsed struct parameter: {struct_dict}")
             else:
                 value = param.text or ""
                 params.append(value)
