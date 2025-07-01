@@ -77,6 +77,19 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .sync-progress {
+            background: #f8f9fa;
+            border-left: 3px solid #007cba;
+            padding: 8px 12px;
+            margin: 8px 0;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.85em;
+        }
+        .sync-operation {
+            color: #495057;
+            margin: 2px 0;
+        }
     </style>
 </head>
 <body>
@@ -139,10 +152,13 @@
             <div class="admin-section">
                 <h2>Data Synchronization</h2>
                 <p>Sync content between working directory (/app/content/) and persistent volume (/data/content/)</p>
-                <button id="sync-to-volume-btn" class="admin-button" onclick="syncToVolume()">Sync to Volume</button>
-                <button id="sync-from-volume-btn" class="admin-button" onclick="syncFromVolume()">Sync from Volume</button>
-                <button id="bidirectional-sync-btn" class="admin-button" onclick="bidirectionalSync()">Bidirectional Sync</button>
+                <div style="margin-bottom: 15px;">
+                    <button id="sync-to-volume-btn" class="admin-button" onclick="syncToVolume()">Sync to Volume</button>
+                    <button id="sync-from-volume-btn" class="admin-button" onclick="syncFromVolume()">Sync from Volume</button>
+                    <button id="bidirectional-sync-btn" class="admin-button" onclick="bidirectionalSync()">Bidirectional Sync</button>
+                </div>
                 <div id="data-sync-status"></div>
+                <div id="data-sync-progress" style="margin-top: 10px;"></div>
                 <small>
                     <strong>Sync to Volume:</strong> Copies newer files from working directory to volume<br>
                     <strong>Sync from Volume:</strong> Copies newer files from volume to working directory<br>
@@ -274,32 +290,133 @@
         async function performSync(endpoint, buttonId, buttonText, loadingText) {
             const button = document.getElementById(buttonId);
             const statusDiv = document.getElementById('data-sync-status');
+            const progressDiv = document.getElementById('data-sync-progress');
             
             // Show loading state
             button.disabled = true;
             button.innerHTML = '<span class="spinner"></span>' + loadingText;
             statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>' + loadingText + '</div>';
+            progressDiv.innerHTML = '<div style="font-size: 0.9em; color: #666; margin-top: 5px;">Initializing synchronization...</div>';
+            
+            // Disable other sync buttons during operation
+            disableAllSyncButtons();
+            
+            const startTime = Date.now();
             
             try {
+                progressDiv.innerHTML = '<div style="font-size: 0.9em; color: #666;">📡 Contacting server...</div>';
+                
                 const response = await fetch(endpoint, { method: 'POST' });
+                
+                progressDiv.innerHTML = '<div style="font-size: 0.9em; color: #666;">⚙️ Processing synchronization...</div>';
+                
                 const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
                 
                 if (response.ok) {
-                    statusDiv.innerHTML = '<div class="status success">✓ ' + result.message + '</div>';
-                    // Auto-clear success message after 5 seconds
+                    // Parse sync output for more details
+                    let details = '';
+                    let allOutput = '';
+                    
+                    // Handle different response formats
+                    if (result.output) {
+                        allOutput = result.output;
+                    } else if (result.app_to_data && result.data_to_app) {
+                        // Bidirectional sync has two outputs
+                        allOutput = `App to Data:\n${result.app_to_data}\n\nData to App:\n${result.data_to_app}`;
+                    }
+                    
+                    if (allOutput) {
+                        const lines = allOutput.split('\n').filter(line => line.trim());
+                        const fileLines = lines.filter(line => 
+                            line.includes('>') || 
+                            line.includes('sent') || 
+                            line.includes('bytes') ||
+                            line.includes('sending') ||
+                            line.includes('created') ||
+                            line.includes('directory')
+                        );
+                        
+                        if (fileLines.length > 0) {
+                            const displayLines = fileLines.slice(0, 6);
+                            const operationCount = fileLines.length;
+                            const transferredFiles = fileLines.filter(line => line.includes('>')).length;
+                            const createdDirs = fileLines.filter(line => line.includes('created directory')).length;
+                            
+                            let stats = '';
+                            if (transferredFiles > 0 || createdDirs > 0) {
+                                stats = `<div style="margin-bottom: 8px; font-weight: bold; color: #007cba;">
+                                    📊 ${transferredFiles} files transferred${createdDirs > 0 ? `, ${createdDirs} directories created` : ''}
+                                </div>`;
+                            }
+                            
+                            details = `<div class="sync-progress">
+                                ${stats}
+                                <strong>Recent Operations:</strong><br>
+                                ${displayLines.map(line => `<div class="sync-operation">${line.trim()}</div>`).join('')}
+                                ${fileLines.length > 6 ? `<div style="margin-top: 6px; font-style: italic;">... and ${fileLines.length - 6} more operations</div>` : ''}
+                            </div>`;
+                        } else if (lines.length > 0) {
+                            // Show summary if no file operations found
+                            const summaryLines = lines.filter(line => 
+                                line.includes('total') || 
+                                line.includes('sent') || 
+                                line.includes('bytes')
+                            );
+                            if (summaryLines.length > 0) {
+                                details = `<div class="sync-progress">
+                                    <strong>Sync Summary:</strong><br>
+                                    ${summaryLines.map(line => `<div class="sync-operation">${line.trim()}</div>`).join('')}
+                                </div>`;
+                            } else {
+                                details = `<div class="sync-progress">
+                                    <div class="sync-operation">✅ No files needed synchronization - directories are in sync</div>
+                                </div>`;
+                            }
+                        }
+                    }
+                    
+                    statusDiv.innerHTML = `<div class="status success">✓ ${result.message}</div>`;
+                    progressDiv.innerHTML = `<div style="font-size: 0.9em; color: #28a745;">
+                        ✅ Completed successfully in ${duration}s
+                        ${details}
+                    </div>`;
+                    
+                    // Auto-clear after 8 seconds
                     setTimeout(() => {
                         statusDiv.innerHTML = '';
-                    }, 5000);
+                        progressDiv.innerHTML = '';
+                    }, 8000);
                 } else {
                     statusDiv.innerHTML = '<div class="status error">✗ ' + result.detail + '</div>';
+                    progressDiv.innerHTML = `<div style="font-size: 0.9em; color: #dc3545;">
+                        ❌ Failed after ${duration}s
+                    </div>`;
                 }
             } catch (error) {
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
                 statusDiv.innerHTML = '<div class="status error">✗ Error: ' + error.message + '</div>';
+                progressDiv.innerHTML = `<div style="font-size: 0.9em; color: #dc3545;">
+                    ❌ Connection error after ${duration}s
+                </div>`;
             } finally {
                 // Restore button state
                 button.disabled = false;
                 button.innerHTML = buttonText;
+                enableAllSyncButtons();
             }
+        }
+        
+        function disableAllSyncButtons() {
+            document.getElementById('sync-to-volume-btn').disabled = true;
+            document.getElementById('sync-from-volume-btn').disabled = true;
+            document.getElementById('bidirectional-sync-btn').disabled = true;
+        }
+        
+        function enableAllSyncButtons() {
+            document.getElementById('sync-to-volume-btn').disabled = false;
+            document.getElementById('sync-from-volume-btn').disabled = false;
+            document.getElementById('bidirectional-sync-btn').disabled = false;
         }
     </script>
 </body>
