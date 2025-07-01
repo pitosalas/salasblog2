@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block title %}Pages{% endblock %}
+{% block description %}A collection of pages and information on {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Pages</h1>
+        <p>A collection of pages and information organized for easy browsing.</p>
+    </div>
+    
+    <div class="pages-grid">
+        {% for page in pages %}
+        <div class="page-card">
+            <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+            {% if page.excerpt %}
+                <p class="page-excerpt">{{ page.excerpt }}</p>
+            {% endif %}
+            <div class="page-meta">
+                {% if page.category and page.category != 'Uncategorized' %}
+                    <span class="page-category">{{ page.category }}</span>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+/* Page-specific styles */
+.pages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.page-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.page-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.page-card h3 {
+    margin: 0 0 0.75rem 0;
+    font-family: 'Telex', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.page-card h3 a {
+    color: #2d3748;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.page-card h3 a:hover {
+    color: #667eea;
+}
+
+.page-excerpt {
+    color: #718096;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.page-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.page-category {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .pages-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .page-card {
+        padding: 1.25rem;
+    }
+    
+    .page-card h3 {
+        font-size: 1.1rem;
+    }
+}
+</style>
+{% endblock %}

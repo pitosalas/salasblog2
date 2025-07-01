@@ -15,13 +15,18 @@
             <p class="site-tagline">it's even worse than it appears</p>
         </div>
         <nav class="nav-tabs">
-            <a href="/" class="tab">blog</a>
-            <a href="/raindrops/" class="tab">link blog</a>{% for page in navigation %}{% if page.title != 'Home' and page.title != 'Blog' and page.title != 'Link Blog' %}
-            <a href="{{ page.url }}" class="tab">{{ page.title.lower() }}</a>{% endif %}{% endfor %}
+            <a href="/" class="tab">home</a>
+            <a href="/blog/" class="tab">blog</a>
+            <a href="/raindrops/" class="tab">link blog</a>
+            <a href="/pages/" class="tab">pages</a>
             
             <div class="search-container">
                 <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
                 <div id="search-results" class="search-results"></div>
+            </div>
+            
+            <div class="nav-admin">
+                <a href="/admin" class="admin-link">admin</a>
             </div>
         </nav>
     </header>

@@ -311,23 +311,14 @@ class SiteGenerator:
             return f"/{content_type}/page-{page_num}.html"
     
     def get_navigation_items(self):
-        """Get navigation items from pages directory"""
+        """Get simplified navigation items"""
         nav_items = []
         
-        # Always include Home
+        # Simplified navigation structure
         nav_items.append({'title': 'Home', 'url': '/'})
-        
-        # Add pages as navigation items
-        pages = self.load_posts('pages')
-        for page in pages:
-            nav_items.append({
-                'title': page['title'],
-                'url': f"/{page['filename']}.html"
-            })
-        
-        # Add blog and raindrops
         nav_items.append({'title': 'Blog', 'url': '/blog/'})
         nav_items.append({'title': 'Link Blog', 'url': '/raindrops/'})
+        nav_items.append({'title': 'Pages', 'url': '/pages/'})
         
         return nav_items
     
@@ -352,6 +343,30 @@ class SiteGenerator:
             f.write(html_content)
         
         print("✓ Generated home page")
+    
+    def generate_pages_listing(self, pages):
+        """Generate the pages listing page"""
+        # Sort pages alphabetically by title
+        sorted_pages = sorted(pages, key=lambda p: p['title'].lower())
+        
+        context = {
+            'pages': sorted_pages,
+            'site_title': 'Pito Salas Blog',
+            'navigation': self.get_navigation_items(),
+            'title': 'Pages'
+        }
+        
+        html_content = self.render_template('pages_list.html', context)
+        
+        # Create pages subdirectory
+        pages_output_dir = self.output_dir / "pages"
+        pages_output_dir.mkdir(exist_ok=True)
+        
+        output_file = pages_output_dir / "index.html"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+        
+        print("✓ Generated pages listing")
     
     def reset_output(self):
         """Remove all generated files"""
@@ -430,6 +445,11 @@ class SiteGenerator:
         # Generate home page
         print("🏠 Generating home page...")
         self.generate_home_page(blog_posts, raindrops)
+        print()
+        
+        # Generate pages listing
+        print("📄 Generating pages listing...")
+        self.generate_pages_listing(pages)
         print()
         
         # Generate search index

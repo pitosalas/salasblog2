@@ -506,3 +506,24 @@ pre code {
 .hero, .content-section, .post-grid, .post-card, .raindrop-list, .raindrop-item {
     display: none;
 }
+
+/* Admin link styling for winer theme */
+.nav-admin {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.admin-link {
+    color: #666 !important;
+    text-decoration: underline;
+    font-size: 11px;
+    font-weight: normal;
+    transition: color 0.3s ease;
+    padding: 2px 4px;
+}
+
+.admin-link:hover {
+    color: #333 !important;
+}
