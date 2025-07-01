@@ -3,58 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Salasblog2</title>
+    <title>Admin - Salas Blog</title>
+    <meta name="description" content="Admin panel for Salas Blog">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/rsd.xml" />
+    <link rel="stylesheet" href="/static/css/style.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        .admin-section { margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
-        button { padding: 10px 20px; margin: 10px 0; background: #007cba; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 14px; min-width: 140px; }
-        button:hover { background: #005a87; }
-        button:disabled { background: #ccc; cursor: not-allowed; }
-        .status { margin: 10px 0; padding: 10px; border-radius: 3px; }
-        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-        .loading { background: #cce7ff; color: #004085; border: 1px solid #b3d7ff; }
-        .spinner { display: inline-block; width: 12px; height: 12px; border: 2px solid #ccc; border-top: 2px solid #007cba; border-radius: 50%; animation: spin 1s linear infinite; margin-right: 8px; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .admin-section { 
+            margin: 20px 0; 
+            padding: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            background: #f9f9f9;
+        }
+        .admin-section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .admin-button { 
+            padding: 10px 20px; 
+            margin: 10px 5px; 
+            background: #007cba; 
+            color: white; 
+            border: none; 
+            border-radius: 3px; 
+            cursor: pointer; 
+            font-size: 14px; 
+            min-width: 140px;
+            transition: background-color 0.2s;
+        }
+        .admin-button:hover { 
+            background: #005a87; 
+        }
+        .admin-button:disabled { 
+            background: #ccc; 
+            cursor: not-allowed; 
+        }
+        .status { 
+            margin: 10px 0; 
+            padding: 10px; 
+            border-radius: 3px; 
+        }
+        .success { 
+            background: #d4edda; 
+            color: #155724; 
+            border: 1px solid #c3e6cb; 
+        }
+        .error { 
+            background: #f8d7da; 
+            color: #721c24; 
+            border: 1px solid #f5c6cb; 
+        }
+        .loading { 
+            background: #cce7ff; 
+            color: #004085; 
+            border: 1px solid #b3d7ff; 
+        }
+        .spinner { 
+            display: inline-block; 
+            width: 12px; 
+            height: 12px; 
+            border: 2px solid #ccc; 
+            border-top: 2px solid #007cba; 
+            border-radius: 50%; 
+            animation: spin 1s linear infinite; 
+            margin-right: 8px; 
+        }
+        @keyframes spin { 
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+        .admin-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Salasblog2 Admin</h1>
-    
-    <div class="admin-section">
-        <h2>Raindrop Sync</h2>
-        <p>Download new bookmarks from Raindrop.io and regenerate the site</p>
-        <button id="sync-btn" onclick="syncRaindrops()">Sync Raindrops</button>
-        <div id="sync-status"></div>
-    </div>
-    
-    <div class="admin-section">
-        <h2>Site Generation</h2>
-        <p>Regenerate the static site from markdown files</p>
-        <button id="regen-btn" onclick="regenerateSite()">Regenerate Site</button>
-        <div id="regen-status"></div>
-    </div>
-    
-    <div class="admin-section">
-        <h2>Data Synchronization</h2>
-        <p>Sync content between working directory (/app/content/) and persistent volume (/data/content/)</p>
-        <button id="sync-to-volume-btn" onclick="syncToVolume()">Sync to Volume</button>
-        <button id="sync-from-volume-btn" onclick="syncFromVolume()">Sync from Volume</button>
-        <button id="bidirectional-sync-btn" onclick="bidirectionalSync()">Bidirectional Sync</button>
-        <div id="data-sync-status"></div>
-        <small>
-            <strong>Sync to Volume:</strong> Copies newer files from working directory to volume<br>
-            <strong>Sync from Volume:</strong> Copies newer files from volume to working directory<br>
-            <strong>Bidirectional Sync:</strong> Performs both operations (recommended)
-        </small>
-    </div>
-    
-    <div class="admin-section">
-        <h2>Weblogs API</h2>
-        <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
-        <p>Supports standard Blogger API methods for external blog clients.</p>
-    </div>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="/">Salas Blog</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/raindrops/">Link Blog</a></li>
+                <li class="nav-dropdown">
+                    <a href="/faq/" class="nav-dropdown-toggle">FAQ</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/faq/recommendations/">Recommendations</a></li>
+                        <li><a href="/faq/getting-a-job/">Getting a Job</a></li>
+                        <li><a href="/faq/keeping-up/">Keeping Up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/robots/" class="nav-dropdown-toggle">Robots</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/robots/brh/">BRH</a></li>
+                        <li><a href="/robots/dome/">Dome</a></li>
+                        <li><a href="/robots/articles/">Articles</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/brandeis/" class="nav-dropdown-toggle">Brandeis</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/brandeis/teaching/">Teaching</a></li>
+                        <li><a href="/brandeis/research/">Research</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="/about/" class="nav-dropdown-toggle">About</a>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="/about/bio/">Bio</a></li>
+                        <li><a href="/about/resume/">Resume</a></li>
+                    </ul>
+                </li>
+                <li><a href="/whyaskwhy" class="nav-current">Admin</a></li>
+                <li class="search-container">
+                    <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
+                    <div id="search-results" class="search-results"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="main">
+        <div class="admin-content">
+            <h1>Admin Panel</h1>
+            <p>Manage your Salas Blog site with the tools below.</p>
+            
+            <div class="admin-section">
+                <h2>Raindrop Sync</h2>
+                <p>Download new bookmarks from Raindrop.io and regenerate the site</p>
+                <button id="sync-btn" class="admin-button" onclick="syncRaindrops()">Sync Raindrops</button>
+                <div id="sync-status"></div>
+            </div>
+            
+            <div class="admin-section">
+                <h2>Site Generation</h2>
+                <p>Regenerate the static site from markdown files</p>
+                <button id="regen-btn" class="admin-button" onclick="regenerateSite()">Regenerate Site</button>
+                <div id="regen-status"></div>
+            </div>
+            
+            <div class="admin-section">
+                <h2>Data Synchronization</h2>
+                <p>Sync content between working directory (/app/content/) and persistent volume (/data/content/)</p>
+                <button id="sync-to-volume-btn" class="admin-button" onclick="syncToVolume()">Sync to Volume</button>
+                <button id="sync-from-volume-btn" class="admin-button" onclick="syncFromVolume()">Sync from Volume</button>
+                <button id="bidirectional-sync-btn" class="admin-button" onclick="bidirectionalSync()">Bidirectional Sync</button>
+                <div id="data-sync-status"></div>
+                <small>
+                    <strong>Sync to Volume:</strong> Copies newer files from working directory to volume<br>
+                    <strong>Sync from Volume:</strong> Copies newer files from volume to working directory<br>
+                    <strong>Bidirectional Sync:</strong> Performs both operations (recommended)
+                </small>
+            </div>
+            
+            <div class="admin-section">
+                <h2>Weblogs API</h2>
+                <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
+                <p>Supports standard Blogger API methods for external blog clients.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Salas Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
     <script>
         async function syncRaindrops() {
             const button = document.getElementById('sync-btn');

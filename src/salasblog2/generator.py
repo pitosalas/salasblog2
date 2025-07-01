@@ -377,41 +377,66 @@ class SiteGenerator:
     
     def generate_site(self):
         """Generate the complete static site"""
-        print(f"🚀 Generating site with theme: {self.theme}")
+        print(f"🚀 Starting site generation with theme: {self.theme}")
+        print(f"📁 Templates: {self.templates_dir}")
+        print(f"📁 Static files: {self.static_dir}")
+        print(f"📁 Output: {self.output_dir}")
+        print()
         
         # Create output directory
         self.output_dir.mkdir(exist_ok=True)
+        print(f"✓ Created output directory")
         
         # Load all content
+        print("📖 Loading content...")
         blog_posts = self.load_posts('blog')
         raindrops = self.load_posts('raindrops')
         pages = self.load_posts('pages')
         
-        print(f"📊 Loaded {len(blog_posts)} blog posts, {len(raindrops)} raindrops, {len(pages)} pages")
+        print(f"✓ Loaded {len(blog_posts)} blog posts")
+        print(f"✓ Loaded {len(raindrops)} raindrops")
+        print(f"✓ Loaded {len(pages)} pages")
+        print()
         
         # Generate individual posts
+        print("🔨 Generating individual pages...")
         self.generate_individual_posts(blog_posts, 'blog')
         self.generate_individual_posts(raindrops, 'raindrops')
         self.generate_individual_posts(pages, 'pages')
+        print()
         
         # Generate listing pages
+        print("📋 Generating listing pages...")
         self.generate_listing_pages(blog_posts, 'blog')
         self.generate_listing_pages(raindrops, 'raindrops')
+        print()
         
         # Generate home page
+        print("🏠 Generating home page...")
         self.generate_home_page(blog_posts, raindrops)
+        print()
         
         # Generate search index
+        print("🔍 Generating search index...")
         all_posts = blog_posts + raindrops + pages
         self.generate_search_index(all_posts)
+        print()
         
         # Generate 404 error page
+        print("🚫 Generating 404 page...")
         self.generate_404_page()
+        print()
         
         # Copy static files
+        print("📋 Copying static files...")
         self.copy_static_files()
+        print()
         
-        print(f"✅ Site generation complete! Output: {self.output_dir}")
+        total_files = len(blog_posts) + len(raindrops) + len(pages)
+        print(f"✅ Site generation complete!")
+        print(f"📊 Generated {total_files} total content files")
+        print(f"📁 Output directory: {self.output_dir}")
+        print(f"🌐 Ready to serve or deploy!")
     
     def incremental_regenerate_post(self, post_filename: str, content_type: str = 'blog'):
         """Incrementally regenerate site after a single post change."""

@@ -20,7 +20,7 @@ RUN git clone -b persistent-volume https://github.com/pitosalas/salasblog2.git /
     cp /tmp/repo/.gitignore . 2>/dev/null || true && \
     rm -rf /tmp/repo && \
     git config user.email "blog-api@salasblog2.com" && \
-    git config user.name "Salasblog2 Server" && \
+    git config user.name "Salasblog2 Server"
 
 # Install dependencies
 RUN uv sync --frozen
