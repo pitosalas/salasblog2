@@ -617,19 +617,19 @@ async def xmlrpc_endpoint(request: Request):
             elif method_name == "blogger.getPost":
                 logger.info("Executing blogger.getPost")
                 result = api.blogger_getPost(*params)
-            # MetaWeblog API methods (same implementation, different names)
+            # MetaWeblog API methods (different parameter signatures)
             elif method_name == "metaWeblog.newPost":
                 logger.info("Executing metaWeblog.newPost")
-                result = api.blogger_newPost(*params)
+                result = api.metaweblog_newPost(*params)
             elif method_name == "metaWeblog.editPost":
                 logger.info("Executing metaWeblog.editPost")
-                result = api.blogger_editPost(*params)
+                result = api.metaweblog_editPost(*params)
             elif method_name == "metaWeblog.getPost":
                 logger.info("Executing metaWeblog.getPost")
-                result = api.blogger_getPost(*params)
+                result = api.metaweblog_getPost(*params)
             elif method_name == "metaWeblog.getRecentPosts":
                 logger.info("Executing metaWeblog.getRecentPosts")
-                result = api.blogger_getRecentPosts(*params)
+                result = api.metaweblog_getRecentPosts(*params)
             else:
                 logger.error(f"Unknown method: {method_name}")
                 raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")

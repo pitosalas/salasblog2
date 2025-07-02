@@ -385,3 +385,20 @@ class BloggerAPI:
         else:
             logger.warning("Authentication failed: empty credentials")
         return fallback_auth
+
+    # MetaWeblog API wrapper methods (different parameter signatures)
+    def metaweblog_newPost(self, blogid: str, username: str, password: str, struct, publish: bool) -> str:
+        """MetaWeblog API newPost - maps to blogger_newPost with added appkey"""
+        return self.blogger_newPost("metaweblog", blogid, username, password, struct, publish)
+    
+    def metaweblog_editPost(self, postid: str, username: str, password: str, struct, publish: bool) -> bool:
+        """MetaWeblog API editPost - maps to blogger_editPost with added appkey"""
+        return self.blogger_editPost("metaweblog", postid, username, password, struct, publish)
+    
+    def metaweblog_getPost(self, postid: str, username: str, password: str) -> dict:
+        """MetaWeblog API getPost - maps to blogger_getPost with added appkey"""
+        return self.blogger_getPost("metaweblog", postid, username, password)
+    
+    def metaweblog_getRecentPosts(self, blogid: str, username: str, password: str, numberOfPosts: int) -> list:
+        """MetaWeblog API getRecentPosts - maps to blogger_getRecentPosts with added appkey"""
+        return self.blogger_getRecentPosts("metaweblog", blogid, username, password, numberOfPosts)
