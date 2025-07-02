@@ -630,6 +630,9 @@ async def xmlrpc_endpoint(request: Request):
             elif method_name == "metaWeblog.getRecentPosts":
                 logger.info("Executing metaWeblog.getRecentPosts")
                 result = api.metaweblog_getRecentPosts(*params)
+            elif method_name == "metaWeblog.getCategories":
+                logger.info("Executing metaWeblog.getCategories")
+                result = api.metaweblog_getCategories(*params)
             else:
                 logger.error(f"Unknown method: {method_name}")
                 raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")

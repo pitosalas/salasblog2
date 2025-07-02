@@ -402,3 +402,26 @@ class BloggerAPI:
     def metaweblog_getRecentPosts(self, blogid: str, username: str, password: str, numberOfPosts: int) -> list:
         """MetaWeblog API getRecentPosts - maps to blogger_getRecentPosts with added appkey"""
         return self.blogger_getRecentPosts("metaweblog", blogid, username, password, numberOfPosts)
+    
+    def metaweblog_getCategories(self, blogid: str, username: str, password: str) -> list:
+        """MetaWeblog API getCategories - return list of available categories"""
+        logger.info(f"metaweblog_getCategories called: blogid={blogid}, username={username}")
+        
+        # Authenticate user
+        self._authenticate_or_raise(username, password)
+        
+        # Return a simple categories list - can be expanded later
+        categories = [
+            {
+                'description': 'General',
+                'htmlUrl': '/blog/',
+                'rssUrl': '/blog/rss.xml'
+            },
+            {
+                'description': 'Technology', 
+                'htmlUrl': '/blog/',
+                'rssUrl': '/blog/rss.xml'
+            }
+        ]
+        logger.info(f"Returning {len(categories)} categories")
+        return categories
