@@ -170,6 +170,8 @@ class BloggerAPI:
                        content, publish: bool) -> str:
         """Create a new blog post and return the post ID (filename)."""
         logger.info(f"blogger_newPost called: appkey={appkey}, blogid={blogid}, username={username}, publish={publish}")
+        logger.info(f"blogger_newPost content type: {type(content)}")
+        logger.info(f"blogger_newPost full content: {repr(content)}")
         
         # Authenticate user
         self._authenticate_or_raise(username, password)
@@ -201,6 +203,8 @@ class BloggerAPI:
                         content, publish: bool) -> bool:
         """Edit an existing blog post."""
         logger.info(f"blogger_editPost called: postid={postid}, username={username}, publish={publish}")
+        logger.info(f"blogger_editPost content type: {type(content)}")
+        logger.info(f"blogger_editPost full content: {repr(content)}")
         
         # Authenticate user
         self._authenticate_or_raise(username, password)
