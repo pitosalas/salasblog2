@@ -535,6 +535,7 @@ async def xmlrpc_endpoint(request: Request):
     try:
         body = await request.body()
         logger.info(f"Received XML-RPC request, body length: {len(body)}")
+        logger.info(f"Raw XML-RPC request body: {body.decode('utf-8')}")
         
         # Parse XML-RPC request
         root = ET.fromstring(body.decode('utf-8'))
@@ -546,19 +547,24 @@ async def xmlrpc_endpoint(request: Request):
         param_nodes = root.findall('.//param/value')
         logger.info(f"Found {len(param_nodes)} parameters")
         for i, param in enumerate(param_nodes):
+            logger.info(f"Processing parameter {i+1}: {ET.tostring(param, encoding='unicode')}")
             # Handle different value types
             if param.find('string') is not None:
                 value = param.find('string').text or ""
                 params.append(value)
+                logger.info(f"Parameter {i+1} (string): {repr(value)}")
             elif param.find('boolean') is not None:
                 value = param.find('boolean').text == '1'
                 params.append(value)
+                logger.info(f"Parameter {i+1} (boolean): {value}")
             elif param.find('int') is not None:
                 value = int(param.find('int').text)
                 params.append(value)
+                logger.info(f"Parameter {i+1} (int): {value}")
             elif param.find('i4') is not None:
                 value = int(param.find('i4').text)
                 params.append(value)
+                logger.info(f"Parameter {i+1} (i4): {value}")
             elif param.find('struct') is not None:
                 # Parse struct (dictionary) for structured content
                 struct_elem = param.find('struct')
@@ -581,14 +587,16 @@ async def xmlrpc_endpoint(request: Request):
                             val = value_elem.text or ""
                         struct_dict[key] = val
                 params.append(struct_dict)
-                logger.info(f"Parsed struct parameter: {struct_dict}")
+                logger.info(f"Parameter {i+1} (struct): {struct_dict}")
             else:
                 value = param.text or ""
                 params.append(value)
+                logger.info(f"Parameter {i+1} (raw): {repr(value)}")
         
         # Handle Blogger API methods
         api = BloggerAPI()
         logger.info(f"Calling {method_name} with {len(params)} parameters")
+        logger.info(f"All parsed parameters: {[repr(p) for p in params]}")
         
         try:
             if method_name == "blogger.newPost":
