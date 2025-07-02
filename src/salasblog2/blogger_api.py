@@ -396,12 +396,40 @@ class BloggerAPI:
         return self.blogger_editPost("metaweblog", postid, username, password, struct, publish)
     
     def metaweblog_getPost(self, postid: str, username: str, password: str) -> dict:
-        """MetaWeblog API getPost - maps to blogger_getPost with added appkey"""
-        return self.blogger_getPost("metaweblog", postid, username, password)
+        """MetaWeblog API getPost - returns MetaWeblog-formatted response"""
+        blogger_post = self.blogger_getPost("metaweblog", postid, username, password)
+        
+        # Convert to MetaWeblog format
+        metaweblog_post = {
+            'postid': blogger_post['postid'],
+            'title': blogger_post['title'],
+            'description': blogger_post['content'],  # MetaWeblog uses 'description' not 'content'
+            'dateCreated': blogger_post['dateCreated'],
+            'userid': blogger_post['userid'],
+            'categories': ['General']  # Add categories array
+        }
+        logger.info(f"Converted to MetaWeblog format: title='{metaweblog_post['title']}', description_length={len(metaweblog_post['description'])}")
+        return metaweblog_post
     
     def metaweblog_getRecentPosts(self, blogid: str, username: str, password: str, numberOfPosts: int) -> list:
-        """MetaWeblog API getRecentPosts - maps to blogger_getRecentPosts with added appkey"""
-        return self.blogger_getRecentPosts("metaweblog", blogid, username, password, numberOfPosts)
+        """MetaWeblog API getRecentPosts - returns MetaWeblog-formatted response"""
+        blogger_posts = self.blogger_getRecentPosts("metaweblog", blogid, username, password, numberOfPosts)
+        
+        # Convert each post to MetaWeblog format
+        metaweblog_posts = []
+        for post in blogger_posts:
+            metaweblog_post = {
+                'postid': post['postid'],
+                'title': post['title'],
+                'description': post['content'],  # MetaWeblog uses 'description' not 'content'
+                'dateCreated': post['dateCreated'],
+                'userid': post['userid'],
+                'categories': ['General']  # Add categories array
+            }
+            metaweblog_posts.append(metaweblog_post)
+        
+        logger.info(f"Converted {len(metaweblog_posts)} posts to MetaWeblog format")
+        return metaweblog_posts
     
     def metaweblog_getCategories(self, blogid: str, username: str, password: str) -> list:
         """MetaWeblog API getCategories - return list of available categories"""
