@@ -505,9 +505,9 @@ async def serve_rsd(request: Request):
     <engineLink>https://github.com/pitosalas/salasblog2</engineLink>
     <homePageLink>{base_url}/</homePageLink>
     <apis>
-      <api name="Blogger" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
+      <api name="MetaWeblog" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
         <settings>
-          <docs>http://plant.blogger.com/api/index.html</docs>
+          <docs>http://www.xmlrpc.com/metaWeblogApi</docs>
         </settings>
       </api>
     </apis>
@@ -617,6 +617,19 @@ async def xmlrpc_endpoint(request: Request):
             elif method_name == "blogger.getPost":
                 logger.info("Executing blogger.getPost")
                 result = api.blogger_getPost(*params)
+            # MetaWeblog API methods (same implementation, different names)
+            elif method_name == "metaWeblog.newPost":
+                logger.info("Executing metaWeblog.newPost")
+                result = api.blogger_newPost(*params)
+            elif method_name == "metaWeblog.editPost":
+                logger.info("Executing metaWeblog.editPost")
+                result = api.blogger_editPost(*params)
+            elif method_name == "metaWeblog.getPost":
+                logger.info("Executing metaWeblog.getPost")
+                result = api.blogger_getPost(*params)
+            elif method_name == "metaWeblog.getRecentPosts":
+                logger.info("Executing metaWeblog.getRecentPosts")
+                result = api.blogger_getRecentPosts(*params)
             else:
                 logger.error(f"Unknown method: {method_name}")
                 raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")
