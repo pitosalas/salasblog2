@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git push:*)",
-      "WebFetch(domain:raw.githubusercontent.com)"
-    ],
-    "deny": []
-  }
-}
