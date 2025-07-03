@@ -41,22 +41,24 @@ class GitScheduler:
                 logger.warning("Git credentials not configured, skipping sync")
                 return False
             
-            # Check if there are any changes
-            result = subprocess.run(
-                ["git", "status", "--porcelain"],
-                capture_output=True, text=True, timeout=10
-            )
-            
-            if not result.stdout.strip():
-                logger.info("No changes to sync to GitHub")
-                return True
-            
-            # Add all changes in content directory
+            # Add content directory changes
             logger.info("Adding content changes to git...")
             subprocess.run(
                 ["git", "add", "content/"],
                 capture_output=True, text=True, timeout=30, check=True
             )
+            
+            # Check if there are any staged changes (content-related)
+            result = subprocess.run(
+                ["git", "diff", "--cached", "--name-only"],
+                capture_output=True, text=True, timeout=10
+            )
+            
+            if not result.stdout.strip():
+                logger.info("No content changes to sync to GitHub")
+                return True
+            
+            logger.info(f"Content files to commit: {result.stdout.strip()}")
             
             # Create commit with timestamp
             commit_message = f"Automated sync from blog API - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
