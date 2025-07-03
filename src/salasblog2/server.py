@@ -16,6 +16,7 @@ from contextlib import asynccontextmanager
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
+from .scheduler import get_scheduler
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -81,6 +82,9 @@ async def lifespan(app: FastAPI):
     # Check if we're the only instance running
     _check_single_instance()
     
+    # Start the Git scheduler
+    scheduler = get_scheduler()
+    scheduler.start_scheduler(interval_hours=6)  # Sync every 6 hours
     
     import asyncio
     
@@ -88,6 +92,9 @@ async def lifespan(app: FastAPI):
     
     # Shutdown
     logger.info("Shutting down Salasblog2 server")
+    
+    # Stop the scheduler
+    scheduler.stop_scheduler()
 
 
 app = FastAPI(
@@ -375,6 +382,56 @@ async def bidirectional_sync():
     except Exception as e:
         logger.error(f"Bidirectional sync error: {e}")
         raise HTTPException(status_code=500, detail=f"Sync error: {str(e)}")
+
+@app.get("/api/scheduler/status")
+async def get_scheduler_status():
+    """Get the current status of the Git scheduler"""
+    scheduler = get_scheduler()
+    status = scheduler.get_status()
+    return JSONResponse(content=status)
+
+@app.post("/api/scheduler/sync-now")
+async def trigger_git_sync():
+    """Manually trigger a Git sync to GitHub"""
+    scheduler = get_scheduler()
+    try:
+        success = await scheduler.sync_to_github()
+        if success:
+            return JSONResponse(content={
+                "status": "success",
+                "message": "Content successfully synced to GitHub"
+            })
+        else:
+            raise HTTPException(status_code=500, detail="Git sync failed - check logs for details")
+    except Exception as e:
+        logger.error(f"Manual Git sync failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Git sync error: {str(e)}")
+
+@app.post("/api/scheduler/start")
+async def start_scheduler(hours: int = 6):
+    """Start or restart the Git scheduler with specified interval"""
+    if hours < 1 or hours > 24:
+        raise HTTPException(status_code=400, detail="Interval must be between 1 and 24 hours")
+    
+    scheduler = get_scheduler()
+    scheduler.stop_scheduler()  # Stop if already running
+    scheduler.start_scheduler(interval_hours=hours)
+    
+    return JSONResponse(content={
+        "status": "success",
+        "message": f"Git scheduler started - will sync every {hours} hours"
+    })
+
+@app.post("/api/scheduler/stop")
+async def stop_scheduler():
+    """Stop the Git scheduler"""
+    scheduler = get_scheduler()
+    scheduler.stop_scheduler()
+    
+    return JSONResponse(content={
+        "status": "success",
+        "message": "Git scheduler stopped"
+    })
 
 @app.get("/api/sync-raindrops")
 async def sync_raindrops():

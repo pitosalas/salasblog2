@@ -1,9 +1,9 @@
 # Multi-stage build for Salasblog2 FastAPI app
 FROM python:3.11-slim
 
-# Install system dependencies including git and rsync
+# Install system dependencies including git, rsync, and ripgrep
 RUN apt-get update && \
-    apt-get install -y git rsync && \
+    apt-get install -y git rsync ripgrep && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

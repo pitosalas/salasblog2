@@ -167,6 +167,23 @@
             </div>
             
             <div class="admin-section">
+                <h2>GitHub Sync Scheduler</h2>
+                <p>Automatically sync content to GitHub repository on a schedule</p>
+                <div style="margin-bottom: 15px;">
+                    <button id="git-sync-now-btn" class="admin-button" onclick="gitSyncNow()">Sync to GitHub Now</button>
+                    <button id="scheduler-start-btn" class="admin-button" onclick="startScheduler()">Start Scheduler (6h)</button>
+                    <button id="scheduler-stop-btn" class="admin-button" onclick="stopScheduler()">Stop Scheduler</button>
+                </div>
+                <div id="scheduler-status"></div>
+                <div id="git-sync-progress" style="margin-top: 10px;"></div>
+                <small>
+                    <strong>Sync Now:</strong> Immediately sync content to GitHub<br>
+                    <strong>Start Scheduler:</strong> Automatically sync every 6 hours<br>
+                    <strong>Stop Scheduler:</strong> Disable automatic syncing
+                </small>
+            </div>
+            
+            <div class="admin-section">
                 <h2>Weblogs API</h2>
                 <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
                 <p>Supports standard Blogger API methods for external blog clients.</p>
@@ -418,6 +435,107 @@
             document.getElementById('sync-from-volume-btn').disabled = false;
             document.getElementById('bidirectional-sync-btn').disabled = false;
         }
+        
+        // Git Scheduler Functions
+        async function gitSyncNow() {
+            const button = document.getElementById('git-sync-now-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            
+            button.disabled = true;
+            statusDiv.innerHTML = '<div class="status-running">Syncing to GitHub...</div>';
+            progressDiv.innerHTML = '';
+            
+            try {
+                const response = await fetch('/api/scheduler/sync-now', { method: 'POST' });
+                const result = await response.json();
+                
+                if (response.ok) {
+                    statusDiv.innerHTML = '<div class="status-success">✓ Content synced to GitHub successfully</div>';
+                } else {
+                    statusDiv.innerHTML = `<div class="status-error">✗ Git sync failed: ${result.detail}</div>`;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status-error">✗ Error: ${error.message}</div>`;
+            } finally {
+                button.disabled = false;
+                loadSchedulerStatus(); // Refresh status
+            }
+        }
+        
+        async function startScheduler() {
+            const button = document.getElementById('scheduler-start-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            
+            button.disabled = true;
+            statusDiv.innerHTML = '<div class="status-running">Starting scheduler...</div>';
+            
+            try {
+                const response = await fetch('/api/scheduler/start', { method: 'POST' });
+                const result = await response.json();
+                
+                if (response.ok) {
+                    statusDiv.innerHTML = '<div class="status-success">✓ Git scheduler started - syncing every 6 hours</div>';
+                } else {
+                    statusDiv.innerHTML = `<div class="status-error">✗ Failed to start scheduler: ${result.detail}</div>`;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status-error">✗ Error: ${error.message}</div>`;
+            } finally {
+                button.disabled = false;
+                loadSchedulerStatus(); // Refresh status
+            }
+        }
+        
+        async function stopScheduler() {
+            const button = document.getElementById('scheduler-stop-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            
+            button.disabled = true;
+            statusDiv.innerHTML = '<div class="status-running">Stopping scheduler...</div>';
+            
+            try {
+                const response = await fetch('/api/scheduler/stop', { method: 'POST' });
+                const result = await response.json();
+                
+                if (response.ok) {
+                    statusDiv.innerHTML = '<div class="status-success">✓ Git scheduler stopped</div>';
+                } else {
+                    statusDiv.innerHTML = `<div class="status-error">✗ Failed to stop scheduler: ${result.detail}</div>`;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = `<div class="status-error">✗ Error: ${error.message}</div>`;
+            } finally {
+                button.disabled = false;
+                loadSchedulerStatus(); // Refresh status
+            }
+        }
+        
+        async function loadSchedulerStatus() {
+            try {
+                const response = await fetch('/api/scheduler/status');
+                const status = await response.json();
+                
+                const progressDiv = document.getElementById('git-sync-progress');
+                const lastSync = status.last_sync ? new Date(status.last_sync).toLocaleString() : 'Never';
+                
+                progressDiv.innerHTML = `
+                    <div class="progress-info">
+                        <strong>Scheduler Status:</strong> ${status.running ? 'Running' : 'Stopped'}<br>
+                        <strong>Last Sync:</strong> ${lastSync}<br>
+                        <strong>Git Configured:</strong> ${status.git_configured ? 'Yes' : 'No'}<br>
+                        <strong>Scheduled Jobs:</strong> ${status.next_jobs.length}
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Failed to load scheduler status:', error);
+            }
+        }
+        
+        // Load scheduler status on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSchedulerStatus();
+        });
     </script>
 </body>
 </html>
