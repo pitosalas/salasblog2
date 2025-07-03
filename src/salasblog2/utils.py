@@ -68,22 +68,25 @@ def format_date_dd_mm_yyyy(date_str: Optional[str]) -> str:
     return format_date(date_str, '%d-%m-%Y')
 
 
-def create_excerpt(content: str, max_length: int = 150) -> str:
+def create_excerpt(content: str, max_length: int = 150, smart_threshold: int = 100) -> str:
     """
     Create an excerpt from text content.
     
     Args:
         content: Full text content
         max_length: Maximum length of excerpt
+        smart_threshold: If content is only this many chars longer than max_length, include full content
         
     Returns:
-        Excerpt with ellipsis if truncated
+        Excerpt with ellipsis if truncated, or full content if close to excerpt length
         
     Examples:
         >>> create_excerpt("This is a short text")
         'This is a short text'
         >>> create_excerpt("This is a very long text that will be truncated", 20)
         'This is a very long...'
+        >>> create_excerpt("This is a medium length text that is just a bit longer", 40)
+        'This is a medium length text that is just a bit longer'
     """
     if not content:
         return ''
@@ -91,10 +94,38 @@ def create_excerpt(content: str, max_length: int = 150) -> str:
     # Clean up content - remove newlines and extra spaces
     clean_content = content.replace('\n', ' ').strip()
     
+    # If content is short enough, return as-is
     if len(clean_content) <= max_length:
         return clean_content
     
+    # If content is only slightly longer than max_length, return full content
+    if len(clean_content) <= max_length + smart_threshold:
+        return clean_content
+    
     return clean_content[:max_length] + '...'
+
+def create_excerpt_with_info(content: str, max_length: int = 150, smart_threshold: int = 100) -> tuple[str, bool]:
+    """
+    Create an excerpt and return whether content was truncated.
+    
+    Returns:
+        Tuple of (excerpt, was_truncated)
+    """
+    if not content:
+        return '', False
+    
+    # Clean up content - remove newlines and extra spaces
+    clean_content = content.replace('\n', ' ').strip()
+    
+    # If content is short enough, return as-is
+    if len(clean_content) <= max_length:
+        return clean_content, False
+    
+    # If content is only slightly longer than max_length, return full content
+    if len(clean_content) <= max_length + smart_threshold:
+        return clean_content, False
+    
+    return clean_content[:max_length] + '...', True
 
 
 def parse_date_for_sorting(date_str: Optional[str]) -> datetime:

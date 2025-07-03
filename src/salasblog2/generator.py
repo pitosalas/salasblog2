@@ -15,6 +15,7 @@ from .utils import (
     format_date,
     format_date_dd_mm_yyyy,
     create_excerpt,
+    create_excerpt_with_info,
     parse_date_for_sorting,
     process_markdown_to_html,
     parse_frontmatter_file,
@@ -140,7 +141,13 @@ class SiteGenerator:
                 
                 # Create excerpt - prefer frontmatter excerpt, fallback to content
                 frontmatter_excerpt = parsed['metadata'].get('excerpt', '')
-                post_data['excerpt'] = frontmatter_excerpt if frontmatter_excerpt else create_excerpt(parsed['content'])
+                if frontmatter_excerpt:
+                    post_data['excerpt'] = frontmatter_excerpt
+                    post_data['is_truncated'] = False  # Manual excerpt, don't show read more
+                else:
+                    excerpt, is_truncated = create_excerpt_with_info(parsed['content'])
+                    post_data['excerpt'] = excerpt
+                    post_data['is_truncated'] = is_truncated
                 
                 posts.append(post_data)
                 
