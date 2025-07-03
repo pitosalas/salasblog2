@@ -281,9 +281,9 @@ async def sync_to_volume():
         data_dir = Path("/data/content")
         data_dir.mkdir(parents=True, exist_ok=True)
         
-        # Use rsync for bidirectional sync (newer files win)
+        # Use rsync with checksum comparison (content-based sync)
         result = subprocess.run([
-            "rsync", "-av", "--update", 
+            "rsync", "-av", "--checksum", 
             "/app/content/", "/data/content/"
         ], capture_output=True, text=True, timeout=30)
         
