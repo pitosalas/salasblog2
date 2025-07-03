@@ -97,6 +97,43 @@ class BloggerAPI:
             logger.error(f"Failed to write post: {e}")
             raise
     
+    def _backup_to_volume(self, file_path: Path):
+        """Immediately backup a single post file to persistent volume."""
+        try:
+            # Calculate relative path from blog_dir to maintain structure
+            relative_path = file_path.relative_to(self.root_dir)
+            volume_path = Path("/data") / relative_path
+            
+            # Ensure volume directory exists
+            volume_path.parent.mkdir(parents=True, exist_ok=True)
+            
+            # Copy the file to volume
+            import shutil
+            shutil.copy2(file_path, volume_path)
+            
+            logger.info(f"Post backed up to volume: {file_path} -> {volume_path}")
+            
+        except Exception as e:
+            logger.error(f"Failed to backup post to volume {file_path}: {e}")
+            # Don't raise - post creation should still succeed even if backup fails
+    
+    def _delete_from_volume(self, file_path: Path):
+        """Delete a single post file from persistent volume."""
+        try:
+            # Calculate relative path from blog_dir to maintain structure
+            relative_path = file_path.relative_to(self.root_dir)
+            volume_path = Path("/data") / relative_path
+            
+            if volume_path.exists():
+                volume_path.unlink()
+                logger.info(f"Post deleted from volume: {volume_path}")
+            else:
+                logger.info(f"Post not found in volume (already deleted): {volume_path}")
+                
+        except Exception as e:
+            logger.error(f"Failed to delete post from volume {file_path}: {e}")
+            # Don't raise - post deletion should still succeed even if volume cleanup fails
+    
     def _regenerate_and_verify(self, filename: str, operation: str):
         """Handle site regeneration and file verification for create/edit operations."""
         if operation.lower() == "delete":
@@ -187,6 +224,9 @@ class BloggerAPI:
         file_path = self.blog_dir / filename
         self._write_post_file(file_path, post)
         
+        # Immediately backup to persistent volume
+        self._backup_to_volume(file_path)
+        
         # Handle publishing workflow
         if publish:
             try:
@@ -228,6 +268,9 @@ class BloggerAPI:
         post = self._create_post_frontmatter(title, body_content)
         self._write_post_file(file_path, post)
         
+        # Immediately backup to persistent volume
+        self._backup_to_volume(file_path)
+        
         # Handle publishing workflow
         if publish:
             try:
@@ -266,6 +309,10 @@ class BloggerAPI:
         try:
             file_path.unlink()
             logger.info(f"Post deleted successfully: {file_path}")
+            
+            # Also delete from persistent volume
+            self._delete_from_volume(file_path)
+            
         except Exception as e:
             logger.error(f"Failed to delete post: {e}")
             raise
