@@ -23,7 +23,8 @@ from .utils import (
     sort_posts_by_date,
     group_posts_by_month,
     load_markdown_files_from_directory,
-    safe_get_filename_stem
+    safe_get_filename_stem,
+    get_markdown_processor
 )
 
 
@@ -54,7 +55,8 @@ class SiteGenerator:
         self.jinja_env.filters['dd_mm_yyyy'] = format_date_dd_mm_yyyy
         self.jinja_env.filters['group_by_month'] = group_posts_by_month
         self.jinja_env.filters['markdown'] = self.markdown_to_html
-        self.markdown_processor = markdown.Markdown(extensions=['meta', 'codehilite', 'toc'])
+        # Use the same markdown processor as utils.py for consistency
+        self.markdown_processor = get_markdown_processor()
     
     def format_date(self, date_str, format_str='%B %d, %Y'):
         """Custom Jinja2 filter for date formatting"""

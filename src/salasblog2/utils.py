@@ -186,7 +186,17 @@ def process_markdown_to_html(content: str) -> str:
     # Reset the processor to avoid state issues between conversions
     processor = get_markdown_processor()
     processor.reset()
-    return processor.convert(content)
+    result = processor.convert(content)
+    
+    # Debug logging to help diagnose markdown processing issues
+    import logging
+    logger = logging.getLogger(__name__)
+    if len(content) > 0 and len(result) > 0:
+        logger.debug(f"Markdown conversion: {len(content)} chars -> {len(result)} chars")
+        if content[:50] == result[:50]:  # If input == output, markdown didn't process
+            logger.warning(f"Markdown may not have processed correctly. Input starts with: {content[:100]}")
+    
+    return result
 
 
 def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
