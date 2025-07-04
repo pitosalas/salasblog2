@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Python-based static site generator for personal websites and blogs called "salasblog2". It processes Markdown files with frontmatter to generate static HTML sites that can be deployed on Fly.io.
+This is a Python-based static site generator for personal websites and blogs called "salasblog2". It processes Markdown files with frontmatter to generate static HTML sites that can be deployed on Fly.io. It also implements the Blogger API to allow client apps like MarsEdit to post content.
 
 ## Development Setup
 
@@ -15,16 +15,25 @@ This project uses `uv` for Python package and environment management:
 3. Install dependencies: `uv sync`
 4. Activate environment: `source .venv/bin/activate` or use `uv run` prefix
 
+## Code Style and Best Practices
+
+- Python function or method comments should be brief. What it does and any special information. Don't document each parameter
+- Make sure the parameter names are useful and meaningful
+- Comments on functions and methods should be no more than 3 lines of text
+- Any function with just one line is questionable. Make sure it is doing something useful. Analyze and list which functions you think are removable.
+- Any if else statement with more than three branches is questionable. Try to write it another way.
+
 ## Common Commands
 
 ### Static Site Generation (CLI)
 - `salasblog2` - Show help message
-- `salasblog2 generate` - Process markdown files and generate static HTML site (uses "winer" theme by default)
+- `salasblog2 generate` - Process markdown files and generate static HTML site (uses "claude" theme by default)
 - `salasblog2 generate --theme salas` - Generate site using the original "salas" theme
 - `salasblog2 generate --theme winer` - Generate site using the "winer" theme (scripting.com style)
 - `salasblog2 themes` - List available themes
 - `salasblog2 reset` - Delete all generated files
 - `salasblog2 deploy` - Deploy site to Fly.io
+- `salasblog2 server` - Run development server with API
 
 ### Development
 - `uv sync` - Install/update dependencies
@@ -37,12 +46,16 @@ This project uses `uv` for Python package and environment management:
 - Server runs on port 8000 by default
 - XML-RPC endpoint: `/xmlrpc` (for blog editors like MarsEdit)
 - RSD discovery: `/rsd.xml` (for automatic blog API detection)
+- Admin interface: `/admin` (password-protected content management)
+- API endpoints: `/api/regenerate`, `/api/sync-status`, `/api/scheduler/status`
 - Authentication: Set `BLOG_USERNAME` and `BLOG_PASSWORD` environment variables
 
 ### Testing
 - `uv run pytest` - Run tests
 - `uv run pytest tests/` - Run tests in tests directory
 - `uv run pytest -v` - Run tests with verbose output
+- `uv run pytest -k "not integration"` - Skip integration tests (require running server)
+- `uv run pytest tests/integration/ -v` - Run only integration tests (requires server at localhost:8003)
 
 ### Code Quality
 - `uv run flake8` - Lint code
@@ -55,14 +68,16 @@ This project uses `uv` for Python package and environment management:
 
 ## Architecture Notes
 
-This is a well-structured Python package that provides a static site generator with Raindrop.io integration. Key components:
+This is a well-structured Python package that provides a static site generator with Raindrop.io integration and persistent volume management. Key components:
 
 ### Package Structure (src/salasblog2/)
 - **cli.py**: Unified command-line interface with argparse subcommands
 - **generator.py**: Core SiteGenerator class for processing Markdown and generating HTML
-- **server.py**: FastAPI server with XML-RPC Blogger API support for blog editors (MarsEdit, etc.)
+- **server.py**: FastAPI server with XML-RPC Blogger API support and admin interface
 - **blogger_api.py**: Blogger API implementation for XML-RPC compatibility
 - **raindrop.py**: RaindropDownloader class for API integration
+- **scheduler.py**: Git scheduler for automated GitHub synchronization
+- **volume_manager.py**: Persistent volume management for Fly.io deployment
 - **utils.py**: Reusable utility functions for date formatting, markdown processing, etc.
 - **__init__.py**: Package metadata and version information
 
@@ -70,7 +85,10 @@ This is a well-structured Python package that provides a static site generator w
 - **Static Site Generator**: Processes markdown files into HTML using Jinja2 templates
 - **Unified CLI**: Single `salasblog2` command with subcommands for all functionality
 - **FastAPI Server**: Development server with XML-RPC Blogger API support
+- **Admin Interface**: Web-based content management with authentication
 - **Blog Editor Integration**: Compatible with MarsEdit, Windows Live Writer, and other XML-RPC blog editors
+- **Git Scheduler**: Automated GitHub synchronization with configurable intervals
+- **Persistent Volume Management**: Handles volume synchronization for Fly.io deployment
 - **Markdown Processing**: All content stored as markdown files with YAML frontmatter
 - **Dynamic Navigation**: Automatically generates menu items from content/pages/ directory
 - **Content Types**: 
@@ -85,10 +103,16 @@ This is a well-structured Python package that provides a static site generator w
 
 ## Fly.io Deployment
 
-The application is configured for deployment on Fly.io. Key files for deployment:
+The application is configured for deployment on Fly.io with persistent volume support. Key files for deployment:
 - `fly.toml` - Fly.io configuration file
 - `Dockerfile` - Container configuration
 - `requirements.txt` - Python dependencies
+
+### Volume Management
+- **Source**: `/app/content` (application content)
+- **Destination**: `/data/content` (persistent volume)
+- **Synchronization**: Uses rsync with --checksum flag to handle MarsEdit timestamp issues
+- **Benefits**: Persistent storage, handles instance restarts, resolves timestamp conflicts
 
 ## Content Structure
 
@@ -121,6 +145,10 @@ output/
 The site generator supports multiple themes, allowing you to switch between different designs and layouts:
 
 ### Available Themes
+- **claude**: The default theme with clean, modern design
+  - Features: Responsive layout, clean typography, modern aesthetic
+  - Header: Navigation bar with search functionality
+  - Style: Contemporary design optimized for readability
 - **winer**: A clean, minimalist theme inspired by Dave Winer's scripting.com
   - Features: Tab navigation, serif typography (Georgia), simple blog-style layout
   - Header: Artistic gradient background with site title
@@ -133,6 +161,9 @@ The site generator supports multiple themes, allowing you to switch between diff
 ### Theme Structure
 ```
 themes/
+  claude/
+    templates/    # HTML templates for claude theme
+    static/       # CSS, JS, and assets for claude theme
   winer/
     templates/    # HTML templates for winer theme
     static/       # CSS, JS, and assets for winer theme
@@ -167,7 +198,7 @@ themes/
 - **Other XML-RPC compatible editors**
 
 ### Setup Instructions
-1. **Run the server**: `uvicorn src.salasblog2.server:app --host 0.0.0.0 --port 8000`
+1. **Run the server**: `salasblog2 server` or `uvicorn src.salasblog2.server:app --host 0.0.0.0 --port 8000`
 2. **Configure blog editor**:
    - **Blog URL**: `https://your-domain.com/` or `http://localhost:8000/`
    - **XML-RPC URL**: `https://your-domain.com/xmlrpc` or `http://localhost:8000/xmlrpc`
@@ -217,53 +248,89 @@ fly secrets set GIT_NAME="Your Name"
 3. **Git commit and push** → Changes automatically pushed to GitHub
 4. **Persistence guaranteed** → All content stored in GitHub repository
 
-## Raindrop.io Integration (rd_dl)
+### Git Scheduler
+- **Automated sync**: Configurable interval-based GitHub synchronization
+- **Conflict resolution**: Handles merge conflicts and sync issues
+- **Status monitoring**: API endpoints for scheduler status and health checks
+- **Environment variables**:
+  - `GIT_SYNC_ENABLED` - Enable/disable automatic git sync (default: true)
+  - `GIT_SYNC_INTERVAL` - Sync interval in minutes (default: 5)
 
-The project includes `rd_dl`, a CLI tool for downloading bookmarks from Raindrop.io and integrating them with the static site generator.
+## Raindrop.io Integration
 
-### rd_dl Overview
-- Fully embedded CLI tool for downloading bookmarks from Raindrop.io using their REST API
+The project includes comprehensive Raindrop.io integration for downloading bookmarks and integrating them with the static site generator.
+
+### Raindrop.io Overview
+- Fully integrated bookmark downloading from Raindrop.io using their REST API
 - Outputs directly to `content/raindrops/` directory for seamless integration
 - Maintains idempotent operation - only downloads new bookmarks
 - Generates markdown files with aligned frontmatter format
-- Single self-contained file (`rd_dl.py`) with unified dependency management
+- Comprehensive API coverage with full metadata preservation
 
-### rd_dl API Reference
+### Raindrop.io API Reference
 - Documentation: https://developer.raindrop.io
 - Authentication: Access token required (set RAINDROP_TOKEN environment variable)
 - Main endpoints: Collections, Raindrops, User, Tags, Filters, Import/Export
 
-### rd_dl Usage
+### Raindrop.io Usage
 - `salasblog2 sync-raindrops` - Download new bookmarks from Raindrop.io (for link blog)
 - `salasblog2 sync-raindrops --reset` - Delete all existing link blog posts and rebuild from scratch
 - `salasblog2 sync-raindrops --count N` - Limit the number of link blog posts to download
 
-### rd_dl Implementation
-- Python CLI tool using uv for dependency management
-- Uses requests library for API calls
+### Raindrop.io Implementation
+- Python integration using requests library for API calls
 - Handles authentication with access tokens
 - Remembers downloaded items via cache to avoid duplicates
 - Formats output as markdown with YAML frontmatter
+- Comprehensive metadata preservation including highlights, tags, and user notes
 
-### rd_dl Specification
+### Raindrop.io Specification
 - Pulls down all "raindrops" from Raindrop.io
 - Idempotent operation - same output when re-run
 - Results placed in `content/raindrops/` directory
 - Output formatted as markdown files named `YY-MM-DD-counter-title.md`
 - Frontmatter includes: title, date, tags, type: "drop", url, excerpt
 - Frontmatter format aligned with existing static site generator expectations
+- Preserves all API metadata: highlights, notes, importance flags, broken link status
+
+## Environment Variables
+
+### Core Configuration
+- `BLOG_USERNAME` - Username for admin/API access (default: admin)
+- `BLOG_PASSWORD` - Password for admin/API access (default: password)
+- `PORT` - Server port (default: 8000)
+- `HOST` - Server host (default: 0.0.0.0)
+
+### Git Integration
+- `GIT_EMAIL` - Email for git commits (default: blog-api@salasblog2.com)
+- `GIT_NAME` - Name for git commits (default: Salasblog2 API)
+- `GIT_TOKEN` - Personal access token for GitHub (alternative to SSH key)
+- `SSH_PRIVATE_KEY` - SSH private key for GitHub (recommended)
+- `GIT_SYNC_ENABLED` - Enable automatic git sync (default: true)
+- `GIT_SYNC_INTERVAL` - Sync interval in minutes (default: 5)
+
+### Raindrop.io Integration
+- `RAINDROP_TOKEN` - Access token for Raindrop.io API
+
+### Volume Management
+- `VOLUME_ENABLED` - Enable volume synchronization (default: true for Fly.io)
+- `VOLUME_SOURCE` - Source directory (default: /app/content)
+- `VOLUME_DEST` - Destination directory (default: /data/content)
 
 ## Dependencies
 
 Key Python packages used:
-- `jinja2` - Template engine
-- `markdown` - Markdown to HTML conversion
-- `python-frontmatter` - YAML frontmatter parsing
-
-### Additional Dependencies (for rd_dl integration)
+- `fastapi>=0.104.0` - Web framework for server and API
+- `uvicorn[standard]>=0.24.0` - ASGI server
+- `jinja2>=3.1.6` - Template engine
+- `markdown>=3.8.2` - Markdown to HTML conversion
+- `python-frontmatter>=1.1.0` - YAML frontmatter parsing
 - `requests>=2.31.0` - HTTP requests for Raindrop.io API
 - `pyyaml>=6.0` - YAML processing for frontmatter
 - `python-dotenv>=1.1.0` - Environment variable management
+- `python-multipart>=0.0.6` - Form data handling
+- `itsdangerous>=2.0.0` - Session management
+- `schedule>=1.2.0` - Task scheduling for git sync
 
 ## Current Status
 
@@ -272,6 +339,7 @@ Key Python packages used:
 ✅ **FastAPI Server with XML-RPC Blogger API**
 ✅ Blog editor integration (MarsEdit, Windows Live Writer, etc.)
 ✅ Authentication system for API access
+✅ **Admin Interface** with web-based content management
 ✅ Markdown processing with frontmatter parsing
 ✅ Jinja2 template rendering system
 ✅ Dynamic navigation from content/pages/
@@ -281,8 +349,11 @@ Key Python packages used:
 ✅ Client-side search functionality
 ✅ Search index generation (JSON)
 ✅ Static file copying and site generation
-✅ **Raindrop.io Integration (rd_dl)**
+✅ **Git Scheduler** for automated GitHub synchronization
+✅ **Persistent Volume Management** for Fly.io deployment
+✅ **Comprehensive Raindrop.io Integration**
 ✅ Raindrop.io bookmark downloading with API integration
-✅ Frontmatter format alignment between rd_dl and site generator
+✅ Frontmatter format alignment between Raindrop.io and site generator
 ✅ Direct output to content/raindrops/ directory
 ✅ Idempotent bookmark synchronization with caching
+✅ **Theme System** with multiple theme support and easy switching

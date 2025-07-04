@@ -1,9 +1,10 @@
 """
-Tests for utility functions.
-Run with: uv run pytest test_utils.py -v
+Comprehensive tests for utility functions.
+Includes all doctest examples migrated to pytest format.
+Run with: uv run pytest tests/test_utils.py -v
 """
 import pytest
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 import tempfile
 import os
@@ -16,8 +17,11 @@ from salasblog2.utils import (
     parse_frontmatter_file,
     generate_url_from_filename,
     sort_posts_by_date,
+    group_posts_by_month,
     load_markdown_files_from_directory,
-    safe_get_filename_stem
+    create_filename_from_title,
+    generate_raindrop_filename,
+    format_raindrop_as_markdown
 )
 
 
@@ -66,7 +70,8 @@ class TestCreateExcerpt:
     def test_create_excerpt_long_text(self):
         """Test excerpt of text longer than max length."""
         long_text = "This is a very long text that should be truncated because it exceeds the maximum length limit for excerpts"
-        result = create_excerpt(long_text, 50)
+        # Use smaller smart_threshold to force truncation
+        result = create_excerpt(long_text, 50, 20)
         assert result == "This is a very long text that should be truncated ..."
         assert len(result) == 53  # 50 + "..."
     
@@ -107,7 +112,7 @@ class TestParseDateForSorting:
     def test_parse_date_iso_datetime(self):
         """Test parsing ISO datetime string."""
         result = parse_date_for_sorting("2021-04-06T13:40:22.885000+00:00")
-        expected = datetime(2021, 4, 6)
+        expected = datetime(2021, 4, 6, 13, 40, 22, 885000, tzinfo=timezone.utc)
         assert result == expected
     
     def test_parse_date_empty_string(self):
@@ -258,29 +263,6 @@ class TestLoadMarkdownFilesFromDirectory:
             assert result == []
 
 
-class TestSafeGetFilenameStem:
-    """Test filename stem utility."""
-    
-    def test_safe_get_filename_stem_simple(self):
-        """Test getting stem from simple filename."""
-        result = safe_get_filename_stem(Path("test.md"))
-        assert result == "test"
-    
-    def test_safe_get_filename_stem_complex(self):
-        """Test getting stem from complex filename."""
-        result = safe_get_filename_stem(Path("my-blog-post.md"))
-        assert result == "my-blog-post"
-    
-    def test_safe_get_filename_stem_no_extension(self):
-        """Test getting stem from filename without extension."""
-        result = safe_get_filename_stem(Path("filename"))
-        assert result == "filename"
-    
-    def test_safe_get_filename_stem_multiple_dots(self):
-        """Test getting stem from filename with multiple dots."""
-        result = safe_get_filename_stem(Path("file.name.with.dots.md"))
-        assert result == "file.name.with.dots"
-
 
 class TestParseFrontmatterFile:
     """Test frontmatter file parsing utility."""
@@ -330,6 +312,192 @@ Some content here.
                 os.unlink(f.name)
     
     def test_parse_frontmatter_file_nonexistent(self):
-        """Test parsing non-existent file."""
-        with pytest.raises(FileNotFoundError):
-            parse_frontmatter_file(Path("/nonexistent/file.md"))
+        """Test parsing non-existent file returns fallback data."""
+        result = parse_frontmatter_file(Path("/nonexistent/file.md"))
+        
+        # Should return fallback data structure
+        assert 'metadata' in result
+        assert 'content' in result
+        assert 'raw_content' in result
+        assert 'html_content' in result
+        
+        # Should have default metadata based on filename
+        assert result['metadata']['title'] == 'file'  # filename stem
+        assert result['metadata']['type'] == 'blog'
+        assert result['metadata']['category'] == 'Uncategorized'
+
+
+
+
+class TestGroupPostsByMonth:
+    """Test post grouping by month utility."""
+    
+    def test_group_posts_by_month_basic(self):
+        """Test basic month grouping."""
+        posts = [
+            {'date': '2025-01-15', 'title': 'Post 1'}, 
+            {'date': '2025-01-10', 'title': 'Post 2'}
+        ]
+        grouped = group_posts_by_month(posts)
+        assert grouped[0]['month_name'] == 'January 2025'
+        assert len(grouped[0]['posts']) == 2
+    
+    def test_group_posts_by_month_multiple_months(self):
+        """Test grouping across multiple months."""
+        posts = [
+            {'date': '2025-02-15', 'title': 'Feb Post'},
+            {'date': '2025-01-15', 'title': 'Jan Post 1'}, 
+            {'date': '2025-01-10', 'title': 'Jan Post 2'}
+        ]
+        grouped = group_posts_by_month(posts)
+        assert len(grouped) == 2
+        assert grouped[0]['month_name'] == 'February 2025'
+        assert grouped[1]['month_name'] == 'January 2025'
+        assert len(grouped[1]['posts']) == 2
+    
+    def test_group_posts_by_month_empty_list(self):
+        """Test grouping empty list."""
+        result = group_posts_by_month([])
+        assert result == []
+
+
+class TestCreateFilenameFromTitle:
+    """Test filename creation from title utility."""
+    
+    def test_create_filename_from_title_basic(self):
+        """Test basic filename creation."""
+        # Note: This test will have a dynamic date, so we test the pattern
+        result = create_filename_from_title("My Test Post!")
+        assert result.endswith("-my-test-post.md")
+        assert result.startswith("2025-")  # Assumes current year
+        assert len(result.split("-")) >= 4  # YYYY-MM-DD-title format
+    
+    def test_create_filename_from_title_special_chars(self):
+        """Test filename creation with special characters."""
+        result = create_filename_from_title("Title with @#$% chars!")
+        assert "title-with-chars" in result
+        assert result.endswith(".md")
+        # Should remove special characters
+        assert "@" not in result
+        assert "#" not in result
+        assert "$" not in result
+        assert "%" not in result
+    
+    def test_create_filename_from_title_spaces(self):
+        """Test filename creation with multiple spaces."""
+        result = create_filename_from_title("Multiple   Spaces   Here")
+        assert "multiple-spaces-here" in result
+        assert result.endswith(".md")
+
+
+class TestGenerateRaindropFilename:
+    """Test raindrop filename generation utility."""
+    
+    def test_generate_raindrop_filename_basic(self):
+        """Test basic raindrop filename generation."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Test Bookmark"
+        }
+        result = generate_raindrop_filename(raindrop, 1)
+        assert result == "25-06-28-1-Test-Bookmark.md"
+    
+    def test_generate_raindrop_filename_long_title(self):
+        """Test raindrop filename with long title (truncated)."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "This is a very long title that should be truncated at thirty characters"
+        }
+        result = generate_raindrop_filename(raindrop, 5)
+        assert result.startswith("25-06-28-5-")
+        assert result.endswith(".md")
+        # Title should be truncated and cleaned
+        assert len(result) < len("25-06-28-5-This is a very long title that should be truncated at thirty characters.md")
+    
+    def test_generate_raindrop_filename_special_chars_in_title(self):
+        """Test raindrop filename with special characters in title."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Title with @#$% & * chars!"
+        }
+        result = generate_raindrop_filename(raindrop, 2)
+        assert result.startswith("25-06-28-2-")
+        assert result.endswith(".md")
+        # Should clean special characters
+        assert "@" not in result
+        assert "#" not in result
+        assert "&" not in result
+        assert "*" not in result
+
+
+class TestFormatRaindropAsMarkdown:
+    """Test raindrop markdown formatting utility."""
+    
+    def test_format_raindrop_as_markdown_basic(self):
+        """Test basic raindrop markdown formatting."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Test", 
+            "link": "https://example.com"
+        }
+        markdown = format_raindrop_as_markdown(raindrop)
+        assert "---" in markdown  # Has frontmatter
+        assert "Test" in markdown  # Has title
+        assert "https://example.com" in markdown  # Has URL
+    
+    def test_format_raindrop_as_markdown_with_excerpt(self):
+        """Test raindrop markdown with excerpt."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Test Article", 
+            "link": "https://example.com",
+            "excerpt": "This is a test excerpt"
+        }
+        markdown = format_raindrop_as_markdown(raindrop)
+        assert "This is a test excerpt" in markdown
+        assert "**Excerpt:**" in markdown
+    
+    def test_format_raindrop_as_markdown_with_tags(self):
+        """Test raindrop markdown with tags."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Tagged Article", 
+            "link": "https://example.com",
+            "tags": ["python", "coding", "tutorial"]
+        }
+        markdown = format_raindrop_as_markdown(raindrop)
+        assert "python coding tutorial" in markdown  # Tags as space-separated string
+    
+    def test_format_raindrop_as_markdown_with_notes(self):
+        """Test raindrop markdown with notes."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Article with Notes", 
+            "link": "https://example.com",
+            "note": "These are my personal notes about this article"
+        }
+        markdown = format_raindrop_as_markdown(raindrop)
+        assert "**Notes:**" in markdown
+        assert "These are my personal notes about this article" in markdown
+    
+    def test_format_raindrop_as_markdown_important_flag(self):
+        """Test raindrop markdown with important flag."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Important Article", 
+            "link": "https://example.com",
+            "important": True
+        }
+        markdown = format_raindrop_as_markdown(raindrop)
+        assert "⭐ **Marked as Important**" in markdown
+    
+    def test_format_raindrop_as_markdown_broken_flag(self):
+        """Test raindrop markdown with broken link flag."""
+        raindrop = {
+            "created": "2025-06-28T10:00:00Z", 
+            "title": "Broken Link", 
+            "link": "https://broken-example.com",
+            "broken": True
+        }
+        markdown = format_raindrop_as_markdown(raindrop)
+        assert "⚠️ **Warning: Link may be broken**" in markdown

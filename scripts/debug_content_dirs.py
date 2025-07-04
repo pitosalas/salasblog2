@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Debug script to check content directory structure and find missing files
+Debug script to check content directory structure and find missing files.
+Development/troubleshooting utility for Fly.io deployment issues.
+
+Usage: python scripts/debug_content_dirs.py
 """
 
 import os

@@ -13,7 +13,6 @@ from jinja2 import Environment, FileSystemLoader
 
 from .utils import (
     format_date,
-    format_date_dd_mm_yyyy,
     create_excerpt,
     create_excerpt_with_info,
     parse_date_for_sorting,
@@ -23,7 +22,6 @@ from .utils import (
     sort_posts_by_date,
     group_posts_by_month,
     load_markdown_files_from_directory,
-    safe_get_filename_stem,
     get_markdown_processor
 )
 
@@ -52,7 +50,7 @@ class SiteGenerator:
         # Initialize Jinja2 environment
         self.jinja_env = Environment(loader=FileSystemLoader(self.templates_dir))
         self.jinja_env.filters['strftime'] = self.format_date
-        self.jinja_env.filters['dd_mm_yyyy'] = format_date_dd_mm_yyyy
+        self.jinja_env.filters['dd_mm_yyyy'] = lambda date_str: format_date(date_str, '%d-%m-%Y')
         self.jinja_env.filters['group_by_month'] = group_posts_by_month
         self.jinja_env.filters['markdown'] = self.markdown_to_html
         # Use the same markdown processor as utils.py for consistency
@@ -95,7 +93,7 @@ class SiteGenerator:
         for md_file in load_markdown_files_from_directory(content_dir):
             try:
                 parsed = parse_frontmatter_file(md_file)
-                filename = safe_get_filename_stem(md_file)
+                filename = md_file.stem
                 
                 # Extract frontmatter data
                 post_data = {

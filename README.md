@@ -1,144 +1,100 @@
-# Salas Blog 2
+# Salasblog2
 
-A simple static site generator for personal blogs and websites, built with Python.
+Python static site generator with FastAPI server, XML-RPC Blogger API, and Raindrop.io integration.
 
 ## Features
 
-- **Markdown Processing**: YAML frontmatter + Markdown content
-- **Multiple Content Types**: Blog posts, link blog (bookmarks), and custom pages
-- **Dynamic Navigation**: Automatic menu generation from pages
-- **Template System**: Jinja2 templates with responsive design
-- **Search**: Client-side search with JSON index
-- **Static Output**: Complete static HTML site generation
-- **CLI Tool**: Simple command-line interface (bg.py)
-- **Fly.io Ready**: Built-in deployment support
-- **Raindrop.io Integration**: Automatic bookmark downloading and synchronization
+- Markdown + YAML frontmatter processing
+- Multiple content types: blog posts, link blog, pages
+- Jinja2 templating with theme system
+- FastAPI server with XML-RPC Blogger API (MarsEdit compatible)
+- Web admin interface with authentication
+- Automated Git sync and Fly.io deployment
+- Raindrop.io bookmark integration
+- Client-side search, incremental regeneration
+
+## Installation
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh  # Install uv
+uv sync                                          # Install dependencies
+```
 
 ## Quick Start
 
-1. Install dependencies:
-   ```bash
-   uv sync
-   ```
-
-2. Content directories are already set up:
-   ```
-   content/blog/      # Blog posts
-   content/raindrops/ # Link blog (bookmarks)
-   content/pages/     # Custom pages (auto-generate menu items)
-   ```
-
-3. Generate site:
-   ```bash
-   salasblog2 generate
-   ```
-
-4. Preview locally:
-   ```bash
-   python -m http.server 8000 -d output
-   ```
-   Visit `http://localhost:8000`
-
-## CLI Commands
-
 ```bash
-salasblog2 <command> [options]
+# Generate static site
+salasblog2 generate
+
+# Run server with API
+salasblog2 server
+
+# Preview static files
+python -m http.server 8000 -d output
 ```
 
-### Available Commands
-- `salasblog2 generate` - Generate static site
-- `salasblog2 reset` - Delete generated files
-- `salasblog2 deploy` - Deploy to Fly.io
-- `salasblog2 themes` - List available themes
-- `salasblog2 sync-raindrops` - Download new bookmarks from Raindrop.io (for link blog)
-- `salasblog2 help` - Show help message
+## Commands
 
-### Options
-- `--theme THEME` - Use specific theme (for generate command)
-- `--reset` - Reset link blog cache (for sync-raindrops command)
-- `--count N` - Limit link blog download (for sync-raindrops command)
+```bash
+salasblog2 generate [--theme THEME]     # Generate site
+salasblog2 server [--port PORT]         # FastAPI server
+salasblog2 reset                        # Clean output
+salasblog2 deploy                       # Deploy to Fly.io
+salasblog2 themes                       # List themes
+salasblog2 sync-raindrops [--reset]     # Sync Raindrop.io bookmarks
+```
 
 ## Content Structure
 
 ```
 content/
-  blog/                    # Blog posts
-    my-first-post.md
-  raindrops/              # Link blog (bookmarks)  
-    quick-note.md
-  pages/                  # Custom pages (auto-generate menu items)
-    about.md
-    contact.md
+├── blog/       # Blog posts
+├── raindrops/  # Link blog
+└── pages/      # Static pages (auto-nav)
 ```
 
-### Frontmatter Format
+Frontmatter: `title`, `date` (YYYY-MM-DD), `type` (blog/drop/page), `category`
 
-```yaml
----
-title: "Post Title"
-date: "2024-01-15"        # YYYY-MM-DD format
-type: "blog"              # blog, drop (link blog), or page
-category: "Tech"
----
+## Server & APIs
 
-Your markdown content here...
+- Web admin: `/admin` (set `ADMIN_PASSWORD`)
+- XML-RPC: `/xmlrpc` (MarsEdit/blog editors)
+- Volume sync: `/api/sync-to-volume`, `/api/sync-from-volume`
+- Git scheduler: `/api/scheduler/*`
+
+## Environment Variables
+
+**Required:**
+- `RAINDROP_TOKEN` - Raindrop.io API token
+
+**Authentication:**
+- `ADMIN_PASSWORD` - Web admin password
+- `BLOG_USERNAME/BLOG_PASSWORD` - XML-RPC credentials (default: admin/password)
+
+**Git Integration (Fly.io):**
+- `GIT_TOKEN` or `SSH_PRIVATE_KEY` - GitHub access
+- `GIT_EMAIL/GIT_NAME` - Commit info
+
+## Blog Editor Setup (MarsEdit)
+
+1. Start server: `salasblog2 server`
+2. Add blog: XML-RPC URL `http://localhost:8000/xmlrpc`, API type "Blogger"
+3. Credentials: Use `BLOG_USERNAME/BLOG_PASSWORD` values
+
+## Fly.io Deployment
+
+```bash
+fly secrets set RAINDROP_TOKEN="your_token"
+fly secrets set ADMIN_PASSWORD="your_password" 
+fly secrets set SSH_PRIVATE_KEY="$(cat ~/.ssh/id_ed25519)"
+fly deploy
 ```
 
-### Generated Site Structure
+## Themes
 
-```
-output/
-├── index.html            # Home page
-├── about.html            # Pages from content/pages/
-├── contact.html
-├── search.json           # Search index
-├── blog/
-│   ├── index.html        # Blog listing
-│   └── my-first-post.html
-├── raindrops/
-│   ├── index.html        # Link blog listing  
-│   └── quick-note.html
-└── static/               # CSS, JS, assets
-```
-
-## Project Structure
-
-```
-salasblog2/
-├── src/
-│   └── salasblog2/        # Main Python package
-│       ├── __init__.py
-│       ├── cli.py         # Unified CLI interface
-│       ├── generator.py   # Site generation logic
-│       ├── raindrop.py    # Raindrop.io integration
-│       └── utils.py       # Utility functions
-├── tests/                 # Test suite
-│   ├── __init__.py
-│   └── test_utils.py
-├── content/              # Markdown content
-│   ├── blog/            # Blog posts
-│   ├── raindrops/       # Short notes  
-│   └── pages/           # Custom pages
-├── themes/              # Theme system
-│   ├── winer/          # Winer theme
-│   │   ├── templates/  # HTML templates
-│   │   └── static/     # CSS, JS, assets
-│   └── salas/          # Salas theme
-│       ├── templates/
-│       └── static/
-├── output/              # Generated site (excluded from git)
-├── pyproject.toml       # Package configuration
-├── README.md
-└── CLAUDE.md
-```
+Default: `claude`. Available themes in `themes/` directory.
+Use `salasblog2 themes` to list, `--theme NAME` to select.
 
 ## Development
 
-See [CLAUDE.md](CLAUDE.md) for detailed development information.
-
-## Deployment
-
-Configure for Fly.io deployment:
-
-1. Create `fly.toml`
-2. Run `python bg.py deploy`
+See [CLAUDE.md](CLAUDE.md) for architecture details, API specs, and development guidelines.

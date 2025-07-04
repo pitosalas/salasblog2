@@ -11,106 +11,34 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 
 
-def format_date(date_str: Optional[str], format_str: str = '%B %d, %Y') -> str:
-    """
-    Format a date string using strftime format.
-    
-    Args:
-        date_str: Date string in YYYY-MM-DD format, or None/empty
-        format_str: strftime format string
-        
-    Returns:
-        Formatted date string, or empty string if input is invalid
-        
-    Examples:
-        >>> format_date("2025-01-15")
-        'January 15, 2025'
-        >>> format_date("2025-01-15", "%m/%d/%Y")
-        '01/15/2025'
-        >>> format_date("")
-        ''
-        >>> format_date(None)
-        ''
-    """
+def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
+    """Parse ISO date string into datetime object."""
     if not date_str:
-        return ''
+        return None
     
     try:
         if isinstance(date_str, str):
             # Handle ISO datetime format first
             if 'T' in date_str:
-                date_obj = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                return datetime.fromisoformat(date_str.replace('Z', '+00:00'))
             else:
                 # Try to parse ISO format YYYY-MM-DD
-                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
-            return date_obj.strftime(format_str)
-        return str(date_str)
+                return datetime.strptime(date_str, '%Y-%m-%d')
+        return None
     except (ValueError, TypeError):
-        return str(date_str) if date_str else ''
+        return None
 
 
-def format_date_dd_mm_yyyy(date_str: Optional[str]) -> str:
-    """
-    Format a date string as dd-mm-yyyy.
-    
-    Args:
-        date_str: Date string in various formats
-        
-    Returns:
-        Formatted date string in dd-mm-yyyy format, or empty string if invalid
-        
-    Examples:
-        >>> format_date_dd_mm_yyyy("2025-01-15")
-        '15-01-2025'
-        >>> format_date_dd_mm_yyyy("2025-01-15T10:30:00Z")
-        '15-01-2025'
-    """
-    return format_date(date_str, '%d-%m-%Y')
+def format_date(date_str: Optional[str], format_str: str = '%B %d, %Y') -> str:
+    """Format date string using strftime format."""
+    date_obj = _parse_iso_date(date_str)
+    if date_obj:
+        return date_obj.strftime(format_str)
+    return str(date_str) if date_str else ''
 
-
-def create_excerpt(content: str, max_length: int = 150, smart_threshold: int = 100) -> str:
-    """
-    Create an excerpt from text content.
-    
-    Args:
-        content: Full text content
-        max_length: Maximum length of excerpt
-        smart_threshold: If content is only this many chars longer than max_length, include full content
-        
-    Returns:
-        Excerpt with ellipsis if truncated, or full content if close to excerpt length
-        
-    Examples:
-        >>> create_excerpt("This is a short text")
-        'This is a short text'
-        >>> create_excerpt("This is a very long text that will be truncated", 20)
-        'This is a very long...'
-        >>> create_excerpt("This is a medium length text that is just a bit longer", 40)
-        'This is a medium length text that is just a bit longer'
-    """
-    if not content:
-        return ''
-    
-    # Clean up content - remove newlines and extra spaces
-    clean_content = content.replace('\n', ' ').strip()
-    
-    # If content is short enough, return as-is
-    if len(clean_content) <= max_length:
-        return clean_content
-    
-    # If content is only slightly longer than max_length, return full content
-    if len(clean_content) <= max_length + smart_threshold:
-        return clean_content
-    
-    return clean_content[:max_length] + '...'
 
 def create_excerpt_with_info(content: str, max_length: int = 150, smart_threshold: int = 100) -> tuple[str, bool]:
-    """
-    Create an excerpt and return whether content was truncated.
-    
-    Returns:
-        Tuple of (excerpt, was_truncated)
-    """
+    """Create excerpt from text content and return truncation status."""
     if not content:
         return '', False
     
@@ -128,44 +56,16 @@ def create_excerpt_with_info(content: str, max_length: int = 150, smart_threshol
     return clean_content[:max_length] + '...', True
 
 
+def create_excerpt(content: str, max_length: int = 150, smart_threshold: int = 100) -> str:
+    """Create excerpt from text content with ellipsis if truncated."""
+    excerpt, _ = create_excerpt_with_info(content, max_length, smart_threshold)
+    return excerpt
+
+
 def parse_date_for_sorting(date_str: Optional[str]) -> datetime:
-    """
-    Parse a date string for sorting purposes.
-    
-    Args:
-        date_str: Date string in various formats
-        
-    Returns:
-        datetime object, or datetime.min if parsing fails
-        
-    Examples:
-        >>> parse_date_for_sorting("2025-01-15")
-        datetime.datetime(2025, 1, 15, 0, 0)
-        >>> parse_date_for_sorting("")
-        datetime.datetime(1, 1, 1, 0, 0)
-    """
-    if not date_str:
-        return datetime.min
-    
-    try:
-        # Handle various date formats
-        date_str = str(date_str)
-        
-        # Try ISO format first (YYYY-MM-DD)
-        if len(date_str) >= 10 and date_str[4] == '-' and date_str[7] == '-':
-            return datetime.strptime(date_str[:10], '%Y-%m-%d')
-        
-        # Try ISO datetime format
-        if 'T' in date_str:
-            # Handle ISO datetime like "2021-04-06T13:40:22.885000+00:00"
-            date_part = date_str.split('T')[0]
-            return datetime.strptime(date_part, '%Y-%m-%d')
-            
-        # Fallback - return min date for unknown formats
-        return datetime.min
-        
-    except (ValueError, TypeError):
-        return datetime.min
+    """Parse date string for sorting, returns datetime.min if parsing fails."""
+    date_obj = _parse_iso_date(date_str)
+    return date_obj if date_obj else datetime.min
 
 
 # Module-level singleton for markdown processor
@@ -190,19 +90,7 @@ def process_markdown_to_html(content: str) -> str:
 
 
 def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
-    """
-    Parse a markdown file with frontmatter.
-    
-    Args:
-        file_path: Path to markdown file
-        
-    Returns:
-        Dictionary with 'metadata', 'content', and 'raw_content' keys
-        
-    Raises:
-        FileNotFoundError: If file doesn't exist
-        UnicodeDecodeError: If file encoding is invalid
-    """
+    """Parse markdown file with frontmatter, returns dict with metadata and content."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             post = frontmatter.load(f)
@@ -228,16 +116,7 @@ def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
 
 
 def _parse_malformed_frontmatter(file_path: Path, original_error: Exception) -> Dict[str, Any]:
-    """
-    Attempt to parse frontmatter with common YAML fixes.
-    
-    Args:
-        file_path: Path to markdown file
-        original_error: The original parsing error
-        
-    Returns:
-        Dictionary with parsed data or fallback values
-    """
+    """Attempt to parse frontmatter with common YAML fixes."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -267,52 +146,34 @@ def _parse_malformed_frontmatter(file_path: Path, original_error: Exception) -> 
                     pass
         
         # Fallback: extract filename as title and use content as-is
-        filename_stem = file_path.stem
-        return {
-            'metadata': {
-                'title': filename_stem.replace('-', ' ').replace('_', ' ').title(),
-                'date': '',
-                'type': 'blog',
-                'category': 'Uncategorized'
-            },
-            'content': content,
-            'raw_content': content,
-            'html_content': process_markdown_to_html(content)
-        }
+        return _create_fallback_metadata(file_path, content)
         
     except Exception:
         # Ultimate fallback
-        filename_stem = file_path.stem
-        return {
-            'metadata': {
-                'title': filename_stem,
-                'date': '',
-                'type': 'blog', 
-                'category': 'Uncategorized'
-            },
-            'content': f"Error parsing file: {original_error}",
-            'raw_content': f"Error parsing file: {original_error}",
-            'html_content': f"<p>Error parsing file: {original_error}</p>"
-        }
+        error_content = f"Error parsing file: {original_error}"
+        return _create_fallback_metadata(file_path, error_content)
+
+
+def _create_fallback_metadata(file_path: Path, content: str) -> Dict[str, Any]:
+    """Create fallback metadata when frontmatter parsing fails."""
+    filename_stem = file_path.stem
+    title = filename_stem.replace('-', ' ').replace('_', ' ').title() if '-' in filename_stem or '_' in filename_stem else filename_stem
+    
+    return {
+        'metadata': {
+            'title': title,
+            'date': '',
+            'type': 'blog',
+            'category': 'Uncategorized'
+        },
+        'content': content,
+        'raw_content': content,
+        'html_content': process_markdown_to_html(content)
+    }
 
 
 def generate_url_from_filename(filename: str, content_type: str) -> str:
-    """
-    Generate URL from filename and content type.
-    
-    Args:
-        filename: Base filename (without extension)
-        content_type: Type of content ('blog', 'raindrops', 'pages')
-        
-    Returns:
-        URL string
-        
-    Examples:
-        >>> generate_url_from_filename("my-post", "blog")
-        '/blog/my-post.html'
-        >>> generate_url_from_filename("about", "pages")
-        '/about.html'
-    """
+    """Generate URL from filename and content type."""
     if content_type == 'pages':
         return f"/{filename}.html"
     else:
@@ -320,41 +181,12 @@ def generate_url_from_filename(filename: str, content_type: str) -> str:
 
 
 def sort_posts_by_date(posts: List[Dict[str, Any]], reverse: bool = True) -> List[Dict[str, Any]]:
-    """
-    Sort a list of posts by date.
-    
-    Args:
-        posts: List of post dictionaries with 'date' key
-        reverse: If True, sort newest first (default)
-        
-    Returns:
-        Sorted list of posts
-        
-    Examples:
-        >>> posts = [{'date': '2025-01-01'}, {'date': '2025-01-15'}]
-        >>> sorted_posts = sort_posts_by_date(posts)
-        >>> sorted_posts[0]['date']
-        '2025-01-15'
-    """
+    """Sort posts by date, newest first by default."""
     return sorted(posts, key=lambda post: parse_date_for_sorting(post.get('date')), reverse=reverse)
 
 
 def group_posts_by_month(posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    Group posts by month and year.
-    
-    Args:
-        posts: List of post dictionaries with 'date' key (assumed to be sorted)
-        
-    Returns:
-        List of dictionaries with 'month_year', 'month_name', and 'posts' keys
-        
-    Examples:
-        >>> posts = [{'date': '2025-01-15', 'title': 'Post 1'}, {'date': '2025-01-10', 'title': 'Post 2'}]
-        >>> grouped = group_posts_by_month(posts)
-        >>> grouped[0]['month_name']
-        'January 2025'
-    """
+    """Group posts by month and year."""
     if not posts:
         return []
     
@@ -383,59 +215,30 @@ def group_posts_by_month(posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 
 def load_markdown_files_from_directory(directory_path: Path) -> List[Path]:
-    """
-    Get all markdown files from a directory.
-    
-    Args:
-        directory_path: Path to directory
-        
-    Returns:
-        List of Path objects for .md files
-        
-    Examples:
-        >>> files = load_markdown_files_from_directory(Path("/content/blog"))
-        >>> len(files) >= 0
-        True
-    """
+    """Get all markdown files from directory."""
     if not directory_path.exists():
         return []
     
     return list(directory_path.glob("*.md"))
 
 
-def safe_get_filename_stem(file_path: Path) -> str:
-    """
-    Safely get the filename stem (without extension).
+def _sanitize_filename(text: str, max_length: int = 30) -> str:
+    """Convert text to filename-safe format."""
+    # Replace characters that aren't filename-safe
+    safe_text = "".join(
+        c for c in text if c.isalnum() or c in (" ", "-", "_")
+    ).strip()
+    safe_text = safe_text.replace(" ", "-")
     
-    Args:
-        file_path: Path object
-        
-    Returns:
-        Filename without extension
-        
-    Examples:
-        >>> safe_get_filename_stem(Path("test.md"))
-        'test'
-        >>> safe_get_filename_stem(Path("complex-name.md"))
-        'complex-name'
-    """
-    return file_path.stem
+    # Truncate if too long
+    if len(safe_text) > max_length:
+        safe_text = safe_text[:max_length]
+    
+    return safe_text
 
 
 def create_filename_from_title(title: str) -> str:
-    """
-    Create a safe filename from post title with current date prefix.
-    
-    Args:
-        title: Post title to convert to filename
-        
-    Returns:
-        Safe filename with date prefix and .md extension
-        
-    Examples:
-        >>> create_filename_from_title("My Test Post!")
-        '2025-06-28-my-test-post.md'
-    """
+    """Create safe filename from post title with current date prefix."""
     # Remove special characters and convert to lowercase
     safe_title = re.sub(r'[^\w\s-]', '', title.lower())
     safe_title = re.sub(r'[-\s]+', '-', safe_title)
@@ -446,51 +249,19 @@ def create_filename_from_title(title: str) -> str:
 
 
 def generate_raindrop_filename(raindrop: Dict[str, Any], counter: int) -> str:
-    """
-    Create markdown filename from raindrop data and counter.
-    
-    Args:
-        raindrop: Dictionary containing raindrop data with 'created' and 'title'
-        counter: Counter for uniqueness
-        
-    Returns:
-        Safe filename for raindrop markdown file
-        
-    Examples:
-        >>> raindrop = {"created": "2025-06-28T10:00:00Z", "title": "Test Bookmark"}
-        >>> generate_raindrop_filename(raindrop, 1)
-        '25-06-28-1-Test-Bookmark.md'
-    """
+    """Create markdown filename from raindrop data and counter."""
     created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
     date_str = created.strftime("%y-%m-%d")
 
     # Get title and clean it for filename
-    title = raindrop.get("title", "Untitled")[:30]
-    # Replace characters that aren't filename-safe
-    safe_title = "".join(
-        c for c in title if c.isalnum() or c in (" ", "-", "_")
-    ).strip()
-    safe_title = safe_title.replace(" ", "-")
+    title = raindrop.get("title", "Untitled")
+    safe_title = _sanitize_filename(title)
 
     return f"{date_str}-{counter}-{safe_title}.md"
 
 
 def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
-    """
-    Convert raindrop data to markdown with YAML frontmatter.
-    
-    Args:
-        raindrop: Dictionary containing raindrop data
-        
-    Returns:
-        Formatted markdown content with frontmatter
-        
-    Examples:
-        >>> raindrop = {"created": "2025-06-28T10:00:00Z", "title": "Test", "link": "https://example.com"}
-        >>> markdown = format_raindrop_as_markdown(raindrop)
-        >>> "---" in markdown
-        True
-    """
+    """Convert raindrop data to markdown with YAML frontmatter."""
     created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
     
     # Parse lastUpdate if available

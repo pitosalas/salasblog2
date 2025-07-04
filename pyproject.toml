@@ -46,3 +46,13 @@ Repository = "https://github.com/pitosalas/salasblog2"
 dev = [
     "pytest>=8.4.1",
 ]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests as integration tests requiring running server",
+    "deployment: marks tests as deployment-related tests requiring rsync",
+]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
