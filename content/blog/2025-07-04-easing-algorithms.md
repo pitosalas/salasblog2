@@ -3,6 +3,9 @@ category: General
 date: '2025-07-04'
 title: Easing Algorithms
 type: blog
+subtitle: "Gradually increasing or decreasing values for smooth computer animation"
+tags: []
+wordpress_id: 0
 ---
 
 
