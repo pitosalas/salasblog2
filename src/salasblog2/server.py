@@ -549,6 +549,94 @@ async def regenerate_site():
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Regeneration failed: {str(e)}")
 
+@app.get("/api/admin-status")
+async def get_admin_status(request: Request):
+    """Check if current user is authenticated as admin"""
+    return JSONResponse(content={
+        "authenticated": is_admin_authenticated(request)
+    })
+
+@app.get("/admin/edit-post/{filename}")
+async def edit_post_page(filename: str, request: Request):
+    """Serve edit post page (placeholder for Phase 2)"""
+    if not is_admin_authenticated(request):
+        return RedirectResponse(url="/admin", status_code=302)
+    
+    # TODO: Phase 2 - Implement actual edit post form
+    return HTMLResponse(content=f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Edit Post - {filename}</title>
+        <style>
+            body {{ font-family: Arial, sans-serif; margin: 50px; background: #f5f5f5; }}
+            .container {{ max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }}
+            h1 {{ color: #333; margin-bottom: 20px; }}
+            p {{ color: #666; line-height: 1.5; }}
+            .back-link {{ margin-top: 20px; }}
+            .back-link a {{ color: #007bff; text-decoration: none; }}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Edit Post: {filename}</h1>
+            <p>This is a placeholder page for Phase 2 implementation.</p>
+            <p>In Phase 2, this page will provide a form to edit the blog post content, title, and metadata.</p>
+            <div class="back-link">
+                <a href="/blog/">← Back to Blog</a>
+            </div>
+        </div>
+    </body>
+    </html>
+    """, status_code=200)
+
+@app.get("/admin/new-post")
+async def new_post_page(request: Request):
+    """Serve new post page (placeholder for Phase 2)"""
+    if not is_admin_authenticated(request):
+        return RedirectResponse(url="/admin", status_code=302)
+    
+    # TODO: Phase 2 - Implement actual new post form
+    return HTMLResponse(content="""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>New Post - Salas Blog</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 50px; background: #f5f5f5; }
+            .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+            h1 { color: #333; margin-bottom: 20px; }
+            p { color: #666; line-height: 1.5; }
+            .back-link { margin-top: 20px; }
+            .back-link a { color: #007bff; text-decoration: none; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Create New Post</h1>
+            <p>This is a placeholder page for Phase 2 implementation.</p>
+            <p>In Phase 2, this page will provide a form to create new blog posts with title, content, and metadata.</p>
+            <div class="back-link">
+                <a href="/blog/">← Back to Blog</a>
+            </div>
+        </div>
+    </body>
+    </html>
+    """, status_code=200)
+
+@app.post("/admin/delete-post/{filename}")
+async def delete_post_endpoint(filename: str, request: Request):
+    """Delete a blog post (placeholder for Phase 2)"""
+    if not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    # TODO: Phase 2 - Implement actual post deletion
+    # For now, return a placeholder response
+    return JSONResponse(content={
+        "status": "error",
+        "detail": f"Post deletion not yet implemented. Would delete: {filename}"
+    }, status_code=501)
+
 @app.get("/rsd.xml")
 async def serve_rsd(request: Request):
     """Serve RSD (Really Simple Discovery) XML for blog API autodiscovery"""
