@@ -175,7 +175,7 @@ def get_markdown_processor():
     """Get or create the singleton markdown processor."""
     global _md_processor
     if _md_processor is None:
-        _md_processor = markdown.Markdown(extensions=['meta', 'toc'])
+        _md_processor = markdown.Markdown(extensions=['meta', 'toc', 'codehilite'])
     return _md_processor
 
 def process_markdown_to_html(content: str) -> str:
@@ -183,7 +183,10 @@ def process_markdown_to_html(content: str) -> str:
     if not content:
         return ''
     
-    return get_markdown_processor().convert(content)
+    # Reset the processor to avoid state issues between conversions
+    processor = get_markdown_processor()
+    processor.reset()
+    return processor.convert(content)
 
 
 def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
