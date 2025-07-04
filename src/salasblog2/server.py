@@ -562,9 +562,9 @@ async def serve_rsd(request: Request):
     <engineLink>https://github.com/pitosalas/salasblog2</engineLink>
     <homePageLink>{base_url}/</homePageLink>
     <apis>
-      <api name="MetaWeblog" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
+      <api name="Blogger" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
         <settings>
-          <docs>http://www.xmlrpc.com/metaWeblogApi</docs>
+          <docs>http://plant.blogger.com/api/index.html</docs>
         </settings>
       </api>
     </apis>
