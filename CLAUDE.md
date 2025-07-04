@@ -357,3 +357,41 @@ Key Python packages used:
 ✅ Direct output to content/raindrops/ directory
 ✅ Idempotent bookmark synchronization with caching
 ✅ **Theme System** with multiple theme support and easy switching
+
+## Web-Based Post Management - TODO
+
+### Phase 1: Extend Existing Blog Post Display
+- [ ] Add admin controls to individual blog post pages
+  - [ ] Add "Edit" and "Delete" buttons/links on each blog post
+  - [ ] Only visible when user is authenticated as admin
+  - [ ] Style them subtly (maybe small icons in top-right corner)
+- [ ] Add global "New Post" link
+  - [ ] Add to header navigation or admin section
+  - [ ] Only visible to authenticated admin users
+  - [ ] Could be a "+" icon or "New Post" link
+
+### Phase 2: Create Post Editor Interface
+- [ ] Create post editing page (`/admin/edit-post/{filename}`)
+  - [ ] Load existing post content and frontmatter
+  - [ ] Markdown editor with frontmatter form
+  - [ ] Save/Cancel actions
+- [ ] Create new post page (`/admin/new-post`)
+  - [ ] Empty editor with default frontmatter template
+  - [ ] Generate filename based on title + current date
+
+### Phase 3: Handle Actions
+- [ ] Implement edit/delete endpoints
+  - [ ] `POST /admin/save-post` - Save post changes
+  - [ ] `POST /admin/delete-post` - Delete post with confirmation
+  - [ ] Trigger site regeneration and GitHub sync
+- [ ] Add client-side enhancements
+  - [ ] Delete confirmation dialog
+  - [ ] Auto-save drafts while editing
+  - [ ] Success/error notifications
+
+### Benefits of This Approach:
+- **Natural workflow** - Edit posts where you read them
+- **No duplicate interfaces** - Users see actual blog, not management abstraction  
+- **Contextual actions** - Edit/delete actions are right on the content they affect
+- **Cleaner admin experience** - No need to navigate to separate management area
+- **Familiar pattern** - Similar to WordPress, Ghost, and other CMS admin bars
