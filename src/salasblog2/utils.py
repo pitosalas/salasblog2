@@ -217,6 +217,15 @@ def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
         with open(file_path, 'r', encoding='utf-8') as f:
             post = frontmatter.load(f)
         
+        # Debug logging to see what content we're actually getting
+        import logging
+        logger = logging.getLogger(__name__)
+        if post.content and len(post.content) > 0:
+            content_start = post.content[:100].replace('\n', ' ')
+            logger.debug(f"Raw content from {file_path.name}: {content_start}")
+            if post.content.startswith('<'):
+                logger.warning(f"File {file_path.name} contains HTML, not markdown: {content_start}")
+        
         return {
             'metadata': post.metadata,
             'content': post.content,
