@@ -852,122 +852,36 @@ async def edit_post_page(filename: str, request: Request):
                     }}
                 }}
                 
-                async function previewPost() {{
+                function previewPost() {{
                     const content = document.getElementById('content').value;
                     const title = document.getElementById('title').value;
                     
-                    try {{
-                        // Send markdown to server for rendering
-                        const response = await fetch('/admin/preview-markdown', {{
-                            method: 'POST',
-                            headers: {{
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                            }},
-                            body: `content=${{encodeURIComponent(content)}}`
-                        }});
-                        
-                        if (response.ok) {{
-                            const result = await response.json();
-                            
-                            // Create preview in same tab with back button
-                            const previewHtml = `
-                                <html>
-                                <head>
-                                    <title>Preview: ${{title}}</title>
-                                    <style>
-                                        body {{ 
-                                            font-family: Georgia, serif; 
-                                            max-width: 800px; 
-                                            margin: 2rem auto; 
-                                            padding: 0 2rem; 
-                                            line-height: 1.6; 
-                                            color: #333;
-                                        }}
-                                        h1, h2, h3, h4, h5, h6 {{ 
-                                            color: #2c3e50; 
-                                            margin-top: 2rem; 
-                                            margin-bottom: 1rem; 
-                                        }}
-                                        h1 {{ font-size: 2.5rem; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }}
-                                        h2 {{ font-size: 2rem; }}
-                                        h3 {{ font-size: 1.5rem; }}
-                                        p {{ margin-bottom: 1rem; }}
-                                        pre {{ 
-                                            background: #f8f9fa; 
-                                            padding: 1rem; 
-                                            border-radius: 4px; 
-                                            overflow-x: auto; 
-                                            border: 1px solid #e9ecef;
-                                        }}
-                                        code {{
-                                            background: #f8f9fa;
-                                            padding: 0.2rem 0.4rem;
-                                            border-radius: 3px;
-                                            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-                                        }}
-                                        blockquote {{ 
-                                            border-left: 4px solid #3498db; 
-                                            margin: 1rem 0; 
-                                            padding-left: 1rem; 
-                                            color: #666; 
-                                            font-style: italic;
-                                        }}
-                                        a {{ color: #3498db; text-decoration: none; }}
-                                        a:hover {{ text-decoration: underline; }}
-                                        ul, ol {{ margin-bottom: 1rem; }}
-                                        li {{ margin-bottom: 0.5rem; }}
-                                        img {{ max-width: 100%; height: auto; }}
-                                        table {{ 
-                                            border-collapse: collapse; 
-                                            width: 100%; 
-                                            margin: 1rem 0; 
-                                        }}
-                                        th, td {{ 
-                                            border: 1px solid #ddd; 
-                                            padding: 0.5rem; 
-                                            text-align: left; 
-                                        }}
-                                        th {{ background: #f8f9fa; font-weight: bold; }}
-                                        .preview-header {{
-                                            background: #e8f4f8;
-                                            padding: 1rem;
-                                            margin: -2rem -2rem 2rem -2rem;
-                                            border-bottom: 1px solid #3498db;
-                                        }}
-                                        .back-btn {{
-                                            background: #3498db;
-                                            color: white;
-                                            padding: 0.5rem 1rem;
-                                            border: none;
-                                            border-radius: 4px;
-                                            cursor: pointer;
-                                            margin-right: 1rem;
-                                        }}
-                                        .back-btn:hover {{ background: #2980b9; }}
-                                    </style>
-                                </head>
-                                <body>
-                                    <div class="preview-header">
-                                        <button class="back-btn" onclick="history.back()">← Back to Edit</button>
-                                        <h1 style="margin: 0; border: none; font-size: 1.5rem; display: inline;">📝 Preview: ${{title}}</h1>
-                                        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your post will appear on the blog</p>
-                                    </div>
-                                    <h1>${{{title}}}</h1>
-                                    ${{result.html}}
-                                </body>
-                                </html>
-                            `;
-                            
-                            // Replace current page content with preview
-                            document.open();
-                            document.write(previewHtml);
-                            document.close();
-                        }} else {{
-                            alert('Preview failed: ' + response.statusText);
-                        }}
-                    }} catch (error) {{
-                        alert('Preview error: ' + error.message);
+                    if (!content.trim()) {{
+                        alert('Please enter some content to preview');
+                        return;
                     }}
+                    
+                    // Create a form and submit to preview endpoint
+                    const form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = '/admin/preview-post';
+                    form.target = '_blank';
+                    
+                    const titleInput = document.createElement('input');
+                    titleInput.type = 'hidden';
+                    titleInput.name = 'title';
+                    titleInput.value = title;
+                    form.appendChild(titleInput);
+                    
+                    const contentInput = document.createElement('input');
+                    contentInput.type = 'hidden';
+                    contentInput.name = 'content';
+                    contentInput.value = content;
+                    form.appendChild(contentInput);
+                    
+                    document.body.appendChild(form);
+                    form.submit();
+                    document.body.removeChild(form);
                 }}
                 
                 // Auto-save functionality (optional)
@@ -1083,6 +997,117 @@ async def preview_markdown(request: Request, content: str = Form(...)):
         
     except Exception as e:
         logger.error(f"Error rendering markdown preview: {e}")
+        raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
+
+@app.post("/admin/preview-post")
+async def preview_post_html(request: Request, title: str = Form(...), content: str = Form(...)):
+    """Render complete preview page with HTML"""
+    admin_password = get_admin_password()
+    
+    # Check authentication (same logic as admin-status API)
+    if admin_password and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    try:
+        import markdown
+        
+        # Configure markdown with extensions
+        md = markdown.Markdown(extensions=[
+            'codehilite',
+            'tables', 
+            'toc',
+            'fenced_code',
+            'nl2br'
+        ])
+        
+        # Convert markdown to HTML
+        html_content = md.convert(content)
+        
+        # Create complete HTML page
+        preview_html = f"""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Preview: {title}</title>
+            <style>
+                body {{ 
+                    font-family: Georgia, serif; 
+                    max-width: 800px; 
+                    margin: 2rem auto; 
+                    padding: 0 2rem; 
+                    line-height: 1.6; 
+                    color: #333;
+                }}
+                h1, h2, h3, h4, h5, h6 {{ 
+                    color: #2c3e50; 
+                    margin-top: 2rem; 
+                    margin-bottom: 1rem; 
+                }}
+                h1 {{ font-size: 2.5rem; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }}
+                h2 {{ font-size: 2rem; }}
+                h3 {{ font-size: 1.5rem; }}
+                p {{ margin-bottom: 1rem; }}
+                pre {{ 
+                    background: #f8f9fa; 
+                    padding: 1rem; 
+                    border-radius: 4px; 
+                    overflow-x: auto; 
+                    border: 1px solid #e9ecef;
+                }}
+                code {{
+                    background: #f8f9fa;
+                    padding: 0.2rem 0.4rem;
+                    border-radius: 3px;
+                    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+                }}
+                blockquote {{ 
+                    border-left: 4px solid #3498db; 
+                    margin: 1rem 0; 
+                    padding-left: 1rem; 
+                    color: #666; 
+                    font-style: italic;
+                }}
+                a {{ color: #3498db; text-decoration: none; }}
+                a:hover {{ text-decoration: underline; }}
+                ul, ol {{ margin-bottom: 1rem; }}
+                li {{ margin-bottom: 0.5rem; }}
+                img {{ max-width: 100%; height: auto; }}
+                table {{ 
+                    border-collapse: collapse; 
+                    width: 100%; 
+                    margin: 1rem 0; 
+                }}
+                th, td {{ 
+                    border: 1px solid #ddd; 
+                    padding: 0.5rem; 
+                    text-align: left; 
+                }}
+                th {{ background: #f8f9fa; font-weight: bold; }}
+                .preview-header {{
+                    background: #e8f4f8;
+                    padding: 1rem;
+                    margin: -2rem -2rem 2rem -2rem;
+                    border-bottom: 1px solid #3498db;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class="preview-header">
+                <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: {title}</h1>
+                <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your post will appear on the blog</p>
+            </div>
+            <h1>{title}</h1>
+            {html_content}
+        </body>
+        </html>
+        """
+        
+        return HTMLResponse(content=preview_html)
+        
+    except Exception as e:
+        logger.error(f"Error rendering post preview: {e}")
         raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
 
 @app.get("/admin/new-post")
