@@ -869,9 +869,8 @@ async def edit_post_page(filename: str, request: Request):
                         if (response.ok) {{
                             const result = await response.json();
                             
-                            // Open preview in new window
-                            const previewWindow = window.open('', '_blank', 'width=800,height=600');
-                            previewWindow.document.write(`
+                            // Create preview in same tab with back button
+                            const previewHtml = `
                                 <html>
                                 <head>
                                     <title>Preview: ${{title}}</title>
@@ -935,18 +934,34 @@ async def edit_post_page(filename: str, request: Request):
                                             margin: -2rem -2rem 2rem -2rem;
                                             border-bottom: 1px solid #3498db;
                                         }}
+                                        .back-btn {{
+                                            background: #3498db;
+                                            color: white;
+                                            padding: 0.5rem 1rem;
+                                            border: none;
+                                            border-radius: 4px;
+                                            cursor: pointer;
+                                            margin-right: 1rem;
+                                        }}
+                                        .back-btn:hover {{ background: #2980b9; }}
                                     </style>
                                 </head>
                                 <body>
                                     <div class="preview-header">
-                                        <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: ${{title}}</h1>
+                                        <button class="back-btn" onclick="history.back()">← Back to Edit</button>
+                                        <h1 style="margin: 0; border: none; font-size: 1.5rem; display: inline;">📝 Preview: ${{title}}</h1>
                                         <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your post will appear on the blog</p>
                                     </div>
-                                    <h1>${{title}}</h1>
+                                    <h1>${{{title}}}</h1>
                                     ${{result.html}}
                                 </body>
                                 </html>
-                            `);
+                            `;
+                            
+                            // Replace current page content with preview
+                            document.open();
+                            document.write(previewHtml);
+                            document.close();
                         }} else {{
                             alert('Preview failed: ' + response.statusText);
                         }}
