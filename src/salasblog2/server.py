@@ -552,6 +552,15 @@ async def regenerate_site():
 @app.get("/api/admin-status")
 async def get_admin_status(request: Request):
     """Check if current user is authenticated as admin"""
+    admin_password = get_admin_password()
+    
+    # If no admin password is set, allow access without authentication
+    if not admin_password:
+        return JSONResponse(content={
+            "authenticated": True
+        })
+    
+    # Check if admin is authenticated via session
     return JSONResponse(content={
         "authenticated": is_admin_authenticated(request)
     })
