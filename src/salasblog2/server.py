@@ -1230,37 +1230,670 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
 
 @app.get("/admin/new-post")
 async def new_post_page(request: Request):
-    """Serve new post page (placeholder for Phase 2)"""
-    if not is_admin_authenticated(request):
+    """Serve new post creation page with form"""
+    admin_password = get_admin_password()
+    
+    # Check authentication (same logic as admin-status API)
+    if admin_password and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
     
-    # TODO: Phase 2 - Implement actual new post form
-    return HTMLResponse(content="""
+    # Get current date for default
+    from datetime import datetime
+    current_date = datetime.now().strftime('%Y-%m-%d')
+    
+    # Create the new post form HTML
+    new_post_form_html = f"""
     <!DOCTYPE html>
-    <html>
+    <html lang="en">
     <head>
-        <title>New Post - Salas Blog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create New Post - Salas Blog</title>
         <style>
-            body { font-family: Arial, sans-serif; margin: 50px; background: #f5f5f5; }
-            .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-            h1 { color: #333; margin-bottom: 20px; }
-            p { color: #666; line-height: 1.5; }
-            .back-link { margin-top: 20px; }
-            .back-link a { color: #007bff; text-decoration: none; }
+            body {{ 
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                margin: 0; 
+                background: #f5f6fa; 
+                line-height: 1.6;
+            }}
+            .header {{
+                background: #27ae60;
+                color: white;
+                padding: 1rem 2rem;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }}
+            .header h1 {{
+                margin: 0;
+                font-size: 1.5rem;
+            }}
+            .container {{
+                max-width: 1200px;
+                margin: 2rem auto;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                overflow: hidden;
+            }}
+            .form-section {{
+                padding: 2rem;
+            }}
+            .form-grid {{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+            }}
+            .form-group {{
+                margin-bottom: 1.5rem;
+            }}
+            .form-group.full-width {{
+                grid-column: 1 / -1;
+            }}
+            label {{
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
+                color: #2c3e50;
+            }}
+            input, textarea, select {{
+                width: 100%;
+                padding: 0.75rem;
+                border: 2px solid #e1e8ed;
+                border-radius: 4px;
+                font-size: 1rem;
+                transition: border-color 0.2s;
+                font-family: inherit;
+                box-sizing: border-box;
+            }}
+            input:focus, textarea:focus, select:focus {{
+                outline: none;
+                border-color: #27ae60;
+            }}
+            #content {{
+                font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+                min-height: 400px;
+                resize: vertical;
+            }}
+            .button-group {{
+                display: flex;
+                gap: 1rem;
+                justify-content: flex-end;
+                padding: 1.5rem 2rem;
+                background: #f8f9fa;
+                border-top: 1px solid #e1e8ed;
+            }}
+            .btn {{
+                padding: 0.75rem 1.5rem;
+                border: none;
+                border-radius: 4px;
+                font-size: 1rem;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.2s;
+                font-weight: 500;
+            }}
+            .btn-primary {{
+                background: #3498db;
+                color: white;
+            }}
+            .btn-primary:hover {{
+                background: #2980b9;
+            }}
+            .btn-secondary {{
+                background: #95a5a6;
+                color: white;
+            }}
+            .btn-secondary:hover {{
+                background: #7f8c8d;
+            }}
+            .btn-success {{
+                background: #27ae60;
+                color: white;
+            }}
+            .btn-success:hover {{
+                background: #229954;
+            }}
+            .status-message {{
+                padding: 1rem;
+                margin: 1rem 0;
+                border-radius: 4px;
+                display: none;
+            }}
+            .status-success {{
+                background: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }}
+            .status-error {{
+                background: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }}
+            .help-text {{
+                font-size: 0.875rem;
+                color: #666;
+                margin-top: 0.25rem;
+            }}
+            @media (max-width: 768px) {{
+                .form-grid {{
+                    grid-template-columns: 1fr;
+                }}
+                .container {{
+                    margin: 1rem;
+                }}
+                .header {{
+                    padding: 1rem;
+                }}
+            }}
         </style>
     </head>
     <body>
+        <div class="header">
+            <h1>✨ Create New Post</h1>
+        </div>
+        
         <div class="container">
-            <h1>Create New Post</h1>
-            <p>This is a placeholder page for Phase 2 implementation.</p>
-            <p>In Phase 2, this page will provide a form to create new blog posts with title, content, and metadata.</p>
-            <div class="back-link">
-                <a href="/blog/">← Back to Blog</a>
+            <form id="newPostForm" class="form-section">
+                <div id="statusMessage" class="status-message"></div>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="title">Post Title *</label>
+                        <input type="text" id="title" name="title" required placeholder="Enter your post title">
+                        <div class="help-text">This will be used to generate the filename</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" name="date" value="{current_date}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" name="category" value="General" placeholder="General">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" name="type">
+                            <option value="blog" selected>Blog Post</option>
+                            <option value="page">Page</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="content">Content (Markdown) *</label>
+                    <textarea id="content" name="content" placeholder="Write your post content in Markdown..." required></textarea>
+                    <div class="help-text">Use Markdown syntax for formatting. You can preview before saving.</div>
+                </div>
+            </form>
+            
+            <div class="button-group">
+                <a href="/blog/" class="btn btn-secondary">Cancel</a>
+                <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
+                <button type="button" class="btn btn-success" onclick="createPost()">Create Post</button>
             </div>
         </div>
+        
+        <script>
+            async function createPost() {{
+                const form = document.getElementById('newPostForm');
+                const statusMessage = document.getElementById('statusMessage');
+                
+                // Validate form
+                const title = document.getElementById('title').value.trim();
+                const date = document.getElementById('date').value;
+                const content = document.getElementById('content').value.trim();
+                
+                if (!title) {{
+                    statusMessage.className = 'status-message status-error';
+                    statusMessage.textContent = '✗ Please enter a post title';
+                    statusMessage.style.display = 'block';
+                    return;
+                }}
+                
+                if (!date) {{
+                    statusMessage.className = 'status-message status-error';
+                    statusMessage.textContent = '✗ Please select a date';
+                    statusMessage.style.display = 'block';
+                    return;
+                }}
+                
+                if (!content) {{
+                    statusMessage.className = 'status-message status-error';
+                    statusMessage.textContent = '✗ Please enter some content';
+                    statusMessage.style.display = 'block';
+                    return;
+                }}
+                
+                const formData = new FormData(form);
+                
+                // Show loading state
+                const createBtn = event.target;
+                const originalText = createBtn.textContent;
+                createBtn.textContent = 'Creating...';
+                createBtn.disabled = true;
+                
+                try {{
+                    const response = await fetch('/admin/new-post', {{
+                        method: 'POST',
+                        body: formData
+                    }});
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok) {{
+                        statusMessage.className = 'status-message status-success';
+                        statusMessage.textContent = `✓ Post created successfully! Filename: ${{result.filename}}`;
+                        statusMessage.style.display = 'block';
+                        
+                        // Clear form
+                        form.reset();
+                        document.getElementById('date').value = '{current_date}';
+                        
+                        // Auto-hide success message and redirect after 3 seconds
+                        setTimeout(() => {{
+                            window.location.href = `/blog/${{result.filename.replace('.md', '.html')}}`;
+                        }}, 2000);
+                    }} else {{
+                        throw new Error(result.detail || 'Creation failed');
+                    }}
+                }} catch (error) {{
+                    statusMessage.className = 'status-message status-error';
+                    statusMessage.textContent = '✗ Error: ' + error.message;
+                    statusMessage.style.display = 'block';
+                }} finally {{
+                    // Restore button state
+                    createBtn.textContent = originalText;
+                    createBtn.disabled = false;
+                }}
+            }}
+            
+            function previewPost() {{
+                const content = document.getElementById('content').value;
+                const title = document.getElementById('title').value;
+                const date = document.getElementById('date').value;
+                const category = document.getElementById('category').value;
+                const type = document.getElementById('type').value;
+                
+                if (!content.trim()) {{
+                    alert('Please enter some content to preview');
+                    return;
+                }}
+                
+                if (!title.trim()) {{
+                    alert('Please enter a title to preview');
+                    return;
+                }}
+                
+                // Create a form and submit to preview endpoint
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '/admin/preview-new-post';
+                form.target = '_blank';
+                
+                const titleInput = document.createElement('input');
+                titleInput.type = 'hidden';
+                titleInput.name = 'title';
+                titleInput.value = title;
+                form.appendChild(titleInput);
+                
+                const contentInput = document.createElement('input');
+                contentInput.type = 'hidden';
+                contentInput.name = 'content';
+                contentInput.value = content;
+                form.appendChild(contentInput);
+                
+                const dateInput = document.createElement('input');
+                dateInput.type = 'hidden';
+                dateInput.name = 'date';
+                dateInput.value = date;
+                form.appendChild(dateInput);
+                
+                const categoryInput = document.createElement('input');
+                categoryInput.type = 'hidden';
+                categoryInput.name = 'category';
+                categoryInput.value = category;
+                form.appendChild(categoryInput);
+                
+                const typeInput = document.createElement('input');
+                typeInput.type = 'hidden';
+                typeInput.name = 'type';
+                typeInput.value = type;
+                form.appendChild(typeInput);
+                
+                document.body.appendChild(form);
+                form.submit();
+                document.body.removeChild(form);
+            }}
+            
+            // Auto-generate filename preview
+            function updateFilenamePreview() {{
+                const title = document.getElementById('title').value.trim();
+                const date = document.getElementById('date').value;
+                const helpText = document.querySelector('.help-text');
+                
+                if (title && date) {{
+                    // Generate filename
+                    const safeTitle = title.toLowerCase()
+                        .replace(/[^\\w\\s-]/g, '')  // Remove special chars
+                        .replace(/[-\\s]+/g, '-')    // Replace spaces/dashes with single dash
+                        .replace(/^-+|-+$/g, '');    // Remove leading/trailing dashes
+                    
+                    const filename = `${{date}}-${{safeTitle}}.md`;
+                    helpText.textContent = `Filename will be: ${{filename}}`;
+                }} else {{
+                    helpText.textContent = 'This will be used to generate the filename';
+                }}
+            }}
+            
+            // Add event listeners for filename preview
+            document.getElementById('title').addEventListener('input', updateFilenamePreview);
+            document.getElementById('date').addEventListener('change', updateFilenamePreview);
+        </script>
     </body>
     </html>
-    """, status_code=200)
+    """
+    
+    return HTMLResponse(content=new_post_form_html)
+
+@app.post("/admin/new-post")
+async def create_new_post(request: Request, title: str = Form(...), 
+                         date: str = Form(...), category: str = Form(...), 
+                         type: str = Form(...), content: str = Form(...)):
+    """Create a new blog post with generated filename"""
+    admin_password = get_admin_password()
+    
+    # Check authentication (same logic as admin-status API)
+    if admin_password and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    import frontmatter
+    import re
+    from datetime import datetime
+    from .generator import SiteGenerator
+    
+    try:
+        # Generate filename from title and date
+        def create_filename_from_title(title: str, date: str) -> str:
+            """Create safe filename from post title and date."""
+            # Remove special characters and convert to lowercase
+            safe_title = re.sub(r'[^\w\s-]', '', title.lower())
+            safe_title = re.sub(r'[-\s]+', '-', safe_title)
+            safe_title = safe_title.strip('-')  # Remove leading/trailing dashes
+            
+            return f"{date}-{safe_title}.md"
+        
+        filename = create_filename_from_title(title.strip(), date)
+        
+        # Check if file already exists
+        blog_dir = root_dir / "content" / "blog"
+        blog_dir.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
+        post_file = blog_dir / filename
+        
+        if post_file.exists():
+            raise HTTPException(status_code=400, detail=f"A post with filename '{filename}' already exists")
+        
+        # Create the new post with frontmatter
+        post = frontmatter.Post(content.strip())
+        post.metadata = {
+            'title': title.strip(),
+            'date': date,
+            'category': category.strip() if category.strip() else 'General',
+            'type': type
+        }
+        
+        # Write the new post to file
+        with open(post_file, 'w', encoding='utf-8') as f:
+            f.write(frontmatter.dumps(post))
+            f.flush()
+            os.fsync(f.fileno())  # Force disk write
+        
+        logger.info(f"New post created successfully: {filename}")
+        
+        # Regenerate affected pages
+        try:
+            generator = SiteGenerator()
+            generator.incremental_regenerate_post(filename, 'blog')
+            logger.info(f"Site regenerated after creating: {filename}")
+        except Exception as regen_error:
+            logger.error(f"Site regeneration failed after creating {filename}: {regen_error}")
+            # Don't fail the creation operation if regeneration fails
+        
+        return JSONResponse(content={
+            "status": "success",
+            "message": "Post created successfully",
+            "filename": filename,
+            "url": f"/blog/{filename.replace('.md', '.html')}"
+        })
+        
+    except HTTPException:
+        # Re-raise HTTP exceptions (like file exists)
+        raise
+    except Exception as e:
+        logger.error(f"Error creating new post: {e}")
+        raise HTTPException(status_code=500, detail=f"Error creating post: {str(e)}")
+
+@app.post("/admin/preview-new-post")
+async def preview_new_post_html(request: Request, title: str = Form(...), content: str = Form(...), 
+                               date: str = Form(...), category: str = Form(...), 
+                               type: str = Form(...)):
+    """Render complete preview page for new post with HTML"""
+    admin_password = get_admin_password()
+    
+    # Check authentication (same logic as admin-status API)
+    if admin_password and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    try:
+        import markdown
+        import re
+        
+        # Configure markdown with extensions
+        md = markdown.Markdown(extensions=[
+            'codehilite',
+            'tables', 
+            'toc',
+            'fenced_code',
+            'nl2br'
+        ])
+        
+        # Convert markdown to HTML
+        html_content = md.convert(content)
+        
+        # Generate filename preview
+        def create_filename_from_title(title: str, date: str) -> str:
+            safe_title = re.sub(r'[^\w\s-]', '', title.lower())
+            safe_title = re.sub(r'[-\s]+', '-', safe_title)
+            safe_title = safe_title.strip('-')
+            return f"{date}-{safe_title}.md"
+        
+        filename = create_filename_from_title(title.strip(), date)
+        
+        # Create complete HTML page
+        preview_html = f"""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Preview: {title}</title>
+            <style>
+                body {{ 
+                    font-family: Georgia, serif; 
+                    max-width: 800px; 
+                    margin: 2rem auto; 
+                    padding: 0 2rem; 
+                    line-height: 1.6; 
+                    color: #333;
+                }}
+                h1, h2, h3, h4, h5, h6 {{ 
+                    color: #2c3e50; 
+                    margin-top: 2rem; 
+                    margin-bottom: 1rem; 
+                }}
+                h1 {{ font-size: 2.5rem; border-bottom: 2px solid #27ae60; padding-bottom: 0.5rem; }}
+                h2 {{ font-size: 2rem; }}
+                h3 {{ font-size: 1.5rem; }}
+                p {{ margin-bottom: 1rem; }}
+                pre {{ 
+                    background: #f8f9fa; 
+                    padding: 1rem; 
+                    border-radius: 4px; 
+                    overflow-x: auto; 
+                    border: 1px solid #e9ecef;
+                }}
+                code {{
+                    background: #f8f9fa;
+                    padding: 0.2rem 0.4rem;
+                    border-radius: 3px;
+                    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+                }}
+                blockquote {{ 
+                    border-left: 4px solid #27ae60; 
+                    margin: 1rem 0; 
+                    padding-left: 1rem; 
+                    color: #666; 
+                    font-style: italic;
+                }}
+                a {{ color: #27ae60; text-decoration: none; }}
+                a:hover {{ text-decoration: underline; }}
+                ul, ol {{ margin-bottom: 1rem; }}
+                li {{ margin-bottom: 0.5rem; }}
+                img {{ max-width: 100%; height: auto; }}
+                table {{ 
+                    border-collapse: collapse; 
+                    width: 100%; 
+                    margin: 1rem 0; 
+                }}
+                th, td {{ 
+                    border: 1px solid #ddd; 
+                    padding: 0.5rem; 
+                    text-align: left; 
+                }}
+                th {{ background: #f8f9fa; font-weight: bold; }}
+                .preview-header {{
+                    background: #e8f5e8;
+                    padding: 1rem;
+                    margin: -2rem -2rem 2rem -2rem;
+                    border-bottom: 1px solid #27ae60;
+                }}
+                .preview-actions {{
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: white;
+                    padding: 10px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                }}
+                .btn {{
+                    padding: 8px 16px;
+                    margin: 0 5px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    text-decoration: none;
+                    display: inline-block;
+                }}
+                .btn-success {{
+                    background: #27ae60;
+                    color: white;
+                }}
+                .btn-success:hover {{
+                    background: #219a52;
+                }}
+                .btn-secondary {{
+                    background: #95a5a6;
+                    color: white;
+                }}
+                .btn-secondary:hover {{
+                    background: #7f8c8d;
+                }}
+                .filename-info {{
+                    background: #f8f9fa;
+                    padding: 0.5rem;
+                    border-radius: 4px;
+                    font-size: 0.875rem;
+                    color: #666;
+                    margin-bottom: 1rem;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class="preview-actions">
+                <button class="btn btn-success" onclick="createAndClose()">✨ Create & View</button>
+                <button class="btn btn-secondary" onclick="window.close()">✕ Close</button>
+            </div>
+            
+            <div class="preview-header">
+                <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: {title}</h1>
+                <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your new post will appear on the blog</p>
+                <div class="filename-info">Filename: {filename}</div>
+            </div>
+            <h1>{title}</h1>
+            {html_content}
+            
+            <script>
+                // Form data passed from the new post page
+                const postData = {{
+                    title: `{title}`,
+                    content: `{content.replace('`', '\\`').replace('$', '\\$')}`,
+                    date: `{date}`,
+                    category: `{category}`,
+                    type: `{type}`
+                }};
+                
+                async function createAndClose() {{
+                    const createBtn = event.target;
+                    const originalText = createBtn.textContent;
+                    createBtn.textContent = '✨ Creating...';
+                    createBtn.disabled = true;
+                    
+                    try {{
+                        // Create form data with the current post data
+                        const formData = new FormData();
+                        formData.append('title', postData.title);
+                        formData.append('content', postData.content);
+                        formData.append('date', postData.date);
+                        formData.append('category', postData.category);
+                        formData.append('type', postData.type);
+                        
+                        const response = await fetch('/admin/new-post', {{
+                            method: 'POST',
+                            body: formData
+                        }});
+                        
+                        const result = await response.json();
+                        
+                        if (response.ok) {{
+                            alert('✓ Post created successfully!');
+                            // Navigate to the new post
+                            window.location.href = result.url;
+                        }} else {{
+                            throw new Error(result.detail || 'Creation failed');
+                        }}
+                    }} catch (error) {{
+                        alert('✗ Error creating: ' + error.message);
+                    }} finally {{
+                        createBtn.textContent = originalText;
+                        createBtn.disabled = false;
+                    }}
+                }}
+            </script>
+        </body>
+        </html>
+        """
+        
+        return HTMLResponse(content=preview_html)
+        
+    except Exception as e:
+        logger.error(f"Error rendering new post preview: {e}")
+        raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
 
 @app.post("/admin/delete-post/{filename}")
 async def delete_post_endpoint(filename: str, request: Request):
