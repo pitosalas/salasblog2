@@ -1091,15 +1091,122 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
                     margin: -2rem -2rem 2rem -2rem;
                     border-bottom: 1px solid #3498db;
                 }}
+                .preview-actions {{
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: white;
+                    padding: 10px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                    z-index: 1000;
+                }}
+                .btn {{
+                    padding: 8px 16px;
+                    margin: 0 5px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    text-decoration: none;
+                    display: inline-block;
+                }}
+                .btn-success {{
+                    background: #27ae60;
+                    color: white;
+                }}
+                .btn-success:hover {{
+                    background: #229954;
+                }}
+                .btn-secondary {{
+                    background: #95a5a6;
+                    color: white;
+                }}
+                .btn-secondary:hover {{
+                    background: #7f8c8d;
+                }}
             </style>
         </head>
         <body>
+            <div class="preview-actions">
+                <button class="btn btn-success" onclick="saveAndClose()">💾 Save & Close</button>
+                <button class="btn btn-secondary" onclick="window.close()">✕ Close</button>
+            </div>
+            
             <div class="preview-header">
                 <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: {title}</h1>
                 <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your post will appear on the blog</p>
             </div>
             <h1>{title}</h1>
             {html_content}
+            
+            <script>
+                // Get the original data from the opener window
+                const originalData = {{
+                    title: `{title}`,
+                    content: `{content.replace('`', '\\`').replace('$', '\\$')}`
+                }};
+                
+                async function saveAndClose() {{
+                    const saveBtn = event.target;
+                    const originalText = saveBtn.textContent;
+                    saveBtn.textContent = '💾 Saving...';
+                    saveBtn.disabled = true;
+                    
+                    try {{
+                        // Get the filename from the URL parameters or opener
+                        const urlParams = new URLSearchParams(window.location.search);
+                        let filename = urlParams.get('filename');
+                        
+                        // If no filename in URL, try to get it from the opener window
+                        if (!filename && window.opener) {{
+                            const openerUrl = window.opener.location.pathname;
+                            const match = openerUrl.match(/\/admin\/edit-post\/(.+)$/);
+                            if (match) {{
+                                filename = match[1];
+                            }}
+                        }}
+                        
+                        if (!filename) {{
+                            alert('Cannot determine which post to save');
+                            return;
+                        }}
+                        
+                        // Get form data from opener window or use current data
+                        let formData = new FormData();
+                        if (window.opener && window.opener.document.getElementById('editForm')) {{
+                            const openerForm = window.opener.document.getElementById('editForm');
+                            formData = new FormData(openerForm);
+                        }} else {{
+                            // Fallback to current data
+                            formData.append('title', originalData.title);
+                            formData.append('content', originalData.content);
+                            formData.append('date', new Date().toISOString().split('T')[0]);
+                            formData.append('category', 'General');
+                            formData.append('type', 'blog');
+                        }}
+                        
+                        const response = await fetch(`/admin/edit-post/${{filename}}`, {{
+                            method: 'POST',
+                            body: formData
+                        }});
+                        
+                        const result = await response.json();
+                        
+                        if (response.ok) {{
+                            alert('✓ Post saved successfully!');
+                            window.close();
+                        }} else {{
+                            throw new Error(result.detail || 'Save failed');
+                        }}
+                    }} catch (error) {{
+                        alert('✗ Error saving: ' + error.message);
+                    }} finally {{
+                        saveBtn.textContent = originalText;
+                        saveBtn.disabled = false;
+                    }}
+                }}
+            </script>
         </body>
         </html>
         """
