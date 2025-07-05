@@ -70,9 +70,10 @@ class GitScheduler:
             )
             
             # Push to GitHub
-            logger.info("Pushing to GitHub...")
+            git_branch = os.getenv("GIT_BRANCH", "main")
+            logger.info(f"Pushing to GitHub branch: {git_branch}")
             result = subprocess.run(
-                ["git", "push", "origin", "persistent-volume"],
+                ["git", "push", "origin", git_branch],
                 capture_output=True, text=True, timeout=60
             )
             

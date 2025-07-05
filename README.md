@@ -74,6 +74,7 @@ Frontmatter: `title`, `date` (YYYY-MM-DD), `type` (blog/drop/page), `category`
 **Git Integration (Fly.io):**
 - `GIT_TOKEN` or `SSH_PRIVATE_KEY` - GitHub access
 - `GIT_EMAIL/GIT_NAME` - Commit info
+- `GIT_BRANCH` - Target branch for pushes (default: main)
 
 ## Blog Editor Setup (MarsEdit)
 

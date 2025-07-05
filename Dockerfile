@@ -39,6 +39,20 @@ if [ -n "$GIT_TOKEN" ]; then\n\
     echo "Git authentication configured"\n\
 fi\n\
 \n\
+# Update git user config from environment variables if available\n\
+if [ -n "$GIT_EMAIL" ]; then\n\
+    echo "Setting git user email to: $GIT_EMAIL"\n\
+    git config user.email "$GIT_EMAIL"\n\
+fi\n\
+\n\
+if [ -n "$GIT_NAME" ]; then\n\
+    echo "Setting git user name to: $GIT_NAME"\n\
+    git config user.name "$GIT_NAME"\n\
+fi\n\
+\n\
+# Show current git configuration\n\
+echo "Current git user: $(git config user.name) <$(git config user.email)>"\n\
+\n\
 # Ensure /app/content is a real directory, not a symlink\n\
 if [ -L "/app/content" ]; then\n\
     echo "Removing symlink at /app/content..."\n\
