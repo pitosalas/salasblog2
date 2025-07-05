@@ -13,8 +13,8 @@ RUN pip install uv
 # Set working directory
 WORKDIR /app
 
-# Clone the repository directly from persistent-volume branch
-RUN git clone -b persistent-volume https://github.com/pitosalas/salasblog2.git /tmp/repo && \
+# Clone the repository directly from web-based-post-management branch
+RUN git clone -b web-based-post-management https://github.com/pitosalas/salasblog2.git /tmp/repo && \
     cp -r /tmp/repo/* . && \
     cp -r /tmp/repo/.git . && \
     cp /tmp/repo/.gitignore . 2>/dev/null || true && \
