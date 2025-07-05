@@ -855,6 +855,9 @@ async def edit_post_page(filename: str, request: Request):
                 function previewPost() {{
                     const content = document.getElementById('content').value;
                     const title = document.getElementById('title').value;
+                    const date = document.getElementById('date').value;
+                    const category = document.getElementById('category').value;
+                    const type = document.getElementById('type').value;
                     
                     if (!content.trim()) {{
                         alert('Please enter some content to preview');
@@ -878,6 +881,32 @@ async def edit_post_page(filename: str, request: Request):
                     contentInput.name = 'content';
                     contentInput.value = content;
                     form.appendChild(contentInput);
+                    
+                    const dateInput = document.createElement('input');
+                    dateInput.type = 'hidden';
+                    dateInput.name = 'date';
+                    dateInput.value = date;
+                    form.appendChild(dateInput);
+                    
+                    const categoryInput = document.createElement('input');
+                    categoryInput.type = 'hidden';
+                    categoryInput.name = 'category';
+                    categoryInput.value = category;
+                    form.appendChild(categoryInput);
+                    
+                    const typeInput = document.createElement('input');
+                    typeInput.type = 'hidden';
+                    typeInput.name = 'type';
+                    typeInput.value = type;
+                    form.appendChild(typeInput);
+                    
+                    // Add filename from current URL
+                    const filename = window.location.pathname.split('/').pop();
+                    const filenameInput = document.createElement('input');
+                    filenameInput.type = 'hidden';
+                    filenameInput.name = 'filename';
+                    filenameInput.value = filename;
+                    form.appendChild(filenameInput);
                     
                     document.body.appendChild(form);
                     form.submit();
@@ -1000,7 +1029,9 @@ async def preview_markdown(request: Request, content: str = Form(...)):
         raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
 
 @app.post("/admin/preview-post")
-async def preview_post_html(request: Request, title: str = Form(...), content: str = Form(...)):
+async def preview_post_html(request: Request, title: str = Form(...), content: str = Form(...), 
+                           date: str = Form(...), category: str = Form(...), 
+                           type: str = Form(...), filename: str = Form(...)):
     """Render complete preview page with HTML"""
     admin_password = get_admin_password()
     
@@ -1141,10 +1172,14 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
             {html_content}
             
             <script>
-                // Get the original data from the opener window
-                const originalData = {{
+                // Form data passed from the edit page
+                const postData = {{
                     title: `{title}`,
-                    content: `{content.replace('`', '\\`').replace('$', '\\$')}`
+                    content: `{content.replace('`', '\\`').replace('$', '\\$')}`,
+                    date: `{date}`,
+                    category: `{category}`,
+                    type: `{type}`,
+                    filename: `{filename}`
                 }};
                 
                 async function saveAndClose() {{
@@ -1154,39 +1189,15 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
                     saveBtn.disabled = true;
                     
                     try {{
-                        // Get the filename from the URL parameters or opener
-                        const urlParams = new URLSearchParams(window.location.search);
-                        let filename = urlParams.get('filename');
+                        // Create form data with the current post data
+                        const formData = new FormData();
+                        formData.append('title', postData.title);
+                        formData.append('content', postData.content);
+                        formData.append('date', postData.date);
+                        formData.append('category', postData.category);
+                        formData.append('type', postData.type);
                         
-                        // If no filename in URL, try to get it from the opener window
-                        if (!filename && window.opener) {{
-                            const openerUrl = window.opener.location.pathname;
-                            const match = openerUrl.match(/\/admin\/edit-post\/(.+)$/);
-                            if (match) {{
-                                filename = match[1];
-                            }}
-                        }}
-                        
-                        if (!filename) {{
-                            alert('Cannot determine which post to save');
-                            return;
-                        }}
-                        
-                        // Get form data from opener window or use current data
-                        let formData = new FormData();
-                        if (window.opener && window.opener.document.getElementById('editForm')) {{
-                            const openerForm = window.opener.document.getElementById('editForm');
-                            formData = new FormData(openerForm);
-                        }} else {{
-                            // Fallback to current data
-                            formData.append('title', originalData.title);
-                            formData.append('content', originalData.content);
-                            formData.append('date', new Date().toISOString().split('T')[0]);
-                            formData.append('category', 'General');
-                            formData.append('type', 'blog');
-                        }}
-                        
-                        const response = await fetch(`/admin/edit-post/${{filename}}`, {{
+                        const response = await fetch(`/admin/edit-post/${{postData.filename}}`, {{
                             method: 'POST',
                             body: formData
                         }});
