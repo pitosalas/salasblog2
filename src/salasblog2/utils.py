@@ -2,6 +2,7 @@
 Pure utility functions for content processing and site generation.
 These functions are completely independent and reusable.
 """
+import os
 import re
 import markdown
 import frontmatter
@@ -37,10 +38,16 @@ def format_date(date_str: Optional[str], format_str: str = '%B %d, %Y') -> str:
     return str(date_str) if date_str else ''
 
 
-def create_excerpt_with_info(content: str, max_length: int = 150, smart_threshold: int = 100) -> tuple[str, bool]:
+def create_excerpt_with_info(content: str, max_length: int = None, smart_threshold: int = None) -> tuple[str, bool]:
     """Create excerpt from text content and return truncation status."""
     if not content:
         return '', False
+    
+    # Get excerpt length from environment variables with defaults
+    if max_length is None:
+        max_length = int(os.getenv('EXCERPT_LENGTH', '150'))
+    if smart_threshold is None:
+        smart_threshold = int(os.getenv('EXCERPT_SMART_THRESHOLD', '100'))
     
     # Clean up content - remove newlines and extra spaces
     clean_content = content.replace('\n', ' ').strip()
@@ -56,7 +63,7 @@ def create_excerpt_with_info(content: str, max_length: int = 150, smart_threshol
     return clean_content[:max_length] + '...', True
 
 
-def create_excerpt(content: str, max_length: int = 150, smart_threshold: int = 100) -> str:
+def create_excerpt(content: str, max_length: int = None, smart_threshold: int = None) -> str:
     """Create excerpt from text content with ellipsis if truncated."""
     excerpt, _ = create_excerpt_with_info(content, max_length, smart_threshold)
     return excerpt
