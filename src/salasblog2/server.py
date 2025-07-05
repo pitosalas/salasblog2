@@ -852,28 +852,107 @@ async def edit_post_page(filename: str, request: Request):
                     }}
                 }}
                 
-                function previewPost() {{
+                async function previewPost() {{
                     const content = document.getElementById('content').value;
                     const title = document.getElementById('title').value;
                     
-                    // Open preview in new window (basic implementation)
-                    const previewWindow = window.open('', '_blank', 'width=800,height=600');
-                    previewWindow.document.write(`
-                        <html>
-                        <head><title>Preview: ${{title}}</title>
-                        <style>
-                            body {{ font-family: Georgia, serif; max-width: 800px; margin: 2rem auto; padding: 0 2rem; line-height: 1.6; }}
-                            h1, h2, h3 {{ color: #2c3e50; }}
-                            pre {{ background: #f8f9fa; padding: 1rem; border-radius: 4px; overflow-x: auto; }}
-                            blockquote {{ border-left: 4px solid #3498db; margin: 1rem 0; padding-left: 1rem; color: #666; }}
-                        </style>
-                        </head>
-                        <body>
-                        <h1>${{title}}</h1>
-                        <pre>${{content}}</pre>
-                        </body>
-                        </html>
-                    `);
+                    try {{
+                        // Send markdown to server for rendering
+                        const response = await fetch('/admin/preview-markdown', {{
+                            method: 'POST',
+                            headers: {{
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                            }},
+                            body: `content=${{encodeURIComponent(content)}}`
+                        }});
+                        
+                        if (response.ok) {{
+                            const result = await response.json();
+                            
+                            // Open preview in new window
+                            const previewWindow = window.open('', '_blank', 'width=800,height=600');
+                            previewWindow.document.write(`
+                                <html>
+                                <head>
+                                    <title>Preview: ${{title}}</title>
+                                    <style>
+                                        body {{ 
+                                            font-family: Georgia, serif; 
+                                            max-width: 800px; 
+                                            margin: 2rem auto; 
+                                            padding: 0 2rem; 
+                                            line-height: 1.6; 
+                                            color: #333;
+                                        }}
+                                        h1, h2, h3, h4, h5, h6 {{ 
+                                            color: #2c3e50; 
+                                            margin-top: 2rem; 
+                                            margin-bottom: 1rem; 
+                                        }}
+                                        h1 {{ font-size: 2.5rem; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; }}
+                                        h2 {{ font-size: 2rem; }}
+                                        h3 {{ font-size: 1.5rem; }}
+                                        p {{ margin-bottom: 1rem; }}
+                                        pre {{ 
+                                            background: #f8f9fa; 
+                                            padding: 1rem; 
+                                            border-radius: 4px; 
+                                            overflow-x: auto; 
+                                            border: 1px solid #e9ecef;
+                                        }}
+                                        code {{
+                                            background: #f8f9fa;
+                                            padding: 0.2rem 0.4rem;
+                                            border-radius: 3px;
+                                            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+                                        }}
+                                        blockquote {{ 
+                                            border-left: 4px solid #3498db; 
+                                            margin: 1rem 0; 
+                                            padding-left: 1rem; 
+                                            color: #666; 
+                                            font-style: italic;
+                                        }}
+                                        a {{ color: #3498db; text-decoration: none; }}
+                                        a:hover {{ text-decoration: underline; }}
+                                        ul, ol {{ margin-bottom: 1rem; }}
+                                        li {{ margin-bottom: 0.5rem; }}
+                                        img {{ max-width: 100%; height: auto; }}
+                                        table {{ 
+                                            border-collapse: collapse; 
+                                            width: 100%; 
+                                            margin: 1rem 0; 
+                                        }}
+                                        th, td {{ 
+                                            border: 1px solid #ddd; 
+                                            padding: 0.5rem; 
+                                            text-align: left; 
+                                        }}
+                                        th {{ background: #f8f9fa; font-weight: bold; }}
+                                        .preview-header {{
+                                            background: #e8f4f8;
+                                            padding: 1rem;
+                                            margin: -2rem -2rem 2rem -2rem;
+                                            border-bottom: 1px solid #3498db;
+                                        }}
+                                    </style>
+                                </head>
+                                <body>
+                                    <div class="preview-header">
+                                        <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: ${{title}}</h1>
+                                        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your post will appear on the blog</p>
+                                    </div>
+                                    <h1>${{title}}</h1>
+                                    ${{result.html}}
+                                </body>
+                                </html>
+                            `);
+                        }} else {{
+                            alert('Preview failed: ' + response.statusText);
+                        }}
+                    }} catch (error) {{
+                        alert('Preview error: ' + error.message);
+                    }}
                 }}
                 
                 // Auto-save functionality (optional)
@@ -956,6 +1035,40 @@ async def save_edited_post(filename: str, request: Request, title: str = Form(..
     except Exception as e:
         logger.error(f"Error saving post {filename}: {e}")
         raise HTTPException(status_code=500, detail=f"Error saving post: {str(e)}")
+
+@app.post("/admin/preview-markdown")
+async def preview_markdown(request: Request, content: str = Form(...)):
+    """Convert markdown content to HTML for preview"""
+    admin_password = get_admin_password()
+    
+    # Check authentication (same logic as admin-status API)
+    if admin_password and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    try:
+        import markdown
+        from markdown.extensions import codehilite, tables, toc
+        
+        # Configure markdown with extensions
+        md = markdown.Markdown(extensions=[
+            'codehilite',
+            'tables', 
+            'toc',
+            'fenced_code',
+            'nl2br'
+        ])
+        
+        # Convert markdown to HTML
+        html = md.convert(content)
+        
+        return JSONResponse(content={
+            "status": "success",
+            "html": html
+        })
+        
+    except Exception as e:
+        logger.error(f"Error rendering markdown preview: {e}")
+        raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
 
 @app.get("/admin/new-post")
 async def new_post_page(request: Request):
