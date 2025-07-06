@@ -15,7 +15,7 @@
         <div class="page-card">
             <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
             {% if page.excerpt %}
-                <p class="page-excerpt">{{ page.excerpt }}</p>
+                <p class="page-excerpt">{{ page.excerpt | markdown | safe }}</p>
             {% endif %}
             <div class="page-meta">
                 {% if page.category and page.category != 'Uncategorized' %}
