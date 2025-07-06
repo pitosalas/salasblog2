@@ -2,12 +2,9 @@
 title: Robots
 date: 2024-12-28
 ---
-
-# Robotics Projects
-
 My work and research in robotics, autonomous systems, and related technologies.
 
-## Sections
+# Projects
 
 - [BRH](/robots/brh/) - BRH robotics project
 - [Dome](/robots/dome/) - Dome-related robotics work
