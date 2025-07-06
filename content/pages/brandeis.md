@@ -2,14 +2,9 @@
 title: Brandeis University
 date: 2024-12-28
 ---
-
 # Brandeis University
 
-My work and affiliations with Brandeis University.
+[Brandeis University](https://www.brandeis.edu) is not only my alma mater, but where I worked as a member of the [Computer Science Faculty](https://www.brandeis.edu/computer-science/), and continue to belong as an Emeritus member of that department.
 
-## Sections
 
-- [Teaching](/brandeis/teaching/) - Courses and educational activities
-- [Research](/brandeis/research/) - Research projects and publications
 
-*This page is under construction. Please check back soon for more information about my Brandeis activities.*

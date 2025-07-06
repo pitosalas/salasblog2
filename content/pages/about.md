@@ -1,7 +1,9 @@
 ---
-title: About Me
+title: About Me: Pito Salas
 ---
 
 # About Me
 
-Personal information, background, and interests.
+As you know, my name is Pito Salas. You can find all about me on [LinkedIn](https://www.linkedin.com/in/pitosalas/). If I have met you in person I will generally accept a link invite. But if you put a note with the link invite, chances are better that I will acceopt.
+
+s
