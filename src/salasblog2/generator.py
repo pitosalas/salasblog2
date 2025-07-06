@@ -27,7 +27,7 @@ from .utils import (
 
 
 class SiteGenerator:
-    def __init__(self, theme="claude"):
+    def __init__(self, theme=None):
         self.root_dir = Path.cwd()
         self.content_dir = self.root_dir / "content"
         self.blog_dir = self.content_dir / "blog"
@@ -35,7 +35,9 @@ class SiteGenerator:
         self.pages_dir = self.content_dir / "pages"
         self.output_dir = self.root_dir / "output"
         
-        # Theme support
+        # Theme support - use environment variable if theme not specified
+        if theme is None:
+            theme = os.environ.get('THEME', 'claude')
         self.theme = theme
         self.themes_dir = self.root_dir / "themes"
         self.templates_dir = self.themes_dir / theme / "templates"

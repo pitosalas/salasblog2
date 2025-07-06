@@ -2,6 +2,7 @@
 Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
 """
 import argparse
+import os
 import sys
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
@@ -80,7 +81,7 @@ def main():
     
     # Generate command
     generate_parser = subparsers.add_parser('generate', help='Generate static site')
-    generate_parser.add_argument('--theme', default='claude', 
+    generate_parser.add_argument('--theme', default=os.environ.get('THEME', 'claude'), 
                                 help='Theme to use for site generation')
     generate_parser.set_defaults(func=cmd_generate)
     

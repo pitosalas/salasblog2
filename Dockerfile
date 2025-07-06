@@ -76,7 +76,7 @@ echo "Using excerpt settings: length=${EXCERPT_LENGTH}, smart_threshold=${EXCERP
 \n\
 # Regenerate site with current environment variables\n\
 echo "Regenerating site with current environment variables..."\n\
-uv run salasblog2 generate --theme test\n\
+uv run salasblog2 generate\n\
 echo "Site regeneration completed"\n\
 \n\
 # Start the server\n\
