@@ -69,6 +69,16 @@ else\n\
     echo "No existing content in volume found"\n\
 fi\n\
 \n\
+# Set excerpt environment variables if not already set\n\
+export EXCERPT_LENGTH=${EXCERPT_LENGTH:-80}\n\
+export EXCERPT_SMART_THRESHOLD=${EXCERPT_SMART_THRESHOLD:-30}\n\
+echo "Using excerpt settings: length=${EXCERPT_LENGTH}, smart_threshold=${EXCERPT_SMART_THRESHOLD}"\n\
+\n\
+# Regenerate site with current environment variables\n\
+echo "Regenerating site with current environment variables..."\n\
+uv run salasblog2 generate\n\
+echo "Site regeneration completed"\n\
+\n\
 # Start the server\n\
 exec uv run salasblog2 server --port 8080' > /startup.sh && \
 chmod +x /startup.sh

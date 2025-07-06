@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo:*)",
+      "Bash(EXCERPT_LENGTH=50 EXCERPT_SMART_THRESHOLD=20 uv run python -c \"\nfrom src.salasblog2.utils import create_excerpt_with_info\ntest_content = ''This is a test blog post content that should be much longer than the excerpt length to test the truncation functionality and see if the environment variables are working correctly.''\nexcerpt, is_truncated = create_excerpt_with_info(test_content)\nprint(f''Excerpt: {excerpt}'')\nprint(f''Is truncated: {is_truncated}'')\nprint(f''Excerpt length: {len(excerpt)}'')\n\")",
+      "Bash(uv run:*)",
+      "Bash(EXCERPT_LENGTH=50 EXCERPT_SMART_THRESHOLD=20 uv run salasblog2 generate --theme winer)"
+    ],
+    "deny": []
+  }
+}

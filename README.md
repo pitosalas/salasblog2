@@ -77,8 +77,8 @@ Frontmatter: `title`, `date` (YYYY-MM-DD), `type` (blog/drop/page), `category`
 - `GIT_BRANCH` - Target branch for pushes (default: main)
 
 **Content Display:**
-- `EXCERPT_LENGTH` - Maximum excerpt length in characters (default: 150)
-- `EXCERPT_SMART_THRESHOLD` - Smart cutoff threshold to avoid awkward truncations (default: 100)
+- `EXCERPT_LENGTH` - Maximum excerpt length in characters (default: 80)
+- `EXCERPT_SMART_THRESHOLD` - Smart cutoff threshold to avoid awkward truncations (default: 30)
 
 ## Blog Editor Setup (MarsEdit)
 

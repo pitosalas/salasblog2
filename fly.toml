@@ -13,6 +13,9 @@ primary_region = 'bos'
   # Git configuration for manual operations
   GIT_EMAIL = 'blog-api@salasblog2.com'
   GIT_NAME = 'Salasblog2 Server'
+  # Content display settings
+  EXCERPT_LENGTH = '80'
+  EXCERPT_SMART_THRESHOLD = '30'
 
 [mounts]
   source = "blog_data"
