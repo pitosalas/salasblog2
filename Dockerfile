@@ -19,8 +19,8 @@ RUN git clone -b main https://github.com/pitosalas/salasblog2.git /tmp/repo && \
     cp -r /tmp/repo/.git . && \
     cp /tmp/repo/.gitignore . 2>/dev/null || true && \
     rm -rf /tmp/repo && \
-    git config user.email "blog-api@salasblog2.com" && \
-    git config user.name "Salasblog2 Server"
+    git config user.email "pitosalas@gmail.com" && \
+    git config user.name "pitosalas"
 
 # Install dependencies
 RUN uv sync --frozen
@@ -76,7 +76,7 @@ echo "Using excerpt settings: length=${EXCERPT_LENGTH}, smart_threshold=${EXCERP
 \n\
 # Regenerate site with current environment variables\n\
 echo "Regenerating site with current environment variables..."\n\
-uv run salasblog2 generate\n\
+uv run salasblog2 generate --theme test\n\
 echo "Site regeneration completed"\n\
 \n\
 # Start the server\n\
