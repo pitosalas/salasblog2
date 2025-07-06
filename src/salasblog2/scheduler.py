@@ -133,11 +133,15 @@ class GitScheduler:
         except Exception as e:
             logger.error(f"Error in scheduled sync: {e}")
     
-    def start_scheduler(self, interval_hours: int = 6):
+    def start_scheduler(self, interval_hours: int = None):
         """Start the background scheduler"""
         if self.is_running:
             logger.warning("Scheduler is already running")
             return
+        
+        # Use environment variable if interval_hours not specified
+        if interval_hours is None:
+            interval_hours = int(os.environ.get('SCHED_HRS_INTERVAL', 6))
         
         logger.info(f"Starting Git scheduler - will sync every {interval_hours} hours")
         

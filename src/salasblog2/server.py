@@ -84,7 +84,7 @@ async def lifespan(app: FastAPI):
     
     # Start the Git scheduler
     scheduler = get_scheduler()
-    scheduler.start_scheduler(interval_hours=6)  # Sync every 6 hours
+    scheduler.start_scheduler()  # Use SCHED_HRS_INTERVAL env var (defaults to 6 hours)
     
     import asyncio
     
@@ -408,18 +408,21 @@ async def trigger_git_sync():
         raise HTTPException(status_code=500, detail=f"Git sync error: {str(e)}")
 
 @app.post("/api/scheduler/start")
-async def start_scheduler(hours: int = 6):
+async def start_scheduler(hours: int = None):
     """Start or restart the Git scheduler with specified interval"""
-    if hours < 1 or hours > 24:
+    if hours is not None and (hours < 1 or hours > 24):
         raise HTTPException(status_code=400, detail="Interval must be between 1 and 24 hours")
     
     scheduler = get_scheduler()
     scheduler.stop_scheduler()  # Stop if already running
     scheduler.start_scheduler(interval_hours=hours)
     
+    # Get actual interval used (from env var if hours was None)
+    actual_hours = hours if hours is not None else int(os.environ.get('SCHED_HRS_INTERVAL', 6))
+    
     return JSONResponse(content={
         "status": "success",
-        "message": f"Git scheduler started - will sync every {hours} hours"
+        "message": f"Git scheduler started - will sync every {actual_hours} hours"
     })
 
 @app.post("/api/scheduler/stop")
