@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Grid Layout{% endblock %}
+
+{% block content %}
+<div class="blog-posts-grid">
+    {% if pagination and pagination.total_pages > 1 %}
+    <div class="pagination-info">
+        Page {{ pagination.current_page }} of {{ pagination.total_pages }} 
+        ({{ total_posts }} total posts)
+    </div>
+    {% endif %}
+    
+    <div class="blog-grid">
+        {% for post in posts %}
+        <article class="blog-post-card">
+            <div class="post-date-grid">{{ post.date | strftime('%m/%d/%y') }}</div>
+            <h3 class="post-title-grid"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            {% if post.excerpt %}
+            <div class="post-excerpt-grid">{{ post.excerpt | markdown | safe }}</div>
+            {% endif %}
+            {% if post.category %}
+            <div class="post-category-grid">{{ post.category }}</div>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </div>
+    
+    {% if posts|length == 0 %}
+    <div style="text-align: center; color: #666; font-style: italic;">
+        No blog posts found.
+    </div>
+    {% endif %}
+    
+    {% if pagination and pagination.total_pages > 1 %}
+    <nav class="pagination">
+        {% if pagination.has_prev %}
+            <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
+        {% endif %}
+        
+        <div class="pagination-numbers">
+            {% for page_url in pagination.page_urls %}
+                {% set loop_index = loop.index %}
+                {% if loop_index == pagination.current_page %}
+                    <span class="pagination-link current">{{ loop_index }}</span>
+                {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+                    <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
+                {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+                    <span class="pagination-ellipsis">…</span>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        {% if pagination.has_next %}
+            <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</div>
+
+<style>
+/* Grid Layout Styles */
+.blog-posts-grid {
+    margin: 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.blog-post-card {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 16px;
+    transition: box-shadow 0.2s ease;
+}
+
+.blog-post-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.post-date-grid {
+    color: #666;
+    font-size: 10px;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.post-title-grid {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.post-title-grid a {
+    color: #000;
+    text-decoration: none;
+}
+
+.post-title-grid a:hover {
+    color: #0066cc;
+}
+
+.post-excerpt-grid {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.post-category-grid {
+    color: #0066cc;
+    font-size: 10px;
+    background: #e6f3ff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+</style>
+{% endblock %}

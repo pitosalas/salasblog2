@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }}{% endblock %} - Salas Blog</title>
+    <meta name="description" content="{% block description %}Personal blog and website{% endblock %}">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/rsd.xml" />
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="/">Salas Blog</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/raindrops/">Link Blog</a></li>
+                <li><a href="/pages/">Pages</a></li>
+                <li class="admin-new-post" style="display: none;">
+                    <a href="/admin/new-post" style="background: #28a745; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 14px; margin-right: 10px;">+ New Post</a>
+                </li>
+                <li class="search-container">
+                    <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
+                    <div id="search-results" class="search-results"></div>
+                </li>
+            </ul>
+            <div class="nav-admin">
+                <a href="/admin" class="admin-link">admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>&copy; {{ current_year }} Salas Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    <script>
+        // Admin controls management
+        async function checkAdminStatus() {
+            try {
+                const response = await fetch('/api/admin-status');
+                const data = await response.json();
+                
+                if (data.authenticated) {
+                    // Show admin controls
+                    const adminControls = document.querySelector('.admin-controls');
+                    const newPostBtn = document.querySelector('.admin-new-post');
+                    
+                    if (adminControls) {
+                        adminControls.style.display = 'block';
+                    }
+                    if (newPostBtn) {
+                        newPostBtn.style.display = 'block';
+                    }
+                    
+                    // Add hover effects to admin buttons
+                    document.querySelectorAll('.admin-btn-edit').forEach(btn => {
+                        btn.addEventListener('mouseover', () => btn.style.background = '#0056b3');
+                        btn.addEventListener('mouseout', () => btn.style.background = '#007bff');
+                    });
+                    
+                    document.querySelectorAll('.admin-btn-delete').forEach(btn => {
+                        btn.addEventListener('mouseover', () => btn.style.background = '#c82333');
+                        btn.addEventListener('mouseout', () => btn.style.background = '#dc3545');
+                    });
+                }
+            } catch (error) {
+                console.error('Failed to check admin status:', error);
+            }
+        }
+        
+        // Delete post function
+        async function deletePost(filename) {
+            if (!confirm('Are you sure you want to delete this post? This action cannot be undone.')) {
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/admin/delete-post/${filename}`, {
+                    method: 'POST'
+                });
+                
+                if (response.ok) {
+                    alert('Post deleted successfully. Redirecting to blog...');
+                    window.location.href = '/blog/';
+                } else {
+                    const data = await response.json();
+                    alert(`Failed to delete post: ${data.detail || 'Unknown error'}`);
+                }
+            } catch (error) {
+                alert(`Error deleting post: ${error.message}`);
+            }
+        }
+        
+        // Check admin status when page loads
+        document.addEventListener('DOMContentLoaded', checkAdminStatus);
+    </script>
+</body>
+</html>

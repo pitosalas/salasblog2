@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block description %}{{ post.excerpt or post.title }}{% endblock %}
+
+{% block content %}
+<article class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
+            <span class="post-category">{{ post.category }}</span>
+        </div>
+    </header>
+
+    <div class="post-content">
+        {{ post.content | safe }}
+    </div>
+
+    <footer class="post-footer">
+        <!-- Admin Controls (hidden by default, shown via JavaScript when authenticated) -->
+        <div class="admin-controls" style="display: none; margin-bottom: 20px; padding: 15px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+            <h4 style="margin: 0 0 10px 0; font-size: 14px; color: #495057;">Admin Actions</h4>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="/admin/edit-post/{{ post.filename }}.md" 
+                   class="admin-btn admin-btn-edit" 
+                   style="padding: 8px 16px; background: #007bff; color: white; text-decoration: none; border-radius: 4px; font-size: 13px; transition: background-color 0.2s;">
+                    ✏️ Edit Post
+                </a>
+                <button onclick="deletePost('{{ post.filename }}.md')" 
+                        class="admin-btn admin-btn-delete" 
+                        style="padding: 8px 16px; background: #dc3545; color: white; border: none; border-radius: 4px; font-size: 13px; cursor: pointer; transition: background-color 0.2s;">
+                    🗑️ Delete Post
+                </button>
+            </div>
+        </div>
+        
+        <div class="post-navigation">
+            {% if prev_post %}
+            <a href="{{ prev_post.url }}" class="nav-link nav-prev">
+                ← {{ prev_post.title }}
+            </a>
+            {% endif %}
+            {% if next_post %}
+            <a href="{{ next_post.url }}" class="nav-link nav-next">
+                {{ next_post.title }} →
+            </a>
+            {% endif %}
+        </div>
+    </footer>
+</article>
+{% endblock %}

@@ -1,0 +1,217 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Magazine Layout{% endblock %}
+
+{% block content %}
+<div class="blog-posts-magazine">
+    {% if pagination and pagination.total_pages > 1 %}
+    <div class="pagination-info">
+        Page {{ pagination.current_page }} of {{ pagination.total_pages }} 
+        ({{ total_posts }} total posts)
+    </div>
+    {% endif %}
+    
+    {% set featured_post = posts[0] if posts %}
+    {% set other_posts = posts[1:] if posts|length > 1 else [] %}
+    
+    {% if featured_post %}
+    <article class="featured-post">
+        <div class="featured-meta">
+            <span class="featured-date">{{ featured_post.date | strftime('%B %d, %Y') }}</span>
+            {% if featured_post.category %}
+            <span class="featured-category">{{ featured_post.category }}</span>
+            {% endif %}
+        </div>
+        <h2 class="featured-title"><a href="{{ featured_post.url }}">{{ featured_post.title }}</a></h2>
+        {% if featured_post.excerpt %}
+        <div class="featured-excerpt">{{ featured_post.excerpt | markdown | safe }}</div>
+        {% endif %}
+    </article>
+    {% endif %}
+    
+    {% if other_posts %}
+    <div class="secondary-posts">
+        {% for post in other_posts %}
+        <article class="secondary-post">
+            <div class="secondary-meta">
+                <span class="secondary-date">{{ post.date | strftime('%m/%d') }}</span>
+                {% if post.category %}
+                <span class="secondary-category">{{ post.category }}</span>
+                {% endif %}
+            </div>
+            <h3 class="secondary-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            {% if post.excerpt %}
+            <div class="secondary-excerpt">{{ post.excerpt | markdown | safe }}</div>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if posts|length == 0 %}
+    <div style="text-align: center; color: #666; font-style: italic;">
+        No blog posts found.
+    </div>
+    {% endif %}
+    
+    {% if pagination and pagination.total_pages > 1 %}
+    <nav class="pagination">
+        {% if pagination.has_prev %}
+            <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
+        {% endif %}
+        
+        <div class="pagination-numbers">
+            {% for page_url in pagination.page_urls %}
+                {% set loop_index = loop.index %}
+                {% if loop_index == pagination.current_page %}
+                    <span class="pagination-link current">{{ loop_index }}</span>
+                {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+                    <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
+                {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+                    <span class="pagination-ellipsis">…</span>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        {% if pagination.has_next %}
+            <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</div>
+
+<style>
+/* Magazine Layout Styles */
+.blog-posts-magazine {
+    margin: 0;
+}
+
+.featured-post {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.featured-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.featured-date {
+    color: #666;
+    font-size: 11px;
+    font-style: italic;
+}
+
+.featured-category {
+    color: #0066cc;
+    font-size: 10px;
+    background: #e6f3ff;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.featured-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+.featured-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.featured-title a:hover {
+    color: #0066cc;
+}
+
+.featured-excerpt {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.secondary-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.secondary-post {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 16px;
+    transition: border-color 0.2s ease;
+}
+
+.secondary-post:hover {
+    border-color: #ccc;
+}
+
+.secondary-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.secondary-date {
+    color: #666;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.secondary-category {
+    color: #0066cc;
+    font-size: 9px;
+    background: #f0f6ff;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.secondary-title {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.secondary-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.secondary-title a:hover {
+    color: #0066cc;
+}
+
+.secondary-excerpt {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .featured-post {
+        padding: 16px;
+    }
+    
+    .secondary-posts {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .featured-title {
+        font-size: 16px;
+    }
+}
+</style>
+{% endblock %>

@@ -56,6 +56,12 @@
                     <div class="raindrop-excerpt">{{ post.excerpt | markdown | safe }}</div>
                     {% endif %}
                     
+                    {% if post.note %}
+                    <div class="raindrop-notes">
+                        <strong>Notes:</strong> {{ post.note | markdown | safe }}
+                    </div>
+                    {% endif %}
+                    
                     {% if post.raindrop_url %}
                     <div class="raindrop-url">
                         <strong>URL:</strong> <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener">{{ post.raindrop_url }}</a>
@@ -177,7 +183,7 @@
     text-decoration: underline;
 }
 
-.raindrop-domain, .raindrop-excerpt, .raindrop-url, .raindrop-tags {
+.raindrop-domain, .raindrop-excerpt, .raindrop-url, .raindrop-tags, .raindrop-notes {
     margin-bottom: 0.5em;
     font-size: 0.9em;
 }
@@ -198,6 +204,15 @@
 
 .raindrop-tags {
     color: #666;
+    font-style: italic;
+}
+
+.raindrop-notes {
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    padding: 0.5em;
+    border-left: 3px solid #3498db;
+    border-radius: 0 4px 4px 0;
     font-style: italic;
 }
 

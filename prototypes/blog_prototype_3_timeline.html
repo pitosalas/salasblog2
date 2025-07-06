@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - Timeline Layout{% endblock %}
+
+{% block content %}
+<div class="blog-posts-timeline">
+    {% if pagination and pagination.total_pages > 1 %}
+    <div class="pagination-info">
+        Page {{ pagination.current_page }} of {{ pagination.total_pages }} 
+        ({{ total_posts }} total posts)
+    </div>
+    {% endif %}
+    
+    <div class="timeline">
+        {% set current_year = '' %}
+        {% for post in posts %}
+            {% set post_year = post.date | strftime('%Y') %}
+            {% if post_year != current_year %}
+                {% set current_year = post_year %}
+                <div class="timeline-year">{{ current_year }}</div>
+            {% endif %}
+            
+            <article class="timeline-post">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="post-date-timeline">{{ post.date | strftime('%B %d') }}</div>
+                    <h3 class="post-title-timeline"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    {% if post.excerpt %}
+                    <div class="post-excerpt-timeline">{{ post.excerpt | markdown | safe }}</div>
+                    {% endif %}
+                    {% if post.category %}
+                    <div class="post-category-timeline">{{ post.category }}</div>
+                    {% endif %}
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+    
+    {% if posts|length == 0 %}
+    <div style="text-align: center; color: #666; font-style: italic;">
+        No blog posts found.
+    </div>
+    {% endif %}
+    
+    {% if pagination and pagination.total_pages > 1 %}
+    <nav class="pagination">
+        {% if pagination.has_prev %}
+            <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
+        {% endif %}
+        
+        <div class="pagination-numbers">
+            {% for page_url in pagination.page_urls %}
+                {% set loop_index = loop.index %}
+                {% if loop_index == pagination.current_page %}
+                    <span class="pagination-link current">{{ loop_index }}</span>
+                {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+                    <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
+                {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+                    <span class="pagination-ellipsis">…</span>
+                {% endif %}
+            {% endfor %}
+        </div>
+        
+        {% if pagination.has_next %}
+            <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+</div>
+
+<style>
+/* Timeline Layout Styles */
+.blog-posts-timeline {
+    margin: 0;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ddd;
+}
+
+.timeline-year {
+    position: relative;
+    background: #0066cc;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 20px 0 15px -8px;
+    z-index: 2;
+}
+
+.timeline-post {
+    position: relative;
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -18px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: #0066cc;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #ddd;
+}
+
+.timeline-content {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 14px;
+}
+
+.post-date-timeline {
+    color: #666;
+    font-size: 11px;
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+.post-title-timeline {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.post-title-timeline a {
+    color: #000;
+    text-decoration: none;
+}
+
+.post-title-timeline a:hover {
+    color: #0066cc;
+}
+
+.post-excerpt-timeline {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.post-category-timeline {
+    color: #0066cc;
+    font-size: 10px;
+    background: #e6f3ff;
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-post {
+        padding-left: 15px;
+    }
+    
+    .timeline-marker {
+        left: -12px;
+        width: 6px;
+        height: 6px;
+    }
+}
+</style>
+{% endblock %}
