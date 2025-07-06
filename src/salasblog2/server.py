@@ -1914,6 +1914,18 @@ async def serve_rsd(request: Request):
     # Get the base URL from the request
     base_url = f"{request.url.scheme}://{request.url.netloc}"
     
+    # Get API type from environment variable (default to metaweblog)
+    api_type = os.getenv("RSD_API_TYPE", "metaweblog").lower()
+    
+    # Set API name and documentation based on type
+    if api_type == "blogger":
+        api_name = "Blogger"
+        docs_url = "http://plant.blogger.com/api/index.html"
+    else:
+        # Default to MetaWeblog API
+        api_name = "MetaWeblog"
+        docs_url = "http://www.xmlrpc.com/metaWeblogApi"
+    
     rsd_content = f"""<?xml version="1.0" encoding="UTF-8"?>
 <rsd version="1.0" xmlns="http://archipelago.phrasewise.com/rsd">
   <service>
@@ -1921,9 +1933,9 @@ async def serve_rsd(request: Request):
     <engineLink>https://github.com/pitosalas/salasblog2</engineLink>
     <homePageLink>{base_url}/</homePageLink>
     <apis>
-      <api name="Blogger" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
+      <api name="{api_name}" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
         <settings>
-          <docs>http://plant.blogger.com/api/index.html</docs>
+          <docs>{docs_url}</docs>
         </settings>
       </api>
     </apis>
