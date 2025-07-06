@@ -541,7 +541,8 @@ async def regenerate_site():
         generator.generate_site()
         return {
             "status": "success", 
-            "message": "Site regenerated successfully"
+            "message": "Site regenerated successfully",
+            "theme": generator.theme
         }
     
     try:

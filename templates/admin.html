@@ -144,7 +144,7 @@
             
             <div class="admin-section">
                 <h2>Site Generation</h2>
-                <p>Regenerate the static site from markdown files</p>
+                <p>Regenerate the static site from markdown files using current theme</p>
                 <button id="regen-btn" class="admin-button" onclick="regenerateSite()">Regenerate Site</button>
                 <div id="regen-status"></div>
             </div>
@@ -153,8 +153,8 @@
                 <h2>Data Synchronization</h2>
                 <p>Sync content between working directory (/app/content/) and persistent volume (/data/content/)</p>
                 <div style="margin-bottom: 15px;">
-                    <button id="sync-to-volume-btn" class="admin-button" onclick="syncToVolume()">Sync to Volume</button>
-                    <button id="sync-from-volume-btn" class="admin-button" onclick="syncFromVolume()">Sync from Volume</button>
+                    <button id="sync-to-volume-btn" class="admin-button" onclick="syncToVolume()">Sync Working → Persistent</button>
+                    <button id="sync-from-volume-btn" class="admin-button" onclick="syncFromVolume()">Sync Persistent → Working</button>
                     <button id="bidirectional-sync-btn" class="admin-button" onclick="bidirectionalSync()">Bidirectional Sync</button>
                 </div>
                 <div id="data-sync-status"></div>
@@ -167,7 +167,7 @@
             </div>
             
             <div class="admin-section">
-                <h2>GitHub Sync Scheduler</h2>
+                <h2>Scheduler</h2>
                 <p>Automatically sync content to GitHub repository on a schedule</p>
                 <div style="margin-bottom: 15px;">
                     <button id="git-sync-now-btn" class="admin-button" onclick="gitSyncNow()">Sync to GitHub Now</button>
@@ -275,7 +275,7 @@
                 const result = await response.json();
                 
                 if (response.ok) {
-                    statusDiv.innerHTML = '<div class="status success">✓ ' + result.message + '</div>';
+                    statusDiv.innerHTML = '<div class="status success">✓ ' + result.message + ' (Theme: ' + (result.theme || 'unknown') + ')</div>';
                     // Auto-clear success message after 5 seconds
                     setTimeout(() => {
                         statusDiv.innerHTML = '';
@@ -293,11 +293,11 @@
         }
         
         async function syncToVolume() {
-            await performSync('/api/sync-to-volume', 'sync-to-volume-btn', 'Sync to Volume', 'Syncing to volume...');
+            await performSync('/api/sync-to-volume', 'sync-to-volume-btn', 'Sync Working → Persistent', 'Syncing working → persistent...');
         }
         
         async function syncFromVolume() {
-            await performSync('/api/sync-from-volume', 'sync-from-volume-btn', 'Sync from Volume', 'Syncing from volume...');
+            await performSync('/api/sync-from-volume', 'sync-from-volume-btn', 'Sync Persistent → Working', 'Syncing persistent → working...');
         }
         
         async function bidirectionalSync() {
