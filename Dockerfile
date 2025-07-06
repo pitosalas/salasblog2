@@ -26,7 +26,7 @@ RUN git clone -b main https://github.com/pitosalas/salasblog2.git /tmp/repo && \
 RUN uv sync --frozen
 
 # Generate the static site
-RUN uv run python -m salasblog2.cli generate
+RUN uv run python -m salasblog2.cli generate --theme test
 
 # Create startup script for git authentication and initial sync
 RUN echo '#!/bin/bash\n\
