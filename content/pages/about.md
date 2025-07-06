@@ -1,4 +1,7 @@
 ---
 title: About Me
 ---
-foobar
+
+# About Me
+
+Personal information, background, and interests.
