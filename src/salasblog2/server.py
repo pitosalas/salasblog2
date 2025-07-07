@@ -3,6 +3,7 @@ FastAPI server for Salasblog2 - serves static files + API endpoints
 Includes Blogger API (XML-RPC) support for blog editors
 """
 import os
+import time
 import xml.etree.ElementTree as ET
 import logging
 import subprocess
@@ -482,6 +483,90 @@ async def stop_scheduler():
         "status": "success",
         "message": "Scheduler stopped"
     })
+
+@app.post("/api/emergency-restore")
+async def emergency_restore_from_github():
+    """
+    EMERGENCY: Restore /data/content from GitHub repository
+    WARNING: This overwrites the persistent volume with repository content!
+    """
+    import subprocess
+    import shutil
+    from pathlib import Path
+    
+    try:
+        logger.warning("EMERGENCY RESTORE: Starting restoration from GitHub to /data/content")
+        
+        # Ensure we're in the git directory
+        git_dir = Path("/app")
+        if not (git_dir / ".git").exists():
+            raise HTTPException(status_code=500, detail="Git repository not found in /app")
+        
+        # Pull latest from GitHub to ensure /app/content is up to date
+        logger.info("Pulling latest content from GitHub...")
+        result = subprocess.run(
+            ["git", "pull", "origin", "main"],
+            cwd=git_dir,
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+        
+        if result.returncode != 0:
+            logger.error(f"Git pull failed: {result.stderr}")
+            raise HTTPException(status_code=500, detail=f"Failed to pull from GitHub: {result.stderr}")
+        
+        # Check if /app/content exists
+        app_content = git_dir / "content"
+        if not app_content.exists():
+            raise HTTPException(status_code=500, detail="/app/content does not exist after git pull")
+        
+        # Backup current /data/content if it exists
+        data_content = Path("/data/content")
+        backup_path = Path("/data/content_backup_" + str(int(time.time())))
+        
+        if data_content.exists():
+            logger.info(f"Backing up current /data/content to {backup_path}")
+            shutil.move(str(data_content), str(backup_path))
+        
+        # Create /data/content directory
+        data_content.mkdir(parents=True, exist_ok=True)
+        
+        # Copy /app/content to /data/content
+        logger.info("Copying /app/content to /data/content...")
+        result = subprocess.run(
+            ["rsync", "-av", str(app_content) + "/", str(data_content) + "/"],
+            capture_output=True,
+            text=True,
+            timeout=120
+        )
+        
+        if result.returncode != 0:
+            # Restore backup if copy failed
+            if backup_path.exists():
+                logger.error("Restore failed, restoring backup...")
+                shutil.move(str(backup_path), str(data_content))
+            raise HTTPException(status_code=500, detail=f"Failed to copy content: {result.stderr}")
+        
+        # Clean up backup after successful restore
+        if backup_path.exists():
+            logger.info(f"Removing backup {backup_path}")
+            shutil.rmtree(backup_path)
+        
+        logger.warning("EMERGENCY RESTORE: Successfully restored /data/content from GitHub")
+        
+        return JSONResponse(content={
+            "status": "success", 
+            "message": "Emergency restore completed - /data/content restored from GitHub",
+            "warning": "Volume content was overwritten with repository content"
+        })
+        
+    except subprocess.TimeoutExpired:
+        logger.error("Emergency restore timed out")
+        raise HTTPException(status_code=500, detail="Emergency restore operation timed out")
+    except Exception as e:
+        logger.error(f"Emergency restore failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Emergency restore failed: {str(e)}")
 
 @app.get("/api/sync-raindrops")
 async def sync_raindrops():

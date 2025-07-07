@@ -184,6 +184,26 @@
             </div>
             
             <div class="admin-section">
+                <h2>Emergency Repository Restore</h2>
+                <p style="color: #dc3545; font-weight: bold;">⚠️ DANGER: This overwrites /data/content with GitHub repository content!</p>
+                <p>Use only if the persistent volume gets corrupted or you need to revert to GitHub state.</p>
+                <div style="margin-bottom: 15px;">
+                    <button id="emergency-restore-btn" class="admin-button" style="background: #dc3545;" 
+                            onmouseover="this.style.background='#c82333'" 
+                            onmouseout="this.style.background='#dc3545'"
+                            onclick="emergencyRestore()">
+                        Emergency Restore from GitHub
+                    </button>
+                </div>
+                <div id="emergency-restore-status"></div>
+                <small style="color: #6c757d;">
+                    <strong>Emergency Restore:</strong> Pulls latest from GitHub → /app/content → /data/content<br>
+                    <strong>Backup:</strong> Current /data/content is backed up before restore<br>
+                    <strong>Warning:</strong> This operation cannot be undone!
+                </small>
+            </div>
+            
+            <div class="admin-section">
                 <h2>Weblogs API</h2>
                 <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
                 <p>Supports standard Blogger API methods for external blog clients.</p>
@@ -529,6 +549,78 @@
                 `;
             } catch (error) {
                 console.error('Failed to load scheduler status:', error);
+            }
+        }
+        
+        // Emergency restore function
+        async function emergencyRestore() {
+            const button = document.getElementById('emergency-restore-btn');
+            const statusDiv = document.getElementById('emergency-restore-status');
+            
+            // Show confirmation dialog
+            const confirmed = confirm(
+                '⚠️ EMERGENCY RESTORE WARNING ⚠️\n\n' +
+                'This will:\n' +
+                '1. Pull latest content from GitHub\n' +
+                '2. OVERWRITE your entire /data/content volume\n' +
+                '3. You will LOSE any unsaved changes in the volume\n\n' +
+                'Current volume content will be backed up.\n\n' +
+                'Are you absolutely sure you want to proceed?'
+            );
+            
+            if (!confirmed) {
+                return;
+            }
+            
+            // Second confirmation for really dangerous operations
+            const doubleConfirmed = confirm(
+                '🚨 FINAL WARNING 🚨\n\n' +
+                'This will PERMANENTLY overwrite your persistent volume!\n\n' +
+                'Type "RESTORE" in the next dialog to confirm...'
+            );
+            
+            if (!doubleConfirmed) {
+                return;
+            }
+            
+            const confirmation = prompt('Type "RESTORE" to confirm emergency restore:');
+            if (confirmation !== 'RESTORE') {
+                statusDiv.innerHTML = '<div class="status error">❌ Emergency restore cancelled - confirmation failed</div>';
+                return;
+            }
+            
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner"></span>Restoring...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>🚨 EMERGENCY RESTORE IN PROGRESS - DO NOT INTERRUPT!</div>';
+            
+            const startTime = Date.now();
+            
+            try {
+                const response = await fetch('/api/emergency-restore', { method: 'POST' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                
+                if (response.ok) {
+                    statusDiv.innerHTML = `<div class="status success">
+                        ✅ ${result.message}<br>
+                        <strong>⚠️ ${result.warning}</strong><br>
+                        <small>Completed in ${duration}s</small>
+                    </div>`;
+                } else {
+                    statusDiv.innerHTML = `<div class="status error">
+                        ❌ Emergency restore failed: ${result.detail}<br>
+                        <small>Failed after ${duration}s</small>
+                    </div>`;
+                }
+            } catch (error) {
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = `<div class="status error">
+                    ❌ Emergency restore error: ${error.message}<br>
+                    <small>Failed after ${duration}s</small>
+                </div>`;
+            } finally {
+                button.disabled = false;
+                button.innerHTML = 'Emergency Restore from GitHub';
             }
         }
         
