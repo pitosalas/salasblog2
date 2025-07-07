@@ -47,6 +47,78 @@ class TestAuthenticationHelpers:
         assert result is False
 
 
+class TestAdminStatusEndpoint:
+    """Test the /api/admin-status endpoint functionality."""
+    
+    @pytest.fixture
+    def mock_config(self):
+        """Mock the config for testing."""
+        with patch('salasblog2.server.config') as mock_config:
+            yield mock_config
+    
+    def test_admin_status_no_password_set(self, mock_config):
+        """Test admin status when no password is configured."""
+        from salasblog2.server import get_admin_status
+        import asyncio
+        
+        # Mock config with no admin password
+        mock_config.__getitem__.return_value = None
+        
+        # Mock request
+        mock_request = Mock()
+        
+        # Run the async function
+        result = asyncio.run(get_admin_status(mock_request))
+        
+        # Check the response
+        assert hasattr(result, 'body')
+        import json
+        response_data = json.loads(result.body.decode())
+        assert response_data["authenticated"] is True
+    
+    def test_admin_status_with_password_authenticated(self, mock_config):
+        """Test admin status when password is set and user is authenticated."""
+        from salasblog2.server import get_admin_status
+        import asyncio
+        
+        # Mock config with admin password
+        mock_config.__getitem__.return_value = "test_password"
+        
+        # Mock authenticated request
+        mock_request = Mock()
+        mock_request.session = {"admin_authenticated": True}
+        
+        # Run the async function
+        result = asyncio.run(get_admin_status(mock_request))
+        
+        # Check the response
+        assert hasattr(result, 'body')
+        import json
+        response_data = json.loads(result.body.decode())
+        assert response_data["authenticated"] is True
+    
+    def test_admin_status_with_password_not_authenticated(self, mock_config):
+        """Test admin status when password is set and user is not authenticated."""
+        from salasblog2.server import get_admin_status
+        import asyncio
+        
+        # Mock config with admin password
+        mock_config.__getitem__.return_value = "test_password"
+        
+        # Mock unauthenticated request
+        mock_request = Mock()
+        mock_request.session = {}
+        
+        # Run the async function
+        result = asyncio.run(get_admin_status(mock_request))
+        
+        # Check the response
+        assert hasattr(result, 'body')
+        import json
+        response_data = json.loads(result.body.decode())
+        assert response_data["authenticated"] is False
+
+
 class TestXMLRPCHelpers:
     """Test XML-RPC helper functions."""
     

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview: {{ title }}</title>
+    <style>
+        body { 
+            font-family: Georgia, serif; 
+            max-width: 800px; 
+            margin: 2rem auto; 
+            padding: 0 2rem; 
+            line-height: 1.6; 
+            color: #333;
+        }
+        h1, h2, h3, h4, h5, h6 { 
+            color: #2c3e50; 
+            margin-top: 2rem; 
+            margin-bottom: 1rem; 
+        }
+        h1 { font-size: 2.5rem; border-bottom: 2px solid #27ae60; padding-bottom: 0.5rem; }
+        h2 { font-size: 2rem; }
+        h3 { font-size: 1.5rem; }
+        p { margin-bottom: 1rem; }
+        pre { 
+            background: #f8f9fa; 
+            padding: 1rem; 
+            border-radius: 4px; 
+            overflow-x: auto; 
+            border: 1px solid #e9ecef;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+        blockquote { 
+            border-left: 4px solid #27ae60; 
+            margin: 1rem 0; 
+            padding-left: 1rem; 
+            color: #666; 
+            font-style: italic;
+        }
+        a { color: #27ae60; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        img { max-width: 100%; height: auto; }
+        table { 
+            border-collapse: collapse; 
+            width: 100%; 
+            margin: 1rem 0; 
+        }
+        th, td { 
+            border: 1px solid #ddd; 
+            padding: 0.5rem; 
+            text-align: left; 
+        }
+        th { background: #f8f9fa; font-weight: bold; }
+        .preview-header {
+            background: #e8f5e8;
+            padding: 1rem;
+            margin: -2rem -2rem 2rem -2rem;
+            border-bottom: 1px solid #27ae60;
+        }
+        .preview-actions {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .btn {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+        .btn-success:hover {
+            background: #219a52;
+        }
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+        .filename-info {
+            background: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-actions">
+        <button class="btn btn-success" onclick="createAndClose()">✨ Create & View</button>
+        <button class="btn btn-secondary" onclick="window.close()">✕ Close</button>
+    </div>
+    
+    <div class="preview-header">
+        <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: {{ title }}</h1>
+        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your new post will appear on the blog</p>
+        <div class="filename-info">Filename: {{ filename }}</div>
+    </div>
+    <h1>{{ title }}</h1>
+    {{ html_content|safe }}
+    
+    <script>
+        // Form data passed from the new post page
+        const postData = {
+            title: {{ title|tojson }},
+            content: {{ content|tojson }},
+            date: {{ date|tojson }},
+            category: {{ category|tojson }},
+            type: {{ type|tojson }}
+        };
+        
+        async function createAndClose() {
+            const createBtn = event.target;
+            const originalText = createBtn.textContent;
+            createBtn.textContent = '✨ Creating...';
+            createBtn.disabled = true;
+            
+            try {
+                // Create form data with the current post data
+                const formData = new FormData();
+                formData.append('title', postData.title);
+                formData.append('content', postData.content);
+                formData.append('date', postData.date);
+                formData.append('category', postData.category);
+                formData.append('type', postData.type);
+                
+                const response = await fetch('/admin/new-post', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    alert('✓ Post created successfully!');
+                    // Navigate to the new post
+                    window.location.href = result.url;
+                } else {
+                    throw new Error(result.detail || 'Creation failed');
+                }
+            } catch (error) {
+                alert('✗ Error creating: ' + error.message);
+            } finally {
+                createBtn.textContent = originalText;
+                createBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
