@@ -167,19 +167,29 @@
             </div>
             
             <div class="admin-section">
-                <h2>Scheduler</h2>
-                <p>Automatically sync content to GitHub repository on a schedule</p>
+                <h2>Automated Scheduler</h2>
+                <p>The scheduler performs two automated tasks: <strong>Git sync to GitHub</strong> (backup content) and <strong>Raindrop sync</strong> (download new bookmarks)</p>
+                
+                <div style="background: #f8f9fa; padding: 12px; border-radius: 5px; margin: 10px 0; font-size: 0.9em;">
+                    <strong>🔄 Git Sync Process:</strong> /data/content → /app/content → GitHub repository<br>
+                    <strong>📚 Raindrop Sync Process:</strong> Raindrop.io API → /data/content/raindrops/ → Site regeneration<br>
+                    <strong>⏰ Default Schedule:</strong> Git sync every 6 hours, Raindrop sync every 2 hours
+                </div>
+                
                 <div style="margin-bottom: 15px;">
-                    <button id="git-sync-now-btn" class="admin-button" onclick="gitSyncNow()">Sync to GitHub Now</button>
-                    <button id="scheduler-start-btn" class="admin-button" onclick="startScheduler()">Start Scheduler (6h)</button>
-                    <button id="scheduler-stop-btn" class="admin-button" onclick="stopScheduler()">Stop Scheduler</button>
+                    <button id="git-sync-now-btn" class="admin-button" onclick="gitSyncNow()">📡 Sync to GitHub Now</button>
+                    <button id="raindrop-sync-now-btn" class="admin-button" onclick="raindropSyncNow()">📚 Sync Raindrops Now</button>
+                    <button id="scheduler-start-btn" class="admin-button" onclick="startScheduler()">⏰ Start Auto Scheduler</button>
+                    <button id="scheduler-stop-btn" class="admin-button" onclick="stopScheduler()">⏹️ Stop Scheduler</button>
                 </div>
                 <div id="scheduler-status"></div>
                 <div id="git-sync-progress" style="margin-top: 10px;"></div>
+                <div id="scheduler-logs" style="margin-top: 10px;"></div>
                 <small>
-                    <strong>Sync Now:</strong> Immediately sync content to GitHub<br>
-                    <strong>Start Scheduler:</strong> Automatically sync every 6 hours<br>
-                    <strong>Stop Scheduler:</strong> Disable automatic syncing
+                    <strong>📡 Sync to GitHub Now:</strong> Immediately backup all content changes to GitHub repository<br>
+                    <strong>📚 Sync Raindrops Now:</strong> Download new bookmarks from Raindrop.io and regenerate affected pages<br>
+                    <strong>⏰ Start Scheduler:</strong> Enable automatic syncing (Git: 6h intervals, Raindrops: 2h intervals)<br>
+                    <strong>⏹️ Stop Scheduler:</strong> Disable all automatic background syncing operations
                 </small>
             </div>
             
@@ -456,53 +466,313 @@
             document.getElementById('bidirectional-sync-btn').disabled = false;
         }
         
-        // Git Scheduler Functions
+        // Scheduler Functions
         async function gitSyncNow() {
             const button = document.getElementById('git-sync-now-btn');
             const statusDiv = document.getElementById('scheduler-status');
             const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
             
             button.disabled = true;
-            statusDiv.innerHTML = '<div class="status-running">Syncing to GitHub...</div>';
+            button.innerHTML = '<span class="spinner"></span>📡 Syncing...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Starting Git sync to GitHub...</div>';
             progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            
+            const startTime = Date.now();
+            
+            // Show detailed progress steps
+            const steps = [
+                '🔍 Checking Git credentials and repository access...',
+                '📂 Copying /data/content to /app/content staging area...',
+                '📋 Analyzing changes and staging files for commit...',
+                '💾 Creating commit with timestamp...',
+                '📡 Pushing changes to GitHub repository...',
+                '✅ Finalizing sync operation...'
+            ];
+            
+            let currentStep = 0;
+            
+            function showNextStep() {
+                if (currentStep < steps.length) {
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation">Step ${currentStep + 1}/${steps.length}: ${steps[currentStep]}</div>
+                    </div>`;
+                    currentStep++;
+                }
+            }
+            
+            // Show initial step
+            showNextStep();
+            const stepInterval = setInterval(showNextStep, 2000);
             
             try {
                 const response = await fetch('/api/scheduler/sync-now', { method: 'POST' });
                 const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                
+                clearInterval(stepInterval);
                 
                 if (response.ok) {
-                    statusDiv.innerHTML = '<div class="status-success">✓ Content synced to GitHub successfully</div>';
+                    statusDiv.innerHTML = '<div class="status success">✅ Git sync completed successfully!</div>';
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #28a745; font-weight: bold;">
+                            ✅ Content successfully backed up to GitHub repository
+                        </div>
+                        <div class="sync-operation">
+                            📊 Operation completed in ${duration} seconds
+                        </div>
+                        <div class="sync-operation">
+                            🔗 Volume-first architecture: /data/content → /app/content → GitHub
+                        </div>
+                    </div>`;
+                    
+                    // Auto-clear after 8 seconds
+                    setTimeout(() => {
+                        statusDiv.innerHTML = '';
+                        progressDiv.innerHTML = '';
+                    }, 8000);
                 } else {
-                    statusDiv.innerHTML = `<div class="status-error">✗ Git sync failed: ${result.detail}</div>`;
+                    statusDiv.innerHTML = `<div class="status error">❌ Git sync failed: ${result.detail}</div>`;
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #dc3545;">
+                            ❌ Sync failed after ${duration} seconds
+                        </div>
+                        <div class="sync-operation">
+                            💡 Check logs for details or verify Git credentials
+                        </div>
+                    </div>`;
                 }
             } catch (error) {
-                statusDiv.innerHTML = `<div class="status-error">✗ Error: ${error.message}</div>`;
+                clearInterval(stepInterval);
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = `<div class="status error">❌ Connection error: ${error.message}</div>`;
+                progressDiv.innerHTML = `<div class="sync-progress">
+                    <div class="sync-operation" style="color: #dc3545;">
+                        🔌 Network error after ${duration} seconds
+                    </div>
+                </div>`;
             } finally {
+                clearInterval(stepInterval);
                 button.disabled = false;
+                button.innerHTML = '📡 Sync to GitHub Now';
                 loadSchedulerStatus(); // Refresh status
+            }
+        }
+        
+        async function raindropSyncNow() {
+            const button = document.getElementById('raindrop-sync-now-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
+            
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner"></span>📚 Syncing...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Starting Raindrop sync...</div>';
+            progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            
+            const startTime = Date.now();
+            
+            // Show detailed progress steps
+            const steps = [
+                '🔑 Verifying Raindrop.io API credentials...',
+                '📥 Downloading new bookmarks from Raindrop.io...',
+                '📝 Processing bookmark metadata and content...',
+                '💾 Saving new markdown files to /data/content/raindrops/...',
+                '🔨 Regenerating static site with new content...',
+                '✅ Finalizing Raindrop sync...'
+            ];
+            
+            let currentStep = 0;
+            
+            function showNextStep() {
+                if (currentStep < steps.length) {
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation">Step ${currentStep + 1}/${steps.length}: ${steps[currentStep]}</div>
+                    </div>`;
+                    currentStep++;
+                }
+            }
+            
+            // Show initial step
+            showNextStep();
+            const stepInterval = setInterval(showNextStep, 1500);
+            
+            try {
+                const response = await fetch('/api/sync-raindrops', { method: 'GET' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                
+                clearInterval(stepInterval);
+                
+                if (response.ok) {
+                    if (result.status === 'started' || result.status === 'running') {
+                        // Poll for completion
+                        statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Raindrop sync in progress...</div>';
+                        pollRaindropStatus(button, statusDiv, progressDiv, startTime);
+                        return;
+                    } else {
+                        statusDiv.innerHTML = '<div class="status success">✅ Raindrop sync completed!</div>';
+                        progressDiv.innerHTML = `<div class="sync-progress">
+                            <div class="sync-operation" style="color: #28a745; font-weight: bold;">
+                                📚 ${result.message}
+                            </div>
+                            <div class="sync-operation">
+                                📊 Operation completed in ${duration} seconds
+                            </div>
+                        </div>`;
+                    }
+                } else {
+                    statusDiv.innerHTML = `<div class="status error">❌ Raindrop sync failed: ${result.detail || result.message}</div>`;
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #dc3545;">
+                            ❌ Sync failed after ${duration} seconds
+                        </div>
+                    </div>`;
+                }
+            } catch (error) {
+                clearInterval(stepInterval);
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = `<div class="status error">❌ Connection error: ${error.message}</div>`;
+                progressDiv.innerHTML = `<div class="sync-progress">
+                    <div class="sync-operation" style="color: #dc3545;">
+                        🔌 Network error after ${duration} seconds
+                    </div>
+                </div>`;
+            } finally {
+                if (!currentStep < steps.length) { // Only restore if not polling
+                    clearInterval(stepInterval);
+                    button.disabled = false;
+                    button.innerHTML = '📚 Sync Raindrops Now';
+                }
+            }
+        }
+        
+        async function pollRaindropStatus(button, statusDiv, progressDiv, startTime) {
+            try {
+                const response = await fetch('/api/sync-status');
+                const status = await response.json();
+                
+                if (status.running) {
+                    // Still running, update status and poll again
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation">
+                            🔄 ${status.message}
+                        </div>
+                        <div class="sync-operation">
+                            ⏱️ Running for ${((Date.now() - startTime) / 1000).toFixed(1)} seconds
+                        </div>
+                    </div>`;
+                    setTimeout(() => pollRaindropStatus(button, statusDiv, progressDiv, startTime), 1000);
+                } else {
+                    // Finished
+                    button.disabled = false;
+                    button.innerHTML = '📚 Sync Raindrops Now';
+                    
+                    const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                    
+                    if (status.message && !status.message.includes('Error:')) {
+                        statusDiv.innerHTML = '<div class="status success">✅ Raindrop sync completed!</div>';
+                        progressDiv.innerHTML = `<div class="sync-progress">
+                            <div class="sync-operation" style="color: #28a745; font-weight: bold;">
+                                📚 ${status.message}
+                            </div>
+                            <div class="sync-operation">
+                                📊 Total operation time: ${duration} seconds
+                            </div>
+                        </div>`;
+                        
+                        // Auto-clear after 8 seconds
+                        setTimeout(() => {
+                            statusDiv.innerHTML = '';
+                            progressDiv.innerHTML = '';
+                        }, 8000);
+                    } else {
+                        statusDiv.innerHTML = `<div class="status error">❌ ${status.message}</div>`;
+                        progressDiv.innerHTML = `<div class="sync-progress">
+                            <div class="sync-operation" style="color: #dc3545;">
+                                ❌ Failed after ${duration} seconds
+                            </div>
+                        </div>`;
+                    }
+                }
+            } catch (error) {
+                button.disabled = false;
+                button.innerHTML = '📚 Sync Raindrops Now';
+                statusDiv.innerHTML = `<div class="status error">❌ Error checking status: ${error.message}</div>`;
             }
         }
         
         async function startScheduler() {
             const button = document.getElementById('scheduler-start-btn');
             const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
             
             button.disabled = true;
-            statusDiv.innerHTML = '<div class="status-running">Starting scheduler...</div>';
+            button.innerHTML = '<span class="spinner"></span>⏰ Starting...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Starting automated scheduler...</div>';
+            progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            
+            const startTime = Date.now();
             
             try {
+                progressDiv.innerHTML = `<div class="sync-progress">
+                    <div class="sync-operation">🔧 Configuring scheduler services...</div>
+                    <div class="sync-operation">⏰ Setting up Git sync (every 6 hours) and Raindrop sync (every 2 hours)</div>
+                    <div class="sync-operation">🚀 Scheduling startup tasks (Git: 10min, Raindrops: 5min)</div>
+                </div>`;
+                
                 const response = await fetch('/api/scheduler/start', { method: 'POST' });
                 const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
                 
                 if (response.ok) {
-                    statusDiv.innerHTML = '<div class="status-success">✓ Git scheduler started - syncing every 6 hours</div>';
+                    statusDiv.innerHTML = '<div class="status success">✅ Automated scheduler started successfully!</div>';
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #28a745; font-weight: bold;">
+                            ✅ ${result.message}
+                        </div>
+                        <div class="sync-operation">
+                            📡 Git sync: Every 6 hours + startup in 10 minutes
+                        </div>
+                        <div class="sync-operation">
+                            📚 Raindrop sync: Every 2 hours + startup in 5 minutes
+                        </div>
+                        <div class="sync-operation">
+                            📊 Scheduler activated in ${duration} seconds
+                        </div>
+                    </div>`;
+                    
+                    // Auto-clear after 10 seconds
+                    setTimeout(() => {
+                        statusDiv.innerHTML = '';
+                        progressDiv.innerHTML = '';
+                    }, 10000);
                 } else {
-                    statusDiv.innerHTML = `<div class="status-error">✗ Failed to start scheduler: ${result.detail}</div>`;
+                    statusDiv.innerHTML = `<div class="status error">❌ Failed to start scheduler: ${result.detail}</div>`;
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #dc3545;">
+                            ❌ Scheduler startup failed after ${duration} seconds
+                        </div>
+                        <div class="sync-operation">
+                            💡 Check server logs for details
+                        </div>
+                    </div>`;
                 }
             } catch (error) {
-                statusDiv.innerHTML = `<div class="status-error">✗ Error: ${error.message}</div>`;
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = `<div class="status error">❌ Connection error: ${error.message}</div>`;
+                progressDiv.innerHTML = `<div class="sync-progress">
+                    <div class="sync-operation" style="color: #dc3545;">
+                        🔌 Network error after ${duration} seconds
+                    </div>
+                </div>`;
             } finally {
                 button.disabled = false;
+                button.innerHTML = '⏰ Start Auto Scheduler';
                 loadSchedulerStatus(); // Refresh status
             }
         }
@@ -510,23 +780,69 @@
         async function stopScheduler() {
             const button = document.getElementById('scheduler-stop-btn');
             const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
             
             button.disabled = true;
-            statusDiv.innerHTML = '<div class="status-running">Stopping scheduler...</div>';
+            button.innerHTML = '<span class="spinner"></span>⏹️ Stopping...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Stopping automated scheduler...</div>';
+            progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            
+            const startTime = Date.now();
             
             try {
+                progressDiv.innerHTML = `<div class="sync-progress">
+                    <div class="sync-operation">🛑 Cancelling scheduled tasks...</div>
+                    <div class="sync-operation">🔧 Stopping background scheduler thread...</div>
+                    <div class="sync-operation">🧹 Cleaning up active jobs and timers...</div>
+                </div>`;
+                
                 const response = await fetch('/api/scheduler/stop', { method: 'POST' });
                 const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
                 
                 if (response.ok) {
-                    statusDiv.innerHTML = '<div class="status-success">✓ Git scheduler stopped</div>';
+                    statusDiv.innerHTML = '<div class="status success">✅ Automated scheduler stopped successfully!</div>';
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #28a745; font-weight: bold;">
+                            ✅ ${result.message}
+                        </div>
+                        <div class="sync-operation">
+                            🛑 All automatic syncing operations disabled
+                        </div>
+                        <div class="sync-operation">
+                            💡 Manual sync operations still available
+                        </div>
+                        <div class="sync-operation">
+                            📊 Scheduler stopped in ${duration} seconds
+                        </div>
+                    </div>`;
+                    
+                    // Auto-clear after 8 seconds
+                    setTimeout(() => {
+                        statusDiv.innerHTML = '';
+                        progressDiv.innerHTML = '';
+                    }, 8000);
                 } else {
-                    statusDiv.innerHTML = `<div class="status-error">✗ Failed to stop scheduler: ${result.detail}</div>`;
+                    statusDiv.innerHTML = `<div class="status error">❌ Failed to stop scheduler: ${result.detail}</div>`;
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #dc3545;">
+                            ❌ Scheduler stop failed after ${duration} seconds
+                        </div>
+                    </div>`;
                 }
             } catch (error) {
-                statusDiv.innerHTML = `<div class="status-error">✗ Error: ${error.message}</div>`;
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = `<div class="status error">❌ Connection error: ${error.message}</div>`;
+                progressDiv.innerHTML = `<div class="sync-progress">
+                    <div class="sync-operation" style="color: #dc3545;">
+                        🔌 Network error after ${duration} seconds
+                    </div>
+                </div>`;
             } finally {
                 button.disabled = false;
+                button.innerHTML = '⏹️ Stop Scheduler';
                 loadSchedulerStatus(); // Refresh status
             }
         }
@@ -536,18 +852,51 @@
                 const response = await fetch('/api/scheduler/status');
                 const status = await response.json();
                 
-                const progressDiv = document.getElementById('git-sync-progress');
-                const lastSync = status.last_sync ? new Date(status.last_sync).toLocaleString() : 'Never';
+                const logsDiv = document.getElementById('scheduler-logs');
+                const lastGitSync = status.last_git_sync ? new Date(status.last_git_sync).toLocaleString() : 'Never';
+                const lastRaindropSync = status.last_raindrop_sync ? new Date(status.last_raindrop_sync).toLocaleString() : 'Never';
                 
-                progressDiv.innerHTML = `
-                    <div class="progress-info">
-                        <strong>Scheduler Status:</strong> ${status.running ? 'Running' : 'Stopped'}<br>
-                        <strong>Last Sync:</strong> ${lastSync}<br>
-                        <strong>Git Configured:</strong> ${status.git_configured ? 'Yes' : 'No'}<br>
-                        <strong>Scheduled Jobs:</strong> ${status.next_jobs.length}
+                const statusIcon = status.running ? '🟢' : '🔴';
+                const gitIcon = status.git_configured ? '✅' : '❌';
+                const raindropIcon = status.raindrop_configured ? '✅' : '❌';
+                
+                logsDiv.innerHTML = `
+                    <div class="sync-progress">
+                        <div class="sync-operation" style="font-weight: bold; margin-bottom: 8px;">
+                            📊 Current Scheduler Status
+                        </div>
+                        <div class="sync-operation">
+                            ${statusIcon} <strong>Scheduler:</strong> ${status.running ? 'Running' : 'Stopped'}
+                        </div>
+                        <div class="sync-operation">
+                            📡 <strong>Last Git Sync:</strong> ${lastGitSync}
+                        </div>
+                        <div class="sync-operation">
+                            📚 <strong>Last Raindrop Sync:</strong> ${lastRaindropSync}
+                        </div>
+                        <div class="sync-operation">
+                            ${gitIcon} <strong>Git Configuration:</strong> ${status.git_configured ? 'Ready' : 'Missing credentials'}
+                        </div>
+                        <div class="sync-operation">
+                            ${raindropIcon} <strong>Raindrop Configuration:</strong> ${status.raindrop_configured ? 'Ready' : 'Missing token'}
+                        </div>
+                        <div class="sync-operation">
+                            ⏰ <strong>Active Jobs:</strong> ${status.next_jobs.length} scheduled tasks
+                        </div>
+                        <div class="sync-operation">
+                            🔄 <strong>Intervals:</strong> Git ${status.git_interval_hours}h, Raindrops ${status.raindrop_interval_hours}h
+                        </div>
                     </div>
                 `;
             } catch (error) {
+                const logsDiv = document.getElementById('scheduler-logs');
+                logsDiv.innerHTML = `
+                    <div class="sync-progress">
+                        <div class="sync-operation" style="color: #dc3545;">
+                            ❌ Failed to load scheduler status: ${error.message}
+                        </div>
+                    </div>
+                `;
                 console.error('Failed to load scheduler status:', error);
             }
         }
