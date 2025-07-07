@@ -87,8 +87,8 @@ def main():
     
     # Server command
     server_parser = subparsers.add_parser('server', help='Start FastAPI server')
-    server_parser.add_argument('--port', type=int, default=8000,
-                              help='Port to run server on (default: 8000)')
+    server_parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', 8000)),
+                              help='Port to run server on (default: PORT env var or 8000)')
     server_parser.add_argument('--reload', action='store_true',
                               help='Enable auto-reload for development')
     server_parser.set_defaults(func=cmd_server)
