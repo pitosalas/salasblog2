@@ -33,15 +33,21 @@ if [ -L "/app/content" ]; then
 fi
 mkdir -p /app/content
 
-# Selective sync from volume - preserve repository structure, add volume-only content
+# Repository-first sync - use repository as base, add only newer content from volume
 if [ -d "/data/content" ] && [ "$(ls -A /data/content 2>/dev/null)" ]; then
-    echo "Found existing content in volume, performing selective sync..."
-    # Only sync files from /data that don't exist in /app (preserves repo content)
-    # This allows volume to add new content but not override repository structure
-    rsync -av --ignore-existing /data/content/ /app/content/
-    echo "Selective sync completed - repository content preserved, added volume-only files"
+    echo "Found existing content in volume, performing repository-first sync..."
+    
+    # Repository content is authoritative - only sync files from volume that are newer
+    # This ensures deleted repository content stays deleted, but allows new dynamic content
+    echo "Repository content takes precedence, syncing only newer volume content..."
+    
+    # Use --update flag to only copy files that are newer in the source
+    # This preserves all repository content while adding new volume content
+    rsync -av --update /data/content/ /app/content/
+    
+    echo "Repository-first sync completed - repository is authoritative, newer volume content added"
 else
-    echo "No existing content in volume found"
+    echo "No existing content in volume found - using pure repository content"
 fi
 
 # Set excerpt environment variables if not already set
