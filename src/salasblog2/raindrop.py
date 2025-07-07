@@ -23,8 +23,8 @@ class RaindropDownloader:
             "Authorization": f"Bearer {self.access_token}",
             "Content-Type": "application/json",
         }
-        self.drops_dir = Path("content/raindrops")
-        self.cache_file = Path("content/.rd_cache.json")
+        self.drops_dir = Path("/data/content/raindrops")
+        self.cache_file = Path("/data/content/.rd_cache.json")
 
     def authenticate(self):
         if not self.access_token:

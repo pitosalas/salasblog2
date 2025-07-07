@@ -30,7 +30,8 @@ from .utils import (
 class SiteGenerator:
     def __init__(self, theme=None):
         self.root_dir = Path.cwd()
-        self.content_dir = self.root_dir / "content"
+        # Use persistent volume as source of truth for content
+        self.content_dir = Path("/data/content")
         self.blog_dir = self.content_dir / "blog"
         self.raindrops_dir = self.content_dir / "raindrops"
         self.pages_dir = self.content_dir / "pages"

@@ -479,7 +479,7 @@ async def sync_raindrops():
                 
                 # Check if this is a first sync (no cache) with many files
                 env_timestamp = os.getenv("RAINDROP_LAST_SYNC")
-                cache_file = Path("content/.rd_cache.json")
+                cache_file = Path("/data/content/.rd_cache.json")
                 is_first_sync = not env_timestamp and not cache_file.exists()
                 
                 if is_first_sync and len(new_filenames) > 10:
