@@ -425,32 +425,35 @@ async def trigger_raindrop_sync():
         raise HTTPException(status_code=500, detail=f"Raindrop sync error: {str(e)}")
 
 @app.post("/api/scheduler/start")
-async def start_scheduler(hours: int = None):
-    """Start or restart the Git scheduler with specified interval"""
-    if hours is not None and (hours < 1 or hours > 24):
-        raise HTTPException(status_code=400, detail="Interval must be between 1 and 24 hours")
+async def start_scheduler(git_hours: float = None, raindrop_hours: float = None):
+    """Start or restart the scheduler with specified intervals"""
+    if git_hours is not None and (git_hours < 0.1 or git_hours > 24):
+        raise HTTPException(status_code=400, detail="Git interval must be between 0.1 and 24 hours")
+    if raindrop_hours is not None and (raindrop_hours < 0.1 or raindrop_hours > 24):
+        raise HTTPException(status_code=400, detail="Raindrop interval must be between 0.1 and 24 hours")
     
     scheduler = get_scheduler()
     scheduler.stop_scheduler()  # Stop if already running
-    scheduler.start_scheduler(interval_hours=hours)
+    scheduler.start_scheduler(git_interval_hours=git_hours, raindrop_interval_hours=raindrop_hours)
     
-    # Get actual interval used (from env var if hours was None)
-    actual_hours = hours if hours is not None else int(os.environ.get('SCHED_HRS_INTERVAL', 6))
+    # Get actual intervals used (from env vars if not specified)
+    actual_git_hours = git_hours if git_hours is not None else float(os.environ.get('SCHED_GITSYNC_HRS', 6.0))
+    actual_raindrop_hours = raindrop_hours if raindrop_hours is not None else float(os.environ.get('SCHED_RAINSYNC_HRS', 2.0))
     
     return JSONResponse(content={
         "status": "success",
-        "message": f"Git scheduler started - will sync every {actual_hours} hours"
+        "message": f"Scheduler started - Git sync every {actual_git_hours} hours, Raindrop sync every {actual_raindrop_hours} hours"
     })
 
 @app.post("/api/scheduler/stop")
 async def stop_scheduler():
-    """Stop the Git scheduler"""
+    """Stop the scheduler"""
     scheduler = get_scheduler()
     scheduler.stop_scheduler()
     
     return JSONResponse(content={
         "status": "success",
-        "message": "Git scheduler stopped"
+        "message": "Scheduler stopped"
     })
 
 @app.get("/api/sync-raindrops")

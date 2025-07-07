@@ -49,6 +49,11 @@ export EXCERPT_LENGTH=${EXCERPT_LENGTH:-80}
 export EXCERPT_SMART_THRESHOLD=${EXCERPT_SMART_THRESHOLD:-30}
 echo "Using excerpt settings: length=${EXCERPT_LENGTH}, smart_threshold=${EXCERPT_SMART_THRESHOLD}"
 
+# Set scheduler environment variables if not already set
+export SCHED_GITSYNC_HRS=${SCHED_GITSYNC_HRS:-6.0}
+export SCHED_RAINSYNC_HRS=${SCHED_RAINSYNC_HRS:-2.0}
+echo "Using scheduler settings: git_sync=${SCHED_GITSYNC_HRS}h, raindrop_sync=${SCHED_RAINSYNC_HRS}h"
+
 echo "Regenerating site with current environment variables..."
 uv run salasblog2 generate
 echo "Site regeneration completed"
