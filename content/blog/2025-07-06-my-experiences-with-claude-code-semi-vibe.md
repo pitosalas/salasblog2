@@ -19,4 +19,6 @@ When I start I have a very specific design and architecture in mind. I will expl
 
 **What it is amazingly good at** Tedious repetitive processes that would be hard to automate. One recent example. I have a directory of about 2000 markdwon files. I had reason to think that some of them had html in them instead of markdown. It checked them all and found 5 that had that and fixed them for me. Or I wanted to rename a particular environment variable but I was not sure where it was being accessed.
 
+You know those changes in your code that are conceptually really simple, and you know exactly how to make them, but they still will take hours of jumping all around your code base? Claude Code is really amazing at those.
+
 **Where it makes me nervous** It is so good that it generates a lot of code. Tell it that you to add logging so that you can monitor better what is happening. It goes crazy and dilligently puts in many more than you would. Ask it to make error reporting more clear and suddenly you have multi-step try/except blocks everywhere. It also is pretty dumb about adding repetitive code. So you really have to keep an eye on it.

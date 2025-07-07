@@ -82,9 +82,9 @@ async def lifespan(app: FastAPI):
     # Check if we're the only instance running
     _check_single_instance()
     
-    # Start the Git scheduler
+    # Start the scheduler for both Git and Raindrop sync
     scheduler = get_scheduler()
-    scheduler.start_scheduler()  # Use SCHED_HRS_INTERVAL env var (defaults to 6 hours)
+    scheduler.start_scheduler()  # Use SCHED_GITSYNC_HRS and SCHED_RAINSYNC_HRS env vars
     
     import asyncio
     
@@ -385,7 +385,7 @@ async def bidirectional_sync():
 
 @app.get("/api/scheduler/status")
 async def get_scheduler_status():
-    """Get the current status of the Git scheduler"""
+    """Get the current status of the scheduler"""
     scheduler = get_scheduler()
     status = scheduler.get_status()
     return JSONResponse(content=status)
@@ -406,6 +406,23 @@ async def trigger_git_sync():
     except Exception as e:
         logger.error(f"Manual Git sync failed: {e}")
         raise HTTPException(status_code=500, detail=f"Git sync error: {str(e)}")
+
+@app.post("/api/scheduler/sync-raindrops-now")
+async def trigger_raindrop_sync():
+    """Manually trigger a Raindrop sync"""
+    scheduler = get_scheduler()
+    try:
+        success = await scheduler.sync_raindrops()
+        if success:
+            return JSONResponse(content={
+                "status": "success",
+                "message": "Raindrops successfully synced and site regenerated"
+            })
+        else:
+            raise HTTPException(status_code=500, detail="Raindrop sync failed - check logs for details")
+    except Exception as e:
+        logger.error(f"Manual Raindrop sync failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Raindrop sync error: {str(e)}")
 
 @app.post("/api/scheduler/start")
 async def start_scheduler(hours: int = None):
