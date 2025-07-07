@@ -27,6 +27,9 @@ from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
 from .scheduler import get_scheduler
+import mimetypes
+
+mimetypes.add_type("text/css", ".css", strict=True)
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
