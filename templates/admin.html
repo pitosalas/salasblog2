@@ -194,6 +194,29 @@
             </div>
             
             <div class="admin-section">
+                <h2>Safe Pages Sync</h2>
+                <p>Sync only the pages directory from GitHub repository to fix frontmatter issues</p>
+                
+                <div style="background: #e7f3ff; padding: 12px; border-radius: 5px; margin: 10px 0; font-size: 0.9em;">
+                    <strong>🛡️ Safe Operation:</strong> Only updates /data/content/pages/ directory<br>
+                    <strong>📁 What it does:</strong> GitHub /app/content/pages → /data/content/pages<br>
+                    <strong>💾 Backup:</strong> Creates automatic backup before sync<br>
+                    <strong>🔄 Restores:</strong> Automatically restores backup if sync fails
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <button id="sync-pages-btn" class="admin-button" onclick="syncPagesFromRepo()">📄 Sync Pages from GitHub</button>
+                </div>
+                <div id="pages-sync-status"></div>
+                <div id="pages-sync-progress" style="margin-top: 10px;"></div>
+                <small>
+                    <strong>📄 Sync Pages:</strong> Safely updates only the 4 page files with fixed frontmatter from GitHub<br>
+                    <strong>🛡️ Safe:</strong> Doesn't touch blog posts, raindrops, or other content<br>
+                    <strong>💾 Automatic backup:</strong> Creates timestamped backup that's restored on failure
+                </small>
+            </div>
+            
+            <div class="admin-section">
                 <h2>Emergency Repository Restore</h2>
                 <p style="color: #dc3545; font-weight: bold;">⚠️ DANGER: This overwrites /data/content with GitHub repository content!</p>
                 <p>Use only if the persistent volume gets corrupted or you need to revert to GitHub state.</p>
@@ -898,6 +921,99 @@
                     </div>
                 `;
                 console.error('Failed to load scheduler status:', error);
+            }
+        }
+        
+        // Safe pages sync function
+        async function syncPagesFromRepo() {
+            const button = document.getElementById('sync-pages-btn');
+            const statusDiv = document.getElementById('pages-sync-status');
+            const progressDiv = document.getElementById('pages-sync-progress');
+            
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner"></span>📄 Syncing...';
+            statusDiv.innerHTML = '<div class="status loading"><span class="spinner"></span>Starting safe pages sync...</div>';
+            progressDiv.innerHTML = '';
+            
+            const startTime = Date.now();
+            
+            // Show detailed progress steps
+            const steps = [
+                '🔍 Verifying GitHub repository access...',
+                '📥 Pulling latest changes from GitHub...',
+                '💾 Creating backup of current pages...',
+                '📄 Copying pages with fixed frontmatter...',
+                '✅ Verifying sync completion...'
+            ];
+            
+            let currentStep = 0;
+            
+            function showNextStep() {
+                if (currentStep < steps.length) {
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation">Step ${currentStep + 1}/${steps.length}: ${steps[currentStep]}</div>
+                    </div>`;
+                    currentStep++;
+                }
+            }
+            
+            // Show initial step
+            showNextStep();
+            const stepInterval = setInterval(showNextStep, 2000);
+            
+            try {
+                const response = await fetch('/api/sync-pages-from-repo', { method: 'POST' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                
+                clearInterval(stepInterval);
+                
+                if (response.ok) {
+                    statusDiv.innerHTML = '<div class="status success">✅ Pages sync completed successfully!</div>';
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #28a745; font-weight: bold;">
+                            ✅ ${result.message}
+                        </div>
+                        <div class="sync-operation">
+                            📄 Files updated: ${result.files_synced.join(', ')}
+                        </div>
+                        <div class="sync-operation">
+                            🛡️ Safe operation: Only pages directory affected
+                        </div>
+                        <div class="sync-operation">
+                            📊 Operation completed in ${duration} seconds
+                        </div>
+                    </div>`;
+                    
+                    // Auto-clear after 8 seconds
+                    setTimeout(() => {
+                        statusDiv.innerHTML = '';
+                        progressDiv.innerHTML = '';
+                    }, 8000);
+                } else {
+                    statusDiv.innerHTML = `<div class="status error">❌ Pages sync failed: ${result.detail}</div>`;
+                    progressDiv.innerHTML = `<div class="sync-progress">
+                        <div class="sync-operation" style="color: #dc3545;">
+                            ❌ Sync failed after ${duration} seconds
+                        </div>
+                        <div class="sync-operation">
+                            💾 Backup automatically restored
+                        </div>
+                    </div>`;
+                }
+            } catch (error) {
+                clearInterval(stepInterval);
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = `<div class="status error">❌ Connection error: ${error.message}</div>`;
+                progressDiv.innerHTML = `<div class="sync-progress">
+                    <div class="sync-operation" style="color: #dc3545;">
+                        🔌 Network error after ${duration} seconds
+                    </div>
+                </div>`;
+            } finally {
+                clearInterval(stepInterval);
+                button.disabled = false;
+                button.innerHTML = '📄 Sync Pages from GitHub';
             }
         }
         

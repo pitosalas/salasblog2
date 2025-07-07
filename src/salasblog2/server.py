@@ -478,6 +478,83 @@ async def emergency_restore_from_github():
         "warning": "Volume content was overwritten with repository content"
     })
 
+@app.post("/api/sync-pages-from-repo")
+async def sync_pages_from_repo():
+    """
+    Safely sync just the pages directory from GitHub repository to volume
+    Only updates /data/content/pages/ with repository content
+    """
+    logger = logging.getLogger(__name__)
+    logger.info("Starting safe pages sync from GitHub repository...")
+    
+    # Ensure we're in the git directory
+    git_dir = Path("/app")
+    if not (git_dir / ".git").exists():
+        raise HTTPException(status_code=500, detail="Git repository not found in /app")
+    
+    # Pull latest from GitHub first
+    logger.info("Pulling latest content from GitHub...")
+    result = subprocess.run(
+        ["git", "pull", "origin", "main"],
+        cwd=git_dir,
+        capture_output=True,
+        text=True,
+        timeout=60
+    )
+    
+    if result.returncode != 0:
+        logger.error(f"Git pull failed: {result.stderr}")
+        raise HTTPException(status_code=500, detail=f"Failed to pull from GitHub: {result.stderr}")
+    
+    # Check if /app/content/pages exists
+    app_pages = git_dir / "content" / "pages"
+    if not app_pages.exists():
+        raise HTTPException(status_code=500, detail="/app/content/pages does not exist after git pull")
+    
+    # Ensure /data/content/pages directory exists
+    data_pages = Path("/data/content/pages")
+    data_pages.mkdir(parents=True, exist_ok=True)
+    
+    # Backup current pages (just in case)
+    backup_path = Path("/data/pages_backup_" + str(int(time.time())))
+    if data_pages.exists() and any(data_pages.iterdir()):
+        logger.info(f"Backing up current pages to {backup_path}")
+        shutil.copytree(str(data_pages), str(backup_path))
+    
+    # Copy pages from repository to volume
+    logger.info("Copying pages from /app/content/pages to /data/content/pages...")
+    result = subprocess.run(
+        ["rsync", "-av", "--delete", str(app_pages) + "/", str(data_pages) + "/"],
+        capture_output=True,
+        text=True,
+        timeout=30
+    )
+    
+    if result.returncode != 0:
+        # Restore backup if copy failed
+        if backup_path.exists():
+            logger.error("Pages sync failed, restoring backup...")
+            shutil.rmtree(data_pages)
+            shutil.move(str(backup_path), str(data_pages))
+        raise HTTPException(status_code=500, detail=f"Failed to sync pages: {result.stderr}")
+    
+    # Clean up backup on success
+    if backup_path.exists():
+        logger.info(f"Removing backup {backup_path}")
+        shutil.rmtree(backup_path)
+    
+    # Count synced files
+    synced_files = list(data_pages.glob("*.md"))
+    
+    logger.info(f"Successfully synced {len(synced_files)} page files from repository")
+    
+    return JSONResponse(content={
+        "status": "success",
+        "message": f"Pages synced successfully - {len(synced_files)} files updated",
+        "files_synced": [f.name for f in synced_files],
+        "sync_details": f"Synced from /app/content/pages to /data/content/pages"
+    })
+
 # Raindrop sync and site generation endpoints with simplified logic
 @app.get("/api/sync-raindrops")
 async def sync_raindrops():
