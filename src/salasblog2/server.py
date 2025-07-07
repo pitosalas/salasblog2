@@ -25,7 +25,11 @@ regen_status = {"running": False, "message": "Ready"}
 # Set up logging
 log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
 log_level_value = getattr(logging, log_level, logging.INFO)
-logging.basicConfig(level=log_level_value)
+logging.basicConfig(
+    level=log_level_value,
+    format='%(asctime)s [%(levelname)s] %(message)s',
+    datefmt='%M:%S'
+)
 logger = logging.getLogger(__name__)
 
 

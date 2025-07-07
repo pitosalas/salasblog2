@@ -10,18 +10,16 @@ primary_region = 'bos'
 
 [env]
   PORT = '8080'
-  LOG_LEVEL=INFO
-  THEME=test
-  SCHED_GITSYNC_HRS=12
-  SCHED_RAINSYNC_HRS=12
-  EXCERPT_LENGTH=300
-  EXCERPT_SMART_THRESHOLD=400
-  GIT_BRANCH=main
-  GIT_EMAIL='pitosalas@gmail.com'
-  GIT_NAME='Pito Salas'
-  RSD_API_TYPE=metaweblog
-
-
+  THEME = 'test'
+  LOG_LEVEL = 'INFO'
+  SCHED_GITSYNC_HRS = '12'
+  SCHED_RAINSYNC_HRS = '12'
+  EXCERPT_LENGTH = '300'
+  EXCERPT_SMART_THRESHOLD = '400'
+  GIT_BRANCH = 'main'
+  GIT_EMAIL = 'pitosalas@gmail.com'
+  GIT_NAME = 'Pito Salas'
+  RSD_API_TYPE = 'metaweblog'
 
 [mounts]
   source = "blog_data"
