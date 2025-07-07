@@ -23,7 +23,9 @@ sync_status = {"running": False, "message": "Ready"}
 regen_status = {"running": False, "message": "Ready"}
 
 # Set up logging
-logging.basicConfig(level=logging.DEBUG)
+log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
+log_level_value = getattr(logging, log_level, logging.INFO)
+logging.basicConfig(level=log_level_value)
 logger = logging.getLogger(__name__)
 
 
