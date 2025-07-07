@@ -1,0 +1,682 @@
+{
+  "timestamp": "2025-06-22T15:00:24.323341",
+  "total_duplicates": 77,
+  "duplicates": [
+    {
+      "type": "content_duplicate",
+      "original_id": 4620,
+      "original_date": "2023-09-08T01:01:39",
+      "duplicate_id": 4618,
+      "duplicate_date": "2023-09-08T01:01:36",
+      "title": "syllabi policies for ai generative tools"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 4620,
+      "original_date": "2023-09-08T01:01:39",
+      "duplicate_id": 4616,
+      "duplicate_date": "2023-09-08T01:01:32",
+      "title": "syllabi policies for ai generative tools"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 4106,
+      "original_date": "2022-08-28T19:01:28",
+      "duplicate_id": 4103,
+      "duplicate_date": "2022-08-28T18:01:32",
+      "title": "codesee – bring visibility to your codebase"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 4106,
+      "original_date": "2022-08-28T19:01:28",
+      "duplicate_id": 4101,
+      "duplicate_date": "2022-08-28T17:01:50",
+      "title": "codesee – bring visibility to your codebase"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 4091,
+      "original_date": "2022-08-24T18:02:14",
+      "duplicate_id": 4089,
+      "duplicate_date": "2022-08-24T17:01:48",
+      "title": "everything you need to know"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 4042,
+      "original_date": "2022-08-11T03:02:01",
+      "duplicate_id": 4038,
+      "duplicate_date": "2022-08-11T01:01:41",
+      "title": "price guide for research poster printing"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 4001,
+      "original_date": "2022-07-18T01:02:01",
+      "duplicate_id": 3999,
+      "duplicate_date": "2022-07-18T00:01:48",
+      "title": "pmarchive · pmarca guide to career planning: skills and education"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 4001,
+      "original_date": "2022-07-18T01:02:01",
+      "duplicate_id": 3997,
+      "duplicate_date": "2022-07-17T23:01:54",
+      "title": "pmarchive · pmarca guide to career planning: skills and education"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 4624,
+      "original_date": "2023-09-08T01:01:47",
+      "duplicate_id": 3989,
+      "duplicate_date": "2022-07-17T13:01:34",
+      "title": "learn something new on wyzant.com!",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 4624,
+      "original_date": "2023-09-08T01:01:47",
+      "duplicate_id": 3987,
+      "duplicate_date": "2022-07-17T12:01:43",
+      "title": "learn something new on wyzant.com!",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 4624,
+      "original_date": "2023-09-08T01:01:47",
+      "duplicate_id": 3985,
+      "duplicate_date": "2022-07-17T11:01:57",
+      "title": "learn something new on wyzant.com!",
+      "action": "kept_older"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 3975,
+      "original_date": "2022-07-16T15:01:56",
+      "duplicate_id": 3973,
+      "duplicate_date": "2022-07-16T14:01:43",
+      "title": "github &#8211; postlight/mercury-parser: 📜 extract meaningful content from the chaos of a web page"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 3975,
+      "original_date": "2022-07-16T15:01:56",
+      "duplicate_id": 3971,
+      "duplicate_date": "2022-07-16T13:01:48",
+      "title": "github &#8211; postlight/mercury-parser: 📜 extract meaningful content from the chaos of a web page"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 3251,
+      "original_date": "2022-02-03T07:32:05",
+      "duplicate_id": 3173,
+      "duplicate_date": "2022-01-02T16:31:51",
+      "title": "robogrok university-level robotics course and parts kit",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 4628,
+      "original_date": "2023-09-08T01:01:56",
+      "duplicate_id": 2949,
+      "duplicate_date": "2021-06-09T07:34:20",
+      "title": "home",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 2943,
+      "original_date": "2021-06-05T20:34:57",
+      "duplicate_id": 2941,
+      "duplicate_date": "2021-06-05T09:34:20",
+      "title": "machine learning: the great stagnation",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 98,
+      "original_date": "2014-06-27T17:37:33",
+      "duplicate_id": 140,
+      "duplicate_date": "2013-11-18T23:31:06",
+      "title": "affordable care act software fiasco: a special report",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 657,
+      "original_date": "2010-09-30T20:22:57",
+      "duplicate_id": 658,
+      "duplicate_date": "2010-09-30T20:22:45",
+      "title": "i never remember anything",
+      "action": "kept_older"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 687,
+      "original_date": "2010-08-08T14:29:00",
+      "duplicate_id": 688,
+      "duplicate_date": "2010-08-08T13:31:34",
+      "title": "iphones record everything you do?"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 726,
+      "original_date": "2010-04-27T13:00:02",
+      "duplicate_id": 788,
+      "duplicate_date": "2009-10-23T14:50:05",
+      "title": "sequoia voting system witch hunt, err&#8230; study project",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 679,
+      "original_date": "2010-08-27T13:00:02",
+      "duplicate_id": 796,
+      "duplicate_date": "2009-10-10T21:30:00",
+      "title": "high reactives",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 92,
+      "original_date": "2014-06-27T20:50:29",
+      "duplicate_id": 818,
+      "duplicate_date": "2009-07-29T12:00:00",
+      "title": "let&#8217;s give gpss the emotion feature",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 90,
+      "original_date": "2014-06-27T20:50:36",
+      "duplicate_id": 819,
+      "duplicate_date": "2009-07-28T21:04:41",
+      "title": "[geeky] switched from firefox to safari, and back again",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 750,
+      "original_date": "2010-01-28T14:00:02",
+      "duplicate_id": 825,
+      "duplicate_date": "2009-07-14T11:40:00",
+      "title": "wolfram on computable knowledge",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 86,
+      "original_date": "2014-06-27T20:50:40",
+      "duplicate_id": 826,
+      "duplicate_date": "2009-07-13T14:27:26",
+      "title": "microsoft still has some tricks up it&#8217;s sleeve: office 2010",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 84,
+      "original_date": "2014-06-27T20:50:52",
+      "duplicate_id": 836,
+      "duplicate_date": "2009-06-13T11:25:00",
+      "title": "flight 447 from a pilot&#8217;s perspective",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 806,
+      "original_date": "2009-09-08T13:00:02",
+      "duplicate_id": 876,
+      "duplicate_date": "2009-03-03T14:00:11",
+      "title": "dc lingo &#8211; from my notebook",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 944,
+      "original_date": "2008-11-20T18:45:49",
+      "duplicate_id": 945,
+      "duplicate_date": "2008-11-20T00:49:09",
+      "title": "bummer for whole foods",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 837,
+      "original_date": "2009-06-12T13:00:02",
+      "duplicate_id": 954,
+      "duplicate_date": "2008-11-07T23:16:18",
+      "title": "election day in benton, new hampshire",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 838,
+      "original_date": "2009-06-10T13:00:02",
+      "duplicate_id": 959,
+      "duplicate_date": "2008-10-30T19:12:22",
+      "title": "just when i was thinking about stopping my netflix subscription",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 853,
+      "original_date": "2009-04-25T13:00:03",
+      "duplicate_id": 969,
+      "duplicate_date": "2008-10-11T00:37:13",
+      "title": "weapons of civic mass destruction",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 860,
+      "original_date": "2009-04-09T13:00:02",
+      "duplicate_id": 971,
+      "duplicate_date": "2008-10-04T14:38:57",
+      "title": "if you think stronger regulation is a good answer, heed buffett",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 897,
+      "original_date": "2009-02-04T14:00:03",
+      "duplicate_id": 1004,
+      "duplicate_date": "2008-07-23T19:42:00",
+      "title": "the 7 deadly sins and 10 lessons of a failed startup",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 912,
+      "original_date": "2009-01-07T14:00:03",
+      "duplicate_id": 1023,
+      "duplicate_date": "2008-06-26T22:41:53",
+      "title": "30+ must-have updated firefox 3 extensions",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 915,
+      "original_date": "2009-01-04T14:00:02",
+      "duplicate_id": 1024,
+      "duplicate_date": "2008-06-25T02:33:18",
+      "title": "using google to make community standards transparent and objective",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 927,
+      "original_date": "2008-12-16T14:00:02",
+      "duplicate_id": 1048,
+      "duplicate_date": "2008-05-13T12:35:49",
+      "title": "back channels may add, but they also subtract",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 979,
+      "original_date": "2008-09-05T13:00:02",
+      "duplicate_id": 1097,
+      "duplicate_date": "2008-03-03T14:00:00",
+      "title": "beware of freeconomics",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 984,
+      "original_date": "2008-08-30T13:00:02",
+      "duplicate_id": 1101,
+      "duplicate_date": "2008-02-28T14:08:15",
+      "title": "two examples of great web 2.0 by usa government",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 985,
+      "original_date": "2008-08-30T13:00:02",
+      "duplicate_id": 1107,
+      "duplicate_date": "2008-02-20T14:00:31",
+      "title": "cloud computing case studies",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 989,
+      "original_date": "2008-08-22T13:00:02",
+      "duplicate_id": 1108,
+      "duplicate_date": "2008-02-19T14:38:54",
+      "title": "5 things to keep in mind when relying on s3 and similar saas services",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 993,
+      "original_date": "2008-08-17T14:47:10",
+      "duplicate_id": 1111,
+      "duplicate_date": "2008-02-15T14:43:04",
+      "title": "mysteries of printing mac os x address book labels",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 994,
+      "original_date": "2008-08-16T05:47:28",
+      "duplicate_id": 1112,
+      "duplicate_date": "2008-02-14T15:32:02",
+      "title": "harper&#8217;s on torture",
+      "action": "kept_older"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 1011,
+      "original_date": "2008-07-14T14:00:03",
+      "duplicate_id": 1147,
+      "duplicate_date": "2007-12-27T13:10:26",
+      "title": "10 commandments might apply to more than just facebook!"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 70,
+      "original_date": "2014-06-28T13:54:32",
+      "duplicate_id": 1149,
+      "duplicate_date": "2007-12-23T17:19:10",
+      "title": "is apple trying to buy off &#8220;fake steve&#8221; or is it april 1 in december?",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 694,
+      "original_date": "2010-08-02T13:00:03",
+      "duplicate_id": 1153,
+      "duplicate_date": "2007-12-18T14:51:06",
+      "title": "why are you reading?",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1017,
+      "original_date": "2008-07-06T13:00:03",
+      "duplicate_id": 1155,
+      "duplicate_date": "2007-12-16T14:48:14",
+      "title": "making my blog look very busy",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 995,
+      "original_date": "2008-08-14T13:00:02",
+      "duplicate_id": 1204,
+      "duplicate_date": "2007-09-25T01:34:46",
+      "title": "[geeky] can your current reader/aggregator do this?",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 677,
+      "original_date": "2010-08-31T13:00:02",
+      "duplicate_id": 1234,
+      "duplicate_date": "2007-08-01T20:07:07",
+      "title": "why i now have an email signature",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1063,
+      "original_date": "2008-04-21T14:25:49",
+      "duplicate_id": 1235,
+      "duplicate_date": "2007-07-27T15:10:45",
+      "title": "vista new user experience not for the faint of heart",
+      "action": "kept_older"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 1056,
+      "original_date": "2008-04-30T13:00:07",
+      "duplicate_id": 1236,
+      "duplicate_date": "2007-07-20T23:39:29",
+      "title": "ycombinator startup application form"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 1055,
+      "original_date": "2008-05-01T12:48:52",
+      "duplicate_id": 1237,
+      "duplicate_date": "2007-07-18T15:17:39",
+      "title": "on the business impact of web 2.0"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1061,
+      "original_date": "2008-04-24T12:34:45",
+      "duplicate_id": 1239,
+      "duplicate_date": "2007-07-14T21:56:45",
+      "title": "danah boyd on facebook and myspace",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1064,
+      "original_date": "2008-04-17T13:57:02",
+      "duplicate_id": 1243,
+      "duplicate_date": "2007-07-03T02:10:34",
+      "title": "great new information about blogging",
+      "action": "kept_older"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 1031,
+      "original_date": "2008-06-09T13:00:02",
+      "duplicate_id": 1248,
+      "duplicate_date": "2007-06-26T02:17:51",
+      "title": "what&#8217;s the difference between a web site and a blog?"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1025,
+      "original_date": "2008-06-24T12:06:08",
+      "duplicate_id": 1249,
+      "duplicate_date": "2007-06-25T11:18:31",
+      "title": "good article about techcrunch and michael arrington in wired",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1016,
+      "original_date": "2008-07-07T13:00:02",
+      "duplicate_id": 1258,
+      "duplicate_date": "2007-06-06T17:34:01",
+      "title": "what it takes to emmigrate to australia&#8230;",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1013,
+      "original_date": "2008-07-13T13:00:02",
+      "duplicate_id": 1261,
+      "duplicate_date": "2007-06-05T14:32:54",
+      "title": "fun little web goodies",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1022,
+      "original_date": "2008-06-27T13:00:02",
+      "duplicate_id": 1265,
+      "duplicate_date": "2007-05-27T13:31:52",
+      "title": "dave (not that one) writes about fear of failure",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 686,
+      "original_date": "2010-08-11T13:00:03",
+      "duplicate_id": 1274,
+      "duplicate_date": "2007-05-04T16:34:36",
+      "title": "little children&#8217;s drawings turned into art &#8211; cool!",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 996,
+      "original_date": "2008-08-13T13:00:01",
+      "duplicate_id": 1278,
+      "duplicate_date": "2007-04-28T22:44:18",
+      "title": "blind to bargains &#8211; jeremy wagstaff",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 680,
+      "original_date": "2010-08-26T13:00:05",
+      "duplicate_id": 1280,
+      "duplicate_date": "2007-04-27T21:02:06",
+      "title": "do you remember &#8220;twin peaks&#8221;?",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1033,
+      "original_date": "2008-06-06T13:00:02",
+      "duplicate_id": 1285,
+      "duplicate_date": "2007-04-14T01:19:43",
+      "title": "&#8220;this is the discover card fraud department. call 1-800-555-1212 &#8211; immediately",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 992,
+      "original_date": "2008-08-18T13:00:03",
+      "duplicate_id": 1286,
+      "duplicate_date": "2007-04-13T00:59:50",
+      "title": "[geek] note to self: ruby has no ++ operator",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 999,
+      "original_date": "2008-08-07T13:00:02",
+      "duplicate_id": 1371,
+      "duplicate_date": "2006-12-29T00:23:09",
+      "title": "why is this funny?",
+      "action": "kept_older"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 1051,
+      "original_date": "2008-05-08T19:43:08",
+      "duplicate_id": 1418,
+      "duplicate_date": "2006-10-16T20:44:23",
+      "title": "know rule 240!"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1434,
+      "original_date": "2006-09-25T17:52:13",
+      "duplicate_id": 1625,
+      "duplicate_date": "2006-01-01T17:20:21",
+      "title": "back from away",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1174,
+      "original_date": "2007-11-24T14:46:05",
+      "duplicate_id": 1633,
+      "duplicate_date": "2005-12-14T02:44:29",
+      "title": "the system administrators song",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1043,
+      "original_date": "2008-05-20T13:00:03",
+      "duplicate_id": 1641,
+      "duplicate_date": "2005-11-30T17:01:46",
+      "title": "really cool rowing instrumentation",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1041,
+      "original_date": "2008-05-21T13:00:03",
+      "duplicate_id": 1643,
+      "duplicate_date": "2005-11-29T18:05:27",
+      "title": "creepy",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1047,
+      "original_date": "2008-05-16T12:31:41",
+      "duplicate_id": 1644,
+      "duplicate_date": "2005-11-28T17:39:51",
+      "title": "very cool illusion",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1039,
+      "original_date": "2008-05-28T13:00:03",
+      "duplicate_id": 1645,
+      "duplicate_date": "2005-11-27T16:46:31",
+      "title": "big search, mechanical turk and why amazon is at least as cool as google",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1035,
+      "original_date": "2008-06-02T13:00:03",
+      "duplicate_id": 1650,
+      "duplicate_date": "2005-11-20T03:33:57",
+      "title": "useful and cool little utility",
+      "action": "kept_older"
+    },
+    {
+      "type": "content_duplicate",
+      "original_id": 1669,
+      "original_date": "2005-10-28T03:43:19",
+      "duplicate_id": 1678,
+      "duplicate_date": "2005-10-13T14:11:10",
+      "title": "thinking about business models"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 998,
+      "original_date": "2008-08-09T13:00:01",
+      "duplicate_id": 1693,
+      "duplicate_date": "2005-09-19T16:36:13",
+      "title": "finally, a simple cell phone!",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1034,
+      "original_date": "2008-06-05T13:00:01",
+      "duplicate_id": 1725,
+      "duplicate_date": "2005-08-01T03:41:19",
+      "title": "google sightseeing: target in my neighborhood",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1050,
+      "original_date": "2008-05-09T13:00:02",
+      "duplicate_id": 1734,
+      "duplicate_date": "2005-07-18T17:47:18",
+      "title": "firewalls scanning im messages: google as symbolic link",
+      "action": "kept_older"
+    },
+    {
+      "type": "title_duplicate",
+      "original_id": 1170,
+      "original_date": "2007-11-29T14:00:04",
+      "duplicate_id": 1882,
+      "duplicate_date": "2005-01-01T04:16:01",
+      "title": "how to be creative",
+      "action": "kept_older"
+    }
+  ]
+}
