@@ -65,8 +65,13 @@ def validate_environment_and_setup():
     
     # Validate critical directories exist
     if not config["templates_dir"].exists():
+        # Log detailed path information for debugging
+        logger.error(f"Templates directory not found: {config['templates_dir']}")
+        logger.error(f"__file__ = {__file__}")
+        logger.error(f"Root dir = {config['root_dir']}")
+        logger.error(f"Root dir exists: {config['root_dir'].exists()}")
+        logger.error(f"Contents of root dir: {list(config['root_dir'].iterdir()) if config['root_dir'].exists() else 'N/A'}")
         error_msg = f"Templates directory not found: {config['templates_dir']}"
-        logger.error(error_msg)
         raise RuntimeError(error_msg)
     
     # Set up Jinja2 environment
