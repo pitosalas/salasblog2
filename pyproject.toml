@@ -46,6 +46,9 @@ Repository = "https://github.com/pitosalas/salasblog2"
 dev = [
     "pytest>=8.4.1",
 ]
+test = [
+    "httpx>=0.28.1",
+]
 
 [tool.pytest.ini_options]
 markers = [
