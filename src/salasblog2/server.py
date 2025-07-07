@@ -817,4 +817,6 @@ if __name__ == "__main__":
     validate_environment_and_setup()
     mount_static_files()
     
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Use PORT environment variable or default to 8000 for local development
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
