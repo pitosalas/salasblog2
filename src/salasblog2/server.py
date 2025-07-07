@@ -25,11 +25,32 @@ regen_status = {"running": False, "message": "Ready"}
 # Set up logging
 log_level = os.getenv('LOG_LEVEL', 'INFO').upper()
 log_level_value = getattr(logging, log_level, logging.INFO)
+
+# Configure logging format for all loggers
+log_format = '%(asctime)s [%(levelname)s] %(message)s'
+date_format = '%M:%S'
+
 logging.basicConfig(
     level=log_level_value,
-    format='%(asctime)s [%(levelname)s] %(message)s',
-    datefmt='%M:%S'
+    format=log_format,
+    datefmt=date_format,
+    force=True  # Override any existing configuration
 )
+
+# Also configure uvicorn loggers specifically
+uvicorn_logger = logging.getLogger("uvicorn")
+uvicorn_access_logger = logging.getLogger("uvicorn.access")
+
+# Create a formatter and apply it to uvicorn loggers
+formatter = logging.Formatter(log_format, datefmt=date_format)
+
+# Update handlers for uvicorn loggers
+for logger_name in ["uvicorn", "uvicorn.access", "uvicorn.error"]:
+    logger_obj = logging.getLogger(logger_name)
+    logger_obj.setLevel(log_level_value)
+    for handler in logger_obj.handlers:
+        handler.setFormatter(formatter)
+
 logger = logging.getLogger(__name__)
 
 
