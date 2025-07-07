@@ -169,6 +169,9 @@ async def lifespan(app: FastAPI):
     # Validate environment and setup configuration
     validate_environment_and_setup()
     
+    # Mount static files after validation
+    mount_static_files()
+    
     # Check if we're the only instance running
     _check_single_instance()
     
