@@ -199,6 +199,8 @@ app.add_middleware(SessionMiddleware, secret_key=config.get("session_secret", "f
 def mount_static_files():
     if config["output_dir"] and config["output_dir"].exists():
         app.mount("/static", StaticFiles(directory=config["output_dir"] / "static"), name="static")
+    else:
+        print("****** ERROR**** Line 202")
 
 # Authentication helpers
 def is_admin_authenticated(request: Request) -> bool:
