@@ -15,6 +15,7 @@ from .utils import (
     format_date,
     create_excerpt,
     create_excerpt_with_info,
+    extract_first_paragraph,
     parse_date_for_sorting,
     process_markdown_to_html,
     parse_frontmatter_file,
@@ -147,9 +148,14 @@ class SiteGenerator:
                     post_data['excerpt'] = frontmatter_excerpt
                     post_data['is_truncated'] = False  # Manual excerpt, don't show read more
                 else:
-                    excerpt, is_truncated = create_excerpt_with_info(parsed['content'])
-                    post_data['excerpt'] = excerpt
-                    post_data['is_truncated'] = is_truncated
+                    # For pages, use first paragraph; for posts/raindrops, use regular excerpt
+                    if content_type == 'pages':
+                        post_data['excerpt'] = extract_first_paragraph(parsed['content'])
+                        post_data['is_truncated'] = False  # Pages don't show "read more"
+                    else:
+                        excerpt, is_truncated = create_excerpt_with_info(parsed['content'])
+                        post_data['excerpt'] = excerpt
+                        post_data['is_truncated'] = is_truncated
                 
                 posts.append(post_data)
                 

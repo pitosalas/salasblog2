@@ -69,6 +69,37 @@ def create_excerpt(content: str, max_length: int = None, smart_threshold: int = 
     return excerpt
 
 
+def extract_first_paragraph(content: str) -> str:
+    """Extract the first paragraph from markdown content."""
+    if not content:
+        return ''
+    
+    # Split content into lines and find the first paragraph
+    lines = content.strip().split('\n')
+    paragraph_lines = []
+    
+    for line in lines:
+        line = line.strip()
+        
+        # Skip empty lines at the start
+        if not paragraph_lines and not line:
+            continue
+            
+        # Stop at first empty line after we've started collecting
+        if paragraph_lines and not line:
+            break
+            
+        # Skip markdown headers (lines starting with #)
+        if line.startswith('#'):
+            continue
+            
+        # Add line to paragraph
+        paragraph_lines.append(line)
+    
+    # Join lines and return
+    return ' '.join(paragraph_lines)
+
+
 def parse_date_for_sorting(date_str: Optional[str]) -> datetime:
     """Parse date string for sorting, returns datetime.min if parsing fails."""
     date_obj = _parse_iso_date(date_str)
