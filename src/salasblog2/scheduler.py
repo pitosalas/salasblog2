@@ -28,7 +28,8 @@ class Scheduler:
         
     async def sync_to_github(self) -> bool:
         """
-        Sync /app/content to GitHub repository
+        Sync /data/content to GitHub repository via /app/content
+        Volume-first architecture: /data/content → /app/content → GitHub
         Returns True if successful, False otherwise
         """
         try:
@@ -41,6 +42,27 @@ class Scheduler:
             if not self._check_git_credentials():
                 logger.warning("Git credentials not configured, skipping sync")
                 return False
+            
+            # Phase 2: Copy /data/content to /app/content for git operations
+            logger.info("Copying /data/content to /app/content for git sync...")
+            if not os.path.exists("/data/content"):
+                logger.warning("/data/content does not exist, cannot sync to GitHub")
+                return False
+                
+            # Ensure /app/content exists
+            os.makedirs("/app/content", exist_ok=True)
+            
+            # Use rsync to sync /data/content to /app/content
+            rsync_result = subprocess.run(
+                ["rsync", "-av", "--delete", "/data/content/", "/app/content/"],
+                capture_output=True, text=True, timeout=60
+            )
+            
+            if rsync_result.returncode != 0:
+                logger.error(f"Failed to copy /data/content to /app/content: {rsync_result.stderr}")
+                return False
+                
+            logger.info("Successfully copied /data/content to /app/content")
             
             # Add content directory changes
             logger.info("Adding content changes to git...")
@@ -62,7 +84,7 @@ class Scheduler:
             logger.info(f"Content files to commit: {result.stdout.strip()}")
             
             # Create commit with timestamp
-            commit_message = f"Automated sync from blog API - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            commit_message = f"Automated sync from /data/content - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
             logger.info(f"Creating commit: {commit_message}")
             
             subprocess.run(
