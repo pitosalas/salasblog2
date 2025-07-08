@@ -198,6 +198,27 @@ class Scheduler:
         except Exception as e:
             logger.error(f"Error in scheduled git sync: {e}")
     
+    def _git_sync_startup_wrapper(self):
+        """One-time startup git sync wrapper that cancels itself after running"""
+        try:
+            # Create new event loop for this thread
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            success = loop.run_until_complete(self.sync_to_github())
+            loop.close()
+            
+            if success:
+                logger.info("Startup Git sync completed successfully")
+            else:
+                logger.warning("Startup Git sync failed")
+                
+        except Exception as e:
+            logger.error(f"Error in startup git sync: {e}")
+        finally:
+            # Cancel this one-time job after running
+            schedule.clear('git_startup')
+            logger.info("Startup Git sync job cancelled (one-time only)")
+    
     def _raindrop_sync_wrapper(self):
         """Wrapper for the async raindrop sync function to run in scheduler"""
         try:
@@ -214,6 +235,27 @@ class Scheduler:
                 
         except Exception as e:
             logger.error(f"Error in scheduled raindrop sync: {e}")
+    
+    def _raindrop_sync_startup_wrapper(self):
+        """One-time startup raindrop sync wrapper that cancels itself after running"""
+        try:
+            # Create new event loop for this thread
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            success = loop.run_until_complete(self.sync_raindrops())
+            loop.close()
+            
+            if success:
+                logger.info("Startup Raindrop sync completed successfully")
+            else:
+                logger.warning("Startup Raindrop sync failed")
+                
+        except Exception as e:
+            logger.error(f"Error in startup raindrop sync: {e}")
+        finally:
+            # Cancel this one-time job after running
+            schedule.clear('raindrop_startup')
+            logger.info("Startup Raindrop sync job cancelled (one-time only)")
     
     def start_scheduler(self, git_interval_hours: float = None, raindrop_interval_hours: float = None):
         """Start the background scheduler with support for fractional hours"""
@@ -239,13 +281,13 @@ class Scheduler:
         # Schedule the sync jobs
         if git_minutes > 0:
             schedule.every(git_minutes).minutes.do(self._git_sync_wrapper).tag('git_sync')
-            # Also run a git sync 10 minutes after startup
-            schedule.every(10).minutes.do(self._git_sync_wrapper).tag('git_startup')
+            # Run a one-time git sync 10 minutes after startup
+            schedule.every(10).minutes.do(self._git_sync_startup_wrapper).tag('git_startup')
         
         if raindrop_minutes > 0:
             schedule.every(raindrop_minutes).minutes.do(self._raindrop_sync_wrapper).tag('raindrop_sync')
-            # Also run a raindrop sync 5 minutes after startup
-            schedule.every(5).minutes.do(self._raindrop_sync_wrapper).tag('raindrop_startup')
+            # Run a one-time raindrop sync 5 minutes after startup
+            schedule.every(5).minutes.do(self._raindrop_sync_startup_wrapper).tag('raindrop_startup')
         
         self.is_running = True
         
