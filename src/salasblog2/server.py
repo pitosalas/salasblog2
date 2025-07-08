@@ -199,7 +199,7 @@ app.add_middleware(SessionMiddleware, secret_key=config.get("session_secret", "f
 # Mount static files if output directory exists
 def mount_static_files():
     if config["output_dir"] and config["output_dir"].exists():
-        logging.getLogger(__name__).info(f"mounting static directory at {onfig["output_dir"] / "static")}")
+        logging.getLogger(__name__).info(f"mounting static directory at {config['output_dir'] / 'static'}")
         app.mount("/static", StaticFiles(directory=config["output_dir"] / "static"), name="static")
     else:
         logging.getLogger(__name__).error("No Output Directory Found")
