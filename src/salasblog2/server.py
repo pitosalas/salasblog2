@@ -217,6 +217,85 @@ def render_template(template_name: str, context: dict = None) -> str:
     template = config["jinja_env"].get_template(template_name)
     return template.render(**context)
 
+# Shared content management helpers
+def get_content_directory(content_type: str) -> Path:
+    """Get directory for content type ('blog' or 'pages')"""
+    return config["root_dir"] / "content" / content_type
+
+def create_filename_for_content(title: str, date: str, content_type: str) -> str:
+    """Generate filename based on content type"""
+    safe_title = re.sub(r'[^\w\s-]', '', title.lower())
+    safe_title = re.sub(r'[-\s]+', '-', safe_title)
+    safe_title = safe_title.strip('-')
+    
+    if content_type == 'blog':
+        return f"{date}-{safe_title}.md"  # Date prefix for blog posts
+    else:  # pages
+        return f"{safe_title}.md"  # No date prefix for pages
+
+def load_content_item(filename: str, content_type: str):
+    """Load and parse frontmatter for any content type"""
+    content_dir = get_content_directory(content_type)
+    content_file = content_dir / filename
+    
+    if not content_file.exists():
+        raise HTTPException(status_code=404, detail=f"{content_type.title()} not found: {filename}")
+    
+    try:
+        with open(content_file, 'r', encoding='utf-8') as f:
+            item = frontmatter.load(f)
+        
+        return {
+            'title': item.metadata.get('title', ''),
+            'date': item.metadata.get('date', ''),
+            'category': item.metadata.get('category', 'General'),
+            'type': item.metadata.get('type', content_type.rstrip('s')),  # 'blog' or 'page'
+            'content': item.content
+        }
+    except Exception as e:
+        logging.getLogger(__name__).error(f"Error loading {content_type} {filename}: {e}")
+        raise HTTPException(status_code=500, detail=f"Error loading {content_type}: {str(e)}")
+
+def save_content_item(filename: str, content_type: str, title: str, date: str, 
+                     category: str, item_type: str, content: str):
+    """Save content item with frontmatter and regenerate site"""
+    logger = logging.getLogger(__name__)
+    
+    content_dir = get_content_directory(content_type)
+    content_dir.mkdir(parents=True, exist_ok=True)
+    content_file = content_dir / filename
+    
+    try:
+        # Create the content item with frontmatter
+        item = frontmatter.Post(content.strip())
+        item.metadata = {
+            'title': title.strip(),
+            'date': date,
+            'category': category.strip() if category.strip() else 'General',
+            'type': item_type
+        }
+        
+        # Write the content back to file
+        with open(content_file, 'w', encoding='utf-8') as f:
+            f.write(frontmatter.dumps(item))
+            f.flush()
+            os.fsync(f.fileno())
+        
+        logger.info(f"{content_type.title()} saved successfully: {filename}")
+        
+        # Regenerate affected content
+        try:
+            generator = SiteGenerator()
+            generator.incremental_regenerate_post(filename, content_type)
+            logger.info(f"Site regenerated after saving {content_type}: {filename}")
+        except Exception as regen_error:
+            logger.error(f"Site regeneration failed after saving {content_type} {filename}: {regen_error}")
+        
+        return True
+    except Exception as e:
+        logger.error(f"Error saving {content_type} {filename}: {e}")
+        raise HTTPException(status_code=500, detail=f"Error saving {content_type}: {str(e)}")
+
 # API Routes
 @app.get("/")
 async def serve_home():
@@ -607,91 +686,42 @@ async def edit_post_page(filename: str, request: Request):
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
     
-    # Load the post file
-    blog_dir = config["root_dir"] / "content" / "blog"
-    post_file = blog_dir / filename
+    # Load the post using shared function
+    post_data = load_content_item(filename, 'blog')
     
-    if not post_file.exists():
-        raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
-    
-    try:
-        with open(post_file, 'r', encoding='utf-8') as f:
-            post = frontmatter.load(f)
-        
-        # Extract metadata
-        title = post.metadata.get('title', '')
-        date = post.metadata.get('date', '')
-        category = post.metadata.get('category', 'General')
-        post_type = post.metadata.get('type', 'blog')
-        content = post.content
-        
-        # Render edit form using template
-        context = {
-            'filename': filename,
-            'title': title,
-            'date': date,
-            'category': category,
-            'post_type': post_type,
-            'content': content
-        }
-        return HTMLResponse(content=render_template("edit_post.html", context))
-        
-    except Exception as e:
-        logging.getLogger(__name__).error(f"Error loading post {filename}: {e}")
-        raise HTTPException(status_code=500, detail=f"Error loading post: {str(e)}")
+    # Render edit form using template with post context
+    context = {
+        'filename': filename,
+        'content_type': 'post',
+        'content_type_title': 'Post',
+        'action_url': f'/admin/edit-post/{filename}',
+        'cancel_url': '/blog/',
+        **post_data
+    }
+    return HTMLResponse(content=render_template("edit_post.html", context))
 
 @app.post("/admin/edit-post/{filename}")
 async def save_edited_post(filename: str, request: Request, title: str = Form(...), 
                           date: str = Form(...), category: str = Form(...), 
                           type: str = Form(...), content: str = Form(...)):
     """Save edited post to file and regenerate site"""
-    logger = logging.getLogger(__name__)
-    
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
     
-    blog_dir = config["root_dir"] / "content" / "blog"
-    post_file = blog_dir / filename
-    
-    if not post_file.exists():
+    # Check if file exists
+    content_dir = get_content_directory('blog')
+    if not (content_dir / filename).exists():
         raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
     
-    try:
-        # Create the updated post with frontmatter
-        post = frontmatter.Post(content)
-        post.metadata = {
-            'title': title.strip(),
-            'date': date,
-            'category': category.strip() if category.strip() else 'General',
-            'type': type
-        }
-        
-        # Write the updated post back to file
-        with open(post_file, 'w', encoding='utf-8') as f:
-            f.write(frontmatter.dumps(post))
-            f.flush()
-            os.fsync(f.fileno())
-        
-        logger.info(f"Post updated successfully: {filename}")
-        
-        # Regenerate affected pages
-        try:
-            generator = SiteGenerator()
-            generator.incremental_regenerate_post(filename, 'blog')
-            logger.info(f"Site regenerated after editing: {filename}")
-        except Exception as regen_error:
-            logger.error(f"Site regeneration failed after editing {filename}: {regen_error}")
-        
-        return JSONResponse(content={
-            "status": "success",
-            "message": "Post updated successfully",
-            "filename": filename
-        })
-        
-    except Exception as e:
-        logger.error(f"Error saving post {filename}: {e}")
-        raise HTTPException(status_code=500, detail=f"Error saving post: {str(e)}")
+    # Save using shared function
+    save_content_item(filename, 'blog', title, date, category, type, content)
+    
+    return JSONResponse(content={
+        "status": "success",
+        "message": "Post updated successfully",
+        "filename": filename
+    })
 
 @app.get("/admin/new-post")
 async def new_post_page(request: Request):
@@ -704,7 +734,11 @@ async def new_post_page(request: Request):
     current_date = datetime.now().strftime('%Y-%m-%d')
     
     context = {
-        'current_date': current_date
+        'current_date': current_date,
+        'content_type': 'post',
+        'content_type_title': 'Post',
+        'action_url': '/admin/new-post',
+        'cancel_url': '/blog/'
     }
     return HTMLResponse(content=render_template("new_post.html", context))
 
@@ -713,55 +747,21 @@ async def create_new_post(request: Request, title: str = Form(...),
                          date: str = Form(...), category: str = Form(...), 
                          type: str = Form(...), content: str = Form(...)):
     """Create a new blog post with generated filename"""
-    logger = logging.getLogger(__name__)
-    
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
     
     try:
-        # Generate filename from title and date
-        def create_filename_from_title(title: str, date: str) -> str:
-            """Create safe filename from post title and date."""
-            safe_title = re.sub(r'[^\w\s-]', '', title.lower())
-            safe_title = re.sub(r'[-\s]+', '-', safe_title)
-            safe_title = safe_title.strip('-')
-            return f"{date}-{safe_title}.md"
-        
-        filename = create_filename_from_title(title.strip(), date)
+        # Generate filename using shared function
+        filename = create_filename_for_content(title.strip(), date, 'blog')
         
         # Check if file already exists
-        blog_dir = config["root_dir"] / "content" / "blog"
-        blog_dir.mkdir(parents=True, exist_ok=True)
-        post_file = blog_dir / filename
-        
-        if post_file.exists():
+        content_dir = get_content_directory('blog')
+        if (content_dir / filename).exists():
             raise HTTPException(status_code=400, detail=f"A post with filename '{filename}' already exists")
         
-        # Create the new post with frontmatter
-        post = frontmatter.Post(content.strip())
-        post.metadata = {
-            'title': title.strip(),
-            'date': date,
-            'category': category.strip() if category.strip() else 'General',
-            'type': type
-        }
-        
-        # Write the new post to file
-        with open(post_file, 'w', encoding='utf-8') as f:
-            f.write(frontmatter.dumps(post))
-            f.flush()
-            os.fsync(f.fileno())
-        
-        logger.info(f"New post created successfully: {filename}")
-        
-        # Regenerate affected pages
-        try:
-            generator = SiteGenerator()
-            generator.incremental_regenerate_post(filename, 'blog')
-            logger.info(f"Site regenerated after creating: {filename}")
-        except Exception as regen_error:
-            logger.error(f"Site regeneration failed after creating {filename}: {regen_error}")
+        # Save using shared function
+        save_content_item(filename, 'blog', title, date, category, type, content)
         
         return JSONResponse(content={
             "status": "success",
@@ -773,8 +773,106 @@ async def create_new_post(request: Request, title: str = Form(...),
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"Error creating new post: {e}")
+        logging.getLogger(__name__).error(f"Error creating new post: {e}")
         raise HTTPException(status_code=500, detail=f"Error creating post: {str(e)}")
+
+# Page editing endpoints (reusing shared code)
+@app.get("/admin/edit-page/{filename}")
+async def edit_page_page(filename: str, request: Request):
+    """Serve edit page form with actual page content"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        return RedirectResponse(url="/admin", status_code=302)
+    
+    # Load the page using shared function
+    page_data = load_content_item(filename, 'pages')
+    
+    # Render edit form using template with page context
+    context = {
+        'filename': filename,
+        'content_type': 'page',
+        'content_type_title': 'Page',
+        'action_url': f'/admin/edit-page/{filename}',
+        'cancel_url': '/pages/',
+        **page_data
+    }
+    return HTMLResponse(content=render_template("edit_post.html", context))
+
+@app.post("/admin/edit-page/{filename}")
+async def save_edited_page(filename: str, request: Request, title: str = Form(...), 
+                          date: str = Form(...), category: str = Form(...), 
+                          type: str = Form(...), content: str = Form(...)):
+    """Save edited page to file and regenerate site"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    # Check if file exists
+    content_dir = get_content_directory('pages')
+    if not (content_dir / filename).exists():
+        raise HTTPException(status_code=404, detail=f"Page not found: {filename}")
+    
+    # Save using shared function
+    save_content_item(filename, 'pages', title, date, category, type, content)
+    
+    return JSONResponse(content={
+        "status": "success",
+        "message": "Page updated successfully",
+        "filename": filename
+    })
+
+@app.get("/admin/new-page")
+async def new_page_page(request: Request):
+    """Serve new page creation form"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        return RedirectResponse(url="/admin", status_code=302)
+    
+    # Get current date for default
+    current_date = datetime.now().strftime('%Y-%m-%d')
+    
+    context = {
+        'current_date': current_date,
+        'content_type': 'page',
+        'content_type_title': 'Page',
+        'action_url': '/admin/new-page',
+        'cancel_url': '/pages/'
+    }
+    return HTMLResponse(content=render_template("new_post.html", context))
+
+@app.post("/admin/new-page")
+async def create_new_page(request: Request, title: str = Form(...), 
+                         date: str = Form(...), category: str = Form(...), 
+                         type: str = Form(...), content: str = Form(...)):
+    """Create a new page"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
+    try:
+        # Generate filename using shared function
+        filename = create_filename_for_content(title.strip(), date, 'pages')
+        
+        # Check if file already exists
+        content_dir = get_content_directory('pages')
+        if (content_dir / filename).exists():
+            raise HTTPException(status_code=400, detail=f"A page with filename '{filename}' already exists")
+        
+        # Save using shared function
+        save_content_item(filename, 'pages', title, date, category, type, content)
+        
+        return JSONResponse(content={
+            "status": "success",
+            "message": "Page created successfully",
+            "filename": filename,
+            "url": f"/pages/{filename.replace('.md', '.html')}"
+        })
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logging.getLogger(__name__).error(f"Error creating new page: {e}")
+        raise HTTPException(status_code=500, detail=f"Error creating page: {str(e)}")
 
 @app.post("/admin/delete-post/{filename}")
 async def delete_post_endpoint(filename: str, request: Request):

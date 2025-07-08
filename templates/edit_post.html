@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Post - {{ title }}</title>
+    <title>Edit {{ content_type_title|default('Post') }} - {{ title }}</title>
     <link rel="stylesheet" href="/static/css/admin-forms.css">
 </head>
 <body class="edit-form">
     <div class="header header-edit">
-        <h1>✏️ Edit Post: {{ title }}</h1>
+        <h1>✏️ Edit {{ content_type_title|default('Post') }}: {{ title }}</h1>
     </div>
     
     <div class="container">
@@ -17,7 +17,7 @@
             
             <div class="form-grid">
                 <div class="form-group">
-                    <label for="title">Post Title</label>
+                    <label for="title">{{ content_type_title|default('Post') }} Title</label>
                     <input type="text" id="title" name="title" value="{{ title }}" required>
                 </div>
                 
@@ -47,9 +47,9 @@
         </form>
         
         <div class="button-group">
-            <a href="/blog/" class="btn btn-secondary">Cancel</a>
+            <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
             <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
-            <button type="button" class="btn btn-success" onclick="savePost()">Save Post</button>
+            <button type="button" class="btn btn-success" onclick="savePost()">Save {{ content_type_title|default('Post') }}</button>
         </div>
     </div>
     
@@ -93,7 +93,7 @@
             saveBtn.disabled = true;
             
             try {
-                const response = await fetch('/admin/edit-post/{{ filename }}', {
+                const response = await fetch('{{ action_url|default("/admin/edit-post/" + filename) }}', {
                     method: 'POST',
                     body: formData
                 });
@@ -102,7 +102,7 @@
                 
                 if (response.ok) {
                     statusMessage.className = 'status-message status-success';
-                    statusMessage.textContent = '✓ Post saved successfully!';
+                    statusMessage.textContent = '✓ {{ content_type_title|default("Post") }} saved successfully!';
                     statusMessage.style.display = 'block';
                     
                     // Auto-hide success message after 3 seconds

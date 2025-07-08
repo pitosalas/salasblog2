@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Post - Salas Blog</title>
+    <title>Create New {{ content_type_title|default('Post') }} - Salas Blog</title>
     <link rel="stylesheet" href="/static/css/admin-forms.css">
 </head>
 <body class="new-form">
     <div class="header header-new">
-        <h1>✨ Create New Post</h1>
+        <h1>✨ Create New {{ content_type_title|default('Post') }}</h1>
     </div>
     
     <div class="container">
@@ -17,7 +17,7 @@
             
             <div class="form-grid">
                 <div class="form-group">
-                    <label for="title">Post Title *</label>
+                    <label for="title">{{ content_type_title|default('Post') }} Title *</label>
                     <input type="text" id="title" name="title" required placeholder="Enter your post title">
                     <div class="help-text">This will be used to generate the filename</div>
                 </div>
@@ -49,9 +49,9 @@
         </form>
         
         <div class="button-group">
-            <a href="/blog/" class="btn btn-secondary">Cancel</a>
+            <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
             <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
-            <button type="button" class="btn btn-success" onclick="createPost()">Create Post</button>
+            <button type="button" class="btn btn-success" onclick="createPost()">Create {{ content_type_title|default('Post') }}</button>
         </div>
     </div>
     
@@ -95,7 +95,7 @@
             createBtn.disabled = true;
             
             try {
-                const response = await fetch('/admin/new-post', {
+                const response = await fetch('{{ action_url|default("/admin/new-post") }}', {
                     method: 'POST',
                     body: formData
                 });
@@ -104,7 +104,7 @@
                 
                 if (response.ok) {
                     statusMessage.className = 'status-message status-success';
-                    statusMessage.textContent = `✓ Post created successfully! Filename: ${result.filename}`;
+                    statusMessage.textContent = `✓ {{ content_type_title|default("Post") }} created successfully! Filename: ${result.filename}`;
                     statusMessage.style.display = 'block';
                     
                     // Clear form
