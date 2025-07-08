@@ -1198,53 +1198,41 @@ def create_xmlrpc_fault_with_code(fault_code, message):
   </fault>
 </methodResponse>"""
 
-# Serve all other routes as static files or 404
+# Serve all static content (blog, pages, root files) with proper MIME types
 @app.get("/{path:path}")
-async def serve_static_or_404(path: str):
-    """Serve static files or custom 404 page"""
+async def serve_static_content(path: str):
+    """Serve static content from output directory with proper MIME types"""
     file_path = config["output_dir"] / path
     
     # If it's a directory, try index.html
     if file_path.is_dir():
         file_path = file_path / "index.html"
     
-    # If no extension, try adding .html
+    # If no extension, try adding .html (for clean URLs like /blog/post-name)
     if not file_path.suffix and not file_path.exists():
         file_path = config["output_dir"] / f"{path}.html"
     
     if file_path.exists() and file_path.is_file():
-        # Determine proper MIME type based on file extension
-        if file_path.suffix == ".html":
-            content_type = "text/html"
-        elif file_path.suffix == ".css":
-            content_type = "text/css"
-        elif file_path.suffix == ".js":
-            content_type = "application/javascript"
-        elif file_path.suffix == ".json":
-            content_type = "application/json"
-        elif file_path.suffix == ".xml":
-            content_type = "application/xml"
-        else:
-            # Use mimetypes module for other extensions
-            content_type, _ = mimetypes.guess_type(str(file_path))
-            if not content_type:
+        # Use mimetypes module for automatic MIME type detection
+        content_type, _ = mimetypes.guess_type(str(file_path))
+        if not content_type:
+            # Fallback for unknown types
+            if file_path.suffix == ".html":
+                content_type = "text/html"
+            elif file_path.suffix == ".css":
+                content_type = "text/css"
+            elif file_path.suffix == ".js":
+                content_type = "application/javascript"
+            else:
                 content_type = "text/plain"
         
-        return HTMLResponse(
-            content=file_path.read_text(encoding='utf-8'),
+        return Response(
+            content=file_path.read_bytes(),
             media_type=content_type
         )
     
-    # Return custom 404 page
-    error_404_path = config["output_dir"] / "404.html"
-    if error_404_path.exists():
-        return HTMLResponse(
-            content=error_404_path.read_text(encoding='utf-8'),
-            status_code=404
-        )
-    
-    # Fallback 404
-    return HTMLResponse(content=render_template("404.html"), status_code=404)
+    # Return 404 for missing files
+    raise HTTPException(status_code=404, detail="Not found")
 
 if __name__ == "__main__":
     import uvicorn
