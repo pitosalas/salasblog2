@@ -13,6 +13,7 @@ import shutil
 import re
 import frontmatter
 import markdown
+import mimetypes
 from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
@@ -200,7 +201,20 @@ app.add_middleware(SessionMiddleware, secret_key=config.get("session_secret", "f
 def mount_static_files():
     if config["output_dir"] and config["output_dir"].exists():
         logging.getLogger(__name__).info(f"mounting static directory at {config['output_dir'] / 'static'}")
+        # Mount static assets (CSS, JS, images, etc.) - this handles proper MIME types automatically
         app.mount("/static", StaticFiles(directory=config["output_dir"] / "static"), name="static")
+        
+        logging.getLogger(__name__).info(f"mounting blog content at {config['output_dir'] / 'blog'}")
+        # Mount blog content directory
+        blog_dir = config["output_dir"] / "blog"
+        if blog_dir.exists():
+            app.mount("/blog", StaticFiles(directory=blog_dir, html=True), name="blog")
+            
+        logging.getLogger(__name__).info(f"mounting pages content at {config['output_dir'] / 'pages'}")
+        # Mount pages content directory  
+        pages_dir = config["output_dir"] / "pages"
+        if pages_dir.exists():
+            app.mount("/pages", StaticFiles(directory=pages_dir, html=True), name="pages")
     else:
         logging.getLogger(__name__).error("No Output Directory Found")
 
@@ -1296,17 +1310,21 @@ def create_xmlrpc_fault_with_code(fault_code, message):
   </fault>
 </methodResponse>"""
 
-# Serve all static content (blog, pages, root files) with proper MIME types
+# Root level files served by catch-all route (index.html, etc.)
 @app.get("/{path:path}")
-async def serve_static_content(path: str):
-    """Serve static content from output directory with proper MIME types"""
+async def serve_root_files(path: str):
+    """Serve root-level files like index.html, robots.txt, etc."""
+    # Only handle root-level files, not paths that start with mounted directories
+    if '/' in path or path.startswith(('blog', 'pages', 'static')):
+        raise HTTPException(status_code=404, detail="Not found")
+    
     file_path = config["output_dir"] / path
     
     # If it's a directory, try index.html
     if file_path.is_dir():
         file_path = file_path / "index.html"
     
-    # If no extension, try adding .html (for clean URLs like /blog/post-name)
+    # If no extension, try adding .html
     if not file_path.suffix and not file_path.exists():
         file_path = config["output_dir"] / f"{path}.html"
     
@@ -1314,15 +1332,7 @@ async def serve_static_content(path: str):
         # Use mimetypes module for automatic MIME type detection
         content_type, _ = mimetypes.guess_type(str(file_path))
         if not content_type:
-            # Fallback for unknown types
-            if file_path.suffix == ".html":
-                content_type = "text/html"
-            elif file_path.suffix == ".css":
-                content_type = "text/css"
-            elif file_path.suffix == ".js":
-                content_type = "application/javascript"
-            else:
-                content_type = "text/plain"
+            content_type = "text/html" if file_path.suffix == ".html" else "text/plain"
         
         return Response(
             content=file_path.read_bytes(),
