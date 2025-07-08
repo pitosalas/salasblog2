@@ -171,8 +171,8 @@ async def lifespan(app: FastAPI):
     # Validate environment and setup configuration
     validate_environment_and_setup()
     
-    # Mount static files after validation
-    mount_static_files()
+    # Skip mounting static files - using custom endpoints instead
+    # mount_static_files()
     
     # Check if we're the only instance running
     _check_single_instance()
@@ -196,6 +196,87 @@ app = FastAPI(
 
 # Add session middleware with validated secret
 app.add_middleware(SessionMiddleware, secret_key=config.get("session_secret", "fallback-key"))
+
+# Temporarily use custom endpoints instead of StaticFiles mounts due to HEAD/GET issues
+@app.get("/static/{file_path:path}")
+async def serve_static_files(file_path: str):
+    """Custom static file serving to avoid HEAD/GET issues"""
+    logger = logging.getLogger(__name__)
+    logger.error(f"🔥 STATIC FILE REQUEST: {file_path}, config={config}")
+    
+    if not config.get("output_dir"):
+        logger.error(f"🔥 NO OUTPUT DIR: config={config}")
+        raise HTTPException(status_code=404, detail="No output directory configured")
+    
+    full_path = config["output_dir"] / "static" / file_path
+    
+    if not full_path.exists() or not full_path.is_file():
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    # Use mimetypes module for automatic MIME type detection
+    content_type, _ = mimetypes.guess_type(str(full_path))
+    if not content_type:
+        if full_path.suffix == ".css":
+            content_type = "text/css"
+        elif full_path.suffix == ".js":
+            content_type = "application/javascript"
+        elif full_path.suffix == ".html":
+            content_type = "text/html"
+        else:
+            content_type = "application/octet-stream"
+    
+    return Response(
+        content=full_path.read_bytes(),
+        media_type=content_type
+    )
+
+@app.get("/blog/{file_path:path}")
+async def serve_blog_files(file_path: str):
+    """Custom blog file serving"""
+    if not config.get("output_dir"):
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    full_path = config["output_dir"] / "blog" / file_path
+    
+    # Handle directory index
+    if full_path.is_dir():
+        full_path = full_path / "index.html"
+    
+    if not full_path.exists() or not full_path.is_file():
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    content_type, _ = mimetypes.guess_type(str(full_path))
+    if not content_type:
+        content_type = "text/html"
+    
+    return Response(
+        content=full_path.read_bytes(),
+        media_type=content_type
+    )
+
+@app.get("/pages/{file_path:path}")
+async def serve_pages_files(file_path: str):
+    """Custom pages file serving"""
+    if not config.get("output_dir"):
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    full_path = config["output_dir"] / "pages" / file_path
+    
+    # Handle directory index
+    if full_path.is_dir():
+        full_path = full_path / "index.html"
+    
+    if not full_path.exists() or not full_path.is_file():
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    content_type, _ = mimetypes.guess_type(str(full_path))
+    if not content_type:
+        content_type = "text/html"
+    
+    return Response(
+        content=full_path.read_bytes(),
+        media_type=content_type
+    )
 
 # Mount static files if output directory exists
 def mount_static_files():
@@ -1310,12 +1391,20 @@ def create_xmlrpc_fault_with_code(fault_code, message):
   </fault>
 </methodResponse>"""
 
-# Root level files served by catch-all route (index.html, etc.)
+# Catch-all route moved to end of file to ensure proper precedence
+
+# Root level files served by catch-all route (index.html, etc.)  
+# This MUST be the last route defined to ensure proper precedence
 @app.get("/{path:path}")
 async def serve_root_files(path: str):
     """Serve root-level files like index.html, robots.txt, etc."""
+    # Debug logging
+    logger = logging.getLogger(__name__)
+    logger.error(f"❌ CATCH-ALL ROUTE HIT: {path} - This should not happen for static/blog/pages!")
+    
     # Only handle root-level files, not paths that start with mounted directories
     if '/' in path or path.startswith(('blog', 'pages', 'static')):
+        logger.error(f"❌ Rejecting path {path} - should have been handled by mounts!")
         raise HTTPException(status_code=404, detail="Not found")
     
     file_path = config["output_dir"] / path
