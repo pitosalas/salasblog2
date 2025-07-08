@@ -5,6 +5,10 @@
       "Bash(pkill:*)",
       "Bash(rg:*)"
     ],
-    "deny": []
+    "deny": [
+      "Read(output)",
+      "Read(content_*)",
+      "Read(content)"
+    ]
   }
 }
