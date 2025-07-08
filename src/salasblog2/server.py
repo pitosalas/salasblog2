@@ -1213,7 +1213,23 @@ async def serve_static_or_404(path: str):
         file_path = config["output_dir"] / f"{path}.html"
     
     if file_path.exists() and file_path.is_file():
-        content_type = "text/html" if file_path.suffix == ".html" else None
+        # Determine proper MIME type based on file extension
+        if file_path.suffix == ".html":
+            content_type = "text/html"
+        elif file_path.suffix == ".css":
+            content_type = "text/css"
+        elif file_path.suffix == ".js":
+            content_type = "application/javascript"
+        elif file_path.suffix == ".json":
+            content_type = "application/json"
+        elif file_path.suffix == ".xml":
+            content_type = "application/xml"
+        else:
+            # Use mimetypes module for other extensions
+            content_type, _ = mimetypes.guess_type(str(file_path))
+            if not content_type:
+                content_type = "text/plain"
+        
         return HTMLResponse(
             content=file_path.read_text(encoding='utf-8'),
             media_type=content_type
