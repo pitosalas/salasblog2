@@ -27,9 +27,6 @@ from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
 from .scheduler import get_scheduler
-import mimetypes
-
-mimetypes.add_type("text/css", ".css", strict=True)
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -65,7 +62,8 @@ def validate_environment_and_setup():
     config["root_dir"] = Path(__file__).parent.parent.parent
     config["output_dir"] = config["root_dir"] / "output"
     config["templates_dir"] = config["root_dir"] / "templates"
-    
+    print(f"********** {config}**********")
+
     # Validate critical directories exist
     if not config["templates_dir"].exists():
         # Log detailed path information for debugging
@@ -201,9 +199,10 @@ app.add_middleware(SessionMiddleware, secret_key=config.get("session_secret", "f
 # Mount static files if output directory exists
 def mount_static_files():
     if config["output_dir"] and config["output_dir"].exists():
+        logging.getLogger(__name__).info(f"mounting static directory at {onfig["output_dir"] / "static")}")
         app.mount("/static", StaticFiles(directory=config["output_dir"] / "static"), name="static")
     else:
-        print("****** ERROR**** Line 202")
+        logging.getLogger(__name__).error("No Output Directory Found")
 
 # Authentication helpers
 def is_admin_authenticated(request: Request) -> bool:
