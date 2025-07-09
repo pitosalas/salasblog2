@@ -271,6 +271,29 @@ async def serve_pages_files(file_path: str, request: Request):
     content = full_path.read_bytes() if request.method == "GET" else b""
     return Response(content=content, media_type=content_type)
 
+@app.api_route("/raindrops/{file_path:path}", methods=["GET", "HEAD"])
+async def serve_raindrops_files(file_path: str, request: Request):
+    """Custom raindrops file serving with consistent GET/HEAD behavior"""
+    if not config.get("output_dir"):
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    full_path = config["output_dir"] / "raindrops" / file_path
+    
+    # Handle directory index
+    if full_path.is_dir():
+        full_path = full_path / "index.html"
+    
+    if not full_path.exists() or not full_path.is_file():
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    content_type, _ = mimetypes.guess_type(str(full_path))
+    if not content_type:
+        content_type = "text/html"
+    
+    # Return content for GET, empty for HEAD
+    content = full_path.read_bytes() if request.method == "GET" else b""
+    return Response(content=content, media_type=content_type)
+
 # Mount static files if output directory exists
 def mount_static_files():
     if config["output_dir"] and config["output_dir"].exists():
