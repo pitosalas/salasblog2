@@ -592,6 +592,45 @@ body {
     color: white;
 }
 
+/* Admin navigation buttons */
+.admin-nav-btn {
+    background: #0066cc;
+    color: white !important;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid #0066cc;
+    transition: all 0.2s ease;
+}
+
+.admin-nav-btn:hover {
+    background: #0052a3;
+    border-color: #0052a3;
+    color: white !important;
+}
+
+.admin-nav-btn.new-page {
+    background: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.admin-nav-btn.new-page:hover {
+    background: #138496;
+    border-color: #138496;
+}
+
+.admin-nav-btn.new-post {
+    background: #28a745;
+    border-color: #28a745;
+}
+
+.admin-nav-btn.new-post:hover {
+    background: #218838;
+    border-color: #218838;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .nav {

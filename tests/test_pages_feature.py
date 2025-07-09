@@ -356,7 +356,7 @@ type: "page"
         
         # Check that the new page button has the correct styling
         assert '+ New Page' in content
-        assert 'background: #17a2b8' in content  # Distinct color for page button
+        assert 'admin-nav-btn new-page' in content  # Proper CSS class for page button
     
     def test_admin_status_endpoint_functionality(self):
         """Test the admin status endpoint that controls UI visibility."""
@@ -748,8 +748,8 @@ This is a test page with **markdown** formatting."""
         assert '/admin/new-page' in content
         assert '+ New Page' in content
         
-        # Check that it has the correct styling
-        assert 'background: #17a2b8' in content  # Distinct color for page button
+        # Check that it has the correct CSS class
+        assert 'admin-nav-btn new-page' in content  # Proper CSS class for page button
         
         # Check that it's hidden by default
         assert 'style="display: none;"' in content
