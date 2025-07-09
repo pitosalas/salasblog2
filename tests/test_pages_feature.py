@@ -1404,27 +1404,48 @@ type: "page"
                 
                 assert login_response.status_code in [200, 302], f"Login failed for {base_url}, got {login_response.status_code}"
                 
-                # Step 2: Test page edit endpoints (try multiple pages)
-                pages_to_test = ['robots.md', 'curacao.md', 'about.md']
-                working_page = None
-                edit_response = None
+                # Step 2: Test page edit endpoints (test all pages)
+                pages_to_test = ['about.md', 'robots.md', 'curacao.md', 'brandeis.md']
+                successful_pages = []
+                failed_pages = []
                 
                 for page in pages_to_test:
                     edit_url = f"{base_url}/admin/edit-page/{page}"
                     edit_response = session.get(edit_url, timeout=10)
                     
                     if edit_response.status_code in [200, 302]:
-                        working_page = page
-                        break
+                        successful_pages.append(page)
+                        print(f"✓ {page} edit endpoint works for {base_url}")
                     elif edit_response.status_code == 500:
-                        print(f"⚠️  Server error (500) for {base_url}/admin/edit-page/{page}")
-                        continue
+                        try:
+                            error_detail = edit_response.json().get('detail', 'Unknown error')
+                            failed_pages.append(f"{page}: {error_detail}")
+                            print(f"✗ {page} edit endpoint failed for {base_url}: {error_detail}")
+                        except:
+                            failed_pages.append(f"{page}: Server error (500)")
+                            print(f"✗ {page} edit endpoint failed for {base_url}: Server error (500)")
+                    else:
+                        failed_pages.append(f"{page}: HTTP {edit_response.status_code}")
+                        print(f"✗ {page} edit endpoint failed for {base_url}: HTTP {edit_response.status_code}")
                 
-                if not working_page:
+                # Report results
+                print(f"📊 {base_url} page edit results:")
+                print(f"   ✓ Working: {len(successful_pages)}/{len(pages_to_test)}")
+                print(f"   ✗ Failed: {len(failed_pages)}/{len(pages_to_test)}")
+                
+                if failed_pages:
+                    print("   Failed pages:")
+                    for failure in failed_pages:
+                        print(f"     - {failure}")
+                
+                # Use the first working page for the rest of the test
+                if not successful_pages:
                     print(f"⚠️  No working page edit endpoints found for {base_url}")
                     continue
                 
-                print(f"✓ Using working page: {working_page} for {base_url}")
+                working_page = successful_pages[0]
+                edit_url = f"{base_url}/admin/edit-page/{working_page}"
+                edit_response = session.get(edit_url, timeout=10)
                 
                 # Should get the edit form (200) or a redirect
                 assert edit_response.status_code in [200, 302], f"Page edit request failed for {base_url}, got {edit_response.status_code}"
