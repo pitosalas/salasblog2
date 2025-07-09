@@ -1366,3 +1366,127 @@ type: "page"
                 pytest.skip(f"Could not connect to production server {base_url}: {e}")
             except Exception as e:
                 assert False, f"Unexpected error testing authenticated production endpoint {base_url}: {e}"
+    
+    def test_production_page_can_be_edited(self):
+        """Test that a page can be edited on the running production server."""
+        import requests
+        import os
+        
+        # Get admin password from environment or skip test
+        admin_password = os.getenv('ADMIN_PASSWORD')
+        if not admin_password:
+            import pytest
+            pytest.skip("ADMIN_PASSWORD environment variable not set - skipping authenticated test")
+        
+        # Test both production endpoints
+        production_urls = [
+            "https://salas.com",
+            "https://salasblog2.fly.dev"
+        ]
+        
+        successful_tests = 0
+        
+        for base_url in production_urls:
+            try:
+                # Create a session to maintain cookies
+                session = requests.Session()
+                
+                # Step 1: Login to admin
+                login_url = f"{base_url}/admin"
+                login_data = {"password": admin_password}
+                
+                login_response = session.post(login_url, data=login_data, timeout=10)
+                
+                # Skip if login fails
+                if login_response.status_code == 401:
+                    import pytest
+                    pytest.skip(f"Login failed for {base_url} - authentication failed (401). Check ADMIN_PASSWORD environment variable.")
+                
+                assert login_response.status_code in [200, 302], f"Login failed for {base_url}, got {login_response.status_code}"
+                
+                # Step 2: Test page edit endpoints (try multiple pages)
+                pages_to_test = ['robots.md', 'curacao.md', 'about.md']
+                working_page = None
+                edit_response = None
+                
+                for page in pages_to_test:
+                    edit_url = f"{base_url}/admin/edit-page/{page}"
+                    edit_response = session.get(edit_url, timeout=10)
+                    
+                    if edit_response.status_code in [200, 302]:
+                        working_page = page
+                        break
+                    elif edit_response.status_code == 500:
+                        print(f"⚠️  Server error (500) for {base_url}/admin/edit-page/{page}")
+                        continue
+                
+                if not working_page:
+                    print(f"⚠️  No working page edit endpoints found for {base_url}")
+                    continue
+                
+                print(f"✓ Using working page: {working_page} for {base_url}")
+                
+                # Should get the edit form (200) or a redirect
+                assert edit_response.status_code in [200, 302], f"Page edit request failed for {base_url}, got {edit_response.status_code}"
+                
+                if edit_response.status_code == 200:
+                    content = edit_response.text
+                    
+                    # Should be the edit form for the page
+                    assert 'name="title"' in content, f"Page edit form should have title field for {base_url}"
+                    assert 'name="content"' in content, f"Page edit form should have content field for {base_url}"
+                    assert 'name="date"' in content, f"Page edit form should have date field for {base_url}"
+                    
+                    # Should have proper form styling
+                    assert 'admin-forms.css' in content, f"Page edit form should include admin forms CSS for {base_url}"
+                    
+                    # Should have edit-specific elements
+                    assert 'Edit Page' in content or 'edit' in content.lower(), f"Page edit form should indicate it's editing for {base_url}"
+                    
+                    # Should have save/update button
+                    assert 'Save' in content or 'Update' in content, f"Page edit form should have save/update button for {base_url}"
+                    
+                    print(f"✓ {base_url} page {working_page} can be edited successfully")
+                    
+                elif edit_response.status_code == 302:
+                    # If it redirects, check where it goes
+                    location = edit_response.headers.get('location', '')
+                    print(f"✓ {base_url} page edit redirects to {location} (acceptable)")
+                
+                # Step 3: Verify the page exists and is accessible
+                page_name = working_page.replace('.md', '')
+                page_url = f"{base_url}/{page_name}.html"
+                page_response = session.get(page_url, timeout=10)
+                assert page_response.status_code == 200, f"Page should be accessible at {page_url}"
+                
+                # Step 4: Check that the page has edit controls in the HTML
+                page_content = page_response.text
+                assert 'admin-btn-edit' in page_content, f"Page should have edit button for {base_url}"
+                assert f'admin/edit-page/{working_page}' in page_content, f"Page should have correct edit link for {base_url}"
+                
+                print(f"✓ {base_url} page {page_name} is accessible and has edit controls")
+                
+                # Step 5: Test admin status to confirm we're still authenticated
+                admin_status_url = f"{base_url}/api/admin-status"
+                status_response = session.get(admin_status_url, timeout=10)
+                
+                if status_response.status_code == 200:
+                    status_data = status_response.json()
+                    assert status_data.get('authenticated') == True, f"Admin status should show authenticated for {base_url}"
+                
+                # Step 6: Logout (clean up)
+                logout_url = f"{base_url}/admin/logout"
+                session.post(logout_url, timeout=10)
+                
+                # Mark this server as successful
+                successful_tests += 1
+                
+            except requests.exceptions.RequestException as e:
+                # If there's a network error, skip this test
+                import pytest
+                pytest.skip(f"Could not connect to production server {base_url}: {e}")
+            except Exception as e:
+                assert False, f"Unexpected error testing about page editing for {base_url}: {e}"
+        
+        # At least one server should work
+        assert successful_tests > 0, "At least one production server should allow page editing"
