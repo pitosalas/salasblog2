@@ -357,7 +357,7 @@ class TestScheduler:
     async def test_sync_raindrops_no_new_files(self, scheduler):
         """Test raindrop sync with no new files"""
         with patch.dict(os.environ, {'RAINDROP_TOKEN': 'fake_token'}), \
-             patch('salasblog2.scheduler.RaindropDownloader') as mock_downloader:
+             patch('salasblog2.raindrop.RaindropDownloader') as mock_downloader:
             
             mock_instance = Mock()
             mock_instance.download_raindrops.return_value = []
@@ -371,8 +371,8 @@ class TestScheduler:
     async def test_sync_raindrops_success(self, scheduler):
         """Test successful raindrop sync"""
         with patch.dict(os.environ, {'RAINDROP_TOKEN': 'fake_token'}), \
-             patch('salasblog2.scheduler.RaindropDownloader') as mock_downloader, \
-             patch('salasblog2.scheduler.SiteGenerator') as mock_generator:
+             patch('salasblog2.raindrop.RaindropDownloader') as mock_downloader, \
+             patch('salasblog2.generator.SiteGenerator') as mock_generator:
             
             mock_dl_instance = Mock()
             mock_dl_instance.download_raindrops.return_value = ['file1.md', 'file2.md']

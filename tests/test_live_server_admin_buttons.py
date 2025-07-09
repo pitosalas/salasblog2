@@ -72,7 +72,7 @@ class TestLiveServerAdminButtons:
                             print(f"✅ {page_link} has delete button: {delete_onclick}")
                             
                             # Verify delete function call
-                            assert 'deletePost(' in delete_onclick, f"Delete button should call deletePost function"
+                            assert 'deletePage(' in delete_onclick, f"Delete button should call deletePage function"
                         else:
                             print(f"❌ {page_link} missing delete button")
                         
