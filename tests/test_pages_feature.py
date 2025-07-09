@@ -1274,3 +1274,95 @@ type: "page"
                 pytest.skip(f"Could not connect to production server {url}: {e}")
             except Exception as e:
                 assert False, f"Unexpected error testing production endpoint {url}: {e}"
+    
+    def test_production_edit_page_endpoint_with_admin_login(self):
+        """Test that the production edit page endpoint works correctly when admin is logged in."""
+        import requests
+        import os
+        
+        # Get admin password from environment or skip test
+        admin_password = os.getenv('ADMIN_PASSWORD')
+        if not admin_password:
+            import pytest
+            pytest.skip("ADMIN_PASSWORD environment variable not set - skipping authenticated test")
+        
+        # Test both production endpoints
+        production_urls = [
+            "https://salas.com",
+            "https://salasblog2.fly.dev"
+        ]
+        
+        for base_url in production_urls:
+            try:
+                # Create a session to maintain cookies
+                session = requests.Session()
+                
+                # Step 1: Login to admin
+                login_url = f"{base_url}/admin"
+                login_data = {"password": admin_password}
+                
+                login_response = session.post(login_url, data=login_data, timeout=10)
+                
+                # Login should succeed (200) or redirect (302), or fail with 401 for wrong password
+                if login_response.status_code == 401:
+                    # Wrong password - skip this test
+                    import pytest
+                    pytest.skip(f"Login failed for {base_url} - authentication failed (401). Check ADMIN_PASSWORD environment variable.")
+                
+                assert login_response.status_code in [200, 302], f"Login failed for {base_url}, got {login_response.status_code}"
+                
+                # Step 2: Test the edit page endpoint with authentication
+                # Templates now include .md extension
+                edit_url = f"{base_url}/admin/edit-page/brandeis.md"
+                edit_response = session.get(edit_url, timeout=10)
+                
+                # With authentication, we should get the edit form (200) or a redirect
+                assert edit_response.status_code in [200, 302], f"Edit page request failed for {edit_url}, got {edit_response.status_code}"
+                
+                if edit_response.status_code == 200:
+                    content = edit_response.text
+                    
+                    # Should be the edit form, not a login page
+                    assert 'name="title"' in content, f"Edit form should have title field for {base_url}"
+                    assert 'name="content"' in content, f"Edit form should have content field for {base_url}"
+                    assert 'name="date"' in content, f"Edit form should have date field for {base_url}"
+                    
+                    # Should contain reference to the brandeis page
+                    assert 'brandeis' in content.lower(), f"Edit form should reference brandeis page for {base_url}"
+                    
+                    # Should have proper form styling
+                    assert 'admin-forms.css' in content, f"Edit form should include admin forms CSS for {base_url}"
+                    
+                    # Should have edit-specific elements
+                    assert 'Edit Page' in content or 'edit' in content.lower(), f"Edit form should indicate it's editing for {base_url}"
+                    
+                    # Should have save/update button
+                    assert 'Save' in content or 'Update' in content, f"Edit form should have save/update button for {base_url}"
+                    
+                    print(f"✓ {base_url} edit page loads correctly with authentication")
+                    
+                elif edit_response.status_code == 302:
+                    # If it redirects, check where it goes
+                    location = edit_response.headers.get('location', '')
+                    # It might redirect to the page itself or another admin page
+                    print(f"✓ {base_url} edit page redirects to {location} (acceptable)")
+                
+                # Step 3: Test admin status to confirm we're authenticated
+                admin_status_url = f"{base_url}/api/admin-status"
+                status_response = session.get(admin_status_url, timeout=10)
+                
+                if status_response.status_code == 200:
+                    status_data = status_response.json()
+                    assert status_data.get('authenticated') == True, f"Admin status should show authenticated for {base_url}"
+                    print(f"✓ {base_url} admin status confirms authentication")
+                
+                # Step 4: Logout (clean up)
+                logout_url = f"{base_url}/admin/logout"
+                session.post(logout_url, timeout=10)
+                
+            except requests.exceptions.RequestException as e:
+                # If there's a network error, skip this test
+                import pytest
+                pytest.skip(f"Could not connect to production server {base_url}: {e}")
+            except Exception as e:
+                assert False, f"Unexpected error testing authenticated production endpoint {base_url}: {e}"
