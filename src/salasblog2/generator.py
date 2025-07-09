@@ -105,8 +105,13 @@ class SiteGenerator:
                 filename = md_file.stem
                 
                 # Extract frontmatter data
+                # Use a clear placeholder when title is missing from frontmatter
+                title = parsed['metadata'].get('title')
+                if not title:
+                    title = f"placeholder title: {filename.replace('_', ' ').replace('-', ' ').title()}"
+                
                 post_data = {
-                    'title': parsed['metadata'].get('title', filename),
+                    'title': title,
                     'date': parsed['metadata'].get('date', ''),
                     'type': parsed['metadata'].get('type', content_type),
                     'category': parsed['metadata'].get('category', 'Uncategorized'),
