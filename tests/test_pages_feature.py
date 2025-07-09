@@ -350,9 +350,13 @@ type: "page"
         content = response.text
         
         # Check that the new page button structure exists
-        assert 'admin-new-post' in content  # CSS class for the new post button
-        assert 'admin/new-post' in content  # Link to new post page
+        assert 'admin-new-page' in content  # CSS class for the new page button
+        assert 'admin/new-page' in content  # Link to new page endpoint
         assert 'style="display: none;"' in content  # Should be hidden by default, shown by JS
+        
+        # Check that the new page button has the correct styling
+        assert '+ New Page' in content
+        assert 'background: #17a2b8' in content  # Distinct color for page button
     
     def test_admin_status_endpoint_functionality(self):
         """Test the admin status endpoint that controls UI visibility."""
@@ -555,3 +559,267 @@ This is page {i} content.""")
         
         # Should contain the proper number of page cards
         assert content.count('<div class="page-card">') == 3
+
+
+class TestPagesAdminFeatures:
+    """Specific tests for the new admin features added to pages."""
+    
+    @pytest.fixture(autouse=True)
+    def setup_admin_test_environment(self):
+        """Set up test environment for admin functionality tests."""
+        # Create temporary directories
+        self.test_dir = Path(tempfile.mkdtemp())
+        self.content_dir = self.test_dir / "content"
+        self.pages_dir = self.content_dir / "pages"
+        self.output_dir = self.test_dir / "output"
+        self.themes_dir = self.test_dir / "themes" / "test"
+        
+        # Create directory structure
+        self.pages_dir.mkdir(parents=True, exist_ok=True)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.themes_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Use real templates from the test theme
+        self.real_templates_dir = Path.cwd() / "themes" / "test" / "templates"
+        self.templates_dir = self.themes_dir / "templates"
+        self.templates_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Copy real templates to test directory
+        self.copy_real_templates()
+        
+        # Create sample page
+        self.create_sample_page()
+        
+        # Set up config for testing
+        self.original_config = config.copy()
+        config.update({
+            "root_dir": self.test_dir,
+            "output_dir": self.output_dir,
+            "admin_password": "test_password",
+            "session_secret": "test_secret_key_for_sessions"
+        })
+        
+        # Set environment variable for SESSION_SECRET
+        os.environ["SESSION_SECRET"] = "test_secret_key_for_sessions"
+        
+        # Create test client
+        self.client = TestClient(app)
+        
+        yield
+        
+        # Cleanup
+        config.clear()
+        config.update(self.original_config)
+        if "SESSION_SECRET" in os.environ:
+            del os.environ["SESSION_SECRET"]
+        shutil.rmtree(self.test_dir)
+    
+    def copy_real_templates(self):
+        """Copy real templates from the test theme to the test directory."""
+        if not self.real_templates_dir.exists():
+            raise FileNotFoundError(f"Real templates directory not found: {self.real_templates_dir}")
+        
+        # Copy all template files
+        for template_file in self.real_templates_dir.glob("*.html"):
+            destination = self.templates_dir / template_file.name
+            destination.write_text(template_file.read_text())
+    
+    def create_sample_page(self):
+        """Create a sample page for testing."""
+        frontmatter = f"""---
+title: "Test Page"
+date: "2024-01-01"
+category: "Testing"
+type: "page"
+---
+This is a test page with **markdown** formatting."""
+        
+        page_file = self.pages_dir / "test.md"
+        page_file.write_text(frontmatter)
+    
+    def generate_test_site(self):
+        """Generate the test site using the generator."""
+        generator = SiteGenerator(theme="test")
+        
+        # Set the generator to use our test directories
+        generator.root_dir = self.test_dir
+        generator.content_dir = self.content_dir
+        generator.pages_dir = self.pages_dir
+        generator.output_dir = self.output_dir
+        generator.themes_dir = self.test_dir / "themes"
+        generator.templates_dir = self.templates_dir
+        
+        # Reinitialize Jinja2 environment with test templates
+        from jinja2 import Environment, FileSystemLoader
+        generator.jinja_env = Environment(loader=FileSystemLoader(generator.templates_dir))
+        generator.jinja_env.filters['strftime'] = generator.format_date
+        generator.jinja_env.filters['dd_mm_yyyy'] = lambda date_str: generator.format_date(date_str, '%d-%m-%Y')
+        generator.jinja_env.filters['markdown'] = generator.markdown_to_html
+        
+        # Load pages
+        pages = generator.load_posts('pages')
+        
+        # Generate individual pages
+        generator.generate_individual_posts(pages, 'pages')
+        
+        # Generate pages listing
+        generator.generate_pages_listing(pages)
+        
+        return pages
+    
+    def test_individual_page_edit_button_works(self):
+        """Test that the edit button on individual pages works correctly."""
+        # Generate the site first
+        pages = self.generate_test_site()
+        
+        # Test the individual page
+        page_url = f"/{pages[0]['filename']}.html"
+        response = self.client.get(page_url)
+        content = response.text
+        
+        # Check that the edit button exists and has the correct link
+        assert 'admin-btn-edit' in content
+        expected_edit_link = f'/admin/edit-page/{pages[0]["filename"]}'
+        assert expected_edit_link in content
+        
+        # Check that the edit button is properly styled using CSS classes
+        assert 'class="admin-btn-edit"' in content
+        
+        # Verify the edit button doesn't have inline styles (should use CSS)
+        edit_button_line = [line for line in content.split('\n') if 'admin-btn-edit' in line and 'href=' in line][0]
+        assert 'style=' not in edit_button_line or 'style="display: none;"' in edit_button_line
+    
+    def test_individual_page_delete_button_uses_correct_function(self):
+        """Test that the delete button on individual pages calls deletePage function."""
+        # Generate the site first
+        pages = self.generate_test_site()
+        
+        # Test the individual page
+        page_url = f"/{pages[0]['filename']}.html"
+        response = self.client.get(page_url)
+        content = response.text
+        
+        # Check that the delete button calls deletePage function, not deletePost
+        assert 'admin-btn-delete' in content
+        assert f'deletePage(\'{pages[0]["filename"]}\')' in content
+        assert f'deletePost(\'{pages[0]["filename"]}\')' not in content
+        
+        # Check that the delete button is properly styled using CSS classes
+        assert 'class="admin-btn-delete"' in content
+    
+    def test_pages_listing_has_admin_controls(self):
+        """Test that the pages listing page has admin controls for each page."""
+        # Generate the site first
+        pages = self.generate_test_site()
+        
+        response = self.client.get("/pages/")
+        content = response.text
+        
+        # Check that admin controls exist in the listing
+        assert 'admin-controls' in content
+        
+        # Check that there are edit and delete buttons for each page
+        edit_button_count = content.count('admin-btn-edit')
+        delete_button_count = content.count('admin-btn-delete')
+        
+        # Should have one edit and one delete button per page
+        assert edit_button_count >= len(pages)
+        assert delete_button_count >= len(pages)
+        
+        # Check that the edit links are correct
+        for page in pages:
+            expected_edit_link = f'/admin/edit-page/{page["filename"]}'
+            assert expected_edit_link in content
+        
+        # Check that delete buttons call deletePage function
+        for page in pages:
+            assert f'deletePage(\'{page["filename"]}\')' in content
+    
+    def test_new_page_button_in_navigation(self):
+        """Test that the navigation menu includes a 'New Page' button."""
+        # Generate the site first
+        self.generate_test_site()
+        
+        response = self.client.get("/pages/")
+        content = response.text
+        
+        # Check that the new page button exists
+        assert 'admin-new-page' in content
+        assert '/admin/new-page' in content
+        assert '+ New Page' in content
+        
+        # Check that it has the correct styling
+        assert 'background: #17a2b8' in content  # Distinct color for page button
+        
+        # Check that it's hidden by default
+        assert 'style="display: none;"' in content
+    
+    def test_delete_page_javascript_function_exists(self):
+        """Test that the deletePage JavaScript function exists in the template."""
+        # Generate the site first
+        self.generate_test_site()
+        
+        response = self.client.get("/pages/")
+        content = response.text
+        
+        # Check that the deletePage function exists
+        assert 'async function deletePage' in content
+        assert 'Are you sure you want to delete this page?' in content
+        assert 'Page deleted successfully. Redirecting to pages...' in content
+        assert 'window.location.href = \'/pages/\'' in content
+    
+    def test_admin_controls_use_css_classes_not_inline_styles(self):
+        """Test that admin controls use CSS classes instead of inline styles."""
+        # Generate the site first
+        self.generate_test_site()
+        
+        response = self.client.get("/pages/")
+        content = response.text
+        
+        # Check that the admin buttons use CSS classes
+        assert 'class="admin-btn-edit"' in content
+        assert 'class="admin-btn-delete"' in content
+        
+        # Check that they don't have extensive inline styles
+        lines_with_admin_btn = [line for line in content.split('\n') if 'admin-btn-' in line and 'class=' in line]
+        
+        for line in lines_with_admin_btn:
+            # Should not have background color inline styles
+            assert 'style="background:' not in line
+            assert 'style="color:' not in line
+            assert 'style="padding:' not in line
+            
+            # Only display: none should be inline
+            if 'style=' in line:
+                assert 'style="display: none;"' in line
+    
+    def test_admin_controls_consistent_across_pages_and_individual_pages(self):
+        """Test that admin controls are consistent between pages listing and individual pages."""
+        # Generate the site first
+        pages = self.generate_test_site()
+        
+        # Test pages listing
+        listing_response = self.client.get("/pages/")
+        listing_content = listing_response.text
+        
+        # Test individual page
+        individual_response = self.client.get(f"/{pages[0]['filename']}.html")
+        individual_content = individual_response.text
+        
+        # Both should have admin controls
+        assert 'admin-controls' in listing_content
+        assert 'admin-controls' in individual_content
+        
+        # Both should have edit and delete buttons
+        assert 'admin-btn-edit' in listing_content
+        assert 'admin-btn-edit' in individual_content
+        assert 'admin-btn-delete' in listing_content
+        assert 'admin-btn-delete' in individual_content
+        
+        # Both should have the checkAdminStatus function
+        assert 'checkAdminStatus' in listing_content
+        assert 'checkAdminStatus' in individual_content
+        
+        # Both should have controls hidden by default
+        assert 'style="display: none;"' in listing_content
+        assert 'style="display: none;"' in individual_content
