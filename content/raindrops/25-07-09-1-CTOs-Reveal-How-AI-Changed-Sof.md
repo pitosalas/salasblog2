@@ -1,5 +1,9 @@
 ---
 broken: false
+cache:
+  created: '2025-07-09T14:13:40.229Z'
+  size: 2115040
+  status: ready
 collection_id: 17452361
 cover: https://cdn.prod.website-files.com/6660a5bfdcf6c5fbf039f446/686d13100118e9c9497733ad_CTOs%20Reveal%20How%20AI%20Changed%20Software%20Developer%20Hiring%20in%202025.jpg
 creator_ref:
