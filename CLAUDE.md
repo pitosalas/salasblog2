@@ -24,6 +24,8 @@ This project uses `uv` for Python package and environment management:
 - Any if else statement with more than three branches is questionable. Try to write it another way.
 - **Use as little JavaScript as possible**
 - Keep css as simple as possible
+- Never put css inside html files. Use existing css files or modify existing css files.
+- When working on themes, focus on the default "test" theme
 
 ## Common Commands
 

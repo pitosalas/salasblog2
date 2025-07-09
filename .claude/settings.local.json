@@ -7,8 +7,7 @@
     ],
     "deny": [
       "Read(output)",
-      "Read(content_*)",
-      "Read(content)"
+      "Read(content_*)"
     ]
   }
 }
