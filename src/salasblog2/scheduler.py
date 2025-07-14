@@ -234,34 +234,48 @@ class Scheduler:
         except Exception:
             return False
 
+    def _get_sync_method(self, sync_type: str):
+        """Get the appropriate sync method for the given type"""
+        if sync_type == 'git':
+            return self.sync_to_github, "Git"
+        else:
+            return self.sync_raindrops, "Raindrop"
+    
+    def _run_async_in_thread(self, coro):
+        """Run an async coroutine in a new event loop (for threading)"""
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        try:
+            return loop.run_until_complete(coro)
+        finally:
+            loop.close()
+    
+    def _handle_sync_result(self, success: bool, operation: str, is_startup: bool):
+        """Handle the result of a sync operation"""
+        status = "Startup" if is_startup else "Scheduled"
+        if success:
+            logger.info(f"{status} {operation} sync completed successfully")
+        else:
+            logger.warning(f"{status} {operation} sync failed")
+    
+    def _cleanup_startup_job(self, sync_type: str, operation: str):
+        """Clean up startup job after completion"""
+        schedule.clear(f'{sync_type}_startup')
+        logger.info(f"Startup {operation} sync job cancelled (one-time only)")
+
     def _sync_wrapper(self, sync_type: str, is_startup: bool = False):
         """Generic wrapper for sync operations"""
+        sync_method, operation = self._get_sync_method(sync_type)
+        
         try:
-            # Create new event loop for this thread
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            
-            if sync_type == 'git':
-                success = loop.run_until_complete(self.sync_to_github())
-                operation = "Git"
-            else:
-                success = loop.run_until_complete(self.sync_raindrops())
-                operation = "Raindrop"
-                
-            loop.close()
-            
-            status = "Startup" if is_startup else "Scheduled"
-            if success:
-                logger.info(f"{status} {operation} sync completed successfully")
-            else:
-                logger.warning(f"{status} {operation} sync failed")
+            success = self._run_async_in_thread(sync_method())
+            self._handle_sync_result(success, operation, is_startup)
                 
         except Exception as e:
             logger.error(f"Error in {sync_type} sync: {e}")
         finally:
             if is_startup:
-                schedule.clear(f'{sync_type}_startup')
-                logger.info(f"Startup {operation} sync job cancelled (one-time only)")
+                self._cleanup_startup_job(sync_type, operation)
 
     def start_scheduler(self, git_interval_hours: float = None, raindrop_interval_hours: float = None):
         """Start the background scheduler with support for fractional hours"""
