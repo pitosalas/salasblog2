@@ -26,7 +26,10 @@
                 <li><a href="/raindrops/">Link Blog</a></li>
                 <li><a href="/pages/">Pages</a></li>
                 <li class="admin-new-post" style="display: none;">
-                    <a href="/admin/new-post" style="background: #28a745; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 14px; margin-right: 10px;">+ New Post</a>
+                    <a href="/admin/new-post" class="admin-nav-btn new-post">+ New Post</a>
+                </li>
+                <li class="admin-new-page" style="display: none;">
+                    <a href="/admin/new-page" class="admin-nav-btn new-page">+ New Page</a>
                 </li>
                 <li class="search-container">
                     <input type="search" id="search-input" placeholder="Search..." aria-label="Search">
@@ -57,14 +60,18 @@
                 
                 if (data.authenticated) {
                     // Show admin controls
-                    const adminControls = document.querySelector('.admin-controls');
+                    const adminControls = document.querySelectorAll('.admin-controls');
                     const newPostBtn = document.querySelector('.admin-new-post');
+                    const newPageBtn = document.querySelector('.admin-new-page');
                     
-                    if (adminControls) {
-                        adminControls.style.display = 'block';
-                    }
+                    adminControls.forEach(control => {
+                        control.style.display = 'block';
+                    });
                     if (newPostBtn) {
                         newPostBtn.style.display = 'block';
+                    }
+                    if (newPageBtn) {
+                        newPageBtn.style.display = 'block';
                     }
                     
                     // Add hover effects to admin buttons
@@ -103,6 +110,29 @@
                 }
             } catch (error) {
                 alert(`Error deleting post: ${error.message}`);
+            }
+        }
+        
+        // Delete page function
+        async function deletePage(filename) {
+            if (!confirm('Are you sure you want to delete this page? This action cannot be undone.')) {
+                return;
+            }
+            
+            try {
+                const response = await fetch(`/admin/delete-post/${filename}`, {
+                    method: 'POST'
+                });
+                
+                if (response.ok) {
+                    alert('Page deleted successfully. Redirecting to pages...');
+                    window.location.href = '/pages/';
+                } else {
+                    const data = await response.json();
+                    alert(`Failed to delete page: ${data.detail || 'Unknown error'}`);
+                }
+            } catch (error) {
+                alert(`Error deleting page: ${error.message}`);
             }
         }
         

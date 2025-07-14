@@ -22,6 +22,11 @@
                     <span class="page-category">{{ page.category }}</span>
                 {% endif %}
             </div>
+            
+            <div class="admin-controls" style="display: none;">
+                <a href="/admin/edit-page/{{ page.filename }}.md" class="admin-btn-edit">Edit</a>
+                <button onclick="deletePage('{{ page.filename }}')" class="admin-btn-delete">Delete</button>
+            </div>
         </div>
         {% endfor %}
     </div>

@@ -5,6 +5,11 @@
 {% block content %}
 <div class="page-header">
     <h1>{{ page.title }}</h1>
+    
+    <div class="admin-controls" style="display: none;">
+        <a href="/admin/edit-page/{{ page.filename }}.md" class="admin-btn-edit">Edit</a>
+        <button onclick="deletePage('{{ page.filename }}')" class="admin-btn-delete">Delete</button>
+    </div>
 </div>
 
 <section class="page-content">

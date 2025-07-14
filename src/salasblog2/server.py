@@ -197,15 +197,11 @@ app = FastAPI(
 # Add session middleware with validated secret
 app.add_middleware(SessionMiddleware, secret_key=config.get("session_secret", "fallback-key"))
 
-# Temporarily use custom endpoints instead of StaticFiles mounts due to HEAD/GET issues
-@app.get("/static/{file_path:path}")
-async def serve_static_files(file_path: str):
-    """Custom static file serving to avoid HEAD/GET issues"""
-    logger = logging.getLogger(__name__)
-    logger.error(f"🔥 STATIC FILE REQUEST: {file_path}, config={config}")
-    
+# Custom endpoints to fix FastAPI StaticFiles HEAD/GET inconsistency
+@app.api_route("/static/{file_path:path}", methods=["GET", "HEAD"])
+async def serve_static_files(file_path: str, request: Request):
+    """Custom static file serving with consistent GET/HEAD behavior"""
     if not config.get("output_dir"):
-        logger.error(f"🔥 NO OUTPUT DIR: config={config}")
         raise HTTPException(status_code=404, detail="No output directory configured")
     
     full_path = config["output_dir"] / "static" / file_path
@@ -225,14 +221,13 @@ async def serve_static_files(file_path: str):
         else:
             content_type = "application/octet-stream"
     
-    return Response(
-        content=full_path.read_bytes(),
-        media_type=content_type
-    )
+    # Return content for GET, empty for HEAD
+    content = full_path.read_bytes() if request.method == "GET" else b""
+    return Response(content=content, media_type=content_type)
 
-@app.get("/blog/{file_path:path}")
-async def serve_blog_files(file_path: str):
-    """Custom blog file serving"""
+@app.api_route("/blog/{file_path:path}", methods=["GET", "HEAD"])
+async def serve_blog_files(file_path: str, request: Request):
+    """Custom blog file serving with consistent GET/HEAD behavior"""
     if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="Not found")
     
@@ -249,14 +244,13 @@ async def serve_blog_files(file_path: str):
     if not content_type:
         content_type = "text/html"
     
-    return Response(
-        content=full_path.read_bytes(),
-        media_type=content_type
-    )
+    # Return content for GET, empty for HEAD
+    content = full_path.read_bytes() if request.method == "GET" else b""
+    return Response(content=content, media_type=content_type)
 
-@app.get("/pages/{file_path:path}")
-async def serve_pages_files(file_path: str):
-    """Custom pages file serving"""
+@app.api_route("/pages/{file_path:path}", methods=["GET", "HEAD"])
+async def serve_pages_files(file_path: str, request: Request):
+    """Custom pages file serving with consistent GET/HEAD behavior"""
     if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="Not found")
     
@@ -273,10 +267,32 @@ async def serve_pages_files(file_path: str):
     if not content_type:
         content_type = "text/html"
     
-    return Response(
-        content=full_path.read_bytes(),
-        media_type=content_type
-    )
+    # Return content for GET, empty for HEAD
+    content = full_path.read_bytes() if request.method == "GET" else b""
+    return Response(content=content, media_type=content_type)
+
+@app.api_route("/raindrops/{file_path:path}", methods=["GET", "HEAD"])
+async def serve_raindrops_files(file_path: str, request: Request):
+    """Custom raindrops file serving with consistent GET/HEAD behavior"""
+    if not config.get("output_dir"):
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    full_path = config["output_dir"] / "raindrops" / file_path
+    
+    # Handle directory index
+    if full_path.is_dir():
+        full_path = full_path / "index.html"
+    
+    if not full_path.exists() or not full_path.is_file():
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    content_type, _ = mimetypes.guess_type(str(full_path))
+    if not content_type:
+        content_type = "text/html"
+    
+    # Return content for GET, empty for HEAD
+    content = full_path.read_bytes() if request.method == "GET" else b""
+    return Response(content=content, media_type=content_type)
 
 # Mount static files if output directory exists
 def mount_static_files():
@@ -1395,16 +1411,14 @@ def create_xmlrpc_fault_with_code(fault_code, message):
 
 # Root level files served by catch-all route (index.html, etc.)  
 # This MUST be the last route defined to ensure proper precedence
-@app.get("/{path:path}")
-async def serve_root_files(path: str):
+@app.api_route("/{path:path}", methods=["GET", "HEAD"])
+async def serve_root_files(path: str, request: Request):
     """Serve root-level files like index.html, robots.txt, etc."""
-    # Debug logging
-    logger = logging.getLogger(__name__)
-    logger.error(f"❌ CATCH-ALL ROUTE HIT: {path} - This should not happen for static/blog/pages!")
-    
     # Only handle root-level files, not paths that start with mounted directories
     if '/' in path or path.startswith(('blog', 'pages', 'static')):
-        logger.error(f"❌ Rejecting path {path} - should have been handled by mounts!")
+        raise HTTPException(status_code=404, detail="Not found")
+    
+    if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="Not found")
     
     file_path = config["output_dir"] / path
@@ -1423,10 +1437,9 @@ async def serve_root_files(path: str):
         if not content_type:
             content_type = "text/html" if file_path.suffix == ".html" else "text/plain"
         
-        return Response(
-            content=file_path.read_bytes(),
-            media_type=content_type
-        )
+        # Return content for GET, empty for HEAD
+        content = file_path.read_bytes() if request.method == "GET" else b""
+        return Response(content=content, media_type=content_type)
     
     # Return 404 for missing files
     raise HTTPException(status_code=404, detail="Not found")

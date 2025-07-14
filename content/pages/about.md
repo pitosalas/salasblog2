@@ -1,5 +1,5 @@
 ---
-title: About Me: Pito Salas
+title: Pito Salas"
 date: july-6-2025
 ---
 

@@ -10,119 +10,172 @@ import time
 from datetime import datetime
 from pathlib import Path
 from threading import Thread
-from typing import Optional
+from typing import Optional, List
 
 import schedule
 
 logger = logging.getLogger(__name__)
 
+
+class SchedulerConfig:
+    """Configuration for scheduler paths and intervals"""
+    
+    def __init__(self):
+        self.data_dir = Path("/data/content")
+        self.app_dir = Path("/app")
+        self.content_dir = Path("/app/content")
+        self.git_sync_hours = float(os.environ.get('SCHED_GITSYNC_HRS', 6.0))
+        self.raindrop_sync_hours = float(os.environ.get('SCHED_RAINSYNC_HRS', 2.0))
+        self.git_branch = os.getenv("GIT_BRANCH", "main")
+
+
 class Scheduler:
     """Handles scheduled Git synchronization and Raindrop sync operations"""
     
-    def __init__(self, content_dir: Path = Path("/app/content")):
-        self.content_dir = content_dir
-        self.git_dir = Path("/app")
+    def __init__(self, content_dir: Path = None):
+        self.config = SchedulerConfig()
+        if content_dir:
+            self.config.content_dir = content_dir
         self.is_running = False
         self.last_git_sync = None
         self.last_raindrop_sync = None
+        self.recent_errors = []
         
+    def _run_command_with_retry(self, cmd: List[str], retries: int = 2, timeout: int = 60) -> subprocess.CompletedProcess:
+        """Run command with simple retry logic"""
+        for attempt in range(retries + 1):
+            try:
+                return subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, check=True)
+            except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
+                if attempt == retries:
+                    raise
+                logger.warning(f"Command failed (attempt {attempt + 1}), retrying: {e}")
+                time.sleep(5)
+    
+    def _log_error(self, error: str):
+        """Log error and keep recent errors for debugging"""
+        logger.error(error)
+        self.recent_errors.append(f"{datetime.now().strftime('%H:%M:%S')}: {error}")
+        # Keep only last 10 errors
+        if len(self.recent_errors) > 10:
+            self.recent_errors.pop(0)
+    
+    def _copy_content_to_git(self) -> bool:
+        """Copy /data/content to /app/content for git operations"""
+        if not self.config.data_dir.exists():
+            self._log_error("/data/content does not exist, cannot sync to GitHub")
+            return False
+            
+        # Ensure /app/content exists
+        self.config.content_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Use rsync to sync /data/content to /app/content
+        try:
+            result = self._run_command_with_retry([
+                "rsync", "-av", "--delete", 
+                f"{self.config.data_dir}/", 
+                f"{self.config.content_dir}/"
+            ])
+            logger.info("Successfully copied /data/content to /app/content")
+            return True
+        except Exception as e:
+            self._log_error(f"Failed to copy /data/content to /app/content: {e}")
+            return False
+    
+    def _has_git_changes(self) -> bool:
+        """Check if there are any staged changes"""
+        try:
+            result = subprocess.run(
+                ["git", "diff", "--cached", "--name-only"],
+                capture_output=True, text=True, timeout=10
+            )
+            has_changes = bool(result.stdout.strip())
+            if has_changes:
+                logger.info(f"Content files to commit: {result.stdout.strip()}")
+            return has_changes
+        except Exception as e:
+            self._log_error(f"Failed to check git changes: {e}")
+            return False
+    
+    def _commit_and_push(self) -> bool:
+        """Create commit and push to GitHub"""
+        try:
+            # Create commit with timestamp
+            commit_message = f"Automated sync from /data/content - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            logger.info(f"Creating commit: {commit_message}")
+            
+            self._run_command_with_retry(["git", "commit", "-m", commit_message], timeout=30)
+            
+            # Push to GitHub
+            logger.info(f"Pushing to GitHub branch: {self.config.git_branch}")
+            self._run_command_with_retry(["git", "push", "origin", self.config.git_branch], timeout=60)
+            
+            logger.info("Successfully synced content to GitHub")
+            return True
+            
+        except Exception as e:
+            self._log_error(f"Failed to commit and push: {e}")
+            return False
+    
+    def _get_git_remote(self) -> str:
+        """Get git remote URL for debugging"""
+        try:
+            result = subprocess.run(
+                ["git", "remote", "-v"],
+                capture_output=True, text=True, timeout=5
+            )
+            return result.stdout.strip() if result.returncode == 0 else "Unknown"
+        except Exception:
+            return "Error getting remote"
+
     async def sync_to_github(self) -> bool:
         """
         Sync /data/content to GitHub repository via /app/content
         Volume-first architecture: /data/content → /app/content → GitHub
-        Returns True if successful, False otherwise
         """
         try:
             logger.info("Starting scheduled Git sync to GitHub...")
             
             # Change to git directory
-            os.chdir(self.git_dir)
+            os.chdir(self.config.app_dir)
             
             # Check if we have git credentials
             if not self._check_git_credentials():
                 logger.warning("Git credentials not configured, skipping sync")
                 return False
             
-            # Phase 2: Copy /data/content to /app/content for git operations
-            logger.info("Copying /data/content to /app/content for git sync...")
-            if not os.path.exists("/data/content"):
-                logger.warning("/data/content does not exist, cannot sync to GitHub")
+            # Copy content from data to app directory
+            if not self._copy_content_to_git():
                 return False
-                
-            # Ensure /app/content exists
-            os.makedirs("/app/content", exist_ok=True)
-            
-            # Use rsync to sync /data/content to /app/content
-            rsync_result = subprocess.run(
-                ["rsync", "-av", "--delete", "/data/content/", "/app/content/"],
-                capture_output=True, text=True, timeout=60
-            )
-            
-            if rsync_result.returncode != 0:
-                logger.error(f"Failed to copy /data/content to /app/content: {rsync_result.stderr}")
-                return False
-                
-            logger.info("Successfully copied /data/content to /app/content")
             
             # Add content directory changes
             logger.info("Adding content changes to git...")
-            subprocess.run(
-                ["git", "add", "content/"],
-                capture_output=True, text=True, timeout=30, check=True
-            )
+            try:
+                subprocess.run(
+                    ["git", "add", "content/"],
+                    capture_output=True, text=True, timeout=30, check=True
+                )
+            except Exception as e:
+                self._log_error(f"Failed to add content to git: {e}")
+                return False
             
-            # Check if there are any staged changes (content-related)
-            result = subprocess.run(
-                ["git", "diff", "--cached", "--name-only"],
-                capture_output=True, text=True, timeout=10
-            )
-            
-            if not result.stdout.strip():
+            # Check if there are any changes
+            if not self._has_git_changes():
                 logger.info("No content changes to sync to GitHub")
                 return True
             
-            logger.info(f"Content files to commit: {result.stdout.strip()}")
-            
-            # Create commit with timestamp
-            commit_message = f"Automated sync from /data/content - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-            logger.info(f"Creating commit: {commit_message}")
-            
-            subprocess.run(
-                ["git", "commit", "-m", commit_message],
-                capture_output=True, text=True, timeout=30, check=True
-            )
-            
-            # Push to GitHub
-            git_branch = os.getenv("GIT_BRANCH", "main")
-            logger.info(f"Pushing to GitHub branch: {git_branch}")
-            result = subprocess.run(
-                ["git", "push", "origin", git_branch],
-                capture_output=True, text=True, timeout=60
-            )
-            
-            if result.returncode == 0:
-                logger.info("Successfully synced content to GitHub")
+            # Commit and push changes
+            success = self._commit_and_push()
+            if success:
                 self.last_git_sync = datetime.now()
-                return True
-            else:
-                logger.error(f"Git push failed: {result.stderr}")
-                return False
+            return success
                 
-        except subprocess.CalledProcessError as e:
-            logger.error(f"Git command failed: {e.stderr if e.stderr else str(e)}")
-            return False
-        except subprocess.TimeoutExpired:
-            logger.error("Git operation timed out")
-            return False
         except Exception as e:
-            logger.error(f"Unexpected error during Git sync: {e}")
+            self._log_error(f"Unexpected error during Git sync: {e}")
             return False
-    
+
     async def sync_raindrops(self) -> bool:
-        """
-        Sync raindrops from Raindrop.io and regenerate site
-        Returns True if successful, False otherwise
-        """
+        """Sync raindrops from Raindrop.io and regenerate site"""
         try:
             logger.info("Starting scheduled Raindrop sync...")
             
@@ -157,9 +210,9 @@ class Scheduler:
             return True
             
         except Exception as e:
-            logger.error(f"Unexpected error during Raindrop sync: {e}")
+            self._log_error(f"Unexpected error during Raindrop sync: {e}")
             return False
-    
+
     def _check_git_credentials(self) -> bool:
         """Check if Git credentials are properly configured"""
         try:
@@ -180,72 +233,72 @@ class Scheduler:
             
         except Exception:
             return False
-    
-    def _git_sync_wrapper(self):
-        """Wrapper for the async git sync function to run in scheduler"""
+
+    def _sync_wrapper(self, sync_type: str, is_startup: bool = False):
+        """Generic wrapper for sync operations"""
         try:
             # Create new event loop for this thread
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
-            success = loop.run_until_complete(self.sync_to_github())
+            
+            if sync_type == 'git':
+                success = loop.run_until_complete(self.sync_to_github())
+                operation = "Git"
+            else:
+                success = loop.run_until_complete(self.sync_raindrops())
+                operation = "Raindrop"
+                
             loop.close()
             
+            status = "Startup" if is_startup else "Scheduled"
             if success:
-                logger.info("Scheduled Git sync completed successfully")
+                logger.info(f"{status} {operation} sync completed successfully")
             else:
-                logger.warning("Scheduled Git sync failed")
+                logger.warning(f"{status} {operation} sync failed")
                 
         except Exception as e:
-            logger.error(f"Error in scheduled git sync: {e}")
-    
-    def _raindrop_sync_wrapper(self):
-        """Wrapper for the async raindrop sync function to run in scheduler"""
-        try:
-            # Create new event loop for this thread
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            success = loop.run_until_complete(self.sync_raindrops())
-            loop.close()
-            
-            if success:
-                logger.info("Scheduled Raindrop sync completed successfully")
-            else:
-                logger.warning("Scheduled Raindrop sync failed")
-                
-        except Exception as e:
-            logger.error(f"Error in scheduled raindrop sync: {e}")
-    
+            logger.error(f"Error in {sync_type} sync: {e}")
+        finally:
+            if is_startup:
+                schedule.clear(f'{sync_type}_startup')
+                logger.info(f"Startup {operation} sync job cancelled (one-time only)")
+
     def start_scheduler(self, git_interval_hours: float = None, raindrop_interval_hours: float = None):
         """Start the background scheduler with support for fractional hours"""
         if self.is_running:
             logger.warning("Scheduler is already running")
             return
         
-        # Get intervals from environment variables with new names
-        if git_interval_hours is None:
-            git_interval_hours = float(os.environ.get('SCHED_GITSYNC_HRS', 6.0))
-        
-        if raindrop_interval_hours is None:
-            raindrop_interval_hours = float(os.environ.get('SCHED_RAINSYNC_HRS', 2.0))
+        # Use provided intervals or config defaults
+        git_hours = git_interval_hours or self.config.git_sync_hours
+        raindrop_hours = raindrop_interval_hours or self.config.raindrop_sync_hours
         
         logger.info(f"Starting scheduler:")
-        logger.info(f"  Git sync: every {git_interval_hours} hours")
-        logger.info(f"  Raindrop sync: every {raindrop_interval_hours} hours")
+        logger.info(f"  Git sync: every {git_hours} hours")
+        logger.info(f"  Raindrop sync: every {raindrop_hours} hours")
         
         # Convert fractional hours to minutes for the schedule library
-        git_minutes = int(git_interval_hours * 60)
-        raindrop_minutes = int(raindrop_interval_hours * 60)
+        git_minutes = int(git_hours * 60)
+        raindrop_minutes = int(raindrop_hours * 60)
         
         # Schedule the sync jobs
         if git_minutes > 0:
-            schedule.every(git_minutes).minutes.do(self._git_sync_wrapper).tag('git_sync')
-            # Also run a git sync 10 minutes after startup
-            schedule.every(10).minutes.do(self._git_sync_wrapper).tag('git_startup')
+            schedule.every(git_minutes).minutes.do(
+                lambda: self._sync_wrapper('git', False)
+            ).tag('git_sync')
+            # Run a one-time git sync 10 minutes after startup
+            schedule.every(10).minutes.do(
+                lambda: self._sync_wrapper('git', True)
+            ).tag('git_startup')
         
         if raindrop_minutes > 0:
-            schedule.every(raindrop_minutes).minutes.do(self._raindrop_sync_wrapper).tag('raindrop_sync')
-            # Also run a raindrop sync 5 minutes after startup
-            schedule.every(5).minutes.do(self._raindrop_sync_wrapper).tag('raindrop_startup')
+            schedule.every(raindrop_minutes).minutes.do(
+                lambda: self._sync_wrapper('raindrop', False)
+            ).tag('raindrop_sync')
+            # Run a one-time raindrop sync 5 minutes after startup
+            schedule.every(5).minutes.do(
+                lambda: self._sync_wrapper('raindrop', True)
+            ).tag('raindrop_startup')
         
         self.is_running = True
         
@@ -263,13 +316,13 @@ class Scheduler:
         scheduler_thread.start()
         
         logger.info("Scheduler started successfully")
-    
+
     def stop_scheduler(self):
         """Stop the background scheduler"""
         self.is_running = False
         schedule.clear()
         logger.info("Git scheduler stopped")
-    
+
     def get_status(self) -> dict:
         """Get scheduler status information"""
         raindrop_token = os.getenv("RAINDROP_TOKEN")
@@ -280,9 +333,29 @@ class Scheduler:
             "next_jobs": [str(job) for job in schedule.jobs],
             "git_configured": self._check_git_credentials(),
             "raindrop_configured": bool(raindrop_token),
-            "git_interval_hours": float(os.environ.get('SCHED_GITSYNC_HRS', 6.0)),
-            "raindrop_interval_hours": float(os.environ.get('SCHED_RAINSYNC_HRS', 2.0))
+            "git_interval_hours": self.config.git_sync_hours,
+            "raindrop_interval_hours": self.config.raindrop_sync_hours
         }
+
+    def get_detailed_status(self) -> dict:
+        """Get detailed status for debugging"""
+        return {
+            **self.get_status(),
+            "data_dir_exists": self.config.data_dir.exists(),
+            "content_dir_exists": self.config.content_dir.exists(),
+            "git_remote": self._get_git_remote(),
+            "last_sync_errors": self.recent_errors,
+            "file_counts": {
+                "data_content": len(list(self.config.data_dir.glob("**/*"))) if self.config.data_dir.exists() else 0,
+                "app_content": len(list(self.config.content_dir.glob("**/*"))) if self.config.content_dir.exists() else 0,
+            },
+            "config": {
+                "data_dir": str(self.config.data_dir),
+                "content_dir": str(self.config.content_dir),
+                "git_branch": self.config.git_branch
+            }
+        }
+
 
 # Global scheduler instance
 _scheduler_instance: Optional[Scheduler] = None
