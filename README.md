@@ -15,9 +15,12 @@ Python static site generator with FastAPI server, XML-RPC Blogger API, and Raind
 
 ## Installation
 
+This project uses `uv` for Python package and environment management:
+
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh  # Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh  # Install uv (or pip install uv)
 uv sync                                          # Install dependencies
+source .venv/bin/activate                        # Activate environment (or use uv run prefix)
 ```
 
 ## Quick Start
