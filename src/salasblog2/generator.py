@@ -282,7 +282,7 @@ class SiteGenerator:
         
         posts_per_page = 20  # Show 20 posts per page
         total_posts = len(posts)
-        total_pages = (total_posts + posts_per_page - 1) // posts_per_page  # Ceiling division
+        total_pages = max(1, (total_posts + posts_per_page - 1) // posts_per_page)  # Ensure at least 1 page
         
         template_name = f"{content_type}_list.html"
         
