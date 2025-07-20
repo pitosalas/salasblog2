@@ -845,11 +845,7 @@ async def new_post_page(request: Request):
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
     
-    # Get current date for default
-    current_date = datetime.now().strftime('%Y-%m-%d')
-    
     context = {
-        'current_date': current_date,
         'content_type': 'blog',
         'content_type_title': 'Post',
         'action_url': '/admin/new-post',
@@ -943,11 +939,7 @@ async def new_page_page(request: Request):
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
     
-    # Get current date for default
-    current_date = datetime.now().strftime('%Y-%m-%d')
-    
     context = {
-        'current_date': current_date,
         'content_type': 'page',
         'content_type_title': 'Page',
         'action_url': '/admin/new-page',
