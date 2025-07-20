@@ -736,11 +736,13 @@ async def sync_pages_from_repo():
     data_pages = Path("/data/content/pages")
     data_pages.mkdir(parents=True, exist_ok=True)
     
-    # Backup current pages (just in case)
-    backup_path = Path("/data/pages_backup_" + str(int(time.time())))
+    # Backup current pages as .md-old files (including subdirectories)
     if data_pages.exists() and any(data_pages.iterdir()):
-        logger.info(f"Backing up current pages to {backup_path}")
-        shutil.copytree(str(data_pages), str(backup_path))
+        logger.info("Backing up current pages as .md-old files")
+        for md_file in data_pages.rglob("*.md"):
+            backup_file = md_file.with_suffix(".md-old")
+            logger.info(f"Backing up {md_file.relative_to(data_pages)} to {backup_file.relative_to(data_pages)}")
+            shutil.copy2(str(md_file), str(backup_file))
     
     # Copy pages from repository to volume
     logger.info("Copying pages from /app/content/pages to /data/content/pages...")
@@ -752,20 +754,16 @@ async def sync_pages_from_repo():
     )
     
     if result.returncode != 0:
-        # Restore backup if copy failed
-        if backup_path.exists():
-            logger.error("Pages sync failed, restoring backup...")
-            shutil.rmtree(data_pages)
-            shutil.move(str(backup_path), str(data_pages))
+        # Restore from .md-old files if copy failed (including subdirectories)
+        logger.error("Pages sync failed, restoring from .md-old files...")
+        for backup_file in data_pages.rglob("*.md-old"):
+            original_file = backup_file.with_suffix(".md")
+            logger.info(f"Restoring {original_file.relative_to(data_pages)} from {backup_file.relative_to(data_pages)}")
+            shutil.copy2(str(backup_file), str(original_file))
         raise HTTPException(status_code=500, detail=f"Failed to sync pages: {result.stderr}")
     
-    # Clean up backup on success
-    if backup_path.exists():
-        logger.info(f"Removing backup {backup_path}")
-        shutil.rmtree(backup_path)
-    
-    # Count synced files
-    synced_files = list(data_pages.glob("*.md"))
+    # Count synced files (including subdirectories)
+    synced_files = list(data_pages.rglob("*.md"))
     
     logger.info(f"Successfully synced {len(synced_files)} page files from repository")
     
