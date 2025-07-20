@@ -113,18 +113,25 @@ def get_markdown_processor():
     """Get or create the singleton markdown processor."""
     global _md_processor
     if _md_processor is None:
-        _md_processor = markdown.Markdown(extensions=['meta', 'toc', 'codehilite'])
+        _md_processor = markdown.Markdown(extensions=['meta', 'toc', 'codehilite', 'tables', 'fenced_code', 'nl2br'])
     return _md_processor
 
 def process_markdown_to_html(content: str) -> str:
-    """Convert markdown content to HTML."""
+    """Convert markdown content to HTML with consistent processing."""
     if not content:
         return ''
+    
+    # Standardized text preprocessing for malformed links
+    # Convert "[ text ]( url )" to "[text](url)"
+    fixed_content = content.replace('[ ', '[')   # Remove space after opening bracket
+    fixed_content = fixed_content.replace(' ](', '](') # Remove space before closing bracket and opening paren
+    fixed_content = fixed_content.replace(']( ', '](') # Remove space after opening paren
+    fixed_content = fixed_content.replace(' )', ')')   # Remove space before closing paren
     
     # Reset the processor to avoid state issues between conversions
     processor = get_markdown_processor()
     processor.reset()
-    return processor.convert(content)
+    return processor.convert(fixed_content)
 
 
 def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:

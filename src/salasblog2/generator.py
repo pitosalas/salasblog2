@@ -71,18 +71,7 @@ class SiteGenerator:
     
     def markdown_to_html(self, text):
         """Custom Jinja2 filter for converting markdown to HTML"""
-        if not text:
-            return ''
-        
-        # Fix malformed markdown links with spaces around brackets/parentheses
-        # Convert "[ text ]( url )" to "[text](url)"
-        fixed_text = text
-        fixed_text = fixed_text.replace('[ ', '[')   # Remove space after opening bracket
-        fixed_text = fixed_text.replace(' ](', '](') # Remove space before closing bracket and opening paren
-        fixed_text = fixed_text.replace(']( ', '](') # Remove space after opening paren
-        fixed_text = fixed_text.replace(' )', ')')   # Remove space before closing paren
-        
-        return process_markdown_to_html(fixed_text)
+        return process_markdown_to_html(text)
         
     def load_posts(self, content_type):
         """Load and parse markdown files from a directory"""

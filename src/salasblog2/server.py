@@ -1000,17 +1000,8 @@ async def preview_markdown(request: Request, content: str = Form(...)):
         raise HTTPException(status_code=401, detail="Authentication required")
     
     try:
-        # Configure markdown with extensions
-        md = markdown.Markdown(extensions=[
-            'codehilite',
-            'tables', 
-            'toc',
-            'fenced_code',
-            'nl2br'
-        ])
-        
-        # Convert markdown to HTML
-        html = md.convert(content)
+        # Use standardized markdown processing
+        html = process_markdown_to_html(content)
         
         return JSONResponse(content={
             "status": "success",
@@ -1031,17 +1022,8 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
         raise HTTPException(status_code=401, detail="Authentication required")
     
     try:
-        # Configure markdown with extensions
-        md = markdown.Markdown(extensions=[
-            'codehilite',
-            'tables', 
-            'toc',
-            'fenced_code',
-            'nl2br'
-        ])
-        
-        # Convert markdown to HTML
-        html_content = md.convert(content)
+        # Use standardized markdown processing
+        html_content = process_markdown_to_html(content)
         
         context = {
             'title': title,
@@ -1068,17 +1050,8 @@ async def preview_new_post_html(request: Request, title: str = Form(...), conten
         raise HTTPException(status_code=401, detail="Authentication required")
     
     try:
-        # Configure markdown with extensions
-        md = markdown.Markdown(extensions=[
-            'codehilite',
-            'tables', 
-            'toc',
-            'fenced_code',
-            'nl2br'
-        ])
-        
-        # Convert markdown to HTML
-        html_content = md.convert(content)
+        # Use standardized markdown processing
+        html_content = process_markdown_to_html(content)
         
         # Generate filename preview
         def create_filename_from_title(title: str, date: str) -> str:
