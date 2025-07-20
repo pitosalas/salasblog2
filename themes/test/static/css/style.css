@@ -398,14 +398,35 @@ body {
 
 .post-content, .raindrop-content {
     margin-bottom: 1.5rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #333;
 }
 
-.post-content h1, .post-content h2, .post-content h3,
-.raindrop-content h1, .raindrop-content h2, .raindrop-content h3 {
+.post-content h1, .raindrop-content h1 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.post-content h2, .raindrop-content h2 {
+    font-size: 1.8rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.post-content h3, .raindrop-content h3 {
+    font-size: 1.4rem;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
-    color: #333;
+    color: #34495e;
+    font-weight: 500;
 }
 
 .post-content p, .raindrop-content p {
@@ -414,37 +435,88 @@ body {
 
 .post-content ul, .post-content ol,
 .raindrop-content ul, .raindrop-content ol {
-    margin-bottom: 1rem;
-    padding-left: 1.5rem;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+}
+
+.post-content ul li, .raindrop-content ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.post-content ul li::before, .raindrop-content ul li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: -1rem;
+}
+
+.post-content ol li, .raindrop-content ol li {
+    margin-bottom: 0.5rem;
+    counter-increment: item;
+}
+
+.post-content a, .raindrop-content a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.post-content a:hover, .raindrop-content a:hover {
+    color: #2980b9;
+    border-bottom-color: #2980b9;
 }
 
 .post-content blockquote, .raindrop-content blockquote {
-    margin: 1rem 0;
-    padding: 0.75rem 1rem;
-    border-left: 3px solid #ddd;
-    background: #f8f9fa;
-    border-radius: 0 3px 3px 0;
+    margin: 1.5rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 4px solid #3498db;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-content blockquote::before, .raindrop-content blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: #3498db;
+    position: absolute;
+    top: -0.5rem;
+    left: 0.5rem;
+    font-family: Georgia, serif;
 }
 
 .post-content code, .raindrop-content code {
-    background: #f4f4f4;
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
+    background: #f1f3f4;
+    color: #d73a49;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    border: 1px solid #e1e4e8;
 }
 
 .post-content pre, .raindrop-content pre {
-    background: #f4f4f4;
-    padding: 1rem;
-    border-radius: 3px;
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 8px;
     overflow-x: auto;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 4px solid #4299e1;
 }
 
 .post-content pre code, .raindrop-content pre code {
     background: none;
+    color: inherit;
     padding: 0;
+    border: none;
+    font-size: 0.9rem;
 }
 
 /* Navigation */

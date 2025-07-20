@@ -7,6 +7,8 @@ app = 'salasblog2'
 primary_region = 'bos'
 
 [build]
+  [build.args]
+    GIT_BRANCH = "main"
 
 [env]
   PORT = '8080'

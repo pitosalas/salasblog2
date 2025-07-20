@@ -28,6 +28,7 @@ from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
 from .scheduler import get_scheduler
+from .utils import process_markdown_to_html
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -63,7 +64,6 @@ def validate_environment_and_setup():
     config["root_dir"] = Path(__file__).parent.parent.parent
     config["output_dir"] = config["root_dir"] / "output"
     config["templates_dir"] = config["root_dir"] / "templates"
-    print(f"********** {config}**********")
 
     # Validate critical directories exist
     if not config["templates_dir"].exists():
@@ -330,8 +330,14 @@ def render_template(template_name: str, context: dict = None) -> str:
 
 # Shared content management helpers
 def get_content_directory(content_type: str) -> Path:
-    """Get directory for content type ('blog' or 'pages')"""
-    return config["root_dir"] / "content" / content_type
+    """Get directory for content type using volume-first logic (same as generator)"""
+    volume_content_dir = Path("/data/content")
+    if volume_content_dir.exists():
+        content_dir = volume_content_dir
+    else:
+        content_dir = config["root_dir"] / "content"
+    
+    return content_dir / content_type
 
 def create_filename_for_content(title: str, date: str, content_type: str) -> str:
     """Generate filename based on content type"""
@@ -736,11 +742,13 @@ async def sync_pages_from_repo():
     data_pages = Path("/data/content/pages")
     data_pages.mkdir(parents=True, exist_ok=True)
     
-    # Backup current pages (just in case)
-    backup_path = Path("/data/pages_backup_" + str(int(time.time())))
+    # Backup current pages as .md-old files (including subdirectories)
     if data_pages.exists() and any(data_pages.iterdir()):
-        logger.info(f"Backing up current pages to {backup_path}")
-        shutil.copytree(str(data_pages), str(backup_path))
+        logger.info("Backing up current pages as .md-old files")
+        for md_file in data_pages.rglob("*.md"):
+            backup_file = md_file.with_suffix(".md-old")
+            logger.info(f"Backing up {md_file.relative_to(data_pages)} to {backup_file.relative_to(data_pages)}")
+            shutil.copy2(str(md_file), str(backup_file))
     
     # Copy pages from repository to volume
     logger.info("Copying pages from /app/content/pages to /data/content/pages...")
@@ -752,20 +760,16 @@ async def sync_pages_from_repo():
     )
     
     if result.returncode != 0:
-        # Restore backup if copy failed
-        if backup_path.exists():
-            logger.error("Pages sync failed, restoring backup...")
-            shutil.rmtree(data_pages)
-            shutil.move(str(backup_path), str(data_pages))
+        # Restore from .md-old files if copy failed (including subdirectories)
+        logger.error("Pages sync failed, restoring from .md-old files...")
+        for backup_file in data_pages.rglob("*.md-old"):
+            original_file = backup_file.with_suffix(".md")
+            logger.info(f"Restoring {original_file.relative_to(data_pages)} from {backup_file.relative_to(data_pages)}")
+            shutil.copy2(str(backup_file), str(original_file))
         raise HTTPException(status_code=500, detail=f"Failed to sync pages: {result.stderr}")
     
-    # Clean up backup on success
-    if backup_path.exists():
-        logger.info(f"Removing backup {backup_path}")
-        shutil.rmtree(backup_path)
-    
-    # Count synced files
-    synced_files = list(data_pages.glob("*.md"))
+    # Count synced files (including subdirectories)
+    synced_files = list(data_pages.rglob("*.md"))
     
     logger.info(f"Successfully synced {len(synced_files)} page files from repository")
     
@@ -803,7 +807,7 @@ async def edit_post_page(filename: str, request: Request):
     # Render edit form using template with post context
     context = {
         'filename': filename,
-        'content_type': 'post',
+        'content_type': 'blog',
         'content_type_title': 'Post',
         'action_url': f'/admin/edit-post/{filename}',
         'cancel_url': '/blog/',
@@ -841,12 +845,8 @@ async def new_post_page(request: Request):
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
     
-    # Get current date for default
-    current_date = datetime.now().strftime('%Y-%m-%d')
-    
     context = {
-        'current_date': current_date,
-        'content_type': 'post',
+        'content_type': 'blog',
         'content_type_title': 'Post',
         'action_url': '/admin/new-post',
         'cancel_url': '/blog/'
@@ -939,11 +939,7 @@ async def new_page_page(request: Request):
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
     
-    # Get current date for default
-    current_date = datetime.now().strftime('%Y-%m-%d')
-    
     context = {
-        'current_date': current_date,
         'content_type': 'page',
         'content_type_title': 'Page',
         'action_url': '/admin/new-page',
@@ -1004,17 +1000,8 @@ async def preview_markdown(request: Request, content: str = Form(...)):
         raise HTTPException(status_code=401, detail="Authentication required")
     
     try:
-        # Configure markdown with extensions
-        md = markdown.Markdown(extensions=[
-            'codehilite',
-            'tables', 
-            'toc',
-            'fenced_code',
-            'nl2br'
-        ])
-        
-        # Convert markdown to HTML
-        html = md.convert(content)
+        # Use standardized markdown processing
+        html = process_markdown_to_html(content)
         
         return JSONResponse(content={
             "status": "success",
@@ -1035,17 +1022,8 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
         raise HTTPException(status_code=401, detail="Authentication required")
     
     try:
-        # Configure markdown with extensions
-        md = markdown.Markdown(extensions=[
-            'codehilite',
-            'tables', 
-            'toc',
-            'fenced_code',
-            'nl2br'
-        ])
-        
-        # Convert markdown to HTML
-        html_content = md.convert(content)
+        # Use standardized markdown processing
+        html_content = process_markdown_to_html(content)
         
         context = {
             'title': title,
@@ -1072,17 +1050,8 @@ async def preview_new_post_html(request: Request, title: str = Form(...), conten
         raise HTTPException(status_code=401, detail="Authentication required")
     
     try:
-        # Configure markdown with extensions
-        md = markdown.Markdown(extensions=[
-            'codehilite',
-            'tables', 
-            'toc',
-            'fenced_code',
-            'nl2br'
-        ])
-        
-        # Convert markdown to HTML
-        html_content = md.convert(content)
+        # Use standardized markdown processing
+        html_content = process_markdown_to_html(content)
         
         # Generate filename preview
         def create_filename_from_title(title: str, date: str) -> str:

@@ -31,13 +31,8 @@
                     <input type="text" id="category" name="category" value="{{ category }}">
                 </div>
                 
-                <div class="form-group">
-                    <label for="type">Type</label>
-                    <select id="type" name="type">
-                        <option value="blog" {% if post_type == "blog" %}selected{% endif %}>Blog Post</option>
-                        <option value="page" {% if post_type == "page" %}selected{% endif %}>Page</option>
-                    </select>
-                </div>
+                <!-- Content type is automatically determined by the editing context -->
+                <input type="hidden" id="type" name="type" value="{{ content_type }}">
             </div>
             
             <div class="form-group full-width">
@@ -50,6 +45,7 @@
             <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
             <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
             <button type="button" class="btn btn-success" onclick="savePost()">Save {{ content_type_title|default('Post') }}</button>
+            <button type="button" class="btn btn-secondary" onclick="closeEditor()">Close</button>
         </div>
     </div>
     
@@ -184,6 +180,16 @@
             document.body.removeChild(form);
         }
         
+        function closeEditor() {
+            // Close the current window/tab
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // If no history, go to admin page
+                window.location.href = '/admin';
+            }
+        }
+        
         // Auto-save functionality (optional)
         let autoSaveTimeout;
         function scheduleAutoSave() {
@@ -192,6 +198,14 @@
                 // Could implement auto-save to drafts here
                 console.log('Auto-save could be triggered here');
             }, 30000); // 30 seconds
+        }
+        
+        // Initialize date field with current date if empty
+        const dateField = document.getElementById('date');
+        if (!dateField.value) {
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
+            dateField.value = formattedDate;
         }
         
         // Add event listeners for auto-save

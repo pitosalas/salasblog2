@@ -1,6 +1,9 @@
 # Multi-stage build for Salasblog2 FastAPI app
 FROM python:3.11-slim
 
+# Accept GIT_BRANCH as build argument (defaults to main)
+ARG GIT_BRANCH=main
+
 # Install system dependencies including git, rsync, ripgrep, and nano
 RUN apt-get update && \
     apt-get install -y git rsync ripgrep nano && \
@@ -13,8 +16,8 @@ RUN pip install uv
 # Set working directory
 WORKDIR /app
 
-# Clone the repository directly from main branch
-RUN git clone -b main https://github.com/pitosalas/salasblog2.git /tmp/repo && \
+# Clone the repository from specified branch
+RUN git clone -b ${GIT_BRANCH} https://github.com/pitosalas/salasblog2.git /tmp/repo && \
     cp -r /tmp/repo/* . && \
     cp -r /tmp/repo/.git . && \
     cp /tmp/repo/.gitignore . 2>/dev/null || true && \
