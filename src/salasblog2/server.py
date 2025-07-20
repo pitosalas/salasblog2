@@ -28,6 +28,7 @@ from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
 from .scheduler import get_scheduler
+from .utils import process_markdown_to_html
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}

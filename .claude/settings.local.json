@@ -3,7 +3,8 @@
     "allow": [
       "Bash(curl:*)",
       "Bash(pkill:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "Bash(find:*)"
     ],
     "deny": [
       "Read(output)",
