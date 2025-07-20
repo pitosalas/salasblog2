@@ -50,6 +50,7 @@
             <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
             <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
             <button type="button" class="btn btn-success" onclick="savePost()">Save {{ content_type_title|default('Post') }}</button>
+            <button type="button" class="btn btn-secondary" onclick="closeEditor()">Close</button>
         </div>
     </div>
     
@@ -182,6 +183,16 @@
             document.body.appendChild(form);
             form.submit();
             document.body.removeChild(form);
+        }
+        
+        function closeEditor() {
+            // Close the current window/tab
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // If no history, go to admin page
+                window.location.href = '/admin';
+            }
         }
         
         // Auto-save functionality (optional)
