@@ -64,7 +64,6 @@ def validate_environment_and_setup():
     config["root_dir"] = Path(__file__).parent.parent.parent
     config["output_dir"] = config["root_dir"] / "output"
     config["templates_dir"] = config["root_dir"] / "templates"
-    print(f"********** {config}**********")
 
     # Validate critical directories exist
     if not config["templates_dir"].exists():
