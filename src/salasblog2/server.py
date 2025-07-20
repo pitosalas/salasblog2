@@ -330,8 +330,14 @@ def render_template(template_name: str, context: dict = None) -> str:
 
 # Shared content management helpers
 def get_content_directory(content_type: str) -> Path:
-    """Get directory for content type ('blog' or 'pages')"""
-    return config["root_dir"] / "content" / content_type
+    """Get directory for content type using volume-first logic (same as generator)"""
+    volume_content_dir = Path("/data/content")
+    if volume_content_dir.exists():
+        content_dir = volume_content_dir
+    else:
+        content_dir = config["root_dir"] / "content"
+    
+    return content_dir / content_type
 
 def create_filename_for_content(title: str, date: str, content_type: str) -> str:
     """Generate filename based on content type"""
@@ -801,7 +807,7 @@ async def edit_post_page(filename: str, request: Request):
     # Render edit form using template with post context
     context = {
         'filename': filename,
-        'content_type': 'post',
+        'content_type': 'blog',
         'content_type_title': 'Post',
         'action_url': f'/admin/edit-post/{filename}',
         'cancel_url': '/blog/',
@@ -844,7 +850,7 @@ async def new_post_page(request: Request):
     
     context = {
         'current_date': current_date,
-        'content_type': 'post',
+        'content_type': 'blog',
         'content_type_title': 'Post',
         'action_url': '/admin/new-post',
         'cancel_url': '/blog/'
