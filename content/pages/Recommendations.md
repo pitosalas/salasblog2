@@ -1,4 +1,11 @@
 ---
+category: General
+date: '2019-07-17'
+title: Recommendations
+type: page
+---
+
+---
 title: "Recommendations"
 author: Pito Salas
 date: 2025-08-20
@@ -10,7 +17,7 @@ like, I tend to have a very visual memory!
 
 ## List of information to provide
 
-* List of all the computer science c1ourses you took, the professor, and the grade.
+* List of all the computer science courses you took, the professor, and the grade.
 * Your degree, i.e. "Double Major in Computer Science and Theater, 2025"
 * List each of the times we interacted significantly together (e.g. courses, projects, TA, advisor, mentor etc.) Include when it was, and a reminder of an interesting or meaningful interaction or experience.
 * Attach a profile picture of any kind so I can remember you better (I have a visual memory)
