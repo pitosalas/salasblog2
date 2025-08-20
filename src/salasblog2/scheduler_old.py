@@ -148,8 +148,7 @@ class Scheduler:
             
             # Regenerate site to include new raindrops
             logger.info("Regenerating site with new raindrops...")
-            theme = os.environ.get('THEME', 'claude')
-            generator = SiteGenerator(theme=theme)
+            generator = SiteGenerator()
             generator.generate_site()
             
             logger.info("Successfully synced raindrops and regenerated site")

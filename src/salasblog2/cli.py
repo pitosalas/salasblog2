@@ -10,7 +10,7 @@ from .raindrop import RaindropDownloader
 
 def cmd_generate(args):
     """Generate the static site"""
-    generator = SiteGenerator(theme=args.theme)
+    generator = SiteGenerator()
     generator.generate_site()
 
 
@@ -26,10 +26,6 @@ def cmd_deploy(args):
     generator.deploy_to_fly()
 
 
-def cmd_themes(args):
-    """List available themes"""
-    generator = SiteGenerator()
-    generator.list_themes()
 
 
 def cmd_sync_raindrops(args):
@@ -55,12 +51,10 @@ def cmd_help(args):
     print("  server             - Start FastAPI server to serve site with API endpoints")
     print("  reset              - Delete all generated files")
     print("  deploy             - Deploy site to Fly.io")
-    print("  themes             - List available themes")
     print("  sync-raindrops     - Download new bookmarks from Raindrop.io (for link blog)")
     print("  help               - Show this help message")
     print()
     print("Options:")
-    print("  --theme THEME      - Use specific theme (for generate command)")
     print("  --port PORT        - Port for server (default: 8000)")
     print("  --reload           - Enable auto-reload for development (server command)")
     print("  --reset            - Reset link blog cache (for sync-raindrops command)")
@@ -74,15 +68,12 @@ def main():
         add_help=False  # We'll handle help ourselves
     )
     
-    # We'll handle theme in the generate subcommand instead
     
     # Subcommands
     subparsers = parser.add_subparsers(dest='command', help='Available commands')
     
     # Generate command
     generate_parser = subparsers.add_parser('generate', help='Generate static site')
-    generate_parser.add_argument('--theme', default=os.environ.get('THEME', 'claude'), 
-                                help='Theme to use for site generation')
     generate_parser.set_defaults(func=cmd_generate)
     
     # Server command
@@ -101,9 +92,6 @@ def main():
     deploy_parser = subparsers.add_parser('deploy', help='Deploy to Fly.io')
     deploy_parser.set_defaults(func=cmd_deploy)
     
-    # Themes command
-    themes_parser = subparsers.add_parser('themes', help='List available themes')
-    themes_parser.set_defaults(func=cmd_themes)
     
     # Sync raindrops command
     sync_parser = subparsers.add_parser('sync-raindrops', help='Download bookmarks from Raindrop.io for link blog')

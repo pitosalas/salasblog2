@@ -1166,8 +1166,7 @@ async def regenerate_site():
         generator.generate_site()
         return {
             "status": "success", 
-            "message": "Site regenerated successfully",
-            "theme": generator.theme
+            "message": "Site regenerated successfully"
         }
     
     # Run regeneration in thread pool

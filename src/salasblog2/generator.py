@@ -28,7 +28,7 @@ from .utils import (
 
 
 class SiteGenerator:
-    def __init__(self, theme=None):
+    def __init__(self):
         self.root_dir = Path.cwd()
         # Use persistent volume as source of truth for content, fallback to local
         volume_content_dir = Path("/data/content")
@@ -42,19 +42,9 @@ class SiteGenerator:
         self.pages_dir = self.content_dir / "pages"
         self.output_dir = self.root_dir / "output"
         
-        # Theme support - use environment variable if theme not specified
-        if theme is None:
-            theme = os.environ.get('THEME', 'claude')
-        self.theme = theme
-        self.themes_dir = self.root_dir / "themes"
-        self.templates_dir = self.themes_dir / theme / "templates"
-        self.static_dir = self.themes_dir / theme / "static"
-        
-        # Fallback to old structure if theme doesn't exist
-        if not self.templates_dir.exists():
-            print(f"⚠️  Theme '{theme}' not found, falling back to default templates")
-            self.templates_dir = self.root_dir / "templates"
-            self.static_dir = self.root_dir / "static"
+        # Use default templates and static directories
+        self.templates_dir = self.root_dir / "templates"
+        self.static_dir = self.root_dir / "static"
         
         # Initialize Jinja2 environment
         self.jinja_env = Environment(loader=FileSystemLoader(self.templates_dir))
@@ -216,12 +206,12 @@ class SiteGenerator:
         if static_output_dir.exists():
             shutil.rmtree(static_output_dir)
         
-        # Copy theme static files
+        # Copy static files
         if self.static_dir.exists():
             shutil.copytree(self.static_dir, static_output_dir)
-            print(f"✓ Copied static files from theme: {self.theme}")
+            print(f"✓ Copied static files")
         else:
-            print(f"⚠️  No static files found for theme: {self.theme}")
+            print(f"⚠️  No static files found")
     
     def render_template(self, template_name, context):
         """Render a Jinja2 template with context"""
@@ -391,22 +381,6 @@ class SiteGenerator:
         else:
             print("✓ No output directory to delete")
     
-    def list_themes(self):
-        """List available themes"""
-        if not self.themes_dir.exists():
-            print("No themes directory found")
-            return
-        
-        themes = [d.name for d in self.themes_dir.iterdir() 
-                 if d.is_dir() and (d / "templates").exists()]
-        
-        if themes:
-            print("Available themes:")
-            for theme in sorted(themes):
-                current = " (current)" if theme == self.theme else ""
-                print(f"  - {theme}{current}")
-        else:
-            print("No themes found")
     
     def deploy_to_fly(self):
         """Deploy to Fly.io"""
@@ -423,7 +397,7 @@ class SiteGenerator:
     
     def generate_site(self):
         """Generate the complete static site"""
-        print(f"🚀 Starting site generation with theme: {self.theme}")
+        print(f"🚀 Starting site generation")
         print(f"📁 Templates: {self.templates_dir}")
         print(f"📁 Static files: {self.static_dir}")
         print(f"📁 Output: {self.output_dir}")

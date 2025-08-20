@@ -1,108 +1,77 @@
 # Salasblog2
 
-Python static site generator with FastAPI server, XML-RPC Blogger API, and Raindrop.io integration.
+Static site generator with FastAPI server, XML-RPC Blogger API, and Raindrop.io integration.
 
 ## Features
 
 - Markdown + YAML frontmatter processing
-- Multiple content types: blog posts, link blog, pages
-- Jinja2 templating with theme system
-- FastAPI server with XML-RPC Blogger API (MarsEdit compatible)
-- Web admin interface with authentication
-- Automated Git sync and Fly.io deployment
-- Raindrop.io bookmark integration
-- Client-side search, incremental regeneration
+- Multi-content types: blog posts, raindrops (link blog), static pages
+- Jinja2 templating
+- XML-RPC Blogger API (MarsEdit compatible)
+- Web admin interface
+- Raindrop.io bookmark sync
+- Dual content storage (persistent volume + git)
 
 ## Installation
 
-This project uses `uv` for Python package and environment management:
-
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh  # Install uv (or pip install uv)
-uv sync                                          # Install dependencies
-source .venv/bin/activate                        # Activate environment (or use uv run prefix)
-```
-
-## Quick Start
-
-```bash
-# Generate static site
-salasblog2 generate
-
-# Run server with API
-salasblog2 server
-
-# Preview static files
-python -m http.server 8000 -d output
+uv sync
 ```
 
 ## Commands
 
 ```bash
-salasblog2 generate [--theme THEME]     # Generate site
-salasblog2 server [--port PORT]         # FastAPI server
-salasblog2 reset                        # Clean output
-salasblog2 deploy                       # Deploy to Fly.io
-salasblog2 themes                       # List themes
-salasblog2 sync-raindrops [--reset]     # Sync Raindrop.io bookmarks
+uv run bg generate                             # Generate static site
+uv run bg server [--port PORT]                # Start FastAPI server
+uv run bg sync-raindrops [--reset]            # Sync Raindrop.io bookmarks
+uv run bg reset                               # Clean output directory
+uv run bg deploy                              # Deploy to Fly.io
 ```
 
 ## Content Structure
 
+**Production**: `/data/content/` (persistent volume)  
+**Development**: `content/` (local files)
+
 ```
 content/
-├── blog/       # Blog posts
-├── raindrops/  # Link blog
-└── pages/      # Static pages (auto-nav)
+├── blog/       # Blog posts (.md files)
+├── raindrops/  # Link blog from Raindrop.io
+└── pages/      # Static pages
 ```
 
-Frontmatter: `title`, `date` (YYYY-MM-DD), `type` (blog/drop/page), `category`
-
-## Server & APIs
-
-- Web admin: `/admin` (set `ADMIN_PASSWORD`)
-- XML-RPC: `/xmlrpc` (MarsEdit/blog editors)
-- Volume sync: `/api/sync-to-volume`, `/api/sync-from-volume`
-- Git scheduler: `/api/scheduler/*`
+**Frontmatter**: `title`, `date`, `type` (blog/drop/page), `category`
 
 ## Environment Variables
 
-**Required:**
-- `RAINDROP_TOKEN` - Raindrop.io API token
+**Required for Raindrops:**
+- `RAINDROP_TOKEN`
 
 **Authentication:**
-- `ADMIN_PASSWORD` - Web admin password
-- `BLOG_USERNAME/BLOG_PASSWORD` - XML-RPC credentials (default: admin/password)
+- `SESSION_SECRET` - Required for web admin sessions (random string)
+- `ADMIN_PASSWORD` - Web admin login password
+- `BLOG_USERNAME`/`BLOG_PASSWORD` - XML-RPC (default: admin/password)
 
-**Git Integration (Fly.io):**
-- `GIT_TOKEN` or `SSH_PRIVATE_KEY` - GitHub access
-- `GIT_EMAIL/GIT_NAME` - Commit info
-- `GIT_BRANCH` - Target branch for pushes (default: main)
+**Git Integration:**
+- `GIT_TOKEN` or `SSH_PRIVATE_KEY`
+- `GIT_EMAIL`/`GIT_NAME`
+- `GIT_BRANCH` (default: main)
 
-**Content Display:**
-- `EXCERPT_LENGTH` - Maximum excerpt length in characters (default: 80)
-- `EXCERPT_SMART_THRESHOLD` - Smart cutoff threshold to avoid awkward truncations (default: 30)
+## XML-RPC Setup (MarsEdit)
 
-## Blog Editor Setup (MarsEdit)
-
-1. Start server: `salasblog2 server`
-2. Add blog: XML-RPC URL `http://localhost:8000/xmlrpc`, API type "Blogger"
-3. Credentials: Use `BLOG_USERNAME/BLOG_PASSWORD` values
+1. `uv run bg server`
+2. Add blog: `http://localhost:8000/xmlrpc`, API type "Blogger"
+3. Use `BLOG_USERNAME`/`BLOG_PASSWORD` credentials
 
 ## Fly.io Deployment
 
 ```bash
-fly secrets set RAINDROP_TOKEN="your_token"
-fly secrets set ADMIN_PASSWORD="your_password" 
+fly secrets set RAINDROP_TOKEN="token"
+fly secrets set ADMIN_PASSWORD="password" 
 fly secrets set SSH_PRIVATE_KEY="$(cat ~/.ssh/id_ed25519)"
 fly deploy
 ```
 
-## Themes
-
-Default: `claude`. Available themes in `themes/` directory.
-Use `salasblog2 themes` to list, `--theme NAME` to select.
-
 ## Development
 
-See [CLAUDE.md](CLAUDE.md) for architecture details, API specs, and development guidelines.
+See [CLAUDE.md](CLAUDE.md) for architecture and development guidelines.

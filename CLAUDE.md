@@ -5,9 +5,8 @@ Development guidance for Claude Code when working on this salasblog2 codebase.
 ## Development Workflow
 
 - Use `uv sync` to install dependencies
-- Use `uv run` prefix for commands or activate with `source .venv/bin/activate`
-- Test changes with `salasblog2 generate` and `salasblog2 server`
-- Focus on the "test" theme when working on themes
+- Use `uv run` prefix for all commands
+- Test changes with `uv run bg generate` and `uv run bg server`
 
 ## Code Style
 
@@ -51,9 +50,8 @@ Markdown content here...
 
 ## Testing & Quality
 
-- Run `salasblog2 generate` to test static generation
-- Run `salasblog2 server` to test API functionality
-- Check themes with `salasblog2 generate --theme test`
+- Run `uv run bg generate` to test static generation  
+- Run `uv run bg server` to test API functionality
 
 ## Debugging
 - Before writing a test, read the corresponding source files to make sure you understand them
