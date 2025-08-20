@@ -3,9 +3,6 @@ title: "Independent Study"
 author: Pito Salas
 date: 2020-12-14
 ---
-
-
-
 ## FAQ
 
 **Context - **Faculty members have different approaches to independent

@@ -29,7 +29,7 @@ RUN git clone -b ${GIT_BRANCH} https://github.com/pitosalas/salasblog2.git /tmp/
 RUN uv sync --frozen
 
 # Generate the static site
-RUN uv run python -m salasblog2.cli generate --theme test
+RUN uv run bg generate
 
 # Copy and setup startup script
 COPY startup.sh /startup.sh

@@ -59,7 +59,7 @@ export LOG_LEVEL=${LOG_LEVEL:-INFO}
 echo "Using log level: ${LOG_LEVEL}"
 
 echo "Regenerating site with current environment variables..."
-uv run salasblog2 generate
+uv run bg generate
 echo "Site regeneration completed"
 
-exec uv run salasblog2 server --port 8080
+exec uv run bg server --port 8080

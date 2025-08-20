@@ -845,6 +845,94 @@ body {
     }
 }
 
+/* Page content styling */
+.page-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #2d3748;
+}
+
+.page-content h2 {
+    font-family: 'Telex', sans-serif;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    color: #2d3748;
+    border-bottom: 2px solid #4299e1;
+    padding-bottom: 0.5rem;
+}
+
+.page-content h3 {
+    font-family: 'Telex', sans-serif;
+    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem 0;
+    color: #2d3748;
+}
+
+.page-content p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.page-content ul, .page-content ol {
+    margin: 1.25rem 0;
+    padding-left: 2rem;
+}
+
+.page-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.page-content ul li {
+    list-style-type: disc;
+}
+
+.page-content ol li {
+    list-style-type: decimal;
+}
+
+.page-content blockquote {
+    margin: 1.5rem 0;
+    padding: 1.25rem;
+    border-left: 4px solid #4299e1;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+.page-content code {
+    background: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.page-content pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.page-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.page-content strong {
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.page-content em {
+    font-style: italic;
+    color: #4a5568;
+}
+
 /* Admin link styling */
 .nav-admin {
     display: flex;
