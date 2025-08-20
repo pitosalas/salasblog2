@@ -30,17 +30,36 @@ uv run bg deploy                              # Deploy to Fly.io
 
 ## Content Structure
 
-**Production**: `/data/content/` (persistent volume)  
-**Development**: `content/` (local files)
+### Key Directories
+- **`/data/content/`** - Persistent volume storage (production source of truth)
+- **`/app/content/`** - Git repository content (development/local)
+- Generator prioritizes `/data/content/` if it exists, falls back to local `content/`
 
+### Content Subdirectories
 ```
 content/
-├── blog/       # Blog posts (.md files)
-├── raindrops/  # Link blog from Raindrop.io
-└── pages/      # Static pages
+├── blog/       # Blog posts with YAML frontmatter + markdown
+├── raindrops/  # Link blog posts from Raindrop.io bookmarks  
+└── pages/      # Static pages (About, Contact, etc.)
 ```
 
-**Frontmatter**: `title`, `date`, `type` (blog/drop/page), `category`
+### Content File Format
+All content files use YAML frontmatter + markdown:
+```yaml
+---
+title: "Post Title"
+date: "2024-01-15"
+type: "blog" | "drop" | "page"
+category: "General"
+---
+Markdown content here...
+```
+
+### Content Lifecycle
+- **Creation**: Blog API (MarsEdit) → `/app/content/blog/` → immediate backup to `/data/content/`
+- **Raindrops**: API fetch → `/data/content/raindrops/` directly
+- **Sync**: Scheduler syncs `/data/content/` ↔ GitHub via `/app/content/`
+- **Generation**: Reads from `/data/content/` (or `/app/content/` fallback)
 
 ## Environment Variables
 
@@ -72,6 +91,11 @@ fly secrets set SSH_PRIVATE_KEY="$(cat ~/.ssh/id_ed25519)"
 fly deploy
 ```
 
+## Testing
+
+- Run `uv run bg generate` to test static generation  
+- Run `uv run bg server` to test API functionality
+
 ## Development
 
-See [CLAUDE.md](CLAUDE.md) for architecture and development guidelines.
+See [CLAUDE.md](CLAUDE.md) for development guidelines.

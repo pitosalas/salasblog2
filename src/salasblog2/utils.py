@@ -70,34 +70,44 @@ def create_excerpt(content: str, max_length: int = None, smart_threshold: int = 
 
 
 def extract_first_paragraph(content: str) -> str:
-    """Extract the first paragraph from markdown content."""
+    """Extract the first paragraph from markdown content by converting to HTML first."""
     if not content:
         return ''
     
-    # Split content into lines and find the first paragraph
-    lines = content.strip().split('\n')
-    paragraph_lines = []
+    # Convert markdown to HTML
+    html_content = process_markdown_to_html(content)
     
-    for line in lines:
-        line = line.strip()
+    # Parse HTML to find first paragraph
+    import re
+    
+    # Find the first <p> tag content
+    p_match = re.search(r'<p[^>]*>(.*?)</p>', html_content, re.DOTALL)
+    if p_match:
+        paragraph_html = p_match.group(1)
         
-        # Skip empty lines at the start
-        if not paragraph_lines and not line:
-            continue
-            
-        # Stop at first empty line after we've started collecting
-        if paragraph_lines and not line:
-            break
-            
-        # Skip markdown headers (lines starting with #)
-        if line.startswith('#'):
-            continue
-            
-        # Add line to paragraph
-        paragraph_lines.append(line)
+        # Strip HTML tags to get clean text
+        clean_text = re.sub(r'<[^>]+>', ' ', paragraph_html)
+        
+        # Clean up whitespace
+        clean_text = ' '.join(clean_text.split())
+        
+        return clean_text
     
-    # Join lines and return
-    return ' '.join(paragraph_lines)
+    # Fallback: if no <p> tags found, try to extract first non-header content
+    # Remove HTML tags and get first sentence/paragraph
+    clean_content = re.sub(r'<[^>]+>', ' ', html_content)
+    clean_content = ' '.join(clean_content.split())
+    
+    # Take first 200 characters as fallback
+    if len(clean_content) > 200:
+        # Try to break at sentence boundary
+        sentences = clean_content.split('. ')
+        if len(sentences) > 1 and len(sentences[0]) < 200:
+            return sentences[0] + '.'
+        else:
+            return clean_content[:200].rsplit(' ', 1)[0] + '...'
+    
+    return clean_content
 
 
 def parse_date_for_sorting(date_str: Optional[str]) -> datetime:
