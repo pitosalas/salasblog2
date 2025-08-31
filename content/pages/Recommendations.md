@@ -1,7 +1,8 @@
 ---
+title: "Recommendations"
+author: Pito Salas
+date: 2025-08-20
 category: General
-date: '2019-07-17'
-title: Recommendations
 type: page
 ---
 I often am asked for a recommendation, either for grad school or for a job in industry. I would like to answer your questions about the process. The overall theme here will be that my recommendation will be only as good as the information you supply to me.
