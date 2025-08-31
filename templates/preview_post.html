@@ -4,20 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preview: {{ title }}</title>
-    <link rel="stylesheet" href="/static/css/preview.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .preview-actions {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+        .preview-notice {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .preview-notice h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-family: 'Telex', sans-serif;
+        }
+        .preview-notice p {
+            margin: 0.5rem 0 0 0;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
-    <div class="preview-actions">
-        <button class="btn btn-success" onclick="saveAndClose()">💾 Save & Close</button>
-        <button class="btn btn-secondary" onclick="window.close()">✕ Close</button>
-    </div>
-    
-    <div class="preview-header">
-        <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: {{ title }}</h1>
-        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your post will appear on the blog</p>
-    </div>
-    <h1>{{ title }}</h1>
-    {{ html_content|safe }}
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <a href="/">Salas Blog</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/raindrops/">Raindrops</a></li>
+                <li><a href="/pages/">Pages</a></li>
+                <li class="nav-admin">
+                    <a href="/admin" class="admin-link">Admin</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="preview-actions">
+            <button class="btn btn-success" onclick="saveAndClose()">Save & Close</button>
+            <button class="btn btn-secondary" onclick="window.close()">✕ Close</button>
+        </div>
+        
+        <div class="preview-notice">
+            <h2>Preview Mode</h2>
+            <p>This is how your post will appear on the blog</p>
+        </div>
+
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">{{ title }}</h1>
+                <div class="post-meta">
+                    <time datetime="{{ date }}">{{ date if date else 'No date' }}</time>
+                    {% if category %}
+                    <span class="post-category">{{ category }}</span>
+                    {% endif %}
+                </div>
+            </header>
+
+            <div class="post-content">
+                {{ html_content|safe }}
+            </div>
+        </article>
+    </main>
     
     <script>
         // Form data passed from the edit page
@@ -33,7 +100,7 @@
         async function saveAndClose() {
             const saveBtn = event.target;
             const originalText = saveBtn.textContent;
-            saveBtn.textContent = '💾 Saving...';
+            saveBtn.textContent = 'Saving...';
             saveBtn.disabled = true;
             
             try {
@@ -53,13 +120,13 @@
                 const result = await response.json();
                 
                 if (response.ok) {
-                    alert('✓ Post saved successfully!');
+                    alert('Post saved successfully!');
                     window.close();
                 } else {
                     throw new Error(result.detail || 'Save failed');
                 }
             } catch (error) {
-                alert('✗ Error saving: ' + error.message);
+                alert('Error saving: ' + error.message);
             } finally {
                 saveBtn.textContent = originalText;
                 saveBtn.disabled = false;

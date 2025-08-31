@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="header">
-        <nav class="nav">
+        <nav class="nav d-flex justify-content-between align-items-center align-items-lg-baseline flex-wrap">
             <div class="nav-brand">
                 <a href="/">Salas Blog</a>
             </div>
@@ -20,7 +20,7 @@
                 <span></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="/">Home</a></li>
+                <li><a href="/overview">Overview</a></li>
                 <li><a href="/blog/">Blog</a></li>
                 <li><a href="/raindrops/">Link Blog</a></li>
                 <li><a href="/pages/">Pages</a></li>
@@ -38,7 +38,7 @@
         </nav>
     </header>
 
-    <main class="main">
+    <main class="container-lg py-4">
         {% block content %}{% endblock %}
     </main>
 
@@ -56,26 +56,16 @@
                 
                 if (data.authenticated) {
                     // Show admin controls
-                    const adminControls = document.querySelector('.admin-controls');
+                    const adminControls = document.querySelectorAll('.admin-controls');
                     const newPostBtn = document.querySelector('.admin-new-post');
                     
-                    if (adminControls) {
-                        adminControls.style.display = 'block';
-                    }
+                    adminControls.forEach(control => {
+                        control.style.display = 'block';
+                    });
                     if (newPostBtn) {
                         newPostBtn.style.display = 'block';
                     }
                     
-                    // Add hover effects to admin buttons
-                    document.querySelectorAll('.admin-btn-edit').forEach(btn => {
-                        btn.addEventListener('mouseover', () => btn.style.background = '#0056b3');
-                        btn.addEventListener('mouseout', () => btn.style.background = '#007bff');
-                    });
-                    
-                    document.querySelectorAll('.admin-btn-delete').forEach(btn => {
-                        btn.addEventListener('mouseover', () => btn.style.background = '#c82333');
-                        btn.addEventListener('mouseout', () => btn.style.background = '#dc3545');
-                    });
                 }
             } catch (error) {
                 console.error('Failed to check admin status:', error);

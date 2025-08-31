@@ -8,7 +8,7 @@
 </head>
 <body class="new-form">
     <div class="header header-new">
-        <h1>✨ Create New {{ content_type_title|default('Post') }}</h1>
+        <h1>Create New {{ content_type_title|default('Post') }}</h1>
     </div>
     
     <div class="container">
@@ -62,21 +62,21 @@
             
             if (!title) {
                 statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please enter a title';
+                statusMessage.textContent = 'Please enter a title';
                 statusMessage.style.display = 'block';
                 return;
             }
             
             if (!date) {
                 statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please select a date';
+                statusMessage.textContent = 'Please select a date';
                 statusMessage.style.display = 'block';
                 return;
             }
             
             if (!content) {
                 statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please enter some content';
+                statusMessage.textContent = 'Please enter some content';
                 statusMessage.style.display = 'block';
                 return;
             }
@@ -99,7 +99,7 @@
                 
                 if (response.ok) {
                     statusMessage.className = 'status-message status-success';
-                    statusMessage.textContent = `✓ {{ content_type_title|default("Post") }} created successfully! Filename: ${result.filename}`;
+                    statusMessage.textContent = `{{ content_type_title|default("Post") }} created successfully! Filename: ${result.filename}`;
                     statusMessage.style.display = 'block';
                     
                     // Clear form
@@ -119,7 +119,7 @@
                 }
             } catch (error) {
                 statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Error: ' + error.message;
+                statusMessage.textContent = 'Error: ' + error.message;
                 statusMessage.style.display = 'block';
             } finally {
                 // Restore button state

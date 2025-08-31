@@ -4,213 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit {{ content_type_title|default('Post') }} - {{ title }}</title>
-    <link rel="stylesheet" href="/static/css/admin-forms.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body class="edit-form">
-    <div class="header header-edit">
-        <h1>✏️ Edit {{ content_type_title|default('Post') }}: {{ title }}</h1>
-    </div>
+<body>
+    {% include 'includes/navigation.html' %}
     
-    <div class="container">
-        <form id="editForm" class="form-section">
-            <div id="statusMessage" class="status-message"></div>
+    <main class="main">
+        <div class="page-header">
+            <h1>Edit {{ content_type_title|default('Post') }}: {{ title }}</h1>
+        </div>
+        
+        <div class="container">
+        <form id="editForm" class="bg-white p-4 rounded shadow-sm">
+            <div id="statusMessage" class="alert" style="display: none;"></div>
             
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="title">{{ content_type_title|default('Post') }} Title</label>
-                    <input type="text" id="title" name="title" value="{{ title }}" required>
+            <div class="row mb-3">
+                <div class="col-md-6 mb-3">
+                    <label for="title" class="form-label">{{ content_type_title|default('Post') }} Title</label>
+                    <input type="text" id="title" name="title" class="form-control" value="{{ title }}" required>
                 </div>
                 
-                <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" value="{{ date }}" required>
+                <div class="col-md-3 mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" id="date" name="date" class="form-control" value="{{ date }}" required>
                 </div>
                 
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <input type="text" id="category" name="category" value="{{ category }}">
+                <div class="col-md-3 mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <input type="text" id="category" name="category" class="form-control" value="{{ category }}">
                 </div>
                 
                 <!-- Content type is automatically determined by the editing context -->
                 <input type="hidden" id="type" name="type" value="{{ content_type }}">
             </div>
             
-            <div class="form-group full-width">
-                <label for="content">Content (Markdown)</label>
-                <textarea id="content" name="content" placeholder="Write your post content in Markdown...">{{ content }}</textarea>
+            <div class="mb-3">
+                <label for="content" class="form-label">Content (Markdown)</label>
+                <textarea id="content" name="content" class="form-control" rows="15" placeholder="Write your post content in Markdown...">{{ content }}</textarea>
             </div>
         </form>
         
-        <div class="button-group">
-            <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
-            <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
-            <button type="button" class="btn btn-success" onclick="savePost()">Save {{ content_type_title|default('Post') }}</button>
-            <button type="button" class="btn btn-secondary" onclick="closeEditor()">Close</button>
+            <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
+                <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
+                <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
+                <button type="button" class="btn btn-success" onclick="savePost()">Save {{ content_type_title|default('Post') }}</button>
+                <button type="button" class="btn btn-secondary" onclick="closeEditor()">Close</button>
+            </div>
         </div>
-    </div>
+    </main>
     
+    <script src="/static/js/form-validation.js"></script>
+    <script src="/static/js/preview.js"></script>
     <script>
-        async function savePost() {
-            const form = document.getElementById('editForm');
-            const statusMessage = document.getElementById('statusMessage');
-            
-            // Validate form
-            const title = document.getElementById('title').value.trim();
-            const date = document.getElementById('date').value;
-            const content = document.getElementById('content').value.trim();
-            
-            if (!title) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please enter a post title';
-                statusMessage.style.display = 'block';
-                return;
-            }
-            
-            if (!date) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please select a date';
-                statusMessage.style.display = 'block';
-                return;
-            }
-            
-            if (!content) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please enter some content';
-                statusMessage.style.display = 'block';
-                return;
-            }
-            
-            const formData = new FormData(form);
-            
-            // Show loading state
-            const saveBtn = event.target;
-            const originalText = saveBtn.textContent;
-            saveBtn.textContent = 'Saving...';
-            saveBtn.disabled = true;
-            
-            try {
-                const response = await fetch('{{ action_url|default("/admin/edit-post/" + filename) }}', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                const result = await response.json();
-                
-                if (response.ok) {
-                    statusMessage.className = 'status-message status-success';
-                    statusMessage.textContent = '✓ {{ content_type_title|default("Post") }} saved successfully!';
-                    statusMessage.style.display = 'block';
-                    
-                    // Auto-hide success message after 3 seconds
-                    setTimeout(() => {
-                        statusMessage.style.display = 'none';
-                    }, 3000);
-                } else {
-                    throw new Error(result.detail || 'Save failed');
-                }
-            } catch (error) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Error: ' + error.message;
-                statusMessage.style.display = 'block';
-            } finally {
-                // Restore button state
-                saveBtn.textContent = originalText;
-                saveBtn.disabled = false;
-            }
+        // Initialize preview functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initializePreview();
+        });
+        
+        // Save post function specific to this page
+        function savePost() {
+            const endpoint = '{{ action_url|default("/admin/edit-post/" + filename) }}';
+            savePost(endpoint);
         }
         
+        // Preview function
         function previewPost() {
-            const content = document.getElementById('content').value;
-            const title = document.getElementById('title').value;
-            const date = document.getElementById('date').value;
-            const category = document.getElementById('category').value;
-            const type = document.getElementById('type').value;
-            
-            if (!content.trim()) {
-                alert('Please enter some content to preview');
-                return;
-            }
-            
-            // Create a form and submit to preview endpoint
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = '/admin/preview-post';
-            form.target = '_blank';
-            
-            const titleInput = document.createElement('input');
-            titleInput.type = 'hidden';
-            titleInput.name = 'title';
-            titleInput.value = title;
-            form.appendChild(titleInput);
-            
-            const contentInput = document.createElement('input');
-            contentInput.type = 'hidden';
-            contentInput.name = 'content';
-            contentInput.value = content;
-            form.appendChild(contentInput);
-            
-            const dateInput = document.createElement('input');
-            dateInput.type = 'hidden';
-            dateInput.name = 'date';
-            dateInput.value = date;
-            form.appendChild(dateInput);
-            
-            const categoryInput = document.createElement('input');
-            categoryInput.type = 'hidden';
-            categoryInput.name = 'category';
-            categoryInput.value = category;
-            form.appendChild(categoryInput);
-            
-            const typeInput = document.createElement('input');
-            typeInput.type = 'hidden';
-            typeInput.name = 'type';
-            typeInput.value = type;
-            form.appendChild(typeInput);
-            
-            // Add filename from current URL
-            const filename = window.location.pathname.split('/').pop();
-            const filenameInput = document.createElement('input');
-            filenameInput.type = 'hidden';
-            filenameInput.name = 'filename';
-            filenameInput.value = filename;
-            form.appendChild(filenameInput);
-            
-            document.body.appendChild(form);
-            form.submit();
-            document.body.removeChild(form);
+            previewPost(false); // false = existing post
         }
-        
-        function closeEditor() {
-            // Close the current window/tab
-            if (window.history.length > 1) {
-                window.history.back();
-            } else {
-                // If no history, go to admin page
-                window.location.href = '/admin';
-            }
-        }
-        
-        // Auto-save functionality (optional)
-        let autoSaveTimeout;
-        function scheduleAutoSave() {
-            clearTimeout(autoSaveTimeout);
-            autoSaveTimeout = setTimeout(() => {
-                // Could implement auto-save to drafts here
-                console.log('Auto-save could be triggered here');
-            }, 30000); // 30 seconds
-        }
-        
-        // Initialize date field with current date if empty
-        const dateField = document.getElementById('date');
-        if (!dateField.value) {
-            const today = new Date();
-            const formattedDate = today.toISOString().split('T')[0];
-            dateField.value = formattedDate;
-        }
-        
-        // Add event listeners for auto-save
-        document.getElementById('content').addEventListener('input', scheduleAutoSave);
-        document.getElementById('title').addEventListener('input', scheduleAutoSave);
     </script>
 </body>
 </html>

@@ -349,6 +349,60 @@ class SiteGenerator:
         
         print("✓ Generated home page")
     
+    def generate_overview_page(self):
+        """Generate overview page with recent blog posts and raindrops"""
+        # Load recent blog posts (limit to 5)
+        blog_posts = self.load_posts('blog')
+        blog_posts.sort(key=lambda x: x.get('date', ''), reverse=True)
+        recent_blog_posts = blog_posts[:5]
+        
+        # Load recent raindrops (limit to 15)
+        raindrops = self.load_posts('raindrops')
+        raindrops.sort(key=lambda x: x.get('date', ''), reverse=True)
+        recent_raindrops = raindrops[:15]
+        
+        context = {
+            'blog_posts': recent_blog_posts,
+            'raindrops': recent_raindrops,
+            'site_title': 'Pito Salas Blog',
+            'navigation': self.get_navigation_items()
+        }
+        
+        html_content = self.render_template('overview.html', context)
+        
+        output_file = self.output_dir / "overview.html"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+        
+        print("✓ Generated overview page")
+    
+    def generate_overview_as_home(self):
+        """Generate overview page as the home page (index.html)"""
+        # Load recent blog posts (limit to 5)
+        blog_posts = self.load_posts('blog')
+        blog_posts.sort(key=lambda x: x.get('date', ''), reverse=True)
+        recent_blog_posts = blog_posts[:5]
+        
+        # Load recent raindrops (limit to 15)
+        raindrops = self.load_posts('raindrops')
+        raindrops.sort(key=lambda x: x.get('date', ''), reverse=True)
+        recent_raindrops = raindrops[:15]
+        
+        context = {
+            'blog_posts': recent_blog_posts,
+            'raindrops': recent_raindrops,
+            'site_title': 'Pito Salas Blog',
+            'navigation': self.get_navigation_items()
+        }
+        
+        html_content = self.render_template('overview.html', context)
+        
+        output_file = self.output_dir / "index.html"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+        
+        print("✓ Generated index.html (overview layout)")
+    
     def generate_pages_listing(self, pages):
         """Generate the pages listing page"""
         # Sort pages alphabetically by title
@@ -385,13 +439,11 @@ class SiteGenerator:
     def deploy_to_fly(self):
         """Deploy to Fly.io"""
         try:
-            result = subprocess.run(['fly', 'deploy'], 
-                                  capture_output=True, text=True, check=True)
+            result = subprocess.run(['fly', 'deploy', '--no-cache'], 
+                                  text=True, check=True)
             print("✓ Successfully deployed to Fly.io")
-            print(result.stdout)
         except subprocess.CalledProcessError as e:
             print(f"✗ Deployment failed: {e}")
-            print(f"Error output: {e.stderr}")
         except FileNotFoundError:
             print("✗ 'fly' command not found. Please install Fly CLI first.")
     
@@ -434,6 +486,12 @@ class SiteGenerator:
         # Generate home page
         print("🏠 Generating home page...")
         self.generate_home_page(blog_posts, raindrops)
+        print()
+        
+        # Generate overview page (also as home)
+        print("📊 Generating overview page...")
+        self.generate_overview_page()
+        self.generate_overview_as_home()
         print()
         
         # Generate pages listing
