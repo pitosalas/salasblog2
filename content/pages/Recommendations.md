@@ -4,12 +4,6 @@ date: '2019-07-17'
 title: Recommendations
 type: page
 ---
-
----
-title: "Recommendations"
-author: Pito Salas
-date: 2025-08-20
----
 I often am asked for a recommendation, either for grad school or for a job in industry. I would like to answer your questions about the process. The overall theme here will be that my recommendation will be only as good as the information you supply to me.
 
 Realize that in order to write you a credible recommendation or give you a reference, I need to know you to some extent. That means obviously that you've taken a class, or done a project, or TA'd for me at some point. And not too long ago. If I don't feel like I know you well enough I will decline. In any event if you are comfortable with this please include a picture to remind me what you look
