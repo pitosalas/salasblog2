@@ -4,8 +4,6 @@ date: '2025-08-30'
 title: Coding is forever changed
 type: blog
 ---
-### Impact of AI on development
-
 Continuing a theme of the previous blog, I am starting to really believe that programming, coding, software development is going to be forever changed. I say this, among other things, from the perspective of someone who has taught software engineering, development, and intro programming courses. 
 
 I have been doing more and more programming using AI tools. In my case, Claude Code in particular. But I think they are all similar and converging. From time to time, the leader switches around. But really, that is kind of meaningless because it is very unclear what it means to be the leader. In other words, what is the metric by which we compare them? There are more or less an infinite number of use cases, opinions, and tastes. A better way to think about it, perhaps, is that there are a small handful of leading AI tools. I feel I can tell whether a certain one (e.g., Grok) can be counted as a leader.
