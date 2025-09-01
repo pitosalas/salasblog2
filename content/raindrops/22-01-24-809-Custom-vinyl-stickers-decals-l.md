@@ -16,7 +16,7 @@ domain: stickerguy.com
 excerpt: Get custom vinyl stickers, die cuts, window decals, and roll labels printed
   with your design. The original Sticker Guy, stickin since 1993
 important: false
-last_update: '2022-06-23T22:43:23.861000+00:00'
+last_update: '2025-07-21T10:54:43.193000+00:00'
 media:
 - link: https://www.stickerguy.com/wp-content/themes/sticker/pix/stickerguy-banner.png
   type: image
@@ -45,3 +45,6 @@ user_id: 624427
 **Domain:** stickerguy.com
 
 **Excerpt:** Get custom vinyl stickers, die cuts, window decals, and roll labels printed with your design. The original Sticker Guy, stickin since 1993
+
+**Notes:**
+Linked is a great web site to make cheap stickers. That is all :)

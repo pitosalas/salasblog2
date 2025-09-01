@@ -4,7 +4,7 @@ cache:
   created: '2025-07-16T12:11:12.291Z'
   size: 3312650
   status: ready
-collection_id: -1
+collection_id: 17452361
 cover: https://substackcdn.com/image/fetch/$s_!x1Lg!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F62509f60-85c7-467d-8cce-1d0fbfcb8412_1728x940.png
 creator_ref:
   _id: 624427
@@ -16,7 +16,7 @@ domain: open.substack.com
 excerpt: Text-based user interfaces (TUIs) have gained significant popularity in recent
   years.
 important: false
-last_update: '2025-07-16T12:09:51.500000+00:00'
+last_update: '2025-07-22T15:12:47.790000+00:00'
 media:
 - link: https://substackcdn.com/image/fetch/$s_!x1Lg!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F62509f60-85c7-467d-8cce-1d0fbfcb8412_1728x940.png
   type: image
