@@ -1087,7 +1087,7 @@ async def preview_new_post_html(request: Request, title: str = Form(...), conten
         raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
 
 # Raindrop sync and site generation endpoints with simplified logic
-@app.get("/api/sync-raindrops")
+@app.post("/api/sync-raindrops")
 async def sync_raindrops():
     """Trigger raindrop sync and regenerate site"""
     
@@ -1166,7 +1166,48 @@ async def get_sync_status():
     """Get current raindrop sync status"""
     return JSONResponse(content=sync_status)
 
-@app.get("/api/regenerate")
+@app.post("/api/reset-raindrop-cache")
+async def reset_raindrop_cache():
+    """Reset the raindrop cache"""
+    try:
+        from .raindrop import RaindropDownloader
+        downloader = RaindropDownloader()
+        
+        # Remove cache file
+        if downloader.cache_file.exists():
+            downloader.cache_file.unlink()
+            message = "Raindrop cache deleted successfully"
+        else:
+            message = "No cache file found to delete"
+            
+        return JSONResponse(content={"status": "success", "message": message})
+    except Exception as e:
+        logging.getLogger(__name__).error(f"Failed to reset raindrop cache: {e}")
+        return JSONResponse(
+            status_code=500, 
+            content={"status": "error", "message": f"Failed to reset cache: {str(e)}"}
+        )
+
+@app.post("/api/rebuild-raindrop-cache")
+async def rebuild_raindrop_cache():
+    """Rebuild raindrop cache from existing files"""
+    try:
+        from .raindrop import RaindropDownloader
+        downloader = RaindropDownloader()
+        
+        # Rebuild cache from files
+        found_ids = downloader.rebuild_cache_from_files()
+        message = f"Rebuilt cache with {len(found_ids)} raindrop IDs from existing files"
+            
+        return JSONResponse(content={"status": "success", "message": message})
+    except Exception as e:
+        logging.getLogger(__name__).error(f"Failed to rebuild raindrop cache: {e}")
+        return JSONResponse(
+            status_code=500, 
+            content={"status": "error", "message": f"Failed to rebuild cache: {str(e)}"}
+        )
+
+@app.post("/api/regenerate")
 async def regenerate_site():
     """Regenerate the static site"""
     

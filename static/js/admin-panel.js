@@ -52,7 +52,7 @@ class AdminPanel {
                 polling: false
             },
             'sync-pages-btn': {
-                endpoint: '/api/sync-pages',
+                endpoint: '/api/sync-pages-from-repo',
                 operation: 'Sync Pages from GitHub',
                 polling: true
             },
@@ -61,6 +61,17 @@ class AdminPanel {
                 operation: 'Emergency Restore',
                 polling: true,
                 confirmMessage: 'Are you sure? This will overwrite /data/content with GitHub repository content!'
+            },
+            'reset-raindrop-cache-btn': {
+                endpoint: '/api/reset-raindrop-cache',
+                operation: 'Reset Raindrop Cache',
+                polling: false,
+                confirmMessage: 'Are you sure? This will delete the raindrop cache and force a fresh sync on next download.'
+            },
+            'rebuild-raindrop-cache-btn': {
+                endpoint: '/api/rebuild-raindrop-cache',
+                operation: 'Rebuild Raindrop Cache',
+                polling: false
             }
         };
     }
