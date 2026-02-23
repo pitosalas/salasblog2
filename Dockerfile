@@ -3,7 +3,7 @@ FROM python:3.12-slim
 
 # Install system dependencies
 RUN apt-get update && \
-    apt-get install -y git rsync ripgrep nano gcc && \
+    apt-get install -y git rsync ripgrep nano && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
