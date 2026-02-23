@@ -1,12 +1,9 @@
-# Multi-stage build for Salasblog2 FastAPI app
-FROM python:3.11-slim
+# Salasblog2 FastAPI app
+FROM python:3.12-slim
 
-# Accept GIT_BRANCH as build argument (defaults to main)
-ARG GIT_BRANCH=main
-
-# Install system dependencies including git, rsync, ripgrep, and nano
+# Install system dependencies
 RUN apt-get update && \
-    apt-get install -y git rsync ripgrep nano && \
+    apt-get install -y git rsync ripgrep nano gcc && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -16,17 +13,16 @@ RUN pip install uv
 # Set working directory
 WORKDIR /app
 
-# Clone the repository from specified branch
-RUN git clone -b ${GIT_BRANCH} https://github.com/pitosalas/salasblog2.git /tmp/repo && \
-    cp -r /tmp/repo/* . && \
-    cp -r /tmp/repo/.git . && \
-    cp /tmp/repo/.gitignore . 2>/dev/null || true && \
-    rm -rf /tmp/repo && \
+# Copy project files
+COPY . .
+
+# Configure git identity (needed for scheduler git sync)
+RUN git init && \
     git config user.email "pitosalas@gmail.com" && \
     git config user.name "pitosalas"
 
 # Install dependencies
-RUN uv sync --frozen
+RUN uv sync --frozen --no-dev
 
 # Generate the static site
 RUN uv run bg generate
