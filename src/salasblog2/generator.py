@@ -52,6 +52,7 @@ class SiteGenerator:
         self.jinja_env.filters['dd_mm_yyyy'] = lambda date_str: format_date(date_str, '%d-%m-%Y')
         self.jinja_env.filters['group_by_month'] = group_posts_by_month
         self.jinja_env.filters['markdown'] = self.markdown_to_html
+        self.jinja_env.globals['NOTE_TRUNCATE_LENGTH'] = 300
         # Use the same markdown processor as utils.py for consistency
         self.markdown_processor = get_markdown_processor()
     
@@ -136,16 +137,19 @@ class SiteGenerator:
                 frontmatter_excerpt = parsed['metadata'].get('excerpt', '')
                 if frontmatter_excerpt:
                     post_data['excerpt'] = frontmatter_excerpt
-                    post_data['is_truncated'] = False  # Manual excerpt, don't show read more
+                    post_data['is_truncated'] = False
+                elif content_type == 'pages':
+                    post_data['excerpt'] = extract_first_paragraph(parsed['content'])
+                    post_data['is_truncated'] = False
+                elif content_type == 'raindrops':
+                    # Raindrop body contains raw metadata labels (**URL:**, **Type:**, etc.)
+                    # Note and URL are already rendered separately by the template
+                    post_data['excerpt'] = ''
+                    post_data['is_truncated'] = False
                 else:
-                    # For pages, use first paragraph; for posts/raindrops, use regular excerpt
-                    if content_type == 'pages':
-                        post_data['excerpt'] = extract_first_paragraph(parsed['content'])
-                        post_data['is_truncated'] = False  # Pages don't show "read more"
-                    else:
-                        excerpt, is_truncated = create_excerpt_with_info(parsed['content'])
-                        post_data['excerpt'] = excerpt
-                        post_data['is_truncated'] = is_truncated
+                    excerpt, is_truncated = create_excerpt_with_info(parsed['content'])
+                    post_data['excerpt'] = excerpt
+                    post_data['is_truncated'] = is_truncated
                 
                 posts.append(post_data)
                 

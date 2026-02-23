@@ -58,7 +58,7 @@
                     
                     {% if post.note %}
                     <div class="raindrop-notes">
-                        <strong>Notes:</strong> {{ post.note | markdown | safe }}
+                        <strong>Notes:</strong> {{ post.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
                     </div>
                     {% endif %}
                     
