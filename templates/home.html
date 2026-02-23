@@ -29,9 +29,22 @@
         <h2>Link Blog</h2>
         <div class="raindrop-list">
             {% for raindrop in recent_raindrops %}
-            <article class="raindrop-item">
-                <h4><a href="{{ raindrop.url }}">{{ raindrop.title }}</a></h4>
-                <time datetime="{{ raindrop.date }}">{{ raindrop.date | strftime('%b %d, %Y') }}</time>
+            <article class="raindrop">
+                <div class="raindrop-header">
+                    <div class="raindrop-date">{{ raindrop.date | dd_mm_yyyy }}</div>
+                </div>
+                <div class="raindrop-content">
+                    <div class="raindrop-text">
+                        <h3 class="raindrop-title">
+                            <a href="{{ raindrop.url }}">{{ raindrop.title }}</a>
+                        </h3>
+                        {% if raindrop.note %}
+                        <div class="raindrop-notes">
+                            {{ raindrop.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
             </article>
             {% endfor %}
         </div>

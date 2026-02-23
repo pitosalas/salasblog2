@@ -389,13 +389,10 @@ class SiteGenerator:
     def deploy_to_fly(self):
         """Deploy to Fly.io"""
         try:
-            result = subprocess.run(['fly', 'deploy'], 
-                                  capture_output=True, text=True, check=True)
+            result = subprocess.run(['fly', 'deploy'], check=True)
             print("✓ Successfully deployed to Fly.io")
-            print(result.stdout)
         except subprocess.CalledProcessError as e:
-            print(f"✗ Deployment failed: {e}")
-            print(f"Error output: {e.stderr}")
+            print(f"✗ Deployment failed (exit code {e.returncode})")
         except FileNotFoundError:
             print("✗ 'fly' command not found. Please install Fly CLI first.")
     
