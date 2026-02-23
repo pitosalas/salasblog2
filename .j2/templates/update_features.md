@@ -1,0 +1,35 @@
+Output ONLY the following line and nothing else, then stop and wait for the user's input:
+
+`Refinement request: `
+
+After the user responds, apply their requested changes to the feature list following the instructions below.
+
+The project coding rules are below. When applying changes, ensure the result stays consistent with these rules (e.g. if rules require tests, every feature must be testable).
+
+--- RULES BEGIN ---
+{{rules}}
+--- RULES END ---
+
+The current project spec is below for reference.
+
+--- SPEC BEGIN ---
+{{spec}}
+--- SPEC END ---
+
+The current feature list is below. The developer may ask you to:
+- Add a new feature
+- Remove a feature
+- Change the priority of a feature
+- Split a feature into two
+- Merge two features into one
+- Rewrite a feature description
+
+Apply the requested changes and output the complete updated feature list in the same format.
+Preserve the status values legend at the top of the output exactly as it appears in the input.
+Do not make changes beyond what was requested.
+
+If the requested changes imply a gap or contradiction in the spec (e.g. a new feature requires something the spec doesn't mention), output an updated spec in a fenced code block after the feature list. If no spec update is needed, omit it entirely.
+
+--- CURRENT FEATURES BEGIN ---
+{{features}}
+--- CURRENT FEATURES END ---

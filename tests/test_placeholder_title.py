@@ -32,11 +32,11 @@ class TestPlaceholderTitle:
         test_file = pages_dir / "about_me.md"
         test_file.write_text("This is content without frontmatter.")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
-        
+
         pages = generator.load_posts('pages')
-        
+
         assert len(pages) == 1
         assert pages[0]['title'] == "placeholder title: About Me"
         assert pages[0]['filename'] == "about_me"
@@ -53,7 +53,7 @@ category: "Information"
 ---
 This has frontmatter but no title field.""")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')
@@ -79,7 +79,7 @@ This has frontmatter but no title field.""")
             test_file = pages_dir / f"{filename}.md"
             test_file.write_text("Content without frontmatter")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')
@@ -103,7 +103,7 @@ category: "Personal"
 ---
 This has proper frontmatter with a title.""")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')
@@ -136,7 +136,7 @@ Bad content without title.""")
         ugly_file = pages_dir / "ugly_file.md"
         ugly_file.write_text("No frontmatter at all.")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')

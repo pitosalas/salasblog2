@@ -1,0 +1,79 @@
+# j2 Workflow Definition
+# Steps are executed in order. Each maps to a slash command and a prompt template.
+
+steps:
+  - id: refresh
+    command: "/refresh"
+    template: "refresh.md"
+    output: ".j2/features/spec-review.md"
+    description: "Summarize the spec, suggest answers to clarifying questions, and rewrite the spec."
+
+  - id: features-gen
+    command: "/features-gen"
+    template: "gen_features.md"
+    output: ".j2/features/features.md"
+    description: "Generate a prioritized feature list from the spec."
+
+  - id: features-update
+    command: "/features-update"
+    template: "update_features.md"
+    output: ".j2/features/features.md"
+    description: "Interactively update the feature list."
+
+  - id: tasks-gen
+    command: "/tasks-gen"
+    template: "gen_tasks.md"
+    output: ".j2/tasks/{feature}.md"
+    description: "Generate task breakdowns for each feature."
+
+  - id: tasks-update
+    command: "/tasks-update"
+    template: "update_tasks.md"
+    output: ".j2/tasks/{feature}.md"
+    description: "Update the task list for a given feature."
+
+  - id: task-start
+    command: "/task-start"
+    template: "start_task.md"
+    description: "Begin implementation of a specific task."
+
+  - id: task-next
+    command: "/task-next"
+    template: "next_task.md"
+    description: "Automatically find and implement the next pending task."
+
+  - id: task-run-all
+    command: "/task-run-all"
+    template: "run_all_tasks.md"
+    description: "Implement all tasks in a feature sequentially without stopping."
+
+  - id: features-parallel
+    command: "/features-parallel"
+    template: "features_parallel.md"
+    description: "Launch parallel background agents to implement multiple features concurrently."
+
+  - id: checkpoint
+    command: "/checkpoint"
+    template: "checkpoint.md"
+    output: ".j2/current.md"
+    description: "Save current working context to current.md so work can be resumed later."
+
+  - id: milestone
+    command: "/milestone"
+    template: "milestone.md"
+    description: "Declare a feature done — confirms implementation, tests written, tests passing."
+
+  - id: code-review
+    command: "/code-review"
+    template: "code_review.md"
+    description: "Review all source files against rules.md and output violations as tasks."
+
+  - id: adopt
+    command: "/adopt"
+    template: "adopt.md"
+    description: "Adopt an existing project into j2 by scanning, generating spec/features, and merging config."
+
+  - id: deploy
+    command: "/deploy"
+    template: "deploy.md"
+    description: "Create a target directory and install the j2 scaffold into it."

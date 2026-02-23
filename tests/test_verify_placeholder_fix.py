@@ -40,21 +40,10 @@ category: "Travel"
 ---
 Information about Curacao.""")
     
-    # Test with our generator
-    generator = SiteGenerator(theme="test")
+    generator = SiteGenerator()
     generator.pages_dir = pages_dir
-    
+
     pages = generator.load_posts('pages')
-    
-    print("\n=== SIMULATION: What live server would show after fix ===")
-    for page in sorted(pages, key=lambda p: p['filename']):
-        title = page['title']
-        filename = page['filename']
-        
-        if title.startswith('placeholder title:'):
-            print(f"🔴 NEEDS FIXING: '{title}' (file: {filename}.md)")
-        else:
-            print(f"✅ WORKING: '{title}' (file: {filename}.md)")
     
     # Cleanup
     import shutil

@@ -369,7 +369,7 @@ class TestCreateFilenameFromTitle:
         # Note: This test will have a dynamic date, so we test the pattern
         result = create_filename_from_title("My Test Post!")
         assert result.endswith("-my-test-post.md")
-        assert result.startswith("2025-")  # Assumes current year
+        assert result.startswith(str(datetime.now().year) + "-")
         assert len(result.split("-")) >= 4  # YYYY-MM-DD-title format
     
     def test_create_filename_from_title_special_chars(self):

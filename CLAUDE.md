@@ -27,3 +27,8 @@ Development guidance for Claude Code when working on this salasblog2 codebase.
 - It is not necessary to test every possible failure mode and provide fallbacks for bugs in content or code
 - Focus on core functionality rather than edge cases
 
+## j2 Framework
+
+This project uses the j2 framework. Run `/refresh` to get oriented, or `/continue` to pick up where you left off.
+
+Coding rules are in `.j2/rules.md`. Project spec is in `.j2/specs/`. Current state is in `.j2/state.md`.

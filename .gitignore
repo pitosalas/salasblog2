@@ -67,3 +67,7 @@ temp/
 
 # Git credentials (if accidentally created)
 .git-credentials
+
+# j2 framework
+.j2/state.md
+.coverage

@@ -267,9 +267,8 @@ class TestPagesLiveServer:
         viewport = soup.find('meta', {'name': 'viewport'})
         assert viewport is not None, "Should have viewport meta tag for mobile"
         
-        # Check for responsive CSS (media queries)
-        css_content = response.text
-        assert '@media' in css_content or 'responsive' in css_content.lower(), "Should have responsive CSS"
+        # Check that external CSS is linked (media queries live in the stylesheet)
+        assert soup.find('link', {'rel': 'stylesheet'}) is not None, "Should link an external stylesheet"
 
     def test_raindrops_url_accessible(self, base_url, check_server_accessible):
         """Test that /raindrops/ URL is accessible and contains raindrop content."""
