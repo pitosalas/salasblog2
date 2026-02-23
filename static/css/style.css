@@ -238,6 +238,29 @@ body {
     margin: 0 auto;
 }
 
+/* Home page two-column layout */
+.home-columns {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.home-main {
+    flex: 2;
+    min-width: 0;
+}
+
+.home-sidebar {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .home-columns {
+        flex-direction: column;
+    }
+}
+
 /* Content sections */
 .content-section {
     margin-bottom: 2rem;
@@ -252,17 +275,10 @@ body {
     padding-bottom: 0.3rem;
 }
 
-/* Post grid - Masonry brick layout */
+/* Post grid */
 .post-grid {
-    columns: 3;
+    columns: 1;
     column-gap: 1rem;
-    column-fill: balance;
-}
-
-@media (max-width: 768px) {
-    .post-grid {
-        columns: 2;
-    }
 }
 
 @media (max-width: 480px) {
