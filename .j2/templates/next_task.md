@@ -1,5 +1,7 @@
 Feature ID: {{default_feature}}
 
+If the task file `.j2/tasks/{{default_feature}}.md` does not exist, output: "Error: No task file for {{default_feature}}. Run `/tasks-gen {{default_feature}}` first." and stop.
+
 Read the task file at `.j2/tasks/{{default_feature}}.md` directly. Find the first task whose `**Status**` is `not started` and implement it. You must follow the coding principles below exactly.
 
 --- PRINCIPLES BEGIN ---

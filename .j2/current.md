@@ -1,21 +1,18 @@
-# Current Session — 2026-02-22
+# Current Session — 2026-02-24
 
 ## What was completed
-- Deleted dead code: `scheduler_old.py` (188 stmts, 0% coverage)
-- Fixed raindrop excerpt bug: raindrops with no frontmatter excerpt no longer generate excerpts from raw markdown body (which contained **URL:**, **Type:**, **Domain:** labels)
-- Fixed long note display: truncated raindrop notes at 300 chars in `raindrops_list.html` using Jinja2 `truncate` filter
-- Made truncation length configurable via `NOTE_TRUNCATE_LENGTH` global in `generator.py` (line 57)
-- Added `tests/test_raindrop_excerpt.py` (5 tests) covering the excerpt bug fix
-- Added `tests/test_generator.py` (34 tests) covering generator.py: load_posts, search index, individual post rendering, listing pages, home page, pages listing, reset, incremental regen
-- Improved generator.py coverage from 32% → 73%; overall coverage from 37% → 46%
-- All 202 core tests passing
+- F17 Bootstrap-First Styling: migrated all 14 Jinja2 templates to Bootstrap 5.3 CDN
+- Reduced static/css/style.css from 1024 lines to ~50 lines (overrides only, each commented)
+- Added "UI / Styling Principles" section to spec enforcing Bootstrap-first rule
+- Added load_dotenv() to cli.py so .env vars (EXCERPT_LENGTH etc.) apply to all commands
+- Fixed extra blank space at bottom of post cards (nested <p> margin from markdown filter)
+- 12 new Bootstrap rendering tests added; 232 total passing
 
 ## Currently in progress
-Nothing — all 16 features done.
+Nothing — all 17 features done.
 
 ## What is next
-- `/features-update` to add new features, or `/deploy` to ship to Fly.io
-- Consider adding httpx to dev deps to enable server/blogger_api tests without separate install
+- /features-update to add new features, or /deploy to ship to Fly.io
 
 ## Open questions
 - None
@@ -39,4 +36,5 @@ Nothing — all 16 features done.
 | F13 Fly.io Deployment | Medium | done ✓ |
 | F14 File Serving Security | Medium | done ✓ |
 | F15 MIME Type Handling | Medium | done ✓ |
+| F17 Bootstrap-First Styling | Medium | done ✓ |
 | F16 Pages Feature | Low | done ✓ |

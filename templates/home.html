@@ -3,51 +3,49 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-<div class="hero">
-    <h1>Welcome to Salas Blog</h1>
-    <p class="hero-subtitle">Personal thoughts, projects, and discoveries</p>
+<div class="py-3 mb-4 border-bottom">
+    <h1 class="display-5">Welcome to Salas Blog</h1>
+    <p class="lead text-muted">Personal thoughts, projects, and discoveries</p>
 </div>
 
-<div class="home-columns">
-    <section class="home-main">
-        <h2>Recent Posts</h2>
-        <div class="post-grid">
+<div class="row g-4">
+    <section class="col-md-8">
+        <h2 class="h4 border-bottom pb-2 mb-3">Recent Posts</h2>
+        <div class="row row-cols-1 g-3">
             {% for post in recent_posts %}
-            <article class="post-card">
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <div class="post-meta">
-                    <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
-                    <span class="post-category">{{ post.category }}</span>
-                </div>
-                <p class="post-excerpt">{{ post.excerpt | markdown | safe }}</p>
-            </article>
+            <div class="col">
+                <article class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title h6"><a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a></h3>
+                        <div class="card-subtitle mb-2 text-muted small">
+                            <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
+                            <span class="badge bg-primary ms-1">{{ post.category }}</span>
+                        </div>
+                        <div class="card-text small mb-0">{{ post.excerpt | markdown | safe }}</div>
+                    </div>
+                </article>
+            </div>
             {% endfor %}
         </div>
     </section>
 
-    <aside class="home-sidebar">
-        <h2>Link Blog</h2>
-        <div class="raindrop-list">
+    <aside class="col-md-4">
+        <h2 class="h4 border-bottom pb-2 mb-3">Link Blog</h2>
+        <ul class="list-group list-group-flush">
             {% for raindrop in recent_raindrops %}
-            <article class="raindrop">
-                <div class="raindrop-header">
-                    <div class="raindrop-date">{{ raindrop.date | dd_mm_yyyy }}</div>
+            <li class="list-group-item px-0">
+                <div class="small text-muted">{{ raindrop.date | dd_mm_yyyy }}</div>
+                <h3 class="h6 mb-1">
+                    <a href="{{ raindrop.url }}" class="text-decoration-none">{{ raindrop.title }}</a>
+                </h3>
+                {% if raindrop.note %}
+                <div class="small text-muted">
+                    {{ raindrop.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
                 </div>
-                <div class="raindrop-content">
-                    <div class="raindrop-text">
-                        <h3 class="raindrop-title">
-                            <a href="{{ raindrop.url }}">{{ raindrop.title }}</a>
-                        </h3>
-                        {% if raindrop.note %}
-                        <div class="raindrop-notes">
-                            {{ raindrop.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
-            </article>
+                {% endif %}
+            </li>
             {% endfor %}
-        </div>
+        </ul>
     </aside>
 </div>
 {% endblock %}

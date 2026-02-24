@@ -1,5 +1,7 @@
 Feature ID: {{feature_id}}
 
+If the feature description below is marked "(not yet available:", output: "Error: Feature {{feature_id}} not found in features.md. Run `/features-gen` or `/features-update` first." and stop.
+
 Generate or update the task list for this feature following the instructions below.
 
 You must follow these coding principles when generating tasks:

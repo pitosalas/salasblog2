@@ -191,11 +191,12 @@ def _parse_malformed_frontmatter(file_path: Path, original_error: Exception) -> 
                     import yaml
                     metadata = yaml.safe_load(fixed_yaml) or {}
                     
+                    stripped = markdown_content.strip()
                     return {
                         'metadata': metadata,
-                        'content': markdown_content,
-                        'raw_content': markdown_content,
-                        'html_content': process_markdown_to_html(markdown_content)
+                        'content': stripped,
+                        'raw_content': stripped,
+                        'html_content': process_markdown_to_html(stripped)
                     }
                 except:
                     pass

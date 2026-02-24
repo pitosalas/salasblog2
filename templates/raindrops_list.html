@@ -3,227 +3,106 @@
 {% block title %}Link Blog{% endblock %}
 
 {% block content %}
-<div class="raindrops-list">
+<div class="border-bottom pb-3 mb-4">
+    <h1 class="display-6">Link Blog</h1>
     {% if pagination and pagination.total_pages > 1 %}
-    <div class="pagination-info">
-        Page {{ pagination.current_page }} of {{ pagination.total_pages }} 
-        ({{ total_posts }} total posts)
-    </div>
-    {% endif %}
-    
-    {% if posts|length == 0 %}
-    <div style="text-align: center; color: #666; font-style: italic;">
-        No link blog posts found.
-    </div>
-    {% else %}
-    
-    {% set grouped_posts = posts | group_by_month %}
-    {% for month_group in grouped_posts %}
-    <section class="month-group">
-        <h2 class="month-header">{{ month_group.month_name }}</h2>
-        
-        {% for post in month_group.posts %}
-        <article class="raindrop">
-            <div class="raindrop-header">
-                <div class="raindrop-date">{{ post.date | dd_mm_yyyy }}</div>
-                {% if post.important %}
-                <span class="raindrop-important">⭐</span>
-                {% endif %}
-                {% if post.broken %}
-                <span class="raindrop-broken">⚠️</span>
-                {% endif %}
-            </div>
-            
-            <div class="raindrop-content">
-                {% if post.cover %}
-                <div class="raindrop-image">
-                    <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy" />
-                </div>
-                {% endif %}
-                
-                <div class="raindrop-text">
-                    <h3 class="raindrop-title">
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </h3>
-                    
-                    {% if post.domain %}
-                    <div class="raindrop-domain">
-                        <strong>Source:</strong> {{ post.domain }}
-                    </div>
-                    {% endif %}
-                    
-                    {% if post.excerpt %}
-                    <div class="raindrop-excerpt">{{ post.excerpt | markdown | safe }}</div>
-                    {% endif %}
-                    
-                    {% if post.note %}
-                    <div class="raindrop-notes">
-                        <strong>Notes:</strong> {{ post.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
-                    </div>
-                    {% endif %}
-                    
-                    {% if post.raindrop_url %}
-                    <div class="raindrop-url">
-                        <strong>URL:</strong> <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener">{{ post.raindrop_url }}</a>
-                    </div>
-                    {% endif %}
-                    
-                    {% if post.tags and post.tags[0] %}
-                    <div class="raindrop-tags">
-                        <strong>Tags:</strong> {{ post.tags[0] }}
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-        </article>
-        {% endfor %}
-    </section>
-    {% endfor %}
-    
-    {% endif %}
-    
-    {% if pagination and pagination.total_pages > 1 %}
-    <nav class="pagination">
-        {% if pagination.has_prev %}
-            <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
-        {% endif %}
-        
-        <div class="pagination-numbers">
-            {% for page_url in pagination.page_urls %}
-                {% set loop_index = loop.index %}
-                {% if loop_index == pagination.current_page %}
-                    <span class="pagination-link current">{{ loop_index }}</span>
-                {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
-                    <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
-                {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
-                    <span class="pagination-ellipsis">…</span>
-                {% endif %}
-            {% endfor %}
-        </div>
-        
-        {% if pagination.has_next %}
-            <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
-        {% endif %}
-    </nav>
+    <p class="text-muted small mb-0">Page {{ pagination.current_page }} of {{ pagination.total_pages }} ({{ total_posts }} total posts)</p>
     {% endif %}
 </div>
 
-<style>
-.month-group {
-    margin-bottom: 2em;
-}
+{% if posts|length == 0 %}
+<p class="text-center text-muted fst-italic py-5">No link blog posts found.</p>
+{% else %}
 
-.month-header {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
-    font-size: 1.5em;
-}
+{% set grouped_posts = posts | group_by_month %}
+{% for month_group in grouped_posts %}
+<section class="mb-4">
+    <h2 class="h5 border-bottom border-primary pb-1 mb-3">{{ month_group.month_name }}</h2>
 
-.raindrop {
-    margin-bottom: 1.5em;
-    padding: 1em;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background: #fafafa;
-}
+    {% for post in month_group.posts %}
+    <article class="card mb-3">
+        <div class="card-body">
+            <div class="d-flex align-items-center gap-2 mb-1">
+                <small class="text-muted fw-bold">{{ post.date | dd_mm_yyyy }}</small>
+                {% if post.important %}<span title="Important">&#11088;</span>{% endif %}
+                {% if post.broken %}<span title="Broken link">&#9888;&#65039;</span>{% endif %}
+            </div>
 
-.raindrop-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    margin-bottom: 0.5em;
-}
+            <div class="d-flex gap-3 align-items-start">
+                {% if post.cover %}
+                <div class="flex-shrink-0">
+                    <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy" class="rounded" style="width:100px; height:auto;">
+                </div>
+                {% endif %}
 
-.raindrop-date {
-    font-size: 0.9em;
-    color: #666;
-    font-weight: bold;
-}
+                <div class="flex-grow-1">
+                    <h3 class="h6 mb-1">
+                        <a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a>
+                    </h3>
 
-.raindrop-important, .raindrop-broken {
-    font-size: 1.2em;
-}
+                    {% if post.domain %}
+                    <div class="text-muted small mb-1"><strong>Source:</strong> {{ post.domain }}</div>
+                    {% endif %}
 
-.raindrop-content {
-    display: flex;
-    gap: 1em;
-    align-items: flex-start;
-}
+                    {% if post.excerpt %}
+                    <div class="small mb-1">{{ post.excerpt | markdown | safe }}</div>
+                    {% endif %}
 
-.raindrop-image {
-    flex-shrink: 0;
-    width: 120px;
-}
+                    {% if post.note %}
+                    <div class="small border-start border-primary ps-2 fst-italic mb-1">
+                        {{ post.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
+                    </div>
+                    {% endif %}
 
-.raindrop-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
+                    {% if post.raindrop_url %}
+                    <div class="small text-muted mb-1">
+                        <strong>URL:</strong> <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener" class="text-break">{{ post.raindrop_url }}</a>
+                    </div>
+                    {% endif %}
 
-.raindrop-text {
-    flex: 1;
-}
+                    {% if post.tags and post.tags[0] %}
+                    <div class="small text-muted fst-italic"><strong>Tags:</strong> {{ post.tags[0] }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </article>
+    {% endfor %}
+</section>
+{% endfor %}
 
-.raindrop-title {
-    margin: 0 0 0.5em 0;
-    font-size: 1.1em;
-}
+{% endif %}
 
-.raindrop-title a {
-    color: #2c3e50;
-    text-decoration: none;
-}
+{% if pagination and pagination.total_pages > 1 %}
+<nav aria-label="Link blog pagination" class="mt-4">
+    <ul class="pagination justify-content-center flex-wrap">
+        {% if pagination.has_prev %}
+        <li class="page-item">
+            <a class="page-link" href="{{ pagination.prev_url }}">&laquo; Previous</a>
+        </li>
+        {% endif %}
 
-.raindrop-title a:hover {
-    color: #3498db;
-    text-decoration: underline;
-}
+        {% for page_url in pagination.page_urls %}
+            {% set loop_index = loop.index %}
+            {% if loop_index == pagination.current_page %}
+            <li class="page-item active" aria-current="page">
+                <span class="page-link">{{ loop_index }}</span>
+            </li>
+            {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+            <li class="page-item">
+                <a class="page-link" href="{{ page_url }}">{{ loop_index }}</a>
+            </li>
+            {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+            <li class="page-item disabled"><span class="page-link">&hellip;</span></li>
+            {% endif %}
+        {% endfor %}
 
-.raindrop-domain, .raindrop-excerpt, .raindrop-url, .raindrop-tags, .raindrop-notes {
-    margin-bottom: 0.5em;
-    font-size: 0.9em;
-}
-
-.raindrop-domain {
-    color: #666;
-}
-
-.raindrop-excerpt {
-    color: #444;
-    line-height: 1.4;
-}
-
-.raindrop-url a {
-    color: #3498db;
-    word-break: break-all;
-}
-
-.raindrop-tags {
-    color: #666;
-    font-style: italic;
-}
-
-.raindrop-notes {
-    color: #2c3e50;
-    background-color: #f8f9fa;
-    padding: 0.5em;
-    border-left: 3px solid #3498db;
-    border-radius: 0 4px 4px 0;
-    font-style: italic;
-}
-
-@media (max-width: 600px) {
-    .raindrop-content {
-        flex-direction: column;
-    }
-    
-    .raindrop-image {
-        width: 100%;
-    }
-}
-</style>
+        {% if pagination.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="{{ pagination.next_url }}">Next &raquo;</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 {% endblock %}

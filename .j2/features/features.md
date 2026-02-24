@@ -11,6 +11,13 @@ Status values:
 
 <!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
 
+## F17 — Bootstrap-First Styling
+**Priority**: Medium
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: Replace custom CSS with the latest Bootstrap (v5.x) loaded from CDN. Remove or minimize `static/css/` overrides so the site uses Bootstrap's default components and utilities throughout all Jinja2 templates (nav, cards, pagination, tables, forms, admin UI). No custom color themes or layout overrides — accept Bootstrap defaults. Verify all pages render correctly with no broken layouts.
+
+---
+
 ## F08 — Placeholder Title for Missing Frontmatter
 **Priority**: Medium
 **Status**: done | Tests written: yes | Tests passing: yes

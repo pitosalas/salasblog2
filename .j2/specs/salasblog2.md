@@ -4,6 +4,14 @@
 
 salasblog2 is a personal blogging platform implemented as a Python static site generator with an integrated FastAPI web server. It processes Markdown files with YAML frontmatter into HTML pages, supports three content types (blog posts, link-blog raindrops, static pages), syncs bookmarks from Raindrop.io, and exposes an XML-RPC Blogger API for compatibility with desktop editors like MarsEdit. The application is deployed on Fly.io with dual content storage (a persistent volume as the source of truth and a Git repository for backups).
 
+## UI / Styling Principles
+
+- Use Bootstrap 5 (CDN) as the sole CSS framework; accept its default appearance.
+- Do **not** add custom CSS to reproduce what Bootstrap already provides.
+- All overrides must live exclusively in `static/css/style.css` — never inline in templates.
+- Every rule in `style.css` must have a comment explaining why Bootstrap alone is insufficient.
+- When in doubt, remove the override and live with the Bootstrap default.
+
 ## Goals
 
 - Generate a complete static website from Markdown + YAML frontmatter content files

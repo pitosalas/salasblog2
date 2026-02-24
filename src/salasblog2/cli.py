@@ -4,8 +4,11 @@ Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
 import argparse
 import os
 import sys
+from dotenv import load_dotenv
 from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
+
+load_dotenv()
 
 
 def cmd_generate(args):

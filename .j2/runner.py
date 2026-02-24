@@ -164,6 +164,55 @@ def find_default_feature(root, settings):
     return in_progress or not_started or "F01"
 
 
+def compute_status(root, settings):
+    # Compute and return the final formatted status text directly.
+    specs_dir = root / ".j2" / "specs"
+    spec_count = len(list(specs_dir.glob("*.md"))) if specs_dir.exists() else 0
+
+    try:
+        features_text = load_features(root, settings)
+    except FileNotFoundError:
+        features_text = ""
+
+    pattern = r"^## (F\d+) —.*?\n\*\*Priority\*\*: \w+\n\*\*Status\*\*: ([^\n|]+)"
+    counts = {"done": 0, "in progress": 0, "not started": 0}
+    for _, status in re.findall(pattern, features_text, re.MULTILINE):
+        s = status.strip().lower()
+        if s in counts:
+            counts[s] += 1
+
+    missing = missing_tasks_summary(root, settings)
+
+    tasks_dir = root / settings["j2"]["tasks_dir"]
+    pending = 0
+    if tasks_dir.exists():
+        for tf in tasks_dir.glob("*.md"):
+            pending += tf.read_text().count("**Status**: not started")
+
+    state_path = root / ".j2" / "state.md"
+    last_completed = next_cmd = "(unknown)"
+    if state_path.exists():
+        state_text = state_path.read_text()
+        m = re.search(r"^completed:\s*(.+)", state_text, re.MULTILINE)
+        if m:
+            last_completed = m.group(1).strip()
+        m = re.search(r"^next:\s*(.+)", state_text, re.MULTILINE)
+        if m:
+            next_cmd = m.group(1).strip()
+
+    lines = [
+        "Project Status",
+        "==============",
+        f"Specs:      {spec_count}",
+        f"Features:   {counts['done']} done / {counts['in progress']} in progress / {counts['not started']} not started",
+        f"Missing task files: {missing}",
+        f"Pending tasks: {pending}",
+        f"Last completed: {last_completed}",
+        f"Next:       {next_cmd}",
+    ]
+    return "\n".join(lines)
+
+
 def clean_export(root, target):
     # Copy the project to target, excluding all j2 infrastructure, then remove runner.py.
     target_path = Path(target).resolve()
@@ -196,6 +245,7 @@ def build_context(root, settings, placeholders, args):
         "tasks":      lambda: load_tasks(root, settings, args.feature),
         "task":       lambda: extract_task(load_tasks(root, settings, args.feature), args.task),
         "feature_id":       lambda: args.feature if args.feature else find_default_feature(root, settings),
+        "feature_arg_provided": lambda: "yes" if args.feature else "no",
         "request":          lambda: args.request,
         "target":           lambda: args.target,
         "default_feature":  lambda: find_default_feature(root, settings),
@@ -244,6 +294,9 @@ def main():
         if args.command == "continue":
             resolve_next_command(root, args)
         settings = load_config(root)
+        if args.command == "status":
+            print(compute_status(root, settings))
+            return
         workflow = load_workflow(root)
         step = find_step(workflow, args.command)
         template = load_template(root, settings, step["template"])

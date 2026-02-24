@@ -77,3 +77,8 @@ steps:
     command: "/deploy"
     template: "deploy.md"
     description: "Create a target directory and install the j2 scaffold into it."
+
+  - id: status
+    command: "/status"
+    template: "status.md"
+    description: "Display current project health: spec, feature, and task done-ness."
