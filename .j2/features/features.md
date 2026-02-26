@@ -9,6 +9,11 @@ Status values:
 
 <!-- ===== INCOMPLETE FEATURES (High → Medium → Low) ===== -->
 
+## F21 — Raindrop Collection Filtering
+**Priority**: Medium
+**Status**: not started | Tests written: no | Tests passing: n/a
+**Description**: The `/raindrops/` listing page displays a row of links at the top, one for each collection found across all raindrops. Clicking a collection link filters the displayed raindrops to show only those from that collection. The generator extracts collection names from raindrop frontmatter and generates filtered listing pages per collection.
+
 ---
 
 <!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
