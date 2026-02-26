@@ -23,7 +23,8 @@ from .utils import (
     sort_posts_by_date,
     group_posts_by_month,
     load_markdown_files_from_directory,
-    get_markdown_processor
+    get_markdown_processor,
+    slugify_tag
 )
 
 
@@ -52,6 +53,7 @@ class SiteGenerator:
         self.jinja_env.filters['dd_mm_yyyy'] = lambda date_str: format_date(date_str, '%d-%m-%Y')
         self.jinja_env.filters['group_by_month'] = group_posts_by_month
         self.jinja_env.filters['markdown'] = self.markdown_to_html
+        self.jinja_env.filters['slugify'] = slugify_tag
         self.jinja_env.globals['NOTE_TRUNCATE_LENGTH'] = 300
         # Use the same markdown processor as utils.py for consistency
         self.markdown_processor = get_markdown_processor()
@@ -98,7 +100,8 @@ class SiteGenerator:
                     'content': parsed['html_content'],
                     'raw_content': parsed['content'],
                     'filename': filename,
-                    'url': generate_url_from_filename(filename, content_type)
+                    'url': generate_url_from_filename(filename, content_type),
+                    'tags': parsed['metadata'].get('tags', [])
                 }
                 
                 # Add raindrop-specific fields if they exist
@@ -334,8 +337,9 @@ class SiteGenerator:
     def generate_home_page(self, blog_posts, raindrops):
         """Generate the home page"""
         # Get recent posts for home page
-        recent_blog_posts = blog_posts[:5] if blog_posts else []
-        recent_raindrops = raindrops[:5] if raindrops else []
+        posts_count = int(os.environ.get("HOME_POSTS_COUNT", "5"))
+        recent_blog_posts = blog_posts[:posts_count] if blog_posts else []
+        recent_raindrops = raindrops[:posts_count] if raindrops else []
         
         context = {
             'recent_posts': recent_blog_posts,
@@ -396,6 +400,31 @@ class SiteGenerator:
         except FileNotFoundError:
             print("✗ 'fly' command not found. Please install Fly CLI first.")
     
+    def generate_tag_pages(self, posts):
+        """Generate one tag index page per unique tag across blog posts."""
+        tags_by_slug = {}
+        for post in posts:
+            for tag in post.get('tags', []):
+                slug = slugify_tag(tag)
+                if slug not in tags_by_slug:
+                    tags_by_slug[slug] = {'name': tag, 'posts': []}
+                tags_by_slug[slug]['posts'].append(post)
+
+        for slug, data in tags_by_slug.items():
+            tag_dir = self.output_dir / "tags" / slug
+            tag_dir.mkdir(parents=True, exist_ok=True)
+            context = {
+                'tag': data['name'],
+                'posts': sort_posts_by_date(data['posts']),
+                'site_title': 'Pito Salas Blog',
+                'navigation': self.get_navigation_items()
+            }
+            html_content = self.render_template('tag_page.html', context)
+            with open(tag_dir / "index.html", 'w', encoding='utf-8') as f:
+                f.write(html_content)
+
+        print(f"✓ Generated {len(tags_by_slug)} tag pages")
+
     def generate_site(self):
         """Generate the complete static site"""
         print(f"🚀 Starting site generation")
@@ -430,6 +459,11 @@ class SiteGenerator:
         print("📋 Generating listing pages...")
         self.generate_listing_pages(blog_posts, 'blog')
         self.generate_listing_pages(raindrops, 'raindrops')
+        print()
+
+        # Generate tag pages
+        print("🏷️  Generating tag pages...")
+        self.generate_tag_pages(blog_posts)
         print()
         
         # Generate home page

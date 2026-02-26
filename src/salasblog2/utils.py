@@ -316,6 +316,14 @@ def generate_raindrop_filename(raindrop: Dict[str, Any], counter: int) -> str:
     return f"{date_str}-{counter}-{safe_title}.md"
 
 
+def slugify_tag(tag: str) -> str:
+    """Convert tag to URL-safe slug."""
+    slug = tag.lower()
+    slug = re.sub(r'[^\w\s-]', '', slug)
+    slug = re.sub(r'[\s_]+', '-', slug)
+    return slug.strip('-')
+
+
 def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
     """Convert raindrop data to markdown with YAML frontmatter."""
     created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))

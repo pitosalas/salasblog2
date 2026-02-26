@@ -13,6 +13,11 @@
                 <div class="text-muted">
                     <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
                     <span class="badge bg-primary ms-2">{{ post.category }}</span>
+                    {% for tag in post.tags %}
+                    {% if not tag.isdigit() %}
+                    <a href="/tags/{{ tag | slugify }}/index.html" class="badge bg-secondary text-decoration-none ms-1">{{ tag }}</a>
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </header>
 

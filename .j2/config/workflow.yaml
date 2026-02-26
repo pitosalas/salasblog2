@@ -34,7 +34,7 @@ steps:
 
   - id: task-start
     command: "/task-start"
-    template: "start_task.md"
+    template: "next_task.md"
     description: "Begin implementation of a specific task."
 
   - id: task-next

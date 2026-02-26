@@ -10,12 +10,6 @@ The project coding rules are below. When applying changes, ensure the result sta
 {{rules}}
 --- RULES END ---
 
-The current project spec is below for reference.
-
---- SPEC BEGIN ---
-{{spec}}
---- SPEC END ---
-
 The current feature list is below. The developer may ask you to:
 - Add a new feature
 - Remove a feature
@@ -34,8 +28,6 @@ Do not make changes beyond what was requested.
 Use the HTML comment markers `<!-- ===== INCOMPLETE FEATURES (High → Medium → Low) ===== -->` and `<!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->` to delimit the sections. This ordering must be maintained on every write regardless of what was changed.
 
 **Auto-task-gen**: After outputting the updated feature list, compare the new feature IDs against those in `--- CURRENT FEATURES BEGIN ---` below. For each feature ID that is newly added (not present in the current list), generate a task file at `.j2/tasks/<FID>.md` using the same format and rules as `/tasks-gen`: concrete actionable tasks, T01/T02/… IDs, all statuses `not started`, consistent with the coding rules. Write each file directly — do not display the task list in the console, just confirm with one line per file: `Written: .j2/tasks/<FID>.md (N tasks)`. If no new features were added, skip this step entirely.
-
-If the requested changes imply a gap or contradiction in the spec (e.g. a new feature requires something the spec doesn't mention), output an updated spec in a fenced code block after the feature list. If no spec update is needed, omit it entirely.
 
 --- CURRENT FEATURES BEGIN ---
 {{features}}

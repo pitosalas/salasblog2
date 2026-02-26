@@ -1,15 +1,14 @@
-# Current Session — 2026-02-24
+# Current Session — 2026-02-26
 
 ## What was completed
-- F17 Bootstrap-First Styling: migrated all 14 Jinja2 templates to Bootstrap 5.3 CDN
-- Reduced static/css/style.css from 1024 lines to ~50 lines (overrides only, each commented)
-- Added "UI / Styling Principles" section to spec enforcing Bootstrap-first rule
-- Added load_dotenv() to cli.py so .env vars (EXCERPT_LENGTH etc.) apply to all commands
-- Fixed extra blank space at bottom of post cards (nested <p> margin from markdown filter)
-- 12 new Bootstrap rendering tests added; 232 total passing
+- F18 Clickable Tag Pages: fixed numeric tag filtering to prevent WordPress import artifact IDs from displaying
+  - Added `{% if not tag.isdigit() %}` condition to blog_post.html, blog_list.html, home.html templates
+  - All 11 F18 tests passing, moved F18.md to done folder
+- F19 Configurable Home Page Post Count: already complete, all tests passing
+- F20 Front Page "See All" Links: already complete, all tests passing
 
 ## Currently in progress
-Nothing — all 17 features done.
+None — all 20 features done.
 
 ## What is next
 - /features-update to add new features, or /deploy to ship to Fly.io
@@ -37,4 +36,7 @@ Nothing — all 17 features done.
 | F14 File Serving Security | Medium | done ✓ |
 | F15 MIME Type Handling | Medium | done ✓ |
 | F17 Bootstrap-First Styling | Medium | done ✓ |
+| F18 Clickable Tag Pages | Medium | done ✓ |
+| F19 Configurable Post Count | Medium | done ✓ |
+| F20 See All Links | Low | done ✓ |
 | F16 Pages Feature | Low | done ✓ |

@@ -1,13 +1,8 @@
-# salasblog2 project settings (auto-detected by /adopt)
+# j2 dev repo settings
 
 project:
-  name: "salasblog2"
+  name: "j2"
   language: "python"
-  python_version: "3.12"
-  package_manager: "uv"
-  test_runner: "pytest"
-  framework: "fastapi"
-  platform: "fly.io"
 
 j2:
   specs_dir: ".j2/specs"

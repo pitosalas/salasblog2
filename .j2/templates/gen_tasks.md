@@ -37,10 +37,6 @@ Format each task as:
 **Status**: not started
 **Description**: ...
 
---- SPEC BEGIN ---
-{{spec}}
---- SPEC END ---
-
 --- FEATURES BEGIN ---
 {{features}}
 --- FEATURES END ---

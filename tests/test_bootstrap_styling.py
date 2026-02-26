@@ -6,7 +6,7 @@
 from pathlib import Path
 import pytest
 from jinja2 import Environment, FileSystemLoader
-from salasblog2.utils import format_date, group_posts_by_month, get_markdown_processor
+from salasblog2.utils import format_date, group_posts_by_month, get_markdown_processor, slugify_tag
 
 PROJECT_ROOT = Path(__file__).parent.parent
 TEMPLATES_DIR = PROJECT_ROOT / "templates"
@@ -20,6 +20,7 @@ def make_env():
     env.filters["group_by_month"] = group_posts_by_month
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
     env.filters["truncate"] = lambda s, n, killwords=False, end="...": s[:n] + end if s and len(s) > n else (s or "")
+    env.filters["slugify"] = slugify_tag
     return env
 
 
@@ -33,6 +34,7 @@ def fake_post():
         "is_truncated": False,
         "filename": "test",
         "content": "<p>Body</p>",
+        "tags": [],
     }
 
 

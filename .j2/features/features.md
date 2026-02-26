@@ -9,7 +9,30 @@ Status values:
 
 <!-- ===== INCOMPLETE FEATURES (High → Medium → Low) ===== -->
 
+---
+
 <!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
+
+## F19 — Configurable Front Page Post Count
+**Priority**: Medium
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: The number of recent posts shown in each section on the home page (blog posts and raindrops) is currently hardcoded to 5. Add a `HOME_POSTS_COUNT` environment variable (default 5) read by the generator when building the home page context so operators can adjust the count without code changes.
+
+---
+
+## F18 — Clickable Tag Pages
+**Priority**: Medium
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: Blog posts can have a `tags` list in their YAML frontmatter. Each tag displayed on a post page or listing page becomes a link to `/tags/<tag>/index.html`, which lists all posts carrying that tag (title, date, excerpt). The generator builds one static tag page per unique tag across all blog posts. Tags are shown as Bootstrap badges on `blog_post.html`, `blog_list.html`, and `home.html` (recent posts section).
+
+---
+
+## F20 — Front Page "See All" Links
+**Priority**: Low
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: Add a "See all posts →" link below the recent blog posts section on `home.html` and a "See all links →" link below the recent raindrops section. Each links to the corresponding listing page (`/blog/` and `/raindrops/` respectively).
+
+---
 
 ## F17 — Bootstrap-First Styling
 **Priority**: Medium

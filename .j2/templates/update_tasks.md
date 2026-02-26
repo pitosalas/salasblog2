@@ -12,10 +12,4 @@ The project coding rules are below. Ensure the updated task list stays consisten
 {{rules}}
 --- RULES END ---
 
-The full feature list is below for context.
-
---- FEATURES BEGIN ---
-{{features}}
---- FEATURES END ---
-
 Apply the developer's requested changes and output the complete updated task list in the same format. Preserve the `**Status**` field on each task exactly as it appears. Do not make changes beyond what was requested.

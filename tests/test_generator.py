@@ -24,12 +24,13 @@ def make_generator(tmp_path):
     g.output_dir = tmp_path / "output"
     g.output_dir.mkdir()
     from jinja2 import Environment, FileSystemLoader
-    from salasblog2.utils import format_date, group_posts_by_month, get_markdown_processor, process_markdown_to_html
+    from salasblog2.utils import format_date, group_posts_by_month, get_markdown_processor, process_markdown_to_html, slugify_tag
     g.jinja_env = Environment(loader=FileSystemLoader(g.templates_dir))
     g.jinja_env.filters['strftime'] = g.format_date
     g.jinja_env.filters['dd_mm_yyyy'] = lambda d: format_date(d, '%d-%m-%Y')
     g.jinja_env.filters['group_by_month'] = group_posts_by_month
     g.jinja_env.filters['markdown'] = g.markdown_to_html
+    g.jinja_env.filters['slugify'] = slugify_tag
     return g
 
 
@@ -213,7 +214,7 @@ class TestGenerateIndividualPosts:
             "title": title, "date": date, "type": "blog", "category": "General",
             "content": "<p>Hello</p>", "raw_content": "Hello",
             "filename": "2025-01-01-test", "url": "/blog/2025-01-01-test.html",
-            "excerpt": "Hello", "is_truncated": False,
+            "excerpt": "Hello", "is_truncated": False, "tags": [],
         }]
 
     def test_blog_post_goes_to_blog_subdir(self, tmp_path):
@@ -295,7 +296,7 @@ class TestGenerateHomePage:
         return {"title": title, "date": date, "type": "blog", "category": "General",
                 "content": "<p>x</p>", "raw_content": "x",
                 "filename": "f", "url": "/blog/f.html",
-                "excerpt": "Ex", "is_truncated": False}
+                "excerpt": "Ex", "is_truncated": False, "tags": []}
 
     def test_creates_index_html(self, tmp_path):
         g = make_generator(tmp_path)
