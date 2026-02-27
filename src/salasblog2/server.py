@@ -842,7 +842,11 @@ async def api_stats(request: Request):
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=403, detail="Not authenticated")
     counts = get_counter().get_all()
-    return {"counts": [{"path": p, "count": c} for p, c in counts], "total": sum(c for _, c in counts)}
+    total = sum(sum(types.values()) for _, types in counts)
+    return {
+        "counts": [{"path": p, "total": sum(t.values()), "by_type": t} for p, t in counts],
+        "total": total,
+    }
 
 
 @app.get("/admin/edit-post/{filename}")

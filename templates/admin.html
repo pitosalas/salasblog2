@@ -649,10 +649,17 @@
                     div.innerHTML = '<p class="text-muted fst-italic">No visits recorded yet.</p>';
                     return;
                 }
+                const types = ['human', 'search_engine', 'ai_bot', 'crawler', 'unknown'];
+                const labels = {'human': 'Human', 'search_engine': 'Search', 'ai_bot': 'AI Bot', 'crawler': 'Crawler', 'unknown': 'Unknown'};
+                const headerCols = types.map(t => `<th class="text-end">${labels[t]}</th>`).join('');
+                const rows = data.counts.map(r => {
+                    const typeCols = types.map(t => `<td class="text-end"><span class="badge bg-secondary">${r.by_type[t] || 0}</span></td>`).join('');
+                    return `<tr><td><a href="${r.path}" class="text-decoration-none">${r.path}</a></td><td class="text-end fw-bold">${r.total}</td>${typeCols}</tr>`;
+                }).join('');
                 div.innerHTML = `<p class="text-muted mb-2"><strong>${data.total}</strong> total visits across <strong>${data.counts.length}</strong> pages</p>
                     <table class="table table-striped table-hover table-sm">
-                        <thead class="table-dark"><tr><th>Page</th><th class="text-end" style="width:100px">Visits</th></tr></thead>
-                        <tbody>${data.counts.map(r => `<tr><td><a href="${r.path}" class="text-decoration-none">${r.path}</a></td><td class="text-end"><span class="badge bg-secondary">${r.count}</span></td></tr>`).join('')}</tbody>
+                        <thead class="table-dark"><tr><th>Page</th><th class="text-end">Total</th>${headerCols}</tr></thead>
+                        <tbody>${rows}</tbody>
                     </table>`;
             } catch (e) {
                 div.innerHTML = '<p class="text-danger">Failed to load stats.</p>';
