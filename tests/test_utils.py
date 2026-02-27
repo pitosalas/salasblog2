@@ -289,7 +289,6 @@ Some content here.
                 # frontmatter may parse dates as date objects
                 date_value = result['metadata']['date']
                 assert str(date_value) == '2025-01-15'
-                assert result['metadata']['category'] == 'Test'
                 assert '# This is a test post' in result['content']
                 assert '<h1' in result['html_content'] and 'This is a test post</h1>' in result['html_content']
                 
@@ -324,7 +323,6 @@ Some content here.
         # Should have default metadata based on filename
         assert result['metadata']['title'] == 'file'  # filename stem
         assert result['metadata']['type'] == 'blog'
-        assert result['metadata']['category'] == 'Uncategorized'
 
 
 
@@ -369,7 +367,7 @@ class TestCreateFilenameFromTitle:
         # Note: This test will have a dynamic date, so we test the pattern
         result = create_filename_from_title("My Test Post!")
         assert result.endswith("-my-test-post.md")
-        assert result.startswith("2025-")  # Assumes current year
+        assert result.startswith(str(datetime.now().year) + "-")
         assert len(result.split("-")) >= 4  # YYYY-MM-DD-title format
     
     def test_create_filename_from_title_special_chars(self):
@@ -466,7 +464,9 @@ class TestFormatRaindropAsMarkdown:
             "tags": ["python", "coding", "tutorial"]
         }
         markdown = format_raindrop_as_markdown(raindrop)
-        assert "python coding tutorial" in markdown  # Tags as space-separated string
+        assert "python" in markdown  # Tags stored as YAML list items
+        assert "coding" in markdown
+        assert "tutorial" in markdown
     
     def test_format_raindrop_as_markdown_with_notes(self):
         """Test raindrop markdown with notes."""

@@ -1,101 +1,105 @@
 # Salasblog2
 
-Static site generator with FastAPI server, XML-RPC Blogger API, and Raindrop.io integration.
+Personal blogging platform: Python static site generator + FastAPI server, with Raindrop.io link blog and XML-RPC Blogger API for MarsEdit.
 
 ## Features
 
-- Markdown + YAML frontmatter processing
-- Multi-content types: blog posts, raindrops (link blog), static pages
-- Jinja2 templating
+- Markdown + YAML frontmatter content processing
+- Three content types: blog posts, raindrops (link blog), static pages
+- Jinja2 HTML templating with Bootstrap 5
 - XML-RPC Blogger API (MarsEdit compatible)
-- Web admin interface
-- Raindrop.io bookmark sync
-- Dual content storage (persistent volume + git)
+- Web admin interface with create/edit/delete and tag selection
+- Tag pages: clickable tag badges link to `/tags/<tag>/` listing pages
+- Raindrop.io bookmark sync (scheduled + on-demand) with collection filtering
+- Dual content storage: Fly.io persistent volume + GitHub backup
+- Scheduled Git sync and Raindrop sync
 
-## Installation
+## Quick Start
 
 ```bash
 uv sync
+uv run bg generate    # build static site
+uv run bg server      # serve at http://localhost:8000
 ```
 
-## Commands
+## CLI Commands
 
 ```bash
-uv run bg generate                             # Generate static site
-uv run bg server [--port PORT]                # Start FastAPI server
-uv run bg sync-raindrops [--reset]            # Sync Raindrop.io bookmarks
-uv run bg reset                               # Clean output directory
-uv run bg deploy                              # Deploy to Fly.io
+uv run bg generate                          # Generate full static site
+uv run bg server [--port PORT]             # Start FastAPI server (default: 8000)
+uv run bg sync-raindrops [--reset] [--count N]  # Sync Raindrop.io bookmarks
+uv run bg reset                            # Delete output/ directory
+uv run bg deploy                           # Deploy to Fly.io (runs fly deploy)
 ```
+
+## Testing
+
+```bash
+uv run pytest tests/                       # Run all core tests (202 tests)
+```
+
+CI runs automatically on every push via GitHub Actions.
 
 ## Content Structure
 
-### Key Directories
-- **`/data/content/`** - Persistent volume storage (production source of truth)
-- **`/app/content/`** - Git repository content (development/local)
-- Generator prioritizes `/data/content/` if it exists, falls back to local `content/`
-
-### Content Subdirectories
 ```
 content/
-├── blog/       # Blog posts with YAML frontmatter + markdown
-├── raindrops/  # Link blog posts from Raindrop.io bookmarks  
-└── pages/      # Static pages (About, Contact, etc.)
+├── blog/         # Blog posts
+├── raindrops/    # Raindrop.io link blog entries
+└── pages/        # Static pages (About, Contact, etc.)
 ```
 
+In production, `/data/content/` (Fly.io persistent volume) takes precedence over local `content/`.
+
 ### Content File Format
-All content files use YAML frontmatter + markdown:
+
 ```yaml
 ---
 title: "Post Title"
 date: "2024-01-15"
-type: "blog" | "drop" | "page"
+type: "blog"        # blog | drop | page
 category: "General"
 ---
 Markdown content here...
 ```
 
-### Content Lifecycle
-- **Creation**: Blog API (MarsEdit) → `/app/content/blog/` → immediate backup to `/data/content/`
-- **Raindrops**: API fetch → `/data/content/raindrops/` directly
-- **Sync**: Scheduler syncs `/data/content/` ↔ GitHub via `/app/content/`
-- **Generation**: Reads from `/data/content/` (or `/app/content/` fallback)
+Blog posts also support a `tags` list (selected from the built-in vocabulary in `BLOG_TAGS`).
+
+Raindrop entries also include: `url`, `domain`, `cover`, `tags`, `note`, `raindrop_type`, `collection`.
 
 ## Environment Variables
 
-**Required for Raindrops:**
-- `RAINDROP_TOKEN`
+| Variable | Required | Description |
+|---|---|---|
+| `SESSION_SECRET` | Yes | Random string for admin session signing |
+| `ADMIN_PASSWORD` | Yes | Web admin login password |
+| `RAINDROP_TOKEN` | For sync | Raindrop.io API token |
+| `BLOG_USERNAME` | Optional | XML-RPC auth (default: admin) |
+| `BLOG_PASSWORD` | Optional | XML-RPC auth (default: password) |
+| `GIT_TOKEN` or `SSH_PRIVATE_KEY` | For git sync | GitHub credentials |
+| `GIT_EMAIL` / `GIT_NAME` | For git sync | Git commit identity |
+| `GIT_BRANCH` | For git sync | Branch to push to (default: main) |
+| `SCHED_GITSYNC_HRS` | Optional | Git sync interval in hours (default: 6) |
+| `SCHED_RAINSYNC_HRS` | Optional | Raindrop sync interval in hours (default: 2) |
 
-**Authentication:**
-- `SESSION_SECRET` - Required for web admin sessions (random string)
-- `ADMIN_PASSWORD` - Web admin login password
-- `BLOG_USERNAME`/`BLOG_PASSWORD` - XML-RPC (default: admin/password)
+## MarsEdit Setup
 
-**Git Integration:**
-- `GIT_TOKEN` or `SSH_PRIVATE_KEY`
-- `GIT_EMAIL`/`GIT_NAME`
-- `GIT_BRANCH` (default: main)
-
-## XML-RPC Setup (MarsEdit)
-
-1. `uv run bg server`
-2. Add blog: `http://localhost:8000/xmlrpc`, API type "Blogger"
-3. Use `BLOG_USERNAME`/`BLOG_PASSWORD` credentials
+1. Start the server: `uv run bg server`
+2. In MarsEdit: add blog → URL `http://localhost:8000/xmlrpc`, API type **Blogger**
+3. Credentials: `BLOG_USERNAME` / `BLOG_PASSWORD`
 
 ## Fly.io Deployment
 
 ```bash
-fly secrets set RAINDROP_TOKEN="token"
-fly secrets set ADMIN_PASSWORD="password" 
-fly secrets set SSH_PRIVATE_KEY="$(cat ~/.ssh/id_ed25519)"
+fly secrets set SESSION_SECRET="$(openssl rand -hex 32)"
+fly secrets set ADMIN_PASSWORD="yourpassword"
+fly secrets set RAINDROP_TOKEN="yourtoken"
+fly secrets set GIT_TOKEN="yourghtoken"   # or SSH_PRIVATE_KEY
+fly secrets set GIT_EMAIL="you@example.com"
+fly secrets set GIT_NAME="Your Name"
 fly deploy
 ```
 
-## Testing
-
-- Run `uv run bg generate` to test static generation  
-- Run `uv run bg server` to test API functionality
-
 ## Development
 
-See [CLAUDE.md](CLAUDE.md) for development guidelines.
+See [CLAUDE.md](CLAUDE.md) for coding guidelines and architecture notes.

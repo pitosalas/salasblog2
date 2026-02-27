@@ -3,16 +3,19 @@
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h1>{{ page.title }}</h1>
-    
-    <div class="admin-controls" style="display: none;">
-        <a href="/admin/edit-page/{{ page.filename }}" class="admin-btn-edit" style="background: #007bff; color: white; padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 14px; margin-right: 10px;">Edit</a>
-        <button onclick="deletePage('{{ page.filename }}')" class="admin-btn-delete" style="background: #dc3545; color: white; padding: 8px 16px; border-radius: 4px; border: none; font-size: 14px; cursor: pointer;">Delete</button>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <header class="mb-4 pb-3 border-bottom">
+            <h1 class="display-6">{{ page.title }}</h1>
+            <div class="admin-controls d-none mt-2">
+                <a href="/admin/edit-page/{{ page.filename }}" class="btn btn-primary btn-sm">Edit</a>
+                <button onclick="deletePage('{{ page.filename }}')" class="btn btn-danger btn-sm">Delete</button>
+            </div>
+        </header>
+
+        <section>
+            {{ page.content | safe }}
+        </section>
     </div>
 </div>
-
-<section class="page-content">
-    {{ page.content | safe }}
-</section>
 {% endblock %}

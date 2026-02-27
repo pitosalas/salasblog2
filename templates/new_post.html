@@ -4,109 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New {{ content_type_title|default('Post') }} - Salas Blog</title>
-    <link rel="stylesheet" href="/static/css/admin-forms.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body class="new-form">
-    <div class="header header-new">
-        <h1>✨ Create New {{ content_type_title|default('Post') }}</h1>
-    </div>
-    
+<body>
+    <nav class="navbar navbar-dark bg-primary px-3 mb-4">
+        <a class="navbar-brand" href="/">Salas Blog</a>
+        <span class="navbar-text">Create New {{ content_type_title|default('Post') }}</span>
+        <a href="/admin" class="nav-link text-white-50 small">Admin</a>
+    </nav>
     <div class="container">
-        <form id="newPostForm" class="form-section">
-            <div id="statusMessage" class="status-message"></div>
-            
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="title">{{ content_type_title|default('Post') }} Title *</label>
-                    <input type="text" id="title" name="title" required placeholder="Enter your {{ content_type|default('post') }} title">
-                    <div class="help-text">This will be used to generate the filename</div>
+        <form id="newPostForm">
+            <div id="statusMessage" class="alert d-none mb-3"></div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="title" class="form-label">{{ content_type_title|default('Post') }} Title *</label>
+                    <input type="text" id="title" name="title" class="form-control" required placeholder="Enter your {{ content_type|default('post') }} title">
+                    <div id="filenameHint" class="form-text">This will be used to generate the filename</div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="date">Date *</label>
-                    <input type="date" id="date" name="date" required>
+                <div class="col-md-3">
+                    <label for="date" class="form-label">Date *</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
                 </div>
-                
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <input type="text" id="category" name="category" value="General" placeholder="General">
-                </div>
-                
-                <!-- Content type is automatically determined by the editing context -->
+
                 <input type="hidden" id="type" name="type" value="{{ content_type }}">
             </div>
-            
-            <div class="form-group full-width">
-                <label for="content">Content (Markdown) *</label>
-                <textarea id="content" name="content" placeholder="Write your {{ content_type|default('post') }} content in Markdown..." required></textarea>
-                <div class="help-text">Use Markdown syntax for formatting. You can preview before saving.</div>
+
+            {% if content_type == 'blog' %}
+            <div class="mb-3">
+                <label class="form-label">Tags</label>
+                <div class="d-flex flex-wrap gap-2">
+                    {% for tag in blog_tags %}
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="tags" id="tag_{{ tag }}" value="{{ tag }}">
+                        <label class="form-check-label" for="tag_{{ tag }}">{{ tag }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="mb-3">
+                <label for="content" class="form-label">Content (Markdown) *</label>
+                <textarea id="content" name="content" class="form-control" rows="20" placeholder="Write your {{ content_type|default('post') }} content in Markdown..." required></textarea>
+                <div class="form-text">Use Markdown syntax for formatting. You can preview before saving.</div>
             </div>
         </form>
-        
-        <div class="button-group">
+
+        <div class="d-flex gap-2 mb-4 flex-wrap">
             <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
-            <button type="button" class="btn btn-primary" onclick="previewPost()">Preview</button>
+            <button type="button" class="btn btn-outline-primary" onclick="previewPost()">Preview</button>
             <button type="button" class="btn btn-success" onclick="createPost()">Create {{ content_type_title|default('Post') }}</button>
         </div>
     </div>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         async function createPost() {
             const form = document.getElementById('newPostForm');
-            const statusMessage = document.getElementById('statusMessage');
-            
-            // Validate form
             const title = document.getElementById('title').value.trim();
             const date = document.getElementById('date').value;
             const content = document.getElementById('content').value.trim();
-            
-            if (!title) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please enter a title';
-                statusMessage.style.display = 'block';
-                return;
-            }
-            
-            if (!date) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please select a date';
-                statusMessage.style.display = 'block';
-                return;
-            }
-            
-            if (!content) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Please enter some content';
-                statusMessage.style.display = 'block';
-                return;
-            }
-            
-            const formData = new FormData(form);
-            
-            // Show loading state
+
+            if (!title) { showStatus('error', 'Please enter a title'); return; }
+            if (!date) { showStatus('error', 'Please select a date'); return; }
+            if (!content) { showStatus('error', 'Please enter some content'); return; }
+
             const createBtn = event.target;
             const originalText = createBtn.textContent;
             createBtn.textContent = 'Creating...';
             createBtn.disabled = true;
-            
+
             try {
                 const response = await fetch('{{ action_url|default("/admin/new-post") }}', {
                     method: 'POST',
-                    body: formData
+                    body: new FormData(form)
                 });
-                
                 const result = await response.json();
-                
                 if (response.ok) {
-                    statusMessage.className = 'status-message status-success';
-                    statusMessage.textContent = `✓ {{ content_type_title|default("Post") }} created successfully! Filename: ${result.filename}`;
-                    statusMessage.style.display = 'block';
-                    
-                    // Clear form
+                    showStatus('success', `{{ content_type_title|default("Post") }} created! Filename: ${result.filename}`);
                     form.reset();
                     document.getElementById('date').value = '{{ current_date }}';
-                    
-                    // Auto-hide success message and redirect after 3 seconds
                     setTimeout(() => {
                         {% if content_type == 'page' %}
                         window.location.href = `/${result.filename.replace('.md', '.html')}`;
@@ -118,105 +97,55 @@
                     throw new Error(result.detail || 'Creation failed');
                 }
             } catch (error) {
-                statusMessage.className = 'status-message status-error';
-                statusMessage.textContent = '✗ Error: ' + error.message;
-                statusMessage.style.display = 'block';
+                showStatus('error', 'Error: ' + error.message);
             } finally {
-                // Restore button state
                 createBtn.textContent = originalText;
                 createBtn.disabled = false;
             }
         }
-        
+
+        function showStatus(type, message) {
+            const el = document.getElementById('statusMessage');
+            el.className = 'alert mb-3 alert-' + (type === 'error' ? 'danger' : 'success');
+            el.textContent = message;
+        }
+
         function previewPost() {
             const content = document.getElementById('content').value;
             const title = document.getElementById('title').value;
-            const date = document.getElementById('date').value;
-            const category = document.getElementById('category').value;
-            const type = document.getElementById('type').value;
-            
-            if (!content.trim()) {
-                alert('Please enter some content to preview');
-                return;
-            }
-            
-            if (!title.trim()) {
-                alert('Please enter a title to preview');
-                return;
-            }
-            
-            // Create a form and submit to preview endpoint
+            if (!content.trim()) { alert('Please enter some content to preview'); return; }
+            if (!title.trim()) { alert('Please enter a title to preview'); return; }
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = '/admin/preview-new-post';
             form.target = '_blank';
-            
-            const titleInput = document.createElement('input');
-            titleInput.type = 'hidden';
-            titleInput.name = 'title';
-            titleInput.value = title;
-            form.appendChild(titleInput);
-            
-            const contentInput = document.createElement('input');
-            contentInput.type = 'hidden';
-            contentInput.name = 'content';
-            contentInput.value = content;
-            form.appendChild(contentInput);
-            
-            const dateInput = document.createElement('input');
-            dateInput.type = 'hidden';
-            dateInput.name = 'date';
-            dateInput.value = date;
-            form.appendChild(dateInput);
-            
-            const categoryInput = document.createElement('input');
-            categoryInput.type = 'hidden';
-            categoryInput.name = 'category';
-            categoryInput.value = category;
-            form.appendChild(categoryInput);
-            
-            const typeInput = document.createElement('input');
-            typeInput.type = 'hidden';
-            typeInput.name = 'type';
-            typeInput.value = type;
-            form.appendChild(typeInput);
-            
+            [['title', title], ['content', content], ['date', document.getElementById('date').value],
+             ['type', document.getElementById('type').value]].forEach(([name, value]) => {
+                const input = document.createElement('input');
+                input.type = 'hidden'; input.name = name; input.value = value;
+                form.appendChild(input);
+            });
             document.body.appendChild(form);
             form.submit();
             document.body.removeChild(form);
         }
-        
-        // Auto-generate filename preview
-        function updateFilenamePreview() {
+
+        function updateFilenameHint() {
             const title = document.getElementById('title').value.trim();
             const date = document.getElementById('date').value;
-            const helpText = document.querySelector('.help-text');
-            
+            const hint = document.getElementById('filenameHint');
             if (title && date) {
-                // Generate filename
-                const safeTitle = title.toLowerCase()
-                    .replace(/[^\w\s-]/g, '')  // Remove special chars
-                    .replace(/[-\s]+/g, '-')    // Replace spaces/dashes with single dash
-                    .replace(/^-+|-+$/g, '');    // Remove leading/trailing dashes
-                
-                const filename = `${date}-${safeTitle}.md`;
-                helpText.textContent = `Filename will be: ${filename}`;
+                const safeTitle = title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[-\s]+/g, '-').replace(/^-+|-+$/g, '');
+                hint.textContent = `Filename will be: ${date}-${safeTitle}.md`;
             } else {
-                helpText.textContent = 'This will be used to generate the filename';
+                hint.textContent = 'This will be used to generate the filename';
             }
         }
-        
-        // Initialize date field with current date if empty
+
         const dateField = document.getElementById('date');
-        if (!dateField.value) {
-            const today = new Date();
-            const formattedDate = today.toISOString().split('T')[0];
-            dateField.value = formattedDate;
-        }
-        
-        // Add event listeners for filename preview
-        document.getElementById('title').addEventListener('input', updateFilenamePreview);
-        document.getElementById('date').addEventListener('change', updateFilenamePreview);
+        if (!dateField.value) dateField.value = new Date().toISOString().split('T')[0];
+        document.getElementById('title').addEventListener('input', updateFilenameHint);
+        document.getElementById('date').addEventListener('change', updateFilenameHint);
     </script>
 </body>
 </html>

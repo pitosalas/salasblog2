@@ -49,8 +49,8 @@ class TestRaindropDownloader:
         downloader = RaindropDownloader(access_token='test_token')
         assert downloader.access_token == 'test_token'
         assert downloader.base_url == "https://api.raindrop.io/rest/v1"
-        assert downloader.drops_dir == Path("/data/content/raindrops")
-        assert downloader.cache_file == Path("/data/content/.rd_cache.json")
+        assert "raindrops" in str(downloader.drops_dir)
+        assert downloader.cache_file.name == ".rd_cache.json"
     
     def test_load_cache_no_env_no_file(self, downloader):
         """Test loading cache when no environment variable or file exists."""
@@ -164,7 +164,7 @@ class TestRaindropDownloader:
             mock_filename.side_effect = ["file1.md", "file2.md"]
             mock_format.return_value = "# Test Content"
             
-            result = downloader._write_raindrops_to_files(sample_raindrops)
+            result = downloader._write_raindrops_to_files(sample_raindrops, set())
             
             assert result == ["file1.md", "file2.md"]
             assert mock_file.call_count == 2

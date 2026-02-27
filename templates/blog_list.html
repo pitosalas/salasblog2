@@ -3,67 +3,74 @@
 {% block title %}Blog{% endblock %}
 
 {% block content %}
-<div class="page-header">
-    <h1>Blog Posts</h1>
-    <p class="page-subtitle">All my blog posts and articles</p>
+<div class="border-bottom pb-3 mb-4">
+    <h1 class="display-6">Blog Posts</h1>
+    <p class="text-muted">All my blog posts and articles</p>
     {% if pagination and pagination.total_pages > 1 %}
-    <div class="pagination-info">
-        Page {{ pagination.current_page }} of {{ pagination.total_pages }} 
-        ({{ total_posts }} total posts)
-    </div>
+    <p class="text-muted small mb-0">Page {{ pagination.current_page }} of {{ pagination.total_pages }} ({{ total_posts }} total posts)</p>
     {% endif %}
 </div>
 
-<section class="posts-list">
-    {% if posts %}
-        {% set grouped_posts = posts | group_by_month %}
-        {% for month_group in grouped_posts %}
-            <div class="month-header">
-                <h2>{{ month_group.month_name }}</h2>
-            </div>
-            {% for post in month_group.posts %}
-            <article class="post-item">
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <div class="post-meta">
-                    <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
-                    <span class="post-category">{{ post.category }}</span>
-                </div>
-                <p class="post-excerpt">{{ post.excerpt | markdown | safe }}</p>
-                {% if post.is_truncated %}
-                <a href="{{ post.url }}" class="read-more">Read more →</a>
-                {% endif %}
-            </article>
-            {% endfor %}
-        {% endfor %}
-        
-        {% if pagination and pagination.total_pages > 1 %}
-        <nav class="pagination">
-            {% if pagination.has_prev %}
-                <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
-            {% endif %}
-            
-            <div class="pagination-numbers">
-                {% for page_url in pagination.page_urls %}
-                    {% set loop_index = loop.index %}
-                    {% if loop_index == pagination.current_page %}
-                        <span class="pagination-link current">{{ loop_index }}</span>
-                    {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
-                        <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
-                    {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
-                        <span class="pagination-ellipsis">…</span>
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        {% if posts %}
+            {% set grouped_posts = posts | group_by_month %}
+            {% for month_group in grouped_posts %}
+                <h2 class="h5 border-bottom border-primary pb-1 mt-4 mb-3">{{ month_group.month_name }}</h2>
+                {% for post in month_group.posts %}
+                <article class="mb-4">
+                    <h3 class="h5 mb-1"><a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a> <i class="bi bi-file-text text-secondary small"></i></h3>
+                    <div class="text-muted small mb-2">
+                        <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
+                        {% for tag in post.tags %}
+                        {% if not tag.isdigit() %}
+                        <a href="/tags/{{ tag | slugify }}/index.html" class="badge bg-secondary text-decoration-none ms-1">{{ tag }}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    <p class="mb-1 small">{{ post.excerpt | markdown | safe }}</p>
+                    {% if post.is_truncated %}
+                    <a href="{{ post.url }}" class="small">Read more &rarr;</a>
                     {% endif %}
+                </article>
                 {% endfor %}
-            </div>
-            
-            {% if pagination.has_next %}
-                <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
+            {% endfor %}
+
+            {% if pagination and pagination.total_pages > 1 %}
+            <nav aria-label="Blog pagination" class="mt-4">
+                <ul class="pagination justify-content-center flex-wrap">
+                    {% if pagination.has_prev %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ pagination.prev_url }}">&laquo; Previous</a>
+                    </li>
+                    {% endif %}
+
+                    {% for page_url in pagination.page_urls %}
+                        {% set loop_index = loop.index %}
+                        {% if loop_index == pagination.current_page %}
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link">{{ loop_index }}</span>
+                        </li>
+                        {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+                        <li class="page-item">
+                            <a class="page-link" href="{{ page_url }}">{{ loop_index }}</a>
+                        </li>
+                        {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+                        <li class="page-item disabled"><span class="page-link">&hellip;</span></li>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if pagination.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ pagination.next_url }}">Next &raquo;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
             {% endif %}
-        </nav>
+        {% else %}
+        <p class="text-center text-muted fst-italic py-5">No blog posts yet. Check back soon!</p>
         {% endif %}
-    {% else %}
-        <div class="no-posts">
-            <p>No blog posts yet. Check back soon!</p>
-        </div>
-    {% endif %}
-</section>
+    </div>
+</div>
 {% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Tag: {{ tag }}{% endblock %}
+
+{% block content %}
+<div class="border-bottom pb-3 mb-4">
+    <h1 class="display-6">Posts tagged <span class="badge bg-secondary">{{ tag }}</span></h1>
+    <p class="text-muted">{{ posts | length }} post{{ 's' if posts | length != 1 }}</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        {% if posts %}
+            {% for post in posts %}
+            <article class="mb-4">
+                <h2 class="h5 mb-1">
+                    <a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a>
+                    {% if post.type == 'raindrops' or post.type == 'raindrop' %}
+                    <i class="bi bi-link-45deg text-secondary small"></i>
+                    {% else %}
+                    <i class="bi bi-file-text text-secondary small"></i>
+                    {% endif %}
+                </h2>
+                <div class="text-muted small mb-2">
+                    <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
+                    {% if (post.type == 'raindrops' or post.type == 'raindrop') and post.collection %}
+                    <span class="badge bg-primary ms-1">{{ post.collection }}</span>
+                    {% endif %}
+                </div>
+                {% if post.excerpt %}
+                <p class="mb-1 small">{{ post.excerpt | markdown | safe }}</p>
+                {% endif %}
+                {% if post.is_truncated %}
+                <a href="{{ post.url }}" class="small">Read more &rarr;</a>
+                {% endif %}
+            </article>
+            {% endfor %}
+        {% else %}
+        <p class="text-center text-muted fst-italic py-5">No posts with this tag.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

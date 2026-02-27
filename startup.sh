@@ -8,7 +8,11 @@ if [ -n "$GIT_TOKEN" ]; then
     echo "Setting up git authentication..."
     git config --global credential.helper store
     echo "https://oauth2:${GIT_TOKEN}@github.com" > ~/.git-credentials
-    git remote set-url origin "https://oauth2:${GIT_TOKEN}@github.com/pitosalas/salasblog2.git"
+    if git remote get-url origin &>/dev/null; then
+        git remote set-url origin "https://oauth2:${GIT_TOKEN}@github.com/pitosalas/salasblog2.git"
+    else
+        git remote add origin "https://oauth2:${GIT_TOKEN}@github.com/pitosalas/salasblog2.git"
+    fi
     echo "Git authentication configured"
 fi
 

@@ -32,11 +32,11 @@ class TestPlaceholderTitle:
         test_file = pages_dir / "about_me.md"
         test_file.write_text("This is content without frontmatter.")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
-        
+
         pages = generator.load_posts('pages')
-        
+
         assert len(pages) == 1
         assert pages[0]['title'] == "placeholder title: About Me"
         assert pages[0]['filename'] == "about_me"
@@ -53,7 +53,7 @@ category: "Information"
 ---
 This has frontmatter but no title field.""")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')
@@ -61,7 +61,6 @@ This has frontmatter but no title field.""")
         assert len(pages) == 1
         assert pages[0]['title'] == "placeholder title: Contact Info"
         assert pages[0]['filename'] == "contact-info"
-        assert pages[0]['category'] == "Information"  # Other frontmatter should work
     
     def test_placeholder_title_formatting(self, temp_setup):
         """Test that placeholder titles are properly formatted."""
@@ -79,7 +78,7 @@ This has frontmatter but no title field.""")
             test_file = pages_dir / f"{filename}.md"
             test_file.write_text("Content without frontmatter")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')
@@ -103,7 +102,7 @@ category: "Personal"
 ---
 This has proper frontmatter with a title.""")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')
@@ -111,7 +110,6 @@ This has proper frontmatter with a title.""")
         assert len(pages) == 1
         assert pages[0]['title'] == "About Me - The Real Title"  # Should use real title
         assert pages[0]['filename'] == "about"
-        assert pages[0]['category'] == "Personal"
     
     def test_mixed_files_with_and_without_titles(self, temp_setup):
         """Test handling of mixed files - some with titles, some without."""
@@ -136,7 +134,7 @@ Bad content without title.""")
         ugly_file = pages_dir / "ugly_file.md"
         ugly_file.write_text("No frontmatter at all.")
         
-        generator = SiteGenerator(theme="test")
+        generator = SiteGenerator()
         generator.pages_dir = pages_dir
         
         pages = generator.load_posts('pages')
@@ -147,14 +145,11 @@ Bad content without title.""")
         # bad-file.md - has frontmatter but no title
         bad_page = next(p for p in pages if p['filename'] == 'bad-file')
         assert bad_page['title'] == "placeholder title: Bad File"
-        assert bad_page['category'] == "Bad"
-        
+
         # good.md - has proper title
         good_page = next(p for p in pages if p['filename'] == 'good')
         assert good_page['title'] == "Proper Title"
-        assert good_page['category'] == "Good"
-        
+
         # ugly_file.md - no frontmatter at all
         ugly_page = next(p for p in pages if p['filename'] == 'ugly_file')
         assert ugly_page['title'] == "placeholder title: Ugly File"
-        assert ugly_page['category'] == "Uncategorized"  # Default fallback

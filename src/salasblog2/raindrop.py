@@ -28,8 +28,15 @@ class RaindropDownloader:
             "Authorization": f"Bearer {self.access_token}",
             "Content-Type": "application/json",
         }
-        self.drops_dir = Path("/data/content/raindrops")
-        self.cache_file = Path("/data/content/.rd_cache.json")
+        # Use persistent volume as source of truth for content, fallback to local
+        volume_content_dir = Path("/data/content")
+        if volume_content_dir.exists():
+            content_dir = volume_content_dir
+        else:
+            content_dir = Path.cwd() / "content"
+        
+        self.drops_dir = content_dir / "raindrops"
+        self.cache_file = content_dir / ".rd_cache.json"
 
     def authenticate(self):
         """Authenticate with Raindrop.io API."""
@@ -41,6 +48,25 @@ class RaindropDownloader:
             raise Exception(f"Authentication failed: {response.status_code}")
 
         print(f"Authenticated as: {response.json()['user']['fullName']}")
+
+    def get_collections(self):
+        """Fetch all collections and return a dict mapping collection ID to name."""
+        try:
+            response = requests.get(
+                f"{self.base_url}/collections",
+                headers=self.headers
+            )
+            
+            if response.status_code != 200:
+                print(f"Warning: Failed to fetch collections: {response.status_code}")
+                return {}
+            
+            collections_data = response.json().get("items", [])
+            # Map collection ID to title
+            return {coll["_id"]: coll["title"] for coll in collections_data}
+        except Exception as e:
+            print(f"Warning: Error fetching collections: {e}")
+            return {}
 
     def load_cache(self):
         # Try to load from environment variable first (persists across restarts)
@@ -75,7 +101,8 @@ class RaindropDownloader:
         params = {
             "page": page, 
             "perpage": perpage,
-            "sort": "-created"
+            "sort": "-created",
+            "search": "[{\"key\":\"type\",\"val\":\"link\"}]"  # Filter for links only
         }
         
         if since_timestamp:
@@ -87,7 +114,7 @@ class RaindropDownloader:
                 print(f"\\nWarning: Invalid timestamp format {since_timestamp}: {e}")
                 print("Proceeding without timestamp filter...")
 
-        response = requests.get(
+        response  = requests.get(
             f"{self.base_url}/raindrops/0",
             headers=self.headers,
             params=params,
@@ -189,12 +216,18 @@ class RaindropDownloader:
                 
             return new_drops, downloaded_ids
 
-    def _write_raindrops_to_files(self, new_drops):
+    def _write_raindrops_to_files(self, new_drops, collection_names):
         """Write raindrops to markdown files and return created filenames."""
         created_filenames = []
         counter = 1
         
         for i, raindrop in enumerate(new_drops, 1):
+            # Add collection name to raindrop data
+            if raindrop.get('collection') and isinstance(raindrop['collection'], dict):
+                collection_id = raindrop['collection'].get('$id')
+                if collection_id and collection_id in collection_names:
+                    raindrop['collection_name'] = collection_names[collection_id]
+            
             filename = generate_raindrop_filename(raindrop, counter)
             filepath = self.drops_dir / filename
 
@@ -231,6 +264,11 @@ class RaindropDownloader:
         try:
             self.authenticate()
 
+            # Fetch collections mapping
+            print("Fetching collections...")
+            collection_names = self.get_collections()
+            print(f"Found {len(collection_names)} collections")
+
             if reset:
                 self.reset_data()
 
@@ -245,7 +283,7 @@ class RaindropDownloader:
                 
             print(f"Found {len(new_drops)} new raindrops")
             
-            created_filenames = self._write_raindrops_to_files(new_drops)
+            created_filenames = self._write_raindrops_to_files(new_drops, collection_names)
             
             # Update downloaded_ids with new drops
             for raindrop in new_drops:

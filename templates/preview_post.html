@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preview: {{ title }}</title>
-    <link rel="stylesheet" href="/static/css/preview.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <div class="preview-actions">
-        <button class="btn btn-success" onclick="saveAndClose()">💾 Save & Close</button>
-        <button class="btn btn-secondary" onclick="window.close()">✕ Close</button>
+    <nav class="navbar navbar-dark bg-primary px-3 mb-3">
+        <a class="navbar-brand" href="/">Salas Blog</a>
+        <span class="navbar-text">Preview</span>
+        <div class="d-flex gap-2">
+            <button class="btn btn-success btn-sm" onclick="saveAndClose()">Save &amp; Close</button>
+            <button class="btn btn-secondary btn-sm" onclick="window.close()">Close</button>
+        </div>
+    </nav>
+    <div class="container">
+        <p class="text-muted small">This is how your post will appear on the blog</p>
+        <h1 class="display-6">{{ title }}</h1>
+        <div>{{ html_content|safe }}</div>
     </div>
-    
-    <div class="preview-header">
-        <h1 style="margin: 0; border: none; font-size: 1.5rem;">📝 Preview: {{ title }}</h1>
-        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">This is how your post will appear on the blog</p>
-    </div>
-    <h1>{{ title }}</h1>
-    {{ html_content|safe }}
     
     <script>
         // Form data passed from the edit page
@@ -25,7 +28,6 @@
             title: {{ title|tojson }},
             content: {{ content|tojson }},
             date: {{ date|tojson }},
-            category: {{ category|tojson }},
             type: {{ type|tojson }},
             filename: {{ filename|tojson }}
         };
@@ -42,7 +44,6 @@
                 formData.append('title', postData.title);
                 formData.append('content', postData.content);
                 formData.append('date', postData.date);
-                formData.append('category', postData.category);
                 formData.append('type', postData.type);
                 
                 const response = await fetch(`/admin/edit-post/${postData.filename}`, {
@@ -66,5 +67,6 @@
             }
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

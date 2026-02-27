@@ -12,6 +12,25 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 
 
+BLOG_TAGS = [
+    "technology",
+    "programming",
+    "robotics",
+    "ai",
+    "design",
+    "science",
+    "personal",
+    "travel",
+    "food",
+    "books",
+    "music",
+    "health",
+    "politics",
+    "business",
+    "education",
+]
+
+
 def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
     """Parse ISO date string into datetime object."""
     if not date_str:
@@ -191,11 +210,12 @@ def _parse_malformed_frontmatter(file_path: Path, original_error: Exception) -> 
                     import yaml
                     metadata = yaml.safe_load(fixed_yaml) or {}
                     
+                    stripped = markdown_content.strip()
                     return {
                         'metadata': metadata,
-                        'content': markdown_content,
-                        'raw_content': markdown_content,
-                        'html_content': process_markdown_to_html(markdown_content)
+                        'content': stripped,
+                        'raw_content': stripped,
+                        'html_content': process_markdown_to_html(stripped)
                     }
                 except:
                     pass
@@ -218,8 +238,7 @@ def _create_fallback_metadata(file_path: Path, content: str) -> Dict[str, Any]:
         'metadata': {
             'title': title,
             'date': '',
-            'type': 'blog',
-            'category': 'Uncategorized'
+            'type': 'blog'
         },
         'content': content,
         'raw_content': content,
@@ -315,6 +334,29 @@ def generate_raindrop_filename(raindrop: Dict[str, Any], counter: int) -> str:
     return f"{date_str}-{counter}-{safe_title}.md"
 
 
+def slugify_tag(tag: str) -> str:
+    """Convert tag to URL-safe slug."""
+    slug = tag.lower()
+    slug = re.sub(r'[^\w\s-]', '', slug)
+    slug = re.sub(r'[\s_]+', '-', slug)
+    return slug.strip('-')
+
+
+def extract_unique_collections(raindrops: List[Dict[str, Any]]) -> List[str]:
+    """Extract unique collection names from raindrops, sorted alphabetically."""
+    collections = set()
+    for raindrop in raindrops:
+        collection = raindrop.get('collection')
+        if collection and isinstance(collection, str) and collection.strip():
+            collections.add(collection.strip())
+    return sorted(list(collections))
+
+
+def slugify_collection(name: str) -> str:
+    """Convert collection name to URL-safe slug."""
+    return slugify_tag(name)
+
+
 def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
     """Convert raindrop data to markdown with YAML frontmatter."""
     created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
@@ -327,16 +369,15 @@ def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
         except:
             last_update = raindrop.get("lastUpdate")
 
-    # Format tags as space-separated string to match existing raindrop format
+    # Keep tags as individual list items for proper YAML formatting
     tags = raindrop.get("tags", [])
-    tags_str = " ".join(tags) if tags else ""
 
     # Build comprehensive frontmatter with all available fields
     frontmatter_data = {
         # Core fields (existing)
         "date": created.isoformat(),
         "excerpt": raindrop.get("excerpt", ""),
-        "tags": [tags_str] if tags_str else [],
+        "tags": tags if tags else [],
         "title": raindrop.get("title", "Untitled"),
         "type": "drop", 
         "url": raindrop.get("link", ""),
@@ -351,7 +392,8 @@ def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
         "last_update": last_update,
         
         # Collection info
-        "collection_id": raindrop.get("collection", {}).get("$id") if raindrop.get("collection") else None,
+        "collection": raindrop.get("collection_name") or (raindrop.get("collection", {}).get("title") if isinstance(raindrop.get("collection"), dict) else None),
+        "collection_id": raindrop.get("collection", {}).get("$id") if isinstance(raindrop.get("collection"), dict) else None,
         
         # User info
         "user_id": raindrop.get("user", {}).get("$id") if raindrop.get("user") else None,
