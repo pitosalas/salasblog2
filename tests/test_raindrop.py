@@ -74,8 +74,8 @@ class TestRaindropDownloader:
              patch('builtins.open', mock_open(read_data=json.dumps(cache_data))):
             cache = downloader.load_cache()
             assert cache["last_sync_timestamp"] == "2023-01-01T12:00:00Z"
-            # The load_cache method returns the data as-is when last_sync_timestamp is present
-            assert cache["downloaded"] == ["123", "456"]
+            # load_cache converts the downloaded list to a set
+            assert cache["downloaded"] == {"123", "456"}
     
     def test_save_cache(self, downloader):
         """Test saving cache to file."""
@@ -201,7 +201,7 @@ class TestRaindropDownloader:
             result = downloader.download_raindrops(count=100)
             
             assert result == ["file1.md", "file2.md"]
-            mock_write.assert_called_once_with(sample_raindrops)
+            mock_write.assert_called_once_with(sample_raindrops, {})
             mock_update.assert_called_once()
 
 
@@ -325,9 +325,9 @@ class TestCacheManagement:
              patch('pathlib.Path.exists', return_value=True), \
              patch('builtins.open', mock_open(read_data="invalid json")):
             
-            # Should raise JSONDecodeError since the code doesn't handle it
-            with pytest.raises(json.JSONDecodeError):
-                downloader.load_cache()
+            # Code catches JSONDecodeError and returns empty cache
+            cache = downloader.load_cache()
+            assert cache == {"last_sync_timestamp": None, "downloaded": set()}
 
 
 class TestErrorHandling:
