@@ -105,14 +105,14 @@
 
             <div class="admin-pane d-none" id="tab-pages">
                 <h2 class="h5 mb-2">Safe Pages Sync</h2>
-                <p class="text-muted">Sync only the pages directory from GitHub repository to fix frontmatter issues</p>
+                <p class="text-muted">Copy pages from the Docker image (/app/content/pages) to the persistent volume (/data/content/pages)</p>
                 <div class="alert alert-info small mb-3">
                     <strong>Safe Operation:</strong> Only updates /data/content/pages/ directory<br>
-                    <strong>What it does:</strong> GitHub /app/content/pages &rarr; /data/content/pages<br>
+                    <strong>What it does:</strong> /app/content/pages &rarr; /data/content/pages<br>
                     <strong>Backup:</strong> Creates automatic backup before sync<br>
                     <strong>Restores:</strong> Automatically restores backup if sync fails
                 </div>
-                <button id="sync-pages-btn" class="btn btn-primary" onclick="syncPagesFromRepo()">Sync Pages from GitHub</button>
+                <button id="sync-pages-btn" class="btn btn-primary" onclick="syncPagesFromRepo()">Sync Pages from Image</button>
                 <div id="pages-sync-status" class="mt-2"></div>
                 <div id="pages-sync-progress" class="mt-2"></div>
                 <small class="text-muted d-block mt-2">
@@ -552,7 +552,7 @@
             const progressDiv = document.getElementById('pages-sync-progress');
             button.disabled = true;
             button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Syncing...';
-            statusDiv.innerHTML = statusHtml('loading', 'Starting safe pages sync...');
+            statusDiv.innerHTML = statusHtml('loading', 'Starting pages sync from image...');
             progressDiv.innerHTML = '';
             const startTime = Date.now();
             const steps = [

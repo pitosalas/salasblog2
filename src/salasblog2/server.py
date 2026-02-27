@@ -757,29 +757,10 @@ async def sync_pages_from_repo():
     logger = logging.getLogger(__name__)
     logger.info("Starting safe pages sync from GitHub repository...")
     
-    # Ensure we're in the git directory
-    git_dir = Path("/app")
-    if not (git_dir / ".git").exists():
-        raise HTTPException(status_code=500, detail="Git repository not found in /app")
-    
-    # Pull latest from GitHub first
-    logger.info("Pulling latest content from GitHub...")
-    result = subprocess.run(
-        ["git", "pull", "origin", "main"],
-        cwd=git_dir,
-        capture_output=True,
-        text=True,
-        timeout=60
-    )
-    
-    if result.returncode != 0:
-        logger.error(f"Git pull failed: {result.stderr}")
-        raise HTTPException(status_code=500, detail=f"Failed to pull from GitHub: {result.stderr}")
-    
-    # Check if /app/content/pages exists
-    app_pages = git_dir / "content" / "pages"
+    # Pages are already in /app/content/pages from the Docker build — no git pull needed
+    app_pages = Path("/app/content/pages")
     if not app_pages.exists():
-        raise HTTPException(status_code=500, detail="/app/content/pages does not exist after git pull")
+        raise HTTPException(status_code=500, detail="/app/content/pages does not exist")
     
     # Ensure /data/content/pages directory exists
     data_pages = Path("/data/content/pages")
