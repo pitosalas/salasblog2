@@ -568,8 +568,12 @@ async def get_scheduler_status():
     return JSONResponse(content=status)
 
 @app.post("/api/scheduler/sync-now")
-async def trigger_git_sync():
-    """Manually trigger a Git sync to GitHub"""
+async def trigger_git_sync(request: Request):
+    """Manually trigger a Git sync to GitHub (admin only)"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
     logger = logging.getLogger(__name__)
     scheduler = get_scheduler()
     
@@ -583,8 +587,12 @@ async def trigger_git_sync():
         raise HTTPException(status_code=500, detail="Git sync failed - check logs for details")
 
 @app.post("/api/scheduler/sync-raindrops-now")
-async def trigger_raindrop_sync():
-    """Manually trigger a Raindrop sync"""
+async def trigger_raindrop_sync(request: Request):
+    """Manually trigger a Raindrop sync (admin only)"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
     logger = logging.getLogger(__name__)
     scheduler = get_scheduler()
     
@@ -602,8 +610,12 @@ async def trigger_raindrop_sync():
         raise HTTPException(status_code=500, detail=f"Raindrop sync error: {str(e)}")
 
 @app.post("/api/scheduler/start")
-async def start_scheduler(git_hours: float = None, raindrop_hours: float = None):
-    """Start or restart the scheduler with specified intervals"""
+async def start_scheduler(request: Request, git_hours: float = None, raindrop_hours: float = None):
+    """Start or restart the scheduler with specified intervals (admin only)"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    
     if git_hours is not None and (git_hours < 0.1 or git_hours > 24):
         raise HTTPException(status_code=400, detail="Git interval must be between 0.1 and 24 hours")
     if raindrop_hours is not None and (raindrop_hours < 0.1 or raindrop_hours > 24):
@@ -1079,8 +1091,11 @@ async def preview_new_post_html(request: Request, title: str = Form(...), conten
 
 # Raindrop sync and site generation endpoints with simplified logic
 @app.get("/api/sync-raindrops")
-async def sync_raindrops():
-    """Trigger raindrop sync and regenerate site"""
+async def sync_raindrops(request: Request):
+    """Trigger raindrop sync and regenerate site (admin only)"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
     
     def do_sync():
         sync_status["running"] = True
@@ -1158,8 +1173,11 @@ async def get_sync_status():
     return JSONResponse(content=sync_status)
 
 @app.get("/api/regenerate")
-async def regenerate_site():
-    """Regenerate the static site"""
+async def regenerate_site(request: Request):
+    """Regenerate the static site (admin only)"""
+    # Check authentication
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
     
     def do_regenerate():
         generator = SiteGenerator()

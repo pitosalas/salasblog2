@@ -3,12 +3,24 @@
 {% block title %}Link Blog{% endblock %}
 
 {% block content %}
-<div class="border-bottom pb-3 mb-4">
+<div class="mb-3">
     <h1 class="display-6">Link Blog</h1>
-    {% if pagination and pagination.total_pages > 1 %}
-    <p class="text-muted small mb-0">Page {{ pagination.current_page }} of {{ pagination.total_pages }} ({{ total_posts }} total posts)</p>
-    {% endif %}
 </div>
+
+{% if collections %}
+<div class="mb-4">
+    <div class="d-flex flex-wrap gap-2 mb-2">
+        {% for collection in collections %}
+        <a href="/raindrops/{{ collection | slugify }}/" class="btn btn-primary btn-sm">
+            {{ collection }} <span class="badge bg-light text-dark ms-1">{{ collection_counts.get(collection, 0) }}</span>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="text-muted small">
+        <strong>{{ collections|length }}</strong> collections · <strong>{{ total_posts }}</strong> total posts
+    </div>
+</div>
+{% endif %}
 
 {% if posts|length == 0 %}
 <p class="text-center text-muted fst-italic py-5">No link blog posts found.</p>

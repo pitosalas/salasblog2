@@ -4,7 +4,9 @@
       "Bash(curl:*)",
       "Bash(pkill:*)",
       "Bash(rg:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(python3:*)",
+      "Bash(git:*)"
     ],
     "deny": [
       "Read(output)",

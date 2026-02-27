@@ -24,7 +24,9 @@ from .utils import (
     group_posts_by_month,
     load_markdown_files_from_directory,
     get_markdown_processor,
-    slugify_tag
+    slugify_tag,
+    slugify_collection,
+    extract_unique_collections
 )
 
 
@@ -54,6 +56,7 @@ class SiteGenerator:
         self.jinja_env.filters['group_by_month'] = group_posts_by_month
         self.jinja_env.filters['markdown'] = self.markdown_to_html
         self.jinja_env.filters['slugify'] = slugify_tag
+        self.jinja_env.filters['slugify_collection'] = slugify_collection
         self.jinja_env.globals['NOTE_TRUNCATE_LENGTH'] = 300
         # Use the same markdown processor as utils.py for consistency
         self.markdown_processor = get_markdown_processor()
@@ -133,6 +136,7 @@ class SiteGenerator:
                         'broken': parsed['metadata'].get('broken', False),
                         'tags': parsed['metadata'].get('tags', []),
                         'raindrop_url': parsed['metadata'].get('url', ''),  # Original URL
+                        'collection': parsed['metadata'].get('collection', ''),
                         'note': note
                     })
                 
@@ -261,27 +265,27 @@ class SiteGenerator:
         
         print(f"✓ Generated {len(posts)} {content_type} pages")
     
-    def generate_listing_pages(self, posts, content_type):
+    def generate_listing_pages(self, posts, content_type, collections=None, collection_counts=None):
         """Generate paginated listing pages for blog and raindrops"""
         if content_type == 'pages':
             return  # Pages don't have listing pages
-        
+
         posts_per_page = 20  # Show 20 posts per page
         total_posts = len(posts)
         total_pages = max(1, (total_posts + posts_per_page - 1) // posts_per_page)  # Ensure at least 1 page
-        
+
         template_name = f"{content_type}_list.html"
-        
+
         # Create subdirectory for listing
         output_subdir = self.output_dir / content_type
         output_subdir.mkdir(exist_ok=True)
-        
+
         # Generate each page
         for page_num in range(1, total_pages + 1):
             start_idx = (page_num - 1) * posts_per_page
             end_idx = start_idx + posts_per_page
             page_posts = posts[start_idx:end_idx]
-            
+
             # Build pagination context
             pagination = {
                 'current_page': page_num,
@@ -292,14 +296,16 @@ class SiteGenerator:
                 'next_url': self._get_page_url(content_type, page_num + 1) if page_num < total_pages else None,
                 'page_urls': [self._get_page_url(content_type, p) for p in range(1, total_pages + 1)]
             }
-            
+
             context = {
                 'posts': page_posts,
                 'content_type': content_type,
                 'site_title': 'Pito Salas Blog',
                 'navigation': self.get_navigation_items(),
                 'pagination': pagination,
-                'total_posts': total_posts
+                'total_posts': total_posts,
+                'collections': collections or [],
+                'collection_counts': collection_counts or {}
             }
             
             html_content = self.render_template(template_name, context)
@@ -315,13 +321,77 @@ class SiteGenerator:
         
         print(f"✓ Generated {content_type} listing pages ({total_pages} pages, {total_posts} posts)")
     
-    def _get_page_url(self, content_type, page_num):
-        """Get URL for a specific page number"""
+    def _get_page_url(self, content_type, page_num, collection_slug=None):
+        """Get URL for a specific page number, optionally filtered by collection"""
+        base = f"/{content_type}"
+        if collection_slug:
+            base = f"/{content_type}/{collection_slug}"
+
         if page_num == 1:
-            return f"/{content_type}/"
+            return f"{base}/"
         else:
-            return f"/{content_type}/page-{page_num}.html"
-    
+            return f"{base}/page-{page_num}.html"
+
+    def generate_collection_filtered_pages(self, raindrops, collections, collection_counts=None):
+        """Generate collection-filtered listing pages for raindrops"""
+        if not collections:
+            return
+
+        template_name = "raindrops_list.html"
+        posts_per_page = 20
+
+        for collection in collections:
+            collection_slug = slugify_tag(collection)
+            filtered_raindrops = [r for r in raindrops if r.get('collection') == collection]
+
+            if not filtered_raindrops:
+                continue
+
+            total_posts = len(filtered_raindrops)
+            total_pages = max(1, (total_posts + posts_per_page - 1) // posts_per_page)
+
+            # Create collection subdirectory
+            collection_dir = self.output_dir / "raindrops" / collection_slug
+            collection_dir.mkdir(parents=True, exist_ok=True)
+
+            # Generate each page
+            for page_num in range(1, total_pages + 1):
+                start_idx = (page_num - 1) * posts_per_page
+                end_idx = start_idx + posts_per_page
+                page_posts = filtered_raindrops[start_idx:end_idx]
+
+                pagination = {
+                    'current_page': page_num,
+                    'total_pages': total_pages,
+                    'has_prev': page_num > 1,
+                    'has_next': page_num < total_pages,
+                    'prev_url': self._get_page_url('raindrops', page_num - 1, collection_slug) if page_num > 1 else None,
+                    'next_url': self._get_page_url('raindrops', page_num + 1, collection_slug) if page_num < total_pages else None,
+                    'page_urls': [self._get_page_url('raindrops', p, collection_slug) for p in range(1, total_pages + 1)]
+                }
+
+                context = {
+                    'posts': page_posts,
+                    'content_type': 'raindrops',
+                    'site_title': 'Pito Salas Blog',
+                    'navigation': self.get_navigation_items(),
+                    'pagination': pagination,
+                    'total_posts': total_posts,
+                    'collections': collections,
+                    'collection_counts': collection_counts or {},
+                    'current_collection': collection
+                }
+
+                html_content = self.render_template(template_name, context)
+
+                if page_num == 1:
+                    output_file = collection_dir / "index.html"
+                else:
+                    output_file = collection_dir / f"page-{page_num}.html"
+
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(html_content)
+
     def get_navigation_items(self):
         """Get simplified navigation items"""
         nav_items = []
@@ -442,10 +512,20 @@ class SiteGenerator:
         blog_posts = self.load_posts('blog')
         raindrops = self.load_posts('raindrops')
         pages = self.load_posts('pages')
-        
+
         print(f"✓ Loaded {len(blog_posts)} blog posts")
         print(f"✓ Loaded {len(raindrops)} raindrops")
         print(f"✓ Loaded {len(pages)} pages")
+
+        # Extract unique collections from raindrops
+        collections = extract_unique_collections(raindrops)
+        print(f"✓ Found {len(collections)} unique collections")
+        
+        # Calculate collection counts
+        collection_counts = {}
+        for collection in collections:
+            count = len([r for r in raindrops if r.get('collection') == collection])
+            collection_counts[collection] = count
         print()
         
         # Generate individual posts
@@ -458,7 +538,8 @@ class SiteGenerator:
         # Generate listing pages
         print("📋 Generating listing pages...")
         self.generate_listing_pages(blog_posts, 'blog')
-        self.generate_listing_pages(raindrops, 'raindrops')
+        self.generate_listing_pages(raindrops, 'raindrops', collections, collection_counts)
+        self.generate_collection_filtered_pages(raindrops, collections, collection_counts)
         print()
 
         # Generate tag pages
