@@ -93,13 +93,12 @@ def classify_visitor(user_agent: str) -> str:
     if has_browser and not _has_bot_signal(ua):
         return "human"
 
-    # Generic bot keywords
+    # Generic bot keywords or any bot signal without a browser token → crawler
     for pattern in GENERIC_BOT_PATTERNS:
         if pattern in ua:
             return "crawler"
 
-    # Has browser token but also has bot signals → crawler
-    if has_browser:
+    if _has_bot_signal(ua) or has_browser:
         return "crawler"
 
     return "unknown"

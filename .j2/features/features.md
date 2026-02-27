@@ -11,7 +11,7 @@ Status values:
 
 ## F26 — Traffic Classification by Visitor Type
 **Priority**: Medium
-**Status**: not started | Tests written: no | Tests passing: n/a
+**Status**: done | Tests written: yes | Tests passing: yes
 **Description**: Extend the visit statistics system (F25) to classify each request as one of five visitor types: `human`, `ai_bot`, `search_engine`, `crawler`, `unknown`. Classification is based on the `User-Agent` request header. AI bots (GPTBot, ClaudeBot, etc.) and search engines (Googlebot, Bingbot, etc.) are identified by known UA substrings. Requests with browser signatures (Mozilla/, Chrome/, etc.) are classified as human. Remaining requests containing generic bot/crawler/spider keywords are classified as crawler. Empty or unrecognized UAs are unknown. The `VisitCounter` stores counts per path broken down by visitor type. The admin Stats tab displays counts per type alongside totals. No new external dependencies.
 
 <!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
