@@ -49,6 +49,10 @@ Thumbs.db
 # Generated output
 output/
 
+# Raindrop sync (synced from API, not source of truth)
+content/raindrops/
+content/.rd_cache.json
+
 # Logs
 *.log
 logs/
