@@ -324,6 +324,21 @@ def slugify_tag(tag: str) -> str:
     return slug.strip('-')
 
 
+def extract_unique_collections(raindrops: List[Dict[str, Any]]) -> List[str]:
+    """Extract unique collection names from raindrops, sorted alphabetically."""
+    collections = set()
+    for raindrop in raindrops:
+        collection = raindrop.get('collection')
+        if collection and isinstance(collection, str) and collection.strip():
+            collections.add(collection.strip())
+    return sorted(list(collections))
+
+
+def slugify_collection(name: str) -> str:
+    """Convert collection name to URL-safe slug."""
+    return slugify_tag(name)
+
+
 def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
     """Convert raindrop data to markdown with YAML frontmatter."""
     created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
@@ -336,16 +351,15 @@ def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
         except:
             last_update = raindrop.get("lastUpdate")
 
-    # Format tags as space-separated string to match existing raindrop format
+    # Keep tags as individual list items for proper YAML formatting
     tags = raindrop.get("tags", [])
-    tags_str = " ".join(tags) if tags else ""
 
     # Build comprehensive frontmatter with all available fields
     frontmatter_data = {
         # Core fields (existing)
         "date": created.isoformat(),
         "excerpt": raindrop.get("excerpt", ""),
-        "tags": [tags_str] if tags_str else [],
+        "tags": tags if tags else [],
         "title": raindrop.get("title", "Untitled"),
         "type": "drop", 
         "url": raindrop.get("link", ""),
@@ -360,7 +374,8 @@ def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
         "last_update": last_update,
         
         # Collection info
-        "collection_id": raindrop.get("collection", {}).get("$id") if raindrop.get("collection") else None,
+        "collection": raindrop.get("collection_name") or (raindrop.get("collection", {}).get("title") if isinstance(raindrop.get("collection"), dict) else None),
+        "collection_id": raindrop.get("collection", {}).get("$id") if isinstance(raindrop.get("collection"), dict) else None,
         
         # User info
         "user_id": raindrop.get("user", {}).get("$id") if raindrop.get("user") else None,
