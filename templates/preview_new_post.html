@@ -28,7 +28,6 @@
             title: {{ title|tojson }},
             content: {{ content|tojson }},
             date: {{ date|tojson }},
-            category: {{ category|tojson }},
             type: {{ type|tojson }}
         };
         
@@ -44,7 +43,6 @@
                 formData.append('title', postData.title);
                 formData.append('content', postData.content);
                 formData.append('date', postData.date);
-                formData.append('category', postData.category);
                 formData.append('type', postData.type);
                 
                 const response = await fetch('/admin/new-post', {

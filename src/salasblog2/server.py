@@ -387,7 +387,6 @@ def load_content_item(filename: str, content_type: str):
         return {
             'title': item.metadata.get('title', ''),
             'date': item.metadata.get('date', ''),
-            'category': item.metadata.get('category', 'General'),
             'type': item.metadata.get('type', content_type.rstrip('s')),  # 'blog' or 'page'
             'tags': item.metadata.get('tags', []),
             'content': item.content
@@ -397,7 +396,7 @@ def load_content_item(filename: str, content_type: str):
         raise HTTPException(status_code=500, detail=f"Error loading {content_type}: {str(e)}")
 
 def save_content_item(filename: str, content_type: str, title: str, date: str,
-                     category: str, item_type: str, content: str, tags: list):
+                     item_type: str, content: str, tags: list):
     """Save content item with frontmatter and regenerate site"""
     logger = logging.getLogger(__name__)
 
@@ -411,7 +410,6 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
         item.metadata = {
             'title': title.strip(),
             'date': date,
-            'category': category.strip() if category.strip() else 'General',
             'type': item_type,
             'tags': tags
         }
@@ -854,9 +852,8 @@ async def edit_post_page(filename: str, request: Request):
 
 @app.post("/admin/edit-post/{filename}")
 async def save_edited_post(filename: str, request: Request, title: str = Form(...),
-                          date: str = Form(...), category: str = Form(...),
-                          type: str = Form(...), content: str = Form(...),
-                          tags: List[str] = Form(default=[])):
+                          date: str = Form(...), type: str = Form(...),
+                          content: str = Form(...), tags: List[str] = Form(default=[])):
     """Save edited post to file and regenerate site"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -868,7 +865,7 @@ async def save_edited_post(filename: str, request: Request, title: str = Form(..
         raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
 
     # Save using shared function
-    save_content_item(filename, 'blog', title, date, category, type, content, tags)
+    save_content_item(filename, 'blog', title, date, type, content, tags)
     
     return JSONResponse(content={
         "status": "success",
@@ -894,9 +891,8 @@ async def new_post_page(request: Request):
 
 @app.post("/admin/new-post")
 async def create_new_post(request: Request, title: str = Form(...),
-                         date: str = Form(...), category: str = Form(...),
-                         type: str = Form(...), content: str = Form(...),
-                         tags: List[str] = Form(default=[])):
+                         date: str = Form(...), type: str = Form(...),
+                         content: str = Form(...), tags: List[str] = Form(default=[])):
     """Create a new blog post with generated filename"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -912,8 +908,8 @@ async def create_new_post(request: Request, title: str = Form(...),
             raise HTTPException(status_code=400, detail=f"A post with filename '{filename}' already exists")
 
         # Save using shared function
-        save_content_item(filename, 'blog', title, date, category, type, content, tags)
-        
+        save_content_item(filename, 'blog', title, date, type, content, tags)
+
         return JSONResponse(content={
             "status": "success",
             "message": "Post created successfully",
@@ -950,9 +946,9 @@ async def edit_page_page(filename: str, request: Request):
     return HTMLResponse(content=render_template("edit_post.html", context))
 
 @app.post("/admin/edit-page/{filename}")
-async def save_edited_page(filename: str, request: Request, title: str = Form(...), 
-                          date: str = Form(...), category: str = Form(...), 
-                          type: str = Form(...), content: str = Form(...)):
+async def save_edited_page(filename: str, request: Request, title: str = Form(...),
+                          date: str = Form(...), type: str = Form(...),
+                          content: str = Form(...)):
     """Save edited page to file and regenerate site"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -964,7 +960,7 @@ async def save_edited_page(filename: str, request: Request, title: str = Form(..
         raise HTTPException(status_code=404, detail=f"Page not found: {filename}")
     
     # Save using shared function
-    save_content_item(filename, 'pages', title, date, category, type, content, [])
+    save_content_item(filename, 'pages', title, date, type, content, [])
 
     return JSONResponse(content={
         "status": "success",
@@ -988,9 +984,9 @@ async def new_page_page(request: Request):
     return HTMLResponse(content=render_template("new_post.html", context))
 
 @app.post("/admin/new-page")
-async def create_new_page(request: Request, title: str = Form(...), 
-                         date: str = Form(...), category: str = Form(...), 
-                         type: str = Form(...), content: str = Form(...)):
+async def create_new_page(request: Request, title: str = Form(...),
+                         date: str = Form(...), type: str = Form(...),
+                         content: str = Form(...)):
     """Create a new page"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -1006,7 +1002,7 @@ async def create_new_page(request: Request, title: str = Form(...),
             raise HTTPException(status_code=400, detail=f"A page with filename '{filename}' already exists")
         
         # Save using shared function
-        save_content_item(filename, 'pages', title, date, category, type, content, [])
+        save_content_item(filename, 'pages', title, date, type, content, [])
 
         return JSONResponse(content={
             "status": "success",
@@ -1053,9 +1049,8 @@ async def preview_markdown(request: Request, content: str = Form(...)):
         raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
 
 @app.post("/admin/preview-post")
-async def preview_post_html(request: Request, title: str = Form(...), content: str = Form(...), 
-                           date: str = Form(...), category: str = Form(...), 
-                           type: str = Form(...), filename: str = Form(...)):
+async def preview_post_html(request: Request, title: str = Form(...), content: str = Form(...),
+                           date: str = Form(...), type: str = Form(...), filename: str = Form(...)):
     """Render complete preview page with HTML"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -1070,7 +1065,6 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
             'content': content,
             'html_content': html_content,
             'date': date,
-            'category': category,
             'type': type,
             'filename': filename
         }
@@ -1081,9 +1075,8 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
         raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
 
 @app.post("/admin/preview-new-post")
-async def preview_new_post_html(request: Request, title: str = Form(...), content: str = Form(...), 
-                               date: str = Form(...), category: str = Form(...), 
-                               type: str = Form(...)):
+async def preview_new_post_html(request: Request, title: str = Form(...), content: str = Form(...),
+                               date: str = Form(...), type: str = Form(...)):
     """Render complete preview page for new post with HTML"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -1107,7 +1100,6 @@ async def preview_new_post_html(request: Request, title: str = Form(...), conten
             'content': content,
             'html_content': html_content,
             'date': date,
-            'category': category,
             'type': type,
             'filename': filename
         }

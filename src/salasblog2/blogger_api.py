@@ -84,7 +84,6 @@ class BloggerAPI:
             'title': title,
             'date': datetime.now().strftime("%Y-%m-%d"),
             'type': 'blog',
-            'category': 'General',
             'tags': tags
         }
         return post

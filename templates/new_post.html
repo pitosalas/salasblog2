@@ -27,10 +27,7 @@
                     <label for="date" class="form-label">Date *</label>
                     <input type="date" id="date" name="date" class="form-control" required>
                 </div>
-                <div class="col-md-3">
-                    <label for="category" class="form-label">Category</label>
-                    <input type="text" id="category" name="category" class="form-control" value="General" placeholder="General">
-                </div>
+
                 <input type="hidden" id="type" name="type" value="{{ content_type }}">
             </div>
 
@@ -123,7 +120,7 @@
             form.action = '/admin/preview-new-post';
             form.target = '_blank';
             [['title', title], ['content', content], ['date', document.getElementById('date').value],
-             ['category', document.getElementById('category').value], ['type', document.getElementById('type').value]].forEach(([name, value]) => {
+             ['type', document.getElementById('type').value]].forEach(([name, value]) => {
                 const input = document.createElement('input');
                 input.type = 'hidden'; input.name = name; input.value = value;
                 form.appendChild(input);

@@ -99,7 +99,7 @@ class SiteGenerator:
                     'title': title,
                     'date': parsed['metadata'].get('date', ''),
                     'type': parsed['metadata'].get('type', content_type),
-                    'category': parsed['metadata'].get('category', 'Uncategorized'),
+
                     'content': parsed['html_content'],
                     'raw_content': parsed['content'],
                     'filename': filename,

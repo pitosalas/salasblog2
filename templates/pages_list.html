@@ -20,9 +20,6 @@
                 {% if page.excerpt %}
                 <p class="card-text text-muted small">{{ page.excerpt }}</p>
                 {% endif %}
-                {% if page.category and page.category != 'Uncategorized' %}
-                <span class="badge bg-primary">{{ page.category }}</span>
-                {% endif %}
 
                 <div class="admin-controls d-none mt-2">
                     <a href="/admin/edit-page/{{ page.filename }}" class="btn btn-primary btn-sm">Edit</a>

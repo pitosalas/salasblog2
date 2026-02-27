@@ -23,9 +23,6 @@
                 </h2>
                 <div class="text-muted small mb-2">
                     <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
-                    {% if post.type != 'raindrops' and post.type != 'raindrop' and post.category and post.category != 'Uncategorized' %}
-                    <span class="badge bg-primary ms-1">{{ post.category }}</span>
-                    {% endif %}
                     {% if (post.type == 'raindrops' or post.type == 'raindrop') and post.collection %}
                     <span class="badge bg-primary ms-1">{{ post.collection }}</span>
                     {% endif %}

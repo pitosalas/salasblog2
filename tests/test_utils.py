@@ -289,7 +289,6 @@ Some content here.
                 # frontmatter may parse dates as date objects
                 date_value = result['metadata']['date']
                 assert str(date_value) == '2025-01-15'
-                assert result['metadata']['category'] == 'Test'
                 assert '# This is a test post' in result['content']
                 assert '<h1' in result['html_content'] and 'This is a test post</h1>' in result['html_content']
                 
@@ -324,7 +323,6 @@ Some content here.
         # Should have default metadata based on filename
         assert result['metadata']['title'] == 'file'  # filename stem
         assert result['metadata']['type'] == 'blog'
-        assert result['metadata']['category'] == 'Uncategorized'
 
 
 

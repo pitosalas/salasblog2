@@ -238,8 +238,7 @@ def _create_fallback_metadata(file_path: Path, content: str) -> Dict[str, Any]:
         'metadata': {
             'title': title,
             'date': '',
-            'type': 'blog',
-            'category': 'Uncategorized'
+            'type': 'blog'
         },
         'content': content,
         'raw_content': content,
