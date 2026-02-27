@@ -7,7 +7,8 @@
       "Bash(find:*)",
       "Bash(python3:*)",
       "Bash(git:*)",
-      "Bash(uv run:*)"
+      "Bash(uv run:*)",
+      "Bash(fly deploy:*)"
     ],
     "deny": [
       "Read(output)",
