@@ -32,3 +32,15 @@ Development guidance for Claude Code when working on this salasblog2 codebase.
 This project uses the j2 framework. Run `/refresh` to get oriented, or `/continue` to pick up where you left off.
 
 Coding rules are in `.j2/rules.md`. Project spec is in `.j2/specs/`. Current state is in `.j2/state.md`.
+
+## Keeping j2 Files in Sync
+
+After completing any task or feature, always update all three files together:
+
+1. **Task file** (`.j2/tasks/Fxx.md`) — mark completed tasks as `**Status**: done`
+2. **features.md** (`.j2/features/features.md`) — update the feature's status line to `done | Tests written: yes | Tests passing: yes` and move it to the completed section
+3. **state.md** (`.j2/state.md`) — update the one-line summary to reflect current progress
+
+When a feature is fully complete, move its task file: `mv .j2/tasks/Fxx.md .j2/tasks/done/Fxx.md`
+
+Do this immediately after each feature completes — don't batch it up.

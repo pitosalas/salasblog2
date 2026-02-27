@@ -9,14 +9,14 @@ Status values:
 
 <!-- ===== INCOMPLETE FEATURES (High → Medium → Low) ===== -->
 
+<!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
+
 ## F25 — Simple Visit Statistics
 **Priority**: Medium
-**Status**: not started | Tests written: no | Tests passing: n/a
+**Status**: done | Tests written: yes | Tests passing: yes
 **Description**: Track and display simple page-visit statistics server-side without any external analytics service. Count visits to: the home page, the link blog listing page (`/raindrops/`), each individual raindrop post page, and each static page (`/pages/*`). Stats are stored in a lightweight persistent store (e.g. a JSON file or SQLite on the Fly.io volume). A stats summary is visible to the admin (e.g. at `/admin/stats`) showing visit counts per URL, sortable by count. No JavaScript tracking — counts are incremented server-side on each GET request. No personally identifiable information is stored (no IPs, no cookies).
 
 ---
-
-<!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
 
 ## F24 — Content Type Visual Indicators
 **Priority**: Medium
