@@ -52,8 +52,8 @@ def make_post(title="Test Post", url="/blog/test/"):
     }
 
 
-class TestLinkBadgeInRaindropsList:
-    def test_link_badge_present_in_raindrops_list(self):
+class TestLinkIconInRaindropsList:
+    def test_link_icon_present_in_raindrops_list(self):
         env = make_env()
         tpl = env.get_template("raindrops_list.html")
         html = tpl.render(
@@ -64,10 +64,9 @@ class TestLinkBadgeInRaindropsList:
             pagination=None,
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert "Link" in html
-        assert "bg-info" in html
+        assert "bi-link-45deg" in html
 
-    def test_link_badge_per_item_in_raindrops_list(self):
+    def test_link_icon_per_item_in_raindrops_list(self):
         env = make_env()
         tpl = env.get_template("raindrops_list.html")
         raindrops = [make_raindrop(f"Link {i}", f"/raindrops/link{i}/") for i in range(3)]
@@ -79,11 +78,11 @@ class TestLinkBadgeInRaindropsList:
             pagination=None,
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert html.count("bg-info") >= 3
+        assert html.count("bi-link-45deg") >= 3
 
 
-class TestPostBadgeInBlogList:
-    def test_post_badge_present_in_blog_list(self):
+class TestPostIconInBlogList:
+    def test_post_icon_present_in_blog_list(self):
         env = make_env()
         tpl = env.get_template("blog_list.html")
         html = tpl.render(
@@ -91,10 +90,9 @@ class TestPostBadgeInBlogList:
             pagination=None,
             total_posts=1,
         )
-        assert "Post" in html
-        assert "bg-success" in html
+        assert "bi-file-text" in html
 
-    def test_post_badge_per_item_in_blog_list(self):
+    def test_post_icon_per_item_in_blog_list(self):
         env = make_env()
         tpl = env.get_template("blog_list.html")
         posts = [make_post(f"Post {i}", f"/blog/post{i}/") for i in range(3)]
@@ -103,11 +101,11 @@ class TestPostBadgeInBlogList:
             pagination=None,
             total_posts=3,
         )
-        assert html.count("bg-success") >= 3
+        assert html.count("bi-file-text") >= 3
 
 
-class TestBadgesInDetailTemplates:
-    def test_post_badge_in_blog_post_header(self):
+class TestIconsInDetailTemplates:
+    def test_post_icon_in_blog_post_header(self):
         env = make_env()
         tpl = env.get_template("blog_post.html")
         post = {**make_post(), "content": "<p>body</p>", "filename": "test-post"}
@@ -118,10 +116,9 @@ class TestBadgesInDetailTemplates:
             prev_post=None,
             next_post=None,
         )
-        assert "Post" in html
-        assert "bg-success" in html
+        assert "bi-file-text" in html
 
-    def test_link_badge_in_raindrop_post_header(self):
+    def test_link_icon_in_raindrop_post_header(self):
         env = make_env()
         tpl = env.get_template("raindrop_post.html")
         post = {**make_raindrop(), "filename": "test-raindrop", "note": None}
@@ -132,12 +129,11 @@ class TestBadgesInDetailTemplates:
             prev_post=None,
             next_post=None,
         )
-        assert "Link" in html
-        assert "bg-info" in html
+        assert "bi-link-45deg" in html
 
 
-class TestBadgesOnHomePage:
-    def test_post_badge_on_home_recent_posts(self):
+class TestIconsOnHomePage:
+    def test_post_icon_on_home_recent_posts(self):
         env = make_env()
         tpl = env.get_template("home.html")
         html = tpl.render(
@@ -147,9 +143,9 @@ class TestBadgesOnHomePage:
             site_title="Test",
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert "bg-success" in html
+        assert "bi-file-text" in html
 
-    def test_link_badge_on_home_recent_raindrops(self):
+    def test_link_icon_on_home_recent_raindrops(self):
         env = make_env()
         tpl = env.get_template("home.html")
         html = tpl.render(
@@ -159,4 +155,4 @@ class TestBadgesOnHomePage:
             site_title="Test",
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert "bg-info" in html
+        assert "bi-link-45deg" in html

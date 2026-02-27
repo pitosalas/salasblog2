@@ -9,7 +9,7 @@
     <div class="col-lg-8">
         <article>
             <header class="mb-3">
-                <h1 class="display-6 mb-2"><span class="badge bg-info text-dark fs-6 me-2 align-middle">Link</span>{{ post.title }}</h1>
+                <h1 class="display-6 mb-2">{{ post.title }} <i class="bi bi-link-45deg text-secondary fs-4 align-middle"></i></h1>
                 <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
                     <time datetime="{{ post.date }}" class="text-muted small">
                         {{ post.date | strftime('%B %d, %Y') }}

@@ -9,7 +9,7 @@
     <div class="col-lg-8">
         <article>
             <header class="mb-4 pb-3 border-bottom">
-                <h1 class="display-6"><span class="badge bg-success fs-6 me-2 align-middle">Post</span>{{ post.title }}</h1>
+                <h1 class="display-6">{{ post.title }} <i class="bi bi-file-text text-secondary fs-4 align-middle"></i></h1>
                 <div class="text-muted">
                     <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
                     <span class="badge bg-primary ms-2">{{ post.category }}</span>
