@@ -20,14 +20,4 @@ You can find me on [LinkedIn](https://www.linkedin.com/in/pitosalas/) — if we'
 
 ## Brief Bio
 
-**Pito Salas** is a Curaçao-born, Cambridge, Massachusetts-based software developer and educator with a career spanning more than four decades at the intersection of technology, entrepreneurship, and academia.
-
-**Inventor of the Pivot Table.** While working at Lotus Development Corporation's Advanced Technology Group in 1986, Salas invented the pivot table — a "next-generation" spreadsheet concept released as *Lotus Improv* in 1989. Authors Bill Jelen and Mike Alexander have called him the "father of pivot tables." The pivot table concept was later adopted by Microsoft Excel and became one of the most widely used data analysis tools in history.
-
-**Co-founder of eRoom Technology.** In 1996, Salas co-founded [eRoom Technology](https://en.wikipedia.org/wiki/ERoom), one of the first internet-based project collaboration platforms, and served as its CTO. The company was acquired by Documentum in 2002. eRoom was a pioneering product in what would eventually become the enterprise collaboration software industry.
-
-**Creator of BlogBridge.** In 2004, Salas created [BlogBridge](https://en.wikipedia.org/wiki/BlogBridge), an open-source Java-based RSS reader aimed at power users such as journalists and researchers managing large volumes of feeds. It was an early exploration of the social-reading and information-management problems that are still relevant today.
-
-**Educator at Brandeis.** After a full career in industry, Salas joined Brandeis University as Professor of the Practice of Computer Science, where he teaches courses in software engineering, entrepreneurship, and robotics. He holds multiple software patents and has been a mentor, advisor, and connector in the Boston tech community for many years.
-
-**Interests.** Beyond software, Pito writes about technology, AI, robotics, design, books, and the occasional tangent on politics or culture — all of which you'll find on this blog.
+Pito Salas is a software developer, entrepreneur, and educator based in Cambridge, MA. He invented the pivot table at Lotus Development in 1986, co-founded eRoom Technology (acquired by Documentum in 2002), and created the open-source RSS reader BlogBridge. He is currently Professor of the Practice of Computer Science at Brandeis University, where he teaches software engineering, entrepreneurship, and autonomous robotics.
