@@ -62,6 +62,14 @@ echo "Using scheduler settings: git_sync=${SCHED_GITSYNC_HRS}h, raindrop_sync=${
 export LOG_LEVEL=${LOG_LEVEL:-INFO}
 echo "Using log level: ${LOG_LEVEL}"
 
+# Always sync pages from image to volume so page edits in the repo take effect on deploy
+if [ -d "/app/content/pages" ] && [ -d "/data/content" ]; then
+    echo "Syncing pages from image to volume..."
+    mkdir -p /data/content/pages
+    rsync -a --update /app/content/pages/ /data/content/pages/
+    echo "Pages sync completed"
+fi
+
 echo "Regenerating site with current environment variables..."
 uv run bg generate
 echo "Site regeneration completed"
