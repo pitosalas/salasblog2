@@ -12,6 +12,25 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 
 
+BLOG_TAGS = [
+    "technology",
+    "programming",
+    "robotics",
+    "ai",
+    "design",
+    "science",
+    "personal",
+    "travel",
+    "food",
+    "books",
+    "music",
+    "health",
+    "politics",
+    "business",
+    "education",
+]
+
+
 def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
     """Parse ISO date string into datetime object."""
     if not date_str:

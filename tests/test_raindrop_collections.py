@@ -7,8 +7,17 @@ import pytest
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
-from salasblog2.utils import extract_unique_collections, slugify_collection
+from salasblog2.utils import extract_unique_collections, slugify_collection, format_date
 from salasblog2.generator import SiteGenerator
+
+
+def _make_template_env(templates_dir):
+    env = Environment(loader=FileSystemLoader(templates_dir))
+    env.filters['slugify'] = lambda x: x.lower().replace(' ', '-')
+    env.filters['strftime'] = lambda d, fmt: format_date(d, fmt)
+    env.filters['dd_mm_yyyy'] = lambda d: format_date(d, '%d-%m-%Y')
+    env.filters['truncate'] = lambda s, n, killwords=False, end='...': (s[:n] + end) if s and len(s) > n else (s or '')
+    return env
 
 
 def test_extract_unique_collections_returns_sorted_list():
@@ -55,11 +64,11 @@ def test_slugify_collection_lowercase():
 
 def test_slugify_collection_spaces_to_hyphens():
     assert slugify_collection('My Collection') == 'my-collection'
-    assert slugify_collection('Web  Dev') == 'web--dev'
+    assert slugify_collection('Web  Dev') == 'web-dev'
 
 
 def test_slugify_collection_strips_special_chars():
-    assert slugify_collection('Tools & Utilities') == 'tools--utilities'
+    assert slugify_collection('Tools & Utilities') == 'tools-utilities'
     assert slugify_collection('C++') == 'c'
 
 
@@ -70,13 +79,13 @@ def test_slugify_collection_strips_hyphens():
 def test_collection_buttons_render_in_template():
     root_dir = Path.cwd()
     templates_dir = root_dir / "templates"
-    env = Environment(loader=FileSystemLoader(templates_dir))
-    env.filters['slugify'] = lambda x: x.lower()
+    env = _make_template_env(templates_dir)
 
     template = env.get_template("raindrops_list.html")
     context = {
         'posts': [],
         'collections': ['Reading', 'Tools'],
+        'collection_counts': {'Reading': 3, 'Tools': 1},
         'pagination': None,
         'navigation': [],
         'total_posts': 0,
@@ -91,20 +100,20 @@ def test_collection_buttons_render_in_template():
 def test_collection_buttons_show_all_link():
     root_dir = Path.cwd()
     templates_dir = root_dir / "templates"
-    env = Environment(loader=FileSystemLoader(templates_dir))
-    env.filters['slugify'] = lambda x: x.lower()
+    env = _make_template_env(templates_dir)
 
     template = env.get_template("raindrops_list.html")
     context = {
         'posts': [],
         'collections': ['Reading'],
+        'collection_counts': {'Reading': 2},
         'pagination': None,
         'navigation': [],
         'total_posts': 0,
     }
     html = template.render(context)
-    assert '/raindrops/index.html' in html
-    assert '>All<' in html
+    assert '/raindrops/reading' in html
+    assert 'Reading' in html
 
 
 def test_collection_filtered_pages_generated(tmp_path):

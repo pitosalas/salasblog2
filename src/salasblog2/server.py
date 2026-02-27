@@ -17,6 +17,7 @@ import mimetypes
 from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
+from typing import List
 from fastapi import FastAPI, HTTPException, Request, Form, Depends
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse, Response, RedirectResponse
@@ -28,7 +29,7 @@ from .generator import SiteGenerator
 from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
 from .scheduler import get_scheduler
-from .utils import process_markdown_to_html
+from .utils import process_markdown_to_html, BLOG_TAGS
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -367,21 +368,22 @@ def load_content_item(filename: str, content_type: str):
             'date': item.metadata.get('date', ''),
             'category': item.metadata.get('category', 'General'),
             'type': item.metadata.get('type', content_type.rstrip('s')),  # 'blog' or 'page'
+            'tags': item.metadata.get('tags', []),
             'content': item.content
         }
     except Exception as e:
         logging.getLogger(__name__).error(f"Error loading {content_type} {filename}: {e}")
         raise HTTPException(status_code=500, detail=f"Error loading {content_type}: {str(e)}")
 
-def save_content_item(filename: str, content_type: str, title: str, date: str, 
-                     category: str, item_type: str, content: str):
+def save_content_item(filename: str, content_type: str, title: str, date: str,
+                     category: str, item_type: str, content: str, tags: list):
     """Save content item with frontmatter and regenerate site"""
     logger = logging.getLogger(__name__)
-    
+
     content_dir = get_content_directory(content_type)
     content_dir.mkdir(parents=True, exist_ok=True)
     content_file = content_dir / filename
-    
+
     try:
         # Create the content item with frontmatter
         item = frontmatter.Post(content.strip())
@@ -389,7 +391,8 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
             'title': title.strip(),
             'date': date,
             'category': category.strip() if category.strip() else 'General',
-            'type': item_type
+            'type': item_type,
+            'tags': tags
         }
         
         # Write the content back to file
@@ -823,26 +826,28 @@ async def edit_post_page(filename: str, request: Request):
         'content_type_title': 'Post',
         'action_url': f'/admin/edit-post/{filename}',
         'cancel_url': '/blog/',
+        'blog_tags': BLOG_TAGS,
         **post_data
     }
     return HTMLResponse(content=render_template("edit_post.html", context))
 
 @app.post("/admin/edit-post/{filename}")
-async def save_edited_post(filename: str, request: Request, title: str = Form(...), 
-                          date: str = Form(...), category: str = Form(...), 
-                          type: str = Form(...), content: str = Form(...)):
+async def save_edited_post(filename: str, request: Request, title: str = Form(...),
+                          date: str = Form(...), category: str = Form(...),
+                          type: str = Form(...), content: str = Form(...),
+                          tags: List[str] = Form(default=[])):
     """Save edited post to file and regenerate site"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
-    
+
     # Check if file exists
     content_dir = get_content_directory('blog')
     if not (content_dir / filename).exists():
         raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
-    
+
     # Save using shared function
-    save_content_item(filename, 'blog', title, date, category, type, content)
+    save_content_item(filename, 'blog', title, date, category, type, content, tags)
     
     return JSONResponse(content={
         "status": "success",
@@ -861,30 +866,32 @@ async def new_post_page(request: Request):
         'content_type': 'blog',
         'content_type_title': 'Post',
         'action_url': '/admin/new-post',
-        'cancel_url': '/blog/'
+        'cancel_url': '/blog/',
+        'blog_tags': BLOG_TAGS
     }
     return HTMLResponse(content=render_template("new_post.html", context))
 
 @app.post("/admin/new-post")
-async def create_new_post(request: Request, title: str = Form(...), 
-                         date: str = Form(...), category: str = Form(...), 
-                         type: str = Form(...), content: str = Form(...)):
+async def create_new_post(request: Request, title: str = Form(...),
+                         date: str = Form(...), category: str = Form(...),
+                         type: str = Form(...), content: str = Form(...),
+                         tags: List[str] = Form(default=[])):
     """Create a new blog post with generated filename"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
-    
+
     try:
         # Generate filename using shared function
         filename = create_filename_for_content(title.strip(), date, 'blog')
-        
+
         # Check if file already exists
         content_dir = get_content_directory('blog')
         if (content_dir / filename).exists():
             raise HTTPException(status_code=400, detail=f"A post with filename '{filename}' already exists")
-        
+
         # Save using shared function
-        save_content_item(filename, 'blog', title, date, category, type, content)
+        save_content_item(filename, 'blog', title, date, category, type, content, tags)
         
         return JSONResponse(content={
             "status": "success",
@@ -936,8 +943,8 @@ async def save_edited_page(filename: str, request: Request, title: str = Form(..
         raise HTTPException(status_code=404, detail=f"Page not found: {filename}")
     
     # Save using shared function
-    save_content_item(filename, 'pages', title, date, category, type, content)
-    
+    save_content_item(filename, 'pages', title, date, category, type, content, [])
+
     return JSONResponse(content={
         "status": "success",
         "message": "Page updated successfully",
@@ -978,8 +985,8 @@ async def create_new_page(request: Request, title: str = Form(...),
             raise HTTPException(status_code=400, detail=f"A page with filename '{filename}' already exists")
         
         # Save using shared function
-        save_content_item(filename, 'pages', title, date, category, type, content)
-        
+        save_content_item(filename, 'pages', title, date, category, type, content, [])
+
         return JSONResponse(content={
             "status": "success",
             "message": "Page created successfully",

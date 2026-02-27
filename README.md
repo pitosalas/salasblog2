@@ -6,10 +6,11 @@ Personal blogging platform: Python static site generator + FastAPI server, with 
 
 - Markdown + YAML frontmatter content processing
 - Three content types: blog posts, raindrops (link blog), static pages
-- Jinja2 HTML templating
+- Jinja2 HTML templating with Bootstrap 5
 - XML-RPC Blogger API (MarsEdit compatible)
-- Web admin interface
-- Raindrop.io bookmark sync (scheduled + on-demand)
+- Web admin interface with create/edit/delete and tag selection
+- Tag pages: clickable tag badges link to `/tags/<tag>/` listing pages
+- Raindrop.io bookmark sync (scheduled + on-demand) with collection filtering
 - Dual content storage: Fly.io persistent volume + GitHub backup
 - Scheduled Git sync and Raindrop sync
 
@@ -62,7 +63,9 @@ category: "General"
 Markdown content here...
 ```
 
-Raindrop entries also include: `url`, `domain`, `cover`, `tags`, `note`, `raindrop_type`.
+Blog posts also support a `tags` list (selected from the built-in vocabulary in `BLOG_TAGS`).
+
+Raindrop entries also include: `url`, `domain`, `cover`, `tags`, `note`, `raindrop_type`, `collection`.
 
 ## Environment Variables
 

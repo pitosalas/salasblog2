@@ -279,11 +279,29 @@ class TestScheduler:
         """Test successful commit and push"""
         with patch.object(scheduler, '_run_command_with_retry') as mock_retry:
             mock_retry.return_value = Mock(returncode=0)
-            
+
             result = scheduler._commit_and_push()
-            
+
             assert result is True
             assert mock_retry.call_count == 2  # commit + push
+
+    def test_commit_and_push_uses_head_ref(self, scheduler):
+        """Push command uses HEAD:<branch> so local branch name doesn't matter"""
+        with patch.object(scheduler, '_run_command_with_retry') as mock_retry:
+            mock_retry.return_value = Mock(returncode=0)
+            scheduler.config.git_branch = "j2-experiment"
+
+            scheduler._commit_and_push()
+
+            push_call = mock_retry.call_args_list[1]
+            push_cmd = push_call[0][0]
+            assert push_cmd == ["git", "push", "origin", "HEAD:j2-experiment"]
+
+    def test_commit_and_push_branch_from_env(self):
+        """Scheduler reads GIT_BRANCH from environment"""
+        with patch.dict(os.environ, {"GIT_BRANCH": "my-branch"}):
+            s = Scheduler()
+            assert s.config.git_branch == "my-branch"
     
     def test_commit_and_push_failure(self, scheduler):
         """Test commit and push with failure"""

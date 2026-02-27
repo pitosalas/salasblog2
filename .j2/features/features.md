@@ -9,14 +9,26 @@ Status values:
 
 <!-- ===== INCOMPLETE FEATURES (High → Medium → Low) ===== -->
 
-## F21 — Raindrop Collection Filtering
+<!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
+
+## F22 — Scheduler Git Push Uses fly.toml Branch
 **Priority**: Medium
-**Status**: not started | Tests written: no | Tests passing: n/a
-**Description**: The `/raindrops/` listing page displays a row of links at the top, one for each collection found across all raindrops. Clicking a collection link filters the displayed raindrops to show only those from that collection. The generator extracts collection names from raindrop frontmatter and generates filtered listing pages per collection.
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: The scheduler's Git sync must push content to the branch specified by `GIT_BRANCH` in `fly.toml`. The current push command (`git push origin <branch>`) fails when the local repo is checked out on a different branch (e.g. `main` built into Docker but `GIT_BRANCH=j2-experiment` at runtime). Fix: use `git push origin HEAD:<branch>` so the current HEAD is always pushed to the configured remote branch regardless of local branch name.
 
 ---
 
-<!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
+## F23 — Tag Selection for Blog Posts (UI and API)
+**Priority**: Medium
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: Blog posts created or edited via the admin web UI or the XML-RPC Blogger API can carry one or more tags. A fixed tag vocabulary is defined in code (a Python list constant). The admin create-post and edit-post forms render the vocabulary as a multi-select control (checkboxes or `<select multiple>`); selected tags are written as a YAML `tags` list in the post's frontmatter. The XML-RPC `newPost`/`editPost` handlers accept a `tags` field and persist it the same way. Tags are displayed as clickable Bootstrap badge links on `blog_post.html` and listing pages, identical to how raindrop tags are shown (F18).
+
+---
+
+## F21 — Raindrop Collection Filtering
+**Priority**: Medium
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: The `/raindrops/` listing page displays a row of links at the top, one for each collection found across all raindrops. Clicking a collection link filters the displayed raindrops to show only those from that collection. The generator extracts collection names from raindrop frontmatter and generates filtered listing pages per collection.
 
 ## F19 — Configurable Front Page Post Count
 **Priority**: Medium

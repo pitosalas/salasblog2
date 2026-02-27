@@ -466,7 +466,9 @@ class TestFormatRaindropAsMarkdown:
             "tags": ["python", "coding", "tutorial"]
         }
         markdown = format_raindrop_as_markdown(raindrop)
-        assert "python coding tutorial" in markdown  # Tags as space-separated string
+        assert "python" in markdown  # Tags stored as YAML list items
+        assert "coding" in markdown
+        assert "tutorial" in markdown
     
     def test_format_raindrop_as_markdown_with_notes(self):
         """Test raindrop markdown with notes."""

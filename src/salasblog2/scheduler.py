@@ -106,9 +106,11 @@ class Scheduler:
             
             self._run_command_with_retry(["git", "commit", "-m", commit_message], timeout=30)
             
-            # Push to GitHub
+            # Push current HEAD to configured remote branch
             logger.info(f"Pushing to GitHub branch: {self.config.git_branch}")
-            self._run_command_with_retry(["git", "push", "origin", self.config.git_branch], timeout=60)
+            self._run_command_with_retry(
+                ["git", "push", "origin", f"HEAD:{self.config.git_branch}"], timeout=60
+            )
             
             logger.info("Successfully synced content to GitHub")
             return True

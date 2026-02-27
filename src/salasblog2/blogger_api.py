@@ -56,31 +56,36 @@ class BloggerAPI:
         body_content = content
         return title, body_content
     
-    def _parse_content_or_struct(self, content) -> tuple[str, str]:
-        """Parse content whether it's a string or structured data."""
+    def _parse_content_or_struct(self, content) -> tuple[str, str, list]:
+        """Parse content whether it's a string or structured data. Returns title, body, tags."""
         if isinstance(content, dict):
-            # Handle structured content (modern blog editors)
             title = content.get('title', 'Untitled Post')
             body = content.get('description', content.get('content', ''))
-            logger.info(f"Received structured content: title='{title}', body_length={len(body)}")
-            return title, body
+            raw_tags = content.get('mt_keywords', content.get('tags', ''))
+            if isinstance(raw_tags, str):
+                tags = [t.strip() for t in raw_tags.split(',') if t.strip()]
+            else:
+                tags = list(raw_tags) if raw_tags else []
+            logger.info(f"Received structured content: title='{title}', tags={tags}")
+            return title, body, tags
         elif isinstance(content, str):
-            # Handle string content (legacy format)
             logger.info(f"Received string content, parsing: {len(content)} chars")
-            return self._parse_content(content)
+            title, body = self._parse_content(content)
+            return title, body, []
         else:
-            # Fallback
             logger.warning(f"Unknown content type: {type(content)}, converting to string")
-            return self._parse_content(str(content))
+            title, body = self._parse_content(str(content))
+            return title, body, []
     
-    def _create_post_frontmatter(self, title: str, body_content: str) -> frontmatter.Post:
+    def _create_post_frontmatter(self, title: str, body_content: str, tags: list) -> frontmatter.Post:
         """Create frontmatter post object with standard metadata."""
         post = frontmatter.Post(body_content)
         post.metadata = {
             'title': title,
             'date': datetime.now().strftime("%Y-%m-%d"),
             'type': 'blog',
-            'category': 'General'
+            'category': 'General',
+            'tags': tags
         }
         return post
     
@@ -214,13 +219,13 @@ class BloggerAPI:
         self._authenticate_or_raise(username, password)
         
         # Parse content and create post
-        title, body_content = self._parse_content_or_struct(content)
-        logger.info(f"Parsed title: '{title}', body length: {len(body_content)}")
-        
+        title, body_content, tags = self._parse_content_or_struct(content)
+        logger.info(f"Parsed title: '{title}', body length: {len(body_content)}, tags: {tags}")
+
         filename = create_filename_from_title(title)
         logger.info(f"Generated filename: {filename}")
-        
-        post = self._create_post_frontmatter(title, body_content)
+
+        post = self._create_post_frontmatter(title, body_content, tags)
         file_path = self.blog_dir / filename
         self._write_post_file(file_path, post)
         
@@ -264,8 +269,8 @@ class BloggerAPI:
             logger.info(f"Creating new post from edit request: {postid}")
         
         # Parse content and update post
-        title, body_content = self._parse_content_or_struct(content)
-        post = self._create_post_frontmatter(title, body_content)
+        title, body_content, tags = self._parse_content_or_struct(content)
+        post = self._create_post_frontmatter(title, body_content, tags)
         self._write_post_file(file_path, post)
         
         # Immediately backup to persistent volume
