@@ -8,16 +8,18 @@ type: page
 
 ## About Me
 
-I'm Pito Salas — software engineer, educator, entrepreneur, and tinkerer. I've spent my career building things: software products, companies, robots, and now, courses that teach the next generation of engineers how to build things too.
+I'm Pito Salas — software engineer, educator, entrepreneur, and tinkerer based in Cambridge, MA.
 
-I'm currently **Professor of the Practice of Computer Science** at the [Michtom School of Computer Science at Brandeis University](https://www.brandeis.edu/computer-science/), where I teach Software Engineering, Software Entrepreneurship, Software Design, and Autonomous Robotics. I believe strongly that students need to see how computer science connects to the real world, so I invest heavily in experiential learning, team projects, and hands-on work outside the classroom.
+Earlier in my career I invented the pivot table while working at Lotus Development's Advanced Technology Group (released as *Lotus Improv* in 1989 — yes, before Excel had it). I co-founded [eRoom Technology](https://en.wikipedia.org/wiki/ERoom), one of the first internet-based project collaboration platforms, which was acquired by Documentum in 2002. I also created [BlogBridge](https://en.wikipedia.org/wiki/BlogBridge), an open-source RSS reader for power users.
 
-My robotics lab runs **COSI 119a — Autonomous Robotics**, a multi-cohort, multi-semester course where students work side by side to build the [Campus Rover](https://www.brandeis.edu/computer-science/), a robot that navigates indoors and outdoors on an actual campus. It's one of the most ambitious teaching robotics projects at any university.
+After a full career in industry I joined Brandeis University, where I'm now **Professor of the Practice of Computer Science** at the [Michtom School of Computer Science](https://www.brandeis.edu/computer-science/). I teach Software Engineering, Software Entrepreneurship, Software Design, and Autonomous Robotics. My robotics lab runs a multi-semester course where students build the Campus Rover — a robot that navigates real indoor and outdoor environments.
 
-You can find me on [LinkedIn](https://www.linkedin.com/in/pitosalas/) — if we've met in person I'll generally accept a connection request, especially if you include a note.
+I believe CS students need to see how their skills connect to the real world, so I invest heavily in experiential learning and hands-on team projects.
+
+You can find me on [LinkedIn](https://www.linkedin.com/in/pitosalas/) — if we've met in person I'll generally accept a connection, especially with a note.
 
 ---
 
 ## Brief Bio
 
-Pito Salas is a software developer, entrepreneur, and educator based in Cambridge, MA. He invented the pivot table at Lotus Development in 1986, co-founded eRoom Technology (acquired by Documentum in 2002), and created the open-source RSS reader BlogBridge. He is currently Professor of the Practice of Computer Science at Brandeis University, where he teaches software engineering, entrepreneurship, and autonomous robotics.
+Pito Salas is a software developer, entrepreneur, and educator. Inventor of the pivot table, co-founder of eRoom Technology, and Professor of the Practice of Computer Science at Brandeis University.
