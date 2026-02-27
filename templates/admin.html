@@ -35,33 +35,33 @@
             </form>
         </div>
 
-        <ul class="nav nav-tabs mb-4" id="adminTabs">
-            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#tab-raindrop">Raindrop</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-generate">Generate</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-datasync">Data Sync</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-scheduler">Scheduler</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-pages">Pages Sync</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-stats">Stats</a></li>
-            <li class="nav-item"><a class="nav-link text-danger" data-bs-toggle="tab" href="#tab-emergency">Emergency</a></li>
-            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-api">API</a></li>
-        </ul>
+        <div class="d-flex flex-wrap gap-2 mb-4" id="adminTabs">
+            <button class="btn btn-primary btn-sm admin-tab active" onclick="showTab('tab-raindrop', this)">Raindrop</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-generate', this)">Generate</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-datasync', this)">Data Sync</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-scheduler', this)">Scheduler</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-pages', this)">Pages Sync</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-stats', this)">Stats</button>
+            <button class="btn btn-danger btn-sm admin-tab" onclick="showTab('tab-emergency', this)">Emergency</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-api', this)">API</button>
+        </div>
 
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab-raindrop">
+            <div class="admin-pane" id="tab-raindrop">
                 <h2 class="h5 mb-2">Raindrop Sync</h2>
                 <p class="text-muted">Download new bookmarks from Raindrop.io and regenerate the site</p>
                 <button id="sync-btn" class="btn btn-primary" onclick="syncRaindrops()">Sync Raindrops</button>
                 <div id="sync-status" class="mt-2"></div>
             </div>
 
-            <div class="tab-pane fade" id="tab-generate">
+            <div class="admin-pane d-none" id="tab-generate">
                 <h2 class="h5 mb-2">Site Generation</h2>
                 <p class="text-muted">Regenerate the static site from markdown files using current theme</p>
                 <button id="regen-btn" class="btn btn-primary" onclick="regenerateSite()">Regenerate Site</button>
                 <div id="regen-status" class="mt-2"></div>
             </div>
 
-            <div class="tab-pane fade" id="tab-datasync">
+            <div class="admin-pane d-none" id="tab-datasync">
                 <h2 class="h5 mb-2">Data Synchronization</h2>
                 <p class="text-muted">Sync content between working directory (/app/content/) and persistent volume (/data/content/)</p>
                 <div class="d-flex gap-2 flex-wrap mb-2">
@@ -78,7 +78,7 @@
                 </small>
             </div>
 
-            <div class="tab-pane fade" id="tab-scheduler">
+            <div class="admin-pane d-none" id="tab-scheduler">
                 <h2 class="h5 mb-2">Automated Scheduler</h2>
                 <p class="text-muted">The scheduler performs two automated tasks: <strong>Git sync to GitHub</strong> (backup content) and <strong>Raindrop sync</strong> (download new bookmarks)</p>
                 <div class="alert alert-light border mb-3 small">
@@ -103,7 +103,7 @@
                 </small>
             </div>
 
-            <div class="tab-pane fade" id="tab-pages">
+            <div class="admin-pane d-none" id="tab-pages">
                 <h2 class="h5 mb-2">Safe Pages Sync</h2>
                 <p class="text-muted">Sync only the pages directory from GitHub repository to fix frontmatter issues</p>
                 <div class="alert alert-info small mb-3">
@@ -122,13 +122,13 @@
                 </small>
             </div>
 
-            <div class="tab-pane fade" id="tab-stats">
+            <div class="admin-pane d-none" id="tab-stats">
                 <h2 class="h5 mb-2">Visit Statistics</h2>
                 <p class="text-muted">View page visit counts tracked server-side</p>
                 <a href="/admin/stats" class="btn btn-outline-secondary">View Stats</a>
             </div>
 
-            <div class="tab-pane fade" id="tab-emergency">
+            <div class="admin-pane d-none" id="tab-emergency">
                 <h2 class="h5 mb-2 text-danger">Emergency Repository Restore</h2>
                 <p class="text-danger fw-bold">DANGER: This overwrites /data/content with GitHub repository content!</p>
                 <p class="text-muted">Use only if the persistent volume gets corrupted or you need to revert to GitHub state.</p>
@@ -143,7 +143,7 @@
                 </small>
             </div>
 
-            <div class="tab-pane fade" id="tab-api">
+            <div class="admin-pane d-none" id="tab-api">
                 <h2 class="h5 mb-2">Weblogs API</h2>
                 <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
                 <p class="text-muted">Supports standard Blogger API methods for external blog clients.</p>
@@ -631,6 +631,16 @@
                 button.disabled = false;
                 button.innerHTML = 'Emergency Restore from GitHub';
             }
+        }
+
+        function showTab(id, btn) {
+            document.querySelectorAll('.admin-pane').forEach(p => p.classList.add('d-none'));
+            document.getElementById(id).classList.remove('d-none');
+            document.querySelectorAll('.admin-tab').forEach(b => {
+                b.classList.remove('active');
+                if (!b.classList.contains('btn-danger')) b.classList.replace('btn-secondary', 'btn-primary');
+            });
+            btn.classList.add('active');
         }
 
         document.addEventListener('DOMContentLoaded', function() {
