@@ -8,7 +8,8 @@
       "Bash(python3:*)",
       "Bash(git:*)",
       "Bash(uv run:*)",
-      "Bash(fly deploy:*)"
+      "Bash(fly deploy:*)",
+      "Bash(/Users/pitosalas/mydev/salasblog2/.j2/tasks/F25.md:*)"
     ],
     "deny": [
       "Read(output)",

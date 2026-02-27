@@ -1,42 +1,28 @@
-# Current Session — 2026-02-26
+# Current Session State
 
-## What was completed
-- F18 Clickable Tag Pages: fixed numeric tag filtering to prevent WordPress import artifact IDs from displaying
-  - Added `{% if not tag.isdigit() %}` condition to blog_post.html, blog_list.html, home.html templates
-  - All 11 F18 tests passing, moved F18.md to done folder
-- F19 Configurable Home Page Post Count: already complete, all tests passing
-- F20 Front Page "See All" Links: already complete, all tests passing
+## What was just completed
+- F26 — Traffic Classification by Visitor Type: full implementation
+  - visitor_type.py: robust 5-category classifier with disguised-bot detection
+  - stats.py: VisitCounter extended to store per-visitor-type counts; migrates old int format
+  - server.py: all three routes classify User-Agent and pass visitor type to increment()
+  - Admin Stats tab shows per-type columns (Human, Search, AI Bot, Crawler, Unknown)
+  - 27 tests passing
+- Fixed critical session bug: SessionMiddleware initialized with secret_key=None (ran before lifespan)
+- Admin page refactored to btn-primary tab buttons
+- About page: excerpt for pages listing, styled Find Pito Online links as buttons
+- Pages Sync: removed broken git pull, copies directly from /app to /data
+- startup.sh: pages synced from image to volume on every deploy
+- Footer year: admin.html uses JS for dynamic year
 
-## Currently in progress
-None — all 20 features done.
+## What is currently in progress
+Nothing — all 26 features complete.
 
 ## What is next
-- /features-update to add new features, or /deploy to ship to Fly.io
+- Deploy to Fly.io to get F26 live
+- /features-update to plan next milestone
 
 ## Open questions
-- None
+None
 
 ## Feature status summary
-
-| Feature | Priority | Status |
-|---------|----------|--------|
-| F01 Static Site Generator | High | done ✓ |
-| F02 Raindrop.io Bookmark Sync | High | done ✓ |
-| F03 FastAPI Server | High | done ✓ |
-| F04 XML-RPC Blogger API | High | done ✓ |
-| F05 CLI Entry Point | High | done ✓ |
-| F06 Incremental Site Regen | High | done ✓ |
-| F07 Scheduler Git Sync | High | done ✓ |
-| F09 Content Utility Functions | High | done ✓ |
-| F10 Dual Content Storage | High | done ✓ |
-| F08 Placeholder Title | Medium | done ✓ |
-| F11 Web Admin Interface | Medium | done ✓ |
-| F12 Scheduler Raindrop Sync | Medium | done ✓ |
-| F13 Fly.io Deployment | Medium | done ✓ |
-| F14 File Serving Security | Medium | done ✓ |
-| F15 MIME Type Handling | Medium | done ✓ |
-| F17 Bootstrap-First Styling | Medium | done ✓ |
-| F18 Clickable Tag Pages | Medium | done ✓ |
-| F19 Configurable Post Count | Medium | done ✓ |
-| F20 See All Links | Low | done ✓ |
-| F16 Pages Feature | Low | done ✓ |
+F01–F26: all done

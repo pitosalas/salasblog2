@@ -1,0 +1,28 @@
+{
+  "/pages/": {
+    "human": 6,
+    "unknown": 2
+  },
+  "/raindrops/": {
+    "human": 17,
+    "unknown": 14
+  },
+  "/raindrops/test-raindrop.html": {
+    "human": 2,
+    "unknown": 2
+  },
+  "/raindrops/example-article.html": {
+    "human": 2,
+    "unknown": 2
+  },
+  "/raindrops/raindrop1.html": {
+    "human": 2,
+    "unknown": 2
+  },
+  "/": {
+    "human": 7
+  },
+  "/raindrops/programming/": {
+    "human": 1
+  }
+}
