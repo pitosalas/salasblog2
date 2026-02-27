@@ -10,11 +10,11 @@ type: page
 
 I'm Pito Salas — software engineer, educator, entrepreneur, and tinkerer based in Cambridge, MA.
 
-Earlier in my career I invented the pivot table while working at Lotus Development's Advanced Technology Group (released as *Lotus Improv* in 1989 — yes, before Excel had it). I co-founded [eRoom Technology](https://en.wikipedia.org/wiki/ERoom), one of the first internet-based project collaboration platforms, which was acquired by Documentum in 2002. I also created [BlogBridge](https://en.wikipedia.org/wiki/BlogBridge), an open-source RSS reader for power users.
+Earlier in my career I am credited with having invented the "pivot table" while working at Lotus Development's Advanced Technology Group (released as *Lotus Improv* in 1989 — yes, before Excel had it). I co-founded [eRoom Technology](https://en.wikipedia.org/wiki/ERoom), one of the first internet-based project collaboration platforms, which was acquired by Documentum in 2002. I also created [BlogBridge](https://en.wikipedia.org/wiki/BlogBridge), an open-source RSS reader for power users.
 
-After a full career in industry I joined Brandeis University, where I'm now **Professor of the Practice of Computer Science** at the [Michtom School of Computer Science](https://www.brandeis.edu/computer-science/). I teach Software Engineering, Software Entrepreneurship, Software Design, and Autonomous Robotics. My robotics lab runs a multi-semester course where students build the Campus Rover — a robot that navigates real indoor and outdoor environments.
+After a full career in industry I joined Brandeis University as **Professor of the Practice of Computer Science** at the [Michtom School of Computer Science](https://www.brandeis.edu/computer-science/). I taught  Software Engineering, Software Entrepreneurship, Software Design, and Autonomous Robotics. In 2025 I retired.
 
-I believe CS students need to see how their skills connect to the real world, so I invest heavily in experiential learning and hands-on team projects.
+I have remained very busy and involved with robotics. I founded the [Boston Robot Hackers](bostonrobothackers.com) group last year and continue to build, test, and experiment with Robots.
 
 You can find me on [LinkedIn](https://www.linkedin.com/in/pitosalas/) — if we've met in person I'll generally accept a connection, especially with a note.
 
@@ -22,4 +22,10 @@ You can find me on [LinkedIn](https://www.linkedin.com/in/pitosalas/) — if we'
 
 ## Brief Bio
 
-Pito Salas is a software developer, entrepreneur, and educator. Inventor of the pivot table, co-founder of eRoom Technology, and Professor of the Practice of Computer Science at Brandeis University.
+Pito Salas is a software developer, entrepreneur, and educator based in Cambridge, MA. He has been credited with inventing the pivot table while at Lotus Development in the late 1980s. He co-founded eRoom Technology, one of the first internet-based project collaboration platforms (acquired by Documentum in 2002), and created the open-source RSS reader BlogBridge. He served as Professor of the Practice of Computer Science at Brandeis University until retiring in 2025, where he taught software engineering, entrepreneurship, and autonomous robotics. He is now active in the Boston robotics community as founder of Boston Robot Hackers.
+
+**Find Pito online:**
+- [Brandeis University faculty page](https://www.brandeis.edu/computer-science/)
+- [Wikipedia](https://en.wikipedia.org/wiki/Pito_Salas)
+- [LinkedIn](https://www.linkedin.com/in/pitosalas/)
+- [Boston Robot Hackers](http://bostonrobothackers.com)
