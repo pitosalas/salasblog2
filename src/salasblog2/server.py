@@ -31,6 +31,7 @@ from .blogger_api import BloggerAPI
 from .scheduler import get_scheduler
 from .utils import process_markdown_to_html, BLOG_TAGS
 from .stats import get_counter
+from .visitor_type import classify_visitor
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -287,7 +288,8 @@ async def serve_pages_files(file_path: str, request: Request):
         raise HTTPException(status_code=404, detail="Not found")
 
     if request.method == "GET" and str(full_path).endswith(".html"):
-        get_counter().increment(f"/pages/{file_path}")
+        vtype = classify_visitor(request.headers.get("user-agent", ""))
+        get_counter().increment(f"/pages/{file_path}", vtype)
 
     content_type, _ = mimetypes.guess_type(str(full_path))
     if not content_type:
@@ -313,7 +315,8 @@ async def serve_raindrops_files(file_path: str, request: Request):
         raise HTTPException(status_code=404, detail="Not found")
 
     if request.method == "GET" and str(full_path).endswith(".html"):
-        get_counter().increment(f"/raindrops/{file_path}")
+        vtype = classify_visitor(request.headers.get("user-agent", ""))
+        get_counter().increment(f"/raindrops/{file_path}", vtype)
 
     content_type, _ = mimetypes.guess_type(str(full_path))
     if not content_type:
@@ -446,7 +449,8 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
 @app.get("/")
 async def serve_home(request: Request):
     """Serve the home page"""
-    get_counter().increment("/")
+    vtype = classify_visitor(request.headers.get("user-agent", ""))
+    get_counter().increment("/", vtype)
     home_file = config["output_dir"] / "index.html"
     if home_file.exists():
         return HTMLResponse(content=home_file.read_text(encoding='utf-8'))
