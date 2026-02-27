@@ -1,7 +1,8 @@
-"""
-Simple visit counter that persists page counts to a JSON file.
-Uses /data/stats.json in production (Fly.io volume), stats.json locally.
-"""
+#!/usr/bin/env python3
+# stats.py — Visit counter persisting per-path, per-visitor-type counts to JSON
+# Author: Pito Salas and Claude Code
+# Open Source Under MIT license
+
 import json
 import logging
 from pathlib import Path
@@ -19,31 +20,41 @@ class VisitCounter:
         self._counts: dict = self._load()
 
     def _load(self) -> dict:
+        """Load counts from file, migrating old int-per-path format if needed."""
         try:
             if self.stats_file.exists():
-                return json.loads(self.stats_file.read_text(encoding="utf-8"))
+                raw = json.loads(self.stats_file.read_text(encoding="utf-8"))
+                return {
+                    path: ({"human": val} if isinstance(val, int) else val)
+                    for path, val in raw.items()
+                }
         except Exception as e:
             logger.warning(f"Could not load stats file: {e}")
         return {}
 
     def _save(self):
-        try:
-            self.stats_file.write_text(
-                json.dumps(self._counts, indent=2), encoding="utf-8"
-            )
-        except Exception as e:
-            logger.warning(f"Could not save stats file: {e}")
+        self.stats_file.write_text(
+            json.dumps(self._counts, indent=2), encoding="utf-8"
+        )
 
-    def increment(self, path: str):
-        self._counts[path] = self._counts.get(path, 0) + 1
+    def increment(self, path: str, visitor_type: str):
+        """Increment visit count for path and visitor type."""
+        if path not in self._counts:
+            self._counts[path] = {}
+        self._counts[path][visitor_type] = self._counts[path].get(visitor_type, 0) + 1
         self._save()
 
     def get(self, path: str) -> int:
-        return self._counts.get(path, 0)
+        """Return total visit count across all visitor types for path."""
+        return sum(self._counts.get(path, {}).values())
 
-    def get_all(self) -> list[tuple[str, int]]:
-        """Return all counts sorted by visit count descending."""
-        return sorted(self._counts.items(), key=lambda x: x[1], reverse=True)
+    def get_all(self) -> list[tuple[str, dict]]:
+        """Return all paths with their type breakdown, sorted by total count descending."""
+        return sorted(
+            self._counts.items(),
+            key=lambda x: sum(x[1].values()),
+            reverse=True,
+        )
 
 
 _counter: VisitCounter | None = None
