@@ -197,8 +197,8 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Add session middleware with validated secret
-app.add_middleware(SessionMiddleware, secret_key=config.get("session_secret", "fallback-key"))
+# Add session middleware — read directly from env since middleware registers before lifespan
+app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET", "fallback-dev-key"))
 
 # Custom endpoints to fix FastAPI StaticFiles HEAD/GET inconsistency
 @app.api_route("/static/{file_path:path}", methods=["GET", "HEAD"])
