@@ -249,6 +249,27 @@ async def serve_blog_files(file_path: str, request: Request):
     content = full_path.read_bytes() if request.method == "GET" else b""
     return Response(content=content, media_type=content_type)
 
+@app.api_route("/tags/{file_path:path}", methods=["GET", "HEAD"])
+async def serve_tags_files(file_path: str, request: Request):
+    """Serve tag index pages"""
+    if not config.get("output_dir"):
+        raise HTTPException(status_code=404, detail="Not found")
+
+    full_path = config["output_dir"] / "tags" / file_path
+
+    if full_path.is_dir():
+        full_path = full_path / "index.html"
+
+    if not full_path.exists() or not full_path.is_file():
+        raise HTTPException(status_code=404, detail="Not found")
+
+    content_type, _ = mimetypes.guess_type(str(full_path))
+    if not content_type:
+        content_type = "text/html"
+
+    content = full_path.read_bytes() if request.method == "GET" else b""
+    return Response(content=content, media_type=content_type)
+
 @app.api_route("/pages/{file_path:path}", methods=["GET", "HEAD"])
 async def serve_pages_files(file_path: str, request: Request):
     """Custom pages file serving with consistent GET/HEAD behavior"""

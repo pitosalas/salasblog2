@@ -49,7 +49,7 @@
 
                 <div class="flex-grow-1">
                     <h3 class="h6 mb-1">
-                        <a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a>
+                        <span class="badge bg-info text-dark me-1">Link</span><a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a>
                     </h3>
 
                     {% if post.domain %}
@@ -73,7 +73,11 @@
                     {% endif %}
 
                     {% if post.tags and post.tags[0] %}
-                    <div class="small text-muted fst-italic"><strong>Tags:</strong> {{ post.tags[0] }}</div>
+                    <div class="mt-1">
+                        {% for tag in post.tags %}
+                        <a href="/tags/{{ tag | slugify }}/index.html" class="badge bg-secondary text-decoration-none me-1">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
                     {% endif %}
                 </div>
             </div>

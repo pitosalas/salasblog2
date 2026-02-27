@@ -6,7 +6,8 @@
       "Bash(rg:*)",
       "Bash(find:*)",
       "Bash(python3:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(uv run:*)"
     ],
     "deny": [
       "Read(output)",

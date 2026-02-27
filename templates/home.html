@@ -16,7 +16,7 @@
             <div class="col">
                 <article class="card h-100">
                     <div class="card-body">
-                        <h3 class="card-title h6"><a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a></h3>
+                        <h3 class="card-title h6"><span class="badge bg-success me-1">Post</span><a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a></h3>
                         <div class="card-subtitle mb-2 text-muted small">
                             <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
                             <span class="badge bg-primary ms-1">{{ post.category }}</span>
@@ -44,7 +44,7 @@
             <li class="list-group-item px-0">
                 <div class="small text-muted">{{ raindrop.date | dd_mm_yyyy }}</div>
                 <h3 class="h6 mb-1">
-                    <a href="{{ raindrop.url }}" class="text-decoration-none">{{ raindrop.title }}</a>
+                    <span class="badge bg-info text-dark me-1">Link</span><a href="{{ raindrop.url }}" class="text-decoration-none">{{ raindrop.title }}</a>
                 </h3>
                 {% if raindrop.note %}
                 <div class="small text-muted">

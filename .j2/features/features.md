@@ -11,6 +11,13 @@ Status values:
 
 <!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
 
+## F24 — Content Type Visual Indicators
+**Priority**: Medium
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: Each item displayed in listing pages and on the home page should make its content type immediately clear to the reader. Blog posts show a distinct label or icon (e.g. "Post" badge or pencil icon). Link blog (raindrop) items show a distinct label or icon (e.g. "Link" badge or chain icon). The indicator appears consistently on listing pages, the home page, and individual post pages. Implementation uses Bootstrap badges or icons — no custom CSS.
+
+---
+
 ## F22 — Scheduler Git Push Uses fly.toml Branch
 **Priority**: Medium
 **Status**: done | Tests written: yes | Tests passing: yes

@@ -241,12 +241,16 @@ class SiteGenerator:
             'pages': 'page.html'
         }.get(content_type, 'page.html')
         
-        for post in posts:
+        for i, post in enumerate(posts):
+            prev_post = posts[i + 1] if i + 1 < len(posts) else None
+            next_post = posts[i - 1] if i > 0 else None
             context = {
                 'post': post,
                 'page': post,  # Some templates expect 'page' instead of 'post'
                 'site_title': 'Pito Salas Blog',
-                'navigation': self.get_navigation_items()
+                'navigation': self.get_navigation_items(),
+                'prev_post': prev_post,
+                'next_post': next_post,
             }
             
             html_content = self.render_template(template_name, context)
@@ -470,10 +474,11 @@ class SiteGenerator:
         except FileNotFoundError:
             print("✗ 'fly' command not found. Please install Fly CLI first.")
     
-    def generate_tag_pages(self, posts):
-        """Generate one tag index page per unique tag across blog posts."""
+    def generate_tag_pages(self, posts, extra_posts=None):
+        """Generate one tag index page per unique tag across blog and raindrop posts."""
+        all_tagged = list(posts) + list(extra_posts or [])
         tags_by_slug = {}
-        for post in posts:
+        for post in all_tagged:
             for tag in post.get('tags', []):
                 slug = slugify_tag(tag)
                 if slug not in tags_by_slug:
@@ -544,7 +549,7 @@ class SiteGenerator:
 
         # Generate tag pages
         print("🏷️  Generating tag pages...")
-        self.generate_tag_pages(blog_posts)
+        self.generate_tag_pages(blog_posts, raindrops)
         print()
         
         # Generate home page
