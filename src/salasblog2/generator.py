@@ -611,10 +611,9 @@ class SiteGenerator:
         self.generate_home_page(blog_posts, raindrops)
         print()
         
-        # Generate overview page (also as home)
+        # Generate overview page
         print("📊 Generating overview page...")
         self.generate_overview_page()
-        self.generate_overview_as_home()
         print()
         
         # Generate pages listing
