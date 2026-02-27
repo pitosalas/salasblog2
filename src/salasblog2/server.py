@@ -30,6 +30,7 @@ from .raindrop import RaindropDownloader
 from .blogger_api import BloggerAPI
 from .scheduler import get_scheduler
 from .utils import process_markdown_to_html, BLOG_TAGS
+from .stats import get_counter
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -275,20 +276,23 @@ async def serve_pages_files(file_path: str, request: Request):
     """Custom pages file serving with consistent GET/HEAD behavior"""
     if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="Not found")
-    
+
     full_path = config["output_dir"] / "pages" / file_path
-    
+
     # Handle directory index
     if full_path.is_dir():
         full_path = full_path / "index.html"
-    
+
     if not full_path.exists() or not full_path.is_file():
         raise HTTPException(status_code=404, detail="Not found")
-    
+
+    if request.method == "GET" and str(full_path).endswith(".html"):
+        get_counter().increment(f"/pages/{file_path}")
+
     content_type, _ = mimetypes.guess_type(str(full_path))
     if not content_type:
         content_type = "text/html"
-    
+
     # Return content for GET, empty for HEAD
     content = full_path.read_bytes() if request.method == "GET" else b""
     return Response(content=content, media_type=content_type)
@@ -298,20 +302,23 @@ async def serve_raindrops_files(file_path: str, request: Request):
     """Custom raindrops file serving with consistent GET/HEAD behavior"""
     if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="Not found")
-    
+
     full_path = config["output_dir"] / "raindrops" / file_path
-    
+
     # Handle directory index
     if full_path.is_dir():
         full_path = full_path / "index.html"
-    
+
     if not full_path.exists() or not full_path.is_file():
         raise HTTPException(status_code=404, detail="Not found")
-    
+
+    if request.method == "GET" and str(full_path).endswith(".html"):
+        get_counter().increment(f"/raindrops/{file_path}")
+
     content_type, _ = mimetypes.guess_type(str(full_path))
     if not content_type:
         content_type = "text/html"
-    
+
     # Return content for GET, empty for HEAD
     content = full_path.read_bytes() if request.method == "GET" else b""
     return Response(content=content, media_type=content_type)
@@ -437,8 +444,9 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
 
 # API Routes
 @app.get("/")
-async def serve_home():
+async def serve_home(request: Request):
     """Serve the home page"""
+    get_counter().increment("/")
     home_file = config["output_dir"] / "index.html"
     if home_file.exists():
         return HTMLResponse(content=home_file.read_text(encoding='utf-8'))
@@ -828,6 +836,21 @@ async def get_admin_status(request: Request):
     return JSONResponse(content={
         "authenticated": is_admin_authenticated(request)
     })
+
+@app.get("/admin/stats")
+async def admin_stats_page(request: Request):
+    """Serve visit statistics page"""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        return RedirectResponse(url="/admin", status_code=302)
+    counts = get_counter().get_all()
+    context = {
+        'counts': counts,
+        'total': sum(c for _, c in counts),
+        'navigation': [],
+        'site_title': 'Salas Blog',
+    }
+    return HTMLResponse(content=render_template("admin_stats.html", context))
+
 
 @app.get("/admin/edit-post/{filename}")
 async def edit_post_page(filename: str, request: Request):
