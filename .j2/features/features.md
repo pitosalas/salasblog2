@@ -9,6 +9,11 @@ Status values:
 
 <!-- ===== INCOMPLETE FEATURES (High → Medium → Low) ===== -->
 
+## F26 — Traffic Classification by Visitor Type
+**Priority**: Medium
+**Status**: not started | Tests written: no | Tests passing: n/a
+**Description**: Extend the visit statistics system (F25) to classify each request as one of three visitor types: `human`, `search_engine`, or `ai_bot`. Classification is based on the `User-Agent` request header using a lookup against known bot/crawler signatures. Human traffic is the default when no known bot pattern matches. The `VisitCounter` stores counts per path broken down by visitor type (e.g. `{"/": {"human": 12, "search_engine": 4, "ai_bot": 7}}`). The `/admin/stats` view (and the Stats tab on the admin page) displays counts per type alongside the total. No new external dependencies — pattern matching uses a plain Python list of known UA substrings for search engines (Googlebot, Bingbot, DuckDuckBot, etc.) and AI crawlers (GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, etc.). This feature is design-only for now — no implementation.
+
 <!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
 
 ## F25 — Simple Visit Statistics
