@@ -851,6 +851,14 @@ async def admin_stats_page(request: Request):
     }
     return HTMLResponse(content=render_template("admin_stats.html", context))
 
+@app.get("/api/stats")
+async def api_stats(request: Request):
+    """Return visit stats as JSON"""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=403, detail="Not authenticated")
+    counts = get_counter().get_all()
+    return {"counts": [{"path": p, "count": c} for p, c in counts], "total": sum(c for _, c in counts)}
+
 
 @app.get("/admin/edit-post/{filename}")
 async def edit_post_page(filename: str, request: Request):

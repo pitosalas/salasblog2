@@ -124,8 +124,7 @@
 
             <div class="admin-pane d-none" id="tab-stats">
                 <h2 class="h5 mb-2">Visit Statistics</h2>
-                <p class="text-muted">View page visit counts tracked server-side</p>
-                <a href="/admin/stats" class="btn btn-outline-secondary">View Stats</a>
+                <div id="stats-content"><p class="text-muted fst-italic">Loading...</p></div>
             </div>
 
             <div class="admin-pane d-none" id="tab-emergency">
@@ -636,11 +635,28 @@
         function showTab(id, btn) {
             document.querySelectorAll('.admin-pane').forEach(p => p.classList.add('d-none'));
             document.getElementById(id).classList.remove('d-none');
-            document.querySelectorAll('.admin-tab').forEach(b => {
-                b.classList.remove('active');
-                if (!b.classList.contains('btn-danger')) b.classList.replace('btn-secondary', 'btn-primary');
-            });
+            document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            if (id === 'tab-stats') loadStats();
+        }
+
+        async function loadStats() {
+            const div = document.getElementById('stats-content');
+            try {
+                const resp = await fetch('/api/stats');
+                const data = await resp.json();
+                if (!data.counts.length) {
+                    div.innerHTML = '<p class="text-muted fst-italic">No visits recorded yet.</p>';
+                    return;
+                }
+                div.innerHTML = `<p class="text-muted mb-2"><strong>${data.total}</strong> total visits across <strong>${data.counts.length}</strong> pages</p>
+                    <table class="table table-striped table-hover table-sm">
+                        <thead class="table-dark"><tr><th>Page</th><th class="text-end" style="width:100px">Visits</th></tr></thead>
+                        <tbody>${data.counts.map(r => `<tr><td><a href="${r.path}" class="text-decoration-none">${r.path}</a></td><td class="text-end"><span class="badge bg-secondary">${r.count}</span></td></tr>`).join('')}</tbody>
+                    </table>`;
+            } catch (e) {
+                div.innerHTML = '<p class="text-danger">Failed to load stats.</p>';
+            }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
