@@ -3,27 +3,70 @@
 # Author: Pito Salas and Claude Code
 # Open Source Under MIT license
 
+# Known AI bot UA substrings — checked first; many disguise as browsers
+AI_BOT_PATTERNS = [
+    "gptbot", "chatgpt", "openai",
+    "claudebot", "claude-web", "anthropic",
+    "perplexitybot", "perplexity",
+    "ccbot", "commoncrawl",
+    "cohere-ai", "coherebot",
+    "google-extended", "googleother",
+    "diffbot", "bytespider",
+    "amazonbot", "applebot-extended",
+    "youbot", "iaskspider", "piplbot",
+    "meta-externalagent", "meta-externalfetcher",
+    "imagesiftbot", "omgilibot",
+    "ai2bot", "friendlycrawler",
+    "timpibot", "seekr",
+]
+
+# Domains found in bot homepage URLs embedded in UA strings
+AI_BOT_URL_PATTERNS = [
+    "openai.com", "anthropic.com", "perplexity.ai",
+    "cohere.com", "you.com", "diffbot.com",
+]
+
 SEARCH_ENGINE_PATTERNS = [
     "googlebot", "bingbot", "slurp", "duckduckbot",
     "baiduspider", "yandexbot", "sogou", "exabot",
-    "facebot", "ia_archiver",
+    "facebot", "ia_archiver", "msnbot", "teoma",
+    "ask jeeves", "naverbot", "seznam",
 ]
 
-AI_BOT_PATTERNS = [
-    "gptbot", "claudebot", "anthropic-ai", "perplexitybot",
-    "ccbot", "cohere-ai", "youbot", "imagesiftbot",
-    "google-extended", "diffbot",
+# Signals that reveal a bot even inside a browser-like UA
+BOT_SIGNALS = [
+    "compatible;",        # e.g. "Mozilla/5.0 (compatible; GPTBot/1.0 ...)"
+    "headlesschrome",     # headless browser
+    "phantomjs",
+    "puppeteer",
+    "selenium",
+    "webdriver",
+    "python-requests",
+    "python-urllib",
+    "go-http-client",
+    "java/",
+    "curl/",
+    "wget/",
+    "libwww",
+    "+http",              # bots often embed their URL: "+https://example.com/botinfo"
 ]
 
+GENERIC_BOT_PATTERNS = [
+    "bot", "crawler", "spider", "scraper",
+    "fetcher", "scan", "checker", "archiver",
+    "monitor", "probe", "harvest",
+]
+
+# Real browser tokens — only trusted after ruling out bot signals
 BROWSER_PATTERNS = [
     "mozilla/", "chrome/", "safari/", "firefox/",
     "edge/", "opera/", "opr/",
 ]
 
-GENERIC_BOT_PATTERNS = [
-    "bot", "crawler", "spider", "scraper",
-    "fetcher", "scan", "checker",
-]
+
+def _has_bot_signal(ua: str) -> bool:
+    """Return True if UA contains any signal that suggests a non-human client."""
+    return any(s in ua for s in BOT_SIGNALS)
 
 
 def classify_visitor(user_agent: str) -> str:
@@ -31,16 +74,32 @@ def classify_visitor(user_agent: str) -> str:
     if not user_agent:
         return "unknown"
     ua = user_agent.lower()
+
+    # AI bots first — even if they include browser tokens
     for pattern in AI_BOT_PATTERNS:
         if pattern in ua:
             return "ai_bot"
+    for pattern in AI_BOT_URL_PATTERNS:
+        if pattern in ua:
+            return "ai_bot"
+
+    # Search engines
     for pattern in SEARCH_ENGINE_PATTERNS:
         if pattern in ua:
             return "search_engine"
-    for pattern in BROWSER_PATTERNS:
-        if pattern in ua:
-            return "human"
+
+    # Browser UA — only trusted if no bot signals present
+    has_browser = any(p in ua for p in BROWSER_PATTERNS)
+    if has_browser and not _has_bot_signal(ua):
+        return "human"
+
+    # Generic bot keywords
     for pattern in GENERIC_BOT_PATTERNS:
         if pattern in ua:
             return "crawler"
+
+    # Has browser token but also has bot signals → crawler
+    if has_browser:
+        return "crawler"
+
     return "unknown"
