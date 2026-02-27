@@ -2,6 +2,7 @@
 date: '2025-07-20'
 title: About Pito Salas
 type: page
+excerpt: Software engineer, educator, entrepreneur, and tinkerer. Credited with inventing the pivot table. Professor of Computer Science at Brandeis (retired 2025).
 ---
 
 <img src="/static/images/pito-salas.jpeg" alt="Pito Salas" style="float: right; width: 220px; margin: 0 0 1.5rem 2rem; border-radius: 8px;">
