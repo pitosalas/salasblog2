@@ -34,7 +34,7 @@ def cmd_deploy(args):
 def cmd_sync_raindrops(args):
     """Download new bookmarks from Raindrop.io"""
     downloader = RaindropDownloader()
-    downloader.download_raindrops(reset=args.reset, count=args.count)
+    downloader.download_raindrops(reset=args.reset, count=args.count, rebuild_cache=args.rebuild_cache)
 
 
 def cmd_server(args):
@@ -61,6 +61,7 @@ def cmd_help(args):
     print("  --port PORT        - Port for server (default: 8000)")
     print("  --reload           - Enable auto-reload for development (server command)")
     print("  --reset            - Reset link blog cache (for sync-raindrops command)")
+    print("  --rebuild-cache    - Rebuild cache from existing files (for sync-raindrops command)")
     print("  --count N          - Limit link blog download (for sync-raindrops command)")
 
 
@@ -100,6 +101,8 @@ def main():
     sync_parser = subparsers.add_parser('sync-raindrops', help='Download bookmarks from Raindrop.io for link blog')
     sync_parser.add_argument('--reset', action='store_true',
                            help='Delete all existing link blog posts and rebuild from scratch')
+    sync_parser.add_argument('--rebuild-cache', action='store_true',
+                           help='Rebuild cache from existing files (fixes duplicate detection)')
     sync_parser.add_argument('--count', type=int, metavar='N',
                            help='Limit the number of link blog posts to download')
     sync_parser.set_defaults(func=cmd_sync_raindrops)

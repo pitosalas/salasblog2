@@ -1,0 +1,90 @@
+{# Navigation macro #}
+{% macro render_navigation(show_admin_link=true) %}
+<header class="header">
+    <nav class="nav">
+        <div class="nav-brand">
+            <a href="/">Salas Blog</a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/raindrops/">Raindrops</a></li>
+            <li><a href="/pages/">Pages</a></li>
+            {% if show_admin_link %}
+            <li class="nav-admin">
+                <a href="/admin" class="admin-link">Admin</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>
+{% endmacro %}
+
+{# Admin controls macro #}
+{% macro admin_controls(content_type, filename, show_edit=true, show_delete=true) %}
+<div class="admin-controls alert alert-light border mb-3" style="display: none;">
+    <h6 class="alert-heading mb-2">Admin Actions</h6>
+    <div class="d-flex gap-2 flex-wrap">
+        {% if show_edit %}
+        <a href="/admin/edit-{{ content_type }}/{{ filename }}" class="btn btn-sm btn-primary">Edit</a>
+        {% endif %}
+        {% if show_delete %}
+        <button onclick="delete{{ content_type.title() }}('{{ filename }}')" class="btn btn-sm btn-danger">Delete</button>
+        {% endif %}
+    </div>
+</div>
+{% endmacro %}
+
+{# Pagination macro #}
+{% macro render_pagination(pagination) %}
+{% if pagination and pagination.total_pages > 1 %}
+<nav class="pagination">
+    {% if pagination.has_prev %}
+        <a href="{{ pagination.prev_url }}" class="pagination-link prev">« Previous</a>
+    {% endif %}
+    
+    <div class="pagination-numbers">
+        {% for page_url in pagination.page_urls %}
+            {% set loop_index = loop.index %}
+            {% if loop_index == pagination.current_page %}
+                <span class="pagination-link current">{{ loop_index }}</span>
+            {% elif loop_index == 1 or loop_index == pagination.total_pages or (loop_index >= pagination.current_page - 2 and loop_index <= pagination.current_page + 2) %}
+                <a href="{{ page_url }}" class="pagination-link">{{ loop_index }}</a>
+            {% elif loop_index == pagination.current_page - 3 or loop_index == pagination.current_page + 3 %}
+                <span class="pagination-ellipsis">…</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+    
+    {% if pagination.has_next %}
+        <a href="{{ pagination.next_url }}" class="pagination-link next">Next »</a>
+    {% endif %}
+</nav>
+{% endif %}
+{% endmacro %}
+
+{# Post navigation macro #}
+{% macro render_post_navigation(prev_post, next_post) %}
+<div class="post-navigation">
+    {% if prev_post %}
+    <a href="{{ prev_post.url }}" class="nav-link nav-prev">
+        ← {{ prev_post.title }}
+    </a>
+    {% endif %}
+    {% if next_post %}
+    <a href="{{ next_post.url }}" class="nav-link nav-next">
+        {{ next_post.title }} →
+    </a>
+    {% endif %}
+</div>
+{% endmacro %}
+
+{# Status message macro #}
+{% macro render_status_message(id="statusMessage") %}
+<div id="{{ id }}" class="alert" style="display: none;"></div>
+{% endmacro %}

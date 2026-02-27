@@ -444,6 +444,7 @@ async def serve_home():
         return HTMLResponse(content=home_file.read_text(encoding='utf-8'))
     raise HTTPException(status_code=404, detail="Site not generated yet")
 
+
 @app.get("/admin")
 async def serve_admin_get(request: Request):
     """Serve admin login form or admin page"""
@@ -931,6 +932,10 @@ async def edit_page_page(filename: str, request: Request):
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
     
+    # Ensure filename has .md extension if not present
+    if not filename.endswith('.md'):
+        filename = f"{filename}.md"
+    
     # Load the page using shared function
     page_data = load_content_item(filename, 'pages')
     
@@ -953,6 +958,10 @@ async def save_edited_page(filename: str, request: Request, title: str = Form(..
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
+    
+    # Ensure filename has .md extension if not present
+    if not filename.endswith('.md'):
+        filename = f"{filename}.md"
     
     # Check if file exists
     content_dir = get_content_directory('pages')

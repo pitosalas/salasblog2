@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% from 'macros.html' import admin_controls %}
+
+{% block title %}Overview{% endblock %}
+{% block description %}Latest blog posts and links from {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="overview-container">
+    <!-- Left Column: Blog Posts -->
+    <div class="overview-column overview-posts">
+        <h2 class="column-header">
+            <a href="/blog/">Recent Blog Posts</a>
+        </h2>
+        
+        {% if blog_posts %}
+            {% for post in blog_posts %}
+            <article class="overview-item post-item">
+                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <div class="item-meta">
+                    <time datetime="{{ post.date }}">{{ post.date | strftime('%b %d, %Y') }}</time>
+                    {% if post.category %}
+                    <span class="item-category">{{ post.category }}</span>
+                    {% endif %}
+                </div>
+                {% if post.excerpt %}
+                <p class="item-excerpt">{{ post.excerpt }}</p>
+                {% endif %}
+                {% if post.content %}
+                <div class="item-content">{{ post.content[:300] }}{% if post.content|length > 300 %}...{% endif %}</div>
+                {% endif %}
+            </article>
+            {% endfor %}
+            
+            <div class="view-more">
+                <a href="/blog/" class="btn btn-outline-primary">View All Posts →</a>
+            </div>
+        {% else %}
+            <div class="no-content">
+                <p>No blog posts yet.</p>
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Right Column: Raindrops/Links -->
+    <div class="overview-column overview-links">
+        <h2 class="column-header">
+            <a href="/raindrops/">Link Blog</a>
+        </h2>
+        
+        {% if raindrops %}
+            <ul class="links-list">
+            {% for raindrop in raindrops %}
+                <li class="link-item">
+                    <a href="{{ raindrop.url }}">{{ raindrop.title }}</a>{% if raindrop.excerpt %} <span class="link-excerpt">{{ raindrop.excerpt }} <span class="link-date">({{ raindrop.date | strftime('%b %d') }})</span>
+                    {% if raindrop.important %}
+                    <span class="raindrop-important">★</span>
+                    {% endif %}
+                    {% if raindrop.broken %}
+                    <span class="raindrop-broken">✗</span>
+                    {% endif %}
+                    </span>
+                    {% else %}
+                    <span class="link-date">({{ raindrop.date | strftime('%b %d') }})</span>
+                    {% if raindrop.important %}
+                    <span class="raindrop-important">★</span>
+                    {% endif %}
+                    {% if raindrop.broken %}
+                    <span class="raindrop-broken">✗</span>
+                    {% endif %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+            
+            <div class="view-more">
+                <a href="/raindrops/" class="btn btn-outline-primary">View All Links →</a>
+            </div>
+        {% else %}
+            <div class="no-content">
+                <p>No links yet.</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

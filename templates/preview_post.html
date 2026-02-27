@@ -35,7 +35,7 @@
         async function saveAndClose() {
             const saveBtn = event.target;
             const originalText = saveBtn.textContent;
-            saveBtn.textContent = '💾 Saving...';
+            saveBtn.textContent = 'Saving...';
             saveBtn.disabled = true;
             
             try {
@@ -54,13 +54,13 @@
                 const result = await response.json();
                 
                 if (response.ok) {
-                    alert('✓ Post saved successfully!');
+                    alert('Post saved successfully!');
                     window.close();
                 } else {
                     throw new Error(result.detail || 'Save failed');
                 }
             } catch (error) {
-                alert('✗ Error saving: ' + error.message);
+                alert('Error saving: ' + error.message);
             } finally {
                 saveBtn.textContent = originalText;
                 saveBtn.disabled = false;

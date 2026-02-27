@@ -69,21 +69,29 @@ class RaindropDownloader:
             return {}
 
     def load_cache(self):
-        # Try to load from environment variable first (persists across restarts)
-        env_timestamp = os.getenv("RAINDROP_LAST_SYNC")
-        if env_timestamp:
-            print(f"Using cached timestamp from environment: {env_timestamp}")
-            return {"last_sync_timestamp": env_timestamp, "downloaded": set()}
-            
+        # Always try to load from cache file first to get downloaded IDs
+        downloaded_ids = set()
+        cache_timestamp = None
+        
         if self.cache_file.exists():
-            with open(self.cache_file, "r") as f:
-                cache = json.load(f)
-                # Convert old ID-based cache to new timestamp-based cache
-                if "downloaded" in cache and "last_sync_timestamp" not in cache:
-                    print("Converting old cache format to timestamp-based...")
-                    cache = {"last_sync_timestamp": None, "downloaded": set(cache["downloaded"])}
-                return cache
-        return {"last_sync_timestamp": None, "downloaded": set()}
+            try:
+                with open(self.cache_file, "r") as f:
+                    cache = json.load(f)
+                    downloaded_ids = set(cache.get("downloaded", []))
+                    cache_timestamp = cache.get("last_sync_timestamp")
+                    print(f"Loaded cache with {len(downloaded_ids)} downloaded IDs")
+            except Exception as e:
+                print(f"Error loading cache file: {e}")
+        
+        # Environment variable can override timestamp but not downloaded IDs
+        env_timestamp = os.getenv("RAINDROP_LAST_SYNC")
+        if env_timestamp and env_timestamp != cache_timestamp:
+            print(f"Using environment timestamp: {env_timestamp} (overriding cache: {cache_timestamp})")
+            cache_timestamp = env_timestamp
+        elif cache_timestamp:
+            print(f"Using cached timestamp: {cache_timestamp}")
+            
+        return {"last_sync_timestamp": cache_timestamp, "downloaded": downloaded_ids}
 
     def save_cache(self, cache):
         # Create a copy for serialization
@@ -95,6 +103,36 @@ class RaindropDownloader:
         # Also save timestamp to environment for backup
         if cache.get("last_sync_timestamp"):
             print(f"Cache saved - next sync will fetch raindrops newer than {cache['last_sync_timestamp']}")
+
+    def rebuild_cache_from_files(self):
+        """Rebuild cache by scanning existing markdown files for raindrop IDs."""
+        print("Rebuilding cache from existing files...")
+        downloaded_ids = set()
+        
+        if self.drops_dir.exists():
+            for md_file in self.drops_dir.glob("*.md"):
+                try:
+                    with open(md_file, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        # Look for raindrop ID in frontmatter
+                        if 'raindrop_id:' in content:
+                            for line in content.split('\n'):
+                                if line.strip().startswith('raindrop_id:'):
+                                    raindrop_id = line.split(':', 1)[1].strip().strip('"\'')
+                                    if raindrop_id:
+                                        downloaded_ids.add(raindrop_id)
+                                    break
+                except Exception as e:
+                    print(f"Error reading {md_file}: {e}")
+        
+        print(f"Found {len(downloaded_ids)} raindrop IDs from existing files")
+        
+        # Update cache with found IDs
+        cache = self.load_cache()
+        cache["downloaded"] = downloaded_ids
+        self.save_cache(cache)
+        
+        return downloaded_ids
 
     def _fetch_page(self, page, perpage, since_timestamp=None):
         """Fetch a single page of raindrops from the API."""
@@ -221,6 +259,11 @@ class RaindropDownloader:
         created_filenames = []
         counter = 1
         
+        # Get existing filenames to avoid overwrites
+        existing_files = set()
+        if self.drops_dir.exists():
+            existing_files = {f.name for f in self.drops_dir.glob("*.md")}
+        
         for i, raindrop in enumerate(new_drops, 1):
             # Add collection name to raindrop data
             if raindrop.get('collection') and isinstance(raindrop['collection'], dict):
@@ -230,6 +273,12 @@ class RaindropDownloader:
             
             filename = generate_raindrop_filename(raindrop, counter)
             filepath = self.drops_dir / filename
+            
+            # Skip if file already exists (additional duplicate protection)
+            if filename in existing_files:
+                print(f"  [{i}/{len(new_drops)}] Skipping existing: {filename}")
+                counter += 1
+                continue
 
             print(
                 f"  [{i}/{len(new_drops)}] Writing: {filename} - {raindrop.get('title', 'Untitled')[:50]}..."
@@ -259,7 +308,7 @@ class RaindropDownloader:
             
         self.save_cache(cache)
 
-    def download_raindrops(self, reset=False, count=None):
+    def download_raindrops(self, reset=False, count=None, rebuild_cache=False):
         """Download raindrops from API and save as markdown files."""
         try:
             self.authenticate()
@@ -271,6 +320,8 @@ class RaindropDownloader:
 
             if reset:
                 self.reset_data()
+            elif rebuild_cache:
+                self.rebuild_cache_from_files()
 
             self.drops_dir.mkdir(exist_ok=True)
             cache = self.load_cache()
