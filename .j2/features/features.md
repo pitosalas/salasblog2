@@ -9,12 +9,17 @@ Status values:
 
 <!-- ===== INCOMPLETE FEATURES (High → Medium → Low) ===== -->
 
+## F27 — Per-Post Action Buttons (Edit & Derive)
+**Priority**: Medium
+**Status**: done | Tests written: yes | Tests passing: yes
+**Description**: Add two action buttons to each blog post page (`blog_post.html`), visible only to logged-in admins. "Edit this post" links to the existing admin edit page for the post. "Start a new post based on this one" pre-fills the new-post form with the current post's title (prefixed "Re: ") and body, letting the author write a follow-up. Both buttons must be visually distinct from the prev/next navigation buttons: use Bootstrap `btn-warning` or `btn-info` with a recognizable label, grouped separately from the navigation row. No custom CSS. No JavaScript required. The derive (new-post-based-on) link passes title and body as query parameters to the existing new-post admin route, which reads them to pre-fill the form.
+
+<!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
+
 ## F26 — Traffic Classification by Visitor Type
 **Priority**: Medium
 **Status**: done | Tests written: yes | Tests passing: yes
 **Description**: Extend the visit statistics system (F25) to classify each request as one of five visitor types: `human`, `ai_bot`, `search_engine`, `crawler`, `unknown`. Classification is based on the `User-Agent` request header. AI bots (GPTBot, ClaudeBot, etc.) and search engines (Googlebot, Bingbot, etc.) are identified by known UA substrings. Requests with browser signatures (Mozilla/, Chrome/, etc.) are classified as human. Remaining requests containing generic bot/crawler/spider keywords are classified as crawler. Empty or unrecognized UAs are unknown. The `VisitCounter` stores counts per path broken down by visitor type. The admin Stats tab displays counts per type alongside totals. No new external dependencies.
-
-<!-- ===== COMPLETED FEATURES (High → Medium → Low) ===== -->
 
 ## F25 — Simple Visit Statistics
 **Priority**: Medium

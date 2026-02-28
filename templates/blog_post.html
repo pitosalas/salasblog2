@@ -26,11 +26,11 @@
             </div>
 
             <footer>
-                <div class="admin-controls d-none mb-3 p-3 bg-light border rounded">
+                <div class="admin-controls d-none mb-3 p-3 bg-warning-subtle border border-warning rounded">
                     <h4 class="h6 mb-2">Admin Actions</h4>
                     <div class="d-flex gap-2 flex-wrap">
-                        <a href="/admin/edit-post/{{ post.filename }}.md" class="btn btn-primary btn-sm">Edit Post</a>
-                        <a href="/admin/repost/{{ post.filename }}.md" class="btn btn-secondary btn-sm">Repost</a>
+                        <a href="/admin/edit-post/{{ post.filename }}.md" class="btn btn-warning btn-sm">Edit this post</a>
+                        <a href="/admin/repost/{{ post.filename }}.md" class="btn btn-info btn-sm">New post based on this one</a>
                         <button onclick="deletePost('{{ post.filename }}.md')" class="btn btn-danger btn-sm">Delete Post</button>
                     </div>
                 </div>

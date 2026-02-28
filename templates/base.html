@@ -54,8 +54,8 @@
                 if (data.authenticated) {
                     const adminControls = document.querySelector('.admin-controls');
                     const newPostBtn = document.querySelector('.admin-new-post');
-                    if (adminControls) adminControls.style.display = 'block';
-                    if (newPostBtn) newPostBtn.style.display = 'block';
+                    if (adminControls) adminControls.classList.remove('d-none');
+                    if (newPostBtn) newPostBtn.classList.remove('d-none');
                 }
             } catch (error) {
                 console.error('Failed to check admin status:', error);
