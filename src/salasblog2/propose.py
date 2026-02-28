@@ -104,8 +104,9 @@ def get_proposed_posts(blog_dir: Path, top_n: int = 10) -> list[ScoredPost]:
 
         filename = md_file.name
         url = f"/blog/{filename.replace('.md', '.html')}"
-        scored.append((s, ScoredPost(score=s, filename=filename,
-                                     title=title, date=str(post_date), url=url)))
+        sp = ScoredPost(score=s, filename=filename, title=title,
+                        date=str(post_date), url=url)
+        scored.append(sp)
 
-    scored.sort(key=lambda x: x[0], reverse=True)
-    return [sp for _, sp in scored[:top_n]]
+    scored.sort(key=lambda sp: sp.score, reverse=True)
+    return scored[:top_n]

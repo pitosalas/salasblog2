@@ -32,7 +32,7 @@ class TestScorePost:
         today = date(2024, 6, 1)
         old_date = date(2022, 1, 1)
         keyword = RELEVANCE_KEYWORDS[0]
-        score_with = score_post(keyword, keyword * 3, old_date, today)
+        score_with = score_post(' '.join([keyword] * 3), ' '.join([keyword] * 5), old_date, today)
         score_without = score_post("banana", "banana soup recipe", old_date, today)
         assert score_with > score_without
 

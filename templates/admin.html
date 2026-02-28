@@ -666,7 +666,7 @@
                         <td>${i + 1}</td>
                         <td><a href="${p.url}" target="_blank">${p.title}</a></td>
                         <td>${p.date}</td>
-                        <td>${p.score}</td>
+                        <td>${p.score.toFixed(1)}</td>
                         <td><a href="/admin/repost/${p.filename}" class="btn btn-sm btn-outline-primary">Repost</a></td>
                     </tr>`
                 ).join('');
