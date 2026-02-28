@@ -30,6 +30,7 @@
                     <h4 class="h6 mb-2">Admin Actions</h4>
                     <div class="d-flex gap-2 flex-wrap">
                         <a href="/admin/edit-post/{{ post.filename }}.md" class="btn btn-primary btn-sm">Edit Post</a>
+                        <a href="/admin/repost/{{ post.filename }}.md" class="btn btn-secondary btn-sm">Repost</a>
                         <button onclick="deletePost('{{ post.filename }}.md')" class="btn btn-danger btn-sm">Delete Post</button>
                     </div>
                 </div>

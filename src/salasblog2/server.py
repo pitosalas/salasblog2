@@ -32,6 +32,7 @@ from .scheduler import get_scheduler
 from .utils import process_markdown_to_html, BLOG_TAGS
 from .stats import get_counter
 from .visitor_type import classify_visitor
+from .propose import get_proposed_posts
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -1240,6 +1241,44 @@ async def regenerate_site(request: Request):
     loop = asyncio.get_event_loop()
     result = await loop.run_in_executor(None, do_regenerate)
     return JSONResponse(content=result)
+
+@app.get("/api/propose")
+async def propose_posts(request: Request):
+    """Return top 10 highest-scoring old blog posts for reposting"""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+
+    blog_dir = get_content_directory("blog")
+    posts = get_proposed_posts(blog_dir)
+    return JSONResponse(content=[
+        {"filename": p.filename, "title": p.title, "date": p.date,
+         "url": p.url, "score": round(p.score, 1)}
+        for p in posts
+    ])
+
+
+@app.get("/admin/repost/{filename}")
+async def repost_page(filename: str, request: Request):
+    """Open the new-post UI pre-filled with an existing post's content"""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        return RedirectResponse(url="/admin", status_code=302)
+
+    if not filename.endswith(".md"):
+        filename = f"{filename}.md"
+
+    post_data = load_content_item(filename, "blog")
+    context = {
+        "content_type": "blog",
+        "content_type_title": "Post",
+        "action_url": "/admin/new-post",
+        "cancel_url": "/blog/",
+        "blog_tags": BLOG_TAGS,
+        "prefill_title": post_data["title"],
+        "prefill_content": post_data["content"],
+        "prefill_tags": post_data.get("tags", []),
+    }
+    return HTMLResponse(content=render_template("new_post.html", context))
+
 
 # RSD and XML-RPC endpoints
 @app.get("/rsd.xml")
