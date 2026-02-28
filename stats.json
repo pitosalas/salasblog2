@@ -1,26 +1,21 @@
 {
   "/pages/": {
-    "human": 6,
-    "unknown": 4
+    "human": 6
   },
   "/raindrops/": {
-    "human": 17,
-    "unknown": 28
+    "human": 17
   },
   "/raindrops/test-raindrop.html": {
-    "human": 2,
-    "unknown": 4
+    "human": 2
   },
   "/raindrops/example-article.html": {
-    "human": 2,
-    "unknown": 4
+    "human": 2
   },
   "/raindrops/raindrop1.html": {
-    "human": 2,
-    "unknown": 4
+    "human": 2
   },
   "/": {
-    "human": 7
+    "human": 8
   },
   "/raindrops/programming/": {
     "human": 1
