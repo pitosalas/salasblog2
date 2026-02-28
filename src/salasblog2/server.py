@@ -289,7 +289,7 @@ async def serve_pages_files(file_path: str, request: Request):
         raise HTTPException(status_code=404, detail="Not found")
 
     if request.method == "GET" and str(full_path).endswith(".html"):
-        vtype = classify_visitor(request.headers.get("user-agent", ""))
+        vtype = classify_visitor(request.headers.get("user-agent", ""), request.headers.get("accept-language", ""))
         get_counter().increment(f"/pages/{file_path}", vtype)
 
     content_type, _ = mimetypes.guess_type(str(full_path))
@@ -316,7 +316,7 @@ async def serve_raindrops_files(file_path: str, request: Request):
         raise HTTPException(status_code=404, detail="Not found")
 
     if request.method == "GET" and str(full_path).endswith(".html"):
-        vtype = classify_visitor(request.headers.get("user-agent", ""))
+        vtype = classify_visitor(request.headers.get("user-agent", ""), request.headers.get("accept-language", ""))
         get_counter().increment(f"/raindrops/{file_path}", vtype)
 
     content_type, _ = mimetypes.guess_type(str(full_path))
@@ -450,7 +450,7 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
 @app.get("/")
 async def serve_home(request: Request):
     """Serve the home page"""
-    vtype = classify_visitor(request.headers.get("user-agent", ""))
+    vtype = classify_visitor(request.headers.get("user-agent", ""), request.headers.get("accept-language", ""))
     get_counter().increment("/", vtype)
     home_file = config["output_dir"] / "index.html"
     if home_file.exists():

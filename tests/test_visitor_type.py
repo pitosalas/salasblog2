@@ -7,11 +7,11 @@ from salasblog2.visitor_type import classify_visitor
 
 
 class TestClassifyVisitor:
-    def test_empty_ua_returns_unknown(self):
-        assert classify_visitor("") == "unknown"
+    def test_empty_ua_returns_crawler(self):
+        assert classify_visitor("") == "crawler"
 
-    def test_none_like_empty_returns_unknown(self):
-        assert classify_visitor("   ") == "unknown"
+    def test_none_like_empty_returns_crawler(self):
+        assert classify_visitor("   ") == "crawler"
 
     def test_googlebot_returns_search_engine(self):
         assert classify_visitor("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)") == "search_engine"
@@ -32,10 +32,14 @@ class TestClassifyVisitor:
         assert classify_visitor("PerplexityBot/1.0 (+https://perplexity.ai/perplexitybot)") == "ai_bot"
 
     def test_chrome_browser_returns_human(self):
-        assert classify_visitor("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36") == "human"
+        assert classify_visitor("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", "en-US,en;q=0.9") == "human"
 
     def test_firefox_browser_returns_human(self):
-        assert classify_visitor("Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0") == "human"
+        assert classify_visitor("Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0", "en-GB,en;q=0.8") == "human"
+
+    def test_browser_ua_without_accept_language_returns_crawler(self):
+        # Browser UA but no Accept-Language — likely a bot spoofing a browser
+        assert classify_visitor("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36", "") == "crawler"
 
     def test_compatible_bot_disguised_as_browser_not_human(self):
         # Has Mozilla/ but also "compatible;" — should not be classified as human
@@ -54,5 +58,5 @@ class TestClassifyVisitor:
     def test_generic_spider_returns_crawler(self):
         assert classify_visitor("MySuperSpider/1.0") == "crawler"
 
-    def test_unrecognized_ua_returns_unknown(self):
-        assert classify_visitor("CustomTool/2.0 SomeVendor") == "unknown"
+    def test_unrecognized_ua_returns_crawler(self):
+        assert classify_visitor("CustomTool/2.0 SomeVendor") == "crawler"

@@ -43,11 +43,21 @@ BOT_SIGNALS = [
     "webdriver",
     "python-requests",
     "python-urllib",
+    "python/",
     "go-http-client",
     "java/",
     "curl/",
     "wget/",
     "libwww",
+    "httpx/",
+    "aiohttp/",
+    "axios/",
+    "got/",
+    "node-fetch",
+    "okhttp/",
+    "ruby",
+    "php/",
+    "perl/",
     "+http",              # bots often embed their URL: "+https://example.com/botinfo"
 ]
 
@@ -55,6 +65,8 @@ GENERIC_BOT_PATTERNS = [
     "bot", "crawler", "spider", "scraper",
     "fetcher", "scan", "checker", "archiver",
     "monitor", "probe", "harvest",
+    "validator", "reader", "indexer", "downloader",
+    "httpclient", "request", "agent",
 ]
 
 # Real browser tokens — only trusted after ruling out bot signals
@@ -69,10 +81,10 @@ def _has_bot_signal(ua: str) -> bool:
     return any(s in ua for s in BOT_SIGNALS)
 
 
-def classify_visitor(user_agent: str) -> str:
+def classify_visitor(user_agent: str, accept_language: str = "") -> str:
     """Classify a visitor as human, ai_bot, search_engine, crawler, or unknown."""
     if not user_agent:
-        return "unknown"
+        return "crawler"
     ua = user_agent.lower()
 
     # AI bots first — even if they include browser tokens
@@ -88,9 +100,10 @@ def classify_visitor(user_agent: str) -> str:
         if pattern in ua:
             return "search_engine"
 
-    # Browser UA — only trusted if no bot signals present
+    # Browser UA — only trusted if no bot signals present and Accept-Language is set
+    # Real browsers always send Accept-Language; missing it is a strong bot signal
     has_browser = any(p in ua for p in BROWSER_PATTERNS)
-    if has_browser and not _has_bot_signal(ua):
+    if has_browser and not _has_bot_signal(ua) and accept_language:
         return "human"
 
     # Generic bot keywords or any bot signal without a browser token → crawler
@@ -101,4 +114,4 @@ def classify_visitor(user_agent: str) -> str:
     if _has_bot_signal(ua) or has_browser:
         return "crawler"
 
-    return "unknown"
+    return "crawler"
