@@ -20,7 +20,7 @@
             <div class="row g-3 mb-3">
                 <div class="col-md-6">
                     <label for="title" class="form-label">{{ content_type_title|default('Post') }} Title *</label>
-                    <input type="text" id="title" name="title" class="form-control" required placeholder="Enter your {{ content_type|default('post') }} title">
+                    <input type="text" id="title" name="title" class="form-control" required placeholder="Enter your {{ content_type|default('post') }} title" value="{{ prefill_title|default('') }}">
                     <div id="filenameHint" class="form-text">This will be used to generate the filename</div>
                 </div>
                 <div class="col-md-3">
@@ -37,7 +37,7 @@
                 <div class="d-flex flex-wrap gap-2">
                     {% for tag in blog_tags %}
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" name="tags" id="tag_{{ tag }}" value="{{ tag }}">
+                        <input class="form-check-input" type="checkbox" name="tags" id="tag_{{ tag }}" value="{{ tag }}"{% if tag in prefill_tags|default([]) %} checked{% endif %}>
                         <label class="form-check-label" for="tag_{{ tag }}">{{ tag }}</label>
                     </div>
                     {% endfor %}
@@ -47,7 +47,7 @@
 
             <div class="mb-3">
                 <label for="content" class="form-label">Content (Markdown) *</label>
-                <textarea id="content" name="content" class="form-control" rows="20" placeholder="Write your {{ content_type|default('post') }} content in Markdown..." required></textarea>
+                <textarea id="content" name="content" class="form-control" rows="20" placeholder="Write your {{ content_type|default('post') }} content in Markdown..." required>{{ prefill_content|default('') }}</textarea>
                 <div class="form-text">Use Markdown syntax for formatting. You can preview before saving.</div>
             </div>
         </form>

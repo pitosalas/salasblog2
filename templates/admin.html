@@ -44,6 +44,7 @@
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-stats', this)">Stats</button>
             <button class="btn btn-danger btn-sm admin-tab" onclick="showTab('tab-emergency', this)">Emergency</button>
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-api', this)">API</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-propose', this)">Propose</button>
         </div>
 
         <div class="tab-content">
@@ -146,6 +147,14 @@
                 <h2 class="h5 mb-2">Weblogs API</h2>
                 <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
                 <p class="text-muted">Supports standard Blogger API methods for external blog clients.</p>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-propose">
+                <h2 class="h5 mb-2">Proposed Posts to Repost</h2>
+                <p class="text-muted">Top 10 older blog posts that may be worth reposting, ranked by relevance.</p>
+                <button class="btn btn-primary btn-sm mb-3" onclick="loadProposedPosts()">Refresh</button>
+                <div id="propose-status"></div>
+                <div id="propose-list"></div>
             </div>
         </div>
     </main>
@@ -638,6 +647,35 @@
             document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             if (id === 'tab-stats') loadStats();
+            if (id === 'tab-propose') loadProposedPosts();
+        }
+
+        async function loadProposedPosts() {
+            const statusDiv = document.getElementById('propose-status');
+            const listDiv = document.getElementById('propose-list');
+            statusDiv.innerHTML = statusHtml('loading', 'Loading proposed posts...');
+            listDiv.innerHTML = '';
+            try {
+                const resp = await fetch('/api/propose');
+                if (!resp.ok) { statusDiv.innerHTML = statusHtml('error', 'Failed to load proposed posts'); return; }
+                const posts = await resp.json();
+                statusDiv.innerHTML = '';
+                if (!posts.length) { listDiv.innerHTML = '<p class="text-muted">No qualifying posts found.</p>'; return; }
+                const rows = posts.map((p, i) =>
+                    `<tr>
+                        <td>${i + 1}</td>
+                        <td><a href="${p.url}" target="_blank">${p.title}</a></td>
+                        <td>${p.date}</td>
+                        <td>${p.score.toFixed(1)}</td>
+                        <td><a href="/admin/repost/${p.filename}" class="btn btn-sm btn-outline-primary">Repost</a></td>
+                    </tr>`
+                ).join('');
+                listDiv.innerHTML = `<table class="table table-sm table-hover">
+                    <thead class="table-dark"><tr><th>#</th><th>Title</th><th>Date</th><th>Score</th><th></th></tr></thead>
+                    <tbody>${rows}</tbody></table>`;
+            } catch (e) {
+                statusDiv.innerHTML = statusHtml('error', 'Error: ' + e.message);
+            }
         }
 
         async function loadStats() {
