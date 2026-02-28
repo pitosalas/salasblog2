@@ -11,7 +11,7 @@ Good morning sports-fans. We recently [totally revamped the BlogBridge](http://w
 
 Importantly, it now includes [a group blog where the BlogBridge](http://www.blogbridge.com/weblog/index.html) team posts bits of interest to anyone interested in the project. 
 
-We have started a new series of posts there called: [“Did you know” ](http://www.blogbridge.com/weblog/archives/000658.html)where every day we (try to) post a short article describing a feature or capability of interest to users.
+We have started a new series of posts there called: [“Did you know”](http://www.blogbridge.com/weblog/archives/000658.html)where every day we (try to) post a short article describing a feature or capability of interest to users.
 
 **Check it out!**
 

@@ -7,4 +7,4 @@ date: "2023-07-06"
 type: "wp"
 wordpress_id: 4559
 ---
-[ How to diagnose and control login and background items](https://eclecticlight.co/2023/07/04/how-to-diagnose-and-control-login-and-background-items/) –Login and Background Items are increasingly common, and can cause all sorts of problems. Diagnosing and fixing them is better in Ventura.
+[How to diagnose and control login and background items](https://eclecticlight.co/2023/07/04/how-to-diagnose-and-control-login-and-background-items/) –Login and Background Items are increasingly common, and can cause all sorts of problems. Diagnosing and fixing them is better in Ventura.

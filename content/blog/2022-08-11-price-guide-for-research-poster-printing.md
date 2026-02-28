@@ -7,4 +7,4 @@ date: "2022-08-11"
 type: "wp"
 wordpress_id: 4042
 ---
-[ Price guide for research poster printing]( https://www.posterpresentations.com/price-guide.html) –Poster printing services and pricing guide.
+[Price guide for research poster printing](https://www.posterpresentations.com/price-guide.html) –Poster printing services and pricing guide.

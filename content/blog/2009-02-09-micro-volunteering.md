@@ -14,7 +14,7 @@ Volunteerism excludes most of us: Why? Because it **asks us for a kind of time t
 
 **This rings true to me**. The rest of the [article](http://www.techpresident.com/blog/entry/33677/information_age_volunteerism_open_sourced_crowdsourced) proposes some ideas on how to better leverage the bits of time people have that they might be using to volunteer.
 
-Ben then goes on to describe a project that he is working on called [The Extraordinari ](http://www.theextraordinaries.org/)which is a really cool idea.
+Ben then goes on to describe a project that he is working on called [The Extraordinari](http://www.theextraordinaries.org/)which is a really cool idea.
 
 If you are interested in volunteering and the new dynamics there, [read the article!](http://www.techpresident.com/blog/entry/33677/information_age_volunteerism_open_sourced_crowdsourced)It is absolutely chock full of background information and links to other projects.
 

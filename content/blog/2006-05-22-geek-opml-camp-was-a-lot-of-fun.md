@@ -27,7 +27,7 @@ wordpress_id: 1540
 
 - Adam Green [really cool Techmeme](http://mashup.darwinianweb.com/archive/2006/18.html)/OPML Mashup ([here’s the result](http://mashup.darwinianweb.com/projects/tmblogs/tmopml.xml))
 
-- We talked about [OPML 2.0 ](http://www.opml.org/)and what is new there
+- We talked about [OPML 2.0](http://www.opml.org/)and what is new there
 
 - We talked about the role of namespaces in extending XML and OPML
 

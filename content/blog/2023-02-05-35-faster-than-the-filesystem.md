@@ -7,4 +7,4 @@ date: "2023-02-05"
 type: "wp"
 wordpress_id: 4389
 ---
-[ 35% Faster Than The Filesystem]( https://www.sqlite.org/fasterthanfs.html) –An interesting study of performance. It seems hard to believe.
+[35% Faster Than The Filesystem](https://www.sqlite.org/fasterthanfs.html) –An interesting study of performance. It seems hard to believe.

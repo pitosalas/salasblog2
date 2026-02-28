@@ -7,4 +7,4 @@ date: "2023-07-15"
 type: "wp"
 wordpress_id: 4587
 ---
-[ How to Use AI to Do Stuff: An Opinionated Guide]( https://www.oneusefulthing.org/p/how-to-use-ai-to-do-stuff-an-opinionated?utm_source=substack&utm_medium=email) –
+[How to Use AI to Do Stuff: An Opinionated Guide](https://www.oneusefulthing.org/p/how-to-use-ai-to-do-stuff-an-opinionated?utm_source=substack&utm_medium=email) –

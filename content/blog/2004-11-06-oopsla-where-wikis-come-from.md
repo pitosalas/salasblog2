@@ -7,10 +7,10 @@ date: "2004-11-06"
 type: "wp"
 wordpress_id: 1917
 ---
-I was lucky enough to meet and spend some time with [**Ward Cunningham **](http://c2.com/cgi/wiki?WardCunningham)at [OOPSLA ](http://www.oopsla.org/2004/ShowPage.do?id=Home)this year. I also heard him present in a big hall. If you are a [Wiki ](http://en.wikipedia.org/wiki/Wiki)fan then you know that Ward is the one who invented the concept. 
+I was lucky enough to meet and spend some time with [**Ward Cunningham **](http://c2.com/cgi/wiki?WardCunningham)at [OOPSLA](http://www.oopsla.org/2004/ShowPage.do?id=Home)this year. I also heard him present in a big hall. If you are a [Wiki](http://en.wikipedia.org/wiki/Wiki)fan then you know that Ward is the one who invented the concept. 
 What seems to be a **little less well known **is how the idea evolved, where it came from. I am sure it’s written up somewhere. but I thought I’d write down my own idiosynchratic understanding of the story.
 
-Ward was involved in the early days of the [Design Patterns ](http://en.wikipedia.org/wiki/Design_pattern_(computer_science))movement, which seems to have it’s own roots in the OOPSLA conference. So here’s the **story**.
+Ward was involved in the early days of the [Design Patterns](http://en.wikipedia.org/wiki/Design_pattern_(computer_science))movement, which seems to have it’s own roots in the OOPSLA conference. So here’s the **story**.
 
 At some gathering it was noted that there ought to be a central repository of all the patterns that had been invented to date and a way for new ones to be added.
 

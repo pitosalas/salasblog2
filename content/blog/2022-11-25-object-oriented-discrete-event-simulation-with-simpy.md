@@ -7,4 +7,4 @@ date: "2022-11-25"
 type: "wp"
 wordpress_id: 4234
 ---
-[ Object-Oriented Discrete Event Simulation — with SimPy]( https://link.medium.com/QQPcixGrfvb) –Discrete Simulation is a grest alternative for scenarios that are hard or impossibke to solve analytically. Improving a busy emergency department with stochastic discrete event simulation
+[Object-Oriented Discrete Event Simulation — with SimPy](https://link.medium.com/QQPcixGrfvb) –Discrete Simulation is a grest alternative for scenarios that are hard or impossibke to solve analytically. Improving a busy emergency department with stochastic discrete event simulation

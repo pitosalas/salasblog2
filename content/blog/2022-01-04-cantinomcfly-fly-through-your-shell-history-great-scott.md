@@ -7,6 +7,6 @@ date: "2022-01-04"
 type: "wp"
 wordpress_id: 3179
 ---
-[ cantino/mcfly: Fly through your shell history. Great Scott!](https://github.com/cantino/mcfly)
+[cantino/mcfly: Fly through your shell history. Great Scott!](https://github.com/cantino/mcfly)
  Fly through your shell history. Great Scott! Contribute to cantino/mcfly development by creating an account on GitHub.
 January 4, 2022 at 02:50PM

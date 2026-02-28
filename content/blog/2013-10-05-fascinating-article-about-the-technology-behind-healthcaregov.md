@@ -7,7 +7,7 @@ date: "2013-10-05"
 type: "wp"
 wordpress_id: 155
 ---
-Pretty amazing that the govt is actually placing [all the code for healthcare.gov on github for all of us to inspect](https://github.com/CMSgov/healthcare.gov). There’s only one commit, and it’s 3 months old. Also there’s a [reasonable amount of developer information available. ](https://www.healthcare.gov/developers/)
+Pretty amazing that the govt is actually placing [all the code for healthcare.gov on github for all of us to inspect](https://github.com/CMSgov/healthcare.gov). There’s only one commit, and it’s 3 months old. Also there’s a [reasonable amount of developer information available.](https://www.healthcare.gov/developers/)
 
 [](https://www.healthcare.gov/developers/)Somehow I suspect that it is not *all* there or how fast it will be updated, but still whatever’s there is a big step forward from the SOP of the past!
 

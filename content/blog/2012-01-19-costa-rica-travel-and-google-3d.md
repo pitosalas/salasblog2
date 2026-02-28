@@ -13,4 +13,4 @@ We are trying to gather information about that drive. Is it realistically 3 hour
 
 Part of my research uses Google maps, right? Have you seen the Google maps 3D driving simulation thing? It’s amazing!
 
-[Follow this link to the Google Maps ](http://g.co/maps/qpq4d)page, and then locate the 3D button in the white margin on the left next to the directions. Click the button and BE AMAZED!!
+[Follow this link to the Google Maps](http://g.co/maps/qpq4d)page, and then locate the 3D button in the white margin on the left next to the directions. Click the button and BE AMAZED!!

@@ -13,7 +13,7 @@ I’d say it’s definitely worth a look.
 The other investors seem to like it better. Ironic state of affairs, aint it? Unless it’s a totally subversive way for Mike Arrington to get attention to the site. Wouldn’t that take the cake?
 
 - [Mike Arrington](http://www.techcrunch.com/2007/01/04/daylife-launches-starts-very-long-uphill-climb/) on DayLife
-- [Jeff Jarvis ](http://www.buzzmachine.com/index.php/2007/01/04/daylife-dawns)on DayLife
+- [Jeff Jarvis](http://www.buzzmachine.com/index.php/2007/01/04/daylife-dawns)on DayLife
 - [Technorati](http://technorati.com/search/daylife) on DayLife
 
 Check out [DayLife itself](http://www.daylife.com/topstories) 🙂

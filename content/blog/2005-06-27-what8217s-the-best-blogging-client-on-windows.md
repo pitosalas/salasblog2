@@ -15,4 +15,4 @@ On Mac, I use the fairly wonderful [Ecto for OS X](http://ecto.kung-foo.tv/) –
 
 On Windows, I **tried** all the free ones that I found recommended, and only w.bloggar was stable enough to actually use, although I didn’t like the user interface. I also tried tried ShartMT and Ecto for Windows.
 
-Despite my best efforts, neither one was stable enough to use. In the end, I found and am now using the [BlogJet ](http://blogjet.com/)– **Clean and simple.**
+Despite my best efforts, neither one was stable enough to use. In the end, I found and am now using the [BlogJet](http://blogjet.com/)– **Clean and simple.**

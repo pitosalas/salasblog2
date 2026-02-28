@@ -15,4 +15,4 @@ But, today I came across a very clean and simple alternative called [Trajectory
 
 You may want to check it out. I can’t say why we need [Trajectory](https://www.apptrajectory.com/) where we have [Tracker](https://www.pivotaltracker.com/). My guess is that [Trajectory](https://www.apptrajectory.com/) is much less than a scrum system, maybe it’s a structured way to communicate stories and design between client and developer.
 
-[But wasn’t Basecamp for that? ](http://basecamphq.com/)
+[But wasn’t Basecamp for that?](http://basecamphq.com/)

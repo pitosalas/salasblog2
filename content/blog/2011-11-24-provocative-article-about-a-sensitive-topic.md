@@ -7,7 +7,7 @@ date: "2011-11-24"
 type: "wp"
 wordpress_id: 458
 ---
-[Eric Ries ](http://www.crunchbase.com/person/eric-ries)is locally famous as being one of the strong promoters of the [Lean Startup.](http://www.amazon.com/dp/0307887898/?tag=blogbridge-20)
+[Eric Ries](http://www.crunchbase.com/person/eric-ries)is locally famous as being one of the strong promoters of the [Lean Startup.](http://www.amazon.com/dp/0307887898/?tag=blogbridge-20)
 
 He writes an [excellent and courageous article that explores why it is that there seem to be **many more white males **starting new technology companies than other genders, races, and nationalities.](http://techcrunch.com/2011/11/19/racism-and-meritocracy/)
 

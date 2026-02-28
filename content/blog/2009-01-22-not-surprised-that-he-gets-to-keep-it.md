@@ -11,6 +11,6 @@ There’s been some back and forth silliness about whether Barack Obama can keep
 > “On Monday, a government agency that the Obama administration  — but
 that is probably the National Security Agency — added to a standard
 blackberry a super-encryption package…. and Obama WILL be able to use
-it … still for routine and personal messages.” (from [Marc Ambinder in ](http://marcambinder.theatlantic.com/archives/2009/01/obama_will_get_his_blackberry.php)Atlantic)
+it … still for routine and personal messages.” (from [Marc Ambinder in](http://marcambinder.theatlantic.com/archives/2009/01/obama_will_get_his_blackberry.php)Atlantic)
 
 But, he won’t be allowed to use IM 🙂

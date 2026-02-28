@@ -11,6 +11,6 @@ I just came off listening to [Dan Bricklin’s first podcast, an interview with 
 
 One link, right off the bat is to [Linda Hamel’s own web site](http://www.mass.gov/portal/index.jsp?pageID=itdsubtopic&L=3&L0=Home&L1=Policies%2c+Standards+%26+Legal&L2=Open+Standards&sid=Aitd) with lots of interesting resources about Open Source licensing in the public arena.
 
-Particularly cool is[ this huge Excel chart doing a comparison of all the multitude of open source licenses.](http://www.mass.gov/Aitd/docs/quickrefchart.xls)
+Particularly cool is[this huge Excel chart doing a comparison of all the multitude of open source licenses.](http://www.mass.gov/Aitd/docs/quickrefchart.xls)
 
 Technorati Tags: [opensource](http://technorati.com/tag/opensource), [legal](http://technorati.com/tag/legal)

@@ -12,7 +12,7 @@ Just check out this well argued, detailed piece, “[Wake up to the dangers of a
 
 Even if necessary changes in policy are implemented, the odds now favour a US recession that slows growth significantly on a global basis. Without stronger policy responses than have been observed to date, moreover, there is the risk that the adverse impacts will be felt for the rest of this decade and beyond.” (**from** [Financial Times](/wp-admin/post.php?action=edit&post=1901))
 
-This gloom and doom view is echoed by much of the commentary I’ve come across over the last month, for example, this from today’s New York Times, [“Innovating Our Way to Financial Crisis”: ](http://www.nytimes.com/2007/12/03/opinion/03krugman.html?ref=opinion)
+This gloom and doom view is echoed by much of the commentary I’ve come across over the last month, for example, this from today’s New York Times, [“Innovating Our Way to Financial Crisis”:](http://www.nytimes.com/2007/12/03/opinion/03krugman.html?ref=opinion)
 
 > “The bottom line is that policy makers left the financial industry free to innovate — and what it did was to innovate itself, and the rest of us, into a big, nasty mess.” (from [Paul Krugman in the New York Times](http://www.nytimes.com/2007/12/03/opinion/03krugman.html?ref=opinion).)
 

@@ -7,7 +7,7 @@ date: "2006-02-13"
 type: "wp"
 wordpress_id: 1597
 ---
-Just a [quick reminder ](/weblogs/archives/001050.php)of a Geek Dinner organized by three of us: Adam Green, who writes [Darwinian Web](http://www.darwinianweb.com/), Mark Doerschlag, and yours truly who writes [this Blog](/) and also runs the [BlogBridge project](http://www.blogbridge.com/). 
+Just a [quick reminder](/weblogs/archives/001050.php)of a Geek Dinner organized by three of us: Adam Green, who writes [Darwinian Web](http://www.darwinianweb.com/), Mark Doerschlag, and yours truly who writes [this Blog](/) and also runs the [BlogBridge project](http://www.blogbridge.com/). 
 
 What is this “geek dinner” thing again? Well we’re **inviting all their geek friends** to hang out and geek out for a few hours. Each of us have almost non-overlapping networks so this is a chance for us to make new connections around town, and for you to do the same.
 

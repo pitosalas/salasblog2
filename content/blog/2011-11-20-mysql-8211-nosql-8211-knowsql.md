@@ -7,7 +7,7 @@ date: "2011-11-20"
 type: "wp"
 wordpress_id: 461
 ---
-A catchy headline, but is it true? “[Facebook Trapped in MySql ‘a fate worse than death’. ](http://gigaom.com/cloud/facebook-trapped-in-mysql-fate-worse-than-death/)This is a quote of what Michael Stonebreaker supposedly said in this interview article:
+A catchy headline, but is it true? “[Facebook Trapped in MySql ‘a fate worse than death’.](http://gigaom.com/cloud/facebook-trapped-in-mysql-fate-worse-than-death/)This is a quote of what Michael Stonebreaker supposedly said in this interview article:
 
 > 
 “The widely accepted problem with MySQL is that it wasn’t built for webscale applications or those that must handle excessive transaction volumes. Stonebraker said the problem with MySQL and other SQL databases is that they consume too many resources for overhead tasks (e.g., maintaining ACID compliance and handling multithreading) and relatively few on actually finding and serving data. This might be fine for a small application with a small data set, but it quickly becomes too much to handle as data and transaction volumes grow.” (**from** [GigaOm](http://gigaom.com/cloud/facebook-trapped-in-mysql-fate-worse-than-death/))

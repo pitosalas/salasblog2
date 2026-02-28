@@ -7,4 +7,4 @@ date: "2023-11-11"
 type: "wp"
 wordpress_id: 4670
 ---
-[ Excalidraw — Collaborative whiteboarding made easy]( https://excalidraw.com/) –Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.
+[Excalidraw — Collaborative whiteboarding made easy](https://excalidraw.com/) –Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.

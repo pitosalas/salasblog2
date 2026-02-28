@@ -7,10 +7,10 @@ date: "2012-02-10"
 type: "wp"
 wordpress_id: 393
 ---
-Here’s a really interesting [article about how the Superbowl used Social Media ](http://socialmediatoday.com/elizabeth-lupfer/440875/exclusive-look-why-super-bowl-s-social-media-command-center-scores-winning-t)to enhance the experience:
+Here’s a really interesting [article about how the Superbowl used Social Media](http://socialmediatoday.com/elizabeth-lupfer/440875/exclusive-look-why-super-bowl-s-social-media-command-center-scores-winning-t)to enhance the experience:
 
 > 
-“An exclusive, in-depth look into the Super Bowlâs first ever social media command center, the folks who ran it, and how the convergence of technology and people created the ultimate online Super Bowl experience.” (**from** [Why the Super Bowl’s Mission Command Center Scores a Winning Touchdown](http://socialmediatoday.com/elizabeth-lupfer/440875/exclusive-look-why-super-bowl-s-social-media-command-center-scores-winning-t))
+“An exclusive, in-depth look into the Super Bowl’s first ever social media command center, the folks who ran it, and how the convergence of technology and people created the ultimate online Super Bowl experience.” (**from** [Why the Super Bowl’s Mission Command Center Scores a Winning Touchdown](http://socialmediatoday.com/elizabeth-lupfer/440875/exclusive-look-why-super-bowl-s-social-media-command-center-scores-winning-t))
 
 The article goes into each of the four missions/goals they set out:: Safety, Service, Capture the experience, Amplification. Interesting that safety is number one. What they say:
 

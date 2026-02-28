@@ -7,4 +7,4 @@ date: "2024-01-06"
 type: "wp"
 wordpress_id: 4769
 ---
-[ Understanding numeric data types in python]( https://fullspeedpython.com/articles/understanding-numeric-data-types/) –
+[Understanding numeric data types in python](https://fullspeedpython.com/articles/understanding-numeric-data-types/) –

@@ -19,6 +19,6 @@ The designer in China **redesigned** the [www.blogbridge.com](http://www.blogbri
 
 I have been extremely impressed with the quality of people that bid. How do I find out? Well there’s always a bit of back and forth on email while you are considering a bid proposal. By the questions that they ask as well as the answers they give to your questions, it’s usually pretty clear who’s good and who is not.
 
-My favorites of these markets are [Rent-a-Coder](http://www.rentacoder.com/RentACoder/default.asp) for development and [Elance](http://www.elance.com) for design. I’ve used both to good success. But there are some others that I am experimenting with, that might be worth a look if you are interested: [Scriptlance.com](http://www.scriptlance.com),[ TheCentralMall](http://www.TheCentralMall.com) and [Assembla Talent](http://talent.assembla.com).
+My favorites of these markets are [Rent-a-Coder](http://www.rentacoder.com/RentACoder/default.asp) for development and [Elance](http://www.elance.com) for design. I’ve used both to good success. But there are some others that I am experimenting with, that might be worth a look if you are interested: [Scriptlance.com](http://www.scriptlance.com),[TheCentralMall](http://www.TheCentralMall.com) and [Assembla Talent](http://talent.assembla.com).
 
 If you are a tiny organization or even not so tiny, it’s an avenue worth looking into.

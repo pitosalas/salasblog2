@@ -13,7 +13,7 @@ We still use the [Keurig](http://www.keurig.com/) a lot, but truth is that we’
 
 Anyway, when I got interested in [Espresso](http://en.wikipedia.org/wiki/Espresso), I visited [Williams-Sonoma](http://ww5.williams-sonoma.com/) several times to look at the different machines. The brand I had heard the most about was [Capresso](http://www.capresso.com/index.html). 
 
-Without even getting into the **outrageous** price, I was eyeing the [Capresso Impressa F9, F8 ](http://www.capresso.com/prod_super_f9.html)and so on. All **fully automatic**, meaning you put whole beans and water in **one end** and espresso comes out the **other end**. Wonderful. However, being [Keurig](http://www.keurig.com/) fans, we had gotten used to being able to choose from **cup to cup** whether it was going to be caf, decaf, flavored or what not. 
+Without even getting into the **outrageous** price, I was eyeing the [Capresso Impressa F9, F8](http://www.capresso.com/prod_super_f9.html)and so on. All **fully automatic**, meaning you put whole beans and water in **one end** and espresso comes out the **other end**. Wonderful. However, being [Keurig](http://www.keurig.com/) fans, we had gotten used to being able to choose from **cup to cup** whether it was going to be caf, decaf, flavored or what not. 
 
 A **key obstacle** with these fully automatics for me was that you more or less had to **commit** to one kind of bean. It’s **true** that in addition to the canister of beans there’s a chute that bypasses all that and lets you send in ground coffee of any kind. But that kind of **defeats** the whole idea and didn’t satisfy me. Plus, there was the **outrageous** price.
 

@@ -5,19 +5,19 @@
   },
   "/raindrops/": {
     "human": 17,
-    "unknown": 14
+    "unknown": 21
   },
   "/raindrops/test-raindrop.html": {
     "human": 2,
-    "unknown": 2
+    "unknown": 3
   },
   "/raindrops/example-article.html": {
     "human": 2,
-    "unknown": 2
+    "unknown": 3
   },
   "/raindrops/raindrop1.html": {
     "human": 2,
-    "unknown": 2
+    "unknown": 3
   },
   "/": {
     "human": 7

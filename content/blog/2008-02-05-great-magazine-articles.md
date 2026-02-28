@@ -20,7 +20,7 @@ If you appreciate really excellent non fiction writing, you owe it to yourself t
 
 [Commentary Magazine: Crime, Drugs and Welfare, and other good news](http://www.commentarymagazine.com/viewarticle.cfm/Crime--Drugs--Welfare-and-Other-Good-News-10999)
 
-[Vanity Fair: A death in the family ](http://www.vanityfair.com/politics/features/2007/11/hitchens200711?currentPage=2)
+[Vanity Fair: A death in the family](http://www.vanityfair.com/politics/features/2007/11/hitchens200711?currentPage=2)
 
 [Claremont Institute: Review of ‘God is not great’](http://www.claremont.org/publications/crb/id.1396/article_detail.asp#)
 

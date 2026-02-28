@@ -13,6 +13,6 @@ I am now using a Movable Type plugin called [HMPassphrase](http://www.sixapart.c
 
 In one **magic stroke** my comment spam has gone from 10 or so per day, to zero. **Nice**.
 
-p.s. I am also told that the WordPress [Akismet spam filter plug-in ](http://akismet.com/)is now available for Movable Type too and is **very effective**. But for now I guess I don’t need it.
+p.s. I am also told that the WordPress [Akismet spam filter plug-in](http://akismet.com/)is now available for Movable Type too and is **very effective**. But for now I guess I don’t need it.
 
 Technorati Tags: [commentspam](http://www.technorati.com/tag/commentspam)

@@ -12,6 +12,6 @@ He’s had several really good ones, most recently [showing off](http://weblog.i
 
 Anyway, I’m trying my hand at this in practice, both to **learn** about the new medium and to **illustrate** some BlogBridge features. 
 
-After a bunch of **false starts**, playing with tools and utilities and microphones that aren’t on here’s my [ first quasi-successful attempt.](http://www.blogbridge.com/movies/bbmovie1.mov) I don’t think it’s quite practical yet. For one, at 6Meg it’s way **too big**. 
+After a bunch of **false starts**, playing with tools and utilities and microphones that aren’t on here’s my [first quasi-successful attempt.](http://www.blogbridge.com/movies/bbmovie1.mov) I don’t think it’s quite practical yet. For one, at 6Meg it’s way **too big**. 
 
 But it is an interesting **start**. I will continue to look at it and report as I go.

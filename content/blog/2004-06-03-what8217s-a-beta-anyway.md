@@ -7,7 +7,7 @@ date: "2004-06-03"
 type: "wp"
 wordpress_id: 1989
 ---
-[BlogBridge ](http://www.blogbridge.com)is getting ready to go into a limited beta test. The purpose is to get some early feedback on the basic User Interface model and the overall product vision. If you are interested in participating, please send an email to email@blogbridge.com.
+[BlogBridge](http://www.blogbridge.com)is getting ready to go into a limited beta test. The purpose is to get some early feedback on the basic User Interface model and the overall product vision. If you are interested in participating, please send an email to email@blogbridge.com.
 Doing a beta when you are operating a, shall we say, *boutique *software shop, is a different experience. The number of loose ends, bugs, procedural and process things that need to be nailed down are overwhelming. 
 
 The Web Site is being revised to reflect this new phase of work. The totally out in the open Functional Specification has been moved to a private area, a Wiki in fact. The thinking is that now that things are getting more real, and my hack is turning into a real product, it makes you think about where things might lead.

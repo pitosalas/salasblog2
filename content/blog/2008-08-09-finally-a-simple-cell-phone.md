@@ -14,6 +14,6 @@ Someone I know recently did a 90 minute drive in 3.5 hours because their car’s
 
 I’ve seen this idea suggested elsewhere, but how a cell phone for people who don’t read manuals? Why can’t a cell phone be as easy to operate as a regular telephone? (Yes, the new home cordless sets with built in answering machines are almost as complex as cell phones!)
 
-It seems someone [has finally done it! ](http://www.gizmodo.com/gadgets/cellphones/3g-simple-cellphonesfor-grandma-126079.php)Thank you [KDDI, Kyocera and Toshiba](http://www.3g.co.uk/PR/Sept2005/1904.htm).
+It seems someone [has finally done it!](http://www.gizmodo.com/gadgets/cellphones/3g-simple-cellphonesfor-grandma-126079.php)Thank you [KDDI, Kyocera and Toshiba](http://www.3g.co.uk/PR/Sept2005/1904.htm).
 
 *Originally posted on Sep 19, 2005. Reprinted courtesy of ReRuns plug-in.*

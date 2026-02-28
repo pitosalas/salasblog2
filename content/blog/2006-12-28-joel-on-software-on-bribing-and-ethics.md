@@ -16,7 +16,7 @@ Check out [this
  post](http://www.joelonsoftware.com/items/2006/12/28.html) from [Joel on Software](http://www.joelonsoftware.com):
 
 ** [![](https://i0.wp.com/www.joelonsoftware.com/i/rsshead.jpg?resize=100%2C44)
- ](http://www.joelonsoftware.com/)
+](http://www.joelonsoftware.com/)
 
  Joel says: “There’s an interesting debate going on about whether bloggers should 
  accept gifts from vendors. 

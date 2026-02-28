@@ -11,7 +11,7 @@ I was excited to hear about the [Kindle Fire.](http://www.google.com/search?clie
 
 So the Fire seems like a match made in heaven, right?
 
-Well, today [David Pogue, tech reporter of the New York Times ](http://topics.nytimes.com/top/reference/timestopics/people/p/david_pogue/index.html?inline=nyt-per)kind of reviewed the Fire (along with the other new, low end Kindles.) Well, the punchline is, he loves the new inexpensive Kindles, but he does NOT love the new Fire, which by the way, isn’t ‘expensive’ at $200, it’s just less incredibly cheap than the other new models. Here’s a short bit:
+Well, today [David Pogue, tech reporter of the New York Times](http://topics.nytimes.com/top/reference/timestopics/people/p/david_pogue/index.html?inline=nyt-per)kind of reviewed the Fire (along with the other new, low end Kindles.) Well, the punchline is, he loves the new inexpensive Kindles, but he does NOT love the new Fire, which by the way, isn’t ‘expensive’ at $200, it’s just less incredibly cheap than the other new models. Here’s a short bit:
 
 (Admitedly the most negative paragraph:)
 

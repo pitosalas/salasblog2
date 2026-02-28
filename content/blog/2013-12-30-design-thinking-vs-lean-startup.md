@@ -23,7 +23,7 @@ A fascinating article about the “[Plattner Institute of Design at Stanford” 
 
 (from the same article) 
 
-This is the same philosophy taught at [Olin College ](http://www.olin.edu)where I teach. At Olin we call it [UOCD or User Oriented Collaborative Design.](http://design.olin.edu/courses/uocd/) In fact at Olin there are numerous interesting courses that come at Design from many different perspectives.
+This is the same philosophy taught at [Olin College](http://www.olin.edu)where I teach. At Olin we call it [UOCD or User Oriented Collaborative Design.](http://design.olin.edu/courses/uocd/) In fact at Olin there are numerous interesting courses that come at Design from many different perspectives.
 
 #### Counterpoint
 Now the courses that I myself have taught have been based on so-called [Lean Startup](http://theleanstartup.com) and I use the excellent book by Eric Ries called [The Lean Startup](http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898). The Lean Startup process receommends: 

@@ -23,7 +23,7 @@ Kind of a cool
 
  tags: [brutalist](https://www.diigo.com/user/pitosalas/brutalist)
 
- [Pro tips for Visual Studio Code to be productive in 2018 ](https://dev.to/teamxenox/pro-tips-for-visual-studio-code-to-be-productive-in-2018--1jek?utm_source=Newsletter+Subscribers&utm_campaign=1b6ffc3038-EMAIL_CAMPAIGN_2018_12_17_01_43_COPY_01&utm_medium=email&utm_term=0_d8f11d5d1e-1b6ffc3038-154336497) 
+ [Pro tips for Visual Studio Code to be productive in 2018](https://dev.to/teamxenox/pro-tips-for-visual-studio-code-to-be-productive-in-2018--1jek?utm_source=Newsletter+Subscribers&utm_campaign=1b6ffc3038-EMAIL_CAMPAIGN_2018_12_17_01_43_COPY_01&utm_medium=email&utm_term=0_d8f11d5d1e-1b6ffc3038-154336497) 
 
 Everyone uses VSCODE right? Here are your tips for today!
 

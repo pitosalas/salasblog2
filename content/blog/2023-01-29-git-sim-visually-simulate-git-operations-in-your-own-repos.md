@@ -7,4 +7,4 @@ date: "2023-01-29"
 type: "wp"
 wordpress_id: 4379
 ---
-[ git-sim: Visually simulate Git operations in your own repos]( https://initialcommit.com/blog/git-sim) –git-sim: Visually simulate Git operations in your own repos with a single terminal command
+[git-sim: Visually simulate Git operations in your own repos](https://initialcommit.com/blog/git-sim) –git-sim: Visually simulate Git operations in your own repos with a single terminal command

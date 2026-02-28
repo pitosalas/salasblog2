@@ -23,8 +23,8 @@ Hadn’t heard about anchoring before? Here’s a bit about it:
 And also:
 
 > 
-“Take the last three digits of your social security number. Turn those numbers into a dollar value (i.e., if your numbers are 462 then they provide a value of $462). Consider whether you would be willing to pay that dollar amount for a first edition of JRR Tolkienâs, The Hobbit. Now, how much would you actually pay for a first edition original copy?
+“Take the last three digits of your social security number. Turn those numbers into a dollar value (i.e., if your numbers are 462 then they provide a value of $462). Consider whether you would be willing to pay that dollar amount for a first edition of JRR Tolkien’s, The Hobbit. Now, how much would you actually pay for a first edition original copy?
 
-A stylized result from laboratory experiments in economics and psychology is that a subjectâs answer to the latter valuation question is strongly influenced by the dollar amount computed from their social security numbers, whether for ordinary consumer products or exotic goods.1 Based on the premise that the randomly determined value should contain no useful information, critics of neoclassical theory have argued that such findings refute the notion that decision makersâ preferences are consistent and stable.
+A stylized result from laboratory experiments in economics and psychology is that a subject’s answer to the latter valuation question is strongly influenced by the dollar amount computed from their social security numbers, whether for ordinary consumer products or exotic goods.1 Based on the premise that the randomly determined value should contain no useful information, critics of neoclassical theory have argued that such findings refute the notion that decision makers’ preferences are consistent and stable.
 
 A natural conclusion is that if preferences are unduly labile and influenced by innocuous properties of circumstance, then no optimization principles may underlie even straightforward individual economic decisions.” (**from** [University of Alaska)](http://www.econpapers.uaa.alaska.edu/RePEC/ala/wpaper/ALA201102.pdf)

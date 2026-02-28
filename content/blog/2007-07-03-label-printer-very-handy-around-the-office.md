@@ -12,7 +12,7 @@ Almost all the labels that I’ve printed have been for the myriad of cables, ch
 
 More mainstream uses are for labeling files in my filing system (such as it is), my wiring closet (such as it is), and various expensive electronica (like my laptop.)
 
-Suffice it to say that these things are great. The one I have been using is the [Casio Ez-Label Printer KL-100. ](http://www.casio.com/products/archive/Label_%26_Disk_Title_Printers/Label_Printers/KL-100/) (I got it at Staples, but it seems to no longer be available.)
+Suffice it to say that these things are great. The one I have been using is the [Casio Ez-Label Printer KL-100.](http://www.casio.com/products/archive/Label_%26_Disk_Title_Printers/Label_Printers/KL-100/) (I got it at Staples, but it seems to no longer be available.)
 
 I was asked to take a look at one of the label makers from [Cableorganizer.com](http://cableorganizer.com), in particular the [Brother PT-80](http://welcome.solutions.brother.com/BSC/public/us/us/en/model_top/P-touch/80eus.html?reg=us&c=us&lang=en&prod=80eus).
 

@@ -14,6 +14,6 @@ David Weiner, author, speaker, thinker, turns out to be a programmer too! Read 
 
 But the reason I really cite this is because it reminds me of [Google’s new tool to easily create applications for Android. It’s called AppInventor](http://appinventor.googlelabs.com/about/). I’ve studied it a little. It looks interesting and cool but it raises in me an old bias against visual programming environments.
 
-Take a [look at this out of context screen shot. ](http://appinventor.googlelabs.com/learn/tutorials/molemash/MoleMashAssets/MoveMole.png)I wonder whether you can really program visually. I think it was [Dave Winer](http://www.scripting.com/) who said years ago that programming is more like writing and less like drawing. I think I agree.
+Take a [look at this out of context screen shot.](http://appinventor.googlelabs.com/learn/tutorials/molemash/MoleMashAssets/MoveMole.png)I wonder whether you can really program visually. I think it was [Dave Winer](http://www.scripting.com/) who said years ago that programming is more like writing and less like drawing. I think I agree.
 
 I wonder what the flat footed developer corps thinks. Does Visual Programming help?

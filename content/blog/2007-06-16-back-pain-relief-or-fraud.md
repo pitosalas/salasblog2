@@ -18,4 +18,4 @@ Here are some links and quotes I was able to find. Do you know anything about th
 
 [DRX 9000 Maker Under Investigation:](http://realpt.blogspot.com/2007/06/drx-9000-maker-under-investigation.html) “What can you do? Educate, educate, educate. Don’t be afraid to tell people the truth. There is NO literature that shows the DRX 9000 to be more beneficial than standard traction and not much literature that shows traction, in general is helpful.”
 
-[FBI Raids Medical Supply Business: ](http://www.tboblogs.com/index.php/newswire/story/fbi-raids-medical-supply-business/)“TAMPA – Agents from the FBI raided Axiom Worldwide this morning, carrying boxes and bags to a large white van parked in a disabled parking spot in front of the business.”
+[FBI Raids Medical Supply Business:](http://www.tboblogs.com/index.php/newswire/story/fbi-raids-medical-supply-business/)“TAMPA – Agents from the FBI raided Axiom Worldwide this morning, carrying boxes and bags to a large white van parked in a disabled parking spot in front of the business.”

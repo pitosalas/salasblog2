@@ -7,11 +7,11 @@ date: "2011-01-31"
 type: "wp"
 wordpress_id: 602
 ---
-[Michael Arrington ](http://en.wikipedia.org/wiki/Michael_Arrington)is a famous Tech-pundit-commentator-blogger who recently left or got fired from AOL because he wanted to be a VC while being a journalist covering the companies he is investing in.
+[Michael Arrington](http://en.wikipedia.org/wiki/Michael_Arrington)is a famous Tech-pundit-commentator-blogger who recently left or got fired from AOL because he wanted to be a VC while being a journalist covering the companies he is investing in.
 
 One way or another that led him and AOL and the super-popular blog he started, [TechCrunch](http://en.wikipedia.org/wiki/TechCrunch), to part ways. All that is interesting back story.
 
-Arrington recently wrote a very [provocative article arguing that people who are serious entrepreneurs in serious startups, especially in Silicon Valley, should be willing to give up their life for work: ](http://uncrunched.com/2011/11/27/startups-are-hard-so-work-more-cry-less-and-quit-all-the-whining/) Startups are hard. So work more, cry less, and quit all the whining. Yes he is a genius provocateur.
+Arrington recently wrote a very [provocative article arguing that people who are serious entrepreneurs in serious startups, especially in Silicon Valley, should be willing to give up their life for work:](http://uncrunched.com/2011/11/27/startups-are-hard-so-work-more-cry-less-and-quit-all-the-whining/) Startups are hard. So work more, cry less, and quit all the whining. Yes he is a genius provocateur.
 
 > 
 “… You might be sad that you work long hours and that sometimes your boss yells at you when tensions run high. But you also know that there is nowhere on earth like Silicon Valley. Nowhere else that is structurally designed to help you make whatever you can imagine into reality. Nowhere else where there are so many like minded people who are willing to sacrifice and work hard to create something new….” (**from** [Uncrunched](http://uncrunched.com/2011/11/27/startups-are-hard-so-work-more-cry-less-and-quit-all-the-whining/))

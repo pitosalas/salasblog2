@@ -13,7 +13,7 @@ In Sun’s [blurb about this](http://www.sun.com/2005-1004/feature/) they said: 
 
 Ok, great. But what would Google do in return? My search through press releases didn’t produce anything. The natural quid-pro-quo would be if Google in turn distributed the Java Runtime as part of something…
 
-Well the very natural “something” would be the newly announced “[Google Pack](http://pack.google.com/pack_installer_required.html)“, which many people are saying heralds the coming [Google OS. ](http://www.kottke.org/04/04/google-operating-system)
+Well the very natural “something” would be the newly announced “[Google Pack](http://pack.google.com/pack_installer_required.html)“, which many people are saying heralds the coming [Google OS.](http://www.kottke.org/04/04/google-operating-system)
 
 Given all the stuff already in the [Google Pack](http://pack.google.com/pack_installer_required.html), it’s gotta be a pretty big download. But looks as I can I don’t see any mention of a Java Runtime as part of it. Pitty. That would have been a great opportunity!
 

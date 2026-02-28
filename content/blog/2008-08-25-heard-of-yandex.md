@@ -14,6 +14,6 @@ Hmm, let me try the [query that tripped up Cuil:](/2008/07/28/cuil-vs-google/)
 
 [ipod cradle wireless sync](http://yandex.ru/yandsearch?text=ipod+cradle+wireless+sync)
 
-Whoops. The site is all Russian. But interestingly I typed in the query in english and I seem to have gotten fairly good results. [Certainly better than I got from Cuil](http://www.cuil.com/search?q=ipod+cradle+wireless+sync). And the oddest phenomenon is now when [I write that search in googl](http://www.google.com/search?q=ipod+cradle+wireless+sync&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a)e, it takes me to [my own post on that very topic. ](/2008/07/28/cuil-vs-google/)
+Whoops. The site is all Russian. But interestingly I typed in the query in english and I seem to have gotten fairly good results. [Certainly better than I got from Cuil](http://www.cuil.com/search?q=ipod+cradle+wireless+sync). And the oddest phenomenon is now when [I write that search in googl](http://www.google.com/search?q=ipod+cradle+wireless+sync&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a)e, it takes me to [my own post on that very topic.](/2008/07/28/cuil-vs-google/)
 
 Can you spell “echo chamber?”

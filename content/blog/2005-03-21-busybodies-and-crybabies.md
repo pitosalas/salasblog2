@@ -8,7 +8,7 @@ type: "wp"
 wordpress_id: 1822
 ---
 ![](http://s3.media.squarespace.com/production/1075723/12829350/weblogs/busybodies/1101910812_400.jpg)
-height=”250″ width=”200″ align=”right” hspace=”20″ />I caught on Dan Gilmor’s blog a[ pointer](http://dangillmor.typepad.com/dan_gillmor_on_grassroots/2005/03/hint_its_hyperb.html) to an article by Tina Brown which talks about the Eggshell Era, 
+height=”250″ width=”200″ align=”right” hspace=”20″ />I caught on Dan Gilmor’s blog a[pointer](http://dangillmor.typepad.com/dan_gillmor_on_grassroots/2005/03/hint_its_hyperb.html) to an article by Tina Brown which talks about the Eggshell Era, 
 
 **“…in which everyone has to tiptoe around because there’s a world of busybodies out there who are being paid to catch you out…”
 

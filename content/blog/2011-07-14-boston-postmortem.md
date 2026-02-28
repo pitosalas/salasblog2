@@ -25,7 +25,7 @@ Here’s the link to his presentation: [Death of an Indie Game Studio](http://sl
 
 > 
 
-I also learned that there’s a gaming unconference in Boston this august, called the [Boston Game Loop. ](http://www.bostongameloop.com/category/announcement/)I will be there!
+I also learned that there’s a gaming unconference in Boston this august, called the [Boston Game Loop.](http://www.bostongameloop.com/category/announcement/)I will be there!
 
 p.s. to my word spelling circle, I learned today that postmortem is one word not two 🙂
 

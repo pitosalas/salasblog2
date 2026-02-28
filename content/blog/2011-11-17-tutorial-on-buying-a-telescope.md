@@ -7,7 +7,7 @@ date: "2011-11-17"
 type: "wp"
 wordpress_id: 464
 ---
-Out of left (star) field. Here’s a succinct tutorial on buying a telescope that my friend [Ben Gomes Casseres ](http://www.linkedin.com/profile/view?id=2741471&authType=name&authToken=8vju&locale=en_US&pvs=pp&trk=ppro_viewmore)emailed me which I thought might be of general interest. You can see [Ben’s own astronomy work here](http://www.alliancestrategy.com/Astro).
+Out of left (star) field. Here’s a succinct tutorial on buying a telescope that my friend [Ben Gomes Casseres](http://www.linkedin.com/profile/view?id=2741471&authType=name&authToken=8vju&locale=en_US&pvs=pp&trk=ppro_viewmore)emailed me which I thought might be of general interest. You can see [Ben’s own astronomy work here](http://www.alliancestrategy.com/Astro).
 
 If you are thinking of buying a telescope (or giving one as a gift), Ben says:
 

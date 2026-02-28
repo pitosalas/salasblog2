@@ -7,4 +7,4 @@ date: "2023-06-07"
 type: "wp"
 wordpress_id: 4511
 ---
-[ Alternate Python REPL – bpython]( https://bpython-interpreter.org/) –
+[Alternate Python REPL – bpython](https://bpython-interpreter.org/) –

@@ -14,7 +14,7 @@ I have more or less gotten all the applications I use over onto the Mac. Almost 
 
 [X1](http://www.x1.com/) – My wonderful desktop search. I already miss it. My only consolation is that the next release of OS X will include something called “SpotLight” which is supposed to be totally amazing and will change my life.
 
-[Plaxo](http://www.plaxo.com/) – Who would have thunk? But this business of typing and maintaining people’s contact information by hand can become pretty tiresome. I’d settle for a Mac version of[ GetAnagram.com](http://getanagram.com/), but that of course doesn’t exist.
+[Plaxo](http://www.plaxo.com/) – Who would have thunk? But this business of typing and maintaining people’s contact information by hand can become pretty tiresome. I’d settle for a Mac version of[GetAnagram.com](http://getanagram.com/), but that of course doesn’t exist.
 
 Thinking about what software exists and doesn’t exist on Mac, and why, can be sobering. I don’t know the figures, but let’s say that Mac accounts for 5 or so percent of the PC Installed base. 
 

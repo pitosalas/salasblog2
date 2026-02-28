@@ -7,7 +7,7 @@ date: "2011-09-23"
 type: "wp"
 wordpress_id: 497
 ---
-Some people are starting to wonder whether [Google+ ](/)will continue to grow and become a major social network. Even for Google, it will be **quite an achievement** to penetrate the already relatively crowded world of social networks and become a major player.
+Some people are starting to wonder whether [Google+](/)will continue to grow and become a major social network. Even for Google, it will be **quite an achievement** to penetrate the already relatively crowded world of social networks and become a major player.
 
 Indeed they have had an excellent start and in my opinion built quite a nice little service. (By the way, do not underestimate how much they must have spent designing, building and now deploying [Google+](/). I call it a ‘nice little service’ but I know we are talking many millions of dollars.)
 

@@ -11,6 +11,6 @@ You may not have heard of this, but we are now starting to see quite decent word
 
 > “None of these methods, however, are as simple to set up as a standard Web browser, which can quickly access a file from anywhere in the world. That’s the promise that AJAX brings to the party.” (**from** [AJAX: the way word processing will be](http://itmanagement.earthweb.com/columns/executive_tech/article.php/3567061))
 
-> One very impressive example cited in the article is [Writely](http://www.writely.com/). It’s (of course) free and easy to try. It really seems to work. Of course when it comes to word processing, features matter, but reliability matters a lot too. Last thing I want is to lose the 10 page term paper and not be able to retrieve it. [Check it out. ](http://www.writely.com/)
+> One very impressive example cited in the article is [Writely](http://www.writely.com/). It’s (of course) free and easy to try. It really seems to work. Of course when it comes to word processing, features matter, but reliability matters a lot too. Last thing I want is to lose the 10 page term paper and not be able to retrieve it. [Check it out.](http://www.writely.com/)
 
 Technorati Tags: [ajax](http://www.technorati.com/tag/ajax)

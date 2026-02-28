@@ -7,13 +7,13 @@ date: "2019-11-24"
 type: "wp"
 wordpress_id: 2658
 ---
-[How to Process Passwords as a Software Developer – DEV Community ](https://dev.to/nathilia_pierce/how-to-process-passwords-as-a-software-developer-3dkh) 
+[How to Process Passwords as a Software Developer – DEV Community](https://dev.to/nathilia_pierce/how-to-process-passwords-as-a-software-developer-3dkh) 
 
 Very useful tips and techniques on handling of passwords. 
 
  tags: [hash](https://www.diigo.com/user/pitosalas/hash) [password](https://www.diigo.com/user/pitosalas/password) [howto](https://www.diigo.com/user/pitosalas/howto)
 
- [20 Most-Recommended Books for Software Developers – DEV Community ](https://dev.to/awwsmm/20-most-recommended-books-for-software-developers-5578) 
+ [20 Most-Recommended Books for Software Developers – DEV Community](https://dev.to/awwsmm/20-most-recommended-books-for-software-developers-5578) 
 
 I know all these books. Odd that nothing new is on the list. 
 

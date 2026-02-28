@@ -7,7 +7,7 @@ date: "2012-03-01"
 type: "wp"
 wordpress_id: 377
 ---
-This interesting, and I think, correct [article, makes the argument that the word ‘innovation’ is being watered down ](http://www.nytimes.com/2012/02/26/opinion/sunday/innovation-and-the-bell-labs-miracle.html?pagewanted=3&_r=1&ref=opinion)and even getting **cheapened**. It says, about “innovation”,
+This interesting, and I think, correct [article, makes the argument that the word ‘innovation’ is being watered down](http://www.nytimes.com/2012/02/26/opinion/sunday/innovation-and-the-bell-labs-miracle.html?pagewanted=3&_r=1&ref=opinion)and even getting **cheapened**. It says, about “innovation”,
 
 > 
 “Regrettably, we now use the term to describe almost anything. It can describe a smartphone app or a social media tool; or it can describe the transistor or the blueprint for a cellphone system. The **differences are immense**.” (**from** [Innovation and the Bell Labs Miracle)](http://www.nytimes.com/2012/02/26/opinion/sunday/innovation-and-the-bell-labs-miracle.html?pagewanted=3&_r=1&ref=opinion)

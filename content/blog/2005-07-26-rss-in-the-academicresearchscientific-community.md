@@ -19,7 +19,7 @@ I learned that there’s actually **lots and lots** going on with RSS and Bloggi
 
 - [IEEE Computer Society](http://www.computer.org/portal/cms_docs_cs/csdl/jsp/rss/index.jsp?content=yes)  (warning:  if you’re at an institution that uses Xplore — the feed does not link through to full text and you’ll have to search)
 
-- [EurekAlert!  ](http://www.eurekalert.org/rss.php)(ok, only press releases from Universities and research institutions, but still very much of interest to practicing scientists and engineers)
+- [EurekAlert! ](http://www.eurekalert.org/rss.php)(ok, only press releases from Universities and research institutions, but still very much of interest to practicing scientists and engineers)
 
 - [Science](http://www.sciencemag.org/rss/index.shtml)
 

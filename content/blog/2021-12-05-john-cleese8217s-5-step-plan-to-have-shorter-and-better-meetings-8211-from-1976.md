@@ -7,7 +7,7 @@ date: "2021-12-05"
 type: "wp"
 wordpress_id: 3135
 ---
-[ John Cleese’s 5-step plan to have shorter and better meetings – from 1976!](https://youtube.com/watch?v=Ff9V0mISmtk&feature=share)
+[John Cleese’s 5-step plan to have shorter and better meetings – from 1976!](https://youtube.com/watch?v=Ff9V0mISmtk&feature=share)
  John Cleese (Monty Python) nails it in this classic 1976 work “Meetings, Bloody Meetings”, and his hilarious portrayal of meeting culture seems worryingly accurate today.
 That’s why we created MetaMeet. MetaMeet is a workplace app that helps employees reduce time spent in meetings: https://ift.tt/2WHDMKB
 

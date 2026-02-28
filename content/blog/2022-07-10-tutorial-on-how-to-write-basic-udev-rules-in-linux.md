@@ -7,4 +7,4 @@ date: "2022-07-10"
 type: "wp"
 wordpress_id: 3956
 ---
-[ Tutorial on how to write basic udev rules in Linux]( https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux) –Another tutorial on these hairy udev rules! Getting the base concepts about udev rules
+[Tutorial on how to write basic udev rules in Linux](https://linuxconfig.org/tutorial-on-how-to-write-basic-udev-rules-in-linux) –Another tutorial on these hairy udev rules! Getting the base concepts about udev rules

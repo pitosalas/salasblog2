@@ -27,6 +27,6 @@ Here are **three articles **on this very topic, for your fascination:
 
 [A letter from the owner of a great local bookstore, the Harvard Bookstore in Harvard Square, Cambridge Mass.](http://campaign.r20.constantcontact.com/render?llr=jaojuicab&v=001bHw_LhcjpQoafcX7vACkf-wYiN2SaF7J3mTJTddWShErvlSCchvgXqC6ouXlEozQEnLa8_Q212QALxLWhB_YFwYzavdLUPwgyzqIhAkmN_0%3D)
 
-[Amazon should partner with independent bookstores, an article suggesting ways in which the two could benefit mutually. ](http://blogs.hbr.org/hbr/hbreditors/2011/12/amazon_should_partner_with_ind.html)Hmm, perhaps a fantasy.
+[Amazon should partner with independent bookstores, an article suggesting ways in which the two could benefit mutually.](http://blogs.hbr.org/hbr/hbreditors/2011/12/amazon_should_partner_with_ind.html)Hmm, perhaps a fantasy.
 
 [Amazon’s Jungle Logic, an](http://www.nytimes.com/2011/12/13/opinion/amazons-jungle-logic.html?_r=4&pagewanted=all) Anti-Amazon screed from a set of authors.

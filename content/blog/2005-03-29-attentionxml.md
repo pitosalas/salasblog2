@@ -11,7 +11,7 @@ wordpress_id: 1817
 
 [BlogBridge](http://www.blogbridge.com) is a feed reader with a **primary goal** to save the reader’s time by collecting and using any information possible to help the user focus on what will be useful to them and ignoring the rest. So there’s an excellent alignment between BlogBridge’s goals and what Steve is trying to accomplish with Attention.xml. **BlogBridge will support attention.xml.**
 
-The section in [Steve’s post ](http://blogs.zdnet.com/Gillmor/index.php?p=74)that is particularly interesting to me (and to BlogBridge) are his ideas on how to use Attention information to triage information being displayed in a feed reader – basically an outline of the kind of heuristics that might be used. It’s a long section (in the second half of the post), so I won’t quote it, but here’s the tantalizing beginning:
+The section in [Steve’s post](http://blogs.zdnet.com/Gillmor/index.php?p=74)that is particularly interesting to me (and to BlogBridge) are his ideas on how to use Attention information to triage information being displayed in a feed reader – basically an outline of the kind of heuristics that might be used. It’s a long section (in the second half of the post), so I won’t quote it, but here’s the tantalizing beginning:
 
 > *“Why is this so important, at least to me? Because RSS is about time, and the data about lack of interest is intensely valuable to me as an indicator of what can be thrown out or pushed down the priority stack. As RSS takes hold, we are moving rapidly to a multiplicity of valuable content, where throwing out duplicates, redundancies, and repetitive analyses is key to providing enough of a window for absorbing the much greater signal-to-noise of the attention stream.”*
 

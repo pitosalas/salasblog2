@@ -24,7 +24,7 @@ Check out [this
  tasks. 
 
  [![](https://i0.wp.com/ajaxian.com/wp-content/images/fooplot.png?resize=584%2C298)
- ](http://fooplot.com/) 
+](http://fooplot.com/) 
 
  (from: [Fooplot: 
  function plotting](http://ajaxian.com/archives/fooplot-function-plotting))

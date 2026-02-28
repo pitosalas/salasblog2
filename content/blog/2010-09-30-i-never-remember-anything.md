@@ -7,7 +7,7 @@ date: "2010-09-30"
 type: "wp"
 wordpress_id: 657
 ---
-Finally [someone writes about something ](http://www.nytimes.com/2010/09/19/books/review/Collins-t.html?_r=1&pagewanted=all)that happens to me (and yes, to you) all the time.
+Finally [someone writes about something](http://www.nytimes.com/2010/09/19/books/review/Collins-t.html?_r=1&pagewanted=all)that happens to me (and yes, to you) all the time.
  
 - What was that movie about that we saw LAST WEEK?
 

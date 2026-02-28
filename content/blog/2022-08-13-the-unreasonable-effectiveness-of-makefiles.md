@@ -7,4 +7,4 @@ date: "2022-08-13"
 type: "wp"
 wordpress_id: 4050
 ---
-[ The Unreasonable Effectiveness of Makefiles]( https://matt-rickard.com/the-unreasonable-effectiveness-of-makefiles) –Im just in the process of leveling up my make knowledge. Ive read many many makefiles. But the last time i studied how it works?
+[The Unreasonable Effectiveness of Makefiles](https://matt-rickard.com/the-unreasonable-effectiveness-of-makefiles) –Im just in the process of leveling up my make knowledge. Ive read many many makefiles. But the last time i studied how it works?

@@ -7,7 +7,7 @@ date: "2022-08-10"
 type: "wp"
 wordpress_id: 4036
 ---
-[ PID controller | Wikiwand]( https://www.wikiwand.com/en/PID_controller) –A proportional–integral–derivative controller is a control loop mechanism employing feedback that is widely used in industrial control systems and a variety of other applications requiring continuously modulated control. A PID controller continuously calculates an error value 
+[PID controller | Wikiwand](https://www.wikiwand.com/en/PID_controller) –A proportional–integral–derivative controller is a control loop mechanism employing feedback that is widely used in industrial control systems and a variety of other applications requiring continuously modulated control. A PID controller continuously calculates an error value 
 
  e {\displaystyle e }
 

@@ -7,4 +7,4 @@ date: "2022-12-06"
 type: "wp"
 wordpress_id: 4285
 ---
-[ Creating a Chart]( https://docs.preset.io/docs/creating-a-chart) –I’ve been experimenting with Apache Superset to create charts and dashboards. The features are very powerul and consequently can be obscure. I just found this doc which seems helpful
+[Creating a Chart](https://docs.preset.io/docs/creating-a-chart) –I’ve been experimenting with Apache Superset to create charts and dashboards. The features are very powerul and consequently can be obscure. I just found this doc which seems helpful

@@ -7,6 +7,6 @@ date: "2021-06-12"
 type: "wp"
 wordpress_id: 2953
 ---
-[ This is Grammar For Robots. What? Why? 🤖](https://www.youtube.com/watch?v=rSPwOeX46UA)
+[This is Grammar For Robots. What? Why? 🤖](https://www.youtube.com/watch?v=rSPwOeX46UA)
  https://lambdalabs.com/papers📝 The paper “RoboGrammar: Graph Grammar for Terrain-Optimized Robot designer. Very intersting paper !
 June 12, 2021 at 07:58PM

@@ -7,7 +7,7 @@ date: "2007-05-21"
 type: "wp"
 wordpress_id: 1269
 ---
-PC Magazine’s newest issue has a retrospective of their past 25 years and Lotus[ Improv gets mentioned for one of the big deals of 1993](http://www.pcmag.com/article2/0,1895,2129553,00.asp). And yes, you can see a bad picture of yours truly back in those days.
+PC Magazine’s newest issue has a retrospective of their past 25 years and Lotus[Improv gets mentioned for one of the big deals of 1993](http://www.pcmag.com/article2/0,1895,2129553,00.asp). And yes, you can see a bad picture of yours truly back in those days.
 > “**Innovators: Pito Salas**
 
  // Set slideShowSpeed (milliseconds) var slideShowSpeed = 3000 // Duration of crossfade (seconds) var crossFadeDuration = 3 // Specify the image files var Pic = new Array() // don\’t touch this // to add more images, just continue // the pattern, adding to the array below Pic[0] = \’http://common.ziffdavisinternet.com/util_get_image/17/0,1425,i=175286,00.gif\’ Pic[1] = \’http://common.ziffdavisinternet.com/util_get_image/17/0,1425,i=175289,00.gif\’ // ======================================= // do not edit anything below this line // ======================================= var t var j = 0 var p = Pic.length var preLoad = new Array() for (i = 0; i 

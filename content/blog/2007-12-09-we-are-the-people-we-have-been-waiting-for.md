@@ -10,7 +10,7 @@ wordpress_id: 1162
 Tom Friedman recently had a good column about global warming (“global climate change”) and what is, or should be being done about it, where he quotes the Onion:
 ““Fall, the long-running series of shorter days and cooler nights, was canceled earlier this week after nearly 3 billion seasons on Earth, sources reported Tuesday.”
 
-Anyway, [read the whole thing. ](“Fall, the long-running series of shorter days and cooler nights, was canceled earlier this week after nearly 3 billion seasons on Earth, sources reported Tuesday.)
+Anyway, [read the whole thing.](“Fall, the long-running series of shorter days and cooler nights, was canceled earlier this week after nearly 3 billion seasons on Earth, sources reported Tuesday.)
 
 Also while you are at it, take a look at the referenced  [MIT Project, the Vehicle Design Summit.](http://vehicledesignsummit.org/website/component/option,com_frontpage/Itemid,26/)
 

@@ -21,7 +21,7 @@ Whatever the reason, I worry about the **chilling effect** this can have on inno
 
 Is there **another** explanation? 
 
-What if this was a pure **supply-demand** invisible hand phenomenon? What if the **platforms** on which these systems are built (Apache, Tomcat, PHP, MYSql, Java, and so on) have become so rich and so **powerful** that it has become *comparatively* very **cheap** to build wonderful innovative systems like [Furl](http://www.furl.net/), [Rollyo](http://rollyo.com/index.html) or [Reddit](http://reddit.com/), and therefore the market was valuing them correctly at zero dollars. (My friend [Shimon Rura](http://frassle.rura.org/Directory/index?feed=1) put forth a case along those lines the other day. )
+What if this was a pure **supply-demand** invisible hand phenomenon? What if the **platforms** on which these systems are built (Apache, Tomcat, PHP, MYSql, Java, and so on) have become so rich and so **powerful** that it has become *comparatively* very **cheap** to build wonderful innovative systems like [Furl](http://www.furl.net/), [Rollyo](http://rollyo.com/index.html) or [Reddit](http://reddit.com/), and therefore the market was valuing them correctly at zero dollars. (My friend [Shimon Rura](http://frassle.rura.org/Directory/index?feed=1) put forth a case along those lines the other day.)
 
 While there’s an **element of truth** in this second explanation, I believe it is only a small part of the story. I continue to believe that this tendency to expect stuff to be free has had a chilling effect on innovation in our industry.
 

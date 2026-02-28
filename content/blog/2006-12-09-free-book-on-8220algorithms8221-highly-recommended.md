@@ -11,7 +11,7 @@ Check out [this
  post](http://www.dzone.com/rsslinks/free_book_on_algorithms_highly_recommended.html) from [dzone.com: latest front page](http://www.dzone.com/):
 
 > [![](https://i0.wp.com/www.dzone.com/images/thumbs/80x60/8744.jpg?w=584)
- ](http://www.dzone.com/rsslinks/free_book_on_algorithms_highly_recommended.html)I just finished a fantastic book called "Algorithms", by Sanjoy 
+](http://www.dzone.com/rsslinks/free_book_on_algorithms_highly_recommended.html)I just finished a fantastic book called "Algorithms", by Sanjoy 
  Dasgupta, Christos Papadimitriou and Umesh Vazirani. Even better: this 
  book is free and can be downloaded in PDF form from the authors’ web 
  site.

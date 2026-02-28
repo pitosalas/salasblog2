@@ -10,7 +10,7 @@ wordpress_id: 1898
 You might think it’s a bad idea for me to complain about Java Web Start. Well the truth is that I really like it and so am really frustrated by it’s failures. In my own small way I am hoping to wake up someone at Sun to see the importance of this little bit of technology to their grand Java strategy. 
 In my interview with [ClientJava](http://www.clientjava.com/blog/) I again made some pointed comments about Java Web Start, and in the comment thread some annonymous person (coward) asked me to elaborate. **Here is what I said.**
 
-“Why has WebStart been such a disappointment? I’ve written about this in my blog, [here ](/weblogs/archives/000441.html)and [here](/weblogs/archives/000336.html).
+“Why has WebStart been such a disappointment? I’ve written about this in my blog, [here](/weblogs/archives/000441.html)and [here](/weblogs/archives/000336.html).
 Basically, the promise of WebStart is great: a cross platform way to deploy, install and update Java based desktop apps. The disappointment is that it comes close to working but then fails in so many different ways. It’s a tease. 
 
 There is no reliable cross platform way to check and then install a java environment. And then to add insult to injury, there’s no user friendly URL to send users to that does it for them. Try looking at www.java.com. It’s so sad. Lots of useless and confusing marketing and a little link in the corner to install Java.

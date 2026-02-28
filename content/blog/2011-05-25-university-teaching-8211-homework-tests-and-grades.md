@@ -11,7 +11,7 @@ I am about a week from beginning teaching my course at Brandeis University. The 
 
 The structure is that we teach during june and july, 4 days a week, and the students end up with 3 courses worth of credits. The students are both graduate and undergraduate. Given the time frame you can see that it’s an intensive boot camp-like experience. It’s a lot of work and a lot of fun.
 
-So with my mind on teaching, curriculum, homework assignments and grading, I made note of[ “The Poor Quality of an Undergraduate Education](http://www.nytimes.com/2011/05/15/opinion/15arum.html?_r=1)“, an article about higher ed in the New York Times:
+So with my mind on teaching, curriculum, homework assignments and grading, I made note of[“The Poor Quality of an Undergraduate Education](http://www.nytimes.com/2011/05/15/opinion/15arum.html?_r=1)“, an article about higher ed in the New York Times:
 
 > 
 
@@ -29,4 +29,4 @@ So we grade on homework and class participation/performance. There are **no test
 
 I kind of **agree** with that. For me, grading is not about the final grade, when all is said and done. It is about the daily ‘marks’ on homework and other deliverables – they act as a motivator and a focuser of student effort to spend time on things that seem to lead to the greatest learning.
 
-(remember, I’m a **newbie** 🙂 )
+(remember, I’m a **newbie** 🙂)

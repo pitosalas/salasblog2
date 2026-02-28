@@ -8,7 +8,7 @@ type: "wp"
 wordpress_id: 1909
 ---
 ![](https://i0.wp.com/www.xandocosi.com/images/CosiMap2.gif?w=584) Have you seen this **map **before? Yes? 
-**Actually **it’s the map of states where the [Cosi Restaurant ](http://www.xandocosi.com/)chain [has stores](http://www.xandocosi.com/locator.html). I don’t know what it means, but I thought it must mean **something**. Amusing.
+**Actually **it’s the map of states where the [Cosi Restaurant](http://www.xandocosi.com/)chain [has stores](http://www.xandocosi.com/locator.html). I don’t know what it means, but I thought it must mean **something**. Amusing.
 
 (from a private mailing list I am on)
 

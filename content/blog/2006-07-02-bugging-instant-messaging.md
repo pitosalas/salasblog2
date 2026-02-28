@@ -7,7 +7,7 @@ date: "2006-07-02"
 type: "wp"
 wordpress_id: 1503
 ---
-I just walked by a room full of people working on computers during a [break between presentations ](http://www.gnomedex.com/)and over in a corner I saw one fellow **furiously** instant messaging, his fingers **flying** across the keyboard in a very **animated** way. I had a **sense** of what he might be **chatting** about and I had this **subversive** thought: what if I could bug IM conversations?
+I just walked by a room full of people working on computers during a [break between presentations](http://www.gnomedex.com/)and over in a corner I saw one fellow **furiously** instant messaging, his fingers **flying** across the keyboard in a very **animated** way. I had a **sense** of what he might be **chatting** about and I had this **subversive** thought: what if I could bug IM conversations?
 
 And as these thoughts go, I couldn’t help musing about how one might actually do this. 
 

@@ -7,4 +7,4 @@ date: "2023-07-22"
 type: "wp"
 wordpress_id: 4591
 ---
-[ Shale – Ruby object mapper and serializer for XML, JSON, TOML and YAML]( https://www.shalerb.org/) –Shale – Ruby object mapper and serializer for XML, JSON and YAML
+[Shale – Ruby object mapper and serializer for XML, JSON, TOML and YAML](https://www.shalerb.org/) –Shale – Ruby object mapper and serializer for XML, JSON and YAML

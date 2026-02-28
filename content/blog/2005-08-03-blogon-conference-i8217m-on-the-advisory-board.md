@@ -11,7 +11,7 @@ wordpress_id: 1723
 
 The full name is “BlogOn 2005 Social Media Summit”. 
 
-And yes, ******[ yours truly is on the advisory board](http://www.blogonevent.com/blogon2005/2005/07/pito_salas.html)** FWIW.
+And yes, ******[yours truly is on the advisory board](http://www.blogonevent.com/blogon2005/2005/07/pito_salas.html)** FWIW.
 
 The conference is in New York City, on October 17 and 18. 
 

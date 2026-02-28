@@ -7,4 +7,4 @@ date: "2023-07-07"
 type: "wp"
 wordpress_id: 4561
 ---
-[ Experiential Robotics Platform (XRP) Kit – Beta](https://www.sparkfun.com/products/22230) –The XRP Robotics Platform is a hands-on, comprehensive robotics platform and includes everything needed to build and program a beginner to advanced robot.
+[Experiential Robotics Platform (XRP) Kit – Beta](https://www.sparkfun.com/products/22230) –The XRP Robotics Platform is a hands-on, comprehensive robotics platform and includes everything needed to build and program a beginner to advanced robot.
