@@ -11,7 +11,7 @@ wordpress_id: 1638
 
 I am playing around with the [Last.FM](http://www.last.fm/) music service. 
 
-Among the many things it does, is that It ‘watches’ everything you play with iTunes to figure out your music tastes. And then with that, [Last.FM ](http://www.last.fm/)recommends music that you might like. 
+Among the many things it does, is that It ‘watches’ everything you play with iTunes to figure out your music tastes. And then with that, [Last.FM](http://www.last.fm/)recommends music that you might like. 
 
 What caught my eye is the first use of the [famous ‘long tail’ graph](http://www.wired.com/wired/archive/12.10/tail.html) as a User Interface element. You can drag the vertical bar right and left to affect whether the recommended music is more in the popular or obscure range of possibilities. **Cute**! 
 

@@ -22,4 +22,4 @@ and
 
 The Accessor wants to write an application program that accesses and does something useful with data coming from any Publisher. Accessor and Publisher don’t know each other. ” (**from** [DataRSS: Technical Overview](http://www.scribd.com/doc/14136777/DataRss-Tech-Overview))
 
-**Delicious** isn’t it? One final tease, I also have worked out some detailed examples of how DataRSS might work with the [New York Times API,](http://open.blogs.nytimes.com/) with the [Sunlight Foundation API](http://www.sunlightfoundation.com/) and with the [Follow The Money API. ](http://www.followthemoney.org/)
+**Delicious** isn’t it? One final tease, I also have worked out some detailed examples of how DataRSS might work with the [New York Times API,](http://open.blogs.nytimes.com/) with the [Sunlight Foundation API](http://www.sunlightfoundation.com/) and with the [Follow The Money API.](http://www.followthemoney.org/)

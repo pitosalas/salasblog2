@@ -9,7 +9,7 @@ wordpress_id: 1993
 ---
 As I continue to make rapid progress on [BlogBridge](http://www.blogbridge.com/), now with a significant amount of help, I am asking myself some tricky questions about licensing, which I thought I’d try out here. (By the way, BlogBridge is the blog reader that I’ve been working on and which is soon going to be available in beta form.) 
 
-BlogBridge is an [open source application](http://opensource.org/docs/definition.php). The source code is all available on [www.sourceforge.net ](https://sourceforge.net/projects/blogbridge/)for any and all to look at and play with. It’s open source also because of the license that you’ll see in each source file, the so-called “[Lesser GPL](http://opensource.org/licenses/lgpl-license.php).” I would like to say that I chose that one after long and careful thought, but the truth is that I picked it more or less randomly because another project that I am contributing to was using it. 
+BlogBridge is an [open source application](http://opensource.org/docs/definition.php). The source code is all available on [www.sourceforge.net](https://sourceforge.net/projects/blogbridge/)for any and all to look at and play with. It’s open source also because of the license that you’ll see in each source file, the so-called “[Lesser GPL](http://opensource.org/licenses/lgpl-license.php).” I would like to say that I chose that one after long and careful thought, but the truth is that I picked it more or less randomly because another project that I am contributing to was using it. 
 
 Now that BlogBridge is going to get some more visibility, the question is, **what rights exactly do I want to give away and which ones do I want to keep for myself?** 
 

@@ -26,6 +26,6 @@ Activity. Using another web based service, we’ll try to figure out how activel
 Given these four metrics (so far, but more can easily be added) we come up with a number of stars to rate the blog. Of course the more advanced user can tweak the mix to get the Starz to reflect their own priorities, using this cool interface.
 
 [![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/starz-thumb.jpg?resize=300%2C289)
-Click here to enlarge. ](http://s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/starz.html)
+Click here to enlarge.](http://s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/starz.html)
 
 Given the Starz Rating on each Channel, there are lots of other interesting things we can do for the user. **That’s for another time.**

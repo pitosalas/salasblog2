@@ -20,4 +20,4 @@ Here’s a little from the article by Marie Colvin:
 
 For Noor, it was a double tragedy. Adnan, her 27-year-old brother, was killed at Maziad’s side. “(from [The Sunday Times)](http://www.thesundaytimes.co.uk/sto/public/news/article874796.ece)
 
-The sad postscript is that this article was [Marie Colvin’s ](http://www.thesundaytimes.co.uk/sto/public/MarieColvin/)last, as she was herself killed soon after in a bombing.
+The sad postscript is that this article was [Marie Colvin’s](http://www.thesundaytimes.co.uk/sto/public/MarieColvin/)last, as she was herself killed soon after in a bombing.

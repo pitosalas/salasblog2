@@ -7,7 +7,7 @@ date: "2011-02-09"
 type: "wp"
 wordpress_id: 598
 ---
-This article is called [“Fact and Folklore In Software Engineering” ](http://morendil.github.com/folklore.html) and while it is about that, the part that was more interesting to me was the first section talking about Scientific Discourse:
+This article is called [“Fact and Folklore In Software Engineering”](http://morendil.github.com/folklore.html) and while it is about that, the part that was more interesting to me was the first section talking about Scientific Discourse:
 
 > 
 

@@ -16,4 +16,4 @@ However is it fair to me? After all these students are becoming multi-millionair
 One professor has an **amusing solution** to this dilemma, but I think it still misses the point;
 
 > 
-Precisely. Besides which, I’ve figured out a much more fun solution to the problem: I’m going to buy some of these note sets and outlines being sold for my classes. I’ll go through them and find all the mistakes. And then I’ll write exam questions testing on those very same mistakes. If we all did that, the market would dry up pretty quick. (**from**[ Professor Bainbridge.com)](http://www.professorbainbridge.com/professorbainbridgecom/2012/02/should-students-profit-off-my-classes.html)
+Precisely. Besides which, I’ve figured out a much more fun solution to the problem: I’m going to buy some of these note sets and outlines being sold for my classes. I’ll go through them and find all the mistakes. And then I’ll write exam questions testing on those very same mistakes. If we all did that, the market would dry up pretty quick. (**from**[Professor Bainbridge.com)](http://www.professorbainbridge.com/professorbainbridgecom/2012/02/should-students-profit-off-my-classes.html)

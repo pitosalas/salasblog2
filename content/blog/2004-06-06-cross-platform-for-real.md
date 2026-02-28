@@ -7,7 +7,7 @@ date: "2004-06-06"
 type: "wp"
 wordpress_id: 1987
 ---
-We are busy getting [BlogBridge ](http://www.blogbridge.com)ready for beta (send email if you want to participate.) I hope we are only days away. 
+We are busy getting [BlogBridge](http://www.blogbridge.com)ready for beta (send email if you want to participate.) I hope we are only days away. 
 But in doing that, and updating the web site, I thought this might be of interest…
 
 **Java really works**! Here are three screen shots of BlogBridge, on Linux, Windows XP and Mac OSX. **We didn’t write any platform specific code**, and yet, other than some minor font goop, it looks quite nice, IMHO.

@@ -7,4 +7,4 @@ date: "2022-10-17"
 type: "wp"
 wordpress_id: 4172
 ---
-[ Learn SQL: Aggregate Functions]( https://www.sqlshack.com/learn-sql-aggregate-functions/) –Aggregate functions are a very powerful tool in databases. They serve the same purpose as their equivalents in MS Excel
+[Learn SQL: Aggregate Functions](https://www.sqlshack.com/learn-sql-aggregate-functions/) –Aggregate functions are a very powerful tool in databases. They serve the same purpose as their equivalents in MS Excel

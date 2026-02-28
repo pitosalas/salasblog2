@@ -20,6 +20,6 @@ Later on, when I tried to reboot, **it failed, hard**.
 
 Over and over again, blue screen of death! Booting from floppies didn’t work. Booting from CDs didn’t work. Booting to DOS worked, but when I tried to look at the C: drive it said that it wasn’t there. 
 
-Anyway, **long story short**, after a bit of searching I found that I was not the only one. [And Microsoft, God Bless em, had a technote ](http://support.microsoft.com/default.aspx?scid=kb;en-us;875355)that took me through a tortured process of cutting 8 floppies, booting of of them into the “Recovery Console”, lighting some incese, and following a bunch of steps. And yes, I am back up again,** without SP2 installed.**
+Anyway, **long story short**, after a bit of searching I found that I was not the only one. [And Microsoft, God Bless em, had a technote](http://support.microsoft.com/default.aspx?scid=kb;en-us;875355)that took me through a tortured process of cutting 8 floppies, booting of of them into the “Recovery Console”, lighting some incese, and following a bunch of steps. And yes, I am back up again,** without SP2 installed.**
 
 **So I guess this is the exception that proves the rule.**

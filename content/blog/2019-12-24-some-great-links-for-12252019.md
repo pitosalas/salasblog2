@@ -7,7 +7,7 @@ date: "2019-12-24"
 type: "wp"
 wordpress_id: 2683
 ---
-[more handy python snippets ](https://link.medium.com/U8bjsYsqG2) 
+[more handy python snippets](https://link.medium.com/U8bjsYsqG2) 
 
 More handy shortcuts and one liners in everyday use
 

@@ -7,4 +7,4 @@ date: "2023-11-12"
 type: "wp"
 wordpress_id: 4674
 ---
-[ Ask Guy Kawasaki Anything]( https://www.kawasakigpt.com/) –Let AI answer your questions based on Guy Kawasaki’s videos.
+[Ask Guy Kawasaki Anything](https://www.kawasakigpt.com/) –Let AI answer your questions based on Guy Kawasaki’s videos.

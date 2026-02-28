@@ -16,4 +16,4 @@ I guess I am all for trying to improve on what exists. But in the case of A9, th
 
 But geez, do I have to decide now between the Google toolbar and the A9 Toolbar? Puleez!
 
-But **here’s a tidbit **for you: if you use A9 then [you get a little discount ](https://www.amazon.com/gp/xs/sharethepi.html)on your Anazon book order. It’s only 1.5% (or so 🙂 but still **if you order a lot of books, it could add up!**
+But **here’s a tidbit **for you: if you use A9 then [you get a little discount](https://www.amazon.com/gp/xs/sharethepi.html)on your Anazon book order. It’s only 1.5% (or so 🙂 but still **if you order a lot of books, it could add up!**

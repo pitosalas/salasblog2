@@ -13,7 +13,7 @@ A great analysis of this terrible example of the impact of bugs
 
  tags: [software](https://www.diigo.com/user/pitosalas/software) [737](https://www.diigo.com/user/pitosalas/737) [bugs](https://www.diigo.com/user/pitosalas/bugs) [testing](https://www.diigo.com/user/pitosalas/testing) [airplane](https://www.diigo.com/user/pitosalas/airplane) [warstories](https://www.diigo.com/user/pitosalas/warstories) [quality](https://www.diigo.com/user/pitosalas/quality)
 
- [Moving Past Tutorials: 8 Tips for Problem Solving – DEV Community ](https://dev.to/aspittel/moving-past-tutorials-8-tips-for-problem-solving-3e0p?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
+ [Moving Past Tutorials: 8 Tips for Problem Solving – DEV Community](https://dev.to/aspittel/moving-past-tutorials-8-tips-for-problem-solving-3e0p?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
 This article answers a question that I get frequently from my students. 
 

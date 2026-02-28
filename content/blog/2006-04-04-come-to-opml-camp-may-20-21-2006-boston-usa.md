@@ -9,7 +9,7 @@ wordpress_id: 1562
 ---
 There is a *[lot of stuff going on with OPML](http://opmlcamp.com/)* these days. OPML stands for Outline Processing Markup Language, invented and evangelized by [Dave Winer](http://www.scripting.com/) [some number](http://www.opml.org/about) of years ago. Since then though, at least from my observation, it’s had its greatest traction as an import / export format for RSS Aggregators.
 
-But now, there are [lots](http://www.opmlsearch.com/) of [cool](http://www.grazr.com/) [new ideas](http://libraryclips.blogsome.com/2005/12/26/my-or-mysyndicaat-the-ultimate-newsmasters-processing-tool/) [floating](http://feedrinse.com/) around, prototypes and products being built, that rely on and leverage OPML. Also there are lots of [less  new sites ](http://www.web20workgroup.com/)which are using OPML in interesting ways.
+But now, there are [lots](http://www.opmlsearch.com/) of [cool](http://www.grazr.com/) [new ideas](http://libraryclips.blogsome.com/2005/12/26/my-or-mysyndicaat-the-ultimate-newsmasters-processing-tool/) [floating](http://feedrinse.com/) around, prototypes and products being built, that rely on and leverage OPML. Also there are lots of [less  new sites](http://www.web20workgroup.com/)which are using OPML in interesting ways.
 
 In short, anyone who uses, generates, processes, filters or renders a hierarchical list of some kind, especially of Feeds, should consider using OPML as input or output or both. That is the way to interop, and lots of amazing leverage. Think of it as a different kind of mashup!
 

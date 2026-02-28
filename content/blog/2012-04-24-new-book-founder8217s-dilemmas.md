@@ -12,7 +12,7 @@ This book looks good: “Founder’s Dilemmas: Anticipating and Avoiding the pit
 This excerpt talks about a common scenario with startups, where the founders assume that they way they chose to split equity on day 0 will continue to work for them as time goes on:
 
 > 
-“How should founders deal with such developments? In short, by assuming when they do the initial split that things will change, even if the specific changes cannot be foreseen, and therefore structuring a dynamic equity split rather than the static splits used at Zipcar, govWorks, and many other startups. As important as it is to get the initial equity split rightâby matching it as closely as possible thefoundersâ past contributions, opportunity costs, future contributions, and motivationsâit is equally important to keep it right; that is, to be able to adjust the split as circumstances change.” (**from**[Founder’s Dilemmas: Equity Splits)](http://www.startuplessonslearned.com/)
+“How should founders deal with such developments? In short, by assuming when they do the initial split that things will change, even if the specific changes cannot be foreseen, and therefore structuring a dynamic equity split rather than the static splits used at Zipcar, govWorks, and many other startups. As important as it is to get the initial equity split right—by matching it as closely as possible thefounders’ past contributions, opportunity costs, future contributions, and motivations—it is equally important to keep it right; that is, to be able to adjust the split as circumstances change.” (**from**[Founder’s Dilemmas: Equity Splits)](http://www.startuplessonslearned.com/)
 
 I think I will be getting the book.
 

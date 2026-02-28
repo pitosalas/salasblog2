@@ -7,4 +7,4 @@ date: "2023-06-25"
 type: "wp"
 wordpress_id: 4545
 ---
-[ PocketTube – YouTube Subscription Manager](https://pockettube.io/) –The better way to group and organize your Youtube subscriptions
+[PocketTube – YouTube Subscription Manager](https://pockettube.io/) –The better way to group and organize your Youtube subscriptions

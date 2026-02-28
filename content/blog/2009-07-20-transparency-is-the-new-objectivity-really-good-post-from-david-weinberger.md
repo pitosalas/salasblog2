@@ -10,7 +10,7 @@ wordpress_id: 822
 Check this excerpt from a post by [David Weinberger](http://en.wikipedia.org/wiki/David_Weinberger) called [Transparency is the new objectivity](http://www.hyperorg.com/blogger/2009/07/19/transparency-is-the-new-objectivity/) from [Joho the Blog](http://www.hyperorg.com/blogger/feed/):
 > “A friend asked me to post an explanation of what I meant when I said at [PDF09](http://personaldemocracy.com/pdf-conference/personal-democracy-forum-conference) that “transparency is the new objectivity.” […snip…]”
 
-“Outside of the realm of science, objectivity is discredited these days as anything but an aspiration, and even that aspiration is looking pretty sketchy. The problem with objectivity is that it tries to show what the world looks like from no particular point of view, which is like wondering what something looks like in the dark.” (**from: **[Transparency is the New Objectivity) ](http://www.hyperorg.com/blogger/2009/07/19/transparency-is-the-new-objectivity/)
+“Outside of the realm of science, objectivity is discredited these days as anything but an aspiration, and even that aspiration is looking pretty sketchy. The problem with objectivity is that it tries to show what the world looks like from no particular point of view, which is like wondering what something looks like in the dark.” (**from: **[Transparency is the New Objectivity)](http://www.hyperorg.com/blogger/2009/07/19/transparency-is-the-new-objectivity/)
 
 Man, this is a a subtle area. but fascinating.
 

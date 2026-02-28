@@ -15,7 +15,7 @@ My purely biased view of the most memorable presenters, quotes and associated li
 
 - Quote heard in the corridors: *“The size of the font on the name badges is directly proportional to the price of attending the conference.”*
 
-- According to [Dan Pink, author of “A Whole New Mind”: ](http://www.danpink.com/)these are the keys to giving a memorable speech: “*Brevity, Levity, and Repetition*” (and repetition). [Here’s Ethan’s blogging about Dan’s presentation](http://www.ethanzuckerman.com/blog/2007/10/18/poptech-daniel-pinks-whole-new-economy/).
+- According to [Dan Pink, author of “A Whole New Mind”:](http://www.danpink.com/)these are the keys to giving a memorable speech: “*Brevity, Levity, and Repetition*” (and repetition). [Here’s Ethan’s blogging about Dan’s presentation](http://www.ethanzuckerman.com/blog/2007/10/18/poptech-daniel-pinks-whole-new-economy/).
 
 - According to [Dan Gilbert](http://www.wjh.harvard.edu/~dtg/gilbert.htm) ([see also Ethan Z’s coverage](http://www.ethanzuckerman.com/blog/2007/10/19/poptech-happiness-and-risk/)), we humans are best at recognizing and responding to threats when it has all these characteristics. The fewer of them, the less likely it is that we will take a threat seriously. (Global Climate Change as an example.)
  
@@ -37,6 +37,6 @@ The threat has a human face
 
 - Check out [Ethan Zuckerman’s amazingly detailed blogging about each and every Pop!Tech speaker](http://www.ethanzuckerman.com/blog/category/poptech-2007/) — the rest of his blog is pretty cool too.
 
-- In retrospect, and everyone asks this, my personal favorite and most memorable speakers: Jessica Flannery, Chris Jordan, Steven Pinker, [Van Jones](http://www.ethanzuckerman.com/blog/2007/10/20/poptech-green-collar-jobs/), [Bill Shannon, ](http://www.ethanzuckerman.com/blog/2007/10/20/poptech-bill-shannon-gets-around/)[Elizabeth Streb](http://www.ethanzuckerman.com/blog/2007/10/20/poptech-elizabeth-streb-i-prefer-the-crash/), [Cary Fowler, ](http://www.ethanzuckerman.com/blog/2007/10/19/poptech-backing-up-global-agriculture/)[Carl Honoré, ](http://http://www.ethanzuckerman.com/blog/2007/10/19/poptech-slowing-down-with-carl-honore/) [Jonathan Harris.](http://www.ethanzuckerman.com/blog/2007/10/19/poptech-jonathan-harris-and-digital-storytelling/)
+- In retrospect, and everyone asks this, my personal favorite and most memorable speakers: Jessica Flannery, Chris Jordan, Steven Pinker, [Van Jones](http://www.ethanzuckerman.com/blog/2007/10/20/poptech-green-collar-jobs/), [Bill Shannon,](http://www.ethanzuckerman.com/blog/2007/10/20/poptech-bill-shannon-gets-around/)[Elizabeth Streb](http://www.ethanzuckerman.com/blog/2007/10/20/poptech-elizabeth-streb-i-prefer-the-crash/), [Cary Fowler,](http://www.ethanzuckerman.com/blog/2007/10/19/poptech-backing-up-global-agriculture/)[Carl Honoré,](http://http://www.ethanzuckerman.com/blog/2007/10/19/poptech-slowing-down-with-carl-honore/) [Jonathan Harris.](http://www.ethanzuckerman.com/blog/2007/10/19/poptech-jonathan-harris-and-digital-storytelling/)
 
 - Here’s a collection from the [BlogBridge Library](http://library.blogbridge.com/) of [all the blogs and sites related to Pop!Tech 2007](http://library.blogbridge.com/folder/13006-pop-tech-bloggers).

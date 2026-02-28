@@ -7,6 +7,6 @@ date: "2022-03-13"
 type: "wp"
 wordpress_id: 3322
 ---
-[ OpenCV: OpenCV modules](https://docs.opencv.org/4.x/)
+[OpenCV: OpenCV modules](https://docs.opencv.org/4.x/)
  
 March 14, 2022 at 01:28AM

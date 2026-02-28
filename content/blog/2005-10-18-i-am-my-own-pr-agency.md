@@ -7,7 +7,7 @@ date: "2005-10-18"
 type: "wp"
 wordpress_id: 1676
 ---
-Over the last week or so I’ve been working around the clock preparing for [BlogBridge’s ](http://www.blogonevent.com/)appearance at the BlogOn 2005 conference in New York City. 
+Over the last week or so I’ve been working around the clock preparing for [BlogBridge’s](http://www.blogonevent.com/)appearance at the BlogOn 2005 conference in New York City. 
 
 Contemplating this at the end of the first day, I have to say it’s been a blast although quite different from what I’ve done in the past. 
 

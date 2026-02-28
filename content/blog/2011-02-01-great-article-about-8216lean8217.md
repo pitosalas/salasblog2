@@ -11,7 +11,7 @@ wordpress_id: 601
 
 About why lean production is becoming so hot among us software entrepreneurs:
 
-> The great transformation of the industry over the last 10 years has been the availability of already-written (and battle tested) software which has slashed the size of a team that can build a functioning product and the crash in price of hardware. (**from**[ Fatboy in a Lean World](http://www.oreillygmt.eu/interview/fatboy-in-a-lean-world/))
+> The great transformation of the industry over the last 10 years has been the availability of already-written (and battle tested) software which has slashed the size of a team that can build a functioning product and the crash in price of hardware. (**from**[Fatboy in a Lean World](http://www.oreillygmt.eu/interview/fatboy-in-a-lean-world/))
 
 About Y-Combinator’s philosophy:
 

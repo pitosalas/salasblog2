@@ -8,7 +8,7 @@ type: "wp"
 wordpress_id: 1912
 ---
 Hey, sorry if you aren’t a BlogBridge user yet, but I just can’t resist some news here. 
-First of all, we’ve released a new Alpha, just today.[ You can get it here. ](http://www.blogbridge.com/install/alpha/blogbridge.jnlp) The way we work it is that if after a week or so of use there are no show stopped bugs, we will promote the Alpha to a Beta. [The general release model is described here.](http://www.blogbridge.com/projectpage.htm#releases)
+First of all, we’ve released a new Alpha, just today.[You can get it here.](http://www.blogbridge.com/install/alpha/blogbridge.jnlp) The way we work it is that if after a week or so of use there are no show stopped bugs, we will promote the Alpha to a Beta. [The general release model is described here.](http://www.blogbridge.com/projectpage.htm#releases)
 
 This new version has a ton of new feature stuff, plus major stability and performance improvements. I dare say, we are getting close to having a Release 1.0 product. Here are some highlights:
 

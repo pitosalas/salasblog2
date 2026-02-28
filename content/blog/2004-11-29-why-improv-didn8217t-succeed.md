@@ -8,7 +8,7 @@ type: "wp"
 wordpress_id: 1905
 ---
 It’s been a while.
-Which is why my heart beat just a **little faster **when I read a reference to Improv (not altogether flattering) in the [Adam Bossworth piece ](http://www.adambosworth.net/archives/000031.html)I just wrote about, where he said:
+Which is why my heart beat just a **little faster **when I read a reference to Improv (not altogether flattering) in the [Adam Bossworth piece](http://www.adambosworth.net/archives/000031.html)I just wrote about, where he said:
 
 ***
 Consider the spreadsheet**. It is a protean, sloppy, plastic, flexible medium that is, ironically, the despair of all accountants and auditors because it is virtually impossible to reliably understand a truly complex and rich spreadsheet. 

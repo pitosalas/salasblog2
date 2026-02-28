@@ -7,4 +7,4 @@ date: "2023-05-30"
 type: "wp"
 wordpress_id: 4503
 ---
-[ How-To Add Recommendations to a Rails App with pgvector and OpenAI]( https://link.medium.com/Xfk2UqtydAb) –Creating recommendations with pgvector, ruby-openai, and the neighbor gem.
+[How-To Add Recommendations to a Rails App with pgvector and OpenAI](https://link.medium.com/Xfk2UqtydAb) –Creating recommendations with pgvector, ruby-openai, and the neighbor gem.

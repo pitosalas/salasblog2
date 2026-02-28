@@ -7,7 +7,7 @@ date: "2021-02-13"
 type: "wp"
 wordpress_id: 2823
 ---
-[Reverse Tech Interview: Questions to Stump an Interviewer – DEV Community ](https://dev.to/devinterview/reverse-tech-interview-questions-to-stump-an-interviewer-4n6a?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
+[Reverse Tech Interview: Questions to Stump an Interviewer – DEV Community](https://dev.to/devinterview/reverse-tech-interview-questions-to-stump-an-interviewer-4n6a?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
 A really great set of questions that you should consider asking at your next interview 
 

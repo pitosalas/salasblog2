@@ -7,7 +7,7 @@ date: "2011-02-15"
 type: "wp"
 wordpress_id: 596
 ---
-Over the last several months I’ve been following a series of blog postings by [Jamis Buck ](http://weblog.jamisbuck.org/)on the esoteric and quirky topic of writing programs to design mazes.
+Over the last several months I’ve been following a series of blog postings by [Jamis Buck](http://weblog.jamisbuck.org/)on the esoteric and quirky topic of writing programs to design mazes.
 
 For reasons that are not clear, Jamis developed an obsession with mazes and has collected a series of articles detailing many different algorithms, their tradeoffs and concepts and writing them up beautifully.
 

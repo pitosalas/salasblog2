@@ -11,7 +11,7 @@ wordpress_id: 1639
 
 > “Personally, I want the data the AttentionRecorder is collecting to be used, but I don’t want to freight porting my feeds from one platform to another with those additional 10000+ rows of data.” (**from** [elliptical…](http://kinrowan.net/blog/wp/archives/2005/12/02/attention-in-opml-nick-bradbury-on-attentiontech)“)
 
-While[ it may make sense to use OPML as a foundation for the format for Attention information](http://nick.typepad.com/blog/2005/11/an_attention_na_1.html), they **are not one and the same** and should not be inexorably bound. 
+While[it may make sense to use OPML as a foundation for the format for Attention information](http://nick.typepad.com/blog/2005/11/an_attention_na_1.html), they **are not one and the same** and should not be inexorably bound. 
 
 In the **world of aggregators**, the one of the original and core use of OPML was interoperability — import and export of a user’s set of subscriptions from one aggregator to the next. The **potential voluminousness** of attention information would harm OPMLs role as the universal interchange format between aggregators.
 

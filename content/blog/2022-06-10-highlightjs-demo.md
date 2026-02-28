@@ -7,6 +7,6 @@ date: "2022-06-10"
 type: "wp"
 wordpress_id: 3488
 ---
-[ highlight.js demo](https://highlightjs.org/static/demo/)
+[highlight.js demo](https://highlightjs.org/static/demo/)
  
 June 10, 2022 at 04:13PM

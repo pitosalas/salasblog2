@@ -13,7 +13,7 @@ Olin is a small engineering college, actually in the [top ten of engineering col
 
 I’ll be teaching Entrepreneurship in a course called “**The Tech Startup**” (at least I think that will be the name of the course.) 
 
-As you might know, I was teaching at[ Brandeis University](http://colleges.usnews.rankingsandreviews.com/best-colleges/brandeis-university-2133) over the last three years. The [course I taught at Brandeis  was more computer science oriented,](http://www.brandeis.edu/jbs/pastprograms/r2012/webappssocialnet/index.html) aimed at getting the students the experience and helping them gain the skills to build software products in a way that looks like the real world.
+As you might know, I was teaching at[Brandeis University](http://colleges.usnews.rankingsandreviews.com/best-colleges/brandeis-university-2133) over the last three years. The [course I taught at Brandeis  was more computer science oriented,](http://www.brandeis.edu/jbs/pastprograms/r2012/webappssocialnet/index.html) aimed at getting the students the experience and helping them gain the skills to build software products in a way that looks like the real world.
 
 At Olin the focus will be on the broader topic of how engineers should think about startups, how to come up with products that have a chance at selling, making sure they match what customers want and are willing to pay for. I
 

@@ -13,7 +13,7 @@ Yes, I am not in its demographic, but it was **fascinating** to learn about how 
 
 Things get **interesting** when players decide to **cross over** between the gaming world and the ‘real’ world and use real money to buy or trade artifacts.
 
-[Here’s a fascinating and amusing article ](http://www.legalaffairs.org/issues/January-February-2006/feature_dibbell_janfeb06.msp)on that very topic:
+[Here’s a fascinating and amusing article](http://www.legalaffairs.org/issues/January-February-2006/feature_dibbell_janfeb06.msp)on that very topic:
 
 > “IF YOU HAVEN’T MISSPENT HOURS battling an Arctic Ogre Lord near an Ice Dungeon or been equally profligate spending time reading the published works of the Internal Revenue Service, you probably haven’t wondered whether the United States government will someday tax your virtual winnings from games played over the Internet. The real question is, Why hasn’t it happened already? ” (**from** “[Dragon Slayers or Tax Evaders?”](http://www.legalaffairs.org/issues/January-February-2006/feature_dibbell_janfeb06.msp))
 

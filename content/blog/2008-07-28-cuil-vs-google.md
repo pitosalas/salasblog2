@@ -13,7 +13,7 @@ Anyway, after doing my obvious test searches, like [Curacao](http://www.cuil.com
 ### ipod cradle wireless sync
 See the results for yourself: [Google results](http://www.google.com/search?q=ipod+cradle+wireless+sync&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a) and [Cuil Results](http://www.cuil.com/search?q=ipod+cradle+wireless+sync).
 
-Anyway it’s just one test, but for me the Cuil results for the ipod cradle [produced no results at all! ](http://www.cuil.com/search?q=ipod+cradle+wireless+sync)
+Anyway it’s just one test, but for me the Cuil results for the ipod cradle [produced no results at all!](http://www.cuil.com/search?q=ipod+cradle+wireless+sync)
 
 Give everyone the benefit of the doubt though:
 

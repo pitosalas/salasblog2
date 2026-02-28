@@ -7,7 +7,7 @@ date: "2020-08-29"
 type: "wp"
 wordpress_id: 2763
 ---
-[Ruby style guide from Shopify. ](https://shopify.github.io/ruby-style-guide/) 
+[Ruby style guide from Shopify.](https://shopify.github.io/ruby-style-guide/) 
 
 Great, I think I agree with all of it. We should all be able to live with these!
 

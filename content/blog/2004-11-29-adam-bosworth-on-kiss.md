@@ -18,7 +18,7 @@ Adam Bosworth’s an interesting guy, and very smart, and has been deeply involv
 
 Anyway, if you’ve followed SOAP and the related and simpler standard known as XML-RPC you will have noticed a big difference, particularly in the degree of complexity in each scheme. And by the way, SOAP has spawned a whole series of related formats or standards, one more complicated than the one before it.
 
-Anyway, Adam Bosworth, closely connected to the origins of SOAP, [in this speech gives an ](http://www.adambosworth.net/archives/000031.html)empassioned plea for what we know as the “KISS” principle. Where I went to school, KISS stood for “Keep it Simple Stupid” (yes, I didn’t get out much 🙂 but Adam Bosworth uses to mean Keep it Simple and Sloppy.
+Anyway, Adam Bosworth, closely connected to the origins of SOAP, [in this speech gives an](http://www.adambosworth.net/archives/000031.html)empassioned plea for what we know as the “KISS” principle. Where I went to school, KISS stood for “Keep it Simple Stupid” (yes, I didn’t get out much 🙂 but Adam Bosworth uses to mean Keep it Simple and Sloppy.
 
 This argument about how simple is too simple is an important (and not new) one in our field. [Adam Bosworth’s article](http://www.adambosworth.net/archives/000031.html) is a good piece because it collects together many of the traditional points as well as clever phrases which are used in this debate which we see in our field in many different guises, and it makes you think.
 

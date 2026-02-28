@@ -7,4 +7,4 @@ date: "2022-10-27"
 type: "wp"
 wordpress_id: 4190
 ---
-[ Google Sheets – 🟧Heystack]( https://heystacks.com/?type=sheets) –Discover the best public Google docs
+[Google Sheets – 🟧Heystack](https://heystacks.com/?type=sheets) –Discover the best public Google docs

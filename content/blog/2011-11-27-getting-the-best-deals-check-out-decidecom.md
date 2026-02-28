@@ -7,7 +7,7 @@ date: "2011-11-27"
 type: "wp"
 wordpress_id: 456
 ---
-A **useful** article in the New York Times today, just in time for the holidays. A[ new site that tries to forecast the best time to buy that item you really want. ](http://www.nytimes.com/2011/11/25/business/fridays-deals-may-not-be-the-best.html)It seems to draw a graph showing how the price of, for example, a Nikon 50-300mm Zoom Lens has varied over the last 3 months and whether I should buy it today or wait till next month. It’s a very nicely done site and if it works, it could be very useful. The site is [decide.com.](http://www.decide.com/)
+A **useful** article in the New York Times today, just in time for the holidays. A[new site that tries to forecast the best time to buy that item you really want.](http://www.nytimes.com/2011/11/25/business/fridays-deals-may-not-be-the-best.html)It seems to draw a graph showing how the price of, for example, a Nikon 50-300mm Zoom Lens has varied over the last 3 months and whether I should buy it today or wait till next month. It’s a very nicely done site and if it works, it could be very useful. The site is [decide.com.](http://www.decide.com/)
 
 > 
 “Oren Etzioni writes articles about artificial intelligence for scholarly journals, is a renowned expert on data mining and gained fame when Microsoft paid $115 million for Farecast, an airline-ticket price predictor he founded.

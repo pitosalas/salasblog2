@@ -7,7 +7,7 @@ date: "2012-02-25"
 type: "wp"
 wordpress_id: 383
 ---
-Do you believe that you require 8 hours of sleep to be rested and effective. Well, in this really interesting [article in the BBC News it seems like that pattern might not really be the most natural. ](http://www.bbc.co.uk/news/magazine-16964783)Some experiments conducted came up with some interesting findings:
+Do you believe that you require 8 hours of sleep to be rested and effective. Well, in this really interesting [article in the BBC News it seems like that pattern might not really be the most natural.](http://www.bbc.co.uk/news/magazine-16964783)Some experiments conducted came up with some interesting findings:
 
 > 
 In the early 1990s, psychiatrist Thomas Wehr conducted an experiment in which a group of people were plunged into darkness for 14 hours every day for a month.

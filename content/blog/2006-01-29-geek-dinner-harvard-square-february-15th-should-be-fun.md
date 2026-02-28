@@ -15,7 +15,7 @@ What is this “geek dinner” thing? Well 3 guys **inviting all their geek frie
 
 [This](http://www.darwinianweb.com/archive/2006/206.html) is like, **totally totally informal**! **Anyone** who reads this blog is invited. You don’t have to be a geek, but you probably should like to hang out with them 🙂 
 
-Expect the crowd to be, well, you know, **technical types**. We have **no idea** whether it will be just the three of us (which would be a bit embarassing… ) or who else will come. As it is **totally informal** there are no startup, setup or other commitments. The space is borrowed (thanks [RSSLabs](http://www.opmlworkstation.com/About.aspx) and [Bela](http://blogs.opml.org/belaLabovitch)!) , so, **nothing ventured nothing gained** as they say.
+Expect the crowd to be, well, you know, **technical types**. We have **no idea** whether it will be just the three of us (which would be a bit embarassing…) or who else will come. As it is **totally informal** there are no startup, setup or other commitments. The space is borrowed (thanks [RSSLabs](http://www.opmlworkstation.com/About.aspx) and [Bela](http://blogs.opml.org/belaLabovitch)!) , so, **nothing ventured nothing gained** as they say.
 
 So with no further ado, here are the **coordinates**. 
 

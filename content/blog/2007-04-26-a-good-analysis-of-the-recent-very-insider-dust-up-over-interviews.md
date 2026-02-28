@@ -36,6 +36,6 @@ Check out [this post](http://www.buzzmachine.com/2007/04/26/the-obsolete-intervi
 
  Meanwhile, elsewhere at Wired, they are trying radical new ways working with Jay Rosen and [NewAssignment](http://newassignment.net).net on their [Assignment Zero](http://zero.newassignment.net/). I was interviewed via email and posted the [results](http://www.buzzmachine.com/2007/04/09/my-assignment-zero-interview/) immediately, as did the reporter; they also [solicited questions](http://zero.newassignment.net/assignmentzero/what_questions_should_interviewer_ask_jeff_jarvis) and wrote [about](http://zero.newassignment.net/blog/vivian_martin/apr2007/11/turning_categories_and_interviews_upside_down) doing interviews this way. Not a lot of conversation around that because I was long-winded, pontifical, and boring. But hey, the internet and conversation are meritocracies. We talk about what’s worth talking about. 
 
- [![](http://feeds.feedburner.com/~a/buzzmachine?i=hrx115) ](http://feeds.feedburner.com/~a/buzzmachine?a=hrx115) 
+ [![](http://feeds.feedburner.com/~a/buzzmachine?i=hrx115)](http://feeds.feedburner.com/~a/buzzmachine?a=hrx115) 
 
  (from: [The obsolete interview](http://www.buzzmachine.com/2007/04/26/the-obsolete-interview/))

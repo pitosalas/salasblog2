@@ -13,6 +13,6 @@ After all, Office has had ActiveX controls **forever**, and I would just not be 
 
 Anyway, [this bit seems to be more or less](http://www.activewin.com/awin/comments.asp?HeadlineIndex=33627) consistent with that fear:
 
-> “The power of Microsoft’s branding is so great that **slapping** the labels ‘Live’ and ‘Office’ on a piecemeal bundle of rehashed services seems to have the whole world agog. The **evidence doesn’t** justify the excitement.” (**from**[ “Whatever Office Live is, it ain’t the Web Office](http://www.activewin.com/awin/comments.asp?HeadlineIndex=33627)“)
+> “The power of Microsoft’s branding is so great that **slapping** the labels ‘Live’ and ‘Office’ on a piecemeal bundle of rehashed services seems to have the whole world agog. The **evidence doesn’t** justify the excitement.” (**from**[“Whatever Office Live is, it ain’t the Web Office](http://www.activewin.com/awin/comments.asp?HeadlineIndex=33627)“)
 
 Technorati Tags: [microsoft](http://www.technorati.com/tag/microsoft), [fud](http://www.technorati.com/tag/fud)

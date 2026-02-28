@@ -7,7 +7,7 @@ date: "2012-02-08"
 type: "wp"
 wordpress_id: 396
 ---
-There is always a good deal of **controversy** surrounding elections and in particular, whether an election is ‘fair’ or not. As I have been working on a project with the [Open Source Digital Voting Foundation ](http://www.osdv.org)I’ve been exposed to this from time to time.
+There is always a good deal of **controversy** surrounding elections and in particular, whether an election is ‘fair’ or not. As I have been working on a project with the [Open Source Digital Voting Foundation](http://www.osdv.org)I’ve been exposed to this from time to time.
 
 This controversy arises in many different guises. There is a group that is **absolutely against using computers **in any way shape or form to run elections. Given that we need to count the votes of some 200 Million people in this country alone, it seems **far fetched** to try to do that without a computer involved anywhere.
 

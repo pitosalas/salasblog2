@@ -7,7 +7,7 @@ date: "2007-10-24"
 type: "wp"
 wordpress_id: 1188
 ---
-[Doc Searls has a new post about Facebook](http://blogs.law.harvard.edu/doc/2007/10/23/too-much-facebook-time/) which I came across in [ Scoble’s Link Blog.](http://www.google.com/reader/public/atom/user/14480565058256660224/state/com.google/) It mentions something that I’ve been thinking about too.
+[Doc Searls has a new post about Facebook](http://blogs.law.harvard.edu/doc/2007/10/23/too-much-facebook-time/) which I came across in [Scoble’s Link Blog.](http://www.google.com/reader/public/atom/user/14480565058256660224/state/com.google/) It mentions something that I’ve been thinking about too.
 Is [[tag]Facebook[/tag]](http://brandeis.facebook.com/home.php?) the new [[tag]America Online[/tag]](http://www.aol.com/)? Here’s what I mean: Back in the bad old days, there were services like AOL, [tag]Compuserve[/tag] which were very popular. I was a committed user.
 
 Built-in information sources, built-in instant messaging, built-in ecommerce, built-in email, built-in search, single signon. **Life was good**. Nothing new to learn.

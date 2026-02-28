@@ -7,7 +7,7 @@ date: "2011-09-11"
 type: "wp"
 wordpress_id: 500
 ---
-If you watched (or didn’t) the preceding video by [Jesse Schell ](http://www.schellgames.com/)you might have caught one throw away idea mentioned that really intrigued me: **Eliminate grades **and instead adopt a system modeled more like experience points in a game. The idea he mentions I believe came from a [Professor Lee Sheldon](http://www.escapistmagazine.com/news/view/99224-Professor-Abandons-Grades-for-Experience-Points). Here’s the [link to his course, Gaming the Classroom.](http://gamingtheclassroom.wordpress.com/syllabus/)
+If you watched (or didn’t) the preceding video by [Jesse Schell](http://www.schellgames.com/)you might have caught one throw away idea mentioned that really intrigued me: **Eliminate grades **and instead adopt a system modeled more like experience points in a game. The idea he mentions I believe came from a [Professor Lee Sheldon](http://www.escapistmagazine.com/news/view/99224-Professor-Abandons-Grades-for-Experience-Points). Here’s the [link to his course, Gaming the Classroom.](http://gamingtheclassroom.wordpress.com/syllabus/)
 
 *In my teaching at Brandeis, deciding how to handle grading is one of the **trickier problems** to solve. While my experience teaching so far is quite limited I have come to believe you need to be aware that your students’ expectations about what ‘counts’ towards the grade will **heavily influence **their behavior.*
 

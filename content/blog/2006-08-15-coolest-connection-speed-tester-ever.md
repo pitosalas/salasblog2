@@ -7,4 +7,4 @@ date: "2006-08-15"
 type: "wp"
 wordpress_id: 1451
 ---
-[Speedtest.net is another ](http://www.speedtest.net/) wicked cool way to check how fast your internet connection really is. Tastes good and looks good too!
+[Speedtest.net is another](http://www.speedtest.net/) wicked cool way to check how fast your internet connection really is. Tastes good and looks good too!

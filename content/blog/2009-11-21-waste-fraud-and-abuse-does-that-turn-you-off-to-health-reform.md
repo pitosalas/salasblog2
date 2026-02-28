@@ -12,7 +12,7 @@ The Massachusetts experience as covered in the press here is that the majority o
 
 Here are some other articles that I thought were interesting:
 
-[ Screening Debate Reveals Culture Clash in Medicine](http://www.nytimes.com/2009/11/20/health/20assess.html)
+[Screening Debate Reveals Culture Clash in Medicine](http://www.nytimes.com/2009/11/20/health/20assess.html)
 [The Wrong Side of History](http://www.nytimes.com/2009/11/19/opinion/19kristof.html)
 
 ![](https://i0.wp.com/img.zemanta.com/pixy.gif?w=584)

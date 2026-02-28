@@ -13,7 +13,7 @@ This is really interesting and cute. Maybe too cute. Urban legend?
 
  tags: [fake](https://www.diigo.com/user/pitosalas/fake) [interesting](https://www.diigo.com/user/pitosalas/interesting) [maps](https://www.diigo.com/user/pitosalas/maps) [google maps](https://www.diigo.com/user/pitosalas/google maps)
 
- [GitHub – teialgodeck: An Open-Source Collection of +200 Algorithmic Flash Cards to Help you Preparing your Algorithm & Data Structure Interview ](https://github.com/teivah/algodeck) 
+ [GitHub – teialgodeck: An Open-Source Collection of +200 Algorithmic Flash Cards to Help you Preparing your Algorithm & Data Structure Interview](https://github.com/teivah/algodeck) 
 
 Not that I’m about to go on an interview but this is a nice resource. 
 

@@ -7,4 +7,4 @@ date: "2022-10-22"
 type: "wp"
 wordpress_id: 4180
 ---
-[ Home – Meet Edgar]( https://meetedgar.com/) –Social Media automatic posting tool. Seems popular with the cognizenti
+[Home – Meet Edgar](https://meetedgar.com/) –Social Media automatic posting tool. Seems popular with the cognizenti

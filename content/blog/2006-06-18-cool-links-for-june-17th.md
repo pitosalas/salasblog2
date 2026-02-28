@@ -8,7 +8,7 @@ type: "wp"
 wordpress_id: 1516
 ---
 - 
-[ Guy Kawasaki — Bona tempora volvantu](http://blog.guykawasaki.com/index.rdf)
+[Guy Kawasaki — Bona tempora volvantu](http://blog.guykawasaki.com/index.rdf)
 
 Guy Kawasaki’s blog always has good stuff!
 

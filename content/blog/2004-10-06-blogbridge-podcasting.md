@@ -14,7 +14,7 @@ It turns out that there’s a new term floating around, **PodCasting**, that des
 
 From a technical viewpoint what’s interesting is that people are using RSS and enclosures to integrate this into the world of Blogs. That is, there are some rss feeds, which are all enclosures, which are specifically designed to be handled by a special kind of reader that presents a list to the user, let’s them pick the recordings they want and then in background, download them to the pc and then onto the attached iPod.
 
-**This will be a [BlogBridge ](http://www.blogbridge.com)feature in the not too distant future.**
+**This will be a [BlogBridge](http://www.blogbridge.com)feature in the not too distant future.**
 
 Here’s how it will work. There will be a kind of Channel called a PodCaster Channel. It will be similar to a blog or other feed channel, with two exceptions.
 

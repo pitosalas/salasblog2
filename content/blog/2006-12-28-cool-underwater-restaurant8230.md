@@ -9,7 +9,7 @@ wordpress_id: 1373
 ---
 Check out [this 
  post](http://crave.cnet.com/8301-1_105-9670397-1.html?part=rss&tag=feed&subj=Crave) from [Crave 
- RSS ](http://crave.cnet.com/?part=rss&tag=feed&subj=Crave):
+ RSS](http://crave.cnet.com/?part=rss&tag=feed&subj=Crave):
 
 > ![](https://i0.wp.com/i.i.com.com/cnwk.1d/i/bto/20061228/under_water_restaurant_525x378.jpg?resize=525%2C378)
 

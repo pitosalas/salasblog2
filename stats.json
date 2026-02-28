@@ -3,16 +3,20 @@
     "human": 6
   },
   "/raindrops/": {
-    "human": 17
+    "human": 17,
+    "unknown": 21
   },
   "/raindrops/test-raindrop.html": {
-    "human": 2
+    "human": 2,
+    "unknown": 3
   },
   "/raindrops/example-article.html": {
-    "human": 2
+    "human": 2,
+    "unknown": 3
   },
   "/raindrops/raindrop1.html": {
-    "human": 2
+    "human": 2,
+    "unknown": 3
   },
   "/": {
     "human": 8

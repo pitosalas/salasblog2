@@ -17,7 +17,7 @@ If a commercial entity wants to use the code to build a commercial business, we 
 
 As it turns out, this is not an unusual set of objectives, and it is pretty straightforward to achieve. 
 
-As of BlogBridge 0.5.4, the **product will be licensed under the GPL** (rather than the [LGPL ](http://www.gnu.org/copyleft/lesser.html)which is what we had before.) 
+As of BlogBridge 0.5.4, the **product will be licensed under the GPL** (rather than the [LGPL](http://www.gnu.org/copyleft/lesser.html)which is what we had before.) 
 
 The effect of this is that the first objective above is fully achieved **implicitly**. The second objective is achieved, indirectly: 
 

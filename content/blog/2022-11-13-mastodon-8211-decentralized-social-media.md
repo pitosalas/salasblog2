@@ -7,4 +7,4 @@ date: "2022-11-13"
 type: "wp"
 wordpress_id: 4198
 ---
-[ Mastodon – Decentralized social media]( https://joinmastodon.org/) –Learn more about Mastodon, the radically different, free and open-source decentralized social media platform.
+[Mastodon – Decentralized social media](https://joinmastodon.org/) –Learn more about Mastodon, the radically different, free and open-source decentralized social media platform.

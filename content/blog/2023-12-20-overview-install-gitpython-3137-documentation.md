@@ -7,4 +7,4 @@ date: "2023-12-20"
 type: "wp"
 wordpress_id: 4699
 ---
-[ Overview / Install — GitPython 3.1.37 documentation]( https://gitpython.readthedocs.io/en/stable/intro.html) –null
+[Overview / Install — GitPython 3.1.37 documentation](https://gitpython.readthedocs.io/en/stable/intro.html) –null

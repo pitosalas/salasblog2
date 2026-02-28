@@ -22,7 +22,7 @@ The crux of the issue comes down to a concept known as **idempotency**. An opera
 
 According to the HTTP 1.1 specification, GET, HEAD, PUT and DELETE are idempotent, while POST is not.
 
-That is, a sequence of multiple attempts to PUT data to a URL will result in the same resource state as a single attempt to PUT data to that URL, but the same cannot be said of a POST request.” (from [“Put or Post: The Rest of the Story”](http://jcalcote.wordpress.com/2008/10/16/put-or-post-the-rest-of-the-story/) )
+That is, a sequence of multiple attempts to PUT data to a URL will result in the same resource state as a single attempt to PUT data to that URL, but the same cannot be said of a POST request.” (from [“Put or Post: The Rest of the Story”](http://jcalcote.wordpress.com/2008/10/16/put-or-post-the-rest-of-the-story/))
 
 **Idempotency**, hello? Viagra anyone?
 

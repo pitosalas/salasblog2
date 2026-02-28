@@ -43,7 +43,7 @@ Write what look like rich applications while writing very little code. Looks int
 
  tags: [alan](https://www.diigo.com/user/pitosalas/alan) [code](https://www.diigo.com/user/pitosalas/code) [application](https://www.diigo.com/user/pitosalas/application) [platform](https://www.diigo.com/user/pitosalas/platform)
 
- [oscarmorrison/md-page: ](https://github.com/oscarmorrison/md-page?utm_source=hackernewsletter&utm_medium=email&utm_term=show_hn) 
+ [oscarmorrison/md-page:](https://github.com/oscarmorrison/md-page?utm_source=hackernewsletter&utm_medium=email&utm_term=show_hn) 
 
 Quite cool way to write a web page with markdown instead of with html!
 

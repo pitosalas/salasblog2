@@ -9,7 +9,7 @@ wordpress_id: 339
 ---
 Americans Elect got Tom Friedman to endorse their effort to get a third party presidential ballot in November. He wrote about it and convinced me too that it was a good idea. A month or two ago I started having misgivings and now, it seems like things are really turning sour for Americans Elect. 
 
-An [article in Techpresident.Com ](http://techpresident.com/news/22148/op-ed-americans-elect-they-built-it-and-nobody-came#.T6Pvbfdd82E.twitter)paints a pretty bleak picture: 
+An [article in Techpresident.Com](http://techpresident.com/news/22148/op-ed-americans-elect-they-built-it-and-nobody-came#.T6Pvbfdd82E.twitter)paints a pretty bleak picture: 
 
 > 
 “Americans Elect is the best example of the Field of Dreams Fallacy I have ever observed. The organization spent a reported $9 million building a cutting edge platform, assuming that high-priced technology and a mainstream media blitz would result in a centrist groundswell that revolutionizes American politics. It built no participatory community, and assumed that the Internet would magically serve one up for them. The result has been an all-too-predictable failure.” (**from** [Techpresident.com](http://techpresident.com/news/22148/op-ed-americans-elect-they-built-it-and-nobody-came#.T6Pvbfdd82E.twitter))

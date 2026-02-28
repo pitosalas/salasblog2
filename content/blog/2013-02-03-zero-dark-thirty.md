@@ -7,7 +7,7 @@ date: "2013-02-03"
 type: "wp"
 wordpress_id: 249
 ---
-I saw this movie last night and really thought it was great. I had read some[ negative commentary about Zero Dark Thirty](http://www.nybooks.com/articles/archives/2013/feb/07/disturbing-misleading-zero-dark-thirty/?pagination=false):
+I saw this movie last night and really thought it was great. I had read some[negative commentary about Zero Dark Thirty](http://www.nybooks.com/articles/archives/2013/feb/07/disturbing-misleading-zero-dark-thirty/?pagination=false):
 
 > 
 “At the same time, a number of journalists and public officials—including three United States senators—have excoriated Zero Dark Thirty. Their main complaint is that the film greatly overstates the role played by torture—or “enhanced interrogation techniques,” in the CIA’s terrifying euphemism—in extracting from al-Qaeda-affiliated detainees information that ultimately led to the discovery of Osama bin Laden’s hideout in Abbottabad, Pakistan, where he was killed by Navy SEALs on May 2, 2011.” (from [New York Review of Books](http://www.nybooks.com/articles/archives/2013/feb/07/disturbing-misleading-zero-dark-thirty/?pagination=false))

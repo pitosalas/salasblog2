@@ -19,7 +19,7 @@ wordpress_id: 2394
 
  tags: [cucumber](https://www.diigo.com/user/pitosalas/cucumber) [rails](https://www.diigo.com/user/pitosalas/rails)
 
- [10 Common Git Problems and How to Fix Them – DEV Community ](https://dev.to/citizen428/10-common-git-problems-and-how-to-fix-them-234o?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
+ [10 Common Git Problems and How to Fix Them – DEV Community](https://dev.to/citizen428/10-common-git-problems-and-how-to-fix-them-234o?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
  tags: [git](https://www.diigo.com/user/pitosalas/git) [problems](https://www.diigo.com/user/pitosalas/problems) [fix](https://www.diigo.com/user/pitosalas/fix)
 

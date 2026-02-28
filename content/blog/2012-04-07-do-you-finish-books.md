@@ -7,7 +7,7 @@ date: "2012-04-07"
 type: "wp"
 wordpress_id: 356
 ---
-I **love** this article. It’s by an [actual author ](http://tim-parks.com/)talking about whether it matters if a reader reads a book through to the very end.
+I **love** this article. It’s by an [actual author](http://tim-parks.com/)talking about whether it matters if a reader reads a book through to the very end.
 
 He starts with the basics, claiming that serious (‘**mature**‘) readers don’t feel self-imposed pressure to read a book to its very last syllable:
 
@@ -24,6 +24,6 @@ He then gets into much subtler ground: what the experience is of the author or w
 The article has several other **neat scenarios** and examples and ends with this, from the point of view of the author himself:
 
 > 
-“And finally I wonder if it isnât perhaps time that I learned, in my own novels, to drop readers a hint or two that, from this or that moment on, they have my permission to let the book go just as and when they choose.” (**from** [Why Finish Books)](http://www.nybooks.com/blogs/nyrblog/2012/mar/13/why-finish-books/)
+“And finally I wonder if it isn’t perhaps time that I learned, in my own novels, to drop readers a hint or two that, from this or that moment on, they have my permission to let the book go just as and when they choose.” (**from** [Why Finish Books)](http://www.nybooks.com/blogs/nyrblog/2012/mar/13/why-finish-books/)
 
 If you like reading, you will [like reading this article!](http://www.nybooks.com/blogs/nyrblog/2012/mar/13/why-finish-books/)

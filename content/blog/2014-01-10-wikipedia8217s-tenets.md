@@ -21,7 +21,7 @@ Anyway the present article is interesting to me because I had not previously see
 
  In fact the only one I was aware of was “Neutral POV”. 
 
-I hesitate to mention this (and why will be clear in a second) but there are three wikipedia articles that mention me: [Pito Salas](http://en.wikipedia.org/wiki/Pito_Salas), [Lotus Improv ](http://en.wikipedia.org/wiki/Lotus_Improv)and [Pivot Table](http://en.wikipedia.org/wiki/Pivot_table).
+I hesitate to mention this (and why will be clear in a second) but there are three wikipedia articles that mention me: [Pito Salas](http://en.wikipedia.org/wiki/Pito_Salas), [Lotus Improv](http://en.wikipedia.org/wiki/Lotus_Improv)and [Pivot Table](http://en.wikipedia.org/wiki/Pivot_table).
 
 Let’s be honest, being mentioned in Wikipedia at all is an honor and good for my personal brand/reputation. I don’t want to mess with that. Because of that I don’t know who wrote them and haven’t really paid attention to them over the years. And as I write that sentence, I think to myself, “Wait. I vaguely remember fixing a typo or a date in one of them years and years ago; is it safe to make a claim that I didn’t touch them? Will I be punished? So I remove the statement that I never touched them.”
 

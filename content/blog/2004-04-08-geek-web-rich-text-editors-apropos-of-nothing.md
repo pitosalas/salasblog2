@@ -17,7 +17,7 @@ Basically I am looking for a Rich Text Editor that can be embedded in a browser 
 
 So far, here’s what I’ve come up with:
 
-[This one ](http://www.kevinroth.com/rte/demo.htm)looks nice, is lightweight and sufficiently functional.
+[This one](http://www.kevinroth.com/rte/demo.htm)looks nice, is lightweight and sufficiently functional.
 
 [This one is much heavier weight, and is very functional](http://kupu.oscom.org/)
 

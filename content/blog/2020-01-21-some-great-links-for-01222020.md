@@ -13,7 +13,7 @@ A fantastic efficient way to review most of the top methods and functions in pyt
 
  tags: [Python](https://www.diigo.com/user/pitosalas/Python) [howto](https://www.diigo.com/user/pitosalas/howto) [learning](https://www.diigo.com/user/pitosalas/learning)
 
- [Notes on algorithms – DEV Community ](https://dev.to/hexangel616/notes-on-algorithms-36pi) 
+ [Notes on algorithms – DEV Community](https://dev.to/hexangel616/notes-on-algorithms-36pi) 
 
 Review in a straightforward manner the complexity of the key sort algorithms 
 
