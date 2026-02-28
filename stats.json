@@ -1,7 +1,6 @@
 {
   "/pages/": {
-    "human": 6,
-    "unknown": 2
+    "human": 6
   },
   "/raindrops/": {
     "human": 17,
@@ -20,7 +19,7 @@
     "unknown": 3
   },
   "/": {
-    "human": 7
+    "human": 8
   },
   "/raindrops/programming/": {
     "human": 1
