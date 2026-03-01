@@ -202,17 +202,26 @@ app = FastAPI(
 app.add_middleware(SessionMiddleware, secret_key=os.getenv("SESSION_SECRET", "fallback-dev-key"))
 
 # Custom endpoints to fix FastAPI StaticFiles HEAD/GET inconsistency
+def _safe_resolve(base_dir: Path, file_path: str) -> Path | None:
+    """Resolve file_path within base_dir, blocking traversal, symlink escapes, and hidden files."""
+    if any(part.startswith(".") for part in Path(file_path).parts):
+        return None
+    full_path = (base_dir / file_path).resolve()
+    if not full_path.is_relative_to(base_dir.resolve()):
+        return None
+    return full_path
+
+
 @app.api_route("/static/{file_path:path}", methods=["GET", "HEAD"])
 async def serve_static_files(file_path: str, request: Request):
     """Custom static file serving with consistent GET/HEAD behavior"""
     if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="No output directory configured")
-    
-    full_path = config["output_dir"] / "static" / file_path
-    
-    if not full_path.exists() or not full_path.is_file():
+
+    full_path = _safe_resolve(config["output_dir"] / "static", file_path)
+    if full_path is None or not full_path.exists() or not full_path.is_file():
         raise HTTPException(status_code=404, detail="Not found")
-    
+
     # Use mimetypes module for automatic MIME type detection
     content_type, _ = mimetypes.guess_type(str(full_path))
     if not content_type:
@@ -224,9 +233,11 @@ async def serve_static_files(file_path: str, request: Request):
             content_type = "text/html"
         else:
             content_type = "application/octet-stream"
-    
-    # Return content for GET, empty for HEAD
-    content = full_path.read_bytes() if request.method == "GET" else b""
+
+    try:
+        content = full_path.read_bytes() if request.method == "GET" else b""
+    except (PermissionError, OSError):
+        raise HTTPException(status_code=404, detail="Not found")
     return Response(content=content, media_type=content_type)
 
 @app.api_route("/blog/{file_path:path}", methods=["GET", "HEAD"])
@@ -248,6 +259,10 @@ async def serve_blog_files(file_path: str, request: Request):
     if not content_type:
         content_type = "text/html"
     
+    if request.method == "GET" and str(full_path).endswith(".html"):
+        vtype = classify_visitor(request.headers.get("user-agent", ""), request.headers.get("accept-language", ""))
+        get_counter().increment(f"/blog/{file_path}", vtype)
+
     # Return content for GET, empty for HEAD
     content = full_path.read_bytes() if request.method == "GET" else b""
     return Response(content=content, media_type=content_type)
@@ -306,13 +321,18 @@ async def serve_raindrops_files(file_path: str, request: Request):
     if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="Not found")
 
-    full_path = config["output_dir"] / "raindrops" / file_path
+    base_dir = config["output_dir"] / "raindrops"
+    full_path = _safe_resolve(base_dir, file_path) if file_path else base_dir / "index.html"
+    if full_path is None:
+        raise HTTPException(status_code=404, detail="Not found")
 
-    # Handle directory index
-    if full_path.is_dir():
-        full_path = full_path / "index.html"
-
-    if not full_path.exists() or not full_path.is_file():
+    try:
+        # Handle directory index
+        if full_path.is_dir():
+            full_path = full_path / "index.html"
+        if not full_path.exists() or not full_path.is_file():
+            raise HTTPException(status_code=404, detail="Not found")
+    except (PermissionError, OSError):
         raise HTTPException(status_code=404, detail="Not found")
 
     if request.method == "GET" and str(full_path).endswith(".html"):
@@ -323,8 +343,10 @@ async def serve_raindrops_files(file_path: str, request: Request):
     if not content_type:
         content_type = "text/html"
 
-    # Return content for GET, empty for HEAD
-    content = full_path.read_bytes() if request.method == "GET" else b""
+    try:
+        content = full_path.read_bytes() if request.method == "GET" else b""
+    except (PermissionError, OSError):
+        raise HTTPException(status_code=404, detail="Not found")
     return Response(content=content, media_type=content_type)
 
 # Mount static files if output directory exists
@@ -434,14 +456,16 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
         logger.info(f"{content_type.title()} saved successfully: {filename}")
         
         # Regenerate affected content
+        regen_warning = None
         try:
             generator = SiteGenerator()
             generator.incremental_regenerate_post(filename, content_type)
             logger.info(f"Site regenerated after saving {content_type}: {filename}")
         except Exception as regen_error:
+            regen_warning = f"Regeneration failed: {regen_error}"
             logger.error(f"Site regeneration failed after saving {content_type} {filename}: {regen_error}")
-        
-        return True
+
+        return regen_warning
     except Exception as e:
         logger.error(f"Error saving {content_type} {filename}: {e}")
         raise HTTPException(status_code=500, detail=f"Error saving {content_type}: {str(e)}")
@@ -838,15 +862,16 @@ async def admin_stats_page(request: Request):
     return HTMLResponse(content=render_template("admin_stats.html", context))
 
 @app.get("/api/stats")
-async def api_stats(request: Request):
-    """Return visit stats as JSON"""
+async def api_stats(request: Request, period: str | None = None):
+    """Return visit stats as JSON, optionally filtered by period (today/this_week/this_month/this_year)."""
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=403, detail="Not authenticated")
-    counts = get_counter().get_all()
+    counts = get_counter().get_all(period=period)
     total = sum(sum(types.values()) for _, types in counts)
     return {
         "counts": [{"path": p, "total": sum(t.values()), "by_type": t} for p, t in counts],
         "total": total,
+        "period": period,
     }
 
 
@@ -887,13 +912,12 @@ async def save_edited_post(filename: str, request: Request, title: str = Form(..
         raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
 
     # Save using shared function
-    save_content_item(filename, 'blog', title, date, type, content, tags)
-    
-    return JSONResponse(content={
-        "status": "success",
-        "message": "Post updated successfully",
-        "filename": filename
-    })
+    regen_warning = save_content_item(filename, 'blog', title, date, type, content, tags)
+
+    response = {"status": "success", "message": "Post updated successfully", "filename": filename}
+    if regen_warning:
+        response["warning"] = regen_warning
+    return JSONResponse(content=response)
 
 @app.get("/admin/new-post")
 async def new_post_page(request: Request):
@@ -930,14 +954,17 @@ async def create_new_post(request: Request, title: str = Form(...),
             raise HTTPException(status_code=400, detail=f"A post with filename '{filename}' already exists")
 
         # Save using shared function
-        save_content_item(filename, 'blog', title, date, type, content, tags)
+        regen_warning = save_content_item(filename, 'blog', title, date, type, content, tags)
 
-        return JSONResponse(content={
+        response = {
             "status": "success",
             "message": "Post created successfully",
             "filename": filename,
             "url": f"/blog/{filename.replace('.md', '.html')}"
-        })
+        }
+        if regen_warning:
+            response["warning"] = regen_warning
+        return JSONResponse(content=response)
         
     except HTTPException:
         raise
@@ -990,13 +1017,12 @@ async def save_edited_page(filename: str, request: Request, title: str = Form(..
         raise HTTPException(status_code=404, detail=f"Page not found: {filename}")
     
     # Save using shared function
-    save_content_item(filename, 'pages', title, date, type, content, [])
+    regen_warning = save_content_item(filename, 'pages', title, date, type, content, [])
 
-    return JSONResponse(content={
-        "status": "success",
-        "message": "Page updated successfully",
-        "filename": filename
-    })
+    response = {"status": "success", "message": "Page updated successfully", "filename": filename}
+    if regen_warning:
+        response["warning"] = regen_warning
+    return JSONResponse(content=response)
 
 @app.get("/admin/new-page")
 async def new_page_page(request: Request):
@@ -1032,14 +1058,17 @@ async def create_new_page(request: Request, title: str = Form(...),
             raise HTTPException(status_code=400, detail=f"A page with filename '{filename}' already exists")
         
         # Save using shared function
-        save_content_item(filename, 'pages', title, date, type, content, [])
+        regen_warning = save_content_item(filename, 'pages', title, date, type, content, [])
 
-        return JSONResponse(content={
+        response = {
             "status": "success",
             "message": "Page created successfully",
             "filename": filename,
             "url": f"/pages/{filename.replace('.md', '.html')}"
-        })
+        }
+        if regen_warning:
+            response["warning"] = regen_warning
+        return JSONResponse(content=response)
         
     except HTTPException:
         raise
@@ -1491,31 +1520,35 @@ async def serve_root_files(path: str, request: Request):
     # Only handle root-level files, not paths that start with mounted directories
     if '/' in path or path.startswith(('blog', 'pages', 'static')):
         raise HTTPException(status_code=404, detail="Not found")
-    
+
     if not config.get("output_dir"):
         raise HTTPException(status_code=404, detail="Not found")
-    
-    file_path = config["output_dir"] / path
-    
+
+    file_path = _safe_resolve(config["output_dir"], path)
+    if file_path is None:
+        raise HTTPException(status_code=404, detail="Not found")
+
     # If it's a directory, try index.html
     if file_path.is_dir():
         file_path = file_path / "index.html"
-    
+
     # If no extension, try adding .html
     if not file_path.suffix and not file_path.exists():
-        file_path = config["output_dir"] / f"{path}.html"
-    
+        alt = _safe_resolve(config["output_dir"], f"{path}.html")
+        if alt is not None:
+            file_path = alt
+
     if file_path.exists() and file_path.is_file():
-        # Use mimetypes module for automatic MIME type detection
         content_type, _ = mimetypes.guess_type(str(file_path))
         if not content_type:
             content_type = "text/html" if file_path.suffix == ".html" else "text/plain"
-        
-        # Return content for GET, empty for HEAD
-        content = file_path.read_bytes() if request.method == "GET" else b""
+
+        try:
+            content = file_path.read_bytes() if request.method == "GET" else b""
+        except (PermissionError, OSError):
+            raise HTTPException(status_code=404, detail="Not found")
         return Response(content=content, media_type=content_type)
-    
-    # Return 404 for missing files
+
     raise HTTPException(status_code=404, detail="Not found")
 
 if __name__ == "__main__":

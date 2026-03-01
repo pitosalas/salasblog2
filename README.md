@@ -8,11 +8,13 @@ Personal blogging platform: Python static site generator + FastAPI server, with 
 - Three content types: blog posts, raindrops (link blog), static pages
 - Jinja2 HTML templating with Bootstrap 5
 - XML-RPC Blogger API (MarsEdit compatible)
-- Web admin interface with create/edit/delete and tag selection
+- Web admin interface with create/edit/delete, tag selection, and per-post edit/derive buttons
 - Tag pages: clickable tag badges link to `/tags/<tag>/` listing pages
 - Raindrop.io bookmark sync (scheduled + on-demand) with collection filtering
 - Dual content storage: Fly.io persistent volume + GitHub backup
 - Scheduled Git sync and Raindrop sync
+- Visitor statistics with per-period filtering (today/week/month/year) and type breakdown (human, bot, crawler)
+- Hardened static file serving: path traversal, symlink, and hidden file protection
 
 ## Quick Start
 
@@ -35,7 +37,7 @@ uv run bg deploy                           # Deploy to Fly.io (runs fly deploy)
 ## Testing
 
 ```bash
-uv run pytest tests/                       # Run all core tests (202 tests)
+uv run pytest tests/                       # Run all core tests (434 tests)
 ```
 
 CI runs automatically on every push via GitHub Actions.

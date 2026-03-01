@@ -9,8 +9,8 @@
       "Bash(git:*)",
       "Bash(uv run:*)",
       "Bash(fly deploy:*)",
-      "Bash(/Users/pitosalas/mydev/salasblog2/.j2/tasks/F25.md:*)",
-      "Bash(.j2/state.md:*)"
+      "Bash(python:*)",
+      "Bash(fly logs:*)"
     ],
     "deny": [
       "Read(output)",

@@ -274,6 +274,7 @@ class SiteGenerator:
         if content_type == 'pages':
             return  # Pages don't have listing pages
 
+        posts = sorted(posts, key=lambda x: x.get('date', ''), reverse=True)
         posts_per_page = 20  # Show 20 posts per page
         total_posts = len(posts)
         total_pages = max(1, (total_posts + posts_per_page - 1) // posts_per_page)  # Ensure at least 1 page
@@ -412,8 +413,10 @@ class SiteGenerator:
         """Generate the home page"""
         # Get recent posts for home page
         posts_count = int(os.environ.get("HOME_POSTS_COUNT", "5"))
-        recent_blog_posts = blog_posts[:posts_count] if blog_posts else []
-        recent_raindrops = raindrops[:posts_count] if raindrops else []
+        sorted_blog = sorted(blog_posts, key=lambda x: x.get('date', ''), reverse=True)
+        sorted_raindrops = sorted(raindrops, key=lambda x: x.get('date', ''), reverse=True)
+        recent_blog_posts = sorted_blog[:posts_count] if sorted_blog else []
+        recent_raindrops = sorted_raindrops[:posts_count] if sorted_raindrops else []
         
         context = {
             'recent_posts': recent_blog_posts,

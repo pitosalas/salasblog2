@@ -46,10 +46,7 @@ class TestPagesLiveServer:
         response = requests.get(f"{base_url}/pages/", timeout=10)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Check for header structure
-        header = soup.find('header')
-        assert header is not None, "Header element should exist"
-        
+        # Check for nav structure (Bootstrap navbar)
         nav = soup.find('nav')
         assert nav is not None, "Navigation element should exist"
         
@@ -70,11 +67,11 @@ class TestPagesLiveServer:
         response = requests.get(f"{base_url}/pages/", timeout=10)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # Look for page cards or similar content structure
-        page_cards = soup.find_all('div', class_='page-card')
+        # Look for page cards (Bootstrap card layout)
+        page_cards = soup.find_all('div', class_='card')
         if not page_cards:
-            # Try alternative selectors if page-card doesn't exist
-            page_cards = soup.find_all('article') or soup.find_all('div', class_='page')
+            # Fallback to alternative selectors
+            page_cards = soup.find_all('article') or soup.find_all('div', class_='page-card')
         
         assert len(page_cards) > 0, "Should have at least one page listed"
         

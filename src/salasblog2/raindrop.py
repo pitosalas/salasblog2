@@ -9,7 +9,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
-from .utils import generate_raindrop_filename, format_raindrop_as_markdown
+from .utils import generate_raindrop_filename, format_raindrop_as_markdown, _parse_iso_date
 
 # Constants
 DEFAULT_PAGE_SIZE = 50  # Items per page when fetching from Raindrop.io API
@@ -144,13 +144,12 @@ class RaindropDownloader:
         }
         
         if since_timestamp:
-            try:
-                since_dt = datetime.fromisoformat(since_timestamp.replace("Z", "+00:00"))
+            since_dt = _parse_iso_date(since_timestamp)
+            if since_dt:
                 since_unix = int(since_dt.timestamp())
                 params["lastUpdate"] = since_unix
-            except Exception as e:
-                print(f"\\nWarning: Invalid timestamp format {since_timestamp}: {e}")
-                print("Proceeding without timestamp filter...")
+            else:
+                print(f"\nWarning: Invalid timestamp format {since_timestamp}, proceeding without timestamp filter...")
 
         response  = requests.get(
             f"{self.base_url}/raindrops/0",

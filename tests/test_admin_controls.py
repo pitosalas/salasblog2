@@ -41,3 +41,19 @@ def test_blog_post_nav_buttons_use_outline_secondary():
     """Prev/next nav buttons use btn-outline-secondary, visually distinct from action buttons."""
     content = (TEMPLATES_DIR / "blog_post.html").read_text()
     assert "btn-outline-secondary" in content
+
+
+def test_new_post_button_hidden_via_d_none_not_inline_style():
+    """admin-new-post nav item must use d-none class, not inline style, so JS classList.remove works."""
+    content = (TEMPLATES_DIR / "base.html").read_text()
+    assert 'admin-new-post d-none' in content
+    # Inline style on this element would make classList.remove('d-none') ineffective
+    assert 'admin-new-post" style="display: none;"' not in content
+
+
+def test_admin_raindrop_tab_hidden_by_default():
+    """tab-raindrop pane must carry d-none so Sync Raindrops button is hidden on page load."""
+    content = (TEMPLATES_DIR / "admin.html").read_text()
+    assert 'id="tab-raindrop"' in content
+    # The pane must have d-none so it doesn't bleed into other tabs (e.g. Stats)
+    assert 'admin-pane d-none" id="tab-raindrop"' in content

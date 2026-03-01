@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Test suite for raindrop collection filtering functionality."""
-"""Author: Pito Salas and Claude Code"""
-"""Open Source Under MIT license"""
+# test_raindrop_collections.py — Tests for raindrop collection filtering
+# Author: Pito Salas and Claude Code
+# Open Source Under MIT license
 
 import pytest
 from pathlib import Path
@@ -57,23 +57,17 @@ def test_extract_unique_collections_empty_list():
     assert result == []
 
 
-def test_slugify_collection_lowercase():
-    assert slugify_collection('Reading') == 'reading'
-    assert slugify_collection('TOOLS') == 'tools'
-
-
-def test_slugify_collection_spaces_to_hyphens():
-    assert slugify_collection('My Collection') == 'my-collection'
-    assert slugify_collection('Web  Dev') == 'web-dev'
-
-
-def test_slugify_collection_strips_special_chars():
-    assert slugify_collection('Tools & Utilities') == 'tools-utilities'
-    assert slugify_collection('C++') == 'c'
-
-
-def test_slugify_collection_strips_hyphens():
-    assert slugify_collection('-Reading-') == 'reading'
+@pytest.mark.parametrize("input_str,expected", [
+    ('Reading', 'reading'),
+    ('TOOLS', 'tools'),
+    ('My Collection', 'my-collection'),
+    ('Web  Dev', 'web-dev'),
+    ('Tools & Utilities', 'tools-utilities'),
+    ('C++', 'c'),
+    ('-Reading-', 'reading'),
+])
+def test_slugify_collection(input_str, expected):
+    assert slugify_collection(input_str) == expected
 
 
 def test_collection_buttons_render_in_template():
@@ -140,28 +134,23 @@ def test_collection_filtered_pages_generated(tmp_path):
     ]
     collections = ['Reading', 'Tools']
 
-    # Create temporary output directory
-    original_output = generator.output_dir
     generator.output_dir = tmp_path / "output"
     generator.output_dir.mkdir(exist_ok=True)
 
-    try:
-        generator.generate_collection_filtered_pages(raindrops, collections)
+    generator.generate_collection_filtered_pages(raindrops, collections)
 
-        # Check that collection directories were created
-        assert (generator.output_dir / "raindrops" / "reading" / "index.html").exists()
-        assert (generator.output_dir / "raindrops" / "tools" / "index.html").exists()
+    # Check that collection directories were created
+    assert (generator.output_dir / "raindrops" / "reading" / "index.html").exists()
+    assert (generator.output_dir / "raindrops" / "tools" / "index.html").exists()
 
-        # Check that Reading page has 2 posts
-        reading_html = (generator.output_dir / "raindrops" / "reading" / "index.html").read_text()
-        assert 'Post 1' in reading_html
-        assert 'Post 3' in reading_html
-        assert 'Post 2' not in reading_html
+    # Check that Reading page has 2 posts
+    reading_html = (generator.output_dir / "raindrops" / "reading" / "index.html").read_text()
+    assert 'Post 1' in reading_html
+    assert 'Post 3' in reading_html
+    assert 'Post 2' not in reading_html
 
-        # Check that Tools page has 1 post
-        tools_html = (generator.output_dir / "raindrops" / "tools" / "index.html").read_text()
-        assert 'Post 2' in tools_html
-        assert 'Post 1' not in tools_html
-        assert 'Post 3' not in tools_html
-    finally:
-        generator.output_dir = original_output
+    # Check that Tools page has 1 post
+    tools_html = (generator.output_dir / "raindrops" / "tools" / "index.html").read_text()
+    assert 'Post 2' in tools_html
+    assert 'Post 1' not in tools_html
+    assert 'Post 3' not in tools_html

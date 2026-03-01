@@ -4,12 +4,15 @@ These functions are completely independent and reusable.
 """
 import os
 import re
+import logging
 import markdown
 import frontmatter
 import yaml
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+
+_logger = logging.getLogger(__name__)
 
 
 BLOG_TAGS = [
@@ -132,7 +135,12 @@ def extract_first_paragraph(content: str) -> str:
 def parse_date_for_sorting(date_str: Optional[str]) -> datetime:
     """Parse date string for sorting, returns datetime.min if parsing fails."""
     date_obj = _parse_iso_date(date_str)
-    return date_obj if date_obj else datetime.min
+    if date_obj is None:
+        _logger.warning(
+            f"Unparseable date '{date_str}' — post will sort to bottom of listings"
+        )
+        return datetime.min
+    return date_obj
 
 
 # Module-level singleton for markdown processor
@@ -170,13 +178,11 @@ def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
             post = frontmatter.load(f)
         
         # Debug logging to see what content we're actually getting
-        import logging
-        logger = logging.getLogger(__name__)
         if post.content and len(post.content) > 0:
             content_start = post.content[:100].replace('\n', ' ')
-            logger.debug(f"Raw content from {file_path.name}: {content_start}")
+            _logger.debug(f"Raw content from {file_path.name}: {content_start}")
             if post.content.startswith('<'):
-                logger.warning(f"File {file_path.name} contains HTML, not markdown: {content_start}")
+                _logger.warning(f"File {file_path.name} contains HTML, not markdown: {content_start}")
         
         return {
             'metadata': post.metadata,
@@ -324,7 +330,7 @@ def create_filename_from_title(title: str) -> str:
 
 def generate_raindrop_filename(raindrop: Dict[str, Any], counter: int) -> str:
     """Create markdown filename from raindrop data and counter."""
-    created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
+    created = _parse_iso_date(raindrop.get("created", "")) or datetime.now()
     date_str = created.strftime("%y-%m-%d")
 
     # Get title and clean it for filename
@@ -359,15 +365,13 @@ def slugify_collection(name: str) -> str:
 
 def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
     """Convert raindrop data to markdown with YAML frontmatter."""
-    created = datetime.fromisoformat(raindrop["created"].replace("Z", "+00:00"))
-    
+    created = _parse_iso_date(raindrop.get("created", "")) or datetime.now()
+
     # Parse lastUpdate if available
     last_update = None
     if raindrop.get("lastUpdate"):
-        try:
-            last_update = datetime.fromisoformat(raindrop["lastUpdate"].replace("Z", "+00:00")).isoformat()
-        except:
-            last_update = raindrop.get("lastUpdate")
+        parsed = _parse_iso_date(raindrop["lastUpdate"])
+        last_update = parsed.isoformat() if parsed else raindrop.get("lastUpdate")
 
     # Keep tags as individual list items for proper YAML formatting
     tags = raindrop.get("tags", [])

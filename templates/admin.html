@@ -36,19 +36,18 @@
         </div>
 
         <div class="d-flex flex-wrap gap-2 mb-4" id="adminTabs">
-            <button class="btn btn-primary btn-sm admin-tab active" onclick="showTab('tab-raindrop', this)">Raindrop</button>
-            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-generate', this)">Generate</button>
-            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-datasync', this)">Data Sync</button>
-            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-scheduler', this)">Scheduler</button>
-            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-pages', this)">Pages Sync</button>
-            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-stats', this)">Stats</button>
-            <button class="btn btn-danger btn-sm admin-tab" onclick="showTab('tab-emergency', this)">Emergency</button>
-            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-api', this)">API</button>
+            <button class="btn btn-primary btn-sm admin-tab active" onclick="showTab('tab-stats', this)">Stats</button>
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-propose', this)">Propose</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-generate', this)">Generate</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-scheduler', this)">Scheduler</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-datasync', this)">Data Sync</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-pages', this)">Pages Sync</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-raindrop', this)">Raindrop</button>
+            <button class="btn btn-danger btn-sm admin-tab" onclick="showTab('tab-emergency', this)">Emergency</button>
         </div>
 
         <div class="tab-content">
-            <div class="admin-pane" id="tab-raindrop">
+            <div class="admin-pane d-none" id="tab-raindrop">
                 <h2 class="h5 mb-2">Raindrop Sync</h2>
                 <p class="text-muted">Download new bookmarks from Raindrop.io and regenerate the site</p>
                 <button id="sync-btn" class="btn btn-primary" onclick="syncRaindrops()">Sync Raindrops</button>
@@ -125,6 +124,13 @@
 
             <div class="admin-pane d-none" id="tab-stats">
                 <h2 class="h5 mb-2">Visit Statistics</h2>
+                <div class="btn-group btn-group-sm mb-3" role="group">
+                    <button type="button" class="btn btn-outline-primary stats-period active" data-period="today" onclick="selectStatsPeriod(this)">Today</button>
+                    <button type="button" class="btn btn-outline-primary stats-period" data-period="this_week" onclick="selectStatsPeriod(this)">This Week</button>
+                    <button type="button" class="btn btn-outline-primary stats-period" data-period="this_month" onclick="selectStatsPeriod(this)">This Month</button>
+                    <button type="button" class="btn btn-outline-primary stats-period" data-period="this_year" onclick="selectStatsPeriod(this)">This Year</button>
+                    <button type="button" class="btn btn-outline-secondary stats-period" data-period="" onclick="selectStatsPeriod(this)">All Time</button>
+                </div>
                 <div id="stats-content"><p class="text-muted fst-italic">Loading...</p></div>
             </div>
 
@@ -646,7 +652,7 @@
             document.getElementById(id).classList.remove('d-none');
             document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            if (id === 'tab-stats') loadStats();
+            if (id === 'tab-stats') loadStats('today');
             if (id === 'tab-propose') loadProposedPosts();
         }
 
@@ -678,10 +684,17 @@
             }
         }
 
-        async function loadStats() {
+        function selectStatsPeriod(btn) {
+            document.querySelectorAll('.stats-period').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            loadStats(btn.dataset.period);
+        }
+
+        async function loadStats(period) {
             const div = document.getElementById('stats-content');
+            const url = period ? `/api/stats?period=${period}` : '/api/stats';
             try {
-                const resp = await fetch('/api/stats');
+                const resp = await fetch(url);
                 const data = await resp.json();
                 if (!data.counts.length) {
                     div.innerHTML = '<p class="text-muted fst-italic">No visits recorded yet.</p>';
@@ -690,14 +703,32 @@
                 const types = ['human', 'search_engine', 'ai_bot', 'crawler', 'unknown'];
                 const labels = {'human': 'Human', 'search_engine': 'Search', 'ai_bot': 'AI Bot', 'crawler': 'Crawler', 'unknown': 'Unknown'};
                 const headerCols = types.map(t => `<th class="text-end">${labels[t]}</th>`).join('');
-                const rows = data.counts.map(r => {
-                    const typeCols = types.map(t => `<td class="text-end"><span class="badge bg-secondary">${r.by_type[t] || 0}</span></td>`).join('');
-                    return `<tr><td><a href="${r.path}" class="text-decoration-none">${r.path}</a></td><td class="text-end fw-bold">${r.total}</td>${typeCols}</tr>`;
-                }).join('');
+
+                const root = data.counts.filter(r => !r.path.startsWith('/blog/') && !r.path.startsWith('/raindrops/'));
+                const blog = data.counts.filter(r => r.path.startsWith('/blog/'));
+                const drops = data.counts.filter(r => r.path.startsWith('/raindrops/'));
+
+                function renderRows(items) {
+                    return items.map(r => {
+                        const typeCols = types.map(t => `<td class="text-end"><span class="badge bg-secondary">${r.by_type[t] || 0}</span></td>`).join('');
+                        return `<tr><td><a href="${r.path}" class="text-decoration-none">${r.path}</a></td><td class="text-end fw-bold">${r.total}</td>${typeCols}</tr>`;
+                    }).join('');
+                }
+
+                function sectionHeader(label, count) {
+                    return `<tr class="table-secondary"><td colspan="${2 + types.length}"><strong>${label}</strong> <span class="text-muted">(${count} pages)</span></td></tr>`;
+                }
+
+                const tbody = [
+                    root.length ? sectionHeader('Root & Top-level', root.length) + renderRows(root) : '',
+                    blog.length ? sectionHeader('Blog', blog.length) + renderRows(blog) : '',
+                    drops.length ? sectionHeader('Raindrops', drops.length) + renderRows(drops) : '',
+                ].join('');
+
                 div.innerHTML = `<p class="text-muted mb-2"><strong>${data.total}</strong> total visits across <strong>${data.counts.length}</strong> pages</p>
                     <table class="table table-striped table-hover table-sm">
                         <thead class="table-dark"><tr><th>Page</th><th class="text-end">Total</th>${headerCols}</tr></thead>
-                        <tbody>${rows}</tbody>
+                        <tbody>${tbody}</tbody>
                     </table>`;
             } catch (e) {
                 div.innerHTML = '<p class="text-danger">Failed to load stats.</p>';
@@ -707,6 +738,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-year').textContent = new Date().getFullYear();
             loadSchedulerStatus();
+            // Show Stats as the default tab
+            document.getElementById('tab-stats').classList.remove('d-none');
+            loadStats('today');
         });
     </script>
 </body>

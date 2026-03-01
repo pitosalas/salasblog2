@@ -40,24 +40,15 @@ def fake_post(tags=None):
 
 # --- slugify_tag tests ---
 
-def test_slugify_lowercase():
-    assert slugify_tag("Python") == "python"
-
-
-def test_slugify_spaces_to_hyphens():
-    assert slugify_tag("open source") == "open-source"
-
-
-def test_slugify_strips_special_chars():
-    assert slugify_tag("C++") == "c"
-
-
-def test_slugify_strips_leading_trailing_hyphens():
-    assert slugify_tag("-tag-") == "tag"
-
-
-def test_slugify_multiple_spaces():
-    assert slugify_tag("web  dev") == "web-dev"
+@pytest.mark.parametrize("input_tag,expected", [
+    ("Python", "python"),
+    ("open source", "open-source"),
+    ("C++", "c"),
+    ("-tag-", "tag"),
+    ("web  dev", "web-dev"),
+])
+def test_slugify_tag(input_tag, expected):
+    assert slugify_tag(input_tag) == expected
 
 
 # --- Template rendering tests ---

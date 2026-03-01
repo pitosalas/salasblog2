@@ -6,8 +6,6 @@ Run with: uv run pytest tests/test_utils.py -v
 import pytest
 from datetime import datetime, timezone
 from pathlib import Path
-import tempfile
-import os
 
 from salasblog2.utils import (
     format_date,
@@ -130,6 +128,14 @@ class TestParseDateForSorting:
         result = parse_date_for_sorting("invalid-date")
         assert result == datetime.min
 
+    def test_unparseable_date_logs_warning(self, caplog):
+        """An unparseable date must log a warning so bad-date posts are diagnosable."""
+        import logging
+        with caplog.at_level(logging.WARNING, logger="salasblog2.utils"):
+            result = parse_date_for_sorting("not-a-date")
+        assert result == datetime.min
+        assert any("not-a-date" in r.message for r in caplog.records)
+
 
 class TestProcessMarkdownToHtml:
     """Test markdown processing utility."""
@@ -233,44 +239,40 @@ class TestSortPostsByDate:
 class TestLoadMarkdownFilesFromDirectory:
     """Test markdown file loading utility."""
     
-    def test_load_markdown_files_existing_directory(self):
+    def test_load_markdown_files_existing_directory(self, tmp_path):
         """Test loading markdown files from existing directory."""
-        with tempfile.TemporaryDirectory() as temp_dir:
-            temp_path = Path(temp_dir)
-            
-            # Create test files
-            (temp_path / "test1.md").write_text("# Test 1")
-            (temp_path / "test2.md").write_text("# Test 2")
-            (temp_path / "not_markdown.txt").write_text("Not markdown")
-            
-            result = load_markdown_files_from_directory(temp_path)
-            
-            assert len(result) == 2
-            md_files = [f.name for f in result]
-            assert "test1.md" in md_files
-            assert "test2.md" in md_files
-            assert "not_markdown.txt" not in md_files
+        # Create test files
+        (tmp_path / "test1.md").write_text("# Test 1")
+        (tmp_path / "test2.md").write_text("# Test 2")
+        (tmp_path / "not_markdown.txt").write_text("Not markdown")
+
+        result = load_markdown_files_from_directory(tmp_path)
+
+        assert len(result) == 2
+        md_files = [f.name for f in result]
+        assert "test1.md" in md_files
+        assert "test2.md" in md_files
+        assert "not_markdown.txt" not in md_files
     
     def test_load_markdown_files_nonexistent_directory(self):
         """Test loading markdown files from non-existent directory."""
         result = load_markdown_files_from_directory(Path("/nonexistent/path"))
         assert result == []
     
-    def test_load_markdown_files_empty_directory(self):
+    def test_load_markdown_files_empty_directory(self, tmp_path):
         """Test loading markdown files from empty directory."""
-        with tempfile.TemporaryDirectory() as temp_dir:
-            result = load_markdown_files_from_directory(Path(temp_dir))
-            assert result == []
+        result = load_markdown_files_from_directory(tmp_path)
+        assert result == []
 
 
 
 class TestParseFrontmatterFile:
     """Test frontmatter file parsing utility."""
     
-    def test_parse_frontmatter_file_with_metadata(self):
+    def test_parse_frontmatter_file_with_metadata(self, tmp_path):
         """Test parsing file with frontmatter."""
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.md', delete=False) as f:
-            f.write("""---
+        f = tmp_path / "test.md"
+        f.write_text("""---
 title: Test Post
 date: 2025-01-15
 category: Test
@@ -280,35 +282,23 @@ category: Test
 
 Some content here.
 """)
-            f.flush()
-            
-            try:
-                result = parse_frontmatter_file(Path(f.name))
-                
-                assert result['metadata']['title'] == 'Test Post'
-                # frontmatter may parse dates as date objects
-                date_value = result['metadata']['date']
-                assert str(date_value) == '2025-01-15'
-                assert '# This is a test post' in result['content']
-                assert '<h1' in result['html_content'] and 'This is a test post</h1>' in result['html_content']
-                
-            finally:
-                os.unlink(f.name)
+        result = parse_frontmatter_file(f)
+
+        assert result['metadata']['title'] == 'Test Post'
+        # frontmatter may parse dates as date objects
+        date_value = result['metadata']['date']
+        assert str(date_value) == '2025-01-15'
+        assert '# This is a test post' in result['content']
+        assert '<h1' in result['html_content'] and 'This is a test post</h1>' in result['html_content']
     
-    def test_parse_frontmatter_file_no_metadata(self):
+    def test_parse_frontmatter_file_no_metadata(self, tmp_path):
         """Test parsing file without frontmatter."""
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.md', delete=False) as f:
-            f.write("# Just a simple post\n\nNo frontmatter here.")
-            f.flush()
-            
-            try:
-                result = parse_frontmatter_file(Path(f.name))
-                
-                assert result['metadata'] == {}
-                assert 'Just a simple post' in result['content']
-                
-            finally:
-                os.unlink(f.name)
+        f = tmp_path / "test.md"
+        f.write_text("# Just a simple post\n\nNo frontmatter here.")
+        result = parse_frontmatter_file(f)
+
+        assert result['metadata'] == {}
+        assert 'Just a simple post' in result['content']
     
     def test_parse_frontmatter_file_nonexistent(self):
         """Test parsing non-existent file returns fallback data."""

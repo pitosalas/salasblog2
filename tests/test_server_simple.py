@@ -404,5 +404,86 @@ class TestServerStructure:
         assert len(conditional_imports) >= 0, "Conditional imports in __main__ block are acceptable"
 
 
+class TestBlogStatsTracking:
+    """Regression tests: blog visits must be recorded in the stats counter."""
+
+    @pytest.fixture
+    def blog_html_file(self, tmp_path):
+        """Create a minimal blog HTML file for serving."""
+        blog_dir = tmp_path / "blog"
+        blog_dir.mkdir()
+        post = blog_dir / "2026-02-28-test-post.html"
+        post.write_text("<html><body>Test</body></html>")
+        return tmp_path, post
+
+    def test_blog_get_increments_counter(self, blog_html_file):
+        """GET request to a blog HTML file must increment the visit counter."""
+        import asyncio
+        from unittest.mock import AsyncMock, MagicMock, patch
+        from salasblog2.server import serve_blog_files
+
+        output_dir, _ = blog_html_file
+
+        mock_request = MagicMock()
+        mock_request.method = "GET"
+        mock_request.headers = {"user-agent": "Mozilla/5.0", "accept-language": "en"}
+
+        mock_counter = MagicMock()
+
+        with patch("salasblog2.server.config", {"output_dir": output_dir}):
+            with patch("salasblog2.server.get_counter", return_value=mock_counter):
+                with patch("salasblog2.server.classify_visitor", return_value="human"):
+                    asyncio.run(serve_blog_files("2026-02-28-test-post.html", mock_request))
+
+        mock_counter.increment.assert_called_once_with(
+            "/blog/2026-02-28-test-post.html", "human"
+        )
+
+    def test_blog_head_does_not_increment_counter(self, blog_html_file):
+        """HEAD request to a blog HTML file must NOT increment the visit counter."""
+        import asyncio
+        from unittest.mock import MagicMock, patch
+        from salasblog2.server import serve_blog_files
+
+        output_dir, _ = blog_html_file
+
+        mock_request = MagicMock()
+        mock_request.method = "HEAD"
+        mock_request.headers = {"user-agent": "Mozilla/5.0", "accept-language": "en"}
+
+        mock_counter = MagicMock()
+
+        with patch("salasblog2.server.config", {"output_dir": output_dir}):
+            with patch("salasblog2.server.get_counter", return_value=mock_counter):
+                with patch("salasblog2.server.classify_visitor", return_value="human"):
+                    asyncio.run(serve_blog_files("2026-02-28-test-post.html", mock_request))
+
+        mock_counter.increment.assert_not_called()
+
+    def test_blog_non_html_get_does_not_increment_counter(self, blog_html_file):
+        """GET request for a non-HTML blog asset must NOT increment the visit counter."""
+        import asyncio
+        from unittest.mock import MagicMock, patch
+        from salasblog2.server import serve_blog_files
+
+        output_dir, _ = blog_html_file
+        # Create a non-HTML asset
+        css_file = output_dir / "blog" / "style.css"
+        css_file.write_text("body {}")
+
+        mock_request = MagicMock()
+        mock_request.method = "GET"
+        mock_request.headers = {"user-agent": "Mozilla/5.0", "accept-language": "en"}
+
+        mock_counter = MagicMock()
+
+        with patch("salasblog2.server.config", {"output_dir": output_dir}):
+            with patch("salasblog2.server.get_counter", return_value=mock_counter):
+                with patch("salasblog2.server.classify_visitor", return_value="human"):
+                    asyncio.run(serve_blog_files("style.css", mock_request))
+
+        mock_counter.increment.assert_not_called()
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
