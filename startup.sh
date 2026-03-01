@@ -15,16 +15,16 @@ if [ -n "$GIT_TOKEN" ]; then
     fi
     echo "Git authentication configured"
 
-    # Fetch remote history so the local repo has a valid commit to push from.
-    # The Dockerfile excludes .git, so the container starts with a bare `git init`.
-    # Without at least one commit in the history, `git push origin HEAD:main` fails.
-    echo "Fetching git history from remote..."
-    if git fetch origin main 2>/dev/null; then
-        git checkout -B main origin/main
-        echo "Git repository synced with remote ($(git rev-parse --short HEAD))"
-    else
-        echo "Warning: Could not fetch from remote — scheduler git sync may fail"
-    fi
+    # # Fetch remote history so the local repo has a valid commit to push from.
+    # # The Dockerfile excludes .git, so the container starts with a bare `git init`.
+    # # Without at least one commit in the history, `git push origin HEAD:main` fails.
+    # echo "Fetching git history from remote..."
+    # if git fetch origin main 2>/dev/null; then
+    #     git checkout -B main origin/main
+    #     echo "Git repository synced with remote ($(git rev-parse --short HEAD))"
+    # else
+    #     echo "Warning: Could not fetch from remote — scheduler git sync may fail"
+    # fi
 fi
 
 # Configure git if credentials are provided
