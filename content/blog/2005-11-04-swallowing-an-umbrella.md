@@ -1,8 +1,7 @@
 ---
 title: "Swallowing an umbrella"
-subtitle: "> “The sword passes within millimetres of the heart, aorta, and other vitals but, surprisingly, few ..."
+subtitle: "The sword passes within millimetres of the heart, aorta, and other vitals but, surprisingly, few ..."
 category: "298"
-tags: []
 date: "2005-11-04"
 type: "wp"
 wordpress_id: 1662
