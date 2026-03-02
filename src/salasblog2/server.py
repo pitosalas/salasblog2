@@ -1561,4 +1561,5 @@ if __name__ == "__main__":
     
     # Use PORT environment variable or default to 8000 for local development
     port = int(os.getenv("PORT", 8080))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    print(f"***************** {port}")
+    uvicorn.run(app, host="0.0.0.0", port=8080)
