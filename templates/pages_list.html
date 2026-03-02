@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Pages{% endblock %}
+{% block description %}A collection of pages and information on {{ site_title }}{% endblock %}
+
+{% block content %}
+<div class="border-bottom pb-3 mb-4">
+    <h1 class="display-6">Pages</h1>
+    <p class="text-muted">A collection of pages and information organized for easy browsing.</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for page in pages %}
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title h5">
+                    <a href="{{ page.url }}" class="text-decoration-none">{{ page.title }}</a>
+                </h3>
+                {% if page.excerpt %}
+                <p class="card-text text-muted small">{{ page.excerpt }}</p>
+                {% endif %}
+
+                <div class="admin-controls d-none mt-2">
+                    <a href="/admin/edit-page/{{ page.filename }}" class="btn btn-primary btn-sm">Edit</a>
+                    <button onclick="deletePage('{{ page.filename }}')" class="btn btn-danger btn-sm">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

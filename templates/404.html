@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block description %}The requested page could not be found{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 60vh;">
+    <div class="text-center" style="max-width: 600px;">
+        <p class="display-1 fw-bold text-danger lh-1">404</p>
+        <h2 class="h2 mb-3">Page Not Found</h2>
+        <p class="lead text-muted mb-4">The page you're looking for doesn't exist or has been moved.</p>
+        <div class="d-flex gap-2 justify-content-center flex-wrap mb-4">
+            <a href="/" class="btn btn-primary">Go Home</a>
+            <a href="/blog/" class="btn btn-secondary">Browse Blog</a>
+            <a href="/search/" class="btn btn-secondary">Search</a>
+        </div>
+        <div class="card bg-light">
+            <div class="card-body">
+                <h3 class="card-title h6">You might be looking for:</h3>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="/blog/">Recent blog posts</a></li>
+                    <li><a href="/raindrops/">Link blog</a></li>
+                    <li><a href="/about/">About page</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

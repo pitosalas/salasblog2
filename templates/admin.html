@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Salas Blog</title>
+    <meta name="description" content="Admin panel for Salas Blog">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/rsd.xml" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Salas Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/raindrops/">Link Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/">Pages</a></li>
+                </ul>
+                <span class="navbar-text fw-bold">Admin</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="h3 mb-0">Admin Panel</h1>
+            <form method="post" action="/admin/logout">
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-4" id="adminTabs">
+            <button class="btn btn-primary btn-sm admin-tab active" onclick="showTab('tab-stats', this)">Stats</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-propose', this)">Propose</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-generate', this)">Generate</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-scheduler', this)">Scheduler</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-datasync', this)">Data Sync</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-pages', this)">Pages Sync</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-raindrop', this)">Raindrop</button>
+            <button class="btn btn-danger btn-sm admin-tab" onclick="showTab('tab-emergency', this)">Emergency</button>
+        </div>
+
+        <div class="tab-content">
+            <div class="admin-pane d-none" id="tab-raindrop">
+                <h2 class="h5 mb-2">Raindrop Sync</h2>
+                <p class="text-muted">Download new bookmarks from Raindrop.io and regenerate the site</p>
+                <button id="sync-btn" class="btn btn-primary" onclick="syncRaindrops()">Sync Raindrops</button>
+                <div id="sync-status" class="mt-2"></div>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-generate">
+                <h2 class="h5 mb-2">Site Generation</h2>
+                <p class="text-muted">Regenerate the static site from markdown files using current theme</p>
+                <button id="regen-btn" class="btn btn-primary" onclick="regenerateSite()">Regenerate Site</button>
+                <div id="regen-status" class="mt-2"></div>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-datasync">
+                <h2 class="h5 mb-2">Data Synchronization</h2>
+                <p class="text-muted">Sync content between working directory (/app/content/) and persistent volume (/data/content/)</p>
+                <div class="d-flex gap-2 flex-wrap mb-2">
+                    <button id="sync-to-volume-btn" class="btn btn-primary" onclick="syncToVolume()">Sync Working &rarr; Persistent</button>
+                    <button id="sync-from-volume-btn" class="btn btn-primary" onclick="syncFromVolume()">Sync Persistent &rarr; Working</button>
+                    <button id="bidirectional-sync-btn" class="btn btn-primary" onclick="bidirectionalSync()">Bidirectional Sync</button>
+                </div>
+                <div id="data-sync-status" class="mt-2"></div>
+                <div id="data-sync-progress" class="mt-2"></div>
+                <small class="text-muted">
+                    <strong>Sync to Volume:</strong> Copies newer files from working directory to volume<br>
+                    <strong>Sync from Volume:</strong> Copies newer files from volume to working directory<br>
+                    <strong>Bidirectional Sync:</strong> Performs both operations (recommended)
+                </small>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-scheduler">
+                <h2 class="h5 mb-2">Automated Scheduler</h2>
+                <p class="text-muted">The scheduler performs two automated tasks: <strong>Git sync to GitHub</strong> (backup content) and <strong>Raindrop sync</strong> (download new bookmarks)</p>
+                <div class="alert alert-light border mb-3 small">
+                    <strong>Git Sync Process:</strong> /data/content &rarr; /app/content &rarr; GitHub repository<br>
+                    <strong>Raindrop Sync Process:</strong> Raindrop.io API &rarr; /data/content/raindrops/ &rarr; Site regeneration<br>
+                    <strong>Default Schedule:</strong> Git sync every 6 hours, Raindrop sync every 2 hours
+                </div>
+                <div class="d-flex gap-2 flex-wrap mb-2">
+                    <button id="git-sync-now-btn" class="btn btn-primary" onclick="gitSyncNow()">Sync to GitHub Now</button>
+                    <button id="raindrop-sync-now-btn" class="btn btn-primary" onclick="raindropSyncNow()">Sync Raindrops Now</button>
+                    <button id="scheduler-start-btn" class="btn btn-success" onclick="startScheduler()">Start Auto Scheduler</button>
+                    <button id="scheduler-stop-btn" class="btn btn-warning" onclick="stopScheduler()">Stop Scheduler</button>
+                </div>
+                <div id="scheduler-status" class="mt-2"></div>
+                <div id="git-sync-progress" class="mt-2"></div>
+                <div id="scheduler-logs" class="mt-2"></div>
+                <small class="text-muted">
+                    <strong>Sync to GitHub Now:</strong> Immediately backup all content changes to GitHub repository<br>
+                    <strong>Sync Raindrops Now:</strong> Download new bookmarks from Raindrop.io and regenerate affected pages<br>
+                    <strong>Start Scheduler:</strong> Enable automatic syncing (Git: 6h intervals, Raindrops: 2h intervals)<br>
+                    <strong>Stop Scheduler:</strong> Disable all automatic background syncing operations
+                </small>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-pages">
+                <h2 class="h5 mb-2">Safe Pages Sync</h2>
+                <p class="text-muted">Copy pages from the Docker image (/app/content/pages) to the persistent volume (/data/content/pages)</p>
+                <div class="alert alert-info small mb-3">
+                    <strong>Safe Operation:</strong> Only updates /data/content/pages/ directory<br>
+                    <strong>What it does:</strong> /app/content/pages &rarr; /data/content/pages<br>
+                    <strong>Backup:</strong> Creates automatic backup before sync<br>
+                    <strong>Restores:</strong> Automatically restores backup if sync fails
+                </div>
+                <button id="sync-pages-btn" class="btn btn-primary" onclick="syncPagesFromRepo()">Sync Pages from Image</button>
+                <div id="pages-sync-status" class="mt-2"></div>
+                <div id="pages-sync-progress" class="mt-2"></div>
+                <small class="text-muted d-block mt-2">
+                    <strong>Sync Pages:</strong> Copies all page files and folders from GitHub content/pages to /data/content/pages<br>
+                    <strong>Safe:</strong> Doesn't touch blog posts, raindrops, or other content<br>
+                    <strong>Automatic backup:</strong> Saves existing pages as .md-old files, restored on failure
+                </small>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-stats">
+                <h2 class="h5 mb-2">Visit Statistics</h2>
+                <div class="btn-group btn-group-sm mb-3" role="group">
+                    <button type="button" class="btn btn-outline-primary stats-period active" data-period="today" onclick="selectStatsPeriod(this)">Today</button>
+                    <button type="button" class="btn btn-outline-primary stats-period" data-period="this_week" onclick="selectStatsPeriod(this)">This Week</button>
+                    <button type="button" class="btn btn-outline-primary stats-period" data-period="this_month" onclick="selectStatsPeriod(this)">This Month</button>
+                    <button type="button" class="btn btn-outline-primary stats-period" data-period="this_year" onclick="selectStatsPeriod(this)">This Year</button>
+                    <button type="button" class="btn btn-outline-secondary stats-period" data-period="" onclick="selectStatsPeriod(this)">All Time</button>
+                </div>
+                <div id="stats-content"><p class="text-muted fst-italic">Loading...</p></div>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-emergency">
+                <h2 class="h5 mb-2 text-danger">Emergency Repository Restore</h2>
+                <p class="text-danger fw-bold">DANGER: This overwrites /data/content with GitHub repository content!</p>
+                <p class="text-muted">Use only if the persistent volume gets corrupted or you need to revert to GitHub state.</p>
+                <button id="emergency-restore-btn" class="btn btn-danger" onclick="emergencyRestore()">
+                    Emergency Restore from GitHub
+                </button>
+                <div id="emergency-restore-status" class="mt-2"></div>
+                <small class="text-muted d-block mt-2">
+                    <strong>Emergency Restore:</strong> Pulls latest from GitHub &rarr; /app/content &rarr; /data/content<br>
+                    <strong>Backup:</strong> Current /data/content is backed up before restore<br>
+                    <strong>Warning:</strong> This operation cannot be undone!
+                </small>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-api">
+                <h2 class="h5 mb-2">Weblogs API</h2>
+                <p>XML-RPC endpoint for blog editors: <code>/xmlrpc</code></p>
+                <p class="text-muted">Supports standard Blogger API methods for external blog clients.</p>
+            </div>
+
+            <div class="admin-pane d-none" id="tab-propose">
+                <h2 class="h5 mb-2">Proposed Posts to Repost</h2>
+                <p class="text-muted">Top 10 older blog posts that may be worth reposting, ranked by relevance.</p>
+                <button class="btn btn-primary btn-sm mb-3" onclick="loadProposedPosts()">Refresh</button>
+                <div id="propose-status"></div>
+                <div id="propose-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-secondary text-white text-center py-4 mt-4">
+        <p class="mb-0">&copy; <span id="footer-year"></span> Salas Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script>
+        function statusHtml(type, message) {
+            const cls = type === 'success' ? 'alert-success' : type === 'error' ? 'alert-danger' : 'alert-info';
+            const spinner = type === 'loading' ? '<span class="spinner-border spinner-border-sm me-2"></span>' : '';
+            return `<div class="alert ${cls}">${spinner}${message}</div>`;
+        }
+
+        function progressHtml(lines) {
+            return `<div class="border-start border-primary ps-3 font-monospace small">${lines.map(l => `<div>${l}</div>`).join('')}</div>`;
+        }
+
+        async function syncRaindrops() {
+            const button = document.getElementById('sync-btn');
+            const statusDiv = document.getElementById('sync-status');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Starting...';
+            statusDiv.innerHTML = statusHtml('loading', 'Starting raindrop sync...');
+            try {
+                const response = await fetch('/api/sync-raindrops');
+                const result = await response.json();
+                if (response.ok && (result.status === 'started' || result.status === 'running')) {
+                    pollSyncStatus(button, statusDiv);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', result.detail || result.message);
+                    button.disabled = false;
+                    button.innerHTML = 'Sync Raindrops';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = statusHtml('error', 'Error: ' + error.message);
+                button.disabled = false;
+                button.innerHTML = 'Sync Raindrops';
+            }
+        }
+
+        async function pollSyncStatus(button, statusDiv) {
+            try {
+                const response = await fetch('/api/sync-status');
+                const status = await response.json();
+                if (status.running) {
+                    button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Syncing...';
+                    statusDiv.innerHTML = statusHtml('loading', status.message);
+                    setTimeout(() => pollSyncStatus(button, statusDiv), 1000);
+                } else {
+                    button.disabled = false;
+                    button.innerHTML = 'Sync Raindrops';
+                    if (status.message.includes('Error:')) {
+                        statusDiv.innerHTML = statusHtml('error', status.message);
+                    } else {
+                        statusDiv.innerHTML = statusHtml('success', status.message);
+                        setTimeout(() => { statusDiv.innerHTML = ''; }, 5000);
+                    }
+                }
+            } catch (error) {
+                button.disabled = false;
+                button.innerHTML = 'Sync Raindrops';
+                statusDiv.innerHTML = statusHtml('error', 'Error checking status: ' + error.message);
+            }
+        }
+
+        async function regenerateSite() {
+            const button = document.getElementById('regen-btn');
+            const statusDiv = document.getElementById('regen-status');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Regenerating...';
+            statusDiv.innerHTML = statusHtml('loading', 'Regenerating static site from markdown files...');
+            try {
+                const response = await fetch('/api/regenerate');
+                const result = await response.json();
+                if (response.ok) {
+                    statusDiv.innerHTML = statusHtml('success', result.message + ' (Theme: ' + (result.theme || 'unknown') + ')');
+                    setTimeout(() => { statusDiv.innerHTML = ''; }, 5000);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', result.detail);
+                }
+            } catch (error) {
+                statusDiv.innerHTML = statusHtml('error', 'Error: ' + error.message);
+            } finally {
+                button.disabled = false;
+                button.innerHTML = 'Regenerate Site';
+            }
+        }
+
+        async function syncToVolume() {
+            await performSync('/api/sync-to-volume', 'sync-to-volume-btn', 'Sync Working \u2192 Persistent', 'Syncing working \u2192 persistent...');
+        }
+
+        async function syncFromVolume() {
+            await performSync('/api/sync-from-volume', 'sync-from-volume-btn', 'Sync Persistent \u2192 Working', 'Syncing persistent \u2192 working...');
+        }
+
+        async function bidirectionalSync() {
+            await performSync('/api/bidirectional-sync', 'bidirectional-sync-btn', 'Bidirectional Sync', 'Performing bidirectional sync...');
+        }
+
+        async function performSync(endpoint, buttonId, buttonText, loadingText) {
+            const button = document.getElementById(buttonId);
+            const statusDiv = document.getElementById('data-sync-status');
+            const progressDiv = document.getElementById('data-sync-progress');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>' + loadingText;
+            statusDiv.innerHTML = statusHtml('loading', loadingText);
+            progressDiv.innerHTML = progressHtml(['Initializing synchronization...']);
+            disableAllSyncButtons();
+            const startTime = Date.now();
+            try {
+                progressDiv.innerHTML = progressHtml(['Contacting server...']);
+                const response = await fetch(endpoint, { method: 'POST' });
+                progressDiv.innerHTML = progressHtml(['Processing synchronization...']);
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                if (response.ok) {
+                    let details = '';
+                    let allOutput = result.output || (result.app_to_data ? `App to Data:\n${result.app_to_data}\n\nData to App:\n${result.data_to_app}` : '');
+                    if (allOutput) {
+                        const lines = allOutput.split('\n').filter(l => l.trim());
+                        const fileLines = lines.filter(l => l.includes('>') || l.includes('sent') || l.includes('bytes') || l.includes('sending') || l.includes('created') || l.includes('directory'));
+                        if (fileLines.length > 0) {
+                            const displayLines = fileLines.slice(0, 25);
+                            details = progressHtml(displayLines.map(l => l.trim()).concat(fileLines.length > 25 ? [`... and ${fileLines.length - 25} more operations`] : []));
+                        } else {
+                            details = progressHtml(['No files needed synchronization - directories are in sync']);
+                        }
+                    }
+                    statusDiv.innerHTML = statusHtml('success', result.message);
+                    progressDiv.innerHTML = progressHtml([`Completed successfully in ${duration}s`]) + details;
+                    setTimeout(() => { statusDiv.innerHTML = ''; progressDiv.innerHTML = ''; }, 8000);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', result.detail);
+                    progressDiv.innerHTML = progressHtml([`Failed after ${duration}s`]);
+                }
+            } catch (error) {
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = statusHtml('error', 'Error: ' + error.message);
+                progressDiv.innerHTML = progressHtml([`Connection error after ${duration}s`]);
+            } finally {
+                button.disabled = false;
+                button.innerHTML = buttonText;
+                enableAllSyncButtons();
+            }
+        }
+
+        function disableAllSyncButtons() {
+            document.getElementById('sync-to-volume-btn').disabled = true;
+            document.getElementById('sync-from-volume-btn').disabled = true;
+            document.getElementById('bidirectional-sync-btn').disabled = true;
+        }
+
+        function enableAllSyncButtons() {
+            document.getElementById('sync-to-volume-btn').disabled = false;
+            document.getElementById('sync-from-volume-btn').disabled = false;
+            document.getElementById('bidirectional-sync-btn').disabled = false;
+        }
+
+        async function gitSyncNow() {
+            const button = document.getElementById('git-sync-now-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Syncing...';
+            statusDiv.innerHTML = statusHtml('loading', 'Starting Git sync to GitHub...');
+            progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            const startTime = Date.now();
+            const steps = [
+                'Checking Git credentials and repository access...',
+                'Copying /data/content to /app/content staging area...',
+                'Analyzing changes and staging files for commit...',
+                'Creating commit with timestamp...',
+                'Pushing changes to GitHub repository...',
+                'Finalizing sync operation...'
+            ];
+            let currentStep = 0;
+            function showNextStep() {
+                if (currentStep < steps.length) {
+                    progressDiv.innerHTML = progressHtml([`Step ${currentStep + 1}/${steps.length}: ${steps[currentStep]}`]);
+                    currentStep++;
+                }
+            }
+            showNextStep();
+            const stepInterval = setInterval(showNextStep, 2000);
+            try {
+                const response = await fetch('/api/scheduler/sync-now', { method: 'POST' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                clearInterval(stepInterval);
+                if (response.ok) {
+                    statusDiv.innerHTML = statusHtml('success', 'Git sync completed successfully!');
+                    progressDiv.innerHTML = progressHtml(['Content successfully backed up to GitHub repository', `Operation completed in ${duration} seconds`, 'Volume-first architecture: /data/content \u2192 /app/content \u2192 GitHub']);
+                    setTimeout(() => { statusDiv.innerHTML = ''; progressDiv.innerHTML = ''; }, 8000);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', 'Git sync failed: ' + result.detail);
+                    progressDiv.innerHTML = progressHtml([`Sync failed after ${duration} seconds`, 'Check logs for details or verify Git credentials']);
+                }
+            } catch (error) {
+                clearInterval(stepInterval);
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = statusHtml('error', 'Connection error: ' + error.message);
+                progressDiv.innerHTML = progressHtml([`Network error after ${duration} seconds`]);
+            } finally {
+                clearInterval(stepInterval);
+                button.disabled = false;
+                button.innerHTML = 'Sync to GitHub Now';
+                loadSchedulerStatus();
+            }
+        }
+
+        async function raindropSyncNow() {
+            const button = document.getElementById('raindrop-sync-now-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Syncing...';
+            statusDiv.innerHTML = statusHtml('loading', 'Starting Raindrop sync...');
+            progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            const startTime = Date.now();
+            const steps = [
+                'Verifying Raindrop.io API credentials...',
+                'Downloading new bookmarks from Raindrop.io...',
+                'Processing bookmark metadata and content...',
+                'Saving new markdown files to /data/content/raindrops/...',
+                'Regenerating static site with new content...',
+                'Finalizing Raindrop sync...'
+            ];
+            let currentStep = 0;
+            function showNextStep() {
+                if (currentStep < steps.length) {
+                    progressDiv.innerHTML = progressHtml([`Step ${currentStep + 1}/${steps.length}: ${steps[currentStep]}`]);
+                    currentStep++;
+                }
+            }
+            showNextStep();
+            const stepInterval = setInterval(showNextStep, 1500);
+            try {
+                const response = await fetch('/api/sync-raindrops', { method: 'GET' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                clearInterval(stepInterval);
+                if (response.ok) {
+                    if (result.status === 'started' || result.status === 'running') {
+                        statusDiv.innerHTML = statusHtml('loading', 'Raindrop sync in progress...');
+                        pollRaindropStatus(button, statusDiv, progressDiv, startTime);
+                        return;
+                    } else {
+                        statusDiv.innerHTML = statusHtml('success', 'Raindrop sync completed!');
+                        progressDiv.innerHTML = progressHtml([result.message, `Operation completed in ${duration} seconds`]);
+                    }
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', 'Raindrop sync failed: ' + (result.detail || result.message));
+                    progressDiv.innerHTML = progressHtml([`Sync failed after ${duration} seconds`]);
+                }
+            } catch (error) {
+                clearInterval(stepInterval);
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = statusHtml('error', 'Connection error: ' + error.message);
+                progressDiv.innerHTML = progressHtml([`Network error after ${duration} seconds`]);
+            } finally {
+                if (!currentStep < steps.length) {
+                    clearInterval(stepInterval);
+                    button.disabled = false;
+                    button.innerHTML = 'Sync Raindrops Now';
+                }
+            }
+        }
+
+        async function pollRaindropStatus(button, statusDiv, progressDiv, startTime) {
+            try {
+                const response = await fetch('/api/sync-status');
+                const status = await response.json();
+                if (status.running) {
+                    progressDiv.innerHTML = progressHtml([status.message, `Running for ${((Date.now() - startTime) / 1000).toFixed(1)} seconds`]);
+                    setTimeout(() => pollRaindropStatus(button, statusDiv, progressDiv, startTime), 1000);
+                } else {
+                    button.disabled = false;
+                    button.innerHTML = 'Sync Raindrops Now';
+                    const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                    if (status.message && !status.message.includes('Error:')) {
+                        statusDiv.innerHTML = statusHtml('success', 'Raindrop sync completed!');
+                        progressDiv.innerHTML = progressHtml([status.message, `Total operation time: ${duration} seconds`]);
+                        setTimeout(() => { statusDiv.innerHTML = ''; progressDiv.innerHTML = ''; }, 8000);
+                    } else {
+                        statusDiv.innerHTML = statusHtml('error', status.message);
+                        progressDiv.innerHTML = progressHtml([`Failed after ${duration} seconds`]);
+                    }
+                }
+            } catch (error) {
+                button.disabled = false;
+                button.innerHTML = 'Sync Raindrops Now';
+                statusDiv.innerHTML = statusHtml('error', 'Error checking status: ' + error.message);
+            }
+        }
+
+        async function startScheduler() {
+            const button = document.getElementById('scheduler-start-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Starting...';
+            statusDiv.innerHTML = statusHtml('loading', 'Starting automated scheduler...');
+            progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            const startTime = Date.now();
+            try {
+                progressDiv.innerHTML = progressHtml([
+                    'Configuring scheduler services...',
+                    'Setting up Git sync (every 6 hours) and Raindrop sync (every 2 hours)',
+                    'Scheduling startup tasks (Git: 10min, Raindrops: 5min)'
+                ]);
+                const response = await fetch('/api/scheduler/start', { method: 'POST' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                if (response.ok) {
+                    statusDiv.innerHTML = statusHtml('success', 'Automated scheduler started successfully!');
+                    progressDiv.innerHTML = progressHtml([result.message, 'Git sync: Every 6 hours + startup in 10 minutes', 'Raindrop sync: Every 2 hours + startup in 5 minutes', `Scheduler activated in ${duration} seconds`]);
+                    setTimeout(() => { statusDiv.innerHTML = ''; progressDiv.innerHTML = ''; }, 10000);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', 'Failed to start scheduler: ' + result.detail);
+                    progressDiv.innerHTML = progressHtml([`Scheduler startup failed after ${duration} seconds`, 'Check server logs for details']);
+                }
+            } catch (error) {
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = statusHtml('error', 'Connection error: ' + error.message);
+                progressDiv.innerHTML = progressHtml([`Network error after ${duration} seconds`]);
+            } finally {
+                button.disabled = false;
+                button.innerHTML = 'Start Auto Scheduler';
+                loadSchedulerStatus();
+            }
+        }
+
+        async function stopScheduler() {
+            const button = document.getElementById('scheduler-stop-btn');
+            const statusDiv = document.getElementById('scheduler-status');
+            const progressDiv = document.getElementById('git-sync-progress');
+            const logsDiv = document.getElementById('scheduler-logs');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Stopping...';
+            statusDiv.innerHTML = statusHtml('loading', 'Stopping automated scheduler...');
+            progressDiv.innerHTML = '';
+            logsDiv.innerHTML = '';
+            const startTime = Date.now();
+            try {
+                progressDiv.innerHTML = progressHtml(['Cancelling scheduled tasks...', 'Stopping background scheduler thread...', 'Cleaning up active jobs and timers...']);
+                const response = await fetch('/api/scheduler/stop', { method: 'POST' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                if (response.ok) {
+                    statusDiv.innerHTML = statusHtml('success', 'Automated scheduler stopped successfully!');
+                    progressDiv.innerHTML = progressHtml([result.message, 'All automatic syncing operations disabled', 'Manual sync operations still available', `Scheduler stopped in ${duration} seconds`]);
+                    setTimeout(() => { statusDiv.innerHTML = ''; progressDiv.innerHTML = ''; }, 8000);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', 'Failed to stop scheduler: ' + result.detail);
+                    progressDiv.innerHTML = progressHtml([`Scheduler stop failed after ${duration} seconds`]);
+                }
+            } catch (error) {
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = statusHtml('error', 'Connection error: ' + error.message);
+                progressDiv.innerHTML = progressHtml([`Network error after ${duration} seconds`]);
+            } finally {
+                button.disabled = false;
+                button.innerHTML = 'Stop Scheduler';
+                loadSchedulerStatus();
+            }
+        }
+
+        async function loadSchedulerStatus() {
+            const logsDiv = document.getElementById('scheduler-logs');
+            try {
+                const response = await fetch('/api/scheduler/status');
+                const status = await response.json();
+                const lastGitSync = status.last_git_sync ? new Date(status.last_git_sync).toLocaleString() : 'Never';
+                const lastRaindropSync = status.last_raindrop_sync ? new Date(status.last_raindrop_sync).toLocaleString() : 'Never';
+                logsDiv.innerHTML = progressHtml([
+                    `<strong>Scheduler Status</strong>`,
+                    `Running: ${status.running ? 'Yes' : 'No'}`,
+                    `Last Git Sync: ${lastGitSync}`,
+                    `Last Raindrop Sync: ${lastRaindropSync}`,
+                    `Git Configuration: ${status.git_configured ? 'Ready' : 'Missing credentials'}`,
+                    `Raindrop Configuration: ${status.raindrop_configured ? 'Ready' : 'Missing token'}`,
+                    `Active Jobs: ${status.next_jobs.length} scheduled tasks`,
+                    `Intervals: Git ${status.git_interval_hours}h, Raindrops ${status.raindrop_interval_hours}h`
+                ]);
+            } catch (error) {
+                logsDiv.innerHTML = progressHtml([`Failed to load scheduler status: ${error.message}`]);
+            }
+        }
+
+        async function syncPagesFromRepo() {
+            const button = document.getElementById('sync-pages-btn');
+            const statusDiv = document.getElementById('pages-sync-status');
+            const progressDiv = document.getElementById('pages-sync-progress');
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Syncing...';
+            statusDiv.innerHTML = statusHtml('loading', 'Starting pages sync from image...');
+            progressDiv.innerHTML = '';
+            const startTime = Date.now();
+            const steps = [
+                'Verifying GitHub repository access...',
+                'Pulling latest changes from GitHub...',
+                'Creating backup of current pages...',
+                'Copying pages with fixed frontmatter...',
+                'Verifying sync completion...'
+            ];
+            let currentStep = 0;
+            function showNextStep() {
+                if (currentStep < steps.length) {
+                    progressDiv.innerHTML = progressHtml([`Step ${currentStep + 1}/${steps.length}: ${steps[currentStep]}`]);
+                    currentStep++;
+                }
+            }
+            showNextStep();
+            const stepInterval = setInterval(showNextStep, 2000);
+            try {
+                const response = await fetch('/api/sync-pages-from-repo', { method: 'POST' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                clearInterval(stepInterval);
+                if (response.ok) {
+                    statusDiv.innerHTML = statusHtml('success', 'Pages sync completed successfully!');
+                    progressDiv.innerHTML = progressHtml([result.message, `Files updated: ${result.files_synced.join(', ')}`, 'Safe operation: Only pages directory affected', `Operation completed in ${duration} seconds`]);
+                    setTimeout(() => { statusDiv.innerHTML = ''; progressDiv.innerHTML = ''; }, 8000);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', 'Pages sync failed: ' + result.detail);
+                    progressDiv.innerHTML = progressHtml([`Sync failed after ${duration} seconds`, 'Backup automatically restored']);
+                }
+            } catch (error) {
+                clearInterval(stepInterval);
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = statusHtml('error', 'Connection error: ' + error.message);
+                progressDiv.innerHTML = progressHtml([`Network error after ${duration} seconds`]);
+            } finally {
+                clearInterval(stepInterval);
+                button.disabled = false;
+                button.innerHTML = 'Sync Pages from GitHub';
+            }
+        }
+
+        async function emergencyRestore() {
+            const button = document.getElementById('emergency-restore-btn');
+            const statusDiv = document.getElementById('emergency-restore-status');
+            const confirmed = confirm(
+                'EMERGENCY RESTORE WARNING\n\nThis will:\n1. Pull latest content from GitHub\n2. OVERWRITE your entire /data/content volume\n3. You will LOSE any unsaved changes in the volume\n\nCurrent volume content will be backed up.\n\nAre you absolutely sure you want to proceed?'
+            );
+            if (!confirmed) return;
+            const doubleConfirmed = confirm('FINAL WARNING\n\nThis will PERMANENTLY overwrite your persistent volume!\n\nType "RESTORE" in the next dialog to confirm...');
+            if (!doubleConfirmed) return;
+            const confirmation = prompt('Type "RESTORE" to confirm emergency restore:');
+            if (confirmation !== 'RESTORE') {
+                statusDiv.innerHTML = statusHtml('error', 'Emergency restore cancelled - confirmation failed');
+                return;
+            }
+            button.disabled = true;
+            button.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Restoring...';
+            statusDiv.innerHTML = statusHtml('loading', 'EMERGENCY RESTORE IN PROGRESS - DO NOT INTERRUPT!');
+            const startTime = Date.now();
+            try {
+                const response = await fetch('/api/emergency-restore', { method: 'POST' });
+                const result = await response.json();
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                if (response.ok) {
+                    statusDiv.innerHTML = statusHtml('success', `${result.message} — ${result.warning} (Completed in ${duration}s)`);
+                } else {
+                    statusDiv.innerHTML = statusHtml('error', `Emergency restore failed: ${result.detail} (Failed after ${duration}s)`);
+                }
+            } catch (error) {
+                const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+                statusDiv.innerHTML = statusHtml('error', `Emergency restore error: ${error.message} (Failed after ${duration}s)`);
+            } finally {
+                button.disabled = false;
+                button.innerHTML = 'Emergency Restore from GitHub';
+            }
+        }
+
+        function showTab(id, btn) {
+            document.querySelectorAll('.admin-pane').forEach(p => p.classList.add('d-none'));
+            document.getElementById(id).classList.remove('d-none');
+            document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (id === 'tab-stats') loadStats('today');
+            if (id === 'tab-propose') loadProposedPosts();
+        }
+
+        async function loadProposedPosts() {
+            const statusDiv = document.getElementById('propose-status');
+            const listDiv = document.getElementById('propose-list');
+            statusDiv.innerHTML = statusHtml('loading', 'Loading proposed posts...');
+            listDiv.innerHTML = '';
+            try {
+                const resp = await fetch('/api/propose');
+                if (!resp.ok) { statusDiv.innerHTML = statusHtml('error', 'Failed to load proposed posts'); return; }
+                const posts = await resp.json();
+                statusDiv.innerHTML = '';
+                if (!posts.length) { listDiv.innerHTML = '<p class="text-muted">No qualifying posts found.</p>'; return; }
+                const rows = posts.map((p, i) =>
+                    `<tr>
+                        <td>${i + 1}</td>
+                        <td><a href="${p.url}" target="_blank">${p.title}</a></td>
+                        <td>${p.date}</td>
+                        <td>${p.score.toFixed(1)}</td>
+                        <td><a href="/admin/repost/${p.filename}" class="btn btn-sm btn-outline-primary">Repost</a></td>
+                    </tr>`
+                ).join('');
+                listDiv.innerHTML = `<table class="table table-sm table-hover">
+                    <thead class="table-dark"><tr><th>#</th><th>Title</th><th>Date</th><th>Score</th><th></th></tr></thead>
+                    <tbody>${rows}</tbody></table>`;
+            } catch (e) {
+                statusDiv.innerHTML = statusHtml('error', 'Error: ' + e.message);
+            }
+        }
+
+        function selectStatsPeriod(btn) {
+            document.querySelectorAll('.stats-period').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            loadStats(btn.dataset.period);
+        }
+
+        async function loadStats(period) {
+            const div = document.getElementById('stats-content');
+            const url = period ? `/api/stats?period=${period}` : '/api/stats';
+            try {
+                const resp = await fetch(url);
+                const data = await resp.json();
+                if (!data.counts.length) {
+                    div.innerHTML = '<p class="text-muted fst-italic">No visits recorded yet.</p>';
+                    return;
+                }
+                const types = ['human', 'search_engine', 'ai_bot', 'crawler', 'unknown'];
+                const labels = {'human': 'Human', 'search_engine': 'Search', 'ai_bot': 'AI Bot', 'crawler': 'Crawler', 'unknown': 'Unknown'};
+                const headerCols = types.map(t => `<th class="text-end">${labels[t]}</th>`).join('');
+
+                const root = data.counts.filter(r => !r.path.startsWith('/blog/') && !r.path.startsWith('/raindrops/'));
+                const blog = data.counts.filter(r => r.path.startsWith('/blog/'));
+                const drops = data.counts.filter(r => r.path.startsWith('/raindrops/'));
+
+                function renderRows(items) {
+                    return items.map(r => {
+                        const typeCols = types.map(t => `<td class="text-end"><span class="badge bg-secondary">${r.by_type[t] || 0}</span></td>`).join('');
+                        return `<tr><td><a href="${r.path}" class="text-decoration-none">${r.path}</a></td><td class="text-end fw-bold">${r.total}</td>${typeCols}</tr>`;
+                    }).join('');
+                }
+
+                function sectionHeader(label, count) {
+                    return `<tr class="table-secondary"><td colspan="${2 + types.length}"><strong>${label}</strong> <span class="text-muted">(${count} pages)</span></td></tr>`;
+                }
+
+                const tbody = [
+                    root.length ? sectionHeader('Root & Top-level', root.length) + renderRows(root) : '',
+                    blog.length ? sectionHeader('Blog', blog.length) + renderRows(blog) : '',
+                    drops.length ? sectionHeader('Raindrops', drops.length) + renderRows(drops) : '',
+                ].join('');
+
+                div.innerHTML = `<p class="text-muted mb-2"><strong>${data.total}</strong> total visits across <strong>${data.counts.length}</strong> pages</p>
+                    <table class="table table-striped table-hover table-sm">
+                        <thead class="table-dark"><tr><th>Page</th><th class="text-end">Total</th>${headerCols}</tr></thead>
+                        <tbody>${tbody}</tbody>
+                    </table>`;
+            } catch (e) {
+                div.innerHTML = '<p class="text-danger">Failed to load stats.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('footer-year').textContent = new Date().getFullYear();
+            loadSchedulerStatus();
+            // Show Stats as the default tab
+            document.getElementById('tab-stats').classList.remove('d-none');
+            loadStats('today');
+        });
+    </script>
+</body>
+</html>

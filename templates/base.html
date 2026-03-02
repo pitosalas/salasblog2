@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }}{% endblock %} - Salas Blog</title>
+    <meta name="description" content="{% block description %}Personal blog and website{% endblock %}">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/rsd.xml" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Salas Blog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/raindrops/">Link Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/">Pages</a></li>
+                    <li class="nav-item admin-new-post d-none">
+                        <a href="/admin/new-post" class="btn btn-success btn-sm ms-2">+ New Post</a>
+                    </li>
+                </ul>
+                <div class="search-container me-2">
+                    <input type="search" id="search-input" class="form-control form-control-sm" placeholder="Search..." aria-label="Search" style="width: 200px;">
+                    <div id="search-results" class="search-results"></div>
+                </div>
+                <a href="/admin" class="nav-link text-white-50 small">admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-secondary text-white text-center py-4 mt-4">
+        <p class="mb-0">&copy; {{ current_year }} Salas Blog. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/script.js"></script>
+    <script>
+        async function checkAdminStatus() {
+            try {
+                const response = await fetch('/api/admin-status');
+                const data = await response.json();
+                if (data.authenticated) {
+                    const adminControls = document.querySelector('.admin-controls');
+                    const newPostBtn = document.querySelector('.admin-new-post');
+                    if (adminControls) adminControls.classList.remove('d-none');
+                    if (newPostBtn) newPostBtn.classList.remove('d-none');
+                }
+            } catch (error) {
+                console.error('Failed to check admin status:', error);
+            }
+        }
+
+        async function deletePost(filename) {
+            if (!confirm('Are you sure you want to delete this post? This action cannot be undone.')) return;
+            try {
+                const response = await fetch(`/admin/delete-post/${filename}`, { method: 'POST' });
+                if (response.ok) {
+                    alert('Post deleted successfully. Redirecting to blog...');
+                    window.location.href = '/blog/';
+                } else {
+                    const data = await response.json();
+                    alert(`Failed to delete post: ${data.detail || 'Unknown error'}`);
+                }
+            } catch (error) {
+                alert(`Error deleting post: ${error.message}`);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', checkAdminStatus);
+    </script>
+</body>
+</html>

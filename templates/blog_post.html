@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% from 'macros.html' import admin_controls %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block description %}{{ post.excerpt or post.title }}{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <article>
+            <header class="mb-4 pb-3 border-bottom">
+                <h1 class="display-6">{{ post.title }} <i class="bi bi-file-text text-secondary fs-4 align-middle"></i></h1>
+                <div class="text-muted">
+                    <time datetime="{{ post.date }}">{{ post.date | strftime('%B %d, %Y') }}</time>
+                    {% for tag in post.tags %}
+                    {% if not tag.isdigit() %}
+                    <a href="/tags/{{ tag | slugify }}/index.html" class="badge bg-secondary text-decoration-none ms-1">{{ tag }}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </header>
+
+            <div class="mb-4">
+                {{ post.content | safe }}
+            </div>
+
+            <footer>
+                <div class="admin-controls d-none mb-3 p-3 bg-warning-subtle border border-warning rounded">
+                    <h4 class="h6 mb-2">Admin Actions</h4>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="/admin/edit-post/{{ post.filename }}.md" class="btn btn-warning btn-sm">Edit this post</a>
+                        <a href="/admin/repost/{{ post.filename }}.md" class="btn btn-info btn-sm">New post based on this one</a>
+                        <button onclick="deletePost('{{ post.filename }}.md')" class="btn btn-danger btn-sm">Delete Post</button>
+                    </div>
+                </div>
+
+                <nav class="d-flex justify-content-between border-top pt-3 mt-3">
+                    {% if prev_post %}
+                    <a href="{{ prev_post.url }}" class="btn btn-outline-secondary btn-sm">&larr; {{ prev_post.title }}</a>
+                    {% else %}
+                    <span></span>
+                    {% endif %}
+                    {% if next_post %}
+                    <a href="{{ next_post.url }}" class="btn btn-outline-secondary btn-sm">{{ next_post.title }} &rarr;</a>
+                    {% endif %}
+                </nav>
+            </footer>
+        </article>
+    </div>
+</div>
+{% endblock %}

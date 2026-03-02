@@ -1,0 +1,47 @@
+/*
+ * style.css — Bootstrap overrides ONLY.
+ * Rule: every block here must explain why Bootstrap alone is insufficient.
+ * Default Bootstrap appearance is always preferred over custom rules.
+ */
+
+/* Markdown renders <p> tags inside card-text divs; Bootstrap's p margin-bottom
+   creates unwanted space at the bottom of cards. */
+.card-body > *:last-child,
+.card-text p:last-child { margin-bottom: 0; }
+
+/* Bootstrap's default primary (#0d6efd) is too bright for this site's tone.
+   Blue-gray is used throughout (navbar, badges, buttons, links). */
+:root {
+    --bs-primary: #5b7fa6;
+    --bs-primary-rgb: 91, 127, 166;
+    --bs-link-color: #5b7fa6;
+    --bs-link-hover-color: #3d607f;
+}
+
+/* Bootstrap has no built-in live-search dropdown component; this is custom. */
+.search-container { position: relative; }
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+.search-results.active { display: block; }
+.search-result {
+    padding: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    color: #212529;
+}
+.search-result:hover { background: #f8f9fa; }
+.search-result:last-child { border-bottom: none; }
+.search-result h4 { margin: 0 0 0.25rem 0; font-size: 0.9rem; }
+.search-result p { margin: 0; font-size: 0.8rem; color: #6c757d; }
