@@ -43,7 +43,8 @@ def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
         if isinstance(date_str, str):
             # Handle ISO datetime format first
             if 'T' in date_str:
-                return datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                dt = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                return dt.replace(tzinfo=None)
             else:
                 # Try to parse ISO format YYYY-MM-DD
                 return datetime.strptime(date_str, '%Y-%m-%d')

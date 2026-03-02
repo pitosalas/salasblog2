@@ -108,10 +108,11 @@ class TestParseDateForSorting:
         assert result == expected
     
     def test_parse_date_iso_datetime(self):
-        """Test parsing ISO datetime string."""
+        """Test parsing ISO datetime string returns naive datetime (no tzinfo)."""
         result = parse_date_for_sorting("2021-04-06T13:40:22.885000+00:00")
-        expected = datetime(2021, 4, 6, 13, 40, 22, 885000, tzinfo=timezone.utc)
+        expected = datetime(2021, 4, 6, 13, 40, 22, 885000)
         assert result == expected
+        assert result.tzinfo is None
     
     def test_parse_date_empty_string(self):
         """Test parsing empty string."""
@@ -234,6 +235,18 @@ class TestSortPostsByDate:
         """Test sorting empty list."""
         result = sort_posts_by_date([])
         assert result == []
+
+    def test_sort_posts_mixed_naive_and_aware_dates(self):
+        """Regression: sorting posts with mixed naive (YYYY-MM-DD) and aware
+        (ISO datetime with tz) dates must not raise TypeError."""
+        posts = [
+            {'date': '2025-01-15', 'title': 'Naive date post'},
+            {'date': '2021-04-06T13:40:22.885000+00:00', 'title': 'Aware date post'},
+            {'date': '2024-06-01', 'title': 'Another naive post'},
+        ]
+        result = sort_posts_by_date(posts)
+        assert result[0]['title'] == 'Naive date post'
+        assert len(result) == 3
 
 
 class TestLoadMarkdownFilesFromDirectory:
