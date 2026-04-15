@@ -1,43 +1,89 @@
-## Technology and Framework Requirements
-    * You shall write code in Python
-    * You should prefer async/await over threading when there is a choice
-    * You must look for existing libraries instead of reinventing solutions
-    * You will always have a shebang line
-    * The first comment will give the name of the module and in one line say what it is
-    * The second comment will say "Author: Pito Salas and Claude Code"
-    * The third comment will say "Open Souce Under MIT license"
+# Coding Standards
 
-## Code Structure and Organization
-    * You shall ensure functions and methods are no longer than 50 lines
-    * You shall ensure no files have more than about 300 lines
-    * You shall use classes and put them in separate files
-    * You shall put data classes in the file where they are constructed
-    * You shall name files after the class defined in the file
-    * You shall give classes, methods and functions intention-revealing names but be willing to use obvious abbreviations or truncations to keep identifiers no more than ~ 15 chars
-    * You shall avoid if/else statements that are nested more than 1 deep. If tempted to do so, look for another design
-    * You shall not have if statements with more than 3 branches. If tempted to do so, look for another design
-    * You shall avoid 2 line methods
-    * You shall avoid 1 line functions and methods
-    * You shall avoid simple wrappers
-    * You should look for code duplication and make the code DRY if it makes sense
-    * You shall avoid functions with more than 3 arguments
-    * You shall use absolute imports with module aliases rather than relative imports
-    * You shall put all imports at the top of the file
+## General Python (applies everywhere)
 
-## Packaging
-    * You shall use Python latest and standard package management (uv) 
-    * You shall use the uv package manager at all times
-    * You shall call the directory containing the source code with the same name as the project directory
-    * You shall create the correct .toml file to ensure that the target program can be launched with uv run
+### Language and style
+* Write code in Python 3; always use `python3` and `pip3` — never `python` or `pip`
+* Write idiomatic Python
+* Always have a shebang line (`#!/usr/bin/env python3`)
+* First comment: module name and one-line description
+* Second comment: `Author: Pito Salas and Claude Code`
+* Third comment: `Open Source Under MIT license`
+* Use double quotes throughout; single quotes only when specifically required
+* Put all imports at the top of the file
+* Use absolute imports with module aliases rather than relative imports
+* Do not precede private method names or private instance variables with an underscore
+* Do not use `from __future__ import annotations`
+* Do not use `Optional[X]` from `typing` — write `X | None` instead (Python 3.10+) — if a forward reference genuinely requires it, explain why in a comment
 
-## Code Quality and Best Practices
-    * You shall write idiomatic Python
-    * You should not go overboard on error checking
-    * You shall never have bare except Exception: you shall be specific, and also put something in the alert box
-    * You shall not assign the result of a function to a variable just to use that variable one time only; you shall use the function call directly
-    * You shall put a comment with each method or function ONLY if the name of the function is not sufficient by itself
-    * You should almost always use double quotes; you shall only use single quotes if there is a specific requirement to do so
-    * You shall undertake multi-step implementation or refactoring in a way that after each step a running program is retained so that testing can be done to ensure progress is on the right track
-    * You shall not provide default parameters to functions; make the caller provide all required values explicitly
-    * You shall not code defensively; let exceptions bubble up rather than handling every possible error case
-    * You shall follow YAGNI (You Aren't Gonna Need It): only add functions, methods, or classes that are explicitly required by current requirements; do not add code for anticipated future needs
+### Structure and organization
+* Functions and methods no longer than 50 lines
+* Files no longer than ~300 lines
+* One class per file; name the file after the class
+* Put dataclasses in the file where they are constructed
+* Give classes, methods and functions intention-revealing names; abbreviate to keep identifiers ≤ ~15 chars
+* Avoid if/else nested more than 1 deep — find another design
+* No if statement with more than 3 branches — find another design
+* Avoid 1-line and 2-line methods
+* Avoid simple wrappers
+* Avoid functions with more than 3 arguments
+* No default parameters on functions — make callers provide all values explicitly
+* Do not assign a function result to a variable used only once; call the function directly
+
+### Code quality
+* Look for code duplication and DRY it up when it makes sense
+* Do not go overboard on error checking
+* Never use bare `except Exception:` — be specific and log or re-raise
+* Do not code defensively; let exceptions bubble up
+* Add a comment to a method or function ONLY if the name is not self-explanatory
+* Follow YAGNI: only add code explicitly required by current requirements
+* Prefer async/await over threading when there is a choice
+* Look for existing libraries before reinventing solutions
+* Undertake multi-step refactoring so a runnable program exists after each step
+
+---
+
+## Standalone library code
+
+### Packaging
+* Use standard Python packaging with `pyproject.toml` and `setuptools`
+* Install with `pip3 install -e . --break-system-packages` on Raspberry Pi
+* Source directory name must match the project directory name
+* If the repo also needs to work as a ROS2 colcon package, add `package.xml`, `setup.py`, and `resource/<package_name>` alongside `pyproject.toml`
+
+### Design
+* Library modules expose clean classes and functions — no `main()`, no `argparse`
+* All configuration flows through a config dataclass loaded from YAML — no hardcoded values
+* Example scripts in `examples/` are thin wiring scripts (~40 lines); all real logic lives in the library package
+* Do not import ROS2 packages (`rclpy`, `sensor_msgs`, etc.) from library modules — keep the standalone path ROS-free
+
+---
+
+## ROS2 package code
+
+### Structure
+* ROS2 nodes live under a `ros/` subpackage and are the only place that imports `rclpy` or ROS message types
+* Nodes are lifecycle nodes (`rclpy.lifecycle.Node`) where appropriate
+* Message conversion helpers go in `ros/converters.py`, not in the node
+
+### Launch files
+* Use `better_launch` — not the standard `ros2 launch` Python API
+* Launch files live in `launch/` with `.launch.py` extension
+* Entry point is `@launch_this` decorator on a plain Python function
+* Function parameters with type annotations become CLI arguments automatically — no substitution DSL
+* Use `bl.node(...)`, `bl.group(...)`, `bl.include(...)` — plain Python, no deferred evaluation
+* Lifecycle nodes transitioned via `node.lifecycle.transition(LifecycleStage.ACTIVE)`
+* Files work with both `bl` CLI and `ros2 launch`
+
+### Dependencies
+* ROS2 runtime dependencies (`rclpy`, `sensor_msgs`, `vision_msgs`, `diagnostic_updater`) are system-installed via apt — do not add them to `pyproject.toml`
+* Declare them as `exec_depend` in `package.xml`
+
+## Combined repo (standalone + ROS2 in one repo)
+
+* The repo must be cloneable standalone (`pip3 install -e .`) and into `ros2_ws/src` (`colcon build`) without any changes
+* Required files for dual packaging: `pyproject.toml`, `package.xml`, `setup.py`, `resource/<package_name>`
+* ROS2 imports must never appear outside the `ros/` subpackage — guard with `try/except ImportError` if truly needed at the boundary
+* `pyproject.toml` build backend: `setuptools.build_meta`
+* Tests in `tests/` must run with plain `pytest` — no `colcon test` dependency
+

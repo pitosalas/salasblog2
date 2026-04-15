@@ -339,12 +339,15 @@ class TestScheduler:
              patch.object(scheduler, '_has_git_changes', return_value=False), \
              patch('subprocess.run') as mock_run, \
              patch('os.chdir'):
-            
+
             mock_run.return_value = Mock(returncode=0)
-            
+
             result = await scheduler.sync_to_github()
-            
+
             assert result is True
+            # Regression: last_git_sync must be set even when there are no changes to commit,
+            # so the admin UI does not show "Last Git Sync: Never" after a successful no-op sync.
+            assert scheduler.last_git_sync is not None
     
     @pytest.mark.asyncio
     async def test_sync_to_github_success(self, scheduler):

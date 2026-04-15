@@ -164,6 +164,7 @@ class Scheduler:
             # Check if there are any changes
             if not self._has_git_changes():
                 logger.info("No content changes to sync to GitHub")
+                self.last_git_sync = datetime.now()
                 return True
             
             # Commit and push changes
