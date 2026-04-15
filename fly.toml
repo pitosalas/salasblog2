@@ -39,7 +39,7 @@ primary_region = 'bos'
   [[http_service.checks]]
     interval = '15s'
     timeout = '10s'
-    grace_period = '5s'
+    grace_period = '120s'
     method = 'GET'
     path = '/'
 

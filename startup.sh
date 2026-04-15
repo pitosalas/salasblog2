@@ -18,9 +18,9 @@ if [ -n "$GIT_TOKEN" ]; then
     # Fetch remote history so the local repo has a valid commit to push from.
     # The Dockerfile excludes .git, so the container starts with a bare `git init`.
     # Without at least one commit in the history, `git push origin HEAD:main` fails.
-    # --depth=1 keeps startup fast (no full history needed).
+    # timeout 20 prevents a hung GitHub connection from blocking the entire startup.
     echo "Fetching git history from remote..."
-    if git fetch --depth=1 origin main 2>/dev/null; then
+    if timeout 20 git fetch --depth=1 origin main 2>/dev/null; then
         git checkout -B main origin/main
         echo "Git repository synced with remote ($(git rev-parse --short HEAD))"
     else
