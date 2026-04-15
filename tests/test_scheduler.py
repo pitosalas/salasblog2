@@ -314,6 +314,28 @@ class TestScheduler:
             assert len(scheduler.recent_errors) > 0
     
     @pytest.mark.asyncio
+    async def test_sync_stages_images_alongside_content(self, scheduler):
+        """git add must be called for both content/ and static/images/uploads/
+        so uploaded images are included in the GitHub backup."""
+        with patch.object(scheduler, '_check_git_credentials', return_value=True), \
+             patch.object(scheduler, '_copy_content_to_git', return_value=True), \
+             patch.object(scheduler, '_has_git_changes', return_value=True), \
+             patch.object(scheduler, '_commit_and_push', return_value=True), \
+             patch('subprocess.run') as mock_run, \
+             patch('os.chdir'):
+
+            mock_run.return_value = Mock(returncode=0)
+            await scheduler.sync_to_github()
+
+            git_add_calls = [
+                call[0][0] for call in mock_run.call_args_list
+                if call[0] and call[0][0][0] == "git" and "add" in call[0][0]
+            ]
+            staged_paths = [cmd[2] for cmd in git_add_calls]
+            assert "content/" in staged_paths, "content/ must be staged"
+            assert "static/images/uploads/" in staged_paths, "static/images/uploads/ must be staged"
+
+    @pytest.mark.asyncio
     async def test_sync_to_github_no_credentials(self, scheduler):
         """Test GitHub sync with no credentials"""
         with patch.object(scheduler, '_check_git_credentials', return_value=False):

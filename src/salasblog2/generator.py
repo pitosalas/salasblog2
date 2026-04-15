@@ -269,8 +269,14 @@ class SiteGenerator:
         
         print(f"✓ Generated {len(posts)} {content_type} pages")
     
-    def generate_listing_pages(self, posts, content_type, collections=None, collection_counts=None):
-        """Generate paginated listing pages for blog and raindrops"""
+    def generate_listing_pages(self, posts, content_type, collections=None, collection_counts=None, target_filename=None):
+        """Generate paginated listing pages for blog and raindrops.
+
+        If target_filename is given, only the single page that contains that post
+        is written to disk (all pagination metadata is still computed correctly).
+        This keeps incremental edits fast — a 2817-post blog has 141 pages but a
+        content-only edit only needs to touch one of them.
+        """
         if content_type == 'pages':
             return  # Pages don't have listing pages
 
@@ -279,14 +285,29 @@ class SiteGenerator:
         total_posts = len(posts)
         total_pages = max(1, (total_posts + posts_per_page - 1) // posts_per_page)  # Ensure at least 1 page
 
+        # When regenerating incrementally, find which page the changed post lives on
+        # and only write that page (pagination nav metadata is still computed for all pages).
+        if target_filename is not None:
+            bare = target_filename.replace('.md', '')
+            try:
+                post_index = next(i for i, p in enumerate(posts) if p.get('filename') == bare)
+                target_pages = {post_index // posts_per_page + 1}  # 1-based
+            except StopIteration:
+                target_pages = None  # post not found — fall through to full regen
+        else:
+            target_pages = None
+
         template_name = f"{content_type}_list.html"
 
         # Create subdirectory for listing
         output_subdir = self.output_dir / content_type
         output_subdir.mkdir(exist_ok=True)
 
+        pages_written = 0
         # Generate each page
         for page_num in range(1, total_pages + 1):
+            if target_pages is not None and page_num not in target_pages:
+                continue
             start_idx = (page_num - 1) * posts_per_page
             end_idx = start_idx + posts_per_page
             page_posts = posts[start_idx:end_idx]
@@ -323,8 +344,12 @@ class SiteGenerator:
             
             with open(output_file, 'w', encoding='utf-8') as f:
                 f.write(html_content)
-        
-        print(f"✓ Generated {content_type} listing pages ({total_pages} pages, {total_posts} posts)")
+            pages_written += 1
+
+        if target_pages is not None:
+            print(f"✓ Generated {content_type} listing pages ({pages_written} of {total_pages} pages, {total_posts} posts)")
+        else:
+            print(f"✓ Generated {content_type} listing pages ({total_pages} pages, {total_posts} posts)")
     
     def _get_page_url(self, content_type, page_num, collection_slug=None):
         """Get URL for a specific page number, optionally filtered by collection"""
@@ -647,40 +672,58 @@ class SiteGenerator:
         print(f"🌐 Ready to serve or deploy!")
     
     def incremental_regenerate_post(self, post_filename: str, content_type: str = 'blog'):
-        """Incrementally regenerate site after a single post change."""
+        """Incrementally regenerate site after a single post change.
+
+        Only loads content types that are actually needed:
+        - The changed type is always loaded (individual post + listing).
+        - Other types are loaded only if required for home page / search index,
+          and only the changed type is ever read in full from disk.
+        """
         print(f"🔄 Incremental regeneration for {content_type}: {post_filename}")
-        
-        # Create output directory if needed
+
         self.output_dir.mkdir(exist_ok=True)
-        
-        # Load all content (needed for listings and search)
-        blog_posts = self.load_posts('blog')
-        raindrops = self.load_posts('raindrops') 
-        pages = self.load_posts('pages')
-        
+
+        # Load only the changed content type from disk
+        changed_posts = self.load_posts(content_type)
+
+        # For home page and search we need blog + raindrops, but avoid a full
+        # disk read for the type that didn't change.
+        if content_type == 'blog':
+            blog_posts = changed_posts
+            raindrops = self.load_posts('raindrops')
+            pages = []
+        elif content_type == 'raindrops':
+            blog_posts = self.load_posts('blog')
+            raindrops = changed_posts
+            pages = []
+        else:  # pages
+            blog_posts = self.load_posts('blog')
+            raindrops = []
+            pages = changed_posts
+
         # Find the specific post that changed
-        content_posts = {'blog': blog_posts, 'raindrops': raindrops, 'pages': pages}[content_type]
-        changed_post = next((p for p in content_posts if p['filename'] == post_filename.replace('.md', '')), None)
-        
+        changed_post = next(
+            (p for p in changed_posts if p['filename'] == post_filename.replace('.md', '')),
+            None
+        )
+
         if changed_post:
-            # Regenerate the individual post
             self.generate_individual_posts([changed_post], content_type)
             print(f"✓ Regenerated individual {content_type} post")
-        
-        # Regenerate the listing page for this content type
+
+        # Regenerate only the listing page that contains this post
         if content_type in ['blog', 'raindrops']:
-            self.generate_listing_pages(content_posts, content_type)
+            self.generate_listing_pages(changed_posts, content_type, target_filename=post_filename)
             print(f"✓ Regenerated {content_type} listing page")
-        
-        # Regenerate home page (shows recent posts from blog and raindrops)
+
+        # Regenerate home page (blog + raindrops only)
         self.generate_home_page(blog_posts, raindrops)
         print(f"✓ Regenerated home page")
-        
-        # Regenerate search index (includes all posts)
-        all_posts = blog_posts + raindrops + pages
-        self.generate_search_index(all_posts)
+
+        # Regenerate search index
+        self.generate_search_index(blog_posts + raindrops + pages)
         print(f"✓ Regenerated search index")
-        
+
         print(f"✅ Incremental regeneration complete!")
     
     def incremental_regenerate_after_deletion(self, post_filename: str, content_type: str = 'blog'):

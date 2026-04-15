@@ -18,7 +18,7 @@ from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
 from typing import List
-from fastapi import FastAPI, HTTPException, Request, Form, Depends
+from fastapi import FastAPI, HTTPException, Request, Form, Depends, UploadFile, File, BackgroundTasks
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse, Response, RedirectResponse
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
@@ -430,7 +430,7 @@ def load_content_item(filename: str, content_type: str):
 
 def save_content_item(filename: str, content_type: str, title: str, date: str,
                      item_type: str, content: str, tags: list):
-    """Save content item with frontmatter and regenerate site"""
+    """Write content item to disk. Regeneration is handled separately as a background task."""
     logger = logging.getLogger(__name__)
 
     content_dir = get_content_directory(content_type)
@@ -438,7 +438,6 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
     content_file = content_dir / filename
 
     try:
-        # Create the content item with frontmatter
         item = frontmatter.Post(content.strip())
         item.metadata = {
             'title': title.strip(),
@@ -446,29 +445,28 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
             'type': item_type,
             'tags': tags
         }
-        
-        # Write the content back to file
+
         with open(content_file, 'w', encoding='utf-8') as f:
             f.write(frontmatter.dumps(item))
             f.flush()
             os.fsync(f.fileno())
-        
-        logger.info(f"{content_type.title()} saved successfully: {filename}")
-        
-        # Regenerate affected content
-        regen_warning = None
-        try:
-            generator = SiteGenerator()
-            generator.incremental_regenerate_post(filename, content_type)
-            logger.info(f"Site regenerated after saving {content_type}: {filename}")
-        except Exception as regen_error:
-            regen_warning = f"Regeneration failed: {regen_error}"
-            logger.error(f"Site regeneration failed after saving {content_type} {filename}: {regen_error}")
 
-        return regen_warning
+        logger.info(f"{content_type.title()} saved successfully: {filename}")
     except Exception as e:
         logger.error(f"Error saving {content_type} {filename}: {e}")
         raise HTTPException(status_code=500, detail=f"Error saving {content_type}: {str(e)}")
+
+
+def _regenerate_in_background(filename: str, content_type: str):
+    """Run incremental site regeneration — intended for use as a background task."""
+    logger = logging.getLogger(__name__)
+    logger.info(f"Background regeneration START for {content_type}: {filename}")
+    try:
+        generator = SiteGenerator()
+        generator.incremental_regenerate_post(filename, content_type)
+        logger.info(f"Background regeneration DONE for {content_type}: {filename}")
+    except Exception as e:
+        logger.error(f"Background regeneration FAILED for {content_type} {filename}: {e}")
 
 # API Routes
 @app.get("/")
@@ -833,6 +831,51 @@ async def sync_pages_from_repo():
         "sync_details": f"Synced from /app/content/pages to /data/content/pages"
     })
 
+@app.post("/api/upload-image")
+async def upload_image(request: Request, image: UploadFile = File(None), file: UploadFile = File(None)):
+    """Upload an image from the admin editor. Saves to static/images/uploads/ and returns a URL."""
+    logger = logging.getLogger(__name__)
+
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+
+    # Accept field name 'image' (EasyMDE imageUploadEndpoint) or 'file' (custom)
+    upload = image or file
+    if not upload:
+        raise HTTPException(status_code=400, detail="No file provided")
+
+    date_prefix = datetime.now().strftime('%Y-%m-%d')
+    safe_name = re.sub(r'[^\w.\-]', '_', upload.filename or "upload")
+    filename = f"{date_prefix}-{safe_name}"
+    data = await upload.read()
+
+    root_dir = config["root_dir"]
+
+    # 1. Source — included in git sync
+    source_dir = root_dir / "static" / "images" / "uploads"
+    source_dir.mkdir(parents=True, exist_ok=True)
+    (source_dir / filename).write_bytes(data)
+
+    # 2. Output — served immediately (use configured output_dir, not Path.cwd())
+    output_dir = config["output_dir"] / "static" / "images" / "uploads"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source_dir / filename, output_dir / filename)
+
+    # 3. Volume backup
+    try:
+        volume_dir = Path("/data") / "static" / "images" / "uploads"
+        volume_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source_dir / filename, volume_dir / filename)
+    except Exception as e:
+        logger.warning(f"Volume backup failed for uploaded image {filename}: {e}")
+
+    url = f"/static/images/uploads/{filename}"
+    logger.info(f"Image uploaded: {url}")
+    # Return both formats: EasyMDE imageUploadEndpoint expects data.filePath,
+    # custom imageUploadFunction uses url
+    return JSONResponse(content={"data": {"filePath": url}, "url": url})
+
+
 @app.get("/api/admin-status")
 async def get_admin_status(request: Request):
     """Check if current user is authenticated as admin"""
@@ -898,26 +941,20 @@ async def edit_post_page(filename: str, request: Request):
     return HTMLResponse(content=render_template("edit_post.html", context))
 
 @app.post("/admin/edit-post/{filename}")
-async def save_edited_post(filename: str, request: Request, title: str = Form(...),
-                          date: str = Form(...), type: str = Form(...),
+async def save_edited_post(filename: str, request: Request, background_tasks: BackgroundTasks,
+                          title: str = Form(...), date: str = Form(...), type: str = Form(...),
                           content: str = Form(...), tags: List[str] = Form(default=[])):
     """Save edited post to file and regenerate site"""
-    # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
-    # Check if file exists
     content_dir = get_content_directory('blog')
     if not (content_dir / filename).exists():
         raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
 
-    # Save using shared function
-    regen_warning = save_content_item(filename, 'blog', title, date, type, content, tags)
-
-    response = {"status": "success", "message": "Post updated successfully", "filename": filename}
-    if regen_warning:
-        response["warning"] = regen_warning
-    return JSONResponse(content=response)
+    save_content_item(filename, 'blog', title, date, type, content, tags)
+    background_tasks.add_task(_regenerate_in_background, filename, 'blog')
+    return JSONResponse(content={"status": "success", "message": "Post updated successfully", "filename": filename})
 
 @app.get("/admin/new-post")
 async def new_post_page(request: Request):
@@ -936,36 +973,27 @@ async def new_post_page(request: Request):
     return HTMLResponse(content=render_template("new_post.html", context))
 
 @app.post("/admin/new-post")
-async def create_new_post(request: Request, title: str = Form(...),
-                         date: str = Form(...), type: str = Form(...),
+async def create_new_post(request: Request, background_tasks: BackgroundTasks,
+                         title: str = Form(...), date: str = Form(...), type: str = Form(...),
                          content: str = Form(...), tags: List[str] = Form(default=[])):
     """Create a new blog post with generated filename"""
-    # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     try:
-        # Generate filename using shared function
         filename = create_filename_for_content(title.strip(), date, 'blog')
-
-        # Check if file already exists
         content_dir = get_content_directory('blog')
         if (content_dir / filename).exists():
             raise HTTPException(status_code=400, detail=f"A post with filename '{filename}' already exists")
 
-        # Save using shared function
-        regen_warning = save_content_item(filename, 'blog', title, date, type, content, tags)
-
-        response = {
+        save_content_item(filename, 'blog', title, date, type, content, tags)
+        background_tasks.add_task(_regenerate_in_background, filename, 'blog')
+        return JSONResponse(content={
             "status": "success",
             "message": "Post created successfully",
             "filename": filename,
             "url": f"/blog/{filename.replace('.md', '.html')}"
-        }
-        if regen_warning:
-            response["warning"] = regen_warning
-        return JSONResponse(content=response)
-        
+        })
     except HTTPException:
         raise
     except Exception as e:
@@ -999,30 +1027,23 @@ async def edit_page_page(filename: str, request: Request):
     return HTMLResponse(content=render_template("edit_post.html", context))
 
 @app.post("/admin/edit-page/{filename}")
-async def save_edited_page(filename: str, request: Request, title: str = Form(...),
-                          date: str = Form(...), type: str = Form(...),
+async def save_edited_page(filename: str, request: Request, background_tasks: BackgroundTasks,
+                          title: str = Form(...), date: str = Form(...), type: str = Form(...),
                           content: str = Form(...)):
     """Save edited page to file and regenerate site"""
-    # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
-    
-    # Ensure filename has .md extension if not present
+
     if not filename.endswith('.md'):
         filename = f"{filename}.md"
-    
-    # Check if file exists
+
     content_dir = get_content_directory('pages')
     if not (content_dir / filename).exists():
         raise HTTPException(status_code=404, detail=f"Page not found: {filename}")
-    
-    # Save using shared function
-    regen_warning = save_content_item(filename, 'pages', title, date, type, content, [])
 
-    response = {"status": "success", "message": "Page updated successfully", "filename": filename}
-    if regen_warning:
-        response["warning"] = regen_warning
-    return JSONResponse(content=response)
+    save_content_item(filename, 'pages', title, date, type, content, [])
+    background_tasks.add_task(_regenerate_in_background, filename, 'pages')
+    return JSONResponse(content={"status": "success", "message": "Page updated successfully", "filename": filename})
 
 @app.get("/admin/new-page")
 async def new_page_page(request: Request):
@@ -1040,36 +1061,27 @@ async def new_page_page(request: Request):
     return HTMLResponse(content=render_template("new_post.html", context))
 
 @app.post("/admin/new-page")
-async def create_new_page(request: Request, title: str = Form(...),
-                         date: str = Form(...), type: str = Form(...),
+async def create_new_page(request: Request, background_tasks: BackgroundTasks,
+                         title: str = Form(...), date: str = Form(...), type: str = Form(...),
                          content: str = Form(...)):
     """Create a new page"""
-    # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
-    
+
     try:
-        # Generate filename using shared function
         filename = create_filename_for_content(title.strip(), date, 'pages')
-        
-        # Check if file already exists
         content_dir = get_content_directory('pages')
         if (content_dir / filename).exists():
             raise HTTPException(status_code=400, detail=f"A page with filename '{filename}' already exists")
-        
-        # Save using shared function
-        regen_warning = save_content_item(filename, 'pages', title, date, type, content, [])
 
-        response = {
+        save_content_item(filename, 'pages', title, date, type, content, [])
+        background_tasks.add_task(_regenerate_in_background, filename, 'pages')
+        return JSONResponse(content={
             "status": "success",
             "message": "Page created successfully",
             "filename": filename,
             "url": f"/pages/{filename.replace('.md', '.html')}"
-        }
-        if regen_warning:
-            response["warning"] = regen_warning
-        return JSONResponse(content=response)
-        
+        })
     except HTTPException:
         raise
     except Exception as e:
@@ -1380,6 +1392,9 @@ async def xmlrpc_endpoint(request: Request):
             value = int(param.find('int').text)
         elif param.find('i4') is not None:
             value = int(param.find('i4').text)
+        elif param.find('base64') is not None:
+            import base64 as _base64
+            value = _base64.b64decode(param.find('base64').text or "")
         elif param.find('struct') is not None:
             # Parse struct
             struct_elem = param.find('struct')
@@ -1397,13 +1412,16 @@ async def xmlrpc_endpoint(request: Request):
                         val = int(value_elem.find('int').text)
                     elif value_elem.find('i4') is not None:
                         val = int(value_elem.find('i4').text)
+                    elif value_elem.find('base64') is not None:
+                        import base64 as _base64
+                        val = _base64.b64decode(value_elem.find('base64').text or "")
                     else:
                         val = value_elem.text or ""
                     struct_dict[key] = val
             value = struct_dict
         else:
             value = param.text or ""
-        
+
         params.append(value)
     
     # Handle Blogger API methods
@@ -1433,6 +1451,8 @@ async def xmlrpc_endpoint(request: Request):
             result = api.metaweblog_getRecentPosts(*params)
         elif method_name == "metaWeblog.getCategories":
             result = api.metaweblog_getCategories(*params)
+        elif method_name == "metaWeblog.newMediaObject":
+            result = api.metaweblog_newMediaObject(*params)
         else:
             logger.error(f"Unknown method: {method_name}")
             raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")

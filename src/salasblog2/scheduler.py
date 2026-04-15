@@ -150,12 +150,16 @@ class Scheduler:
             if not self._copy_content_to_git():
                 return False
             
-            # Add content directory changes
-            logger.info("Adding content changes to git...")
+            # Add content and uploaded images to git
+            logger.info("Adding content and media changes to git...")
             try:
                 subprocess.run(
                     ["git", "add", "content/"],
                     capture_output=True, text=True, timeout=30, check=True
+                )
+                subprocess.run(
+                    ["git", "add", "static/images/uploads/"],
+                    capture_output=True, text=True, timeout=30, check=False
                 )
             except Exception as e:
                 self._log_error(f"Failed to add content to git: {e}")

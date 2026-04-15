@@ -9,6 +9,8 @@ import frontmatter
 import re
 import logging
 import os
+import shutil
+import base64
 from xmlrpc.client import Fault
 from .generator import SiteGenerator
 from .utils import create_filename_from_title
@@ -418,6 +420,50 @@ class BloggerAPI:
             logger.error(f"Failed to read post {postid}: {e}")
             self._create_fault(500, f"Unable to read post '{postid}'. The file may be corrupted or have invalid formatting. Error: {str(e)}")
     
+
+    def metaweblog_newMediaObject(self, blogid: str, username: str, password: str, struct: dict) -> dict:
+        """MetaWeblog API newMediaObject — upload an image or file from MarsEdit."""
+        logger.info(f"metaweblog_newMediaObject called: blogid={blogid}, username={username}")
+        self._authenticate_or_raise(username, password)
+
+        original_name = struct.get('name', 'upload')
+        bits = struct.get('bits', b'')
+
+        # bits may arrive as a base64 string if not already decoded
+        if isinstance(bits, str):
+            bits = base64.b64decode(bits)
+
+        # Date-prefix the filename to avoid collisions
+        date_prefix = datetime.now().strftime('%Y-%m-%d')
+        safe_name = re.sub(r'[^\w.\-]', '_', original_name)
+        filename = f"{date_prefix}-{safe_name}"
+
+        # 1. Source copy — included in git sync
+        source_dir = self.root_dir / "static" / "images" / "uploads"
+        source_dir.mkdir(parents=True, exist_ok=True)
+        source_path = source_dir / filename
+        source_path.write_bytes(bits)
+        logger.info(f"Media saved to source: {source_path}")
+
+        # 2. Output copy — served immediately without a site regeneration
+        output_dir = self.root_dir / "output" / "static" / "images" / "uploads"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source_path, output_dir / filename)
+        logger.info(f"Media copied to output: {output_dir / filename}")
+
+        # 3. Volume backup — persists across container restarts
+        try:
+            volume_dir = Path("/data") / "static" / "images" / "uploads"
+            volume_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source_path, volume_dir / filename)
+            logger.info(f"Media backed up to volume: {volume_dir / filename}")
+        except Exception as e:
+            logger.error(f"Volume backup failed for media {filename}: {e}")
+            self._create_fault(500, f"Media was saved but could not be backed up to persistent storage: {e}")
+
+        url = f"/static/images/uploads/{filename}"
+        logger.info(f"metaweblog_newMediaObject completed, url: {url}")
+        return {'url': url}
 
     def _authenticate(self, username: str, password: str) -> bool:
         """Basic authentication check."""
