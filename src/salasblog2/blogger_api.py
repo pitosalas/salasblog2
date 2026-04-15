@@ -103,23 +103,18 @@ class BloggerAPI:
     
     def _backup_to_volume(self, file_path: Path):
         """Immediately backup a single post file to persistent volume."""
-        try:
-            # Calculate relative path from blog_dir to maintain structure
-            relative_path = file_path.relative_to(self.root_dir)
-            volume_path = Path("/data") / relative_path
-            
-            # Ensure volume directory exists
-            volume_path.parent.mkdir(parents=True, exist_ok=True)
-            
-            # Copy the file to volume
-            import shutil
-            shutil.copy2(file_path, volume_path)
-            
-            logger.info(f"Post backed up to volume: {file_path} -> {volume_path}")
-            
-        except Exception as e:
-            logger.error(f"Failed to backup post to volume {file_path}: {e}")
-            # Don't raise - post creation should still succeed even if backup fails
+        # Calculate relative path from blog_dir to maintain structure
+        relative_path = file_path.relative_to(self.root_dir)
+        volume_path = Path("/data") / relative_path
+
+        # Ensure volume directory exists
+        volume_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Copy the file to volume
+        import shutil
+        shutil.copy2(file_path, volume_path)
+
+        logger.info(f"Post backed up to volume: {file_path} -> {volume_path}")
     
     def _delete_from_volume(self, file_path: Path):
         """Delete a single post file from persistent volume."""
@@ -227,10 +222,14 @@ class BloggerAPI:
         post = self._create_post_frontmatter(title, body_content, tags)
         file_path = self.blog_dir / filename
         self._write_post_file(file_path, post)
-        
+
         # Immediately backup to persistent volume
-        self._backup_to_volume(file_path)
-        
+        try:
+            self._backup_to_volume(file_path)
+        except Exception as e:
+            logger.error(f"Volume backup failed for {filename}: {e}")
+            self._create_fault(500, f"Post was written but could not be backed up to persistent storage: {e}")
+
         # Handle publishing workflow
         if publish:
             try:
@@ -238,8 +237,7 @@ class BloggerAPI:
             except Exception as e:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still created successfully
-            
-        
+
         logger.info(f"blogger_newPost completed successfully, returning: {filename}")
         return filename
     
@@ -271,10 +269,14 @@ class BloggerAPI:
         title, body_content, tags = self._parse_content_or_struct(content)
         post = self._create_post_frontmatter(title, body_content, tags)
         self._write_post_file(file_path, post)
-        
+
         # Immediately backup to persistent volume
-        self._backup_to_volume(file_path)
-        
+        try:
+            self._backup_to_volume(file_path)
+        except Exception as e:
+            logger.error(f"Volume backup failed for {postid}: {e}")
+            self._create_fault(500, f"Post was written but could not be backed up to persistent storage: {e}")
+
         # Handle publishing workflow
         if publish:
             try:
@@ -284,8 +286,7 @@ class BloggerAPI:
             except Exception as e:
                 logger.error(f"Incremental site regeneration failed: {e}")
                 # Don't raise - post was still created/edited successfully
-            
-        
+
         logger.info("blogger_editPost completed successfully")
         return True
     
