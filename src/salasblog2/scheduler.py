@@ -148,6 +148,20 @@ class Scheduler:
                 logger.warning("Git credentials not configured, skipping sync")
                 return False
             
+            # Fetch remote and fast-forward so we don't clobber GitHub-side changes
+            try:
+                self._run_command_with_retry(["git", "fetch", "origin", self.config.git_branch], timeout=30)
+                merge = subprocess.run(
+                    ["git", "merge", "--ff-only", f"origin/{self.config.git_branch}"],
+                    capture_output=True, text=True, timeout=30
+                )
+                if merge.returncode != 0:
+                    self._log_error(f"Cannot fast-forward before push — diverged history: {merge.stderr.strip()}")
+                    return False
+            except Exception as e:
+                self._log_error(f"Git fetch/merge failed before push: {e}")
+                return False
+
             # Copy content from data to app directory
             if not self._copy_content_to_git():
                 return False
