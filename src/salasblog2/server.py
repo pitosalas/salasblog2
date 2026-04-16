@@ -874,15 +874,17 @@ async def upload_image(request: Request, image: UploadFile = File(None), file: U
     source_dir = root_dir / "static" / "images" / "uploads"
     source_dir.mkdir(parents=True, exist_ok=True)
 
-    # Generate yyyy-mm-dd-N.ext filename, incrementing N until unique
+    # Generate yyyy-mm-dd-N.ext filename using exclusive create to avoid races.
+    # open(..., 'xb') is atomic: raises FileExistsError if the file already exists.
     n = 1
     while True:
         filename = f"{date_prefix}-{n}{ext}"
-        if not (source_dir / filename).exists():
+        try:
+            with open(source_dir / filename, 'xb') as f:
+                f.write(data)
             break
-        n += 1
-
-    (source_dir / filename).write_bytes(data)
+        except FileExistsError:
+            n += 1
 
     # 2. Output — served immediately (use configured output_dir, not Path.cwd())
     output_dir = config["output_dir"] / "static" / "images" / "uploads"
