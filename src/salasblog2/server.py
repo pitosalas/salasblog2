@@ -865,7 +865,9 @@ async def upload_image(request: Request, image: UploadFile = File(None), file: U
         raise HTTPException(status_code=400, detail="No file provided")
 
     date_prefix = datetime.now().strftime('%Y-%m-%d')
-    ext = Path(upload.filename or "upload").suffix or ".bin"
+    original = Path(upload.filename or "upload")
+    stem = original.stem or "upload"
+    ext = original.suffix or ".bin"
     data = await upload.read()
 
     root_dir = config["root_dir"]
@@ -874,17 +876,23 @@ async def upload_image(request: Request, image: UploadFile = File(None), file: U
     source_dir = root_dir / "static" / "images" / "uploads"
     source_dir.mkdir(parents=True, exist_ok=True)
 
-    # Generate yyyy-mm-dd-N.ext filename using exclusive create to avoid races.
+    # Generate yyyy-mm-dd-originalname.ext filename using exclusive create to avoid
+    # races. If a file with that name already exists, append -N before the extension.
     # open(..., 'xb') is atomic: raises FileExistsError if the file already exists.
-    n = 1
-    while True:
-        filename = f"{date_prefix}-{n}{ext}"
-        try:
-            with open(source_dir / filename, 'xb') as f:
-                f.write(data)
-            break
-        except FileExistsError:
-            n += 1
+    filename = f"{date_prefix}-{stem}{ext}"
+    try:
+        with open(source_dir / filename, 'xb') as f:
+            f.write(data)
+    except FileExistsError:
+        n = 2
+        while True:
+            filename = f"{date_prefix}-{stem}-{n}{ext}"
+            try:
+                with open(source_dir / filename, 'xb') as f:
+                    f.write(data)
+                break
+            except FileExistsError:
+                n += 1
 
     # 2. Output — served immediately (use configured output_dir, not Path.cwd())
     output_dir = config["output_dir"] / "static" / "images" / "uploads"

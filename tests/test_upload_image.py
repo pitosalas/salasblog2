@@ -47,19 +47,19 @@ class TestUploadImage:
         assert body["data"]["filePath"].startswith("/static/images/uploads/")
         assert body["data"]["filePath"].endswith(".png")
 
-    def test_filename_is_date_and_sequence(self, client, tmp_path):
-        """Uploaded filename uses yyyy-mm-dd-N.ext scheme."""
+    def test_filename_is_date_and_original_name(self, client, tmp_path):
+        """Uploaded filename uses yyyy-mm-dd-originalname.ext scheme."""
         response = client.post(
             "/api/upload-image",
             files={"file": ("myimage.jpg", b"data", "image/jpeg")},
         )
         assert response.status_code == 200
         filename = response.json()["data"]["filePath"].split("/")[-1]
-        assert re.match(r"^\d{4}-\d{2}-\d{2}-\d+\.jpg$", filename), \
-            f"Expected date-sequence filename, got: {filename}"
+        assert re.match(r"^\d{4}-\d{2}-\d{2}-myimage\.jpg$", filename), \
+            f"Expected date-originalname filename, got: {filename}"
 
-    def test_sequential_uploads_get_unique_names(self, client, tmp_path):
-        """Multiple uploads on the same day get incrementing sequence numbers."""
+    def test_duplicate_original_name_gets_suffix(self, client, tmp_path):
+        """Uploading the same filename twice appends -2, -3, etc."""
         filenames = []
         for _ in range(3):
             response = client.post(
@@ -69,6 +69,10 @@ class TestUploadImage:
             assert response.status_code == 200
             filenames.append(response.json()["data"]["filePath"].split("/")[-1])
         assert len(set(filenames)) == 3, f"Expected unique filenames, got: {filenames}"
+        today = filenames[0][:10]
+        assert filenames[0] == f"{today}-img.png"
+        assert filenames[1] == f"{today}-img-2.png"
+        assert filenames[2] == f"{today}-img-3.png"
 
     def test_unauthenticated_returns_401(self, tmp_path):
         """Request without a valid session is rejected."""
