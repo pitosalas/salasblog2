@@ -1,6 +1,8 @@
 ---
 date: '2026-04-15'
-tags: []
+tags:
+- programming
+- ai
 title: Literate Programming and Claude
 type: blog
 ---
