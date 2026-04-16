@@ -49,4 +49,20 @@
         </article>
     </div>
 </div>
+
+{% block extra_js %}
+<script>
+    // Wrap every image in the post content with a link to its full-size source.
+    document.querySelectorAll('article div img').forEach(img => {
+        if (img.parentElement.tagName === 'A') return; // already linked in markdown
+        const a = document.createElement('a');
+        a.href = img.src;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.title = img.alt || 'View full size';
+        img.parentElement.insertBefore(a, img);
+        a.appendChild(img);
+    });
+</script>
+{% endblock %}
 {% endblock %}
