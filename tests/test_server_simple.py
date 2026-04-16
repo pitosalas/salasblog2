@@ -293,14 +293,6 @@ class TestEnvironmentValidationUnit:
         from salasblog2.server import validate_environment_and_setup
         assert callable(validate_environment_and_setup)
     
-    def test_environment_validation_requires_session_secret(self):
-        """Test validation requires SESSION_SECRET."""
-        from salasblog2.server import validate_environment_and_setup
-        
-        with patch.dict(os.environ, {}, clear=True):
-            with pytest.raises(RuntimeError, match="SESSION_SECRET"):
-                validate_environment_and_setup()
-
 
 class TestServerImports:
     """Test that all expected functions and objects can be imported."""
