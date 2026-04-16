@@ -1150,7 +1150,8 @@ async def preview_markdown(request: Request, content: str = Form(...)):
 
 @app.post("/admin/preview-post")
 async def preview_post_html(request: Request, title: str = Form(...), content: str = Form(...),
-                           date: str = Form(...), type: str = Form(...), filename: str = Form(...)):
+                           date: str = Form(...), type: str = Form(...), filename: str = Form(...),
+                           image_size: str = Form(default='')):
     """Render complete preview page with HTML"""
     # Check authentication
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -1166,10 +1167,11 @@ async def preview_post_html(request: Request, title: str = Form(...), content: s
             'html_content': html_content,
             'date': date,
             'type': type,
-            'filename': filename
+            'filename': filename,
+            'image_size': image_size,
         }
         return HTMLResponse(content=render_template("preview_post.html", context))
-        
+
     except Exception as e:
         logging.getLogger(__name__).error(f"Error rendering post preview: {e}")
         raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")

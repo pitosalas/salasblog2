@@ -19,7 +19,7 @@
     <div class="container">
         <p class="text-muted small">This is how your post will appear on the blog</p>
         <h1 class="display-6">{{ title }}</h1>
-        <div>{{ html_content|safe }}</div>
+        <div{% if image_size %} class="images-{{ image_size }}"{% endif %}>{{ html_content|safe }}</div>
     </div>
     
     <script>
@@ -29,7 +29,8 @@
             content: {{ content|tojson }},
             date: {{ date|tojson }},
             type: {{ type|tojson }},
-            filename: {{ filename|tojson }}
+            filename: {{ filename|tojson }},
+            image_size: {{ image_size|tojson }},
         };
         
         async function saveAndClose() {
@@ -45,6 +46,7 @@
                 formData.append('content', postData.content);
                 formData.append('date', postData.date);
                 formData.append('type', postData.type);
+                formData.append('image_size', postData.image_size);
                 
                 const response = await fetch(`/admin/edit-post/${postData.filename}`, {
                     method: 'POST',
