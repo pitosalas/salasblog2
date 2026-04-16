@@ -21,7 +21,7 @@ if [ -n "$GIT_TOKEN" ]; then
     # timeout 20 prevents a hung GitHub connection from blocking the entire startup.
     echo "Fetching git history from remote..."
     if timeout 20 git fetch --depth=1 origin main 2>/dev/null; then
-        git checkout -B main origin/main
+        git checkout -f -B main origin/main
         echo "Git repository synced with remote ($(git rev-parse --short HEAD))"
     else
         echo "Warning: Could not fetch from remote — scheduler git sync may fail"

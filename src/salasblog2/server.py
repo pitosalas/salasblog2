@@ -52,18 +52,6 @@ def validate_environment_and_setup():
     """Validate all environment variables and system assumptions at startup"""
     logger = logging.getLogger(__name__)
     
-    # Required environment variables
-    required_env_vars = {
-        "SESSION_SECRET": "Session secret key for admin authentication"
-    }
-    
-    # Check required environment variables
-    for var, description in required_env_vars.items():
-        if not os.getenv(var):
-            error_msg = f"Required environment variable {var} not set: {description}"
-            logger.error(error_msg)
-            raise RuntimeError(error_msg)
-    
     # Set up paths
     config["root_dir"] = Path(__file__).parent.parent.parent
     config["output_dir"] = config["root_dir"] / "output"
