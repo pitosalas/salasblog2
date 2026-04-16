@@ -5,6 +5,8 @@
 
 import json
 import logging
+import threading
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -27,6 +29,8 @@ def _period_start(period: str | None) -> datetime | None:
     return None
 
 
+FLUSH_INTERVAL_SECONDS = 60
+
 class VisitCounter:
     def __init__(self):
         data_dir = Path("/data")
@@ -35,6 +39,9 @@ class VisitCounter:
         else:
             self.stats_file = Path("stats.json")
         self._counts: dict = self._load()
+        self._dirty = False
+        self._lock = threading.Lock()
+        self._start_flush_thread()
 
     def _load(self) -> dict:
         """Load counts from file, migrating old formats if needed.
@@ -70,21 +77,43 @@ class VisitCounter:
             logger.warning(f"Could not load stats file: {e}")
         return {}
 
+    def _start_flush_thread(self):
+        """Start background thread that flushes dirty stats to disk periodically."""
+        def flush_loop():
+            while True:
+                time.sleep(FLUSH_INTERVAL_SECONDS)
+                self.flush()
+        t = threading.Thread(target=flush_loop, daemon=True)
+        t.start()
+
+    def flush(self):
+        """Write stats to disk if there are pending changes."""
+        with self._lock:
+            if not self._dirty:
+                return
+            try:
+                self.stats_file.write_text(
+                    json.dumps(self._counts, indent=2), encoding="utf-8"
+                )
+                self._dirty = False
+            except Exception as e:
+                logger.warning(f"Could not save stats: {e}")
+
     def _save(self):
-        self.stats_file.write_text(
-            json.dumps(self._counts, indent=2), encoding="utf-8"
-        )
+        """Mark stats as dirty — actual write happens in background flush thread."""
+        self._dirty = True
 
     def increment(self, path: str, visitor_type: str):
         """Record a visit for path and visitor type with current UTC timestamp."""
-        if path not in self._counts:
-            self._counts[path] = {}
-        if visitor_type not in self._counts[path]:
-            self._counts[path][visitor_type] = []
-        self._counts[path][visitor_type].append(
-            datetime.now(timezone.utc).isoformat()
-        )
-        self._save()
+        with self._lock:
+            if path not in self._counts:
+                self._counts[path] = {}
+            if visitor_type not in self._counts[path]:
+                self._counts[path][visitor_type] = []
+            self._counts[path][visitor_type].append(
+                datetime.now(timezone.utc).isoformat()
+            )
+            self._dirty = True
 
     def get(self, path: str) -> int:
         """Return total visit count across all visitor types for path."""

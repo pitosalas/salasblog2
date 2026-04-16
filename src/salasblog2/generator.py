@@ -99,12 +99,12 @@ class SiteGenerator:
                     'title': title,
                     'date': parsed['metadata'].get('date', ''),
                     'type': parsed['metadata'].get('type', content_type),
-
                     'content': parsed['html_content'],
                     'raw_content': parsed['content'],
                     'filename': filename,
                     'url': generate_url_from_filename(filename, content_type),
-                    'tags': parsed['metadata'].get('tags', [])
+                    'tags': parsed['metadata'].get('tags', []),
+                    'image_size': parsed['metadata'].get('image_size', '')
                 }
                 
                 # Add raindrop-specific fields if they exist
@@ -223,6 +223,16 @@ class SiteGenerator:
             print(f"✓ Copied static files")
         else:
             print(f"⚠️  No static files found")
+
+        # Merge uploaded images from volume (survive redeploys)
+        volume_uploads = Path("/data/static/images/uploads")
+        if volume_uploads.exists():
+            output_uploads = static_output_dir / "images" / "uploads"
+            output_uploads.mkdir(parents=True, exist_ok=True)
+            for f in volume_uploads.iterdir():
+                if f.is_file():
+                    shutil.copy2(f, output_uploads / f.name)
+            print(f"✓ Restored uploaded images from volume")
     
     def render_template(self, template_name, context):
         """Render a Jinja2 template with context"""

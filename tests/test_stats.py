@@ -37,6 +37,7 @@ class TestVisitCounter:
         counter = _make_counter(tmp_path)
         counter.increment("/", "human")
         counter.increment("/raindrops/", "ai_bot")
+        counter.flush()
 
         data = json.loads((tmp_path / "stats.json").read_text())
         assert len(data["/"]["human"]) == 1

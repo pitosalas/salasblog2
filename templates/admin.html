@@ -79,6 +79,9 @@
             </div>
 
             <div class="admin-pane d-none" id="tab-scheduler">
+                <h2 class="h5 mb-2">Process Activity</h2>
+                <div id="process-activity" class="mb-4"><p class="text-muted fst-italic small">Loading...</p></div>
+
                 <h2 class="h5 mb-2">Automated Scheduler</h2>
                 <p class="text-muted">The scheduler performs two automated tasks: <strong>Git sync to GitHub</strong> (backup content) and <strong>Raindrop sync</strong> (download new bookmarks)</p>
                 <div class="alert alert-light border mb-3 small">
@@ -539,6 +542,28 @@
             }
         }
 
+        async function loadProcessActivity() {
+            const div = document.getElementById('process-activity');
+            try {
+                const resp = await fetch('/api/process-activity');
+                const d = await resp.json();
+                function fmt(iso) {
+                    return iso ? new Date(iso).toLocaleString() : 'Never';
+                }
+                div.innerHTML = `<table class="table table-sm table-bordered w-auto">
+                    <tbody>
+                        <tr><th>Server uptime</th><td>${d.uptime}</td><td class="text-muted small">started ${fmt(d.server_started)}</td></tr>
+                        <tr><th>Site generations</th><td>${d.generation_count}</td><td class="text-muted small">last: ${fmt(d.last_generation)}</td></tr>
+                        <tr><th>Git syncs</th><td>${d.git_sync_count}</td><td class="text-muted small">last: ${fmt(d.last_git_sync)}</td></tr>
+                        <tr><th>Raindrop syncs</th><td>${d.raindrop_sync_count}</td><td class="text-muted small">last: ${fmt(d.last_raindrop_sync)}</td></tr>
+                        <tr><th>Scheduler</th><td colspan="2">${d.scheduler_running ? '<span class="badge bg-success">Running</span>' : '<span class="badge bg-secondary">Stopped</span>'}</td></tr>
+                    </tbody>
+                </table>`;
+            } catch (e) {
+                div.innerHTML = `<p class="text-danger small">Failed to load: ${e.message}</p>`;
+            }
+        }
+
         async function loadSchedulerStatus() {
             const logsDiv = document.getElementById('scheduler-logs');
             try {
@@ -654,6 +679,7 @@
             btn.classList.add('active');
             if (id === 'tab-stats') loadStats('today');
             if (id === 'tab-propose') loadProposedPosts();
+            if (id === 'tab-scheduler') loadProcessActivity();
         }
 
         async function loadProposedPosts() {
@@ -738,6 +764,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-year').textContent = new Date().getFullYear();
             loadSchedulerStatus();
+            loadProcessActivity();
             // Show Stats as the default tab
             document.getElementById('tab-stats').classList.remove('d-none');
             loadStats('today');

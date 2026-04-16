@@ -24,6 +24,13 @@
    Markdown renderer. */
 article img { max-width: 100%; height: auto; }
 
+/* Per-post image sizing controlled by image_size frontmatter field.
+   Applied to a wrapper div so all images in the post are sized uniformly. */
+.images-small img  { max-width: 25%; height: auto; }
+.images-medium img { max-width: 50%; height: auto; }
+.images-large img  { max-width: 75%; height: auto; }
+.images-full img   { max-width: 100%; height: auto; }
+
 /* Bootstrap has no built-in live-search dropdown component; this is custom. */
 .search-container { position: relative; }
 .search-results {

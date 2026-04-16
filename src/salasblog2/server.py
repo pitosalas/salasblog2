@@ -38,6 +38,11 @@ from .propose import get_proposed_posts
 sync_status = {"running": False, "message": "Ready"}
 regen_status = {"running": False, "message": "Ready"}
 
+# Process activity tracking
+_server_start_time = datetime.now()
+_generation_count = 0
+_last_generation_time = None
+
 # Global configuration
 config = {
     "root_dir": None,
@@ -169,9 +174,9 @@ async def lifespan(app: FastAPI):
     # Check if we're the only instance running
     _check_single_instance()
     
-    # Start the scheduler for both Git and Raindrop sync
-    scheduler = get_scheduler()
-    scheduler.start_scheduler()
+    # Scheduler disabled for debugging — start manually from admin if needed
+    # scheduler = get_scheduler()
+    # scheduler.start_scheduler()
     
     yield
     
@@ -410,6 +415,7 @@ def load_content_item(filename: str, content_type: str):
             'date': item.metadata.get('date', ''),
             'type': item.metadata.get('type', content_type.rstrip('s')),  # 'blog' or 'page'
             'tags': item.metadata.get('tags', []),
+            'image_size': item.metadata.get('image_size', ''),
             'content': item.content
         }
     except Exception as e:
@@ -417,7 +423,7 @@ def load_content_item(filename: str, content_type: str):
         raise HTTPException(status_code=500, detail=f"Error loading {content_type}: {str(e)}")
 
 def save_content_item(filename: str, content_type: str, title: str, date: str,
-                     item_type: str, content: str, tags: list):
+                     item_type: str, content: str, tags: list, image_size: str = ''):
     """Write content item to disk. Regeneration is handled separately as a background task."""
     logger = logging.getLogger(__name__)
 
@@ -433,6 +439,8 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
             'type': item_type,
             'tags': tags
         }
+        if image_size:
+            item.metadata['image_size'] = image_size
 
         with open(content_file, 'w', encoding='utf-8') as f:
             f.write(frontmatter.dumps(item))
@@ -447,11 +455,14 @@ def save_content_item(filename: str, content_type: str, title: str, date: str,
 
 def _regenerate_in_background(filename: str, content_type: str):
     """Run incremental site regeneration — intended for use as a background task."""
+    global _generation_count, _last_generation_time
     logger = logging.getLogger(__name__)
     logger.info(f"Background regeneration START for {content_type}: {filename}")
     try:
         generator = SiteGenerator()
         generator.incremental_regenerate_post(filename, content_type)
+        _generation_count += 1
+        _last_generation_time = datetime.now()
         logger.info(f"Background regeneration DONE for {content_type}: {filename}")
     except Exception as e:
         logger.error(f"Background regeneration FAILED for {content_type} {filename}: {e}")
@@ -612,6 +623,27 @@ async def get_scheduler_status():
     scheduler = get_scheduler()
     status = scheduler.get_status()
     return JSONResponse(content=status)
+
+@app.get("/api/process-activity")
+async def get_process_activity():
+    """Get process activity stats: uptime, generation counts, sync counts"""
+    scheduler = get_scheduler()
+    sched_status = scheduler.get_status()
+    uptime_seconds = int((datetime.now() - _server_start_time).total_seconds())
+    hours, remainder = divmod(uptime_seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    uptime_str = f"{hours}h {minutes}m {seconds}s"
+    return JSONResponse(content={
+        "server_started": _server_start_time.isoformat(),
+        "uptime": uptime_str,
+        "generation_count": _generation_count,
+        "last_generation": _last_generation_time.isoformat() if _last_generation_time else None,
+        "git_sync_count": sched_status.get("git_sync_count", 0),
+        "last_git_sync": sched_status.get("last_git_sync"),
+        "raindrop_sync_count": sched_status.get("raindrop_sync_count", 0),
+        "last_raindrop_sync": sched_status.get("last_raindrop_sync"),
+        "scheduler_running": sched_status.get("running", False),
+    })
 
 @app.post("/api/scheduler/sync-now")
 async def trigger_git_sync(request: Request):
@@ -833,8 +865,7 @@ async def upload_image(request: Request, image: UploadFile = File(None), file: U
         raise HTTPException(status_code=400, detail="No file provided")
 
     date_prefix = datetime.now().strftime('%Y-%m-%d')
-    safe_name = re.sub(r'[^\w.\-]', '_', upload.filename or "upload")
-    filename = f"{date_prefix}-{safe_name}"
+    ext = Path(upload.filename or "upload").suffix or ".bin"
     data = await upload.read()
 
     root_dir = config["root_dir"]
@@ -842,6 +873,15 @@ async def upload_image(request: Request, image: UploadFile = File(None), file: U
     # 1. Source — included in git sync
     source_dir = root_dir / "static" / "images" / "uploads"
     source_dir.mkdir(parents=True, exist_ok=True)
+
+    # Generate yyyy-mm-dd-N.ext filename, incrementing N until unique
+    n = 1
+    while True:
+        filename = f"{date_prefix}-{n}{ext}"
+        if not (source_dir / filename).exists():
+            break
+        n += 1
+
     (source_dir / filename).write_bytes(data)
 
     # 2. Output — served immediately (use configured output_dir, not Path.cwd())
@@ -931,7 +971,8 @@ async def edit_post_page(filename: str, request: Request):
 @app.post("/admin/edit-post/{filename}")
 async def save_edited_post(filename: str, request: Request, background_tasks: BackgroundTasks,
                           title: str = Form(...), date: str = Form(...), type: str = Form(...),
-                          content: str = Form(...), tags: List[str] = Form(default=[])):
+                          content: str = Form(...), tags: List[str] = Form(default=[]),
+                          image_size: str = Form(default='')):
     """Save edited post to file and regenerate site"""
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
@@ -940,7 +981,7 @@ async def save_edited_post(filename: str, request: Request, background_tasks: Ba
     if not (content_dir / filename).exists():
         raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
 
-    save_content_item(filename, 'blog', title, date, type, content, tags)
+    save_content_item(filename, 'blog', title, date, type, content, tags, image_size)
     background_tasks.add_task(_regenerate_in_background, filename, 'blog')
     return JSONResponse(content={"status": "success", "message": "Post updated successfully", "filename": filename})
 
@@ -1259,10 +1300,13 @@ async def regenerate_site(request: Request):
         raise HTTPException(status_code=401, detail="Authentication required")
     
     def do_regenerate():
+        global _generation_count, _last_generation_time
         generator = SiteGenerator()
         generator.generate_site()
+        _generation_count += 1
+        _last_generation_time = datetime.now()
         return {
-            "status": "success", 
+            "status": "success",
             "message": "Site regenerated successfully"
         }
     

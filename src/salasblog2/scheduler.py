@@ -40,6 +40,8 @@ class Scheduler:
         self.last_git_sync = None
         self.last_raindrop_sync = None
         self.recent_errors = []
+        self.git_sync_count = 0
+        self.raindrop_sync_count = 0
         
     def _run_command_with_retry(self, cmd: List[str], retries: int = 2, timeout: int = 60) -> subprocess.CompletedProcess:
         """Run command with simple retry logic"""
@@ -175,6 +177,7 @@ class Scheduler:
             success = self._commit_and_push()
             if success:
                 self.last_git_sync = datetime.now()
+                self.git_sync_count += 1
             return success
                 
         except Exception as e:
@@ -213,6 +216,7 @@ class Scheduler:
             
             logger.info("Successfully synced raindrops and regenerated site")
             self.last_raindrop_sync = datetime.now()
+            self.raindrop_sync_count += 1
             return True
             
         except Exception as e:
@@ -306,19 +310,11 @@ class Scheduler:
             schedule.every(git_minutes).minutes.do(
                 lambda: self._sync_wrapper('git', False)
             ).tag('git_sync')
-            # Run a one-time git sync 10 minutes after startup
-            schedule.every(10).minutes.do(
-                lambda: self._sync_wrapper('git', True)
-            ).tag('git_startup')
-        
+
         if raindrop_minutes > 0:
             schedule.every(raindrop_minutes).minutes.do(
                 lambda: self._sync_wrapper('raindrop', False)
             ).tag('raindrop_sync')
-            # Run a one-time raindrop sync 5 minutes after startup
-            schedule.every(5).minutes.do(
-                lambda: self._sync_wrapper('raindrop', True)
-            ).tag('raindrop_startup')
         
         self.is_running = True
         
@@ -350,6 +346,8 @@ class Scheduler:
             "running": self.is_running,
             "last_git_sync": self.last_git_sync.isoformat() if self.last_git_sync else None,
             "last_raindrop_sync": self.last_raindrop_sync.isoformat() if self.last_raindrop_sync else None,
+            "git_sync_count": self.git_sync_count,
+            "raindrop_sync_count": self.raindrop_sync_count,
             "next_jobs": [str(job) for job in schedule.jobs],
             "git_configured": self._check_git_credentials(),
             "raindrop_configured": bool(raindrop_token),

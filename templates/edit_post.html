@@ -39,6 +39,16 @@
                     <label for="date" class="form-label">Date</label>
                     <input type="date" id="date" name="date" class="form-control" value="{{ date }}" required>
                 </div>
+                <div class="col-md-3">
+                    <label for="image_size" class="form-label">Image Size</label>
+                    <select id="image_size" name="image_size" class="form-select">
+                        <option value="" {% if not image_size %}selected{% endif %}>Default (full width)</option>
+                        <option value="small" {% if image_size == 'small' %}selected{% endif %}>Small (25%)</option>
+                        <option value="medium" {% if image_size == 'medium' %}selected{% endif %}>Medium (50%)</option>
+                        <option value="large" {% if image_size == 'large' %}selected{% endif %}>Large (75%)</option>
+                        <option value="full" {% if image_size == 'full' %}selected{% endif %}>Full (100%)</option>
+                    </select>
+                </div>
 
                 <input type="hidden" id="type" name="type" value="{{ content_type }}">
             </div>
