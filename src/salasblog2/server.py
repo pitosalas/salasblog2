@@ -1413,7 +1413,7 @@ async def list_drafts(request: Request):
 
     def _load():
         drafts = []
-        for md_file in sorted(blog_dir.glob("*.md")):
+        for md_file in sorted(blog_dir.glob("draft-*.md")):
             try:
                 with open(md_file, "r", encoding="utf-8") as f:
                     post = frontmatter.load(f)
