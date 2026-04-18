@@ -16,7 +16,7 @@ import frontmatter
 import markdown
 import mimetypes
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, date
 from concurrent.futures import ThreadPoolExecutor
 from typing import List
 from fastapi import FastAPI, HTTPException, Request, Form, Depends, UploadFile, File, BackgroundTasks
@@ -1456,6 +1456,7 @@ async def publish_draft(request: Request):
         post = frontmatter.load(f)
 
     del post.metadata["draft"]
+    post.metadata["date"] = date.today().isoformat()
     draft_file.write_text(frontmatter.dumps(post), encoding="utf-8")
 
     app_blog = Path("/app/content/blog") / filename
@@ -1463,6 +1464,7 @@ async def publish_draft(request: Request):
         with open(app_blog, "r", encoding="utf-8") as f:
             app_post = frontmatter.load(f)
         del app_post.metadata["draft"]
+        app_post.metadata["date"] = date.today().isoformat()
         app_blog.write_text(frontmatter.dumps(app_post), encoding="utf-8")
 
     generator = SiteGenerator()
