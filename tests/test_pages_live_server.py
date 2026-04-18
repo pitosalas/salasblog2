@@ -191,8 +191,8 @@ class TestPagesLiveServer:
         # Since we're not authenticated, we shouldn't see edit/delete buttons
         
         # Check that sensitive admin paths are not exposed
-        assert '/admin/edit-page/' not in response.text or 'display: none' in response.text
-        assert '/admin/delete-page/' not in response.text or 'display: none' in response.text
+        assert '/admin/edit-page/' not in response.text or 'd-none' in response.text
+        assert '/admin/delete-page/' not in response.text or 'd-none' in response.text
         
         # Admin controls might be in the DOM but hidden - that's okay
         # What matters is they're not visible to unauthenticated users

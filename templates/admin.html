@@ -183,6 +183,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/static/js/script.js"></script>
     <script>
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
         function statusHtml(type, message) {
             const cls = type === 'success' ? 'alert-success' : type === 'error' ? 'alert-danger' : 'alert-info';
             const spinner = type === 'loading' ? '<span class="spinner-border spinner-border-sm me-2"></span>' : '';
@@ -685,7 +690,6 @@
             document.getElementById(id).classList.remove('d-none');
             document.querySelectorAll('.admin-tab').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            if (id === 'tab-stats') loadStats('today');
             if (id === 'tab-propose') { loadProposedPosts(); loadProposedDrops(); }
             if (id === 'tab-stats') document.getElementById('stats-iframe').src = '/admin-stats.html';
             if (id === 'tab-drafts') loadDrafts();
@@ -788,20 +792,25 @@
                 const rows = drafts.map((d, i) =>
                     `<tr id="draft-row-${i}">
                         <td>
-                            <strong>${d.title}</strong>
-                            <small class="text-muted ms-2">${d.date}</small>
-                            ${d.source_url ? `<br><small><a href="${d.source_url}" target="_blank">${d.source_url}</a></small>` : ''}
-                            <div class="mt-2 p-2 bg-light border rounded font-monospace small" style="white-space:pre-wrap">${d.body}</div>
+                            <strong>${escapeHtml(d.title)}</strong>
+                            <small class="text-muted ms-2">${escapeHtml(d.date)}</small>
+                            ${d.source_url ? `<br><small><a href="${escapeHtml(d.source_url)}" target="_blank">${escapeHtml(d.source_url)}</a></small>` : ''}
+                            <div class="mt-2 p-2 bg-light border rounded font-monospace small draft-body" data-idx="${i}" style="white-space:pre-wrap"></div>
                         </td>
                         <td class="text-nowrap">
-                            <a href="/admin/repost/${d.filename}" class="btn btn-sm btn-success me-1">Edit &amp; Post</a>
-                            <button class="btn btn-sm btn-outline-danger" onclick="deleteDraft('${d.filename}', ${i}, this)">Delete</button>
+                            <a href="/admin/repost/${escapeHtml(d.filename)}" class="btn btn-sm btn-success me-1">Edit &amp; Post</a>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteDraft('${escapeHtml(d.filename)}', ${i}, this)">Delete</button>
                         </td>
                     </tr>`
                 ).join('');
                 listDiv.innerHTML = `<table class="table table-sm table-hover">
                     <thead class="table-dark"><tr><th>Draft</th><th></th></tr></thead>
                     <tbody>${rows}</tbody></table>`;
+                // Set body via textContent to safely handle backticks, HTML chars, etc.
+                drafts.forEach((d, i) => {
+                    const bodyDiv = listDiv.querySelector(`.draft-body[data-idx="${i}"]`);
+                    if (bodyDiv) bodyDiv.textContent = d.body || '';
+                });
             } catch (e) {
                 statusDiv.innerHTML = statusHtml('error', 'Error: ' + e.message);
             }
