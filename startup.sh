@@ -82,9 +82,7 @@ if [ -d "/app/content/pages" ] && [ -d "/data/content" ]; then
     echo "Pages sync completed"
 fi
 
-echo "Regenerating site with volume content..."
-uv run bg generate
-echo "Site generation complete"
+echo "Starting server immediately; regenerating site in background..."
+uv run bg generate &
 
-echo "Starting server..."
 exec uv run bg server --port 8080
