@@ -1331,12 +1331,13 @@ async def regenerate_site(request: Request):
 
 @app.get("/api/propose")
 async def propose_posts(request: Request):
-    """Return top 10 highest-scoring old blog posts for reposting"""
+    """Return 5 random high-scoring old blog posts for reposting."""
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     blog_dir = get_content_directory("blog")
-    posts = get_proposed_posts(blog_dir, 50)
+    loop = asyncio.get_event_loop()
+    posts = await loop.run_in_executor(None, lambda: get_proposed_posts(blog_dir, 50))
     sample = random.sample(posts, min(5, len(posts)))
     return JSONResponse(content=[
         {"filename": p.filename, "title": p.title, "date": p.date,
@@ -1352,8 +1353,9 @@ async def propose_drops(request: Request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     drops_dir = get_content_directory("raindrops")
+    loop = asyncio.get_event_loop()
     filt = DropFilter(min_age_months=3, min_visits=5, top_n=50)
-    drops = get_proposed_drops(drops_dir, get_counter(), filt)
+    drops = await loop.run_in_executor(None, lambda: get_proposed_drops(drops_dir, get_counter(), filt))
     sample = random.sample(drops, min(5, len(drops)))
     return JSONResponse(content=sample)
 
@@ -1408,23 +1410,29 @@ async def list_drafts(request: Request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     blog_dir = get_content_directory("blog")
-    drafts = []
-    for md_file in sorted(blog_dir.glob("*.md")):
-        try:
-            with open(md_file, "r", encoding="utf-8") as f:
-                post = frontmatter.load(f)
-            if not post.metadata.get("draft"):
+
+    def _load():
+        drafts = []
+        for md_file in sorted(blog_dir.glob("*.md")):
+            try:
+                with open(md_file, "r", encoding="utf-8") as f:
+                    post = frontmatter.load(f)
+                if not post.metadata.get("draft"):
+                    continue
+                drafts.append({
+                    "filename": md_file.name,
+                    "title": post.metadata.get("title", md_file.stem),
+                    "date": str(post.metadata.get("date", "")),
+                    "source_raindrop": post.metadata.get("source_raindrop", ""),
+                    "source_url": post.metadata.get("source_url", ""),
+                    "excerpt": post.content[:200] if post.content else "",
+                })
+            except OSError:
                 continue
-            drafts.append({
-                "filename": md_file.name,
-                "title": post.metadata.get("title", md_file.stem),
-                "date": str(post.metadata.get("date", "")),
-                "source_raindrop": post.metadata.get("source_raindrop", ""),
-                "source_url": post.metadata.get("source_url", ""),
-                "excerpt": post.content[:200] if post.content else "",
-            })
-        except OSError:
-            continue
+        return drafts
+
+    loop = asyncio.get_event_loop()
+    drafts = await loop.run_in_executor(None, _load)
     return JSONResponse(content=drafts)
 
 
@@ -1461,6 +1469,30 @@ async def publish_draft(request: Request):
     generator.incremental_regenerate_post(filename, "blog")
 
     return JSONResponse(content={"status": "published", "filename": filename})
+
+
+@app.post("/api/delete-draft")
+async def delete_draft(request: Request):
+    """Delete a draft blog post."""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+
+    body = await request.json()
+    filename = body.get("filename", "")
+    if not filename:
+        raise HTTPException(status_code=400, detail="filename required")
+
+    blog_dir = get_content_directory("blog")
+    draft_file = blog_dir / filename
+    if not draft_file.exists():
+        raise HTTPException(status_code=404, detail=f"Draft not found: {filename}")
+
+    draft_file.unlink()
+    app_blog = Path("/app/content/blog") / filename
+    if app_blog.exists():
+        app_blog.unlink()
+
+    return JSONResponse(content={"status": "deleted", "filename": filename})
 
 
 @app.get("/admin/repost/{filename}")

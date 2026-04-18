@@ -799,7 +799,10 @@
                             <small>${d.excerpt}</small>
                             ${d.source_url ? `<br><small><a href="${d.source_url}" target="_blank">${d.source_url}</a></small>` : ''}
                         </td>
-                        <td><button class="btn btn-sm btn-success" onclick="publishDraft('${d.filename}', ${i}, this)">Post</button></td>
+                        <td class="text-nowrap">
+                            <button class="btn btn-sm btn-success me-1" onclick="publishDraft('${d.filename}', ${i}, this)">Post</button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteDraft('${d.filename}', ${i}, this)">Delete</button>
+                        </td>
                     </tr>`
                 ).join('');
                 listDiv.innerHTML = `<table class="table table-sm table-hover">
@@ -831,6 +834,31 @@
             } catch (e) {
                 btn.disabled = false;
                 btn.innerHTML = 'Post';
+                alert('Error: ' + e.message);
+            }
+        }
+
+        async function deleteDraft(filename, rowIdx, btn) {
+            if (!confirm('Delete this draft permanently?')) return;
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
+            try {
+                const resp = await fetch('/api/delete-draft', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({filename})
+                });
+                if (resp.ok) {
+                    document.getElementById(`draft-row-${rowIdx}`).remove();
+                } else {
+                    const result = await resp.json();
+                    btn.disabled = false;
+                    btn.innerHTML = 'Delete';
+                    alert('Error: ' + (result.detail || 'Unknown error'));
+                }
+            } catch (e) {
+                btn.disabled = false;
+                btn.innerHTML = 'Delete';
                 alert('Error: ' + e.message);
             }
         }

@@ -88,6 +88,26 @@ class TestPublishDraft:
         assert resp.status_code == 404
 
 
+class TestDeleteDraft:
+    def test_deletes_draft_file(self, client, tmp_path):
+        blog_dir = tmp_path / "data" / "content" / "blog"
+        blog_dir.mkdir(parents=True)
+        _write_draft(blog_dir, "draft-one.md")
+
+        with patch("salasblog2.server.get_content_directory", return_value=blog_dir):
+            resp = client.post("/api/delete-draft", json={"filename": "draft-one.md"})
+
+        assert resp.status_code == 200
+        assert not (blog_dir / "draft-one.md").exists()
+
+    def test_returns_404_for_missing_draft(self, client, tmp_path):
+        blog_dir = tmp_path / "data" / "content" / "blog"
+        blog_dir.mkdir(parents=True)
+        with patch("salasblog2.server.get_content_directory", return_value=blog_dir):
+            resp = client.post("/api/delete-draft", json={"filename": "missing.md"})
+        assert resp.status_code == 404
+
+
 class TestGenerateDraftEndpoint:
     def test_returns_draft_filename(self, client, tmp_path):
         drops_dir = tmp_path / "data" / "content" / "raindrops"
