@@ -174,9 +174,8 @@ async def lifespan(app: FastAPI):
     # Check if we're the only instance running
     _check_single_instance()
     
-    # Scheduler disabled for debugging — start manually from admin if needed
-    # scheduler = get_scheduler()
-    # scheduler.start_scheduler()
+    scheduler = get_scheduler()
+    scheduler.start_scheduler()
     
     yield
     
@@ -933,7 +932,8 @@ async def admin_stats_page(request: Request):
     """Serve visit statistics page"""
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
-    counts = get_counter().get_all()
+    raw = get_counter().get_all()
+    counts = [(path, sum(types.values())) for path, types in raw]
     context = {
         'counts': counts,
         'total': sum(c for _, c in counts),
