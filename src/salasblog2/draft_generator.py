@@ -88,7 +88,11 @@ def generate_draft_from_drop(drop: dict) -> str:
     logger.info("Fetched page text length: %d", len(page_text))
     prompt = build_prompt(drop, page_text)
     logger.info("Calling Claude API...")
-    body = call_claude(prompt)
+    try:
+        body = call_claude(prompt)
+    except Exception as e:
+        logger.error("Claude API call failed: %s: %s", type(e).__name__, e)
+        raise
     logger.info("Claude response length: %d", len(body))
     title = drop["title"]
     fm = build_frontmatter(drop, title)
