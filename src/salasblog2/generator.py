@@ -8,6 +8,7 @@ from pathlib import Path
 from datetime import datetime
 import json
 import markdown
+import yaml as _yaml
 import frontmatter
 from jinja2 import Environment, FileSystemLoader
 
@@ -450,7 +451,10 @@ class SiteGenerator:
     def generate_home_page(self, blog_posts, raindrops):
         """Generate the home page"""
         # Get recent posts for home page
-        posts_count = int(os.environ.get("HOME_POSTS_COUNT", "5"))
+        _cfg_path = Path(__file__).parent.parent.parent / "config.yaml"
+        _yaml_cfg = _yaml.safe_load(_cfg_path.read_text()) if _cfg_path.exists() else {}
+        _yaml_count = _yaml_cfg.get("home", {}).get("posts_count", 5)
+        posts_count = int(os.environ.get("HOME_POSTS_COUNT", _yaml_count))
         sorted_blog = sorted(blog_posts, key=lambda x: x.get('date', ''), reverse=True)
         sorted_raindrops = sorted(raindrops, key=lambda x: x.get('date', ''), reverse=True)
         recent_blog_posts = sorted_blog[:posts_count] if sorted_blog else []

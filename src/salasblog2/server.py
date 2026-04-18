@@ -5,6 +5,7 @@ Includes Blogger API (XML-RPC) support for blog editors
 import os
 import random
 import time
+import yaml
 import xml.etree.ElementTree as ET
 import logging
 import subprocess
@@ -44,6 +45,28 @@ regen_status = {"running": False, "message": "Ready"}
 _server_start_time = datetime.now()
 _generation_count = 0
 _last_generation_time = None
+
+def _load_yaml_config() -> dict:
+    """Load config.yaml from project root, returning defaults if missing."""
+    for candidate in [Path(__file__).parent.parent.parent / "config.yaml", Path("config.yaml")]:
+        if candidate.exists():
+            with open(candidate) as f:
+                return yaml.safe_load(f) or {}
+    return {}
+
+yaml_config = _load_yaml_config()
+
+def _cfg(*keys, default=None):
+    """Read a nested value from yaml_config."""
+    node = yaml_config
+    for k in keys:
+        if not isinstance(node, dict):
+            return default
+        node = node.get(k, default)
+        if node is default:
+            return default
+    return node
+
 
 # Global configuration
 config = {
@@ -185,7 +208,7 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.warning("Initial stats cache generation failed: %s", e)
     import schedule as _sched
-    _sched.every(60).seconds.do(generate_stats_cache)
+    _sched.every(_cfg("stats", "cache_refresh_seconds", default=60)).seconds.do(generate_stats_cache)
 
     yield
     
@@ -713,8 +736,8 @@ async def start_scheduler(request: Request, git_hours: float = None, raindrop_ho
     scheduler.start_scheduler(git_interval_hours=git_hours, raindrop_interval_hours=raindrop_hours)
     
     # Get actual intervals used
-    actual_git_hours = git_hours if git_hours is not None else float(os.environ.get('SCHED_GITSYNC_HRS', 6.0))
-    actual_raindrop_hours = raindrop_hours if raindrop_hours is not None else float(os.environ.get('SCHED_RAINSYNC_HRS', 2.0))
+    actual_git_hours = git_hours if git_hours is not None else float(os.environ.get('SCHED_GITSYNC_HRS', _cfg("scheduler", "git_sync_hours", default=6.0)))
+    actual_raindrop_hours = raindrop_hours if raindrop_hours is not None else float(os.environ.get('SCHED_RAINSYNC_HRS', _cfg("scheduler", "raindrop_sync_hours", default=2.0)))
     
     return JSONResponse(content={
         "status": "success",
@@ -1366,8 +1389,10 @@ async def propose_posts(request: Request):
 
     blog_dir = get_content_directory("blog")
     loop = asyncio.get_event_loop()
-    posts = await loop.run_in_executor(None, lambda: get_proposed_posts(blog_dir, 50))
-    sample = random.sample(posts, min(5, len(posts)))
+    pool = _cfg("propose", "pool_size", default=50)
+    count = _cfg("propose", "count", default=5)
+    posts = await loop.run_in_executor(None, lambda: get_proposed_posts(blog_dir, pool))
+    sample = random.sample(posts, min(count, len(posts)))
     return JSONResponse(content=[
         {"filename": p.filename, "title": p.title, "date": p.date,
          "url": p.url, "score": round(p.score, 1)}
@@ -1383,9 +1408,14 @@ async def propose_drops(request: Request):
 
     drops_dir = get_content_directory("raindrops")
     loop = asyncio.get_event_loop()
-    filt = DropFilter(min_age_months=3, min_visits=5, top_n=50)
+    filt = DropFilter(
+        min_age_months=_cfg("propose", "drops_min_age_months", default=3),
+        min_visits=_cfg("propose", "drops_min_visits", default=5),
+        top_n=_cfg("propose", "pool_size", default=50),
+    )
+    count = _cfg("propose", "count", default=5)
     drops = await loop.run_in_executor(None, lambda: get_proposed_drops(drops_dir, get_counter(), filt))
-    sample = random.sample(drops, min(5, len(drops)))
+    sample = random.sample(drops, min(count, len(drops)))
     return JSONResponse(content=sample)
 
 

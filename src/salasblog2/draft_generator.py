@@ -14,7 +14,15 @@ from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
 
-CLAUDE_MODEL = "claude-sonnet-4-6"
+def _load_model() -> str:
+    for candidate in [Path(__file__).parent.parent.parent / "config.yaml", Path("config.yaml")]:
+        if candidate.exists():
+            with open(candidate) as f:
+                data = yaml.safe_load(f) or {}
+            return data.get("drafts", {}).get("claude_model", "claude-sonnet-4-6")
+    return "claude-sonnet-4-6"
+
+CLAUDE_MODEL = _load_model()
 URL_FETCH_TIMEOUT = 5
 MAX_FETCHED_CHARS = 3000
 

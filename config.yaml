@@ -1,0 +1,21 @@
+# Salasblog2 configuration
+# Edit this file to tune runtime behavior without code changes.
+
+stats:
+  cache_refresh_seconds: 60
+
+home:
+  posts_count: 5
+
+scheduler:
+  git_sync_hours: 6.0
+  raindrop_sync_hours: 2.0
+
+propose:
+  pool_size: 50          # candidates fetched before random sampling
+  count: 5               # entries shown in the UI
+  drops_min_age_months: 3
+  drops_min_visits: 5
+
+drafts:
+  claude_model: claude-sonnet-4-6
