@@ -137,10 +137,9 @@ class RaindropDownloader:
     def _fetch_page(self, page, perpage, since_timestamp=None):
         """Fetch a single page of raindrops from the API."""
         params = {
-            "page": page, 
+            "page": page,
             "perpage": perpage,
             "sort": "-created",
-            "search": "[{\"key\":\"type\",\"val\":\"link\"}]"  # Filter for links only
         }
         
         if since_timestamp:
