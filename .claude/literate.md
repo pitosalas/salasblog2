@@ -18,7 +18,5 @@ Guidelines:
   are discussed
 - Each code block should be preceded by prose that motivates it
 - Call out any non-obvious choices, tradeoffs, or assumptions
-- End with a "Complete Program" section that assembles all code blocks 
-  in executable order
 
 Output format: a single Markdown document with alternating prose and fenced Python code blocks. Include diagrams of flow, algorithm, interesting or tricky data structures. Do not include the full program text. Put the file in the literate/ directory
