@@ -203,6 +203,10 @@ async def lifespan(app: FastAPI):
     scheduler.start_scheduler()
 
     # Pre-generate stats cache once and schedule refresh every 60 seconds
+    # Write placeholder so the file exists immediately
+    output_dir = config.get("output_dir")
+    if output_dir:
+        (output_dir / "admin-stats.html").write_text(_STATS_PLACEHOLDER, encoding="utf-8")
     try:
         generate_stats_cache()
     except Exception as e:
@@ -967,20 +971,15 @@ async def get_admin_status(request: Request):
         "authenticated": is_admin_authenticated(request)
     })
 
-@app.get("/admin/stats")
-async def admin_stats_page(request: Request):
-    """Serve visit statistics page"""
+@app.get("/admin-stats.html")
+async def serve_admin_stats(request: Request):
+    """Serve the pre-generated static stats page."""
     if config["admin_password"] and not is_admin_authenticated(request):
         return RedirectResponse(url="/admin", status_code=302)
-    raw = get_counter().get_all()
-    counts = [(path, sum(types.values())) for path, types in raw]
-    context = {
-        'counts': counts,
-        'total': sum(c for _, c in counts),
-        'navigation': [],
-        'site_title': 'Salas Blog',
-    }
-    return HTMLResponse(content=render_template("admin_stats.html", context))
+    stats_file = config["output_dir"] / "admin-stats.html"
+    if stats_file.exists():
+        return HTMLResponse(content=stats_file.read_text(encoding="utf-8"))
+    return HTMLResponse(content="<p>Stats not yet generated.</p>")
 
 def _build_stats_for_period(counter, period):
     counts = counter.get_all(period=period)
@@ -992,29 +991,37 @@ def _build_stats_for_period(counter, period):
     }
 
 
+_STATS_PLACEHOLDER = "<html><body><p class='p-3 text-muted'>Stats loading...</p></body></html>"
+
+STATS_PERIODS = [
+    ("today", "Today"),
+    ("this_week", "This Week"),
+    ("this_month", "This Month"),
+    ("this_year", "This Year"),
+    ("all", "All Time"),
+]
+
+
 def generate_stats_cache():
-    """Pre-generate stats for all periods into a single JSON file."""
+    """Render stats for all periods into a static admin-stats.html file."""
+    output_dir = config.get("output_dir")
+    if not output_dir:
+        return
     counter = get_counter()
-    cache = {
-        period or "all": _build_stats_for_period(counter, period)
-        for period in [None, "today", "this_week", "this_month", "this_year"]
-    }
-    cache_path = config.get("output_dir")
-    if cache_path:
-        (cache_path / "stats-cache.json").write_text(json.dumps(cache), encoding="utf-8")
-
-
-@app.get("/api/stats")
-async def api_stats(request: Request, period: str | None = None):
-    """Return pre-generated visit stats from cache file."""
-    if config["admin_password"] and not is_admin_authenticated(request):
-        raise HTTPException(status_code=403, detail="Not authenticated")
-    cache_path = config.get("output_dir")
-    if cache_path and (cache_path / "stats-cache.json").exists():
-        cache = json.loads((cache_path / "stats-cache.json").read_text(encoding="utf-8"))
-        return cache.get(period or "all", cache.get("all", {}))
-    # Fallback if cache not yet generated
-    return _build_stats_for_period(get_counter(), period)
+    stats = {}
+    for key, _ in STATS_PERIODS:
+        period = None if key == "all" else key
+        stats[key] = _build_stats_for_period(counter, period)
+    jinja_env = config.get("jinja_env")
+    if not jinja_env:
+        return
+    tmpl = jinja_env.get_template("stats_page.html")
+    html = tmpl.render(
+        stats=stats,
+        periods=STATS_PERIODS,
+        generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    )
+    (output_dir / "admin-stats.html").write_text(html, encoding="utf-8")
 
 
 @app.get("/admin/edit-post/{filename}")
