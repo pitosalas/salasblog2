@@ -78,10 +78,12 @@ def build_frontmatter(drop: dict, title: str) -> str:
 def call_claude(prompt: str) -> str:
     http_client = httpx.Client(headers={"User-Agent": "salasblog2/1.0"})
     client = anthropic.Anthropic(http_client=http_client)
+    test_prompt = "hello"
+    logger.info("DEBUG: using hardcoded test prompt '%s'", test_prompt)
     message = client.messages.create(
         model=CLAUDE_MODEL,
         max_tokens=400,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[{"role": "user", "content": test_prompt}],
     )
     return message.content[0].text.strip()
 
