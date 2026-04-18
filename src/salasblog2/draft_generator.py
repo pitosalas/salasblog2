@@ -8,6 +8,7 @@ from datetime import date
 from pathlib import Path
 
 import anthropic
+import httpx
 import requests
 import yaml
 from bs4 import BeautifulSoup
@@ -75,7 +76,8 @@ def build_frontmatter(drop: dict, title: str) -> str:
 
 
 def call_claude(prompt: str) -> str:
-    client = anthropic.Anthropic()
+    http_client = httpx.Client(headers={"User-Agent": "salasblog2/1.0"})
+    client = anthropic.Anthropic(http_client=http_client)
     message = client.messages.create(
         model=CLAUDE_MODEL,
         max_tokens=400,
