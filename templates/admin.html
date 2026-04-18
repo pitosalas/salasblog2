@@ -730,10 +730,6 @@
                 const labels = {'human': 'Human', 'search_engine': 'Search', 'ai_bot': 'AI Bot', 'crawler': 'Crawler', 'unknown': 'Unknown'};
                 const headerCols = types.map(t => `<th class="text-end">${labels[t]}</th>`).join('');
 
-                const root = data.counts.filter(r => !r.path.startsWith('/blog/') && !r.path.startsWith('/raindrops/'));
-                const blog = data.counts.filter(r => r.path.startsWith('/blog/'));
-                const drops = data.counts.filter(r => r.path.startsWith('/raindrops/'));
-
                 function renderRows(items) {
                     return items.map(r => {
                         const typeCols = types.map(t => `<td class="text-end"><span class="badge bg-secondary">${r.by_type[t] || 0}</span></td>`).join('');
@@ -741,15 +737,7 @@
                     }).join('');
                 }
 
-                function sectionHeader(label, count) {
-                    return `<tr class="table-secondary"><td colspan="${2 + types.length}"><strong>${label}</strong> <span class="text-muted">(${count} pages)</span></td></tr>`;
-                }
-
-                const tbody = [
-                    root.length ? sectionHeader('Root & Top-level', root.length) + renderRows(root) : '',
-                    blog.length ? sectionHeader('Blog', blog.length) + renderRows(blog) : '',
-                    drops.length ? sectionHeader('Raindrops', drops.length) + renderRows(drops) : '',
-                ].join('');
+                const tbody = renderRows(data.counts);
 
                 div.innerHTML = `<p class="text-muted mb-2"><strong>${data.total}</strong> total visits across <strong>${data.counts.length}</strong> pages</p>
                     <table class="table table-striped table-hover table-sm">
