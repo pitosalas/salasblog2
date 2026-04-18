@@ -1425,7 +1425,7 @@ async def list_drafts(request: Request):
                     "date": str(post.metadata.get("date", "")),
                     "source_raindrop": post.metadata.get("source_raindrop", ""),
                     "source_url": post.metadata.get("source_url", ""),
-                    "excerpt": post.content[:200] if post.content else "",
+                    "body": post.content or "",
                 })
             except OSError:
                 continue

@@ -794,10 +794,10 @@
                 const rows = drafts.map((d, i) =>
                     `<tr id="draft-row-${i}">
                         <td>
-                            <strong>${d.title}</strong><br>
-                            <small class="text-muted">${d.date}</small><br>
-                            <small>${d.excerpt}</small>
+                            <strong>${d.title}</strong>
+                            <small class="text-muted ms-2">${d.date}</small>
                             ${d.source_url ? `<br><small><a href="${d.source_url}" target="_blank">${d.source_url}</a></small>` : ''}
+                            <div class="mt-2 p-2 bg-light border rounded font-monospace small" style="white-space:pre-wrap">${d.body}</div>
                         </td>
                         <td class="text-nowrap">
                             <button class="btn btn-sm btn-success me-1" onclick="publishDraft('${d.filename}', ${i}, this)">Post</button>
