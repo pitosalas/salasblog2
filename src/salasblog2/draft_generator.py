@@ -92,7 +92,6 @@ def generate_draft_from_drop(drop: dict) -> str:
     page_text = fetch_url_text(drop["url"])
     logger.info("Fetched page text length: %d", len(page_text))
     prompt = build_prompt(drop, page_text)
-    logger.info("Prompt: %s", prompt)
     logger.info("Calling Claude API...")
     try:
         body = call_claude(prompt)
@@ -102,7 +101,8 @@ def generate_draft_from_drop(drop: dict) -> str:
     logger.info("Claude response length: %d", len(body))
     title = drop["title"]
     fm = build_frontmatter(drop, title)
-    return fm + "\n" + body + "\n"
+    prefix = f"Originally Posted on: [{drop['url']}]({drop['url']})\n\n"
+    return fm + "\n" + prefix + body + "\n"
 
 
 def save_draft(content: str, filename: str, blog_dirs: list[Path]) -> None:
