@@ -178,7 +178,15 @@ async def lifespan(app: FastAPI):
     
     scheduler = get_scheduler()
     scheduler.start_scheduler()
-    
+
+    # Pre-generate stats cache once and schedule refresh every 60 seconds
+    try:
+        generate_stats_cache()
+    except Exception as e:
+        logger.warning("Initial stats cache generation failed: %s", e)
+    import schedule as _sched
+    _sched.every(60).seconds.do(generate_stats_cache)
+
     yield
     
     # Shutdown
@@ -944,18 +952,39 @@ async def admin_stats_page(request: Request):
     }
     return HTMLResponse(content=render_template("admin_stats.html", context))
 
-@app.get("/api/stats")
-async def api_stats(request: Request, period: str | None = None):
-    """Return visit stats as JSON, optionally filtered by period (today/this_week/this_month/this_year)."""
-    if config["admin_password"] and not is_admin_authenticated(request):
-        raise HTTPException(status_code=403, detail="Not authenticated")
-    counts = get_counter().get_all(period=period)
+def _build_stats_for_period(counter, period):
+    counts = counter.get_all(period=period)
     total = sum(sum(types.values()) for _, types in counts)
     return {
         "counts": [{"path": p, "total": sum(t.values()), "by_type": t} for p, t in counts],
         "total": total,
         "period": period,
     }
+
+
+def generate_stats_cache():
+    """Pre-generate stats for all periods into a single JSON file."""
+    counter = get_counter()
+    cache = {
+        period or "all": _build_stats_for_period(counter, period)
+        for period in [None, "today", "this_week", "this_month", "this_year"]
+    }
+    cache_path = config.get("output_dir")
+    if cache_path:
+        (cache_path / "stats-cache.json").write_text(json.dumps(cache), encoding="utf-8")
+
+
+@app.get("/api/stats")
+async def api_stats(request: Request, period: str | None = None):
+    """Return pre-generated visit stats from cache file."""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=403, detail="Not authenticated")
+    cache_path = config.get("output_dir")
+    if cache_path and (cache_path / "stats-cache.json").exists():
+        cache = json.loads((cache_path / "stats-cache.json").read_text(encoding="utf-8"))
+        return cache.get(period or "all", cache.get("all", {}))
+    # Fallback if cache not yet generated
+    return _build_stats_for_period(get_counter(), period)
 
 
 @app.get("/admin/edit-post/{filename}")
