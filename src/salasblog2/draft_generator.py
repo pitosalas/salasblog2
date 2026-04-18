@@ -53,7 +53,7 @@ def build_prompt(drop: dict, page_text: str) -> str:
     excerpt = _ascii(drop.get("excerpt") or "")
     page_section = f"\n\nPage content (first {MAX_FETCHED_CHARS} chars):\n{page_text}" if page_text else ""
 
-    return f"""Write a single blog paragraph (around 150 words) about the following link post.
+    return f"""Write a single short blog paragraph (50-75 words maximum) about the following link post.
 The paragraph must include a markdown hyperlink to the source URL.
 Write in first person as the blog author sharing an interesting find.
 End naturally — no meta-commentary, no sign-off.
@@ -86,7 +86,7 @@ def call_claude(prompt: str) -> str:
     client = anthropic.Anthropic()
     message = client.messages.create(
         model=CLAUDE_MODEL,
-        max_tokens=400,
+        max_tokens=150,
         messages=[{"role": "user", "content": prompt}],
     )
     return message.content[0].text.strip()
