@@ -1384,7 +1384,11 @@ async def generate_draft(request: Request):
         "tags": post.metadata.get("tags", []),
     }
 
-    content = generate_draft_from_drop(drop)
+    try:
+        content = generate_draft_from_drop(drop)
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"Claude API error: {e}")
+
     stem = filename.replace(".md", "")
     draft_filename = f"draft-{stem}.md"
 

@@ -762,14 +762,16 @@
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({filename})
                 });
-                const result = await resp.json();
                 if (resp.ok) {
                     btn.innerHTML = '✓ Draft saved';
                     btn.classList.replace('btn-outline-success', 'btn-success');
                 } else {
+                    const text = await resp.text();
+                    let detail = 'Server error';
+                    try { detail = JSON.parse(text).detail || text; } catch { detail = text; }
                     btn.disabled = false;
                     btn.innerHTML = 'Generate Draft';
-                    alert('Error: ' + (result.detail || 'Unknown error'));
+                    alert('Error: ' + detail);
                 }
             } catch (e) {
                 btn.disabled = false;
