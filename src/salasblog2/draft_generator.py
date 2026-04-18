@@ -28,7 +28,8 @@ def fetch_url_text(url: str) -> str:
         soup = BeautifulSoup(resp.text, "html.parser")
         for tag in soup(["script", "style", "nav", "footer"]):
             tag.decompose()
-        return soup.get_text(separator=" ", strip=True)[:MAX_FETCHED_CHARS]
+        text = soup.get_text(separator=" ", strip=True)[:MAX_FETCHED_CHARS]
+        return text.encode("ascii", errors="ignore").decode("ascii")
     except requests.RequestException as e:
         logger.warning("Could not fetch %s: %s", url, e)
         return ""
