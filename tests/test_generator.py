@@ -107,6 +107,21 @@ class TestLoadPosts:
         assert "Second paragraph" not in posts[0]["excerpt"]
 
 
+    def test_draft_posts_excluded_from_load(self, generator, tmp_path):
+        g = generator
+        blog_dir = tmp_path / "blog"
+        blog_dir.mkdir()
+        g.blog_dir = blog_dir
+        make_blog_post(blog_dir, "2020-01-01-real.md", "Real Post", "2020-01-01")
+        (blog_dir / "draft-post.md").write_text(
+            "---\ntitle: 'Draft'\ndate: '2020-01-01'\ntype: blog\ndraft: true\n---\nbody\n"
+        )
+        posts = g.load_posts("blog")
+        titles = [p["title"] for p in posts]
+        assert "Real Post" in titles
+        assert "Draft" not in titles
+
+
 # ---------------------------------------------------------------------------
 # get_navigation_items / _get_page_url
 # ---------------------------------------------------------------------------

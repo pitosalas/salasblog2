@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('last_sync:', d.get\\('last_sync_timestamp'\\)\\); print\\('count:', len\\(d.get\\('downloaded',[]\\)\\)\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(pip show *)",
+      "Bash(uv pip *)",
+      "Bash(uv add *)",
+      "Bash(uv run *)"
+    ]
+  }
+}
