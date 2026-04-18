@@ -34,6 +34,9 @@ RUN chmod +x /startup.sh
 # Set environment variables
 ENV PORT=8080
 ENV PYTHONPATH=/app/src
+ENV PYTHONIOENCODING=utf-8
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
 
 # Expose port
 EXPOSE 8080
