@@ -35,10 +35,14 @@ def fetch_url_text(url: str) -> str:
         return ""
 
 
+def _ascii(text: str) -> str:
+    return text.encode("ascii", errors="ignore").decode("ascii")
+
+
 def build_prompt(drop: dict, page_text: str) -> str:
     tags = ", ".join(drop.get("tags") or []) or "none"
-    note = drop.get("note") or ""
-    excerpt = drop.get("excerpt") or ""
+    note = _ascii(drop.get("note") or "")
+    excerpt = _ascii(drop.get("excerpt") or "")
     page_section = f"\n\nPage content (first {MAX_FETCHED_CHARS} chars):\n{page_text}" if page_text else ""
 
     return f"""Write a single blog paragraph (around 150 words) about the following link post.
@@ -46,9 +50,9 @@ The paragraph must include a markdown hyperlink to the source URL.
 Write in first person as the blog author sharing an interesting find.
 End naturally — no meta-commentary, no sign-off.
 
-Title: {drop['title']}
+Title: {_ascii(drop['title'])}
 URL: {drop['url']}
-Domain: {drop['domain']}
+Domain: {_ascii(drop['domain'])}
 Tags: {tags}
 Excerpt: {excerpt}
 My note: {note}{page_section}
@@ -88,6 +92,7 @@ def generate_draft_from_drop(drop: dict) -> str:
     page_text = fetch_url_text(drop["url"])
     logger.info("Fetched page text length: %d", len(page_text))
     prompt = build_prompt(drop, page_text)
+    logger.info("Prompt: %s", prompt)
     logger.info("Calling Claude API...")
     try:
         body = call_claude(prompt)
