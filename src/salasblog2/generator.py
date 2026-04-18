@@ -95,6 +95,9 @@ class SiteGenerator:
                 if not title:
                     title = f"placeholder title: {filename.replace('_', ' ').replace('-', ' ').title()}"
                 
+                if parsed['metadata'].get('draft'):
+                    continue
+
                 post_data = {
                     'title': title,
                     'date': parsed['metadata'].get('date', ''),

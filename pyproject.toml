@@ -33,6 +33,8 @@ dependencies = [
     "itsdangerous>=2.0.0",
     "schedule>=1.2.0",
     "httpx>=0.28.1",
+    "anthropic>=0.96.0",
+    "beautifulsoup4>=4.13.4",
 ]
 
 [project.scripts]

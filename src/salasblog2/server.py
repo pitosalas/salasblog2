@@ -32,7 +32,8 @@ from .scheduler import get_scheduler
 from .utils import process_markdown_to_html, BLOG_TAGS
 from .stats import get_counter
 from .visitor_type import classify_visitor
-from .propose import get_proposed_posts
+from .propose import get_proposed_posts, get_proposed_drops, DropFilter
+from .draft_generator import generate_draft_from_drop, save_draft
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -1334,12 +1335,125 @@ async def propose_posts(request: Request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     blog_dir = get_content_directory("blog")
-    posts = get_proposed_posts(blog_dir)
+    posts = get_proposed_posts(blog_dir, 10)
     return JSONResponse(content=[
         {"filename": p.filename, "title": p.title, "date": p.date,
          "url": p.url, "score": round(p.score, 1)}
         for p in posts
     ])
+
+
+@app.get("/api/propose-drops")
+async def propose_drops(request: Request):
+    """Return popular raindrop link posts suitable for draft generation."""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+
+    drops_dir = get_content_directory("raindrops")
+    filt = DropFilter(min_age_months=3, min_visits=5, top_n=10)
+    drops = get_proposed_drops(drops_dir, get_counter(), filt)
+    return JSONResponse(content=drops)
+
+
+@app.post("/api/generate-draft")
+async def generate_draft(request: Request):
+    """Generate a draft blog post from a raindrop file."""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+
+    body = await request.json()
+    filename = body.get("filename", "")
+    if not filename:
+        raise HTTPException(status_code=400, detail="filename required")
+
+    drops_dir = get_content_directory("raindrops")
+    drop_file = drops_dir / filename
+    if not drop_file.exists():
+        raise HTTPException(status_code=404, detail=f"Raindrop not found: {filename}")
+
+    with open(drop_file, "r", encoding="utf-8") as f:
+        post = frontmatter.load(f)
+
+    drop = {
+        "filename": filename,
+        "title": post.metadata.get("title", ""),
+        "url": post.metadata.get("url", ""),
+        "note": post.metadata.get("note", ""),
+        "domain": post.metadata.get("domain", ""),
+        "excerpt": post.metadata.get("excerpt", ""),
+        "tags": post.metadata.get("tags", []),
+    }
+
+    content = generate_draft_from_drop(drop)
+    stem = filename.replace(".md", "")
+    draft_filename = f"draft-{stem}.md"
+
+    blog_dirs = [get_content_directory("blog"), Path("/app/content/blog")]
+    save_draft(content, draft_filename, blog_dirs)
+
+    return JSONResponse(content={"filename": draft_filename})
+
+
+@app.get("/api/drafts")
+async def list_drafts(request: Request):
+    """List all draft blog posts."""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+
+    blog_dir = get_content_directory("blog")
+    drafts = []
+    for md_file in sorted(blog_dir.glob("*.md")):
+        try:
+            with open(md_file, "r", encoding="utf-8") as f:
+                post = frontmatter.load(f)
+            if not post.metadata.get("draft"):
+                continue
+            drafts.append({
+                "filename": md_file.name,
+                "title": post.metadata.get("title", md_file.stem),
+                "date": str(post.metadata.get("date", "")),
+                "source_raindrop": post.metadata.get("source_raindrop", ""),
+                "source_url": post.metadata.get("source_url", ""),
+                "excerpt": post.content[:200] if post.content else "",
+            })
+        except OSError:
+            continue
+    return JSONResponse(content=drafts)
+
+
+@app.post("/api/publish-draft")
+async def publish_draft(request: Request):
+    """Publish a draft by removing the draft flag and regenerating."""
+    if config["admin_password"] and not is_admin_authenticated(request):
+        raise HTTPException(status_code=401, detail="Authentication required")
+
+    body = await request.json()
+    filename = body.get("filename", "")
+    if not filename:
+        raise HTTPException(status_code=400, detail="filename required")
+
+    blog_dir = get_content_directory("blog")
+    draft_file = blog_dir / filename
+    if not draft_file.exists():
+        raise HTTPException(status_code=404, detail=f"Draft not found: {filename}")
+
+    with open(draft_file, "r", encoding="utf-8") as f:
+        post = frontmatter.load(f)
+
+    del post.metadata["draft"]
+    draft_file.write_text(frontmatter.dumps(post), encoding="utf-8")
+
+    app_blog = Path("/app/content/blog") / filename
+    if app_blog.exists():
+        with open(app_blog, "r", encoding="utf-8") as f:
+            app_post = frontmatter.load(f)
+        del app_post.metadata["draft"]
+        app_blog.write_text(frontmatter.dumps(app_post), encoding="utf-8")
+
+    generator = SiteGenerator()
+    generator.incremental_regenerate_post(filename, "blog")
+
+    return JSONResponse(content={"status": "published", "filename": filename})
 
 
 @app.get("/admin/repost/{filename}")
