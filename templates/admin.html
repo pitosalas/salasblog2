@@ -800,7 +800,7 @@
                             <div class="mt-2 p-2 bg-light border rounded font-monospace small" style="white-space:pre-wrap">${d.body}</div>
                         </td>
                         <td class="text-nowrap">
-                            <button class="btn btn-sm btn-success me-1" onclick="publishDraft('${d.filename}', ${i}, this)">Post</button>
+                            <a href="/admin/repost/${d.filename}" class="btn btn-sm btn-success me-1">Edit &amp; Post</a>
                             <button class="btn btn-sm btn-outline-danger" onclick="deleteDraft('${d.filename}', ${i}, this)">Delete</button>
                         </td>
                     </tr>`
