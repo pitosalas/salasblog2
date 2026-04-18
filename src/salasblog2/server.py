@@ -207,8 +207,15 @@ async def lifespan(app: FastAPI):
         generate_stats_cache()
     except Exception as e:
         logger.warning("Initial stats cache generation failed: %s", e)
+
+    def _stats_cache_job():
+        try:
+            generate_stats_cache()
+        except Exception as ex:
+            logging.getLogger(__name__).warning("Stats cache refresh failed: %s", ex)
+
     import schedule as _sched
-    _sched.every(_cfg("stats", "cache_refresh_seconds", default=60)).seconds.do(generate_stats_cache)
+    _sched.every(_cfg("stats", "cache_refresh_seconds", default=60)).seconds.do(_stats_cache_job)
 
     yield
     
@@ -1448,16 +1455,19 @@ async def generate_draft(request: Request):
         "tags": post.metadata.get("tags", []),
     }
 
-    try:
-        content = generate_draft_from_drop(drop)
-    except Exception as e:
-        raise HTTPException(status_code=502, detail=f"Claude API error: {e}")
-
     stem = filename.replace(".md", "")
     draft_filename = f"draft-{stem}.md"
-
     blog_dirs = [get_content_directory("blog"), Path("/app/content/blog")]
-    save_draft(content, draft_filename, blog_dirs)
+
+    def _generate_and_save():
+        content = generate_draft_from_drop(drop)
+        save_draft(content, draft_filename, blog_dirs)
+
+    try:
+        loop = asyncio.get_event_loop()
+        await loop.run_in_executor(None, _generate_and_save)
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"Claude API error: {e}")
 
     return JSONResponse(content={"filename": draft_filename})
 
