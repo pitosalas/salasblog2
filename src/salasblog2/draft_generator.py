@@ -24,6 +24,7 @@ def fetch_url_text(url: str) -> str:
     try:
         resp = requests.get(url, timeout=URL_FETCH_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
         resp.raise_for_status()
+        resp.encoding = resp.apparent_encoding or "utf-8"
         soup = BeautifulSoup(resp.text, "html.parser")
         for tag in soup(["script", "style", "nav", "footer"]):
             tag.decompose()
@@ -65,7 +66,7 @@ def build_frontmatter(drop: dict, title: str) -> str:
         "source_url": drop["url"],
         "tags": drop.get("tags") or [],
     }
-    return "---\n" + yaml.dump(data, allow_unicode=True, default_flow_style=False) + "---\n"
+    return "---\n" + yaml.dump(data, allow_unicode=True, default_flow_style=False, encoding=None) + "---\n"
 
 
 def call_claude(prompt: str) -> str:
