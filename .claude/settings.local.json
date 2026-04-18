@@ -8,7 +8,10 @@
       "Bash(pip show *)",
       "Bash(uv pip *)",
       "Bash(uv add *)",
-      "Bash(uv run *)"
+      "Bash(uv run *)",
+      "Bash(fly deploy *)",
+      "Bash(fly logs *)",
+      "Bash(fly ssh *)"
     ]
   }
 }
