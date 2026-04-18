@@ -3,6 +3,7 @@ FastAPI server for Salasblog2 - serves static files + API endpoints
 Includes Blogger API (XML-RPC) support for blog editors
 """
 import os
+import random
 import time
 import xml.etree.ElementTree as ET
 import logging
@@ -1335,11 +1336,12 @@ async def propose_posts(request: Request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     blog_dir = get_content_directory("blog")
-    posts = get_proposed_posts(blog_dir, 10)
+    posts = get_proposed_posts(blog_dir, 50)
+    sample = random.sample(posts, min(5, len(posts)))
     return JSONResponse(content=[
         {"filename": p.filename, "title": p.title, "date": p.date,
          "url": p.url, "score": round(p.score, 1)}
-        for p in posts
+        for p in sample
     ])
 
 
@@ -1350,9 +1352,10 @@ async def propose_drops(request: Request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     drops_dir = get_content_directory("raindrops")
-    filt = DropFilter(min_age_months=3, min_visits=5, top_n=10)
+    filt = DropFilter(min_age_months=3, min_visits=5, top_n=50)
     drops = get_proposed_drops(drops_dir, get_counter(), filt)
-    return JSONResponse(content=drops)
+    sample = random.sample(drops, min(5, len(drops)))
+    return JSONResponse(content=sample)
 
 
 @app.post("/api/generate-draft")

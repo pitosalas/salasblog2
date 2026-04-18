@@ -160,17 +160,17 @@
             </div>
 
             <div class="admin-pane d-none" id="tab-propose">
-                <h2 class="h5 mb-2">Proposed Posts to Repost</h2>
-                <p class="text-muted">Top 10 older blog posts that may be worth reposting, ranked by relevance.</p>
-                <button class="btn btn-primary btn-sm mb-3" onclick="loadProposedPosts()">Refresh</button>
-                <div id="propose-status"></div>
-                <div id="propose-list"></div>
-
-                <h2 class="h5 mb-2 mt-4">Popular Link Posts — Generate Draft</h2>
+                <h2 class="h5 mb-2">Popular Link Posts — Generate Draft</h2>
                 <p class="text-muted">Link posts older than 3 months with 5+ visits. Click "Generate Draft" to create a Claude.ai-authored blog post.</p>
                 <button class="btn btn-primary btn-sm mb-3" onclick="loadProposedDrops()">Refresh</button>
                 <div id="propose-drops-status"></div>
                 <div id="propose-drops-list"></div>
+
+                <h2 class="h5 mb-2 mt-4">Proposed Posts to Repost</h2>
+                <p class="text-muted">5 older blog posts that may be worth reposting, randomized each refresh.</p>
+                <button class="btn btn-primary btn-sm mb-3" onclick="loadProposedPosts()">Refresh</button>
+                <div id="propose-status"></div>
+                <div id="propose-list"></div>
             </div>
 
             <div class="admin-pane d-none" id="tab-drafts">
