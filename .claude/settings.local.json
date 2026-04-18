@@ -11,7 +11,10 @@
       "Bash(uv run *)",
       "Bash(fly deploy *)",
       "Bash(fly logs *)",
-      "Bash(fly ssh *)"
+      "Bash(fly ssh *)",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python3 -m pytest tests/ -v)",
+      "Bash(git *)"
     ]
   }
 }
