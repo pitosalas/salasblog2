@@ -85,8 +85,11 @@ def generate_draft_from_drop(drop: dict) -> str:
     Returns full file content (frontmatter + body) ready to write to disk.
     """
     page_text = fetch_url_text(drop["url"])
+    logger.info("Fetched page text length: %d", len(page_text))
     prompt = build_prompt(drop, page_text)
+    logger.info("Calling Claude API...")
     body = call_claude(prompt)
+    logger.info("Claude response length: %d", len(body))
     title = drop["title"]
     fm = build_frontmatter(drop, title)
     return fm + "\n" + body + "\n"
