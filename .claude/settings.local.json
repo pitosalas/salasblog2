@@ -14,7 +14,15 @@
       "Bash(fly ssh *)",
       "Bash(python -m pytest tests/ -v)",
       "Bash(python3 -m pytest tests/ -v)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(/Users/pitosalas/mydev/salasblog2/02-doc/current.md:*)",
+      "Bash(__NEW_LINE_516ae1f1091455f0__ cat)",
+      "Bash(/Users/pitosalas/mydev/salasblog2/02-doc/notes.md:*)",
+      "Bash(find:*)",
+      "Bash(python -m pytest tests/ -x -q)",
+      "Bash(pip install:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
