@@ -14,8 +14,8 @@ scheduler:
 propose:
   pool_size: 50          # candidates fetched before random sampling
   count: 5               # entries shown in the UI
-  drops_min_age_months: 3
-  drops_min_visits: 5
+  drops_min_age_months: 0
+  drops_min_visits: 0
 
 drafts:
   claude_model: claude-sonnet-4-6

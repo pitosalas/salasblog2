@@ -40,10 +40,13 @@ def cmd_sync_raindrops(args):
 def cmd_server(args):
     """Start the FastAPI server"""
     import uvicorn
-    from .server import app
-    
+
     print(f"🚀 Starting server on http://localhost:{args.port}")
-    uvicorn.run(app, host="0.0.0.0", port=args.port, reload=args.reload)
+    if args.reload:
+        uvicorn.run("salasblog2.server:app", host="0.0.0.0", port=args.port, reload=True)
+    else:
+        from .server import app
+        uvicorn.run(app, host="0.0.0.0", port=args.port)
 
 def cmd_help(args):
     """Show help message"""

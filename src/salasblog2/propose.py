@@ -109,6 +109,15 @@ def get_proposed_posts(blog_dir: Path, top_n: int) -> list[ScoredPost]:
     return scored[:top_n]
 
 
+def _extract_note_from_body(content: str) -> str:
+    """Extract the Notes section from a raindrop markdown body."""
+    marker = "**Notes:**"
+    idx = content.find(marker)
+    if idx == -1:
+        return ""
+    return content[idx + len(marker):].strip()
+
+
 def _load_drop_record(md_file: Path, stats_counter, cutoff: date) -> dict | None:
     try:
         with open(md_file, "r", encoding="utf-8") as f:
@@ -122,14 +131,14 @@ def _load_drop_record(md_file: Path, stats_counter, cutoff: date) -> dict | None
 
     stem = md_file.name.replace(".md", "")
     visits = stats_counter.get(f"/raindrops/{stem}.html")
-    if visits == 0:
-        return None
+    note = post.metadata.get("note") or _extract_note_from_body(post.content or "")
 
     return {
         "filename": md_file.name,
         "title": post.metadata.get("title", stem),
         "url": post.metadata.get("url", ""),
-        "note": post.metadata.get("note", ""),
+        "raindrop_url": f"/raindrops/{stem}.html",
+        "note": note,
         "domain": post.metadata.get("domain", ""),
         "excerpt": post.metadata.get("excerpt", ""),
         "tags": post.metadata.get("tags", []),

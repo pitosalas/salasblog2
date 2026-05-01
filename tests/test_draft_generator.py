@@ -16,10 +16,12 @@ SAMPLE_DROP = {
     "filename": "21-04-06-1-some-link.md",
     "title": "A Great Article",
     "url": "https://example.com/article",
+    "raindrop_url": "/raindrops/21-04-06-1-some-link.html",
     "note": "Really insightful take on the topic",
     "domain": "example.com",
     "excerpt": "Summary of the article",
     "tags": ["ai", "programming"],
+    "date": "2021-04-06",
 }
 
 

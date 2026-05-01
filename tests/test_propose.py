@@ -13,10 +13,25 @@ from salasblog2.propose import (
     DropFilter,
     MIN_AGE_DAYS,
     RELEVANCE_KEYWORDS,
+    _extract_note_from_body,
     get_proposed_drops,
     get_proposed_posts,
     score_post,
 )
+
+
+class TestExtractNoteFromBody:
+    def test_extracts_note(self):
+        body = "**URL:** https://example.com\n\n**Notes:**\nThis is my comment about the link."
+        assert _extract_note_from_body(body) == "This is my comment about the link."
+
+    def test_returns_empty_when_no_notes(self):
+        body = "**URL:** https://example.com\n\n**Excerpt:** Some excerpt."
+        assert _extract_note_from_body(body) == ""
+
+    def test_multiline_note(self):
+        body = "**Notes:**\nLine one\nLine two"
+        assert "Line one" in _extract_note_from_body(body)
 
 
 class TestScorePost:
