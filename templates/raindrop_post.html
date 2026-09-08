@@ -57,8 +57,7 @@
                 <div class="admin-controls d-none mb-3 p-3 bg-light border rounded">
                     <h4 class="h6 mb-2">Admin Actions</h4>
                     <div class="d-flex gap-2 flex-wrap">
-                        <a href="/admin/edit-post/{{ post.filename }}.md" class="btn btn-primary btn-sm">Edit Post</a>
-                        <button onclick="deletePost('{{ post.filename }}.md')" class="btn btn-danger btn-sm">Delete Post</button>
+                        <button onclick="deleteRaindrop('{{ post.filename }}.md', this)" class="btn btn-danger btn-sm">Delete Raindrop</button>
                     </div>
                 </div>
 

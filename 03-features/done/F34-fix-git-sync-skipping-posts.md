@@ -1,0 +1,19 @@
+# Feature description for feature F34
+## F34 — Fix Git Sync Silently Skipping New MarsEdit Posts
+**Priority**: High
+**Date Created:** 2026-04-15
+**Done:** yes
+**Tasks File Created:** yes
+**Tests Written:** yes
+**Test Passing:** yes
+**Description**: Two bugs cause new posts created via MarsEdit (XML-RPC) to silently fail to reach GitHub. (1) `blogger_api.py:_backup_to_volume()` swallows all exceptions, so if the Fly.io volume write fails the post exists only in `/app/content/` — the next git sync's `rsync --delete` then wipes it before git can commit it. (2) `scheduler.py:sync_to_github()` returns `True` on the "no changes" path without updating `last_git_sync`, making the admin UI falsely show success and "Last Git Sync: Never". Fix: raise (or at minimum surface) volume backup failures so the caller knows, and update `last_git_sync` on all successful sync_to_github() paths.
+
+## How to Demo
+**Setup**: `uv run bg server`, MarsEdit configured against the local XML-RPC endpoint.
+
+**Steps**:
+1. Publish a new post via MarsEdit.
+2. Confirm the admin UI's "Last Git Sync" timestamp updates even when there are no other pending changes.
+3. Run `uv run pytest tests/ -k "backup_to_volume or git_sync"` and confirm the regression tests pass.
+
+**Expected output**: New MarsEdit posts always reach GitHub; a volume backup failure surfaces as an XML-RPC fault instead of silently vanishing; the admin UI accurately reflects the last sync time.

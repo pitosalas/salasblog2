@@ -7,19 +7,19 @@
 ```bash
 git clone <repo url>
 cd <app name>
-uv sync
+make setup
 ```
 
 ## Usage
 
 ```bash
-uv run <entry point>
+make run
 ```
 
 ## Development
 
 ```bash
-uv run pytest
+make check
 ```
 
 ## License

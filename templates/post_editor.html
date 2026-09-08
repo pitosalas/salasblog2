@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if is_edit %}Edit {{ content_type_title|default('Post') }} - {{ title }}{% else %}Create New {{ content_type_title|default('Post') }} - Salas Blog{% endif %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+    <style>
+        .EasyMDEContainer .CodeMirror { min-height: 400px; font-size: 14px; font-family: monospace; }
+        .editor-toolbar { border-radius: 4px 4px 0 0; }
+        /* Normalize heading sizes — we're editing Markdown, not previewing it */
+        .EasyMDEContainer .CodeMirror .cm-header-1,
+        .EasyMDEContainer .CodeMirror .cm-header-2,
+        .EasyMDEContainer .CodeMirror .cm-header-3,
+        .EasyMDEContainer .CodeMirror .cm-header-4,
+        .EasyMDEContainer .CodeMirror .cm-header-5,
+        .EasyMDEContainer .CodeMirror .cm-header-6 { font-size: 14px; line-height: inherit; }
+        #inlinePreview { display: none; border: 1px solid var(--bs-border-color); border-radius: 4px; padding: 1rem; max-height: 600px; overflow-y: auto; }
+        #inlinePreview.showing { display: block; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-primary px-3 mb-4">
+        <a class="navbar-brand" href="/">Salas Blog</a>
+        <span class="navbar-text">
+            {% if is_edit %}Edit {{ content_type_title|default('Post') }}: {{ title }}{% else %}Create New {{ content_type_title|default('Post') }}{% endif %}
+        </span>
+        <a href="/admin" class="nav-link text-white-50 small">Admin</a>
+    </nav>
+
+    <div class="container">
+        <form id="editorForm">
+            <div id="statusMessage" class="alert d-none mb-3"></div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-{% if content_type == 'blog' %}4{% else %}6{% endif %}">
+                    <label for="title" class="form-label">{{ content_type_title|default('Post') }} Title *</label>
+                    <input type="text" id="title" name="title" class="form-control" required
+                           value="{{ title|default(prefill_title|default('')) }}"
+                           placeholder="Enter your {{ content_type|default('post') }} title">
+                    {% if not is_edit %}
+                    <div id="filenameHint" class="form-text">This will be used to generate the filename</div>
+                    {% endif %}
+                </div>
+                <div class="col-md-2">
+                    <label for="date" class="form-label">Date *</label>
+                    <input type="date" id="date" name="date" class="form-control" required value="{{ date|default('') }}">
+                </div>
+                {% if content_type == 'blog' %}
+                <div class="col-md-3">
+                    <label for="category" class="form-label">Category</label>
+                    <input type="text" id="category" name="category" class="form-control"
+                           value="{{ category|default('') }}" placeholder="e.g. General">
+                </div>
+                <div class="col-md-3">
+                    <label for="image_size" class="form-label">Image Size</label>
+                    <select id="image_size" name="image_size" class="form-select">
+                        <option value="" {% if not image_size %}selected{% endif %}>Default (full width)</option>
+                        <option value="small" {% if image_size == 'small' %}selected{% endif %}>Small (25%)</option>
+                        <option value="medium" {% if image_size == 'medium' %}selected{% endif %}>Medium (50%)</option>
+                        <option value="large" {% if image_size == 'large' %}selected{% endif %}>Large (75%)</option>
+                        <option value="full" {% if image_size == 'full' %}selected{% endif %}>Full (100%)</option>
+                    </select>
+                </div>
+                {% endif %}
+
+                <input type="hidden" id="type" name="type" value="{{ content_type }}">
+                {% if is_edit %}
+                <input type="hidden" id="loaded_mtime" name="loaded_mtime" value="{{ loaded_mtime|default('') }}">
+                {% endif %}
+            </div>
+
+            {% if content_type == 'blog' %}
+            <div class="mb-3">
+                <label for="tags" class="form-label">Tags</label>
+                <input type="text" id="tags" name="tags_raw" class="form-control" list="tagSuggestions"
+                       value="{{ (tags|default(prefill_tags|default([])))|join(', ') }}"
+                       placeholder="comma-separated, e.g. python, testing">
+                <datalist id="tagSuggestions">
+                    {% for tag in blog_tags|default([]) %}
+                    <option value="{{ tag }}">
+                    {% endfor %}
+                </datalist>
+                <div class="form-text">Comma-separated. Existing tags are suggested, but any tag can be typed.</div>
+            </div>
+            {% endif %}
+
+            <div class="mb-3">
+                <label for="content" class="form-label">Content (Markdown) *</label>
+                <textarea id="content" name="content" class="form-control" rows="20" required
+                          placeholder="Write your {{ content_type|default('post') }} content in Markdown...">{{ content|default(prefill_content|default('')) }}</textarea>
+            </div>
+        </form>
+
+        <div id="inlinePreview" class="mb-4"></div>
+
+        <div class="d-flex gap-2 mb-4 flex-wrap">
+            <a href="{{ cancel_url|default('/blog/') }}" class="btn btn-secondary">Cancel</a>
+            <button type="button" id="previewBtn" class="btn btn-outline-primary" onclick="togglePreview()">Preview</button>
+            <button type="button" class="btn btn-success" onclick="saveContent()">{% if is_edit %}Save {{ content_type_title|default('Post') }}{% else %}Create {{ content_type_title|default('Post') }}{% endif %}</button>
+            {% if is_edit %}
+            <button type="button" class="btn btn-secondary" onclick="closeEditor()">Close</button>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+    <script>
+        const IS_EDIT = {{ 'true' if is_edit else 'false' }};
+        const ACTION_URL = {{ (action_url|default('/admin/new-post'))|tojson }};
+        const AUTOSAVE_ID = {{ ('editor-' + (filename|default('new')))|tojson }};
+
+        const easyMDE = new EasyMDE({
+            element: document.getElementById('content'),
+            toolbar: ["bold", "italic", "heading", "|", "upload-image", "link", "code", "|", "unordered-list", "ordered-list"],
+            hideIcons: ["preview", "side-by-side", "fullscreen", "guide"],
+            status: false,
+            spellChecker: false,
+            uploadImage: true,
+            imageUploadEndpoint: "/api/upload-image",
+            imagePathAbsolute: true,
+            autosave: {
+                enabled: true,
+                uniqueId: AUTOSAVE_ID,
+                delay: 5000,
+            },
+        });
+
+        let formDirty = false;
+        let saveSucceeded = false;
+        easyMDE.codemirror.on('change', () => { formDirty = true; });
+        document.getElementById('editorForm').addEventListener('input', () => { formDirty = true; });
+
+        window.addEventListener('beforeunload', (e) => {
+            if (formDirty && !saveSucceeded) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+
+        function getTags() {
+            const raw = document.getElementById('tags')?.value || '';
+            return raw.split(',').map(t => t.trim()).filter(t => t.length > 0);
+        }
+
+        function buildFormData() {
+            const form = document.getElementById('editorForm');
+            document.getElementById('content').value = easyMDE.value().trim();
+            const formData = new FormData(form);
+            formData.delete('tags_raw');
+            getTags().forEach(t => formData.append('tags', t));
+            return formData;
+        }
+
+        async function saveContent() {
+            const title = document.getElementById('title').value.trim();
+            const date = document.getElementById('date').value;
+            const content = easyMDE.value().trim();
+
+            if (!title) { showStatus('error', 'Please enter a title'); return; }
+            if (!date) { showStatus('error', 'Please select a date'); return; }
+            if (!content) { showStatus('error', 'Please enter some content'); return; }
+
+            const btn = event.target;
+            const originalText = btn.textContent;
+            btn.textContent = IS_EDIT ? 'Saving...' : 'Creating...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch(ACTION_URL, {
+                    method: 'POST',
+                    body: buildFormData(),
+                });
+                const result = await response.json().catch(() => ({}));
+
+                if (response.status === 409) {
+                    showStatus('error', result.detail || 'This was changed elsewhere since you opened it. Reload to see the latest version before saving over it.');
+                    return;
+                }
+                if (!response.ok) {
+                    throw new Error(result.detail || (IS_EDIT ? 'Save failed' : 'Creation failed'));
+                }
+
+                saveSucceeded = true;
+                formDirty = false;
+                easyMDE.clearAutosavedValue();
+
+                if (IS_EDIT) {
+                    showStatus('success', `{{ content_type_title|default("Post") }} saved successfully!`);
+                    if (result.loaded_mtime !== undefined) {
+                        document.getElementById('loaded_mtime').value = result.loaded_mtime;
+                    }
+                    saveSucceeded = false; // re-arm the unsaved-changes guard for further edits
+                    formDirty = false;
+                    setTimeout(() => document.getElementById('statusMessage').classList.add('d-none'), 3000);
+                } else {
+                    showStatus('success', `{{ content_type_title|default("Post") }} created! Filename: ${result.filename}`);
+                    setTimeout(() => {
+                        {% if content_type == 'page' %}
+                        window.location.href = `/${result.filename.replace('.md', '.html')}`;
+                        {% else %}
+                        window.location.href = `/blog/${result.filename.replace('.md', '.html')}`;
+                        {% endif %}
+                    }, 1500);
+                }
+            } catch (error) {
+                showStatus('error', 'Error: ' + error.message);
+            } finally {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        function showStatus(type, message) {
+            const el = document.getElementById('statusMessage');
+            el.className = 'alert mb-3 alert-' + (type === 'error' ? 'danger' : 'success');
+            el.textContent = message;
+        }
+
+        let previewShown = false;
+        async function togglePreview() {
+            const panel = document.getElementById('inlinePreview');
+            if (previewShown) {
+                panel.classList.remove('showing');
+                previewShown = false;
+                document.getElementById('previewBtn').textContent = 'Preview';
+                return;
+            }
+            const content = easyMDE.value();
+            if (!content.trim()) { showStatus('error', 'Please enter some content to preview'); return; }
+
+            try {
+                const formData = new FormData();
+                formData.append('content', content);
+                const response = await fetch('/admin/preview-markdown', { method: 'POST', body: formData });
+                const result = await response.json();
+                if (!response.ok) throw new Error(result.detail || 'Preview failed');
+                panel.innerHTML = result.html;
+                panel.classList.add('showing');
+                previewShown = true;
+                document.getElementById('previewBtn').textContent = 'Hide Preview';
+            } catch (error) {
+                showStatus('error', 'Preview error: ' + error.message);
+            }
+        }
+
+        function closeEditor() {
+            if (window.history.length > 1) { window.history.back(); }
+            else { window.location.href = '/admin'; }
+        }
+
+        function updateFilenameHint() {
+            const hint = document.getElementById('filenameHint');
+            if (!hint) return;
+            const title = document.getElementById('title').value.trim();
+            const date = document.getElementById('date').value;
+            if (title && date) {
+                const safeTitle = title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/[-\s]+/g, '-').replace(/^-+|-+$/g, '');
+                hint.textContent = `Filename will be: ${date}-${safeTitle}.md`;
+            } else {
+                hint.textContent = 'This will be used to generate the filename';
+            }
+        }
+
+        const dateField = document.getElementById('date');
+        if (!dateField.value) dateField.value = new Date().toISOString().split('T')[0];
+        if (!IS_EDIT) {
+            document.getElementById('title').addEventListener('input', updateFilenameHint);
+            document.getElementById('date').addEventListener('change', updateFilenameHint);
+        }
+    </script>
+</body>
+</html>

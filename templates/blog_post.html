@@ -31,7 +31,7 @@
                     <div class="d-flex gap-2 flex-wrap">
                         <a href="/admin/edit-post/{{ post.filename }}.md" class="btn btn-warning btn-sm">Edit this post</a>
                         <a href="/admin/repost/{{ post.filename }}.md" class="btn btn-info btn-sm">New post based on this one</a>
-                        <button onclick="deletePost('{{ post.filename }}.md')" class="btn btn-danger btn-sm">Delete Post</button>
+                        <button onclick="deletePost('{{ post.filename }}.md', this)" class="btn btn-danger btn-sm">Delete Post</button>
                     </div>
                 </div>
 

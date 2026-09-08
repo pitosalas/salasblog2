@@ -1,0 +1,27 @@
+# TF24 — Content Type Visual Indicators
+**Date Created:** 2026-03-01
+
+## TF24.0 — Add type badge to raindrop listing items
+**Status**: done
+
+**Description**: In `raindrops_list.html`, add a small "Link" badge (Bootstrap `badge bg-info`) next to the post title in each list item so viewers immediately know it's a link blog entry.
+
+## TF24.1 — Add type badge to blog listing items
+**Status**: done
+
+**Description**: In `blog_list.html`, add a small "Post" badge (Bootstrap `badge bg-success`) next to the post title in each list item.
+
+## TF24.2 — Add type indicator to home page items
+**Status**: done
+
+**Description**: In `home.html`, add the appropriate "Post" or "Link" badge to each item in the recent blog posts and recent raindrops sections.
+
+## TF24.3 — Add type indicator to individual post pages
+**Status**: done
+
+**Description**: In `blog_post.html` and `raindrop_post.html`, add the content type badge in the post header alongside the date and category.
+
+## TF24.4 — Write tests for type indicator presence
+**Status**: done
+
+**Description**: Add tests verifying the "Link" badge appears in rendered `raindrops_list.html` and the "Post" badge appears in rendered `blog_list.html`.

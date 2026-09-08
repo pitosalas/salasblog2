@@ -1,0 +1,17 @@
+# TF27 — Per-Post Action Buttons (Edit & Derive)
+**Date Created:** 2026-03-01
+
+## TF27.0 — Fix admin-controls visibility on blog_post.html
+**Status**: done
+
+**Description**: Fix `base.html` JS: replace `adminControls.style.display = 'block'` with `adminControls.classList.remove('d-none')`. Bootstrap's `d-none` uses `display: none !important` which overrides an inline style; `classList.remove` is the correct fix.
+
+## TF27.1 — Rename Repost button and style action buttons distinctly
+**Status**: done
+
+**Description**: In `blog_post.html` rename the "Repost" button label to "New post based on this one". Change the Edit button to `btn-warning` and the derive button to `btn-info` so they are visually distinct from the `btn-outline-secondary` prev/next nav buttons. No custom CSS.
+
+## TF27.2 — Add test for admin-controls visibility fix
+**Status**: done
+
+**Description**: Add a test in `tests/test_pages_live_server.py` (or a new `test_admin_controls.py`) that logs in as admin, fetches a blog post page, and asserts the admin-controls div does not have `d-none` in its class list.

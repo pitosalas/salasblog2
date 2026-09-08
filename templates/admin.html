@@ -39,6 +39,7 @@
             <button class="btn btn-primary btn-sm admin-tab active" onclick="showTab('tab-stats', this)">Stats</button>
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-propose', this)">Propose</button>
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-drafts', this)">Drafts</button>
+            <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-posts', this)">All Posts</button>
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-generate', this)">Generate</button>
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-scheduler', this)">Scheduler</button>
             <button class="btn btn-primary btn-sm admin-tab" onclick="showTab('tab-datasync', this)">Data Sync</button>
@@ -173,6 +174,17 @@
                 <div id="drafts-status"></div>
                 <div id="drafts-list"></div>
             </div>
+
+            <div class="admin-pane d-none" id="tab-posts">
+                <h2 class="h5 mb-2">All Posts &amp; Pages</h2>
+                <p class="text-muted">Browse, edit, or delete any existing blog post or page.</p>
+                <div class="d-flex gap-2 mb-3 flex-wrap">
+                    <input type="search" id="posts-search" class="form-control form-control-sm" style="max-width: 320px;" placeholder="Filter by title or filename..." oninput="renderAdminPosts()">
+                    <button class="btn btn-primary btn-sm" onclick="loadAdminPosts()">Refresh</button>
+                </div>
+                <div id="posts-status"></div>
+                <div id="posts-list"></div>
+            </div>
         </div>
     </main>
 
@@ -182,6 +194,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/static/js/script.js"></script>
+    <script src="/static/js/admin-delete.js"></script>
     <script>
         function escapeHtml(str) {
             if (!str) return '';
@@ -864,6 +877,54 @@
                 btn.innerHTML = 'Delete';
                 alert('Error: ' + e.message);
             }
+        }
+
+        let allAdminPosts = [];
+
+        async function loadAdminPosts() {
+            const statusDiv = document.getElementById('posts-status');
+            statusDiv.innerHTML = statusHtml('loading', 'Loading posts...');
+            try {
+                const resp = await fetch('/api/admin-posts');
+                if (!resp.ok) { statusDiv.innerHTML = statusHtml('error', 'Failed to load posts'); return; }
+                allAdminPosts = await resp.json();
+                statusDiv.innerHTML = '';
+                renderAdminPosts();
+            } catch (e) {
+                statusDiv.innerHTML = statusHtml('error', 'Error: ' + e.message);
+            }
+        }
+
+        function renderAdminPosts() {
+            const listDiv = document.getElementById('posts-list');
+            const query = (document.getElementById('posts-search').value || '').toLowerCase();
+            const filtered = allAdminPosts.filter(p =>
+                p.title.toLowerCase().includes(query) || p.filename.toLowerCase().includes(query)
+            );
+            if (!filtered.length) {
+                listDiv.innerHTML = '<p class="text-muted">No posts match.</p>';
+                return;
+            }
+            const rows = filtered.map((p, i) => {
+                const editUrl = p.content_type === 'pages'
+                    ? `/admin/edit-page/${escapeHtml(p.filename)}`
+                    : `/admin/edit-post/${escapeHtml(p.filename)}`;
+                const deleteFn = p.content_type === 'pages' ? 'deletePage' : 'deletePost';
+                return `<tr id="admin-post-row-${i}">
+                    <td>
+                        <strong>${escapeHtml(p.title)}</strong>
+                        <span class="badge bg-secondary ms-1">${p.content_type === 'pages' ? 'Page' : 'Post'}</span>
+                        <br><small class="text-muted">${escapeHtml(p.date)} &middot; ${escapeHtml(p.filename)}</small>
+                    </td>
+                    <td class="text-nowrap">
+                        <a href="${editUrl}" class="btn btn-sm btn-primary me-1">Edit</a>
+                        <button class="btn btn-sm btn-outline-danger" onclick="${deleteFn}('${escapeHtml(p.filename)}', this, () => document.getElementById('admin-post-row-${i}').remove())">Delete</button>
+                    </td>
+                </tr>`;
+            }).join('');
+            listDiv.innerHTML = `<table class="table table-sm table-hover">
+                <thead class="table-dark"><tr><th>Title</th><th></th></tr></thead>
+                <tbody>${rows}</tbody></table>`;
         }
 
         document.addEventListener('DOMContentLoaded', function() {

@@ -1,28 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('last_sync:', d.get\\('last_sync_timestamp'\\)\\); print\\('count:', len\\(d.get\\('downloaded',[]\\)\\)\\)\")",
-      "Bash(git add *)",
-      "Bash(git commit -m ' *)",
-      "Bash(git push *)",
-      "Bash(pip show *)",
-      "Bash(uv pip *)",
-      "Bash(uv add *)",
-      "Bash(uv run *)",
-      "Bash(fly deploy *)",
-      "Bash(fly logs *)",
-      "Bash(fly ssh *)",
-      "Bash(python -m pytest tests/ -v)",
-      "Bash(python3 -m pytest tests/ -v)",
-      "Bash(git *)",
-      "Bash(/Users/pitosalas/mydev/salasblog2/02-doc/current.md:*)",
-      "Bash(__NEW_LINE_516ae1f1091455f0__ cat)",
-      "Bash(/Users/pitosalas/mydev/salasblog2/02-doc/notes.md:*)",
-      "Bash(find:*)",
-      "Bash(python -m pytest tests/ -x -q)",
-      "Bash(pip install:*)",
-      "Bash(python -m pytest:*)",
-      "Bash(git commit:*)"
+      "Skill(code-review)",
+      "Bash(git -C /home/pitosalas/j3 status)",
+      "Bash(git -C /home/pitosalas/j3 diff)",
+      "Bash(git -C /home/pitosalas/j3 add .claude/bootstrap.md .claude/commands/checkpoint.md .claude/commands/start.md .claude/literate.md .claude/process.md .claude/settings.json .claude/settings.local.json .claude/style_guide.md .claude/templates/feature-template.md README.md)",
+      "Bash(git -C /home/pitosalas/j3 commit -m ' *)",
+      "Bash(git *)"
     ]
   }
 }

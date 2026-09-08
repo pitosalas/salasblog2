@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # test_blog_tags.py — Tests for F23 tag selection for blog posts
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-08
+# Updated: 2026-09-08
 # Open Source Under MIT license
 
-import frontmatter
-import pytest
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from salasblog2.utils import BLOG_TAGS, format_date, get_markdown_processor, slugify_tag
@@ -42,6 +43,7 @@ class TestBlogTagsConstant:
 class TestBloggerApiTagParsing:
     def _make_api(self, tmp_path):
         from salasblog2.blogger_api import BloggerAPI
+
         api = BloggerAPI.__new__(BloggerAPI)
         api.root_dir = tmp_path
         api.blog_dir = tmp_path / "content" / "blog"
@@ -50,7 +52,11 @@ class TestBloggerApiTagParsing:
 
     def test_parse_struct_with_mt_keywords(self, tmp_path):
         api = self._make_api(tmp_path)
-        struct = {"title": "My Post", "description": "body", "mt_keywords": "python, coding"}
+        struct = {
+            "title": "My Post",
+            "description": "body",
+            "mt_keywords": "python, coding",
+        }
         title, body, tags = api._parse_content_or_struct(struct)
         assert "python" in tags
         assert "coding" in tags
@@ -69,7 +75,9 @@ class TestBloggerApiTagParsing:
 
     def test_parse_string_returns_empty_tags(self, tmp_path):
         api = self._make_api(tmp_path)
-        title, body, tags = api._parse_content_or_struct("Post Title\nBody content here.")
+        title, body, tags = api._parse_content_or_struct(
+            "Post Title\nBody content here."
+        )
         assert tags == []
 
     def test_create_post_frontmatter_includes_tags(self, tmp_path):
@@ -84,46 +92,80 @@ class TestBloggerApiTagParsing:
 
 
 class TestTagsInTemplates:
-    def test_new_post_template_has_tag_checkboxes(self):
-        env = make_env()
-        tpl = env.get_template("new_post.html")
-        html = tpl.render(content_type="blog", content_type_title="Post",
-                         action_url="/admin/new-post", cancel_url="/blog/",
-                         blog_tags=BLOG_TAGS)
-        for tag in BLOG_TAGS:
-            assert f'value="{tag}"' in html
+    """post_editor.html (shared by create and edit, per F42) replaced the fixed
+    BLOG_TAGS checkbox list with a free-form comma-separated tag input, with
+    existing tags offered as <datalist> autocomplete suggestions rather than a
+    hard vocabulary — see F42 point 6."""
 
-    def test_edit_post_template_prechecks_existing_tags(self):
+    def test_new_post_template_offers_tag_suggestions(self):
         env = make_env()
-        tpl = env.get_template("edit_post.html")
-        html = tpl.render(content_type="blog", content_type_title="Post",
-                         title="My Post", date="2025-01-01", category="General",
-                         content="body", filename="foo.md",
-                         action_url="/admin/edit-post/foo.md",
-                         cancel_url="/blog/", blog_tags=BLOG_TAGS,
-                         tags=["technology", "ai"])
-        assert 'value="technology"' in html
-        assert 'value="ai"' in html
-        # technology should be checked
-        assert 'value="technology" checked' in html or 'checked' in html
+        tpl = env.get_template("post_editor.html")
+        html = tpl.render(
+            content_type="blog",
+            content_type_title="Post",
+            action_url="/admin/new-post",
+            cancel_url="/blog/",
+            blog_tags=BLOG_TAGS,
+            is_edit=False,
+        )
+        assert 'id="tagSuggestions"' in html
+        for tag in BLOG_TAGS:
+            assert f'<option value="{tag}">' in html
+
+    def test_edit_post_template_prefills_existing_tags(self):
+        env = make_env()
+        tpl = env.get_template("post_editor.html")
+        html = tpl.render(
+            content_type="blog",
+            content_type_title="Post",
+            title="My Post",
+            date="2025-01-01",
+            category="General",
+            content="body",
+            filename="foo.md",
+            action_url="/admin/edit-post/foo.md",
+            cancel_url="/blog/",
+            blog_tags=BLOG_TAGS,
+            tags=["technology", "ai"],
+            is_edit=True,
+        )
+        assert 'id="tags"' in html
+        assert 'value="technology, ai"' in html
 
     def test_edit_post_template_no_tags_context(self):
         env = make_env()
-        tpl = env.get_template("edit_post.html")
-        html = tpl.render(content_type="blog", content_type_title="Post",
-                         title="My Post", date="2025-01-01", category="General",
-                         content="body", filename="foo.md",
-                         action_url="/admin/edit-post/foo.md",
-                         cancel_url="/blog/", blog_tags=BLOG_TAGS,
-                         tags=[])
-        # No checkboxes should be pre-checked
-        assert 'checked' not in html
+        tpl = env.get_template("post_editor.html")
+        html = tpl.render(
+            content_type="blog",
+            content_type_title="Post",
+            title="My Post",
+            date="2025-01-01",
+            category="General",
+            content="body",
+            filename="foo.md",
+            action_url="/admin/edit-post/foo.md",
+            cancel_url="/blog/",
+            blog_tags=BLOG_TAGS,
+            tags=[],
+            is_edit=True,
+        )
+        import re
 
-    def test_tag_checkboxes_not_shown_for_pages(self):
+        tags_input = re.search(r'<input[^>]*id="tags"[^>]*>', html)
+        assert tags_input is not None
+        assert 'value=""' in tags_input.group(0)
+
+    def test_tag_input_not_shown_for_pages(self):
         env = make_env()
-        tpl = env.get_template("new_post.html")
-        html = tpl.render(content_type="page", content_type_title="Page",
-                         action_url="/admin/new-page", cancel_url="/pages/",
-                         blog_tags=BLOG_TAGS)
+        tpl = env.get_template("post_editor.html")
+        html = tpl.render(
+            content_type="page",
+            content_type_title="Page",
+            action_url="/admin/new-page",
+            cancel_url="/pages/",
+            blog_tags=BLOG_TAGS,
+            is_edit=False,
+        )
         # Tags section should not appear for pages
-        assert 'name="tags"' not in html
+        assert 'id="tags"' not in html
+        assert 'name="tags_raw"' not in html

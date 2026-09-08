@@ -4,6 +4,9 @@
 stats:
   cache_refresh_seconds: 60
 
+posts_index:
+  cache_refresh_seconds: 300
+
 home:
   posts_count: 5
 

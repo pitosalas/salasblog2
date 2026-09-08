@@ -1,5 +1,5 @@
 # Current State — salasblog2
-_Last updated: 2026-04-18_
+_Last updated: 2026-09-08_
 
 ---
 
@@ -7,11 +7,12 @@ _Last updated: 2026-04-18_
 
 A personal blog platform for Pito Salas deployed on fly.io. It is a FastAPI server that:
 - Serves a **pre-generated static site** (Hugo-style markdown → HTML, done by `generator.py`)
-- Provides an **admin panel** (`/admin`) for managing posts, drafts, raindrops, and site regeneration
+- Provides an **admin panel** (`/admin`) for managing posts, pages, drafts, raindrops, and site regeneration
 - Syncs bookmarks from **Raindrop.io** (link blog at `/raindrops/`)
 - Uses **Claude AI** to auto-generate blog draft posts from popular raindrop link posts
 - Backs content up to **GitHub** on a schedule via git push
 - Stores persistent content on a **fly.io volume** at `/data/content/`
+- Supports **MarsEdit** (XML-RPC/MetaWeblog) as an alternate authoring path (F44)
 
 The server is the product — it IS the blog. There is no separate CMS.
 
@@ -22,9 +23,9 @@ The server is the product — it IS the blog. There is no separate CMS.
 ```
 salasblog2/
 ├── src/salasblog2/         # Python package (FastAPI server + site generator)
-│   ├── server.py           # 1859 lines — main FastAPI app, ALL routes, too much logic
+│   ├── server.py           # 2221 lines — main FastAPI app, ALL routes, too much logic
 │   ├── generator.py        # 782 lines — static site generator
-│   ├── blogger_api.py      # 552 lines — XML-RPC / MarsEdit / MetaWeblog API
+│   ├── blogger_api.py      # 714 lines — XML-RPC / MarsEdit / MetaWeblog API
 │   ├── utils.py            # 449 lines — markdown processing, shared helpers
 │   ├── scheduler.py        # 399 lines — background job scheduler (git sync, raindrop sync)
 │   ├── raindrop.py         # 350 lines — Raindrop.io API client
@@ -34,24 +35,20 @@ salasblog2/
 │   ├── draft_generator.py  # 120 lines — Claude API draft generation
 │   └── visitor_type.py     # 117 lines — bot/human/search classifier
 ├── templates/              # Jinja2 HTML templates
-│   ├── admin.html          # Main admin SPA (~870 lines, heavy inline JS)
+│   ├── admin.html          # Main admin SPA (~940 lines, heavy inline JS)
+│   ├── post_editor.html    # Unified create/edit for posts and pages (F42; replaced new_post.html/edit_post.html)
 │   ├── stats_page.html     # Pre-generated stats page (served via iframe)
-│   ├── new_post.html       # New post editor (EasyMDE)
-│   ├── edit_post.html      # Edit post editor (EasyMDE)
-│   └── ...                 # blog_post.html, home.html, raindrop_post.html, etc.
+│   └── ...                 # blog_post.html, home.html, raindrop_post.html, page.html, etc.
 ├── static/js/
-│   ├── script.js           # Main blog JS (search, admin controls on post pages)
-│   ├── admin-functions.js  # (exists but admin logic is still mostly in admin.html)
-│   └── ...
-├── content/                # Source markdown (blog/, raindrops/, pages/)
-├── output/                 # Generated static site (served directly)
+│   ├── script.js           # Main blog JS (search)
+│   ├── admin-delete.js     # Shared delete handlers for post/page/raindrop (F42), loaded via base.html
+│   └── admin-functions.js  # (admin logic is still mostly inline in admin.html)
+├── content/                # Source markdown (blog/, raindrops/, pages/) — local dev only; /data/content/ is prod source of truth
+├── output/                 # Generated static site (served directly), incl. admin-stats.html and admin-posts-index.json caches
 ├── config.yaml             # Runtime parameters (see below)
-├── process/
-│   ├── features/notdone/   # F29, F30, F33, F35, F41
-│   ├── features/done/      # F28–F40
-│   ├── tasks/notdone/      # F29, F30, F33, F35, F41
-│   └── tasks/done/         # F07–F08, F17–F27, F32, F34, F36–F40
-└── tests/                  # 494 passing, 11 skipped (2026-04-18)
+├── 03-features/{notdone,done,deferred}/   # FNN-<slug>.md feature files
+├── 04-tasks/{notdone,done,deferred}/      # TFNN-<slug>.md task files
+└── tests/                  # 501 passing, 2 skipped, 1 pre-existing unrelated failure (2026-09-08)
 ```
 
 ---
@@ -61,6 +58,9 @@ salasblog2/
 ```yaml
 stats:
   cache_refresh_seconds: 60
+
+posts_index:
+  cache_refresh_seconds: 300
 
 home:
   posts_count: 5
@@ -72,7 +72,7 @@ scheduler:
 propose:
   pool_size: 50
   count: 5
-  drops_min_age_months: 3
+  drops_min_age_months: 0
   drops_min_visits: 5
 
 drafts:
@@ -89,82 +89,44 @@ The preferred pattern for any data that changes infrequently is:
 2. Serve that file directly on GET — zero computation
 3. Invalidate/regenerate immediately on writes
 
-Currently applied to: **stats page** (`output/admin-stats.html`, refreshed every 60s).
-**Not yet applied to**: propose lists, draft list. (That is F41 T06/T07.)
+Applied to: **stats page** (`output/admin-stats.html`, refreshed every 60s) and **admin posts index** (`output/admin-posts-index.json`, refreshed every 5 min + after every create/edit/delete, F42).
+**Not yet applied to**: propose lists, draft list (F41 TF41.5/TF41.6).
 
 ### Non-blocking I/O
-All blocking operations (Claude API, URL fetch, directory scans, site generation) run in `loop.run_in_executor(None, fn)` to avoid blocking the FastAPI event loop.
+All blocking operations (Claude API, URL fetch, directory scans, site generation, XML-RPC post regeneration as of F44) run via `BackgroundTasks` or `loop.run_in_executor(None, fn)` to avoid blocking the FastAPI event loop.
+
+### Post/page editing (unified, F42)
+`templates/post_editor.html` handles both create and edit, for both blog posts and pages, via an `is_edit` context flag — replacing the previously hand-duplicated `new_post.html`/`edit_post.html`. Includes: category field, free-form comma-separated tags (with `<datalist>` suggestions from `BLOG_TAGS`, not a hard vocabulary), EasyMDE autosave + `beforeunload` unsaved-changes guard, inline preview (via `/admin/preview-markdown`, no more round-trip to a new tab), and mtime-based concurrency conflict detection (`409` on stale save). Delete is real (`/admin/delete-post`, `/admin/delete-page`, `/admin/delete-raindrop`), backed by `static/js/admin-delete.js` loaded globally via `base.html`.
 
 ### Draft workflow
 1. Propose tab → Popular Link Posts → "Generate Draft" button
 2. POST `/api/generate-draft` → calls Claude API in executor → saves `draft-<name>.md` to `/data/content/blog/`
 3. Drafts tab shows all `draft-*.md` files with full body text
-4. "Edit & Post" → `/admin/repost/<filename>` → opens `new_post.html` pre-filled with draft content
+4. "Edit & Post" → `/admin/repost/<filename>` → opens `post_editor.html` pre-filled with draft content
 5. User edits and clicks "Create Post" → new published post created, draft file remains (user deletes it)
 
 Generated drafts start with `Originally Posted on: [url](url)` and a 50–75 word Claude paragraph.
 
+### MarsEdit / XML-RPC (F44)
+`/xmlrpc` uses Python's stdlib `xmlrpc.client.loads()`/`dumps()` for marshalling (not hand-rolled `ElementTree`), so it correctly handles `dateTime.iso8601`, `<array>`, `<base64>` (as `xmlrpc.client.Binary`, unwrapped to plain `bytes` at the parsing boundary), and properly escapes response content. Response `Content-Type` must be left to `media_type="text/xml"` alone — an explicit `headers={"Content-Type": "text/xml"}` suppresses Starlette's automatic `; charset=utf-8`, which broke MarsEdit on any post with non-ASCII characters. Kept deliberately (not removed) to support MarsEdit alongside the web admin UI — see F44 for the "should we even keep XML-RPC" question, already answered.
+
 ### Content storage (volume-first)
 - `/data/content/` — persistent fly.io volume, source of truth at runtime
-- `/app/content/` — baked into Docker image from git; overwritten by startup.sh at deploy
+- `/app/content/` — baked into Docker image from git; overwritten by `startup.sh`'s `git checkout -f -B main origin/main` at container boot
 - `output/` — generated static site, regenerated from `/data/content/` at startup and on demand
 
-This three-way architecture is identified as a complexity target in F41 T12.
+This three-way architecture is identified as a complexity target in F41 TF41.11.
 
 ### Admin panel
-Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, Generate, Scheduler, Data Sync, Pages Sync, Raindrop, Emergency. All admin JavaScript is currently inline in `templates/admin.html` (~870 lines). Moving it to `.js` files is F41 T03.
+Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), Generate, Scheduler, Data Sync, Pages Sync, Raindrop, Emergency. Most admin JavaScript is still inline in `templates/admin.html` — extracting it is F41 TF41.2 (explicitly excludes `post_editor.html`, which already got its own JS separation as part of F42).
 
 ---
 
-## What was done this session (F40)
+## Open
 
-All complete and deployed to fly.io.
+**F44 — Fix the MetaWeblog/XML-RPC Implementation**: 5 of 6 tasks done (see `04-tasks/notdone/TF44-fix-metaweblog-xmlrpc.md`). Only **TF44.4 remains** — manual end-to-end verification against real MarsEdit. Blocked until this session's work is committed, pushed, and redeployed (see Deployment section below — nothing from this session is live yet).
 
-1. **Drafts body not displaying** — `d.body` in template literal broke on backticks/`${` in Claude output. Fixed: added `escapeHtml()`, set body via `textContent` not innerHTML.
-2. **"Edit & Post" button not rendering** — same root cause as above. Now works.
-3. **Stats page redesign** — pre-generated static HTML via `generate_stats_cache()`, served via iframe, refreshed every 60s. Zero computation on GET.
-4. **Non-blocking draft generation** — Claude API + URL fetch in `run_in_executor`.
-5. **Draft list fast glob** — `draft-*.md` glob instead of scanning all 2800 posts.
-6. **Delete draft endpoint** — `POST /api/delete-draft`.
-7. **Publish sets today's date** — so published drafts appear as newest post.
-8. **"Originally Posted on:" prefix** — added to all generated drafts.
-9. **Claude prompt shortened** — 50–75 words, `max_tokens=150`.
-10. **config.yaml** — centralised runtime parameters, read by server.py, generator.py, draft_generator.py.
-11. **Test fix** — `'display: none'` → `'d-none'` in live server test assertion.
-
----
-
-## Next session: F41 — Codebase Cleanup and Architecture Review
-
-**Feature file**: `process/features/notdone/F41.md`
-**Task file**: `process/tasks/notdone/F41.md`
-
-### Tasks summary
-
-| # | Task | Focus |
-|---|------|-------|
-| T01 | Remove `_` prefix from private names | Coding standards |
-| T02 | Fix file headers (shebang, author, license) | Coding standards |
-| T03 | Extract inline JS from HTML templates to `.js` files | Separation of concerns |
-| T04 | Remove HTML literals from Python files | Separation of concerns |
-| T05 | Reduce/simplify admin JavaScript | JS reduction |
-| T06 | Pre-generate propose lists as static JSON | Responsiveness |
-| T07 | Pre-generate draft list as static JSON | Responsiveness |
-| T08 | Audit all GET routes for minimal-work compliance | Responsiveness |
-| T09 | Arch review: module decomposition (`server.py` is 1859 lines) | Architecture |
-| T10 | Arch review: scheduler vs asyncio, background work ownership | Architecture |
-| T11 | Arch review: XML-RPC / Blogger API necessity | Architecture |
-| T12 | Arch review: volume-first three-way content sync | Architecture |
-| T13 | Arch review: YAGNI and speculative abstractions | Architecture |
-
-Architecture review tasks (T09–T13) write findings to `process/arch-review.md` only — no code changes. Code changes follow in subsequent features.
-
-### Suggested starting point
-T09 (architecture review of `server.py`) is the highest-value first step — it will shape which subsequent cleanup tasks make sense and in what order.
-
----
-
-## Open features (not F41)
+**Other open features** (`03-features/notdone/`, no dependency on each other or on F44):
 
 | Feature | Description | Priority |
 |---------|-------------|----------|
@@ -172,40 +134,45 @@ T09 (architecture review of `server.py`) is the highest-value first step — it 
 | F30 | Code quality improvements in raindrop.py | Low |
 | F33 | Fix web search (item.category → item.type bug + raindrop indexing) | Medium |
 | F35 | Fix admin sync button after GIT_TOKEN rotation | Medium |
+| F41 | Codebase cleanup and architecture review | Medium |
 
-F33 T01 (the category/type field name fix in `script.js`) is already done. F33 T02–T04 (raindrop indexing, content truncation, tests) remain.
+F33 TF33.0 (the category/type field name fix in `script.js`) is already done. F33 TF33.1–TF33.3 (raindrop indexing, content truncation, tests) remain.
+
+F41 was reconciled this session against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they don't redo or contradict work those two features already did) — see `04-tasks/notdone/TF41-codebase-cleanup-architecture.md`. Recommended order if picking F41 up: after F44, since TF41.3/TF41.10 assume F44 has landed.
+
+**Deferred**: F43 (token-authenticated REST API for posting from a phone, `03-features/deferred/`) — parked, not abandoned, independent of everything else.
 
 ---
 
 ## Test status
 
 ```
-494 passed, 11 skipped, 3 warnings
+501 passed, 2 skipped, 1 failed, 33 deselected, 3 warnings
 ```
 
-All tests pass locally. Skipped tests require a live server (`https://salas.com`).
+The 1 failure (`test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env`) is pre-existing and unrelated to this session's work (confirmed to fail identically on `main` before any of this session's changes) — raindrop.py cache-loading test isolation issue, F29/F30 territory. Skipped tests require a live server (`https://salasblog2.fly.dev`).
 
 ---
 
 ## Deployment
 
 ```bash
-fly deploy          # build and deploy to fly.io
-fly logs            # tail live logs
-fly ssh console     # shell into running container
+make deploy          # build and deploy to fly.io (uv run bg deploy → fly deploy)
+fly logs              # tail live logs
+fly ssh console        # shell into running container
 ```
 
 Deployed app: https://salasblog2.fly.dev
 
-Startup sequence: `startup.sh` runs `git checkout -f -B main origin/main` (overwrites `/app` with GitHub HEAD), then starts uvicorn. This means **code changes must be committed and pushed to GitHub before `fly deploy`**, or they will be overwritten at startup.
+**Startup sequence**: `startup.sh` runs `git checkout -f -B main origin/main` (overwrites `/app` with GitHub HEAD), then starts uvicorn. **Code changes must be committed and pushed to GitHub before `make deploy`**, or they will be silently overwritten at container startup — confirmed the hard way this session: three deploys in a row kept serving pre-session code because nothing had been pushed, verified via `fly ssh console` showing the running container on commit `e909c27` (pre-session HEAD) despite fresh deploy timestamps.
 
 ---
 
 ## Known rough edges
 
-- `server.py` at 1859 lines is the biggest structural problem — nearly everything lives there.
-- Admin JS is ~600 lines inline in `admin.html` — hard to maintain, not testable.
-- The three-way content sync (`/data` ↔ `/app` ↔ `output/`) adds operational complexity.
-- XML-RPC endpoint (`/xmlrpc`, `blogger_api.py`) may be dead weight if MarsEdit is no longer the primary authoring tool.
-- `mount_static_files()` is defined but intentionally disabled at startup (replaced by custom endpoints) — dead code.
+- `server.py` at 2221 lines is the biggest structural problem — nearly everything lives there. F41 TF41.8 covers decomposition.
+- Admin JS is still mostly inline in `admin.html` — hard to maintain, not testable. F41 TF41.2.
+- The three-way content sync (`/data` ↔ `/app` ↔ `output/`) adds operational complexity, and is also why deploys silently lose uncommitted work (see Deployment above). F41 TF41.11.
+- `mount_static_files()` is defined but intentionally disabled at startup (replaced by custom endpoints) — dead code. F41 TF41.12 candidate.
 - `_check_single_instance()` depends on the `fly` CLI being present in the container — fragile.
+- `raindrop_post.html` has no admin edit flow (raindrops are Raindrop.io-synced, not manually authored) — only delete was added in F42; this is intentional, not a gap, but worth knowing if someone expects an edit button there.

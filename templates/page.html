@@ -9,7 +9,7 @@
             <h1 class="display-6">{{ page.title }}</h1>
             <div class="admin-controls d-none mt-2">
                 <a href="/admin/edit-page/{{ page.filename }}" class="btn btn-primary btn-sm">Edit</a>
-                <button onclick="deletePage('{{ page.filename }}')" class="btn btn-danger btn-sm">Delete</button>
+                <button onclick="deletePage('{{ page.filename }}', this)" class="btn btn-danger btn-sm">Delete</button>
             </div>
         </header>
 
