@@ -669,7 +669,7 @@ def regenerate_after_deletion_in_background(filename: str, content_type: str):
         )
     except Exception as e:
         logger.error(
-            f"Background deletion regeneration FAILED for {content_type} {filename}: {e}"
+            f"Background deletion regen FAILED for {content_type} {filename}: {e}"
         )
 
 
@@ -2063,7 +2063,7 @@ async def xmlrpc_get_endpoint(request: Request):
     )
 
 
-def call_xmlrpc_method(api, method_name, params, background_tasks):
+def call_xmlrpc_method(api, method_name, method_args, background_tasks):
     """Look up and invoke the right BloggerAPI method for an XML-RPC call.
 
     Methods that create/edit/delete a post trigger site regeneration, so they
@@ -2091,10 +2091,10 @@ def call_xmlrpc_method(api, method_name, params, background_tasks):
     }
     if method_name in regenerating_methods:
         return regenerating_methods[method_name](
-            *params, background_tasks=background_tasks
+            *method_args, background_tasks=background_tasks
         )
     if method_name in other_methods:
-        return other_methods[method_name](*params)
+        return other_methods[method_name](*method_args)
     logging.getLogger(__name__).error(f"Unknown XML-RPC method: {method_name}")
     raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")
 
@@ -2124,12 +2124,12 @@ async def xmlrpc_endpoint(request: Request, background_tasks: BackgroundTasks):
     # not plain bytes. Unwrap them here so blogger_api.py's methods keep receiving
     # plain bytes as they already expect, rather than leaking an XML-RPC library type
     # into the business-logic layer.
-    params = [unwrap_xmlrpc_binary(p) for p in raw_params]
-    logger.info(f"XML-RPC method: {method_name}, {len(params)} parameters")
+    method_args = [unwrap_xmlrpc_binary(p) for p in raw_params]
+    logger.info(f"XML-RPC method: {method_name}, {len(method_args)} parameters")
 
     api = BloggerAPI()
     try:
-        result = call_xmlrpc_method(api, method_name, params, background_tasks)
+        result = call_xmlrpc_method(api, method_name, method_args, background_tasks)
     except xmlrpc_client.Fault as fault:
         logger.info(f"XML-RPC Fault {fault.faultCode}: {fault.faultString}")
         response_xml = xmlrpc_client.dumps(fault)
@@ -2225,7 +2225,6 @@ if __name__ == "__main__":
     validate_environment_and_setup()
     mount_static_files()
 
-    # Use PORT environment variable or default to 8000 for local development
+    # Use PORT environment variable or default to 8080
     port = int(os.getenv("PORT", 8080))
-    print(f"***************** {port}")
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=port)
