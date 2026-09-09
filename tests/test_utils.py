@@ -156,6 +156,24 @@ class TestCreateExcerpt:
         result = create_excerpt(text)
         assert "**bold**" in result
 
+    def test_create_excerpt_preserves_paragraph_breaks(self):
+        """Regression: a long excerpt spanning more than one of the source
+        post's paragraphs used to collapse every newline (including blank
+        lines) into a single space, reading as one run-on wall of text with
+        no breaks at all. Blank lines (paragraph breaks) must survive so the
+        markdown filter (blog_list.html/home.html) renders separate <p>s;
+        only word-wrap newlines within a paragraph get collapsed to spaces."""
+        text = "First paragraph here.\n\nSecond paragraph here."
+        result = create_excerpt(text)
+        assert result == "First paragraph here.\n\nSecond paragraph here."
+
+    def test_create_excerpt_collapses_single_newlines_within_paragraph(self):
+        """Word-wrap newlines inside one paragraph still become spaces, not a
+        paragraph break — only a genuine blank line counts as one."""
+        text = "Line one\nLine two\n\nSeparate paragraph"
+        result = create_excerpt(text)
+        assert result == "Line one Line two\n\nSeparate paragraph"
+
 
 class TestParseDateForSorting:
     """Test date parsing for sorting utility."""

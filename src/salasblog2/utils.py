@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
 # Updated: 2026-09-09
 # Open Source Under MIT license
@@ -83,9 +83,16 @@ def create_excerpt_with_info(
         smart_threshold = int(os.getenv("EXCERPT_SMART_THRESHOLD", "100"))
 
     # Clean up content - strip block markers (headers/quotes/bullets only mean
-    # anything at the start of a line), then remove newlines and extra spaces
+    # anything at the start of a line), then collapse each paragraph onto one
+    # line while keeping paragraph breaks. A long excerpt often spans more than
+    # one of the original post's paragraphs; collapsing every newline (including
+    # blank lines) into a single space reads as one run-on wall of text, so only
+    # word-wrap newlines are collapsed — blank lines survive as a paragraph break
+    # for the markdown filter (blog_list.html/home.html) to render as separate <p>s.
     clean_content = _strip_block_markdown_markers(content)
-    clean_content = re.sub(r"[ \t]+", " ", clean_content.replace("\n", " ")).strip()
+    paragraphs = re.split(r"\n\s*\n", clean_content)
+    paragraphs = [re.sub(r"\s+", " ", p).strip() for p in paragraphs]
+    clean_content = "\n\n".join(p for p in paragraphs if p)
 
     # If content is short enough, return as-is
     if len(clean_content) <= max_length:
