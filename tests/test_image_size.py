@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_image_size.py — Tests for image_size frontmatter feature
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-08
+# Updated: 2026-09-08
 # Open Source Under MIT license
 
 import pytest
@@ -8,7 +11,9 @@ from pathlib import Path
 from salasblog2.generator import SiteGenerator
 
 
-def make_blog_post(directory, filename, title, date, content="Post body.", image_size=None):
+def make_blog_post(
+    directory, filename, title, date, content="Post body.", image_size=None
+):
     image_size_line = f"image_size: {image_size!r}\n" if image_size else ""
     (directory / filename).write_text(
         f"---\ntitle: {title!r}\ndate: '{date}'\ntype: blog\n{image_size_line}---\n{content}\n"
@@ -20,7 +25,9 @@ class TestImageSizeGenerator:
         blog_dir = tmp_path / "blog"
         blog_dir.mkdir()
         generator.blog_dir = blog_dir
-        make_blog_post(blog_dir, "2025-01-01-test.md", "Test", "2025-01-01", image_size="medium")
+        make_blog_post(
+            blog_dir, "2025-01-01-test.md", "Test", "2025-01-01", image_size="medium"
+        )
         posts = generator.load_posts("blog")
         assert posts[0]["image_size"] == "medium"
 
@@ -37,7 +44,13 @@ class TestImageSizeGenerator:
         blog_dir.mkdir()
         generator.blog_dir = blog_dir
         for i, size in enumerate(["small", "medium", "large", "full"]):
-            make_blog_post(blog_dir, f"2025-01-0{i+1}-test.md", f"Test {size}", f"2025-01-0{i+1}", image_size=size)
+            make_blog_post(
+                blog_dir,
+                f"2025-01-0{i + 1}-test.md",
+                f"Test {size}",
+                f"2025-01-0{i + 1}",
+                image_size=size,
+            )
         posts = generator.load_posts("blog")
         sizes = {p["image_size"] for p in posts}
         assert sizes == {"small", "medium", "large", "full"}
@@ -46,6 +59,7 @@ class TestImageSizeGenerator:
 class TestImageSizeServerLoadSave:
     def test_load_content_item_returns_image_size(self, tmp_path):
         from salasblog2 import server
+
         content_file = tmp_path / "test-post.md"
         content_file.write_text(
             "---\ntitle: Test\ndate: '2025-01-01'\ntype: blog\nimage_size: large\n---\nContent here.\n"
@@ -60,6 +74,7 @@ class TestImageSizeServerLoadSave:
 
     def test_load_content_item_no_image_size_defaults_empty(self, tmp_path):
         from salasblog2 import server
+
         content_file = tmp_path / "test-post.md"
         content_file.write_text(
             "---\ntitle: Test\ndate: '2025-01-01'\ntype: blog\n---\nContent here.\n"
@@ -75,12 +90,23 @@ class TestImageSizeServerLoadSave:
     def test_save_content_item_writes_image_size(self, tmp_path):
         from salasblog2 import server
         import frontmatter
+
         content_file = tmp_path / "test-post.md"
-        content_file.write_text("---\ntitle: Old\ndate: '2025-01-01'\ntype: blog\n---\nOld content.\n")
+        content_file.write_text(
+            "---\ntitle: Old\ndate: '2025-01-01'\ntype: blog\n---\nOld content.\n"
+        )
         original_func = server.get_content_directory
         server.get_content_directory = lambda ct: tmp_path
         try:
-            server.save_content_item("test-post.md", "blog", "New Title", "2025-01-01", "blog", "New content.", [], image_size="small")
+            fields = server.ContentFields(
+                "New Title",
+                "2025-01-01",
+                "blog",
+                "New content.",
+                [],
+                image_size="small",
+            )
+            server.save_content_item("test-post.md", "blog", fields)
             with open(content_file) as f:
                 saved = frontmatter.load(f)
             assert saved.metadata.get("image_size") == "small"
@@ -90,12 +116,18 @@ class TestImageSizeServerLoadSave:
     def test_save_content_item_omits_image_size_when_empty(self, tmp_path):
         from salasblog2 import server
         import frontmatter
+
         content_file = tmp_path / "test-post.md"
-        content_file.write_text("---\ntitle: Old\ndate: '2025-01-01'\ntype: blog\n---\nOld content.\n")
+        content_file.write_text(
+            "---\ntitle: Old\ndate: '2025-01-01'\ntype: blog\n---\nOld content.\n"
+        )
         original_func = server.get_content_directory
         server.get_content_directory = lambda ct: tmp_path
         try:
-            server.save_content_item("test-post.md", "blog", "New Title", "2025-01-01", "blog", "New content.", [], image_size="")
+            fields = server.ContentFields(
+                "New Title", "2025-01-01", "blog", "New content.", [], image_size=""
+            )
+            server.save_content_item("test-post.md", "blog", fields)
             with open(content_file) as f:
                 saved = frontmatter.load(f)
             assert "image_size" not in saved.metadata

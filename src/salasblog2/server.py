@@ -1,6 +1,13 @@
+#!/usr/bin/env python3
+# server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
+# Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-08
+# Updated: 2026-09-08
+# Open Source Under MIT license
 """
-FastAPI server for Salasblog2 - serves static files + API endpoints
-Includes Blogger API (XML-RPC) support for blog editors
+FastAPI server for Salasblog2 - serves static files + API endpoints.
+Includes Blogger API (XML-RPC) support for blog editors.
 """
 
 import os
@@ -19,6 +26,7 @@ import mimetypes
 from pathlib import Path
 from datetime import datetime, date
 from typing import List
+from dataclasses import dataclass
 from fastapi import (
     FastAPI,
     HTTPException,
@@ -33,15 +41,15 @@ from fastapi.responses import HTMLResponse, JSONResponse, Response, RedirectResp
 from starlette.middleware.sessions import SessionMiddleware
 from contextlib import asynccontextmanager
 from jinja2 import Environment, FileSystemLoader
-from .generator import SiteGenerator
-from .raindrop import RaindropDownloader
-from .blogger_api import BloggerAPI
-from .scheduler import get_scheduler
-from .utils import process_markdown_to_html, BLOG_TAGS
-from .stats import get_counter
-from .visitor_type import classify_visitor
-from .propose import get_proposed_posts, get_proposed_drops, DropFilter
-from .draft_generator import generate_draft_from_drop, save_draft
+from salasblog2.generator import SiteGenerator
+from salasblog2.raindrop import RaindropDownloader
+from salasblog2.blogger_api import BloggerAPI
+from salasblog2.scheduler import get_scheduler
+from salasblog2.utils import process_markdown_to_html, BLOG_TAGS
+from salasblog2.stats import get_counter
+from salasblog2.visitor_type import classify_visitor
+from salasblog2.propose import get_proposed_posts, get_proposed_drops, DropFilter
+from salasblog2.draft_generator import generate_draft_from_drop, save_draft
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -580,17 +588,21 @@ def check_no_concurrent_edit(content_file: Path, loaded_mtime: str):
         return
 
 
-def save_content_item(
-    filename: str,
-    content_type: str,
-    title: str,
-    date: str,
-    item_type: str,
-    content: str,
-    tags: list,
-    image_size: str = "",
-    category: str = "",
-) -> float:
+@dataclass
+class ContentFields:
+    """Frontmatter + body fields for a blog post or page, as submitted by
+    the create/edit forms and written to disk by save_content_item()."""
+
+    title: str
+    date: str
+    item_type: str
+    content: str
+    tags: list
+    image_size: str = ""
+    category: str = ""
+
+
+def save_content_item(filename: str, content_type: str, fields: ContentFields) -> float:
     """Write content item to disk. Regeneration is handled separately as a
     background task. Returns the new file's mtime, for the concurrency check
     on subsequent edits (see save_edited_post/save_edited_page)."""
@@ -601,17 +613,17 @@ def save_content_item(
     content_file = content_dir / filename
 
     try:
-        item = frontmatter.Post(content.strip())
+        item = frontmatter.Post(fields.content.strip())
         item.metadata = {
-            "title": title.strip(),
-            "date": date,
-            "type": item_type,
-            "tags": tags,
+            "title": fields.title.strip(),
+            "date": fields.date,
+            "type": fields.item_type,
+            "tags": fields.tags,
         }
-        if image_size:
-            item.metadata["image_size"] = image_size
-        if category:
-            item.metadata["category"] = category.strip()
+        if fields.image_size:
+            item.metadata["image_size"] = fields.image_size
+        if fields.category:
+            item.metadata["category"] = fields.category.strip()
 
         with open(content_file, "w", encoding="utf-8") as f:
             f.write(frontmatter.dumps(item))
@@ -1369,7 +1381,9 @@ async def save_edited_post(
     check_no_concurrent_edit(content_file, loaded_mtime)
 
     new_mtime = save_content_item(
-        filename, "blog", title, date, type, content, tags, image_size, category
+        filename,
+        "blog",
+        ContentFields(title, date, type, content, tags, image_size, category),
     )
     background_tasks.add_task(_regenerate_in_background, filename, "blog")
     background_tasks.add_task(generate_posts_index_cache)
@@ -1427,7 +1441,9 @@ async def create_new_post(
             )
 
         save_content_item(
-            filename, "blog", title, date, type, content, tags, image_size, category
+            filename,
+            "blog",
+            ContentFields(title, date, type, content, tags, image_size, category),
         )
         background_tasks.add_task(_regenerate_in_background, filename, "blog")
         background_tasks.add_task(generate_posts_index_cache)
@@ -1499,7 +1515,9 @@ async def save_edited_page(
 
     check_no_concurrent_edit(content_file, loaded_mtime)
 
-    new_mtime = save_content_item(filename, "pages", title, date, type, content, [])
+    new_mtime = save_content_item(
+        filename, "pages", ContentFields(title, date, type, content, [])
+    )
     background_tasks.add_task(_regenerate_in_background, filename, "pages")
     background_tasks.add_task(generate_posts_index_cache)
     return JSONResponse(
@@ -1551,7 +1569,9 @@ async def create_new_page(
                 detail=f"A page with filename '{filename}' already exists",
             )
 
-        save_content_item(filename, "pages", title, date, type, content, [])
+        save_content_item(
+            filename, "pages", ContentFields(title, date, type, content, [])
+        )
         background_tasks.add_task(_regenerate_in_background, filename, "pages")
         background_tasks.add_task(generate_posts_index_cache)
         return JSONResponse(
@@ -2105,7 +2125,10 @@ async def xmlrpc_endpoint(request: Request, background_tasks: BackgroundTasks):
     logger = logging.getLogger(__name__)
 
     body = await request.body()
-    logger.info(f"Received XML-RPC request, body length: {len(body)}")
+    user_agent = request.headers.get("user-agent", "unknown")
+    logger.info(
+        f"Received XML-RPC request, body length: {len(body)}, user-agent: {user_agent}"
+    )
 
     # Parse XML-RPC request using the standard library's own marshalling, which
     # correctly handles every XML-RPC type (dateTime.iso8601, array, nested struct,
@@ -2114,7 +2137,7 @@ async def xmlrpc_endpoint(request: Request, background_tasks: BackgroundTasks):
     try:
         raw_params, method_name = xmlrpc_client.loads(body)
     except Exception as e:
-        logger.error(f"Malformed XML-RPC request: {e}")
+        logger.exception(f"Malformed XML-RPC request: {e}")
         fault_xml = create_xmlrpc_fault_with_code(
             400, f"Malformed XML-RPC request: {e}"
         )
@@ -2127,7 +2150,15 @@ async def xmlrpc_endpoint(request: Request, background_tasks: BackgroundTasks):
     method_args = [unwrap_xmlrpc_binary(p) for p in raw_params]
     logger.info(f"XML-RPC method: {method_name}, {len(method_args)} parameters")
 
-    api = BloggerAPI()
+    try:
+        api = BloggerAPI()
+    except Exception:
+        logger.exception(f"BloggerAPI() construction failed for method {method_name}")
+        response_xml = xmlrpc_client.dumps(
+            xmlrpc_client.Fault(500, "Server failed to initialize BloggerAPI")
+        )
+        return Response(content=response_xml, media_type="text/xml", status_code=200)
+
     try:
         result = call_xmlrpc_method(api, method_name, method_args, background_tasks)
     except xmlrpc_client.Fault as fault:
@@ -2137,14 +2168,34 @@ async def xmlrpc_endpoint(request: Request, background_tasks: BackgroundTasks):
     except HTTPException:
         raise
     except Exception as e:
-        logger.error(f"XML-RPC method {method_name} failed: {e}")
+        logger.exception(f"XML-RPC method {method_name} failed")
         response_xml = xmlrpc_client.dumps(xmlrpc_client.Fault(500, str(e)))
         return Response(content=response_xml, media_type="text/xml", status_code=200)
 
-    # Create XML-RPC response
-    logger.info(f"Method {method_name} completed successfully")
-    response_xml = create_xmlrpc_response(result)
+    logger.info(
+        f"Method {method_name} completed successfully, "
+        f"result type={type(result).__name__}, result repr={repr(result)[:1000]}"
+    )
 
+    # Marshalling happens here, after the method has already succeeded — if xmlrpc_client
+    # can't serialize whatever the method returned, this must not crash uncaught, since an
+    # unhandled exception here makes FastAPI return a plain HTML 500 page instead of XML,
+    # which is exactly what produces MarsEdit's "XMLRPC Response Parsing Failed: (null)".
+    try:
+        response_xml = create_xmlrpc_response(result)
+    except Exception:
+        logger.exception(
+            f"Failed to marshal XML-RPC response for method {method_name}, "
+            f"result type={type(result).__name__}, result repr={repr(result)[:1000]}"
+        )
+        response_xml = xmlrpc_client.dumps(
+            xmlrpc_client.Fault(
+                500, f"Server failed to marshal response for {method_name}"
+            )
+        )
+        return Response(content=response_xml, media_type="text/xml", status_code=200)
+
+    logger.info(f"XML-RPC response length: {len(response_xml)}")
     return Response(content=response_xml, media_type="text/xml")
 
 

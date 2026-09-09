@@ -1,6 +1,14 @@
+#!/usr/bin/env python3
+# blogger_api — Blogger/MetaWeblog XML-RPC adapter for MarsEdit
+# Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-08
+# Updated: 2026-09-08
+# Open Source Under MIT license
 """
-Blogger API (XML-RPC) implementation for Salasblog2
-Supports Blogger API methods for compatibility with blog editors like Windows Live Writer and MarsEdit.
+Blogger API (XML-RPC) implementation for Salasblog2.
+Implements the Blogger and MetaWeblog protocols for compatibility with
+MarsEdit and similar blog-editor clients.
 """
 
 from datetime import datetime
@@ -12,8 +20,8 @@ import os
 import shutil
 import base64
 from xmlrpc.client import Fault
-from .generator import SiteGenerator
-from .utils import create_filename_from_title
+from salasblog2.generator import SiteGenerator
+from salasblog2.utils import create_filename_from_title
 
 # Set up logging
 logger = logging.getLogger(__name__)
