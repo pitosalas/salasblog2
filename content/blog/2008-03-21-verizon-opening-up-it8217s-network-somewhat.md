@@ -1,12 +1,15 @@
 ---
-title: "Verizon opening up it’s network somewhat"
-subtitle: "I am starting to follow the world of mesh networks and things..."
-category: "298"
-tags: []
-date: "2008-03-21"
-type: "wp"
+category: '298'
+date: '2008-03-21'
+subtitle: I am starting to follow the world of mesh networks and things...
+tags:
+- technology
+- verizon
+title: Verizon opening up it’s network somewhat
+type: wp
 wordpress_id: 1082
 ---
+
 I am starting to follow the world of [mesh networks](http://del.icio.us/tag/meshnetworks) and things related to that.
 One immediate question that has popped up is: now that there are cell towers everywhere, what advantage might there be to creating a new national or global or mobile network based on mesh technology? I am just an ignoramus so far on this, but in that quest, I came across this article.
 

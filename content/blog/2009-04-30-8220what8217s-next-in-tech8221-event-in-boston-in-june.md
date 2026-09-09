@@ -1,12 +1,16 @@
 ---
-title: "“What’s next in tech” event in Boston in June"
-subtitle: "If you live in the Boston area and somehow connected to technology professions you should be interes..."
-category: "538"
-tags: ["729", "732", "1007", "1805", "2068"]
-date: "2009-04-30"
-type: "wp"
+category: '538'
+date: '2009-04-30'
+subtitle: If you live in the Boston area and somehow connected to technology professions
+  you should be interes...
+tags:
+- boston
+- scott-kirsner
+title: “What’s next in tech” event in Boston in June
+type: wp
 wordpress_id: 850
 ---
+
 If you live in the Boston area and somehow connected to technology professions you should be interested in this meeting being put on in June:
 **[What’s Next In Tech – Where will the next waves of growth will come from?](http://whatsnext.eventbrite.com/)**
 

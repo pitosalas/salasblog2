@@ -1,12 +1,15 @@
 ---
-title: "Premature Evaluation?: Obama Wins Nobel Prize"
-subtitle: "Check out Premature Evaluation?: Obama Wins Nobel Prize(**from** ..."
-category: "51"
-tags: []
-date: "2009-10-11"
-type: "wp"
+category: '51'
+date: '2009-10-11'
+subtitle: 'Check out Premature Evaluation?: Obama Wins Nobel Prize(**from** ...'
+tags:
+- politics
+- barack-obama
+title: 'Premature Evaluation?: Obama Wins Nobel Prize'
+type: wp
 wordpress_id: 795
 ---
+
 Check out [Premature Evaluation?: Obama Wins Nobel Prize](http://www.bradblog.com/?p=7458)(**from** [The BRAD BLOG](http://www.bradblog.com/?feed=rss2):
 > “The Norwegian Nobel Committee has decided that the Nobel Peace Prize for 2009 is to be awarded to President Barack Obama for his extraordinary efforts to strengthen international diplomacy and cooperation between peoples. The Committee has attached special importance to Obama’s vision of and work for a world without nuclear weapons.” (**from: **[Premature Evaluation?: Obama Wins Nobel Prize) ](http://www.bradblog.com/?p=7458)
 

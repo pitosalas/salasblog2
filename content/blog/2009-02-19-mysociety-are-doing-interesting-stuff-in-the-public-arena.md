@@ -1,12 +1,16 @@
 ---
-title: "mySociety are doing  interesting stuff in the public arena"
-subtitle: "A british organization (or should I say organisation?) called mySociety has done some **really cool*..."
-category: "298"
-tags: []
-date: "2009-02-19"
-type: "wp"
+category: '298'
+date: '2009-02-19'
+subtitle: A british organization (or should I say organisation?) called mySociety
+  has done some **really cool*...
+tags:
+- technology
+- mysociety
+title: mySociety are doing  interesting stuff in the public arena
+type: wp
 wordpress_id: 887
 ---
+
 A british organization (or should I say organisation?) called mySociety has done some **really cool** publically minded open source projects.
 Sites like [FixMyStreet](http://www.fixmystreet.com/) and [WhatDoTheyKnow](http://www.whatdotheyknow.com/) make so much sense and it would seem to me could **easily be done** here in the USA.
 

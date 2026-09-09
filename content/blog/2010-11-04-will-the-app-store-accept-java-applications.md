@@ -1,12 +1,15 @@
 ---
-title: "Will the App Store Accept Java Applications?"
-subtitle: "Check out Apple Begins Accepting Submissions for Mac App Store"
-category: "51"
-tags: []
-date: "2010-11-04"
-type: "wp"
+category: '51'
+date: '2010-11-04'
+subtitle: Check out Apple Begins Accepting Submissions for Mac App Store
+tags:
+- technology
+- blogbridge
+title: Will the App Store Accept Java Applications?
+type: wp
 wordpress_id: 647
 ---
+
 Check out [Apple Begins Accepting Submissions for Mac App Store](http://feedproxy.google.com/~r/TheAppleBlog/~3/KhbunzJNK9g/)(**from** [GigaOM](http://feeds.feedburner.com/theappleblog):
 ** "At the Oct. 20 “Back to the Mac” event, the Mac App Store was announced alongside the next iteration of OS X, dubbed Lion (10.7). Apple then revealed that users wouldn’t have to wait until Lion’s summer release window to get their hands on the new distribution channel. Instead, the Mac App Store would be available for OS X 10.6 Snow Leopard within 90 days." (from: **[Apple Begins Accepting Submissions for Mac App Store) ](http://feedproxy.google.com/~r/TheAppleBlog/~3/KhbunzJNK9g/) 
 

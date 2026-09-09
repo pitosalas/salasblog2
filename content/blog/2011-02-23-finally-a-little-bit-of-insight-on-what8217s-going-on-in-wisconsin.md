@@ -1,12 +1,15 @@
 ---
-title: "Finally a little bit of insight on what’s going on in Wisconsin"
-subtitle: "I’ve seen several interviews with Scott Walker"
-category: "298"
-tags: ["918", "2123"]
-date: "2011-02-23"
-type: "wp"
+category: '298'
+date: '2011-02-23'
+subtitle: I’ve seen several interviews with Scott Walker
+tags:
+- politics
+- scott-walker
+title: Finally a little bit of insight on what’s going on in Wisconsin
+type: wp
 wordpress_id: 592
 ---
+
 I’ve seen several interviews with [Scott Walker](http://en.wikipedia.org/wiki/Scott_Walker_(politician)), the Governor of Wisconsin, about his efforts to ‘balance the budget’. I put that in scare quotes because there’s a good case to be made that his agenda is different or at least well beyond that.
 
 He’s very [articulate about his position, and quite convincing](http://www.cnn.com/2011/US/02/21/wisconsin.budget/index.html?iref=24hours). None of the interviewers had anything to add to the debate other than, “gee aren’t you union busting?” and “gee, how come isn’t it good enough that the unions have agreed to the financial concessions?” And the Governor has very good answers to each of the obvious questions.

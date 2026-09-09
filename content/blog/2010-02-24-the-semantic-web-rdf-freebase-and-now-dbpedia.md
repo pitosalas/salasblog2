@@ -1,12 +1,16 @@
 ---
-title: "The Semantic Web, RDF, Freebase and now, DBpedia"
-subtitle: "I was talking with Noah Mendelsohn this morning and we got into a di..."
-category: "538"
-tags: []
-date: "2010-02-24"
-type: "wp"
+category: '538'
+date: '2010-02-24'
+subtitle: I was talking with Noah Mendelsohn this morning and we got into a di...
+tags:
+- technology
+- freebase
+- dbpedia
+title: The Semantic Web, RDF, Freebase and now, DBpedia
+type: wp
 wordpress_id: 736
 ---
+
 I was talking with [Noah Mendelsohn](http://www.arcanedomain.com/) this morning and we got into a discussion about [RDF](http://www.w3.org/RDF/) and it’s role in the world. Noah mentioned something called [DBPedia](http://dbpedia.org/About) which I had not heard of. 
 [DBPedia](http://dbpedia.org/About) but it turns out to be a platform that grabs and analyzes Wikipedia content and delivers all that it can as an RDF Service. This sounds a lot like [Freebase](http://www.freebase.com/), [another service which I am a fan of](/2007/11/23/freebasecom-is-the-semantic-web/) too, which has it’s own representations and standards, but among many other things, grabs and analyzes Wikipedia content and optionally delivers it, yes, as an [RDF](http://www.w3.org/RDF/) service.
 

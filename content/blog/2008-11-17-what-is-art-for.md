@@ -1,12 +1,14 @@
 ---
-title: "What is Art For?"
-subtitle: "A really good article in the New York Times Magazine today about Lewis Hyde"
-category: "298"
-tags: []
-date: "2008-11-17"
-type: "wp"
+category: '298'
+date: '2008-11-17'
+subtitle: A really good article in the New York Times Magazine today about Lewis Hyde
+tags:
+- books
+title: What is Art For?
+type: wp
 wordpress_id: 947
 ---
+
 A really [good article in the New York Times Magazine today about Lewis Hyde](http://www.nytimes.com/2008/11/16/magazine/16hyde-t.html). I had not heard of [Lewis Hyde](http://www.lewishyde.com) before. First of all, the article makes me want to pick up his book, [The Gift:](http://www.amazon.com/gp/product/0307279502/ref=s9sdps_c6_14_at1-rfc_g1-frt_p-3237_p_si2?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-1&pf_rd_r=141BMCKH6EY0Q1Q8NVDB&pf_rd_t=101&pf_rd_p=463383351&pf_rd_i=507846)
 > ““The Gift,” the core argument of which depends on establishing an analogy between the making of art and how objects accrue value in traditional “gift economies,” has been praised as the most subtle, influential study of reciprocity since the French anthropologist Marcel Mauss’s 1924 essay of the same name.” (from [What is Art For](http://www.nytimes.com/2008/11/16/magazine/16hyde-t.html)?)
 

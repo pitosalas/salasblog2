@@ -1,12 +1,15 @@
 ---
-title: "Weapons of civic mass destruction"
-subtitle: "I am struck by how broken our political process is. I’m not the first nor the last to make this obse..."
-category: "298"
-tags: []
-date: "2009-04-25"
-type: "wp"
+category: '298'
+date: '2009-04-25'
+subtitle: I am struck by how broken our political process is. I’m not the first nor
+  the last to make this obse...
+tags:
+- politics
+title: Weapons of civic mass destruction
+type: wp
 wordpress_id: 853
 ---
+
 I am struck by how broken our political process is. I’m not the first nor the last to make this observation, How did we get here and what are the underlying reasons?
 Here’s one way I have started to look at it: we have perfected the science of persuasion to such a point that it is **now destroying us**. Here’s what I mean:
 

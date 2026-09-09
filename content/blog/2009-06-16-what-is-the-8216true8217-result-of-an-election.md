@@ -1,12 +1,14 @@
 ---
-title: "What is the ‘true’ result of an election?"
-subtitle: "With what’s going on in Iran right now"
-category: "298"
-tags: []
-date: "2009-06-16"
-type: "wp"
+category: '298'
+date: '2009-06-16'
+subtitle: With what’s going on in Iran right now
+tags:
+- politics
+title: What is the ‘true’ result of an election?
+type: wp
 wordpress_id: 834
 ---
+
 With what’s [going on in Iran right now](http://www.nytimes.com/2009/06/16/world/middleeast/16iran.html?partner=rss&emc=rss), many commentators are wondering whether the elections were fair. That is to say, do the reported results correspond to reality, to how people actually voted?
 > “In Washington, a State Department spokesman, Ian Kelly, said the United States is “deeply troubled” by the unrest in Iran and is concerned about allegations of ballot fraud. But he stopped short of condemning the Iran security forces for cracking down on demonstrators and said Washington does not know whether the allegations of fraud are, in fact, true.” (**from** “[Top Cleric Calls for Inquiry as Protesters Defy Ban in Iran](http://www.nytimes.com/2009/06/16/world/middleeast/16iran.html?partner=rss&emc=rss)“)
 

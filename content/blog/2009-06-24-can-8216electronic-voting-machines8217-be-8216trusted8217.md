@@ -1,12 +1,16 @@
 ---
-title: "Can ‘Electronic Voting Machines’ be ‘Trusted’?"
-subtitle: "Leaving aside *what* exactly an Electronic Voting Machine *is*, the New York Times weighed in with t..."
-category: "298"
-tags: []
-date: "2009-06-24"
-type: "wp"
+category: '298'
+date: '2009-06-24'
+subtitle: Leaving aside *what* exactly an Electronic Voting Machine *is*, the New
+  York Times weighed in with t...
+tags:
+- politics
+- technology
+title: Can ‘Electronic Voting Machines’ be ‘Trusted’?
+type: wp
 wordpress_id: 832
 ---
+
 Leaving aside *what* exactly an Electronic Voting Machine *is*, the New York Times weighed in with this editorial the other day:
 > “Electronic voting machines that do not produce a paper record of every vote cast cannot be trusted. In 2008, more than one-third of the states, including New Jersey and Texas, still did not require all votes to be recorded on paper. Representative Rush Holt has introduced a good [bill](http://thomas.loc.gov/cgi-bin/query/z?c111:H.R.2894:) that would ban paperless electronic voting in all federal elections. Congress should pass it while there is still time to get ready for 2010 […[click here for the whole thing](http://www.nytimes.com/2009/06/22/opinion/22mon2.html?_r=1&scp=2&sq=electronic%20voting&st=cse)]” (**from** [How to Trust Electronic Voting, New York Times](http://www.nytimes.com/2009/06/22/opinion/22mon2.html?_r=1&scp=2&sq=electronic%20voting&st=cse))
 

@@ -1,12 +1,14 @@
 ---
-title: "Overreaction"
-subtitle: "I tend to agree with this writer that:"
-category: "298"
-tags: []
-date: "2010-11-13"
-type: "wp"
+category: '298'
+date: '2010-11-13'
+subtitle: 'I tend to agree with this writer that:'
+tags:
+- politics
+title: Overreaction
+type: wp
 wordpress_id: 642
 ---
+
 I tend to agree with this writer that:
 > “With respect to airport security, it is remarkable how we have come to place Sept. 11, 2001, as the fulcrum upon which we balance almost all of our decisions. As if deadly terrorism didn’t exist prior to that day, when really we’ve been dealing with the same old threats for decades. What have we learned? What have we done?” (**from** [News Flash: Deadly Terrorism Existed before 9/11](http://www.salon.com/technology/ask_the_pilot/2010/11/10/airport_security/index.html))
 

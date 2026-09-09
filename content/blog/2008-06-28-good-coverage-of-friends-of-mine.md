@@ -1,12 +1,17 @@
 ---
-title: "Good coverage of friends of mine"
-subtitle: "Recently three friends of mine got nice press coverage, so I thought I’d share them:"
-category: "298"
-tags: []
-date: "2008-06-28"
-type: "wp"
+category: '298'
+date: '2008-06-28'
+subtitle: 'Recently three friends of mine got nice press coverage, so I thought I’d
+  share them:'
+tags:
+- business
+- boston
+- kayak
+title: Good coverage of friends of mine
+type: wp
 wordpress_id: 1021
 ---
+
 Recently three friends of mine got nice press coverage, so I thought I’d share them:
  
 - [Reed Sturtevant is doing some great things at Microsoft in Boston](http://www.boston.com/business/technology/articles/2008/06/30/microsoft_seeks_next_big_idea_in_cambridge/)

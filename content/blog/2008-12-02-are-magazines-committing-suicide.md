@@ -1,12 +1,17 @@
 ---
-title: "Are magazines committing suicide?"
-subtitle: "I was traveling this weekend and as I am wont to do, spent too much time at bookstores and magazine ..."
-category: "298"
-tags: []
-date: "2008-12-02"
-type: "wp"
+category: '298'
+date: '2008-12-02'
+subtitle: I was traveling this weekend and as I am wont to do, spent too much time
+  at bookstores and magazine ...
+tags:
+- technology
+- business
+- ray-ozzie
+title: Are magazines committing suicide?
+type: wp
 wordpress_id: 936
 ---
+
 I was traveling this weekend and as I am wont to do, spent too much time at bookstores and magazine stands.
 I came across the current issue of the New Yorker, where this article caught my eye: “[A reporter at Large: Anatomy of a Meltdown”](http://www.newyorker.com/reporting/2008/12/01/081201fa_fact_cassidy?printable=true), and the current issue of Wired, where this article caught my eye: “[Ray Ozzie wants to Push Microsoft Back into Startup Mode”. ](http://www.wired.com/print/techbiz/people/magazine/16-12/ff_ozzie)
 

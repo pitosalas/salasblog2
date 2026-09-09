@@ -1,12 +1,15 @@
 ---
-title: "Great article about ‘lean’"
-subtitle: "I recommend this article, “Fatboy in A Lean World”"
-category: "298"
-tags: ["1365"]
-date: "2011-02-01"
-type: "wp"
+category: '298'
+date: '2011-02-01'
+subtitle: I recommend this article, “Fatboy in A Lean World”
+tags:
+- business
+- lean-startup
+title: Great article about ‘lean’
+type: wp
 wordpress_id: 601
 ---
+
 [I recommend this article, “Fatboy in A Lean World”](http://www.oreillygmt.eu/interview/fatboy-in-a-lean-world/), (by [Gordon Guthrie](http://www.oreillygmt.eu/author/gordon-guthrie/)) if you are interested in ‘lean’ as in Lean Startups, Lean Production.
 
 About why lean production is becoming so hot among us software entrepreneurs:

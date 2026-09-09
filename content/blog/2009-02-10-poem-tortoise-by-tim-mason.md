@@ -1,12 +1,14 @@
 ---
-title: "Poem: Tortoise by Tim Mason"
-subtitle: "**Tortoise**"
-category: "298"
-tags: ["1639", "1641", "2007"]
-date: "2009-02-10"
-type: "wp"
+category: '298'
+date: '2009-02-10'
+subtitle: '**Tortoise**'
+tags:
+- books
+title: 'Poem: Tortoise by Tim Mason'
+type: wp
 wordpress_id: 890
 ---
+
 **Tortoise**
 by [Tim Mason](http://www.timothydmason.com/tortoise.shtml)
 I set my pace deliberately

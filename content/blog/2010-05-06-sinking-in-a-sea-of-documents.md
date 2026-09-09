@@ -1,12 +1,16 @@
 ---
-title: "Sinking in a sea of documents"
-subtitle: "Lately because of one of my projects I am having to work my way through a bunch of long, semi struct..."
-category: "538"
-tags: ["839", "957", "1262"]
-date: "2010-05-06"
-type: "wp"
+category: '538'
+date: '2010-05-06'
+subtitle: Lately because of one of my projects I am having to work my way through
+  a bunch of long, semi struct...
+tags:
+- technology
+- personal
+title: Sinking in a sea of documents
+type: wp
 wordpress_id: 720
 ---
+
 Lately because of one of my projects I am having to work my way through a bunch of long, semi structured documents containing things such as requests for proposals, government program reports, threat models and all kinds of things like that. They are in techno-legalese as I would call them: highly structured, with section numbering and 3, 4 and 5 levels of nesting. All in English, they look like the writers were getting paid by the word if you know what I mean.
 I need a more efficient way to locate those paragraphs of nuggets that matter to me. So what I’d like is kind of a local document index/repository, that would allow me to have some standing queries and easily locate sections in documents that talk about my queries. Here’s an example:
 

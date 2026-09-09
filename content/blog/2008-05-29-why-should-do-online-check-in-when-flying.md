@@ -1,12 +1,15 @@
 ---
-title: "Why should do online check-in when flying?"
-subtitle: "This, from American Airlines:"
-category: "298"
-tags: ["614"]
-date: "2008-05-29"
-type: "wp"
+category: '298'
+date: '2008-05-29'
+subtitle: 'This, from American Airlines:'
+tags:
+- travel
+- personal
+title: Why should do online check-in when flying?
+type: wp
 wordpress_id: 1038
 ---
+
 This, from American Airlines:
 > “Your trip is eligible for check-in now. Save time at the airport and check-in on AA.com® any time from now up to one hour prior to your departure. To use our new instant check-in feature, simply click the button below and print your boarding pass. Save this email and use your personal check-in button for quick and easy check-in for your return flight.”
 

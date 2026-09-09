@@ -2,7 +2,8 @@
 category: '298'
 date: '2006-12-07'
 subtitle: Check out [this
-tags: []
+tags:
+- personal
 title: My Middle-Sized Problems
 type: wp
 wordpress_id: 1394

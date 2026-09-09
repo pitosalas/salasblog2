@@ -1,12 +1,17 @@
 ---
-title: "Chris Herot on RulesBase"
-subtitle: "Chris Herot writes about a new product called RulesBase: Check out this post"
-category: "538"
-tags: []
-date: "2008-02-22"
-type: "wp"
+category: '538'
+date: '2008-02-22'
+subtitle: 'Chris Herot writes about a new product called RulesBase: Check out this
+  post'
+tags:
+- technology
+- business
+- javelin-software
+title: Chris Herot on RulesBase
+type: wp
 wordpress_id: 1106
 ---
+
 Chris Herot writes about a new product called RulesBase: Check out [this post](http://herot.typepad.com/cherot/2008/02/rulesbase.html) from [Christopher Herot’s Weblog](http://herot.typepad.com/cherot/):
 > “I had a visit yesterday from Steven Ginzberg and Jack Schatz of [Gray Box Software](http://www.grayboxsoftware.com). They showed me a new financial analysis and modeling tool – [RulesBase](http://www.grayboxsoftware.com/rulesbase.cfm).
 

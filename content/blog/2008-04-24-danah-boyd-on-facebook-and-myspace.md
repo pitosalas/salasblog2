@@ -1,12 +1,15 @@
 ---
-title: "Danah Boyd on Facebook and Myspace"
-subtitle: "A really interesting article for anyone interested in social networks"
-category: "298"
-tags: []
-date: "2008-04-24"
-type: "wp"
+category: '298'
+date: '2008-04-24'
+subtitle: A really interesting article for anyone interested in social networks
+tags:
+- technology
+- danah-boyd
+title: Danah Boyd on Facebook and Myspace
+type: wp
 wordpress_id: 1061
 ---
+
 A really interesting [article for anyone interested in social networks](http://www.danah.org/papers/essays/ClassDivisions.html) and their role and impact in our society.
 > “… I want to take a moment to make a meta point here. I have been traipsing through the country talking to teens and I’ve been seeing this transition for the past 6-9 months but I’m having a hard time putting into words.
 

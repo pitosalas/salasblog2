@@ -1,12 +1,15 @@
 ---
-title: "Stuxnet apparently as effective as a military strike"
-subtitle: "Check out Stuxnet apparently as effective as a military strike"
-category: "298"
-tags: []
-date: "2010-12-17"
-type: "wp"
+category: '298'
+date: '2010-12-17'
+subtitle: Check out Stuxnet apparently as effective as a military strike
+tags:
+- technology
+- stuxnet
+title: Stuxnet apparently as effective as a military strike
+type: wp
 wordpress_id: 618
 ---
+
 Check out [Stuxnet apparently as effective as a military strike](http://arstechnica.com/tech-policy/news/2010/12/stuxnet-apparently-as-effective-as-a-military-strike.ars?utm_source=rss&utm_medium=rss&utm_campaign=rss)(**from** [Ars Technica](http://arstechnica.com/members/318783044fd511917d3bc9765d85b753b3e2dd73/feeds/everything.xml):
 > “Damage from the Stuxnet virus has apparently set back the Iranian nuclear program by as much as two years, according to a German security expert talking to the Jerusalem Post. This makes the virus as effective as a military strike—but without loss of life or risk of full-blown war.” (**from: **[Stuxnet apparently as effective as a military strike) ](http://arstechnica.com/tech-policy/news/2010/12/stuxnet-apparently-as-effective-as-a-military-strike.ars?utm_source=rss&utm_medium=rss&utm_campaign=rss)
 

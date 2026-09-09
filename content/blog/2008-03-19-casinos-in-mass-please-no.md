@@ -1,12 +1,16 @@
 ---
-title: "Casinos in Mass? Please, No!"
-subtitle: "[youtube http://www.youtube.com/watch?v=ZfWsfDweeM4&hl=en]I found my way onto Robin Chase’s blog, [N..."
-category: "298"
-tags: []
-date: "2008-03-19"
-type: "wp"
+category: '298'
+date: '2008-03-19'
+subtitle: '[youtube http://www.youtube.com/watch?v=ZfWsfDweeM4&hl=en]I found my way
+  onto Robin Chase’s blog, [N...'
+tags:
+- politics
+- boston
+title: Casinos in Mass? Please, No!
+type: wp
 wordpress_id: 1084
 ---
+
 [youtube http://www.youtube.com/watch?v=ZfWsfDweeM4&hl=en]I found my way onto Robin Chase’s blog, [Network Musings](http://networkmusings.blogspot.com/). She writes about lots of stuff I am interested in. Starting with the top post right now, [“Should Casinos Subsidize Car Travel?”](http://networkmusings.blogspot.com/2008/03/casinos-and-cars.html) where she says:
 > “The Governor of Massachusetts has asked state legislators to seriously consider encouraging the building of several new large casinos in the state in order to raise revenues, the majority of which will be used for transportation shortfalls.” (from [Network Musings](http://networkmusings.blogspot.com/))
 

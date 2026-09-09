@@ -1,12 +1,16 @@
 ---
-title: "Targeted Copyright Enforcement: Deterring Many Users with a Few Lawsuits"
-subtitle: "Check out Targeted Copyright Enforcement: Deterring Many Users with a Few Lawsuits"
-category: "410"
-tags: ["873", "982", "1265"]
-date: "2009-11-09"
-type: "wp"
+category: '410'
+date: '2009-11-09'
+subtitle: 'Check out Targeted Copyright Enforcement: Deterring Many Users with a Few
+  Lawsuits'
+tags:
+- politics
+- technology
+title: 'Targeted Copyright Enforcement: Deterring Many Users with a Few Lawsuits'
+type: wp
 wordpress_id: 780
 ---
+
 Check out [Targeted Copyright Enforcement: Deterring Many Users with a Few Lawsuits](http://freedom-to-tinker.com/blog/felten/targeted-copyright-enforcement-deterring-many-users-few-lawsuits)(**from** [Freedom to Tinker](http://freedom-to-tinker.com/rss.xml):
 > “One reason the record industry’s strategy of suing online infringers ran into trouble is that there are too many infringers to sue. If the industry can only sue a tiny fraction of infringers, then any individual infringer will know that he is very unlikely to be sued, and deterrence will fail.” (**from: **[Targeted Copyright Enforcement: Deterring Many Users with a Few Lawsuits) ](http://freedom-to-tinker.com/blog/felten/targeted-copyright-enforcement-deterring-many-users-few-lawsuits)
 

@@ -1,12 +1,16 @@
 ---
-title: "iTunes 8 Genius is calling home"
-subtitle: "I just downloaded the new ITunes 8. It has this new thing called the iTunes Genius which seems like ..."
-category: "298"
-tags: []
-date: "2008-09-10"
-type: "wp"
+category: '298'
+date: '2008-09-10'
+subtitle: I just downloaded the new ITunes 8. It has this new thing called the iTunes
+  Genius which seems like ...
+tags:
+- technology
+- itunes
+title: iTunes 8 Genius is calling home
+type: wp
 wordpress_id: 976
 ---
+
 I just downloaded the new ITunes 8. It has this new thing called the iTunes Genius which seems like it is going to help me create play lists or something. Maybe it’s gonna out Pandora Pandora or Last.FM. Don’t know exactly what I am getting but I pushed the big red button and got it enabled.
 I got curious though when I saw the CPU pegged for a while and saw this ‘progress bar’:
 

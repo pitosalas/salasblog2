@@ -1,12 +1,14 @@
 ---
-title: "[story] This did happen"
-subtitle: "PART 1: THE ELDERS"
-category: "298"
-tags: []
-date: "2010-10-04"
-type: "wp"
+category: '298'
+date: '2010-10-04'
+subtitle: 'PART 1: THE ELDERS'
+tags:
+- personal
+title: '[story] This did happen'
+type: wp
 wordpress_id: 656
 ---
+
 PART 1: THE ELDERS
 Now, such a long time after first contact, it was hard to remember the times, so much earlier, when the elders had established the borders, such as they were, of the terrain, such as it was. The elders, The Elders, were no longer around, or visible even. But their influence certainly was felt.
 

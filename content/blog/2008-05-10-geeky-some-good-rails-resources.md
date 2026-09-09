@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] Some good Rails resources"
-subtitle: "Just a few handy links that, if you are a Rails developer you may be interested in:"
-category: "538"
-tags: []
-date: "2008-05-10"
-type: "wp"
+category: '538'
+date: '2008-05-10'
+subtitle: 'Just a few handy links that, if you are a Rails developer you may be interested
+  in:'
+tags:
+- programming
+- ruby-on-rails
+title: '[GEEKY] Some good Rails resources'
+type: wp
 wordpress_id: 1049
 ---
+
 Just a few handy links that, if you are a Rails developer you may be interested in:
 
 - [Ruby Plus – Free Ruby and Rails Screencasts](http://www.rubyplus.org/)

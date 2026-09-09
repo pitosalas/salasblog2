@@ -1,12 +1,16 @@
 ---
-title: "Asymmetrical  conflict in the blogosphere"
-subtitle: "I met with a potential client the other day who was on red alert because there were a lot of **nasty..."
-category: "51"
-tags: ["720"]
-date: "2008-05-22"
-type: "wp"
+category: '51'
+date: '2008-05-22'
+subtitle: I met with a potential client the other day who was on red alert because
+  there were a lot of **nasty...
+tags:
+- business
+- personal
+title: Asymmetrical  conflict in the blogosphere
+type: wp
 wordpress_id: 1040
 ---
+
 I met with a potential client the other day who was on red alert because there were a lot of **nasty things** being said about them on blogs, comments and forums. And I thought of the concept of asymmetrical conflict as we have learned about it in recent years.
 Even without knowing whether the criticism of the client was deserved: for a single act, or a pattern of action, or not at all, it struck me that they were in a very tough and unfair spot. If you look at nasty blog posts or comment streams, it is hard to deny that there’s a piling on, hit them when they are down dynamic.
 

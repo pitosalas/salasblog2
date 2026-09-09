@@ -1,12 +1,16 @@
 ---
-title: "Government Data, Apis, and the tipping point"
-subtitle: "I’ve been discovering the mass of information that is created by the government and is very slowly m..."
-category: "298"
-tags: []
-date: "2009-02-05"
-type: "wp"
+category: '298'
+date: '2009-02-05'
+subtitle: I’ve been discovering the mass of information that is created by the government
+  and is very slowly m...
+tags:
+- politics
+- technology
+title: Government Data, Apis, and the tipping point
+type: wp
 wordpress_id: 896
 ---
+
 I’ve been discovering the mass of information that is created by the government and is very slowly making its way online. I will be posting my discoveries from time to time.
 The process of making public information available online seems to go something like this:
 

@@ -1,12 +1,16 @@
 ---
-title: "Oldish news, but interesting"
-subtitle: "I came across this note that the fairly famous spat between Apple Gossip site Think Secret and Apple..."
-category: "298"
-tags: []
-date: "2008-02-24"
-type: "wp"
+category: '298'
+date: '2008-02-24'
+subtitle: I came across this note that the fairly famous spat between Apple Gossip
+  site Think Secret and Apple...
+tags:
+- technology
+- apple
+title: Oldish news, but interesting
+type: wp
 wordpress_id: 1104
 ---
+
 I came across this note that the fairly famous spat between Apple Gossip site Think Secret and Apple Inc. has been settled:
 > 
 

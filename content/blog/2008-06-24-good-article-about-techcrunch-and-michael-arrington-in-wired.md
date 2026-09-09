@@ -1,12 +1,17 @@
 ---
-title: "Good article about TechCrunch and Michael Arrington in Wired"
-subtitle: "I haven’t seen anyone pointing to this article about TechCrunch and Professor Arrington"
-category: "298"
-tags: ["1978"]
-date: "2008-06-24"
-type: "wp"
+category: '298'
+date: '2008-06-24'
+subtitle: I haven’t seen anyone pointing to this article about TechCrunch and Professor
+  Arrington
+tags:
+- technology
+- techcrunch
+- mike-arrington
+title: Good article about TechCrunch and Michael Arrington in Wired
+type: wp
 wordpress_id: 1025
 ---
+
 I haven’t seen anyone pointing to this [article about TechCrunch and Professor Arrington](http://www.wired.com/techbiz/people/magazine/15-07/ff_arrington), but it’s very interesting. I remember when it was first starting and how he would write an unbelievable number of interesting and useful reviews about new products. Mike Arrington was a machine! Say what you will about him, TechCrunch is the labor of some extremely hard work:
 > “Of course, Arrington’s success is about more than partying like a frat boy and schmoozing like a Hollywood agent at a cast party. With the exception of a three-week vacation (during which he worked half-time) at the end of 2006, he says he has worked every day for two years straight.
 

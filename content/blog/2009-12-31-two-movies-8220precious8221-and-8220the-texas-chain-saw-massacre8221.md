@@ -1,12 +1,15 @@
 ---
-title: "Two movies: “Precious” and “The Texas Chain Saw Massacre”"
-subtitle: "(**Note**: Spoilers for both movies, but nothing that everyone probably has already been exposed to)"
-category: "298"
-tags: []
-date: "2009-12-31"
-type: "wp"
+category: '298'
+date: '2009-12-31'
+subtitle: '(**Note**: Spoilers for both movies, but nothing that everyone probably
+  has already been exposed to)'
+tags:
+- personal
+title: 'Two movies: “Precious” and “The Texas Chain Saw Massacre”'
+type: wp
 wordpress_id: 763
 ---
+
 (**Note**: Spoilers for both movies, but nothing that everyone probably has already been exposed to)
 I saw both these movies this weekend. [One I thought was very good but disturbing](http://en.wikipedia.org/wiki/Precious_%28film%29), the other I thought was [so so, kind of sick, but I did watch it to the end](http://en.wikipedia.org/wiki/The_Texas_Chain_Saw_Massacre). Yet thinking about it, is there a core theme in common and what does my reaction say about my biases?
 

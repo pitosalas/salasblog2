@@ -1,12 +1,17 @@
 ---
-title: "[GEEKY] Mac will be discontinuing support of Java"
-subtitle: "This is a weird development. Java is a super well established language, why would Apple decide to st..."
-category: "50"
-tags: []
-date: "2010-10-22"
-type: "wp"
+category: '50'
+date: '2010-10-22'
+subtitle: This is a weird development. Java is a super well established language,
+  why would Apple decide to st...
+tags:
+- technology
+- macos
+- java
+title: '[GEEKY] Mac will be discontinuing support of Java'
+type: wp
 wordpress_id: 649
 ---
+
 This is a weird development. Java is a super well established language, why would Apple decide to stop developing it:
 “Apple’s [announcement](http://www.macrumors.com/2010/10/21/apple-discontinuing-java-installation-packages-for-mac-os-x/) that they would be ceasing future development of their version of Java for the Mac has generated concern amongst Java developers.” (**from**: [Steve Jobs Comments on Apple’s Java Discontinuation – Mac Rumors](http://www.macrumors.com/2010/10/22/steve-jobs-comments-on-apples-java-discontinuation/).)
 

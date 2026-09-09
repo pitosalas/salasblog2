@@ -1,12 +1,14 @@
 ---
-title: "Engineering"
-subtitle: "Some choice quotes to introduce a good lecture about Engineering"
-category: "298"
-tags: ["1003", "1040"]
-date: "2011-02-23"
-type: "wp"
+category: '298'
+date: '2011-02-23'
+subtitle: Some choice quotes to introduce a good lecture about Engineering
+tags:
+- education
+title: Engineering
+type: wp
 wordpress_id: 593
 ---
+
 Some choice quotes to introduce a good [lecture about Engineering](http://sunnyday.mit.edu/16.355/Augustine.htm):
 
 > ‘…[snip], Napoleon dismissed Robert Fulton’s claim of a steam-powered ship: “What, sir, would you make a ship sail against the wind and currents by lighting a bonfire under her deck? I pray you excuse me. I have no time to listen to such nonsense.”

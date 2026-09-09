@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] How DataRSS might work"
-subtitle: "**Editors Note (that’s me, Pito): I’ve decided to change the name of this thing to “Decentralized Da..."
-category: "51"
-tags: ["635", "912", "1075", "1742", "1951", "2106"]
-date: "2009-04-13"
-type: "wp"
+category: '51'
+date: '2009-04-13'
+subtitle: '**Editors Note (that’s me, Pito): I’ve decided to change the name of this
+  thing to “Decentralized Da...'
+tags:
+- technology
+- datarss
+title: '[GEEKY] How DataRSS might work'
+type: wp
 wordpress_id: 857
 ---
+
 **Editors Note (that’s me, Pito): I’ve decided to change the name of this thing to “Decentralized Data Discovery – DDD” because I learned from more than one person that calling it Data RSS was misleading and confusing. I need to go back and update the papers and blog posts.**
 I’ve just finished writing part 3 of my series about DataRSS. [Part 1 gives the background and justification for the concept](http://www.scribd.com/doc/12866121/Data-Rss), and [Part 2 worked through a semi-believable scenario where having DataRSS would be a good thing.](http://www.scribd.com/doc/13583957/DataRSS-Case-Study)
 

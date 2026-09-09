@@ -1,12 +1,16 @@
 ---
-title: "My health insurance has gone up 15% for 2010"
-subtitle: "Yeah, I just received the renewal paperwork for health insurance, and i**t’s up**. This is with [Blu..."
-category: "298"
-tags: []
-date: "2009-11-11"
-type: "wp"
+category: '298'
+date: '2009-11-11'
+subtitle: Yeah, I just received the renewal paperwork for health insurance, and i**t’s
+  up**. This is with [Blu...
+tags:
+- personal
+- health
+title: My health insurance has gone up 15% for 2010
+type: wp
 wordpress_id: 778
 ---
+
 Yeah, I just received the renewal paperwork for health insurance, and i**t’s up**. This is with [Blue Cross Blue Shield of Massachusetts](http://www.bluecrossma.com/common/en_US/index.jsp), with whom I have been having a fine experience. I am **happy** with the service, and the responsiveness.
 But from 2009 to 2010, **my bill is up 15%. Wow.**
 

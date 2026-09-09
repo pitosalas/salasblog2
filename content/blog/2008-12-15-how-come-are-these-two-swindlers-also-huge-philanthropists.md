@@ -1,12 +1,15 @@
 ---
-title: "How come are these two swindlers also huge philanthropists?"
-subtitle: "The irony and paradox confounds:"
-category: "298"
-tags: []
-date: "2008-12-15"
-type: "wp"
+category: '298'
+date: '2008-12-15'
+subtitle: 'The irony and paradox confounds:'
+tags:
+- business
+- bernie-madoff
+title: How come are these two swindlers also huge philanthropists?
+type: wp
 wordpress_id: 928
 ---
+
 The irony and paradox confounds:
 > “[…] Mr. Dreier, who grew up on Long Island, the son of a refugee from
 Poland who owned movie theaters, evolved into a bon vivant who belonged

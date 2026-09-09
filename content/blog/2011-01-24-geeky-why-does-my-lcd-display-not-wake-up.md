@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] Why does my LCD display not wake up?"
-subtitle: "When my computer turns on it can often take 30 to 120 seconds for my Samsung LCD display to wake up...."
-category: "538"
-tags: ["1121", "1361"]
-date: "2011-01-24"
-type: "wp"
+category: '538'
+date: '2011-01-24'
+subtitle: When my computer turns on it can often take 30 to 120 seconds for my Samsung
+  LCD display to wake up....
+tags:
+- technology
+- personal
+title: '[GEEKY] Why does my LCD display not wake up?'
+type: wp
 wordpress_id: 605
 ---
+
 When my computer turns on it can often take 30 to 120 seconds for my Samsung LCD display to wake up. Facts of the case:
 
 - Display is 213T and is something like 3-5 years old

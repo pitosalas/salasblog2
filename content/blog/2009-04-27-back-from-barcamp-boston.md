@@ -1,12 +1,15 @@
 ---
-title: "Back from Barcamp Boston"
-subtitle: "![](h..."
-category: "298"
-tags: []
-date: "2009-04-27"
-type: "wp"
+category: '298'
+date: '2009-04-27'
+subtitle: '![](h...'
+tags:
+- boston
+- barcamp
+title: Back from Barcamp Boston
+type: wp
 wordpress_id: 852
 ---
+
 [![](https://i0.wp.com/farm4.static.flickr.com/3569/3480291552_47e25d7520_m.jpg?resize=240%2C118)](http://www.flickr.com/photos/xxv/3480291552/sizes/o/)
 This weekend I had a chance to attend BarCamp Boston (4). As usual it was fun and interesting and I had a chance to hang out and talk with a bunch of interesting people.
 

@@ -1,12 +1,15 @@
 ---
-title: "What Life Asks of Us"
-subtitle: "A column in the NYTimes that offers a very different perspective from what we might think of as the ..."
-category: "298"
-tags: []
-date: "2009-01-30"
-type: "wp"
+category: '298'
+date: '2009-01-30'
+subtitle: A column in the NYTimes that offers a very different perspective from what
+  we might think of as the ...
+tags:
+- personal
+title: What Life Asks of Us
+type: wp
 wordpress_id: 900
 ---
+
 A column in the NYTimes that offers a very different perspective from what we might think of as the goal of a liberal education: 
 > “Individuals should learn to think for themselves. They should be skeptical of pre-existing arrangements. They should break free from the way they were raised, examine life from the outside and discover their own values.” (from [What Life Asks of Us](http://www.nytimes.com/2009/01/27/opinion/27brooks.html))
 

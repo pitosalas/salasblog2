@@ -1,12 +1,16 @@
 ---
-title: "How the world changes (Was: Is the world ready for a replacement to Outlook?)"
-subtitle: "Now that I’ve been blogging for a while, it’s fun and instructive sometimes to see some of the older..."
-category: "538"
-tags: []
-date: "2010-07-26"
-type: "wp"
+category: '538'
+date: '2010-07-26'
+subtitle: Now that I’ve been blogging for a while, it’s fun and instructive sometimes
+  to see some of the older...
+tags:
+- technology
+- outlook
+title: 'How the world changes (Was: Is the world ready for a replacement to Outlook?)'
+type: wp
 wordpress_id: 697
 ---
+
 Now that I’ve been blogging for a while, it’s fun and instructive sometimes to see some of the older stuff that I wrote to see how fast our tech world changes and how I myself change…[Everyone loves](http://reviews-zdnet.com.com/AnchorDesk/4520-7297_16-5141451.html?tag=adts) to beat up on Microsoft’s **Outlook**. Including me! See [Outlook Haters Anyone?](/weblogs/archives/000396.html) and [Outlook 2003 Rant.](/weblogs/archives/000373.html)
 It is true that Outlook is a bit of an **abomination**. It’s large, slow, and as of the latest release, the user interface has gotten that **much worse**.
 

@@ -1,12 +1,16 @@
 ---
-title: "Sophsiticated (odd) paywall at the Wall Street Journal"
-subtitle: "So I am trying to decide whether I should renew my subscription to Wall Street Journal online. I rea..."
-category: "298"
-tags: []
-date: "2010-01-29"
-type: "wp"
+category: '298'
+date: '2010-01-29'
+subtitle: So I am trying to decide whether I should renew my subscription to Wall
+  Street Journal online. I rea...
+tags:
+- technology
+- business
+title: Sophsiticated (odd) paywall at the Wall Street Journal
+type: wp
 wordpress_id: 749
 ---
+
 So I am trying to decide whether I should renew my subscription to Wall Street Journal online. I read an article hear and there in the journal probably every day but certainly not the whole paper. So I’ve been paying a little more attention to what that subscription gets me.
 Here are some interesting findings:
 

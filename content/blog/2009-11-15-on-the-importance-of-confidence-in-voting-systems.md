@@ -1,12 +1,16 @@
 ---
-title: "On the importance of confidence in voting systems"
-subtitle: "I was following a series of articles about the Brazilian e-voting system, which apparently underwent..."
-category: "410"
-tags: []
-date: "2009-11-15"
-type: "wp"
+category: '410'
+date: '2009-11-15'
+subtitle: I was following a series of articles about the Brazilian e-voting system,
+  which apparently underwent...
+tags:
+- technology
+- e-voting
+title: On the importance of confidence in voting systems
+type: wp
 wordpress_id: 776
 ---
+
 I was following a series of articles about the Brazilian e-voting system, which apparently underwent a white-hat hack test and survived. It started with this Slashdot article, “[Hackers Fail to Crack Brazillian Voting Machines”](http://yro.slashdot.org/story/09/11/14/1936200/Hackers-Fail-To-Crack-Brazilian-Voting-Machines?from=rss&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Slashdot%2Fslashdot+%28Slashdot%29) Problem is that the original article is in Portugese (although remarkably well translated by Google Translation) and is a general news article, without technical specifics.
 This took me to this [Slashdot article about how elections in Brazil are running on Linux boxes](http://politics.slashdot.org/article.pl?sid=08/10/07/0029224&tid=266). Interesting, and essentially what we at the [OSDV](http://www.osdv.org) are embarking on. But I was still not satisfied because I was not familiar with the source of the stories and wasn’t sure how much to believe everything I was reading. There was also a link to an interesting [wikipedia article about Elections in Brazil.](http://en.wikipedia.org/wiki/Elections_in_Brazil#The_Brazilian_voting_machines)
 

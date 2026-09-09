@@ -1,12 +1,16 @@
 ---
-title: "Big Changes coming in Curaçao!"
-subtitle: "You may not follow the news, but Curaçao is undergoing major constitutional changes, as are all the ..."
-category: "298"
-tags: []
-date: "2010-10-08"
-type: "wp"
+category: '298'
+date: '2010-10-08'
+subtitle: You may not follow the news, but Curaçao is undergoing major constitutional
+  changes, as are all the ...
+tags:
+- curacao
+- politics
+title: Big Changes coming in Curaçao!
+type: wp
 wordpress_id: 653
 ---
+
 You may not follow the news, but Curaçao is undergoing major constitutional changes, as are all the Netherlands Antilles. In fact, as of this Sunday, Oct 10, (“10-10-10”) the Netherlands Antilles will cease to exist as a legal entity.
 The easiest way to explain this to Americans that I have come up with is, that it’s as if all the islands of the State of Hawaii decided that they should all be their own state, the state of Oahu, of Maui, etc.
 

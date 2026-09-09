@@ -1,12 +1,16 @@
 ---
-title: "Waste, Fraud and Abuse: does that turn you off to health reform?"
-subtitle: "An article from Canadian Healthcare Technology notes that [US Healthcare wastes up to $800 billion a..."
-category: "298"
-tags: []
-date: "2009-11-21"
-type: "wp"
+category: '298'
+date: '2009-11-21'
+subtitle: An article from Canadian Healthcare Technology notes that [US Healthcare
+  wastes up to $800 billion a...
+tags:
+- politics
+- health
+title: 'Waste, Fraud and Abuse: does that turn you off to health reform?'
+type: wp
 wordpress_id: 775
 ---
+
 An article from Canadian Healthcare Technology notes that [US Healthcare wastes up to $800 billion a year.](http://www.canhealth.com/News1252.html) I don’t disbelieve this article but it doesn’t make me not want to start with healthreform now that it seems possible that it might happen this year, warts and all. One might even say that that it shows how from the perspective of the Canadian health system, the US system ‘has problems.’
 The Massachusetts experience as covered in the press here is that the majority of the public like it; that it was consciously designed originally to try to tackle universal coverage and get to cost containment in future revs; oddly enough I have also heard some say that ER use has not gone down and some say because there are not enough doctors (or GP doctors or something.) 
 

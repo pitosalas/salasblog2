@@ -1,12 +1,15 @@
 ---
-title: "Mathematical Foundations of Consciousness?"
-subtitle: "Say what? I came across this paper; Mathematical Foundations of Consciousness"
-category: "298"
-tags: ["860", "1446", "1740"]
-date: "2010-09-07"
-type: "wp"
+category: '298'
+date: '2010-09-07'
+subtitle: Say what? I came across this paper; Mathematical Foundations of Consciousness
+tags:
+- science
+- mathematics
+title: Mathematical Foundations of Consciousness?
+type: wp
 wordpress_id: 673
 ---
+
 Say what? I came across this paper; [Mathematical Foundations of Consciousness](http://arxiv.org/pdf/0810.4339). I generally love this stuff: Mathematics and writings on the nature of consciousness. When I saw this paper the title really intrigued me. Now my math is not strong enough to tackle anything like PhD level math (in fact my math knowledge beyond under graduate level is definitely uneven.)
 > “The self-referential qualities of consciousness place it outside conventional logic(s) upon which scientific models and frameworks have heretofore been constructed. However more contemporary mathematical development has begun to deal with features of self-reference. We shall address Schrödinger’s critique by assembling and extending such development thereby putting self-reference as a form of awareness into theory. In this way we shall frame mathematical foundations for a theory of consciousness.” (**from** [Mathematical Foundations of Consciousnes](http://arxiv.org/pdf/0810.4339))
 

@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] How to fix slow Skype on Leopard"
-subtitle: "!["
-category: "298"
-tags: ["1408"]
-date: "2008-04-11"
-type: "wp"
+category: '298'
+date: '2008-04-11'
+subtitle: '!['
+tags:
+- technology
+- skype
+- macos
+title: '[GEEKY] How to fix slow Skype on Leopard'
+type: wp
 wordpress_id: 1068
 ---
+
 [![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/imagewell/skypeslow-thumb.jpg?w=584)(Click for enlargement) ](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/imagewell//skypeslow.jpg)Upon updating to the latest Mac OS X 10.5, a.k.a Leopard, I noticed that Skype was ridiculously slow, hanging and doing other ugly things. A search of the web didn’t find any useful ideas, at least that worked for me.
 Here’s what fixed it. In Skype “General Preferences” there’s an option to “Show Address Book Contacts”.
 

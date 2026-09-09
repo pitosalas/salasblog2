@@ -1,12 +1,17 @@
 ---
-title: "What I learned at Transparency Camp"
-subtitle: "There are people in our government who are **strongly pushing** for more openness and who are very f..."
-category: "298"
-tags: ["1950", "1970", "2025"]
-date: "2009-03-02"
-type: "wp"
+category: '298'
+date: '2009-03-02'
+subtitle: There are people in our government who are **strongly pushing** for more
+  openness and who are very f...
+tags:
+- politics
+- technology
+- transparencycamp
+title: What I learned at Transparency Camp
+type: wp
 wordpress_id: 877
 ---
+
 There are people in our government who are **strongly pushing** for more openness and who are very focused on delivering better, more modern, service to citizens. They operate under some **severe constraints**, in some cases from rules and regulations that seem to have become **obsolete**. Yet you can see where these rules came from and also see the difficulty in just deciding not to follow them.
 This paper, “[Barriers and Solutions to Implementing Social Media in Government](http://www.usa.gov/webcontent/about/documents.shtml#barriers)” is **lauded** by many at [Transparency Camp](http://transparencycamp.org/) is a very important contribution. Here’s the kind of thing it covers:
 

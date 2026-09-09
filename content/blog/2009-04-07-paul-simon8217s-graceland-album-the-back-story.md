@@ -1,12 +1,16 @@
 ---
-title: "Paul Simon’s Graceland Album: the back story"
-subtitle: "Ethan Zuckerman writes a great piece about how Paul Simon’s Graceland album came to be, with some of..."
-category: "298"
-tags: ["1155", "1599"]
-date: "2009-04-07"
-type: "wp"
+category: '298'
+date: '2009-04-07'
+subtitle: Ethan Zuckerman writes a great piece about how Paul Simon’s Graceland album
+  came to be, with some of...
+tags:
+- music
+- paul-simon
+title: 'Paul Simon’s Graceland Album: the back story'
+type: wp
 wordpress_id: 862
 ---
+
 Ethan Zuckerman writes a great piece about how Paul Simon’s Graceland album came to be, with some of the historical context, backstory and being a xenophile. A great read:
 > “At its best, Graceland sounds like Simon is encountering forces to large for him to understand or control. He’s riding on top of them, offering free-form reflections on a world that’s vastly more complicated and colorful than the narrow places he and Art Garfunkel explored in their close harmonies. In “Boy in the Bubble” (video above), the chorus, “These are the days of miracle and wonder, this is the long distance call” could serve as a tagline for anyone confronting our strange, connected world.” (From [Ethan Zuckerman)](http://www.ethanzuckerman.com/blog/2009/04/02/from-protest-to-collaboration-paul-simons-graceland-and-lessons-for-xenophiles/)
 

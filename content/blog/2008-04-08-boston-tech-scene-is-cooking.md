@@ -1,12 +1,16 @@
 ---
-title: "Boston Tech Scene is cooking"
-subtitle: "Last week I went to the monthly “WebInno” – web innovators group –"
-category: "298"
-tags: ["730"]
-date: "2008-04-08"
-type: "wp"
+category: '298'
+date: '2008-04-08'
+subtitle: Last week I went to the monthly “WebInno” – web innovators group –
+tags:
+- technology
+- boston
+- webinno
+title: Boston Tech Scene is cooking
+type: wp
 wordpress_id: 1071
 ---
+
 Last week I went to the monthly [“WebInno” – web innovators group – ](http://www.webinnovatorsgroup.com/)meeting at the Sonesta in Cambridge, Massachusetts (USA). I am **quite impressed** with the attendance and the quality of the people presenting.
 The gathering was quite crowded and the buzz was very loud, lots of dynamic discussions going on all over the place, people trading war stories and comparing products. It was **stimulating and fun,** and I plan to go next month again.
 

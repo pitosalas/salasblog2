@@ -1,12 +1,15 @@
 ---
-title: "Op-ed in Mass High Tech about ResourceMatcher.org"
-subtitle: "Gavin Murphy (of Annkissam) a..."
-category: "298"
-tags: []
-date: "2009-08-21"
-type: "wp"
+category: '298'
+date: '2009-08-21'
+subtitle: Gavin Murphy (of Annkissam) a...
+tags:
+- technology
+- resourcematcher
+title: Op-ed in Mass High Tech about ResourceMatcher.org
+type: wp
 wordpress_id: 812
 ---
+
 [Gavin Murphy](http://www.linkedin.com/in/gavinmurphy) (of [Annkissam](http://www.annkissam.com/)) and I have been talking about the implementation of an idea that has [been floating around the philanthropic community](http://munnecke.com/blog/?tag=microphilanthropy) for a while, which is leveraging the web to create kind of a match making service where grass roots community projects who need people, equipment, expertise or money can be matched up with individuals and organizations who have indicated their willingness to offer those.
 We recently were asked by [Mass High Tech](http://www.masshightech.com/) if we wanted to write an op-ed about the project, and it just came out today. The purpose of the article as much as anything is to find out if there is interest and support for doing such a project. Here’s the **last paragraph** of the article:
 

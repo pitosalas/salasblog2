@@ -1,12 +1,15 @@
 ---
-title: "Lies people tell themselves"
-subtitle: "Michael Arrington is a famous Tech-pundit-commenta..."
-category: "1"
-tags: ["652", "1858", "1872", "1918", "1979"]
-date: "2011-01-31"
-type: "wp"
+category: '1'
+date: '2011-01-31'
+subtitle: Michael Arrington is a famous Tech-pundit-commenta...
+tags:
+- technology
+- mike-arrington
+title: Lies people tell themselves
+type: wp
 wordpress_id: 602
 ---
+
 [Michael Arrington ](http://en.wikipedia.org/wiki/Michael_Arrington)is a famous Tech-pundit-commentator-blogger who recently left or got fired from AOL because he wanted to be a VC while being a journalist covering the companies he is investing in.
 
 One way or another that led him and AOL and the super-popular blog he started, [TechCrunch](http://en.wikipedia.org/wiki/TechCrunch), to part ways. All that is interesting back story.

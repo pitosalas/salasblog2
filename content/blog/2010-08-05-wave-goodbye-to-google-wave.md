@@ -1,12 +1,15 @@
 ---
-title: "Wave goodbye to Google Wave"
-subtitle: "Google leaves products in Beta forever, they say."
-category: "298"
-tags: ["1145", "2101"]
-date: "2010-08-05"
-type: "wp"
+category: '298'
+date: '2010-08-05'
+subtitle: Google leaves products in Beta forever, they say.
+tags:
+- technology
+- google-wave
+title: Wave goodbye to Google Wave
+type: wp
 wordpress_id: 690
 ---
+
 Google leaves products in Beta forever, they say.
 Not Google Wave. They actually announced [Wave’s impending cancellation.](http://googleblog.blogspot.com/2010/08/update-on-google-wave.html)
 

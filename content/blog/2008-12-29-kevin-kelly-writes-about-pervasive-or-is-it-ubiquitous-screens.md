@@ -1,12 +1,15 @@
 ---
-title: "Kevin Kelly writes about pervasive (or is it ubiquitous) screens"
-subtitle: "I always love Kevin Kelly’s writing"
-category: "298"
-tags: []
-date: "2008-12-29"
-type: "wp"
+category: '298'
+date: '2008-12-29'
+subtitle: I always love Kevin Kelly’s writing
+tags:
+- technology
+- kevin-kelly
+title: Kevin Kelly writes about pervasive (or is it ubiquitous) screens
+type: wp
 wordpress_id: 917
 ---
+
 I always love [Kevin Kelly’s writing](http://www.nytimes.com/2008/11/23/magazine/23wwln-future-t.html?_r=1&pagewanted=all) and thinking and this article in a [recent New York Times Magazine](http://www.nytimes.com/2008/11/23/magazine/23wwln-future-t.html?_r=1&pagewanted=all) doesn’t disappoint.
 I have a hard time summarizing the article: Video is becoming more ubiquitous than static print as the main mode of visual communication – not just TV etc, but on any and all surfaces in public and private. This will lead to ways in which regular civilians can create, modify, scan and consume video with infinitely greater ease.
 

@@ -1,12 +1,16 @@
 ---
-title: "Ambient Awareness: on being ‘digitally’ close"
-subtitle: "A good article in the New York Times Magazine about the so-called ‘ambient awareness’ phenomenon"
-category: "298"
-tags: []
-date: "2008-09-08"
-type: "wp"
+category: '298'
+date: '2008-09-08'
+subtitle: A good article in the New York Times Magazine about the so-called ‘ambient
+  awareness’ phenomenon
+tags:
+- technology
+- facebook
+title: 'Ambient Awareness: on being ‘digitally’ close'
+type: wp
 wordpress_id: 978
 ---
+
 A [good article in the New York Times Magazine about the so-called ‘ambient awareness’ phenomenon](http://www.nytimes.com/2008/09/07/magazine/07awareness-t.html):
 > “Social scientists have a name for this sort of incessant online contact. They call it “ambient awareness.” It is, they say, very much like being physically near someone and picking up on his mood through the little things he does — body language, sighs, stray comments — out of the corner of your eye. Facebook is no longer alone in offering this sort of interaction online.” (from [New York Times: I am So Totally, Digitally Close to You”)](http://www.nytimes.com/2008/09/07/magazine/07awareness-t.html)
 

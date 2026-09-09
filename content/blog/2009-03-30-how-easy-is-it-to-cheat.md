@@ -1,12 +1,16 @@
 ---
-title: "How easy is it to cheat?"
-subtitle: "I’ve gotten very interested in Election Reform lately, and I’ve delved into how the overall voting s..."
-category: "298"
-tags: []
-date: "2009-03-30"
-type: "wp"
+category: '298'
+date: '2009-03-30'
+subtitle: I’ve gotten very interested in Election Reform lately, and I’ve delved into
+  how the overall voting s...
+tags:
+- politics
+- foocamp
+title: How easy is it to cheat?
+type: wp
 wordpress_id: 867
 ---
+
 I’ve gotten very interested in Election Reform lately, and I’ve delved into how the overall voting system works, technically but also politically and procedurally. There are so many simple and not so simple ways in which election results can be manipulated that it makes my head spin. 
 I was at FooCamp this weekend and told this story to many people, so I thought I’d give some pointers to this particular example of how voters using touch screen devices could be cheated out of their vote.
 

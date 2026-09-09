@@ -1,12 +1,16 @@
 ---
-title: "Should he have signed the letter?"
-subtitle: "Ok this is a bit irreverent."
-category: "298"
-tags: ["1733"]
-date: "2008-07-26"
-type: "wp"
+category: '298'
+date: '2008-07-26'
+subtitle: Ok this is a bit irreverent.
+tags:
+- politics
+- barack-obama
+- jewish
+title: Should he have signed the letter?
+type: wp
 wordpress_id: 1002
 ---
+
 Ok this is a bit irreverent.
 There’s been a spat relating to the note that Barack Obama wrote and left in the stones of the Western Wall (the “wailing wall”). This tradition goes way back.
 

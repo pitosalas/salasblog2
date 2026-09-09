@@ -1,12 +1,16 @@
 ---
-title: "Sign up for Jason Calcanis email list!"
-subtitle: "Jason Calcanis has stopped blogging and instead is d..."
-category: "51"
-tags: []
-date: "2008-08-21"
-type: "wp"
+category: '51'
+date: '2008-08-21'
+subtitle: Jason Calcanis has stopped blogging and instead is d...
+tags:
+- technology
+- business
+- jason-calcanis
+title: Sign up for Jason Calcanis email list!
+type: wp
 wordpress_id: 991
 ---
+
 [Jason Calcanis has stopped blogging](http://www.calacanis.com/2008/08/18/updates/) and instead is doing an [email only mailing list ](https://my.binhost.com/lists/listinfo/jason)(yes, how 1999 of him.) I had heard about it but recently got me a copy of his most recent missive. 
 Interesting, opinionated, practical and easy to read. I recommend it!
 

@@ -1,12 +1,17 @@
 ---
-title: "Rhapsody vs. iTunes"
-subtitle: "I think I might be entering a new phase in my music listening. I listen to a ton of music, on my iPh..."
-category: "298"
-tags: ["589", "837", "1126", "1298", "1307", "1313", "1491", "1492", "1493", "1516", "1571", "1633", "1647", "1717", "1748", "1812", "1861", "1944"]
-date: "2010-08-07"
-type: "wp"
+category: '298'
+date: '2010-08-07'
+subtitle: I think I might be entering a new phase in my music listening. I listen
+  to a ton of music, on my iPh...
+tags:
+- technology
+- itunes
+- rhapsody
+title: Rhapsody vs. iTunes
+type: wp
 wordpress_id: 689
 ---
+
 I think I might be entering a new phase in my music listening. I listen to a ton of music, on my iPhone, on my computer, in my car, all the time. And up to now it’s always been downloaded (purchased) music that I organize manually within iTunes.  From time to time I’ve had subscriptions to [eMusic](http://www.emusic.com/) and similar services.
 As a result I have a **huge number of tracks** on my computer and on my iPhone. And as my music taste develops, and I discover new artists and composers, lots of those tracks are listened to rarely.
 

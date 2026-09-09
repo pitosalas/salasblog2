@@ -1,12 +1,16 @@
 ---
-title: "Big Search, Mechanical Turk and why Amazon is at least as cool as Google"
-subtitle: "Adam Green points to Scoble who re-discover..."
-category: "298"
-tags: []
-date: "2008-05-28"
-type: "wp"
+category: '298'
+date: '2008-05-28'
+subtitle: Adam Green points to Scoble who re-discover...
+tags:
+- technology
+- amazon
+- robert-scoble
+title: Big Search, Mechanical Turk and why Amazon is at least as cool as Google
+type: wp
 wordpress_id: 1039
 ---
+
 [Adam Green](http://darwinianweb.com/archive/2005/1127.html#9:31AM) points to Scoble who re-discover and discover, respectively, Amazon’s street by street, address by address, photographic coverage of the map of, **what, the universe**? It’s a neat new user interface of something [they’ve had for a while](/weblogs/archives/000571.php), actually, but still, quite cool!
 some nuggets:
 

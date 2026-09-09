@@ -1,12 +1,15 @@
 ---
-title: "Owner of Segway dies in Segway accident"
-subtitle: "This is just a weird weird happening:"
-category: "298"
-tags: ["1608", "1825"]
-date: "2010-09-28"
-type: "wp"
+category: '298'
+date: '2010-09-28'
+subtitle: 'This is just a weird weird happening:'
+tags:
+- technology
+- segway
+title: Owner of Segway dies in Segway accident
+type: wp
 wordpress_id: 662
 ---
+
 This is just a weird weird happening:
 > “His body was found late Sunday morning after a passer-by reported seeing a man plummet 30 feet into the River Wharfe, the police said, adding that a “Segway-style vehicle” had also been found.
 

@@ -1,12 +1,15 @@
 ---
-title: "Great paper about Harri Hursti’s demonstration of ballot scanner security concerns"
-subtitle: "I recently saw the movie Hacking Democracy. It’s absolutely fasc..."
-category: "298"
-tags: ["846", "990", "1822"]
-date: "2009-04-08"
-type: "wp"
+category: '298'
+date: '2009-04-08'
+subtitle: I recently saw the movie Hacking Democracy. It’s absolutely fasc...
+tags:
+- politics
+- technology
+title: Great paper about Harri Hursti’s demonstration of ballot scanner security concerns
+type: wp
 wordpress_id: 861
 ---
+
 I recently saw the movie [Hacking Democracy](http://www.hackingdemocracy.com/). It’s absolutely fascinating and basic background for anyone interested in election reform. In it you learn about some of the heroes of election reform, including [Harri Hursti](http://en.wikipedia.org/wiki/Harri_Hursti) who demonstrates in a pretty dramatic manner some of the weaknesses of commonly used election technology.
 This is from the wikipedia article:
 

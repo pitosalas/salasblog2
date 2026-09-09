@@ -1,12 +1,16 @@
 ---
-title: "Two examples of great Web 2.0 by USA government"
-subtitle: "Who said “y**our TSA don’t dance and your USPTO don’t rock and roll**?” (One free copy of BlogBridge..."
-category: "298"
-tags: []
-date: "2008-08-30"
-type: "wp"
+category: '298'
+date: '2008-08-30'
+subtitle: Who said “y**our TSA don’t dance and your USPTO don’t rock and roll**?”
+  (One free copy of BlogBridge...
+tags:
+- technology
+- web2.0
+title: Two examples of great Web 2.0 by USA government
+type: wp
 wordpress_id: 984
 ---
+
 Who said “y**our TSA don’t dance and your USPTO don’t rock and roll**?” (One free copy of BlogBridge for all of you who get the reference without using Wikipedia)
 Here are two cool examples. First up, the TSA ([Transportation Security Administration) now has a blog that seems to be much more than a bunch of pre-digested PR drivel](http://www.tsa.gov/blog/), but instead posts from actual people with actual knowledge about TSA and their mission.
 

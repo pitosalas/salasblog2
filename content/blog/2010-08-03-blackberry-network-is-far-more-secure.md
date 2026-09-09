@@ -1,12 +1,16 @@
 ---
-title: "Blackberry network is far more secure!"
-subtitle: "I never realized this and I am surprised that BlackBerry and Research In Motion advertising have not..."
-category: "538"
-tags: ["1299"]
-date: "2010-08-03"
-type: "wp"
+category: '538'
+date: '2010-08-03'
+subtitle: I never realized this and I am surprised that BlackBerry and Research In
+  Motion advertising have not...
+tags:
+- technology
+- blackberry
+title: Blackberry network is far more secure!
+type: wp
 wordpress_id: 693
 ---
+
 I never realized this and I am surprised that BlackBerry and Research In Motion advertising have not made a big deal out of it. According to this article [BlackBerry communications travel over a highly encrypted channel, not the open internet](http://www.nytimes.com/2010/08/02/business/global/02berry.html):
 > “Other smartphones, like the Apple iPhone, are not tied to one e-mail service. In general, that means e-mail to and from the devices mostly travels over the open Internet and can be relatively easily monitored.
 
