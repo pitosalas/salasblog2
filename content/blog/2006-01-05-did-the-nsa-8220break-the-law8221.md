@@ -1,12 +1,15 @@
 ---
-title: "Did the NSA “break the law”?"
-subtitle: "I know that this blog (Power Line) is pret..."
-category: "298"
-tags: []
-date: "2006-01-05"
-type: "wp"
+category: '298'
+date: '2006-01-05'
+subtitle: I know that this blog (Power Line) is pret...
+tags:
+- politics
+- nsa
+title: Did the NSA “break the law”?
+type: wp
 wordpress_id: 1621
 ---
+
 I know that [this blog](http://powerlineblog.com/) ([Power Line](http://powerlineblog.com/)) is pretty hard-core conservative, but I found their analysis of the legal questions around the NSA electronic intercept program fairly convincing. 
 
 > “The only constitutional limitation on the President’s power to intercept communications by Americans for national security purposes is that such intercepts be “reasonable.”

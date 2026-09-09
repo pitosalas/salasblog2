@@ -1,12 +1,16 @@
 ---
-title: "Is this good? Sun buys MySql!"
-subtitle: "From the Wall Street Journal:"
-category: "538"
-tags: []
-date: "2008-01-16"
-type: "wp"
+category: '538'
+date: '2008-01-16'
+subtitle: 'From the Wall Street Journal:'
+tags:
+- technology
+- business
+- mysql
+title: Is this good? Sun buys MySql!
+type: wp
 wordpress_id: 1136
 ---
+
 From the [Wall Street Journal:](http://online.wsj.com/article/SB120049014746494511.html?mod=hps_us_whats_news)
 > “[snip…] Sun Microsystems Inc. has agreed to buy open-source software maker MySQL AB for $1 billion, and said its fiscal second-quarter net income nearly doubled on boosted margins, according to preliminary results.Sun is paying $800 million in cash and assuming $200 million in options to acquire MySQL.
 

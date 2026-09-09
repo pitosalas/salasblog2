@@ -1,12 +1,15 @@
 ---
-title: "Joel on Software on bribing and ethics"
-subtitle: "If you’re a blogger or read blogs you might have come across the debate,"
-category: "298"
-tags: []
-date: "2006-12-28"
-type: "wp"
+category: '298'
+date: '2006-12-28'
+subtitle: If you’re a blogger or read blogs you might have come across the debate,
+tags:
+- technology
+- joel-spolsky
+title: Joel on Software on bribing and ethics
+type: wp
 wordpress_id: 1372
 ---
+
 If you’re a blogger or read blogs you might have come across the debate, 
  such as it is, about "pay per post." Frankly I’ve not paid much attention 
  to it other than noting the links go by without my clicking on them. But 

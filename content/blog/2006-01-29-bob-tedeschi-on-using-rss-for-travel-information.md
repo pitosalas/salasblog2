@@ -1,12 +1,15 @@
 ---
-title: "Bob Tedeschi on using RSS for travel information"
-subtitle: "Here’s an interesting article"
-category: "50"
-tags: []
-date: "2006-01-29"
-type: "wp"
+category: '50'
+date: '2006-01-29'
+subtitle: Here’s an interesting article
+tags:
+- technology
+- travel
+title: Bob Tedeschi on using RSS for travel information
+type: wp
 wordpress_id: 1608
 ---
+
 Here’s an [interesting article](http://www.nytimes.com/2006/01/29/travel/29prac.html?ei=5088&en=ccb135d1ead1e480&ex=1296190800&adxnnl=1&partner=rssnyt&emc=rss&adxnnlx=1138540124-7iEb+OfxwPPWunCmchZ5ng) in today’s New York Times about how to get travel information in your your home page, like My Yahoo and others. This all hinges on RSS of course, which means you can bring your travel information into BlogBridge and other aggregators.
 
 > “Recently, these sites began allowing consumers to populate their home pages with similar information they’d find in e-mail newsletters, with two added benefits: all the relevant information from multiple sites appears on one page, instead of multiple e-mails, and the information is often considerably fresher, with several updates a week – or even a day.” (**from** [“There’s a popular new code for Deals: RSS”](http://www.nytimes.com/2006/01/29/travel/29prac.html?ei=5088&en=ccb135d1ead1e480&ex=1296190800&adxnnl=1&partner=rssnyt&emc=rss&adxnnlx=1138540124-7iEb+OfxwPPWunCmchZ5ng))

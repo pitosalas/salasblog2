@@ -1,12 +1,16 @@
 ---
-title: "“We make it up in volume”"
-subtitle: "There’s a new **meme floating** around, “*..."
-category: "298"
-tags: []
-date: "2006-04-01"
-type: "wp"
+category: '298'
+date: '2006-04-01'
+subtitle: There’s a new **meme floating** around, “*...
+tags:
+- business
+- blogbridge
+- freemium
+title: “We make it up in volume”
+type: wp
 wordpress_id: 1566
 ---
+
 There’s a new **[meme floating](http://avc.blogs.com/a_vc/2006/03/my_favorite_bus.html)** around, “**Freemium**“, a cute/clever word for a kind of business model. *Giving it away free.* 
 
 **Say what?**

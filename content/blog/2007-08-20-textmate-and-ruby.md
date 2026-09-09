@@ -1,12 +1,17 @@
 ---
-title: "TextMate and Ruby"
-subtitle: "I’m an on and off [tag]Ruby[/tag] developer, and recently I’ve been trying to decide whether I shoul..."
-category: "422"
-tags: []
-date: "2007-08-20"
-type: "wp"
+category: '422'
+date: '2007-08-20'
+subtitle: I’m an on and off [tag]Ruby[/tag] developer, and recently I’ve been trying
+  to decide whether I shoul...
+tags:
+- programming
+- ruby
+- textmate
+title: TextMate and Ruby
+type: wp
 wordpress_id: 1225
 ---
+
 I’m an on and off [tag]Ruby[/tag] developer, and recently I’ve been trying to decide whether I should use Eclipse for Ruby development or whether TextMate (I am on a Mac) is better.
 Why even think of [tag]Eclipse[/tag]? Simply that I know it well and it’s very rich for developing Java. It’s also cross platform. From my investigation though, Ruby support in Eclipse is still immature.
 

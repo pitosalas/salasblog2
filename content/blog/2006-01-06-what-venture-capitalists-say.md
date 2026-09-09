@@ -1,12 +1,16 @@
 ---
-title: "What Venture Capitalists say"
-subtitle: "Guy Kawasaki writes a nice little bit about VCs (some of my best friends are VCs) and about entrepre..."
-category: "298"
-tags: []
-date: "2006-01-06"
-type: "wp"
+category: '298'
+date: '2006-01-06'
+subtitle: Guy Kawasaki writes a nice little bit about VCs (some of my best friends
+  are VCs) and about entrepre...
+tags:
+- business
+- guy-kawasaki
+title: What Venture Capitalists say
+type: wp
 wordpress_id: 1620
 ---
+
 Guy Kawasaki writes a nice little bit about VCs (some of my best friends are VCs) and about entrepreneurs. It rings very true to me. Here’s some of what he says:
 
 > “Venture capitalists are simple people: we’ve either decided to invest, and we are convincing ourselves that our gut is right (aka, “due diligence”) or there’s not a chance in hell. While we may be simple, we’re not necessarily forthcoming, so if you think it’s hard to get a “yes” out of venture capitalist, you should try to get a conclusive “no.””

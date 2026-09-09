@@ -1,12 +1,16 @@
 ---
-title: "All you never wanted to know about colonoscopies"
-subtitle: "Our friend Dave Weinberger shares"
-category: "298"
-tags: []
-date: "2006-05-11"
-type: "wp"
+category: '298'
+date: '2006-05-11'
+subtitle: Our friend Dave Weinberger shares
+tags:
+- health
+- personal
+- dave-weinberger
+title: All you never wanted to know about colonoscopies
+type: wp
 wordpress_id: 1544
 ---
+
 Our friend Dave Weinberger [shares](http://www.hyperorg.com/blogger/mtarchive/colonoscopy_more_than_you_want.html): “I had my first colonoscopy today. They didn’t find anything, except a piece of fruitcake I ate in 1978. But I figured if Katie Couric can show her colon on national TV to encourage people to get checked, then I should too.” 
 
 The only surprise is that this is his first [colonoscopy](http://en.wikipedia.org/wiki/Colonoscopy). David, what took you so long? (I guess my second surprise is that he didn’t link to Wikipedia’s definition of [Colonoscopy](http://Colonoscopy).)

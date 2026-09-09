@@ -1,12 +1,16 @@
 ---
-title: "Best way to protect against identity theft?"
-subtitle: "I’ve come across these two services, priced similarly, sound similar."
-category: "298"
-tags: []
-date: "2007-10-30"
-type: "wp"
+category: '298'
+date: '2007-10-30'
+subtitle: I’ve come across these two services, priced similarly, sound similar.
+tags:
+- technology
+- personal
+- lifelock
+title: Best way to protect against identity theft?
+type: wp
 wordpress_id: 1182
 ---
+
 I’ve come across these two services, priced similarly, sound similar.
 [ID TheftSmart](https://www.idtheftsmart.com/) – The name sounds like they are a smart way to commit identity theft, but I suppose this is not what they mean.
 

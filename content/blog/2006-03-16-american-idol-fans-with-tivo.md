@@ -1,12 +1,16 @@
 ---
-title: "American Idol fans with Tivo"
-subtitle: "Tivo has been doing more and more cool things with their little box."
-category: "298"
-tags: []
-date: "2006-03-16"
-type: "wp"
+category: '298'
+date: '2006-03-16'
+subtitle: Tivo has been doing more and more cool things with their little box.
+tags:
+- technology
+- tivo
+- american-idol
+title: American Idol fans with Tivo
+type: wp
 wordpress_id: 1575
 ---
+
 [Tivo](http://www.tivo.com/0.0.asp) has been doing more and more cool things with their little box. 
 
 **See**, it’s actually a Linux computer, with a 80Gig hard disk and a broadband connection to the internet, plus a big screen TV attached to it. Think of the **possibilities** 🙂

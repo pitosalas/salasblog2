@@ -1,12 +1,17 @@
 ---
-title: "Computer Science: Theory and Practice"
-subtitle: "Joel Spolsky of Joel on Software gave an outstanding talk at Yale which he has written up on his blo..."
-category: "298"
-tags: []
-date: "2007-12-08"
-type: "wp"
+category: '298'
+date: '2007-12-08'
+subtitle: Joel Spolsky of Joel on Software gave an outstanding talk at Yale which
+  he has written up on his blo...
+tags:
+- technology
+- computer-science
+- joel-spolsky
+title: 'Computer Science: Theory and Practice'
+type: wp
 wordpress_id: 1163
 ---
+
 Joel Spolsky of Joel on Software gave an outstanding talk at Yale which he has written up on his blog. For budding Computer Science majors, people getting into the computer world or business, there is a lot of **good wisdom** to be found here:
 My **favorite passage** is the discussion about the value put on software, from the perspective of those who are involved in creating it. Here’s how he **introduces** the topic, but you should really **read the whole thing:**
 

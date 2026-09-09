@@ -1,12 +1,17 @@
 ---
-title: "BloggerCon – Wish I was there"
-subtitle: "BloggerCon IV is going on right now, in California. This is Dave Winer’s original ‘UnConference"
-category: "51"
-tags: []
-date: "2006-06-24"
-type: "wp"
+category: '51'
+date: '2006-06-24'
+subtitle: BloggerCon IV is going on right now, in California. This is Dave Winer’s
+  original ‘UnConference
+tags:
+- technology
+- bloggercon
+- dave-winer
+title: BloggerCon – Wish I was there
+type: wp
 wordpress_id: 1509
 ---
+
 BloggerCon IV is going on right now, in California. This is Dave Winer’s original ‘[UnConference](http://en.wikipedia.org/wiki/Unconference)‘. It’s being incredibly well covered, by blog, photo and podcast. I haven’t come close to reading all the stuff being posted, so these are just some semi-random posts to give you a flavor:
 
 - [Dan Farber: The user complaint session](http://blogs.zdnet.com/BTL/?p=3245)

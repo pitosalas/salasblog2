@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] Gshell, the web’s own command line"
-subtitle: "You remember back in the **stone ages** we all interacted with computers by typing [tag]command line..."
-category: "538"
-tags: []
-date: "2007-09-13"
-type: "wp"
+category: '538'
+date: '2007-09-13'
+subtitle: You remember back in the **stone ages** we all interacted with computers
+  by typing [tag]command line...
+tags:
+- technology
+- google
+title: '[GEEKY] Gshell, the web’s own command line'
+type: wp
 wordpress_id: 1212
 ---
+
 You remember back in the **stone ages** we all interacted with computers by typing [tag]command lines[/tag] at a prompt. Then in the bronze age, the [tag]GUI[/tag] was invented and we used mice, menus and windows? (Oh some of us still preserve the old traditions of course using the ancient language of the unix-people?)
 Today the Google Search box is becoming the new command line. There’s almost no end to the non-search things you can type into google to get answers.
 

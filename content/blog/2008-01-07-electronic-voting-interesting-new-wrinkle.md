@@ -1,12 +1,15 @@
 ---
-title: "Electronic Voting: interesting new wrinkle"
-subtitle: "A lot has been written about electronic voting machines and their vulnerabilities."
-category: "538"
-tags: []
-date: "2008-01-07"
-type: "wp"
+category: '538'
+date: '2008-01-07'
+subtitle: A lot has been written about electronic voting machines and their vulnerabilities.
+tags:
+- technology
+- politics
+title: 'Electronic Voting: interesting new wrinkle'
+type: wp
 wordpress_id: 1141
 ---
+
 A lot has been written about electronic voting machines and their vulnerabilities.
 There is indeed something very primitive about the way we vote today, with markers on sheets of cardboards. You’ve got to believe that we will not always be using physical means, and that sooner or later it will be computerized.
 

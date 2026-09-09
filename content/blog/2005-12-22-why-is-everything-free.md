@@ -1,12 +1,16 @@
 ---
-title: "Why is everything free?"
-subtitle: "Have you noticed how man how many new apps that have appeared of late are available **free of charge..."
-category: "410"
-tags: []
-date: "2005-12-22"
-type: "wp"
+category: '410'
+date: '2005-12-22'
+subtitle: Have you noticed how man how many new apps that have appeared of late are
+  available **free of charge...
+tags:
+- technology
+- business
+title: Why is everything free?
+type: wp
 wordpress_id: 1629
 ---
+
 Have you noticed how man how many new apps that have appeared of late are available **free of charge**?
 
 Web 2.0 services like [gada.be](http://gada.be/) or [flickr](http://www.flickr.com/) or [del.icio.us](http://del.icio.us/). And more conventional client apps like [Firefox](http://www.mozilla.com/firefox/)?  The list is approximately infinite. They **come and **go at an amazing rate. And they are all **free**.

@@ -1,12 +1,15 @@
 ---
-title: "Does a network enabled USB hub exist?"
-subtitle: "Ok, assembled masses: I’ve rearranged my office and now my USB connected printers are farther away f..."
-category: "538"
-tags: []
-date: "2006-11-23"
-type: "wp"
+category: '538'
+date: '2006-11-23'
+subtitle: 'Ok, assembled masses: I’ve rearranged my office and now my USB connected
+  printers are farther away f...'
+tags:
+- technology
+title: Does a network enabled USB hub exist?
+type: wp
 wordpress_id: 1400
 ---
+
 Ok, assembled masses: I’ve rearranged my office and now my USB connected printers are farther away from the computer and closer to an ethernet connection.
 So, what I need is a USB hub which connects with an RJ45 rather than to a computer. I guess that would make it a Netwrok Enabled USB hub. 
 

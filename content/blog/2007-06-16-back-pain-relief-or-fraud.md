@@ -1,12 +1,15 @@
 ---
-title: "Back pain relief or fraud?"
-subtitle: "A friend of mine has been experiencing debilitating back pain for a year now. He’s seen pain special..."
-category: "298"
-tags: []
-date: "2007-06-16"
-type: "wp"
+category: '298'
+date: '2007-06-16'
+subtitle: A friend of mine has been experiencing debilitating back pain for a year
+  now. He’s seen pain special...
+tags:
+- health
+title: Back pain relief or fraud?
+type: wp
 wordpress_id: 1253
 ---
+
 A friend of mine has been experiencing debilitating back pain for a year now. He’s seen pain specialists, surgeons and so on, and so far the only treatment has been pain medications, strong ones. He is desperate.
 He recently came across an advertisement for treatment with a device called the DRX 9000. I’ve been reading about this treatment on the web and find positive reports apparently concentrated on a few sites, and then sporadic reports of shady dealings, FBI investigations and so on.
 

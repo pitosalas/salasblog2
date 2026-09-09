@@ -1,12 +1,16 @@
 ---
-title: "[STERN INSIDE BASEBALL] Wild day on Howard Stern show"
-subtitle: "Hey Stern fans, can you believe what kind of a day it was today? What a soap opera, but riveting."
-category: "298"
-tags: []
-date: "2007-05-25"
-type: "wp"
+category: '298'
+date: '2007-05-25'
+subtitle: Hey Stern fans, can you believe what kind of a day it was today? What a
+  soap opera, but riveting.
+tags:
+- personal
+- howard-stern
+title: '[STERN INSIDE BASEBALL] Wild day on Howard Stern show'
+type: wp
 wordpress_id: 1267
 ---
+
 Hey Stern fans, can you believe what kind of a day it was today? What a soap opera, but riveting. 
 I heard it in bits and pieces as I was driving between meetings today, and I was waiting either for Artie to quit or for Howard to fire him.
 

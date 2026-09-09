@@ -1,12 +1,15 @@
 ---
-title: "Is Eclipse too “Windows-esque”?"
-subtitle: "Check out [this"
-category: "298"
-tags: []
-date: "2007-01-23"
-type: "wp"
+category: '298'
+date: '2007-01-23'
+subtitle: Check out [this
+tags:
+- programming
+- eclipse
+title: Is Eclipse too “Windows-esque”?
+type: wp
 wordpress_id: 1340
 ---
+
 Check out [this 
  post](http://www.dzone.com/rsslinks/is_eclipse_too_windowsesque.html) from [dzone.com: latest front page](http://www.dzone.com/):
 

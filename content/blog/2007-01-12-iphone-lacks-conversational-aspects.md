@@ -1,12 +1,15 @@
 ---
-title: "iPhone Lacks Conversational Aspects"
-subtitle: "Check out [this"
-category: "298"
-tags: []
-date: "2007-01-12"
-type: "wp"
+category: '298'
+date: '2007-01-12'
+subtitle: Check out [this
+tags:
+- technology
+- iphone
+title: iPhone Lacks Conversational Aspects
+type: wp
 wordpress_id: 1355
 ---
+
 Check out [this 
  post](http://opusresearch.net/wordpress/2007/01/11/iphone-lacks-conversational-aspects/) from [Opus Research](http://opusresearch.net/wordpress):
 

@@ -1,12 +1,16 @@
 ---
-title: "“We are the people we have been waiting for.”"
-subtitle: "Tom Friedman recently had a good column about global warming (“global climate change”) and what is, ..."
-category: "298"
-tags: []
-date: "2007-12-09"
-type: "wp"
+category: '298'
+date: '2007-12-09'
+subtitle: Tom Friedman recently had a good column about global warming (“global climate
+  change”) and what is, ...
+tags:
+- politics
+- tom-friedman
+title: “We are the people we have been waiting for.”
+type: wp
 wordpress_id: 1162
 ---
+
 Tom Friedman recently had a good column about global warming (“global climate change”) and what is, or should be being done about it, where he quotes the Onion:
 ““Fall, the long-running series of shorter days and cooler nights, was canceled earlier this week after nearly 3 billion seasons on Earth, sources reported Tuesday.”
 

@@ -1,6 +1,8 @@
 ---
 category: Web
 date: '2006-08-26'
+tags:
+- personal
 title: Falling woman (edited)
 type: blog
 ---

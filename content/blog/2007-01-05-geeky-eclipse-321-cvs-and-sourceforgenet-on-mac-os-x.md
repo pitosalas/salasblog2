@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] Eclipse 3.2.1, CVS and SourceForge.net on Mac OS X"
-subtitle: "If you need this tip, it will save you a lot of time. 99% likely though, you don’t need it and it wi..."
-category: "538"
-tags: []
-date: "2007-01-05"
-type: "wp"
+category: '538'
+date: '2007-01-05'
+subtitle: If you need this tip, it will save you a lot of time. 99% likely though,
+  you don’t need it and it wi...
+tags:
+- programming
+- eclipse
+title: '[GEEKY] Eclipse 3.2.1, CVS and SourceForge.net on Mac OS X'
+type: wp
 wordpress_id: 1363
 ---
+
 If you need this tip, it will save you a lot of time. 99% likely though, you don’t need it and it will read as complete gibberish. But I feel compelled to share it because it’s totally obscure and I just spent 2 hours trying to figure it out.  
 
 Problem:

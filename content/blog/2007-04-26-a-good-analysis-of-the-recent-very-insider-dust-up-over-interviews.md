@@ -1,12 +1,14 @@
 ---
-title: "A good analysis of the recent (very insider) dust-up over interviews"
-subtitle: "Check out this post from [BuzzMachi..."
-category: "50"
-tags: []
-date: "2007-04-26"
-type: "wp"
+category: '50'
+date: '2007-04-26'
+subtitle: Check out this post from [BuzzMachi...
+tags:
+- personal
+title: A good analysis of the recent (very insider) dust-up over interviews
+type: wp
 wordpress_id: 1281
 ---
+
 Check out [this post](http://www.buzzmachine.com/2007/04/26/the-obsolete-interview/) from [BuzzMachine](http://www.buzzmachine.com):
 ** The interview is outmoded and needs to be rethought.
 

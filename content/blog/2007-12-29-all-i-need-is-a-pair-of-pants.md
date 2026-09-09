@@ -1,12 +1,14 @@
 ---
-title: "All I need is a pair of pants"
-subtitle: "Check out this post"
-category: "298"
-tags: []
-date: "2007-12-29"
-type: "wp"
+category: '298'
+date: '2007-12-29'
+subtitle: Check out this post
+tags:
+- personal
+title: All I need is a pair of pants
+type: wp
 wordpress_id: 1146
 ---
+
 Check out [this post](http://feeds.feedburner.com/~r/zephoria/thoughts/~3/207694274/all_i_need_is_a.html) from [apophenia](http://www.zephoria.org/thoughts/) (no I didn’t write it 🙂
 > Dear Clothing Designers,
 

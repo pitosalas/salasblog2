@@ -1,12 +1,16 @@
 ---
-title: "Top Ruby Books"
-subtitle: "!toprubybooks1.jpg"
-category: "298"
-tags: []
-date: "2007-09-07"
-type: "wp"
+category: '298'
+date: '2007-09-07'
+subtitle: '!toprubybooks1.jpg'
+tags:
+- programming
+- ruby
+- blogbridge
+title: Top Ruby Books
+type: wp
 wordpress_id: 1218
 ---
+
 ![toprubybooks1.jpg](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/2007/09/toprubybooks1.jpg?w=584)
 Over the last 2 weeks I’ve been actually able to carve out some quality time to get my head around Ruby and Ruby on Rails.
 

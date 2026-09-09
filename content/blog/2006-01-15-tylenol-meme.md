@@ -1,12 +1,15 @@
 ---
-title: "Tylenol meme"
-subtitle: "Amusingly, several"
-category: "298"
-tags: []
-date: "2006-01-15"
-type: "wp"
+category: '298'
+date: '2006-01-15'
+subtitle: Amusingly, several
+tags:
+- health
+- personal
+title: Tylenol meme
+type: wp
 wordpress_id: 1615
 ---
+
 [Amusingly](http://doc.weblogs.com/2006/01/15#coincidence), [several](http://doc.weblogs.com/2006/01/14#aTylenolTestimonial) [posts](http://retvig.blogspot.com/2006/01/similar-experiences.html) on the wonders of Tylenol. Here’s when we really **run out of things** to write about… 
 
 Still, it’s an opening for a little tidbit that I’ve had floating around my head, because, I too, am a **Tylenol fan** (actually not Tylenol itself but its generic version – Acetaminophen -  available in various pharmacy store brands.)

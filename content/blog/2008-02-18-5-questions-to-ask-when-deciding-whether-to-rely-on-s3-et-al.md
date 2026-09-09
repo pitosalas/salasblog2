@@ -1,12 +1,17 @@
 ---
-title: "5 Questions to ask when deciding whether to rely on S3 et al"
-subtitle: "Several products I’ve worked on recently have relied on Amazon’s really impressive web services. I’v..."
-category: "538"
-tags: []
-date: "2008-02-18"
-type: "wp"
+category: '538'
+date: '2008-02-18'
+subtitle: Several products I’ve worked on recently have relied on Amazon’s really
+  impressive web services. I’v...
+tags:
+- technology
+- business
+- amazon
+title: 5 Questions to ask when deciding whether to rely on S3 et al
+type: wp
 wordpress_id: 1109
 ---
+
 Several products I’ve worked on recently have relied on Amazon’s really impressive web services. I’ve written before about how much [I admire services such as S3 and EC2, solid, commercial quality infrastructure services](/2008/01/11/rumorville-microsoft-amazon/).
 They address (and? or? solve) a big problem that application builders have:
 

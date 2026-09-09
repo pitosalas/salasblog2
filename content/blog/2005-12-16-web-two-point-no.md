@@ -1,12 +1,16 @@
 ---
-title: "Web Two Point No?"
-subtitle: "Om Malik writes that “The Web 2.0 Hit By ..."
-category: "538"
-tags: []
-date: "2005-12-16"
-type: "wp"
+category: '538'
+date: '2005-12-16'
+subtitle: Om Malik writes that “The Web 2.0 Hit By ...
+tags:
+- technology
+- web2.0
+- om-malik
+title: Web Two Point No?
+type: wp
 wordpress_id: 1631
 ---
+
 Om Malik [writes](http://gigaom.com/2005/12/16/the-web-20-hit-by-outages/) that “The Web 2.0 Hit By Outages”, saying:
 
 > “Over past 48 hours, there have been reports of Web 2.0 outages. Six Apart, one of the biggest blog service provider is experiencing serious downtime, which has left many a few influential bloggers in a tears of rage. (maybe that’s why it hasn’t made it to Mememorandum and Tailrank as yet?)” (**from** [Om Malik’s Blog](http://gigaom.com/2005/12/16/the-web-20-hit-by-outages/))

@@ -1,12 +1,16 @@
 ---
-title: "Noah and Tabblo (Water in Arlington Mass)"
-subtitle: "!Picture 1-34"
-category: "298"
-tags: []
-date: "2006-05-16"
-type: "wp"
+category: '298'
+date: '2006-05-16'
+subtitle: '!Picture 1-34'
+tags:
+- personal
+- arlington
+- tabblo
+title: Noah and Tabblo (Water in Arlington Mass)
+type: wp
 wordpress_id: 1542
 ---
+
 ![Picture 1-34](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/Picture%25201-34.png?resize=200%2C150)As you may have heard, we’ve had torrential (and I mean torrential) downpours here in Massachusetts. I happen to live on a little isthmus ([look it up](http://en.wikipedia.org/wiki/Isthmus)) [between the upper and lower Mystic Lakes in Arlington Massachusetts](http://en.wikipedia.org/wiki/Isthmus). 
 
 [![ Miscellaneous Water 885513216303 0 Bg](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/_Miscellaneous_Water_885513216303_0_BG-tm.jpg?resize=192%2C144)](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/_Miscellaneous_Water_885513216303_0_BG.jpg)Every 5 or 10 years the Upper Mystic Lake decides that **it wants to shake hands** with the Lower Mystic Lake and basically water flows right through someone’s back yard. 

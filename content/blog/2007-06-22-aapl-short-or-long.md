@@ -1,12 +1,16 @@
 ---
-title: "AAPL: Short or Long?"
-subtitle: "With all the unbelievable hoopla around the imminent release of the iPhone my thinking turns to the ..."
-category: "298"
-tags: []
-date: "2007-06-22"
-type: "wp"
+category: '298'
+date: '2007-06-22'
+subtitle: With all the unbelievable hoopla around the imminent release of the iPhone
+  my thinking turns to the ...
+tags:
+- business
+- apple
+title: 'AAPL: Short or Long?'
+type: wp
 wordpress_id: 1250
 ---
+
 With all the unbelievable hoopla around the imminent release of the iPhone my thinking turns to the APPL stock price. Right now the [Apple stock price](http://finance.yahoo.com/q?d=t&s=AAPL) at an all time high of $123.00 per share. The iPhone is coming out in one week.
 What will the stock price do? 
 

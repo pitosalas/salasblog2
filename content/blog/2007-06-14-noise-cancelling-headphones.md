@@ -1,12 +1,15 @@
 ---
-title: "Noise cancelling headphones"
-subtitle: "I’ve been doing quite a bit of traveling lately and have been experimenting with those noise cancell..."
-category: "298"
-tags: []
-date: "2007-06-14"
-type: "wp"
+category: '298'
+date: '2007-06-14'
+subtitle: I’ve been doing quite a bit of traveling lately and have been experimenting
+  with those noise cancell...
+tags:
+- technology
+title: Noise cancelling headphones
+type: wp
 wordpress_id: 1254
 ---
+
 I’ve been doing quite a bit of traveling lately and have been experimenting with those noise cancelling headphones. Actually I couldn’t convince myself to spend $350 on the Bose headphones who, by reputation anyway, set the standard.
 I spent about $50 on a pair of Sony noise canceling headphones (at RadioShack no less.) My assessment: I give them a solid “B”. They do cancel noise, but not all of it. And having nothing to compare themm with, I am always wondering how much better the better ones are.
 

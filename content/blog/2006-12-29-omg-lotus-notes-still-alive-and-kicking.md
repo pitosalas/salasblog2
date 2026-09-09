@@ -1,12 +1,15 @@
 ---
-title: "OMG: Lotus Notes still alive and kicking ?"
-subtitle: "A million years ago I used Lotus Notes … I think it was version 3 and 4."
-category: "538"
-tags: []
-date: "2006-12-29"
-type: "wp"
+category: '538'
+date: '2006-12-29'
+subtitle: A million years ago I used Lotus Notes … I think it was version 3 and 4.
+tags:
+- technology
+- lotus-notes
+title: 'OMG: Lotus Notes still alive and kicking ?'
+type: wp
 wordpress_id: 1370
 ---
+
 A million years ago I used Lotus Notes … I think it was version 3 and 4. 
  I believe that it ran on Mac even then so I am not sure what the big news 
  is. But look at this screen shot. It looks more similar than different to 

@@ -1,12 +1,16 @@
 ---
-title: "OpenID not all happyness and light?"
-subtitle: "I don’t follow the Identify world that closely and like everyone I’ve now come across services who s..."
-category: "538"
-tags: []
-date: "2007-09-25"
-type: "wp"
+category: '538'
+date: '2007-09-25'
+subtitle: I don’t follow the Identify world that closely and like everyone I’ve now
+  come across services who s...
+tags:
+- technology
+- openid
+title: OpenID not all happyness and light?
+type: wp
 wordpress_id: 1203
 ---
+
 I don’t follow the Identify world that closely and like everyone I’ve now come across services who suggest that you log into them with an [[tag]OpenId[/tag] account](http://openid.net/). So I have one now too. It’s free. It’s decentralized. What’s not to love?
 Well apparently it isn’t 100% love. Read this article, by [tag]Stefan Brands[/tag], who admittedly seems to be closely associated with a competing service, [[tag]Credentica[/tag]](http://www.credentica.com/u-prove_sdk.html), which might well be the anti-OpenID. So he’s got his own biases:
 

@@ -1,12 +1,15 @@
 ---
-title: "Coffee Series part 2: What kind of grind?"
-subtitle: "This is an **interim report** on “Life with a Capresso espresso maker"
-category: "298"
-tags: []
-date: "2006-04-24"
-type: "wp"
+category: '298'
+date: '2006-04-24'
+subtitle: This is an **interim report** on “Life with a Capresso espresso maker
+tags:
+- food
+- personal
+title: 'Coffee Series part 2: What kind of grind?'
+type: wp
 wordpress_id: 1548
 ---
+
 This is an **interim report** on “Life with a [Capresso espresso maker](http://www.capresso.com/prod_esp_ultima.html)“. The topic for today is what kind of grind of coffee to use. Note that my experience is now about 3 or 4 days so you are learning right along with me.
 
 **Basic** lesson, although I haven’t fully debugged it yet: **too fine** a grind ends up blocking the hot water totally, meaning no coffee comes out. (By the way, I am **not exactly sure** yet whether the water is literally blocked or is getting diverted into some waste reservoir.)

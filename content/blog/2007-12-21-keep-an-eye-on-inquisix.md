@@ -1,12 +1,16 @@
 ---
-title: "Keep an eye on Inquisix"
-subtitle: "Here’s an interesting new product, just into beta: Inquisix. This is a servi..."
-category: "298"
-tags: []
-date: "2007-12-21"
-type: "wp"
+category: '298'
+date: '2007-12-21'
+subtitle: 'Here’s an interesting new product, just into beta: Inquisix. This is a
+  servi...'
+tags:
+- technology
+- business
+title: Keep an eye on Inquisix
+type: wp
 wordpress_id: 1150
 ---
+
 Here’s an interesting new product, just into beta: [Inquisix](http://inquisix.com/). This is a service for **sales people** who need a more effective alternative to cold calling to generate leads.
 They say: “Now there’s no need to waste time on cold calling when contacts are just an Inquisix Trusted Referral Away.”
 

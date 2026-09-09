@@ -1,12 +1,15 @@
 ---
-title: "Geek Dinner a great success!"
-subtitle: "!100319926 6Bac19F6Bc"
-category: "538"
-tags: []
-date: "2006-02-16"
-type: "wp"
+category: '538'
+date: '2006-02-16'
+subtitle: '!100319926 6Bac19F6Bc'
+tags:
+- personal
+- geek-dinner
+title: Geek Dinner a great success!
+type: wp
 wordpress_id: 1596
 ---
+
 ![100319926 6Bac19F6Bc](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/100319926_6bac19f6bc.jpg?resize=200%2C133)
 
 For those of you who came, thanks for joining us. For those of you who didn’t come, you missed out! I think we had about 30 people (but didn’t count) and I met many new people which was great. It seems like these Geek Dinners are popping up all over, and makes us East Coast geeks feel like we actually exist! 

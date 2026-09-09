@@ -1,12 +1,16 @@
 ---
-title: "Space Shuttle Software: YERO"
-subtitle: "Who would think that our advanced space fairing craft have a YERO (Year End Rollover) problem?"
-category: "538"
-tags: []
-date: "2007-12-31"
-type: "wp"
+category: '538'
+date: '2007-12-31'
+subtitle: Who would think that our advanced space fairing craft have a YERO (Year
+  End Rollover) problem?
+tags:
+- technology
+- science
+title: 'Space Shuttle Software: YERO'
+type: wp
 wordpress_id: 1144
 ---
+
 Who would think that our advanced space fairing craft have a YERO (Year End Rollover) problem?
 From an [article about the YERO problem:](http://www.nasaspaceflight.com/content/?cid=5026)
 

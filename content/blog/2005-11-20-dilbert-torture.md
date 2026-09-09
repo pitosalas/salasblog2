@@ -1,12 +1,15 @@
 ---
-title: "Dilbert Torture"
-subtitle: "According to Dilbert (or is it Scott Adams"
-category: "298"
-tags: []
-date: "2005-11-20"
-type: "wp"
+category: '298'
+date: '2005-11-20'
+subtitle: According to Dilbert (or is it Scott Adams
+tags:
+- politics
+- dilbert
+title: Dilbert Torture
+type: wp
 wordpress_id: 1649
 ---
+
 [According to Dilbert (or is it Scott Adams](http://dilbertblog.typepad.com/the_dilbert_blog/2005/11/interrogation_t.html)) we are approaching the whole question of torture in the wrong way:
 
 > “The objective is to think up a form of torture that’s effective but doesn’t sound so bad when the rest of the world finds out you did it. ” (**from** [Dilbert.Blog](http://dilbertblog.typepad.com/the_dilbert_blog/2005/11/interrogation_t.html))

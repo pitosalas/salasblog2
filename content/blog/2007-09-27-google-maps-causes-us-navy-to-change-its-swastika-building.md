@@ -1,12 +1,15 @@
 ---
-title: "Google Maps Causes US Navy To Change Its Swastika Building"
-subtitle: "Check out this post"
-category: "298"
-tags: []
-date: "2007-09-27"
-type: "wp"
+category: '298'
+date: '2007-09-27'
+subtitle: Check out this post
+tags:
+- technology
+- google-maps
+title: Google Maps Causes US Navy To Change Its Swastika Building
+type: wp
 wordpress_id: 1201
 ---
+
 Check out [this post](http://feeds.searchengineland.com/~r/searchengineland/~3/162031302/070927-113222.php) from [Search Engine Land: News About Search Engines & Search Marketing](http://searchengineland.com/): 
 **
  [![](https://i0.wp.com/farm1.static.flickr.com/47/143053448_01c0320dcd_m_d.jpg?resize=240%2C165) ](http://www.flickr.com/photos/silvery/143053448/)

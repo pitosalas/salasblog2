@@ -1,12 +1,15 @@
 ---
-title: "World’s Tallest Man Lends a Hand"
-subtitle: "I just thought [this"
-category: "298"
-tags: []
-date: "2006-12-18"
-type: "wp"
+category: '298'
+date: '2006-12-18'
+subtitle: I just thought [this
+tags:
+- personal
+- dowbrigade
+title: World’s Tallest Man Lends a Hand
+type: wp
 wordpress_id: 1380
 ---
+
 I just thought [this 
 post](http://www.wftv.com/slideshow/news/2691965/detail.html?qs=;s=1;w=480) was interesting and curious — thanks [Dowbrigade 
 News](http://blogs.law.harvard.edu/dowbrigade/)

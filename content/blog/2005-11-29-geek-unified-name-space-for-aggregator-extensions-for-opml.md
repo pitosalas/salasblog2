@@ -1,12 +1,16 @@
 ---
-title: "[GEEK] Unified name space for aggregator extensions for OPML?"
-subtitle: "There’s been a lot"
-category: "50"
-tags: []
-date: "2005-11-29"
-type: "wp"
+category: '50'
+date: '2005-11-29'
+subtitle: There’s been a lot
+tags:
+- technology
+- programming
+- opml
+title: '[GEEK] Unified name space for aggregator extensions for OPML?'
+type: wp
 wordpress_id: 1642
 ---
+
 There’s [been](http://nick.typepad.com/blog/2005/11/an_attention_na_1.html) a [lot](http://www.feedblog.org/2005/11/opml_attention_.html) of [discussion](http://blogs.msdn.com/alexbarn/archive/2005/11/23/496170.aspx) (follow these links for more links) of late about how to **extend OPML**, including [what I wrote](http://www.blogbridge.com/archives/2005/11/geek_preliminar.php) about some common **aggregation related** OPML attributes. From reading the discussions and thinking about it, I am thinking that a course correction might be better. Much of the discussion has been about an [Attention namespace for OPML](http://nick.typepad.com/blog/2005/11/an_attention_na_1.html). I totally  **support** this and will participate in that discussion. 
 
 **Yet** there are clearly some information that many aggregators need to store with the OPML, which is not part of the core OPML standard, and also not really connected to Attention. 

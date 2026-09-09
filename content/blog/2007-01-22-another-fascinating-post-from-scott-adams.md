@@ -1,12 +1,15 @@
 ---
-title: "Another fascinating post from Scott Adams"
-subtitle: "I don’t know, maybe it’s because he’s a mini celebrity but I found the"
-category: "298"
-tags: []
-date: "2007-01-22"
-type: "wp"
+category: '298'
+date: '2007-01-22'
+subtitle: I don’t know, maybe it’s because he’s a mini celebrity but I found the
+tags:
+- personal
+- scott-adams
+title: Another fascinating post from Scott Adams
+type: wp
 wordpress_id: 1342
 ---
+
 I don’t know, maybe it’s because he’s a mini celebrity but I found the 
  continuing story of Scott Adam’s voice problems just gripping. Check out [this 
  post](http://dilbertblog.typepad.com/the_dilbert_blog/2007/01/voice_update_1.html) from [The 

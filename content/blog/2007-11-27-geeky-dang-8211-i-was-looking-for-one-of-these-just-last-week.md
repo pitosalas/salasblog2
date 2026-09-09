@@ -1,12 +1,14 @@
 ---
-title: "[geeky] Dang – I was looking for one of these just last week"
-subtitle: "13 port USB hub"
-category: "538"
-tags: []
-date: "2007-11-27"
-type: "wp"
+category: '538'
+date: '2007-11-27'
+subtitle: 13 port USB hub
+tags:
+- technology
+title: '[geeky] Dang – I was looking for one of these just last week'
+type: wp
 wordpress_id: 1172
 ---
+
 [13 port USB hub](http://www.coolest-gadgets.com/20071126/13-port-usb-hub-keeps-everything-connected/)
 Yeah very **geeky**, eh? All I was able to locate was 7-port USB hubs. Why not daisy chain them?  I have reason to believe that while logically it should not matter, in practice it does.
 

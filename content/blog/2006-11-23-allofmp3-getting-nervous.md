@@ -1,12 +1,15 @@
 ---
-title: "AllofMp3 Getting nervous"
-subtitle: "I’ve written about AllOfMp3.com before. I can’t say other than it’s a pir..."
-category: "298"
-tags: []
-date: "2006-11-23"
-type: "wp"
+category: '298'
+date: '2006-11-23'
+subtitle: I’ve written about AllOfMp3.com before. I can’t say other than it’s a pir...
+tags:
+- music
+- allofmp3
+title: AllofMp3 Getting nervous
+type: wp
 wordpress_id: 1399
 ---
+
 I’ve written about [AllOfMp3.com](http://www.allofmp3.com) before. I can’t say other than it’s a pirated music site. You can buy mp3’s of music of all kinds, from a nice catalog, at ridiculously low prices (like $3 or less for a complete album.) 
 
 Some wags have suggested that [AllofMp3](http://www.allofmp3.com) proves that people are totally willing to pay for downloaded music as long as the price is right. Yeah, like people are totally willing to pay for a BMW as long as the price is right. Other rumors have been that [AllOfMp3](http://www.allofmp3.com) is [always](http://www.msnbc.msn.com/id/15653071/) one step away from being shut down because the WTO has made closing down of [AllOfMp3](http://www.allofmp3.com) a condition for accepting Russia into the organization.

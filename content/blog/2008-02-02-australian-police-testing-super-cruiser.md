@@ -1,12 +1,14 @@
 ---
-title: "Australian police testing super cruiser"
-subtitle: "Check out this post from [Autoblog..."
-category: "298"
-tags: []
-date: "2008-02-02"
-type: "wp"
+category: '298'
+date: '2008-02-02'
+subtitle: Check out this post from [Autoblog...
+tags:
+- technology
+title: Australian police testing super cruiser
+type: wp
 wordpress_id: 1120
 ---
+
 Check out [this post](http://feeds.autoblog.com/~r/weblogsinc/autoblog/~3/210114751/) from [Autoblog](http://www.autoblog.com):
 > Filed under: [Concept Cars](http://www.autoblog.com/category/conceptcars/), [Government/Legal](http://www.autoblog.com/category/government-legal/), [Holden](http://www.autoblog.com/category/holden/), [Police/Emergency](http://www.autoblog.com/category/police-emergency/)[![](https://i0.wp.com/www.blogsmithmedia.com/www.autoblog.com/media/2008/01/aussie_police_battlecruiser.jpg?resize=450%2C371)](http://www.news.com.au/couriermail/story/0,23739,22955879-3102,00.html)The transformation from police cruiser to police destroyer is almost complete. Researchers at Australia’s National Safety Agency, along with Holden, Motorola and the Monash University Accident Research Center, have created an Emergency Services Concept Car that is not your standard black-and-white.
 

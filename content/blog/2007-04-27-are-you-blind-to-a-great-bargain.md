@@ -1,12 +1,15 @@
 ---
-title: "Are you blind to a great bargain?"
-subtitle: "Here’s a column that I can really relate to, and a topic that I’ve written about more than once befo..."
-category: "298"
-tags: []
-date: "2007-04-27"
-type: "wp"
+category: '298'
+date: '2007-04-27'
+subtitle: Here’s a column that I can really relate to, and a topic that I’ve written
+  about more than once befo...
+tags:
+- technology
+title: Are you blind to a great bargain?
+type: wp
 wordpress_id: 1279
 ---
+
 Here’s a column that I can really relate to, and a topic that I’ve written about more than once before.
 > “Computers would be nothing without programs to run on
 them, so why do we spend so much time drooling over our hardware —

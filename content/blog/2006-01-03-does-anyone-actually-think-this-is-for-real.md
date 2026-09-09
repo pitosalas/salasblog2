@@ -1,12 +1,16 @@
 ---
-title: "Does anyone actually think this is for real?"
-subtitle: "Did you see this clever site? Million Dollar Home Page"
-category: "298"
-tags: []
-date: "2006-01-03"
-type: "wp"
+category: '298'
+date: '2006-01-03'
+subtitle: Did you see this clever site? Million Dollar Home Page
+tags:
+- technology
+- business
+- million-dollar-homepage
+title: Does anyone actually think this is for real?
+type: wp
 wordpress_id: 1623
 ---
+
 Did you see this [clever site](http://www.milliondollarhomepage.com/)? [Million Dollar Home Page](http://www.milliondollarhomepage.com/)?
 
 > “The idea is simple: to try and make $1m (US) by selling 1,000,000 pixels for $1 each. Hence, ‘The Million Dollar Homepage”. The main motivation for doing this is to pay for my degree studies, because I don’t like the idea of graduating with a huge student debt. I know people who are paying off student loans 15-20 years after they graduated. Not a nice thought!” (**from** [Million Dollar Home Page](http://www.milliondollarhomepage.com/faq.php))

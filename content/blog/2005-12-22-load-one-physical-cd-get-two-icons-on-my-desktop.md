@@ -1,12 +1,15 @@
 ---
-title: "Load one physical CD, get two icons on my desktop"
-subtitle: "!Picture 1-24"
-category: "538"
-tags: []
-date: "2005-12-22"
-type: "wp"
+category: '538'
+date: '2005-12-22'
+subtitle: '!Picture 1-24'
+tags:
+- technology
+- sony-rootkit
+title: Load one physical CD, get two icons on my desktop
+type: wp
 wordpress_id: 1628
 ---
+
 ![Picture 1-24](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/Picture%25201-24.png?resize=114%2C209)
 
 I know all this Sony rootkit/DRM stuff has made me paranoid. I **loaded** my Sarah McLachlan CD into my Mac (**a single CD**), and **two different CDs appear on my desktop** (see the screenshot on the left.)

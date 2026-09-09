@@ -1,12 +1,16 @@
 ---
-title: "Geek Dinner? Harvard Square? February 15th? Should be fun!"
-subtitle: "Inspired by **Geek Dinners** popping up all over, we thought it might be **fun** to try it here"
-category: "298"
-tags: []
-date: "2006-01-29"
-type: "wp"
+category: '298'
+date: '2006-01-29'
+subtitle: Inspired by **Geek Dinners** popping up all over, we thought it might be
+  **fun** to try it here
+tags:
+- personal
+- geek-dinner
+title: Geek Dinner? Harvard Square? February 15th? Should be fun!
+type: wp
 wordpress_id: 1607
 ---
+
 Inspired by **Geek Dinners** popping up all over, we thought it might be **fun** to [try it here](http://www.darwinianweb.com/archive/2006/206.html). Who is “we”? Adam Green, who writes [Darwinian Web](http://www.darwinianweb.com/), and yours truly who writes [this Blog](/) and also runs the [BlogBridge project](http://www.blogbridge.com/). Adam also has a [Ruby Blog](http://ruby.darwinianweb.com/) (he’s been swallowed whole by Ruby) as well as a [Mashup Blog](http://mashup.darwinianweb.com/). The third “we”
 
 is Mark Doerschlag..

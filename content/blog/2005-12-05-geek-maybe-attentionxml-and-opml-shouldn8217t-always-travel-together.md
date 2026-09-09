@@ -1,12 +1,16 @@
 ---
-title: "[GEEK] Maybe Attention.xml and OPML shouldn’t always travel together"
-subtitle: "Cori Schiegel convinced me"
-category: "50"
-tags: []
-date: "2005-12-05"
-type: "wp"
+category: '50'
+date: '2005-12-05'
+subtitle: Cori Schiegel convinced me
+tags:
+- technology
+- opml
+- attention-xml
+title: '[GEEK] Maybe Attention.xml and OPML shouldn’t always travel together'
+type: wp
 wordpress_id: 1639
 ---
+
 [Cori Schiegel convinced me](http://kinrowan.net/blog/wp/archives/2005/12/02/attention-in-opml-nick-bradbury-on-attentiontech):
 
 > “Personally, I want the data the AttentionRecorder is collecting to be used, but I don’t want to freight porting my feeds from one platform to another with those additional 10000+ rows of data.” (**from** [elliptical…](http://kinrowan.net/blog/wp/archives/2005/12/02/attention-in-opml-nick-bradbury-on-attentiontech)“)

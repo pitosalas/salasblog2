@@ -1,12 +1,15 @@
 ---
-title: "Comment spam – solved for now?"
-subtitle: "The other day I complained about comment spam on my two blogs. Comme..."
-category: "51"
-tags: []
-date: "2006-06-03"
-type: "wp"
+category: '51'
+date: '2006-06-03'
+subtitle: The other day I complained about comment spam on my two blogs. Comme...
+tags:
+- technology
+- movable-type
+title: Comment spam – solved for now?
+type: wp
 wordpress_id: 1531
 ---
+
 [The other day I complained](/weblogs/archives/001162.php) about comment spam on my two blogs. Comment spam is when **fake** comments are added to a blog post that include links to some random site. They are supposedly put there by spammers to generate traffic to their sites, as well as try to improve their  site’s ratings in Google. Whether it works for them I don’t know, all I know is that it’s a **pain in the butt for** me.
 
 I am now using a Movable Type plugin called [HMPassphrase](http://www.sixapart.com/pronet/plugins/plugin/hmpassphrase.html). It’s very **simple** and **effective**. Whenever anyone wants to post a comment they have to read instructions on the web page and type in a certain word into a certain field. The word is right there in the instructions. It’s super simple and yet the **spam robots can’t read the instructions** and so can’t enter the magic word and so can’t even submit a comment.

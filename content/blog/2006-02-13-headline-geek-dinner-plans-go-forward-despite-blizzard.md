@@ -1,12 +1,15 @@
 ---
-title: "Headline: Geek Dinner plans go forward despite blizzard"
-subtitle: "Just a quick reminder of a Geek Dinner organized by three of us: Ada..."
-category: "298"
-tags: []
-date: "2006-02-13"
-type: "wp"
+category: '298'
+date: '2006-02-13'
+subtitle: 'Just a quick reminder of a Geek Dinner organized by three of us: Ada...'
+tags:
+- personal
+- geek-dinner
+title: 'Headline: Geek Dinner plans go forward despite blizzard'
+type: wp
 wordpress_id: 1597
 ---
+
 Just a [quick reminder ](/weblogs/archives/001050.php)of a Geek Dinner organized by three of us: Adam Green, who writes [Darwinian Web](http://www.darwinianweb.com/), Mark Doerschlag, and yours truly who writes [this Blog](/) and also runs the [BlogBridge project](http://www.blogbridge.com/). 
 
 What is this “geek dinner” thing again? Well we’re **inviting all their geek friends** to hang out and geek out for a few hours. Each of us have almost non-overlapping networks so this is a chance for us to make new connections around town, and for you to do the same.

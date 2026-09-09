@@ -1,12 +1,14 @@
 ---
-title: "Look closely: it’s a mermaid!"
-subtitle: "Yeah this is **extraordinarily weird**. As Yakov Smirnov"
-category: "298"
-tags: []
-date: "2006-08-02"
-type: "wp"
+category: '298'
+date: '2006-08-02'
+subtitle: Yeah this is **extraordinarily weird**. As Yakov Smirnov
+tags:
+- personal
+title: 'Look closely: it’s a mermaid!'
+type: wp
 wordpress_id: 1475
 ---
+
 Yeah this is **extraordinarily weird**. As [Yakov Smirnov](http://www.yakov.com/ageOfEnlaughterment/psychologyDegree.html) says: “America, What a country!”  
 
 [It’s from EBay. Anyone want to bid? 

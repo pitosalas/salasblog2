@@ -1,12 +1,16 @@
 ---
-title: "Steven Pinker on Why We Curse"
-subtitle: "I know that access to my blog is blocked at least by EMC (heard so from friends there) so I will ref..."
-category: "298"
-tags: []
-date: "2007-10-19"
-type: "wp"
+category: '298'
+date: '2007-10-19'
+subtitle: I know that access to my blog is blocked at least by EMC (heard so from
+  friends there) so I will ref...
+tags:
+- science
+- steven-pinker
+title: Steven Pinker on Why We Curse
+type: wp
 wordpress_id: 1191
 ---
+
 I know that access to my blog is blocked at least by EMC (heard so from friends there) so I will refrain from quoting [this article’s](http://www.tnr.com/doc.mhtml?i=20071008&s=pinker100807) first word:
 > “*ucking became the subject of congressional debate in 2003, after NBC broadcast the Golden Globe Awards. Bono, lead singer of the mega-band U2, was accepting a prize on behalf of the group and in his euphoria exclaimed, “This is really, really, *ucking brilliant” on the air.” (from Pinker on Why We Curse)
 

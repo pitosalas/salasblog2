@@ -1,12 +1,16 @@
 ---
-title: "Booting MS Windows on Intel Macs: Interesting bit of analysis"
-subtitle: "To be honest, hardly followed the pages and pages"
-category: "298"
-tags: []
-date: "2006-04-08"
-type: "wp"
+category: '298'
+date: '2006-04-08'
+subtitle: To be honest, hardly followed the pages and pages
+tags:
+- technology
+- macos
+- windows-xp
+title: 'Booting MS Windows on Intel Macs: Interesting bit of analysis'
+type: wp
 wordpress_id: 1559
 ---
+
 To be honest, hardly followed the [pages and pages](http://del.icio.us/search/?setcount=100&all=bootcamp) of blog analysis of Apple’s recent release of “Boot Camp” a utility allowing users to boot WIndows XP on Macintosh Intel-based computers. Didn’t seem like that big a deal to me.
 
 Today in the New York Times, a [good op-ed piece](http://www.nytimes.com/2006/04/08/opinion/08cringely.html?_r=1&oref=slogin) analyzing what it may or may not mean, by [Robert X. Cringely](http://www.pbs.org/cringely/). If you haven’t followed the debate, this is a good primer:

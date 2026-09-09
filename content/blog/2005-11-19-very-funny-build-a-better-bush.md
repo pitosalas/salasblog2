@@ -1,12 +1,14 @@
 ---
-title: "Very funny: Build a better Bush"
-subtitle: "!Picture 1-21"
-category: "298"
-tags: []
-date: "2005-11-19"
-type: "wp"
+category: '298'
+date: '2005-11-19'
+subtitle: '!Picture 1-21'
+tags:
+- politics
+title: 'Very funny: Build a better Bush'
+type: wp
 wordpress_id: 1651
 ---
+
 ![Picture 1-21](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/weblog/images/Picture%25201-21.png?resize=158%2C216)
 
 **

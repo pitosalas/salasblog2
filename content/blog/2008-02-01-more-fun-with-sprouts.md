@@ -1,12 +1,15 @@
 ---
-title: "More fun with sprouts"
-subtitle: "http://farm.sproutbuilder.com/2341/load/5QDs6GRmAGexSWMQ.swf"
-category: "298"
-tags: []
-date: "2008-02-01"
-type: "wp"
+category: '298'
+date: '2008-02-01'
+subtitle: http://farm.sproutbuilder.com/2341/load/5QDs6GRmAGexSWMQ.swf
+tags:
+- technology
+- sproutbuilder
+title: More fun with sprouts
+type: wp
 wordpress_id: 1121
 ---
+
 [http://farm.sproutbuilder.com/2341/load/5QDs6GRmAGexSWMQ.swf](http://farm.sproutbuilder.com/2341/load/5QDs6GRmAGexSWMQ.swf)
 ![](https://i0.wp.com/counters.gigya.com/wildfire/CIMP/Jmx*PTEyMDE4MzQyMTgwMjAmcHQ9MTIwMTgzNDM*MDQ4OSZwPTEyMDc*MSZkPTI1NjczJm49.jpg?resize=0%2C0)
 Ok, you can tell I like this new gadget builder, [SproutBuilder](http://www.sproutbuilder.com). 

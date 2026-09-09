@@ -1,12 +1,17 @@
 ---
-title: "Can Shilling focus on 38 Studios and still be a great for the Redsox?"
-subtitle: "Far be it from me to comment on sports… In fact this is exactly the first sports related post for th..."
-category: "298"
-tags: []
-date: "2007-07-18"
-type: "wp"
+category: '298'
+date: '2007-07-18'
+subtitle: Far be it from me to comment on sports… In fact this is exactly the first
+  sports related post for th...
+tags:
+- business
+- red-sox
+- curt-schilling
+title: Can Shilling focus on 38 Studios and still be a great for the Redsox?
+type: wp
 wordpress_id: 1238
 ---
+
 Far be it from me to comment on sports… In fact this is exactly the first sports related post for this blog in 4 years.
 Anyway, if you follow the Redsox, you know they/we have/had a great pitcher by the name of [Curt Shilling.](http://www.mlb.com/team/player.jsp?player_id=121811) He’s well known by the pitcherati for his heroic performance during the 2004 World Series.
 

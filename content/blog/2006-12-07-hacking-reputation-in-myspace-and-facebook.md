@@ -1,12 +1,15 @@
 ---
-title: "Hacking Reputation in MySpace and Facebook"
-subtitle: "Check out [this"
-category: "298"
-tags: []
-date: "2006-12-07"
-type: "wp"
+category: '298'
+date: '2006-12-07'
+subtitle: Check out [this
+tags:
+- technology
+- bruce-schneier
+title: Hacking Reputation in MySpace and Facebook
+type: wp
 wordpress_id: 1396
 ---
+
 Check out [this 
 post](http://www.schneier.com/blog/archives/2006/12/hacking_reputat.html) from [Schneier on Security](http://www.schneier.com/blog/):
 > "I’ll be the first to admit it: I know next to nothing about MySpace or Facebook. I do know that they’re social networking sites, and that — at least to some extent — your reputation is based on who are your "friends" and what they say about you. 

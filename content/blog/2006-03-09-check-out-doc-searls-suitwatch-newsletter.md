@@ -1,12 +1,16 @@
 ---
-title: "Check out Doc Searls Suitwatch newsletter"
-subtitle: "There are a few **really good** newsletters that have not moved over to a blog which I read religio..."
-category: "410"
-tags: []
-date: "2006-03-09"
-type: "wp"
+category: '410'
+date: '2006-03-09'
+subtitle: There are a few **really good** newsletters that have not moved over to
+  a blog which I read religio...
+tags:
+- technology
+- doc-searls
+title: Check out Doc Searls Suitwatch newsletter
+type: wp
 wordpress_id: 1581
 ---
+
 There are  a few **really good** newsletters that have not moved over to a blog which I read religiously. One of them is [Doc Searls](http://doc.weblogs.com/)‘ Suitwatch. Doc writes a fairly long essay approximately monthly. It’s **always interesting** and **well written**. Here’s how his most [recent episode](http://lists.ssc.com/pipermail/suitwatch/2006-February.txt), about CES in Las Vegas, begins:
 
 > “What could be more ridiculous than a city that wants to be like everywhere else? Venice, Paris, New York, Rome and Monte Carlo are all in Las Vegas, embodied as giant hotels, each as clichéd as a travel brochure. Nearly all the big theme hotels front The Strip, a wide paved line in a desert no less arid than the hundred empty basins between the hundred stony ranges that comprise the rest of Nevada.” (**From** [“The Produced Electronics Revolution, Part I”](http://lists.ssc.com/pipermail/suitwatch/2006-February.txt))

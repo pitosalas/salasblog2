@@ -1,12 +1,15 @@
 ---
-title: "Decorating tip"
-subtitle: "Hanging a picture on the wall? The perennial question, “how high should it be”?"
-category: "298"
-tags: []
-date: "2006-02-03"
-type: "wp"
+category: '298'
+date: '2006-02-03'
+subtitle: Hanging a picture on the wall? The perennial question, “how high should
+  it be”?
+tags:
+- personal
+title: Decorating tip
+type: wp
 wordpress_id: 1602
 ---
+
 Hanging a picture on the wall? The perennial question, “how high should it be”?
 
 Here’s the formula, handed down from the decorating gods:

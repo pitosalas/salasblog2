@@ -1,12 +1,16 @@
 ---
-title: "Tivo will be able to transfer videos to Ipods… But…"
-subtitle: "Hot news for Tivo and iPod Fans. Coming soon to a computer near you!"
-category: "298"
-tags: []
-date: "2005-11-21"
-type: "wp"
+category: '298'
+date: '2005-11-21'
+subtitle: Hot news for Tivo and iPod Fans. Coming soon to a computer near you!
+tags:
+- technology
+- tivo
+- ipod
+title: Tivo will be able to transfer videos to Ipods… But…
+type: wp
 wordpress_id: 1648
 ---
+
 Hot news for Tivo and iPod Fans. Coming soon to a computer near you! 
 
 > “TiVo Inc. today is expected to announce a service that allows its digital video recorders to save programs to iPods and PlayStation Portables, further untethering television from time and place.” (**from** [LA Times](http://www.latimes.com/business/custom/cotown/la-fi-tivo21nov21,0,1589292.story)) 

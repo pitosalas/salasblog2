@@ -1,12 +1,14 @@
 ---
-title: "Security Myth: Generic Login Error"
-subtitle: "Check out this post from..."
-category: "538"
-tags: []
-date: "2007-09-05"
-type: "wp"
+category: '538'
+date: '2007-09-05'
+subtitle: Check out this post from...
+tags:
+- technology
+title: 'Security Myth: Generic Login Error'
+type: wp
 wordpress_id: 1219
 ---
+
 Check out [this post](http://blog.jayfields.com/2007/09/security-myth-generic-login-error.html) from [Jay Fields Thoughts](http://blog.jayfields.com/): 
 > 
  Here’s where I have an issue. Maybe I can’t find out from the login screen what is a valid username and what isn’t, but it only takes me a click to get to a screen that tells me what a valid username is. Do we really believe that a hacker is going to give up on the login screen and not just hit the "forgot password" link like I do? I 

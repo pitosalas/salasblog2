@@ -1,12 +1,17 @@
 ---
-title: "Interesting Wikipedia situation developing"
-subtitle: "Wikipedia appears to have banned all contributions and edits coming from the US Congress!"
-category: "298"
-tags: []
-date: "2006-01-30"
-type: "wp"
+category: '298'
+date: '2006-01-30'
+subtitle: Wikipedia appears to have banned all contributions and edits coming from
+  the US Congress!
+tags:
+- technology
+- politics
+- wikipedia
+title: Interesting Wikipedia situation developing
+type: wp
 wordpress_id: 1605
 ---
+
 Wikipedia appears to have banned all contributions and edits coming from the US Congress!
 
 > “I am opening this RFC in order to centralise discussion concerning actions to be taken against US Congressional staffers who repeatedly revert wars, blank content, engage in libelous behaviour, violate WP:NPOV, WP:CIV. The editors from this IP are rude and abrasive, immature, and show no understanding of Wikipedia policy. The editors also frequently try to whitewash the actions of frequent politicians. 

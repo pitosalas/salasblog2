@@ -1,12 +1,14 @@
 ---
-title: "Big news from Iraq, if it’s true…"
-subtitle: "Zarqawi probably killed! according to Iraq the Model."
-category: "298"
-tags: []
-date: "2005-11-21"
-type: "wp"
+category: '298'
+date: '2005-11-21'
+subtitle: Zarqawi probably killed! according to Iraq the Model.
+tags:
+- politics
+title: Big news from Iraq, if it’s true…
+type: wp
 wordpress_id: 1647
 ---
+
 Zarqawi probably killed! according to [Iraq the Model.](http://iraqthemodel.blogspot.com/2005/11/zarqawi-probably-killed.html)
 
 > “According to these two sources, Iraqi and US military forces in Mosul think that Zarqawi, al-Qaeda leader in Iraq was possibly killed in a raid on a house where members of al-Qaeda were holding a meeting.” (**from** [Iraq the Model](http://iraqthemodel.blogspot.com/2005/11/zarqawi-probably-killed.html))

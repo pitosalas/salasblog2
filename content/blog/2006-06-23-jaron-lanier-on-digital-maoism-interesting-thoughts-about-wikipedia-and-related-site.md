@@ -1,12 +1,18 @@
 ---
-title: "Jaron Lanier on Digital Maoism: interesting thoughts about Wikipedia and related site"
-subtitle: "Jaron [is a brilliant thinker (and an amazing piano player as well) Anything he writes is interestin..."
-category: "298"
-tags: []
-date: "2006-06-23"
-type: "wp"
+category: '298'
+date: '2006-06-23'
+subtitle: Jaron [is a brilliant thinker (and an amazing piano player as well) Anything
+  he writes is interestin...
+tags:
+- technology
+- wikipedia
+- jaron-lanier
+title: 'Jaron Lanier on Digital Maoism: interesting thoughts about Wikipedia and related
+  site'
+type: wp
 wordpress_id: 1510
 ---
+
 Jaron [is a brilliant thinker (and an amazing piano player as well) Anything he writes is interesting. In this](http://www.edge.org/documents/archive/edge183.html) case he seems to be **worrying** about how much credence is being given to knowledge in Wikipedia and related types of sites. I **don’t know** if I agree with him, but it is a [great read](http://www.edge.org/documents/archive/edge183.html)!
 
 > Jaron worries about: “the way the Wikipedia has come to be regarded and used; how it’s been **elevated** to such importance so quickly. And that is part of the larger pattern of the appeal of a new **online collectivism** that is nothing less than a resurgence of the idea that the collective is all-wise, that it is desirable to have influence concentrated in a **bottleneck** that can channel the collective with the most verity and force.

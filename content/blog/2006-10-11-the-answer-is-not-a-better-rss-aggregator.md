@@ -1,12 +1,16 @@
 ---
-title: "The answer is not a better RSS Aggregator"
-subtitle: "Before I discuss this new product idea I am turning over in my mind, I want to say a few things abou..."
-category: "50"
-tags: []
-date: "2006-10-11"
-type: "wp"
+category: '50'
+date: '2006-10-11'
+subtitle: Before I discuss this new product idea I am turning over in my mind, I want
+  to say a few things abou...
+tags:
+- technology
+- blogbridge
+title: The answer is not a better RSS Aggregator
+type: wp
 wordpress_id: 1423
 ---
+
 Before I discuss this new product idea I am turning over in my mind, I want to say a few things about why I keep working in this area. I mean there are so many people working on aggregators, and after all Microsoft is building it into IE, and it’s been in FireFox for a while. Why bother?
 
 I’ve thought all along, and I still believe, that all these blog readers, or aggregators, or whatever you want to call them are **really important** but still **very primitive**. 

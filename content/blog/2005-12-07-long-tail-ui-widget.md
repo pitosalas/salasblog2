@@ -1,12 +1,16 @@
 ---
-title: "Long tail UI Widget"
-subtitle: "!Picture 8-2"
-category: "298"
-tags: []
-date: "2005-12-07"
-type: "wp"
+category: '298'
+date: '2005-12-07'
+subtitle: '!Picture 8-2'
+tags:
+- music
+- lastfm
+- long-tail
+title: Long tail UI Widget
+type: wp
 wordpress_id: 1638
 ---
+
 ![Picture 8-2](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/Picture%25208-2.png?resize=302%2C137) This is kind of **cool**. 
 
 I am playing around with the [Last.FM](http://www.last.fm/) music service. 

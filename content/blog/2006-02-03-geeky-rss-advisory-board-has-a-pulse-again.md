@@ -1,12 +1,14 @@
 ---
-title: "[GEEKY] RSS Advisory board has a pulse again!"
-subtitle: "For those of you (like me) who have lots of dependency on RSS, this is..."
-category: "538"
-tags: []
-date: "2006-02-03"
-type: "wp"
+category: '538'
+date: '2006-02-03'
+subtitle: For those of you (like me) who have lots of dependency on RSS, this is...
+tags:
+- technology
+title: '[GEEKY] RSS Advisory board has a pulse again!'
+type: wp
 wordpress_id: 1601
 ---
+
 For those of you (like me) who have [lots of dependency](http://www.blogbridge.com/) on RSS, this is exciting (geeky) news! The [RSS Advisory Board suddenly looks like it’s back alive,](http://www.rssboard.org/) with new members and a totally [new draft specification](http://www.rssboard.org/rss-draft-1).
 
 > “A new era begins today for the RSS Advisory Board, an independent organization formed in 2003 that publishes the Really Simple Syndication (RSS) specification, helps developers create RSS applications and broadens public understanding of the format.” (**from** RSS Advisory Board)

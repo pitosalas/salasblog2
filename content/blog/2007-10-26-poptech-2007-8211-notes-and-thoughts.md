@@ -1,12 +1,17 @@
 ---
-title: "Pop!Tech 2007 – notes and thoughts"
-subtitle: "My purely biased view of the most memorable presenters, quotes and associated links:"
-category: "298"
-tags: []
-date: "2007-10-26"
-type: "wp"
+category: '298'
+date: '2007-10-26'
+subtitle: 'My purely biased view of the most memorable presenters, quotes and associated
+  links:'
+tags:
+- technology
+- poptech
+- kiva
+title: Pop!Tech 2007 – notes and thoughts
+type: wp
 wordpress_id: 1185
 ---
+
 My purely biased view of the most memorable presenters, quotes and associated links:
  
 - [Kiva.org](http://www.kiva.org) uses their web site to allow you and me to make micro loans to entrepreneurs around the world. [Jessica Flannery](http://www.kiva.org/about/story/) gave a terrific and enthusiastic talk and got me to go right to the site and sign up.Here’s [Ethan Zuckerman’s exhaustive live blog of the Kiva presentation.](http://www.google.com/url?sa=t&ct=res&cd=1&url=http%3A%2F%2Fethanzuckerman.com%2Fblog%2F2007%2F10%2F18%2Fpoptech-jessica-flannery-explains-kiva%2F&ei=pDQiR8f7HJaYeomI6bIC&usg=AFQjCNHdbu5RaeIv3l29TxhV3685yf5low&sig2=dcm4bJabjW5SRm_sVr_1Bw)

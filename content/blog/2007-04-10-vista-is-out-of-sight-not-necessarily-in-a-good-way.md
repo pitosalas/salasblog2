@@ -1,12 +1,16 @@
 ---
-title: "Vista is out-of-sight (not necessarily in a good way)"
-subtitle: "I just had the pleasure of going through the initial set up of Windows Vista on a brand new HP noteb..."
-category: "538"
-tags: []
-date: "2007-04-10"
-type: "wp"
+category: '538'
+date: '2007-04-10'
+subtitle: I just had the pleasure of going through the initial set up of Windows Vista
+  on a brand new HP noteb...
+tags:
+- technology
+- windows-vista
+title: Vista is out-of-sight (not necessarily in a good way)
+type: wp
 wordpress_id: 1289
 ---
+
 I just had the pleasure of going through the initial set up of Windows Vista on a brand new HP notebook. Here are some of  my impressions:
 
 - It’s pretty, with translucent window title bars and colors. Somewhat mac-like, but really the Windows XP influence is just below the surface. Listening to Microsoft’s stories, I guess I conclude that they spent lots and lots of time on the kernel and system services and maybe less on re-inventing the user experience.

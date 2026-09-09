@@ -1,12 +1,16 @@
 ---
-title: "An actual “trial balloon”"
-subtitle: "A company that was launched at the Demo conference (which i am going to this year) is deploying in N..."
-category: "298"
-tags: []
-date: "2006-01-30"
-type: "wp"
+category: '298'
+date: '2006-01-30'
+subtitle: A company that was launched at the Demo conference (which i am going to
+  this year) is deploying in N...
+tags:
+- technology
+- personal
+title: An actual “trial balloon”
+type: wp
 wordpress_id: 1606
 ---
+
 A company that was launched at the Demo conference (which i am going to this year) is deploying in North Dakota:
 
 > “A **trial balloon** will be launched in the next few weeks to test the idea, said Schafer, who left office in 2000 after eight years as governor.” (**from** [Associated Press](http://news.yahoo.com/s/ap/20060130/ap_on_hi_te/cellular_balloons)) 

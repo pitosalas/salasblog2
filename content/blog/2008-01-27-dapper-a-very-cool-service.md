@@ -1,12 +1,16 @@
 ---
-title: "Dapper: A very cool service"
-subtitle: "It’s a little hard to explain and I didn’t manage to get it working myself yet, but still I am highl..."
-category: "538"
-tags: []
-date: "2008-01-27"
-type: "wp"
+category: '538'
+date: '2008-01-27'
+subtitle: It’s a little hard to explain and I didn’t manage to get it working myself
+  yet, but still I am highl...
+tags:
+- technology
+- business
+title: 'Dapper: A very cool service'
+type: wp
 wordpress_id: 1130
 ---
+
 It’s a little hard to explain and I didn’t manage to get it working myself yet, but still I am highly intrigued with [Dapper](http://www.dapper.net). [Dapper](http://www.dapper.net)‘s tag line is:
 > “Get more traffic to your site. Easily provide new means for people to access your content (such as RSS). You can use Dapper to create feeds, widgets, and APIs with your content and links.”
 

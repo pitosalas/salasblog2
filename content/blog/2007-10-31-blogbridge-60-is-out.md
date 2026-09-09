@@ -1,12 +1,15 @@
 ---
-title: "BlogBridge 6.0 is out"
-subtitle: "We just released BlogBridge 6.0"
-category: "50"
-tags: []
-date: "2007-10-31"
-type: "wp"
+category: '50'
+date: '2007-10-31'
+subtitle: We just released BlogBridge 6.0
+tags:
+- technology
+- blogbridge
+title: BlogBridge 6.0 is out
+type: wp
 wordpress_id: 1181
 ---
+
 We just released [BlogBridge 6.0](http://www.blogbridge.com/2007/10/19/blogbridge-60-on-our-shelves-right-now/). It’s getting [really good reviews](http://www.blogbridge.com/2007/10/29/blogbridge-60-review-by-robin-good-of-master-new-media/) so you may want to [check out what I’ve claimed is the most powerful blog reader out there.](http://www.blogbridge.com/look)
 One of the cool new things is the “What’s Hot” feature, which is kind of a built-in meme tracker, but based on your own interests. For example, below is my report for today. You can see BlogBridge does a really good job culling the stuff that I care about most. Pretty cool eh? [
 ](http://www.blogbridge.com/look)

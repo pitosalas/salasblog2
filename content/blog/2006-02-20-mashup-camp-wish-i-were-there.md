@@ -1,12 +1,16 @@
 ---
-title: "Mashup Camp: Wish I were there!"
-subtitle: "Even as we speak, Mashup Camp is going on out on the West Coast. Looks like fun! It’s another in the..."
-category: "538"
-tags: []
-date: "2006-02-20"
-type: "wp"
+category: '538'
+date: '2006-02-20'
+subtitle: Even as we speak, Mashup Camp is going on out on the West Coast. Looks like
+  fun! It’s another in the...
+tags:
+- technology
+- mashupcamp
+title: 'Mashup Camp: Wish I were there!'
+type: wp
 wordpress_id: 1590
 ---
+
 Even as we speak, Mashup Camp is going on out on the West Coast. Looks like fun! It’s another in the sequence of ad-hoc, QAD meetings/conferences/events that are popping up all over. Very cool. *Wish I was there:*
 
 [Adam Green on Mashup Camp](http://mashup.darwinianweb.com/)

@@ -1,12 +1,16 @@
 ---
-title: "TechCrunch Boston"
-subtitle: "Two nights ago, Friday, I got to go to the **TechCrunch Boston party"
-category: "538"
-tags: []
-date: "2007-11-19"
-type: "wp"
+category: '538'
+date: '2007-11-19'
+subtitle: Two nights ago, Friday, I got to go to the **TechCrunch Boston party
+tags:
+- technology
+- boston
+- techcrunch
+title: TechCrunch Boston
+type: wp
 wordpress_id: 1180
 ---
+
 Two nights ago, Friday, I got to go to the **[TechCrunch Boston party](http://www.techcrunch.com/2007/11/16/highlights-for-tonights-techcrunch-meetup-in-boston/)** at The Estate in Boston (which oddly enough doesn’t seem to have a web site.) Those of you **who know me** will be ‘surprised’ that **I had to miss** the ‘drinking-focused after party, held at an Irish pub, from 11:00pm on.
 Lately it seems like every week there’s another tech networking event in our area, which is great. This one was huge though, seemed like 500 or more people, elbow to elbow. **Great fun!**
 

@@ -1,12 +1,16 @@
 ---
-title: "I am becoming a headhunter"
-subtitle: "No, just kidding, I am **not. **Some of my best friends are headhunters and I wouldn’t want to compe..."
-category: "298"
-tags: []
-date: "2006-01-12"
-type: "wp"
+category: '298'
+date: '2006-01-12'
+subtitle: No, just kidding, I am **not. **Some of my best friends are headhunters
+  and I wouldn’t want to compe...
+tags:
+- personal
+- business
+title: I am becoming a headhunter
+type: wp
 wordpress_id: 1617
 ---
+
 No, just kidding, I am **not. **Some of my best friends are headhunters and I wouldn’t want to compete with them.** 
 
 But** I do **often** find out about people in my network who are **looking** for new positions and I try to **connect** them to those I know who are looking for new people. Recently another person emailed me saying they were looking for someone, and I realized that I might have lost track of what openings I know about.

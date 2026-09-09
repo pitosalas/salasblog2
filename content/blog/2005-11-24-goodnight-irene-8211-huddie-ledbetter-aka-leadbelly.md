@@ -1,12 +1,15 @@
 ---
-title: "Goodnight Irene – Huddie Ledbetter, aka Leadbelly"
-subtitle: "Irene goodnight, Irene goodnight"
-category: "298"
-tags: []
-date: "2005-11-24"
-type: "wp"
+category: '298'
+date: '2005-11-24'
+subtitle: Irene goodnight, Irene goodnight
+tags:
+- music
+- leadbelly
+title: Goodnight Irene – Huddie Ledbetter, aka Leadbelly
+type: wp
 wordpress_id: 1646
 ---
+
 Chorus:
 
 Irene goodnight, Irene goodnight

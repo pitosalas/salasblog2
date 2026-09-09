@@ -1,12 +1,15 @@
 ---
-title: "The Science of Large Breasts, and Other Evolutionary Verities"
-subtitle: "Hey, don’t blame me, I’m just posting a pointer to this interesting story over that the ever-legitim..."
-category: "298"
-tags: []
-date: "2007-07-09"
-type: "wp"
+category: '298'
+date: '2007-07-09'
+subtitle: Hey, don’t blame me, I’m just posting a pointer to this interesting story
+  over that the ever-legitim...
+tags:
+- science
+title: The Science of Large Breasts, and Other Evolutionary Verities
+type: wp
 wordpress_id: 1241
 ---
+
 Hey, don’t blame me, I’m just posting a pointer to this interesting story over that the ever-legitimate Freakonomics Blog.
 The depths to which people will sink to get certain words and images on their blogs, it’s just outragous. Shameful.
 

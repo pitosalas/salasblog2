@@ -1,12 +1,15 @@
 ---
-title: "“Icons: What are they good for?” — “Absolutely Nothing!”"
-subtitle: "Jeremy Wagstaff, in his regular “Loose Wires”"
-category: "298"
-tags: []
-date: "2007-06-05"
-type: "wp"
+category: '298'
+date: '2007-06-05'
+subtitle: Jeremy Wagstaff, in his regular “Loose Wires”
+tags:
+- design
+- technology
+title: '“Icons: What are they good for?” — “Absolutely Nothing!”'
+type: wp
 wordpress_id: 1260
 ---
+
 [Jeremy Wagstaff, in his regular “Loose Wires”](http://online.wsj.com/article/SB118064841957620556.html?mod=Loose+Wire) column tells some truth about icons in software:
 > “One day, probably quite soon, people are going to look at the little icon in their software program that denotes “save” and say, “What the heck is that supposed to be?” That’s because, in most cases, the icon in question is a floppy disk — one of those plastic-enclosed disks some of us still use to store and transport data. And, of course, one day there will be computer users who have no idea what a floppy disk is.” (from “[Iconoclasm, Jeremy Wagstaff, Wall Street Journal, subscription needed”](http://online.wsj.com/article/SB118064841957620556.html?mod=Loose+Wire))
 

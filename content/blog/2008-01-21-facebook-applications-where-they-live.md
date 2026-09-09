@@ -1,12 +1,16 @@
 ---
-title: "Facebook Applications: Where they live"
-subtitle: "I’ve been learning and thinking about Facebook applications, which everyone else is also writing and..."
-category: "538"
-tags: []
-date: "2008-01-21"
-type: "wp"
+category: '538'
+date: '2008-01-21'
+subtitle: I’ve been learning and thinking about Facebook applications, which everyone
+  else is also writing and...
+tags:
+- technology
+- facebook
+title: 'Facebook Applications: Where they live'
+type: wp
 wordpress_id: 1134
 ---
+
 I’ve been learning and thinking about Facebook applications, which everyone else is also writing and thinking about… I will be posting about some of the interesting facts and insights as they come up.
 This one is fairly obvious if you think about it, but it may be a useful reminder.
 

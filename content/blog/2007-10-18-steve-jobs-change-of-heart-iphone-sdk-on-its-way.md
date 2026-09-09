@@ -1,12 +1,16 @@
 ---
-title: "Steve Jobs’ Change of Heart: iPhone SDK on its Way!"
-subtitle: "Check out this post from Mashable!"
-category: "538"
-tags: []
-date: "2007-10-18"
-type: "wp"
+category: '538'
+date: '2007-10-18'
+subtitle: Check out this post from Mashable!
+tags:
+- technology
+- steve-jobs
+- iphone
+title: 'Steve Jobs’ Change of Heart: iPhone SDK on its Way!'
+type: wp
 wordpress_id: 1193
 ---
+
 Check out [this post](http://mashable.com/2007/10/17/apple-iphone-itouch-sdk/) from [Mashable!](http://mashable.com):
 > 
 

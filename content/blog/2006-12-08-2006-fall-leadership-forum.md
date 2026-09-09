@@ -1,12 +1,15 @@
 ---
-title: "2006 Fall Leadership Forum"
-subtitle: "I am at the 2006 Fall Leadership Forum in Sonoma, C..."
-category: "298"
-tags: []
-date: "2006-12-08"
-type: "wp"
+category: '298'
+date: '2006-12-08'
+subtitle: I am at the 2006 Fall Leadership Forum in Sonoma, C...
+tags:
+- technology
+- business
+title: 2006 Fall Leadership Forum
+type: wp
 wordpress_id: 1391
 ---
+
 I am at the [2006 Fall Leadership Forum](http://www.guidewiregroup.com/site/fallforum/) in Sonoma, CA. Wine is everywhere, even a free bottle in the hotel room. And all that wine and wine information is kind of squandered on me. So I won’t talk about wine, but here are some tidbits from the conference…
 
 - Check out [PicLens](http://www.piclens.com/mac/), a Safari-only (so far) plug-in. It adds a very cool photo browsing experience to sites like Flickr.

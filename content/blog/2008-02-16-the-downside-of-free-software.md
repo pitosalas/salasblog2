@@ -1,12 +1,16 @@
 ---
-title: "The downside of free software"
-subtitle: "Yesterday the [New York Times had an interesting article about our expectation that software (and we..."
-category: "298"
-tags: []
-date: "2008-02-16"
-type: "wp"
+category: '298'
+date: '2008-02-16'
+subtitle: Yesterday the [New York Times had an interesting article about our expectation
+  that software (and we...
+tags:
+- technology
+- business
+title: The downside of free software
+type: wp
 wordpress_id: 1110
 ---
+
 Yesterday the [New York Times had an interesting article about our expectation that software (and web sites and web applications) all should be free](http://www.nytimes.com/2008/02/09/technology/09free.html?_r=1&oref=slogin). I’ve [written about this before](/weblogs/archives/001008.php) so I won’t belabor it again. From the article:
 > A growing number of consumers are paying just that — nothing. This is the Internet’s latest phase: people using freely distributed applications, from e-mail and word processing programs to spreadsheets, games and financial management tools. They run on distant, massive and shared data centers, and users of the services pay with their attention to ads, not cash. (**from** [New York Times](http://www.nytimes.com/2008/02/09/technology/09free.html?_r=1&oref=slogin))
 
