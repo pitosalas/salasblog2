@@ -275,3 +275,65 @@ class TestNewMediaObject:
             result = api.metaweblog_newMediaObject("1", "user", "pass", struct)
 
         assert "url" in result
+
+
+class TestGetCategories:
+    """Regression: metaweblog_getCategories was a hardcoded ["General", "Technology"]
+    stub, unrelated to this blog's actual tags (F42 built it around free-form tags,
+    not a fixed taxonomy) — MarsEdit's category picker always showed the same two
+    values no matter what tags the blog actually used."""
+
+    def test_returns_blog_tags(self, tmp_path):
+        from salasblog2.utils import BLOG_TAGS
+
+        api = _make_api(tmp_path)
+        with patch.object(api, "_authenticate"):
+            categories = api.metaweblog_getCategories("1", "user", "pass")
+
+        assert [c["description"] for c in categories] == BLOG_TAGS
+        assert all(c["htmlUrl"].startswith("/tags/") for c in categories)
+
+
+class TestGetPostLinkAndTags:
+    """Regression: blogger_getPost/getRecentPosts never returned a `link` field
+    (MarsEdit's post permalink) and the MetaWeblog wrappers hardcoded
+    `categories: ["General"]` instead of the post's real tags."""
+
+    def test_get_post_includes_link_and_tags(self, tmp_path):
+        api = _make_api(tmp_path)
+        post_file = api.blog_dir / "my-post.md"
+        post_file.write_text(
+            "---\ntitle: My Post\ndate: '2026-09-09'\ntags: [ai, robotics]\n---\n\nBody"
+        )
+
+        with patch.object(api, "_authenticate"):
+            post = api.blogger_getPost("1", "my-post.md", "user", "pass")
+
+        assert post["link"] == "/blog/my-post.html"
+        assert post["tags"] == ["ai", "robotics"]
+
+    def test_metaweblog_get_post_uses_real_tags_as_categories(self, tmp_path):
+        api = _make_api(tmp_path)
+        post_file = api.blog_dir / "my-post.md"
+        post_file.write_text(
+            "---\ntitle: My Post\ndate: '2026-09-09'\ntags: [ai, robotics]\n---\n\nBody"
+        )
+
+        with patch.object(api, "_authenticate"):
+            post = api.metaweblog_getPost("my-post.md", "user", "pass")
+
+        assert post["categories"] == ["ai", "robotics"]
+        assert post["link"] == "/blog/my-post.html"
+
+    def test_get_recent_posts_includes_link_and_tags(self, tmp_path):
+        api = _make_api(tmp_path)
+        post_file = api.blog_dir / "my-post.md"
+        post_file.write_text(
+            "---\ntitle: My Post\ndate: '2026-09-09'\ntags: [ai]\n---\n\nBody"
+        )
+
+        with patch.object(api, "_authenticate"):
+            posts = api.blogger_getRecentPosts("1", "1", "user", "pass", 10)
+
+        assert posts[0]["link"] == "/blog/my-post.html"
+        assert posts[0]["tags"] == ["ai"]

@@ -97,6 +97,31 @@ class TestCreateExcerpt:
         result = create_excerpt("   \n  \t  ")
         assert result == ""
 
+    def test_create_excerpt_does_not_split_bold_marker(self):
+        """Regression: a truncation cut landing inside **bold** left a dangling
+        unmatched '**' — the excerpt is rendered through the markdown filter
+        (blog_list.html), so an unclosed '**' printed as literal asterisks
+        instead of being dropped. F44 manual verification found this via
+        MarsEdit-authored content that used bold/link markdown."""
+        text = "x" * 295 + "**bold text** more filler well past the smart threshold " + "y" * 400
+        result = create_excerpt(text, 300, 400)
+        assert result.count("**") % 2 == 0
+
+    def test_create_excerpt_does_not_split_markdown_link(self):
+        """Regression: same class of bug as the bold-marker case, for a truncation
+        cut landing inside [text](url)."""
+        text = "x" * 295 + "[a link](http://example.com) more filler " + "y" * 400
+        result = create_excerpt(text, 300, 400)
+        assert "[a link](http" not in result
+
+    def test_create_excerpt_does_not_split_html_tag(self):
+        """Regression: same class of bug for raw HTML content (e.g. MarsEdit
+        sending <strong>/<a> tags directly) — a cut mid-tag left a dangling
+        '<strong' that printed as literal text."""
+        text = "x" * 295 + "<strong>bold</strong> more filler well past threshold " + "y" * 400
+        result = create_excerpt(text, 300, 400)
+        assert "<strong" not in result.rstrip(".")
+
 
 class TestParseDateForSorting:
     """Test date parsing for sorting utility."""

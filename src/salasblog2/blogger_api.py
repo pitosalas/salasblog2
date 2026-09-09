@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # blogger_api — Blogger/MetaWeblog XML-RPC adapter for MarsEdit
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-08
 # Updated: 2026-09-08
 # Open Source Under MIT license
@@ -21,7 +21,12 @@ import shutil
 import base64
 from xmlrpc.client import Fault
 from salasblog2.generator import SiteGenerator
-from salasblog2.utils import create_filename_from_title
+from salasblog2.utils import (
+    BLOG_TAGS,
+    create_filename_from_title,
+    generate_url_from_filename,
+    slugify_tag,
+)
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -468,6 +473,8 @@ class BloggerAPI:
                     "content": post.content,
                     "dateCreated": post.metadata.get("date", ""),
                     "userid": username,
+                    "tags": post.metadata.get("tags", []),
+                    "link": generate_url_from_filename(md_file.stem, "blog"),
                 }
                 posts.append(post_data)
             except Exception as e:
@@ -523,6 +530,8 @@ class BloggerAPI:
                 "content": post.content,
                 "dateCreated": post.metadata.get("date", ""),
                 "userid": username,
+                "tags": post.metadata.get("tags", []),
+                "link": generate_url_from_filename(file_path.stem, "blog"),
             }
             logger.info(f"Retrieved post: {post_data['title']}")
             return post_data
@@ -665,7 +674,8 @@ class BloggerAPI:
             ],  # MetaWeblog uses 'description' not 'content'
             "dateCreated": blogger_post["dateCreated"],
             "userid": blogger_post["userid"],
-            "categories": ["General"],  # Add categories array
+            "categories": blogger_post["tags"],
+            "link": blogger_post["link"],
         }
         logger.info(
             f"Converted to MetaWeblog format: title='{metaweblog_post['title']}', description_length={len(metaweblog_post['description'])}"
@@ -691,7 +701,8 @@ class BloggerAPI:
                 ],  # MetaWeblog uses 'description' not 'content'
                 "dateCreated": post["dateCreated"],
                 "userid": post["userid"],
-                "categories": ["General"],  # Add categories array
+                "categories": post["tags"],
+                "link": post["link"],
             }
             metaweblog_posts.append(metaweblog_post)
 
@@ -709,14 +720,17 @@ class BloggerAPI:
         # Authenticate user
         self._authenticate_or_raise(username, password)
 
-        # Return a simple categories list - can be expanded later
+        # This blog uses free-form tags, not a fixed category taxonomy (see F42) — BLOG_TAGS
+        # is the same curated suggestion list the web admin's tag field offers, so MarsEdit's
+        # category picker shows the same suggestions rather than a hardcoded, unrelated pair.
         categories = [
-            {"description": "General", "htmlUrl": "/blog/", "rssUrl": "/blog/rss.xml"},
             {
-                "description": "Technology",
-                "htmlUrl": "/blog/",
+                "categoryId": tag,
+                "description": tag,
+                "htmlUrl": f"/tags/{slugify_tag(tag)}/index.html",
                 "rssUrl": "/blog/rss.xml",
-            },
+            }
+            for tag in BLOG_TAGS
         ]
         logger.info(f"Returning {len(categories)} categories")
         return categories

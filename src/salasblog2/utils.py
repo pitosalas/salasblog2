@@ -83,7 +83,22 @@ def create_excerpt_with_info(content: str, max_length: int = None, smart_thresho
     if len(clean_content) <= max_length + smart_threshold:
         return clean_content, False
     
-    return clean_content[:max_length] + '...', True
+    return _trim_dangling_markup(clean_content[:max_length]) + '...', True
+
+
+def _trim_dangling_markup(text: str) -> str:
+    """Drop a trailing markdown/HTML token left half-open by character-count truncation.
+
+    Excerpts are rendered through the markdown processor (see blog_list.html's
+    `| markdown` filter), so a cut that lands mid-`**bold**`, mid-`[link](url)`, or
+    mid-`<tag>` leaves an unmatched marker that prints as literal `**`/`[`/`<`
+    characters instead of being silently ignored by the markdown parser.
+    """
+    text = re.sub(r'<[^>]*$', '', text)  # unclosed HTML tag
+    text = re.sub(r'!?\[[^\]]*(\]\([^)]*)?$', '', text)  # unclosed markdown link/image
+    if text.count('**') % 2 == 1:
+        text = text[: text.rfind('**')]
+    return text
 
 
 def create_excerpt(content: str, max_length: int = None, smart_threshold: int = None) -> str:
