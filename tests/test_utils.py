@@ -4,8 +4,7 @@ Includes all doctest examples migrated to pytest format.
 Run with: uv run pytest tests/test_utils.py -v
 """
 
-import pytest
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 
 from salasblog2.utils import (

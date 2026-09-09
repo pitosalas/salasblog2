@@ -1,5 +1,5 @@
 ---
-version: "1.0"
+version: "1.1"
 generated: "2026-09-08"
 ---
 
@@ -52,8 +52,15 @@ This is the *adapter pattern* in its simplest form: one canonical
 implementation, two thin protocol-shaped faces on top of it. The read-only
 `metaweblog_get*` methods go a step further and *reshape the response*,
 since MetaWeblog's field names differ from Blogger's (`description` vs.
-`content`, plus an always-present `categories` array Blogger doesn't
-return).
+`content`, plus a `categories` array Blogger doesn't return — populated
+from each post's real frontmatter `tags`, not a placeholder). Both
+`blogger_getPost`/`blogger_getRecentPosts` also include a `link` field —
+the post's live permalink — which MarsEdit's Link field reads directly.
+This started life as a hardcoded `["General", "Technology"]` stub returned
+by `metaweblog_getCategories` regardless of what tags a post actually had
+(this blog doesn't use a fixed category taxonomy — see F42 — so those two
+values meant nothing); found and fixed during F44's manual MarsEdit
+verification, alongside the missing `link` field.
 
 ## Content parsing: string or struct, decide at the door
 
@@ -231,7 +238,15 @@ context (which post, which credential) is still available.
   reconciled only by `_backup_to_volume()`'s one-way copy. Routing this
   module through the same volume-aware helper `server.py` already has
   would remove an entire class of "why does MarsEdit see stale content"
-  bug.
+  bug. **Confirmed live**, not just theoretical: a user reported MarsEdit
+  showing a stale post even after refreshing. A post edited via the web
+  admin only ever reaches `/data/content`, invisible to this module's reads
+  of `/app/content/blog` until the next scheduled GitHub sync; a container
+  restart between a MarsEdit edit and the next MarsEdit read reverts
+  `/app/content` to the last-pushed commit via `startup.sh`'s
+  `git checkout -f`, while `/data/content` (and the live site) keep the
+  newer version. Tracked as a pending chore (`04-tasks/chores.md`), not yet
+  fixed.
 - **The `try/except Exception: logger.error(...); # Don't raise` pattern
   around regeneration appears three times** (create, edit, delete) with
   identical shape. A small context manager or decorator
@@ -246,7 +261,11 @@ context (which post, which credential) is still available.
   sends in modern use, this fallback path may be closer to dead code than
   load-bearing logic — worth auditing against real traffic before investing
   further in it.
-- **The module docstring says "Windows Live Writer" first**, a client that
-  hasn't been relevant in over a decade; the module's actual, current
-  purpose is MarsEdit support. A one-line update would save a future reader
-  a moment of "wait, is this still used?"
+- **Excerpts on listing/home pages are generated independently of this
+  module** (`utils.py`'s `create_excerpt_with_info()`), by collapsing a
+  post's raw markdown into one line and truncating by character count. Two
+  related bugs surfaced during the same MarsEdit verification pass —
+  truncation cutting mid-`**bold**`/`[link](url)`/`<tag>`, and collapsing
+  newlines before truncating turning a correctly-formatted `## Heading`
+  into literal `##` text — both now fixed, but worth noting here since a
+  MarsEdit-authored post is exactly what exposed them.

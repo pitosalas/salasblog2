@@ -280,7 +280,7 @@ def _parse_malformed_frontmatter(
                         "raw_content": stripped,
                         "html_content": process_markdown_to_html(stripped),
                     }
-                except:
+                except Exception:
                     pass
 
         # Fallback: extract filename as title and use content as-is
@@ -503,16 +503,16 @@ def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
 
     # Add highlights if available
     if raindrop.get("highlights"):
-        content += f"\n**Highlights:**\n"
+        content += "\n**Highlights:**\n"
         for highlight in raindrop["highlights"]:
             content += f"- {highlight}\n"
 
     # Add important marker
     if raindrop.get("important"):
-        content += f"\n⭐ **Marked as Important**\n"
+        content += "\n⭐ **Marked as Important**\n"
 
     # Add broken link warning
     if raindrop.get("broken"):
-        content += f"\n⚠️ **Warning: Link may be broken**\n"
+        content += "\n⚠️ **Warning: Link may be broken**\n"
 
     return content

@@ -124,7 +124,13 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 ## Open
 
-**F44 — Fix the MetaWeblog/XML-RPC Implementation**: 5 of 6 tasks done (see `04-tasks/notdone/TF44-fix-metaweblog-xmlrpc.md`). Only **TF44.4 remains** — manual end-to-end verification against real MarsEdit. Blocked until this session's work is committed, pushed, and redeployed (see Deployment section below — nothing from this session is live yet).
+**F44 — Fix the MetaWeblog/XML-RPC Implementation**: 5 of 6 tasks done (see `04-tasks/notdone/TF44-fix-metaweblog-xmlrpc.md`). **TF44.4** (manual MarsEdit verification) is in progress: refresh, edit, and image upload confirmed working against production. Root cause of refresh failing was MarsEdit's endpoint being configured as `http://` — Fly's `force_https` redirect turns a POST into a GET on 301, dropping the XML-RPC body; fixed by pointing MarsEdit at `https://salas.com/xmlrpc` (client-side config, not a server bug). Still to verify: create, delete, and a title/content with `&`/`<`/`>`.
+
+Manual testing also surfaced several real bugs, now fixed and committed (see `04-tasks/chores.md`): `metaweblog_getCategories` hardcoded stub → now returns `BLOG_TAGS`; missing `link`/real-tags-as-`categories` fields on `getPost`/`getRecentPosts`; excerpt truncation breaking markdown formatting (mid-token cuts and collapsed-newline block markers both printed raw markdown/HTML characters instead of rendering); home page missing the "Read more" link on truncated excerpts.
+
+**Not yet fixed, proposed**: `BloggerAPI` doesn't follow the volume-first content-directory pattern the rest of the codebase uses (`get_content_directory()` in `server.py`, `SiteGenerator` in `generator.py`) — it reads/writes `/app/content/blog` instead of preferring `/data/content`. This is the likely cause of a user-reported bug: MarsEdit showing a stale post even after refresh (a web-admin edit, or a container restart between a MarsEdit edit and the next read, orphans `/app/content` from the volume). See `04-tasks/chores.md`'s last item for the fix scope. Waiting on approval before implementing.
+
+**This session's commits (categories/link/excerpt/Read-more fixes) are pushed to GitHub but not yet deployed** — see Deployment section below.
 
 **Other open features** (`03-features/notdone/`, no dependency on each other or on F44):
 
@@ -147,7 +153,7 @@ F41 was reconciled this session against F42 and F44 (TF41.2, TF41.3, TF41.10 rew
 ## Test status
 
 ```
-501 passed, 2 skipped, 1 failed, 33 deselected, 3 warnings
+537 passed, 11 skipped, 1 failed, 3 warnings
 ```
 
 The 1 failure (`test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env`) is pre-existing and unrelated to this session's work (confirmed to fail identically on `main` before any of this session's changes) — raindrop.py cache-loading test isolation issue, F29/F30 territory. Skipped tests require a live server (`https://salasblog2.fly.dev`).

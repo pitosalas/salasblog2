@@ -41,3 +41,21 @@ Replaced the hand-rolled `ElementTree` request parser and string-built response/
 
 ### Deploy-pipeline gotcha (rediscovered, already documented at `02-doc/current.md`'s Deployment section)
 `startup.sh` runs `git checkout -f -B main origin/main` on every boot (since `GIT_TOKEN` is set in production), overwriting whatever `COPY . .` baked into the Docker image with the last-pushed GitHub `main` HEAD. Three deploys this session silently kept serving pre-session code because nothing had been committed/pushed yet — confirmed via `fly ssh console` that the running container was on commit `e909c27` (the pre-session HEAD) despite fresh-looking deploys. **Commit and push are a hard requirement before `make deploy` actually ships anything**, not just good practice.
+
+---
+
+## Session: 2026-09-08 (continued) — TF44.4 manual MarsEdit verification, diagnostic logging, real bugs found
+
+### Diagnosed and fixed: MarsEdit "Refresh Blog" → "XMLRPC Response Parsing Failed: (null)"
+Added diagnostic logging to `xmlrpc_endpoint()` in `server.py` (request user-agent, result repr before marshalling, `logger.exception` instead of `logger.error` for full tracebacks, and — genuinely load-bearing, kept permanently — wrapped `create_xmlrpc_response()` in its own try/except so a marshalling failure can't crash uncaught into an HTML 500 page). The logging showed every refresh attempt landing as `GET /xmlrpc`, never `POST`. Root cause: MarsEdit's endpoint was configured as `http://salas.com/xmlrpc`; `fly.toml`'s `force_https = true` makes Fly's edge return a 301 to the `https://` URL, and MarsEdit's HTTP client replays a 301 on a POST as a GET, silently dropping the XML-RPC body — confirmed with `curl -X POST http://salas.com/xmlrpc`. Not a server bug; fixed by pointing MarsEdit at `https://salas.com/xmlrpc`. Refresh, edit, and image upload all confirmed working against production afterward.
+
+### Real bugs found during manual verification, fixed
+- `metaweblog_getCategories` was a hardcoded `["General", "Technology"]` stub, unrelated to this blog's actual tags (F42 built it around free-form tags, not a fixed taxonomy) — now returns `BLOG_TAGS`.
+- `blogger_getPost`/`blogger_getRecentPosts` never returned a `link` (permalink) field, so MarsEdit's Link field was always empty; their MetaWeblog wrappers also hardcoded `categories: ["General"]` instead of each post's real tags. Both fixed.
+- `create_excerpt_with_info()` (`utils.py`) truncated by raw character count, which could cut mid-`**bold**`, mid-`[link](url)`, or mid-`<tag>`, leaving a dangling marker that printed literally instead of being dropped — added `_trim_dangling_markup()`.
+- Same function also collapsed all newlines into spaces *before* truncating, so a `## Heading`/`> quote`/`* bullet` written correctly on its own line in MarsEdit ended up mid-sentence, where markdown no longer recognizes the marker as a block construct and prints it literally (confirmed with the user: the source markdown was correctly formatted; the bug was entirely server-side). Added `_strip_block_markdown_markers()`, applied per-line before collapsing.
+- `home.html` had no "Read more" link for a truncated excerpt — `blog_list.html` already had one (conditional on `post.is_truncated`), `home.html` didn't. Added, matching the existing pattern.
+- All logged in `04-tasks/chores.md` (retroactively, since they weren't logged as chores at fix time) along with one still-pending: `BloggerAPI` doesn't follow the volume-first content-directory pattern `get_content_directory()`/`SiteGenerator` already use, which is the likely cause of a separate user-reported bug (MarsEdit showing a stale post even after refresh). Proposed, not yet approved/implemented.
+
+### Two commits pushed this session (not yet deployed)
+`9e08d2b` (categories/link/excerpt-truncation fixes) and `2275fc6` (block-markdown-marker stripping + home page Read more link). `fly.toml`'s `EXCERPT_LENGTH`/`EXCERPT_SMART_THRESHOLD` were also manually retuned from 300/400 to 700/300 during this session (by the user, not via a commit I authored, but included in `9e08d2b`).
