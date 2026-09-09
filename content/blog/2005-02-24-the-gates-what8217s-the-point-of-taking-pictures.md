@@ -2,7 +2,7 @@
 title: "The Gates: What’s the point of taking pictures?"
 subtitle: "As I mentioned a few days ago, I went to see “The Gates” – Environmental art by Christo"
 category: "298"
-tags: []
+tags: ["personal"]
 date: "2005-02-24"
 type: "wp"
 wordpress_id: 1842

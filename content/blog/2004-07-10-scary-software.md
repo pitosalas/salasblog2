@@ -2,7 +2,7 @@
 title: "Scary Software"
 subtitle: "**I love those security guys** just as much as the next guy but this certificate crazyness is ridicu..."
 category: "538"
-tags: []
+tags: ["technology"]
 date: "2004-07-10"
 type: "wp"
 wordpress_id: 1968

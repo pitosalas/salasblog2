@@ -2,7 +2,7 @@
 title: "Simple 8-bit Assembler Simulator in Javascript"
 subtitle: "Simple 8-bit Assembler Simulator in Javascript ..."
 category: "1"
-tags: ["2403", "987", "1033", "2404", "2079"]
+tags: ["programming", "technology", "education"]
 date: "2023-01-13"
 type: "wp"
 wordpress_id: 4360

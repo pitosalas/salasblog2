@@ -2,7 +2,7 @@
 title: "[SEMI GEEKY] Blogs That Matter: really interesting"
 subtitle: "From LifeHacker (o..."
 category: "51"
-tags: []
+tags: ["technology"]
 date: "2006-10-29"
 type: "wp"
 wordpress_id: 1410

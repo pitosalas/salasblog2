@@ -2,7 +2,7 @@
 title: "Programming Esoterica"
 subtitle: "As I delve into programming esoterica, in the past I’ve written down little handy items of informati..."
 category: "422"
-tags: []
+tags: ["programming"]
 date: "2004-05-08"
 type: "wp"
 wordpress_id: 2014

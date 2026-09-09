@@ -2,7 +2,7 @@
 title: "I want RSS to disappear."
 subtitle: "**I want RSS to disappear. **The question was posed, “What do users want from RSS”? I thought long a..."
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-01-14"
 type: "wp"
 wordpress_id: 2096

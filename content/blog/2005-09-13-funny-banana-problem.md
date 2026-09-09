@@ -2,7 +2,7 @@
 title: "Funny: Banana Problem"
 subtitle: "This is from a dictionary:"
 category: "298"
-tags: []
+tags: ["programming"]
 date: "2005-09-13"
 type: "wp"
 wordpress_id: 1698

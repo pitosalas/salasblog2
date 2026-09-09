@@ -2,7 +2,7 @@
 title: "Web 2.0, I knew ye well. Here comes Web 2.5"
 subtitle: "Check out Liam Breck’s new blog."
 category: "538"
-tags: []
+tags: ["technology"]
 date: "2005-12-05"
 type: "wp"
 wordpress_id: 1640

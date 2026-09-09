@@ -2,7 +2,7 @@
 title: "PID controller | Wikiwand"
 subtitle: "PID controller | Wikiwand –A proportional–integral–d..."
 category: "1"
-tags: ["2226", "1033", "1620", "1755"]
+tags: ["robotics", "technology"]
 date: "2022-08-10"
 type: "wp"
 wordpress_id: 4036

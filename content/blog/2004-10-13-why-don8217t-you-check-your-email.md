@@ -2,7 +2,7 @@
 title: "Why don’t you check your email?"
 subtitle: "A very interesting piece"
 category: "538"
-tags: []
+tags: ["technology"]
 date: "2004-10-13"
 type: "wp"
 wordpress_id: 1927

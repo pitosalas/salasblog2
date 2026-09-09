@@ -2,7 +2,7 @@
 title: "The death of spam?"
 subtitle: "My friend Paul English has written an interesting bit about"
 category: "298"
-tags: []
+tags: ["technology"]
 date: "2005-08-06"
 type: "wp"
 wordpress_id: 1722

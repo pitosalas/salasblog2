@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 5
+# Version: 6
 # Created: 2026-09-09
 # Updated: 2026-09-09
 # Open Source Under MIT license
@@ -39,6 +39,11 @@ BLOG_TAGS = [
     "politics",
     "business",
     "education",
+    "curacao",
+    "boston",
+    "brandeis",
+    "jewish",
+    "arlington",
 ]
 
 

@@ -2,7 +2,7 @@
 title: "Switcher’s Log, Part 5: Man does this machine scream."
 subtitle: "For those who are following this narrative, this is a continuing narrative of my experiences after h..."
 category: "538"
-tags: []
+tags: ["technology", "personal"]
 date: "2005-03-09"
 type: "wp"
 wordpress_id: 1831

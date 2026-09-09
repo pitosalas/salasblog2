@@ -2,7 +2,7 @@
 title: "Daily ChatGPT"
 subtitle: "I have been using ChatGPT on a daily basis. Not for joking or playing but for work. It is like a sup..."
 category: "1"
-tags: []
+tags: ["ai", "personal"]
 date: "2023-05-19"
 type: "wp"
 wordpress_id: 4487

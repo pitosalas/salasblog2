@@ -2,7 +2,7 @@
 title: "Is desktop search over? 20 years late!"
 subtitle: 'People are really crowing about Vista’s new "instant serach" and how wonderful it is and better than...'
 category: "538"
-tags: []
+tags: ["technology"]
 date: "2007-02-17"
 type: "wp"
 wordpress_id: 1329

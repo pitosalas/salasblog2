@@ -2,7 +2,7 @@
 title: "What if we all vote on the truth, part 3"
 subtitle: "Just a final follow up on this interesting story"
 category: "298"
-tags: []
+tags: ["technology"]
 date: "2005-06-21"
 type: "wp"
 wordpress_id: 1750

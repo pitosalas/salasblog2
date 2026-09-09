@@ -2,7 +2,7 @@
 title: "BlogBridge Beta, part deux"
 subtitle: "I shoulda known…"
 category: "50"
-tags: []
+tags: ["business", "programming"]
 date: "2004-06-12"
 type: "wp"
 wordpress_id: 1982

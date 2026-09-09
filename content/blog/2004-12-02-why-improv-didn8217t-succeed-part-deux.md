@@ -2,7 +2,7 @@
 title: "Why Improv didn’t succeed, Part Deux"
 subtitle: "Seems like a dredged up some “old” (you know who you are) **Improv fans **with my earlier posting"
 category: "1"
-tags: []
+tags: ["business", "personal"]
 date: "2004-12-02"
 type: "wp"
 wordpress_id: 1903

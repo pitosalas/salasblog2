@@ -2,7 +2,7 @@
 title: "Yahoo IM Spam"
 subtitle: "I have IM accounts on Yahoo, AOL and MSN. Actually I use the AOL by far the most, but I have an occa..."
 category: "538"
-tags: []
+tags: ["technology"]
 date: "2005-06-23"
 type: "wp"
 wordpress_id: 1749

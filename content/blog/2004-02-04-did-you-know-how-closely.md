@@ -2,7 +2,7 @@
 title: "Did you know how closely"
 subtitle: "**Did you know how closely you were being watched by your TIVO? **A by-product of the Janet Jackson ..."
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-02-04"
 type: "wp"
 wordpress_id: 2081

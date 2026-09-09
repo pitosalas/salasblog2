@@ -2,7 +2,7 @@
 title: "Mac OSX not easy to use!"
 subtitle: "Years ago I was a hardcore Mac fanatic. I was one of the creators of a long-gone early Macintosh app..."
 category: "538"
-tags: []
+tags: ["technology", "personal"]
 date: "2004-07-22"
 type: "wp"
 wordpress_id: 1963

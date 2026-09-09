@@ -2,7 +2,7 @@
 title: "BlogBridge Major architectural progress"
 subtitle: "We made some major new progress since the last update."
 category: "50"
-tags: []
+tags: ["business", "programming"]
 date: "2004-03-11"
 type: "wp"
 wordpress_id: 2048

@@ -2,7 +2,7 @@
 title: "RSS/Atom: An idea whose time"
 subtitle: "**RSS/Atom: An idea whose time has come. **Dave Winer"
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-03-10"
 type: "wp"
 wordpress_id: 2050

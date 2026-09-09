@@ -2,7 +2,7 @@
 title: "Push: An interesting looking new conference"
 subtitle: "I met Cecily Sommers at the Pop!Tech conference earlier this year. She heads up a new conference tha..."
 category: "298"
-tags: []
+tags: ["business"]
 date: "2006-01-20"
 type: "wp"
 wordpress_id: 1612

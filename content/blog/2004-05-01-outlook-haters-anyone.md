@@ -2,7 +2,7 @@
 title: "Outlook Haters, anyone?"
 subtitle: "David Coursey writes an interesting bit"
 category: "538"
-tags: []
+tags: ["technology"]
 date: "2004-05-01"
 type: "wp"
 wordpress_id: 2020

@@ -2,7 +2,7 @@
 title: "Announcing… The BlogBridge Service ;-)"
 subtitle: "![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/hdrservi..."
 category: "50"
-tags: []
+tags: ["business", "technology"]
 date: "2004-07-24"
 type: "wp"
 wordpress_id: 1961

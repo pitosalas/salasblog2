@@ -2,7 +2,7 @@
 title: "Key Computing’s Xkey: (Demo 2004"
 subtitle: "**Key Computing’s Xkey:**** (Demo 2004 Series – 3) **By my ..."
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-02-26"
 type: "wp"
 wordpress_id: 2068

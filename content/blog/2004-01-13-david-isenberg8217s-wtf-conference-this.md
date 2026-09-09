@@ -2,7 +2,7 @@
 title: "David Isenberg’s WTF Conference: This"
 subtitle: "**David Isenberg’s WTF Conference:** Th..."
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-01-13"
 type: "wp"
 wordpress_id: 2098

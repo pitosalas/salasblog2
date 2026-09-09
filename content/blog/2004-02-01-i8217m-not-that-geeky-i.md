@@ -2,7 +2,7 @@
 title: "I’m not *that* geeky: I"
 subtitle: "**I’m not *that* geeky: **I am totally fascinated and entralled with what’s going on on Mars right n..."
 category: "1"
-tags: []
+tags: ["personal", "science"]
 date: "2004-02-01"
 type: "wp"
 wordpress_id: 2084

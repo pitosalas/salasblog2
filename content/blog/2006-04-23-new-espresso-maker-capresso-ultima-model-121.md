@@ -2,7 +2,7 @@
 title: "New espresso maker: Capresso Ultima (Model 121)"
 subtitle: "I’m a big coffee drinker, ok? I’ve been putting my Keurig"
 category: "298"
-tags: []
+tags: ["food"]
 date: "2006-04-23"
 type: "wp"
 wordpress_id: 1549

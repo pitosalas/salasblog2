@@ -2,7 +2,7 @@
 title: "Agent Based Modeling"
 subtitle: "And now for something completely different. I was reading this book: “It’s Alive"
 category: "538"
-tags: []
+tags: ["science", "technology"]
 date: "2004-09-08"
 type: "wp"
 wordpress_id: 1943

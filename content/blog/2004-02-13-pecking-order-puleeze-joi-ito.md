@@ -2,7 +2,7 @@
 title: "Pecking order? Puleeze! Joi Ito"
 subtitle: "**Pecking order? Puleeze! **Joi Ito writes"
 category: "1"
-tags: []
+tags: ["personal"]
 date: "2004-02-13"
 type: "wp"
 wordpress_id: 2075

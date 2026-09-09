@@ -2,7 +2,7 @@
 title: "IMHO: I started and stopped"
 subtitle: "**IMHO: **I **started and stopped** writing this two days ago, mostly because I didn’t feel like I k..."
 category: "1"
-tags: []
+tags: ["personal"]
 date: "2004-02-07"
 type: "wp"
 wordpress_id: 2078

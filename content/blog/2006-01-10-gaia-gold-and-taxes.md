@@ -2,7 +2,7 @@
 title: "Gaia Gold and Taxes?"
 subtitle: "I recently had occasion to learn all about a really cool MMORPG"
 category: "298"
-tags: []
+tags: ["technology"]
 date: "2006-01-10"
 type: "wp"
 wordpress_id: 1618

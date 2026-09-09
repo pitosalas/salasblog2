@@ -2,7 +2,7 @@
 title: "Musings on Open Source licensing"
 subtitle: "As I continue to make rapid progress on BlogBridge, now with a signifi..."
 category: "50"
-tags: []
+tags: ["business", "programming"]
 date: "2004-05-28"
 type: "wp"
 wordpress_id: 1993

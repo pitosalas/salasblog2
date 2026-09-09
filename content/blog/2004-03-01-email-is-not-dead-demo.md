@@ -2,7 +2,7 @@
 title: "Email is not dead (Demo"
 subtitle: "**Email is not dead (Demo 2004 Series – 7) **I continue to be an avid follower of what’s going on in..."
 category: "1"
-tags: []
+tags: ["technology", "business"]
 date: "2004-03-01"
 type: "wp"
 wordpress_id: 2062

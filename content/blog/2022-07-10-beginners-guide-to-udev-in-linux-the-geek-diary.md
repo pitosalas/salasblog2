@@ -2,7 +2,7 @@
 title: "Beginners Guide to Udev in Linux – The Geek Diary"
 subtitle: "Beginners Guide to Udev in Linux – The Geek Diary"
 category: "1"
-tags: ["604", "1221", "1387", "1755", "2194", "2195"]
+tags: ["programming", "technology"]
 date: "2022-07-10"
 type: "wp"
 wordpress_id: 3950

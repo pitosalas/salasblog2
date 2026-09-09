@@ -2,7 +2,7 @@
 title: "Well, is it Dr. Dean"
 subtitle: "**Well, is it Dr. Dean or Governor Dean? **It’s funny to me when people try to build up Howard Dean’..."
 category: "1"
-tags: []
+tags: ["politics"]
 date: "2004-01-08"
 type: "wp"
 wordpress_id: 2103

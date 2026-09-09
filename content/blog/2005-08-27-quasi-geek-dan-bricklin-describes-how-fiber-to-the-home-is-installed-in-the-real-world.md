@@ -2,7 +2,7 @@
 title: "[QUASI-GEEK] Dan Bricklin describes how fiber to the home is installed in the real world"
 subtitle: "At a level of detail **only a geek could love** reading (or bother **writing**), Dan Bricklin gives ..."
 category: "298"
-tags: []
+tags: ["technology"]
 date: "2005-08-27"
 type: "wp"
 wordpress_id: 1708

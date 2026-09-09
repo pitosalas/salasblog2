@@ -2,7 +2,7 @@
 title: "Search Innovations (Demo 2004 Series"
 subtitle: "**Search Innovations (Demo 2004 Series – 2) – **Two interesting Seach products were showcased: [Grok..."
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-02-25"
 type: "wp"
 wordpress_id: 2071

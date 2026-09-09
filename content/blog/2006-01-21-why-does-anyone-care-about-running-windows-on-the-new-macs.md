@@ -2,7 +2,7 @@
 title: "Why does anyone care about running Windows on the new Macs?"
 subtitle: "When you’re a blogger it’s sometimes a **strain** to say something **new** about a topic that’s [gon..."
 category: "298"
-tags: []
+tags: ["technology"]
 date: "2006-01-21"
 type: "wp"
 wordpress_id: 1611

@@ -2,7 +2,7 @@
 title: "What’s a blog anyway?"
 subtitle: "I am away from home, at my home in Curacao for a reunion of Salas folks from around the world. I saw..."
 category: "51"
-tags: []
+tags: ["personal", "curacao"]
 date: "2004-06-18"
 type: "wp"
 wordpress_id: 1980

@@ -2,7 +2,7 @@
 title: "BlogBridge Installation and Deployment"
 subtitle: "Working on installation and deployment features. We will be using Java Web Start for this. We have n..."
 category: "50"
-tags: []
+tags: ["business", "programming"]
 date: "2004-02-25"
 type: "wp"
 wordpress_id: 2070

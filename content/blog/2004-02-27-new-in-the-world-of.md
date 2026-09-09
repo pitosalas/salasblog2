@@ -2,7 +2,7 @@
 title: "New in the world of"
 subtitle: "**New in the world of Digital Photography (Demo 2004 Series – 4) **The beat goes on in the world of ..."
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-02-27"
 type: "wp"
 wordpress_id: 2067

@@ -2,7 +2,7 @@
 title: "Great Read: Angels and Demons – Dan Brown"
 subtitle: "By sheer coincidence, the day before leaving for Spain, two people independently mentioned to me tha..."
 category: "298"
-tags: []
+tags: ["books"]
 date: "2004-04-27"
 type: "wp"
 wordpress_id: 2024

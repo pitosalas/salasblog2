@@ -2,7 +2,7 @@
 title: "Scoble, Technorati and Bloglines (and Dow Jones and Nasdaq AGAIN different?! What’s going on?)"
 subtitle: "**Scoble** has been really picking on Te..."
 category: "51"
-tags: []
+tags: ["technology"]
 date: "2005-07-19"
 type: "wp"
 wordpress_id: 1733

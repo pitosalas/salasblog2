@@ -2,7 +2,7 @@
 title: "[SEMI-GEEK] Are activation emails needed – and if so – how do we convince you they aren’t spam?"
 subtitle: "Here’s an odd but important problem, at least for us here at BlogBridge."
 category: "50"
-tags: []
+tags: ["business", "technology"]
 date: "2007-02-22"
 type: "wp"
 wordpress_id: 1324

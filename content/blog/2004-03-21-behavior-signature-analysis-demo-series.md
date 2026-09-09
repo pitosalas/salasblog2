@@ -2,7 +2,7 @@
 title: "Behavior Signature Analysis (Demo Series"
 subtitle: "**Behavior Signature Analysis (Demo Series 10) **This is a little arcane but I thought it was an int..."
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-03-21"
 type: "wp"
 wordpress_id: 2042

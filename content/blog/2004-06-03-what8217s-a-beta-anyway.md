@@ -2,7 +2,7 @@
 title: "What’s a beta, anyway?"
 subtitle: "BlogBridge is getting ready to go into a limited beta test. The purpose..."
 category: "50"
-tags: []
+tags: ["business", "technology"]
 date: "2004-06-03"
 type: "wp"
 wordpress_id: 1989

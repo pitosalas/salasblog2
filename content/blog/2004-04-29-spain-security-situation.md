@@ -2,7 +2,7 @@
 title: "Spain Security Situation"
 subtitle: "Several people asked me about what the security situation in Spain felt like. I have to admit it did..."
 category: "410"
-tags: []
+tags: ["travel", "personal"]
 date: "2004-04-29"
 type: "wp"
 wordpress_id: 2022

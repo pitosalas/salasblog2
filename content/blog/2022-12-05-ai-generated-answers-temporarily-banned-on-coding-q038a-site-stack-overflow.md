@@ -2,7 +2,7 @@
 title: "AI-generated answers temporarily banned on coding Q&A site Stack Overflow"
 subtitle: "AI-generated answers temporarily banned on coding Q&A site Stack Overflow"
 category: "1"
-tags: ["2343", "2340", "2341", "2342", "2339", "1973"]
+tags: ["ai", "technology"]
 date: "2022-12-05"
 type: "wp"
 wordpress_id: 4274

@@ -2,7 +2,7 @@
 title: "Office Live: Why am I not surprised?"
 subtitle: "Have you heard how Microsoft is shipping Windows **Live** and Office **Live** and **this-live** and ..."
 category: "298"
-tags: []
+tags: ["technology"]
 date: "2006-03-23"
 type: "wp"
 wordpress_id: 1573

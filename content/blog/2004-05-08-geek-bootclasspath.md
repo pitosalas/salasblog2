@@ -2,7 +2,7 @@
 title: "[GEEK] Bootclasspath"
 subtitle: "In order to debug a hairy problem, I need to step into some Java system"
 category: "422"
-tags: []
+tags: ["programming", "technology"]
 date: "2004-05-08"
 type: "wp"
 wordpress_id: 2013

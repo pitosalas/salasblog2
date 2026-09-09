@@ -2,7 +2,7 @@
 title: "Can you change the license of an Open Source product?"
 subtitle: "**This puzzled me. **Once we released the BlogBridge source code under ..."
 category: "50"
-tags: []
+tags: ["business", "programming"]
 date: "2004-08-05"
 type: "wp"
 wordpress_id: 1954

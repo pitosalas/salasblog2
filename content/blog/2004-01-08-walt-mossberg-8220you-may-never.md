@@ -2,7 +2,7 @@
 title: "Walt Mossberg: “You may never"
 subtitle: "**Walt Mossberg:"
 category: "1"
-tags: []
+tags: ["technology"]
 date: "2004-01-08"
 type: "wp"
 wordpress_id: 2102

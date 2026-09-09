@@ -2,7 +2,7 @@
 title: "[OOPSLA] Where Wikis come from"
 subtitle: "I was lucky enough to meet and spend some time with **Ward Cunningham **"
 category: "538"
-tags: []
+tags: ["technology"]
 date: "2004-11-06"
 type: "wp"
 wordpress_id: 1917
