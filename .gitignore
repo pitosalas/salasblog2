@@ -63,6 +63,7 @@ temp/
 .tmp
 
 # Environment variables
+.env
 .env.local
 .env.production
 

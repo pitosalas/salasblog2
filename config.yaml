@@ -22,3 +22,6 @@ propose:
 
 drafts:
   claude_model: claude-sonnet-4-6
+
+tag_cleanup:
+  batch_size: 500

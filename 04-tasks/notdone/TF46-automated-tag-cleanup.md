@@ -1,0 +1,164 @@
+# TF46 Automated Tag Cleanup for Full Blog Corpus
+
+**Date Created:** 2026-09-09
+
+## TF46.0 — Post-selection logic
+
+**Status**: done
+
+**Description**: Pure function (new `src/salasblog2/tag_cleanup.py`) that
+scans `content/blog/*.md` frontmatter and returns posts needing work: zero
+tags, or at least one numeric tag (reuse the existing `tag.isdigit()`
+convention already used elsewhere for tag badges/ranking). Supports a
+`limit` parameter for batch size. No saved progress state — re-scanning
+after a post is fixed naturally excludes it.
+
+Considered generalizing selection to sweep the whole corpus regardless of
+tag state (an offset-based `select_posts`), but reverted: the user's actual
+ask (additive-only, "don't remove pre-existing tags") is about not losing a
+post's real tags while fixing its numeric junk, not about re-visiting posts
+that are already fine. `needs_tag_cleanup`/`select_posts_needing_cleanup`
+already self-track correctly for that — a post drops out of the query the
+moment it's fixed, no offset or progress file needed - and remain the sole
+selector.
+
+**Test**: fixture posts covering empty tags, numeric tags, mixed
+numeric+real tags, already-clean tags, and the `limit` cutoff.
+
+## TF46.1 — Tag-proposal extraction and validation
+
+**Status**: done — revised from the original API-based design
+
+**Description**: Originally planned as a Claude API call (`anthropic`
+client, same pattern as `draft_generator.py`). Dropped after discovering
+this local `ANTHROPIC_API_KEY` draws from a separate pay-as-you-go credit
+balance, not the Claude Code subscription already in use — no way to bill a
+standalone API key against that subscription.
+
+Revised design: `summarize_post()` extracts title/current tags/excerpt
+(no API call). Tag decisions are then made directly by Claude acting in an
+assisted session (or a human), reading the summaries and proposing tags.
+
+Two further corrections from the user during the TF46.5 trial:
+
+1. Tags are free-form, not restricted to `BLOG_TAGS` — that vocabulary is a
+   curated *suggestion* list (already established by F42/F45), not an
+   enforced one. The first trial pass wrongly restricted proposals to it and
+   missed obvious, useful entity/topic tags (`blogbridge`, `javaone`,
+   `mars`, `tivo`). `validate_proposed_tags()` now only sanitizes real junk
+   (numeric, empty, duplicates) — it doesn't gate on vocabulary membership.
+2. The pipeline is additive-only. `build_proposal()` unions a post's
+   existing tags with newly proposed ones before sanitizing, so nothing
+   already on a post is ever removed — only numeric junk is dropped.
+
+**Test**: `summarize_post`, `summaries_to_json`, `validate_proposed_tags`,
+and `build_proposal` (including the additive-merge and no-duplicate cases)
+all covered in `tests/test_tag_cleanup.py` — no external API calls anywhere
+in this pipeline.
+
+## TF46.2 — Batch runner scripts
+
+**Status**: done
+
+**Description**: `scripts/select_tag_candidates.py` — selects the next
+batch (via TF46.0) up to a configurable size (`config.yaml`,
+`tag_cleanup.batch_size`, 500) and writes title/excerpt/current-tags
+summaries to a JSON file. `scripts/build_proposals.py` — takes that
+candidates file plus a decisions file (tags chosen per TF46.1) and writes
+the validated, reviewable proposals JSON. Neither touches content files or
+calls an external API.
+
+**Test**: the underlying logic (selection, summarization, validation, JSON
+shape) is fully covered in `tests/test_tag_cleanup.py`. The scripts
+themselves are thin argparse/config/path wiring around that logic —
+consistent with `cli.py`, the repo's other CLI entry point, which also has
+no dedicated test file — so they're not separately unit-tested.
+
+## TF46.3 — Apply-batch script
+
+**Status**: done
+
+**Description**: `scripts/apply_tag_batch.py` — given a reviewed/edited
+proposals JSON, writes the approved tags into each post's frontmatter only.
+Verifies body content is byte-identical before/after (outside the
+frontmatter block) and that the file re-parses as valid frontmatter after
+the write, before moving to the next file. Raises with context (per style
+guide's error-handling rule) rather than silently skipping a file that
+fails verification.
+
+**Test**: `apply_tag_proposal`/`apply_tag_batch` (the logic this script
+wraps) are covered in `tests/test_tag_cleanup.py`, including a simulated
+verification failure that raises instead of writing. The script itself is
+thin CLI wiring, same rationale as TF46.2.
+
+## TF46.4 — Full-feature test pass
+
+**Status**: done
+
+**Description**: Run the full test suite; confirm no regressions in
+existing content-processing tests (`utils.py`, `generator.py`) from the new
+module. Result: 579 passed, 11 skipped, 0 failed (`uv run pytest -q`,
+2026-09-09) — no regressions. New `tests/test_tag_cleanup.py` (24 tests)
+covers selection, summarization, tag validation, proposal building, and
+apply/verify safety.
+
+A real end-to-end smoke test (3 real posts, no mocking) also confirmed the
+full pipeline works: selection → summarization → in-session tag decisions →
+validation/proposal building → apply-with-verification. Reverted afterward
+(`git checkout --`) since it wasn't the reviewed TF46.5 trial.
+
+## TF46.5 — 100-post validation trial
+
+**Status**: in progress
+
+**Description**: Run the pipeline on a 100-post trial batch against real
+content. Build a review artifact from the proposals for the user to
+spot-check (not an exhaustive per-post read) that the algorithm behaves
+correctly. Apply and commit the trial once confirmed. This is the one
+manual checkpoint in the whole feature — every batch after this runs
+autonomously (TF46.6).
+
+Two rounds of user correction happened on this same trial batch before
+sign-off:
+
+1. First pass wrongly restricted tags to the curated `BLOG_TAGS` vocabulary
+   — corrected to free-form tags mixing categories with well-known,
+   emphasized entity/topic tags (`blogbridge`, `javaone`, `mars`, `tivo`,
+   etc.), re-run via a fork, then a manual review pass renamed one
+   ambiguous tag (`demo` → `demo2004`, since it collided with the generic
+   English word).
+2. Pipeline made additive-only (TF46.1: `build_proposal` unions existing
+   tags with new ones before sanitizing) — re-verified as a no-op against
+   this specific trial batch (its 100 posts started with only empty/numeric
+   tags, so there was nothing pre-existing to preserve; `diff` confirmed
+   byte-identical proposals before/after the additive-merge change). An
+   offset-based whole-corpus selector was considered and reverted (see
+   TF46.0) — self-tracking `select_posts_needing_cleanup` already covers
+   what was actually being asked for.
+
+Review artifact: `https://claude.ai/code/artifact/52ca483d-f560-40e2-a5ab-3a3ee82258f2`.
+Applied and committed 2026-09-09 (`bc97223`) after user confirmation.
+
+**Test**: none beyond TF46.0-TF46.3's automated coverage — this step is a
+human judgment call on real output, not a new code path.
+
+## TF46.6 — Autonomous run over the remaining corpus
+
+**Status**: in progress
+
+**Description**: Run the batch+apply scripts repeatedly (`config.yaml`
+`tag_cleanup.batch_size`, 500 — raised from 100 partway through per user
+request) over the remaining needs-cleanup posts until none remain, with no
+per-batch approval pause. Selection is self-tracking
+(`select_posts_needing_cleanup`) — each run naturally picks up where the
+last one left off. Each batch still goes through the existing safety checks
+(body-diff verification, frontmatter re-parse, full test suite), is
+committed on its own, and is pushed to GitHub immediately after (per user
+request) before the next batch starts.
+
+Progress (100-post batches, before the size increase to 500): batch 1
+(`bc97223`, the TF46.5 trial), batch 2 (`42c6f51`), batch 3 (`72effda`) —
+300 of ~2,745 posts done as of 2026-09-09.
+
+**Test**: none beyond TF46.0-TF46.3's automated coverage — this step is
+operational execution, not new logic.
