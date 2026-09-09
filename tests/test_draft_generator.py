@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 # test_draft_generator.py — Tests for draft blog post generation from raindrops
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
-from pathlib import Path
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 import frontmatter
-import pytest
 
-from salasblog2.draft_generator import build_frontmatter, build_prompt, generate_draft_from_drop, save_draft
+from salasblog2.draft_generator import (
+    build_frontmatter,
+    build_prompt,
+    generate_draft_from_drop,
+    save_draft,
+)
 
 
 SAMPLE_DROP = {
@@ -60,9 +66,13 @@ class TestBuildPrompt:
 
 class TestGenerateDraftFromDrop:
     def test_draft_has_draft_flag(self):
-        mock_body = "A paragraph about the link. [Read more](https://example.com/article)."
-        with patch("salasblog2.draft_generator.call_claude", return_value=mock_body), \
-             patch("salasblog2.draft_generator.fetch_url_text", return_value=""):
+        mock_body = (
+            "A paragraph about the link. [Read more](https://example.com/article)."
+        )
+        with (
+            patch("salasblog2.draft_generator.call_claude", return_value=mock_body),
+            patch("salasblog2.draft_generator.fetch_url_text", return_value=""),
+        ):
             content = generate_draft_from_drop(SAMPLE_DROP)
 
         post = frontmatter.loads(content)
@@ -70,8 +80,10 @@ class TestGenerateDraftFromDrop:
 
     def test_draft_author_is_claude(self):
         mock_body = "Paragraph text."
-        with patch("salasblog2.draft_generator.call_claude", return_value=mock_body), \
-             patch("salasblog2.draft_generator.fetch_url_text", return_value=""):
+        with (
+            patch("salasblog2.draft_generator.call_claude", return_value=mock_body),
+            patch("salasblog2.draft_generator.fetch_url_text", return_value=""),
+        ):
             content = generate_draft_from_drop(SAMPLE_DROP)
 
         post = frontmatter.loads(content)
@@ -79,15 +91,19 @@ class TestGenerateDraftFromDrop:
 
     def test_draft_body_contains_source_url(self):
         mock_body = f"Here is a link: [{SAMPLE_DROP['title']}]({SAMPLE_DROP['url']})."
-        with patch("salasblog2.draft_generator.call_claude", return_value=mock_body), \
-             patch("salasblog2.draft_generator.fetch_url_text", return_value=""):
+        with (
+            patch("salasblog2.draft_generator.call_claude", return_value=mock_body),
+            patch("salasblog2.draft_generator.fetch_url_text", return_value=""),
+        ):
             content = generate_draft_from_drop(SAMPLE_DROP)
 
         assert SAMPLE_DROP["url"] in content
 
     def test_draft_source_raindrop_set(self):
-        with patch("salasblog2.draft_generator.call_claude", return_value="body"), \
-             patch("salasblog2.draft_generator.fetch_url_text", return_value=""):
+        with (
+            patch("salasblog2.draft_generator.call_claude", return_value="body"),
+            patch("salasblog2.draft_generator.fetch_url_text", return_value=""),
+        ):
             content = generate_draft_from_drop(SAMPLE_DROP)
 
         post = frontmatter.loads(content)

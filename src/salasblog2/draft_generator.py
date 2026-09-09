@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # draft_generator.py — Generate blog draft posts from raindrop data using Claude API
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 import logging
@@ -14,13 +17,18 @@ from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
 
+
 def _load_model() -> str:
-    for candidate in [Path(__file__).parent.parent.parent / "config.yaml", Path("config.yaml")]:
+    for candidate in [
+        Path(__file__).parent.parent.parent / "config.yaml",
+        Path("config.yaml"),
+    ]:
         if candidate.exists():
             with open(candidate) as f:
                 data = yaml.safe_load(f) or {}
             return data.get("drafts", {}).get("claude_model", "claude-sonnet-4-6")
     return "claude-sonnet-4-6"
+
 
 CLAUDE_MODEL = _load_model()
 URL_FETCH_TIMEOUT = 5
@@ -30,7 +38,9 @@ MAX_FETCHED_CHARS = 3000
 def fetch_url_text(url: str) -> str:
     """Fetch plain text from a URL, returning empty string on any failure."""
     try:
-        resp = requests.get(url, timeout=URL_FETCH_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
+        resp = requests.get(
+            url, timeout=URL_FETCH_TIMEOUT, headers={"User-Agent": "Mozilla/5.0"}
+        )
         resp.raise_for_status()
         resp.encoding = resp.apparent_encoding or "utf-8"
         soup = BeautifulSoup(resp.text, "html.parser")
@@ -51,16 +61,20 @@ def build_prompt(drop: dict, page_text: str) -> str:
     tags = ", ".join(drop.get("tags") or []) or "none"
     note = _ascii(drop.get("note") or "")
     excerpt = _ascii(drop.get("excerpt") or "")
-    page_section = f"\n\nPage content (first {MAX_FETCHED_CHARS} chars):\n{page_text}" if page_text else ""
+    page_section = (
+        f"\n\nPage content (first {MAX_FETCHED_CHARS} chars):\n{page_text}"
+        if page_text
+        else ""
+    )
 
     return f"""Write a single short blog paragraph (50-75 words maximum) about the following link post.
 The paragraph must include a markdown hyperlink to the source URL.
 Write in first person as the blog author sharing an interesting find.
 End naturally — no meta-commentary, no sign-off.
 
-Title: {_ascii(drop['title'])}
-URL: {drop['url']}
-Domain: {_ascii(drop['domain'])}
+Title: {_ascii(drop["title"])}
+URL: {drop["url"]}
+Domain: {_ascii(drop["domain"])}
 Tags: {tags}
 Excerpt: {excerpt}
 My note: {note}{page_section}
@@ -79,7 +93,11 @@ def build_frontmatter(drop: dict, title: str) -> str:
         "source_url": drop["url"],
         "tags": drop.get("tags") or [],
     }
-    return "---\n" + yaml.dump(data, allow_unicode=True, default_flow_style=False, encoding=None) + "---\n"
+    return (
+        "---\n"
+        + yaml.dump(data, allow_unicode=True, default_flow_style=False, encoding=None)
+        + "---\n"
+    )
 
 
 def call_claude(prompt: str) -> str:

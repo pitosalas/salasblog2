@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # stats.py — Visit counter persisting per-path, per-visitor-type counts to JSON
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 import json
@@ -21,7 +24,9 @@ def _period_start(period: str | None) -> datetime | None:
     if period == "today":
         return now.replace(hour=0, minute=0, second=0, microsecond=0)
     if period == "this_week":
-        return (now - __import__('datetime').timedelta(days=now.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
+        return (now - __import__("datetime").timedelta(days=now.weekday())).replace(
+            hour=0, minute=0, second=0, microsecond=0
+        )
     if period == "this_month":
         return now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
     if period == "this_year":
@@ -30,6 +35,7 @@ def _period_start(period: str | None) -> datetime | None:
 
 
 FLUSH_INTERVAL_SECONDS = 60
+
 
 class VisitCounter:
     def __init__(self):
@@ -79,10 +85,12 @@ class VisitCounter:
 
     def _start_flush_thread(self):
         """Start background thread that flushes dirty stats to disk periodically."""
+
         def flush_loop():
             while True:
                 time.sleep(FLUSH_INTERVAL_SECONDS)
                 self.flush()
+
         t = threading.Thread(target=flush_loop, daemon=True)
         t.start()
 
@@ -137,7 +145,8 @@ class VisitCounter:
                     counts[vtype] = len(timestamps)
                 else:
                     counts[vtype] = sum(
-                        1 for ts in timestamps
+                        1
+                        for ts in timestamps
                         if ts != "migrated" and _parse_ts(ts) >= cutoff
                     )
             total = sum(counts.values())

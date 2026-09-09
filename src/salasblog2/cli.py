@@ -1,12 +1,19 @@
+#!/usr/bin/env python3
+# cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
+# Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
+# Open Source Under MIT license
 """
 Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
 """
+
 import argparse
 import os
-import sys
 from dotenv import load_dotenv
-from .generator import SiteGenerator
-from .raindrop import RaindropDownloader
+from salasblog2.generator import SiteGenerator
+from salasblog2.raindrop import RaindropDownloader
 
 load_dotenv()
 
@@ -29,12 +36,12 @@ def cmd_deploy(args):
     generator.deploy_to_fly()
 
 
-
-
 def cmd_sync_raindrops(args):
     """Download new bookmarks from Raindrop.io"""
     downloader = RaindropDownloader()
-    downloader.download_raindrops(reset=args.reset, count=args.count, rebuild_cache=args.rebuild_cache)
+    downloader.download_raindrops(
+        reset=args.reset, count=args.count, rebuild_cache=args.rebuild_cache
+    )
 
 
 def cmd_server(args):
@@ -43,10 +50,14 @@ def cmd_server(args):
 
     print(f"🚀 Starting server on http://localhost:{args.port}")
     if args.reload:
-        uvicorn.run("salasblog2.server:app", host="0.0.0.0", port=args.port, reload=True)
+        uvicorn.run(
+            "salasblog2.server:app", host="0.0.0.0", port=args.port, reload=True
+        )
     else:
-        from .server import app
+        from salasblog2.server import app
+
         uvicorn.run(app, host="0.0.0.0", port=args.port)
+
 
 def cmd_help(args):
     """Show help message"""
@@ -54,77 +65,100 @@ def cmd_help(args):
     print()
     print("Commands:")
     print("  generate           - Process markdown files and generate static HTML site")
-    print("  server             - Start FastAPI server to serve site with API endpoints")
+    print(
+        "  server             - Start FastAPI server to serve site with API endpoints"
+    )
     print("  reset              - Delete all generated files")
     print("  deploy             - Deploy site to Fly.io")
-    print("  sync-raindrops     - Download new bookmarks from Raindrop.io (for link blog)")
+    print(
+        "  sync-raindrops     - Download new bookmarks from Raindrop.io (for link blog)"
+    )
     print("  help               - Show this help message")
     print()
     print("Options:")
     print("  --port PORT        - Port for server (default: 8000)")
     print("  --reload           - Enable auto-reload for development (server command)")
     print("  --reset            - Reset link blog cache (for sync-raindrops command)")
-    print("  --rebuild-cache    - Rebuild cache from existing files (for sync-raindrops command)")
-    print("  --count N          - Limit link blog download (for sync-raindrops command)")
+    print(
+        "  --rebuild-cache    - Rebuild cache from existing files (for sync-raindrops command)"
+    )
+    print(
+        "  --count N          - Limit link blog download (for sync-raindrops command)"
+    )
 
 
 def main():
     """Main CLI entry point"""
     parser = argparse.ArgumentParser(
         description="Static site generator with Raindrop.io integration",
-        add_help=False  # We'll handle help ourselves
+        add_help=False,  # We'll handle help ourselves
     )
-    
-    
+
     # Subcommands
-    subparsers = parser.add_subparsers(dest='command', help='Available commands')
-    
+    subparsers = parser.add_subparsers(dest="command", help="Available commands")
+
     # Generate command
-    generate_parser = subparsers.add_parser('generate', help='Generate static site')
+    generate_parser = subparsers.add_parser("generate", help="Generate static site")
     generate_parser.set_defaults(func=cmd_generate)
-    
+
     # Server command
-    server_parser = subparsers.add_parser('server', help='Start FastAPI server')
-    server_parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', 8000)),
-                              help='Port to run server on (default: PORT env var or 8000)')
-    server_parser.add_argument('--reload', action='store_true',
-                              help='Enable auto-reload for development')
+    server_parser = subparsers.add_parser("server", help="Start FastAPI server")
+    server_parser.add_argument(
+        "--port",
+        type=int,
+        default=int(os.environ.get("PORT", 8000)),
+        help="Port to run server on (default: PORT env var or 8000)",
+    )
+    server_parser.add_argument(
+        "--reload", action="store_true", help="Enable auto-reload for development"
+    )
     server_parser.set_defaults(func=cmd_server)
-    
+
     # Reset command
-    reset_parser = subparsers.add_parser('reset', help='Delete generated files')
+    reset_parser = subparsers.add_parser("reset", help="Delete generated files")
     reset_parser.set_defaults(func=cmd_reset)
-    
+
     # Deploy command
-    deploy_parser = subparsers.add_parser('deploy', help='Deploy to Fly.io')
+    deploy_parser = subparsers.add_parser("deploy", help="Deploy to Fly.io")
     deploy_parser.set_defaults(func=cmd_deploy)
-    
-    
+
     # Sync raindrops command
-    sync_parser = subparsers.add_parser('sync-raindrops', help='Download bookmarks from Raindrop.io for link blog')
-    sync_parser.add_argument('--reset', action='store_true',
-                           help='Delete all existing link blog posts and rebuild from scratch')
-    sync_parser.add_argument('--rebuild-cache', action='store_true',
-                           help='Rebuild cache from existing files (fixes duplicate detection)')
-    sync_parser.add_argument('--count', type=int, metavar='N',
-                           help='Limit the number of link blog posts to download')
+    sync_parser = subparsers.add_parser(
+        "sync-raindrops", help="Download bookmarks from Raindrop.io for link blog"
+    )
+    sync_parser.add_argument(
+        "--reset",
+        action="store_true",
+        help="Delete all existing link blog posts and rebuild from scratch",
+    )
+    sync_parser.add_argument(
+        "--rebuild-cache",
+        action="store_true",
+        help="Rebuild cache from existing files (fixes duplicate detection)",
+    )
+    sync_parser.add_argument(
+        "--count",
+        type=int,
+        metavar="N",
+        help="Limit the number of link blog posts to download",
+    )
     sync_parser.set_defaults(func=cmd_sync_raindrops)
-    
+
     # Help command
-    help_parser = subparsers.add_parser('help', help='Show help message')
+    help_parser = subparsers.add_parser("help", help="Show help message")
     help_parser.set_defaults(func=cmd_help)
-    
+
     # Parse arguments
     args = parser.parse_args()
-    
+
     # If no command specified, show help
     if not args.command:
         cmd_help(args)
         return
-    
+
     # Execute the command
     args.func(args)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

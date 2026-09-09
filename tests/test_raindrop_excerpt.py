@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 # test_raindrop_excerpt.py — Tests for raindrop excerpt generation bug fix
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
-from pathlib import Path
 
 from salasblog2.generator import SiteGenerator
 

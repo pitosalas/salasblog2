@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 # test_image_size.py — Tests for image_size frontmatter feature
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-08
-# Updated: 2026-09-08
+# Updated: 2026-09-09
 # Open Source Under MIT license
-
-import pytest
-from pathlib import Path
-from salasblog2.generator import SiteGenerator
 
 
 def make_blog_post(

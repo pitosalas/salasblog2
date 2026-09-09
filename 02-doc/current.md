@@ -130,7 +130,9 @@ Manual testing also surfaced several real bugs, now fixed and committed (see `04
 
 **Fixed**: `BloggerAPI` now resolves its content directory the same volume-first way `get_content_directory()`/`SiteGenerator` already do (`04-tasks/chores.md`), removing the likely cause of a user-reported bug: MarsEdit showing a stale post even after refresh. `_backup_to_volume()`/`_delete_from_volume()` deleted entirely — writes/deletes go straight to the volume-resolved `blog_dir`, so there's no second copy to fall out of sync.
 
-**This session's commits (categories/link/excerpt/Read-more fixes, volume-first BloggerAPI) are pushed to GitHub but not yet deployed** — see Deployment section below.
+**This session's commits (categories/link/excerpt/Read-more fixes, volume-first BloggerAPI, full style-guide pass, all literate docs regenerated) are pushed to GitHub but not yet deployed** — see Deployment section below.
+
+**Full-repo style-guide pass done this session** (`04-tasks/chores.md`): relative imports fixed to absolute throughout (`generator.py`, `raindrop.py`, `cli.py`, `scheduler.py`), missing file headers added to 6 modules, a real `UnboundLocalError` bug fixed in `scripts/debug_content_dirs.py` (shadowed `Path` import), a genuine test-coverage gap fixed in `tests/deployment/test_checksum_sync.py`, and the whole repo is now `ruff check`/`ruff format --check` clean (was 92 pre-existing violations at session start). All `01-literate/*.md` docs regenerated from scratch in dependency order.
 
 **Other open features** (`03-features/notdone/`, no dependency on each other or on F44):
 

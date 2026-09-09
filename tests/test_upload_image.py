@@ -6,13 +6,13 @@ Run with: uv run pytest tests/test_upload_image.py -v
 
 import pytest
 import re
-from pathlib import Path
 from fastapi.testclient import TestClient
 
 
 @pytest.fixture
 def client(tmp_path):
     from salasblog2.server import app, config
+
     config["root_dir"] = tmp_path
     config["output_dir"] = tmp_path / "output"
     (tmp_path / "output").mkdir()
@@ -23,6 +23,7 @@ def client(tmp_path):
 @pytest.fixture
 def authed_client(tmp_path):
     from salasblog2.server import app, config
+
     config["root_dir"] = tmp_path
     config["output_dir"] = tmp_path / "output"
     (tmp_path / "output").mkdir()
@@ -33,7 +34,6 @@ def authed_client(tmp_path):
 
 
 class TestUploadImage:
-
     def test_upload_returns_url(self, client, tmp_path):
         """Authenticated upload returns a JSON url."""
         image_data = b"\x89PNG\r\n\x1a\nfakeimage"
@@ -55,8 +55,9 @@ class TestUploadImage:
         )
         assert response.status_code == 200
         filename = response.json()["data"]["filePath"].split("/")[-1]
-        assert re.match(r"^\d{4}-\d{2}-\d{2}-myimage\.jpg$", filename), \
+        assert re.match(r"^\d{4}-\d{2}-\d{2}-myimage\.jpg$", filename), (
             f"Expected date-originalname filename, got: {filename}"
+        )
 
     def test_duplicate_original_name_gets_suffix(self, client, tmp_path):
         """Uploading the same filename twice appends -2, -3, etc."""
@@ -77,6 +78,7 @@ class TestUploadImage:
     def test_unauthenticated_returns_401(self, tmp_path):
         """Request without a valid session is rejected."""
         from salasblog2.server import app, config
+
         config["root_dir"] = tmp_path
         config["output_dir"] = tmp_path / "output"
         (tmp_path / "output").mkdir(exist_ok=True)

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # test_stats.py — Tests for F25/F26/F32 visit statistics
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 import json
-import pytest
 from datetime import datetime, timezone, timedelta
-from pathlib import Path
 from salasblog2.stats import VisitCounter
 
 
@@ -46,10 +47,14 @@ class TestVisitCounter:
     def test_load_restores_counts(self, tmp_path):
         stats_file = tmp_path / "stats.json"
         now = datetime.now(timezone.utc).isoformat()
-        stats_file.write_text(json.dumps({
-            "/": {"human": [now, now]},
-            "/raindrops/": {"search_engine": [now] * 7},
-        }))
+        stats_file.write_text(
+            json.dumps(
+                {
+                    "/": {"human": [now, now]},
+                    "/raindrops/": {"search_engine": [now] * 7},
+                }
+            )
+        )
 
         counter = VisitCounter()
         counter.stats_file = stats_file
@@ -148,8 +153,12 @@ class TestVisitCounterPeriodFiltering:
     def test_get_all_this_week_includes_recent(self, tmp_path):
         counter = _make_counter(tmp_path)
         today = datetime.now(timezone.utc)
-        same_day = today.replace(hour=0, minute=1).isoformat()   # definitely today = this week
-        last_year = (today - timedelta(days=400)).isoformat()    # definitely not this week
+        same_day = today.replace(
+            hour=0, minute=1
+        ).isoformat()  # definitely today = this week
+        last_year = (
+            today - timedelta(days=400)
+        ).isoformat()  # definitely not this week
         counter._counts = {"/blog/post.html": {"human": [same_day, last_year]}}
         result = counter.get_all(period="this_week")
         assert len(result) == 1

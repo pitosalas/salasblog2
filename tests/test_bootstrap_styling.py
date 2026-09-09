@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 # test_bootstrap_styling.py — Tests confirming Bootstrap classes in rendered HTML
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 from pathlib import Path
-import pytest
 from jinja2 import Environment, FileSystemLoader
-from salasblog2.utils import format_date, group_posts_by_month, get_markdown_processor, slugify_tag
+from salasblog2.utils import (
+    format_date,
+    group_posts_by_month,
+    get_markdown_processor,
+    slugify_tag,
+)
 
 PROJECT_ROOT = Path(__file__).parent.parent
 TEMPLATES_DIR = PROJECT_ROOT / "templates"
@@ -19,7 +26,11 @@ def make_env():
     env.filters["dd_mm_yyyy"] = lambda d: format_date(d, "%d-%m-%Y")
     env.filters["group_by_month"] = group_posts_by_month
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
-    env.filters["truncate"] = lambda s, n, killwords=False, end="...": s[:n] + end if s and len(s) > n else (s or "")
+    env.filters["truncate"] = (
+        lambda s, n, killwords=False, end="...": s[:n] + end
+        if s and len(s) > n
+        else (s or "")
+    )
     env.filters["slugify"] = slugify_tag
     return env
 
@@ -88,34 +99,46 @@ def render(template_name, context):
 
 
 def test_base_contains_navbar():
-    html = render("home.html", {
-        "recent_posts": [fake_post()],
-        "recent_raindrops": [fake_raindrop()],
-    })
+    html = render(
+        "home.html",
+        {
+            "recent_posts": [fake_post()],
+            "recent_raindrops": [fake_raindrop()],
+        },
+    )
     assert "navbar" in html
 
 
 def test_base_loads_bootstrap_cdn():
-    html = render("home.html", {
-        "recent_posts": [],
-        "recent_raindrops": [],
-    })
+    html = render(
+        "home.html",
+        {
+            "recent_posts": [],
+            "recent_raindrops": [],
+        },
+    )
     assert "bootstrap" in html.lower()
 
 
 def test_home_uses_card_class():
-    html = render("home.html", {
-        "recent_posts": [fake_post()],
-        "recent_raindrops": [],
-    })
+    html = render(
+        "home.html",
+        {
+            "recent_posts": [fake_post()],
+            "recent_raindrops": [],
+        },
+    )
     assert "card" in html
 
 
 def test_home_uses_bootstrap_grid():
-    html = render("home.html", {
-        "recent_posts": [],
-        "recent_raindrops": [],
-    })
+    html = render(
+        "home.html",
+        {
+            "recent_posts": [],
+            "recent_raindrops": [],
+        },
+    )
     assert "col-md-" in html
 
 
@@ -130,47 +153,62 @@ def test_blog_list_uses_pagination_class():
         "next_url": "/blog/2/",
         "page_urls": ["/blog/", "/blog/2/", "/blog/3/"],
     }
-    html = render("blog_list.html", {
-        "posts": [post],
-        "pagination": pagination,
-        "total_posts": 60,
-    })
+    html = render(
+        "blog_list.html",
+        {
+            "posts": [post],
+            "pagination": pagination,
+            "total_posts": 60,
+        },
+    )
     assert "page-item" in html
     assert "page-link" in html
 
 
 def test_raindrops_list_uses_card():
-    html = render("raindrops_list.html", {
-        "posts": [fake_raindrop()],
-        "pagination": fake_pagination(),
-        "total_posts": 1,
-    })
+    html = render(
+        "raindrops_list.html",
+        {
+            "posts": [fake_raindrop()],
+            "pagination": fake_pagination(),
+            "total_posts": 1,
+        },
+    )
     assert "card" in html
 
 
 def test_pages_list_uses_card():
-    html = render("pages_list.html", {
-        "pages": [fake_page()],
-        "site_title": "Salas Blog",
-    })
+    html = render(
+        "pages_list.html",
+        {
+            "pages": [fake_page()],
+            "site_title": "Salas Blog",
+        },
+    )
     assert "card" in html
 
 
 def test_blog_post_uses_container_grid():
-    html = render("blog_post.html", {
-        "post": fake_post(),
-        "prev_post": None,
-        "next_post": None,
-    })
+    html = render(
+        "blog_post.html",
+        {
+            "post": fake_post(),
+            "prev_post": None,
+            "next_post": None,
+        },
+    )
     assert "col-lg-" in html
 
 
 def test_raindrop_post_uses_container_grid():
-    html = render("raindrop_post.html", {
-        "post": fake_raindrop(),
-        "prev_post": None,
-        "next_post": None,
-    })
+    html = render(
+        "raindrop_post.html",
+        {
+            "post": fake_raindrop(),
+            "prev_post": None,
+            "next_post": None,
+        },
+    )
     assert "col-lg-" in html
 
 

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_content_type_badges.py — Tests for F24 content type visual indicators
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 from pathlib import Path
@@ -17,9 +20,13 @@ def make_env():
     env.filters["strftime"] = lambda d, fmt: format_date(d, fmt)
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
     env.filters["slugify"] = slugify_tag
-    env.filters["truncate"] = lambda text, length, **kwargs: text[:length] if text else ""
+    env.filters["truncate"] = (
+        lambda text, length, **kwargs: text[:length] if text else ""
+    )
     env.filters["dd_mm_yyyy"] = lambda d: str(d)
-    env.filters["group_by_month"] = lambda posts: [{"month_name": "January 2025", "posts": posts}]
+    env.filters["group_by_month"] = lambda posts: [
+        {"month_name": "January 2025", "posts": posts}
+    ]
     return env
 
 
@@ -69,7 +76,9 @@ class TestLinkIconInRaindropsList:
     def test_link_icon_per_item_in_raindrops_list(self):
         env = make_env()
         tpl = env.get_template("raindrops_list.html")
-        raindrops = [make_raindrop(f"Link {i}", f"/raindrops/link{i}/") for i in range(3)]
+        raindrops = [
+            make_raindrop(f"Link {i}", f"/raindrops/link{i}/") for i in range(3)
+        ]
         html = tpl.render(
             posts=raindrops,
             collections=[],

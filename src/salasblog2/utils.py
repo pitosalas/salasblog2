@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
+# Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
+# Open Source Under MIT license
 """
 Pure utility functions for content processing and site generation.
 These functions are completely independent and reusable.

@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 # test_generator.py — Tests for SiteGenerator
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 import json
-from pathlib import Path
-
-import pytest
-
-from salasblog2.generator import SiteGenerator
 
 
 def make_blog_post(directory, filename, title, date, content="Post body."):
@@ -34,6 +32,7 @@ def make_page(directory, filename, title, date):
 # ---------------------------------------------------------------------------
 # load_posts
 # ---------------------------------------------------------------------------
+
 
 class TestLoadPosts:
     def test_unknown_content_type_returns_empty(self, generator):
@@ -76,8 +75,13 @@ class TestLoadPosts:
         rd_dir = tmp_path / "raindrops"
         rd_dir.mkdir()
         g.raindrops_dir = rd_dir
-        make_raindrop(rd_dir, "25-01-01-1-link.md", "Some Link", "2025-01-01",
-                      url="https://target.example.com")
+        make_raindrop(
+            rd_dir,
+            "25-01-01-1-link.md",
+            "Some Link",
+            "2025-01-01",
+            url="https://target.example.com",
+        )
         posts = g.load_posts("raindrops")
         assert posts[0]["raindrop_url"] == "https://target.example.com"
 
@@ -106,7 +110,6 @@ class TestLoadPosts:
         assert "First paragraph" in posts[0]["excerpt"]
         assert "Second paragraph" not in posts[0]["excerpt"]
 
-
     def test_draft_posts_excluded_from_load(self, generator, tmp_path):
         g = generator
         blog_dir = tmp_path / "blog"
@@ -125,6 +128,7 @@ class TestLoadPosts:
 # ---------------------------------------------------------------------------
 # get_navigation_items / _get_page_url
 # ---------------------------------------------------------------------------
+
 
 class TestNavAndPagination:
     def test_navigation_contains_four_items(self, generator):
@@ -151,21 +155,36 @@ class TestNavAndPagination:
 # generate_search_index
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateSearchIndex:
     def test_creates_search_json(self, generator):
         g = generator
-        g.generate_search_index([
-            {"title": "T", "url": "/blog/t.html", "type": "blog",
-             "excerpt": "Ex", "raw_content": "Body"},
-        ])
+        g.generate_search_index(
+            [
+                {
+                    "title": "T",
+                    "url": "/blog/t.html",
+                    "type": "blog",
+                    "excerpt": "Ex",
+                    "raw_content": "Body",
+                },
+            ]
+        )
         assert (g.output_dir / "search.json").exists()
 
     def test_search_json_contains_expected_fields(self, generator):
         g = generator
-        g.generate_search_index([
-            {"title": "My Post", "url": "/blog/my-post.html", "type": "blog",
-             "excerpt": "Short blurb", "raw_content": "Full body text"},
-        ])
+        g.generate_search_index(
+            [
+                {
+                    "title": "My Post",
+                    "url": "/blog/my-post.html",
+                    "type": "blog",
+                    "excerpt": "Short blurb",
+                    "raw_content": "Full body text",
+                },
+            ]
+        )
         data = json.loads((g.output_dir / "search.json").read_text())
         assert len(data) == 1
         assert data[0]["title"] == "My Post"
@@ -176,10 +195,17 @@ class TestGenerateSearchIndex:
     def test_search_json_truncates_long_content(self, generator):
         g = generator
         long_body = "x" * 1000
-        g.generate_search_index([
-            {"title": "T", "url": "/u", "type": "blog", "excerpt": "",
-             "raw_content": long_body},
-        ])
+        g.generate_search_index(
+            [
+                {
+                    "title": "T",
+                    "url": "/u",
+                    "type": "blog",
+                    "excerpt": "",
+                    "raw_content": long_body,
+                },
+            ]
+        )
         data = json.loads((g.output_dir / "search.json").read_text())
         assert data[0]["content"].endswith("...")
         assert len(data[0]["content"]) == 503  # 500 + "..."
@@ -187,8 +213,13 @@ class TestGenerateSearchIndex:
     def test_search_json_multiple_posts(self, generator):
         g = generator
         posts = [
-            {"title": f"Post {i}", "url": f"/blog/p{i}.html", "type": "blog",
-             "excerpt": "", "raw_content": "body"}
+            {
+                "title": f"Post {i}",
+                "url": f"/blog/p{i}.html",
+                "type": "blog",
+                "excerpt": "",
+                "raw_content": "body",
+            }
             for i in range(5)
         ]
         g.generate_search_index(posts)
@@ -200,14 +231,24 @@ class TestGenerateSearchIndex:
 # generate_individual_posts
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateIndividualPosts:
     def _one_post(self, title="Test Post", date="2025-01-01"):
-        return [{
-            "title": title, "date": date, "type": "blog", "category": "General",
-            "content": "<p>Hello</p>", "raw_content": "Hello",
-            "filename": "2025-01-01-test", "url": "/blog/2025-01-01-test.html",
-            "excerpt": "Hello", "is_truncated": False, "tags": [],
-        }]
+        return [
+            {
+                "title": title,
+                "date": date,
+                "type": "blog",
+                "category": "General",
+                "content": "<p>Hello</p>",
+                "raw_content": "Hello",
+                "filename": "2025-01-01-test",
+                "url": "/blog/2025-01-01-test.html",
+                "excerpt": "Hello",
+                "is_truncated": False,
+                "tags": [],
+            }
+        ]
 
     def test_blog_post_goes_to_blog_subdir(self, generator):
         g = generator
@@ -217,21 +258,29 @@ class TestGenerateIndividualPosts:
     def test_page_goes_to_root_output(self, generator):
         g = generator
         post = self._one_post()
-        post[0].update({"type": "page", "filename": "about",
-                         "url": "/about.html"})
+        post[0].update({"type": "page", "filename": "about", "url": "/about.html"})
         g.generate_individual_posts(post, "pages")
         assert (g.output_dir / "about.html").exists()
 
     def test_raindrop_goes_to_raindrops_subdir(self, generator):
         g = generator
         post = self._one_post()
-        post[0].update({
-            "type": "drop", "filename": "25-01-01-1-link",
-            "url": "/raindrops/25-01-01-1-link.html",
-            "raindrop_url": "https://x.com", "domain": "x.com",
-            "cover": "", "note": "", "tags": [], "important": False,
-            "broken": False, "raindrop_type": "link", "media": [],
-        })
+        post[0].update(
+            {
+                "type": "drop",
+                "filename": "25-01-01-1-link",
+                "url": "/raindrops/25-01-01-1-link.html",
+                "raindrop_url": "https://x.com",
+                "domain": "x.com",
+                "cover": "",
+                "note": "",
+                "tags": [],
+                "important": False,
+                "broken": False,
+                "raindrop_type": "link",
+                "media": [],
+            }
+        )
         g.generate_individual_posts(post, "raindrops")
         assert (g.output_dir / "raindrops" / "25-01-01-1-link.html").exists()
 
@@ -246,13 +295,22 @@ class TestGenerateIndividualPosts:
 # generate_listing_pages
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateListingPages:
     def _posts(self, n, content_type="blog"):
         return [
-            {"title": f"Post {i}", "date": f"2025-01-{i+1:02d}", "type": content_type,
-             "category": "General", "content": "<p>body</p>", "raw_content": "body",
-             "filename": f"2025-01-{i+1:02d}-post-{i}", "url": f"/blog/p{i}.html",
-             "excerpt": "Ex", "is_truncated": False}
+            {
+                "title": f"Post {i}",
+                "date": f"2025-01-{i + 1:02d}",
+                "type": content_type,
+                "category": "General",
+                "content": "<p>body</p>",
+                "raw_content": "body",
+                "filename": f"2025-01-{i + 1:02d}-post-{i}",
+                "url": f"/blog/p{i}.html",
+                "excerpt": "Ex",
+                "is_truncated": False,
+            }
             for i in range(n)
         ]
 
@@ -283,12 +341,22 @@ class TestGenerateListingPages:
 # generate_home_page
 # ---------------------------------------------------------------------------
 
+
 class TestGenerateHomePage:
     def _post(self, title, date):
-        return {"title": title, "date": date, "type": "blog", "category": "General",
-                "content": "<p>x</p>", "raw_content": "x",
-                "filename": "f", "url": "/blog/f.html",
-                "excerpt": "Ex", "is_truncated": False, "tags": []}
+        return {
+            "title": title,
+            "date": date,
+            "type": "blog",
+            "category": "General",
+            "content": "<p>x</p>",
+            "raw_content": "x",
+            "filename": "f",
+            "url": "/blog/f.html",
+            "excerpt": "Ex",
+            "is_truncated": False,
+            "tags": [],
+        }
 
     def test_creates_index_html(self, generator):
         g = generator
@@ -297,7 +365,7 @@ class TestGenerateHomePage:
 
     def test_uses_at_most_5_recent_posts(self, generator):
         g = generator
-        posts = [self._post(f"Post {i}", f"2025-01-{i+1:02d}") for i in range(8)]
+        posts = [self._post(f"Post {i}", f"2025-01-{i + 1:02d}") for i in range(8)]
         g.generate_home_page(posts, [])
         html = (g.output_dir / "index.html").read_text()
         # With 8 posts and default count=5, only the 5 newest appear; oldest do not
@@ -331,6 +399,7 @@ class TestGenerateHomePage:
 # generate_pages_listing
 # ---------------------------------------------------------------------------
 
+
 class TestGeneratePagesListing:
     def test_creates_pages_index(self, generator):
         g = generator
@@ -340,12 +409,30 @@ class TestGeneratePagesListing:
     def test_pages_sorted_alphabetically(self, generator):
         g = generator
         pages = [
-            {"title": "Zebra", "date": "2025-01-01", "url": "/zebra.html",
-             "filename": "zebra", "excerpt": "", "type": "page",
-             "content": "", "raw_content": "", "category": "x", "is_truncated": False},
-            {"title": "Apple", "date": "2025-01-01", "url": "/apple.html",
-             "filename": "apple", "excerpt": "", "type": "page",
-             "content": "", "raw_content": "", "category": "x", "is_truncated": False},
+            {
+                "title": "Zebra",
+                "date": "2025-01-01",
+                "url": "/zebra.html",
+                "filename": "zebra",
+                "excerpt": "",
+                "type": "page",
+                "content": "",
+                "raw_content": "",
+                "category": "x",
+                "is_truncated": False,
+            },
+            {
+                "title": "Apple",
+                "date": "2025-01-01",
+                "url": "/apple.html",
+                "filename": "apple",
+                "excerpt": "",
+                "type": "page",
+                "content": "",
+                "raw_content": "",
+                "category": "x",
+                "is_truncated": False,
+            },
         ]
         g.generate_pages_listing(pages)
         html = (g.output_dir / "pages" / "index.html").read_text()
@@ -355,6 +442,7 @@ class TestGeneratePagesListing:
 # ---------------------------------------------------------------------------
 # reset_output
 # ---------------------------------------------------------------------------
+
 
 class TestResetOutput:
     def test_removes_existing_output(self, generator):
@@ -372,6 +460,7 @@ class TestResetOutput:
 # ---------------------------------------------------------------------------
 # incremental_regenerate_post
 # ---------------------------------------------------------------------------
+
 
 class TestIncrementalRegenerate:
     def test_regenerates_individual_post_file(self, generator, tmp_path):
@@ -412,6 +501,7 @@ class TestIncrementalRegenerate:
 # incremental_regenerate_after_deletion
 # ---------------------------------------------------------------------------
 
+
 class TestIncrementalDeletion:
     def test_removes_deleted_post_output(self, generator, tmp_path):
         g = generator
@@ -442,7 +532,9 @@ class TestIncrementalDeletion:
 class TestNewPostAppearsOnHomePage:
     """Regression tests for bug: new post not showing on front page after creation."""
 
-    def test_new_post_appears_in_home_page_after_incremental_regen(self, generator, tmp_path):
+    def test_new_post_appears_in_home_page_after_incremental_regen(
+        self, generator, tmp_path
+    ):
         """After incremental regen for a new post, its title must appear in index.html."""
         g = generator
         blog_dir = tmp_path / "blog"
@@ -465,4 +557,3 @@ class TestNewPostAppearsOnHomePage:
 
         html = (g.output_dir / "index.html").read_text()
         assert "Brand New Post" in html
-

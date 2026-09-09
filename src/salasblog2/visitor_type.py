@@ -1,42 +1,76 @@
 #!/usr/bin/env python3
 # visitor_type.py — Classify HTTP visitors by type from User-Agent string
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 # Known AI bot UA substrings — checked first; many disguise as browsers
 AI_BOT_PATTERNS = [
-    "gptbot", "chatgpt", "openai",
-    "claudebot", "claude-web", "anthropic",
-    "perplexitybot", "perplexity",
-    "ccbot", "commoncrawl",
-    "cohere-ai", "coherebot",
-    "google-extended", "googleother",
-    "diffbot", "bytespider",
-    "amazonbot", "applebot-extended",
-    "youbot", "iaskspider", "piplbot",
-    "meta-externalagent", "meta-externalfetcher",
-    "imagesiftbot", "omgilibot",
-    "ai2bot", "friendlycrawler",
-    "timpibot", "seekr",
+    "gptbot",
+    "chatgpt",
+    "openai",
+    "claudebot",
+    "claude-web",
+    "anthropic",
+    "perplexitybot",
+    "perplexity",
+    "ccbot",
+    "commoncrawl",
+    "cohere-ai",
+    "coherebot",
+    "google-extended",
+    "googleother",
+    "diffbot",
+    "bytespider",
+    "amazonbot",
+    "applebot-extended",
+    "youbot",
+    "iaskspider",
+    "piplbot",
+    "meta-externalagent",
+    "meta-externalfetcher",
+    "imagesiftbot",
+    "omgilibot",
+    "ai2bot",
+    "friendlycrawler",
+    "timpibot",
+    "seekr",
 ]
 
 # Domains found in bot homepage URLs embedded in UA strings
 AI_BOT_URL_PATTERNS = [
-    "openai.com", "anthropic.com", "perplexity.ai",
-    "cohere.com", "you.com", "diffbot.com",
+    "openai.com",
+    "anthropic.com",
+    "perplexity.ai",
+    "cohere.com",
+    "you.com",
+    "diffbot.com",
 ]
 
 SEARCH_ENGINE_PATTERNS = [
-    "googlebot", "bingbot", "slurp", "duckduckbot",
-    "baiduspider", "yandexbot", "sogou", "exabot",
-    "facebot", "ia_archiver", "msnbot", "teoma",
-    "ask jeeves", "naverbot", "seznam",
+    "googlebot",
+    "bingbot",
+    "slurp",
+    "duckduckbot",
+    "baiduspider",
+    "yandexbot",
+    "sogou",
+    "exabot",
+    "facebot",
+    "ia_archiver",
+    "msnbot",
+    "teoma",
+    "ask jeeves",
+    "naverbot",
+    "seznam",
 ]
 
 # Signals that reveal a bot even inside a browser-like UA
 BOT_SIGNALS = [
-    "compatible;",        # e.g. "Mozilla/5.0 (compatible; GPTBot/1.0 ...)"
-    "headlesschrome",     # headless browser
+    "compatible;",  # e.g. "Mozilla/5.0 (compatible; GPTBot/1.0 ...)"
+    "headlesschrome",  # headless browser
     "phantomjs",
     "puppeteer",
     "selenium",
@@ -58,21 +92,39 @@ BOT_SIGNALS = [
     "ruby",
     "php/",
     "perl/",
-    "+http",              # bots often embed their URL: "+https://example.com/botinfo"
+    "+http",  # bots often embed their URL: "+https://example.com/botinfo"
 ]
 
 GENERIC_BOT_PATTERNS = [
-    "bot", "crawler", "spider", "scraper",
-    "fetcher", "scan", "checker", "archiver",
-    "monitor", "probe", "harvest",
-    "validator", "reader", "indexer", "downloader",
-    "httpclient", "request", "agent",
+    "bot",
+    "crawler",
+    "spider",
+    "scraper",
+    "fetcher",
+    "scan",
+    "checker",
+    "archiver",
+    "monitor",
+    "probe",
+    "harvest",
+    "validator",
+    "reader",
+    "indexer",
+    "downloader",
+    "httpclient",
+    "request",
+    "agent",
 ]
 
 # Real browser tokens — only trusted after ruling out bot signals
 BROWSER_PATTERNS = [
-    "mozilla/", "chrome/", "safari/", "firefox/",
-    "edge/", "opera/", "opr/",
+    "mozilla/",
+    "chrome/",
+    "safari/",
+    "firefox/",
+    "edge/",
+    "opera/",
+    "opr/",
 ]
 
 

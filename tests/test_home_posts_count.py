@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # test_home_posts_count.py — Test HOME_POSTS_COUNT environment variable
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
-
-import pytest
 
 
 def make_post(title, date):
@@ -19,7 +20,7 @@ def make_post(title, date):
         "url": "/blog/test.html",
         "excerpt": "Ex",
         "is_truncated": False,
-        "tags": []
+        "tags": [],
     }
 
 
@@ -27,7 +28,7 @@ class TestHomePostsCount:
     def test_respects_home_posts_count_env_var(self, generator, tmp_path, monkeypatch):
         monkeypatch.setenv("HOME_POSTS_COUNT", "3")
         g = generator
-        posts = [make_post(f"Post {i}", f"2025-01-{i+1:02d}") for i in range(8)]
+        posts = [make_post(f"Post {i}", f"2025-01-{i + 1:02d}") for i in range(8)]
         g.generate_home_page(posts, [])
         html = (g.output_dir / "index.html").read_text()
         # With count=3, only the 3 newest posts (Post 7, 6, 5) appear; older ones do not
@@ -37,7 +38,7 @@ class TestHomePostsCount:
 
     def test_default_is_five(self, generator):
         g = generator
-        posts = [make_post(f"Post {i}", f"2025-01-{i+1:02d}") for i in range(8)]
+        posts = [make_post(f"Post {i}", f"2025-01-{i + 1:02d}") for i in range(8)]
         g.generate_home_page(posts, [])
         html = (g.output_dir / "index.html").read_text()
         # With default of 5, only the 5 newest posts (Post 7-3) appear; older ones do not
@@ -50,7 +51,7 @@ class TestHomePostsCount:
         raindrops = [
             {
                 "title": f"Drop {i}",
-                "date": f"2025-01-{i+1:02d}",
+                "date": f"2025-01-{i + 1:02d}",
                 "type": "drop",
                 "category": "General",
                 "content": "<p>body</p>",
@@ -67,7 +68,7 @@ class TestHomePostsCount:
                 "important": False,
                 "broken": False,
                 "raindrop_type": "link",
-                "media": []
+                "media": [],
             }
             for i in range(5)
         ]

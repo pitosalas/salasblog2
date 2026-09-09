@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # propose.py — Post relevance scoring and popular drop selection for the Propose feature
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 import re
@@ -12,13 +15,24 @@ from typing import NamedTuple
 import frontmatter
 
 RELEVANCE_KEYWORDS = [
-    "ai", "artificial intelligence", "machine learning",
-    "startup", "entrepreneurship", "productivity",
-    "programming", "software", "technology",
-    "education", "learning", "teaching",
-    "robotics", "automation",
-    "python", "javascript",
-    "leadership", "management",
+    "ai",
+    "artificial intelligence",
+    "machine learning",
+    "startup",
+    "entrepreneurship",
+    "productivity",
+    "programming",
+    "software",
+    "technology",
+    "education",
+    "learning",
+    "teaching",
+    "robotics",
+    "automation",
+    "python",
+    "javascript",
+    "leadership",
+    "management",
 ]
 
 MIN_AGE_DAYS = 60
@@ -115,7 +129,7 @@ def _extract_note_from_body(content: str) -> str:
     idx = content.find(marker)
     if idx == -1:
         return ""
-    return content[idx + len(marker):].strip()
+    return content[idx + len(marker) :].strip()
 
 
 def _load_drop_record(md_file: Path, stats_counter, cutoff: date) -> dict | None:

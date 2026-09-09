@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 # test_raindrops_404_scenarios.py — 404 scenarios for the /raindrops/ endpoint
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
-import pytest
-import os
 from pathlib import Path
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 from fastapi.testclient import TestClient
-from fastapi import HTTPException
 
 from salasblog2.server import app, config
 
 
 class TestRaindrops404Scenarios:
-
     def test_missing_output_dir_config_returns_404(self, tmp_path):
         client = TestClient(app)
         with patch.dict(config, {"output_dir": None}, clear=True):
@@ -55,7 +54,9 @@ class TestRaindrops404Scenarios:
 
         with patch.dict(config, {"output_dir": output_dir}):
             response = client.get("/raindrops/")
-            assert response.status_code == 404, f"Should return 404 when site not generated, got {response.status_code}"
+            assert response.status_code == 404, (
+                f"Should return 404 when site not generated, got {response.status_code}"
+            )
             assert response.json() == {"detail": "Not found"}
 
     def test_raindrops_generated_but_empty_returns_404(self, tmp_path):
@@ -67,7 +68,9 @@ class TestRaindrops404Scenarios:
 
         with patch.dict(config, {"output_dir": output_dir}):
             response = client.get("/raindrops/")
-            assert response.status_code == 404, f"Should return 404 when no index.html generated, got {response.status_code}"
+            assert response.status_code == 404, (
+                f"Should return 404 when no index.html generated, got {response.status_code}"
+            )
 
     def test_corrupted_site_structure_returns_404(self, tmp_path):
         client = TestClient(app)
@@ -78,7 +81,9 @@ class TestRaindrops404Scenarios:
 
         with patch.dict(config, {"output_dir": output_dir}):
             response = client.get("/raindrops/")
-            assert response.status_code == 404, "Server should return 404 for corrupted site structure"
+            assert response.status_code == 404, (
+                "Server should return 404 for corrupted site structure"
+            )
 
     def test_path_traversal_vulnerability_exists(self, tmp_path):
         # SECURITY TEST: Documents existing path traversal vulnerability
@@ -95,13 +100,15 @@ class TestRaindrops404Scenarios:
             # Hidden files must never be served (even via normalized URLs)
             for path in ["../.env", "../.env.local"]:
                 response = client.get(f"/raindrops/{path}")
-                assert "DATABASE_PASSWORD" not in response.text, \
+                assert "DATABASE_PASSWORD" not in response.text, (
                     f"Hidden file exposed via {path}"
+                )
 
             # Paths that escape with multiple segments must not expose system files
             response = client.get("/raindrops/../../etc/passwd")
-            assert response.status_code in [404, 400], \
+            assert response.status_code in [404, 400], (
                 "Deep traversal should be blocked"
+            )
 
     def test_missing_index_html_returns_404(self, tmp_path):
         client = TestClient(app)
@@ -185,9 +192,13 @@ class TestRaindrops404Scenarios:
         index_file.write_text("<html><body>Test</body></html>")
 
         with patch.dict(config, {"output_dir": output_dir}):
-            with patch.object(Path, 'read_bytes', side_effect=PermissionError("Permission denied")):
+            with patch.object(
+                Path, "read_bytes", side_effect=PermissionError("Permission denied")
+            ):
                 response = client.get("/raindrops/")
-                assert response.status_code == 404, f"POOR ERROR HANDLING: Permission error should return 404, not crash. Got unhandled exception."
+                assert response.status_code == 404, (
+                    "POOR ERROR HANDLING: Permission error should return 404, not crash. Got unhandled exception."
+                )
 
     def test_directory_permission_errors_should_return_404_not_crash(self, tmp_path):
         client = TestClient(app)
@@ -196,9 +207,13 @@ class TestRaindrops404Scenarios:
         raindrops_dir.mkdir(parents=True)
 
         with patch.dict(config, {"output_dir": output_dir}):
-            with patch.object(Path, 'is_dir', side_effect=PermissionError("Permission denied")):
+            with patch.object(
+                Path, "is_dir", side_effect=PermissionError("Permission denied")
+            ):
                 response = client.get("/raindrops/")
-                assert response.status_code == 404, f"POOR ERROR HANDLING: Directory permission error should return 404, not crash. Got unhandled exception."
+                assert response.status_code == 404, (
+                    "POOR ERROR HANDLING: Directory permission error should return 404, not crash. Got unhandled exception."
+                )
 
     def test_valid_raindrops_index_serves_successfully(self, tmp_path):
         client = TestClient(app)
@@ -311,19 +326,21 @@ class TestRaindropsRealWorldScenarios:
 <head><title>Test {template_name}</title></head>
 <body>
     <h1>Raindrops</h1>
-    <p>Total posts: {context.get('total_posts', 0)}</p>
-    <p>Total pages: {context.get('pagination', {}).get('total_pages', 0)}</p>
-    {f"<p>No raindrops found.</p>" if context.get('total_posts', 0) == 0 else ""}
+    <p>Total posts: {context.get("total_posts", 0)}</p>
+    <p>Total pages: {context.get("pagination", {}).get("total_pages", 0)}</p>
+    {"<p>No raindrops found.</p>" if context.get("total_posts", 0) == 0 else ""}
 </body>
 </html>"""
 
         generator.render_template = mock_render_template
 
         empty_posts = []
-        generator.generate_listing_pages(empty_posts, 'raindrops')
+        generator.generate_listing_pages(empty_posts, "raindrops")
 
         index_file = output_dir / "raindrops" / "index.html"
-        assert index_file.exists(), "Generator should create index.html even for empty raindrops"
+        assert index_file.exists(), (
+            "Generator should create index.html even for empty raindrops"
+        )
 
         content = index_file.read_text()
         assert "Total posts: 0" in content
@@ -332,7 +349,9 @@ class TestRaindropsRealWorldScenarios:
 
         with patch.dict(config, {"output_dir": output_dir}):
             response = client.get("/raindrops/")
-            assert response.status_code == 200, "Should serve empty raindrops page successfully"
+            assert response.status_code == 200, (
+                "Should serve empty raindrops page successfully"
+            )
             assert "No raindrops found" in response.text
 
     def test_successful_raindrops_generation(self, tmp_path):

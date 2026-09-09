@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
 # test_tag_pages.py — Tests for F18 clickable tag pages
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 from pathlib import Path
 import pytest
 from jinja2 import Environment, FileSystemLoader
-from salasblog2.utils import format_date, group_posts_by_month, get_markdown_processor, slugify_tag
+from salasblog2.utils import (
+    format_date,
+    group_posts_by_month,
+    get_markdown_processor,
+    slugify_tag,
+)
 
 PROJECT_ROOT = Path(__file__).parent.parent
 TEMPLATES_DIR = PROJECT_ROOT / "templates"
@@ -20,7 +28,11 @@ def make_env():
     env.filters["group_by_month"] = group_posts_by_month
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
     env.filters["slugify"] = slugify_tag
-    env.filters["truncate"] = lambda s, n, killwords=False, end="...": s[:n] + end if s and len(s) > n else (s or "")
+    env.filters["truncate"] = (
+        lambda s, n, killwords=False, end="...": s[:n] + end
+        if s and len(s) > n
+        else (s or "")
+    )
     return env
 
 
@@ -40,18 +52,23 @@ def fake_post(tags=None):
 
 # --- slugify_tag tests ---
 
-@pytest.mark.parametrize("input_tag,expected", [
-    ("Python", "python"),
-    ("open source", "open-source"),
-    ("C++", "c"),
-    ("-tag-", "tag"),
-    ("web  dev", "web-dev"),
-])
+
+@pytest.mark.parametrize(
+    "input_tag,expected",
+    [
+        ("Python", "python"),
+        ("open source", "open-source"),
+        ("C++", "c"),
+        ("-tag-", "tag"),
+        ("web  dev", "web-dev"),
+    ],
+)
 def test_slugify_tag(input_tag, expected):
     assert slugify_tag(input_tag) == expected
 
 
 # --- Template rendering tests ---
+
 
 def test_tag_links_in_blog_post_html():
     env = make_env()
@@ -69,7 +86,13 @@ def test_tag_links_in_blog_list_html():
     html = template.render(
         posts=[post],
         navigation=[],
-        pagination={"current_page": 1, "total_pages": 1, "has_prev": False, "has_next": False, "page_urls": []},
+        pagination={
+            "current_page": 1,
+            "total_pages": 1,
+            "has_prev": False,
+            "has_next": False,
+            "page_urls": [],
+        },
         total_posts=1,
     )
     assert "/tags/open-source/index.html" in html
@@ -108,6 +131,7 @@ def test_generate_tag_pages_creates_files(tmp_path):
 
 # --- Bug regression tests ---
 
+
 def test_numeric_tags_are_not_displayed():
     # Tags that are purely numeric IDs (WordPress import artifacts) must not appear as badges
     env = make_env()
@@ -141,5 +165,6 @@ def test_tag_link_resolves_to_generated_page(tmp_path):
     slugs = re.findall(r'href="/tags/([^/]+)/index\.html"', html)
     assert len(slugs) > 0, "Expected tag links in rendered HTML"
     for slug in slugs:
-        assert (tmp_path / "tags" / slug / "index.html").exists(), \
+        assert (tmp_path / "tags" / slug / "index.html").exists(), (
             f"Tag page missing for slug '{slug}'"
+        )

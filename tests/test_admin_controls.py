@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_admin_controls.py — Tests for admin controls visibility behavior
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-09-09
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 from pathlib import Path
@@ -20,7 +23,7 @@ def test_base_uses_classlist_remove_not_style_display():
 def test_blog_post_admin_controls_hidden_by_default():
     """blog_post.html admin-controls div must carry d-none so it starts hidden."""
     content = (TEMPLATES_DIR / "blog_post.html").read_text()
-    assert 'admin-controls d-none' in content
+    assert "admin-controls d-none" in content
 
 
 def test_blog_post_edit_button_uses_warning_style():
@@ -46,7 +49,7 @@ def test_blog_post_nav_buttons_use_outline_secondary():
 def test_new_post_button_hidden_via_d_none_not_inline_style():
     """admin-new-post nav item must use d-none class, not inline style, so JS classList.remove works."""
     content = (TEMPLATES_DIR / "base.html").read_text()
-    assert 'admin-new-post d-none' in content
+    assert "admin-new-post d-none" in content
     # Inline style on this element would make classList.remove('d-none') ineffective
     assert 'admin-new-post" style="display: none;"' not in content
 
