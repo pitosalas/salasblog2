@@ -292,7 +292,27 @@ class TestTopTagsCache:
         generate_posts_index_cache()
 
         top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
-        assert top_tags == ["ai"]
+        assert "1221" not in top_tags
+        assert "1772" not in top_tags
+        assert top_tags[0] == "ai"  # the one real, actually-used tag ranks first
+
+    def test_generate_posts_index_cache_appends_curated_blog_tags(
+        self, client, tmp_path
+    ):
+        """BLOG_TAGS (the curated 15-tag list) are always offered even with
+        zero real usage yet — otherwise a brand-new curated tag could never
+        start being used, since it would never appear in the picklist."""
+        from salasblog2.server import generate_posts_index_cache
+        from salasblog2.utils import BLOG_TAGS
+        import json
+
+        write_post(tmp_path, "2026-01-01-a.md", tags=["some-unrelated-tag"])
+
+        generate_posts_index_cache()
+
+        top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
+        for tag in BLOG_TAGS:
+            assert tag in top_tags
 
     def test_load_top_tags_returns_empty_list_when_cache_missing(self, client):
         from salasblog2.server import load_top_tags

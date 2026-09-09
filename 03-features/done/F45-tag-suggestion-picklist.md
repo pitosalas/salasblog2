@@ -4,7 +4,7 @@
 
 **Date Created:** 2026-09-09
 
-**Done:** no — all 4 task steps done; awaiting your live click-through in `/admin` before closing (no browser tool was available this session to verify chip click/filter interaction directly — see `04-tasks/notdone/TF45-tag-suggestion-picklist.md`'s TF45.2 notes)
+**Done:** yes — confirmed working live by the user 2026-09-09 ("it does work but it is a little ugly. Ok for now" — visual polish deferred, not blocking)
 
 **Tasks File Created:** yes
 

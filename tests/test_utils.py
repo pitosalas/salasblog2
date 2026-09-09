@@ -624,3 +624,18 @@ class TestTopTagsByFrequency:
         tag_lists = [["", "ai"], [""]]
         result = top_tags_by_frequency(tag_lists)
         assert result == ["ai"]
+
+    def test_always_include_appended_after_ranked_tags(self):
+        """A curated tag with zero real usage still needs to be offered, or
+        it can never start being used — but must not crowd out a genuinely
+        popular tag within the ranked portion."""
+        tag_lists = [["ai"], ["ai"], ["robotics"]]
+        result = top_tags_by_frequency(
+            tag_lists, always_include=["curated-unused", "robotics"]
+        )
+        assert result == ["ai", "robotics", "curated-unused"]
+
+    def test_always_include_does_not_duplicate_ranked_tag(self):
+        tag_lists = [["ai"]]
+        result = top_tags_by_frequency(tag_lists, always_include=["ai"])
+        assert result.count("ai") == 1

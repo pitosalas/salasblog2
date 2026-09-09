@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 4
+# Version: 5
 # Created: 2026-09-09
 # Updated: 2026-09-09
 # Open Source Under MIT license
@@ -458,8 +458,13 @@ def slugify_collection(name: str) -> str:
     return slugify_tag(name)
 
 
-def top_tags_by_frequency(tag_lists: List[List[str]], limit: int = 100) -> List[str]:
-    """Return the `limit` most-used tags across all posts, most-used first.
+def top_tags_by_frequency(
+    tag_lists: List[List[str]],
+    limit: int = 100,
+    always_include: Optional[List[str]] = None,
+) -> List[str]:
+    """Return the `limit` most-used tags across all posts, most-used first,
+    followed by any `always_include` tags not already in that top set.
 
     Skips purely-numeric tags: many older posts carry raw WordPress category
     IDs (e.g. "1221") as their `tags` frontmatter, a leftover import artifact
@@ -467,6 +472,14 @@ def top_tags_by_frequency(tag_lists: List[List[str]], limit: int = 100) -> List[
     swamp genuine tags in a frequency ranking. Templates already exclude these
     the same way (`{% if not tag.isdigit() %}` in blog_post.html/blog_list.html/
     home.html) when rendering a post's tag badges; this mirrors that convention.
+
+    `always_include` (e.g. BLOG_TAGS) guarantees a curated tag is always
+    offered even if it's barely used yet — a brand-new curated tag would
+    otherwise never appear in a frequency ranking until posts start using it,
+    which nothing can do if it's never offered in the first place. These are
+    appended after the frequency-ranked tags rather than folded into the
+    ranking, so a curated-but-unused tag can't crowd out a genuinely popular
+    one within `limit`.
 
     Ties broken alphabetically, so the result is deterministic between runs
     (Python's Counter otherwise preserves first-seen order for ties, which
@@ -478,7 +491,11 @@ def top_tags_by_frequency(tag_lists: List[List[str]], limit: int = 100) -> List[
             if tag and not tag.isdigit():
                 counts[tag] = counts.get(tag, 0) + 1
     ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
-    return [tag for tag, _count in ranked[:limit]]
+    top = [tag for tag, _count in ranked[:limit]]
+    for tag in always_include or []:
+        if tag not in top:
+            top.append(tag)
+    return top
 
 
 def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
