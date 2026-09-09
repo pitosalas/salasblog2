@@ -261,6 +261,73 @@ class TestAdminPostsIndex:
         assert response.status_code == 401
 
 
+class TestTopTagsCache:
+    """F45: tag suggestion picklist is backed by output/top-tags.json, the
+    100 most-used real (non-numeric) tags across blog posts, computed by
+    generate_posts_index_cache() alongside admin-posts-index.json."""
+
+    def test_generate_posts_index_cache_writes_top_tags(self, client, tmp_path):
+        from salasblog2.server import generate_posts_index_cache
+        import json
+
+        write_post(tmp_path, "2026-01-01-a.md", tags=["ai", "robotics"])
+        write_post(tmp_path, "2026-01-02-b.md", tags=["ai"])
+        write_post(tmp_path, "2026-01-03-c.md", tags=["robotics", "personal"])
+
+        generate_posts_index_cache()
+
+        top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
+        assert top_tags[:3] == ["ai", "robotics", "personal"]
+
+    def test_generate_posts_index_cache_excludes_numeric_tags(self, client, tmp_path):
+        """Regression: old WordPress-imported posts carry raw numeric category
+        IDs as tags — real content confirmed this dominates a naive frequency
+        count. Numeric tags must not appear in the suggestion list."""
+        from salasblog2.server import generate_posts_index_cache
+        import json
+
+        write_post(tmp_path, "2026-01-01-a.md", tags=["1221", "1772"])
+        write_post(tmp_path, "2026-01-02-b.md", tags=["1221", "ai"])
+
+        generate_posts_index_cache()
+
+        top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
+        assert top_tags == ["ai"]
+
+    def test_load_top_tags_returns_empty_list_when_cache_missing(self, client):
+        from salasblog2.server import load_top_tags
+
+        assert load_top_tags() == []
+
+
+class TestTagPicklistUI:
+    """F45: the blog post editor offers a searchable picklist of the cached
+    top tags; the page editor (no tags field at all) must not."""
+
+    def test_new_post_page_includes_top_tags_and_picklist_controls(
+        self, client, tmp_path
+    ):
+        from salasblog2.server import generate_posts_index_cache
+
+        write_post(tmp_path, "2026-01-01-a.md", tags=["ai", "robotics"])
+        generate_posts_index_cache()
+
+        response = client.get("/admin/new-post")
+        assert response.status_code == 200
+        assert "TOP_TAGS" in response.text
+        assert '"ai"' in response.text
+        assert 'id="tagPicklistToggle"' in response.text
+        assert 'id="tagPicklistChips"' in response.text
+
+    def test_new_page_form_has_no_tag_picklist(self, client):
+        """Pages have no tags field at all — the picklist markup/JS must not
+        appear (it references elements that wouldn't exist on this form)."""
+        response = client.get("/admin/new-page")
+        assert response.status_code == 200
+        assert 'id="tagPicklistToggle"' not in response.text
+        assert "TOP_TAGS" not in response.text
+
+
 class TestUnifiedEditorTemplate:
     """F42 point 4: new_post.html/edit_post.html were hand-duplicated and had
     drifted (e.g. image_size only on edit). Both now render post_editor.html

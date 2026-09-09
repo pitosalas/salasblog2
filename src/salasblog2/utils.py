@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
 # Updated: 2026-09-09
 # Open Source Under MIT license
@@ -456,6 +456,29 @@ def extract_unique_collections(raindrops: List[Dict[str, Any]]) -> List[str]:
 def slugify_collection(name: str) -> str:
     """Convert collection name to URL-safe slug."""
     return slugify_tag(name)
+
+
+def top_tags_by_frequency(tag_lists: List[List[str]], limit: int = 100) -> List[str]:
+    """Return the `limit` most-used tags across all posts, most-used first.
+
+    Skips purely-numeric tags: many older posts carry raw WordPress category
+    IDs (e.g. "1221") as their `tags` frontmatter, a leftover import artifact
+    — not real topical tags, and common enough among old posts to otherwise
+    swamp genuine tags in a frequency ranking. Templates already exclude these
+    the same way (`{% if not tag.isdigit() %}` in blog_post.html/blog_list.html/
+    home.html) when rendering a post's tag badges; this mirrors that convention.
+
+    Ties broken alphabetically, so the result is deterministic between runs
+    (Python's Counter otherwise preserves first-seen order for ties, which
+    would depend on file iteration order — not what a stable cache wants).
+    """
+    counts: Dict[str, int] = {}
+    for tags in tag_lists:
+        for tag in tags:
+            if tag and not tag.isdigit():
+                counts[tag] = counts.get(tag, 0) + 1
+    ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
+    return [tag for tag, _count in ranked[:limit]]
 
 
 def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:

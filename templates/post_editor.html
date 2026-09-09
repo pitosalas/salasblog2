@@ -19,6 +19,11 @@
         .EasyMDEContainer .CodeMirror .cm-header-6 { font-size: 14px; line-height: inherit; }
         #inlinePreview { display: none; border: 1px solid var(--bs-border-color); border-radius: 4px; padding: 1rem; max-height: 600px; overflow-y: auto; }
         #inlinePreview.showing { display: block; }
+        .tag-picklist { border: 1px solid var(--bs-border-color); border-radius: 4px; padding: 0.5rem 0.75rem 0.75rem; margin-top: 0.5rem; }
+        .tag-picklist-chips { max-height: 220px; overflow-y: auto; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .tag-chip { border: 1px solid var(--bs-border-color); background: transparent; border-radius: 999px; padding: 0.15rem 0.65rem; font-size: 0.85rem; cursor: pointer; }
+        .tag-chip.selected { background: var(--bs-primary); border-color: var(--bs-primary); color: #fff; }
+        .tag-picklist-empty { color: var(--bs-secondary-color); font-size: 0.85rem; padding: 0.25rem 0; }
     </style>
 </head>
 <body>
@@ -75,14 +80,16 @@
             {% if content_type == 'blog' %}
             <div class="mb-3">
                 <label for="tags" class="form-label">Tags</label>
-                <input type="text" id="tags" name="tags_raw" class="form-control" list="tagSuggestions"
-                       value="{{ (tags|default(prefill_tags|default([])))|join(', ') }}"
-                       placeholder="comma-separated, e.g. python, testing">
-                <datalist id="tagSuggestions">
-                    {% for tag in blog_tags|default([]) %}
-                    <option value="{{ tag }}">
-                    {% endfor %}
-                </datalist>
+                <div class="d-flex gap-2 align-items-start">
+                    <input type="text" id="tags" name="tags_raw" class="form-control"
+                           value="{{ (tags|default(prefill_tags|default([])))|join(', ') }}"
+                           placeholder="comma-separated, e.g. python, testing">
+                    <button type="button" id="tagPicklistToggle" class="btn btn-outline-secondary text-nowrap">Browse tags</button>
+                </div>
+                <div id="tagPicklist" class="tag-picklist d-none">
+                    <input type="text" id="tagPicklistFilter" class="form-control form-control-sm mb-2" placeholder="Filter tags...">
+                    <div id="tagPicklistChips" class="tag-picklist-chips"></div>
+                </div>
                 <div class="form-text">Comma-separated. Existing tags are suggested, but any tag can be typed.</div>
             </div>
             {% endif %}
@@ -112,6 +119,9 @@
         const IS_EDIT = {{ 'true' if is_edit else 'false' }};
         const ACTION_URL = {{ (action_url|default('/admin/new-post'))|tojson }};
         const AUTOSAVE_ID = {{ ('editor-' + (filename|default('new')))|tojson }};
+        {% if content_type == 'blog' %}
+        const TOP_TAGS = {{ blog_tags|default([])|tojson }};
+        {% endif %}
 
         const easyMDE = new EasyMDE({
             element: document.getElementById('content'),
@@ -145,6 +155,65 @@
             const raw = document.getElementById('tags')?.value || '';
             return raw.split(',').map(t => t.trim()).filter(t => t.length > 0);
         }
+
+        {% if content_type == 'blog' %}
+        function setTags(tags) {
+            document.getElementById('tags').value = tags.join(', ');
+            formDirty = true;
+        }
+
+        function renderTagChips(filterText) {
+            const container = document.getElementById('tagPicklistChips');
+            const selected = new Set(getTags().map(t => t.toLowerCase()));
+            const needle = filterText.trim().toLowerCase();
+            const matches = TOP_TAGS.filter(tag => !needle || tag.toLowerCase().includes(needle));
+
+            container.innerHTML = '';
+            if (matches.length === 0) {
+                const empty = document.createElement('div');
+                empty.className = 'tag-picklist-empty';
+                empty.textContent = TOP_TAGS.length === 0 ? 'No tag suggestions yet.' : 'No matching tags.';
+                container.appendChild(empty);
+                return;
+            }
+            matches.forEach(tag => {
+                const chip = document.createElement('button');
+                chip.type = 'button';
+                chip.className = 'tag-chip' + (selected.has(tag.toLowerCase()) ? ' selected' : '');
+                chip.textContent = tag;
+                chip.addEventListener('click', () => toggleTag(tag));
+                container.appendChild(chip);
+            });
+        }
+
+        function toggleTag(tag) {
+            const current = getTags();
+            const lower = tag.toLowerCase();
+            const withoutTag = current.filter(t => t.toLowerCase() !== lower);
+            if (withoutTag.length === current.length) {
+                withoutTag.push(tag);
+            }
+            setTags(withoutTag);
+            renderTagChips(document.getElementById('tagPicklistFilter').value);
+        }
+
+        document.getElementById('tagPicklistToggle').addEventListener('click', () => {
+            const panel = document.getElementById('tagPicklist');
+            const opening = panel.classList.contains('d-none');
+            panel.classList.toggle('d-none');
+            if (opening) renderTagChips(document.getElementById('tagPicklistFilter').value);
+        });
+
+        document.getElementById('tagPicklistFilter').addEventListener('input', (e) => {
+            renderTagChips(e.target.value);
+        });
+
+        document.getElementById('tags').addEventListener('input', () => {
+            if (!document.getElementById('tagPicklist').classList.contains('d-none')) {
+                renderTagChips(document.getElementById('tagPicklistFilter').value);
+            }
+        });
+        {% endif %}
 
         function buildFormData() {
             const form = document.getElementById('editorForm');

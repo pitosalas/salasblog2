@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_blog_tags.py — Tests for F23 tag selection for blog posts
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-08
-# Updated: 2026-09-08
+# Updated: 2026-09-09
 # Open Source Under MIT license
 
 from pathlib import Path
@@ -94,8 +94,13 @@ class TestBloggerApiTagParsing:
 class TestTagsInTemplates:
     """post_editor.html (shared by create and edit, per F42) replaced the fixed
     BLOG_TAGS checkbox list with a free-form comma-separated tag input, with
-    existing tags offered as <datalist> autocomplete suggestions rather than a
-    hard vocabulary — see F42 point 6."""
+    existing tags offered as suggestions rather than a hard vocabulary — see
+    F42 point 6. F45 replaced the original single-match <datalist> suggestion
+    UI with a searchable multi-select picklist (a plain <datalist> doesn't
+    work well against 100 suggested tags); the `blog_tags` context var — now
+    sourced from real tag-frequency data rather than the static BLOG_TAGS
+    list, see F45 — still drives the suggestion list, just through different
+    markup/JS."""
 
     def test_new_post_template_offers_tag_suggestions(self):
         env = make_env()
@@ -108,9 +113,10 @@ class TestTagsInTemplates:
             blog_tags=BLOG_TAGS,
             is_edit=False,
         )
-        assert 'id="tagSuggestions"' in html
+        assert 'id="tagPicklistToggle"' in html
+        assert 'id="tagPicklistChips"' in html
         for tag in BLOG_TAGS:
-            assert f'<option value="{tag}">' in html
+            assert f'"{tag}"' in html
 
     def test_edit_post_template_prefills_existing_tags(self):
         env = make_env()
