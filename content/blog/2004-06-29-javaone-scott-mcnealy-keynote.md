@@ -1,12 +1,17 @@
 ---
-title: "[JAVAONE] Scott McNealy Keynote"
-subtitle: "I had never heard him speak – He’s a lot of fun to listen to – funny and with a sense of his audienc..."
-category: "538"
-tags: []
-date: "2004-06-29"
-type: "wp"
+category: '538'
+date: '2004-06-29'
+subtitle: I had never heard him speak – He’s a lot of fun to listen to – funny and
+  with a sense of his audienc...
+tags:
+- technology
+- javaone
+- business
+title: '[JAVAONE] Scott McNealy Keynote'
+type: wp
 wordpress_id: 1975
 ---
+
 I had never heard him speak – He’s a lot of fun to listen to – funny and with a sense of his audience. This was a shorter keynote then yesterday. This wasn’t the kind of **rah-rah** motivational speech that I was expecting. He did drive home a few points, clearly showing what he was most interested in us taking away:
 
 **Takeaway 1:** Scott wants us to believe that Sun is highly viable. They will not be going away. $4 Billion in the bank, etc. Unit sales are growing – at least over the last 3 Quarters.

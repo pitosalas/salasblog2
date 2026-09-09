@@ -1,12 +1,16 @@
 ---
-title: "Orkut Revisited: I had been"
-subtitle: "**Orkut Revisited: **I had been wondering whether my negative vibes [about Orkut..."
-category: "1"
-tags: []
-date: "2004-02-02"
-type: "wp"
+category: '1'
+date: '2004-02-02'
+subtitle: '**Orkut Revisited: **I had been wondering whether my negative vibes [about
+  Orkut...'
+tags:
+- technology
+- orkut
+title: 'Orkut Revisited: I had been'
+type: wp
 wordpress_id: 2083
 ---
+
 **Orkut Revisited: **I had been wondering whether my [negative vibes](/2004/01/24.html) [about Orkut](/2004/01/29.html) was because I was the only person on the planet apparently that had not received an invitation. Well that’s all changed. And you know what? I still feel the same way. And apparently I am [not the only](http://doc.weblogs.com/2004/02/02) one…
 
 In a bit of **very clever social engineering**, I believe the **allure of Orkut** was (somewhat or mostly) about the fact that it was unattainable. By being “Invitation Only” it produced two effects: a) people who were left out wanted “in”, and b) people who were “in” viewed it at some level as some kind of validation – after all they were part of the “**in crowd”** now. 

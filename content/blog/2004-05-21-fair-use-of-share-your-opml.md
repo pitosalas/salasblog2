@@ -1,12 +1,15 @@
 ---
-title: "Fair Use of Share-your-OPML?"
-subtitle: "One of the core goals of BlogBridge is to give a newbie a quick and del..."
-category: "50"
-tags: []
-date: "2004-05-21"
-type: "wp"
+category: '50'
+date: '2004-05-21'
+subtitle: One of the core goals of BlogBridge is to give a newbie a quick and del...
+tags:
+- technology
+- blogbridge
+title: Fair Use of Share-your-OPML?
+type: wp
 wordpress_id: 1998
 ---
+
 One of the core goals of [BlogBridge ](http://www.blogbridge.com)is to give a newbie a quick and delicious taste of the world of blogs. One of the very first steps of course is to decide what feeds to follow. Other blog readers come with an initial set of feeds built in or offer the user to pick from a bunch of them. (I hear that the authors of those readers, once they become at all well known, are inundated with bloggers who would like their particular blog to be in the built-in initial list.
 Here’s a different approach. In BlogBridge I want allow a user to use someone else’s subscription list as a base for their own. In other words, give me a subscription list that matches Jon Udell’s. Or like George Bush. Or like Eric Clapton. 
 

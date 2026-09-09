@@ -1,12 +1,16 @@
 ---
-title: "Can we charge for an open source BlogBridge"
-subtitle: "As you know we are developing BlogBridge, “a new kind of blog reader.” ..."
-category: "50"
-tags: []
-date: "2004-05-17"
-type: "wp"
+category: '50'
+date: '2004-05-17'
+subtitle: As you know we are developing BlogBridge, “a new kind of blog reader.” ...
+tags:
+- technology
+- blogbridge
+- business
+title: Can we charge for an open source BlogBridge
+type: wp
 wordpress_id: 2002
 ---
+
 As you know we are developing [BlogBridge](http://www.blogbridge.com), “a new kind of blog reader.” As you may know, BlogBridge is [open source ](https://sourceforge.net/projects/blogbridge/)(see https://sourceforge.net/projects/blogbridge/.)
 With all our recent progress, I feel that pretty **soon BlogBridge will be functional enough that it will actually be usable**, and suitable for a beta. And after a successful beta, we plan to start charging for it, in some form or another.
 

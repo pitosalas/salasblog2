@@ -1,12 +1,15 @@
 ---
-title: "Echo Chamber, redux: Are we"
-subtitle: "**Echo Chamber, redux: **Are we **wasting** our **valuable** brain cells **duplicating** each other’..."
-category: "1"
-tags: []
-date: "2004-02-11"
-type: "wp"
+category: '1'
+date: '2004-02-11'
+subtitle: '**Echo Chamber, redux: **Are we **wasting** our **valuable** brain cells
+  **duplicating** each other’...'
+tags:
+- technology
+title: 'Echo Chamber, redux: Are we'
+type: wp
 wordpress_id: 2076
 ---
+
 **Echo Chamber, redux: **Are we **wasting** our **valuable** brain cells **duplicating** each other’s work? There was an excellent and thought provoking presentation by Dave Sifry of Technorati fame at the ETech Forum. I wish I was there. 
 
 Well, here are **four** (4) different first hand reports of the same talk: [David Weinberger](http://www.hyperorg.com/blogger/mtarchive/002418.html), [Joi Ito](http://joi.ito.com/archives/2004/02/11/technorati_talk.html), [Doc Searls](http://doc.weblogs.com/2004/02/10#technoratification), [Dan Gillmor](http://weblog.siliconvalley.com/column/dangillmor/archives/001773.shtml#001773), and I am **sure there were others**. 

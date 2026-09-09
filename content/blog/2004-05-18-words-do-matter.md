@@ -1,12 +1,14 @@
 ---
-title: "Words DO matter"
-subtitle: "I was scanning Jon Udell’s blog and came across..."
-category: "298"
-tags: []
-date: "2004-05-18"
-type: "wp"
+category: '298'
+date: '2004-05-18'
+subtitle: I was scanning Jon Udell’s blog and came across...
+tags:
+- technology
+title: Words DO matter
+type: wp
 wordpress_id: 2001
 ---
+
 I was scanning [Jon Udell’s blog](http://weblog.infoworld.com/udell/2004/05/17.html) and came across the following:
 *“Plog is a brand-new word that’s even uglier (if possible) than blog. But the **words don’t matter**. What’s striking is how the art of storytelling — our instinctive human way of making sense of the world — has woven itself into the science of information technology. “*
 

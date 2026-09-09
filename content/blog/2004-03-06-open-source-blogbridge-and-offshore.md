@@ -1,12 +1,17 @@
 ---
-title: "Open Source, BlogBridge and Offshore"
-subtitle: "**Open Source, BlogBridge and Offshore Development. **I’ve been using several neat offshore developm..."
-category: "1"
-tags: []
-date: "2004-03-06"
-type: "wp"
+category: '1'
+date: '2004-03-06'
+subtitle: '**Open Source, BlogBridge and Offshore Development. **I’ve been using several
+  neat offshore developm...'
+tags:
+- technology
+- blogbridge
+- business
+title: Open Source, BlogBridge and Offshore
+type: wp
 wordpress_id: 2053
 ---
+
 **Open Source, BlogBridge and Offshore Development. **I’ve been using several neat offshore development options in my work on Blog Bridge, a new kind of Blog Reader that I’ve been working on (very) part time. You can read all about it: [here](http://www.blogbridge.com/).
 
 There’s a developer in **Russia**, a designer in **China**, a programmer in **Norway** and one in **California** (ok, not really offshore.) I don’t want to exagerate, each of these folks has done one project for me, mostly pretty small. It’s been an experiment for me to see how this works and how effective it could be. So far so good.

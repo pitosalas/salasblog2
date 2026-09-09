@@ -1,12 +1,15 @@
 ---
-title: "A new kind of EVIL Spyware"
-subtitle: "One of my computers has gone totally haywire with spyware, popups popping all over the place, and mo..."
-category: "538"
-tags: []
-date: "2004-05-06"
-type: "wp"
+category: '538'
+date: '2004-05-06'
+subtitle: One of my computers has gone totally haywire with spyware, popups popping
+  all over the place, and mo...
+tags:
+- technology
+title: A new kind of EVIL Spyware
+type: wp
 wordpress_id: 2017
 ---
+
 One of my computers has gone totally haywire with spyware, popups popping all over the place, and more. Here’s the new spin, which I hadn’t seen before.
 
 When surfing the web, arbitrary words on web pages are turned into links, and when you innocently click them, you are sent off the deep end with ads, popups, software installing itself or claiming to do so. It’s really ugly. I had never seen that before.

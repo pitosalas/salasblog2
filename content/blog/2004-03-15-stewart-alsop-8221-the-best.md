@@ -1,12 +1,15 @@
 ---
-title: "Stewart Alsop ” the best"
-subtitle: "**Stewart Alsop ” the best political columnist of the past century”: **Well, that’s high praise from..."
-category: "1"
-tags: []
-date: "2004-03-15"
-type: "wp"
+category: '1'
+date: '2004-03-15'
+subtitle: '**Stewart Alsop ” the best political columnist of the past century”: **Well,
+  that’s high praise from...'
+tags:
+- business
+title: Stewart Alsop ” the best
+type: wp
 wordpress_id: 2046
 ---
+
 **Stewart Alsop ” the best political columnist of the past century”: **Well, that’s high praise from [William Safire in a New York Times editorial](http://www.nytimes.com/2004/03/15/opinion/15SAFI.html) today. Stewart of course has been known as a technology columnist, author of a great Tech newsletter **“PC Letter”,** and inventor of the **“Vapor List”** where he tracked software vendors’ promises against reality. Stewart has since gone to the **dark side** and the world of Venture Capital.
 
 What I never knew was that Stewart had been, apparently, a **political columnist of some note!**

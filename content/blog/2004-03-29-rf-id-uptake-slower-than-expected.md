@@ -1,12 +1,16 @@
 ---
-title: "RF-ID uptake slower than expected?"
-subtitle: "I’ve been a quasi-believer about RD-ID technology for a while now. I know more than several people w..."
-category: "1"
-tags: []
-date: "2004-03-29"
-type: "wp"
+category: '1'
+date: '2004-03-29'
+subtitle: I’ve been a quasi-believer about RD-ID technology for a while now. I know
+  more than several people w...
+tags:
+- technology
+- rfid
+title: RF-ID uptake slower than expected?
+type: wp
 wordpress_id: 2039
 ---
+
 I’ve been a quasi-believer about RD-ID technology for a while now. I know more than several people who are investing their time and money into this space, but I am a **fence-sitter**. Briefly, why?
 
 - From what I hear and read, it **doesn’t quite work** reliably yet. The readers can easily be confused by multiple tags, mis-counting or mis-identifying. 

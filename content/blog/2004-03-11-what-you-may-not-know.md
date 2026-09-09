@@ -1,12 +1,16 @@
 ---
-title: "What you may not know"
-subtitle: "**What you may not know about Eclipse. (Demo 2004 Series 10) **If you are a Java developer and you h..."
-category: "1"
-tags: []
-date: "2004-03-11"
-type: "wp"
+category: '1'
+date: '2004-03-11'
+subtitle: '**What you may not know about Eclipse. (Demo 2004 Series 10) **If you are
+  a Java developer and you h...'
+tags:
+- programming
+- eclipse
+title: What you may not know
+type: wp
 wordpress_id: 2049
 ---
+
 **What you may not know about Eclipse. (Demo 2004 Series 10) **If you are a Java developer and you haven’t checked out the Eclipse Development tool from [www.eclipse.org](http://www.eclipse.org), then you owe yourself a treat. Who knows if you get excited about that kind of thing, but it gives me *chills.* Here are some claims to fame:
 
 - 

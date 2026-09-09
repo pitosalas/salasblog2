@@ -1,12 +1,15 @@
 ---
-title: "It’s easy to predict the future!"
-subtitle: "**It’s easy to predict the future. **Tim Bray has just concluded an interesting series of postings o..."
-category: "1"
-tags: ["1105", "1662"]
-date: "2004-01-09"
-type: "wp"
+category: '1'
+date: '2004-01-09'
+subtitle: '**It’s easy to predict the future. **Tim Bray has just concluded an interesting
+  series of postings o...'
+tags:
+- technology
+title: It’s easy to predict the future!
+type: wp
 wordpress_id: 2100
 ---
+
 **It’s easy to predict the future. **Tim Bray has just concluded an interesting series of postings on what he calls [TPSM or Technology Predictor Success Matrix.](http://www.tbray.org/ongoing/When/200x/2004/01/03/TPM1) I’ve had a [belief for a while](//2003/10/04.html) that actually it’s easier than you think to predict the future of technologies. I will limit my comments to technology and computer related predictions, but I bet this applies to other fields as well. ****
 
 **Want to see? **I predict that in the future:

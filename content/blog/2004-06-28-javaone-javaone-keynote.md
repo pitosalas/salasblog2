@@ -1,12 +1,16 @@
 ---
-title: "[JAVAONE] JavaOne Keynote"
-subtitle: "As you know I am attending the JavaOne conference. I jotted down my key takeaways during the keynote..."
-category: "538"
-tags: []
-date: "2004-06-28"
-type: "wp"
+category: '538'
+date: '2004-06-28'
+subtitle: As you know I am attending the JavaOne conference. I jotted down my key
+  takeaways during the keynote...
+tags:
+- technology
+- javaone
+title: '[JAVAONE] JavaOne Keynote'
+type: wp
 wordpress_id: 1978
 ---
+
 As you know I am attending the JavaOne conference. I jotted down my key takeaways during the keynote for myself, which I thought I’d share here. The keynote featured several Sun execs, particularly Jonathan Schwarts, their President and COO.
 
 **Take Away 1: **Java as a platform is incredibly ubiquitous. This argument rests on the premise that the world is a lot more than personal computers, and very importantly includes mobile devices like cell phones and PDAs. In trying to put this in to numbers, they seem to try to take credit in counting the number of network elements of all kinds of things which I don’t think of as Java (RF-ID tags are not really Java are they? Is eBay Java? I don’t think of ring tones as Java.)

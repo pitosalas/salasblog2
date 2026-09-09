@@ -1,12 +1,16 @@
 ---
-title: "Sun still doesn’t get it!"
-subtitle: "**Sun still doesn’t get it! **Ouch this hurts. The UI below is what the vaunted Sun provides to Wind..."
-category: "1"
-tags: []
-date: "2004-01-31"
-type: "wp"
+category: '1'
+date: '2004-01-31'
+subtitle: '**Sun still doesn’t get it! **Ouch this hurts. The UI below is what the
+  vaunted Sun provides to Wind...'
+tags:
+- programming
+- java
+title: Sun still doesn’t get it!
+type: wp
 wordpress_id: 2085
 ---
+
 **Sun still doesn’t get it! **Ouch this hurts. The UI below is what the vaunted Sun provides to Windows users as their standard “Java Web Start” Experience — the latest release of Java no less – fresh off the presses.
 
 This is what poor **first time users **are expected to look at when they are installing Java apps on Windows (I suspect it looks just the same on other platforms.) **It turns my stomach. **

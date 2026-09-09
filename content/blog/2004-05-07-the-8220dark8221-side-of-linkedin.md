@@ -1,12 +1,17 @@
 ---
-title: "The “dark” side of LinkedIn"
-subtitle: "Well, not really dark: This is in reference to Shel Isreal’s recent bit about LinkedIn."
-category: "298"
-tags: []
-date: "2004-05-07"
-type: "wp"
+category: '298'
+date: '2004-05-07'
+subtitle: 'Well, not really dark: This is in reference to Shel Isreal’s recent bit
+  about LinkedIn.'
+tags:
+- technology
+- linkedin
+- business
+title: The “dark” side of LinkedIn
+type: wp
 wordpress_id: 2015
 ---
+
 Well, not really dark: This is in reference to [Shel Isreal’s recent bit about LinkedIn.](http://seems2shel.typepad.com/itseemstome/2004/05/linkedin_part_3.html) Shel notes that [LinkedIn ](http://www.linkedin.com/)is actually **good for recruiting**. He cites some examples of folks who assembled a team using LinkedIn to locate candidates.
 
 **Think about the other side:** You’re the CEO of a company. You’ve discovered LinkedIn. It’s kind of cool. You introduce some of your team to it. Before long everyone is on LinkedIn. 

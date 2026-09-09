@@ -1,12 +1,16 @@
 ---
-title: "[GEEK] Is Log4J not doing what you expect, or not finding its properties?"
-subtitle: "Here’s a handy bit of esoterica: To force Log4J to report on it’s initialization sequence do this:"
-category: "422"
-tags: []
-date: "2004-05-10"
-type: "wp"
+category: '422'
+date: '2004-05-10'
+subtitle: 'Here’s a handy bit of esoterica: To force Log4J to report on it’s initialization
+  sequence do this:'
+tags:
+- programming
+- log4j
+title: '[GEEK] Is Log4J not doing what you expect, or not finding its properties?'
+type: wp
 wordpress_id: 2012
 ---
+
 Here’s a handy bit of esoterica: To force Log4J to report on it’s initialization sequence do this: 
 
 **java -Dlog4j.debug=true**

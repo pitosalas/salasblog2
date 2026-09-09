@@ -1,12 +1,16 @@
 ---
-title: "Social Networking (Demo 2004 Series"
-subtitle: "**Social Networking (Demo 2004 Series – 8) **I’ve written a few times about..."
-category: "1"
-tags: []
-date: "2004-03-05"
-type: "wp"
+category: '1'
+date: '2004-03-05'
+subtitle: '**Social Networking (Demo 2004 Series – 8) **I’ve written a few times about...'
+tags:
+- technology
+- business
+- demo2004
+title: Social Networking (Demo 2004 Series
+type: wp
 wordpress_id: 2056
 ---
+
 **Social Networking (Demo 2004 Series – 8) **[I’ve written a few times](/2004/01/24.html#a155) about Orkut and LinkedIn and **the kind-of-funny-kind-of-strange** infatuation with Orkut among the Digerati that seems to have peaked and now died off. Anyway, Friendster was demoing at Demo, so I had a chance to look and talk to them. I learned a few little things: 
 
 First off, Friendster has a strong Yahoo influence. I sense that maybe some of the people there came from Yahoo, which tells me that a likely direction for them is to be **acquired by Yahoo at some point. **

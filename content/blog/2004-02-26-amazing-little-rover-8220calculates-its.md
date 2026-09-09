@@ -1,12 +1,16 @@
 ---
-title: "Amazing little rover “calculates its"
-subtitle: "**Amazing little rover “calculates its own location in the universe…..on Mars”: **I just can’t get e..."
-category: "1"
-tags: []
-date: "2004-02-26"
-type: "wp"
+category: '1'
+date: '2004-02-26'
+subtitle: '**Amazing little rover “calculates its own location in the universe…..on
+  Mars”: **I just can’t get e...'
+tags:
+- science
+- mars
+title: Amazing little rover “calculates its
+type: wp
 wordpress_id: 2069
 ---
+
 **Amazing little rover “calculates its own location in the universe…..on Mars”: **I just can’t get enough of this [amazing bit of engineering called the Mars Rover](http://marsrovers.jpl.nasa.gov/mission/status.html). Get this: 
 
 > 

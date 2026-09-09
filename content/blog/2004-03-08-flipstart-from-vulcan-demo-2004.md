@@ -1,12 +1,15 @@
 ---
-title: "Flipstart from Vulcan (Demo 2004"
-subtitle: "**Flipstart from Vulcan (Demo 2004 Series – 9): **This is a **weird l..."
-category: "1"
-tags: []
-date: "2004-03-08"
-type: "wp"
+category: '1'
+date: '2004-03-08'
+subtitle: '**Flipstart from Vulcan (Demo 2004 Series – 9): **This is a **weird l...'
+tags:
+- technology
+- demo2004
+title: Flipstart from Vulcan (Demo 2004
+type: wp
 wordpress_id: 2052
 ---
+
 **[Flipstart](http://www.flipstartpc.com/) from Vulcan (Demo 2004 Series – 9): **This is a **weird little** device. It’s essentially a Windows XP computer using thumb keyboard. The dimensions are (from memory, now 4″ x 6″ x 1″) It has a 30Gig disk, and fast chip. It also has built in Wi-Fi. It has a port replicator allowing full size keyboard and screen to be attached. The screen is very high resolution. All in all it looks attractive and **kind of useful**.
 
 But the pitch was that this was a new approach to mobile computing, what you would come up with if you started with a **blank slate**, etc. 

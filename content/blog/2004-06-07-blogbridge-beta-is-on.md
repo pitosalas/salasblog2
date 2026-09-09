@@ -1,12 +1,16 @@
 ---
-title: "BlogBridge beta is ON!"
-subtitle: "Here’s the beta invite email that just went out… Wow, this is exciting! 🙂"
-category: "50"
-tags: []
-date: "2004-06-07"
-type: "wp"
+category: '50'
+date: '2004-06-07'
+subtitle: "Here’s the beta invite email that just went out… Wow, this is exciting!
+  \U0001F642"
+tags:
+- technology
+- blogbridge
+title: BlogBridge beta is ON!
+type: wp
 wordpress_id: 1986
 ---
+
 Here’s the beta invite email that just went out… Wow, this is exciting! 🙂
 “Thanks again for participating in this first beta of BlogBridge. A few comments before getting going:
 

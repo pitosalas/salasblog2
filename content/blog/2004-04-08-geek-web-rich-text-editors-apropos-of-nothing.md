@@ -1,12 +1,15 @@
 ---
-title: "[GEEK] Web Rich Text Editors (Apropos of nothing)"
-subtitle: "I’ve had occasion to look into what kinds of rich text editors are availble out there, and I thought..."
-category: "422"
-tags: []
-date: "2004-04-08"
-type: "wp"
+category: '422'
+date: '2004-04-08'
+subtitle: I’ve had occasion to look into what kinds of rich text editors are availble
+  out there, and I thought...
+tags:
+- programming
+title: '[GEEK] Web Rich Text Editors (Apropos of nothing)'
+type: wp
 wordpress_id: 2032
 ---
+
 I’ve had occasion to look into what kinds of rich text editors are availble out there, and I thought I’d use this as a place to record the results, for myself, for you, and for posterity.
 Basically I am looking for a Rich Text Editor that can be embedded in a browser based application. Here are the requirements:
 

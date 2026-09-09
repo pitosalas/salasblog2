@@ -1,12 +1,15 @@
 ---
-title: "Some miscellaneous links and pointers (WTF Series, 4)"
-subtitle: "I am at the WTF conference (more of a retreat.) IN addition to the more..."
-category: "298"
-tags: []
-date: "2004-04-06"
-type: "wp"
+category: '298'
+date: '2004-04-06'
+subtitle: I am at the WTF conference (more of a retreat.) IN addition to the more...
+tags:
+- business
+- wtf-conference
+title: Some miscellaneous links and pointers (WTF Series, 4)
+type: wp
 wordpress_id: 2034
 ---
+
 I am at the [WTF conference](http://www.stupidnet.com/) (more of a retreat.) IN addition to the more cogent posts that follow, here are some links and pointers that may be of interest.
 
 - About Venture Capital and Innovation: [http://www.signallake.com/innovation/](http://www.signallake.com/innovation/)

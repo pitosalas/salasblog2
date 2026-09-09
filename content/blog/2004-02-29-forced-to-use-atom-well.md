@@ -1,12 +1,14 @@
 ---
-title: "Forced to use Atom. Well,"
-subtitle: "**Forced to use Atom. **Well, it’s happening… My friend Paul English ..."
-category: "1"
-tags: []
-date: "2004-02-29"
-type: "wp"
+category: '1'
+date: '2004-02-29'
+subtitle: '**Forced to use Atom. **Well, it’s happening… My friend Paul English ...'
+tags:
+- technology
+title: Forced to use Atom. Well,
+type: wp
 wordpress_id: 2063
 ---
+
 **Forced to use Atom. **Well, it’s happening… My friend [Paul English](http://www.paulenglish.com/) has been using Blogger for the longest time for his personal blog. I often complained to him that I used a Blog Reader (FeedDemon is my current favorite, until BlogBridge comes out 🙂 and wouldn’t be able to follow his blog until he had a feed…
 
 Well as you may know, [Blogger](http://www.blogger.com/) now has a feed, and it’s uses the Atom format. In the **‘tempest in a teapot’** department, you might have followed the Atom/RSS battle, which took an interesting turn when Blogger (=Google) decided to support *only* Atom as their format. Clever strategic move or **small minded vindictiveness**?

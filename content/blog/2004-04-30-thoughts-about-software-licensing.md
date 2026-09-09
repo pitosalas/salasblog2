@@ -1,12 +1,17 @@
 ---
-title: "Thoughts about software licensing"
-subtitle: "Dan Bricklin’s written a bit on a topic that’s been indirectly on my mind lately"
-category: "538"
-tags: []
-date: "2004-04-30"
-type: "wp"
+category: '538'
+date: '2004-04-30'
+subtitle: Dan Bricklin’s written a bit on a topic that’s been indirectly on my mind
+  lately
+tags:
+- technology
+- business
+- blogbridge
+title: Thoughts about software licensing
+type: wp
 wordpress_id: 2021
 ---
+
 [Dan Bricklin’s written a bit on a topic that’s been indirectly on my mind lately](http://www.bricklin.com/licensingthinking.htm). It has to do with [BlogBridge](http://www.blogbridge.com), the Blogging tool that I’ve been developing as a back room project for a while now (I post periodic updates, so you might have seen them.) 
 Anyway, the connection is that starting sometime next month when I wrap up my current consulting project I will be devoting more time on BlogBridge to see if I can’t get it to a real stable and usable form, and who knows, try to sell it? Progress has been accelerating lately – there’s another developer working on it part time now (Aleksey, in the Ukraine) and things are coming along nicely.
 

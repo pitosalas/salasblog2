@@ -1,12 +1,15 @@
 ---
-title: "Discovering RSS feed URLs"
-subtitle: "Scoble bemoans the fact that folks aren’t all using the XML Icon, and ..."
-category: "50"
-tags: []
-date: "2004-05-24"
-type: "wp"
+category: '50'
+date: '2004-05-24'
+subtitle: Scoble bemoans the fact that folks aren’t all using the XML Icon, and ...
+tags:
+- technology
+- rss
+title: Discovering RSS feed URLs
+type: wp
 wordpress_id: 1997
 ---
+
 [Scoble ](http://scoble.weblogs.com/)bemoans the fact that folks aren’t all using the XML Icon, and he cites [Random Bytes.](http://www.byte.org/blog) 
 
 (Lucky Random Bytes for being mentioned by Scoble. As they say in Holleywood, you can say anything you like about me, just as long as you spell my name right.)

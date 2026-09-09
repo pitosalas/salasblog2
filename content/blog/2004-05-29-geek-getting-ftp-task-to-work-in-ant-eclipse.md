@@ -1,12 +1,15 @@
 ---
-title: "[Geek] Getting ftp task to work in Ant / Eclipse"
-subtitle: "Note to self:"
-category: "538"
-tags: []
-date: "2004-05-29"
-type: "wp"
+category: '538'
+date: '2004-05-29'
+subtitle: 'Note to self:'
+tags:
+- programming
+- eclipse
+title: '[Geek] Getting ftp task to work in Ant / Eclipse'
+type: wp
 wordpress_id: 1992
 ---
+
 Note to self:
 The FTP task in Ant relies on the library: **commons-net.jar from Apache**.
 

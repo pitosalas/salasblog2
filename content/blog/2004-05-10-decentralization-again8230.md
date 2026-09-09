@@ -1,12 +1,15 @@
 ---
-title: "Decentralization, again…"
-subtitle: "Remember when the Berlin wall came down and the Soviet Union ended up breaking up? People talked abo..."
-category: "1"
-tags: []
-date: "2004-05-10"
-type: "wp"
+category: '1'
+date: '2004-05-10'
+subtitle: Remember when the Berlin wall came down and the Soviet Union ended up breaking
+  up? People talked abo...
+tags:
+- politics
+title: Decentralization, again…
+type: wp
 wordpress_id: 2011
 ---
+
 Remember when the Berlin wall came down and the Soviet Union ended up breaking up? People talked about **the power of decentralizaiton**, about how simple faxes were used by individual Soviet citizens to tell the world what was going on and topple the ultimate centralized power?
 
 Or the impact of the television coverage of the **Vietnam** war had such an effect on the way things turned out? Or **Tiananmen Square? **Or the impact of consumer camcorders on the impact of the Rodney King trial and subsequent riots in L.A.?

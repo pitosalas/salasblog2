@@ -1,12 +1,16 @@
 ---
-title: "Identities (WTF Series, 1)"
-subtitle: "Some say that it’s very important that they be able to use one identity while doing one thing, and a..."
-category: "1"
-tags: []
-date: "2004-04-06"
-type: "wp"
+category: '1'
+date: '2004-04-06'
+subtitle: Some say that it’s very important that they be able to use one identity
+  while doing one thing, and a...
+tags:
+- technology
+- wtf-conference
+title: Identities (WTF Series, 1)
+type: wp
 wordpress_id: 2037
 ---
+
 Some say that it’s very important that they be able to use one identity while doing one thing, and a different one for another. In ‘cyberspace’ they want to be able to express themselves without that expression being tied back to them.
 My gut reaction is that I don’t like this. It seems dishonest. It’s contradicts what is possible in meat space, where I have to stand behind what I say and do. Do they have something to hide? Shouldn’t they be held accountable for their statements?
 

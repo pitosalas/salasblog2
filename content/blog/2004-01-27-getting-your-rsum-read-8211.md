@@ -1,12 +1,14 @@
 ---
-title: "Getting Your R�sum� Read –"
-subtitle: "**Getting Your R©sum© Read – From Joel Spolsky"
-category: "1"
-tags: []
-date: "2004-01-27"
-type: "wp"
+category: '1'
+date: '2004-01-27'
+subtitle: '**Getting Your R©sum© Read – From Joel Spolsky'
+tags:
+- business
+title: Getting Your R�sum� Read –
+type: wp
 wordpress_id: 2088
 ---
+
 **[Getting Your R©sum© Read – From Joel Spolsky](http://www.joelonsoftware.com/articles/ResumeRead.html). **Joel writes a good and amusing article with some brain-dead-obvious tips (that apparently aren’t so obvious) about resumes. One of the rants though:
 
 > 

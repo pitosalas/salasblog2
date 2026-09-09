@@ -1,12 +1,15 @@
 ---
-title: "BlogBridge update: Just a quick"
-subtitle: "**BlogBridge update: **Just a quick note about what’s up with BlogBridge"
-category: "1"
-tags: []
-date: "2004-01-30"
-type: "wp"
+category: '1'
+date: '2004-01-30'
+subtitle: '**BlogBridge update: **Just a quick note about what’s up with BlogBridge'
+tags:
+- technology
+- blogbridge
+title: 'BlogBridge update: Just a quick'
+type: wp
 wordpress_id: 2086
 ---
+
 **BlogBridge update: **Just a quick note about what’s up with [BlogBridge](http://www.blogbridge.com). My time has been severely drained by a new consulting project, so progress has slowed down more than I would like. The last while I was knee-deep in installation, deployment, upgrade facilities. I looked at a bunch of possible ways of distributing, installing and then upgrading the application, evaluating 3 of them in detail. What a mess! 
 
 In the end I settled on Java Web Start. I used to think of this as a bit of a kludge, but it seems to be well suited to deployment and installation of Java apps, and with each release Sun seems to make it a little nicer. So that’s what I am going with.

@@ -1,12 +1,16 @@
 ---
-title: "[Geek] Debugging focus problems"
-subtitle: "Struggling with debugging hairy focus and other UI problems in Swing (Java)? Here’s a handy little t..."
-category: "422"
-tags: []
-date: "2004-05-28"
-type: "wp"
+category: '422'
+date: '2004-05-28'
+subtitle: Struggling with debugging hairy focus and other UI problems in Swing (Java)?
+  Here’s a handy little t...
+tags:
+- programming
+- java
+title: '[Geek] Debugging focus problems'
+type: wp
 wordpress_id: 1994
 ---
+
 Struggling with debugging hairy focus and other UI problems in Swing (Java)? Here’s a handy little tip that I just found out about: 
 When running a Java application, type Ctrl-Shift-F1 and the VM will dump the components hierarchy into standard output.
 

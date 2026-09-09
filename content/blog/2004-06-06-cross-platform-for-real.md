@@ -1,12 +1,16 @@
 ---
-title: "Cross Platform, for real!"
-subtitle: "We are busy getting BlogBridge ready for beta (send email if you want t..."
-category: "50"
-tags: []
-date: "2004-06-06"
-type: "wp"
+category: '50'
+date: '2004-06-06'
+subtitle: We are busy getting BlogBridge ready for beta (send email if you want t...
+tags:
+- technology
+- blogbridge
+- java
+title: Cross Platform, for real!
+type: wp
 wordpress_id: 1987
 ---
+
 We are busy getting [BlogBridge ](http://www.blogbridge.com)ready for beta (send email if you want to participate.) I hope we are only days away. 
 But in doing that, and updating the web site, I thought this might be of interest…
 

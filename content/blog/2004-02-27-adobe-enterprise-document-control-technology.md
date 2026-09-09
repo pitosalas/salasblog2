@@ -1,12 +1,17 @@
 ---
-title: "Adobe Enterprise document control technology"
-subtitle: "**Adobe Enterprise document control technology (Demo 2004 Series – 5) **They have come up with a pol..."
-category: "1"
-tags: []
-date: "2004-02-27"
-type: "wp"
+category: '1'
+date: '2004-02-27'
+subtitle: '**Adobe Enterprise document control technology (Demo 2004 Series – 5) **They
+  have come up with a pol...'
+tags:
+- technology
+- business
+- adobe
+title: Adobe Enterprise document control technology
+type: wp
 wordpress_id: 2066
 ---
+
 **Adobe Enterprise document control technology (Demo 2004 Series – 5) **They have come up with a policy server to control and log access to pdf documents. I don’t think it has a name yet. 
 
 It is very similar but **much more limited** than [Liquid Machine’s](http://www.liquidmachines.com/index.shtml) product (and [Authentica](http://www.authentica.com/home_flash.asp).)  
