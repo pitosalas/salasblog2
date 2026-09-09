@@ -1,12 +1,16 @@
 ---
-title: "New BlogBridge Alpha"
-subtitle: "Hey, sorry if you aren’t a BlogBridge user yet, but I just can’t resist some news here."
-category: "50"
-tags: []
-date: "2004-11-20"
-type: "wp"
+category: '50'
+date: '2004-11-20'
+subtitle: Hey, sorry if you aren’t a BlogBridge user yet, but I just can’t resist
+  some news here.
+tags:
+- technology
+- blogbridge
+title: New BlogBridge Alpha
+type: wp
 wordpress_id: 1912
 ---
+
 Hey, sorry if you aren’t a BlogBridge user yet, but I just can’t resist some news here. 
 First of all, we’ve released a new Alpha, just today.[ You can get it here. ](http://www.blogbridge.com/install/alpha/blogbridge.jnlp) The way we work it is that if after a week or so of use there are no show stopped bugs, we will promote the Alpha to a Beta. [The general release model is described here.](http://www.blogbridge.com/projectpage.htm#releases)
 

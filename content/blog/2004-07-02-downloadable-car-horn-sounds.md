@@ -1,12 +1,16 @@
 ---
-title: "Downloadable Car Horn Sounds!?"
-subtitle: "Did you know that you (or your teenager) can buy cool new ring tones for their cell phone? They cost..."
-category: "298"
-tags: []
-date: "2004-07-02"
-type: "wp"
+category: '298'
+date: '2004-07-02'
+subtitle: Did you know that you (or your teenager) can buy cool new ring tones for
+  their cell phone? They cost...
+tags:
+- business
+- personal
+title: Downloadable Car Horn Sounds!?
+type: wp
 wordpress_id: 1972
 ---
+
 Did you know that you (or your teenager) can buy cool new ring tones for their cell phone? They cost a buck or two and are quite the rage, especially in countries other than the US 🙂 You probably knew this. 
 Did you know that this buck or two is actually only good for a month or two of use of the ring tone, after which you would have to buy a renewal or more likely a new one? You might or might not have known this.
 

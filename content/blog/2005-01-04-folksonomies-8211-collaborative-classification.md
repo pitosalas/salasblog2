@@ -1,12 +1,16 @@
 ---
-title: "Folksonomies – Collaborative Classification"
-subtitle: "There has been a lot of traffic on this new meme “Folksonomies”. This Slashdot bit"
-category: "50"
-tags: []
-date: "2005-01-04"
-type: "wp"
+category: '50'
+date: '2005-01-04'
+subtitle: There has been a lot of traffic on this new meme “Folksonomies”. This Slashdot
+  bit
+tags:
+- technology
+- design
+title: Folksonomies – Collaborative Classification
+type: wp
 wordpress_id: 1876
 ---
+
 There has been a lot of traffic on this new meme “Folksonomies”. This [Slashdot bit ](http://slashdot.org/article.pl?sid=05/01/04/0117245)has many of the important links in it, and I can’t say that I’ve read all of it, so what I am describing below may be old hat.
 I am thinking that while Folksonomies is a kind of catchy, although hard to say or spell word, it is too narrow. Folksonomies, as I understand, refers to a community based way of arriving at a taxonomy of information, basically subjective judgements on what the information is **“about.” **We’ve seen this in http://del.icio.us and in http://www.flickr.com.
 

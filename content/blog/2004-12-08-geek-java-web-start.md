@@ -1,12 +1,16 @@
 ---
-title: "[GEEK] Java Web Start"
-subtitle: "You might think it’s a bad idea for me to complain about Java Web Start. Well the truth is that I re..."
-category: "538"
-tags: []
-date: "2004-12-08"
-type: "wp"
+category: '538'
+date: '2004-12-08'
+subtitle: You might think it’s a bad idea for me to complain about Java Web Start.
+  Well the truth is that I re...
+tags:
+- programming
+- java-web-start
+title: '[GEEK] Java Web Start'
+type: wp
 wordpress_id: 1898
 ---
+
 You might think it’s a bad idea for me to complain about Java Web Start. Well the truth is that I really like it and so am really frustrated by it’s failures. In my own small way I am hoping to wake up someone at Sun to see the importance of this little bit of technology to their grand Java strategy. 
 In my interview with [ClientJava](http://www.clientjava.com/blog/) I again made some pointed comments about Java Web Start, and in the comment thread some annonymous person (coward) asked me to elaborate. **Here is what I said.**
 

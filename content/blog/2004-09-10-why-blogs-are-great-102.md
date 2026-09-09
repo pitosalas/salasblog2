@@ -1,12 +1,16 @@
 ---
-title: "Why Blogs are great, #102"
-subtitle: "I am often asked **what’s so special about blogging**. I always answer, technically it’s pretty simp..."
-category: "51"
-tags: []
-date: "2004-09-10"
-type: "wp"
+category: '51'
+date: '2004-09-10'
+subtitle: I am often asked **what’s so special about blogging**. I always answer,
+  technically it’s pretty simp...
+tags:
+- personal
+- politics
+title: 'Why Blogs are great, #102'
+type: wp
 wordpress_id: 1942
 ---
+
 I am often asked **what’s so special about blogging**. I always answer, technically it’s pretty simple, so that’s not it. It’s that there are people in the world, who for their own reasons have chosen to write down their thoughts and opinion. I learn things that I would **never have learned **otherwise from blogs.
 Here’s the **latest example**. Now I am not a Bushie – by any stretch of the **imagination**, and I haven’t bothered checking the credibility of [this post](http://www.hughhewitt.com/#postid874). 
 

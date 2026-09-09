@@ -1,12 +1,17 @@
 ---
-title: "XP SP2 Makes a Hash Of It"
-subtitle: "As you know, [I am quite impressed with Microsoft’s ability to build and ship and deploy and sell an..."
-category: "538"
-tags: []
-date: "2004-08-13"
-type: "wp"
+category: '538'
+date: '2004-08-13'
+subtitle: As you know, [I am quite impressed with Microsoft’s ability to build and
+  ship and deploy and sell an...
+tags:
+- technology
+- microsoft
+- windows-xp
+title: XP SP2 Makes a Hash Of It
+type: wp
 wordpress_id: 1949
 ---
+
 As you know, [I am quite impressed with Microsoft’s ability to build and ship and deploy and sell and support software at an absolutely mass scale.](/weblogs/archives/000475.html)
 Yet, on my second XP SP2 installation, it **totally destroyed and hosed my computer**. It took a superhuman effort (with Google and MSDN help) to recover it.
 

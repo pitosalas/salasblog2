@@ -1,12 +1,16 @@
 ---
-title: "Thinking of being a deserter"
-subtitle: "I’m seriously thinking about starting to use a Macintosh for my day to day work computer instead of ..."
-category: "538"
-tags: []
-date: "2005-01-12"
-type: "wp"
+category: '538'
+date: '2005-01-12'
+subtitle: I’m seriously thinking about starting to use a Macintosh for my day to day
+  work computer instead of ...
+tags:
+- technology
+- personal
+title: Thinking of being a deserter
+type: wp
 wordpress_id: 1872
 ---
+
 I’m seriously thinking about starting to use a Macintosh for my day to day work computer instead of a PC! Can you believe it? Why?
 
 - My research so far says that a fast Mac running OS X is comparable, price performance to a Wintel computer. 

@@ -1,12 +1,17 @@
 ---
-title: "Coding as Writing"
-subtitle: "If you read this blog at all, you know that I’ve been working on a piece of software (BlogBridge"
-category: "298"
-tags: []
-date: "2004-12-19"
-type: "wp"
+category: '298'
+date: '2004-12-19'
+subtitle: If you read this blog at all, you know that I’ve been working on a piece
+  of software (BlogBridge
+tags:
+- technology
+- blogbridge
+- boston-globe
+title: Coding as Writing
+type: wp
 wordpress_id: 1891
 ---
+
 If you read this blog at all, you know that I’ve been working on a piece of software ([BlogBridge](http://www.blogbridge.com)) which at this point I am pretty excited about, even though I don’t know where it will go or end up. 
 I was recently interviewed about my work by [Scott Kirsner](http://www.boston.com/business/technology/kirsner/) (of the Boston Globe) who writes the [@Large Column](http://www.boston.com/business/technology/kirsner/). I don’t know whether or when he will write an article, but the questions he asked made me think a bit about what I was doing, and particularlyy the way I have chosen to go about it.
 

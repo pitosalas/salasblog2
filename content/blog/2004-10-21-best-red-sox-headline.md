@@ -1,12 +1,17 @@
 ---
-title: "Best Red Sox Headline"
-subtitle: "**Isn’t it sweet! **Did you know you could get a big collection of front pages of newspapers at the ..."
-category: "298"
-tags: []
-date: "2004-10-21"
-type: "wp"
+category: '298'
+date: '2004-10-21'
+subtitle: '**Isn’t it sweet! **Did you know you could get a big collection of front
+  pages of newspapers at the ...'
+tags:
+- personal
+- boston
+- red-sox
+title: Best Red Sox Headline
+type: wp
 wordpress_id: 1922
 ---
+
 **Isn’t it sweet! **Did you know you could get a big collection of front pages of newspapers at the [Newseum](http://www.newseum.org/todaysfrontpages/)?
 **Here’s by far the funniest I saw:**
 

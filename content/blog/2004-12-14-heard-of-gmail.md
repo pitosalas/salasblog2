@@ -1,12 +1,15 @@
 ---
-title: "Heard of GMail?"
-subtitle: "There are many interesting things about GMail, so this is either go..."
-category: "538"
-tags: []
-date: "2004-12-14"
-type: "wp"
+category: '538'
+date: '2004-12-14'
+subtitle: There are many interesting things about GMail, so this is either go...
+tags:
+- technology
+- gmail
+title: Heard of GMail?
+type: wp
 wordpress_id: 1894
 ---
+
 There are many interesting things about [GMail](http://gmail.google.com/gmail), so this is either going to be a long post or one of a series. First things first: **GMail is now my primary email provider**. Yes, you heard that right. It’s free, does a great job with spam and I can continue to use Outlook. Life is good.
 First of all, what is GMail (for those of you who have been living under a rock!) GMail is Google’s free, web based, email service. Its major claim to fame, at least initially, was the **1 Gig of free Mail **storage they provide. Kind of amazing isn’t it? When it first came out, that got all the attention. In fact it seems to have forced Hotmail and Yahoo mail to increase the amount of free storage they provide. I don’t believe that they are up to 1 Gig though.
 

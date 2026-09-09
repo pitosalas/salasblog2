@@ -1,12 +1,16 @@
 ---
-title: "BlogBridge tip: Send us Feedback"
-subtitle: "(Non-users of BlogBridge, this wil not be interesting to you. But you have to ask yourself, why are ..."
-category: "50"
-tags: []
-date: "2005-01-16"
-type: "wp"
+category: '50'
+date: '2005-01-16'
+subtitle: (Non-users of BlogBridge, this wil not be interesting to you. But you have
+  to ask yourself, why are ...
+tags:
+- technology
+- blogbridge
+title: 'BlogBridge tip: Send us Feedback'
+type: wp
 wordpress_id: 1869
 ---
+
 (Non-users of BlogBridge, this wil not be interesting to you. But you have to ask yourself, why are you not using it?)
 As most everyone who uses BlogBridge seems to be subscribed to my Blog I thought posting a tip or news every so often might be a way to expose some thinking about BlogBridge to you all, so starting today I will be posting a regular item that I think would be of interest.
 

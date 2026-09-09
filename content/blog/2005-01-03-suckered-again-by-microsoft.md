@@ -1,12 +1,16 @@
 ---
-title: "Suckered again by Microsoft?"
-subtitle: "I’ve been using **Microsoft Money ** (their personal finance package) for years now (after having sw..."
-category: "298"
-tags: []
-date: "2005-01-03"
-type: "wp"
+category: '298'
+date: '2005-01-03'
+subtitle: I’ve been using **Microsoft Money ** (their personal finance package) for
+  years now (after having sw...
+tags:
+- technology
+- microsoft
+title: Suckered again by Microsoft?
+type: wp
 wordpress_id: 1878
 ---
+
 I’ve been using **Microsoft Money ** (their personal finance package) for years now (after having switched from Quicken probably 5 years ago.) I really like it, for what it is. 
 In January of each of the last few years it seems, I shell out another $60 for the latest **“upgrade”**, install it, and immediately **kick **myself when I find almost no new functionality. 
 

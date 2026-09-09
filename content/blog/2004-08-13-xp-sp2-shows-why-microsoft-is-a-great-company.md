@@ -1,12 +1,17 @@
 ---
-title: "XP SP2 Shows Why Microsoft Is A Great Company"
-subtitle: "I’ve said (and believe) that there’s **no other company on earth** that has the capability to develo..."
-category: "538"
-tags: []
-date: "2004-08-13"
-type: "wp"
+category: '538'
+date: '2004-08-13'
+subtitle: I’ve said (and believe) that there’s **no other company on earth** that
+  has the capability to develo...
+tags:
+- technology
+- microsoft
+- windows-xp
+title: XP SP2 Shows Why Microsoft Is A Great Company
+type: wp
 wordpress_id: 1950
 ---
+
 I’ve said (and believe) that there’s **no other company on earth** that has the capability to develop, debug, beta test, deliver software on a massive scale like Microsoft. 
 The number of configurations (both legal and illegal) of hardware, system sofyware, application software, languages, etc that XP has to be tested against **totally boggles the mind.** 
 

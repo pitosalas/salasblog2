@@ -1,12 +1,16 @@
 ---
-title: "Gmail, Part Deux: Strategy"
-subtitle: "So what might GMail’s strategy be? I listened to a wonderful Podcast with Georges Harik"
-category: "538"
-tags: []
-date: "2004-12-23"
-type: "wp"
+category: '538'
+date: '2004-12-23'
+subtitle: So what might GMail’s strategy be? I listened to a wonderful Podcast with
+  Georges Harik
+tags:
+- technology
+- gmail
+title: 'Gmail, Part Deux: Strategy'
+type: wp
 wordpress_id: 1888
 ---
+
 So what might GMail’s strategy be? I listened to a wonderful Podcast with [Georges Harik](http://www.itconversations.com/shows/detail302.html) all about [GMail](http://www.gmail.com/) and some of the thinking about it. If you are interested in GMail, it’s a **worthwhile** listen.
 I noticed that Georges kept referring to GMail as providing *great email ***and communications **capabilities. An interesting and fine distinction to be stressing, although the interviewer never referred to it.
 

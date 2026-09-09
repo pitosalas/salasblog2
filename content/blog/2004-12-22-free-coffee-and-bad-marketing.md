@@ -1,12 +1,15 @@
 ---
-title: "Free Coffee and Bad Marketing"
-subtitle: "First the **punchline**: go to this link, fill out a short questionaire,"
-category: "298"
-tags: []
-date: "2004-12-22"
-type: "wp"
+category: '298'
+date: '2004-12-22'
+subtitle: 'First the **punchline**: go to this link, fill out a short questionaire,'
+tags:
+- business
+- blogbridge
+title: Free Coffee and Bad Marketing
+type: wp
 wordpress_id: 1889
 ---
+
 First the **punchline**: [go to this link, fill out a short questionaire,](http://www.successandyou.net/RAC/) and receive a $15 Starbucks gift card in the mail, no questions asked. But hurry, because I wouldn’t be surprised if that offer evaporates quickly.
 Here is one of those cool “**internet effects.”** There’s a site called [DealNews ](http://www.dealnews.com)where you can immediate reports of interesting offers, coupons, deals, etc. They are posted there by I don’t know who – people without a life. They also [have an RSS Feed ](http://content.dealnews.com/dealnews/rss/last-twenty.xml)for you [BlogBridge ](http://www.blogbridge.com)users. That’s how I found out about the offer.
 

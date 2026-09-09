@@ -1,12 +1,16 @@
 ---
-title: "What is the difference between a blog and a newsgroup?"
-subtitle: "Recently in a conversation I was asked to comment on what really was the big difference between a **..."
-category: "51"
-tags: []
-date: "2004-12-31"
-type: "wp"
+category: '51'
+date: '2004-12-31'
+subtitle: Recently in a conversation I was asked to comment on what really was the
+  big difference between a **...
+tags:
+- technology
+- personal
+title: What is the difference between a blog and a newsgroup?
+type: wp
 wordpress_id: 1883
 ---
+
 Recently in a conversation I was asked to comment on what really was the big difference between a **blog **and a **newsgroup**. 
 After all they are both a *reverse chronological list of postings*, right?
 

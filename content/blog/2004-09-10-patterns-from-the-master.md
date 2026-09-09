@@ -1,12 +1,16 @@
 ---
-title: "Patterns from the master"
-subtitle: "I came across a fascinating article, a t..."
-category: "538"
-tags: []
-date: "2004-09-10"
-type: "wp"
+category: '538'
+date: '2004-09-10'
+subtitle: I came across a fascinating article, a t...
+tags:
+- design
+- programming
+- christopher-alexander
+title: Patterns from the master
+type: wp
 wordpress_id: 1940
 ---
+
 [I came across a fascinating article, ](http://www.patternlanguage.com/archive/ieee/ieeetext.htm)a transcript of a speech by **Christopher Alexander**, architect and author of “A Pattern Language.” 
 Alexander is the guy who invented **Patterns **as they have now been broadly adopted by the Software Design community. In this piece Alexander tells of the thinking and **objectives that led to the Pattern approach **to architectural design – much more than simply cataloging patterns that were known work. He was hoping that when architects used these patterns they would be **led, driven, forced **into creating living and livable structures. 
 

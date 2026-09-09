@@ -1,12 +1,16 @@
 ---
-title: "What is a blog, again?"
-subtitle: "My answer to the question: **“What is a Blog”, **which I get asked often, goes something like this:"
-category: "51"
-tags: []
-date: "2004-11-22"
-type: "wp"
+category: '51'
+date: '2004-11-22'
+subtitle: 'My answer to the question: **“What is a Blog”, **which I get asked often,
+  goes something like this:'
+tags:
+- personal
+- technology
+title: What is a blog, again?
+type: wp
 wordpress_id: 1910
 ---
+
 My answer to the question: **“What is a Blog”, **which I get asked often, goes something like this: 
 “A blog is a just a web site with articles or notes that get posted there, generally by a single person. There’s nothing especially new or complex about the technology of blogs. What’s new and compelling is the **blogging phenomenon**: For whatever reason, individuals with unique and important points of view are **choosing to publish **those in blogs.”
 

@@ -1,12 +1,15 @@
 ---
-title: "What’s wrong with Feed Readers?"
-subtitle: "Here are two very interesting posts on the question of Feed Readers:"
-category: "50"
-tags: []
-date: "2004-08-26"
-type: "wp"
+category: '50'
+date: '2004-08-26'
+subtitle: 'Here are two very interesting posts on the question of Feed Readers:'
+tags:
+- technology
+- blogbridge
+title: What’s wrong with Feed Readers?
+type: wp
 wordpress_id: 1944
 ---
+
 Here are two very interesting posts on the question of Feed Readers:
 
 [Glassdog asks “What’s wrong with Feed Readers”](http://www.glassdog.com/archives/2004/08/25/whats_wrong_with_feed_readers.html)

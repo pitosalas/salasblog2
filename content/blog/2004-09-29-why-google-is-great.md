@@ -1,12 +1,16 @@
 ---
-title: "Why Google is great"
-subtitle: "I’ve written about this before, I think, but I am once again **pleasantly amazed **by Google."
-category: "538"
-tags: []
-date: "2004-09-29"
-type: "wp"
+category: '538'
+date: '2004-09-29'
+subtitle: I’ve written about this before, I think, but I am once again **pleasantly
+  amazed **by Google.
+tags:
+- technology
+- google
+title: Why Google is great
+type: wp
 wordpress_id: 1934
 ---
+
 I’ve written about this before, I think, but I am once again **pleasantly amazed **by Google. 
 I momentarily blanked out on the name of the ‘other’ conservative blogger – other than [Glenn Reynolds (Instapundit)](http://www.instapundit.com/) that is. 
 

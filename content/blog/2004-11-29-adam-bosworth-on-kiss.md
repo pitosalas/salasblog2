@@ -1,12 +1,16 @@
 ---
-title: "Adam Bosworth on KISS"
-subtitle: "Adam Bosworth’s speech"
-category: "538"
-tags: []
-date: "2004-11-29"
-type: "wp"
+category: '538'
+date: '2004-11-29'
+subtitle: Adam Bosworth’s speech
+tags:
+- technology
+- programming
+- adam-bosworth
+title: Adam Bosworth on KISS
+type: wp
 wordpress_id: 1906
 ---
+
 [Adam Bosworth’s speech](http://www.adambosworth.net/archives/000031.html)
 Adam Bosworth’s an interesting guy, and very smart, and has been deeply involved in web services and many related technologies for years. He really knows this stuff. And it’s interesting, because one of the key Web Services technologies is SOAP, a loosely coupled, “webbish” way of doing remote procedure calls.
 

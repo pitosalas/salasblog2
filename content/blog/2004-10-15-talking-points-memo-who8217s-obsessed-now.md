@@ -1,12 +1,15 @@
 ---
-title: "Talking points memo: who’s obsessed now?"
-subtitle: "I’m a huge fan of Talking Points Memo, Josh Marshall’s blog. In..."
-category: "298"
-tags: []
-date: "2004-10-15"
-type: "wp"
+category: '298'
+date: '2004-10-15'
+subtitle: I’m a huge fan of Talking Points Memo, Josh Marshall’s blog. In...
+tags:
+- politics
+- talking-points-memo
+title: 'Talking points memo: who’s obsessed now?'
+type: wp
 wordpress_id: 1925
 ---
+
 I’m a huge fan of [Talking Points Memo](http://www.talkingpointsmemo.com/), Josh Marshall’s blog. In fact it’s my exhibit #1 for people who ask me for a good blog to read (assuming they are “liberal.” If they are not I point them to Instapundit.)
 Anyway just a **few words **about [Josh Marshall’s complaint about how the spinmeisters positioned](http://www.talkingpointsmemo.com/archives/week_2004_10_10.php#003687) Kerry’s comment about Cheney’s daughter the other night. They called it “A crass, **below-the-belt** political strategy to attach the president’s daughter.” 
 

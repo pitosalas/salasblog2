@@ -1,12 +1,15 @@
 ---
-title: "Wikipedia and copyrights"
-subtitle: "If you haven’t heard about Wikipedia, you should check it ..."
-category: "538"
-tags: []
-date: "2004-11-11"
-type: "wp"
+category: '538'
+date: '2004-11-11'
+subtitle: If you haven’t heard about Wikipedia, you should check it ...
+tags:
+- technology
+- wikipedia
+title: Wikipedia and copyrights
+type: wp
 wordpress_id: 1914
 ---
+
 If you haven’t heard about [Wikipedia](http://en.wikipedia.org/wiki/Main_Page), you should check it out. It’s a grass roots encyclopedia. It has a huge number of articles, contributed in general by anyone who feels like writing an article, presumably because they know something about it. [Here’s the Wikipedia definition of Wikipedia.](http://en.wikipedia.org/wiki/Wikipedia)
 It’s quite an **amazing **thing, amazing because of how it has grown, how it was built, who built it and what it was built on.
 

@@ -1,12 +1,16 @@
 ---
-title: "[JAVA ONE]Sun answers my question"
-subtitle: "In several previous posts I’ve won..."
-category: "538"
-tags: []
-date: "2004-07-13"
-type: "wp"
+category: '538'
+date: '2004-07-13'
+subtitle: In several previous posts I’ve won...
+tags:
+- business
+- javaone
+- microsoft
+title: '[JAVA ONE]Sun answers my question'
+type: wp
 wordpress_id: 1964
 ---
+
 In [several ](/weblogs/archives/000449.html)previous [posts ](/weblogs/archives/000446.html)I’ve wondered aloud: “I can see that Sun spends a ton of money on Java. It must be astronomical. What’s the strategy behind that? How do they make money on that?”
 Jonathan Schwartz, Sun’s President and COO, [answers that question directly in his new Blog.](http://blogs.sun.com/roller/page/jonathan/20040712)
 

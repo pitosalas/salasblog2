@@ -1,12 +1,16 @@
 ---
-title: "Is BlogBridge a ‘next generation’ Feed Reader?"
-subtitle: "In response to a query from Andrew Watt and Danny Ayers about what they called next-generation infro..."
-category: "50"
-tags: []
-date: "2004-11-07"
-type: "wp"
+category: '50'
+date: '2004-11-07'
+subtitle: In response to a query from Andrew Watt and Danny Ayers about what they
+  called next-generation infro...
+tags:
+- technology
+- blogbridge
+title: Is BlogBridge a ‘next generation’ Feed Reader?
+type: wp
 wordpress_id: 1915
 ---
+
 In response to a query from Andrew Watt and Danny Ayers about what they called next-generation infromation aggregators, I wrote this, and I thought I’d share it here too.
 Dear Andrew and Danny,
 

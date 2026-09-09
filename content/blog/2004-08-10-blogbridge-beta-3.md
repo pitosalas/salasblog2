@@ -1,12 +1,16 @@
 ---
-title: "BlogBridge Beta 3"
-subtitle: "We just put up **BlogBridge Beta 3**. Check it out. It’s got many neat new features, most particular..."
-category: "50"
-tags: []
-date: "2004-08-10"
-type: "wp"
+category: '50'
+date: '2004-08-10'
+subtitle: We just put up **BlogBridge Beta 3**. Check it out. It’s got many neat new
+  features, most particular...
+tags:
+- technology
+- blogbridge
+title: BlogBridge Beta 3
+type: wp
 wordpress_id: 1952
 ---
+
 We just put up **BlogBridge Beta 3**. Check it out. It’s got many neat new features, most particularly the **BlogBridge Service **which I wrote about recently.
 Here are the **key links of interest**:
 

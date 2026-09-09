@@ -1,12 +1,17 @@
 ---
-title: "BlogBridge open source license"
-subtitle: "I’ve done a little research about what the Open Source really means, legally, when it comes to [Blog..."
-category: "50"
-tags: []
-date: "2004-08-05"
-type: "wp"
+category: '50'
+date: '2004-08-05'
+subtitle: I’ve done a little research about what the Open Source really means, legally,
+  when it comes to [Blog...
+tags:
+- technology
+- blogbridge
+- business
+title: BlogBridge open source license
+type: wp
 wordpress_id: 1955
 ---
+
 I’ve done a little research about what the Open Source really means, legally, when it comes to [BlogBridge](http://www.blogbridge.com). I wrote about this question a few months ago, and now, having consulted with people who know, here’s an update.
 First of all, start with the goals. 
 

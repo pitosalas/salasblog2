@@ -1,12 +1,15 @@
 ---
-title: "Podcasting less important than “IT Conversations”"
-subtitle: "I was working out, listening an IT Conversations interview with [..."
-category: "538"
-tags: []
-date: "2004-11-06"
-type: "wp"
+category: '538'
+date: '2004-11-06'
+subtitle: I was working out, listening an IT Conversations interview with [...
+tags:
+- personal
+- podcasting
+title: Podcasting less important than “IT Conversations”
+type: wp
 wordpress_id: 1916
 ---
+
 I was working out, listening an [IT Conversations ](http://www.itconversations.com/)interview with [Joel Spolsky](http://www.joelonsoftware.com/). It was **interesting **and passed the time.
 It’s **wonderful **that [Doug Kaye](http://www.rds.com/doug/resume.html) interviewed [Joel Spolsky](http://www.joelonsoftware.com/), and it’s wonderful that Joel was fun to listen to, it was wonderful that this MP3 was available on the internet, and that I had iPodder to automatically download it to me iPod, and of course, my iPod is wonderful.
 

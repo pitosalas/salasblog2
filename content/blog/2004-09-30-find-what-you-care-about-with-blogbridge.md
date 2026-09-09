@@ -1,12 +1,16 @@
 ---
-title: "Find what you care about with BlogBridge"
-subtitle: "We just got a **totally cool **new BlogBridge feature working, which actually was suggested by a use..."
-category: "50"
-tags: []
-date: "2004-09-30"
-type: "wp"
+category: '50'
+date: '2004-09-30'
+subtitle: We just got a **totally cool **new BlogBridge feature working, which actually
+  was suggested by a use...
+tags:
+- technology
+- blogbridge
+title: Find what you care about with BlogBridge
+type: wp
 wordpress_id: 1932
 ---
+
 We just got a **totally cool **new BlogBridge feature working, which actually was suggested by a user a few months ago: keyword highlighting. It’s quite simple: 
 The user supplies a set of keywords they care about (in my case: “Bush Kerry Microsoft eRoom Curacao and Pito”)
 

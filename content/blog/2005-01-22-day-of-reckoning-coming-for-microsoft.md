@@ -1,12 +1,17 @@
 ---
-title: "Day of reckoning coming for Microsoft?"
-subtitle: "You’ve heard this one before: there are more and more truly outstanding pieces of software coming ou..."
-category: "538"
-tags: []
-date: "2005-01-22"
-type: "wp"
+category: '538'
+date: '2005-01-22'
+subtitle: 'You’ve heard this one before: there are more and more truly outstanding
+  pieces of software coming ou...'
+tags:
+- technology
+- microsoft
+- firefox
+title: Day of reckoning coming for Microsoft?
+type: wp
 wordpress_id: 1866
 ---
+
 You’ve heard this one before: there are more and more truly outstanding pieces of software coming out as Open Source. Everyone has heard about FireFox, right, the wonderful Web Browser from the Mozilla guys. 
 I just came across [news that Internet Explorer usage fell again](http://www.activewin.com/awin/comments.asp?HeadlineIndex=27974) for the 7th straight month, and it seems that FireFox is taking up the slack. Take a look at Thunderbird 1.0, another gem. Thunderbird is an email client and [it’s a very nice piece of work](http://weblog.infoworld.com/techwatch/archives/000893.html). [You can see both of these apps here.](http://www.mozilla.org/)
 

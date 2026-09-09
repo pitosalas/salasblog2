@@ -1,12 +1,17 @@
 ---
-title: "Four Hours on a Segway"
-subtitle: "I think the **Segway Human Transporter **is really cool, and I’ve read many articles about how they ..."
-category: "298"
-tags: []
-date: "2005-01-14"
-type: "wp"
+category: '298'
+date: '2005-01-14'
+subtitle: I think the **Segway Human Transporter **is really cool, and I’ve read many
+  articles about how they ...
+tags:
+- personal
+- travel
+- segway
+title: Four Hours on a Segway
+type: wp
 wordpress_id: 1871
 ---
+
 I think the **Segway Human Transporter **is really cool, and I’ve read many articles about how they work and what they are like. But this past weekend I had the **unique experience **of spending about 4 hours riding around New Orleans on a Segway. Eye Opening. Here are some (surprising) observations and conclusions.
 It really **works**. It keeps you balanced, and once you get the hang of it, it’s quite easy to move forward, backwards, and turn. It takes about 10 minutes to be able to work it safely and then maybe another 30 to feel proficient.
 

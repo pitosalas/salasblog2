@@ -1,12 +1,16 @@
 ---
-title: "Two really cool new applications"
-subtitle: "Today I was introduced by two totally different people to **two really cool little utilities**."
-category: "538"
-tags: []
-date: "2004-08-05"
-type: "wp"
+category: '538'
+date: '2004-08-05'
+subtitle: Today I was introduced by two totally different people to **two really cool
+  little utilities**.
+tags:
+- technology
+- personal
+title: Two really cool new applications
+type: wp
 wordpress_id: 1953
 ---
+
 Today I was introduced by two totally different people to **two really cool little utilities**.
 
 - [Anagram. ](http://getanagram.com/)This application works with Outlook and pulls and structures contact information out of emails. Simply, you select the text with the name, phone numbers, address etc. in the email, type control-c twice, and up pops a new Outlook contact record all properly filled out. It does similar things with appointments etc. Super useful and perhaps a more politically correct alternative to applications like Plaxo [(Thank you Esther Dyson) ](http://www.edventure.com)

@@ -1,12 +1,16 @@
 ---
-title: "Some arcana about how BlogStarz! work"
-subtitle: "**Believe **me when I say that this **will only be interesting **to you if you are curious about the..."
-category: "50"
-tags: []
-date: "2004-10-18"
-type: "wp"
+category: '50'
+date: '2004-10-18'
+subtitle: '**Believe **me when I say that this **will only be interesting **to you
+  if you are curious about the...'
+tags:
+- technology
+- blogbridge
+title: Some arcana about how BlogStarz! work
+type: wp
 wordpress_id: 1923
 ---
+
 **Believe **me when I say that this **will only be interesting **to you if you are curious about the thinking about the Starz rating system that we’ve built into BlogBridge. If you don’t have a burning curiosity, trust me, it will put you to sleep 🙂
 The basic idea for the BlogStarz! mechanism is simple but the UI at this point is still confusing practically everyone. I will explain it here and describe changes we are planning.
 

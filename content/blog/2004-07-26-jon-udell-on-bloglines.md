@@ -1,12 +1,16 @@
 ---
-title: "Jon Udell on Bloglines"
-subtitle: "[Jon (and many others) really like Bloglines a lot; I recommend his article – there’s a lot to learn..."
-category: "51"
-tags: []
-date: "2004-07-26"
-type: "wp"
+category: '51'
+date: '2004-07-26'
+subtitle: '[Jon (and many others) really like Bloglines a lot; I recommend his article
+  – there’s a lot to learn...'
+tags:
+- technology
+- bloglines
+title: Jon Udell on Bloglines
+type: wp
 wordpress_id: 1960
 ---
+
 [Jon (and many others) really like Bloglines a lot; I recommend his article – there’s a lot to learn there.](http://weblog.infoworld.com/udell/2004/07/25.html)
 I want to address just one point, which is Jon’s prediction of the coming world domination by web apps. There’s an interesting **paradox**, **inconsistency **or **contradiction **here, if you look at the following qoutes from his piece:
 

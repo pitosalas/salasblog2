@@ -1,12 +1,16 @@
 ---
-title: "A couple of good Blog aggregator commentaries"
-subtitle: "Here are two interesting bits that look at all the aggregators and have some interesting comments ab..."
-category: "51"
-tags: []
-date: "2004-11-26"
-type: "wp"
+category: '51'
+date: '2004-11-26'
+subtitle: Here are two interesting bits that look at all the aggregators and have
+  some interesting comments ab...
+tags:
+- technology
+- blogbridge
+title: A couple of good Blog aggregator commentaries
+type: wp
 wordpress_id: 1907
 ---
+
 Here are two interesting bits that look at all the aggregators and have some interesting comments about capabilities and futures.
 
 - [Waiting for Aggie by Jack Vinson](http://jackvinson.com/archives/2004/11/22/waiting_for_aggie.html)

@@ -1,12 +1,17 @@
 ---
-title: "Too Many Toolbars!"
-subtitle: "Everyone wants to give me a toolbar! I’ve successfully fought back Yahoo’s and am a happy user of [G..."
-category: "538"
-tags: []
-date: "2004-10-12"
-type: "wp"
+category: '538'
+date: '2004-10-12'
+subtitle: Everyone wants to give me a toolbar! I’ve successfully fought back Yahoo’s
+  and am a happy user of [G...
+tags:
+- technology
+- google
+- amazon
+title: Too Many Toolbars!
+type: wp
 wordpress_id: 1928
 ---
+
 Everyone wants to give me a toolbar! I’ve successfully fought back Yahoo’s and am a happy user of [Google’s Toolbar](http://toolbar.google.com/). 
 [Now A9 has a toolbar too.](http://toolbar.a9.com/)
 

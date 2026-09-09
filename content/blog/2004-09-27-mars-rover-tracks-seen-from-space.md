@@ -1,12 +1,16 @@
 ---
-title: "Mars Rover tracks seen from space"
-subtitle: "You know I am a fan of the cool **little Mars Rovers**. Here’s an interesting little bit from Nasa:"
-category: "538"
-tags: []
-date: "2004-09-27"
-type: "wp"
+category: '538'
+date: '2004-09-27'
+subtitle: 'You know I am a fan of the cool **little Mars Rovers**. Here’s an interesting
+  little bit from Nasa:'
+tags:
+- science
+- mars
+title: Mars Rover tracks seen from space
+type: wp
 wordpress_id: 1935
 ---
+
 You know I am a fan of the cool **little Mars Rovers**. Here’s an interesting little bit from Nasa:
 “**Mars Orbiter Sees Rover Tracks Among Thousands of New Images**
 

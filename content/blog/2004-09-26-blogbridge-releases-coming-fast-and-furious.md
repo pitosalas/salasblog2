@@ -1,12 +1,16 @@
 ---
-title: "BlogBridge releases coming fast and furious"
-subtitle: "BlogBridge is going **“Great Guns”** as I told my friend David in answer to “What’s going on with Bl..."
-category: "50"
-tags: []
-date: "2004-09-26"
-type: "wp"
+category: '50'
+date: '2004-09-26'
+subtitle: BlogBridge is going **“Great Guns”** as I told my friend David in answer
+  to “What’s going on with Bl...
+tags:
+- technology
+- blogbridge
+title: BlogBridge releases coming fast and furious
+type: wp
 wordpress_id: 1937
 ---
+
 BlogBridge is going **“Great Guns”** as I told my friend David in answer to “What’s going on with BlogBridge?” Well I don’t really know what the heck that means except that **I am pumped **to see the progress we’ve been making. More and more every day. And now there’s a way for you to see it too!
 We just made a [beta release (0.5.6) ](http://blogbridge.com/install/beta/blogbridge.jnlp)Betas have been coming about once a month. 
 

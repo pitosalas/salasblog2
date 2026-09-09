@@ -1,12 +1,15 @@
 ---
-title: "Predicting the future is hard"
-subtitle: "*"
-category: "298"
-tags: []
-date: "2004-11-30"
-type: "wp"
+category: '298'
+date: '2004-11-30'
+subtitle: '*'
+tags:
+- technology
+- personal
+title: Predicting the future is hard
+type: wp
 wordpress_id: 1904
 ---
+
 [*](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/pic59763.jpg)
 “Scientists at the RAND Corporation have created this model to illustrate how a “home computer” could look like in the year 2004. However the needed technology will not be economically feasible for the average home. Also the scientists readily admit that the computer will require not yet invented technology to actually work, but 50 years from now scientific progress is expected to solve these problem.
 

@@ -1,12 +1,16 @@
 ---
-title: "BlogBridge Beta 4: Sept 15, 2004"
-subtitle: "Ok, guys, we have another beta release with lots of great new goodies! It will be up on the web site..."
-category: "50"
-tags: []
-date: "2004-09-14"
-type: "wp"
+category: '50'
+date: '2004-09-14'
+subtitle: Ok, guys, we have another beta release with lots of great new goodies! It
+  will be up on the web site...
+tags:
+- technology
+- blogbridge
+title: 'BlogBridge Beta 4: Sept 15, 2004'
+type: wp
 wordpress_id: 1938
 ---
+
 Ok, guys, we have another beta release with lots of great new goodies! It will be up on the web site tomorrow hopefully. It sports lots of new features, which I will be describing when I have some more time to do it. For now, please go to the BlogBridge web site and look around. Some links of interest:
 
 - [New feature list describing beta 4 (version 0.5.6)](http://www.blogbridge.com/featurelist.htm)

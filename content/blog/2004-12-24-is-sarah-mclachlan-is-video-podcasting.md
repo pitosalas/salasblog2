@@ -1,12 +1,16 @@
 ---
-title: "Is Sarah McLachlan is Video Podcasting?"
-subtitle: "!["
-category: "51"
-tags: []
-date: "2004-12-24"
-type: "wp"
+category: '51'
+date: '2004-12-24'
+subtitle: '!['
+tags:
+- music
+- podcasting
+- sarah-mclachlan
+title: Is Sarah McLachlan is Video Podcasting?
+type: wp
 wordpress_id: 1887
 ---
+
 [![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/sarah_wof%5B1%5D-thumb.gif?resize=584%2C70)](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/sarah_wof%5B1%5D.gif)
 On her site, [World On Fire, Sarah McLachlan ](http://www.worldonfire.ca/)has an interesting video, which reminded me what Video podcasting or Video blogging can become. 
 

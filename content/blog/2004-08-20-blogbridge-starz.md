@@ -1,12 +1,15 @@
 ---
-title: "BlogBridge Starz!"
-subtitle: "Finally. Ever since we started working on BlogBridge, I’ve been talking..."
-category: "50"
-tags: []
-date: "2004-08-20"
-type: "wp"
+category: '50'
+date: '2004-08-20'
+subtitle: Finally. Ever since we started working on BlogBridge, I’ve been talking...
+tags:
+- technology
+- blogbridge
+title: BlogBridge Starz!
+type: wp
 wordpress_id: 1946
 ---
+
 Finally. Ever since we started working on [BlogBridge](http://www.blogbridge.com), I’ve been talking about helping a user slice and dice and **sort through a ton of blogs **and other channels, finding the good from the bad, the interesting from the boring. 
 Remember the catch phrase “… *the ability to follow hundreds of blogs without loosing your mind*” which is sprinkled all over our web site. In our next beta you will **see the initial instantiation of this idea**.
 

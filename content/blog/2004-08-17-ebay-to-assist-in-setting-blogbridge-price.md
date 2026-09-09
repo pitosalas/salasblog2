@@ -1,12 +1,16 @@
 ---
-title: "eBay to assist in setting BlogBridge Price"
-subtitle: "So, some day we will consider BlogBridge complete enough to actually be..."
-category: "50"
-tags: []
-date: "2004-08-17"
-type: "wp"
+category: '50'
+date: '2004-08-17'
+subtitle: So, some day we will consider BlogBridge complete enough to actually be...
+tags:
+- business
+- blogbridge
+- ebay
+title: eBay to assist in setting BlogBridge Price
+type: wp
 wordpress_id: 1947
 ---
+
 So, some day we will consider [BlogBridge ](http://www.blogbridge.com)complete enough to actually be worth a few bucks. But the question is, how much? I’ve said many times, that even if **every single cool idea **I have is perfectly realized that the **most **one could expect is maybe $20 or $30 per copy. But even that is a lot.
 So, here’s a thought. **Let the market decide**. 
 

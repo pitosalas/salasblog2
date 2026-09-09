@@ -1,12 +1,17 @@
 ---
-title: "Web Services gone wild"
-subtitle: "Here’s a **cool **idea: using the web services of **Google **and **Technorati **together to find oth..."
-category: "50"
-tags: []
-date: "2004-09-29"
-type: "wp"
+category: '50'
+date: '2004-09-29'
+subtitle: 'Here’s a **cool **idea: using the web services of **Google **and **Technorati
+  **together to find oth...'
+tags:
+- technology
+- blogbridge
+- google
+title: Web Services gone wild
+type: wp
 wordpress_id: 1933
 ---
+
 Here’s a **cool **idea: using the web services of **Google **and **Technorati **together to find other, related blogs. Here’s the idea:
 One of the things I am trying to do with [BlogBridge ](http://www.blogbridge.com)is to help users **discover **new blogs that they would be interested in. **Let’s say **I am interested in finding other blogs which are related to or similar to one of my favorites, [Scripting News](http://www.scripting.com).
 

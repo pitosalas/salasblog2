@@ -1,12 +1,16 @@
 ---
-title: "Will Wikis Rule the World?"
-subtitle: "I was recently asked by a VC friend of mine what I thought of a certain Wiki product. I thought my r..."
-category: "538"
-tags: []
-date: "2004-07-23"
-type: "wp"
+category: '538'
+date: '2004-07-23'
+subtitle: I was recently asked by a VC friend of mine what I thought of a certain
+  Wiki product. I thought my r...
+tags:
+- technology
+- business
+title: Will Wikis Rule the World?
+type: wp
 wordpress_id: 1962
 ---
+
 I was recently asked by a VC friend of mine what I thought of a certain Wiki product. I thought my response to him (with specific product and people references removed) might be interesting. He asked me, “*Have you kept track of what’s going on in Wiki-land, and what do you think?”*
 Here’s my **answer**:
 

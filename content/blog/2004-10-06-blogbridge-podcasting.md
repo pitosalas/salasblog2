@@ -1,12 +1,16 @@
 ---
-title: "BlogBridge Podcasting?"
-subtitle: "There’s a site called IT Conversations that has a collection of i..."
-category: "50"
-tags: []
-date: "2004-10-06"
-type: "wp"
+category: '50'
+date: '2004-10-06'
+subtitle: There’s a site called IT Conversations that has a collection of i...
+tags:
+- technology
+- blogbridge
+- podcasting
+title: BlogBridge Podcasting?
+type: wp
 wordpress_id: 1930
 ---
+
 There’s a site called [IT Conversations](http://www.itconversations.com/) that has a collection of interviews, recorded on mp3s with some very interesting people. Also included are lectures, debates and panels. It is an excellent site, **I recommend it.**
 For a while now, I’ve been, **manually**, downloading those onto my PC and transferring them to my iPod for listening while I work out. Very **useful **and very **manual**.
 

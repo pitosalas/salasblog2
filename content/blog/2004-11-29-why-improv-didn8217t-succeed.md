@@ -1,12 +1,16 @@
 ---
-title: "Why Improv didn’t succeed"
-subtitle: "It’s been a while."
-category: "538"
-tags: []
-date: "2004-11-29"
-type: "wp"
+category: '538'
+date: '2004-11-29'
+subtitle: It’s been a while.
+tags:
+- technology
+- business
+- lotus-improv
+title: Why Improv didn’t succeed
+type: wp
 wordpress_id: 1905
 ---
+
 It’s been a while.
 Which is why my heart beat just a **little faster **when I read a reference to Improv (not altogether flattering) in the [Adam Bossworth piece ](http://www.adambosworth.net/archives/000031.html)I just wrote about, where he said:
 

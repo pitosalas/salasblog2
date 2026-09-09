@@ -1,12 +1,17 @@
 ---
-title: "[GEEK/JAVAONE] Java Web Start – still falling short"
-subtitle: "Java Web Start is a piece of Java platform that’s meant to ease the deployment and updating of Java ..."
-category: "422"
-tags: []
-date: "2004-07-01"
-type: "wp"
+category: '422'
+date: '2004-07-01'
+subtitle: Java Web Start is a piece of Java platform that’s meant to ease the deployment
+  and updating of Java ...
+tags:
+- programming
+- javaone
+- java-web-start
+title: '[GEEK/JAVAONE] Java Web Start – still falling short'
+type: wp
 wordpress_id: 1974
 ---
+
 Java Web Start is a piece of Java platform that’s meant to ease the deployment and updating of Java applications. It’s a great idea, but disappointingly implemented. There were several JavaOne sessions about Web Start. 
 There are some great enhancements coming in Java 5.0 (1.5)
 

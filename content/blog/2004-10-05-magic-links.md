@@ -1,12 +1,15 @@
 ---
-title: "Magic Links"
-subtitle: "Here’s a really cool idea (via Boing Boing – see their story"
-category: "50"
-tags: []
-date: "2004-10-05"
-type: "wp"
+category: '50'
+date: '2004-10-05'
+subtitle: Here’s a really cool idea (via Boing Boing – see their story
+tags:
+- technology
+- blogbridge
+title: Magic Links
+type: wp
 wordpress_id: 1931
 ---
+
 Here’s a really cool idea (via [Boing Boing ](http://www.boingboing.net/)– see their [story](http://www.boingboing.net/2004/10/04/bbc_news_proxy_makes.html)) – Creating a web site, identical to an existing one, except that certain words have been changed to links. A very powerful idea. [Read the article ](http://www.boingboing.net/2004/10/04/bbc_news_proxy_makes.html)and [see the site](http://www.whitelabel.org/wp/wikiproxy.php?url=http://news.bbc.co.uk/1/hi/uk_politics/3711092.stm).
 In [BlogBridge ](http://www.blogbridge.com)we already have [automatic highlights of keywords](/weblogs/archives/000494.html). That is, you can specify a set of words or phrases you care about, and BlogBridge will [highlight them ](/weblogs/archives/screen.jpg)whenever they occur in a Blog posting.
 **

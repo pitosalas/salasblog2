@@ -1,12 +1,15 @@
 ---
-title: "“Pure Entrepreneurship” article in tbe Boston Globe"
-subtitle: "“Pure Entrepeneurs”, according to this article in the Boston Globe,"
-category: "298"
-tags: []
-date: "2004-12-27"
-type: "wp"
+category: '298'
+date: '2004-12-27'
+subtitle: “Pure Entrepeneurs”, according to this article in the Boston Globe,
+tags:
+- business
+- boston-globe
+title: “Pure Entrepreneurship” article in tbe Boston Globe
+type: wp
 wordpress_id: 1884
 ---
+
 [“Pure Entrepeneurs”, according to this article in the Boston Globe,](http://www.boston.com/business/technology/articles/2004/12/27/its_the_pure_entrepreneur_who_often_leads_the_way?pg=full)
 ***… are loopy and obsessed. They have a vision of the future, and while others are casting their lines into the water to see what will bite, pure entrepreneurs are jumping over the gunwales and swimming after the white whale.
 

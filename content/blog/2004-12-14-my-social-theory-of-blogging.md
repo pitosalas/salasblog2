@@ -1,12 +1,16 @@
 ---
-title: "My social theory of blogging"
-subtitle: "We all love reading blogs **(right?), **and some of us even use their valuable time writing blogs. I..."
-category: "51"
-tags: []
-date: "2004-12-14"
-type: "wp"
+category: '51'
+date: '2004-12-14'
+subtitle: We all love reading blogs **(right?), **and some of us even use their valuable
+  time writing blogs. I...
+tags:
+- personal
+- technology
+title: My social theory of blogging
+type: wp
 wordpress_id: 1895
 ---
+
 We all love reading blogs **(right?), **and some of us even use their valuable time writing blogs. In my evangelism of blogging, a common question is **“Why?.” **Why would you spend your time writing, for a small (for most of us) mostly anonymous audience, for free?
 Well I have a (lower-case “t”) theory that many bloggers (like me) work alone, at home, or as a consultant, or perhaps wor in a company but not among like minded people.
 

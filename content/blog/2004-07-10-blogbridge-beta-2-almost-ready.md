@@ -1,12 +1,16 @@
 ---
-title: "BlogBridge Beta 2 almost ready"
-subtitle: "Well we’ve been **busy little beavers **and are getting ready to release BlogBridge Beta 2. It has q..."
-category: "50"
-tags: []
-date: "2004-07-10"
-type: "wp"
+category: '50'
+date: '2004-07-10'
+subtitle: Well we’ve been **busy little beavers **and are getting ready to release
+  BlogBridge Beta 2. It has q...
+tags:
+- technology
+- blogbridge
+title: BlogBridge Beta 2 almost ready
+type: wp
 wordpress_id: 1970
 ---
+
 Well we’ve been **busy little beavers **and are getting ready to release BlogBridge Beta 2. It has quite a few nifty new features! I will write a little more about it tomorrow or Monday.
 We’ve done a **total overhaul **of the content of the web site (the look/design is unchanged.) Take a look at [our Brand New Web Site](http://www.blogbridge.com.)
 

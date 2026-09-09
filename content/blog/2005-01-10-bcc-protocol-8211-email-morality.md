@@ -1,12 +1,16 @@
 ---
-title: "BCC Protocol – Email Morality?"
-subtitle: "What does the existence of “BCC” (which I think stands for the anachronism “blind carbon copy”) tell..."
-category: "298"
-tags: []
-date: "2005-01-10"
-type: "wp"
+category: '298'
+date: '2005-01-10'
+subtitle: What does the existence of “BCC” (which I think stands for the anachronism
+  “blind carbon copy”) tell...
+tags:
+- technology
+- personal
+title: BCC Protocol – Email Morality?
+type: wp
 wordpress_id: 1874
 ---
+
 What does the existence of “BCC” (which I think stands for the anachronism “blind carbon copy”) tell us about the social norms of emails? This thought occurred to me just now as I was the recipient of an email (corresponding to (3) in the not at all uncommon scenario that I describe below.
 It is an interesting piece of deception that we all participate in, isn’t it? Has anyone ever thought about the morality of email addressing?
 
