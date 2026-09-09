@@ -124,15 +124,15 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 ## Open
 
-**F44 — Fix the MetaWeblog/XML-RPC Implementation**: 5 of 6 tasks done (see `04-tasks/notdone/TF44-fix-metaweblog-xmlrpc.md`). **TF44.4** (manual MarsEdit verification) is in progress: refresh, edit, and image upload confirmed working against production. Root cause of refresh failing was MarsEdit's endpoint being configured as `http://` — Fly's `force_https` redirect turns a POST into a GET on 301, dropping the XML-RPC body; fixed by pointing MarsEdit at `https://salas.com/xmlrpc` (client-side config, not a server bug). Still to verify: create, delete, and a title/content with `&`/`<`/`>`.
+**F44 — Fix the MetaWeblog/XML-RPC Implementation**: 5 of 6 tasks done (see `04-tasks/notdone/TF44-fix-metaweblog-xmlrpc.md`). **TF44.4** (manual MarsEdit verification) still in progress: refresh, edit, and image upload confirmed working against production; create, delete, and a title/content with `&`/`<`/`>` still need verification. Full history of what was found/fixed getting here is in `02-doc/history.md`.
 
-Manual testing also surfaced several real bugs, now fixed and committed (see `04-tasks/chores.md`): `metaweblog_getCategories` hardcoded stub → now returns `BLOG_TAGS`; missing `link`/real-tags-as-`categories` fields on `getPost`/`getRecentPosts`; excerpt truncation breaking markdown formatting (mid-token cuts and collapsed-newline block markers both printed raw markdown/HTML characters instead of rendering); home page missing the "Read more" link on truncated excerpts.
+**F45 — Tag Suggestion Picklist for Post Editor**: done, confirmed working live by the user (`03-features/done/F45-tag-suggestion-picklist.md`). The post editor's Tags field now offers a searchable picklist backed by real tag-frequency data (`output/top-tags.json`, regenerated alongside `admin-posts-index.json`) merged with the curated `BLOG_TAGS` vocabulary, replacing a static 15-tag `<datalist>`.
 
-**Fixed**: `BloggerAPI` now resolves its content directory the same volume-first way `get_content_directory()`/`SiteGenerator` already do (`04-tasks/chores.md`), removing the likely cause of a user-reported bug: MarsEdit showing a stale post even after refresh. `_backup_to_volume()`/`_delete_from_volume()` deleted entirely — writes/deletes go straight to the volume-resolved `blog_dir`, so there's no second copy to fall out of sync.
+**Bulk retagging in progress** (follow-on to F45, content curation not a coding task — see `02-doc/history.md` for full detail): two batches reviewed against real content — the 100 most recent posts, and the 100 posts with the most real human traffic (production `/data/stats.json`, bots/crawlers/search engines/drafts excluded). 77 posts unique to the traffic batch are committed (`b08853a`); the 100-post recent batch (23 of which overlap with the traffic batch and are already committed) is still awaiting the user's review before committing. `BLOG_TAGS` extended with `curacao`/`boston`/`brandeis`/`jewish`/`arlington` per the user's explicit request, applied where found so far.
 
-**This session's commits (categories/link/excerpt/Read-more fixes, volume-first BloggerAPI, full style-guide pass, all literate docs regenerated) are pushed to GitHub but not yet deployed** — see Deployment section below.
+**Found, not yet actioned**: 3 posts (including the #1 and #3 most-visited by real traffic) exist only on the production Fly.io volume — never synced to GitHub/this local repo, despite the scheduled sync job. Fetched directly via `fly ssh sftp get` to include in the retagging review; the underlying sync gap itself is unexplained and not yet filed as an issue.
 
-**Full-repo style-guide pass done this session** (`04-tasks/chores.md`): relative imports fixed to absolute throughout (`generator.py`, `raindrop.py`, `cli.py`, `scheduler.py`), missing file headers added to 6 modules, a real `UnboundLocalError` bug fixed in `scripts/debug_content_dirs.py` (shadowed `Path` import), a genuine test-coverage gap fixed in `tests/deployment/test_checksum_sync.py`, and the whole repo is now `ruff check`/`ruff format --check` clean (was 92 pre-existing violations at session start). All `01-literate/*.md` docs regenerated from scratch in dependency order.
+**This session's commits are pushed to GitHub but not yet deployed** — see Deployment section below.
 
 **Other open features** (`03-features/notdone/`, no dependency on each other or on F44):
 
@@ -146,7 +146,9 @@ Manual testing also surfaced several real bugs, now fixed and committed (see `04
 
 F33 TF33.0 (the category/type field name fix in `script.js`) is already done. F33 TF33.1–TF33.3 (raindrop indexing, content truncation, tests) remain.
 
-F41 was reconciled this session against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they don't redo or contradict work those two features already did) — see `04-tasks/notdone/TF41-codebase-cleanup-architecture.md`. Recommended order if picking F41 up: after F44, since TF41.3/TF41.10 assume F44 has landed.
+F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they don't redo or contradict work those two features already did) — see `04-tasks/notdone/TF41-codebase-cleanup-architecture.md`. Recommended order if picking F41 up: after F44, since TF41.3/TF41.10 assume F44 has landed.
+
+**Open issues** (`05-issues/open/`, found during this session's literate-doc regeneration, not yet fixed): I01 (incremental regeneration drops content types from search/home), I02 (VisitCounter read/write race, no cross-process lock), I03 (scheduler.py's dead startup-job code).
 
 **Deferred**: F43 (token-authenticated REST API for posting from a phone, `03-features/deferred/`) — parked, not abandoned, independent of everything else.
 
@@ -155,7 +157,7 @@ F41 was reconciled this session against F42 and F44 (TF41.2, TF41.3, TF41.10 rew
 ## Test status
 
 ```
-537 passed, 11 skipped, 1 failed, 3 warnings
+554 passed, 11 skipped, 1 failed, 3 warnings
 ```
 
 The 1 failure (`test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env`) is pre-existing and unrelated to this session's work (confirmed to fail identically on `main` before any of this session's changes) — raindrop.py cache-loading test isolation issue, F29/F30 territory. Skipped tests require a live server (`https://salasblog2.fly.dev`).

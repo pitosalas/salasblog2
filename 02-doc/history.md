@@ -75,3 +75,37 @@ User asked for two large follow-on tasks, done without stopping for further conf
 Two fixes went beyond linting into real bugs/gaps: `scripts/debug_content_dirs.py`'s `main()` had a redundant `from pathlib import Path` inside a `try` block that shadowed the module-level import for the whole function scope, so the earlier `Path.cwd()` call would have raised `UnboundLocalError` if the script were ever run — found via ruff's F823 (variable referenced before assignment). And `tests/deployment/test_checksum_sync.py::test_identical_content_skipped` computed `initial_dest_mtime`/`final_dest_mtime` but never compared them despite the comment claiming to verify exactly that — a genuine test-coverage gap. First fix attempt (assert the two mtimes equal) was itself wrong and failed in CI-style testing: `rsync -a --checksum` still syncs destination mtime via `-a`'s `-t` regardless of whether `--checksum` decided to skip the data transfer, so mtime equality doesn't prove anything about whether a transfer was skipped — reverted to removing the dead variables with a comment explaining why, rather than shipping an incorrect assertion.
 
 All 40+ touched test files: `ruff format .` also reformatted ~26 files project-wide that weren't otherwise touched (pure whitespace/formatting, confirmed via `git diff --stat`). Full test suite: 536 passed, 12 skipped, 1 pre-existing unrelated failure throughout — no regressions introduced by any of this pass.
+
+---
+
+## Session: 2026-09-09 — home page markdown formatting, F45 tag picklist, bulk retagging
+
+### Excerpt formatting continued: headers as bold inline text
+User reported the front page "better but headers are not styled a little larger and bold. they are just plain text" — a follow-on to the earlier excerpt paragraph-break fix. Headers crossed by an excerpt were fully flattened (block marker stripped, no visual treatment). Fixed by wrapping header text in `<strong class="excerpt-heading">` (not a real `<h1>`-`<h6>`, which would inherit Bootstrap's much larger size and can't validly nest inside `blog_list.html`'s `<p>` wrapper) with matching CSS in `style.css`. `_trim_dangling_markup()` extended to also drop a truncation cut landing mid-heading-span.
+
+### F45 — Tag Suggestion Picklist for Post Editor (done)
+User asked for a real feature this time: the post editor's Tags field only suggested from the static 15-tag `BLOG_TAGS` via a single-match `<datalist>`. Per process, wrote `03-features/notdone/F45-tag-suggestion-picklist.md` + `04-tasks/notdone/TF45-*.md` and stopped for approval before coding, per the process gate.
+
+Once approved: `generate_posts_index_cache()` (`server.py`) extended to also tally tag frequency (piggybacking on frontmatter it already reads for `admin-posts-index.json`) and write the top 100 to `output/top-tags.json`; `top_tags_by_frequency()` (`utils.py`) does the ranking, excluding purely-numeric tags — real content confirmed old WordPress-imported posts carry raw category IDs as tags, which would otherwise swamp genuine ones (same `tag.isdigit()` convention the templates already use for tag badges). `post_editor.html` got a searchable click-to-add/remove picklist replacing the datalist, implemented inline in that template's own existing `<script>`/`<style>` blocks rather than a new `static/js/` file — discovered mid-implementation that `post_editor.html` doesn't use `base.html`/`admin-delete.js`'s pattern at all, unlike originally assumed in the plan.
+
+Confirmed working live by the user ("it does work but it is a little ugly. Ok for now" — visual polish explicitly deferred, not blocking). Feature closed, moved to `03-features/done/`.
+
+Follow-up fix: `top_tags_by_frequency()` got an `always_include` parameter (`BLOG_TAGS` passed at the real call site) — a curated tag with zero real usage yet would otherwise never surface in the ranking, and could never start being used since it's never offered.
+
+No live browser tool was available this session to click-test the picklist directly (user was mid-installing one; a fresh connection there only gets picked up by a new Claude Code session). Verified instead via: HTML/JS structure served correctly with real cached data, `node --check` on the extracted inline script, and full-coverage automated tests (cache generation/numeric-exclusion through the real write path, template-context wiring, pages correctly excluded).
+
+### Bulk retagging — two batches, real production data
+Once F45 shipped, user asked to retag content in stages: first the 100 most recent posts (for review), then scale up once approved. Two distinct selection criteria ended up in play:
+
+1. **Most recent 100** — straightforward, sorted by `admin-posts-index.json`'s date field.
+2. **Most-visited 100** — user asked to use real traffic data instead. The *local* `stats.json` turned out to be seeded test/fixture data (`test-raindrop.html`, `example-article.html` — not real visits), so the actual production file was pulled via `fly ssh sftp get /data/stats.json` (77MB). Raw total-visit counts were dominated by draft posts (`draft-*.html`, not linked anywhere on the site) and bot/crawler/search-engine traffic — `visitor_type.py`'s "human" classification was used instead, and drafts excluded entirely, to get a ranking that actually reflects real readers of real posts.
+
+Cross-referencing the two lists surfaced a real gap: **3 of the top-visited posts (including #1 and #3) exist only on the production volume, never synced to GitHub** — confirmed via `fly ssh sftp find` showing both an old duplicate-named post and the actual current one only on `/data/content/blog`, not in this repo's git history. Fetched directly via SFTP and included in the review rather than silently skipped; the sync gap itself wasn't diagnosed further or filed as an issue this session.
+
+For each batch: read every post's actual title/excerpt, assigned tags from the curated vocabulary based on real content analysis (not keyword matching), removed any numeric-junk or non-vocabulary tags. Verified rigorously before ever committing: every file's body content diffed byte-for-byte against `git show HEAD` (zero corruption across 177 unique posts total), every file re-parsed with the real `frontmatter` library to confirm valid YAML and exact expected tags, full test suite green throughout.
+
+Built a searchable/filterable review artifact (batch toggles, numeric-junk/no-fit filters) rather than dumping 177 rows of text, republished in place as the second batch was added.
+
+User then said: "you can commit the 77 pages" (the traffic-only posts not already in the recent-100 batch) and separately asked to hardwire `curacao`/`boston`/`brandeis`/`jewish`/`arlington` as new curated tags — found via content review (a Curaçao family-reunion post, a Boston Globe press mention, a Brandeis-teaching reference, a Curaçao Jews history page). Added to `BLOG_TAGS`, applied where a clear match existed in the 77 being committed (2 of the 5 new tags had matches in that batch), and applied to 2 more posts that exist in the still-pending recent-100 batch (updated on disk, deliberately left unstaged since only "the 77" was approved for commit). Verified the staged diff contained exactly the 77 traffic-only files (0 recent-only files) before committing.
+
+The recent-100 batch (100 posts, 23 of which are also in the now-committed traffic batch) remains uncommitted, awaiting the user's review of the same artifact.

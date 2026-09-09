@@ -1,6 +1,6 @@
 ---
-version: "1.0"
-generated: "2026-09-08"
+version: "1.1"
+generated: "2026-09-09"
 ---
 
 # `utils.py` — Content Processing Foundation
@@ -55,36 +55,69 @@ perfectly normal `## Heading` ends up buried mid-sentence, where the
 Markdown renderer no longer treats `##` as a heading marker — it just
 prints two literal hash characters in the middle of the excerpt.
 
-The fix is a small preprocessing pass that strips block markers from each
-line *while lines still exist* — before anything gets joined:
+The fix is a small preprocessing pass that neutralizes block markers from
+each line *while lines still exist* — before anything gets joined. Headers
+get different treatment than blockquotes/bullets: a heading crossed by an
+excerpt should still read as a heading (bold, a touch larger — see
+`.excerpt-heading` in `style.css`), not be flattened to indistinguishable
+plain text, so its marker is replaced with an inline `<strong
+class="excerpt-heading">` span rather than dropped outright:
 
 ```python
-_BLOCK_MARKDOWN_MARKER_RE = re.compile(r"^\s{0,3}(?:#{1,6}\s+|>+\s?|[-*+]\s+|\d+\.\s+)")
+_HEADER_MARKER_RE = re.compile(r"^\s{0,3}#{1,6}\s+(.*)$")
+_OTHER_BLOCK_MARKER_RE = re.compile(r"^\s{0,3}(?:>+\s?|[-*+]\s+|\d+\.\s+)")
+EXCERPT_HEADING_OPEN = '<strong class="excerpt-heading">'
+EXCERPT_HEADING_CLOSE = "</strong>"
 
 def _strip_block_markdown_markers(content: str) -> str:
-    return "\n".join(
-        _BLOCK_MARKDOWN_MARKER_RE.sub("", line) for line in content.split("\n")
-    )
+    lines = []
+    for line in content.split("\n"):
+        header_match = _HEADER_MARKER_RE.match(line)
+        if header_match:
+            lines.append(f"{EXCERPT_HEADING_OPEN}{header_match.group(1)}{EXCERPT_HEADING_CLOSE}")
+        else:
+            lines.append(_OTHER_BLOCK_MARKER_RE.sub("", line))
+    return "\n".join(lines)
 ```
 
-The regex mirrors CommonMark's own tolerance for up to three leading
-spaces before a block marker still counts as "start of line" (four or
-more would make it an indented code block instead). This is a useful
-general lesson: **any text transform that changes line structure must run
-after, not before, any earlier step that depends on line structure.**
-Order of operations here isn't cosmetic — swapping these two lines
-reintroduces the bug.
+A real `<h1>`-`<h6>` tag was deliberately avoided: it would inherit
+Bootstrap's much larger default heading size (looks broken in a small
+excerpt card) and, on the blog listing page specifically, can't validly
+nest inside `blog_list.html`'s `<p>` wrapper the way an inline `<strong>`
+can. The regexes mirror CommonMark's own tolerance for up to three leading
+spaces before a marker still counting as "start of line" (four or more
+would make it an indented code block instead). This is a useful general
+lesson: **any text transform that changes line structure must run after,
+not before, any earlier step that depends on line structure.** Order of
+operations here isn't cosmetic — swapping these two lines reintroduces the
+bug.
+
+A second, related bug: collapsing *every* newline (including blank lines
+between paragraphs) into a single space works fine for a short excerpt but
+reads as one run-on wall of text once an excerpt is long enough to span
+several of the source post's paragraphs. `create_excerpt_with_info()`
+now only collapses *word-wrap* newlines within a paragraph — a genuine
+blank line survives as a paragraph break (`\n\n`), which the markdown
+filter (`blog_list.html`/`home.html`) then renders as a separate `<p>`,
+the same way the full post page already does:
+
+```python
+paragraphs = re.split(r"\n\s*\n", clean_content)
+paragraphs = [re.sub(r"\s+", " ", p).strip() for p in paragraphs]
+clean_content = "\n\n".join(p for p in paragraphs if p)
+```
 
 ### Problem 2: character-count truncation cuts mid-token
 
-Once the content is a single line, truncating at a fixed character count
-is the obvious next step — but Markdown "tokens" like `**bold**`,
-`[link](url)`, and raw `<tag>` HTML have no idea they might get cut in
-half. A cut that lands after `**foo` but before the closing `**` leaves an
-*unmatched* marker. Markdown doesn't silently ignore an unmatched `**` —
-it prints the two literal asterisks as text, which is exactly the kind of
-visual glitch that shows up in a listing page and looks like a rendering
-bug rather than a content bug.
+Truncating the cleaned-up content at a fixed character count is the
+obvious next step — but Markdown "tokens" like `**bold**`, `[link](url)`,
+raw `<tag>` HTML, and now the `<strong class="excerpt-heading">` span from
+Problem 1 have no idea they might get cut in half. A cut that lands after
+`**foo` but before the closing `**` leaves an *unmatched* marker. Markdown
+doesn't silently ignore an unmatched `**` — it prints the two literal
+asterisks as text, which is exactly the kind of visual glitch that shows
+up in a listing page and looks like a rendering bug rather than a content
+bug.
 
 `_trim_dangling_markup()` runs after the character cut and removes
 whichever half-open token got left behind:
@@ -95,17 +128,23 @@ def _trim_dangling_markup(text: str) -> str:
     text = re.sub(r"!?\[[^\]]*(\]\([^)]*)?$", "", text)  # unclosed markdown link/image
     if text.count("**") % 2 == 1:
         text = text[: text.rfind("**")]
+    if text.count(EXCERPT_HEADING_OPEN) > text.count(EXCERPT_HEADING_CLOSE):
+        text = text[: text.rfind(EXCERPT_HEADING_OPEN)]
     return text
 ```
 
-Each check is anchored to the *end* of the string (`$`), because the only
-thing that can be dangling is whatever the truncation just cut through —
-anything earlier in the string was already well-formed. Note the ordering
-dependency between the three checks: an unclosed `[link text` gets
-stripped by the link/image pattern before the `**` count is even
-evaluated, so a `**[bold link**` truncated mid-link doesn't confuse the
-bold-counter with a phantom odd count contributed by a link fragment that
-is about to be removed anyway.
+Each check is anchored to the *end* of the string (`$` or a count
+comparison), because the only thing that can be dangling is whatever the
+truncation just cut through — anything earlier in the string was already
+well-formed. Note the ordering dependency between the checks: an unclosed
+`[link text` gets stripped by the link/image pattern before the `**` count
+is even evaluated, so a `**[bold link**` truncated mid-link doesn't
+confuse the bold-counter with a phantom odd count contributed by a link
+fragment that is about to be removed anyway. The heading-span check is
+last and coarser than the others — rather than trying to detect a partial
+cut *inside* the span's text, it just drops the entire span (opening tag
+onward) whenever the count of opens exceeds closes, since a half-rendered
+heading fragment isn't worth trying to salvage.
 
 This is not a full Markdown parser — it's a small set of targeted patches
 for the token types that are common in this blog's actual posts (bold,
@@ -118,15 +157,17 @@ discovering it as a surprise later.
 
 ```mermaid
 flowchart TD
-    A[Raw post content] --> B[Strip block markers per-line]
-    B --> C[Collapse newlines and whitespace into one line]
-    C --> D{len <= max_length?}
-    D -- yes --> E[Return as-is, truncated=False]
-    D -- no --> F{len <= max_length + smart_threshold?}
-    F -- yes --> G[Return full clean content, truncated=False]
-    F -- no --> H[Hard-cut at max_length chars]
-    H --> I[Trim dangling markup token]
-    I --> J[Append '...' , truncated=True]
+    A[Raw post content] --> B[Strip block markers per-line<br/>headers become excerpt-heading spans]
+    B --> C[Split into paragraphs on blank lines]
+    C --> D[Collapse word-wrap whitespace within each paragraph]
+    D --> E[Rejoin paragraphs with blank lines]
+    E --> F{len <= max_length?}
+    F -- yes --> G[Return as-is, truncated=False]
+    F -- no --> H{len <= max_length + smart_threshold?}
+    H -- yes --> I[Return full clean content, truncated=False]
+    H -- no --> J[Hard-cut at max_length chars]
+    J --> K[Trim dangling markup token]
+    K --> L[Append '...' , truncated=True]
 ```
 
 The `smart_threshold` step is a small but pleasant design choice: if the
@@ -319,6 +360,60 @@ never seems to update its position) rather than a silent one. The log
 message spells out the consequence, which is a nice habit: a future reader
 grepping logs for "why is this post buried" gets the answer directly
 instead of having to reverse-engineer the sort key.
+
+## `BLOG_TAGS` and `top_tags_by_frequency`: a curated floor under real usage
+
+`BLOG_TAGS`, the module-level constant near the top of the file, is a
+hand-curated list of topical tags (originally 15 — `technology`,
+`programming`, `robotics`, and so on — later extended with a handful of
+personal/place tags like `curacao` and `brandeis` as real content review
+turned up posts that needed them). It's not a closed vocabulary — any tag
+can still be typed freely when authoring a post — but it's the seed list
+offered to a human picking tags, both in the post editor's picklist and
+(via `blogger_api.py`) MarsEdit's category list.
+
+`top_tags_by_frequency()` computes the *actual* ranking that backs that
+picklist, from real usage across existing posts rather than the static
+list alone:
+
+```python
+def top_tags_by_frequency(tag_lists, limit=100, always_include=None):
+    counts = {}
+    for tags in tag_lists:
+        for tag in tags:
+            if tag and not tag.isdigit():
+                counts[tag] = counts.get(tag, 0) + 1
+    ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
+    top = [tag for tag, _count in ranked[:limit]]
+    for tag in always_include or []:
+        if tag not in top:
+            top.append(tag)
+    return top
+```
+
+Two details worth calling out:
+
+- **`not tag.isdigit()`** exists because real content review found that
+  many older, WordPress-imported posts carry raw numeric category IDs
+  (e.g. `"1221"`) as their `tags` frontmatter — a leftover migration
+  artifact, not a real topic. Left unfiltered, these numeric "tags" are
+  common enough among old posts to swamp genuinely useful ones in a
+  frequency ranking. The templates (`blog_post.html`/`blog_list.html`/
+  `home.html`) already exclude these the same way when rendering a post's
+  tag badges (`{% if not tag.isdigit() %}`) — this mirrors that existing
+  convention rather than inventing a new one.
+- **`always_include`** (the caller passes `BLOG_TAGS`) is appended *after*
+  the ranked top-N, not folded into the ranking itself. A brand-new
+  curated tag has zero real usage by definition, so it would never surface
+  in a pure frequency ranking — and it could never start being used if
+  it's never offered in the picklist in the first place. Appending after
+  rather than ranking-with means a curated-but-unused tag can't crowd out
+  a genuinely popular one within `limit`.
+
+The actual cache generation (reading every post's frontmatter, writing the
+result to `output/top-tags.json`) lives in `server.py`, not here — this
+module stays a pure function operating on already-loaded tag lists,
+consistent with its "no filesystem, no framework" design.
 
 ## Naming and slugs: three call sites, one intent
 
