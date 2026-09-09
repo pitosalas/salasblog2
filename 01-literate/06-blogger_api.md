@@ -1,5 +1,5 @@
 ---
-version: "1.1"
+version: "1.2"
 generated: "2026-09-08"
 ---
 
@@ -98,26 +98,20 @@ line short and unpunctuated enough to be a title." It's a guess, not a
 parse, and the docstring says so; there's no format here that guarantees a
 correct split.
 
-## The write pipeline: local file → volume backup → regenerate
+## The write pipeline: straight to the volume, then regenerate
 
-Creating or editing a post is a three-stage pipeline, and the ordering
-matters:
+Creating or editing a post is a two-stage pipeline:
 
 ```mermaid
 sequenceDiagram
     participant M as MarsEdit
     participant B as BloggerAPI
-    participant FS as Local content/blog/
-    participant V as /data (Fly volume)
+    participant V as blog_dir (volume-first)
     participant G as SiteGenerator
 
     M->>B: blogger.newPost(title, body, tags, publish)
     B->>B: authenticate or raise Fault(401)
-    B->>FS: write post.md (flush + fsync)
-    B->>V: copy to volume (skipped locally)
-    alt volume backup fails
-        B-->>M: Fault(500) — post written but not backed up
-    end
+    B->>V: write post.md (flush + fsync)
     alt publish=true
         B->>G: regenerate (background task if given one)
     end
@@ -132,16 +126,25 @@ having "succeeded." `fsync` forces the write to durable storage before
 `blogger_newPost` moves on to the next stage — a small cost paid once per
 post, in exchange for not silently losing content a user just typed.
 
-**Why raise on backup failure?** `_backup_to_volume()`'s failure path calls
-`self._create_fault(500, ...)`, converting a Python exception into an
-XML-RPC `Fault` MarsEdit will actually show the user. This exists because
-of a real production incident (documented in this project's feature
-history as F34): if a volume write silently fails, the post exists only in
-the container's ephemeral local copy, and the next scheduled git sync's
-`rsync --delete` step would wipe it out before it ever reached persistent
-storage — with nothing to tell the author it happened. Surfacing the
-failure loudly, immediately, is the fix; a caught-and-ignored exception
-here would have reintroduced the exact bug that shipped once already.
+**Where did the volume-backup step go?** Earlier versions of this module
+wrote to a local `content/blog/` directory first, then made a second,
+explicit copy to `/data/content/blog` (`_backup_to_volume()`) so the post
+survived container restarts — with a failure there raising `Fault(500)` so
+MarsEdit couldn't tell the author "success" for a post that actually
+existed only in the container's ephemeral filesystem (documented in this
+project's history as F34). That two-copy design created a subtler problem:
+`BloggerAPI` still *read* posts back from the local copy, not the volume,
+so a post edited through the web admin (which writes straight to
+`/data/content`) was invisible to MarsEdit until the next scheduled GitHub
+sync, and a container restart between a MarsEdit edit and the next MarsEdit
+read would revert the local copy to the last-pushed git commit while the
+volume (and the live site) kept the newer version — MarsEdit would show a
+stale post even after refreshing. The fix folds `__init__`'s directory
+resolution into the same volume-first check `get_content_directory()`
+(`server.py`) and `SiteGenerator` (`generator.py`) already use, so
+`blog_dir` *is* `/data/content/blog` in production — one location, written
+and read consistently, with no second copy to fall out of sync and nothing
+left to explicitly back up after the fact.
 
 **Why is regeneration backgroundable?** Every publish triggers
 `generator.incremental_regenerate_post()`, which rewrites the individual
@@ -169,29 +172,36 @@ in the background, that raise only reaches the log, not the user. This is
 the same responsiveness-over-strict-confirmation trade this project makes
 elsewhere (the web admin form's save button behaves identically).
 
-## Local-only vs. production: one `Path("/data").exists()` check
+## Local-only vs. production: `Path("/data/...")` existence checks
 
 The Fly.io deployment mounts a persistent volume at `/data`; a laptop
-running the server locally has no such thing. Two places in this module —
-`_backup_to_volume()` and the image-upload path in
-`metaweblog_newMediaObject()` — need to skip their volume-copy step
-entirely when that mount doesn't exist, rather than attempting a doomed
-write and treating the failure as an error:
+running the server locally has no such thing. Two places in this module
+need to know which environment they're in:
+
+- `__init__` checks `Path("/data/content").exists()` to decide whether
+  `blog_dir` resolves under the volume or under `root_dir/content` — the
+  same volume-first check `get_content_directory()`/`SiteGenerator` use.
+- The image-upload path in `metaweblog_newMediaObject()` separately checks
+  `Path("/data").exists()` before attempting its own volume-backup copy of
+  an uploaded image (media intentionally lives in three places at once —
+  source, served output, and volume backup — for different reasons, unlike
+  post content, so this check wasn't folded into the same `__init__`
+  resolution).
 
 ```python
 if not Path("/data").exists():
-    logger.info(f"No /data volume present (local dev) — skipping backup for {file_path}")
+    logger.info(f"No /data volume present (local dev) — skipping media backup for {filename}")
     return
 ```
 
 This mirrors a pattern already used by `generator.py` and `raindrop.py` for
 detecting whether `/data/content` is the active content source. The
-specific bug this fixed: on macOS, attempting to *create* `/data` (which
-doesn't exist there) fails with `EROFS — Read-only file system`, because
-the machine's root filesystem is a sealed, read-only system volume. Before
-this check existed, every local MarsEdit post failed at the backup step
-with exactly that OS error, even though the post itself had already been
-written successfully to the local `content/blog/` directory.
+specific bug this fixed, historically: on macOS, attempting to *create*
+`/data` (which doesn't exist there) fails with `EROFS — Read-only file
+system`, because the machine's root filesystem is a sealed, read-only
+system volume — so any code path that unconditionally tried a `/data` copy
+failed hard on a developer's laptop, even though the rest of the operation
+had already succeeded.
 
 ## Authentication: two tiers, one deliberately loose
 
@@ -230,23 +240,6 @@ context (which post, which credential) is still available.
   requiring `BLOG_USERNAME`/`BLOG_PASSWORD` to be set at all in production)
   would close a real, currently-live gap: any client that knows the
   endpoint exists can authenticate with arbitrary non-empty credentials.
-- **`blog_dir` is hardcoded to `content/blog` under the process's working
-  directory**, never the volume-first `/data/content/blog` that
-  `get_content_directory()` in `server.py` resolves to for the web admin
-  path. XML-RPC reads/writes and the web admin's reads/writes can
-  therefore be looking at two different directories in production,
-  reconciled only by `_backup_to_volume()`'s one-way copy. Routing this
-  module through the same volume-aware helper `server.py` already has
-  would remove an entire class of "why does MarsEdit see stale content"
-  bug. **Confirmed live**, not just theoretical: a user reported MarsEdit
-  showing a stale post even after refreshing. A post edited via the web
-  admin only ever reaches `/data/content`, invisible to this module's reads
-  of `/app/content/blog` until the next scheduled GitHub sync; a container
-  restart between a MarsEdit edit and the next MarsEdit read reverts
-  `/app/content` to the last-pushed commit via `startup.sh`'s
-  `git checkout -f`, while `/data/content` (and the live site) keep the
-  newer version. Tracked as a pending chore (`04-tasks/chores.md`), not yet
-  fixed.
 - **The `try/except Exception: logger.error(...); # Don't raise` pattern
   around regeneration appears three times** (create, edit, delete) with
   identical shape. A small context manager or decorator

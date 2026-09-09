@@ -21,125 +21,98 @@ def _make_api(tmp_path):
     return api
 
 
-class TestBackupToVolume:
-    """Tests for _backup_to_volume() error propagation."""
-
-    @pytest.fixture
-    def api(self, tmp_path):
-        with patch.object(BloggerAPI, "__init__", lambda self: None):
-            obj = BloggerAPI.__new__(BloggerAPI)
-            obj.root_dir = tmp_path
-            obj.blog_dir = tmp_path / "content" / "blog"
-            obj.blog_dir.mkdir(parents=True)
-            return obj
+class TestVolumeFirstContentDir:
+    """Regression: BloggerAPI.blog_dir was hardcoded to root_dir/content/blog,
+    never checking /data/content like get_content_directory() (server.py) and
+    SiteGenerator (generator.py) already do. That let a post edited via the web
+    admin (which writes straight to /data/content) go invisible to MarsEdit, and
+    let a container restart between a MarsEdit edit and the next MarsEdit read
+    revert /app/content to the last-pushed git commit while /data/content (and
+    the live site) kept the newer version — reported by the user as MarsEdit
+    showing a stale post even after refreshing."""
 
     @staticmethod
-    def redirect_data_path(volume_root: Path):
-        """Build a Path(...) side_effect that redirects Path("/data") to an
-        existing tmp directory (simulating the Fly.io volume being present),
-        passing every other call through to the real Path."""
+    def redirect_data_content_path(volume_content_dir: Path):
+        """Build a Path(...) side_effect that redirects Path("/data/content")
+        to an existing tmp directory, passing every other call through."""
         original_Path = Path
 
         def path_factory(*args):
-            if args == ("/data",):
-                return volume_root
+            if args == ("/data/content",):
+                return volume_content_dir
             return original_Path(*args)
 
         return path_factory
 
-    def test_backup_to_volume_success(self, api, tmp_path):
-        """Happy path: file is copied to /data relative path when the volume
-        (production-like) is present."""
-        post_file = api.blog_dir / "my-post.md"
-        post_file.write_text("hello")
-
-        volume_root = tmp_path / "data"
-        volume_root.mkdir()
+    def test_prefers_volume_when_present(self, tmp_path):
+        """When /data/content exists (production-like), blog_dir resolves under it."""
+        volume_content_dir = tmp_path / "data" / "content"
+        volume_content_dir.mkdir(parents=True)
 
         with (
             patch(
                 "salasblog2.blogger_api.Path",
-                side_effect=self.redirect_data_path(volume_root),
+                side_effect=self.redirect_data_content_path(volume_content_dir),
             ),
-            patch("shutil.copy2") as mock_copy,
+            patch("salasblog2.blogger_api.Path.cwd", return_value=tmp_path),
         ):
-            api._backup_to_volume(post_file)
-            assert mock_copy.called
+            api = BloggerAPI()
 
-    def test_backup_to_volume_raises_on_failure(self, api, tmp_path):
-        """Regression: _backup_to_volume() must raise on failure (when the volume
-        is present) so the caller can surface the error via XML-RPC fault instead
-        of silently losing the post."""
-        post_file = api.blog_dir / "my-post.md"
-        post_file.write_text("hello")
+        assert api.blog_dir == volume_content_dir / "blog"
 
-        volume_root = tmp_path / "data"
-        volume_root.mkdir()
+    def test_falls_back_to_local_content_without_volume(self, tmp_path, monkeypatch):
+        """When /data/content doesn't exist (local dev), blog_dir falls back to
+        root_dir/content/blog, same as get_content_directory()/SiteGenerator."""
+        monkeypatch.chdir(tmp_path)
+        api = BloggerAPI()
 
-        with (
-            patch(
-                "salasblog2.blogger_api.Path",
-                side_effect=self.redirect_data_path(volume_root),
-            ),
-            patch("shutil.copy2", side_effect=OSError("disk full")),
-        ):
-            with pytest.raises(OSError, match="disk full"):
-                api._backup_to_volume(post_file)
+        assert api.blog_dir == tmp_path / "content" / "blog"
 
-    def test_backup_to_volume_skipped_without_volume(self, api, tmp_path):
-        """Regression: when /data doesn't exist (local dev — no Fly.io volume
-        mounted), backup must be a silent no-op rather than attempting the copy
-        and raising. This is the actual bug reported: MarsEdit posts failed
-        locally with 'Read-only file system: /data' because the old code always
-        attempted the copy regardless of environment, exactly like
-        generator.py/raindrop.py already guard their own /data/content access."""
-        post_file = api.blog_dir / "my-post.md"
-        post_file.write_text("hello")
 
-        with patch("shutil.copy2") as mock_copy:
-            api._backup_to_volume(post_file)  # must not raise
-            assert not mock_copy.called
+class TestNewEditDeletePost:
+    """Writes/deletes go straight to blog_dir now — no separate volume backup
+    or delete step to fail independently of the write/delete itself."""
 
-    def test_new_post_raises_fault_when_volume_backup_fails(self, tmp_path):
-        """Regression: blogger_newPost() must raise an XML-RPC Fault when the
-        volume backup fails, so MarsEdit knows the post was not fully saved and
-        the subsequent rsync --delete cannot silently delete it."""
-        api = BloggerAPI.__new__(BloggerAPI)
-        api.root_dir = tmp_path
-        api.blog_dir = tmp_path / "content" / "blog"
-        api.blog_dir.mkdir(parents=True)
+    def test_new_post_written_directly_no_backup_step(self, tmp_path):
+        api = _make_api(tmp_path)
 
         with (
             patch.object(api, "_authenticate", return_value=True),
-            patch.object(api, "_write_post_file"),
-            patch.object(api, "_backup_to_volume", side_effect=OSError("no volume")),
             patch.object(api, "_regenerate_and_verify"),
         ):
-            with pytest.raises(Fault):
-                api.blogger_newPost("key", "blog", "user", "pass", "Title\nBody", True)
+            filename = api.blogger_newPost(
+                "key", "blog", "user", "pass", "Title\nBody", True
+            )
 
-    def test_edit_post_raises_fault_when_volume_backup_fails(self, tmp_path):
-        """Regression: blogger_editPost() must raise an XML-RPC Fault when the
-        volume backup fails."""
-        api = BloggerAPI.__new__(BloggerAPI)
-        api.root_dir = tmp_path
-        api.blog_dir = tmp_path / "content" / "blog"
-        api.blog_dir.mkdir(parents=True)
+        assert (api.blog_dir / filename).exists()
 
-        # Create an existing post file
+    def test_edit_post_written_directly_no_backup_step(self, tmp_path):
+        api = _make_api(tmp_path)
         post_file = api.blog_dir / "existing-post.md"
         post_file.write_text("---\ntitle: Test\n---\nBody")
 
         with (
             patch.object(api, "_authenticate", return_value=True),
-            patch.object(api, "_write_post_file"),
-            patch.object(api, "_backup_to_volume", side_effect=OSError("no volume")),
             patch.object(api, "_regenerate_and_verify"),
         ):
-            with pytest.raises(Fault):
-                api.blogger_editPost(
-                    "key", "existing-post.md", "user", "pass", "Title\nBody", True
-                )
+            api.blogger_editPost(
+                "key", "existing-post.md", "user", "pass", "New Title\nNew Body", True
+            )
+
+        assert "New Body" in post_file.read_text()
+
+    def test_delete_post_removed_directly_no_volume_step(self, tmp_path):
+        api = _make_api(tmp_path)
+        post_file = api.blog_dir / "existing-post.md"
+        post_file.write_text("---\ntitle: Test\n---\nBody")
+
+        with (
+            patch.object(api, "_authenticate", return_value=True),
+            patch.object(api, "_regenerate_and_verify"),
+        ):
+            api.blogger_deletePost("key", "existing-post.md", "user", "pass", True)
+
+        assert not post_file.exists()
 
 
 class TestNewMediaObject:
@@ -266,8 +239,8 @@ class TestNewMediaObject:
 
     def test_media_backup_skipped_without_volume(self, tmp_path):
         """Regression: when /data doesn't exist (local dev), media backup is a
-        silent no-op and the upload still succeeds — same fix as
-        test_backup_to_volume_skipped_without_volume, applied to image uploads."""
+        silent no-op and the upload still succeeds, same as generator.py/
+        raindrop.py's own /data/content volume-detection guards."""
         api = _make_api(tmp_path)
         struct = {"name": "img.png", "type": "image/png", "bits": b"data"}
 

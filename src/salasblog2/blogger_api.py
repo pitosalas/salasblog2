@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # blogger_api — Blogger/MetaWeblog XML-RPC adapter for MarsEdit
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-08
 # Updated: 2026-09-08
 # Open Source Under MIT license
@@ -37,7 +37,17 @@ class BloggerAPI:
 
     def __init__(self):
         self.root_dir = Path.cwd()
-        self.blog_dir = self.root_dir / "content" / "blog"
+        # Volume-first content directory — same resolution as server.py's
+        # get_content_directory() and generator.py's SiteGenerator, so a post
+        # written here is immediately the same file the web admin and the live
+        # site see, with no separate backup/sync step needed to reconcile them.
+        volume_content_dir = Path("/data/content")
+        content_dir = (
+            volume_content_dir
+            if volume_content_dir.exists()
+            else self.root_dir / "content"
+        )
+        self.blog_dir = content_dir / "blog"
         self.blog_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f"BloggerAPI initialized, blog_dir: {self.blog_dir}")
 
@@ -126,53 +136,6 @@ class BloggerAPI:
         except Exception as e:
             logger.error(f"Failed to write post: {e}")
             raise
-
-    def _backup_to_volume(self, file_path: Path):
-        """Immediately backup a single post file to persistent volume.
-
-        No-op outside Fly.io: `/data` is the persistent volume mount, which only
-        exists in production. Locally there's nothing to back up to, matching the
-        same volume-detection pattern `generator.py`/`raindrop.py` already use
-        (check `/data/content` exists, else fall back to local-only).
-        """
-        if not Path("/data").exists():
-            logger.info(
-                f"No /data volume present (local dev) — skipping backup for {file_path}"
-            )
-            return
-
-        # Calculate relative path from blog_dir to maintain structure
-        relative_path = file_path.relative_to(self.root_dir)
-        volume_path = Path("/data") / relative_path
-
-        # Ensure volume directory exists
-        volume_path.parent.mkdir(parents=True, exist_ok=True)
-
-        # Copy the file to volume
-        import shutil
-
-        shutil.copy2(file_path, volume_path)
-
-        logger.info(f"Post backed up to volume: {file_path} -> {volume_path}")
-
-    def _delete_from_volume(self, file_path: Path):
-        """Delete a single post file from persistent volume."""
-        try:
-            # Calculate relative path from blog_dir to maintain structure
-            relative_path = file_path.relative_to(self.root_dir)
-            volume_path = Path("/data") / relative_path
-
-            if volume_path.exists():
-                volume_path.unlink()
-                logger.info(f"Post deleted from volume: {volume_path}")
-            else:
-                logger.info(
-                    f"Post not found in volume (already deleted): {volume_path}"
-                )
-
-        except Exception as e:
-            logger.error(f"Failed to delete post from volume {file_path}: {e}")
-            # Don't raise - post deletion should still succeed even if volume cleanup fails
 
     def _regenerate_and_verify(
         self, filename: str, operation: str, background_tasks=None
@@ -297,16 +260,6 @@ class BloggerAPI:
         file_path = self.blog_dir / filename
         self._write_post_file(file_path, post)
 
-        # Immediately backup to persistent volume
-        try:
-            self._backup_to_volume(file_path)
-        except Exception as e:
-            logger.error(f"Volume backup failed for {filename}: {e}")
-            self._create_fault(
-                500,
-                f"Post was written but could not be backed up to persistent storage: {e}",
-            )
-
         # Handle publishing workflow
         if publish:
             try:
@@ -364,16 +317,6 @@ class BloggerAPI:
         post = self._create_post_frontmatter(title, body_content, tags)
         self._write_post_file(file_path, post)
 
-        # Immediately backup to persistent volume
-        try:
-            self._backup_to_volume(file_path)
-        except Exception as e:
-            logger.error(f"Volume backup failed for {postid}: {e}")
-            self._create_fault(
-                500,
-                f"Post was written but could not be backed up to persistent storage: {e}",
-            )
-
         # Handle publishing workflow
         if publish:
             try:
@@ -427,10 +370,6 @@ class BloggerAPI:
         try:
             file_path.unlink()
             logger.info(f"Post deleted successfully: {file_path}")
-
-            # Also delete from persistent volume
-            self._delete_from_volume(file_path)
-
         except Exception as e:
             logger.error(f"Failed to delete post: {e}")
             raise
@@ -577,7 +516,7 @@ class BloggerAPI:
         logger.info(f"Media copied to output: {output_dir / filename}")
 
         # 3. Volume backup — persists across container restarts. No-op outside
-        # Fly.io: /data only exists in production (see _backup_to_volume).
+        # Fly.io: /data only exists in production.
         if Path("/data").exists():
             try:
                 volume_dir = Path("/data") / "static" / "images" / "uploads"

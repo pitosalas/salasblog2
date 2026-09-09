@@ -128,9 +128,9 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 Manual testing also surfaced several real bugs, now fixed and committed (see `04-tasks/chores.md`): `metaweblog_getCategories` hardcoded stub → now returns `BLOG_TAGS`; missing `link`/real-tags-as-`categories` fields on `getPost`/`getRecentPosts`; excerpt truncation breaking markdown formatting (mid-token cuts and collapsed-newline block markers both printed raw markdown/HTML characters instead of rendering); home page missing the "Read more" link on truncated excerpts.
 
-**Not yet fixed, proposed**: `BloggerAPI` doesn't follow the volume-first content-directory pattern the rest of the codebase uses (`get_content_directory()` in `server.py`, `SiteGenerator` in `generator.py`) — it reads/writes `/app/content/blog` instead of preferring `/data/content`. This is the likely cause of a user-reported bug: MarsEdit showing a stale post even after refresh (a web-admin edit, or a container restart between a MarsEdit edit and the next read, orphans `/app/content` from the volume). See `04-tasks/chores.md`'s last item for the fix scope. Waiting on approval before implementing.
+**Fixed**: `BloggerAPI` now resolves its content directory the same volume-first way `get_content_directory()`/`SiteGenerator` already do (`04-tasks/chores.md`), removing the likely cause of a user-reported bug: MarsEdit showing a stale post even after refresh. `_backup_to_volume()`/`_delete_from_volume()` deleted entirely — writes/deletes go straight to the volume-resolved `blog_dir`, so there's no second copy to fall out of sync.
 
-**This session's commits (categories/link/excerpt/Read-more fixes) are pushed to GitHub but not yet deployed** — see Deployment section below.
+**This session's commits (categories/link/excerpt/Read-more fixes, volume-first BloggerAPI) are pushed to GitHub but not yet deployed** — see Deployment section below.
 
 **Other open features** (`03-features/notdone/`, no dependency on each other or on F44):
 
