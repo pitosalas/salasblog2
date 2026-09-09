@@ -26,6 +26,9 @@
                             {% endfor %}
                         </div>
                         <div class="card-text small mb-0">{{ post.excerpt | markdown | safe }}</div>
+                        {% if post.is_truncated %}
+                        <a href="{{ post.url }}" class="small">Read more &rarr;</a>
+                        {% endif %}
                     </div>
                 </article>
             </div>
