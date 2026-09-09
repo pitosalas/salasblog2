@@ -36,6 +36,14 @@ use the exact form below rather than re-deriving one:
 - `demo2004`, `demo2005`, `demo2006`, `demo2008` (the DEMO conference,
   year-specific — not bare `demo`)
 - `sun-microsystems` or a specific product (`mysql`, `java`) — not bare `sun`
+- `mike-arrington` (not `michael-arrington` — TechCrunch founder)
+- `david-weinberger` (not `dave-weinberger` — Cluetrain Manifesto co-author)
+- `trustthevote` (Pito's Open Source Digital Voting Foundation project,
+  recurs 2009-2011 era; one word, no hyphen)
+- `webinno` (recurring Boston tech meetup, distinct from `geek-dinner`)
+- `datarss` (Pito's own project — kept this name even after he renamed it
+  "Decentralized Data Discovery (DDD)" mid-series, to avoid fragmenting one
+  project's posts across two tags)
 
 ## People, places, projects (add here)
 
