@@ -21,6 +21,22 @@ directly by whoever (or whichever agent) decides tags for a batch._
   "demo" the common word would otherwise conflate).
 - Lowercase, single word or short hyphenated phrase.
 
+## Established entity tags (keep spelling consistent)
+
+Batch 5 ran as 5 parallel tagging passes and two different passes picked
+different spellings for the same entity (`geekdinner` vs `geek-dinner`,
+`chavez` vs `hugo-chavez`) — caught and normalized before applying, but
+better to avoid it next time. When any of these entities comes up again,
+use the exact form below rather than re-deriving one:
+
+- `geek-dinner` (Pito's recurring Boston tech meetup)
+- `hugo-chavez` (not bare `chavez`)
+- `attention-xml` (not `attentionxml`)
+- `eroom` (not `lotus` — company Pito co-founded)
+- `demo2004`, `demo2005`, `demo2006`, `demo2008` (the DEMO conference,
+  year-specific — not bare `demo`)
+- `sun-microsystems` or a specific product (`mysql`, `java`) — not bare `sun`
+
 ## People, places, projects (add here)
 
 brandeis
@@ -53,5 +69,6 @@ ruby-on-rails
 
 ## Exclusions
 
-_(empty — note anything that should NOT become a tag even if it recurs,
-e.g. too personal, too niche, or a name that shouldn't be public)_
+- **Family members** — never tag with a family member's name, even when a
+  post mentions or links to one (e.g. a child's blog). Use `personal`
+  instead. (Established during batch 5, chunk 2, of the TF46.6 sweep.)
