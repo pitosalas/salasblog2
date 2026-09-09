@@ -1,12 +1,16 @@
 ---
-title: "Bill Gates Foundation supports Intelligent Design?"
-subtitle: "The New York Times is running a series"
-category: "298"
-tags: []
-date: "2005-08-22"
-type: "wp"
+category: '298'
+date: '2005-08-22'
+subtitle: The New York Times is running a series
+tags:
+- politics
+- science
+- bill-gates
+title: Bill Gates Foundation supports Intelligent Design?
+type: wp
 wordpress_id: 1713
 ---
+
 The New York Times is [running a series](http://www.nytimes.com/pages/science/sciencespecial2/index.html) on the Evolution/Intelligent Design ‘debate’. Quite interesting. I was startled to see this in the article, though:
 
 Referring to the Discovery Institute, one of the main think tanks pushing the ID agenda, the New York Times says:

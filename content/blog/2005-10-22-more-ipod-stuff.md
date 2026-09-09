@@ -1,12 +1,16 @@
 ---
-title: "More iPod stuff"
-subtitle: "Continuing my iPod thoughts, today I read that a [lawsuit has been b..."
-category: "298"
-tags: []
-date: "2005-10-22"
-type: "wp"
+category: '298'
+date: '2005-10-22'
+subtitle: Continuing my iPod thoughts, today I read that a [lawsuit has been b...
+tags:
+- technology
+- ipod
+- poptech
+title: More iPod stuff
+type: wp
 wordpress_id: 1674
 ---
+
 Continuing my [iPod thoughts](/weblogs/archives/000895.php), today I read that a [lawsuit has been brought ](http://www.betanews.com/article/Apple_Sued_Over_Nano_Scratching/1129913472)against Apple on the iPod nano screen scratching situation. So **maybe** there really is something going on. On my (recently dead) iPod, I did have **plenty** of mild scratching – I **don’t know** if the problem on the nano is any worse.
 
 I got to see one of the new **Video iPods** here at Pop!Tech. Another **very impressive** device from Apple. The screen is larger than you expect and the picture, watching a sitcom and listening to the audio over the ear buds, was **remarkable**!

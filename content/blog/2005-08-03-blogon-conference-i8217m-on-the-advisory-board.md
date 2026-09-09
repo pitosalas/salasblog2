@@ -1,12 +1,16 @@
 ---
-title: "BlogOn Conference: I’m on the advisory board"
-subtitle: "!Blogonbuttonsm"
-category: "51"
-tags: []
-date: "2005-08-03"
-type: "wp"
+category: '51'
+date: '2005-08-03'
+subtitle: '!Blogonbuttonsm'
+tags:
+- technology
+- personal
+- blogon
+title: 'BlogOn Conference: I’m on the advisory board'
+type: wp
 wordpress_id: 1723
 ---
+
 ![Blogonbuttonsm](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/BlogOnButtonSm.gif?resize=105%2C60)[BlogOn](http://www.blogonevent.com/blogon2005/) is a conference being organized by the inimitable Chris Shipley. 
 
 The full name is “BlogOn 2005 Social Media Summit”. 

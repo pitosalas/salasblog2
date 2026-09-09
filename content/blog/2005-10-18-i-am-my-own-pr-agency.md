@@ -1,12 +1,17 @@
 ---
-title: "I am my own PR agency"
-subtitle: "Over the last week or so I’ve been working around the clock preparing for BlogBridge’s"
-category: "50"
-tags: []
-date: "2005-10-18"
-type: "wp"
+category: '50'
+date: '2005-10-18'
+subtitle: Over the last week or so I’ve been working around the clock preparing for
+  BlogBridge’s
+tags:
+- personal
+- blogbridge
+- blogon
+title: I am my own PR agency
+type: wp
 wordpress_id: 1676
 ---
+
 Over the last week or so I’ve been working around the clock preparing for [BlogBridge’s ](http://www.blogonevent.com/)appearance at the BlogOn 2005 conference in New York City. 
 
 Contemplating this at the end of the first day, I have to say it’s been a blast although quite different from what I’ve done in the past. 

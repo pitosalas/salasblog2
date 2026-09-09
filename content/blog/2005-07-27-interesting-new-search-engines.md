@@ -1,12 +1,14 @@
 ---
-title: "Interesting new search engines"
-subtitle: "There was a recent interesting article in the New York Times"
-category: "298"
-tags: []
-date: "2005-07-27"
-type: "wp"
+category: '298'
+date: '2005-07-27'
+subtitle: There was a recent interesting article in the New York Times
+tags:
+- technology
+title: Interesting new search engines
+type: wp
 wordpress_id: 1727
 ---
+
 There was a recent [interesting article in the New York Times](http://www.nytimes.com/2005/06/12/business/yourmoney/12techno.html) describing some new, unusual search engines:
 
 > “Search engines are so powerful. And they are so pathetically weak. … When it comes to digging up a specific name, date, phrase or price, search engines are unstoppable. The same is true for details from the previously concealed past. For better and worse, any information about any of us…” (**from** [New York Times](http://www.nytimes.com/2005/06/12/business/yourmoney/12techno.html))

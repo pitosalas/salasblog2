@@ -1,12 +1,16 @@
 ---
-title: "The myth of the safety of signed code"
-subtitle: "This is **commonly accepted wisdom**: When I download and install an application on my computer (any..."
-category: "538"
-tags: []
-date: "2005-06-29"
-type: "wp"
+category: '538'
+date: '2005-06-29'
+subtitle: 'This is **commonly accepted wisdom**: When I download and install an application
+  on my computer (any...'
+tags:
+- technology
+- programming
+title: The myth of the safety of signed code
+type: wp
 wordpress_id: 1743
 ---
+
 This is **commonly accepted wisdom**: When I download and install an application on my computer (any platform) it is a accepted wisdom that if the application is signed with a recognized and valid certificate, I am practicing safe download and my computer isn’t going to be damaged.
 
 This belief is so **entrenched** that I will probably be labelled as “just doesn’t get it” by the cognecenti for saying that the emperor has no clothes. In many cases for most users, there’s no additional safety.

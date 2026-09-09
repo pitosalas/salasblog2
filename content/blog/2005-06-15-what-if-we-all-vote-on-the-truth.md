@@ -1,12 +1,15 @@
 ---
-title: "What if we all vote on the truth?"
-subtitle: "A couple of interesting related articles on facts and non-facts:"
-category: "298"
-tags: []
-date: "2005-06-15"
-type: "wp"
+category: '298'
+date: '2005-06-15'
+subtitle: 'A couple of interesting related articles on facts and non-facts:'
+tags:
+- technology
+- wikipedia
+title: What if we all vote on the truth?
+type: wp
 wordpress_id: 1756
 ---
+
 A couple of interesting related articles on facts and non-facts:
 
 > “Wikipedia is one of the Web’s most popular sites. I asked a teenager if he understood that it carries a disclaimer; Wikipedia “can’t guarantee the validity of the information found here.” “That’s just so that no one will sue them,” he shrugged. As to the content: “It’s all true, mostly.” (**from:** [New York Times](http://www.nytimes.com/2005/06/15/opinion/15schiff.html?))

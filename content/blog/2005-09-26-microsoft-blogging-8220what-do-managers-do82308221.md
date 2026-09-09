@@ -1,12 +1,16 @@
 ---
-title: "Microsoft blogging: “What do managers do…”"
-subtitle: "I often cite Microsoft as an exa..."
-category: "298"
-tags: []
-date: "2005-09-26"
-type: "wp"
+category: '298'
+date: '2005-09-26'
+subtitle: I often cite Microsoft as an exa...
+tags:
+- technology
+- microsoft
+- business
+title: 'Microsoft blogging: “What do managers do…”'
+type: wp
 wordpress_id: 1689
 ---
+
 I [often cite](http://www.blogonevent.com/archives/2005/09/ballmer_may_not.html) Microsoft as an example of corporate blogging that seems to really works: If you work with, for, against Microsoft (and **who in the computer industry **doesn’t do one of those?) Microsoft Bloggers will give you a view into Microsoft’s thinking, attitude, plans and challenges that is **incredibly valuable**.  
 
 You (generally) won’t learn any **trade secrets**. You will hear what you might have heard if you ran into this or that Microsoftie in a Starbucks or at a conference. But **few people do**.  

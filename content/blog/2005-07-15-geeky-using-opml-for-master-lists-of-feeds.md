@@ -1,12 +1,17 @@
 ---
-title: "[GEEKY] Using OPML for master lists of feeds"
-subtitle: "I encounter more and more organizations or people who are collecting lists of feeds or blogs for one..."
-category: "50"
-tags: []
-date: "2005-07-15"
-type: "wp"
+category: '50'
+date: '2005-07-15'
+subtitle: I encounter more and more organizations or people who are collecting lists
+  of feeds or blogs for one...
+tags:
+- technology
+- blogbridge
+- opml
+title: '[GEEKY] Using OPML for master lists of feeds'
+type: wp
 wordpress_id: 1735
 ---
+
 I encounter more and more organizations or people who are collecting lists of feeds or blogs for one purpose or another. With BlogBridge we have the BlogBridge Topic Experts. Global Voices have their collection of international blogs (very cool!) And of course, anyone using a feed reader or aggregator has their own list of subscriptions.  
 
 Anyone who is making a list of blogs or feeds (or I suppose, URLs of any kind) that is not secret or private, would do well to record that in a simple OPML list. And the ‘handle’ to that list or collection is a URL.  

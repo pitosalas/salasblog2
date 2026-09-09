@@ -1,12 +1,14 @@
 ---
-title: "For advanced nerds only: How the deathstar works"
-subtitle: "From **How Stuff Works**:"
-category: "298"
-tags: []
-date: "2005-11-03"
-type: "wp"
+category: '298'
+date: '2005-11-03'
+subtitle: 'From **How Stuff Works**:'
+tags:
+- personal
+title: 'For advanced nerds only: How the deathstar works'
+type: wp
 wordpress_id: 1664
 ---
+
 From **[How Stuff Works](http://www.howstuffworks.com/)**:
 
 > “There is no question that the last few years of world history have seen a fair share of chaos and disorder. With so much global unrest, governments worldwide are struggling to devise new methods to maintain order. The Galactic Empire’s solution to order is the **Death Star**.” 

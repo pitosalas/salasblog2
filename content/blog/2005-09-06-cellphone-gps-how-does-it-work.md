@@ -1,12 +1,15 @@
 ---
-title: "Cellphone GPS: How does it work?"
-subtitle: "My new cellphone **supposedly** has GPS capabilities. It has to do, apparently with the new E-911"
-category: "298"
-tags: []
-date: "2005-09-06"
-type: "wp"
+category: '298'
+date: '2005-09-06'
+subtitle: My new cellphone **supposedly** has GPS capabilities. It has to do, apparently
+  with the new E-911
+tags:
+- technology
+title: 'Cellphone GPS: How does it work?'
+type: wp
 wordpress_id: 1704
 ---
+
 My new cellphone **supposedly** has GPS capabilities. It has to do, apparently with the new [E-911](http://en.wikipedia.org/wiki/Enhanced_911) standard, which requires a cell phone to be able to tell emergency responders where a cell call is coming from.
 
 I’m a pretty big GPS aficionado and I thought GPSs had to have these **big** ugly antennas, **complex** expensive circuitry, and **lots** of software. I don’t understand how all that stuff can be crammed into a tiny little phone.

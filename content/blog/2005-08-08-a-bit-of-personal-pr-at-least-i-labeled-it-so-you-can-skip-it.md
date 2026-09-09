@@ -1,12 +1,16 @@
 ---
-title: "A bit of personal PR (at least I labeled it so you can skip it)"
-subtitle: "Hey, I just came across this:"
-category: "298"
-tags: []
-date: "2005-08-08"
-type: "wp"
+category: '298'
+date: '2005-08-08'
+subtitle: 'Hey, I just came across this:'
+tags:
+- technology
+- personal
+- lotus-improv
+title: A bit of personal PR (at least I labeled it so you can skip it)
+type: wp
 wordpress_id: 1721
 ---
+
 Hey, I just came across this:  
 
 > “The **Invention** of the Pivot Table: The concept that led to today’s pivot table came from the halls of the Lotus Development Corporation with a revolutionary spreadsheet program called Lotus Improv. Improv was envisioned in 1986 by **Pito Salas** of the Advanced Technology Group at Lotus. 

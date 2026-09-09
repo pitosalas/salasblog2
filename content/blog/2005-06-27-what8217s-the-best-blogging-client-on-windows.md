@@ -1,12 +1,16 @@
 ---
-title: "What’s the best Blogging client on Windows?"
-subtitle: "You can do your blogging by typing into a web browser form provided by the Movable Type service. But..."
-category: "538"
-tags: []
-date: "2005-06-27"
-type: "wp"
+category: '538'
+date: '2005-06-27'
+subtitle: You can do your blogging by typing into a web browser form provided by the
+  Movable Type service. But...
+tags:
+- technology
+- blogjet
+title: What’s the best Blogging client on Windows?
+type: wp
 wordpress_id: 1745
 ---
+
 You can do your blogging by typing into a web browser form provided by the Movable Type service. But boy is that clumsy and awful. 
 
 So for a while now I’ve used so-called **“blogging clients”** which provide a nice rich interface to write and edit the posts, and then use the server’s APIs to actually send the update or change up to the server. 

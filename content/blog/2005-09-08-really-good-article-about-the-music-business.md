@@ -1,12 +1,15 @@
 ---
-title: "Really good article about the music business"
-subtitle: "Robin Good points to:"
-category: "298"
-tags: []
-date: "2005-09-08"
-type: "wp"
+category: '298'
+date: '2005-09-08'
+subtitle: 'Robin Good points to:'
+tags:
+- music
+- business
+title: Really good article about the music business
+type: wp
 wordpress_id: 1702
 ---
+
 [Robin Good](http://www.masternewmedia.org/) [points to:](http://www.masternewmedia.org/independent_music/independent_music_publishing/indie_music_online_distribution_service_Mperia_20050908.htm) “The Myth of The Rock Star and of the Need To Sing-up For a Major Recording Label”:
 
 > “Music” does not equal “compact disc”. Music is data. It doesn’t matter whether you burn it to a CD or rip it to an iPod or a Memory Stick or store it on your hard drive. It’s still music. 

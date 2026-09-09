@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Why, oh, Why, Mr. Macintosh?"
-subtitle: "This is one of those handy dandy tips that you wish were not hidden"
-category: "538"
-tags: []
-date: "2005-09-30"
-type: "wp"
+category: '538'
+date: '2005-09-30'
+subtitle: This is one of those handy dandy tips that you wish were not hidden
+tags:
+- technology
+- mac
+title: '[GEEKY] Why, oh, Why, Mr. Macintosh?'
+type: wp
 wordpress_id: 1684
 ---
+
 This is one of those handy dandy [tips that you wish were not hidden](http://homepage.mac.com/butlers/iPhotoExtractor/rebuild.htm), buried and kept secret:
 
 “Hold down the option and control keys while launching iPhoto and you will be treated to a very nice set of options for trying to recover your photos that have mysteriously disappeared.”

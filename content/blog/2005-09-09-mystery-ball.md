@@ -1,12 +1,14 @@
 ---
-title: "Mystery Ball"
-subtitle: "Yesterday, this appeared on my Mac desktop:"
-category: "298"
-tags: []
-date: "2005-09-09"
-type: "wp"
+category: '298'
+date: '2005-09-09'
+subtitle: 'Yesterday, this appeared on my Mac desktop:'
+tags:
+- personal
+title: Mystery Ball
+type: wp
 wordpress_id: 1700
 ---
+
 Yesterday, this appeared on my Mac desktop:
 
 ![Picture 2-5](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/weblog/images/Picture%25202-5.png?resize=386%2C281)

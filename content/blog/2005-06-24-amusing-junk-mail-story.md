@@ -1,12 +1,14 @@
 ---
-title: "Amusing junk mail story"
-subtitle: "About 3 months ago I subscribed to Atlantic Magazine, which I really ..."
-category: "298"
-tags: []
-date: "2005-06-24"
-type: "wp"
+category: '298'
+date: '2005-06-24'
+subtitle: About 3 months ago I subscribed to Atlantic Magazine, which I really ...
+tags:
+- personal
+title: Amusing junk mail story
+type: wp
 wordpress_id: 1747
 ---
+
 About 3 months ago I subscribed to [Atlantic Magazine](http://www.theatlantic.com/), which I really like, by the way. On a lark, I gave my name as “Pito Atlantic Salas” because, well, it amused me. 
 
 It’s taken about 3 months and I’ve received my first bit of Atlantic generated junk mail today:

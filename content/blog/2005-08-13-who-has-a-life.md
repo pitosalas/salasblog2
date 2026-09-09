@@ -1,12 +1,15 @@
 ---
-title: "Who has a  life?"
-subtitle: "As you might have seen over at our **BlogBridge blog**, we are experim..."
-category: "50"
-tags: []
-date: "2005-08-13"
-type: "wp"
+category: '50'
+date: '2005-08-13'
+subtitle: As you might have seen over at our **BlogBridge blog**, we are experim...
+tags:
+- technology
+- blogbridge
+title: Who has a  life?
+type: wp
 wordpress_id: 1717
 ---
+
 As you might have seen over at our **[BlogBridge blog](http://www.blogbridge.com/)**, we are experimenting with a new visualization of blog postings, right inside BlogBridge. I’ve taken to calling this the **Kleppner Widget** as it was invented by Paul and Andrew Kleppner who have been contributing some cool stuff of late.
 
 ![Picture 1-11](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/weblog/images/Picture%25201-11.png?resize=247%2C131)

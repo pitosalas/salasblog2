@@ -1,12 +1,15 @@
 ---
-title: "It’s not all love and kisses"
-subtitle: "We all love Wikipedia – I know I do. I’ve sung it’s praises to lots of ..."
-category: "298"
-tags: []
-date: "2005-10-24"
-type: "wp"
+category: '298'
+date: '2005-10-24'
+subtitle: We all love Wikipedia – I know I do. I’ve sung it’s praises to lots of ...
+tags:
+- technology
+- wikipedia
+title: It’s not all love and kisses
+type: wp
 wordpress_id: 1672
 ---
+
 We all love [Wikipedia](http://www.wikipedia.org/) – I know I do. I’ve sung it’s praises to lots of people and have personally often looked stuff up in it and been satisfied. Still I can’t help but be impressed with an article I came across written by Robert McHenry former Editor in Chief of the Encyclopædia Britannica. 
 
 He’s *sick and tired of it and not going to take it any more*:

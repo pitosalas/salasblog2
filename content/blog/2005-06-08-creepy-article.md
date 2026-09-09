@@ -1,12 +1,15 @@
 ---
-title: "Creepy article!"
-subtitle: "> “A man’s severed leg – with a white Adidas sneaker still attached – plummeted from the sky onto a ..."
-category: "298"
-tags: []
-date: "2005-06-08"
-type: "wp"
+category: '298'
+date: '2005-06-08'
+subtitle: '> “A man’s severed leg – with a white Adidas sneaker still attached – plummeted
+  from the sky onto a ...'
+tags:
+- personal
+title: Creepy article!
+type: wp
 wordpress_id: 1762
 ---
+
 Get this:
 
 > “A man’s severed leg – with a white Adidas sneaker still attached – plummeted from the sky onto a garage roof and bounced into the backyard of a Long Island home yesterday morning.” 

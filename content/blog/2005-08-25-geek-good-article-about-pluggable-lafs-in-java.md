@@ -1,12 +1,17 @@
 ---
-title: "[GEEK} Good article about pluggable LAFs in Java"
-subtitle: "One of the **hairier** and most interesting parts of **Swing** (Java’s GUI layer) are the so-called ..."
-category: "422"
-tags: []
-date: "2005-08-25"
-type: "wp"
+category: '422'
+date: '2005-08-25'
+subtitle: One of the **hairier** and most interesting parts of **Swing** (Java’s GUI
+  layer) are the so-called ...
+tags:
+- technology
+- programming
+- java
+title: '[GEEK} Good article about pluggable LAFs in Java'
+type: wp
 wordpress_id: 1710
 ---
+
 One of the **hairier** and most interesting parts of **Swing** (Java’s GUI layer) are the so-called pluggable look and feels (or is it looks and feel?.) Truth is that you can live a **very happy **Swing life without knowing how it works, but if you are **curious** or need to know for some reason…  
 
 [This document is a good summary](http://java.sun.com/products/jfc/tsc/articles/architecture/), even though a little dated, if you are interested in really understanding it. Like many things it’s not so complex once you **understand** it.

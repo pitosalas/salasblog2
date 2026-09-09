@@ -1,12 +1,15 @@
 ---
-title: "Learning about Open Source"
-subtitle: "!Moldave"
-category: "298"
-tags: []
-date: "2005-11-08"
-type: "wp"
+category: '298'
+date: '2005-11-08'
+subtitle: '!Moldave'
+tags:
+- technology
+- personal
+title: Learning about Open Source
+type: wp
 wordpress_id: 1660
 ---
+
 ![Moldave](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/moldave.jpg?resize=74%2C114)[Peter Moldave](http://opensourcelegal.org/), a friend of mine who has helped me **immensely** with [BlogBridge](http://www.blogbridge.com/) has (**gulp**) [started blogging](http://opensourcelegal.org/blog/)! Yup, another one bites the dust 🙂
 
 [Peter is a lawyer](http://opensourcelegal.org/bio/) (at [Gesmer Updegrove LLP](http://www.gesmer.com/)), expert in intellectual property, patents, licensing, open source, and other legal matters of great interest to us computer folk. 

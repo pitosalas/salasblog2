@@ -1,12 +1,15 @@
 ---
-title: "[GEEK] Site Referral Log Mystery: How does this happen?"
-subtitle: "Can someone explain why my referrer log for this site is full of spamish-looking like urls, none of ..."
-category: "538"
-tags: []
-date: "2005-07-25"
-type: "wp"
+category: '538'
+date: '2005-07-25'
+subtitle: Can someone explain why my referrer log for this site is full of spamish-looking
+  like urls, none of ...
+tags:
+- technology
+title: '[GEEK] Site Referral Log Mystery: How does this happen?'
+type: wp
 wordpress_id: 1729
 ---
+
 Can someone explain why my referrer log for this site is full of spamish-looking like urls, none of which actually have a link to it? For example:
 
 texasholdemcenteral.com, www.freewebs.com, skate.cyberfreehost.com, google.co.uk/search, www.myspace.com/nyjeter2ox,  images.google.ca/imgres, images.google.co.uk/imgres, evilplots.com/texas-holdem, www.texasholdemcenteral.com, online-casino.blest-casino.com/ , www.favorite-casino.com/online-casino, www.sportscribe.com/poker-party, com/texas-holdem.html, favorite-casino.com/casino.

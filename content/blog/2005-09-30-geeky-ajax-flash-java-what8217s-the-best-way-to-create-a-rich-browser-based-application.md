@@ -1,12 +1,17 @@
 ---
-title: "[GEEKY] Ajax? Flash? Java? What’s the best way to create a rich browser based application?"
-subtitle: "![Ss Inbox Tn"
-category: "538"
-tags: []
-date: "2005-09-30"
-type: "wp"
+category: '538'
+date: '2005-09-30'
+subtitle: '![Ss Inbox Tn'
+tags:
+- technology
+- programming
+- ajax
+title: '[GEEKY] Ajax? Flash? Java? What’s the best way to create a rich browser based
+  application?'
+type: wp
 wordpress_id: 1685
 ---
+
 [![Ss Inbox Tn](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/posts/ss_inbox_tn.jpg?resize=200%2C160)](http://www.zimbra.com/screenshots/inbox.html)
 
 This is a perenial debate with lots of sides. Here’ s just some fodder for those of you who are pondering the question:

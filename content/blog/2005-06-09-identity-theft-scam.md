@@ -1,12 +1,15 @@
 ---
-title: "Identity theft scam?"
-subtitle: "What would you do if you received **two letters** from a collection agency saying that you owed $5,0..."
-category: "298"
-tags: []
-date: "2005-06-09"
-type: "wp"
+category: '298'
+date: '2005-06-09'
+subtitle: What would you do if you received **two letters** from a collection agency
+  saying that you owed $5,0...
+tags:
+- personal
+title: Identity theft scam?
+type: wp
 wordpress_id: 1761
 ---
+
 What would you do if you received **two letters** from a collection agency saying that you owed $5,000 to a firm with whom you’ve **never** had an account with?
 
 I ignored it and the following letter, immediately smelling a **rat**.

@@ -1,12 +1,16 @@
 ---
-title: "TiVo whining?"
-subtitle: "I’ve come across a flurry of commentary on the fact that apparently TiVo has added content protectio..."
-category: "298"
-tags: []
-date: "2005-09-13"
-type: "wp"
+category: '298'
+date: '2005-09-13'
+subtitle: I’ve come across a flurry of commentary on the fact that apparently TiVo
+  has added content protectio...
+tags:
+- technology
+- tivo
+title: TiVo whining?
+type: wp
 wordpress_id: 1697
 ---
+
 I’ve come across a flurry of commentary on the fact that apparently TiVo has added content protection allowing a broadcaster to protect any program as it is broadcast. The result of this is:
 
 > “[A program] recorded with a red-flag next to it (an icon I’ve never seen before).  When I selected the episode, I got a message to the effect that “the copyright holder prohibited saving the episode past date mm/dd”.  (**from** [PVRBlog](http://www.pvrblog.com/pvr/2005/09/tivo_72_os_adds.html))

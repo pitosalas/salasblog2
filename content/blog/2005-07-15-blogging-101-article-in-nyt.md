@@ -1,12 +1,14 @@
 ---
-title: "Blogging 101 article in NYT"
-subtitle: "Scripting News: 7/15/2005: Dave points to ..."
-category: "51"
-tags: []
-date: "2005-07-15"
-type: "wp"
+category: '51'
+date: '2005-07-15'
+subtitle: 'Scripting News: 7/15/2005: Dave points to ...'
+tags:
+- technology
+title: Blogging 101 article in NYT
+type: wp
 wordpress_id: 1736
 ---
+
 [Scripting News: 7/15/2005](http://archive.scripting.com/2005/07/15#When:9:36:10AM): Dave points to the New York Times article by [Rich Meslin, Blogs 101](http://www.nytimes.com/ref/technology/blogs_101.html). It’s a very nice collection of Blogs of general interest as a good introduction to the world of Blogs.
 
 > “If you want to get the feel of Web logs and blogging, visit some of these sites. Most blogs carry links to other blogs on related topics or that the author likes. This page is under development; feel free to suggest your own finds. Business and sports suggestions are particularly welcome.” (**from** [New York Times](http://www.nytimes.com/ref/technology/blogs_101.html))

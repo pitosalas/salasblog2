@@ -1,12 +1,14 @@
 ---
-title: "Distributed network of service providers"
-subtitle: "Not computer service providers, but folks like carpenters and plumbers…."
-category: "298"
-tags: []
-date: "2005-06-17"
-type: "wp"
+category: '298'
+date: '2005-06-17'
+subtitle: Not computer service providers, but folks like carpenters and plumbers….
+tags:
+- business
+title: Distributed network of service providers
+type: wp
 wordpress_id: 1754
 ---
+
 Not computer service providers, but folks like carpenters and plumbers….
 
 I came across [ServiceMagic](http://www.servicemagic.com/), which is a pretty cool site for locating and hiring people to work on projects around the house. I needed three doors repaired and on a lark I posted the project on this site. I had a phone call in 5 minutes, and 2 more within the hour. I chose one of them to come by and give me a free estimate in 2 days. 

@@ -1,12 +1,16 @@
 ---
-title: "How long should a Treo 600 last? How about an IPod?"
-subtitle: "A confluence of five events:"
-category: "298"
-tags: []
-date: "2005-10-04"
-type: "wp"
+category: '298'
+date: '2005-10-04'
+subtitle: 'A confluence of five events:'
+tags:
+- technology
+- treo
+- ipod
+title: How long should a Treo 600 last? How about an IPod?
+type: wp
 wordpress_id: 1682
 ---
+
 A confluence of five events:
 
 - **My two year old Treo 600 stopped working**: Despite my best efforts to revive it. Reboots, hard resets, new software – it was dropping calls all the time and had finally become unusable. Took it to the Sprint Store where their tech played with it for 1/2 hour and came to the conclusion that it was defective. As it was out of warrantee, my only option was to turn it back in to them for a $50 credit towards my next phone. There is no repair option. There is no authorized repair facility. This is a $400 device, 2 years old. Throw it out.

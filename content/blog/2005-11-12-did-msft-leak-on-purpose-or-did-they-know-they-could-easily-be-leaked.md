@@ -1,12 +1,17 @@
 ---
-title: "Did MSFT leak on purpose, or did they know they could easily be leaked?"
-subtitle: "I’ve read several accounts relating to Microsoft’s recently ‘leaked’ documents about the new strateg..."
-category: "410"
-tags: []
-date: "2005-11-12"
-type: "wp"
+category: '410'
+date: '2005-11-12'
+subtitle: I’ve read several accounts relating to Microsoft’s recently ‘leaked’ documents
+  about the new strateg...
+tags:
+- technology
+- microsoft
+- business
+title: Did MSFT leak on purpose, or did they know they could easily be leaked?
+type: wp
 wordpress_id: 1657
 ---
+
 I’ve read several accounts relating to Microsoft’s recently ‘leaked’ documents about the new strategy, for example, [Cringely says](http://www.pbs.org/cringely/pulpit/pulpit20051110.html):
 
 > “While ostensibly written solely for internal discussion, the documents from Bill Gates and new Microsoft CTO Ray Ozzie were clearly supposed to be leaked.” 

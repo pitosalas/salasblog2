@@ -1,12 +1,16 @@
 ---
-title: "Sifry: “A new blog is created about every second, there are over 80,000 created daily”"
-subtitle: "Dave Sifry of Technorati has an **interesting analysis** of the curr..."
-category: "51"
-tags: []
-date: "2005-08-02"
-type: "wp"
+category: '51'
+date: '2005-08-02'
+subtitle: Dave Sifry of Technorati has an **interesting analysis** of the curr...
+tags:
+- technology
+- technorati
+title: 'Sifry: “A new blog is created about every second, there are over 80,000 created
+  daily”'
+type: wp
 wordpress_id: 1724
 ---
+
 [Dave Sifry](http://www.sifry.com/alerts/) of Technorati has an **interesting analysis** of the current dynamics in the Blogosphere:  
 
 > “Summary:

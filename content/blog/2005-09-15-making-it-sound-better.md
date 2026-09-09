@@ -1,12 +1,15 @@
 ---
-title: "Making it  sound better"
-subtitle: "Ever notice in restaurant menus how the dish descriptions are made to sound fancier and fancier by a..."
-category: "422"
-tags: []
-date: "2005-09-15"
-type: "wp"
+category: '422'
+date: '2005-09-15'
+subtitle: Ever notice in restaurant menus how the dish descriptions are made to sound
+  fancier and fancier by a...
+tags:
+- personal
+title: Making it  sound better
+type: wp
 wordpress_id: 1695
 ---
+
 Ever notice in restaurant menus how the dish descriptions are made to sound fancier and fancier by adding adjective?
 
 “green beans” are not as good as “fresh green-beans”, which are not as good as “native fresh green-beans”, which are not as good as: “hand-picked native fresh green-beans”, which are of course the best!

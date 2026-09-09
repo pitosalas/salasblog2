@@ -1,12 +1,15 @@
 ---
-title: "Interesting article  about Open Source in the Financial Times"
-subtitle: "And in classic **Blogosphere** form, you can find a report on the report"
-category: "298"
-tags: []
-date: "2005-09-22"
-type: "wp"
+category: '298'
+date: '2005-09-22'
+subtitle: And in classic **Blogosphere** form, you can find a report on the report
+tags:
+- technology
+- business
+title: Interesting article  about Open Source in the Financial Times
+type: wp
 wordpress_id: 1690
 ---
+
 And in classic **Blogosphere** form, you can find a [report on the report](http://www.worldchanging.com/archives/003522.html) from Nicole-Ann Boyer on World Changing, where she says:
 
 > “With the FT riding high as the world’s best daily for the business intelligentsia, take heed large organization types: if you ever needed a piece to put in front your boss’s nose and add credibility to some of your open source ideas, this should help.” (**from** [World Changing)](http://www.worldchanging.com/archives/003522.html)

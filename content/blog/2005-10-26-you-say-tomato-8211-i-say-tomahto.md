@@ -1,12 +1,14 @@
 ---
-title: "You say tomato – I say tomahto"
-subtitle: "filled with tomatoes,"
-category: "298"
-tags: []
-date: "2005-10-26"
-type: "wp"
+category: '298'
+date: '2005-10-26'
+subtitle: filled with tomatoes,
+tags:
+- personal
+title: You say tomato – I say tomahto
+type: wp
 wordpress_id: 1670
 ---
+
 The street
 
 filled with tomatoes,

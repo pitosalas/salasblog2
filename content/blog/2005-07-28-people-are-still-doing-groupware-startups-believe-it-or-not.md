@@ -1,12 +1,17 @@
 ---
-title: "People are still doing groupware startups, believe it or not!"
-subtitle: "Being a veteran of the groupware movement (worked at Lotus for years, and co-founded eRoom Technolog..."
-category: "538"
-tags: []
-date: "2005-07-28"
-type: "wp"
+category: '538'
+date: '2005-07-28'
+subtitle: Being a veteran of the groupware movement (worked at Lotus for years, and
+  co-founded eRoom Technolog...
+tags:
+- technology
+- business
+- eroom
+title: People are still doing groupware startups, believe it or not!
+type: wp
 wordpress_id: 1726
 ---
+
 Being a veteran of the groupware movement (worked at Lotus for years, and co-founded eRoom Technology) this item caught my eye:  
 
 > “[Liquid Systems](http://www.liquidsys.com/), a venture-funded software company that is focused on enterprise messaging and collaboration, according to sources familiar with the company’s plans.” (**from** [InfoWorld](http://www.infoworld.com/article/05/07/13/HNbeadietzen_1.html?source=NLC-AD2005-07-14))

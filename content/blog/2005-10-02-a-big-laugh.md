@@ -1,12 +1,14 @@
 ---
-title: "A big laugh"
-subtitle: "Help me with my Instant Messaging **shorthand**…"
-category: "298"
-tags: []
-date: "2005-10-02"
-type: "wp"
+category: '298'
+date: '2005-10-02'
+subtitle: Help me with my Instant Messaging **shorthand**…
+tags:
+- personal
+title: A big laugh
+type: wp
 wordpress_id: 1683
 ---
+
 Help me with my Instant Messaging **shorthand**…
 
 Is it :-)) or 😀 for a **big laugh?**

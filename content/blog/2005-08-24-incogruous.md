@@ -1,12 +1,15 @@
 ---
-title: "Incogruous"
-subtitle: "![](http://www.flickr.com/p..."
-category: "1"
-tags: []
-date: "2005-08-24"
-type: "wp"
+category: '1'
+date: '2005-08-24'
+subtitle: '![](http://www.flickr.com/p...'
+tags:
+- personal
+- blogbridge
+title: Incogruous
+type: wp
 wordpress_id: 1711
 ---
+
 [![](https://i0.wp.com/photos29.flickr.com/36772773_19828cc1b6_m.jpg?w=584)](http://www.flickr.com/photos/claesk/36772773/)
  
  [Florida-202](http://www.flickr.com/photos/claesk/36772773/)

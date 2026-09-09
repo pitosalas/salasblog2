@@ -1,12 +1,15 @@
 ---
-title: "Making money with aggregators"
-subtitle: "Francois, reacting to something written by Jason Calcanis"
-category: "50"
-tags: []
-date: "2005-06-17"
-type: "wp"
+category: '50'
+date: '2005-06-17'
+subtitle: Francois, reacting to something written by Jason Calcanis
+tags:
+- technology
+- business
+title: Making money with aggregators
+type: wp
 wordpress_id: 1753
 ---
+
 [Francois](http://www.emergencemarketing.com/), reacting to something [written by Jason Calcanis](http://calacanis.weblogsinc.com/entry/1234000760046672/), makes a [very good point in](http://www.blogbridge.com/archives/2005/06/can_an_aggregat.php) this discussion about feed and blog aggregators needing to have a way to make money:
 
 [Jason](http://calacanis.weblogsinc.com/entry/1234000760046672/): 

@@ -1,12 +1,15 @@
 ---
-title: "Thinking about business models"
-subtitle: "Inquisitor is a really cool program that augments the search b..."
-category: "298"
-tags: []
-date: "2005-10-28"
-type: "wp"
+category: '298'
+date: '2005-10-28'
+subtitle: Inquisitor is a really cool program that augments the search b...
+tags:
+- technology
+- business
+title: Thinking about business models
+type: wp
 wordpress_id: 1669
 ---
+
 [Inquisitor is a really cool](http://www.inquisitorx.com/safari/) program that augments the search box in Safari (which for you **heathens** out there is the default Mac OS X web browser.) It’s kind of hard to explain just what it does – it’s kind of a magical word completion **thingie** that guesses, based on other searches and **who knows what else**, what you are going to search for. 
 
 But I am not writing about Inquisitor, although **I recommend it highly**. Here’s a post by it’s author, Dave, who is trying to figure out how or whether he can make some money with his creation. 

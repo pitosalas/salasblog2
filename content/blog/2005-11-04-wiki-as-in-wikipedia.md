@@ -1,12 +1,16 @@
 ---
-title: "Wiki as in Wikipedia"
-subtitle: "I assume you know about Wikis and the Wikipedia"
-category: "298"
-tags: []
-date: "2005-11-04"
-type: "wp"
+category: '298'
+date: '2005-11-04'
+subtitle: I assume you know about Wikis and the Wikipedia
+tags:
+- technology
+- blogbridge
+- wikipedia
+title: Wiki as in Wikipedia
+type: wp
 wordpress_id: 1663
 ---
+
 I assume you know about [Wikis](http://en.wikipedia.org/wiki/Wiki) and the [Wikipedia](http://www.wikipedia.org/). If not, [click](http://en.wikipedia.org/wiki/Wikipedia) on the links to the left and you’ll both find out and experience it, in one fell swoop.
 
 On [BlogBridge](http://www.blogbridge.com/) we use a Wiki as a very **lightweight** project collaboration tool. [Minimalist eRoom](http://www.documentum.com/eroom/) if you like. That’s the kind that most often occurs to me.

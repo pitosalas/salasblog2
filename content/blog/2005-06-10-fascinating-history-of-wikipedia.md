@@ -1,12 +1,15 @@
 ---
-title: "Fascinating history of Wikipedia"
-subtitle: "If you are interested and fascinated with the Wikipedia, h..."
-category: "298"
-tags: []
-date: "2005-06-10"
-type: "wp"
+category: '298'
+date: '2005-06-10'
+subtitle: If you are interested and fascinated with the Wikipedia, h...
+tags:
+- technology
+- wikipedia
+title: Fascinating history of Wikipedia
+type: wp
 wordpress_id: 1760
 ---
+
 If you are interested and fascinated with the [Wikipedia](http://en.wikipedia.org/wiki/Main_Page), how it came to be, why it is the way it is, there’s an absolutely gripping account of the history and origins on [Slashdot](http://slashdot.org/):
 
 > “An impassioned debate has been raging, particularly since about the summer of 2004, about the merits of Wikipedia and the future of free online encyclopedias. This discussion has not benefitted by much detailed, accurate consideration of the origins of Wikipedia and of its parent project, Nupedia. 

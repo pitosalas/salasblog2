@@ -1,12 +1,15 @@
 ---
-title: "Color laser printers consume lots of consumables"
-subtitle: "Color laser printers are **wonderful**. The one I use is a Konica Minolta QMS 2200"
-category: "538"
-tags: []
-date: "2005-08-11"
-type: "wp"
+category: '538'
+date: '2005-08-11'
+subtitle: Color laser printers are **wonderful**. The one I use is a Konica Minolta
+  QMS 2200
+tags:
+- personal
+title: Color laser printers consume lots of consumables
+type: wp
 wordpress_id: 1718
 ---
+
 Color laser printers are **wonderful**. The one I use is a [Konica Minolta QMS 2200](http://www.amazon.com/exec/obidos/tg/detail/-/B0000560EZ/002-5618550-4992858?v=glance). We’ve had it for years and it works like a champ. Only thing is, the toner is really pricey. So pricey that I started suspecting that something was awry, so I kept a log of when I replaced what **consumable** and how much I paid.  It’s a lot!
 
 Yes, “**consumable**“, because in addition to the toner there are a bunch of other things that ‘wear’ out and that you have to replace. The printer very **helpfully** says, “Replace Oil Roller”  and **stops** working. **What** the heck is an oil roller? I don’t know but it costs **$40** or so. It is actually **quite cool** how they have designed the inside of the thing to make each part **easily replaceable** with nice color coded numbered levers and knobs. 

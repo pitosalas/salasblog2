@@ -1,12 +1,15 @@
 ---
-title: "What if we all vote on the  truth, part 2"
-subtitle: "I wrote a few days ago about the coming LA Times initiative to crea..."
-category: "298"
-tags: []
-date: "2005-06-20"
-type: "wp"
+category: '298'
+date: '2005-06-20'
+subtitle: I wrote a few days ago about the coming LA Times initiative to crea...
+tags:
+- technology
+- wikipedia
+title: What if we all vote on the  truth, part 2
+type: wp
 wordpress_id: 1752
 ---
+
 I [wrote a few days](/weblogs/archives/000753.html) ago about the coming LA Times initiative to create something they are calling “Wikitorials.” Well [they’ve done it,](http://www2.latimesinteractive.com/wiki/index.php/Wikitorial) and the results are quite interesting:
 
 Someone going by the name Hank Ramey (a real name?) does a [complete ‘rewrite’ of the LA Times Editorial](http://www2.latimesinteractive.com/wiki/index.php/Dreams_About_War_and_Retribution_-_Hank_Ramey%27s_rewrite). A really provocative idea. However it’s not at all clear what was rewritten though, so the effort is kind of loss. 

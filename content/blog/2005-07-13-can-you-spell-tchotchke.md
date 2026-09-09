@@ -1,12 +1,14 @@
 ---
-title: "Can you spell Tchotchke?"
-subtitle: "!DSCF0009.JPG"
-category: "298"
-tags: []
-date: "2005-07-13"
-type: "wp"
+category: '298'
+date: '2005-07-13'
+subtitle: '!DSCF0009.JPG'
+tags:
+- personal
+title: Can you spell Tchotchke?
+type: wp
 wordpress_id: 1738
 ---
+
 ![DSCF0009.JPG](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/posts/DSCF0009_1.jpg?resize=512%2C384) In the continuing efforts to rid my house of junk, we are donating a whole bunch of nice Tchotchke briefcases. For the heck of it, and to expand recent innovations in “[laundry blogging](http://enthusiasm.cozy.org/archives/2005/06/laundry-blogging/)” let me introduce you to [Tchotchke](http://dictionary.reference.com/wordoftheday/archive/2000/01/19.html) Blogging. 
 
 Here you see a selected history of the computer industry in the last 15 or so years. Also, you see the evolution of my interests and attention. Let’s see, there are several Demo bags of course. 

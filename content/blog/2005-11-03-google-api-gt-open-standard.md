@@ -1,12 +1,15 @@
 ---
-title: "Google API -> Open Standard"
-subtitle: "I really like this idea that Dave Winer has put forward: “Let’s..."
-category: "538"
-tags: []
-date: "2005-11-03"
-type: "wp"
+category: '538'
+date: '2005-11-03'
+subtitle: 'I really like this idea that Dave Winer has put forward: “Let’s...'
+tags:
+- technology
+- google
+title: Google API -> Open Standard
+type: wp
 wordpress_id: 1665
 ---
+
 I really like [this idea that Dave Winer has put forward](http://www.clonethegoogleapi.com/): “Let’s make the Google API an open standard”, where he says, among other things:
 
 > “We’ve asked for a plug-in architecture for search engines, and if we can’t have that, a solid easy-to-program API is a **pretty good alternative**.”

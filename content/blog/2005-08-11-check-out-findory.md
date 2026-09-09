@@ -1,12 +1,15 @@
 ---
-title: "Check out Findory"
-subtitle: "I was talking about search engines the other day. I guess Findory i..."
-category: "51"
-tags: []
-date: "2005-08-11"
-type: "wp"
+category: '51'
+date: '2005-08-11'
+subtitle: I was talking about search engines the other day. I guess Findory i...
+tags:
+- technology
+- findory
+title: Check out Findory
+type: wp
 wordpress_id: 1719
 ---
+
 I was talking about search engines [the other day](/weblogs/archives/000805.html). I guess Findory includes a search engine, but in my mind it’s a lot more. Here’s how they describe it:
 
 > “Our patent-pending technology personalizes the homepage for each reader, recommending content based on what they’ve read and what new content is being published. We crawl through thousands of news and blogs articles so you don’t have to.” (**from** [About Findory](http://www.findory.com/company/))

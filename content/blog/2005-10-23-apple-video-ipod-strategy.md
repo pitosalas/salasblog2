@@ -1,12 +1,16 @@
 ---
-title: "Apple Video iPod Strategy"
-subtitle: "For you Apple and iPod afficionados, here’s an **interesting** article"
-category: "538"
-tags: []
-date: "2005-10-23"
-type: "wp"
+category: '538'
+date: '2005-10-23'
+subtitle: For you Apple and iPod afficionados, here’s an **interesting** article
+tags:
+- technology
+- apple
+- ipod
+title: Apple Video iPod Strategy
+type: wp
 wordpress_id: 1673
 ---
+
 For you Apple and iPod afficionados, [here’s an **interesting** article ](http://www.apcmag.com/apc/v3.nsf/dir/ipodvideo)about what Apple might be up to, tying together various **tantalizing **hints into a good story:
 
 > 

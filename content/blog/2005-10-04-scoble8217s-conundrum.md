@@ -1,12 +1,16 @@
 ---
-title: "Scoble’s conundrum"
-subtitle: "His conundrum is that he loves both Web services (browser based applications) and Windows applicatio..."
-category: "50"
-tags: []
-date: "2005-10-04"
-type: "wp"
+category: '50'
+date: '2005-10-04'
+subtitle: His conundrum is that he loves both Web services (browser based applications)
+  and Windows applicatio...
+tags:
+- technology
+- robert-scoble
+title: Scoble’s conundrum
+type: wp
 wordpress_id: 1681
 ---
+
 His conundrum is that he loves both Web services (browser based applications) and Windows applications and can’t seem to pick a one-size-fits-all preference. Apparently some of his readers noticed that and are calling him to task on it.
 
 > “Some see my condundrum as being one brought upon by where I work. OK, it certainly is a possibility that I’m drinking the Redmond Koolaid,” (**from** [Scobelizer](http://radio.weblogs.com/0001011/2005/10/04.html#a11363))

@@ -1,12 +1,16 @@
 ---
-title: "[GEEK] OPML Validator"
-subtitle: "I just came across Dave Winer’s new, beta, OPML Validator"
-category: "538"
-tags: []
-date: "2005-10-30"
-type: "wp"
+category: '538'
+date: '2005-10-30'
+subtitle: I just came across Dave Winer’s new, beta, OPML Validator
+tags:
+- technology
+- blogbridge
+- opml
+title: '[GEEK] OPML Validator'
+type: wp
 wordpress_id: 1666
 ---
+
 I just came across [Dave Winer’s](http://www.scripting.com/) new, [beta, OPML Validator](http://www.opml.org/2005/10/28#a85), which is a welcome development. While there is an [OPML spec](http://www.opml.org/spec), having a validator too is a great, **pragmatic**, **concrete** way to give a big thumbs up or down to a particular piece of XML
 
 From the very start [BlogBridge](http://www.blogbridge.com/)  has **supported OPML** for import and export, as well as for various **internal** representations and **communications**. We obviously have done our best to write valid OPML, as best as we understood what that was. 

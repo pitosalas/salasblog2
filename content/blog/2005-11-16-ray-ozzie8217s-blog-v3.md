@@ -1,12 +1,15 @@
 ---
-title: "Ray Ozzie’s Blog V3"
-subtitle: "Glad to see that Ray is blogging again. Now that he is at..."
-category: "51"
-tags: []
-date: "2005-11-16"
-type: "wp"
+category: '51'
+date: '2005-11-16'
+subtitle: Glad to see that Ray is blogging again. Now that he is at...
+tags:
+- technology
+- ray-ozzie
+title: Ray Ozzie’s Blog V3
+type: wp
 wordpress_id: 1654
 ---
+
 Glad to see that [Ray is blogging again](http://spaces.msn.com/members/rayozzie/). Now that he is at Microsoft running the big new initiative this should be a really interesting one to follow! 
 
 > “A couple of weeks ago, Bill and I brought life to a new initiative that, over the course of the months and years ahead, will catalyze and deliver a number of things that I’m very excited about.  At that event, I said that unlike many other stealth projects I’ve/we’ve done, in this case many of our plans and offerings will evolve progressively and in the open, shaped in good measure by a dialog with you.” (**from** [Ray Ozzie’s Blog](http://spaces.msn.com/members/rayozzie/))

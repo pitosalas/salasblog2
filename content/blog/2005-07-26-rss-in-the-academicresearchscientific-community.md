@@ -1,12 +1,16 @@
 ---
-title: "RSS in the Academic/Research/Scientific community"
-subtitle: "I recently wondered out loud (on a couple of mailing lists) how much action there is with RSS and Bl..."
-category: "298"
-tags: []
-date: "2005-07-26"
-type: "wp"
+category: '298'
+date: '2005-07-26'
+subtitle: I recently wondered out loud (on a couple of mailing lists) how much action
+  there is with RSS and Bl...
+tags:
+- technology
+- education
+title: RSS in the Academic/Research/Scientific community
+type: wp
 wordpress_id: 1728
 ---
+
 I recently wondered out loud (on a couple of mailing lists) how much action there is with RSS and Blogging within the Academic/Research/Scientific community. 
 
 The  reason for that question was that I was considering that with those folks **refereed, scholarly **articles are what counts which seems diametrically opposite to the **casual, ad-hoc, first-person rants** that are generally associated with blogging. (Ok I am just exaggerating to make a point.)

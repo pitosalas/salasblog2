@@ -1,12 +1,15 @@
 ---
-title: "[GEEK] More tips for the 40 year old virgin"
-subtitle: "Here’s something **funny** I came across: “Sex Tips for Geeks: How to be Sexy” where we learn such g..."
-category: "298"
-tags: []
-date: "2005-08-19"
-type: "wp"
+category: '298'
+date: '2005-08-19'
+subtitle: 'Here’s something **funny** I came across: “Sex Tips for Geeks: How to be
+  Sexy” where we learn such g...'
+tags:
+- personal
+title: '[GEEK] More tips for the 40 year old virgin'
+type: wp
 wordpress_id: 1714
 ---
+
 Here’s something **funny** I came across: “Sex Tips for Geeks: How to be Sexy” where we learn such gems as:  
 
 > “While human beings often have sex for pleasure, the instincts that drive human mating behavior have been shaped by a deadly serious game of evolutionary selection. 

@@ -1,12 +1,16 @@
 ---
-title: "Good stuff from Paul Graham"
-subtitle: "If you work with software developers you’ll **appreciate** these two pieces by **Paul Graham**, auth..."
-category: "538"
-tags: []
-date: "2005-06-06"
-type: "wp"
+category: '538'
+date: '2005-06-06'
+subtitle: If you work with software developers you’ll **appreciate** these two pieces
+  by **Paul Graham**, auth...
+tags:
+- technology
+- paul-graham
+title: Good stuff from Paul Graham
+type: wp
 wordpress_id: 1763
 ---
+
 If you work with software developers you’ll **appreciate** these two pieces by **Paul Graham**, author of [Hackers and Painters](http://www.paulgraham.com/hp.html), a book that I also **recommend** heartily. 
 
 He always has **interesting** things to say:

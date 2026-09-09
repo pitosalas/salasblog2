@@ -1,12 +1,16 @@
 ---
-title: "Business opportunities in blogville?"
-subtitle: "All software has bugs, no doubt. So pulling out one story to make a point isn’t really fair. (Especi..."
-category: "51"
-tags: []
-date: "2005-07-01"
-type: "wp"
+category: '51'
+date: '2005-07-01'
+subtitle: All software has bugs, no doubt. So pulling out one story to make a point
+  isn’t really fair. (Especi...
+tags:
+- business
+- movable-type
+title: Business opportunities in blogville?
+type: wp
 wordpress_id: 1740
 ---
+
 All software has bugs, no doubt. So pulling out one story to make a point isn’t really fair. (Especially recalling the story about **stones** and **glass houses**.) 
 
 But if I looked I know I could find **story after story**, including some that I could write from first hand experience, about the **terrible rough edges** on all the software on which our much beloved blogosphere runs. And from that observation and those stories comes the premise of this post. Here’s one of the stories:
