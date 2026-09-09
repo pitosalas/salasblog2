@@ -1,12 +1,17 @@
 ---
-title: "[ETECH] A9 as a search portal – Amazon defines “Searchlets”"
-subtitle: "Jeff Bezos talked about a new feature of A9 which allows the basic A9 Search Page to be extended by ..."
-category: "538"
-tags: []
-date: "2005-03-15"
-type: "wp"
+category: '538'
+date: '2005-03-15'
+subtitle: Jeff Bezos talked about a new feature of A9 which allows the basic A9 Search
+  Page to be extended by ...
+tags:
+- technology
+- etech
+- a9
+title: '[ETECH] A9 as a search portal – Amazon defines “Searchlets”'
+type: wp
 wordpress_id: 1826
 ---
+
 Jeff Bezos talked about a new feature of A9 which allows the basic A9 Search Page to be extended by anyone, using what I am calling “**Searchlets**.” Here’s an explanation…
 
 If you’ve looked at A9 you’ve seen the various “**vertical**” result regions that you can ask for – there are a handful built in, including for example the yellow pages result which shows you photographs of the establishments identified. 

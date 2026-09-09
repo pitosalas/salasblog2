@@ -1,12 +1,15 @@
 ---
-title: "Boston is thinking about city-wide wi-fi access"
-subtitle: "Michael Feldman of Dowbrigade has a [really interesting]..."
-category: "298"
-tags: []
-date: "2005-05-21"
-type: "wp"
+category: '298'
+date: '2005-05-21'
+subtitle: Michael Feldman of Dowbrigade has a [really interesting]...
+tags:
+- technology
+- boston
+title: Boston is thinking about city-wide wi-fi access
+type: wp
 wordpress_id: 1778
 ---
+
 Michael Feldman of [Dowbrigade](http://blogs.law.harvard.edu/dowbrigade/) has a [really interesting](http://blogs.law.harvard.edu/dowbrigade/2005/05/20#a5155) report on something that I didn’t even know was going on in Boston. Apparently they/we are thinking about providing wi-fi access across the city: 
 
 > “However, there are a number of important issues to be resolved before one of these plans becomes operational: opposition from current ISP’s and wireless phone providers, differing business models for paying for and possibly charging for the service, which of several competing technologies to support, and the proper role of municipal and state government in regulating access and content.”

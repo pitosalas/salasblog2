@@ -1,12 +1,17 @@
 ---
-title: "Machine translation: Funny!"
-subtitle: "The highly anticipated Mac OS X “Tiger” arrived in my hot little hands, and I’ve spent most of the d..."
-category: "298"
-tags: []
-date: "2005-05-07"
-type: "wp"
+category: '298'
+date: '2005-05-07'
+subtitle: The highly anticipated Mac OS X “Tiger” arrived in my hot little hands,
+  and I’ve spent most of the d...
+tags:
+- technology
+- mac
+- konfabulator
+title: 'Machine translation: Funny!'
+type: wp
 wordpress_id: 1791
 ---
+
 The highly anticipated Mac OS X “Tiger” arrived in my hot little hands, and I’ve spent most of the day installing it (2 hours) and getting everything to work again (6 hours and counting.) 
 
 One of the highly touted new features is “Dashboard” which is a “not quite as good as” **knock-off** of [Konfabulator](http://www.konfabulator.com/). 

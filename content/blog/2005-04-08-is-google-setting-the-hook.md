@@ -1,12 +1,16 @@
 ---
-title: "Is Google setting the hook?"
-subtitle: "Recently, GMail *raised *the free storage available to all subscribers to 2 Gig! Amazing isn’t it? I..."
-category: "538"
-tags: []
-date: "2005-04-08"
-type: "wp"
+category: '538'
+date: '2005-04-08'
+subtitle: Recently, GMail *raised *the free storage available to all subscribers to
+  2 Gig! Amazing isn’t it? I...
+tags:
+- technology
+- gmail
+title: Is Google setting the hook?
+type: wp
 wordpress_id: 1807
 ---
+
 Recently, GMail *raised *the free storage available to all subscribers to 2 Gig! Amazing isn’t it? I don’t know how they do it – they must have a monstrous number of subscribers all over the world. And they are getting **hooked**, really hooked. 
 Take me for example – I was getting worried when I had about 600 Meg of archival emails, in about 4 months! What would I do when it filled up? And then they raised the limit. Talk about **lock-in**!
 

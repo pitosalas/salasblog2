@@ -1,12 +1,17 @@
 ---
-title: "Modesty isn’t dead"
-subtitle: "If you are interested in blogging you certainly have come across Robert Scoble’s blog"
-category: "51"
-tags: []
-date: "2005-02-12"
-type: "wp"
+category: '51'
+date: '2005-02-12'
+subtitle: If you are interested in blogging you certainly have come across Robert
+  Scoble’s blog
+tags:
+- technology
+- robert-scoble
+- microsoft
+title: Modesty isn’t dead
+type: wp
 wordpress_id: 1849
 ---
+
 If you are interested in blogging you certainly have come across [Robert Scoble’s blog](http://scoble.weblogs.com/), the most prominent blog written by a Microsoft employee. Recently [The Economist wrote a story about Robert Scoble at Microsoft. Nice article. ](http://www.economist.com/people/displayStory.cfm?story_id=3644293)
 Tip o’ the hat to Robert Scoble for his [response to this column](http://radio.weblogs.com/0001011/2005/02/11.html#a9393):
 

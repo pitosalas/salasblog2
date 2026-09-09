@@ -1,12 +1,17 @@
 ---
-title: "Come on over, the water’s fine! Look who is recommending Macs!"
-subtitle: "I love my **Mac**, as y’all know. I was amused to read about **Intel CEO** **Paul Otellini** who pub..."
-category: "538"
-tags: []
-date: "2005-05-28"
-type: "wp"
+category: '538'
+date: '2005-05-28'
+subtitle: I love my **Mac**, as y’all know. I was amused to read about **Intel CEO**
+  **Paul Otellini** who pub...
+tags:
+- technology
+- mac
+- intel
+title: Come on over, the water’s fine! Look who is recommending Macs!
+type: wp
 wordpress_id: 1772
 ---
+
 I love my **Mac**, as y’all know. I was amused to read about **Intel CEO** **Paul Otellini** who publicly **recommended** getting a Mac. He was being **interviewed** by **Walt Mossberg** at the “D” conference:
 
 > ‘… Asked whether a mainstream computer user in search of immediate safety from security woes ought to buy a Mac instead of a Wintel PC, he said, “If you want to fix it tomorrow, maybe you should **buy something else**.’ (**from** [Mac News Network](http://www.macnn.com/articles/05/05/26/intel.chief.on.security/), but I saw it in several other places.) 

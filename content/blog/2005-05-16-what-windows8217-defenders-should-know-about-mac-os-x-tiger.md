@@ -1,12 +1,17 @@
 ---
-title: "What Windows’ defenders should know about Mac OS X Tiger"
-subtitle: "I often hear folks beat up Microsoft Windows for being a breeding ground for viruses, spyware, and a..."
-category: "538"
-tags: []
-date: "2005-05-16"
-type: "wp"
+category: '538'
+date: '2005-05-16'
+subtitle: I often hear folks beat up Microsoft Windows for being a breeding ground
+  for viruses, spyware, and a...
+tags:
+- technology
+- microsoft
+- mac
+title: What Windows’ defenders should know about Mac OS X Tiger
+type: wp
 wordpress_id: 1784
 ---
+
 I often hear folks beat up Microsoft Windows for being a breeding ground for viruses, spyware, and all sorts of malware. Bad Microsoft for being so sloppy!
 
 There was a [recent exchange](http://radio.weblogs.com/0001011/2005/05/16.html#a10129) between Scoble and [Dan Gillmor](http://bayosphere.com/node/374), where Scoble defends Microsoft against what he feels is an unfair attack:

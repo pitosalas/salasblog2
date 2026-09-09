@@ -1,12 +1,16 @@
 ---
-title: "[BLOGBRIDGE] BlogBridge 1.0 is out!"
-subtitle: "**It’s here! **We are officially declaring BlogBridge as a 1.0 product! The site is updated, the fea..."
-category: "50"
-tags: []
-date: "2005-04-03"
-type: "wp"
+category: '50'
+date: '2005-04-03'
+subtitle: '**It’s here! **We are officially declaring BlogBridge as a 1.0 product!
+  The site is updated, the fea...'
+tags:
+- technology
+- blogbridge
+title: '[BLOGBRIDGE] BlogBridge 1.0 is out!'
+type: wp
 wordpress_id: 1811
 ---
+
 **It’s here! **We are officially declaring BlogBridge as a 1.0 product! The site is updated, the features are solid and we are off to the races. Here are some personal tidbits about where we are now and what happens next:
 
 - Actually 1.0 has been done for about a week now, and really over the last 4 weeks we’ve been much more focused on fixing bugs than anything else. And if by now you don’t know – you can read all about **BlogBridge** [here](http://www.blogbridge.com)and download 1.0 [here.](http://www.blogbridge.com/install/weekly/blogbridge.jnlp)

@@ -1,12 +1,15 @@
 ---
-title: "Link to Susan Senator!"
-subtitle: "!Mpwacover300"
-category: "298"
-tags: []
-date: "2005-05-09"
-type: "wp"
+category: '298'
+date: '2005-05-09'
+subtitle: '!Mpwacover300'
+tags:
+- personal
+- books
+title: Link to Susan Senator!
+type: wp
 wordpress_id: 1790
 ---
+
 ![Mpwacover300](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/mpwacover300.jpg?resize=93%2C136)
 
 [Susan Senator](http://susansenator.com/) has published a book: “Making Peace with Autism”:

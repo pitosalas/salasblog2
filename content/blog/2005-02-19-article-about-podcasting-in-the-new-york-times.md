@@ -1,12 +1,16 @@
 ---
-title: "Article about Podcasting in the New York Times"
-subtitle: "If you haven’t heard about Podcasting (what, are you living under a rock?) the New York Times has a ..."
-category: "538"
-tags: []
-date: "2005-02-19"
-type: "wp"
+category: '538'
+date: '2005-02-19'
+subtitle: If you haven’t heard about Podcasting (what, are you living under a rock?)
+  the New York Times has a ...
+tags:
+- technology
+- podcasting
+title: Article about Podcasting in the New York Times
+type: wp
 wordpress_id: 1845
 ---
+
 If you haven’t heard about Podcasting (what, are you living under a rock?) the New York Times has a good introduction:
 > “Their show, mostly ad-libbed, is a podcast, a kind of recording that, thanks to a technology barely six months old, anyone can make on a computer and then post to a Web site, where it can be downloaded to an iPod or any MP3 player to be played at the listener’s leisure.”
 

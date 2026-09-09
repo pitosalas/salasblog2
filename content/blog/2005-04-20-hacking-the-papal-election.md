@@ -1,12 +1,16 @@
 ---
-title: "Hacking the papal election"
-subtitle: "I have to admit to being **fascinated** with the Vatican, and the **ancient**, elaborate **tradition..."
-category: "298"
-tags: []
-date: "2005-04-20"
-type: "wp"
+category: '298'
+date: '2005-04-20'
+subtitle: I have to admit to being **fascinated** with the Vatican, and the **ancient**,
+  elaborate **tradition...
+tags:
+- technology
+- bruce-schneier
+title: Hacking the papal election
+type: wp
 wordpress_id: 1800
 ---
+
 I have to admit to being **fascinated** with the Vatican, and the **ancient**, elaborate **traditions** and **rules** that surround the papacy. 
 
 Bruce Schneier, in his (**excellent**) monthly newsletter had a [really interesting discussion](http://www.schneier.com/crypto-gram-0504.html#8) about the rules and procedures that have been set down (and fairly **recently** updated) for the papal election:

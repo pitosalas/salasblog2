@@ -1,12 +1,17 @@
 ---
-title: "Switcher’s Log, Part 3: What I miss from my PC Days"
-subtitle: "In the continuing saga of the switch from Windows XP to Mac OS X, here is where we find our hero…."
-category: "538"
-tags: []
-date: "2005-02-03"
-type: "wp"
+category: '538'
+date: '2005-02-03'
+subtitle: In the continuing saga of the switch from Windows XP to Mac OS X, here is
+  where we find our hero….
+tags:
+- technology
+- mac
+- microsoft
+title: 'Switcher’s Log, Part 3: What I miss from my PC Days'
+type: wp
 wordpress_id: 1856
 ---
+
 In the continuing saga of the switch from Windows XP to Mac OS X, here is where we find our hero….
 I have more or less gotten all the applications I use over onto the Mac. Almost all of them. I will be forced to leave behind **Microsoft Money, X1 and Plaxo**. Of all the stuff I ran on the PC, those are the only three that I miss. And in each case I can get by.
 

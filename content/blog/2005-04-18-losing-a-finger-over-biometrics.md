@@ -1,12 +1,16 @@
 ---
-title: "Losing a finger over biometrics"
-subtitle: "> “They stripped Mr Kumaran naked and left him by the side of the road – but not before **cutting of..."
-category: "298"
-tags: []
-date: "2005-04-18"
-type: "wp"
+category: '298'
+date: '2005-04-18'
+subtitle: '> “They stripped Mr Kumaran naked and left him by the side of the road
+  – but not before **cutting of...'
+tags:
+- technology
+- bruce-schneier
+title: Losing a finger over biometrics
+type: wp
 wordpress_id: 1802
 ---
+
 > “They stripped Mr Kumaran naked and left him by the side of the road – but not before **cutting off the end** of his index finger with a machete. (from the [BBC)](http://news.bbc.co.uk/2/hi/asia-pacific/4396831.stm)“
 
 There, I got your **attention**, didn’t I? That’s from the always fascinating monthly mailing on security, [Crypto-Gram](http://www.schneier.com/crypto-gram-0504.html#2), from Bruce Schneier. He has a very interesting [piece](http://www.schneier.com/crypto-gram-0504.html#2) on “New Risks of Biometrics”, where you can see the law of unintended consequences in full bloom:

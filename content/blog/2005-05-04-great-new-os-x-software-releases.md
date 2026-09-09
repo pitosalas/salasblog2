@@ -1,12 +1,16 @@
 ---
-title: "Great new OS X Software Releases"
-subtitle: "***Two of my all time favorite Mac OS X applications just came out with new releases:***"
-category: "538"
-tags: []
-date: "2005-05-04"
-type: "wp"
+category: '538'
+date: '2005-05-04'
+subtitle: '***Two of my all time favorite Mac OS X applications just came out with
+  new releases:***'
+tags:
+- technology
+- mac
+title: Great new OS X Software Releases
+type: wp
 wordpress_id: 1794
 ---
+
 ***Two of my all time favorite Mac OS X applications just came out with new releases:***
 
 **[Adium X](http://www.adiumx.com/)**is a beautiful multi-IM-service client. It’s based on GAIM but with a true OS X user interface. For PC users, it’s kind of like Trillian but nicer! They just came out with a new version. The one thing everyone hasn’t done yet is to add Skype IM support. They are coming on strong as a competitive IM network.

@@ -1,12 +1,15 @@
 ---
-title: "Counting blog impact"
-subtitle: "Interesting article about counting blogs makes a **good point** right off the bat:"
-category: "51"
-tags: []
-date: "2005-05-31"
-type: "wp"
+category: '51'
+date: '2005-05-31'
+subtitle: 'Interesting article about counting blogs makes a **good point** right off
+  the bat:'
+tags:
+- technology
+title: Counting blog impact
+type: wp
 wordpress_id: 1771
 ---
+
 Interesting article about counting blogs makes a **good point** right off the bat:
 
 > “First, let’s step back and consider why we’re counting blogs at all. You no longer see articles that attempt to demonstrate the legitimacy of the Web by stating how many Web pages there are. 

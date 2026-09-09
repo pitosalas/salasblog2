@@ -1,12 +1,16 @@
 ---
-title: "Tags, Meta Tags, Meta Data, Yada Yada"
-subtitle: "It is of course impossible to keep up with the avalanche of discussion about the topic of tags, *fol..."
-category: "538"
-tags: []
-date: "2005-01-27"
-type: "wp"
+category: '538'
+date: '2005-01-27'
+subtitle: It is of course impossible to keep up with the avalanche of discussion about
+  the topic of tags, *fol...
+tags:
+- technology
+- folksonomy
+title: Tags, Meta Tags, Meta Data, Yada Yada
+type: wp
 wordpress_id: 1861
 ---
+
 It is of course impossible to keep up with the avalanche of discussion about the topic of tags, *folksonomies*, *tagonomies*. [David Weinberger](http://www.hyperorg.com/blogger/mtarchive/003625.html) points to a (**beautifully designed**: love those pictures!) essay on the topic from [burningbird](http://weblog.burningbird.net/archives/2005/01/27/cheap-eats-at-the-semantic-web-cafe/) with lots of good quotes and pointers to other essays. Wow, a lot to read!
 In my mind the crucial thing about this new approach classification is that it gets around the **achilles heel** of the traditional approach of meta tagging or controlled vocabularies, which is, *that most people just don’t do it.*
 

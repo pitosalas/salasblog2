@@ -1,12 +1,17 @@
 ---
-title: "First Class/Anachronism"
-subtitle: "On a lark, I used my frequent flyer miles to fly First Class on American Airlines today, heading out..."
-category: "298"
-tags: []
-date: "2005-03-16"
-type: "wp"
+category: '298'
+date: '2005-03-16'
+subtitle: On a lark, I used my frequent flyer miles to fly First Class on American
+  Airlines today, heading out...
+tags:
+- personal
+- travel
+- etech
+title: First Class/Anachronism
+type: wp
 wordpress_id: 1825
 ---
+
 On a lark, I used my frequent flyer miles to fly First Class on American Airlines today, heading out to the O’Reily ETech Conference. 
 I hadn’t done it in quite a while.
 

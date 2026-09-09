@@ -1,12 +1,15 @@
 ---
-title: "RSS Feed Advertising"
-subtitle: "From News.com, about Kaboodle BrightAds RSS"
-category: "51"
-tags: []
-date: "2005-03-01"
-type: "wp"
+category: '51'
+date: '2005-03-01'
+subtitle: From News.com, about Kaboodle BrightAds RSS
+tags:
+- technology
+- business
+title: RSS Feed Advertising
+type: wp
 wordpress_id: 1837
 ---
+
 From News.com, about [Kaboodle BrightAds RSS](http://news.com.com/Firm+eyes+RSS+feeds+as+ad+vehicle/2100-1024_3-5591056.html?tag=cd.top)
 **On Monday, the company introduced a self-service system that lets online publishers pair advertising with their RSS feeds. Called BrightAds RSS (after the technology format known as Really Simple Syndication), the service takes advantage of Kanoodle’s keyword advertising system to match Web content to relevant ads. Once a publisher signs up, an advertising link will piggyback on its syndicated feed sent to third-party news readers.
 

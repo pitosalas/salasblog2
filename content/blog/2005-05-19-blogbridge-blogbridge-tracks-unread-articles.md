@@ -1,12 +1,16 @@
 ---
-title: "[BLOGBRIDGE] BlogBridge tracks unread articles!"
-subtitle: "One of the cool things about BlogBridge’s (free) companion service, is that keeps track for you what..."
-category: "50"
-tags: []
-date: "2005-05-19"
-type: "wp"
+category: '50'
+date: '2005-05-19'
+subtitle: One of the cool things about BlogBridge’s (free) companion service, is that
+  keeps track for you what...
+tags:
+- technology
+- blogbridge
+title: '[BLOGBRIDGE] BlogBridge tracks unread articles!'
+type: wp
 wordpress_id: 1780
 ---
+
 One of the cool things about BlogBridge’s (free) companion service, is that keeps track for you what you have and have not read, *even if you are using BlogBridge on more than one computer! *
 
 In other words, please sign up for the service, and set your synchronization options the way you want them (daily, each time you run BlogBridge, or manually.) Each time you synchronize, not only will your subscription lists be kept in synch, but also which articles you have or have not read.

@@ -1,12 +1,14 @@
 ---
-title: "VC: Rumors of its demise are probably premature"
-subtitle: "Not that I’m an expert or anything…"
-category: "298"
-tags: []
-date: "2005-05-25"
-type: "wp"
+category: '298'
+date: '2005-05-25'
+subtitle: Not that I’m an expert or anything…
+tags:
+- business
+title: 'VC: Rumors of its demise are probably premature'
+type: wp
 wordpress_id: 1773
 ---
+
 Not that I’m an expert or anything…
 
 In the last few days there have been several articles about the **problems** in **High Tech Venture Capital**. One particularly interesting one was in the New York Times on Sunday talked about the **exodus** of recently minted venture capitalists from the business:

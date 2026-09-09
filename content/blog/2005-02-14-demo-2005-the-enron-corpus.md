@@ -1,12 +1,17 @@
 ---
-title: "[Demo 2005] The Enron Corpus"
-subtitle: "The demos at this year’s DEMO are quite good. One interesting thing I noticed is that there are [sev..."
-category: "538"
-tags: []
-date: "2005-02-14"
-type: "wp"
+category: '538'
+date: '2005-02-14'
+subtitle: The demos at this year’s DEMO are quite good. One interesting thing I noticed
+  is that there are [sev...
+tags:
+- business
+- demo2005
+- enron
+title: '[Demo 2005] The Enron Corpus'
+type: wp
 wordpress_id: 1848
 ---
+
 The demos at this year’s DEMO are quite good. One interesting thing I noticed is that there are [several](http://www.demo.com/demo2/demonstrators/audiotriev.html) [products ](http://www.demo.com/demo2/demonstrators/fortiva.html)connected to keeping companies out of legal trouble due to problematic internal and external emails, or to help get them out of trouble if they get into it.
 In several demos we were treated to examples based on the “Enron internal emails.” The first two times I thought I was seeing a coincidental picking of the same humor by two seperate companies. 
 

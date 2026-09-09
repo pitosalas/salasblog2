@@ -1,12 +1,16 @@
 ---
-title: "Google Toolbar: Where’s the fire?"
-subtitle: "In case you’ve come across the flaming debate about how the Google Toolbar is evil, you will [apprec..."
-category: "538"
-tags: []
-date: "2005-03-03"
-type: "wp"
+category: '538'
+date: '2005-03-03'
+subtitle: In case you’ve come across the flaming debate about how the Google Toolbar
+  is evil, you will [apprec...
+tags:
+- technology
+- google-toolbar
+title: 'Google Toolbar: Where’s the fire?'
+type: wp
 wordpress_id: 1835
 ---
+
 In case you’ve come across the flaming debate about how the Google Toolbar is evil, you will [appreciate this post:](http://www.kottke.org/05/03/google-toolbar-autolink)
 **“I’m a bit wary about throwing myself in the middle of the whole Google Toolbar AutoLink business (Dan Gillmor has a good summary and lots of trackbacks to opinions, pro and con), but I’m sort of dumbfounded that so many people are so vehemently against it”
 

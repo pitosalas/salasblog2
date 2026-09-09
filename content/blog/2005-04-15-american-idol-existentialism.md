@@ -1,12 +1,16 @@
 ---
-title: "American Idol Existentialism"
-subtitle: "For you closet viewers of American Idol (the TV Show), I thought you’d be a..."
-category: "298"
-tags: []
-date: "2005-04-15"
-type: "wp"
+category: '298'
+date: '2005-04-15'
+subtitle: For you closet viewers of American Idol (the TV Show), I thought you’d be
+  a...
+tags:
+- personal
+- american-idol
+title: American Idol Existentialism
+type: wp
 wordpress_id: 1803
 ---
+
 For you closet viewers of American Idol ([the TV Show](http://idolonfox.com/)), I thought you’d be amused by this new [TV blog](http://www.tvsquad.com/), and it’s [discussion](http://www.tvsquad.com/2005/04/13/american-idol-i-finally-had-to-vote) of some of the latest developments on that show.
 
 If you don’t know the show, let me briefly tell you about one aspect, the **voting model**, which has raised some interesting questions. 

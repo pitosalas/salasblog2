@@ -1,12 +1,15 @@
 ---
-title: "Social Networks and RSS Aggregators"
-subtitle: "Dave Winer says that there’s a bit of buzz..."
-category: "50"
-tags: []
-date: "2005-02-03"
-type: "wp"
+category: '50'
+date: '2005-02-03'
+subtitle: Dave Winer says that there’s a bit of buzz...
+tags:
+- technology
+- blogbridge
+title: Social Networks and RSS Aggregators
+type: wp
 wordpress_id: 1855
 ---
+
 [Dave Winer says](http://archive.scripting.com/2005/02/02#When:8:05:26PM) that there’s a bit of buzz about social networks and RSS aggregators. I haven’t seen it myself, but I am glad to see it brought up, because it’s one of the things that’s evolving nicely in [BlogBridge](http://www.blogbridge.com) and will be available in the next [weekly build](http://www.blogbridge.com/install/weekly/blogridge.jnlp).
 What do I mean by “Social Networks and RSS Aggregators”? Briefly, here’s what we are doing with in in BlogBridge:
 

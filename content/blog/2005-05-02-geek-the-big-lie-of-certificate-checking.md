@@ -1,12 +1,15 @@
 ---
-title: "[GEEK] The BIG LIE of certificate checking"
-subtitle: "!["
-category: "422"
-tags: []
-date: "2005-05-02"
-type: "wp"
+category: '422'
+date: '2005-05-02'
+subtitle: '!['
+tags:
+- technology
+- blogbridge
+title: '[GEEK] The BIG LIE of certificate checking'
+type: wp
 wordpress_id: 1796
 ---
+
 [![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/Screenshot-1.png?resize=250%2C250)](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/Screenshot-1.png)Maybe you’ve read or heard my rants about what has become known as the “Scary Dialog Box” that users see when the run a Java application without a valid certificate.
 
 And if you have used BlogBridge, you will have seen it and many of you have asked what the heck it means, and I am sure many more have chosen not to run BlogBridge because of it.

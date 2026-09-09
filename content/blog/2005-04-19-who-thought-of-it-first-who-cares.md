@@ -1,12 +1,16 @@
 ---
-title: "Who thought of it first? Who cares?"
-subtitle: "Microsoft and Apple are arguing about..."
-category: "538"
-tags: []
-date: "2005-04-19"
-type: "wp"
+category: '538'
+date: '2005-04-19'
+subtitle: Microsoft and Apple are arguing about...
+tags:
+- technology
+- microsoft
+- apple
+title: Who thought of it first? Who cares?
+type: wp
 wordpress_id: 1801
 ---
+
 Microsoft and Apple are [arguing](http://news.zdnet.com/2100-3513_22-5675681.html?tag=nl.e589) about **who came up first** with the idea of having a pervasive search capability built into the OS Apple is shipping it **imminently** in Tiger, and Microsoft, **eventually**, in Longhorn.
 
 Well let’s see: Windows had a broken Find command in the start menu forever. Apple has had find in the finder forever. Microsoft was talking about this kind of pervasive Find capability since Cairo. 

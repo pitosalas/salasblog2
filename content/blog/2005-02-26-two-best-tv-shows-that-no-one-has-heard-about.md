@@ -1,12 +1,15 @@
 ---
-title: "Two Best TV shows that no one has heard about"
-subtitle: "There are two TV shows that it seems no one knows about, and yet, I think, are the very best on TV t..."
-category: "298"
-tags: []
-date: "2005-02-26"
-type: "wp"
+category: '298'
+date: '2005-02-26'
+subtitle: There are two TV shows that it seems no one knows about, and yet, I think,
+  are the very best on TV t...
+tags:
+- personal
+title: Two Best TV shows that no one has heard about
+type: wp
 wordpress_id: 1840
 ---
+
 There are two TV shows that it seems no one knows about, and yet, I think, are the very best on TV today. Better than West Wing. Better than CSI:xyz. Without further editorializing:
 [**MI-5**](http://www.aetv.com/mi5/) – A british show about spies. **Brilliant**.
 

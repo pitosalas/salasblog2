@@ -1,12 +1,16 @@
 ---
-title: "Have you seen Google Maps?"
-subtitle: "Unless you have been living under a **rock** (or have **better** things to do with your time) you wi..."
-category: "298"
-tags: []
-date: "2005-02-17"
-type: "wp"
+category: '298'
+date: '2005-02-17'
+subtitle: Unless you have been living under a **rock** (or have **better** things
+  to do with your time) you wi...
+tags:
+- technology
+- google-maps
+title: Have you seen Google Maps?
+type: wp
 wordpress_id: 1847
 ---
+
 Unless you have been living under a **rock** (or have **better** things to do with your time) you will have seen [Google Maps](http://maps.google.com). Well, I only just tonight looked at them for the first time. 
 **Stunning! **A spectacular web application. Highly usable and useful. And easy on the eyes!
 

@@ -1,12 +1,17 @@
 ---
-title: "Dowbrigade and Bridge BlogBridge"
-subtitle: "Just a quick note of the **very nice** mention of BlogBridge by almost-famous Dowbrigade"
-category: "50"
-tags: []
-date: "2005-05-21"
-type: "wp"
+category: '50'
+date: '2005-05-21'
+subtitle: Just a quick note of the **very nice** mention of BlogBridge by almost-famous
+  Dowbrigade
+tags:
+- technology
+- blogbridge
+- dowbrigade
+title: Dowbrigade and Bridge BlogBridge
+type: wp
 wordpress_id: 1779
 ---
+
 Just a quick note of the **very nice** mention of BlogBridge by almost-famous [Dowbrigade](http://blogs.law.harvard.edu/dowbrigade/) blog by the incredibly prolific Michael Feldman. 
 
 > (Emphasis mine, throughout) 

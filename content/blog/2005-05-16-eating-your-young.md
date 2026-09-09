@@ -1,12 +1,15 @@
 ---
-title: "Eating your young"
-subtitle: "I came across this bit:"
-category: "538"
-tags: []
-date: "2005-05-16"
-type: "wp"
+category: '538'
+date: '2005-05-16'
+subtitle: 'I came across this bit:'
+tags:
+- business
+- lotus-improv
+title: Eating your young
+type: wp
 wordpress_id: 1785
 ---
+
 I came [across this bit](http://techdirt.com/articles/20050516/0032240_F.shtml):
 
 > “Are we going to be a player in VoIP? Absolutely. Are we going to be prepared to disrupt our own business? Absolutely, Why? Because if not, somebody else will.” ([Techdirt](http://techdirt.com/articles/20050516/0032240_F.shtml))

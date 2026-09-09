@@ -1,12 +1,16 @@
 ---
-title: "[BlogBridge] Screencast tutorials, so far"
-subtitle: "There are two very brief audio-visual overviews of ‘cool’ BlogBridge features."
-category: "50"
-tags: []
-date: "2005-03-09"
-type: "wp"
+category: '50'
+date: '2005-03-09'
+subtitle: There are two very brief audio-visual overviews of ‘cool’ BlogBridge features.
+tags:
+- technology
+- blogbridge
+- screencasting
+title: '[BlogBridge] Screencast tutorials, so far'
+type: wp
 wordpress_id: 1830
 ---
+
 There are two very brief audio-visual overviews of ‘cool’ BlogBridge features.
 
 **BlogStarz feature:**[ in this brief screencast](http://www.blogbridge.com/movies/overview.mov) I introduce and explain a handy way to rate which feeds you find most useful, and at the same time benefit from the experience of other users.

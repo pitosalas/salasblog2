@@ -1,12 +1,15 @@
 ---
-title: "Bloglines Killer? Aren’t we being a bit premature?"
-subtitle: "Richard MacManus made a statement in a p..."
-category: "50"
-tags: []
-date: "2005-05-15"
-type: "wp"
+category: '50'
+date: '2005-05-15'
+subtitle: Richard MacManus made a statement in a p...
+tags:
+- technology
+- bloglines
+title: Bloglines Killer? Aren’t we being a bit premature?
+type: wp
 wordpress_id: 1786
 ---
+
 [Richard MacManus made a statement](http://www.readwriteweb.com/archives/002719.php#comments) in a post last week which elicited a lot of very interesting responses: 
 
 “Competition for Bloglines: We’re nearly halfway through 2005 and there’s still no heavyweight competition to Bloglines, in the web based RSS aggregator stakes.”

@@ -1,12 +1,17 @@
 ---
-title: "[ETECH] Taxonomy of Folksonomies"
-subtitle: "There’s been a lot of talk about tags, folksonomies, taxonomies, etc. Trying to make sense out of th..."
-category: "51"
-tags: []
-date: "2005-03-22"
-type: "wp"
+category: '51'
+date: '2005-03-22'
+subtitle: There’s been a lot of talk about tags, folksonomies, taxonomies, etc. Trying
+  to make sense out of th...
+tags:
+- technology
+- etech
+- folksonomy
+title: '[ETECH] Taxonomy of Folksonomies'
+type: wp
 wordpress_id: 1821
 ---
+
 There’s been a lot of talk about tags, folksonomies, taxonomies, etc. Trying to make sense out of this can be confusing. At the recent ETech conference there was more than one presentation on the topic, each of which helped me understand the subtleties a little better, and organize them in my mind.
 *[What follows is fairly inside-baseball so if you are not particularly into this topic it will probably be somewhat obscure and likely not very interesting, so you are warned!]*
 

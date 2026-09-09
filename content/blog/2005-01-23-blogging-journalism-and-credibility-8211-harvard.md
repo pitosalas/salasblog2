@@ -1,12 +1,16 @@
 ---
-title: "Blogging, Journalism and Credibility – Harvard"
-subtitle: "I was lucky enough to be able to participate in a [conference on Blogging, Journalism and Credibilit..."
-category: "298"
-tags: []
-date: "2005-01-23"
-type: "wp"
+category: '298'
+date: '2005-01-23'
+subtitle: I was lucky enough to be able to participate in a [conference on Blogging,
+  Journalism and Credibilit...
+tags:
+- technology
+- harvard
+title: Blogging, Journalism and Credibility – Harvard
+type: wp
 wordpress_id: 1865
 ---
+
 I was lucky enough to be able to participate in a [conference on Blogging, Journalism and Credibility](http://cyber.law.harvard.edu/webcred/) at Harvard University. I am not myself an expert on this but found the discussions extremely instructive. And of course I see possibilities that our [BlogBridge software](http://www.blogbridge.com) might play a role in this space in the future. So I am vitally interested! Many many people have blogged in great detail on this conference, so I won’t try to improve on that, except for this great **little aha! tidbit**:
 All the discussion in one way or another centered around the question of how blogging affect journalism and journalism might affect blogging. Will blogging be the CB radio of the 2000’s, to be remembered as a curiosity of the times, gone and mostly forgotten? Or, will blogging instead render MSM (*mainstream media*) obsolete, putting even the **New York Times** out of business? 
 

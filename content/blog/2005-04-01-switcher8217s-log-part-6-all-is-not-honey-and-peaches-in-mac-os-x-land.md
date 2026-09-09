@@ -1,12 +1,16 @@
 ---
-title: "Switcher’s Log, Part 6: All is not honey and peaches in Mac OS X land"
-subtitle: "When things go wrong is when you start seeing some of the disadvantages of being on the 5% pc platfo..."
-category: "538"
-tags: []
-date: "2005-04-01"
-type: "wp"
+category: '538'
+date: '2005-04-01'
+subtitle: When things go wrong is when you start seeing some of the disadvantages
+  of being on the 5% pc platfo...
+tags:
+- technology
+- mac
+title: 'Switcher’s Log, Part 6: All is not honey and peaches in Mac OS X land'
+type: wp
 wordpress_id: 1814
 ---
+
 When things go wrong is when you start seeing some of the disadvantages of being on the 5% pc platform. Help is hard to find, alternatives are non-existent. Briefly here is the story:
 
 I tried a ‘better’ Palm synchronizer called[ “Missing Sync”](http://www.markspace.com/missingsync_palmos.php) from [Mark/Space](http://www.markspace.com/). After using it for a little bit I decided it didn’t really have too many advantages over the standard one, so I uninstalled it. But… I uninstalled it “the wrong way.” Who knew? Who knew that there is a wrong way to uninstall on Mac? 

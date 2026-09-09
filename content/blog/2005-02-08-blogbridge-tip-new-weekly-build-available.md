@@ -1,12 +1,16 @@
 ---
-title: "[BlogBridge Tip] New Weekly Build Available"
-subtitle: "We just put up a new weekly build of BlogBridge with many new features. Here are some of the more in..."
-category: "50"
-tags: []
-date: "2005-02-08"
-type: "wp"
+category: '50'
+date: '2005-02-08'
+subtitle: We just put up a new weekly build of BlogBridge with many new features.
+  Here are some of the more in...
+tags:
+- technology
+- blogbridge
+title: '[BlogBridge Tip] New Weekly Build Available'
+type: wp
 wordpress_id: 1852
 ---
+
 We just put up a new weekly build of BlogBridge with many new features. Here are some of the more interesting ones:
 
 **Community Fields. **Right click on a Feed, and choose Feed Properties. Click on the community tab, where you will see our initial pair of fields, Country and Tags. What’s interesting is that whatever you set for these two fields will be seen by all other users. If you know the country where this feed originates you can set it. And if you feel like tagging (classifying) this feed you can do it too.

@@ -1,12 +1,14 @@
 ---
-title: "Two really interesting bits missed by MSM"
-subtitle: "!capt.rom10501301246.vatican_pope_rom105.jpg"
-category: "298"
-tags: []
-date: "2005-02-09"
-type: "wp"
+category: '298'
+date: '2005-02-09'
+subtitle: '!capt.rom10501301246.vatican_pope_rom105.jpg'
+tags:
+- personal
+title: Two really interesting bits missed by MSM
+type: wp
 wordpress_id: 1851
 ---
+
 ![capt.rom10501301246.vatican_pope_rom105.jpg](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/shirtfront/capt.rom10501301246.vatican_pope_rom105.jpg?w=584)
 Here are two practical examples of how mainstream media (“MSM”) sometimes overlooks really interesting or engaging stories which are well covered online (and I don’t mean just blogs.) Have you seen these?
 

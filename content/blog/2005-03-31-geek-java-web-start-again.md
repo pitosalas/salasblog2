@@ -1,12 +1,16 @@
 ---
-title: "[GEEK] Java Web Start {again}"
-subtitle: "There’s another flame-up on the WebS..."
-category: "422"
-tags: []
-date: "2005-03-31"
-type: "wp"
+category: '422'
+date: '2005-03-31'
+subtitle: There’s another flame-up on the WebS...
+tags:
+- technology
+- programming
+- java-web-start
+title: '[GEEK] Java Web Start {again}'
+type: wp
 wordpress_id: 1815
 ---
+
 There’s [another flame-up](http://www.clientjava.com/blog/2005/03/28/1112029988215.html) on the WebStart commentary on the web, this time under the title *“Webstart, now I see why people don’t use it.” 
 
 *Even though I’ve spoken out about this once or twice, I couldn’t resist weighing in.*

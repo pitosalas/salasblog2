@@ -1,12 +1,16 @@
 ---
-title: "[BLOGBRIDGE] Bloeb: A new kind of web site for BlogBridge"
-subtitle: "We’ve been experimenting with a **switcharoo** of the BlogBridge web site – a major overhaul conceiv..."
-category: "50"
-tags: []
-date: "2005-06-05"
-type: "wp"
+category: '50'
+date: '2005-06-05'
+subtitle: We’ve been experimenting with a **switcharoo** of the BlogBridge web site
+  – a major overhaul conceiv...
+tags:
+- technology
+- blogbridge
+title: '[BLOGBRIDGE] Bloeb: A new kind of web site for BlogBridge'
+type: wp
 wordpress_id: 1764
 ---
+
 We’ve been experimenting with a **switcharoo** of the BlogBridge web site – a major overhaul conceived and prototyped by [Francois](http://www.emergencemarketing.com/). (Thanks!) The new site will be going to production tomorrow, but you get to [take a look while](http://www.blogbridge.com) we are putting the finishing touches on it.
 
 What kind of a **switcharoo**? Well, instead of a conventional site that happened to contain a blog, we jokingly call this a ‘**bloeb**‘ (blog+web) site. 

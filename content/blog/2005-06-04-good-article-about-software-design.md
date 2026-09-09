@@ -1,12 +1,16 @@
 ---
-title: "Good article about software design"
-subtitle: "Just add this one to your reading list:"
-category: "538"
-tags: []
-date: "2005-06-04"
-type: "wp"
+category: '538'
+date: '2005-06-04'
+subtitle: 'Just add this one to your reading list:'
+tags:
+- programming
+- design
+- martin-fowler
+title: Good article about software design
+type: wp
 wordpress_id: 1768
 ---
+
 Just add [this one](http://www.martinfowler.com/articles/designDead.html) to your reading list:
 
 > “(XP) challenges many of the common assumptions about software development. Of these one of the most controversial is its rejection of significant effort in up-front design, in favor of a more evolutionary approach. 

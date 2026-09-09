@@ -1,12 +1,15 @@
 ---
-title: "Letter to all BlogBridge users"
-subtitle: "Dear users, ex-users, and future users of BlogBridge,"
-category: "50"
-tags: []
-date: "2005-02-20"
-type: "wp"
+category: '50'
+date: '2005-02-20'
+subtitle: Dear users, ex-users, and future users of BlogBridge,
+tags:
+- technology
+- blogbridge
+title: Letter to all BlogBridge users
+type: wp
 wordpress_id: 1844
 ---
+
 Dear users, ex-users, and future users of BlogBridge,
 As we are approaching our 1.0 release, we are starting to plan what comes next! It is a good time to take the pulse of people using BlogBridge regularly and tap into your collective wisdom! Before getting into that, there are a few preliminaries…
 

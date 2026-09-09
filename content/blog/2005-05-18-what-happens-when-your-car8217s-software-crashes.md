@@ -1,12 +1,16 @@
 ---
-title: "What happens when your car’s (software) crashes?"
-subtitle: "Just an amusing little bit from the Wall Street Journal about the Toyota Prius:"
-category: "298"
-tags: []
-date: "2005-05-18"
-type: "wp"
+category: '298'
+date: '2005-05-18'
+subtitle: 'Just an amusing little bit from the Wall Street Journal about the Toyota
+  Prius:'
+tags:
+- technology
+- toyota-prius
+title: What happens when your car’s (software) crashes?
+type: wp
 wordpress_id: 1781
 ---
+
 Just an amusing little bit from the Wall Street Journal about the Toyota Prius:
 > “Some buyers of **Toyota Motor**Corp.’s Prius gas-electric hybrid cars are complaining that their vehicles are stalling or shutting down at highway-driving speeds, a problem Toyota attributes to software problems in the sophisticated computer system.” ([from WSJ](http://online.wsj.com/article_print/0,,SB111619464176634063,00.html), subscription needed)
 

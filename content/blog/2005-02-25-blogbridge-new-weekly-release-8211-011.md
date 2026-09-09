@@ -1,12 +1,16 @@
 ---
-title: "[BlogBridge] New Weekly Release – 0.11"
-subtitle: "Just a quick note that we’ve updated the weekly build to 0.11. Given that we are wrapping things up ..."
-category: "50"
-tags: []
-date: "2005-02-25"
-type: "wp"
+category: '50'
+date: '2005-02-25'
+subtitle: Just a quick note that we’ve updated the weekly build to 0.11. Given that
+  we are wrapping things up ...
+tags:
+- technology
+- blogbridge
+title: '[BlogBridge] New Weekly Release – 0.11'
+type: wp
 wordpress_id: 1841
 ---
+
 Just a quick note that we’ve updated the weekly build to 0.11. Given that we are wrapping things up for our 1.0 Release, which is imminent, changes are going to be mostly on internals – bug fixes and performance. Still there are a few goodies here for you:
 
 Right clicking on an Article offers a “Copy Link to Clipboard” command. There is a preference to cause the text on the clipboard to actually contain the HREF notation to allow easy pasting into your blog.

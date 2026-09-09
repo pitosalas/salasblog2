@@ -1,12 +1,15 @@
 ---
-title: "New BlogBridge web site, including a blog"
-subtitle: "Good morning sports-fans. We recently totally revamped the BlogBridge ..."
-category: "50"
-tags: []
-date: "2005-05-10"
-type: "wp"
+category: '50'
+date: '2005-05-10'
+subtitle: Good morning sports-fans. We recently totally revamped the BlogBridge ...
+tags:
+- technology
+- blogbridge
+title: New BlogBridge web site, including a blog
+type: wp
 wordpress_id: 1788
 ---
+
 Good morning sports-fans. We recently [totally revamped the BlogBridge](http://www.blogbridge.com/) web site. Take a look, and let me know what you think. 
 
 Importantly, it now includes [a group blog where the BlogBridge](http://www.blogbridge.com/weblog/index.html) team posts bits of interest to anyone interested in the project. 

@@ -1,12 +1,15 @@
 ---
-title: "Too much good stuff: makes me feel inadequate :-)"
-subtitle: "!["
-category: "298"
-tags: []
-date: "2005-05-03"
-type: "wp"
+category: '298'
+date: '2005-05-03'
+subtitle: '!['
+tags:
+- design
+- newsmap
+title: 'Too much good stuff: makes me feel inadequate :-)'
+type: wp
 wordpress_id: 1795
 ---
+
 [![](https://i0.wp.com/online.wsj.com/public/resources/images/Google1_05042805022005145321.jpg?w=584)](http://www.marumushi.com/apps/newsmap/newsmap.cfm)
 
 I saw this in the Wall Street Journal: 

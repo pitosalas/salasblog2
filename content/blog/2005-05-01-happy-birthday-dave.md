@@ -1,12 +1,15 @@
 ---
-title: "Happy Birthday Dave!"
-subtitle: "!Picture 1-3"
-category: "51"
-tags: []
-date: "2005-05-01"
-type: "wp"
+category: '51'
+date: '2005-05-01'
+subtitle: '!Picture 1-3'
+tags:
+- personal
+- dave-winer
+title: Happy Birthday Dave!
+type: wp
 wordpress_id: 1797
 ---
+
 ![Picture 1-3](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/Snoopy.jpg?w=584) Long time readers of this blog (yes, I can say that now, it’s been 2 years or so 🙂 know that I am a [Dave](http://davenet.scripting.com/2000/02/04/howToMakeMoneyOnTheInternet) [Winer](/weblogs/archives/000295.html) [fan](/weblogs/archives/000575.html) [and](/weblogs/archives/000343.html) a daily reader of [Scripting News](http://www.scripting.com/). In yesterday’s posts, [Dave talks about life and death](http://archive.scripting.com/2005/05/01#morningCoffeeNotes), honest, open, sincere, like no one else can:
 
 “What’s it like to die? Some people believe they know, but that’s just a belief. You won’t know for sure until it happens to you. And that, my friends, is both the curse and the blessing of humanity. It’s the curse because it haunts each of us from the age of seven or eight when it first hits us that *we’re going to die too.”* (from [Morning Coffee Notes](http://archive.scripting.com/2005/05/01#morningCoffeeNotes), Scripting News.)

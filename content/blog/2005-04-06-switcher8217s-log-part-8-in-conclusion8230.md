@@ -1,12 +1,15 @@
 ---
-title: "Switcher’s log, Part 8: In conclusion…"
-subtitle: "**I love the fact that I switched to Mac.**"
-category: "538"
-tags: []
-date: "2005-04-06"
-type: "wp"
+category: '538'
+date: '2005-04-06'
+subtitle: '**I love the fact that I switched to Mac.**'
+tags:
+- technology
+- mac
+title: 'Switcher’s log, Part 8: In conclusion…'
+type: wp
 wordpress_id: 1808
 ---
+
 **I love the fact that I switched to Mac.**
 A lot of the **fun** is that it’s **new** and **different**. Also I like the idea that there’s **UNIX** beneath the skin because I wanted to get more familiar with it. Also all the applications are ‘**prettier**‘ to look at and that’s fun.
 

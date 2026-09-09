@@ -1,12 +1,15 @@
 ---
-title: "I read Dowbrigade for the articles"
-subtitle: "Do you know Dowbrigade? An almost always interesting blo..."
-category: "298"
-tags: []
-date: "2005-03-05"
-type: "wp"
+category: '298'
+date: '2005-03-05'
+subtitle: Do you know Dowbrigade? An almost always interesting blo...
+tags:
+- personal
+- dowbrigade
+title: I read Dowbrigade for the articles
+type: wp
 wordpress_id: 1834
 ---
+
 Do you know [Dowbrigade?](http://blogs.law.harvard.edu/dowbrigade/) An almost always interesting blog, intellectually stimulating and thought provoking. [Check it out!](http://blogs.law.harvard.edu/dowbrigade/)
 Wait, read more closely. There’s good stuff there:
 

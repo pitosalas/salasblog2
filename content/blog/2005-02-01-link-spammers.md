@@ -1,12 +1,15 @@
 ---
-title: "Link Spammers"
-subtitle: "I used to have comments enabled on this blog until I got overrun by link spam. With comments my read..."
-category: "538"
-tags: []
-date: "2005-02-01"
-type: "wp"
+category: '538'
+date: '2005-02-01'
+subtitle: I used to have comments enabled on this blog until I got overrun by link
+  spam. With comments my read...
+tags:
+- technology
+title: Link Spammers
+type: wp
 wordpress_id: 1859
 ---
+
 I used to have comments enabled on this blog until I got overrun by link spam. With comments my readers could post responses to my Blog musings. I’ve since turned of commenting on this site.
 What is link spam? Suddenly one day you realize that some of your Blog articles have a very long list of random comments attached to them, each including a link to some random site. Who does this? **Link Spammers**. 
 

@@ -1,12 +1,15 @@
 ---
-title: "Remix Remixed"
-subtitle: "*I wrote this in response [to this post, which ha..."
-category: "538"
-tags: []
-date: "2005-03-25"
-type: "wp"
+category: '538'
+date: '2005-03-25'
+subtitle: '*I wrote this in response [to this post, which ha...'
+tags:
+- technology
+- business
+title: Remix Remixed
+type: wp
 wordpress_id: 1819
 ---
+
 *[I wrote this in response [to this post](http://www.brianstorms.com/archives/000555.html), which had generated a lot of commentary. I liked what I wrote so much I decided to post it here too :-)]*
 I can’t count the ways when someone looked at some great new product and said something like, “I did something just like that 20 years ago as a PhD thesis”, or comments like that.
 
