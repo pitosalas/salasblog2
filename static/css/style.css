@@ -9,6 +9,13 @@
 .card-body > *:last-child,
 .card-text p:last-child { margin-bottom: 0; }
 
+/* An excerpt that spans a heading in the source post renders that heading as
+   inline bold text (see utils.py's create_excerpt_with_info), not a real
+   <h1>-<h6> — a full heading would inherit Bootstrap's much larger size and
+   look broken inside a small excerpt card. This keeps it visually distinct
+   (bold, a touch larger) without the full heading treatment. */
+.excerpt-heading { font-size: 1.08em; }
+
 /* Bootstrap's default primary (#0d6efd) is too bright for this site's tone.
    Blue-gray is used throughout (navbar, badges, buttons, links). */
 :root {

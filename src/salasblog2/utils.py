@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
 # Updated: 2026-09-09
 # Open Source Under MIT license
@@ -105,35 +105,55 @@ def create_excerpt_with_info(
     return _trim_dangling_markup(clean_content[:max_length]) + "...", True
 
 
-_BLOCK_MARKDOWN_MARKER_RE = re.compile(r"^\s{0,3}(?:#{1,6}\s+|>+\s?|[-*+]\s+|\d+\.\s+)")
+_HEADER_MARKER_RE = re.compile(r"^\s{0,3}#{1,6}\s+(.*)$")
+_OTHER_BLOCK_MARKER_RE = re.compile(r"^\s{0,3}(?:>+\s?|[-*+]\s+|\d+\.\s+)")
+EXCERPT_HEADING_OPEN = '<strong class="excerpt-heading">'
+EXCERPT_HEADING_CLOSE = "</strong>"
 
 
 def _strip_block_markdown_markers(content: str) -> str:
-    """Strip leading markdown block markers (headers, blockquotes, list bullets)
-    from each line before an excerpt collapses newlines into spaces.
+    """Neutralize leading markdown block markers before an excerpt collapses
+    newlines onto one line, since none of them mean anything mid-sentence.
 
-    Excerpts squash a post into one line (see below), but ATX headers/blockquotes/
-    list bullets only count as their block construct when the marker sits at the
-    start of a line — once collapsed, `## Heading` ends up mid-sentence and
-    markdown prints the raw `##` characters as literal text instead of a heading.
+    ATX headers/blockquotes/list bullets only count as their block construct
+    when the marker sits at the start of a line — once collapsed, `## Heading`
+    ends up mid-sentence and markdown prints the raw `##` characters as literal
+    text instead of a heading. Blockquote/bullet markers are just dropped, but a
+    header's text is kept visually distinct (bold, slightly larger — see
+    `.excerpt-heading` in style.css) rather than flattened to plain text, since
+    an excerpt spanning a heading in the source post should still read as one.
+    An inline `<strong>` is used rather than a real `<h1>`-`<h6>` tag: a full
+    heading would both inherit Bootstrap's much larger heading size (looks
+    broken in a small card) and can't validly nest inside blog_list.html's `<p>`
+    wrapper the way an inline element can.
     """
-    return "\n".join(
-        _BLOCK_MARKDOWN_MARKER_RE.sub("", line) for line in content.split("\n")
-    )
+    lines = []
+    for line in content.split("\n"):
+        header_match = _HEADER_MARKER_RE.match(line)
+        if header_match:
+            lines.append(
+                f"{EXCERPT_HEADING_OPEN}{header_match.group(1)}{EXCERPT_HEADING_CLOSE}"
+            )
+        else:
+            lines.append(_OTHER_BLOCK_MARKER_RE.sub("", line))
+    return "\n".join(lines)
 
 
 def _trim_dangling_markup(text: str) -> str:
     """Drop a trailing markdown/HTML token left half-open by character-count truncation.
 
     Excerpts are rendered through the markdown processor (see blog_list.html's
-    `| markdown` filter), so a cut that lands mid-`**bold**`, mid-`[link](url)`, or
-    mid-`<tag>` leaves an unmatched marker that prints as literal `**`/`[`/`<`
-    characters instead of being silently ignored by the markdown parser.
+    `| markdown` filter), so a cut that lands mid-`**bold**`, mid-`[link](url)`,
+    mid-`<tag>`, or mid-heading-span leaves an unmatched marker that prints as
+    literal `**`/`[`/`<` characters instead of being silently ignored by the
+    markdown parser.
     """
     text = re.sub(r"<[^>]*$", "", text)  # unclosed HTML tag
     text = re.sub(r"!?\[[^\]]*(\]\([^)]*)?$", "", text)  # unclosed markdown link/image
     if text.count("**") % 2 == 1:
         text = text[: text.rfind("**")]
+    if text.count(EXCERPT_HEADING_OPEN) > text.count(EXCERPT_HEADING_CLOSE):
+        text = text[: text.rfind(EXCERPT_HEADING_OPEN)]
     return text
 
 

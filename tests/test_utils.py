@@ -141,6 +141,14 @@ class TestCreateExcerpt:
         assert "#" not in result
         assert "How I code today" in result
 
+    def test_create_excerpt_renders_header_as_bold_heading_span(self):
+        """A heading crossed by the excerpt should still read as a heading —
+        bold and a touch larger via the excerpt-heading class (styled in
+        style.css) — not flattened to indistinguishable plain text."""
+        text = "Intro paragraph text here.\n\n## How I code today\n\nMore body text."
+        result = create_excerpt(text)
+        assert '<strong class="excerpt-heading">How I code today</strong>' in result
+
     def test_create_excerpt_strips_blockquote_and_bullet_markers(self):
         """Same class of bug as the header case, for blockquotes and list bullets."""
         text = "Intro.\n\n> A quoted line\n\n* First bullet\n* Second bullet"
