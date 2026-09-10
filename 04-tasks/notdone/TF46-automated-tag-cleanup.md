@@ -158,9 +158,40 @@ request) before the next batch starts.
 
 Progress (100-post batches, before the size increase to 500): batch 1
 (`bc97223`, the TF46.5 trial), batch 2 (`42c6f51`), batch 3 (`72effda`) —
-300 of ~2,745 posts done as of 2026-09-09.
+300 of ~2,745 posts done as of 2026-09-09. Then 500-post batches: batch 4
+(`052b57f`, 100 - size increase hadn't taken effect yet), batch 5
+(`c7b20be`), batch 6 (`4405467`).
 
-**Test**: none beyond TF46.0-TF46.3's automated coverage — this step is
+**Correction (2026-09-10)**: batches 1-6 were all run against this local
+repo's `content/blog/` and pushed to GitHub - discovered mid-session that
+this never reached the live site. `/data/content` (the fly.io volume) is
+seeded from git only once, at first deploy; nothing pushes local/GitHub
+content back into it afterward (the one exception, `pages/`, gets rsync'd
+from the repo on every boot - `blog/` doesn't). So none of batches 1-6's
+tags were ever live in production until this was caught.
+
+Batch 7 (500 posts, TF46.7/TF46.8's refined curated-vocabulary pipeline)
+was run correctly against the volume: `fly ssh console` to run
+`select_tag_candidates.py`/`build_proposals.py`/`apply_tag_batch.py`
+directly on the box against `/data/content/blog`, with candidates/decisions
+shuttled up and down via `fly ssh sftp` since the actual tag-decision
+judgment happens in an assisted session, not on the box. 399/500 posts got
+real curated tags; 101 had no clear fit; 17 non-curated tags recurred and
+were queued to tag-hints.md's Proposed Tags section (commit `af1ce6c`) -
+dominated by `blogbridge` (Pito's own product, this era's biggest theme).
+Verified live on the volume afterward (byte-identical body, correct tags).
+
+While confirming the batch, also reproduced F35 directly: `sync_to_github()`
+run manually on the box fails at `git push` with "Invalid username or
+token. Password authentication is not supported for Git operations." - the
+production `GIT_TOKEN` is stale/invalid. This means batch 7's actual
+content changes (on `/data/content/blog`) have **no GitHub backup yet** -
+only the code/tag-hints.md changes (pushed from this local session) are in
+git. Fixing F35 (rotate and reset the `GIT_TOKEN` secret) is now a
+prerequisite for batch 7's content, and every batch after it, to reach
+GitHub - not just a "nice to have."
+
+**Test**: none beyond TF46.0-TF46.3's automated coverage - this step is
 operational execution, not new logic.
 
 ## TF46.7 — Curated-vocabulary restriction and Proposed Tags queue
