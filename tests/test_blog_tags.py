@@ -8,10 +8,18 @@
 
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
-from salasblog2.utils import BLOG_TAGS, format_date, get_markdown_processor, slugify_tag
+from salasblog2.utils import (
+    format_date,
+    get_markdown_processor,
+    load_curated_tags,
+    parse_tag_hints_section,
+    slugify_tag,
+)
 
 PROJECT_ROOT = Path(__file__).parent.parent
 TEMPLATES_DIR = PROJECT_ROOT / "templates"
+TAG_HINTS_PATH = PROJECT_ROOT / "02-doc" / "tag-hints.md"
+BLOG_TAGS = load_curated_tags(TAG_HINTS_PATH)
 
 
 def make_env():
@@ -23,21 +31,47 @@ def make_env():
     return env
 
 
-class TestBlogTagsConstant:
-    def test_blog_tags_is_a_list(self):
-        assert isinstance(BLOG_TAGS, list)
+class TestLoadCuratedTags:
+    def test_parses_flat_tag_list(self, tmp_path):
+        path = tmp_path / "tag-hints.md"
+        path.write_text(
+            "# Tag Cleanup rules\n"
+            "* some rule\n"
+            "\n"
+            "# Curated Tags\n"
+            "\n"
+            "robotics\n"
+            "ai\n"
+            "\n"
+            "# Proposed Tags\n"
+            "should-not-appear\n",
+            encoding="utf-8",
+        )
+        assert load_curated_tags(path) == ["robotics", "ai"]
 
-    def test_blog_tags_not_empty(self):
-        assert len(BLOG_TAGS) > 0
+    def test_strips_clarification_comments(self, tmp_path):
+        path = tmp_path / "tag-hints.md"
+        path.write_text(
+            "# Curated Tags\n\nhugo-chavez (not bare chavez)\n", encoding="utf-8"
+        )
+        assert load_curated_tags(path) == ["hugo-chavez"]
 
-    def test_blog_tags_are_strings(self):
-        assert all(isinstance(t, str) for t in BLOG_TAGS)
-
-    def test_blog_tags_no_duplicates(self):
+    def test_project_curated_tags_are_lowercase_and_unique(self):
+        assert all(isinstance(t, str) and t == t.lower() for t in BLOG_TAGS)
         assert len(BLOG_TAGS) == len(set(BLOG_TAGS))
 
-    def test_blog_tags_lowercase(self):
-        assert all(t == t.lower() for t in BLOG_TAGS)
+    def test_project_curated_tags_not_empty(self):
+        assert len(BLOG_TAGS) > 0
+
+
+class TestParseTagHintsSection:
+    def test_stops_at_next_heading(self):
+        text = "# A\n\none\ntwo\n\n# B\n\nthree\n"
+        assert parse_tag_hints_section(text, "# A") == ["one", "two"]
+        assert parse_tag_hints_section(text, "# B") == ["three"]
+
+    def test_missing_header_returns_empty(self):
+        assert parse_tag_hints_section("# A\n\none\n", "# B") == []
 
 
 class TestBloggerApiTagParsing:

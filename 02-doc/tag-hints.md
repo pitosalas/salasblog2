@@ -6,6 +6,23 @@
 
 # Curated Tags
 
+technology
+programming
+robotics
+ai
+design
+science
+personal
+travel
+food
+books
+music
+health
+politics
+business
+education
+curacao
+jewish
 brandeis
 arlington
 boston
@@ -41,10 +58,7 @@ pandas
 python
 rust
 hugo-chavez (not bare chavez)
-demo2004 (DEMO conference, year-specific — not bare demo)
-demo2005 (DEMO conference, year-specific — not bare demo)
-demo2006 (DEMO conference, year-specific — not bare demo)
-demo2008 (DEMO conference, year-specific — not bare demo)
+demo-conference
 sun-microsystems (or a specific product like mysql/java — not bare sun)
 mike-arrington (not michael-arrington — TechCrunch founder)
 david-weinberger (not dave-weinberger — Cluetrain Manifesto co-author)

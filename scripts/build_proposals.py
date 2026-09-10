@@ -30,10 +30,10 @@ from pathlib import Path
 from salasblog2.tag_cleanup import (
     PostSummary,
     build_proposal,
-    load_curated_tags,
     proposals_to_json,
     record_recurring_candidates,
 )
+from salasblog2.utils import load_curated_tags
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
@@ -60,7 +60,7 @@ def main() -> None:
         for entry in json.loads(args.candidates.read_text(encoding="utf-8"))
     }
     decisions = json.loads(args.decisions.read_text(encoding="utf-8"))
-    curated_tags = load_curated_tags(args.tag_hints)
+    curated_tags = set(load_curated_tags(args.tag_hints))
 
     proposals = [
         build_proposal(summaries[decision["filename"]], decision["tags"], curated_tags)

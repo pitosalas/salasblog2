@@ -19,7 +19,6 @@ from salasblog2.tag_cleanup import (
     apply_tag_proposal,
     build_proposal,
     has_numeric_tag,
-    load_curated_tags,
     needs_tag_cleanup,
     proposals_to_json,
     record_recurring_candidates,
@@ -152,32 +151,6 @@ class TestSplitNewTags:
         accepted, candidates = split_new_tags(["technology"], ["technology"], set())
         assert accepted == []
         assert candidates == []
-
-
-class TestLoadCuratedTags:
-    def test_parses_flat_tag_list(self, tmp_path):
-        path = tmp_path / "tag-hints.md"
-        path.write_text(
-            "# Tag Cleanup rules\n"
-            "* some rule\n"
-            "\n"
-            "# Curated Tags\n"
-            "\n"
-            "robotics\n"
-            "ai\n"
-            "\n"
-            "# Proposed Tags\n"
-            "should-not-appear\n",
-            encoding="utf-8",
-        )
-        assert load_curated_tags(path) == {"robotics", "ai"}
-
-    def test_strips_clarification_comments(self, tmp_path):
-        path = tmp_path / "tag-hints.md"
-        path.write_text(
-            "# Curated Tags\n\nhugo-chavez (not bare chavez)\n", encoding="utf-8"
-        )
-        assert load_curated_tags(path) == {"hugo-chavez"}
 
 
 class TestBuildProposal:

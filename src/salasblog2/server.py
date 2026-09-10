@@ -45,7 +45,11 @@ from salasblog2.generator import SiteGenerator
 from salasblog2.raindrop import RaindropDownloader
 from salasblog2.blogger_api import BloggerAPI
 from salasblog2.scheduler import get_scheduler
-from salasblog2.utils import process_markdown_to_html, top_tags_by_frequency, BLOG_TAGS
+from salasblog2.utils import (
+    process_markdown_to_html,
+    top_tags_by_frequency,
+    load_curated_tags,
+)
 from salasblog2.stats import get_counter
 from salasblog2.visitor_type import classify_visitor
 from salasblog2.propose import get_proposed_posts, get_proposed_drops, DropFilter
@@ -1337,8 +1341,13 @@ def generate_posts_index_cache():
     (output_dir / "admin-posts-index.json").write_text(
         json.dumps(entries), encoding="utf-8"
     )
+    tag_hints_path = config["root_dir"] / "02-doc" / "tag-hints.md"
     (output_dir / "top-tags.json").write_text(
-        json.dumps(top_tags_by_frequency(blog_tag_lists, always_include=BLOG_TAGS)),
+        json.dumps(
+            top_tags_by_frequency(
+                blog_tag_lists, always_include=load_curated_tags(tag_hints_path)
+            )
+        ),
         encoding="utf-8",
     )
 

@@ -193,3 +193,35 @@ comes from the Curated Tags list. Reworked accordingly:
 **Test**: `TestSplitNewTags`, `TestLoadCuratedTags`, and
 `TestRecordRecurringCandidates` added; `TestBuildProposal` updated for the
 new signature and curated/uncurated split behavior.
+
+## TF46.8 — One curated tag list, sourced from tag-hints.md
+
+**Status**: done
+
+**Description**: The user pointed out a second, separate curated list —
+`BLOG_TAGS` in `utils.py` (the post-editor picklist and MarsEdit's category
+picker, F42/F45) — that overlapped but didn't match tag-hints.md's new
+Curated Tags section (missing the general categories like `technology`,
+`personal`, `business`). Decided there should be exactly one list.
+
+1. Merged `BLOG_TAGS`'s 17 general-category entries not already present
+   into tag-hints.md's Curated Tags section, so nothing already offered in
+   the UI disappears.
+2. Moved the section-parsing logic to `utils.py` as
+   `parse_tag_hints_section()` and `load_curated_tags()` (now returning an
+   ordered `list[str]`, not a set) — the shared function `tag_cleanup.py`,
+   `server.py`, and `blogger_api.py` all call against
+   `02-doc/tag-hints.md`.
+3. Removed the `BLOG_TAGS` constant entirely. `server.py`'s
+   `generate_posts_index_cache()` and `blogger_api.py`'s
+   `metaweblog_getCategories()` now call `load_curated_tags()` directly.
+4. `tag_cleanup.py` keeps only pipeline-specific logic
+   (`record_recurring_candidates`'s "Proposed Tags" bookkeeping); it imports
+   `parse_tag_hints_section`/`load_curated_tags` from `utils.py` rather than
+   duplicating them.
+
+**Test**: `TestLoadCuratedTags`/`TestParseTagHintsSection` moved to
+`tests/test_blog_tags.py` (alongside the real-file sanity checks that
+replaced `TestBlogTagsConstant`); `tests/test_post_editor.py` and
+`tests/test_blogger_api.py` updated to write a temp `tag-hints.md` fixture
+instead of importing the removed constant.

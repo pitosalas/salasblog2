@@ -257,13 +257,22 @@ class TestGetCategories:
     values no matter what tags the blog actually used."""
 
     def test_returns_blog_tags(self, tmp_path):
-        from salasblog2.utils import BLOG_TAGS
+        from salasblog2.utils import load_curated_tags
+
+        tag_hints_dir = tmp_path / "02-doc"
+        tag_hints_dir.mkdir()
+        tag_hints_path = tag_hints_dir / "tag-hints.md"
+        tag_hints_path.write_text(
+            "# Curated Tags\n\ntechnology\nai\npersonal\n", encoding="utf-8"
+        )
 
         api = _make_api(tmp_path)
         with patch.object(api, "_authenticate"):
             categories = api.metaweblog_getCategories("1", "user", "pass")
 
-        assert [c["description"] for c in categories] == BLOG_TAGS
+        assert [c["description"] for c in categories] == load_curated_tags(
+            tag_hints_path
+        )
         assert all(c["htmlUrl"].startswith("/tags/") for c in categories)
 
 

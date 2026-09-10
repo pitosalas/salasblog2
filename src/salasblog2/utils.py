@@ -23,28 +23,32 @@ from typing import List, Dict, Any, Optional
 _logger = logging.getLogger(__name__)
 
 
-BLOG_TAGS = [
-    "technology",
-    "programming",
-    "robotics",
-    "ai",
-    "design",
-    "science",
-    "personal",
-    "travel",
-    "food",
-    "books",
-    "music",
-    "health",
-    "politics",
-    "business",
-    "education",
-    "curacao",
-    "boston",
-    "brandeis",
-    "jewish",
-    "arlington",
-]
+def parse_tag_hints_section(text: str, header: str) -> List[str]:
+    """Return the bare tag names listed under a `# <header>` section of
+    tag-hints.md, in file order, stripping any trailing `(clarification)`
+    comment. Stops at the next top-level heading.
+    """
+    tags = []
+    in_section = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            in_section = stripped == header
+            continue
+        if in_section and stripped:
+            tag = stripped.split("(", 1)[0].strip()
+            if tag:
+                tags.append(tag)
+    return tags
+
+
+def load_curated_tags(tag_hints_path: Path) -> List[str]:
+    """Load the single curated tag vocabulary from tag-hints.md's "Curated
+    Tags" section - the one list offered by the post editor picklist,
+    MarsEdit's category picker, and enforced by the F46 tag-cleanup pipeline.
+    """
+    text = tag_hints_path.read_text(encoding="utf-8")
+    return parse_tag_hints_section(text, "# Curated Tags")
 
 
 def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
@@ -478,7 +482,7 @@ def top_tags_by_frequency(
     the same way (`{% if not tag.isdigit() %}` in blog_post.html/blog_list.html/
     home.html) when rendering a post's tag badges; this mirrors that convention.
 
-    `always_include` (e.g. BLOG_TAGS) guarantees a curated tag is always
+    `always_include` (e.g. load_curated_tags()) guarantees a curated tag is always
     offered even if it's barely used yet — a brand-new curated tag would
     otherwise never appear in a frequency ranking until posts start using it,
     which nothing can do if it's never offered in the first place. These are

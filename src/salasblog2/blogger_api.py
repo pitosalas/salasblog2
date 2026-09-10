@@ -22,9 +22,9 @@ import base64
 from xmlrpc.client import Fault
 from salasblog2.generator import SiteGenerator
 from salasblog2.utils import (
-    BLOG_TAGS,
     create_filename_from_title,
     generate_url_from_filename,
+    load_curated_tags,
     slugify_tag,
 )
 
@@ -659,9 +659,11 @@ class BloggerAPI:
         # Authenticate user
         self._authenticate_or_raise(username, password)
 
-        # This blog uses free-form tags, not a fixed category taxonomy (see F42) — BLOG_TAGS
-        # is the same curated suggestion list the web admin's tag field offers, so MarsEdit's
-        # category picker shows the same suggestions rather than a hardcoded, unrelated pair.
+        # This blog uses free-form tags, not a fixed category taxonomy (see F42) — the
+        # curated list from tag-hints.md is the same one the web admin's tag field and
+        # the F46 cleanup pipeline use, so MarsEdit's category picker shows the same
+        # suggestions rather than a hardcoded, unrelated pair.
+        curated_tags = load_curated_tags(self.root_dir / "02-doc" / "tag-hints.md")
         categories = [
             {
                 "categoryId": tag,
@@ -669,7 +671,7 @@ class BloggerAPI:
                 "htmlUrl": f"/tags/{slugify_tag(tag)}/index.html",
                 "rssUrl": "/blog/rss.xml",
             }
-            for tag in BLOG_TAGS
+            for tag in curated_tags
         ]
         logger.info(f"Returning {len(categories)} categories")
         return categories

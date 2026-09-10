@@ -23,6 +23,12 @@ def client(tmp_path):
     config["admin_password"] = ""
     templates_dir = _Path.cwd() / "templates"
     config["jinja_env"] = Environment(loader=FileSystemLoader(templates_dir))
+    tag_hints_dir = tmp_path / "02-doc"
+    tag_hints_dir.mkdir()
+    (tag_hints_dir / "tag-hints.md").write_text(
+        "# Curated Tags\n\ntechnology\nprogramming\nai\npersonal\ntravel\n",
+        encoding="utf-8",
+    )
     return TestClient(app)
 
 
@@ -299,19 +305,22 @@ class TestTopTagsCache:
     def test_generate_posts_index_cache_appends_curated_blog_tags(
         self, client, tmp_path
     ):
-        """BLOG_TAGS (the curated 15-tag list) are always offered even with
-        zero real usage yet — otherwise a brand-new curated tag could never
-        start being used, since it would never appear in the picklist."""
-        from salasblog2.server import generate_posts_index_cache
-        from salasblog2.utils import BLOG_TAGS
+        """Curated tags (tag-hints.md's "Curated Tags" section) are always
+        offered even with zero real usage yet — otherwise a brand-new curated
+        tag could never start being used, since it would never appear in the
+        picklist."""
         import json
+
+        from salasblog2.server import generate_posts_index_cache
+        from salasblog2.utils import load_curated_tags
 
         write_post(tmp_path, "2026-01-01-a.md", tags=["some-unrelated-tag"])
 
         generate_posts_index_cache()
 
         top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
-        for tag in BLOG_TAGS:
+        curated_tags = load_curated_tags(tmp_path / "02-doc" / "tag-hints.md")
+        for tag in curated_tags:
             assert tag in top_tags
 
     def test_load_top_tags_returns_empty_list_when_cache_missing(self, client):

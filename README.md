@@ -65,7 +65,7 @@ category: "General"
 Markdown content here...
 ```
 
-Blog posts also support a `tags` list (selected from the built-in vocabulary in `BLOG_TAGS`).
+Blog posts also support a `tags` list (selected from the curated vocabulary in `02-doc/tag-hints.md`).
 
 Raindrop entries also include: `url`, `domain`, `cover`, `tags`, `note`, `raindrop_type`, `collection`.
 

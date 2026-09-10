@@ -40,12 +40,11 @@ from pathlib import Path
 
 import frontmatter
 
-from salasblog2.utils import create_excerpt
+from salasblog2.utils import create_excerpt, parse_tag_hints_section
 
 logger = logging.getLogger(__name__)
 
 EXCERPT_LENGTH_FOR_TAGGING = 800
-CURATED_TAGS_HEADER = "# Curated Tags"
 PROPOSED_TAGS_HEADER = "# Proposed Tags"
 
 
@@ -129,34 +128,6 @@ def validate_proposed_tags(tags: list[str]) -> list[str]:
     return cleaned
 
 
-def _parse_section_tags(text: str, header: str) -> list[str]:
-    """Return the bare tag names listed under a `# <header>` section of
-    tag-hints.md, in file order, stripping any trailing `(clarification)`
-    comment. Stops at the next top-level heading.
-    """
-    tags = []
-    in_section = False
-    for line in text.splitlines():
-        stripped = line.strip()
-        if stripped.startswith("# "):
-            in_section = stripped == header
-            continue
-        if in_section and stripped:
-            tag = stripped.split("(", 1)[0].strip()
-            if tag:
-                tags.append(tag)
-    return tags
-
-
-def load_curated_tags(tag_hints_path: Path) -> set[str]:
-    """Load the curated tag vocabulary from tag-hints.md's "Curated Tags"
-    section - the set of tags a new (not already on a post) tag must belong
-    to before `build_proposal` will apply it.
-    """
-    text = tag_hints_path.read_text(encoding="utf-8")
-    return set(_parse_section_tags(text, CURATED_TAGS_HEADER))
-
-
 def split_new_tags(
     existing_tags: list[str], new_tags: list[str], curated_tags: set[str]
 ) -> tuple[list[str], list[str]]:
@@ -211,7 +182,7 @@ def record_recurring_candidates(
         return []
 
     text = tag_hints_path.read_text(encoding="utf-8")
-    already_listed = set(_parse_section_tags(text, PROPOSED_TAGS_HEADER))
+    already_listed = set(parse_tag_hints_section(text, PROPOSED_TAGS_HEADER))
     new_entries = [tag for tag in recurring if tag not in already_listed]
     if not new_entries:
         return []
