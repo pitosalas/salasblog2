@@ -1,51 +1,10 @@
-# Tag Hints
+# Tag Cleanup rules
 
-_Editable reference for the F46 automated tag-cleanup pipeline
-(`04-tasks/notdone/TF46-automated-tag-cleanup.md`). Add or revise anything
-here — entities, people, projects, name variants, exclusions — and it feeds
-into the next batch's tag decisions. Not consumed by any script; read
-directly by whoever (or whichever agent) decides tags for a batch._
+* GOAL: The ending state is that all tags are taken from the Curated Tags List
+* MANDATORY:During the cleanup process no tag is ever removed from an item
+* JUDGEMENT: If a tag appears in the data more than once and it is not on this list, then it is added to the Proposed Tags list for my approval
 
-## Recurring entities to recognize
-
-- **BlogBridge** — Pito's own RSS reader product. Tag `blogbridge`. Appears
-  under many spellings/contexts (BlogBridge beta, BlogBridge update, etc.) —
-  all the same entity.
-- **JavaOne** — the Java conference. Tag `javaone`, distinct from `java`
-  (the language itself).
-
-## Naming conventions
-
-- Prefer specific over generic when a tag could collide with an ordinary
-  word (e.g. `demo2004` not `demo`, since "demo" the tech conference and
-  "demo" the common word would otherwise conflate).
-- Lowercase, single word or short hyphenated phrase.
-
-## Established entity tags (keep spelling consistent)
-
-Batch 5 ran as 5 parallel tagging passes and two different passes picked
-different spellings for the same entity (`geekdinner` vs `geek-dinner`,
-`chavez` vs `hugo-chavez`) — caught and normalized before applying, but
-better to avoid it next time. When any of these entities comes up again,
-use the exact form below rather than re-deriving one:
-
-- `geek-dinner` (Pito's recurring Boston tech meetup)
-- `hugo-chavez` (not bare `chavez`)
-- `attention-xml` (not `attentionxml`)
-- `eroom` (not `lotus` — company Pito co-founded)
-- `demo2004`, `demo2005`, `demo2006`, `demo2008` (the DEMO conference,
-  year-specific — not bare `demo`)
-- `sun-microsystems` or a specific product (`mysql`, `java`) — not bare `sun`
-- `mike-arrington` (not `michael-arrington` — TechCrunch founder)
-- `david-weinberger` (not `dave-weinberger` — Cluetrain Manifesto co-author)
-- `trustthevote` (Pito's Open Source Digital Voting Foundation project,
-  recurs 2009-2011 era; one word, no hyphen)
-- `webinno` (recurring Boston tech meetup, distinct from `geek-dinner`)
-- `datarss` (Pito's own project — kept this name even after he renamed it
-  "Decentralized Data Discovery (DDD)" mid-series, to avoid fragmenting one
-  project's posts across two tags)
-
-## People, places, projects (add here)
+# Curated Tags
 
 brandeis
 arlington
@@ -73,10 +32,24 @@ linux
 unix
 ruby
 ruby-on-rails
+maps
+pivot-table
+eroom
+lotus
+numpy
+pandas
+python
+rust
+hugo-chavez (not bare chavez)
+demo2004 (DEMO conference, year-specific — not bare demo)
+demo2005 (DEMO conference, year-specific — not bare demo)
+demo2006 (DEMO conference, year-specific — not bare demo)
+demo2008 (DEMO conference, year-specific — not bare demo)
+sun-microsystems (or a specific product like mysql/java — not bare sun)
+mike-arrington (not michael-arrington — TechCrunch founder)
+david-weinberger (not dave-weinberger — Cluetrain Manifesto co-author)
+trustthevote (Pito's Open Source Digital Voting Foundation project, one word, no hyphen)
+webinno (recurring Boston tech meetup, distinct from geek-dinner)
+datarss (Pito's own project — kept this name even after he renamed it "Decentralized Data Discovery (DDD)" mid-series)
 
-
-## Exclusions
-
-- **Family members** — never tag with a family member's name, even when a
-  post mentions or links to one (e.g. a child's blog). Use `personal`
-  instead. (Established during batch 5, chunk 2, of the TF46.6 sweep.)
+# Proposed Tags

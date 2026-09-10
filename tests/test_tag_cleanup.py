@@ -19,9 +19,12 @@ from salasblog2.tag_cleanup import (
     apply_tag_proposal,
     build_proposal,
     has_numeric_tag,
+    load_curated_tags,
     needs_tag_cleanup,
     proposals_to_json,
+    record_recurring_candidates,
     select_posts_needing_cleanup,
+    split_new_tags,
     summaries_to_json,
     summarize_post,
     validate_proposed_tags,
@@ -134,41 +137,134 @@ class TestValidateProposedTags:
         assert validate_proposed_tags([]) == []
 
 
+class TestSplitNewTags:
+    def test_curated_new_tags_are_accepted(self):
+        accepted, candidates = split_new_tags([], ["robotics"], {"robotics"})
+        assert accepted == ["robotics"]
+        assert candidates == []
+
+    def test_uncurated_new_tags_become_candidates(self):
+        accepted, candidates = split_new_tags([], ["boston-dynamics"], {"robotics"})
+        assert accepted == []
+        assert candidates == ["boston-dynamics"]
+
+    def test_ignores_tags_already_on_the_post(self):
+        accepted, candidates = split_new_tags(["technology"], ["technology"], set())
+        assert accepted == []
+        assert candidates == []
+
+
+class TestLoadCuratedTags:
+    def test_parses_flat_tag_list(self, tmp_path):
+        path = tmp_path / "tag-hints.md"
+        path.write_text(
+            "# Tag Cleanup rules\n"
+            "* some rule\n"
+            "\n"
+            "# Curated Tags\n"
+            "\n"
+            "robotics\n"
+            "ai\n"
+            "\n"
+            "# Proposed Tags\n"
+            "should-not-appear\n",
+            encoding="utf-8",
+        )
+        assert load_curated_tags(path) == {"robotics", "ai"}
+
+    def test_strips_clarification_comments(self, tmp_path):
+        path = tmp_path / "tag-hints.md"
+        path.write_text(
+            "# Curated Tags\n\nhugo-chavez (not bare chavez)\n", encoding="utf-8"
+        )
+        assert load_curated_tags(path) == {"hugo-chavez"}
+
+
 class TestBuildProposal:
-    def test_builds_sanitized_proposal_with_entity_tag(self):
+    def test_accepts_curated_new_tag(self):
         summary = PostSummary(
             filename="post.md",
             title="Robots Are Cool",
             current_tags=["1234"],
             excerpt="All about robots.",
         )
-        proposal = build_proposal(summary, ["robotics", "boston-dynamics"])
+        proposal = build_proposal(summary, ["robotics"], {"robotics"})
 
         assert proposal.filename == "post.md"
         assert proposal.title == "Robots Are Cool"
         assert proposal.current_tags == ["1234"]
-        assert proposal.proposed_tags == ["robotics", "boston-dynamics"]
+        assert proposal.proposed_tags == ["robotics"]
+        assert proposal.candidate_tags == []
 
-    def test_preserves_existing_real_tags_and_adds_new_ones(self):
+    def test_holds_back_uncurated_new_tag_as_candidate(self):
         summary = PostSummary(
-            filename="post.md", title="T", current_tags=["technology"], excerpt="e"
+            filename="post.md",
+            title="Robots Are Cool",
+            current_tags=[],
+            excerpt="All about robots.",
         )
-        proposal = build_proposal(summary, ["blogbridge"])
-        assert proposal.proposed_tags == ["technology", "blogbridge"]
+        proposal = build_proposal(summary, ["boston-dynamics"], {"robotics"})
+
+        assert proposal.proposed_tags == []
+        assert proposal.candidate_tags == ["boston-dynamics"]
+
+    def test_preserves_existing_real_tags_even_if_not_curated(self):
+        summary = PostSummary(
+            filename="post.md", title="T", current_tags=["blogbridge"], excerpt="e"
+        )
+        proposal = build_proposal(summary, ["robotics"], {"robotics"})
+        assert proposal.proposed_tags == ["blogbridge", "robotics"]
 
     def test_does_not_duplicate_a_tag_already_present(self):
         summary = PostSummary(
             filename="post.md", title="T", current_tags=["technology"], excerpt="e"
         )
-        proposal = build_proposal(summary, ["technology", "blogbridge"])
-        assert proposal.proposed_tags == ["technology", "blogbridge"]
+        proposal = build_proposal(
+            summary, ["technology", "robotics"], {"technology", "robotics"}
+        )
+        assert proposal.proposed_tags == ["technology", "robotics"]
 
     def test_no_fit_when_nothing_proposed(self):
         summary = PostSummary(
             filename="post.md", title="T", current_tags=[], excerpt="e"
         )
-        proposal = build_proposal(summary, [])
+        proposal = build_proposal(summary, [], set())
         assert proposal.no_fit is True
+
+
+class TestRecordRecurringCandidates:
+    def make_hints(self, tmp_path, extra=""):
+        path = tmp_path / "tag-hints.md"
+        path.write_text(
+            "# Curated Tags\n\nrobotics\n\n# Proposed Tags\n" + extra, encoding="utf-8"
+        )
+        return path
+
+    def test_ignores_candidates_seen_only_once(self, tmp_path):
+        path = self.make_hints(tmp_path)
+        proposals = [
+            TagProposal(filename="a.md", title="A", current_tags=[], candidate_tags=["mars"])
+        ]
+        assert record_recurring_candidates(proposals, path) == []
+        assert "mars" not in path.read_text(encoding="utf-8")
+
+    def test_appends_candidates_recurring_across_posts(self, tmp_path):
+        path = self.make_hints(tmp_path)
+        proposals = [
+            TagProposal(filename="a.md", title="A", current_tags=[], candidate_tags=["mars"]),
+            TagProposal(filename="b.md", title="B", current_tags=[], candidate_tags=["mars"]),
+        ]
+        added = record_recurring_candidates(proposals, path)
+        assert added == ["mars"]
+        assert "mars" in path.read_text(encoding="utf-8")
+
+    def test_does_not_duplicate_already_listed_candidate(self, tmp_path):
+        path = self.make_hints(tmp_path, extra="mars\n")
+        proposals = [
+            TagProposal(filename="a.md", title="A", current_tags=[], candidate_tags=["mars"]),
+            TagProposal(filename="b.md", title="B", current_tags=[], candidate_tags=["mars"]),
+        ]
+        assert record_recurring_candidates(proposals, path) == []
 
 
 class TestTagProposal:

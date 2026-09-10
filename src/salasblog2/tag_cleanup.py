@@ -12,16 +12,20 @@ post's title/excerpt for a human (or Claude, acting directly in an assisted
 session - no separate paid API call) to propose tags from, and sanitizing
 those proposals before they're written.
 
-Tags on this blog are free-form (F42/F45) - BLOG_TAGS is a curated set of
-*suggestions*, not an enforced vocabulary, so a proposal is free to include
-a specific entity/topic tag (e.g. "blogbridge", "mars", "tivo") alongside or
-instead of a general category. Sanitization only drops what's actually junk:
-numeric leftovers, empty strings, and duplicates.
+Per the rules in `02-doc/tag-hints.md`: the ending state is that every tag
+on a post comes from that file's "Curated Tags" list. A newly proposed tag
+outside that list is never applied to a post - if it recurs across more than
+one post in a batch, `record_recurring_candidates` appends it to tag-hints's
+"Proposed Tags" section instead, for the user to approve or reject by hand.
+Existing tags are never removed regardless of curated-list membership - that
+rule is absolute, independent of the curated-vocabulary one. Sanitization
+also drops what's actually junk: numeric leftovers, empty strings, and
+duplicates.
 
 This pipeline is additive-only: a post's existing tags are never removed,
-only added to (`build_proposal` unions current tags with newly proposed
-ones before sanitizing) - numeric junk is the one exception, dropped like
-any other junk regardless of whether it was already on the post.
+only added to (`build_proposal` unions current tags with newly-accepted
+curated ones before sanitizing) - numeric junk is the one exception, dropped
+like any other junk regardless of whether it was already on the post.
 
 Frontmatter writes (`apply_tag_proposal`) verify the post's body is
 byte-identical before and after, so a bug in this pipeline can't corrupt
@@ -30,6 +34,7 @@ post content even if it writes wrong tags.
 
 import json
 import logging
+from collections import Counter
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
@@ -40,6 +45,8 @@ from salasblog2.utils import create_excerpt
 logger = logging.getLogger(__name__)
 
 EXCERPT_LENGTH_FOR_TAGGING = 800
+CURATED_TAGS_HEADER = "# Curated Tags"
+PROPOSED_TAGS_HEADER = "# Proposed Tags"
 
 
 def has_numeric_tag(tags: list[str]) -> bool:
@@ -71,6 +78,7 @@ class TagProposal:
     title: str
     current_tags: list[str]
     proposed_tags: list[str] = field(default_factory=list)
+    candidate_tags: list[str] = field(default_factory=list)
 
     @property
     def no_fit(self) -> bool:
@@ -106,10 +114,9 @@ def summaries_to_json(summaries: list[PostSummary]) -> str:
 
 
 def validate_proposed_tags(tags: list[str]) -> list[str]:
-    """Sanitize a proposed tag list: drop numeric junk, empty strings, and
-    duplicates (order-preserving). Tags are free-form on this blog (F42/F45)
-    - anything else proposed is kept as-is, including specific entity/topic
-    tags outside the curated BLOG_TAGS suggestions.
+    """Sanitize a tag list: drop numeric junk, empty strings, and duplicates
+    (order-preserving). Doesn't judge curated-vocabulary membership - see
+    `split_new_tags` for that.
     """
     seen = set()
     cleaned = []
@@ -122,20 +129,96 @@ def validate_proposed_tags(tags: list[str]) -> list[str]:
     return cleaned
 
 
-def build_proposal(summary: PostSummary, tags: list[str]) -> TagProposal:
+def _parse_section_tags(text: str, header: str) -> list[str]:
+    """Return the bare tag names listed under a `# <header>` section of
+    tag-hints.md, in file order, stripping any trailing `(clarification)`
+    comment. Stops at the next top-level heading.
+    """
+    tags = []
+    in_section = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            in_section = stripped == header
+            continue
+        if in_section and stripped:
+            tag = stripped.split("(", 1)[0].strip()
+            if tag:
+                tags.append(tag)
+    return tags
+
+
+def load_curated_tags(tag_hints_path: Path) -> set[str]:
+    """Load the curated tag vocabulary from tag-hints.md's "Curated Tags"
+    section - the set of tags a new (not already on a post) tag must belong
+    to before `build_proposal` will apply it.
+    """
+    text = tag_hints_path.read_text(encoding="utf-8")
+    return set(_parse_section_tags(text, CURATED_TAGS_HEADER))
+
+
+def split_new_tags(
+    existing_tags: list[str], new_tags: list[str], curated_tags: set[str]
+) -> tuple[list[str], list[str]]:
+    """Split tags proposed for a post (excluding ones already on it) into
+    curated ones to apply and uncurated candidates to hold back.
+
+    Returns (accepted, candidates).
+    """
+    existing = set(existing_tags)
+    accepted, candidates = [], []
+    for tag in new_tags:
+        if tag in existing:
+            continue
+        (accepted if tag in curated_tags else candidates).append(tag)
+    return accepted, candidates
+
+
+def build_proposal(
+    summary: PostSummary, tags: list[str], curated_tags: set[str]
+) -> TagProposal:
     """Combine a post summary with newly proposed tags into a TagProposal.
 
-    Additive-only: the post's existing tags are unioned with the new ones
-    before sanitizing, so nothing already on the post is ever dropped -
-    except numeric junk, which is sanitized away regardless of source.
+    Additive-only: the post's existing tags are always kept, regardless of
+    curated-vocabulary membership - that rule is absolute. A newly proposed
+    tag is applied only if it's in `curated_tags`; anything else lands in
+    `candidate_tags` instead of being written, for `record_recurring_candidates`
+    to surface later. Numeric junk is sanitized away regardless of source.
     """
-    merged = validate_proposed_tags(summary.current_tags + tags)
+    accepted, candidates = split_new_tags(summary.current_tags, tags, curated_tags)
+    merged = validate_proposed_tags(summary.current_tags + accepted)
     return TagProposal(
         filename=summary.filename,
         title=summary.title,
         current_tags=summary.current_tags,
         proposed_tags=merged,
+        candidate_tags=candidates,
     )
+
+
+def record_recurring_candidates(
+    proposals: list[TagProposal], tag_hints_path: Path
+) -> list[str]:
+    """Tally candidate tags (proposed but outside the curated vocabulary)
+    across a batch. Any tag recurring on more than one post gets appended to
+    tag-hints.md's "Proposed Tags" section, for the user to approve or
+    reject by hand - never applied to a post directly. Already-listed
+    candidates are skipped. Returns the newly added tags.
+    """
+    counts = Counter(tag for p in proposals for tag in p.candidate_tags)
+    recurring = sorted(tag for tag, n in counts.items() if n > 1)
+    if not recurring:
+        return []
+
+    text = tag_hints_path.read_text(encoding="utf-8")
+    already_listed = set(_parse_section_tags(text, PROPOSED_TAGS_HEADER))
+    new_entries = [tag for tag in recurring if tag not in already_listed]
+    if not new_entries:
+        return []
+
+    text = text.rstrip("\n") + "\n" + "\n".join(new_entries) + "\n"
+    tag_hints_path.write_text(text, encoding="utf-8")
+    return new_entries
 
 
 def proposals_to_json(proposals: list[TagProposal]) -> str:
@@ -146,6 +229,7 @@ def proposals_to_json(proposals: list[TagProposal]) -> str:
                 "title": p.title,
                 "current_tags": p.current_tags,
                 "proposed_tags": p.proposed_tags,
+                "candidate_tags": p.candidate_tags,
                 "no_fit": p.no_fit,
             }
             for p in proposals

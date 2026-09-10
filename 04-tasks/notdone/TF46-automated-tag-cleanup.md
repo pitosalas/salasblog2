@@ -162,3 +162,34 @@ Progress (100-post batches, before the size increase to 500): batch 1
 
 **Test**: none beyond TF46.0-TF46.3's automated coverage — this step is
 operational execution, not new logic.
+
+## TF46.7 — Curated-vocabulary restriction and Proposed Tags queue
+
+**Status**: done
+
+**Description**: The user rewrote `02-doc/tag-hints.md` into a rules-first
+format (Tag Cleanup rules / Curated Tags / Proposed Tags) and reversed the
+TF46.1 free-form decision: the ending state is now that every tag on a post
+comes from the Curated Tags list. Reworked accordingly:
+
+1. `load_curated_tags()` parses the "Curated Tags" section of tag-hints.md
+   into a flat set, stripping trailing `(clarification)` comments.
+2. `split_new_tags()` divides a post's newly-proposed (not already present)
+   tags into curated ones to apply and uncurated ones held back as
+   `TagProposal.candidate_tags` — never written to a post directly.
+3. `build_proposal()` now takes `curated_tags` and only merges the accepted
+   half; existing tags are still never removed, independent of curated-list
+   membership (the MANDATORY rule in tag-hints.md is absolute, doesn't yield
+   to the curated-vocabulary GOAL).
+4. `record_recurring_candidates()` tallies candidate tags across a batch and
+   appends any that recur on more than one post to tag-hints.md's "Proposed
+   Tags" section (skipping ones already listed) — satisfies the JUDGEMENT
+   rule: recurring non-curated tags go to the user for approval, not applied
+   silently.
+5. `scripts/build_proposals.py` wires both in: loads curated tags from
+   `02-doc/tag-hints.md` by default, and calls `record_recurring_candidates`
+   after writing proposals.
+
+**Test**: `TestSplitNewTags`, `TestLoadCuratedTags`, and
+`TestRecordRecurringCandidates` added; `TestBuildProposal` updated for the
+new signature and curated/uncurated split behavior.
