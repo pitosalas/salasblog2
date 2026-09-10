@@ -67,3 +67,20 @@ webinno (recurring Boston tech meetup, distinct from geek-dinner)
 datarss (Pito's own project — kept this name even after he renamed it "Decentralized Data Discovery (DDD)" mid-series)
 
 # Proposed Tags
+blogbridge
+blogging
+etech
+folksonomy
+gmail
+google
+java
+microsoft
+orkut
+podcasting
+red-sox
+screencasting
+security
+spam
+tivo
+web2.0
+wiki
