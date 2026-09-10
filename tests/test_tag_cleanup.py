@@ -213,30 +213,28 @@ class TestRecordRecurringCandidates:
         )
         return path
 
-    def test_ignores_candidates_seen_only_once(self, tmp_path):
-        path = self.make_hints(tmp_path)
-        proposals = [
-            TagProposal(filename="a.md", title="A", current_tags=[], candidate_tags=["mars"])
+    def make_proposals(self, filenames, tag="mars"):
+        return [
+            TagProposal(filename=f, title="T", current_tags=[], candidate_tags=[tag])
+            for f in filenames
         ]
+
+    def test_ignores_candidates_below_threshold(self, tmp_path):
+        path = self.make_hints(tmp_path)
+        proposals = self.make_proposals(["a.md", "b.md"])  # 2 < MIN_RECURRENCE_FOR_PROPOSED_TAG
         assert record_recurring_candidates(proposals, path) == []
         assert "mars" not in path.read_text(encoding="utf-8")
 
-    def test_appends_candidates_recurring_across_posts(self, tmp_path):
+    def test_appends_candidates_meeting_threshold(self, tmp_path):
         path = self.make_hints(tmp_path)
-        proposals = [
-            TagProposal(filename="a.md", title="A", current_tags=[], candidate_tags=["mars"]),
-            TagProposal(filename="b.md", title="B", current_tags=[], candidate_tags=["mars"]),
-        ]
+        proposals = self.make_proposals(["a.md", "b.md", "c.md"])
         added = record_recurring_candidates(proposals, path)
         assert added == ["mars"]
         assert "mars" in path.read_text(encoding="utf-8")
 
     def test_does_not_duplicate_already_listed_candidate(self, tmp_path):
         path = self.make_hints(tmp_path, extra="mars\n")
-        proposals = [
-            TagProposal(filename="a.md", title="A", current_tags=[], candidate_tags=["mars"]),
-            TagProposal(filename="b.md", title="B", current_tags=[], candidate_tags=["mars"]),
-        ]
+        proposals = self.make_proposals(["a.md", "b.md", "c.md"])
         assert record_recurring_candidates(proposals, path) == []
 
 

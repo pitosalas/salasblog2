@@ -72,15 +72,12 @@ blogging
 etech
 folksonomy
 gmail
-google
 java
 microsoft
 orkut
 podcasting
 red-sox
-screencasting
 security
 spam
 tivo
 web2.0
-wiki

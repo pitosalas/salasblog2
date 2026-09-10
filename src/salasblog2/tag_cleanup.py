@@ -167,17 +167,22 @@ def build_proposal(
     )
 
 
+MIN_RECURRENCE_FOR_PROPOSED_TAG = 3
+
+
 def record_recurring_candidates(
     proposals: list[TagProposal], tag_hints_path: Path
 ) -> list[str]:
     """Tally candidate tags (proposed but outside the curated vocabulary)
-    across a batch. Any tag recurring on more than one post gets appended to
-    tag-hints.md's "Proposed Tags" section, for the user to approve or
-    reject by hand - never applied to a post directly. Already-listed
-    candidates are skipped. Returns the newly added tags.
+    across a batch. Any tag recurring on at least `MIN_RECURRENCE_FOR_PROPOSED_TAG`
+    posts gets appended to tag-hints.md's "Proposed Tags" section, for the
+    user to approve or reject by hand - never applied to a post directly.
+    Already-listed candidates are skipped. Returns the newly added tags.
     """
     counts = Counter(tag for p in proposals for tag in p.candidate_tags)
-    recurring = sorted(tag for tag, n in counts.items() if n > 1)
+    recurring = sorted(
+        tag for tag, n in counts.items() if n >= MIN_RECURRENCE_FOR_PROPOSED_TAG
+    )
     if not recurring:
         return []
 

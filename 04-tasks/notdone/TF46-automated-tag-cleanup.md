@@ -256,3 +256,22 @@ Curated Tags section (missing the general categories like `technology`,
 replaced `TestBlogTagsConstant`); `tests/test_post_editor.py` and
 `tests/test_blogger_api.py` updated to write a temp `tag-hints.md` fixture
 instead of importing the removed constant.
+
+## TF46.9 — Proposed Tags require 3+ recurrences, not 2+
+
+**Status**: done
+
+**Description**: The user reviewed batch 7's Proposed Tags queue and liked
+it, but set a stricter bar: a candidate tag only queues once it recurs on
+at least 3 posts, not 2. `record_recurring_candidates`'s threshold changed
+from `n > 1` to `n >= MIN_RECURRENCE_FOR_PROPOSED_TAG` (a new module
+constant, 3).
+
+Recomputed batch 7's actual per-tag candidate counts against the real
+`proposals_batch7.json` and corrected tag-hints.md's Proposed Tags section
+by hand to match the new threshold: removed `google` (2), `screencasting`
+(2), and `wiki` (2) - the other 14 entries (`blogbridge` at 84 down to
+`orkut`/`red-sox` at 3 each) all clear the new bar.
+
+**Test**: `TestRecordRecurringCandidates` updated - 2 recurrences no longer
+queues a candidate, 3 does.
