@@ -96,3 +96,8 @@ kubernetes
 raspberry-pi
 startup
 woodworking
+excel
+graphql
+portfolio
+postgres
+sqlite

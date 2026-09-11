@@ -316,7 +316,7 @@ context = {
     "content_type_title": "Post",
     "action_url": f"/admin/edit-post/{filename}",
     "cancel_url": "/blog/",
-    "blog_tags": BLOG_TAGS,
+    "blog_tags": load_top_tags(),
     "is_edit": True,
     **post_data,
 }

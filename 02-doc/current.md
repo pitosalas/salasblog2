@@ -1,5 +1,5 @@
 # Current State — salasblog2
-_Last updated: 2026-09-08_
+_Last updated: 2026-09-11_
 
 ---
 
@@ -117,6 +117,8 @@ Generated drafts start with `Originally Posted on: [url](url)` and a 50–75 wor
 
 This three-way architecture is identified as a complexity target in F41 TF41.11.
 
+**Sync is one-way**: `/data/content` is seeded from git only once, at first deploy (`startup.sh`, if `/data/content` doesn't exist yet or is empty). After that, nothing ever pushes local/GitHub content back into the volume, except `pages/` (rsync'd on every boot). The scheduled `sync_to_github` job only goes the other direction: volume → `/app/content` → GitHub, as a backup. Confirmed the hard way (2026-09-10/11): every tag-cleanup batch done against local `content/blog/` before that point never reached the live site, and production's real content had itself drifted from git for unrelated reasons (manual admin edits). **Any content change meant for the live site must be made against `/data/content` directly** (via `fly ssh`, or the live admin UI) — editing local `content/` and pushing to GitHub does not affect production.
+
 ### Admin panel
 Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), Generate, Scheduler, Data Sync, Pages Sync, Raindrop, Emergency. Most admin JavaScript is still inline in `templates/admin.html` — extracting it is F41 TF41.2 (explicitly excludes `post_editor.html`, which already got its own JS separation as part of F42).
 
@@ -126,13 +128,15 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 **F44 — Fix the MetaWeblog/XML-RPC Implementation**: 5 of 6 tasks done (see `04-tasks/notdone/TF44-fix-metaweblog-xmlrpc.md`). **TF44.4** (manual MarsEdit verification) still in progress: refresh, edit, and image upload confirmed working against production; create, delete, and a title/content with `&`/`<`/`>` still need verification. Full history of what was found/fixed getting here is in `02-doc/history.md`.
 
-**F45 — Tag Suggestion Picklist for Post Editor**: done, confirmed working live by the user (`03-features/done/F45-tag-suggestion-picklist.md`). The post editor's Tags field now offers a searchable picklist backed by real tag-frequency data (`output/top-tags.json`, regenerated alongside `admin-posts-index.json`) merged with the curated `BLOG_TAGS` vocabulary, replacing a static 15-tag `<datalist>`.
+**F45 — Tag Suggestion Picklist for Post Editor**: done, confirmed working live by the user (`03-features/done/F45-tag-suggestion-picklist.md`). The post editor's Tags field offers a searchable picklist backed by real tag-frequency data (`output/top-tags.json`) merged with the curated vocabulary — now sourced from `02-doc/tag-hints.md` (the standalone `BLOG_TAGS` constant was consolidated away this session; see F46 below).
 
-**Bulk retagging in progress** (follow-on to F45, content curation not a coding task — see `02-doc/history.md` for full detail): two batches reviewed against real content — the 100 most recent posts, and the 100 posts with the most real human traffic (production `/data/stats.json`, bots/crawlers/search engines/drafts excluded). 77 posts unique to the traffic batch are committed (`b08853a`); the 100-post recent batch (23 of which overlap with the traffic batch and are already committed) is still awaiting the user's review before committing. `BLOG_TAGS` extended with `curacao`/`boston`/`brandeis`/`jewish`/`arlington` per the user's explicit request, applied where found so far.
+**F46 — Automated Tag Cleanup for Full Blog Corpus**: `04-tasks/notdone/TF46-automated-tag-cleanup.md`, TF46.0-TF46.5 done, TF46.6 (autonomous batch run) in progress, TF46.7-TF46.10 (curated-vocabulary restriction, one unified curated list, 3+ recurrence threshold for Proposed Tags, no-fit posts no longer re-selected every batch) done. Batches 7-12 (3,000 posts, 2004-2023 archive era) run for real against **production's `/data/content/blog` volume** via `fly ssh` — earlier batches (1-6, before this session) only ever touched the local repo and never reached the live site (see the architecture note above). ~545 posts remained after batch 12 (the self-tracking selection order still has 2013-2023 and then 2023-2026 ahead of it). Full batch-by-batch numbers and the three design corrections that got here are in `02-doc/history.md`.
 
-**Found, not yet actioned**: 3 posts (including the #1 and #3 most-visited by real traffic) exist only on the production Fly.io volume — never synced to GitHub/this local repo, despite the scheduled sync job. Fetched directly via `fly ssh sftp get` to include in the retagging review; the underlying sync gap itself is unexplained and not yet filed as an issue.
+`02-doc/tag-hints.md`'s **Proposed Tags** queue currently holds candidates awaiting the user's approval to promote into the Curated Tags list (or reject): `blogbridge`, `blogging`, `etech`, `folksonomy`, `gmail`, `java`, `microsoft`, `orkut`, `podcasting`, `red-sox`, `security`, `spam`, `tivo`, `web2.0`, `agile`, `geek-dinner`, `gnomedex`, `howard-stern`, `opml`, `social-networking`, `games`, `theatre`, `css`, `flask`, `git`, `kubernetes`, `raspberry-pi`, `startup`, `woodworking`, `excel`, `graphql`, `portfolio`, `postgres`, `sqlite`. None of these are applied to any post until promoted.
 
-**This session's commits are pushed to GitHub but not yet deployed** — see Deployment section below.
+**F47 — Console Theme Visual Refresh**: new, `03-features/notdone/F47-console-theme-refresh.md` / `04-tasks/notdone/TF47-*.md` (13 tasks). Plan written and stopped for approval per the process gate — no code written yet. Visual-only refresh of the 9 live public-facing templates (home/blog/link-blog/pages/tag/404) to an externally-designed "Console" theme (monospace chrome, hairline rules, one amber accent, dark/light toggle); `admin.html`/`admin_login.html`/`post_editor.html`/`stats_page.html` explicitly out of scope (standalone, Bootstrap, no design reference given). To be done on a dedicated branch (`feature/f47-console-theme`), not this repo's usual direct-to-`main` workflow, per the user's request — merge-back is its own final task, gated on a full visual QA pass.
+
+**F35 — Fix admin sync button after GIT_TOKEN rotation**: the immediate symptom is fixed — the production `GIT_TOKEN` secret was found to be genuinely invalid (not just stale-in-container as originally hypothesized), the user rotated it via `fly secrets set`, and `sync_to_github()` is now confirmed working end-to-end. The actual code fix this feature describes (reconstruct the git remote URL from the env var at sync time, so a *future* rotation doesn't require a restart) is still not implemented — feature stays open.
 
 **Other open features** (`03-features/notdone/`, no dependency on each other or on F44):
 
@@ -141,14 +145,13 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 | F29 | Extract reusable utilities from raindrop.py | Medium |
 | F30 | Code quality improvements in raindrop.py | Low |
 | F33 | Fix web search (item.category → item.type bug + raindrop indexing) | Medium |
-| F35 | Fix admin sync button after GIT_TOKEN rotation | Medium |
 | F41 | Codebase cleanup and architecture review | Medium |
 
 F33 TF33.0 (the category/type field name fix in `script.js`) is already done. F33 TF33.1–TF33.3 (raindrop indexing, content truncation, tests) remain.
 
 F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they don't redo or contradict work those two features already did) — see `04-tasks/notdone/TF41-codebase-cleanup-architecture.md`. Recommended order if picking F41 up: after F44, since TF41.3/TF41.10 assume F44 has landed.
 
-**Open issues** (`05-issues/open/`, found during this session's literate-doc regeneration, not yet fixed): I01 (incremental regeneration drops content types from search/home), I02 (VisitCounter read/write race, no cross-process lock), I03 (scheduler.py's dead startup-job code).
+**Open issues** (`05-issues/open/`, found during literate-doc regeneration, not yet fixed): I01 (incremental regeneration drops content types from search/home), I02 (VisitCounter read/write race, no cross-process lock), I03 (scheduler.py's dead startup-job code).
 
 **Deferred**: F43 (token-authenticated REST API for posting from a phone, `03-features/deferred/`) — parked, not abandoned, independent of everything else.
 
@@ -157,10 +160,10 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 ## Test status
 
 ```
-554 passed, 11 skipped, 1 failed, 3 warnings
+596 passed, 11 skipped, 3 warnings
 ```
 
-The 1 failure (`test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env`) is pre-existing and unrelated to this session's work (confirmed to fail identically on `main` before any of this session's changes) — raindrop.py cache-loading test isolation issue, F29/F30 territory. Skipped tests require a live server (`https://salasblog2.fly.dev`).
+No failures as of 2026-09-11 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
 
 ---
 
@@ -174,7 +177,9 @@ fly ssh console        # shell into running container
 
 Deployed app: https://salasblog2.fly.dev
 
-**Startup sequence**: `startup.sh` runs `git checkout -f -B main origin/main` (overwrites `/app` with GitHub HEAD), then starts uvicorn. **Code changes must be committed and pushed to GitHub before `make deploy`**, or they will be silently overwritten at container startup — confirmed the hard way this session: three deploys in a row kept serving pre-session code because nothing had been pushed, verified via `fly ssh console` showing the running container on commit `e909c27` (pre-session HEAD) despite fresh deploy timestamps.
+**Startup sequence**: `startup.sh` runs `git checkout -f -B main origin/main` (overwrites `/app` with GitHub HEAD), then starts uvicorn. **Code changes must be committed and pushed to GitHub before `make deploy`**, or they will be silently overwritten at container startup — confirmed the hard way in an earlier session: three deploys in a row kept serving pre-session code because nothing had been pushed, verified via `fly ssh console` showing the running container on commit `e909c27` (pre-session HEAD) despite fresh deploy timestamps.
+
+**`GIT_TOKEN` rotated and confirmed working (2026-09-11)** — see F35 above. `sync_to_github()` (production `/data/content` → GitHub backup) verified working end-to-end across six batch runs this session. To sync `/app`'s git checkout on a *running* container without a full redeploy (e.g. to pick up a doc/content-adjacent change without restarting the app): `fly ssh console -C "sh -c 'cd /app && git fetch --depth 1 origin main && git checkout -f -B main origin/main'"`.
 
 ---
 
@@ -186,3 +191,5 @@ Deployed app: https://salasblog2.fly.dev
 - `mount_static_files()` is defined but intentionally disabled at startup (replaced by custom endpoints) — dead code. F41 TF41.12 candidate.
 - `_check_single_instance()` depends on the `fly` CLI being present in the container — fragile.
 - `raindrop_post.html` has no admin edit flow (raindrops are Raindrop.io-synced, not manually authored) — only delete was added in F42; this is intentional, not a gap, but worth knowing if someone expects an edit button there.
+- `templates/admin_new.html` is dead code — extends `base.html`, but no route in `server.py` renders it (found while scoping F47). Its own body has a stub comment admitting it's incomplete. Deletion candidate for a future chore.
+- `templates/overview.html` is orphaned — rendered to a real file (`output/overview.html`) but not linked from the site's nav, and `generate_overview_as_home()` (the function that would make it the homepage) is never called. Found while scoping F47; not touched.

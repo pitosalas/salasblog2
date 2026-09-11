@@ -239,7 +239,9 @@ class TestRecordRecurringCandidates:
 
     def test_ignores_candidates_below_threshold(self, tmp_path):
         path = self.make_hints(tmp_path)
-        proposals = self.make_proposals(["a.md", "b.md"])  # 2 < MIN_RECURRENCE_FOR_PROPOSED_TAG
+        proposals = self.make_proposals(
+            ["a.md", "b.md"]
+        )  # 2 < MIN_RECURRENCE_FOR_PROPOSED_TAG
         assert record_recurring_candidates(proposals, path) == []
         assert "mars" not in path.read_text(encoding="utf-8")
 

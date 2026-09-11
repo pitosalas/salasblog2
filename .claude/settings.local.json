@@ -6,7 +6,8 @@
       "Bash(git -C /home/pitosalas/j3 diff)",
       "Bash(git -C /home/pitosalas/j3 add .claude/bootstrap.md .claude/commands/checkpoint.md .claude/commands/start.md .claude/literate.md .claude/process.md .claude/settings.json .claude/settings.local.json .claude/style_guide.md .claude/templates/feature-template.md README.md)",
       "Bash(git -C /home/pitosalas/j3 commit -m ' *)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(fly ssh *)"
     ]
   }
 }

@@ -361,16 +361,19 @@ message spells out the consequence, which is a nice habit: a future reader
 grepping logs for "why is this post buried" gets the answer directly
 instead of having to reverse-engineer the sort key.
 
-## `BLOG_TAGS` and `top_tags_by_frequency`: a curated floor under real usage
+## `load_curated_tags` and `top_tags_by_frequency`: a curated floor under real usage
 
-`BLOG_TAGS`, the module-level constant near the top of the file, is a
-hand-curated list of topical tags (originally 15 — `technology`,
-`programming`, `robotics`, and so on — later extended with a handful of
-personal/place tags like `curacao` and `brandeis` as real content review
-turned up posts that needed them). It's not a closed vocabulary — any tag
-can still be typed freely when authoring a post — but it's the seed list
-offered to a human picking tags, both in the post editor's picklist and
-(via `blogger_api.py`) MarsEdit's category list.
+`load_curated_tags()` reads the single curated tag vocabulary from
+`02-doc/tag-hints.md`'s "Curated Tags" section (via the generic
+`parse_tag_hints_section()` helper, which also backs the automated
+tag-cleanup pipeline's "Proposed Tags" queue — see `tag_cleanup.py`). This
+replaced a hand-maintained `BLOG_TAGS` Python constant that had drifted out
+of sync with a second, separately-curated list the tag-cleanup pipeline
+introduced — there's now exactly one list, editable by hand in a markdown
+file, not two. It's not a closed vocabulary — any tag can still be typed
+freely when authoring a post — but it's the seed list offered to a human
+picking tags, both in the post editor's picklist and (via `blogger_api.py`)
+MarsEdit's category list.
 
 `top_tags_by_frequency()` computes the *actual* ranking that backs that
 picklist, from real usage across existing posts rather than the static
@@ -402,7 +405,7 @@ Two details worth calling out:
   `home.html`) already exclude these the same way when rendering a post's
   tag badges (`{% if not tag.isdigit() %}`) — this mirrors that existing
   convention rather than inventing a new one.
-- **`always_include`** (the caller passes `BLOG_TAGS`) is appended *after*
+- **`always_include`** (the caller passes `load_curated_tags(...)`) is appended *after*
   the ranked top-N, not folded into the ranking itself. A brand-new
   curated tag has zero real usage by definition, so it would never surface
   in a pure frequency ranking — and it could never start being used if

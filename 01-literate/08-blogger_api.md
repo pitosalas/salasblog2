@@ -112,15 +112,17 @@ Note also that the volume copy is wrapped in its own `try/except` that raises an
 
 ## Free-form tags, not a fixed taxonomy
 
-Classic Blogger/MetaWeblog assumes a fixed, admin-curated list of **categories**, chosen from a picker. Salasblog2 doesn't work that way — feature F42 established free-form, comma-separated **tags** as the organizing mechanism instead of a closed taxonomy, and `BLOG_TAGS` in `utils.py` is only a *suggestion list* for the web admin's tag field, not an enforced vocabulary. Any string a post's frontmatter uses as a tag is a valid tag.
+Classic Blogger/MetaWeblog assumes a fixed, admin-curated list of **categories**, chosen from a picker. Salasblog2 doesn't work that way — feature F42 established free-form, comma-separated **tags** as the organizing mechanism instead of a closed taxonomy, and the curated vocabulary in `02-doc/tag-hints.md` (loaded via `utils.load_curated_tags()`) is only a *suggestion list* for the web admin's tag field, not an enforced one. Any string a post's frontmatter uses as a tag is a valid tag.
 
-`metaweblog_getCategories` has to answer MarsEdit's category picker with *something*, so it reuses `BLOG_TAGS` as the suggestions MarsEdit shows — keeping MarsEdit's picker in sync with the same suggestions the web admin offers, rather than presenting an unrelated, hardcoded pair of categories:
+`metaweblog_getCategories` has to answer MarsEdit's category picker with *something*, so it loads that same curated list as the suggestions MarsEdit shows — keeping MarsEdit's picker in sync with the same suggestions the web admin offers, rather than presenting an unrelated, hardcoded pair of categories:
 
 ```python
 def metaweblog_getCategories(self, blogid: str, username: str, password: str) -> list:
-    # This blog uses free-form tags, not a fixed category taxonomy (see F42) — BLOG_TAGS
-    # is the same curated suggestion list the web admin's tag field offers, so MarsEdit's
-    # category picker shows the same suggestions rather than a hardcoded, unrelated pair.
+    # This blog uses free-form tags, not a fixed category taxonomy (see F42) — the
+    # curated list from tag-hints.md is the same one the web admin's tag field and
+    # the F46 cleanup pipeline use, so MarsEdit's category picker shows the same
+    # suggestions rather than a hardcoded, unrelated pair.
+    curated_tags = load_curated_tags(self.root_dir / "02-doc" / "tag-hints.md")
     categories = [
         {
             "categoryId": tag,
@@ -128,7 +130,7 @@ def metaweblog_getCategories(self, blogid: str, username: str, password: str) ->
             "htmlUrl": f"/tags/{slugify_tag(tag)}/index.html",
             "rssUrl": "/blog/rss.xml",
         }
-        for tag in BLOG_TAGS
+        for tag in curated_tags
     ]
     return categories
 ```
