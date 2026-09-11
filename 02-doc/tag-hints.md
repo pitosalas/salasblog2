@@ -6,84 +6,84 @@
 
 # Curated Tags
 
-technology
-programming
-robotics
-ai
-design
-science
-personal
-travel
-food
-books
-music
-health
-politics
-business
-education
-curacao
-jewish
-brandeis
-arlington
-boston
-wikipedia
-ros2
-robot
-mathematics
-algorithms
-computer-science
-chat-gpt
-claude-code
-codex
-llm
-law
-legal
-vscode
-software-engineering
-apple
-macos
-ipad
-ios
-iphone
-linux
-unix
-ruby
-ruby-on-rails
-maps
-pivot-table
-eroom
-lotus
-numpy
-pandas
-python
-rust
-hugo-chavez (not bare chavez)
-demo-conference
-sun-microsystems (or a specific product like mysql/java — not bare sun)
-mike-arrington (not michael-arrington — TechCrunch founder)
-david-weinberger (not dave-weinberger — Cluetrain Manifesto co-author)
-trustthevote (Pito's Open Source Digital Voting Foundation project, one word, no hyphen)
-webinno (recurring Boston tech meetup, distinct from geek-dinner)
-datarss (Pito's own project — kept this name even after he renamed it "Decentralized Data Discovery (DDD)" mid-series)
+technology (82 uses)
+programming (39 uses)
+robotics (1 use)
+ai (5 uses)
+design (13 uses)
+science (18 uses)
+personal (11 uses)
+travel (19 uses)
+food (4 uses)
+books (13 uses)
+music (10 uses)
+health (4 uses)
+politics (34 uses)
+business (48 uses)
+education (4 uses)
+curacao (10 uses)
+jewish (1 use)
+brandeis (1 use)
+arlington (1 use)
+boston (11 uses)
+wikipedia (18 uses)
+ros2 (0 uses)
+robot (1 use)
+mathematics (3 uses)
+algorithms (1 use)
+computer-science (2 uses)
+chat-gpt (0 uses)
+claude-code (0 uses)
+codex (1 use)
+llm (0 uses)
+law (2 uses)
+legal (13 uses)
+vscode (1 use)
+software-engineering (8 uses)
+apple (28 uses)
+macos (30 uses)
+ipad (0 uses)
+ios (0 uses)
+iphone (3 uses)
+linux (0 uses)
+unix (0 uses)
+ruby (4 uses)
+ruby-on-rails (2 uses)
+maps (6 uses)
+pivot-table (1 use)
+eroom (6 uses)
+lotus (8 uses)
+numpy (0 uses)
+pandas (0 uses)
+python (1 use)
+rust (0 uses)
+hugo-chavez (not bare chavez; 2 uses)
+demo-conference (21 uses)
+sun-microsystems (or a specific product like mysql/java — not bare sun; 8 uses)
+mike-arrington (not michael-arrington — TechCrunch founder; 2 uses)
+david-weinberger (not dave-weinberger — Cluetrain Manifesto co-author; 3 uses)
+trustthevote (Pito's Open Source Digital Voting Foundation project, one word, no hyphen; 1 use)
+webinno (recurring Boston tech meetup, distinct from geek-dinner; 1 use)
+datarss (Pito's own project — kept this name even after he renamed it "Decentralized Data Discovery (DDD)" mid-series; 0 uses)
 
 # Proposed Tags
-blogbridge
-blogging
-etech
-folksonomy
-gmail
-java
-microsoft
-orkut
-podcasting
-red-sox
-security
-spam
-tivo
-web2.0
-agile
-geek-dinner
-gnomedex
-howard-stern
-opml
-social-networking
+blogbridge (0 uses)
+blogging (0 uses)
+etech (0 uses)
+folksonomy (0 uses)
+gmail (0 uses)
+java (0 uses)
+microsoft (0 uses)
+orkut (0 uses)
+podcasting (0 uses)
+red-sox (0 uses)
+security (0 uses)
+spam (0 uses)
+tivo (0 uses)
+web2.0 (0 uses)
+agile (0 uses)
+geek-dinner (0 uses)
+gnomedex (0 uses)
+howard-stern (0 uses)
+opml (0 uses)
+social-networking (0 uses)
