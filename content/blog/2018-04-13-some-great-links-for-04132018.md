@@ -3,7 +3,7 @@ category: '538'
 date: '2018-04-13'
 subtitle: 'TechRabbit: Makara: a read-write splitting adapter for Active Record'
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  04/13/2018
 type: wp
 wordpress_id: 2197

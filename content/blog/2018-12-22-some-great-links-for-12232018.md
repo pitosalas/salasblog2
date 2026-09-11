@@ -3,7 +3,7 @@ category: '301'
 date: '2018-12-22'
 subtitle: Algorithm Archive · GitBook
 tags:
-- algorithms
+- computer-science
 title: Some great links for  12/23/2018
 type: wp
 wordpress_id: 2510

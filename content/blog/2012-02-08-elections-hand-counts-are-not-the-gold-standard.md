@@ -4,7 +4,6 @@ date: '2012-02-08'
 subtitle: There is always a good deal of **controversy** surrounding elections and
   in particular, whether an e...
 tags:
-- trustthevote
 - politics
 title: 'Elections: Hand counts are NOT the gold standard'
 type: wp

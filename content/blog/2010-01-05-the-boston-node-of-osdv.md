@@ -4,7 +4,6 @@ date: '2010-01-05'
 subtitle: I’ve been working quite a bit on the Open Source Digital Voting foundation
   pr...
 tags:
-- trustthevote
 - boston
 title: The Boston node of OSDV
 type: wp

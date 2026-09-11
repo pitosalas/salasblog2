@@ -3,7 +3,7 @@ category: '301'
 date: '2020-03-22'
 subtitle: Test Double | Our Blog | Improving Dev Experience with Overmind
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  03/23/2020
 type: wp
 wordpress_id: 2738

@@ -3,7 +3,7 @@ category: '405'
 date: '2021-10-18'
 subtitle: The history of spreadsheets
 tags:
-- pivot-table
+- lotus
 title: The history of spreadsheets
 type: wp
 wordpress_id: 3097

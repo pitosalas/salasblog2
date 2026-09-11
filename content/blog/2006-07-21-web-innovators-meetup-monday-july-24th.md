@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-07-21'
 subtitle: Yes the meetups keep on coming fast and furious. [Che...
-tags:
-- webinno
+tag_review: no_fit
+tags: []
 title: Web Innovators meetup Monday, July 24th
 type: wp
 wordpress_id: 1484

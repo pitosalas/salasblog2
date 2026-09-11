@@ -3,7 +3,7 @@ category: '298'
 date: '2007-04-11'
 subtitle: Check out this post
 tags:
-- macos
+- apple
 title: From Lifehacker, for TV Addicts, this is just too good.
 type: wp
 wordpress_id: 1287

@@ -3,7 +3,7 @@ category: '538'
 date: '2008-05-03'
 subtitle: 'TechCrunch:'
 tags:
-- ruby-on-rails
+- ruby
 title: '[GEEKY] Twitter and Ruby on Rails'
 type: wp
 wordpress_id: 1053

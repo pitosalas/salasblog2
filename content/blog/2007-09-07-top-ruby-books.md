@@ -4,7 +4,6 @@ date: '2007-09-07'
 subtitle: '!toprubybooks1.jpg'
 tags:
 - ruby
-- ruby-on-rails
 title: Top Ruby Books
 type: wp
 wordpress_id: 1218

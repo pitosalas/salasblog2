@@ -4,7 +4,6 @@ date: '2010-11-18'
 subtitle: I happen to be reading iWoz, which is Steve Wozniak’s memoir/biography/whatever.
   It’s a very breezy ...
 tags:
-- iphone
 - apple
 title: Woz speaks (on iPhone)
 type: wp

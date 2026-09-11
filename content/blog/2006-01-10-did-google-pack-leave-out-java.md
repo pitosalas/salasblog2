@@ -3,8 +3,8 @@ category: '538'
 date: '2006-01-10'
 subtitle: A little while ago there was a lot of press about how Google and Sun were
   forming a partnership
-tags:
-- sun-microsystems
+tag_review: no_fit
+tags: []
 title: Did Google Pack leave out Java?
 type: wp
 wordpress_id: 1619

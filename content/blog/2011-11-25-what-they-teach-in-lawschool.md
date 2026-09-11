@@ -5,7 +5,7 @@ subtitle: This article gives a [fascinating perspective on the disconnect betwee
   what they teach in law schoo...
 tags:
 - education
-- law
+- legal
 title: What they teach in lawschool
 type: wp
 wordpress_id: 457

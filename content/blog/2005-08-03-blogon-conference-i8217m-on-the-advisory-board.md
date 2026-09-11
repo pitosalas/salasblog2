@@ -2,8 +2,8 @@
 category: '51'
 date: '2005-08-03'
 subtitle: '!Blogonbuttonsm'
-tags:
-- demo-conference
+tag_review: no_fit
+tags: []
 title: 'BlogOn Conference: I’m on the advisory board'
 type: wp
 wordpress_id: 1723

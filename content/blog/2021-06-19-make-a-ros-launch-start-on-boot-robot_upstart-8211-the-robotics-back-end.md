@@ -3,8 +3,7 @@ category: '249'
 date: '2021-06-19'
 subtitle: Make a ROS Launch Start on Boot (robot_upstart) – The Robotics Back-End
 tags:
-- robot
-- ros2
+- robotics
 title: Make a ROS Launch Start on Boot (robot_upstart) – The Robotics Back-End
 type: wp
 wordpress_id: 2969

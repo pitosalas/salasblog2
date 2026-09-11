@@ -3,7 +3,7 @@ category: '175'
 date: '2021-09-02'
 subtitle: OpenSourceRails.org
 tags:
-- ruby-on-rails
+- ruby
 title: OpenSourceRails.org
 type: wp
 wordpress_id: 3057

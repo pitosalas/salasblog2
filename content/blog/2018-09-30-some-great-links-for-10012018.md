@@ -3,7 +3,7 @@ category: '301'
 date: '2018-09-30'
 subtitle: Is your Rails app ready for Production? | AkitaOnRails.com
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  10/01/2018
 type: wp
 wordpress_id: 2470

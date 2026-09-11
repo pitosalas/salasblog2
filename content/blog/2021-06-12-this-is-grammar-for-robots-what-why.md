@@ -3,7 +3,7 @@ category: '374'
 date: '2021-06-12'
 subtitle: "This is Grammar For Robots. What? Why? \U0001F916"
 tags:
-- robot
+- robotics
 - ai
 title: "This is Grammar For Robots. What? Why? \U0001F916"
 type: wp

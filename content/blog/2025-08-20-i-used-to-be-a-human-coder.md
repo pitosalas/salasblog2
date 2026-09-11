@@ -2,7 +2,6 @@
 category: General
 date: '2025-08-20'
 tags:
-- coding
 - software-engineering
 title: I used to be a human coder
 type: blog

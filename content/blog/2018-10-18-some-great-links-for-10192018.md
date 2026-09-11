@@ -3,7 +3,7 @@ category: '301'
 date: '2018-10-18'
 subtitle: '[](https://www.reddit.com/r/compsci/comments/9oztot/algorithms_tutorial_series_for_beginners/?st=JNE...'
 tags:
-- algorithms
+- computer-science
 title: Some great links for  10/19/2018
 type: wp
 wordpress_id: 2476

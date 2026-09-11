@@ -3,7 +3,7 @@ category: '45'
 date: '2021-06-20'
 subtitle: ibraheemdev/modern-unix
 tags:
-- unix
+- linux
 title: ibraheemdev/modern-unix
 type: wp
 wordpress_id: 2973

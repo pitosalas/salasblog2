@@ -5,7 +5,6 @@ subtitle: For you slow pokes who have not yet upgraded to Leopard, my continuing
   might be of intere...
 tags:
 - apple
-- macos
 title: More about Leopard, Apple’s answer to Vista
 type: wp
 wordpress_id: 1077

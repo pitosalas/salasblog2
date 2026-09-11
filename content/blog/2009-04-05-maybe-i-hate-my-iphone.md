@@ -3,7 +3,7 @@ category: '298'
 date: '2009-04-05'
 subtitle: This is from today’s New York Times Magazine
 tags:
-- iphone
+- apple
 title: Maybe I hate my iPhone
 type: wp
 wordpress_id: 863

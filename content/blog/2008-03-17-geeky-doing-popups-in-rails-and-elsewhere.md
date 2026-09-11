@@ -4,7 +4,7 @@ date: '2008-03-17'
 subtitle: So my little toy pedagogical application needed a pretty popup box. Actually
   I wanted one so I could...
 tags:
-- ruby-on-rails
+- ruby
 - programming
 title: '[Geeky] Doing popups in Rails and elsewhere'
 type: wp

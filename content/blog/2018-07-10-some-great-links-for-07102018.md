@@ -3,7 +3,7 @@ category: '538'
 date: '2018-07-10'
 subtitle: LaTeX Tips n Tricks for Conference Papers
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  07/10/2018
 type: wp
 wordpress_id: 2390

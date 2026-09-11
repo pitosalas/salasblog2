@@ -4,7 +4,6 @@ date: '2012-03-08'
 subtitle: Yesterday was great. The buzz in the place is unbelievable. This place is
   the Launch Conference. Org...
 tags:
-- demo-conference
 - boston
 title: Launch Conference, Day Two
 type: wp

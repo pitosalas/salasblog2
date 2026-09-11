@@ -1,10 +1,12 @@
 ---
-title: "Learn Kubernetes Basics"
-subtitle: "Production-Grade Container Orchestration"
-category: "1"
-tags: ["2167", "1221", "1347"]
-date: "2022-06-26"
-type: "wp"
+category: '1'
+date: '2022-06-26'
+subtitle: Production-Grade Container Orchestration
+tag_review: no_fit
+tags: []
+title: Learn Kubernetes Basics
+type: wp
 wordpress_id: 3831
 ---
+
 Production-Grade Container Orchestration

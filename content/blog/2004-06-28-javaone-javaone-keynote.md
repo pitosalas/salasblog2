@@ -3,8 +3,8 @@ category: '538'
 date: '2004-06-28'
 subtitle: As you know I am attending the JavaOne conference. I jotted down my key
   takeaways during the keynote...
-tags:
-- sun-microsystems
+tag_review: no_fit
+tags: []
 title: '[JAVAONE] JavaOne Keynote'
 type: wp
 wordpress_id: 1978

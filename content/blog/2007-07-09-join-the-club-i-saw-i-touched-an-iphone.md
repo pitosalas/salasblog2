@@ -4,7 +4,7 @@ date: '2007-07-09'
 subtitle: 'I am not going to write yet another long review or commentary. But I can’t
   resist a few crass words:'
 tags:
-- iphone
+- apple
 title: 'Join the club: I saw, I touched, an iPhone'
 type: wp
 wordpress_id: 1242

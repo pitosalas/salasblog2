@@ -3,8 +3,8 @@ category: '51'
 date: '2008-01-30'
 subtitle: Yesterday was a busy day! I saw lots of excellent products and ideas. I
   don’t know how useful the Li...
-tags:
-- demo-conference
+tag_review: no_fit
+tags: []
 title: Continuing coverage of Demo 2008
 type: wp
 wordpress_id: 1124

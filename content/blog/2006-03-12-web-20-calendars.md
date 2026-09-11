@@ -2,8 +2,8 @@
 category: '538'
 date: '2006-03-12'
 subtitle: Mike Arrington waxes poetic
-tags:
-- mike-arrington
+tag_review: no_fit
+tags: []
 title: Web 2.0 Calendars?
 type: wp
 wordpress_id: 1579

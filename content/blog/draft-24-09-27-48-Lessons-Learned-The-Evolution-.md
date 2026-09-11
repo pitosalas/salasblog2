@@ -5,8 +5,6 @@ source_raindrop: 24-09-27-48-Lessons-Learned-The-Evolution-.md
 source_url: https://link.springer.com/chapter/10.1007/978-3-031-67059-6_6
 tags:
 - robotics
-- teaching
-- course
 - education
 - programming
 title: 'Lessons Learned: The Evolution of an Undergraduate Robotics Course in'

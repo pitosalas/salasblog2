@@ -4,7 +4,7 @@ date: '2006-03-03'
 subtitle: I guess because **deep down** I am still a paranoid **Windows** user, my
   OS X is configured to **au...
 tags:
-- macos
+- apple
 title: How clever is Mac OS X?
 type: wp
 wordpress_id: 1586

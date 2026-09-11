@@ -4,7 +4,7 @@ date: '2018-06-16'
 subtitle: '[An intro to Stimulus JS: well-factored JavaScript for server-rendered
   applications – Superset Blog]...'
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  06/16/2018
 type: wp
 wordpress_id: 2353

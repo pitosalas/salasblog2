@@ -3,7 +3,7 @@ category: '538'
 date: '2006-12-09'
 subtitle: Check out [this
 tags:
-- algorithms
+- computer-science
 - books
 title: Free book on “Algorithms” highly recommended
 type: wp

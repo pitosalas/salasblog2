@@ -5,7 +5,6 @@ subtitle: I have been working quite a lot on **Election Reform** over the last f
   weeks, at least from the t...
 tags:
 - programming
-- trustthevote
 title: '[GEEKY] A DSL for Image Analysis'
 type: wp
 wordpress_id: 842

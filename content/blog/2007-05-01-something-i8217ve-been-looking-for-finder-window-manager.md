@@ -3,7 +3,7 @@ category: '538'
 date: '2007-05-01'
 subtitle: Check out this post from [The Unofficial A...
 tags:
-- macos
+- apple
 title: 'Something I’ve been looking for: Finder Window Manager'
 type: wp
 wordpress_id: 1276

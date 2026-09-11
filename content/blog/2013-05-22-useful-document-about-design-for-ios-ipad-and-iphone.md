@@ -4,7 +4,7 @@ date: '2013-05-22'
 subtitle: 'Starters Guide to iOS Design:'
 tags:
 - design
-- ios
+- apple
 title: Useful document about design for iOS (iPad and IPhone)
 type: wp
 wordpress_id: 200

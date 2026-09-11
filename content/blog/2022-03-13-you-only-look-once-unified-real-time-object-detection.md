@@ -1,12 +1,15 @@
 ---
-title: "You Only Look Once: Unified, Real-Time Object Detection"
-subtitle: "You Only Look Once: Unified, Real-Time Object Detection"
-category: "127"
-tags: ["1798"]
-date: "2022-03-13"
-type: "wp"
+category: '127'
+date: '2022-03-13'
+subtitle: 'You Only Look Once: Unified, Real-Time Object Detection'
+tags:
+- robotics
+- ai
+title: 'You Only Look Once: Unified, Real-Time Object Detection'
+type: wp
 wordpress_id: 3332
 ---
+
 [ You Only Look Once: Unified, Real-Time Object Detection](https://arxiv.org/abs/1506.02640)
  We present YOLO, a new approach to object detection. Prior work on object
 

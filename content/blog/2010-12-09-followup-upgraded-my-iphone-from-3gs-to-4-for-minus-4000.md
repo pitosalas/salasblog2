@@ -3,7 +3,7 @@ category: '298'
 date: '2010-12-09'
 subtitle: Following up from yesterday’s post, in fact, I w...
 tags:
-- iphone
+- apple
 title: 'Followup: Upgraded my iPhone from 3GS to 4 for MINUS $40.00'
 type: wp
 wordpress_id: 627

@@ -4,7 +4,7 @@ date: '2009-07-07'
 subtitle: Ok so I’ve had the new iPhone for a little while now. This is my first ever
   iPhone and I have some q...
 tags:
-- iphone
+- apple
 title: iPhone 3GS – Questions
 type: wp
 wordpress_id: 831

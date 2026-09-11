@@ -2,8 +2,8 @@
 category: '538'
 date: '2007-01-20'
 subtitle: 'Who is he? The CEO of Sun Microsystems. Check out the video:'
-tags:
-- sun-microsystems
+tag_review: no_fit
+tags: []
 title: Really interesting interview with Jonathan Schwartz
 type: wp
 wordpress_id: 1344

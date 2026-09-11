@@ -4,7 +4,7 @@ date: '2006-08-04'
 subtitle: This is Mac specific, but I wouldn’t be surprised if people with more primitive
   computers could do s...
 tags:
-- macos
+- apple
 title: Mail rule to catch image spam
 type: wp
 wordpress_id: 1469

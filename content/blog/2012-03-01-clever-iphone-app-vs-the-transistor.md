@@ -4,7 +4,7 @@ date: '2012-03-01'
 subtitle: This interesting, and I think, correct [article, makes the argument that
   the word ‘innovation’ is be...
 tags:
-- iphone
+- apple
 - technology
 title: Clever iPhone app vs. the Transistor
 type: wp

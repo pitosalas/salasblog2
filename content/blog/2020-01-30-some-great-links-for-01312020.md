@@ -3,7 +3,7 @@ category: '301'
 date: '2020-01-30'
 subtitle: Different Ways to Set Attributes in ActiveRecord (Rails 6)
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  01/31/2020
 type: wp
 wordpress_id: 2726

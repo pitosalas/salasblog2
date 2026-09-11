@@ -3,7 +3,7 @@ category: '298'
 date: '2009-11-12'
 subtitle: I just posted an update on our work on BlogBridge for the iPhone
 tags:
-- iphone
+- apple
 title: News about BlogBridge for iPhone
 type: wp
 wordpress_id: 777

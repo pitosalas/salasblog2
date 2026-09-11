@@ -4,7 +4,6 @@ date: '2010-12-03'
 subtitle: I work at the Open Source Digital Voting Foundation, where we are creating
   ne...
 tags:
-- trustthevote
 - politics
 title: Why we need new election technology
 type: wp

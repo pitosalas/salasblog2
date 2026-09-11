@@ -3,8 +3,7 @@ category: '456'
 date: '2021-05-21'
 subtitle: Robot Web Tools
 tags:
-- robot
-- ros2
+- robotics
 title: Robot Web Tools
 type: wp
 wordpress_id: 2908

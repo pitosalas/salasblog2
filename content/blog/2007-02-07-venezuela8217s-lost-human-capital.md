@@ -4,7 +4,6 @@ date: '2007-02-07'
 subtitle: Really interesting article about what is going on in Venezuela and the impact
   of Hugo Chavez’ polici...
 tags:
-- hugo-chavez
 - politics
 title: Venezuela’s lost human capital
 type: wp

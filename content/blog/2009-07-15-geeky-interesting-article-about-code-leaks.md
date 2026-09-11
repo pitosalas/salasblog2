@@ -4,7 +4,7 @@ date: '2009-07-15'
 subtitle: Check out this interesting case study of how one awful memory leak was tracked
   down and killed
 tags:
-- ruby-on-rails
+- ruby
 - programming
 title: '[GEEKY] Interesting article about code leaks'
 type: wp

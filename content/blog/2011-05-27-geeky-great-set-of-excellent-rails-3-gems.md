@@ -5,7 +5,7 @@ subtitle: Just a quick read of this post showed me several great gems that I wan
   to try right away! If you’re...
 tags:
 - programming
-- ruby-on-rails
+- ruby
 title: '[GEEKY] Great set of excellent Rails 3 Gems'
 type: wp
 wordpress_id: 557

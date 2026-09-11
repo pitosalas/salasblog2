@@ -3,7 +3,6 @@ category: '298'
 date: '2006-05-11'
 subtitle: Our friend Dave Weinberger shares
 tags:
-- david-weinberger
 - health
 title: All you never wanted to know about colonoscopies
 type: wp

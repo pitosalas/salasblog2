@@ -2,8 +2,8 @@
 category: '1'
 date: '2004-02-05'
 subtitle: 'Joho the Blog: The Semantic Earth. David We...'
-tags:
-- david-weinberger
+tag_review: no_fit
+tags: []
 title: 'Joho the Blog: The Semantic'
 type: wp
 wordpress_id: 2080

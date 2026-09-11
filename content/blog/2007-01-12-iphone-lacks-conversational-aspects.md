@@ -3,7 +3,7 @@ category: '298'
 date: '2007-01-12'
 subtitle: Check out [this
 tags:
-- iphone
+- apple
 title: iPhone Lacks Conversational Aspects
 type: wp
 wordpress_id: 1355

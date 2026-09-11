@@ -5,7 +5,7 @@ subtitle: As you (don’t) know, I am [teaching a course at Brandeis University 
   mobile and game developmen...
 tags:
 - technology
-- ios
+- apple
 title: Adobe Software Updates To Help Devs Build iOS, PlayBook And Android Apps
 type: wp
 wordpress_id: 544

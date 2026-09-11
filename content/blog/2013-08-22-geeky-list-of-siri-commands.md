@@ -3,7 +3,7 @@ category: '1'
 date: '2013-08-22'
 subtitle: How to Use Siri – Full list of Siri Commands for iPhone, iPad, Video
 tags:
-- ios
+- apple
 title: '[GEEKY] List of Siri Commands'
 type: wp
 wordpress_id: 177

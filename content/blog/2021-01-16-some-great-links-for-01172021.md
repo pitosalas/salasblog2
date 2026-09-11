@@ -4,7 +4,7 @@ date: '2021-01-16'
 subtitle: '[Building GitHub-style Hovercards with StimulusJS and HTML-over-the-wire
   | Boring Rails: Skip the bu...'
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  01/17/2021
 type: wp
 wordpress_id: 2817

@@ -3,7 +3,7 @@ category: '301'
 date: '2020-12-18'
 subtitle: When Should You NOT Use Rails?
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  12/19/2020
 type: wp
 wordpress_id: 2805

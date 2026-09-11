@@ -3,8 +3,8 @@ category: '298'
 date: '2008-03-20'
 subtitle: You know I follow the vagaries of computer voting machines, right? Here’s
   an interesting article abo...
-tags:
-- trustthevote
+tag_review: no_fit
+tags: []
 title: More e-Voting shenanigans
 type: wp
 wordpress_id: 1083

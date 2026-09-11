@@ -3,7 +3,7 @@ category: '301'
 date: '2018-09-01'
 subtitle: westonganger (Weston Ganger)
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  09/02/2018
 type: wp
 wordpress_id: 2461

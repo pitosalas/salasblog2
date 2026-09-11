@@ -5,7 +5,6 @@ subtitle: Years ago I was a hardcore Mac fanatic. I was one of the creators of a
   early Macintosh app...
 tags:
 - apple
-- macos
 title: Mac OSX not easy to use!
 type: wp
 wordpress_id: 1963

@@ -3,8 +3,7 @@ category: '249'
 date: '2021-06-19'
 subtitle: The Robotics Back-End – Program Robots Like a Boss
 tags:
-- robot
-- ros2
+- robotics
 title: The Robotics Back-End – Program Robots Like a Boss
 type: wp
 wordpress_id: 2971

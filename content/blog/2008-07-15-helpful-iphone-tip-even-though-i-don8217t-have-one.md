@@ -4,7 +4,7 @@ date: '2008-07-15'
 subtitle: 'I saw this somewhere and I thought I would share as it seems very useful,
   yet obscure:'
 tags:
-- iphone
+- apple
 title: Helpful iPhone tip (even though I don’t have one)
 type: wp
 wordpress_id: 1009

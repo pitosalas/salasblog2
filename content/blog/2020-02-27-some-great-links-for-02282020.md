@@ -3,7 +3,7 @@ category: '301'
 date: '2020-02-27'
 subtitle: How to write Javascript in Rails 6 | Webpacker, Yarn and Sprockets
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  02/28/2020
 type: wp
 wordpress_id: 2732

@@ -3,7 +3,7 @@ category: '301'
 date: '2020-03-03'
 subtitle: Ruby on Rails Mistakes that could kill Your Production Servers
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  03/04/2020
 type: wp
 wordpress_id: 2734

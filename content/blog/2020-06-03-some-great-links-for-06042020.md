@@ -4,7 +4,6 @@ date: '2020-06-03'
 subtitle: The Unreasonable Effectiveness of Method Chaining in Pandas
 tags:
 - python
-- pandas
 title: Some great links for  06/04/2020
 type: wp
 wordpress_id: 2747

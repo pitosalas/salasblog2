@@ -3,7 +3,7 @@ category: '301'
 date: '2019-02-06'
 subtitle: Design follows data structures
 tags:
-- algorithms
+- computer-science
 title: Some great links for  02/07/2019
 type: wp
 wordpress_id: 2533

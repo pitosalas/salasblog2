@@ -3,7 +3,7 @@ category: '301'
 date: '2019-10-09'
 subtitle: Rails Performance Tips
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  10/10/2019
 type: wp
 wordpress_id: 2648

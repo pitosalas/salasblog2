@@ -3,8 +3,8 @@ category: '298'
 date: '2008-06-24'
 subtitle: I haven’t seen anyone pointing to this article about TechCrunch and Professor
   Arrington
-tags:
-- mike-arrington
+tag_review: no_fit
+tags: []
 title: Good article about TechCrunch and Michael Arrington in Wired
 type: wp
 wordpress_id: 1025

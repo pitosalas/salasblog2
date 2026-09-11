@@ -4,7 +4,7 @@ date: '2010-07-21'
 subtitle: This is from my OSX Activity Monitor.app. See how it shows that one process
   is using 659.9% of the ...
 tags:
-- macos
+- apple
 title: '[GEEKY] Something wrong with this picture?'
 type: wp
 wordpress_id: 699

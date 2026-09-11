@@ -4,7 +4,7 @@ date: '2010-06-23'
 subtitle: This looks like a really nice and detailed tutorial on how to use Twitter
   in Rails
 tags:
-- ruby-on-rails
+- ruby
 - programming
 title: '[GEEKY] How to use Twitter in Rails'
 type: wp

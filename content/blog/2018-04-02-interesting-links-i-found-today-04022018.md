@@ -4,7 +4,7 @@ date: '2018-04-02'
 subtitle: '[Rails Refactoring Techniques – Concerns | Best Practice on Ruby on Rails
   | Hire Ruby on Rails devel...'
 tags:
-- ruby-on-rails
+- ruby
 title: Interesting links I found today 04/02/2018
 type: wp
 wordpress_id: 2145

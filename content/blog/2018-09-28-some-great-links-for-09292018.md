@@ -3,7 +3,7 @@ category: '301'
 date: '2018-09-28'
 subtitle: ebobby/has-many-with-set
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  09/29/2018
 type: wp
 wordpress_id: 2469

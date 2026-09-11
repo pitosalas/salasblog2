@@ -4,7 +4,7 @@ date: '2010-07-15'
 subtitle: Just wonderin’ — the iPod Shuffle has a really cool feature where a synthesized
   voice will announce ...
 tags:
-- iphone
+- apple
 title: Why is iPod Shuffle’s ‘voice over’ feature not available on the iPhone?
 type: wp
 wordpress_id: 701

@@ -3,7 +3,7 @@ category: '301'
 date: '2019-10-01'
 subtitle: Understanding Zeitwerk in Rails 6
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  10/02/2019
 type: wp
 wordpress_id: 2645

@@ -3,8 +3,8 @@ category: '1'
 date: '2004-02-27'
 subtitle: '**Real Virtual Reality! (Demo 2004 Series – 6)** I am not clear as to whether
   Total Immersion'
-tags:
-- demo-conference
+tag_review: no_fit
+tags: []
 title: Real Virtual Reality! (Demo 2004
 type: wp
 wordpress_id: 2065

@@ -3,7 +3,6 @@ category: '298'
 date: '2009-09-16'
 subtitle: Just found out that the WebInno group i...
 tags:
-- webinno
 - boston
 title: Upcoming Web Innovators Group meeting
 type: wp

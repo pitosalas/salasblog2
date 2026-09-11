@@ -3,7 +3,7 @@ category: '422'
 date: '2011-08-05'
 subtitle: Check this post A strong argument for why iOS development is winning
 tags:
-- ios
+- apple
 - programming
 title: '[GEEKY] Why I am not yet developing for iOS'
 type: wp

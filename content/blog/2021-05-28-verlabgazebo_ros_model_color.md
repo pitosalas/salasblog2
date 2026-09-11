@@ -3,8 +3,7 @@ category: '208'
 date: '2021-05-28'
 subtitle: verlab/gazebo_ros_model_color
 tags:
-- robot
-- ros2
+- robotics
 title: verlab/gazebo_ros_model_color
 type: wp
 wordpress_id: 2919

@@ -4,7 +4,6 @@ date: '2012-02-17'
 subtitle: 'Great review article:'
 tags:
 - computer-science
-- algorithms
 title: MapReduce Patterns and Examples
 type: wp
 wordpress_id: 388

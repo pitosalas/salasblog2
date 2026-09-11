@@ -3,7 +3,6 @@ category: '298'
 date: '2005-08-08'
 subtitle: 'Hey, I just came across this:'
 tags:
-- pivot-table
 - lotus
 title: A bit of personal PR (at least I labeled it so you can skip it)
 type: wp

@@ -3,8 +3,8 @@ category: '298'
 date: '2006-09-08'
 subtitle: David Weinberger reports that now you can go to Harvard University (or at
   least attend a single cour...
-tags:
-- david-weinberger
+tag_review: no_fit
+tags: []
 title: Ultimate virtual classroom
 type: wp
 wordpress_id: 1435

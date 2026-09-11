@@ -4,7 +4,7 @@ date: '2014-06-26'
 subtitle: Check out this really interesting article plus lovely animations. I have
   to go find out how it actua...
 tags:
-- algorithms
+- computer-science
 - python
 title: Visualizing Algorithms
 type: wp

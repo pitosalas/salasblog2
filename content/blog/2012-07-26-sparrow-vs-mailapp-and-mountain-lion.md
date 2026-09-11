@@ -4,7 +4,6 @@ date: '2012-07-26'
 subtitle: Did you hear that Google bought Sparrow? Sparrow is a really cool email...
 tags:
 - apple
-- macos
 title: Sparrow vs. Mail.app and Mountain Lion
 type: wp
 wordpress_id: 305

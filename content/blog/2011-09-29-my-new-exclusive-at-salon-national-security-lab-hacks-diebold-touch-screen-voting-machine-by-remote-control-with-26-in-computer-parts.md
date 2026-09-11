@@ -5,7 +5,6 @@ subtitle: Continuing my linking to Election related news, check out this post [D
   Touch-Screen Voting Mac...
 tags:
 - politics
-- trustthevote
 title: 'My New EXCLUSIVE at Salon: National Security Lab Hacks Diebold Touch-Screen
   Voting Machine by Remote Control With $26 in Computer Parts'
 type: wp

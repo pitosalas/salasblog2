@@ -4,7 +4,7 @@ date: '2009-03-09'
 subtitle: The other day, [Amazon released a free application on the iPhone (and iPod
   Touch.) On the surface, j...
 tags:
-- iphone
+- apple
 - books
 title: Amazon’s kindle on iPhone – Genius
 type: wp

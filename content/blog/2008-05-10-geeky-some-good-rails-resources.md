@@ -4,7 +4,7 @@ date: '2008-05-10'
 subtitle: 'Just a few handy links that, if you are a Rails developer you may be interested
   in:'
 tags:
-- ruby-on-rails
+- ruby
 title: '[GEEKY] Some good Rails resources'
 type: wp
 wordpress_id: 1049

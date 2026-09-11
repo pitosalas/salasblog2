@@ -3,7 +3,6 @@ category: '1'
 date: '2012-03-07'
 subtitle: The Launch Conference is starting today. It is descended from many venerabl...
 tags:
-- demo-conference
 - business
 title: 'Launch Conference: Day One'
 type: wp

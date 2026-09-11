@@ -4,7 +4,6 @@ date: '2010-12-06'
 subtitle: David Weinberger has, as usual, an interesting take, and some in...
 tags:
 - politics
-- david-weinberger
 title: 'Wikileaks: Truth or Truthy or something entirely different?'
 type: wp
 wordpress_id: 631

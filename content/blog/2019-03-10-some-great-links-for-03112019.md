@@ -3,7 +3,7 @@ category: '301'
 date: '2019-03-10'
 subtitle: How to scale Ruby on Rails with Redis | Opensource.com
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  03/11/2019
 type: wp
 wordpress_id: 2549

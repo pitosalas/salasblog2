@@ -5,8 +5,7 @@ subtitle: I’m getting a little **fascinated** with **Ruby** and **Rails** so I
   been getting acquainted with...
 tags:
 - ruby
-- ruby-on-rails
-- macos
+- apple
 title: '[GEEK] Playing with Ruby on Mac'
 type: wp
 wordpress_id: 1428

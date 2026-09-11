@@ -4,7 +4,7 @@ date: '2018-06-28'
 subtitle: '[Decoding Rails Magic: How Does ActiveJob work? – Karol Galanciak – Ruby
   on Rails and Ember.js consu...'
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  06/28/2018
 type: wp
 wordpress_id: 2371

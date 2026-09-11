@@ -1,12 +1,14 @@
 ---
-title: "Success Through Presentations – 5 Minutes with Cyrill"
-subtitle: "Success Through Presentations – 5 Minutes with Cyrill"
-category: "5"
-tags: ["1973", "2072"]
-date: "2022-04-04"
-type: "wp"
+category: '5'
+date: '2022-04-04'
+subtitle: Success Through Presentations – 5 Minutes with Cyrill
+tag_review: no_fit
+tags: []
+title: Success Through Presentations – 5 Minutes with Cyrill
+type: wp
 wordpress_id: 3414
 ---
+
 [ Success Through Presentations – 5 Minutes with Cyrill](https://youtube.com/watch?v=nU6NPuxkQck&feature=share)
  Success through presenting well
 

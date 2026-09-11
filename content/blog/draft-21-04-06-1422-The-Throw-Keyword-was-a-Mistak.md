@@ -5,7 +5,6 @@ draft: true
 source_raindrop: 21-04-06-1422-The-Throw-Keyword-was-a-Mistak.md
 source_url: https://hackernoon.com/the-throw-keyword-was-a-mistake-l9e532di
 tags:
-- software
 - programming
 - design
 title: The Throw Keyword was a Mistake - By Chris Fox

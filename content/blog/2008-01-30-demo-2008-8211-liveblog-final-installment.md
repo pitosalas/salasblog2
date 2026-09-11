@@ -3,8 +3,8 @@ category: '51'
 date: '2008-01-30'
 subtitle: Sadly we are to the last of the Demo 2008 events. I am writing at the 3/4
   point and so far it has be...
-tags:
-- demo-conference
+tag_review: no_fit
+tags: []
 title: Demo 2008 – Liveblog, final installment
 type: wp
 wordpress_id: 1123

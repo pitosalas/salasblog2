@@ -4,7 +4,7 @@ date: '2014-10-28'
 subtitle: I came across a wonderful quote about intellectual property. I am not sure
   I agree with it myself bu...
 tags:
-- law
+- legal
 title: About intellectual property and other things
 type: wp
 wordpress_id: 2901

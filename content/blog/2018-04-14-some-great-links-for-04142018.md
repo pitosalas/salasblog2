@@ -4,7 +4,7 @@ date: '2018-04-14'
 subtitle: 'Build a Text Classification Program: An NLP Tutorial'
 tags:
 - ai
-- pandas
+- python
 title: Some great links for  04/14/2018
 type: wp
 wordpress_id: 2214

@@ -4,7 +4,6 @@ date: '2005-03-31'
 subtitle: There’s another flame-up on the WebS...
 tags:
 - programming
-- sun-microsystems
 title: '[GEEK] Java Web Start {again}'
 type: wp
 wordpress_id: 1815

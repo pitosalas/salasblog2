@@ -3,7 +3,7 @@ category: '538'
 date: '2018-07-04'
 subtitle: Editors | Drifting Ruby
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  07/04/2018
 type: wp
 wordpress_id: 2387

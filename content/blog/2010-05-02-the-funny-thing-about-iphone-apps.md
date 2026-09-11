@@ -4,7 +4,7 @@ date: '2010-05-02'
 subtitle: So a friend of mine told me of his iPhone app, called Etude. He sung the
   pra...
 tags:
-- iphone
+- apple
 title: The funny thing about iPhone apps
 type: wp
 wordpress_id: 722

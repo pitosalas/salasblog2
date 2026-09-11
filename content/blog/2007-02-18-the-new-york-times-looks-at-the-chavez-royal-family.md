@@ -4,7 +4,6 @@ date: '2007-02-18'
 subtitle: If you keep up with what’s going on in Venezuela, you might want to check
   out this post
 tags:
-- hugo-chavez
 - politics
 title: The New York Times looks at the Chavez Royal family
 type: wp

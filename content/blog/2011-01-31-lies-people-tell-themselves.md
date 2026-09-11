@@ -3,7 +3,6 @@ category: '1'
 date: '2011-01-31'
 subtitle: Michael Arrington is a famous Tech-pundit-commenta...
 tags:
-- mike-arrington
 - business
 title: Lies people tell themselves
 type: wp

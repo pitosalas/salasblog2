@@ -3,7 +3,7 @@ category: '298'
 date: '2007-01-10'
 subtitle: Check out [this
 tags:
-- iphone
+- apple
 title: Do you really really really want an iPhone?
 type: wp
 wordpress_id: 1357

@@ -5,7 +5,6 @@ subtitle: Yeah a weird thought. So when I came across an [analysis called The Du
   Defend Their World Empire]...
 tags:
 - curacao
-- hugo-chavez
 - politics
 title: What would happen if Venezuela invaded Curaçao
 type: wp

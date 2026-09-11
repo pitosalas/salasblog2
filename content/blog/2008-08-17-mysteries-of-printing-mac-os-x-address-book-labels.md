@@ -5,7 +5,6 @@ subtitle: Apple always, or almost always, thinks through the user interface care
   and includes all kinds o...
 tags:
 - apple
-- macos
 title: Mysteries of printing Mac OS X Address Book labels
 type: wp
 wordpress_id: 993

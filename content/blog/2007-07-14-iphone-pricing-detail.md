@@ -4,7 +4,7 @@ date: '2007-07-14'
 subtitle: I was chatting with my neighborhood iPhone (Cingular/AT&T) dealer and learned
   this interesting detai...
 tags:
-- iphone
+- apple
 title: iPhone pricing detail
 type: wp
 wordpress_id: 1240

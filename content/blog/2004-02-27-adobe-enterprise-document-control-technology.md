@@ -3,8 +3,8 @@ category: '1'
 date: '2004-02-27'
 subtitle: '**Adobe Enterprise document control technology (Demo 2004 Series – 5) **They
   have come up with a pol...'
-tags:
-- demo-conference
+tag_review: no_fit
+tags: []
 title: Adobe Enterprise document control technology
 type: wp
 wordpress_id: 2066

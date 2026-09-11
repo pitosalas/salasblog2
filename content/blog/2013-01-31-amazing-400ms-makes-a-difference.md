@@ -4,7 +4,7 @@ date: '2013-01-31'
 subtitle: Under the header “Natural Gas News Leak” (funny) there’s a [story about
   how the securities market re...
 tags:
-- algorithms
+- computer-science
 title: 'Amazing: 400ms makes a difference'
 type: wp
 wordpress_id: 250

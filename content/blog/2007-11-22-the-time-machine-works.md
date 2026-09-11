@@ -3,7 +3,7 @@ category: '538'
 date: '2007-11-22'
 subtitle: Check out this post from [blog...
 tags:
-- macos
+- apple
 title: The Time Machine Works!
 type: wp
 wordpress_id: 1176

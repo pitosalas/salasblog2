@@ -5,7 +5,7 @@ subtitle: 'Check out this really interesting [Pogue article in the New York Time
   “Gorilla Glass, the Smartpho...'
 tags:
 - technology
-- iphone
+- apple
 title: Do you need to keep your cell phone in a protective case?
 type: wp
 wordpress_id: 626

@@ -3,7 +3,7 @@ category: '301'
 date: '2020-03-28'
 subtitle: How to do multi-step forms in Rails – Code with Jason
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  03/29/2020
 type: wp
 wordpress_id: 2740

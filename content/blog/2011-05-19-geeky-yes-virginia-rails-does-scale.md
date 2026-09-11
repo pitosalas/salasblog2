@@ -5,7 +5,7 @@ subtitle: Why doesn’t every one **love Rails**? I am surprised when I run into
   (Pat?) who’s not so sur...
 tags:
 - programming
-- ruby-on-rails
+- ruby
 title: '[GEEKY] Yes, Virginia, Rails DOES scale'
 type: wp
 wordpress_id: 565

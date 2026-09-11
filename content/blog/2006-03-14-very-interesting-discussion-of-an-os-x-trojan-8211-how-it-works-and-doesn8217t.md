@@ -3,7 +3,7 @@ category: '538'
 date: '2006-03-14'
 subtitle: 'Via MetaFilter: “Barbarians are at the gates, testing the lo...'
 tags:
-- macos
+- apple
 title: Very interesting discussion of an OS X Trojan – how it works and doesn’t
 type: wp
 wordpress_id: 1578

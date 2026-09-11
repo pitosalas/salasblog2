@@ -4,7 +4,7 @@ date: '2013-01-15'
 subtitle: I am not being metaphorical, in fact, I am talking about gutters on your
   roof. A few years ago I was...
 tags:
-- robot
+- robotics
 title: Get someone to clean your gutters for you
 type: wp
 wordpress_id: 254

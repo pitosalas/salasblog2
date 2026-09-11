@@ -5,9 +5,6 @@ source_raindrop: 24-03-16-114-zauberzeugnicegui-Create-web-b.md
 source_url: https://github.com/zauberzeug/nicegui
 tags:
 - python
-- package
-- ui
-- chrome
 title: 'zauberzeug/nicegui: Create web-based user interfaces with Python. The nice
   way.'
 type: blog

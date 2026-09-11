@@ -5,7 +5,7 @@ subtitle: "I’ve been playing around with each of the major tablets while consi
   ‘my next move’ \U0001F642"
 tags:
 - technology
-- ipad
+- apple
 title: Weight of tablets
 type: wp
 wordpress_id: 442

@@ -2,8 +2,8 @@
 category: '410'
 date: '2010-01-04'
 subtitle: I’ve been part of the core tech team of the TrustTheVote project and ...
-tags:
-- trustthevote
+tag_review: no_fit
+tags: []
 title: TrustTheVote project
 type: wp
 wordpress_id: 762

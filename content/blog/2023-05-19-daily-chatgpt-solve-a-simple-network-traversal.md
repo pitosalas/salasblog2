@@ -1,12 +1,16 @@
 ---
-title: "Daily ChatGPT: Solve a simple network traversal"
-subtitle: "Tell me how this is simple word completion. Can this be broadened to a more complicated network. Cou..."
-category: "1"
-tags: []
-date: "2023-05-19"
-type: "wp"
+category: '1'
+date: '2023-05-19'
+subtitle: Tell me how this is simple word completion. Can this be broadened to a more
+  complicated network. Cou...
+tags:
+- ai
+- computer-science
+title: 'Daily ChatGPT: Solve a simple network traversal'
+type: wp
 wordpress_id: 4489
 ---
+
 Tell me how this is simple word completion. Can this be broadened to a more complicated network. Could it be used for some kind of semi-intelligent navigation?
 
 ## Prompt:

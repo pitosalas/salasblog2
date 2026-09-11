@@ -3,8 +3,7 @@ category: '205'
 date: '2021-06-16'
 subtitle: Making a ROS Controller
 tags:
-- robot
-- ros2
+- robotics
 title: Making a ROS Controller
 type: wp
 wordpress_id: 2955

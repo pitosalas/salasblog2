@@ -5,7 +5,6 @@ subtitle: This is very close to where I live, and people are amazed to know that
   can actually go by boat f...
 tags:
 - boston
-- arlington
 title: By boat from Boston Harbor to the Lower Mystic Lake
 type: wp
 wordpress_id: 641

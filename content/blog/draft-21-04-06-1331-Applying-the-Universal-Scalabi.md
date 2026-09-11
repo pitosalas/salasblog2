@@ -4,9 +4,7 @@ date: '2026-04-23'
 source_raindrop: 21-04-06-1331-Applying-the-Universal-Scalabi.md
 source_url: https://blog.acolyer.org/2015/04/29/applying-the-universal-scalability-law-to-organisations
 tags:
-- law
-- paper
-- scalability
+- legal
 title: Applying the Universal Scalability Law to organisations | the morning paper
 type: blog
 ---

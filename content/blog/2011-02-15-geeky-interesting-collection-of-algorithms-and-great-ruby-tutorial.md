@@ -4,7 +4,7 @@ date: '2011-02-15'
 subtitle: Over the last several months I’ve been following a series of blog postings
   by Jamis Buck
 tags:
-- algorithms
+- computer-science
 - ruby
 title: '[GEEKY] Interesting collection of algorithms and great Ruby tutorial'
 type: wp

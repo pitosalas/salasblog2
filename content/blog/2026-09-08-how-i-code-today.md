@@ -2,8 +2,7 @@
 date: '2026-09-09'
 image_size: medium
 tags:
-- claude
-- coding
+- ai
 - software-engineering
 title: How I code today
 type: blog

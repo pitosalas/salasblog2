@@ -2,8 +2,8 @@
 category: '538'
 date: '2008-01-16'
 subtitle: 'From the Wall Street Journal:'
-tags:
-- sun-microsystems
+tag_review: no_fit
+tags: []
 title: Is this good? Sun buys MySql!
 type: wp
 wordpress_id: 1136

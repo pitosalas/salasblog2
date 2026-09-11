@@ -3,7 +3,7 @@ category: '1'
 date: '2011-11-28'
 subtitle: 'This is just a weird story:'
 tags:
-- iphone
+- apple
 title: 'Aw, come on: Apple iPhone spontaneously combusts aboard flight in Australia'
 type: wp
 wordpress_id: 454

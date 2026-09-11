@@ -3,7 +3,6 @@ category: '298'
 date: '2011-05-12'
 subtitle: 'Funny to read this:'
 tags:
-- iphone
 - apple
 title: People forgot about iPhone 1.0
 type: wp

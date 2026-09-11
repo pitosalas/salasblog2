@@ -5,7 +5,6 @@ subtitle: I’ve been in the process of setting up a new computer and in the pro
   as is expected, discoverin...
 tags:
 - apple
-- macos
 title: '[geeky] Odd stuff I’ve learned setting up a new Mac'
 type: wp
 wordpress_id: 803

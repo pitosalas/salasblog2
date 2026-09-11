@@ -4,7 +4,6 @@ date: '2010-08-05'
 subtitle: Check this post The flatfooted learning society
 tags:
 - programming
-- david-weinberger
 title: 'David Weinberger has flat feet: Programming'
 type: wp
 wordpress_id: 691

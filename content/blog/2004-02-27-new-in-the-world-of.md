@@ -3,8 +3,8 @@ category: '1'
 date: '2004-02-27'
 subtitle: '**New in the world of Digital Photography (Demo 2004 Series – 4) **The
   beat goes on in the world of ...'
-tags:
-- demo-conference
+tag_review: no_fit
+tags: []
 title: New in the world of
 type: wp
 wordpress_id: 2067

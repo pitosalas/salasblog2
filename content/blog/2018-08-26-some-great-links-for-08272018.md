@@ -3,7 +3,7 @@ category: '301'
 date: '2018-08-26'
 subtitle: How to configure RSpec in Ruby on Rails
 tags:
-- ruby-on-rails
+- ruby
 title: Some great links for  08/27/2018
 type: wp
 wordpress_id: 2459

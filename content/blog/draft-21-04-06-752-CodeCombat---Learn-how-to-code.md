@@ -4,10 +4,8 @@ date: '2026-04-18'
 source_raindrop: 21-04-06-752-CodeCombat---Learn-how-to-code.md
 source_url: https://codecombat.com
 tags:
-- coding
 - programming
-- game
-- vscode
+- cli
 title: CodeCombat - Learn how to code by playing a game
 type: blog
 ---

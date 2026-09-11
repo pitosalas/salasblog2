@@ -3,8 +3,8 @@ category: '1'
 date: '2018-03-31'
 subtitle: 5 Tips To Write Idiomatic Pandas Code (article) – DataCamp
 tags:
-- pandas
-- ruby-on-rails
+- python
+- ruby
 title: Interesting Links
 type: wp
 wordpress_id: 2139

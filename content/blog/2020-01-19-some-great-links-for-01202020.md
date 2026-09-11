@@ -3,7 +3,7 @@ category: '301'
 date: '2020-01-19'
 subtitle: My Favorite Macbook Tools
 tags:
-- macos
+- apple
 title: Some great links for  01/20/2020
 type: wp
 wordpress_id: 2704

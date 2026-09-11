@@ -4,7 +4,6 @@ date: '2008-03-11'
 subtitle: Check out this post from [Planet RubyOnR...
 tags:
 - apple
-- iphone
 title: 30% to Apple for folks selling iPhone apps??
 type: wp
 wordpress_id: 1090

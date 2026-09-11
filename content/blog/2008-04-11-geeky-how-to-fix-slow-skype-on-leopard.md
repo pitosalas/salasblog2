@@ -3,7 +3,6 @@ category: '298'
 date: '2008-04-11'
 subtitle: '!['
 tags:
-- macos
 - apple
 title: '[GEEKY] How to fix slow Skype on Leopard'
 type: wp

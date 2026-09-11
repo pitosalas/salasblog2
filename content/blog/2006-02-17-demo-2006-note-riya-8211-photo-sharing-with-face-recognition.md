@@ -4,7 +4,6 @@ date: '2006-02-17'
 subtitle: This one was probably one of the most talked about sites. The principle
   is, F...
 tags:
-- demo-conference
 - ai
 title: 'Demo 2006 Note: Riya – Photo Sharing with Face Recognition'
 type: wp

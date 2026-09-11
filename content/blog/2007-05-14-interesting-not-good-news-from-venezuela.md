@@ -4,7 +4,6 @@ date: '2007-05-14'
 subtitle: You know that I follow what’s going on in Venezuela. Here’s an interesting
   [article from the Washing...
 tags:
-- hugo-chavez
 - politics
 title: Interesting (not good) news from Venezuela
 type: wp

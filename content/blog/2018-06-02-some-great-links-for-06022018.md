@@ -4,7 +4,7 @@ date: '2018-06-02'
 subtitle: How to solve the Google recruiters’ puzzle about throwing eggs from a building
   | Codementor
 tags:
-- algorithms
+- computer-science
 title: Some great links for  06/02/2018
 type: wp
 wordpress_id: 2346

@@ -5,9 +5,7 @@ subtitle: I get asked from time to time to recommend ruby, rails, and other deve
   in the Boston area, eit...
 tags:
 - ruby
-- ruby-on-rails
 - boston
-- webinno
 title: Ruby and Rails job boards in Boston
 type: wp
 wordpress_id: 751

@@ -4,7 +4,7 @@ date: '2011-12-05'
 subtitle: What if when I typed into the search box in Safari (Mac OS X’s web browser)
   the text is interpreted ...
 tags:
-- macos
+- apple
 - ai
 title: Killer feature for Mac OS X?
 type: wp
