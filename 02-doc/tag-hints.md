@@ -87,3 +87,5 @@ gnomedex (0 uses)
 howard-stern (0 uses)
 opml (0 uses)
 social-networking (0 uses)
+games
+theatre
