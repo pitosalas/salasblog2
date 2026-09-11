@@ -72,19 +72,14 @@ def parse_curated_tag_aliases(text: str) -> Dict[str, str]:
     spelling - a primary tag itself, plus any secondary aliases it
     declares - to that primary tag's name.
 
-    A secondary alias is declared in a line's parenthetical comment with a
-    leading `aka:`, comma-separated, optionally followed by `;` and a plain
-    prose note that isn't itself parsed as aliases:
+    A line's parenthetical, if present, is a comma-separated list of
+    secondary aliases for that primary - not free prose:
 
-        79       robotics (aka: robot, robots)
-        9        eroom (aka: lotus)
-        9        sun-microsystems (aka: sun; or a specific product like mysql/java)
-        4        hugo-chavez (not bare chavez)
+        79       robotics (robot, ros, ros2)
+        9        eroom (lotus)
 
-    A parenthetical with no leading `aka:` (like `hugo-chavez` above) is
-    plain prose, not an alias declaration - existing clarifying comments
-    don't need rewriting just because this function exists. Every primary
-    always maps to itself.
+    Every primary always maps to itself. A tag with no parenthetical has
+    no secondaries.
     """
     aliases: Dict[str, str] = {}
     in_section = False
@@ -103,12 +98,10 @@ def parse_curated_tag_aliases(text: str) -> Dict[str, str]:
         if not primary:
             continue
         aliases[primary] = primary
-        aka_match = re.match(r"^\s*aka:\s*([^;]+)", comment, re.IGNORECASE)
-        if aka_match:
-            for secondary in aka_match.group(1).split(","):
-                secondary = secondary.strip()
-                if secondary:
-                    aliases[secondary] = primary
+        for secondary in comment.split(","):
+            secondary = secondary.strip()
+            if secondary:
+                aliases[secondary] = primary
     return aliases
 
 
