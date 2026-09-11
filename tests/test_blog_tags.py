@@ -11,7 +11,9 @@ from jinja2 import Environment, FileSystemLoader
 from salasblog2.utils import (
     format_date,
     get_markdown_processor,
+    load_curated_tag_aliases,
     load_curated_tags,
+    parse_curated_tag_aliases,
     parse_tag_hints_section,
     slugify_tag,
 )
@@ -72,6 +74,53 @@ class TestParseTagHintsSection:
 
     def test_missing_header_returns_empty(self):
         assert parse_tag_hints_section("# A\n\none\n", "# B") == []
+
+
+class TestParseCuratedTagAliases:
+    def test_primary_maps_to_itself(self):
+        text = "# Curated Tags\n\nrobotics\n"
+        assert parse_curated_tag_aliases(text) == {"robotics": "robotics"}
+
+    def test_aka_declares_secondaries(self):
+        text = "# Curated Tags\n\nrobotics (aka: robot, robots)\n"
+        aliases = parse_curated_tag_aliases(text)
+        assert aliases == {
+            "robotics": "robotics",
+            "robot": "robotics",
+            "robots": "robotics",
+        }
+
+    def test_prose_comment_without_aka_is_not_an_alias(self):
+        text = "# Curated Tags\n\nhugo-chavez (not bare chavez)\n"
+        assert parse_curated_tag_aliases(text) == {"hugo-chavez": "hugo-chavez"}
+
+    def test_aka_can_be_followed_by_a_prose_note(self):
+        text = (
+            "# Curated Tags\n\n"
+            "sun-microsystems (aka: sun; or a specific product like mysql/java)\n"
+        )
+        aliases = parse_curated_tag_aliases(text)
+        assert aliases == {
+            "sun-microsystems": "sun-microsystems",
+            "sun": "sun-microsystems",
+        }
+
+    def test_ignores_leading_usage_count(self):
+        text = "# Curated Tags\n\n79       robotics (aka: robot)\n"
+        aliases = parse_curated_tag_aliases(text)
+        assert aliases == {"robotics": "robotics", "robot": "robotics"}
+
+    def test_stops_at_next_heading(self):
+        text = "# Curated Tags\n\nrobotics\n\n# Something Else\n\nnope (aka: nope2)\n"
+        assert parse_curated_tag_aliases(text) == {"robotics": "robotics"}
+
+    def test_load_curated_tag_aliases_reads_from_file(self, tmp_path):
+        path = tmp_path / "tag-hints.md"
+        path.write_text("# Curated Tags\n\neroom (aka: lotus)\n", encoding="utf-8")
+        assert load_curated_tag_aliases(path) == {
+            "eroom": "eroom",
+            "lotus": "eroom",
+        }
 
 
 class TestBloggerApiTagParsing:

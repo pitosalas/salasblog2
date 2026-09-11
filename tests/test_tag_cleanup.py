@@ -20,6 +20,7 @@ from salasblog2.tag_cleanup import (
     build_proposal,
     has_numeric_tag,
     needs_tag_cleanup,
+    normalize_post_tags,
     promote_recurring_candidates,
     proposals_to_json,
     select_posts_needing_cleanup,
@@ -227,9 +228,7 @@ class TestBuildProposal:
 class TestPromoteRecurringCandidates:
     def make_hints(self, tmp_path, extra=""):
         path = tmp_path / "tag-hints.md"
-        path.write_text(
-            "# Curated Tags\n\nrobotics\n" + extra, encoding="utf-8"
-        )
+        path.write_text("# Curated Tags\n\nrobotics\n" + extra, encoding="utf-8")
         return path
 
     def make_proposals(self, filenames, tag="mars"):
@@ -346,3 +345,46 @@ class TestApplyTagBatch:
         assert written == ["keep.md"]
         assert frontmatter.load(tmp_path / "keep.md").metadata["tags"] == ["ai"]
         assert frontmatter.load(tmp_path / "skip.md").metadata["tags"] == ["5678"]
+
+
+class TestNormalizePostTags:
+    def test_keeps_a_tag_already_a_primary(self):
+        result = normalize_post_tags("post.md", ["robotics"], {"robotics": "robotics"})
+        assert result.normalized_tags == ["robotics"]
+        assert result.removed_tags == []
+        assert result.changed is False
+
+    def test_rewrites_a_secondary_to_its_primary(self):
+        alias_map = {"robotics": "robotics", "robot": "robotics"}
+        result = normalize_post_tags("post.md", ["robot"], alias_map)
+        assert result.normalized_tags == ["robotics"]
+        assert result.removed_tags == []
+        assert result.changed is True
+
+    def test_drops_a_tag_matching_neither_primary_nor_secondary(self):
+        result = normalize_post_tags("post.md", ["mystery"], {"robotics": "robotics"})
+        assert result.normalized_tags == []
+        assert result.removed_tags == ["mystery"]
+        assert result.changed is True
+
+    def test_dedupes_when_primary_and_secondary_both_present(self):
+        alias_map = {"robotics": "robotics", "robot": "robotics"}
+        result = normalize_post_tags("post.md", ["robot", "robotics"], alias_map)
+        assert result.normalized_tags == ["robotics"]
+        assert result.removed_tags == []
+
+    def test_mixed_keep_rewrite_and_drop(self):
+        alias_map = {
+            "robotics": "robotics",
+            "robot": "robotics",
+            "ai": "ai",
+        }
+        result = normalize_post_tags("post.md", ["robot", "ai", "mystery"], alias_map)
+        assert result.normalized_tags == ["robotics", "ai"]
+        assert result.removed_tags == ["mystery"]
+
+    def test_empty_tags_are_unchanged(self):
+        result = normalize_post_tags("post.md", [], {"robotics": "robotics"})
+        assert result.normalized_tags == []
+        assert result.removed_tags == []
+        assert result.changed is False

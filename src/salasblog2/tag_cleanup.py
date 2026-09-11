@@ -39,6 +39,13 @@ consistent with this pipeline having no separate saved progress file.
 Frontmatter writes (`apply_tag_proposal`) verify the post's body is
 byte-identical before and after, so a bug in this pipeline can't corrupt
 post content even if it writes wrong tags.
+
+A second, separate concern lives here too: `normalize_post_tags` rewrites
+tags a post *already has* through tag-hints.md's alias map (a curated tag
+can declare secondary spellings, e.g. `robotics (aka: robot, robots)`,
+loaded via `utils.load_curated_tag_aliases`). This is deliberately NOT
+additive-only, unlike everything above - an existing tag matching neither
+a primary nor a declared secondary is dropped, on purpose, not preserved.
 """
 
 import json
@@ -286,3 +293,54 @@ def apply_tag_batch(blog_dir: Path, approved: list[dict]) -> list[str]:
         apply_tag_proposal(blog_dir, entry["filename"], entry["tags"])
         written.append(entry["filename"])
     return written
+
+
+@dataclass
+class TagNormalization:
+    """The result of rewriting one post's *existing* tags through the
+    curated alias map - see `normalize_post_tags`."""
+
+    filename: str
+    original_tags: list[str]
+    normalized_tags: list[str]
+    removed_tags: list[str] = field(default_factory=list)
+
+    @property
+    def changed(self) -> bool:
+        return self.normalized_tags != self.original_tags
+
+
+def normalize_post_tags(
+    filename: str, current_tags: list[str], alias_map: dict[str, str]
+) -> TagNormalization:
+    """Rewrite a post's existing tags to their canonical primaries per
+    `alias_map` (from `utils.load_curated_tag_aliases`): a tag that's
+    already a known primary is kept, a known secondary is replaced by its
+    primary, and a tag matching neither is dropped. Order-preserving,
+    de-duplicated (two tags collapsing onto the same primary keep one copy).
+
+    Unlike the rest of this module, this is deliberately NOT additive-only
+    - dropping a tag nothing in the curated vocabulary recognizes is the
+    whole point of normalization, not a bug. A post that loses every tag
+    this way is expected to pick up `tag_review: no_fit` the next time
+    `apply_tag_proposal` writes its (now empty) result, re-entering the
+    normal needs-cleanup pipeline for a real look rather than keeping
+    stale, unrecognized tags forever.
+    """
+    normalized: list[str] = []
+    removed: list[str] = []
+    seen: set[str] = set()
+    for tag in current_tags:
+        primary = alias_map.get(tag)
+        if primary is None:
+            removed.append(tag)
+            continue
+        if primary not in seen:
+            seen.add(primary)
+            normalized.append(primary)
+    return TagNormalization(
+        filename=filename,
+        original_tags=current_tags,
+        normalized_tags=normalized,
+        removed_tags=removed,
+    )

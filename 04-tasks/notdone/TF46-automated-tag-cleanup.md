@@ -371,3 +371,55 @@ counts need refreshing after every batch, not just once.
 **Test**: `TestPromoteRecurringCandidates` (renamed from
 `TestRecordRecurringCandidates`) updated - asserts a promoted tag appears
 in `load_curated_tags()`'s result directly, not in a separate section.
+
+## TF46.13 — Secondary-tag normalization (built, not yet run)
+
+**Status**: code and tests done; not run against real content - user is
+still hand-editing `02-doc/tag-hints.md` to add secondaries
+
+**Description**: A curated tag can now declare secondary/alias spellings
+that should be rewritten to it wherever found - e.g. a post tagged `robot`
+should end up tagged `robotics` instead. This is a distinct pass from the
+rest of the F46 pipeline: it looks at tags a post *already has*, not
+missing/numeric ones, and it is deliberately **not** additive-only - a tag
+matching neither a primary nor a declared secondary is dropped.
+
+Syntax chosen (needs an unambiguous way to coexist with existing
+free-text comments like `hugo-chavez (not bare chavez)`, which aren't
+alias declarations): a parenthetical starting with `aka:`, comma-separated,
+optionally followed by `;` and a plain-prose note:
+
+```
+79       robotics (aka: robot, robots)
+9        eroom (aka: lotus)
+9        sun-microsystems (aka: sun; or a specific product like mysql/java)
+4        hugo-chavez (not bare chavez)          <- no "aka:", stays prose
+```
+
+Implementation:
+
+1. `utils.parse_curated_tag_aliases()`/`load_curated_tag_aliases()` - parse
+   the Curated Tags section into a `{spelling: primary}` map (every
+   primary maps to itself; each declared secondary maps to its primary).
+2. `tag_cleanup.normalize_post_tags()`/`TagNormalization` - pure function:
+   for a post's existing tags, keep a primary, rewrite a secondary to its
+   primary, drop anything matching neither. Order-preserving, de-duplicated.
+3. `scripts/normalize_tag_aliases.py` - CLI adapter. Scans every post with
+   any tags (not just ones needing cleanup - this fixes existing tags, it
+   doesn't fill in missing ones), applies via the existing
+   `apply_tag_proposal` (reusing its body-diff safety check and its
+   `tag_review: no_fit` marking if a post loses every tag this way,
+   re-entering the normal pipeline for a real look). Supports `--dry-run`.
+
+Deliberately not run yet - the user is still adding `aka:` secondaries to
+tag-hints.md (existing prose comments like "not bare chavez"/"not bare
+sun"/"not michael-arrington" describe exactly this relationship in
+English already and are candidates for rewriting into real `aka:`
+declarations once ready).
+
+**Test**: `TestParseCuratedTagAliases` (7 cases: primary self-mapping, aka
+parsing, prose-without-aka is not an alias, aka+prose-note, leading count
+stripped, stops at next heading, file-loading wrapper) and
+`TestNormalizePostTags` (6 cases: keep/rewrite/drop, dedup when both
+primary and secondary present on one post, mixed keep+rewrite+drop, empty
+input).

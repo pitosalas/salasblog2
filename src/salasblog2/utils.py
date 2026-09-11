@@ -67,6 +67,59 @@ def load_curated_tags(tag_hints_path: Path) -> List[str]:
     return parse_tag_hints_section(text, CURATED_TAGS_HEADER)
 
 
+def parse_curated_tag_aliases(text: str) -> Dict[str, str]:
+    """Parse the "Curated Tags" section into a mapping of every known
+    spelling - a primary tag itself, plus any secondary aliases it
+    declares - to that primary tag's name.
+
+    A secondary alias is declared in a line's parenthetical comment with a
+    leading `aka:`, comma-separated, optionally followed by `;` and a plain
+    prose note that isn't itself parsed as aliases:
+
+        79       robotics (aka: robot, robots)
+        9        eroom (aka: lotus)
+        9        sun-microsystems (aka: sun; or a specific product like mysql/java)
+        4        hugo-chavez (not bare chavez)
+
+    A parenthetical with no leading `aka:` (like `hugo-chavez` above) is
+    plain prose, not an alias declaration - existing clarifying comments
+    don't need rewriting just because this function exists. Every primary
+    always maps to itself.
+    """
+    aliases: Dict[str, str] = {}
+    in_section = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            in_section = stripped == CURATED_TAGS_HEADER
+            continue
+        if not (in_section and stripped):
+            continue
+        stripped = re.sub(r"^\d+\s+", "", stripped)
+        match = re.match(r"^(.*?)\s*\((.*)\)\s*$", stripped)
+        primary, comment = (
+            (match.group(1).strip(), match.group(2)) if match else (stripped, "")
+        )
+        if not primary:
+            continue
+        aliases[primary] = primary
+        aka_match = re.match(r"^\s*aka:\s*([^;]+)", comment, re.IGNORECASE)
+        if aka_match:
+            for secondary in aka_match.group(1).split(","):
+                secondary = secondary.strip()
+                if secondary:
+                    aliases[secondary] = primary
+    return aliases
+
+
+def load_curated_tag_aliases(tag_hints_path: Path) -> Dict[str, str]:
+    """Load tag-hints.md's full primary+secondary alias map - see
+    `parse_curated_tag_aliases`.
+    """
+    text = tag_hints_path.read_text(encoding="utf-8")
+    return parse_curated_tag_aliases(text)
+
+
 def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
     """Parse ISO date string into datetime object."""
     if not date_str:
