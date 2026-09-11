@@ -1,13 +1,18 @@
 /* header.css — site header: brand, nav, search box, theme toggle. */
 
 .site-header {
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+.site-header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    max-width: 980px;
+    margin: 0 auto;
     padding: 18px 32px;
-    background: var(--header-bg);
-    border-bottom: 1px solid var(--border);
     flex-wrap: wrap;
 }
 

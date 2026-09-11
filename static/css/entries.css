@@ -67,6 +67,7 @@
 
 .entry-excerpt { color: var(--muted); font-size: 0.92em; }
 .entry-excerpt p { margin: 0; }
+.entry-excerpt img { max-width: 100%; height: auto; }
 
 .read-more { display: inline-block; margin-top: 6px; font-size: 0.85em; color: var(--muted); }
 .read-more:hover { color: var(--accent); }
