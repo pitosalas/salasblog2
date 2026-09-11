@@ -275,3 +275,39 @@ by hand to match the new threshold: removed `google` (2), `screencasting`
 
 **Test**: `TestRecordRecurringCandidates` updated - 2 recurrences no longer
 queues a candidate, 3 does.
+
+## TF46.10 — Stop re-selecting already-reviewed no-fit posts
+
+**Status**: done
+
+**Description**: Starting batch 9, selection began re-picking most of the
+previous batch's "no fit" posts (an empty `tags: []` still counts as
+"needs cleanup"), since their content hadn't changed and nothing recorded
+that they'd already been reviewed. Confirmed concretely: batch 9's 500
+candidates overlapped batch 8's by exactly 340 - batch 8's entire no-fit
+count - leaving only 160 genuinely new posts. At that rate most of every
+future batch would just re-litigate the same decisions.
+
+Fixed with a frontmatter marker rather than a separate progress file (kept
+consistent with TF46.0's "no saved progress state" design - the post's own
+state is still the only source of truth):
+
+1. `apply_tag_proposal` sets `tag_review: no_fit` on a post whose final
+   tags end up empty, and clears the marker if a later call gives it real
+   tags.
+2. `needs_tag_cleanup` takes a new `reviewed_no_fit` argument: a post with
+   empty tags no longer needs cleanup once reviewed, but numeric junk still
+   always needs cleanup regardless of the marker.
+3. `select_posts_needing_cleanup` reads the marker from each post's
+   frontmatter to compute `reviewed_no_fit`.
+
+Retroactively marked the ~441 posts already left no-fit by batches 7 and 8
+(101 + 340) directly on the production volume, from the `proposals_batch7`/
+`proposals_batch8.json` files already sitting on the box - no re-deciding
+needed, just applying the marker their own recorded `no_fit` status already
+implied.
+
+**Test**: `TestNeedsTagCleanup` updated for the new required argument;
+`TestSelectPostsNeedingCleanup` and `TestApplyTagProposal` gained cases for
+the marker being set, cleared, and respected during selection (including
+that numeric junk overrides it).

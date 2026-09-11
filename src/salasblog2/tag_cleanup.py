@@ -27,6 +27,12 @@ only added to (`build_proposal` unions current tags with newly-accepted
 curated ones before sanitizing) - numeric junk is the one exception, dropped
 like any other junk regardless of whether it was already on the post.
 
+A post reviewed and left with no tags gets a `tag_review: no_fit` frontmatter
+marker (`apply_tag_proposal`), so `select_posts_needing_cleanup` doesn't
+re-select and re-decide it on every future batch - it distinguishes "never
+looked at" from "looked at, no good tag" using only the post's own state,
+consistent with this pipeline having no separate saved progress file.
+
 Frontmatter writes (`apply_tag_proposal`) verify the post's body is
 byte-identical before and after, so a bug in this pipeline can't corrupt
 post content even if it writes wrong tags.
@@ -46,6 +52,8 @@ logger = logging.getLogger(__name__)
 
 EXCERPT_LENGTH_FOR_TAGGING = 800
 PROPOSED_TAGS_HEADER = "# Proposed Tags"
+NO_FIT_MARKER_FIELD = "tag_review"
+NO_FIT_MARKER_VALUE = "no_fit"
 
 
 def has_numeric_tag(tags: list[str]) -> bool:
@@ -53,9 +61,17 @@ def has_numeric_tag(tags: list[str]) -> bool:
     return any(str(tag).isdigit() for tag in tags)
 
 
-def needs_tag_cleanup(tags: list[str]) -> bool:
-    """A post needs work if it has no tags, or carries a numeric leftover tag."""
-    return not tags or has_numeric_tag(tags)
+def needs_tag_cleanup(tags: list[str], reviewed_no_fit: bool) -> bool:
+    """A post needs work if it carries a numeric leftover tag, or has no tags
+    and hasn't already been reviewed and found to have no curated fit.
+
+    `reviewed_no_fit` distinguishes "never looked at" from "looked at, no
+    good tag" - without it, a post with a genuinely thin/content-free body
+    would be re-selected and re-decided on every future batch forever.
+    """
+    if has_numeric_tag(tags):
+        return True
+    return not tags and not reviewed_no_fit
 
 
 def select_posts_needing_cleanup(blog_dir: Path, limit: int) -> list[Path]:
@@ -64,7 +80,9 @@ def select_posts_needing_cleanup(blog_dir: Path, limit: int) -> list[Path]:
     selected = []
     for path in sorted(blog_dir.glob("*.md")):
         post = frontmatter.load(path)
-        if needs_tag_cleanup(post.metadata.get("tags") or []):
+        tags = post.metadata.get("tags") or []
+        reviewed_no_fit = post.metadata.get(NO_FIT_MARKER_FIELD) == NO_FIT_MARKER_VALUE
+        if needs_tag_cleanup(tags, reviewed_no_fit):
             selected.append(path)
         if len(selected) >= limit:
             break
@@ -218,6 +236,11 @@ def apply_tag_proposal(blog_dir: Path, filename: str, tags: list[str]) -> None:
     """Write `tags` into one post's frontmatter, verifying its body is
     byte-identical before and after.
 
+    An empty `tags` result gets marked `tag_review: no_fit` so this post
+    isn't re-selected by `select_posts_needing_cleanup` on every future
+    batch - it was reviewed, just had no curated fit. The marker is cleared
+    if a later call gives the post real tags.
+
     Raises with context rather than silently skipping or coercing a post
     whose body changed unexpectedly or whose tags didn't persist.
     """
@@ -227,6 +250,10 @@ def apply_tag_proposal(blog_dir: Path, filename: str, tags: list[str]) -> None:
     original_body = post.content
 
     post.metadata["tags"] = tags
+    if tags:
+        post.metadata.pop(NO_FIT_MARKER_FIELD, None)
+    else:
+        post.metadata[NO_FIT_MARKER_FIELD] = NO_FIT_MARKER_VALUE
     path.write_text(frontmatter.dumps(post), encoding="utf-8")
 
     with open(path, "r", encoding="utf-8") as f:

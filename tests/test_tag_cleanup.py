@@ -30,16 +30,19 @@ from salasblog2.tag_cleanup import (
 )
 
 
-def write_post(path, tags, title="A Post", body="Some body content here."):
-    content = (
-        "---\n"
-        f"title: \"{title}\"\n"
-        f"tags: {json.dumps(tags)}\n"
-        "date: \"2020-01-01\"\n"
-        "---\n"
-        f"{body}\n"
-    )
-    path.write_text(content, encoding="utf-8")
+def write_post(
+    path, tags, title="A Post", body="Some body content here.", tag_review=None
+):
+    lines = [
+        "---",
+        f'title: "{title}"',
+        f"tags: {json.dumps(tags)}",
+        'date: "2020-01-01"',
+    ]
+    if tag_review is not None:
+        lines.append(f'tag_review: "{tag_review}"')
+    lines += ["---", body]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 class TestHasNumericTag:
@@ -54,17 +57,20 @@ class TestHasNumericTag:
 
 
 class TestNeedsTagCleanup:
-    def test_true_for_empty_tags(self):
-        assert needs_tag_cleanup([]) is True
+    def test_true_for_empty_tags_never_reviewed(self):
+        assert needs_tag_cleanup([], reviewed_no_fit=False) is True
 
-    def test_true_for_numeric_tag(self):
-        assert needs_tag_cleanup(["1234"]) is True
+    def test_false_for_empty_tags_already_reviewed(self):
+        assert needs_tag_cleanup([], reviewed_no_fit=True) is False
+
+    def test_true_for_numeric_tag_even_if_reviewed(self):
+        assert needs_tag_cleanup(["1234"], reviewed_no_fit=True) is True
 
     def test_false_for_clean_tags(self):
-        assert needs_tag_cleanup(["ai", "programming"]) is False
+        assert needs_tag_cleanup(["ai", "programming"], reviewed_no_fit=False) is False
 
     def test_true_for_mixed_numeric_and_real(self):
-        assert needs_tag_cleanup(["ai", "1234"]) is True
+        assert needs_tag_cleanup(["ai", "1234"], reviewed_no_fit=False) is True
 
 
 class TestSelectPostsNeedingCleanup:
@@ -75,6 +81,18 @@ class TestSelectPostsNeedingCleanup:
         selected = select_posts_needing_cleanup(tmp_path, limit=10)
         names = {p.name for p in selected}
         assert names == {"b-numeric.md", "c-empty.md"}
+
+    def test_skips_empty_tags_already_reviewed_as_no_fit(self, tmp_path):
+        write_post(tmp_path / "a-reviewed.md", [], tag_review="no_fit")
+        write_post(tmp_path / "b-untouched.md", [])
+        selected = select_posts_needing_cleanup(tmp_path, limit=10)
+        names = {p.name for p in selected}
+        assert names == {"b-untouched.md"}
+
+    def test_still_selects_numeric_tag_even_if_marked_reviewed(self, tmp_path):
+        write_post(tmp_path / "a.md", ["1234"], tag_review="no_fit")
+        selected = select_posts_needing_cleanup(tmp_path, limit=10)
+        assert {p.name for p in selected} == {"a.md"}
 
     def test_respects_limit(self, tmp_path):
         for i in range(5):
@@ -274,6 +292,20 @@ class TestApplyTagProposal:
         post = frontmatter.load(tmp_path / "post.md")
         assert post.metadata["tags"] == ["ai", "programming"]
         assert post.content.strip() == "Original body text."
+
+    def test_marks_no_fit_when_tags_end_up_empty(self, tmp_path):
+        write_post(tmp_path / "post.md", ["1234"])
+        apply_tag_proposal(tmp_path, "post.md", [])
+
+        post = frontmatter.load(tmp_path / "post.md")
+        assert post.metadata["tag_review"] == "no_fit"
+
+    def test_clears_no_fit_marker_once_real_tags_applied(self, tmp_path):
+        write_post(tmp_path / "post.md", [], tag_review="no_fit")
+        apply_tag_proposal(tmp_path, "post.md", ["ai"])
+
+        post = frontmatter.load(tmp_path / "post.md")
+        assert "tag_review" not in post.metadata
 
     def test_raises_if_body_changes_unexpectedly(self, tmp_path):
         write_post(tmp_path / "post.md", ["1234"], body="Original body text.")
