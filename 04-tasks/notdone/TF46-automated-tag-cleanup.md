@@ -175,11 +175,17 @@ was run correctly against the volume: `fly ssh console` to run
 `select_tag_candidates.py`/`build_proposals.py`/`apply_tag_batch.py`
 directly on the box against `/data/content/blog`, with candidates/decisions
 shuttled up and down via `fly ssh sftp` since the actual tag-decision
-judgment happens in an assisted session, not on the box. 399/500 posts got
-real curated tags; 101 had no clear fit; 17 non-curated tags recurred and
-were queued to tag-hints.md's Proposed Tags section (commit `af1ce6c`) -
-dominated by `blogbridge` (Pito's own product, this era's biggest theme).
-Verified live on the volume afterward (byte-identical body, correct tags).
+judgment happens in an assisted session, not on the box. 17 non-curated
+tags recurred and were queued to tag-hints.md's Proposed Tags section
+(commit `af1ce6c`) - dominated by `blogbridge` (Pito's own product, this
+era's biggest theme). Verified live on the volume afterward
+(byte-identical body, correct tags).
+
+**Correction**: originally reported here as "399/500 got real curated
+tags, 101 had no clear fit" - wrong, that counted raw decisions (tags
+proposed before curated-vocabulary filtering), not the actual applied
+result. TF46.10's ground-truth check (2026-09-11) found batch 7 alone
+actually landed 266/500 with real curated tags, 234 with none.
 
 While confirming the batch, also reproduced F35 directly: `sync_to_github()`
 run manually on the box fails at `git push` with "Invalid username or
@@ -301,11 +307,19 @@ state is still the only source of truth):
 3. `select_posts_needing_cleanup` reads the marker from each post's
    frontmatter to compute `reviewed_no_fit`.
 
-Retroactively marked the ~441 posts already left no-fit by batches 7 and 8
-(101 + 340) directly on the production volume, from the `proposals_batch7`/
-`proposals_batch8.json` files already sitting on the box - no re-deciding
-needed, just applying the marker their own recorded `no_fit` status already
-implied.
+Retroactively marked the posts already left no-fit by batches 7 and 8.
+`proposals_batch7.json` had been wiped from the box's ephemeral `output/`
+dir by the container restart that picked up the fixed `GIT_TOKEN` - used
+ground truth instead: read every file in the union of batch 7's and batch
+8's 500-post candidate lists (766 unique - batch 8 had already re-picked
+234 of batch 7's no-fit posts) directly off `/data/content/blog`, and
+marked whichever of those 766 still had empty tags (340) as `no_fit`. The
+other 426 already had real curated tags from one of the two batches. No
+re-deciding needed either way - a candidate's current tags fully determine
+its outcome, since numeric junk is always stripped on write.
+
+Confirmed the fix: `select_posts_needing_cleanup` dropped from 2,385 to
+2,045 remaining, exactly the 340 newly-marked posts.
 
 **Test**: `TestNeedsTagCleanup` updated for the new required argument;
 `TestSelectPostsNeedingCleanup` and `TestApplyTagProposal` gained cases for
