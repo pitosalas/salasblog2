@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/06/2018"
-subtitle: "r/webdev – How to prep your GitHub for job seeking"
-category: "301"
+category: '301'
+date: '2018-08-05'
+subtitle: r/webdev – How to prep your GitHub for job seeking
+tag_review: no_fit
 tags: []
-date: "2018-08-05"
-type: "wp"
+title: Some great links for  08/06/2018
+type: wp
 wordpress_id: 2452
 ---
+
 [r/webdev – How to prep your GitHub for job seeking](https://www.reddit.com/r/webdev/comments/90xmpw/how_to_prep_your_github_for_job_seeking/) 
 
  tags: [job](https://www.diigo.com/user/pitosalas/job) [resume](https://www.diigo.com/user/pitosalas/resume) [github](https://www.diigo.com/user/pitosalas/github) [organization](https://www.diigo.com/user/pitosalas/organization)

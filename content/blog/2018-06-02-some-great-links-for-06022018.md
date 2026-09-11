@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  06/02/2018"
-subtitle: "How to solve the Google recruiters’ puzzle about throwing eggs from a building | Codementor"
-category: "538"
-tags: []
-date: "2018-06-02"
-type: "wp"
+category: '538'
+date: '2018-06-02'
+subtitle: How to solve the Google recruiters’ puzzle about throwing eggs from a building
+  | Codementor
+tags:
+- algorithms
+title: Some great links for  06/02/2018
+type: wp
 wordpress_id: 2346
 ---
+
 [How to solve the Google recruiters’ puzzle about throwing eggs from a building | Codementor](https://www.codementor.io/marcinmoskala/how-to-solve-the-google-recruiters-puzzle-about-throwing-eggs-from-a-building-jicqz9lnd?utm_swu=7179) 
 
  tags: [puzzle](https://www.diigo.com/user/pitosalas/puzzle) [google](https://www.diigo.com/user/pitosalas/google) [eggs](https://www.diigo.com/user/pitosalas/eggs) [algorithm](https://www.diigo.com/user/pitosalas/algorithm)

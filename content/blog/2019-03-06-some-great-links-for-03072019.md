@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/07/2019"
-subtitle: "Optimize animated GIF"
-category: "301"
+category: '301'
+date: '2019-03-06'
+subtitle: Optimize animated GIF
+tag_review: no_fit
 tags: []
-date: "2019-03-06"
-type: "wp"
+title: Some great links for  03/07/2019
+type: wp
 wordpress_id: 2546
 ---
+
 [Optimize animated GIF](https://ezgif.com/optimize/ezgif-5-bca12753301f.gif) 
 
 Really good site for creating animated gifs from videos and lots lots more.

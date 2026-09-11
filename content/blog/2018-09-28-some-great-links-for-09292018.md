@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/29/2018"
-subtitle: "ebobby/has-many-with-set"
-category: "301"
-tags: []
-date: "2018-09-28"
-type: "wp"
+category: '301'
+date: '2018-09-28'
+subtitle: ebobby/has-many-with-set
+tags:
+- ruby-on-rails
+title: Some great links for  09/29/2018
+type: wp
 wordpress_id: 2469
 ---
+
 [ebobby/has-many-with-set](https://github.com/ebobby/has-many-with-set) 
 
 An interesting variation on how to represent a many to many relationship in rails. 

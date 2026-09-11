@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/12/2019"
-subtitle: "An introduction to Redis data types and abstractions – Redis"
-category: "301"
+category: '301'
+date: '2019-03-11'
+subtitle: An introduction to Redis data types and abstractions – Redis
+tag_review: no_fit
 tags: []
-date: "2019-03-11"
-type: "wp"
+title: Some great links for  03/12/2019
+type: wp
 wordpress_id: 2550
 ---
+
 [An introduction to Redis data types and abstractions – Redis](https://redis.io/topics/data-types-intro) 
 
 Great overview of how Redis works, all the types and concepts

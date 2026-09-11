@@ -1,12 +1,15 @@
 ---
-title: "Learn to make something"
-subtitle: "This bit of advice rings very true to me. Read the whole article, but here’s a tasty bit."
-category: "1"
-tags: ["776", "1318", "1427"]
-date: "2013-06-03"
-type: "wp"
+category: '1'
+date: '2013-06-03'
+subtitle: This bit of advice rings very true to me. Read the whole article, but here’s
+  a tasty bit.
+tag_review: no_fit
+tags: []
+title: Learn to make something
+type: wp
 wordpress_id: 191
 ---
+
 This bit of advice rings very true to me. Read the whole article, but here’s a tasty bit. 
 
 [@andrewchen: New essays for 06/03/2013](http://us5.campaign-archive1.com/?u=96c185f15d9646d8014b765b7&id=52fa8c2038&e=43eab98055):

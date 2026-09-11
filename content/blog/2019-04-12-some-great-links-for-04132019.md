@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  04/13/2019"
-subtitle: "Hire People or Optimize Processes: A cost-benefit analysis for engineering leaders"
-category: "301"
+category: '301'
+date: '2019-04-12'
+subtitle: 'Hire People or Optimize Processes: A cost-benefit analysis for engineering
+  leaders'
+tag_review: no_fit
 tags: []
-date: "2019-04-12"
-type: "wp"
+title: Some great links for  04/13/2019
+type: wp
 wordpress_id: 2563
 ---
+
 [Hire People or Optimize Processes: A cost-benefit analysis for engineering leaders](https://codeclimate.com/blog/scale-engineering-calculator/?utm_source=drip&utm_medium=email&utm_content=&utm_campaign=velocity-calculator-blog&__s=fzzssq55zd58mvijpssx) 
 
 Perspective on the payback of hiring more people vs. optimizing Dev process so as to require fewer. 

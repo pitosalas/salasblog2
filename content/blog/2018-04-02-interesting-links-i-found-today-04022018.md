@@ -1,12 +1,15 @@
 ---
-title: "Interesting links I found today 04/02/2018"
-subtitle: "[Rails Refactoring Techniques – Concerns | Best Practice on Ruby on Rails | Hire Ruby on Rails devel..."
-category: "1"
-tags: []
-date: "2018-04-02"
-type: "wp"
+category: '1'
+date: '2018-04-02'
+subtitle: '[Rails Refactoring Techniques – Concerns | Best Practice on Ruby on Rails
+  | Hire Ruby on Rails devel...'
+tags:
+- ruby-on-rails
+title: Interesting links I found today 04/02/2018
+type: wp
 wordpress_id: 2145
 ---
+
 [Rails Refactoring Techniques – Concerns | Best Practice on Ruby on Rails | Hire Ruby on Rails developers](http://www.agiratech.com/rails-refactoring-techniques-concerns/) 
 
  tags: [Rails](https://www.diigo.com/user/pitosalas/Rails) [ruby](https://www.diigo.com/user/pitosalas/ruby) [best practice](https://www.diigo.com/user/pitosalas/best practice) [refactoring](https://www.diigo.com/user/pitosalas/refactoring) [ruby on rails](https://www.diigo.com/user/pitosalas/ruby on rails) [concerns](https://www.diigo.com/user/pitosalas/concerns)

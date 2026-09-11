@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/13/2019"
-subtitle: "Understanding Database Sharding | DigitalOcean"
-category: "301"
+category: '301'
+date: '2019-02-12'
+subtitle: Understanding Database Sharding | DigitalOcean
+tag_review: no_fit
 tags: []
-date: "2019-02-12"
-type: "wp"
+title: Some great links for  02/13/2019
+type: wp
 wordpress_id: 2536
 ---
+
 [Understanding Database Sharding | DigitalOcean](https://www.digitalocean.com/community/tutorials/understanding-database-sharding?utm_source=Software+Weekly&utm_campaign=2fbfd984eb-EMAIL_CAMPAIGN_12_03_2018_16_23_COPY_01&utm_medium=email&utm_term=0_846fac531b-2fbfd984eb-183168357) 
 
 Excellent overview of sharding or vertical database partitioning 

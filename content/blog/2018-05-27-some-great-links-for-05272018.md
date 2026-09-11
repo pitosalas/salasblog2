@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/27/2018"
-subtitle: "Command-line Tools can be 235x Faster than your Hadoop Cluster – Adam Drake"
-category: "538"
+category: '538'
+date: '2018-05-27'
+subtitle: Command-line Tools can be 235x Faster than your Hadoop Cluster – Adam Drake
+tag_review: no_fit
 tags: []
-date: "2018-05-27"
-type: "wp"
+title: Some great links for  05/27/2018
+type: wp
 wordpress_id: 2338
 ---
+
 [Command-line Tools can be 235x Faster than your Hadoop Cluster – Adam Drake](https://adamdrake.com/command-line-tools-can-be-235x-faster-than-your-hadoop-cluster.html?utm_source=hackernewsletter&utm_medium=email&utm_term=data) 
 
  tags: [cli](https://www.diigo.com/user/pitosalas/cli) [hadoop](https://www.diigo.com/user/pitosalas/hadoop) [tools](https://www.diigo.com/user/pitosalas/tools)

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/09/2020"
-subtitle: "Gemifying Your Style Guide to DRY Your CSS – Ruby on Rails Upgrades"
-category: "301"
-tags: []
-date: "2020-02-08"
-type: "wp"
+category: '301'
+date: '2020-02-08'
+subtitle: Gemifying Your Style Guide to DRY Your CSS – Ruby on Rails Upgrades
+tags:
+- ruby-on-rails
+title: Some great links for  02/09/2020
+type: wp
 wordpress_id: 2729
 ---
+
 [Gemifying Your Style Guide to DRY Your CSS – Ruby on Rails Upgrades](https://www.fastruby.io/blog/gems/dry/ruby/gemifying-your-styleguide.html) 
 
 A very nice technique to build a gem with all your css and js in one place. 

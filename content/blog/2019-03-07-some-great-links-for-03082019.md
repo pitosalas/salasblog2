@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/08/2019"
-subtitle: "End-to-End Arguments in System Design | the morning paper"
-category: "301"
+category: '301'
+date: '2019-03-07'
+subtitle: End-to-End Arguments in System Design | the morning paper
+tag_review: no_fit
 tags: []
-date: "2019-03-07"
-type: "wp"
+title: Some great links for  03/08/2019
+type: wp
 wordpress_id: 2547
 ---
+
 [End-to-End Arguments in System Design | the morning paper](https://blog.acolyer.org/2014/11/14/end-to-end-arguments-in-system-design/) 
 
  tags: [en-to-end](https://www.diigo.com/user/pitosalas/en-to-end) [argument](https://www.diigo.com/user/pitosalas/argument) [system](https://www.diigo.com/user/pitosalas/system) [design](https://www.diigo.com/user/pitosalas/design)

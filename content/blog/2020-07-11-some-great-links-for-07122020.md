@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/12/2020"
-subtitle: "PEP 622 — Structural Pattern Matching | Python.org"
-category: "301"
-tags: []
-date: "2020-07-11"
-type: "wp"
+category: '301'
+date: '2020-07-11'
+subtitle: PEP 622 — Structural Pattern Matching | Python.org
+tags:
+- python
+title: Some great links for  07/12/2020
+type: wp
 wordpress_id: 2758
 ---
+
 [PEP 622 — Structural Pattern Matching | Python.org](https://www.python.org/dev/peps/pep-0622/) 
 
 A pretty nice concept for patterns in python. 

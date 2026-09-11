@@ -1,12 +1,15 @@
 ---
-title: "Rules of Thumb for Software Engineers"
-subtitle: "Based on my own experience, some of my favorite books and blog posts, and advice from friends, I’ve ..."
-category: "1"
-tags: ["1003", "1779", "1886"]
-date: "2014-04-12"
-type: "wp"
+category: '1'
+date: '2014-04-12'
+subtitle: Based on my own experience, some of my favorite books and blog posts, and
+  advice from friends, I’ve ...
+tags:
+- software-engineering
+title: Rules of Thumb for Software Engineers
+type: wp
 wordpress_id: 106
 ---
+
 Based on my own experience, some of my favorite books and blog posts, and advice from friends, I’ve come up with this. What do you think? What should I add? Please comment!
 
 #### Personal Effectiveness Rules of Thumb

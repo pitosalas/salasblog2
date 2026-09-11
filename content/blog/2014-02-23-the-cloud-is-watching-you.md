@@ -1,12 +1,15 @@
 ---
-title: "The Cloud is Watching You"
-subtitle: "It’s obvious if you think about it, but this article drives some points home. If you use some kind o..."
-category: "1"
-tags: ["725", "815", "889", "1492", "1907", "2015", "2099"]
-date: "2014-02-23"
-type: "wp"
+category: '1'
+date: '2014-02-23'
+subtitle: It’s obvious if you think about it, but this article drives some points
+  home. If you use some kind o...
+tags:
+- technology
+title: The Cloud is Watching You
+type: wp
 wordpress_id: 117
 ---
+
 It’s obvious if you think about it, but this article drives some points home. If you use some kind of web service to read, listen, watch, charge, use, borrow or share stuff, that company not only knows what you’ve (read, listened to, etc.) They also know much more specifically how you did so: Did you stick with it to the end, did you do it from a particular place, at a particular time? Did you do it in one sitting or over a day or a week or a month?
 
 If you then combine such observation across a farily large group of peope you can learn amazing things. Like how many people finish your book, or how far through it they get before abandoning it. Do they listen to the whole song? At what episode of a series do people abandon it? A little scary as the ‘art’ we ‘consume’ gradually morphs into the ‘art’ we ‘like’.

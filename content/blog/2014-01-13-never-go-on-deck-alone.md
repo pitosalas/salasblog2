@@ -1,12 +1,14 @@
 ---
-title: "Never go on deck alone"
-subtitle: "This is just a great read."
-category: "1"
-tags: ["722", "1070", "1542", "1549", "1930"]
-date: "2014-01-13"
-type: "wp"
+category: '1'
+date: '2014-01-13'
+subtitle: This is just a great read.
+tag_review: no_fit
+tags: []
+title: Never go on deck alone
+type: wp
 wordpress_id: 130
 ---
+
 This is just a great read.
 
 [A Speck in the Sea – NYTimes.com](http://www.nytimes.com/2014/01/05/magazine/a-speck-in-the-sea.html?_r=0):

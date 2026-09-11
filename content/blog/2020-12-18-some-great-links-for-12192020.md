@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/19/2020"
-subtitle: "When Should You NOT Use Rails?"
-category: "301"
-tags: []
-date: "2020-12-18"
-type: "wp"
+category: '301'
+date: '2020-12-18'
+subtitle: When Should You NOT Use Rails?
+tags:
+- ruby-on-rails
+title: Some great links for  12/19/2020
+type: wp
 wordpress_id: 2805
 ---
+
 [When Should You NOT Use Rails?](http://codefol.io/posts/when-should-you-not-use-rails/) 
 
 Useful, but not necessarily universally agreed-upon, guides!

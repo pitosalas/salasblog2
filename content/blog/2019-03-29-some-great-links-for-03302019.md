@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/30/2019"
-subtitle: "Scaling a Ruby on Rails app on Heroku"
-category: "301"
+category: '301'
+date: '2019-03-29'
+subtitle: Scaling a Ruby on Rails app on Heroku
+tag_review: no_fit
 tags: []
-date: "2019-03-29"
-type: "wp"
+title: Some great links for  03/30/2019
+type: wp
 wordpress_id: 2558
 ---
+
 [Scaling a Ruby on Rails app on Heroku](https://scottbartell.com/2019/03/26/how-to-scale-ruby-on-rails-app-on-heroku/) 
 
 You know I’m into scalability right now. Here’s a short article with lots of the basics. 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/15/2019"
-subtitle: "CSS doesn’t suck – Andy Bell"
-category: "301"
+category: '301'
+date: '2019-01-14'
+subtitle: CSS doesn’t suck – Andy Bell
+tag_review: no_fit
 tags: []
-date: "2019-01-14"
-type: "wp"
+title: Some great links for  01/15/2019
+type: wp
 wordpress_id: 2525
 ---
+
 [CSS doesn’t suck – Andy Bell](https://andy-bell.design/wrote/css-doesnt-suck/) 
 
 See previous post. I admit I haven’t built super complicated sites, but I always seem to avoid extra languages or preprocessing if at all possible. 

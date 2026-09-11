@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/18/2018"
-subtitle: "Random Forest in Python – Towards Data Science"
-category: "538"
-tags: []
-date: "2018-04-18"
-type: "wp"
+category: '538'
+date: '2018-04-18'
+subtitle: Random Forest in Python – Towards Data Science
+tags:
+- ai
+title: Some great links for  04/18/2018
+type: wp
 wordpress_id: 2250
 ---
+
 [Random Forest in Python – Towards Data Science](https://towardsdatascience.com/random-forest-in-python-24d0893d51c0?source=userActivityShare-d383785221d0-1523968977) 
 
 Good overview

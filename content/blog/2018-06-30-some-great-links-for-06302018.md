@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  06/30/2018"
-subtitle: "[[EN][Keynote] Parallel and Thread-Safe Ruby at High-Speed with TruffleRuby / Benoit Daloze @eregont..."
-category: "538"
-tags: []
-date: "2018-06-30"
-type: "wp"
+category: '538'
+date: '2018-06-30'
+subtitle: '[[EN][Keynote] Parallel and Thread-Safe Ruby at High-Speed with TruffleRuby
+  / Benoit Daloze @eregont...'
+tags:
+- ruby
+title: Some great links for  06/30/2018
+type: wp
 wordpress_id: 2373
 ---
+
 [[EN][Keynote] Parallel and Thread-Safe Ruby at High-Speed with TruffleRuby / Benoit Daloze @eregontp](https://m.youtube.com/watch?v=mRKjWrNJ8DI) 
 
  tags: [performance](https://www.diigo.com/user/pitosalas/performance) [truffle](https://www.diigo.com/user/pitosalas/truffle) [speed](https://www.diigo.com/user/pitosalas/speed) [ruby](https://www.diigo.com/user/pitosalas/ruby) [optimization](https://www.diigo.com/user/pitosalas/optimization)

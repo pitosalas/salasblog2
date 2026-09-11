@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/28/2019"
-subtitle: "Stop using so many divs! An intro to semantic HTML"
-category: "301"
+category: '301'
+date: '2019-03-27'
+subtitle: Stop using so many divs! An intro to semantic HTML
+tag_review: no_fit
 tags: []
-date: "2019-03-27"
-type: "wp"
+title: Some great links for  03/28/2019
+type: wp
 wordpress_id: 2557
 ---
+
 [Stop using so many divs! An intro to semantic HTML](https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i?utm_source=Newsletter+Subscribers&utm_campaign=7ca8819422-EMAIL_CAMPAIGN_2019_03_25_01_56&utm_medium=email&utm_term=0_d8f11d5d1e-7ca8819422-154877025) 
 
 This makes a ton of sense. Wait a minute while I go edit my html files, ok.

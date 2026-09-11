@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/26/2019"
-subtitle: "Drawing Graphs using Dot and Graphviz"
-category: "301"
+category: '301'
+date: '2019-03-25'
+subtitle: Drawing Graphs using Dot and Graphviz
+tag_review: no_fit
 tags: []
-date: "2019-03-25"
-type: "wp"
+title: Some great links for  03/26/2019
+type: wp
 wordpress_id: 2556
 ---
+
 [Drawing Graphs using Dot and Graphviz](http://tonyballantyne.com/graphs.html) 
 
 Another great overview and cheatsheet for Dot

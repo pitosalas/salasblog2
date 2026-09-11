@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/19/2018"
-subtitle: "Write tests. Not too many. Mostly integration. – kentcdodds"
-category: "538"
-tags: []
-date: "2018-04-19"
-type: "wp"
+category: '538'
+date: '2018-04-19'
+subtitle: Write tests. Not too many. Mostly integration. – kentcdodds
+tags:
+- ruby-on-rails
+title: Some great links for  04/19/2018
+type: wp
 wordpress_id: 2259
 ---
+
 [Write tests. Not too many. Mostly integration. – kentcdodds](https://blog.kentcdodds.com/write-tests-not-too-many-mostly-integration-5e8c7fff591c?source=userActivityShare-d383785221d0-1524048950) 
 
 Great subtitle. Most readers won’t get it!

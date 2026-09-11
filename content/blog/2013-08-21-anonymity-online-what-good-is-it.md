@@ -1,12 +1,15 @@
 ---
-title: "Anonymity online: What good is it?"
-subtitle: "Seth Godin is said to have said that anonymous commenting is not a good thing:"
-category: "1"
-tags: ["632", "1766", "1841"]
-date: "2013-08-21"
-type: "wp"
+category: '1'
+date: '2013-08-21'
+subtitle: 'Seth Godin is said to have said that anonymous commenting is not a good
+  thing:'
+tags:
+- technology
+title: 'Anonymity online: What good is it?'
+type: wp
 wordpress_id: 178
 ---
+
 Seth Godin is said to have said that anonymous commenting is not a good thing:
 
 > 

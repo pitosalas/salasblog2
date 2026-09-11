@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/02/2020"
-subtitle: "MockMechanics"
-category: "301"
-tags: []
-date: "2020-11-01"
-type: "wp"
+category: '301'
+date: '2020-11-01'
+subtitle: MockMechanics
+tags:
+- programming
+title: Some great links for  11/02/2020
+type: wp
 wordpress_id: 2770
 ---
+
 [MockMechanics](https://mockmechanics.com) 
 
 Very cool and clever visual programming. 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/15/2019"
-subtitle: "Why NUKEMAP isn’t on Google Maps anymore | Restricted Data"
-category: "301"
-tags: []
-date: "2019-12-14"
-type: "wp"
+category: '301'
+date: '2019-12-14'
+subtitle: Why NUKEMAP isn’t on Google Maps anymore | Restricted Data
+tags:
+- maps
+title: Some great links for  12/15/2019
+type: wp
 wordpress_id: 2670
 ---
+
 [Why NUKEMAP isn’t on Google Maps anymore | Restricted Data](http://blog.nuclearsecrecy.com/2019/12/13/why-nukemap-isnt-on-google-maps-anymore/) 
 
 A great article if you are looking to use mapping and visualization in your application. It convincingly says not to use google maps. Use mapbox instead. 

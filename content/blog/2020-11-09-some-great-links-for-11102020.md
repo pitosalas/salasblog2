@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/10/2020"
-subtitle: "Bilgin’s Blog | Kalman Filter For Dummies"
-category: "301"
-tags: []
-date: "2020-11-09"
-type: "wp"
+category: '301'
+date: '2020-11-09'
+subtitle: Bilgin’s Blog | Kalman Filter For Dummies
+tags:
+- robotics
+title: Some great links for  11/10/2020
+type: wp
 wordpress_id: 2771
 ---
+
 [Bilgin’s Blog | Kalman Filter For Dummies](http://bilgin.esme.org/BitsAndBytes/KalmanFilterforDummies) 
 
 More Kalman Filter links. This one is one of the best.

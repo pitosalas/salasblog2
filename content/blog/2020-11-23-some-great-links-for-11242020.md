@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/24/2020"
-subtitle: "Building Your Color Palette"
-category: "301"
-tags: []
-date: "2020-11-23"
-type: "wp"
+category: '301'
+date: '2020-11-23'
+subtitle: Building Your Color Palette
+tags:
+- design
+title: Some great links for  11/24/2020
+type: wp
 wordpress_id: 2775
 ---
+
 [Building Your Color Palette](https://refactoringui.com/previews/building-your-color-palette/) 
 
 Excellent guide to picking good colors in a UI

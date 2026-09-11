@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/13/2018"
-subtitle: "A Safer RuboCop"
-category: "301"
-tags: []
-date: "2018-11-12"
-type: "wp"
+category: '301'
+date: '2018-11-12'
+subtitle: A Safer RuboCop
+tags:
+- ruby
+title: Some great links for  11/13/2018
+type: wp
 wordpress_id: 2483
 ---
+
 [A Safer RuboCop](https://metaredux.com/posts/2018/10/27/a-safer-rubocop.html) 
 
 Rubocop is a great tool for Ruby programmers

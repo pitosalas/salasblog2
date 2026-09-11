@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Switched from Firefox to Safari, and back again"
-subtitle: "About a week ago the new version of the Safari Browser came out for Mac OS X. I was swayed by the pr..."
-category: "538"
-tags: []
-date: "2014-06-27"
-type: "wp"
+category: '538'
+date: '2014-06-27'
+subtitle: About a week ago the new version of the Safari Browser came out for Mac
+  OS X. I was swayed by the pr...
+tags:
+- technology
+title: '[GEEKY] Switched from Firefox to Safari, and back again'
+type: wp
 wordpress_id: 90
 ---
+
 About a week ago the new version of the Safari Browser came out for Mac OS X. I was swayed by the promotion and decided to use it for a while instead of Firefox 3.5. Here’s my take, subjective, not based on a scientific analysis:
 
 - If Safari 4.02 is faster than Firefox 3.5.1 it wasn’t immediately obvious to me. I think Safari starts up a bit faster but other than that, no noticable difference.

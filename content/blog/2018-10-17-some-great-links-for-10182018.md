@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/18/2018"
-subtitle: "Top 5 Contemporary Software Engineering Books – KI labs Engineering – Medium"
-category: "301"
-tags: []
-date: "2018-10-17"
-type: "wp"
+category: '301'
+date: '2018-10-17'
+subtitle: Top 5 Contemporary Software Engineering Books – KI labs Engineering – Medium
+tags:
+- software-engineering
+title: Some great links for  10/18/2018
+type: wp
 wordpress_id: 2475
 ---
+
 [Top 5 Contemporary Software Engineering Books – KI labs Engineering – Medium](https://medium.com/ki-labs-engineering/top-5-contemporary-software-engineering-books-8b5ca6a28e83?source=userActivityShare-d383785221d0-1539780770) 
 
  tags: [books](https://www.diigo.com/user/pitosalas/books) [software engineering](https://www.diigo.com/user/pitosalas/software engineering)

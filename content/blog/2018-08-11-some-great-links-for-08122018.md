@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/12/2018"
-subtitle: "Webmentions: Enabling Better Communication on the Internet"
-category: "301"
+category: '301'
+date: '2018-08-11'
+subtitle: 'Webmentions: Enabling Better Communication on the Internet'
+tag_review: no_fit
 tags: []
-date: "2018-08-11"
-type: "wp"
+title: Some great links for  08/12/2018
+type: wp
 wordpress_id: 2455
 ---
+
 [Webmentions: Enabling Better Communication on the Internet](https://alistapart.com/article/webmentions-enabling-better-communication-on-the-internet) 
 
 Very interesting underused feature in web communication 

@@ -1,12 +1,16 @@
 ---
-title: "How well does higher ed prepare you as a ‘software engineer’?"
-subtitle: "This article is a bit harsh/one-sided, but I still thought it was interesting to see an attempt at c..."
-category: "1"
-tags: []
-date: "2013-12-03"
-type: "wp"
+category: '1'
+date: '2013-12-03'
+subtitle: This article is a bit harsh/one-sided, but I still thought it was interesting
+  to see an attempt at c...
+tags:
+- education
+- software-engineering
+title: How well does higher ed prepare you as a ‘software engineer’?
+type: wp
 wordpress_id: 137
 ---
+
 This article is a bit harsh/one-sided, but I still thought it was interesting to see an attempt at comparing programming as practiced in two very different contexts. 
 
 [What’s the difference between college-level and corporate programming? | Ars Technica](http://arstechnica.com/information-technology/2013/12/whats-the-difference-between-college-level-and-corporate-programming/):

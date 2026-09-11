@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/06/2019"
-subtitle: "How to Schedule Cron Jobs in Ruby With the Whenever Gem"
-category: "301"
-tags: []
-date: "2019-05-05"
-type: "wp"
+category: '301'
+date: '2019-05-05'
+subtitle: How to Schedule Cron Jobs in Ruby With the Whenever Gem
+tags:
+- ruby
+title: Some great links for  05/06/2019
+type: wp
 wordpress_id: 2572
 ---
+
 [How to Schedule Cron Jobs in Ruby With the Whenever Gem](https://www.rubyguides.com/2019/04/ruby-whenever-gem/) 
 
 Useful gem to have in your toolbox. 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/19/2019"
-subtitle: "How Microservices Saved the Internet – Hacker Noon"
-category: "301"
+category: '301'
+date: '2019-02-18'
+subtitle: How Microservices Saved the Internet – Hacker Noon
+tag_review: no_fit
 tags: []
-date: "2019-02-18"
-type: "wp"
+title: Some great links for  02/19/2019
+type: wp
 wordpress_id: 2539
 ---
+
 [How Microservices Saved the Internet – Hacker Noon](https://hackernoon.com/how-microservices-saved-the-internet-30cd4b9c6230) 
 
  tags: [scaling](https://www.diigo.com/user/pitosalas/scaling) [microservices](https://www.diigo.com/user/pitosalas/microservices) [web](https://www.diigo.com/user/pitosalas/web)

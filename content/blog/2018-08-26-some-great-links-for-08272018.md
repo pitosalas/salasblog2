@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/27/2018"
-subtitle: "How to configure RSpec in Ruby on Rails"
-category: "301"
-tags: []
-date: "2018-08-26"
-type: "wp"
+category: '301'
+date: '2018-08-26'
+subtitle: How to configure RSpec in Ruby on Rails
+tags:
+- ruby-on-rails
+title: Some great links for  08/27/2018
+type: wp
 wordpress_id: 2459
 ---
+
 [How to configure RSpec in Ruby on Rails](https://blog.eq8.eu/article/junior-developer-set-up-rails-with-rspec-factorybot-database-cleaner.html) 
 
 I’m not personally an rspec fan, but lots of people are 

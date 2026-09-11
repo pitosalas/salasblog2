@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/21/2018"
-subtitle: "A collection of awesome Ruby libraries, tools, frameworks and software"
-category: "301"
-tags: []
-date: "2018-10-20"
-type: "wp"
+category: '301'
+date: '2018-10-20'
+subtitle: A collection of awesome Ruby libraries, tools, frameworks and software
+tags:
+- ruby
+title: Some great links for  10/21/2018
+type: wp
 wordpress_id: 2478
 ---
+
 [A collection of awesome Ruby libraries, tools, frameworks and software](https://github.com/markets/awesome-ruby) 
 
 Always looking for the best possible rub tools? Here you go!

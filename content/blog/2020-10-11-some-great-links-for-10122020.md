@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/12/2020"
-subtitle: "Hello from Kuby | Kuby"
-category: "301"
-tags: []
-date: "2020-10-11"
-type: "wp"
+category: '301'
+date: '2020-10-11'
+subtitle: Hello from Kuby | Kuby
+tags:
+- ruby-on-rails
+title: Some great links for  10/12/2020
+type: wp
 wordpress_id: 2769
 ---
+
 [Hello from Kuby | Kuby](https://getkuby.io) 
 
 Looks like another wonderful rails deployment solution. Definitely will check this out as an alternative to Heroku. 

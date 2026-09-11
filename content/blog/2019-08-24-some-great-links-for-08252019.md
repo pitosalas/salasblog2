@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/25/2019"
-subtitle: "The GVL and C Extensions – a cooperative partnership"
-category: "301"
+category: '301'
+date: '2019-08-24'
+subtitle: The GVL and C Extensions – a cooperative partnership
+tag_review: no_fit
 tags: []
-date: "2019-08-24"
-type: "wp"
+title: Some great links for  08/25/2019
+type: wp
 wordpress_id: 2637
 ---
+
 [The GVL and C Extensions – a cooperative partnership](https://mailchi.mp/railsspeed/the-gvl-and-c-extensions-a-cooperative-partnership?e=5a26f26f7d) 
 
 very interesting way to embed C in ruby, if you’re into that kind of thing!

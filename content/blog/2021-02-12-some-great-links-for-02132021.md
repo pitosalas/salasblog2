@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/13/2021"
-subtitle: "15 Python Packages You Probably Don’t Know Exits"
-category: "301"
-tags: []
-date: "2021-02-12"
-type: "wp"
+category: '301'
+date: '2021-02-12'
+subtitle: 15 Python Packages You Probably Don’t Know Exits
+tags:
+- python
+title: Some great links for  02/13/2021
+type: wp
 wordpress_id: 2822
 ---
+
 [15 Python Packages You Probably Don’t Know Exits](https://link.medium.com/csSHSvZHOdb) 
 
 Sweet collection of very useful python packages

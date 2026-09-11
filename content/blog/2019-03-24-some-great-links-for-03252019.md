@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/25/2019"
-subtitle: "Flatdoc"
-category: "301"
+category: '301'
+date: '2019-03-24'
+subtitle: Flatdoc
+tag_review: no_fit
 tags: []
-date: "2019-03-24"
-type: "wp"
+title: Some great links for  03/25/2019
+type: wp
 wordpress_id: 2555
 ---
+
 [Flatdoc](http://ricostacruz.com/flatdoc/) 
 
 A super simple automatic open source doc generator. Except I dont quite understand it. I have a feeling once I try it it will be obvious

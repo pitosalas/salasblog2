@@ -1,12 +1,15 @@
 ---
-title: "Box.com – 50 gig for free!"
-subtitle: "**Forget Dropbox**, I just heard that Box.com gives you **50gig for free **upon signup. I just signe..."
-category: "1"
-tags: ["735", "970", "1091", "1135"]
-date: "2014-01-16"
-type: "wp"
+category: '1'
+date: '2014-01-16'
+subtitle: '**Forget Dropbox**, I just heard that Box.com gives you **50gig for free
+  **upon signup. I just signe...'
+tags:
+- technology
+title: Box.com – 50 gig for free!
+type: wp
 wordpress_id: 129
 ---
+
 **Forget Dropbox**, I just heard that Box.com gives you **50gig for free **upon signup. I just signed up and it seems like I got it. Pretty cool:
 
 [Box | Secure content-sharing that users and IT love and adopt](https://app.box.com/home/):

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/13/2019"
-subtitle: "Postgres Is Underrated—It Handles More than You Think – DEV Community"
-category: "301"
+category: '301'
+date: '2019-10-12'
+subtitle: Postgres Is Underrated—It Handles More than You Think – DEV Community
+tag_review: no_fit
 tags: []
-date: "2019-10-12"
-type: "wp"
+title: Some great links for  10/13/2019
+type: wp
 wordpress_id: 2649
 ---
+
 [Postgres Is Underrated—It Handles More than You Think – DEV Community ](https://dev.to/heroku/postgres-is-underrated-it-handles-more-than-you-think-4ff3?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
 Really great rundown of less known features of Postgres!

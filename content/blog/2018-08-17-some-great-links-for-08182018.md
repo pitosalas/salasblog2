@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/18/2018"
-subtitle: "thisredone/rb"
-category: "301"
-tags: []
-date: "2018-08-17"
-type: "wp"
+category: '301'
+date: '2018-08-17'
+subtitle: thisredone/rb
+tags:
+- mathematics
+title: Some great links for  08/18/2018
+type: wp
 wordpress_id: 2457
 ---
+
 [thisredone/rb](https://github.com/thisredone/rb?utm_source=hackernewsletter&utm_medium=email&utm_term=code) 
 
 This is very interesting and cool way to use ruby for fancy cli scripts, like people often use AWK. I haven’t quite figured out how to use it but it’s cool!

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/12/2018"
-subtitle: "Micromessaging: Connecting Heroku Microservices w/Redis and RabbitMQ"
-category: "538"
-tags: []
-date: "2018-04-12"
-type: "wp"
+category: '538'
+date: '2018-04-12'
+subtitle: 'Micromessaging: Connecting Heroku Microservices w/Redis and RabbitMQ'
+tags:
+- software-engineering
+title: Some great links for  04/12/2018
+type: wp
 wordpress_id: 2194
 ---
+
 [Micromessaging: Connecting Heroku Microservices w/Redis and RabbitMQ](https://blog.carbonfive.com/2014/04/28/micromessaging-connecting-heroku-microservices-wredis-and-rabbitmq/) 
 
 A brief article explaining different architectures for Microservices on Heroku.

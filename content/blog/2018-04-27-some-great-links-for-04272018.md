@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/27/2018"
-subtitle: "Results from the 2018 Rails Hosting Survey | Planet Argon"
-category: "538"
-tags: []
-date: "2018-04-27"
-type: "wp"
+category: '538'
+date: '2018-04-27'
+subtitle: Results from the 2018 Rails Hosting Survey | Planet Argon
+tags:
+- ruby-on-rails
+title: Some great links for  04/27/2018
+type: wp
 wordpress_id: 2308
 ---
+
 [Results from the 2018 Rails Hosting Survey | Planet Argon](http://rails-hosting.com/2018/) 
 
  tags: [survey](https://www.diigo.com/user/pitosalas/survey) [results](https://www.diigo.com/user/pitosalas/results) [rails](https://www.diigo.com/user/pitosalas/rails)

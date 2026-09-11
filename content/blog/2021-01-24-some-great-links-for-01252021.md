@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/25/2021"
-subtitle: "People Data Labs"
-category: "301"
+category: '301'
+date: '2021-01-24'
+subtitle: People Data Labs
+tag_review: no_fit
 tags: []
-date: "2021-01-24"
-type: "wp"
+title: Some great links for  01/25/2021
+type: wp
 wordpress_id: 2818
 ---
+
 [People Data Labs](https://www.peopledatalabs.com) 
 
 A fairly amazing service api if it works. Check it out and let us know!

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/24/2019"
-subtitle: "Microsoft Launches Bosque: An Open Source Programming Language"
-category: "301"
-tags: []
-date: "2019-04-23"
-type: "wp"
+category: '301'
+date: '2019-04-23'
+subtitle: 'Microsoft Launches Bosque: An Open Source Programming Language'
+tags:
+- programming
+title: Some great links for  04/24/2019
+type: wp
 wordpress_id: 2570
 ---
+
 [Microsoft Launches Bosque: An Open Source Programming Language](https://www.technotification.com/2019/04/microsoft-launches-bosque-programming-language.html) 
 
 Interesting to see a brand new language come out of research. 

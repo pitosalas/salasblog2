@@ -1,12 +1,15 @@
 ---
-title: "It’s probably not cool to say, but I am not sure about “Mayday.Us”"
-subtitle: "“We’re kickstarting a Super PAC big enough to make it possible to win a Congress committed to fundam..."
-category: "1"
-tags: ["990", "1359", "1645"]
-date: "2014-07-04"
-type: "wp"
+category: '1'
+date: '2014-07-04'
+subtitle: “We’re kickstarting a Super PAC big enough to make it possible to win a
+  Congress committed to fundam...
+tags:
+- politics
+title: It’s probably not cool to say, but I am not sure about “Mayday.Us”
+type: wp
 wordpress_id: 64
 ---
+
 “We’re kickstarting a Super PAC big enough to make it possible to win a Congress committed to fundamental reform by 2016. We set fundraising goals and then crowdfund those goals.” 
 
 Lofty goal but so vague I can’t tell which way is up!

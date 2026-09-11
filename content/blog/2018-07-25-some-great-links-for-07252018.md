@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/25/2018"
-subtitle: "Orange Computers – HP ProLiant and Dell PowerEdge Servers"
-category: "538"
+category: '538'
+date: '2018-07-25'
+subtitle: Orange Computers – HP ProLiant and Dell PowerEdge Servers
+tag_review: no_fit
 tags: []
-date: "2018-07-25"
-type: "wp"
+title: Some great links for  07/25/2018
+type: wp
 wordpress_id: 2411
 ---
+
 [Orange Computers – HP ProLiant and Dell PowerEdge Servers](https://www.orangecomputers.com/node/) 
 
  tags: [hardware](https://www.diigo.com/user/pitosalas/hardware) [refurbished](https://www.diigo.com/user/pitosalas/refurbished)

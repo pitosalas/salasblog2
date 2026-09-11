@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/11/2018"
-subtitle: "Ruby one-liners"
-category: "301"
-tags: []
-date: "2018-09-10"
-type: "wp"
+category: '301'
+date: '2018-09-10'
+subtitle: Ruby one-liners
+tags:
+- ruby
+title: Some great links for  09/11/2018
+type: wp
 wordpress_id: 2463
 ---
+
 [Ruby one-liners](http://benoithamelin.tumblr.com/ruby1line/) 
 
  tags: [code](https://www.diigo.com/user/pitosalas/code) [examples](https://www.diigo.com/user/pitosalas/examples) [oneliner](https://www.diigo.com/user/pitosalas/oneliner) [ruby](https://www.diigo.com/user/pitosalas/ruby)

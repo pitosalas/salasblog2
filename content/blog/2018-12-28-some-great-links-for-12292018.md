@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/29/2018"
-subtitle: "Fish shell 3.0"
-category: "301"
+category: '301'
+date: '2018-12-28'
+subtitle: Fish shell 3.0
+tag_review: no_fit
 tags: []
-date: "2018-12-28"
-type: "wp"
+title: Some great links for  12/29/2018
+type: wp
 wordpress_id: 2515
 ---
+
 [Fish shell 3.0](https://www.reddit.com/r/programming/comments/aabai1/fish_shell_30/?st=JQ88H4HL&sh=d8b24ec5) 
 
 Big news! If you aren’t using the Fish shell yet, what are you waiting for? It’s practically 100% compatible with bash and is 190x better in certain areas!

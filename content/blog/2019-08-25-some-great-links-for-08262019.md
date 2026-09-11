@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/26/2019"
-subtitle: "4 Rules for Intuitive UX – Learn UI Design"
-category: "301"
+category: '301'
+date: '2019-08-25'
+subtitle: 4 Rules for Intuitive UX – Learn UI Design
+tag_review: no_fit
 tags: []
-date: "2019-08-25"
-type: "wp"
+title: Some great links for  08/26/2019
+type: wp
 wordpress_id: 2638
 ---
+
 [4 Rules for Intuitive UX – Learn UI Design](https://learnui.design/blog/4-rules-intuitive-ux.html) 
 
 Fantastic set of really low hanging fruit UI rules. Stuff that anyone can apply and fix and mistakes you should never make!

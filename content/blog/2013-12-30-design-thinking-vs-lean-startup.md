@@ -1,12 +1,15 @@
 ---
-title: "Design Thinking vs. Lean Startup"
-subtitle: "Solving Problems for Real World, Using Design – NYTimes.com"
-category: "1"
-tags: ["937", "1243", "1364", "1542", "1555", "2055"]
-date: "2013-12-30"
-type: "wp"
+category: '1'
+date: '2013-12-30'
+subtitle: Solving Problems for Real World, Using Design – NYTimes.com
+tags:
+- design
+- business
+title: Design Thinking vs. Lean Startup
+type: wp
 wordpress_id: 132
 ---
+
 ### Point
 [Solving Problems for Real World, Using Design – NYTimes.com](http://www.nytimes.com/2013/12/30/technology/solving-problems-for-real-world-using-design.html?_r=0):
 

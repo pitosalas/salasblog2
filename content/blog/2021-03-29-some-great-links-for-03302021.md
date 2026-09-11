@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/30/2021"
-subtitle: "15 Incredible Agile Project Management Statistics to Know"
-category: "301"
+category: '301'
+date: '2021-03-29'
+subtitle: 15 Incredible Agile Project Management Statistics to Know
+tag_review: no_fit
 tags: []
-date: "2021-03-29"
-type: "wp"
+title: Some great links for  03/30/2021
+type: wp
 wordpress_id: 2829
 ---
+
 [15 Incredible Agile Project Management Statistics to Know](https://blog.capterra.com/agile-project-management-statistics-for-2018/) 
 
 Another article about project management techniques and tools!

@@ -1,12 +1,15 @@
 ---
-title: "Let’s give GPSs the EMOTION feature"
-subtitle: "Maybe it’s because I just arrived from a long drive and stay in New York where I was guided by the n..."
-category: "298"
-tags: []
-date: "2014-06-27"
-type: "wp"
+category: '298'
+date: '2014-06-27'
+subtitle: Maybe it’s because I just arrived from a long drive and stay in New York
+  where I was guided by the n...
+tags:
+- personal
+title: Let’s give GPSs the EMOTION feature
+type: wp
 wordpress_id: 92
 ---
+
 Maybe it’s because I just arrived from a long drive and stay in New York where I was guided by the nose by my TomTom GPS lady.
 
 Did you know that the Garmin GPS Lady gets a little annoyed when you choose a direction different from what is suggested? She says something like: “Incorrect Route, Recalculating…”, which after you hear it two or three times sounds like “Incorrect  Route, you jerk, you are wasting my time again by making me do all this work to recompute another route for you. Can’t you listen???” The TomTom lady just suffers in silence and provides you with a new route as soon as she sees that you didn’t follow directions.

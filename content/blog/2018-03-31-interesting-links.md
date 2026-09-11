@@ -1,12 +1,15 @@
 ---
-title: "Interesting Links"
-subtitle: "5 Tips To Write Idiomatic Pandas Code (article) – DataCamp"
-category: "1"
-tags: []
-date: "2018-03-31"
-type: "wp"
+category: '1'
+date: '2018-03-31'
+subtitle: 5 Tips To Write Idiomatic Pandas Code (article) – DataCamp
+tags:
+- pandas
+- ruby-on-rails
+title: Interesting Links
+type: wp
 wordpress_id: 2139
 ---
+
 - 
 [5 Tips To Write Idiomatic Pandas Code (article) – DataCamp](https://www.datacamp.com/community/tutorials/pandas-idiomatic)
 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/17/2018"
-subtitle: "The Waiting Time Paradox, or, Why Is My Bus Always Late?"
-category: "301"
+category: '301'
+date: '2018-11-16'
+subtitle: The Waiting Time Paradox, or, Why Is My Bus Always Late?
+tag_review: no_fit
 tags: []
-date: "2018-11-16"
-type: "wp"
+title: Some great links for  11/17/2018
+type: wp
 wordpress_id: 2486
 ---
+
 [The Waiting Time Paradox, or, Why Is My Bus Always Late?](http://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav) 
 
  tags: [random](https://www.diigo.com/user/pitosalas/random) [statistics](https://www.diigo.com/user/pitosalas/statistics) [paradox](https://www.diigo.com/user/pitosalas/paradox)

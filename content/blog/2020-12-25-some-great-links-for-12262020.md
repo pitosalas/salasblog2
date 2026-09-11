@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/26/2020"
-subtitle: "This Could Be the New Java"
-category: "301"
+category: '301'
+date: '2020-12-25'
+subtitle: This Could Be the New Java
+tag_review: no_fit
 tags: []
-date: "2020-12-25"
-type: "wp"
+title: Some great links for  12/26/2020
+type: wp
 wordpress_id: 2806
 ---
+
 [This Could Be the New Java](https://link.medium.com/S6fWoGZpvcb) 
 
 I thought Kotlin was the natural heir. This makes a good case for Scala!

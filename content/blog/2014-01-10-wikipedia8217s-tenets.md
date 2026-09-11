@@ -1,12 +1,15 @@
 ---
-title: "Wikipedia’s tenets"
-subtitle: "Flying back home yesterday I read this article about Wikipedia in the New York Times: [Wikipedia, Wh..."
-category: "1"
-tags: ["1542", "2117"]
-date: "2014-01-10"
-type: "wp"
+category: '1'
+date: '2014-01-10'
+subtitle: 'Flying back home yesterday I read this article about Wikipedia in the New
+  York Times: [Wikipedia, Wh...'
+tags:
+- wikipedia
+title: Wikipedia’s tenets
+type: wp
 wordpress_id: 131
 ---
+
 Flying back home yesterday I read this article about Wikipedia in the New York Times: [Wikipedia, What Does Judith Newman Have to Do to Get a Page? – NYTimes.com](http://www.nytimes.com/2014/01/09/fashion/Wikipedia-Judith-Newman.html):
 
 > The three tenets of Wikipedia articles are “No Original Research,” “Neutral Point of View” and “Verifiability” — terms that, in and of themselves, are open to debate. At any rate, Mr. Wales wanted to make real the words of Charles Van Doren, one of the editors of the Encylopedia Brittanica, who wrote in an essay in 1962: “Because the world is radically new, the ideal encyclopedia should be radical, too. It should stop being safe — in politics, in philosophy, in science.” (He was also at the center of the quiz-show scandal in the late 1950s. It’s in Wikipedia; look it up.)

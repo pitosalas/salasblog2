@@ -1,12 +1,15 @@
 ---
-title: "All about Rolling Stone magazine"
-subtitle: "About a year ago I started reading Rolling Stone magazine. It’s true what Taibbi says, it’s definite..."
-category: "1"
-tags: ["729", "1448", "1760"]
-date: "2013-07-19"
-type: "wp"
+category: '1'
+date: '2013-07-19'
+subtitle: About a year ago I started reading Rolling Stone magazine. It’s true what
+  Taibbi says, it’s definite...
+tag_review: no_fit
+tags: []
+title: All about Rolling Stone magazine
+type: wp
 wordpress_id: 184
 ---
+
 About a year ago I started reading Rolling Stone magazine. It’s true what Taibbi says, it’s definitely not People or EW magazine. Yes it does have good ‘cultural’ coverage about music and art and so on, but the writing is good and interesting and very often has nothing to do with music. All the uproar about the Tsarnaev cover (I haven’t received the issue yet but I almost feel like I have) is so over the top.
 
 I mean get over it people, it’s just a magazine cover. Anyway, Mike Taibbi below has a far more reasoned reaction to the outrage than mine, and it’s a good article.

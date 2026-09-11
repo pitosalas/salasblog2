@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/23/2018"
-subtitle: "FREE Tutorials on React.js, Ruby on Rails, JavaScript"
-category: "301"
-tags: []
-date: "2018-09-22"
-type: "wp"
+category: '301'
+date: '2018-09-22'
+subtitle: FREE Tutorials on React.js, Ruby on Rails, JavaScript
+tags:
+- ruby-on-rails
+title: Some great links for  09/23/2018
+type: wp
 wordpress_id: 2466
 ---
+
 [FREE Tutorials on React.js, Ruby on Rails, JavaScript](https://learnetto.com/?utm_source=Learnetto&utm_campaign=18da4cee30-EMAIL_CAMPAIGN_2017_02_03_COPY_01&utm_medium=email&utm_term=0_dc9c211d3c-18da4cee30-196126073&goal=0_dc9c211d3c-18da4cee30-196126073) 
 
 This has just been made free! I think these tutorials will contain some gems. 

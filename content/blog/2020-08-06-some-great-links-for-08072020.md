@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/07/2020"
-subtitle: "Noticed Gem: Notifications for Ruby on Rails applications"
-category: "301"
-tags: []
-date: "2020-08-06"
-type: "wp"
+category: '301'
+date: '2020-08-06'
+subtitle: 'Noticed Gem: Notifications for Ruby on Rails applications'
+tags:
+- ruby-on-rails
+title: Some great links for  08/07/2020
+type: wp
 wordpress_id: 2759
 ---
+
 [Noticed Gem: Notifications for Ruby on Rails applications](https://github.com/excid3/noticed) 
 
 very useful gem to send all kinds of notification from Rails. Haven’t tested it myself.

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/02/2020"
-subtitle: "Google Interviewing Process for Software Developer Role in 2020 / Habr"
-category: "301"
+category: '301'
+date: '2020-03-01'
+subtitle: Google Interviewing Process for Software Developer Role in 2020 / Habr
+tag_review: no_fit
 tags: []
-date: "2020-03-01"
-type: "wp"
+title: Some great links for  03/02/2020
+type: wp
 wordpress_id: 2733
 ---
+
 [Google Interviewing Process for Software Developer Role in 2020 / Habr](https://habr.com/en/post/489698/) 
 
 The madness of interviewing at google. OMG!

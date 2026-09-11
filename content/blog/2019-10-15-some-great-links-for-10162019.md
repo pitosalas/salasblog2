@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/16/2019"
-subtitle: "How to Write Fast Code in Ruby on Rails – Shopify Engineering"
-category: "301"
-tags: []
-date: "2019-10-15"
-type: "wp"
+category: '301'
+date: '2019-10-15'
+subtitle: How to Write Fast Code in Ruby on Rails – Shopify Engineering
+tags:
+- ruby-on-rails
+title: Some great links for  10/16/2019
+type: wp
 wordpress_id: 2651
 ---
+
 [How to Write Fast Code in Ruby on Rails – Shopify Engineering](https://engineering.shopify.com/blogs/engineering/write-fast-code-ruby-rails) 
 
 These people have one of the largest rails apps. They know what they are talking about!

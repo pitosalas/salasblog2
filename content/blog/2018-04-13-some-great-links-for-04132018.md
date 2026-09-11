@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/13/2018"
-subtitle: "TechRabbit: Makara: a read-write splitting adapter for Active Record"
-category: "538"
-tags: []
-date: "2018-04-13"
-type: "wp"
+category: '538'
+date: '2018-04-13'
+subtitle: 'TechRabbit: Makara: a read-write splitting adapter for Active Record'
+tags:
+- ruby-on-rails
+title: Some great links for  04/13/2018
+type: wp
 wordpress_id: 2197
 ---
+
 [TechRabbit: Makara: a read-write splitting adapter for Active Record](http://tech.taskrabbit.com/blog/2013/01/02/makara/) 
 
 An alternative to Octopus as a solution to shard databases

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/24/2019"
-subtitle: "Redis streams as a pure data structure"
-category: "301"
+category: '301'
+date: '2019-03-23'
+subtitle: Redis streams as a pure data structure
+tag_review: no_fit
 tags: []
-date: "2019-03-23"
-type: "wp"
+title: Some great links for  03/24/2019
+type: wp
 wordpress_id: 2554
 ---
+
 [Redis streams as a pure data structure](http://antirez.com/news/128) 
 
 Really really interesting use case for REDIS, and a great scalability pattern

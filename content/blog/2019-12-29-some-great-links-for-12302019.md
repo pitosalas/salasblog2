@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/30/2019"
-subtitle: "Altair: Declarative Visualization in Python"
-category: "301"
-tags: []
-date: "2019-12-29"
-type: "wp"
+category: '301'
+date: '2019-12-29'
+subtitle: 'Altair: Declarative Visualization in Python'
+tags:
+- python
+title: Some great links for  12/30/2019
+type: wp
 wordpress_id: 2684
 ---
+
 [Altair: Declarative Visualization in Python](https://altair-viz.github.io/index.html) 
 
 Amazing pretty visualizations in Python based on vega-lite platform

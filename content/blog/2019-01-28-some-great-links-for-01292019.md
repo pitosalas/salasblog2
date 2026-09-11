@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/29/2019"
-subtitle: "40 Best Ruby Gems We Can’t Live Without"
-category: "301"
-tags: []
-date: "2019-01-28"
-type: "wp"
+category: '301'
+date: '2019-01-28'
+subtitle: 40 Best Ruby Gems We Can’t Live Without
+tags:
+- ruby
+title: Some great links for  01/29/2019
+type: wp
 wordpress_id: 2531
 ---
+
 [40 Best Ruby Gems We Can’t Live Without](https://www.codica.com/blog/top-ruby-gems-we-cant-live-without/) 
 
 It’s always welcome to see what the latest most useful gems are. 

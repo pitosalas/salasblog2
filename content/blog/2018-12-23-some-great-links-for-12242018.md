@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/24/2018"
-subtitle: "André Staltz – JavaScript Getter-Setter Pyramid"
-category: "301"
+category: '301'
+date: '2018-12-23'
+subtitle: André Staltz – JavaScript Getter-Setter Pyramid
+tag_review: no_fit
 tags: []
-date: "2018-12-23"
-type: "wp"
+title: Some great links for  12/24/2018
+type: wp
 wordpress_id: 2511
 ---
+
 [André Staltz – JavaScript Getter-Setter Pyramid](https://staltz.com/javascript-getter-setter-pyramid.html) 
 
 Really excellent explanation of all the different ways functions can be used in JavaScript. Technically dense and requires study but good.

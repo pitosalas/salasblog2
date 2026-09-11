@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/05/2020"
-subtitle: "How to Fake a Traffic Jam on Google Maps – VICE"
-category: "301"
+category: '301'
+date: '2020-02-04'
+subtitle: How to Fake a Traffic Jam on Google Maps – VICE
+tag_review: no_fit
 tags: []
-date: "2020-02-04"
-type: "wp"
+title: Some great links for  02/05/2020
+type: wp
 wordpress_id: 2727
 ---
+
 [How to Fake a Traffic Jam on Google Maps – VICE](https://www.vice.com/en_us/article/9393w7/this-man-created-traffic-jams-on-google-maps-using-a-red-wagon-full-of-phones?utm_source=reddit.com) 
 
 This is really interesting and cute. Maybe too cute. Urban legend?

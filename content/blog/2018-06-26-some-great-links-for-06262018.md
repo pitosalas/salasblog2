@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  06/26/2018"
-subtitle: "Crystal is not Ruby Pt. 2 – Runtime Revolution"
-category: "538"
-tags: []
-date: "2018-06-26"
-type: "wp"
+category: '538'
+date: '2018-06-26'
+subtitle: Crystal is not Ruby Pt. 2 – Runtime Revolution
+tags:
+- ruby
+title: Some great links for  06/26/2018
+type: wp
 wordpress_id: 2370
 ---
+
 [Crystal is not Ruby Pt. 2 – Runtime Revolution](https://revs.runtime-revolution.com/crystal-is-not-ruby-pt-2-7c3d988aa9a1?source=userActivityShare-d383785221d0-1529896500) 
 
  tags: [Ruby](https://www.diigo.com/user/pitosalas/Ruby) [crystal](https://www.diigo.com/user/pitosalas/crystal)

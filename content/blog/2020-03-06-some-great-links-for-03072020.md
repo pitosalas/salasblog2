@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/07/2020"
-subtitle: "Please stop recommending Git Flow! – George Stocker"
-category: "301"
+category: '301'
+date: '2020-03-06'
+subtitle: Please stop recommending Git Flow! – George Stocker
+tag_review: no_fit
 tags: []
-date: "2020-03-06"
-type: "wp"
+title: Some great links for  03/07/2020
+type: wp
 wordpress_id: 2736
 ---
+
 [Please stop recommending Git Flow! – George Stocker](https://georgestocker.com/2020/03/04/please-stop-recommending-git-flow/) 
 
 It’s always hard to handle branches. This was a very popular post when it came out. 

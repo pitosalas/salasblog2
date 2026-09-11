@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/15/2018"
-subtitle: "Home | web.dev"
-category: "301"
+category: '301'
+date: '2018-11-14'
+subtitle: Home | web.dev
+tag_review: no_fit
 tags: []
-date: "2018-11-14"
-type: "wp"
+title: Some great links for  11/15/2018
+type: wp
 wordpress_id: 2485
 ---
+
 [Home  |  web.dev](https://web.dev) 
 
 An interesting google tool for checking a web sites performance and other behavior. 

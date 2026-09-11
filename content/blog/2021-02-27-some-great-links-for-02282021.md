@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/28/2021"
-subtitle: "Different Ways to Handle JSON in a Linux Shell"
-category: "301"
-tags: []
-date: "2021-02-27"
-type: "wp"
+category: '301'
+date: '2021-02-27'
+subtitle: Different Ways to Handle JSON in a Linux Shell
+tags:
+- linux
+title: Some great links for  02/28/2021
+type: wp
 wordpress_id: 2825
 ---
+
 [Different Ways to Handle JSON in a Linux Shell](https://link.medium.com/9FvuL4gneeb) 
 
 If you work with json at all, this is a super useful article, introducing several tools that you might never have heard of.

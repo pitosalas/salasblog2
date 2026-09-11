@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  01/13/2019"
-subtitle: "Scooter startup Bird tried to silence a journalist. It did not go well. – TechCrunch"
-category: "301"
+category: '301'
+date: '2019-01-12'
+subtitle: Scooter startup Bird tried to silence a journalist. It did not go well.
+  – TechCrunch
+tag_review: no_fit
 tags: []
-date: "2019-01-12"
-type: "wp"
+title: Some great links for  01/13/2019
+type: wp
 wordpress_id: 2523
 ---
+
 [Scooter startup Bird tried to silence a journalist. It did not go well. – TechCrunch](https://techcrunch.com/2019/01/11/scooter-startup-bird-silence-journalist/) 
 
 Fun bit of IP and hacking news. Yeah not fun for the recipient, but interesting for us!

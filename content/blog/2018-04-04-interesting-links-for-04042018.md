@@ -1,12 +1,14 @@
 ---
-title: "Interesting links for 04/04/2018"
-subtitle: "1.10. Decision Trees — scikit-learn 0.19.1 documentation"
-category: "1"
-tags: []
-date: "2018-04-04"
-type: "wp"
+category: '1'
+date: '2018-04-04'
+subtitle: 1.10. Decision Trees — scikit-learn 0.19.1 documentation
+tags:
+- programming
+title: Interesting links for 04/04/2018
+type: wp
 wordpress_id: 2147
 ---
+
 - 
 [1.10. Decision Trees — scikit-learn 0.19.1 documentation](http://scikit-learn.org/stable/modules/tree.html)
 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/30/2018"
-subtitle: "Low-hanging design fruit: why you should use Google Font Superfamilies"
-category: "538"
-tags: []
-date: "2018-04-30"
-type: "wp"
+category: '538'
+date: '2018-04-30'
+subtitle: 'Low-hanging design fruit: why you should use Google Font Superfamilies'
+tags:
+- design
+title: Some great links for  04/30/2018
+type: wp
 wordpress_id: 2320
 ---
+
 [Low-hanging design fruit: why you should use Google Font Superfamilies](https://medium.freecodecamp.org/low-hanging-design-fruit-why-you-should-use-google-font-superfamilies-1dae04b2fc50?source=userActivityShare-d383785221d0-1525000385) 
 
  tags: [fonts](https://www.diigo.com/user/pitosalas/fonts) [design](https://www.diigo.com/user/pitosalas/design)

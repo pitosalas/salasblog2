@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/26/2020"
-subtitle: "jq – CLI for JSON files"
-category: "301"
+category: '301'
+date: '2020-02-25'
+subtitle: jq – CLI for JSON files
+tag_review: no_fit
 tags: []
-date: "2020-02-25"
-type: "wp"
+title: Some great links for  02/26/2020
+type: wp
 wordpress_id: 2731
 ---
+
 [jq – CLI for JSON files](https://stedolan.github.io/jq/) 
 
 This is an amazing tool when you need it. Do queries, merges, filters on json files. You only need it once or twice a year but when you need it, it’s a life saver!

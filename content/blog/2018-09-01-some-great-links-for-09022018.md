@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/02/2018"
-subtitle: "westonganger (Weston Ganger)"
-category: "301"
-tags: []
-date: "2018-09-01"
-type: "wp"
+category: '301'
+date: '2018-09-01'
+subtitle: westonganger (Weston Ganger)
+tags:
+- ruby-on-rails
+title: Some great links for  09/02/2018
+type: wp
 wordpress_id: 2461
 ---
+
 [westonganger (Weston Ganger)](https://github.com/westonganger) 
 
 A gem containing functionality to represent, import and export spreadsheets

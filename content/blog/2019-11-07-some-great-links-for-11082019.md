@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/08/2019"
-subtitle: "A Recipe for Training Neural Networks"
-category: "301"
-tags: []
-date: "2019-11-07"
-type: "wp"
+category: '301'
+date: '2019-11-07'
+subtitle: A Recipe for Training Neural Networks
+tags:
+- ai
+title: Some great links for  11/08/2019
+type: wp
 wordpress_id: 2656
 ---
+
 [A Recipe for Training Neural Networks](https://karpathy.github.io/2019/04/25/recipe/) 
 
 Very good article for anyone using Neural Networks

@@ -1,6 +1,7 @@
 ---
 date: '2014-06-27'
-tags: []
+tags:
+- software-engineering
 title: A View of 20th and 21st Century Software Engineering
 type: blog
 ---

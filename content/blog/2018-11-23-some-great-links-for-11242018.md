@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/24/2018"
-subtitle: "Fibers Are the Right Solution"
-category: "301"
-tags: []
-date: "2018-11-23"
-type: "wp"
+category: '301'
+date: '2018-11-23'
+subtitle: Fibers Are the Right Solution
+tags:
+- ruby
+title: Some great links for  11/24/2018
+type: wp
 wordpress_id: 2490
 ---
+
 [Fibers Are the Right Solution](https://www.codeotaku.com/journal/2018-11/fibers-are-the-right-solution/index) 
 
 Good description of how to use fibers in ruby. 

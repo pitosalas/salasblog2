@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  02/23/2019"
-subtitle: "Microbenchmarks vs Macrobenchmarks (i.e. What’s a Microbenchmark?) — Appfolio Engineering"
-category: "301"
+category: '301'
+date: '2019-02-22'
+subtitle: Microbenchmarks vs Macrobenchmarks (i.e. What’s a Microbenchmark?) — Appfolio
+  Engineering
+tag_review: no_fit
 tags: []
-date: "2019-02-22"
-type: "wp"
+title: Some great links for  02/23/2019
+type: wp
 wordpress_id: 2541
 ---
+
 [Microbenchmarks vs Macrobenchmarks (i.e. What’s a Microbenchmark?) — Appfolio Engineering](http://engineering.appfolio.com/appfolio-engineering/2019/1/7/microbenchmarks-vs-macrobenchmarks-ie-whats-a-microbenchmark) 
 
  tags: [ruby](https://www.diigo.com/user/pitosalas/ruby) [benchmarking](https://www.diigo.com/user/pitosalas/benchmarking) [engineering](https://www.diigo.com/user/pitosalas/engineering)

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/23/2018"
-subtitle: "Why Scrum is the Wrong Way to Build Software – Adam Ard – Medium"
-category: "538"
+category: '538'
+date: '2018-04-23'
+subtitle: Why Scrum is the Wrong Way to Build Software – Adam Ard – Medium
+tag_review: no_fit
 tags: []
-date: "2018-04-23"
-type: "wp"
+title: Some great links for  04/23/2018
+type: wp
 wordpress_id: 2298
 ---
+
 [Why Scrum is the Wrong Way to Build Software – Adam Ard – Medium](https://medium.com/@ard_adam/why-scrum-is-the-wrong-way-to-build-software-99d8994409e5?source=userActivityShare-d383785221d0-1524440840) 
 
  tags: [scrum](https://www.diigo.com/user/pitosalas/scrum)

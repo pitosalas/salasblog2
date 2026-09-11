@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/26/2020"
-subtitle: "ajeetdsouza/zoxide"
-category: "301"
+category: '301'
+date: '2020-08-25'
+subtitle: ajeetdsouza/zoxide
+tag_review: no_fit
 tags: []
-date: "2020-08-25"
-type: "wp"
+title: Some great links for  08/26/2020
+type: wp
 wordpress_id: 2762
 ---
+
 [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide) 
 
 A great new tool!

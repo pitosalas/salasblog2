@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  06/14/2019"
-subtitle: "Enhanced Shell Scripting with Ruby"
-category: "301"
-tags: []
-date: "2019-06-13"
-type: "wp"
+category: '301'
+date: '2019-06-13'
+subtitle: Enhanced Shell Scripting with Ruby
+tags:
+- ruby
+title: Some great links for  06/14/2019
+type: wp
 wordpress_id: 2600
 ---
+
 [Enhanced Shell Scripting with Ruby](https://www.devdungeon.com/content/enhanced-shell-scripting-ruby) 
 
 Really nice summary of using ruby for scripting. 

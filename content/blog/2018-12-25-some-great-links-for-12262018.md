@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/26/2018"
-subtitle: "Everything I’ve learned in 10 years of Blogging"
-category: "301"
+category: '301'
+date: '2018-12-25'
+subtitle: Everything I’ve learned in 10 years of Blogging
+tag_review: no_fit
 tags: []
-date: "2018-12-25"
-type: "wp"
+title: Some great links for  12/26/2018
+type: wp
 wordpress_id: 2512
 ---
+
 [Everything I’ve learned in 10 years of Blogging](https://ferrucc.io/posts/starting-a-blog/?utm_source=hackernewsletter&utm_medium=email&utm_term=fav&mc_cid=7c5ca3f9cd&mc_eid=694db8ca58) 
 
 I don’t do this myself but maybe you will find it useful 

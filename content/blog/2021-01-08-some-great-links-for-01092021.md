@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/09/2021"
-subtitle: "Python Code Tips: 4 Ways to Debug Your Python Code Without IDE"
-category: "301"
-tags: []
-date: "2021-01-08"
-type: "wp"
+category: '301'
+date: '2021-01-08'
+subtitle: 'Python Code Tips: 4 Ways to Debug Your Python Code Without IDE'
+tags:
+- python
+title: Some great links for  01/09/2021
+type: wp
 wordpress_id: 2813
 ---
+
 [Python Code Tips: 4 Ways to Debug Your Python Code Without IDE](https://link.medium.com/ZTFY7yszScb) 
 
 A few good reminders. Nothing too new. Except I didn’t know pdb. On the other hand I am not sure I will use pdb. 

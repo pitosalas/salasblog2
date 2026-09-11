@@ -1,12 +1,15 @@
 ---
-title: "Healthcare.gov not working yet (duh)"
-subtitle: "I feel really bad for President Obama and I am still a big fan. But. As we all know now, this is a t..."
-category: "1"
-tags: ["1151", "1196", "1543"]
-date: "2013-11-15"
-type: "wp"
+category: '1'
+date: '2013-11-15'
+subtitle: I feel really bad for President Obama and I am still a big fan. But. As
+  we all know now, this is a t...
+tags:
+- politics
+title: Healthcare.gov not working yet (duh)
+type: wp
 wordpress_id: 142
 ---
+
 I feel really bad for President Obama and I am still a big fan. But. As we all know now, this is a total disaster, on a lot of levels. For first hand experience, I tried to create an account on Healthcare.gov about the middle of October. After several tries I managed to do it. Yesterday I tried to log into the site to see how things were going, and after several tries and I managed to log in. But I didn’t get too far  before I got a 404 error.
 
 Those of us who have worked on, or seen close up how a complex “web site” is built have a feeling of how complicated this is. And coupled with other factors and complications (like politics and buareaucratic ineptitude) we can’t say this is not a movie we’ve seen before. But that doesn’t begin to explain nor excuse it. Here’s a good behind the scenes article:

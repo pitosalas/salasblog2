@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/15/2020"
-subtitle: "Academic Torrents"
-category: "301"
+category: '301'
+date: '2020-01-14'
+subtitle: Academic Torrents
+tag_review: no_fit
 tags: []
-date: "2020-01-14"
-type: "wp"
+title: Some great links for  01/15/2020
+type: wp
 wordpress_id: 2692
 ---
+
 [Academic Torrents](http://academictorrents.com) 
 
 If you’re looking for data for your research project, this is an impressive site. It’s also a home for your large volume data. I’ve not looked at the business model or price. 

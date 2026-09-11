@@ -1,12 +1,15 @@
 ---
-title: "Whats reasonable to ask for before you invest $10K-$20K"
-subtitle: "A couple of entrepreneurs asked me whether I’d be interested in investing in their project at a very..."
-category: "1"
-tags: ["630", "1008", "1824"]
-date: "2013-07-30"
-type: "wp"
+category: '1'
+date: '2013-07-30'
+subtitle: A couple of entrepreneurs asked me whether I’d be interested in investing
+  in their project at a very...
+tags:
+- business
+title: Whats reasonable to ask for before you invest $10K-$20K
+type: wp
 wordpress_id: 180
 ---
+
 A couple of entrepreneurs asked me whether I’d be interested in investing in their project at a very early stage. The question arose, what kind of information would I need (and by extension would any other potential angel need) to see before even considering this? 
 
 - Most obviously, what would the investor get for their funds. What are the legal/financial terms. Exactly what would the ‘paperwork’ look like.

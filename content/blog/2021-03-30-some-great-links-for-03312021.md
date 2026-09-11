@@ -1,12 +1,16 @@
 ---
-title: "Some great links for  03/31/2021"
-subtitle: "Comprehensive Python OpenCV Tutorial For Beginners Part I | by Yukon Peng | Medium"
-category: "301"
-tags: []
-date: "2021-03-30"
-type: "wp"
+category: '301'
+date: '2021-03-30'
+subtitle: Comprehensive Python OpenCV Tutorial For Beginners Part I | by Yukon Peng
+  | Medium
+tags:
+- python
+- robotics
+title: Some great links for  03/31/2021
+type: wp
 wordpress_id: 2830
 ---
+
 [Comprehensive Python OpenCV Tutorial For Beginners Part I | by Yukon Peng | Medium](https://medium.com/@yukunpengba/comprehensive-python-opencv-tutorial-for-beginners-part-i-fd0293d52241) 
 
 For robotics, it’s really handy to know opencv

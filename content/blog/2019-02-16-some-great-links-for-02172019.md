@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/17/2019"
-subtitle: "Opinion | No, You Can’t Ignore Email. It’s Rude."
-category: "301"
+category: '301'
+date: '2019-02-16'
+subtitle: Opinion | No, You Can’t Ignore Email. It’s Rude.
+tag_review: no_fit
 tags: []
-date: "2019-02-16"
-type: "wp"
+title: Some great links for  02/17/2019
+type: wp
 wordpress_id: 2538
 ---
+
 [Opinion | No, You Can’t Ignore Email. It’s Rude.](https://nyti.ms/2EcopxB?smid=nytcore-ios-share) 
 
 True statement about emails. I agree although I know some people who habitually don’t answer emails. Is it me?

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/08/2018"
-subtitle: "Javalin – A lightweight Java and Kotlin web framework"
-category: "301"
+category: '301'
+date: '2018-08-07'
+subtitle: Javalin – A lightweight Java and Kotlin web framework
+tag_review: no_fit
 tags: []
-date: "2018-08-07"
-type: "wp"
+title: Some great links for  08/08/2018
+type: wp
 wordpress_id: 2453
 ---
+
 [Javalin – A lightweight Java and Kotlin web framework](https://javalin.io) 
 
  tags: [kotlin](https://www.diigo.com/user/pitosalas/kotlin) [java](https://www.diigo.com/user/pitosalas/java) [web](https://www.diigo.com/user/pitosalas/web) [framework](https://www.diigo.com/user/pitosalas/framework)

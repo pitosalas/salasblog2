@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/31/2018"
-subtitle: "iridakos – Creating a Linux Desktop application with Ruby"
-category: "301"
-tags: []
-date: "2018-08-30"
-type: "wp"
+category: '301'
+date: '2018-08-30'
+subtitle: iridakos – Creating a Linux Desktop application with Ruby
+tags:
+- ruby
+title: Some great links for  08/31/2018
+type: wp
 wordpress_id: 2460
 ---
+
 [iridakos – Creating a Linux Desktop application with Ruby](https://iridakos.com/tutorials/2018/01/25/creating-a-gtk-todo-application-with-ruby.html) 
 
 A really nice tutorial explaining how to write a gui app on Linux using Ruby.

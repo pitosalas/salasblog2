@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/09/2019"
-subtitle: "codercom/code-server"
-category: "301"
+category: '301'
+date: '2019-04-08'
+subtitle: codercom/code-server
+tag_review: no_fit
 tags: []
-date: "2019-04-08"
-type: "wp"
+title: Some great links for  04/09/2019
+type: wp
 wordpress_id: 2561
 ---
+
 [codercom/code-server](https://github.com/codercom/code-server) 
 
 I don’t quite understand this, nor have I tried it. But the claim is pretty amazing: run vocode on aws or azure, so your development environment is hosted there!

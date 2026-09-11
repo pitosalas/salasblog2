@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/12/2019"
-subtitle: "Don’t confuse Ruby’s ‘throw’ statement with ‘raise’ (Example)"
-category: "301"
+category: '301'
+date: '2019-04-11'
+subtitle: Don’t confuse Ruby’s ‘throw’ statement with ‘raise’ (Example)
+tag_review: no_fit
 tags: []
-date: "2019-04-11"
-type: "wp"
+title: Some great links for  04/12/2019
+type: wp
 wordpress_id: 2562
 ---
+
 [Don’t confuse Ruby’s ‘throw’ statement with ‘raise’ (Example)](https://coderwall.com/p/lhkkug/don-t-confuse-ruby-s-throw-statement-with-raise) 
 
 Wow this is a really good one. I didn’t know and have to make sure I clear this up in my mind!

@@ -1,12 +1,15 @@
 ---
-title: "When Twitter becomes a  blogging platform"
-subtitle: "I have been noticing more and more **serialized tweets**. In other words, someone tweets several tim..."
-category: "1"
-tags: ["719", "1333", "2047"]
-date: "2014-03-23"
-type: "wp"
+category: '1'
+date: '2014-03-23'
+subtitle: I have been noticing more and more **serialized tweets**. In other words,
+  someone tweets several tim...
+tag_review: no_fit
+tags: []
+title: When Twitter becomes a  blogging platform
+type: wp
 wordpress_id: 109
 ---
+
 I have been noticing more and more **serialized tweets**. In other words, someone tweets several times in a row because what they have to say will not fit into 140 characters. They number them and fire them off one after the other. That way you, the reader, can reassemble them in your head. Of course the arrive in reverese order (the newest ones are the last one.) Also you need some way to note that your series is over, which might beget a new twitter shorthand 
 
 Why, if I can attach a 5 minute video or a photograph or a 3 minute mp3 to a tweet, **can’t I attach a 2 paragraph messge?** Why not allow me to have as much text, and why not fonts and styles? It’s just a matter of time.

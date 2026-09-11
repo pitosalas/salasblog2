@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/31/2020"
-subtitle: "Different Ways to Set Attributes in ActiveRecord (Rails 6)"
-category: "301"
-tags: []
-date: "2020-01-30"
-type: "wp"
+category: '301'
+date: '2020-01-30'
+subtitle: Different Ways to Set Attributes in ActiveRecord (Rails 6)
+tags:
+- ruby-on-rails
+title: Some great links for  01/31/2020
+type: wp
 wordpress_id: 2726
 ---
+
 [Different Ways to Set Attributes in ActiveRecord (Rails 6)](https://scottbartell.com/2020/01/30/set-attributes-in-active-record-rails-6/?utm_source=share&utm_medium=ios_app&utm_name=iossmf) 
 
 It’s always hard to remember all the different options that activerecord offers for manipulating data. 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/08/2020"
-subtitle: "Integrate Bootstrap 4 and Font Awesome 5 in Rails 6"
-category: "301"
+category: '301'
+date: '2020-03-07'
+subtitle: Integrate Bootstrap 4 and Font Awesome 5 in Rails 6
+tag_review: no_fit
 tags: []
-date: "2020-03-07"
-type: "wp"
+title: Some great links for  03/08/2020
+type: wp
 wordpress_id: 2737
 ---
+
 [Integrate Bootstrap 4 and Font Awesome 5 in Rails 6](https://medium.com/swlh/integrate-bootstrap-4-and-font-awesome-5-in-rails-6-fec52ee51753) 
 
 This can always be a paining the butt. And now that Rails4 uses all this new and badly integrated package management stuff it gets worse. This is a helpful article.

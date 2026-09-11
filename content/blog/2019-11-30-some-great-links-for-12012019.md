@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/01/2019"
-subtitle: "Markov Localization for Mobile Robots in Dynamic Environments"
-category: "301"
+category: '301'
+date: '2019-11-30'
+subtitle: Markov Localization for Mobile Robots in Dynamic Environments
+tag_review: no_fit
 tags: []
-date: "2019-11-30"
-type: "wp"
+title: Some great links for  12/01/2019
+type: wp
 wordpress_id: 2660
 ---
+
 [Markov Localization for Mobile Robots in Dynamic Environments](http://www.cs.cmu.edu/afs/cs/project/jair/pub/volume11/fox99a-html/jair-localize.html) 
 
 A seminal paper on the Markov Localization Algorithm

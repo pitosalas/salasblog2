@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/29/2021"
-subtitle: "create regexp from a set of examples"
-category: "301"
+category: '301'
+date: '2021-03-28'
+subtitle: create regexp from a set of examples
+tag_review: no_fit
 tags: []
-date: "2021-03-28"
-type: "wp"
+title: Some great links for  03/29/2021
+type: wp
 wordpress_id: 2828
 ---
+
 [create regexp from a set of examples](https://github.com/pemistahl/grex) 
 
  tags: [howto](https://www.diigo.com/user/pitosalas/howto) [tools](https://www.diigo.com/user/pitosalas/tools) [regex](https://www.diigo.com/user/pitosalas/regex)

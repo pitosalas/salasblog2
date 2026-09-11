@@ -1,12 +1,15 @@
 ---
-title: "Google+ Awesome Pictures"
-subtitle: "A very little known feature of Google+ Is the “auto awesome” feature. I want to sing its praises!"
-category: "1"
-tags: []
-date: "2014-07-16"
-type: "wp"
+category: '1'
+date: '2014-07-16'
+subtitle: A very little known feature of Google+ Is the “auto awesome” feature. I
+  want to sing its praises!
+tags:
+- technology
+title: Google+ Awesome Pictures
+type: wp
 wordpress_id: 52
 ---
+
 A very little known feature of Google+ Is the “auto awesome” feature. I want to sing its praises!
 
 On your smartphone. you can download the G+ application and configure it to automatically back up all your photos to Google+, even if you choose to keep them all private. A useful feature, but not unique.

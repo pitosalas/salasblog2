@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/16/2019"
-subtitle: "What’s coming to Rails 6.0? – Ruby Inside – Medium"
-category: "301"
+category: '301'
+date: '2019-02-15'
+subtitle: What’s coming to Rails 6.0? – Ruby Inside – Medium
+tag_review: no_fit
 tags: []
-date: "2019-02-15"
-type: "wp"
+title: Some great links for  02/16/2019
+type: wp
 wordpress_id: 2537
 ---
+
 [What’s coming to Rails 6.0? – Ruby Inside – Medium](https://medium.com/rubyinside/whats-coming-to-rails-6-0-8ec79eea66da) 
 
 Rails 6 will help with database sharding!

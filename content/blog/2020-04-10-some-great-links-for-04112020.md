@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  04/11/2020"
-subtitle: "Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages"
-category: "301"
-tags: []
-date: "2020-04-10"
-type: "wp"
+category: '301'
+date: '2020-04-10'
+subtitle: Cleaning and Prepping Data with Python for Data Science — Best Practices
+  and Helpful Packages
+tags:
+- python
+title: Some great links for  04/11/2020
+type: wp
 wordpress_id: 2742
 ---
+
 [Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages](https://medium.com/@rrfd/cleaning-and-prepping-data-with-python-for-data-science-best-practices-and-helpful-packages-af1edfbe2a3) 
 
 Tour de force explanation of techniques for data cleaning in python data science

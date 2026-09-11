@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/28/2020"
-subtitle: "Very impressive data transformation tool"
-category: "301"
+category: '301'
+date: '2020-05-27'
+subtitle: Very impressive data transformation tool
+tag_review: no_fit
 tags: []
-date: "2020-05-27"
-type: "wp"
+title: Some great links for  05/28/2020
+type: wp
 wordpress_id: 2745
 ---
+
 [Very impressive data transformation tool](https://www.visidata.org/install/) 
 
 It claims to be able to convert, transform and massage data in css, json and lots of other tabular formats!

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/06/2020"
-subtitle: "Library for stubbing and setting expectations on HTTP requests in Ruby."
-category: "301"
-tags: []
-date: "2020-03-05"
-type: "wp"
+category: '301'
+date: '2020-03-05'
+subtitle: Library for stubbing and setting expectations on HTTP requests in Ruby.
+tags:
+- ruby
+title: Some great links for  03/06/2020
+type: wp
 wordpress_id: 2735
 ---
+
 [Library for stubbing and setting expectations on HTTP requests in Ruby.](https://github.com/bblimke/webmock) 
 
 There are many of these building blocks. Use this to mock a web service that your system depends on. That way you can test your system without incurring the costs (in money and time) of calling the service.

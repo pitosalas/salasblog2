@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/20/2019"
-subtitle: "CSS Flexbox Nav Bar – Building a Blog, Part 1"
-category: "301"
+category: '301'
+date: '2019-05-19'
+subtitle: CSS Flexbox Nav Bar – Building a Blog, Part 1
+tag_review: no_fit
 tags: []
-date: "2019-05-19"
-type: "wp"
+title: Some great links for  05/20/2019
+type: wp
 wordpress_id: 2595
 ---
+
 [CSS Flexbox Nav Bar – Building a Blog, Part 1](https://dev.to/njericooper/flexbox-blog-part-1-the-nav-bar-442l?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
 Flex box is a newish css feature that is subtle but very useful. Of course, all of css is subtle!

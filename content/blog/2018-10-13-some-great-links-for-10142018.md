@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/14/2018"
-subtitle: "Creating Powerful Command Line Tools in Ruby – via @codeship | via @codeship"
-category: "301"
-tags: []
-date: "2018-10-13"
-type: "wp"
+category: '301'
+date: '2018-10-13'
+subtitle: Creating Powerful Command Line Tools in Ruby – via @codeship | via @codeship
+tags:
+- ruby
+title: Some great links for  10/14/2018
+type: wp
 wordpress_id: 2472
 ---
+
 [Creating Powerful Command Line Tools in Ruby – via @codeship | via @codeship](https://blog.codeship.com/creating-powerful-command-line-tools-in-ruby/) 
 
 Another great article about creating a well behaved cli

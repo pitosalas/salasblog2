@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/15/2020"
-subtitle: "Pauls Online Math Notes"
-category: "301"
-tags: []
-date: "2020-11-14"
-type: "wp"
+category: '301'
+date: '2020-11-14'
+subtitle: Pauls Online Math Notes
+tags:
+- mathematics
+title: Some great links for  11/15/2020
+type: wp
 wordpress_id: 2773
 ---
+
 [Pauls Online Math Notes](https://tutorial.math.lamar.edu) 
 
 Seems like a comprehensive but short and sweet set of basic math notes for problem solving. College level. 

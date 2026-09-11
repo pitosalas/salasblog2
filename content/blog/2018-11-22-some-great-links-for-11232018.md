@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/23/2018"
-subtitle: "TabNine | Install TabNine"
-category: "301"
+category: '301'
+date: '2018-11-22'
+subtitle: TabNine | Install TabNine
+tag_review: no_fit
 tags: []
-date: "2018-11-22"
-type: "wp"
+title: Some great links for  11/23/2018
+type: wp
 wordpress_id: 2489
 ---
+
 [TabNine | Install TabNine](https://tabnine.com/install) 
 
 Looks really cool. ML auto completion for any programming language. Must try. 

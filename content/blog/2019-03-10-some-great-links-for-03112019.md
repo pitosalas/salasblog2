@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/11/2019"
-subtitle: "How to scale Ruby on Rails with Redis | Opensource.com"
-category: "301"
-tags: []
-date: "2019-03-10"
-type: "wp"
+category: '301'
+date: '2019-03-10'
+subtitle: How to scale Ruby on Rails with Redis | Opensource.com
+tags:
+- ruby-on-rails
+title: Some great links for  03/11/2019
+type: wp
 wordpress_id: 2549
 ---
+
 [How to scale Ruby on Rails with Redis | Opensource.com](https://opensource.com/article/18/4/ruby-rails-redis) 
 
 Another nice tutorial on Caching with Redis and Rails

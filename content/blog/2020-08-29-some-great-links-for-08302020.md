@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/30/2020"
-subtitle: "Ruby style guide from Shopify."
-category: "301"
+category: '301'
+date: '2020-08-29'
+subtitle: Ruby style guide from Shopify.
+tag_review: no_fit
 tags: []
-date: "2020-08-29"
-type: "wp"
+title: Some great links for  08/30/2020
+type: wp
 wordpress_id: 2763
 ---
+
 [Ruby style guide from Shopify. ](https://shopify.github.io/ruby-style-guide/) 
 
 Great, I think I agree with all of it. We should all be able to live with these!

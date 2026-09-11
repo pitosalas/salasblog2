@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/19/2018"
-subtitle: "harelba/q"
-category: "301"
+category: '301'
+date: '2018-11-18'
+subtitle: harelba/q
+tag_review: no_fit
 tags: []
-date: "2018-11-18"
-type: "wp"
+title: Some great links for  11/19/2018
+type: wp
 wordpress_id: 2488
 ---
+
 [harelba/q](https://github.com/harelba/q) 
 
 Under the right circumstances this is an amazingly useful tool

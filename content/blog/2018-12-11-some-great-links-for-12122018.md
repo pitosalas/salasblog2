@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  12/12/2018"
-subtitle: "Teaching Robotics With ROS | The Construct"
-category: "301"
-tags: []
-date: "2018-12-11"
-type: "wp"
+category: '301'
+date: '2018-12-11'
+subtitle: Teaching Robotics With ROS | The Construct
+tags:
+- robotics
+- education
+title: Some great links for  12/12/2018
+type: wp
 wordpress_id: 2506
 ---
+
 [Teaching Robotics With ROS | The Construct](http://www.theconstructsim.com/teaching-robotics-ros/) 
 
 Really good article about a way to teach robotics and pros

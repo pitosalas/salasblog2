@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/20/2019"
-subtitle: "Download Trial | SimpleDiagrams"
-category: "301"
+category: '301'
+date: '2019-01-19'
+subtitle: Download Trial | SimpleDiagrams
+tag_review: no_fit
 tags: []
-date: "2019-01-19"
-type: "wp"
+title: Some great links for  01/20/2019
+type: wp
 wordpress_id: 2528
 ---
+
 [Download Trial | SimpleDiagrams](https://www.simplediagrams.com/trial) 
 
 Another interesting diagramming and sketching tool. 

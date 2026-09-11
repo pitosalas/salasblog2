@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  06/08/2020"
-subtitle: "datas-frame – Modern Pandas (Part 2): Method Chaining"
-category: "301"
-tags: []
-date: "2020-06-07"
-type: "wp"
+category: '301'
+date: '2020-06-07'
+subtitle: 'datas-frame – Modern Pandas (Part 2): Method Chaining'
+tags:
+- python
+- pandas
+title: Some great links for  06/08/2020
+type: wp
 wordpress_id: 2748
 ---
+
 [datas-frame – Modern Pandas (Part 2): Method Chaining](https://tomaugspurger.github.io/method-chaining.html) 
 
 Ive been trying this style and while it looks cool I am not sure it’s more productive. Because debugging is harder as you can’t examine intermediate results.

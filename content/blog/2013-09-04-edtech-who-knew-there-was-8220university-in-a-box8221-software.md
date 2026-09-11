@@ -1,12 +1,16 @@
 ---
-title: "[edtech] Who knew there was “university in a box” software!"
-subtitle: "I stumbled across this web site. I can’t say anything about their status or quality but I was supris..."
-category: "1"
-tags: ["986", "2054"]
-date: "2013-09-04"
-type: "wp"
+category: '1'
+date: '2013-09-04'
+subtitle: I stumbled across this web site. I can’t say anything about their status
+  or quality but I was supris...
+tags:
+- education
+- technology
+title: '[edtech] Who knew there was “university in a box” software!'
+type: wp
 wordpress_id: 169
 ---
+
 I stumbled across this web site. I can’t say anything about their status or quality but I was suprised that someone developed what looks like a complete “university admin in a box” cloud based software. Maybe I can use it for Bootup Academy!
 
 [Get a Feature tour of Fedena – Management Information System](http://www.fedena.com/feature_tour):

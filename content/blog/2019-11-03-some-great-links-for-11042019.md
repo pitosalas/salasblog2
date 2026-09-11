@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/04/2019"
-subtitle: "GitHub – iris-ua/iris_lama: LaMa – A Localization and Mapping library"
-category: "301"
+category: '301'
+date: '2019-11-03'
+subtitle: 'GitHub – iris-ua/iris_lama: LaMa – A Localization and Mapping library'
+tag_review: no_fit
 tags: []
-date: "2019-11-03"
-type: "wp"
+title: Some great links for  11/04/2019
+type: wp
 wordpress_id: 2654
 ---
+
 [GitHub – iris-ua/iris_lama: LaMa – A Localization and Mapping library](https://github.com/iris-ua/iris_lama) 
 
 Another interesting SLAM library to try 

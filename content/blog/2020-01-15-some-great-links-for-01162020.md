@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/16/2020"
-subtitle: "Ruby From Other Languages"
-category: "301"
-tags: []
-date: "2020-01-15"
-type: "wp"
+category: '301'
+date: '2020-01-15'
+subtitle: Ruby From Other Languages
+tags:
+- ruby
+title: Some great links for  01/16/2020
+type: wp
 wordpress_id: 2693
 ---
+
 [Ruby From Other Languages](https://www.ruby-lang.org/en/documentation/ruby-from-other-languages/) 
 
 If you are coming to Ruby from another programming language there are a lot of good tips here!

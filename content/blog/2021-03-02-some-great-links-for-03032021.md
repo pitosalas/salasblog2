@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/03/2021"
-subtitle: "Standard Deviation is an Inferior Measurement*"
-category: "301"
-tags: []
-date: "2021-03-02"
-type: "wp"
+category: '301'
+date: '2021-03-02'
+subtitle: Standard Deviation is an Inferior Measurement*
+tags:
+- mathematics
+title: Some great links for  03/03/2021
+type: wp
 wordpress_id: 2826
 ---
+
 [Standard Deviation is an Inferior Measurement*](https://link.medium.com/gbpcSJtCieb) 
 
 Interesting bit of statistics esoterica…

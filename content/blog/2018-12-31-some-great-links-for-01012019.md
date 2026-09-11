@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/01/2019"
-subtitle: "Rethinking how we interview in Microsoft’s Developer Division"
-category: "301"
+category: '301'
+date: '2018-12-31'
+subtitle: Rethinking how we interview in Microsoft’s Developer Division
+tag_review: no_fit
 tags: []
-date: "2018-12-31"
-type: "wp"
+title: Some great links for  01/01/2019
+type: wp
 wordpress_id: 2517
 ---
+
 [Rethinking how we interview in Microsoft’s Developer Division](https://blog.usejournal.com/rethinking-how-we-interview-in-microsofts-developer-division-8f404cfd075a) 
 
 Interesting about how Microsoft interviews and how they updated their process. 

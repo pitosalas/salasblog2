@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/31/2020"
-subtitle: "Git Commands to Live By"
-category: "301"
+category: '301'
+date: '2020-12-30'
+subtitle: Git Commands to Live By
+tag_review: no_fit
 tags: []
-date: "2020-12-30"
-type: "wp"
+title: Some great links for  12/31/2020
+type: wp
 wordpress_id: 2807
 ---
+
 [Git Commands to Live By](https://link.medium.com/sbnKSHQCDcb) 
 
 A great collection of semi- advanced git commands. Super useful!

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/29/2021"
-subtitle: "How to Get a Software Developer Internship"
-category: "301"
+category: '301'
+date: '2021-01-28'
+subtitle: How to Get a Software Developer Internship
+tag_review: no_fit
 tags: []
-date: "2021-01-28"
-type: "wp"
+title: Some great links for  01/29/2021
+type: wp
 wordpress_id: 2819
 ---
+
 [How to Get a Software Developer Internship](https://link.medium.com/jtrlTwwLpdb) 
 
 Good advice for new grads hunting for a position. 

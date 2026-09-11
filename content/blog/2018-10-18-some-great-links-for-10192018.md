@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/19/2018"
-subtitle: "[](https://www.reddit.com/r/compsci/comments/9oztot/algorithms_tutorial_series_for_beginners/?st=JNE..."
-category: "301"
-tags: []
-date: "2018-10-18"
-type: "wp"
+category: '301'
+date: '2018-10-18'
+subtitle: '[](https://www.reddit.com/r/compsci/comments/9oztot/algorithms_tutorial_series_for_beginners/?st=JNE...'
+tags:
+- algorithms
+title: Some great links for  10/19/2018
+type: wp
 wordpress_id: 2476
 ---
+
 [](https://www.reddit.com/r/compsci/comments/9oztot/algorithms_tutorial_series_for_beginners/?st=JNEHXSO7&sh=2d2fba36) 
 
  tags: [tutorial](https://www.diigo.com/user/pitosalas/tutorial) [algorithms](https://www.diigo.com/user/pitosalas/algorithms) [datastructures](https://www.diigo.com/user/pitosalas/datastructures) [data-structures](https://www.diigo.com/user/pitosalas/data-structures)

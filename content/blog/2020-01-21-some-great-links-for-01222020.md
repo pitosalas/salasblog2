@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/22/2020"
-subtitle: "Python built-ins worth learning – Trey Hunner"
-category: "301"
+category: '301'
+date: '2020-01-21'
+subtitle: Python built-ins worth learning – Trey Hunner
+tag_review: no_fit
 tags: []
-date: "2020-01-21"
-type: "wp"
+title: Some great links for  01/22/2020
+type: wp
 wordpress_id: 2705
 ---
+
 [Python built-ins worth learning – Trey Hunner](https://treyhunner.com/2019/05/python-builtins-worth-learning/) 
 
 A fantastic efficient way to review most of the top methods and functions in python. 

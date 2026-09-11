@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/15/2019"
-subtitle: "styd/apexcharts.rb"
-category: "301"
+category: '301'
+date: '2019-07-14'
+subtitle: styd/apexcharts.rb
+tag_review: no_fit
 tags: []
-date: "2019-07-14"
-type: "wp"
+title: Some great links for  07/15/2019
+type: wp
 wordpress_id: 2608
 ---
+
 [styd/apexcharts.rb](https://github.com/styd/apexcharts.rb) 
 
 This is an AMAZING collection of graphs. Great to have a ruby binding. Haven’t tried it yet but looks very worth while. 

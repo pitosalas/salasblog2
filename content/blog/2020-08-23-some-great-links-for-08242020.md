@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/24/2020"
-subtitle: "Rodauth: A Refreshing Authentication Solution for Ruby | Janko’s Blog"
-category: "301"
-tags: []
-date: "2020-08-23"
-type: "wp"
+category: '301'
+date: '2020-08-23'
+subtitle: 'Rodauth: A Refreshing Authentication Solution for Ruby | Janko’s Blog'
+tags:
+- ruby
+title: Some great links for  08/24/2020
+type: wp
 wordpress_id: 2761
 ---
+
 [Rodauth: A Refreshing Authentication Solution for Ruby | Janko’s Blog](https://janko.io/rodauth-a-refreshing-authentication-solution-for-ruby/) 
 
 Always nice to see alternatives to devise but this is just as complicated. I haven’t used it but my question is how much of the user facing UI does it provide and how do you customize it?

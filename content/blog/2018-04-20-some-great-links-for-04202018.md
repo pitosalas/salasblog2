@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/20/2018"
-subtitle: "7 Practical Tips for Cheating at Design – Refactoring UI – Medium"
-category: "538"
-tags: []
-date: "2018-04-20"
-type: "wp"
+category: '538'
+date: '2018-04-20'
+subtitle: 7 Practical Tips for Cheating at Design – Refactoring UI – Medium
+tags:
+- design
+title: Some great links for  04/20/2018
+type: wp
 wordpress_id: 2279
 ---
+
 [7 Practical Tips for Cheating at Design – Refactoring UI – Medium](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886?source=userActivityShare-d383785221d0-1524177305) 
 
 Awesome useful tips for pretty design!

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/15/2018"
-subtitle: "Ruby goes Serverless! – Apache OpenWhisk adds native support for Ruby"
-category: "301"
-tags: []
-date: "2018-10-14"
-type: "wp"
+category: '301'
+date: '2018-10-14'
+subtitle: Ruby goes Serverless! – Apache OpenWhisk adds native support for Ruby
+tags:
+- ruby
+title: Some great links for  10/15/2018
+type: wp
 wordpress_id: 2473
 ---
+
 [Ruby goes Serverless! – Apache OpenWhisk adds native support for Ruby](https://medium.com/openwhisk/ruby-goes-serverless-apache-openwhisk-adds-native-support-for-ruby-7134faee14e) 
 
 Title says it all. 

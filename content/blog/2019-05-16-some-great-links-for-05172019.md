@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/17/2019"
-subtitle: "We Can Do Better Than SQL"
-category: "301"
-tags: []
-date: "2019-05-16"
-type: "wp"
+category: '301'
+date: '2019-05-16'
+subtitle: We Can Do Better Than SQL
+tags:
+- robotics
+title: Some great links for  05/17/2019
+type: wp
 wordpress_id: 2589
 ---
+
 [We Can Do Better Than SQL](https://edgedb.com/blog/we-can-do-better-than-sql/) 
 
 Interesting account of all the ways that SQL sucks and of course a proposed fix!

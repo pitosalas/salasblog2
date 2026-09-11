@@ -1,12 +1,15 @@
 ---
-title: "Better to be a software developer than a college professor?"
-subtitle: "Other than the headline, which is amusing, I am not sure about the methodology or significance of th..."
-category: "1"
-tags: ["776", "942", "1318", "1886"]
-date: "2014-02-26"
-type: "wp"
+category: '1'
+date: '2014-02-26'
+subtitle: Other than the headline, which is amusing, I am not sure about the methodology
+  or significance of th...
+tags:
+- software-engineering
+title: Better to be a software developer than a college professor?
+type: wp
 wordpress_id: 116
 ---
+
 Other than the headline, which is amusing, I am not sure about the methodology or significance of this [study in US News (do they still exist?)](http://money.usnews.com/careers/best-jobs/rankings/the-100-best-jobs). And it seems that many professions, e.g. College Professor, don’t even get mentioned. Is it because they don’t even make the top 100? I doubt it. Anyway, Here’s more about the US News and World Report’s assessments:
 
 > 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/16/2019"
-subtitle: "Git: Cheat Sheet (advanced) – DEV Community"
-category: "301"
+category: '301'
+date: '2019-12-15'
+subtitle: 'Git: Cheat Sheet (advanced) – DEV Community'
+tag_review: no_fit
 tags: []
-date: "2019-12-15"
-type: "wp"
+title: Some great links for  12/16/2019
+type: wp
 wordpress_id: 2671
 ---
+
 [Git: Cheat Sheet (advanced) – DEV Community ](https://dev.to/maxpou/git-cheat-sheet-advanced-3a17) 
 
 A really nice diagram worth the cost of admission by itself. 

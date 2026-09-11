@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/21/2018"
-subtitle: "13 Noteworthy Points from Google’s JavaScript Style Guide"
-category: "538"
+category: '538'
+date: '2018-04-21'
+subtitle: 13 Noteworthy Points from Google’s JavaScript Style Guide
+tag_review: no_fit
 tags: []
-date: "2018-04-21"
-type: "wp"
+title: Some great links for  04/21/2018
+type: wp
 wordpress_id: 2282
 ---
+
 [13 Noteworthy Points from Google’s JavaScript Style Guide](https://medium.freecodecamp.org/google-publishes-a-javascript-style-guide-here-are-some-key-lessons-1810b8ad050b?source=userActivityShare-d383785221d0-1524228762) 
 
  tags: [code](https://www.diigo.com/user/pitosalas/code) [styles](https://www.diigo.com/user/pitosalas/styles) [javascript](https://www.diigo.com/user/pitosalas/javascript)

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/28/2019"
-subtitle: "Goodhart’s Law: Are Academic Metrics Being Gamed?"
-category: "301"
+category: '301'
+date: '2019-09-27'
+subtitle: 'Goodhart’s Law: Are Academic Metrics Being Gamed?'
+tag_review: no_fit
 tags: []
-date: "2019-09-27"
-type: "wp"
+title: Some great links for  09/28/2019
+type: wp
 wordpress_id: 2643
 ---
+
 [Goodhart’s Law: Are Academic Metrics Being Gamed?](https://thegradient.pub/over-optimization-of-academic-publishing-metrics/) 
 
 Interesting trends in scholarly work, references, citations and academic status. 

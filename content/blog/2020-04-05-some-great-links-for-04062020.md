@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/06/2020"
-subtitle: "The Art of Command Line"
-category: "301"
+category: '301'
+date: '2020-04-05'
+subtitle: The Art of Command Line
+tag_review: no_fit
 tags: []
-date: "2020-04-05"
-type: "wp"
+title: Some great links for  04/06/2020
+type: wp
 wordpress_id: 2741
 ---
+
 [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line/blob/master/README.md) 
 
 We all live in the shell. (Yes, if you’re not geekish that sentence makes no sense). And you can always learn a little more and some special trick to make your day. Here’s another reference.

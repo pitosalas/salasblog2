@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  03/22/2021"
-subtitle: "[GitHub – Overv/outrun: Execute a local command using the processing power of another Linux machine...."
-category: "301"
+category: '301'
+date: '2021-03-21'
+subtitle: '[GitHub – Overv/outrun: Execute a local command using the processing power
+  of another Linux machine....'
+tag_review: no_fit
 tags: []
-date: "2021-03-21"
-type: "wp"
+title: Some great links for  03/22/2021
+type: wp
 wordpress_id: 2827
 ---
+
 [GitHub – Overv/outrun: Execute a local command using the processing power of another Linux machine.](https://github.com/Overv/outrun) 
 
 A pretty amazing little tool if you need this kind of thing!

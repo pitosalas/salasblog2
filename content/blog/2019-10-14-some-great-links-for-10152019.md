@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/15/2019"
-subtitle: "6 Ways to Prevent Your Heroku App From Sleeping | Quick Left"
-category: "301"
+category: '301'
+date: '2019-10-14'
+subtitle: 6 Ways to Prevent Your Heroku App From Sleeping | Quick Left
+tag_review: no_fit
 tags: []
-date: "2019-10-14"
-type: "wp"
+title: Some great links for  10/15/2019
+type: wp
 wordpress_id: 2650
 ---
+
 [6 Ways to Prevent Your Heroku App From Sleeping | Quick Left](https://quickleft.com/blog/6-easy-ways-to-prevent-your-heroku-node-app-from-sleeping/) 
 
 if this works, it’s super useful to overcome the annoying fact that Heroku dynos go to sleep and need to be woken up. 

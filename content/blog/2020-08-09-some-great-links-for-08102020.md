@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/10/2020"
-subtitle: "full featured html embeddable spreadsheet"
-category: "301"
+category: '301'
+date: '2020-08-09'
+subtitle: full featured html embeddable spreadsheet
+tag_review: no_fit
 tags: []
-date: "2020-08-09"
-type: "wp"
+title: Some great links for  08/10/2020
+type: wp
 wordpress_id: 2760
 ---
+
 [full featured html embeddable spreadsheet](https://github.com/mengshukeji/Luckysheet) 
 
  tags: [howto](https://www.diigo.com/user/pitosalas/howto) [Spreadsheets](https://www.diigo.com/user/pitosalas/Spreadsheets) [html](https://www.diigo.com/user/pitosalas/html)

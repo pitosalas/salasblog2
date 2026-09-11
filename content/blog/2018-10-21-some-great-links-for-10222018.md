@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/22/2018"
-subtitle: "danburzo/percollate"
-category: "301"
-tags: []
-date: "2018-10-21"
-type: "wp"
+category: '301'
+date: '2018-10-21'
+subtitle: danburzo/percollate
+tags:
+- ruby
+title: Some great links for  10/22/2018
+type: wp
 wordpress_id: 2479
 ---
+
 [danburzo/percollate](https://github.com/danburzo/percollate) 
 
 This looks like a super useful tool!

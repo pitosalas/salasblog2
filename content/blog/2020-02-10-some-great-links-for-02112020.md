@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/11/2020"
-subtitle: "SSL Cert Rotation with Runbook | dev/blesi"
-category: "301"
+category: '301'
+date: '2020-02-10'
+subtitle: SSL Cert Rotation with Runbook | dev/blesi
+tag_review: no_fit
 tags: []
-date: "2020-02-10"
-type: "wp"
+title: Some great links for  02/11/2020
+type: wp
 wordpress_id: 2730
 ---
+
 [SSL Cert Rotation with Runbook | dev/blesi](http://patrick.ble.si/ssl-cert-rotation-with-runbook) 
 
 More about Runbook my favorite automation tool so far!

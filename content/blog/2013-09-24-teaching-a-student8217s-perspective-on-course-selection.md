@@ -1,12 +1,16 @@
 ---
-title: "[teaching] A student’s perspective on course selection"
-subtitle: "I stumbled across this article while waiting for a meeting to start. It is a bit “inside baseball”, ..."
-category: "1"
-tags: ["738", "884", "1934"]
-date: "2013-09-24"
-type: "wp"
+category: '1'
+date: '2013-09-24'
+subtitle: I stumbled across this article while waiting for a meeting to start. It
+  is a bit “inside baseball”, ...
+tags:
+- education
+- brandeis
+title: '[teaching] A student’s perspective on course selection'
+type: wp
 wordpress_id: 159
 ---
+
 I stumbled across this article while waiting for a meeting to start. It is a bit “inside baseball”, in this case “inside brandeis” but it was revealing to me at least. Students can “shop” for courses for the first two weeks of the term, attending classes and adding and dropping at will during that time as they settle for their choices. I guess when I went to college they had that too, but I wasn’t aware of how it worked, so I never did it.
 
 It makes for odd dynamics in the class room as for the first two weeks you don’t really know who to expect to see, who will show up next time, and whether they are keeping up or not. This writer does not seem to be enjoying his college experience as much as I did 🙂

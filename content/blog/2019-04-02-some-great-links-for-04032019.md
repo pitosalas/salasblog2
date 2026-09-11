@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/03/2019"
-subtitle: "Architecting Ruby on Rails Apps as Microservices | Codeship | via @codeship"
-category: "301"
-tags: []
-date: "2019-04-02"
-type: "wp"
+category: '301'
+date: '2019-04-02'
+subtitle: Architecting Ruby on Rails Apps as Microservices | Codeship | via @codeship
+tags:
+- ruby
+title: Some great links for  04/03/2019
+type: wp
 wordpress_id: 2560
 ---
+
 [Architecting Ruby on Rails Apps as Microservices | Codeship | via @codeship](http://blog.codeship.com/architecting-rails-apps-as-microservices/?utm_source=rubyweekly&utm_medium=email) 
 
 Great article about Service Oriented Architectures

@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  11/02/2019"
-subtitle: "PyRobot: An Open Source Robotics Research Platform"
-category: "301"
-tags: []
-date: "2019-11-01"
-type: "wp"
+category: '301'
+date: '2019-11-01'
+subtitle: 'PyRobot: An Open Source Robotics Research Platform'
+tags:
+- robotics
+- python
+title: Some great links for  11/02/2019
+type: wp
 wordpress_id: 2653
 ---
+
 [PyRobot: An Open Source Robotics Research Platform](https://github.com/facebookresearch/pyrobot?utm_source=share&utm_medium=ios_app&utm_name=iossmf) 
 
 Very nice python interface to control a robot that hides a lot of the complexity (at the cost of flexibility of course)

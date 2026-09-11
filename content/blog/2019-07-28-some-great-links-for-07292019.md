@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/29/2019"
-subtitle: "Scripting and automating git processes"
-category: "301"
+category: '301'
+date: '2019-07-28'
+subtitle: Scripting and automating git processes
+tag_review: no_fit
 tags: []
-date: "2019-07-28"
-type: "wp"
+title: Some great links for  07/29/2019
+type: wp
 wordpress_id: 2623
 ---
+
 [Scripting and automating git processes](https://stackoverflow.com/questions/3878624/how-do-i-programmatically-determine-if-there-are-uncommitted-changes/41646552) 
 
 This one is pretty eclectic but if you find yourself writing a script in ruby or python or bash and you need to respond in the logic to what’s going on in git, then you will find some very useful tips here.

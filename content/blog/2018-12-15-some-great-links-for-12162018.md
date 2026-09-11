@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/16/2018"
-subtitle: "Introducing Action Mailbox for Rails 6"
-category: "301"
+category: '301'
+date: '2018-12-15'
+subtitle: Introducing Action Mailbox for Rails 6
+tag_review: no_fit
 tags: []
-date: "2018-12-15"
-type: "wp"
+title: Some great links for  12/16/2018
+type: wp
 wordpress_id: 2507
 ---
+
 [Introducing Action Mailbox for Rails 6](https://weblog.rubyonrails.org/2018/12/13/introducing-action-mailbox-for-rails-6/) 
 
 Rails keeps on marching on. Another great addition. Supports an intelligent way for a rails app to receive and handle incoming email. 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/10/2018"
-subtitle: "LaTeX Tips n Tricks for Conference Papers"
-category: "538"
-tags: []
-date: "2018-07-10"
-type: "wp"
+category: '538'
+date: '2018-07-10'
+subtitle: LaTeX Tips n Tricks for Conference Papers
+tags:
+- ruby-on-rails
+title: Some great links for  07/10/2018
+type: wp
 wordpress_id: 2390
 ---
+
 [LaTeX Tips n Tricks for Conference Papers](http://gurmeet.net/computer-science/latex-tips-n-tricks-for-conference-papers/) 
 
  tags: [latex](https://www.diigo.com/user/pitosalas/latex) [conference](https://www.diigo.com/user/pitosalas/conference) [papers](https://www.diigo.com/user/pitosalas/papers)

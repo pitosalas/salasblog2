@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/22/2019"
-subtitle: "Plotly | Make charts and dashboards online"
-category: "301"
+category: '301'
+date: '2019-05-21'
+subtitle: Plotly | Make charts and dashboards online
+tag_review: no_fit
 tags: []
-date: "2019-05-21"
-type: "wp"
+title: Some great links for  05/22/2019
+type: wp
 wordpress_id: 2596
 ---
+
 [Plotly | Make charts and dashboards online](https://plot.ly/#/) 
 
 An amazing graphing and plotting web site

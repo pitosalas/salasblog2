@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  06/04/2020"
-subtitle: "The Unreasonable Effectiveness of Method Chaining in Pandas"
-category: "301"
-tags: []
-date: "2020-06-03"
-type: "wp"
+category: '301'
+date: '2020-06-03'
+subtitle: The Unreasonable Effectiveness of Method Chaining in Pandas
+tags:
+- python
+- pandas
+title: Some great links for  06/04/2020
+type: wp
 wordpress_id: 2747
 ---
+
 [The Unreasonable Effectiveness of Method Chaining in Pandas](https://link.medium.com/1gv9kHV606) 
 
 Good article exploring and explaining the functional or fluent style of design in python. 

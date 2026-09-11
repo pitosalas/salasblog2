@@ -1,12 +1,14 @@
 ---
-title: "On Being a Female in Venture Capital"
-subtitle: "Interesting story…"
-category: "1"
-tags: []
-date: "2014-08-28"
-type: "wp"
+category: '1'
+date: '2014-08-28'
+subtitle: Interesting story…
+tags:
+- business
+title: On Being a Female in Venture Capital
+type: wp
 wordpress_id: 15
 ---
+
 Interesting story…
 
 > 

@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  05/02/2019"
-subtitle: "How I Almost Destroyed a £50 million War Plane and The Normalisation of Deviance."
-category: "301"
+category: '301'
+date: '2019-05-01'
+subtitle: How I Almost Destroyed a £50 million War Plane and The Normalisation of
+  Deviance.
+tag_review: no_fit
 tags: []
-date: "2019-05-01"
-type: "wp"
+title: Some great links for  05/02/2019
+type: wp
 wordpress_id: 2571
 ---
+
 [How I Almost Destroyed a £50 million War Plane and The Normalisation of Deviance.](https://fastjetperformance.com/podcasts/how-i-almost-destroyed-a-50-million-war-plane-when-display-flying-goes-wrong-and-the-normalisation-of-deviance/) 
 
 Unusual article not about computers, still with some excellent lessons. 

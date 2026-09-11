@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/19/2019"
-subtitle: "Using Ruby in 2019 – Jason Charnes"
-category: "301"
-tags: []
-date: "2019-01-18"
-type: "wp"
+category: '301'
+date: '2019-01-18'
+subtitle: Using Ruby in 2019 – Jason Charnes
+tags:
+- ruby
+title: Some great links for  01/19/2019
+type: wp
 wordpress_id: 2527
 ---
+
 [Using Ruby in 2019 – Jason Charnes](https://jasoncharnes.com/using-ruby-in-2019/) 
 
 Slightly apologetic rundown of Why Ruby

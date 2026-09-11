@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/20/2018"
-subtitle: "How a Kalman filter works, in pictures"
-category: "301"
-tags: []
-date: "2018-08-19"
-type: "wp"
+category: '301'
+date: '2018-08-19'
+subtitle: How a Kalman filter works, in pictures
+tags:
+- robotics
+title: Some great links for  08/20/2018
+type: wp
 wordpress_id: 2458
 ---
+
 [How a Kalman filter works, in pictures](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/) 
 
 Kalman filters are a mathematical process for smoothing out a noisy signal (its more complicated than that ) its a central algorithm in robotics and real time sensing systems in general. 

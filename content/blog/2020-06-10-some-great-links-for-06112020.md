@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  06/11/2020"
-subtitle: "CS81 Fall 2017"
-category: "301"
+category: '301'
+date: '2020-06-10'
+subtitle: CS81 Fall 2017
+tag_review: no_fit
 tags: []
-date: "2020-06-10"
-type: "wp"
+title: Some great links for  06/11/2020
+type: wp
 wordpress_id: 2749
 ---
+
 [CS81 Fall 2017](https://www.cs.swarthmore.edu/~meeden/cs81/f17/) 
 
 Robotics Course that looks great

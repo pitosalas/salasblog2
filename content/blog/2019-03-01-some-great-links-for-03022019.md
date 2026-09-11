@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/02/2019"
-subtitle: "The Easiest Programming Language To Learn Is… – Codesmith Development"
-category: "301"
+category: '301'
+date: '2019-03-01'
+subtitle: The Easiest Programming Language To Learn Is… – Codesmith Development
+tag_review: no_fit
 tags: []
-date: "2019-03-01"
-type: "wp"
+title: Some great links for  03/02/2019
+type: wp
 wordpress_id: 2543
 ---
+
 [The Easiest Programming Language To Learn Is… – Codesmith Development](https://codesmithdev.com/the-easiest-programming-language-to-learn-is/) 
 
 I agree, of course!

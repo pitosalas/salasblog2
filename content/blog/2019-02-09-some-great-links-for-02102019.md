@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/10/2019"
-subtitle: "10 Signs You Will Suck at Programming – Noteworthy – The Journal Blog"
-category: "301"
-tags: []
-date: "2019-02-09"
-type: "wp"
+category: '301'
+date: '2019-02-09'
+subtitle: 10 Signs You Will Suck at Programming – Noteworthy – The Journal Blog
+tags:
+- programming
+title: Some great links for  02/10/2019
+type: wp
 wordpress_id: 2534
 ---
+
 [10 Signs You Will Suck at Programming – Noteworthy – The Journal Blog](https://blog.usejournal.com/10-signs-you-will-suck-at-programming-5497a6a52c5c) 
 
 It’s good to know if you have some of the traits of a good programmer!

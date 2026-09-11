@@ -1,12 +1,15 @@
 ---
-title: "Jonathan Harris on being stuck"
-subtitle: "Jonathan Harris is the creator of several really interesting web sites that in very creative ways co..."
-category: "1"
-tags: ["593", "1933", "2023", "2136"]
-date: "2014-02-26"
-type: "wp"
+category: '1'
+date: '2014-02-26'
+subtitle: Jonathan Harris is the creator of several really interesting web sites that
+  in very creative ways co...
+tags:
+- design
+title: Jonathan Harris on being stuck
+type: wp
 wordpress_id: 114
 ---
+
 Jonathan Harris is the creator of several really interesting web sites that in very creative ways combine art with computing. From his home page one might conclude that he’s a bit 
 
 > 

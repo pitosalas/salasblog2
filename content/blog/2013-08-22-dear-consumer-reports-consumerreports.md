@@ -1,12 +1,14 @@
 ---
-title: "Dear Consumer Reports #consumerreports"
-subtitle: "![](https://i0.wp.com/salas.com/wp-content/uploads/2013/08/b4582-img_2028.jpg?w=584&ssl=1)"
-category: "1"
-tags: ["683", "865"]
-date: "2013-08-22"
-type: "wp"
+category: '1'
+date: '2013-08-22'
+subtitle: '![](https://i0.wp.com/salas.com/wp-content/uploads/2013/08/b4582-img_2028.jpg?w=584&ssl=1)'
+tag_review: no_fit
+tags: []
+title: 'Dear Consumer Reports #consumerreports'
+type: wp
 wordpress_id: 175
 ---
+
 ![](https://i0.wp.com/salas.com/wp-content/uploads/2013/08/b4582-img_2028.jpg?w=584&ssl=1)
 
 The way you try to get me to renew my subscription is just as bad as many of the merchants you call out in your reviews.

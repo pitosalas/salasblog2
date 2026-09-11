@@ -1,12 +1,15 @@
 ---
-title: "Is Apple trying to buy off “Fake Steve” or is it April 1 in December?"
-subtitle: "I wrote [recently about Fake Steve and wondered aloud how he could get away with what he gets away w..."
-category: "298"
-tags: []
-date: "2014-06-28"
-type: "wp"
+category: '298'
+date: '2014-06-28'
+subtitle: I wrote [recently about Fake Steve and wondered aloud how he could get away
+  with what he gets away w...
+tags:
+- apple
+title: Is Apple trying to buy off “Fake Steve” or is it April 1 in December?
+type: wp
 wordpress_id: 70
 ---
+
 I wrote [recently about Fake Steve and wondered aloud how he could get away with what he gets away with](/2007/11/28/how-does-fake-steve-get-away-with-this/). 
 If that thread interested you at all, you’ve got to go look at the latest shenanigans that Fake Steve is reporting in his blog. [He’s being offered big bucks to stop blogging.](http://fakesteve.blogspot.com/2007/12/breakfast-with-apple-lawyer.html)
 

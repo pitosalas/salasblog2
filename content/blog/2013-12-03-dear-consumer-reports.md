@@ -1,12 +1,14 @@
 ---
-title: "Dear Consumer Reports"
-subtitle: "From an email I sent, just because:"
-category: "1"
-tags: ["865", "1723", "1944"]
-date: "2013-12-03"
-type: "wp"
+category: '1'
+date: '2013-12-03'
+subtitle: 'From an email I sent, just because:'
+tag_review: no_fit
+tags: []
+title: Dear Consumer Reports
+type: wp
 wordpress_id: 136
 ---
+
 From an email I sent, just because: 
 
 > “Dear CU:

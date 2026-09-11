@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  03/26/2020"
-subtitle: "Facade Pattern in Rails for Performance and Maintainability | AppSignal Blog"
-category: "301"
+category: '301'
+date: '2020-03-25'
+subtitle: Facade Pattern in Rails for Performance and Maintainability | AppSignal
+  Blog
+tag_review: no_fit
 tags: []
-date: "2020-03-25"
-type: "wp"
+title: Some great links for  03/26/2020
+type: wp
 wordpress_id: 2739
 ---
+
 [Facade Pattern in Rails for Performance and Maintainability | AppSignal Blog](https://blog.appsignal.com/2020/03/18/facade-pattern-in-rails-for-performance-and-maintainability.html) 
 
 Good explanation. Although I don’t know exactly what his difference is between a facade, a presenter and a service object. 

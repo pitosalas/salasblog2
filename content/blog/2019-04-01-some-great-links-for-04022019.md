@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/02/2019"
-subtitle: "Untangling Ruby Threads"
-category: "301"
-tags: []
-date: "2019-04-01"
-type: "wp"
+category: '301'
+date: '2019-04-01'
+subtitle: Untangling Ruby Threads
+tags:
+- ruby
+title: Some great links for  04/02/2019
+type: wp
 wordpress_id: 2559
 ---
+
 [Untangling Ruby Threads](https://thoughtbot.com/blog/untangling-ruby-threads) 
 
 Dealing with Ruby Threads is tricky. And add to that understanding the GIL, and thread unsafeness and its pretty subtle!

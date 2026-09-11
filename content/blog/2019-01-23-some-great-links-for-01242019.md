@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/24/2019"
-subtitle: "12 cool things you can do with GitHub – Hacker Noon"
-category: "301"
+category: '301'
+date: '2019-01-23'
+subtitle: 12 cool things you can do with GitHub – Hacker Noon
+tag_review: no_fit
 tags: []
-date: "2019-01-23"
-type: "wp"
+title: Some great links for  01/24/2019
+type: wp
 wordpress_id: 2529
 ---
+
 [12 cool things you can do with GitHub – Hacker Noon](https://hackernoon.com/12-cool-things-you-can-do-with-github-f3e0424cf2f0) 
 
 Pretty good tips for the github power user

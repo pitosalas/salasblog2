@@ -1,12 +1,15 @@
 ---
-title: "Corporate doublespeak or inspiration?"
-subtitle: "Maybe I’ve been out of the corporate world for too long. And I do wish Microsoft well because Google..."
-category: "1"
-tags: ["1464", "1473"]
-date: "2014-07-11"
-type: "wp"
+category: '1'
+date: '2014-07-11'
+subtitle: Maybe I’ve been out of the corporate world for too long. And I do wish Microsoft
+  well because Google...
+tags:
+- business
+title: Corporate doublespeak or inspiration?
+type: wp
 wordpress_id: 54
 ---
+
 Maybe I’ve been out of the corporate world for too long. And I do wish Microsoft well because Google and Facebook and others need competition so they don’t totally ruin our world. So I read with interest [Satya Nadella’s email to employees which is available for all to read.](http://www.microsoft.com/en-us/news/ceo/index.html)
 
 The first thing that caught my eye is this abuse of logic and English: “We live in a mobile-first and cloud-first world….” This phrase is all over the place. Do you see the problem? [Maybe I am too nerdy in my parsing of English.

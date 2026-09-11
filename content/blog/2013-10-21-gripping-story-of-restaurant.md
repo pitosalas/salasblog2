@@ -1,12 +1,15 @@
 ---
-title: "Gripping story of restaurant"
-subtitle: "Who knew that a story about behind-the-scenes of a big restaurant could be gripping, but this one is..."
-category: "1"
-tags: ["1078", "1542", "1743"]
-date: "2013-10-21"
-type: "wp"
+category: '1'
+date: '2013-10-21'
+subtitle: Who knew that a story about behind-the-scenes of a big restaurant could
+  be gripping, but this one is...
+tags:
+- food
+title: Gripping story of restaurant
+type: wp
 wordpress_id: 148
 ---
+
 Who knew that a story about behind-the-scenes of a big restaurant could be gripping, but this one is. I guess it’s a combination of a fascinating operation with outstanding writing. Check it out.
 
 [22 Hours in Balthazar – NYTimes.com](http://www.nytimes.com/2013/10/20/magazine/22-hours-in-balthazar.html?_r=0):

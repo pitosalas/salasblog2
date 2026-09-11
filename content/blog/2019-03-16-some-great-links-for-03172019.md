@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/17/2019"
-subtitle: "Presenting XXH3"
-category: "301"
+category: '301'
+date: '2019-03-16'
+subtitle: Presenting XXH3
+tag_review: no_fit
 tags: []
-date: "2019-03-16"
-type: "wp"
+title: Some great links for  03/17/2019
+type: wp
 wordpress_id: 2553
 ---
+
 [Presenting XXH3](https://fastcompression.blogspot.com/2019/03/presenting-xxh3.html?m=1) 
 
 Always interesting to see major improvements in classic algorithms 

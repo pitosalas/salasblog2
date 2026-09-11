@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/09/2020"
-subtitle: "7 Deadly Sins Python Developers Do"
-category: "301"
-tags: []
-date: "2020-12-08"
-type: "wp"
+category: '301'
+date: '2020-12-08'
+subtitle: 7 Deadly Sins Python Developers Do
+tags:
+- python
+title: Some great links for  12/09/2020
+type: wp
 wordpress_id: 2777
 ---
+
 [7 Deadly Sins Python Developers Do](https://link.medium.com/s5bCXwQa3bb) 
 
 Another set of very useful Python tips and tricks. 

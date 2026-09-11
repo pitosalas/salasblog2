@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/29/2018"
-subtitle: "Essential RubyOnRails patterns — part 4: Form Objects"
-category: "538"
-tags: []
-date: "2018-04-29"
-type: "wp"
+category: '538'
+date: '2018-04-29'
+subtitle: 'Essential RubyOnRails patterns — part 4: Form Objects'
+tags:
+- ruby-on-rails
+title: Some great links for  04/29/2018
+type: wp
 wordpress_id: 2309
 ---
+
 [Essential RubyOnRails patterns — part 4: Form Objects](https://medium.com/selleo/essential-rubyonrails-patterns-form-objects-b199aada6ec9?source=userActivityShare-d383785221d0-1524917094) 
 
  tags: [ruby](https://www.diigo.com/user/pitosalas/ruby) [formobjects](https://www.diigo.com/user/pitosalas/formobjects) [Rails](https://www.diigo.com/user/pitosalas/Rails) [forms](https://www.diigo.com/user/pitosalas/forms)

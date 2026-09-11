@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/03/2019"
-subtitle: "20 Docker commands use cases for developers"
-category: "301"
+category: '301'
+date: '2019-02-02'
+subtitle: 20 Docker commands use cases for developers
+tag_review: no_fit
 tags: []
-date: "2019-02-02"
-type: "wp"
+title: Some great links for  02/03/2019
+type: wp
 wordpress_id: 2532
 ---
+
 [20 Docker commands use cases for developers](https://dev.to/alex_barashkov/20-docker-commands-use-cases-for-developers-2d9g?utm_source=Newsletter+Subscribers&utm_campaign=d828837cd6-EMAIL_CAMPAIGN_2019_01_28_01_37&utm_medium=email&utm_term=0_d8f11d5d1e-d828837cd6-154336497) 
 
 Finally I’ve joined the docker bandwagon

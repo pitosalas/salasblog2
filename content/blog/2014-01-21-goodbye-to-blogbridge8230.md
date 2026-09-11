@@ -1,12 +1,14 @@
 ---
-title: "Goodbye to BlogBridge…"
-subtitle: "![](https://i0.wp.com/static.squarespace.com/static/50734a43c4aa091ef5261c5a/53a8d945e4b0457dcd6e167..."
-category: "1"
-tags: ["718", "1667", "1770"]
-date: "2014-01-21"
-type: "wp"
+category: '1'
+date: '2014-01-21'
+subtitle: '![](https://i0.wp.com/static.squarespace.com/static/50734a43c4aa091ef5261c5a/53a8d945e4b0457dcd6e167...'
+tag_review: no_fit
+tags: []
+title: Goodbye to BlogBridge…
+type: wp
 wordpress_id: 127
 ---
+
 ![](https://i0.wp.com/static.squarespace.com/static/50734a43c4aa091ef5261c5a/53a8d945e4b0457dcd6e167c/53a8d946e4b0457dcd6e23fd/1390270322677/1000w/bblogo%20small.png?w=584&ssl=1)After a glorious run of almost 10 years, regretfully, I’ve decided to decomission BlogBridge. My longtime freinds and blog followers will remember that I and Aleksey worked on BlogBridge quite intensively for several years, and then gradually less and less.
 
 Over the last several years BlogBridge was more or less on auto pilot, but still with a decent set of devoted users. And every week and month brought in additional users. Not a huge amount but enough to keep it interesting.

@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  07/17/2018"
-subtitle: "Top 8 Data Structures for Coding Interviews and practice interview questions"
-category: "538"
-tags: []
-date: "2018-07-17"
-type: "wp"
+category: '538'
+date: '2018-07-17'
+subtitle: Top 8 Data Structures for Coding Interviews and practice interview questions
+tags:
+- algorithms
+- ai
+title: Some great links for  07/17/2018
+type: wp
 wordpress_id: 2403
 ---
+
 [Top 8 Data Structures for Coding Interviews and practice interview questions](https://dev.to/fahimulhaq/top-8-data-structures-for-coding-interviews-and-practice-interview-questions-2pb) 
 
  tags: [.](https://www.diigo.com/user/pitosalas/.) [interviews](https://www.diigo.com/user/pitosalas/interviews) [coding](https://www.diigo.com/user/pitosalas/coding)

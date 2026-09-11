@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/13/2018"
-subtitle: "Apache Cordova Tutorial: Developing Mobile Applications with Cordova"
-category: "538"
+category: '538'
+date: '2018-05-13'
+subtitle: 'Apache Cordova Tutorial: Developing Mobile Applications with Cordova'
+tag_review: no_fit
 tags: []
-date: "2018-05-13"
-type: "wp"
+title: Some great links for  05/13/2018
+type: wp
 wordpress_id: 2332
 ---
+
 [Apache Cordova Tutorial: Developing Mobile Applications with Cordova](https://www.toptal.com/mobile/developing-mobile-applications-with-apache-cordova?utm_campaign=Toptal%20Engineering%20Blog&utm_source=hs_email&utm_medium=email&utm_content=62780212&_hsenc=p2ANqtz-9-z378Np046jyA8inm4YyPqLUGoS6gQIPE23M_yJEFAKuaYAcceJ4dajr6xkn4TRf4l8gU8dqeTZqqoYWtI5xDIg2RCg&_hsmi=62780212) 
 
  tags: [apache](https://www.diigo.com/user/pitosalas/apache) [Cordova](https://www.diigo.com/user/pitosalas/Cordova) [mobile](https://www.diigo.com/user/pitosalas/mobile) [PhoneGap](https://www.diigo.com/user/pitosalas/PhoneGap) [tutorial](https://www.diigo.com/user/pitosalas/tutorial)

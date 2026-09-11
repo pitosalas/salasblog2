@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  04/17/2019"
-subtitle: "[textacular/textacular: Textacular exposes full text search capabilities from PostgreSQL, and allows..."
-category: "301"
+category: '301'
+date: '2019-04-16'
+subtitle: '[textacular/textacular: Textacular exposes full text search capabilities
+  from PostgreSQL, and allows...'
+tag_review: no_fit
 tags: []
-date: "2019-04-16"
-type: "wp"
+title: Some great links for  04/17/2019
+type: wp
 wordpress_id: 2567
 ---
+
 [textacular/textacular: Textacular exposes full text search capabilities from PostgreSQL, and allows you to declare full text indexes. Textacularwill extend ActiveRecord with named_scope methods making searching easy and fun!](https://github.com/textacular/textacular) 
 
 This really works! I’ve been experimenting with full text search in postgres with Heroku and there’s a fair amount of documentation around.

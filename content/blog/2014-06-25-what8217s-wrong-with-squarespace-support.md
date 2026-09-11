@@ -1,12 +1,15 @@
 ---
-title: "What’s wrong with Squarespace Support?"
-subtitle: "In moving my blog to Squarespace 6 I’ve had a lot of contact with their support service. They are ‘j..."
-category: "1"
-tags: ["1909"]
-date: "2014-06-25"
-type: "wp"
+category: '1'
+date: '2014-06-25'
+subtitle: In moving my blog to Squarespace 6 I’ve had a lot of contact with their
+  support service. They are ‘j...
+tag_review: no_fit
+tags: []
+title: What’s wrong with Squarespace Support?
+type: wp
 wordpress_id: 105
 ---
+
 In moving my blog to Squarespace 6 I’ve had a lot of contact with their support service. They are ‘just ok’. Yes, they have the usual boilerplate, “so glad you contacted us” and “i think I understand why this is important to you.” Ok, ok. Enough cut and paste.
 
 The problem is that they are probably pretty junior and used to answering easy questions. But when they get at all subtle or maybe even pointing to a bug, they are lost in the woods and give you useless help. But that’s not the  biggest problem.

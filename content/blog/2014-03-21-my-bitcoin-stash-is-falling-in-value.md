@@ -1,12 +1,15 @@
 ---
-title: "My Bitcoin stash is falling in value!"
-subtitle: "Yes, I have about $100 in Bitcoin and today was a bad day. It droppped from around $630 to around $5..."
-category: "1"
-tags: ["714", "895", "2137"]
-date: "2014-03-21"
-type: "wp"
+category: '1'
+date: '2014-03-21'
+subtitle: Yes, I have about $100 in Bitcoin and today was a bad day. It droppped from
+  around $630 to around $5...
+tag_review: no_fit
+tags: []
+title: My Bitcoin stash is falling in value!
+type: wp
 wordpress_id: 110
 ---
+
 Yes, I have about $100 in Bitcoin and today was a bad day. It droppped from around $630 to around $580. Am I a speculator? I guess, but my excuse is that I’m very interested in the underlying technology and there’s nothing like having some to getting a feel for the space. Here’s a great article about Bitcoin Mining.
 
 [For Virtual Prospectors, Life in the Bitcoin Mines Gets Real – WSJ.com](http://online.wsj.com/news/articles/SB10001424127887324665604579079721277783300?mod=rss_mobile_uber_feed&mg=reno64-wsj&url=http%3A%2F%2Fonline.wsj.com%2Farticle%2FSB10001424127887324665604579079721277783300.html%3Fmod%3Drss_mobile_uber_feed):

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/04/2021"
-subtitle: "10 Ultimate Programming Jokes"
-category: "301"
+category: '301'
+date: '2021-02-03'
+subtitle: 10 Ultimate Programming Jokes
+tag_review: no_fit
 tags: []
-date: "2021-02-03"
-type: "wp"
+title: Some great links for  02/04/2021
+type: wp
 wordpress_id: 2821
 ---
+
 [10 Ultimate Programming Jokes](https://link.medium.com/gybRfn32zdb) 
 
 Groan but ok, funny

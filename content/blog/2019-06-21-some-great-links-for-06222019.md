@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  06/22/2019"
-subtitle: "Open-sourcing Sorbet: a fast, powerful type checker for Ruby · Sorbet"
-category: "301"
-tags: []
-date: "2019-06-21"
-type: "wp"
+category: '301'
+date: '2019-06-21'
+subtitle: 'Open-sourcing Sorbet: a fast, powerful type checker for Ruby · Sorbet'
+tags:
+- ruby
+title: Some great links for  06/22/2019
+type: wp
 wordpress_id: 2605
 ---
+
 [Open-sourcing Sorbet: a fast, powerful type checker for Ruby · Sorbet](https://sorbet.org/blog/2019/06/20/open-sourcing-sorbet) 
 
 Claims to bring gradual type checking to ruby. 

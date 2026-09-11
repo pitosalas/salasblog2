@@ -1,12 +1,15 @@
 ---
-title: "Microsoft still has some tricks up it’s sleeve: Office 2010"
-subtitle: "Now I’ve been a mac for about 4 years now, so I generally don’t pay too much attention to Microsoft’..."
-category: "538"
+category: '538'
+date: '2014-06-27'
+subtitle: Now I’ve been a mac for about 4 years now, so I generally don’t pay too
+  much attention to Microsoft’...
+tag_review: no_fit
 tags: []
-date: "2014-06-27"
-type: "wp"
+title: 'Microsoft still has some tricks up it’s sleeve: Office 2010'
+type: wp
 wordpress_id: 86
 ---
+
 Now I’ve been a mac for about 4 years now, so I generally don’t pay too much attention to Microsoft’s new product releases. But take a look at some of these videos about Office 2010. There’s are some impressive new developments.
 
 I am particularly impressed with the ‘backstage view’ which appears to pull together all the functionality that relates to how to get information into and out of any of the office apps.

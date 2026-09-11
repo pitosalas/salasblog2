@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/16/2019"
-subtitle: "Ganbreeder"
-category: "301"
-tags: []
-date: "2019-09-15"
-type: "wp"
+category: '301'
+date: '2019-09-15'
+subtitle: Ganbreeder
+tags:
+- ai
+title: Some great links for  09/16/2019
+type: wp
 wordpress_id: 2641
 ---
+
 [Ganbreeder](http://www.artbreeder.com/models) 
 
 Pretty interesting example of generative art and AI deepfakes related technology. And pretty pictures too.

@@ -1,12 +1,14 @@
 ---
-title: "Cool new board game: Kickstarter: “Lift Off! – Get me off this Planet”"
-subtitle: "![](https://i0.wp.com/salas.com/wp-content/uploads/2014/08/38776-6e5f42de5ca397bd9e6bab8675854f6e_la..."
-category: "1"
+category: '1'
+date: '2014-08-03'
+subtitle: '![](https://i0.wp.com/salas.com/wp-content/uploads/2014/08/38776-6e5f42de5ca397bd9e6bab8675854f6e_la...'
+tag_review: no_fit
 tags: []
-date: "2014-08-03"
-type: "wp"
+title: 'Cool new board game: Kickstarter: “Lift Off! – Get me off this Planet”'
+type: wp
 wordpress_id: 33
 ---
+
 ![](https://i0.wp.com/salas.com/wp-content/uploads/2014/08/38776-6e5f42de5ca397bd9e6bab8675854f6e_large.jpg?w=584&ssl=1)
 
 “Lift Off! Get me off this Planet has a casual space theme and never takes itself too seriously. My goal was to make an easy to learn, fast-paced game, where everyone feels engaged and “in it” until someone has won or the planet explodes! 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/28/2020"
-subtitle: "Free Git GUI for Windows, Mac, Linux | GitKraken"
-category: "301"
+category: '301'
+date: '2020-09-27'
+subtitle: Free Git GUI for Windows, Mac, Linux | GitKraken
+tag_review: no_fit
 tags: []
-date: "2020-09-27"
-type: "wp"
+title: Some great links for  09/28/2020
+type: wp
 wordpress_id: 2767
 ---
+
 [Free Git GUI for Windows, Mac, Linux | GitKraken](https://www.gitkraken.com) 
 
 This looks like an amazing tool. I plan to try it asap!

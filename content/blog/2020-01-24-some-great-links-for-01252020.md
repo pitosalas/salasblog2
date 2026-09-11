@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  01/25/2020"
-subtitle: "How I write backends"
-category: "301"
-tags: []
-date: "2020-01-24"
-type: "wp"
+category: '301'
+date: '2020-01-24'
+subtitle: How I write backends
+tags:
+- programming
+title: Some great links for  01/25/2020
+type: wp
 wordpress_id: 2706
 ---
+
 [How I write backends](https://github.com/fpereiro/backendlore/blob/master/readme.md) 
 
 Very nice detailed set of guidelines for a scalable node backend

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/31/2018"
-subtitle: "wrotniak.net: Lenses for Olympus E-System Cameras"
-category: "538"
+category: '538'
+date: '2018-05-31'
+subtitle: 'wrotniak.net: Lenses for Olympus E-System Cameras'
+tag_review: no_fit
 tags: []
-date: "2018-05-31"
-type: "wp"
+title: Some great links for  05/31/2018
+type: wp
 wordpress_id: 2345
 ---
+
 [wrotniak.net: Lenses for Olympus E-System Cameras](http://wrotniak.net/photo/43/lenses.html) 
 
  tags: [lenses](https://www.diigo.com/user/pitosalas/lenses) [cameras](https://www.diigo.com/user/pitosalas/cameras) [olympus](https://www.diigo.com/user/pitosalas/olympus)

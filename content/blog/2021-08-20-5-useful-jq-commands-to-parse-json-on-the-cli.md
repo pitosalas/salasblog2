@@ -1,12 +1,14 @@
 ---
-title: "5 Useful jq Commands to Parse JSON on the CLI"
-subtitle: "5 Useful jq Commands to Parse JSON on the CLI"
-category: "84"
-tags: []
-date: "2021-08-20"
-type: "wp"
+category: '84'
+date: '2021-08-20'
+subtitle: 5 Useful jq Commands to Parse JSON on the CLI
+tags:
+- programming
+title: 5 Useful jq Commands to Parse JSON on the CLI
+type: wp
 wordpress_id: 3033
 ---
+
 [ 5 Useful jq Commands to Parse JSON on the CLI](https://www.fabian-keller.de/blog/5-useful-jq-commands-parse-json-cli/)
  JSON has become the de facto standard data representation for the web. It’s lightweight, human-readable (in theory) and supported by all major languages and platforms. However, working on the CLI with JSON is still hard using traditional CLI tooling.
 

@@ -1,12 +1,15 @@
 ---
-title: "Looked at the right way, this could be good news!"
-subtitle: "I came across this article a few days ago. The Ticktock of the Death Clock – NYTimes.com"
-category: "1"
-tags: ["923", "1185", "1378", "1675", "2027"]
-date: "2013-08-02"
-type: "wp"
+category: '1'
+date: '2013-08-02'
+subtitle: I came across this article a few days ago. The Ticktock of the Death Clock
+  – NYTimes.com
+tag_review: no_fit
+tags: []
+title: Looked at the right way, this could be good news!
+type: wp
 wordpress_id: 179
 ---
+
 I came across this article a few days ago. [The Ticktock of the Death Clock – NYTimes.com](http://well.blogs.nytimes.com/2013/08/01/the-tick-tock-of-the-death-clock/?_r=0). Yes a depressing topic. The author muses on the wonderful internet resource [DeathClock.com](http://deathclock.com/) which purports to tell you, to the second, when you will die. Hah Hah funny.
 
 Oddly though the article turns this topic into a positive and constructive messasge. Once the author sees that according to [DeathClock.com](http://deathclock.com/) he only has 18 years to go, he ups and quits his job:

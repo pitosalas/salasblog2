@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/05/2018"
-subtitle: "https://link.medium.com/LzL8HArenS"
-category: "301"
+category: '301'
+date: '2018-12-04'
+subtitle: https://link.medium.com/LzL8HArenS
+tag_review: no_fit
 tags: []
-date: "2018-12-04"
-type: "wp"
+title: Some great links for  12/05/2018
+type: wp
 wordpress_id: 2493
 ---
+
 [https://link.medium.com/LzL8HArenS](https://link.medium.com/LzL8HArenS) 
 
 A really great list of services to integrate into your application. A bunch that I didn’t know about!

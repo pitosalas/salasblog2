@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/17/2018"
-subtitle: "The Truth About Microservices"
-category: "538"
+category: '538'
+date: '2018-04-17'
+subtitle: The Truth About Microservices
+tag_review: no_fit
 tags: []
-date: "2018-04-17"
-type: "wp"
+title: Some great links for  04/17/2018
+type: wp
 wordpress_id: 2247
 ---
+
 [The Truth About Microservices](https://codeburst.io/the-truth-about-microservices-8f8124913df4?source=userActivityShare-d383785221d0-1523879046) 
 
  tags: [microservices](https://www.diigo.com/user/pitosalas/microservices) [architecture](https://www.diigo.com/user/pitosalas/architecture) [ddd](https://www.diigo.com/user/pitosalas/ddd)

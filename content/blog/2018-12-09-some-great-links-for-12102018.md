@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/10/2018"
-subtitle: "Qt 5.12 LTS Released – Qt Blog"
-category: "301"
+category: '301'
+date: '2018-12-09'
+subtitle: Qt 5.12 LTS Released – Qt Blog
+tag_review: no_fit
 tags: []
-date: "2018-12-09"
-type: "wp"
+title: Some great links for  12/10/2018
+type: wp
 wordpress_id: 2505
 ---
+
 [Qt 5.12 LTS Released – Qt Blog](http://blog.qt.io/blog/2018/12/06/qt-5-12-lts-released/) 
 
 QT is a cross platform user interface framework. It’s for building client side apps that you can run everywhere. 

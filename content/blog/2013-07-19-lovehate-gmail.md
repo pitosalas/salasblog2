@@ -1,12 +1,15 @@
 ---
-title: "Love/Hate Gmail"
-subtitle: "I’ve been using Gmail like forever now and have converted many friends and family members to using i..."
-category: "1"
-tags: ["998", "1045", "1141"]
-date: "2013-07-19"
-type: "wp"
+category: '1'
+date: '2013-07-19'
+subtitle: I’ve been using Gmail like forever now and have converted many friends and
+  family members to using i...
+tag_review: no_fit
+tags: []
+title: Love/Hate Gmail
+type: wp
 wordpress_id: 186
 ---
+
 I’ve been using Gmail like forever now and have converted many friends and family members to using it. It’s great and it’s ridiculously cheap. Coupled with a good ad-suppressor plug-in for Safari (Mac) it works well for me. I do access it, almost always, via the desktop Mail app on Mac OSX, so I don’t experience it’s UI all the time.
 
 But the Gmail UI is quite bizarre, with multiple different ways to do similar things, weird drop down menus and weird functionality in places. So it’s a little annoying, but, it does scale, it is cheap, and it is up almost all the time.

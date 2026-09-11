@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/20/2018"
-subtitle: "Stop Learning Frameworks – Lifehacks for Developers by Eduards Sizovs"
-category: "301"
+category: '301'
+date: '2018-12-19'
+subtitle: Stop Learning Frameworks – Lifehacks for Developers by Eduards Sizovs
+tag_review: no_fit
 tags: []
-date: "2018-12-19"
-type: "wp"
+title: Some great links for  12/20/2018
+type: wp
 wordpress_id: 2509
 ---
+
 [Stop Learning Frameworks – Lifehacks for Developers by Eduards Sizovs](https://sizovs.net/2018/12/17/stop-learning-frameworks/) 
 
 Without reading this, I know I totally agree!

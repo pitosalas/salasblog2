@@ -1,12 +1,16 @@
 ---
-title: "Intellectual Property on Wall Street?"
-subtitle: "A fascinating although quite long article by Michael Lewis in Vanity Fair. Michael Lewis is an amazi..."
-category: "1"
-tags: ["1276", "1296", "1461", "2091"]
-date: "2013-11-20"
-type: "wp"
+category: '1'
+date: '2013-11-20'
+subtitle: A fascinating although quite long article by Michael Lewis in Vanity Fair.
+  Michael Lewis is an amazi...
+tags:
+- business
+- legal
+title: Intellectual Property on Wall Street?
+type: wp
 wordpress_id: 139
 ---
+
 A fascinating although quite long article by Michael Lewis in Vanity Fair. Michael Lewis is an amazing non-fiction writer, best known to me for Moneyball (about baseball) and Liars Poker (about Wall Street.)
 
 [Michael Lewis: Did Goldman Sachs Overstep in Criminally Charging Its Ex-Programmer? | Vanity Fair](http://www.vanityfair.com/business/2013/09/michael-lewis-goldman-sachs-programmer):

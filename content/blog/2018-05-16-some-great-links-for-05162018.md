@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/16/2018"
-subtitle: "Weekly Command: managing processes with htop"
-category: "538"
-tags: []
-date: "2018-05-16"
-type: "wp"
+category: '538'
+date: '2018-05-16'
+subtitle: 'Weekly Command: managing processes with htop'
+tags:
+- design
+title: Some great links for  05/16/2018
+type: wp
 wordpress_id: 2333
 ---
+
 [Weekly Command: managing processes with htop](https://monades.roperzh.com/weekly-command-managing-processes-with-htop/) 
 
  tags: [processes](https://www.diigo.com/user/pitosalas/processes) [command](https://www.diigo.com/user/pitosalas/command) [cli](https://www.diigo.com/user/pitosalas/cli)

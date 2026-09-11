@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/17/2019"
-subtitle: "The Lesson to Unlearn"
-category: "301"
-tags: []
-date: "2019-12-16"
-type: "wp"
+category: '301'
+date: '2019-12-16'
+subtitle: The Lesson to Unlearn
+tags:
+- education
+title: Some great links for  12/17/2019
+type: wp
 wordpress_id: 2679
 ---
+
 [The Lesson to Unlearn](http://paulgraham.com/lesson.html) 
 
 “The most damaging thing you learned in school wasn’t something you learned in any specific class. It was learning to get good grades.”

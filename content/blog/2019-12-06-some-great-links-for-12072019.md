@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/07/2019"
-subtitle: "A High-Level Grammar of Interactive Graphics | Vega-Lite"
-category: "301"
+category: '301'
+date: '2019-12-06'
+subtitle: A High-Level Grammar of Interactive Graphics | Vega-Lite
+tag_review: no_fit
 tags: []
-date: "2019-12-06"
-type: "wp"
+title: Some great links for  12/07/2019
+type: wp
 wordpress_id: 2661
 ---
+
 [A High-Level Grammar of Interactive Graphics | Vega-Lite](https://vega.github.io/vega-lite/) 
 
 Looks really useful

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  06/14/2020"
-subtitle: "Free illustrations for developers. – DEV"
-category: "301"
+category: '301'
+date: '2020-06-13'
+subtitle: Free illustrations for developers. – DEV
+tag_review: no_fit
 tags: []
-date: "2020-06-13"
-type: "wp"
+title: Some great links for  06/14/2020
+type: wp
 wordpress_id: 2750
 ---
+
 [Free illustrations for developers. – DEV](https://dev.to/sasidharan/free-illustrations-for-developers-35hl?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
 For all those times when you need just the right illustration, an apparently amazing collection!

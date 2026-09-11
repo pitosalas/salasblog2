@@ -1,12 +1,15 @@
 ---
-title: "This post might have changed my mind"
-subtitle: "Scott Adams is the guy behind the famous Dilbert comics. I’ve not worked in a big corporation for a ..."
-category: "1"
-tags: ["1023", "1804", "1947"]
-date: "2013-11-25"
-type: "wp"
+category: '1'
+date: '2013-11-25'
+subtitle: Scott Adams is the guy behind the famous Dilbert comics. I’ve not worked
+  in a big corporation for a ...
+tag_review: no_fit
+tags: []
+title: This post might have changed my mind
+type: wp
 wordpress_id: 138
 ---
+
 Scott Adams is the guy behind the famous Dilbert comics. I’ve not worked in a big corporation for a while and I’ve not been reading Dilbert for quite a while too. But Scott Adams remains a brilliant humourist. This post however, is not meant as humour:
 
 [Scott Adams Blog: I Hope My Father Dies Soon 11/23/2013](http://dilbert.com/blog/entry/i_hope_my_father_dies_soon/):

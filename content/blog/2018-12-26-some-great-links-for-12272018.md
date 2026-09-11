@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/27/2018"
-subtitle: "Deep Rails: How to use Abstract Classes"
-category: "301"
+category: '301'
+date: '2018-12-26'
+subtitle: 'Deep Rails: How to use Abstract Classes'
+tag_review: no_fit
 tags: []
-date: "2018-12-26"
-type: "wp"
+title: Some great links for  12/27/2018
+type: wp
 wordpress_id: 2513
 ---
+
 [Deep Rails: How to use Abstract Classes](https://link.medium.com/qwR3chzoYS) 
 
 Interesting Rails abstract classes feature

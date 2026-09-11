@@ -1,12 +1,15 @@
 ---
-title: "Getting an “A” at Harvard is e-z!"
-subtitle: "Unfortunately students can be quite focused on their grades, and as a result I end up paying more at..."
-category: "1"
-tags: ["1156", "1191", "1204"]
-date: "2013-12-04"
-type: "wp"
+category: '1'
+date: '2013-12-04'
+subtitle: Unfortunately students can be quite focused on their grades, and as a result
+  I end up paying more at...
+tags:
+- education
+title: Getting an “A” at Harvard is e-z!
+type: wp
 wordpress_id: 135
 ---
+
 Unfortunately students can be quite focused on their grades, and as a result I end up paying more attention to grading than I would like. By the way let me point out that ‘grading’ is more than assigning a grade to a bit of homework. Without going into detail, you have to decide and communicate:
 
 - What all the gradable items of work are (e.g. a programming assignment, a reading assignment, a test, a presentation, a mockup or prototype, etc. etc.)

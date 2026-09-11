@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/17/2018"
-subtitle: "alexmojaki/birdseye"
-category: "301"
-tags: []
-date: "2018-10-16"
-type: "wp"
+category: '301'
+date: '2018-10-16'
+subtitle: alexmojaki/birdseye
+tags:
+- python
+title: Some great links for  10/17/2018
+type: wp
 wordpress_id: 2474
 ---
+
 [alexmojaki/birdseye](https://github.com/alexmojaki/birdseye) 
 
 This looks amazing, for teaching. 

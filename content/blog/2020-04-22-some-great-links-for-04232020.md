@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  04/23/2020"
-subtitle: "Stripe is Silently Recording Your Movements On its Customers’ Websites · mtlynch.io"
-category: "301"
+category: '301'
+date: '2020-04-22'
+subtitle: Stripe is Silently Recording Your Movements On its Customers’ Websites ·
+  mtlynch.io
+tag_review: no_fit
 tags: []
-date: "2020-04-22"
-type: "wp"
+title: Some great links for  04/23/2020
+type: wp
 wordpress_id: 2743
 ---
+
 [Stripe is Silently Recording Your Movements On its Customers’ Websites · mtlynch.io](https://mtlynch.io/stripe-recording-its-customers/) 
 
 This kind of thing doesn’t bother me too much. But I know certain people are totally freaked out by it.

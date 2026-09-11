@@ -1,12 +1,14 @@
 ---
-title: "Double Agent?"
-subtitle: "I am reading a really cool book right now: GARBO: The Spy Who Saved D-Day"
-category: "1"
-tags: ["965", "1017", "1114", "1963", "2137"]
-date: "2013-08-28"
-type: "wp"
+category: '1'
+date: '2013-08-28'
+subtitle: 'I am reading a really cool book right now: GARBO: The Spy Who Saved D-Day'
+tags:
+- books
+title: Double Agent?
+type: wp
 wordpress_id: 172
 ---
+
 I am reading a really cool book right now: [GARBO: The Spy Who Saved D-Day](http://www.amazon.com/gp/product/155002504X/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=155002504X&linkCode=as2&tag=blogbridge-20)![](http://ir-na.amazon-adsystem.com/e/ir?t=blogbridge-20&l=as2&o=1&a=155002504X)a about a double agent and an elaborate look behind the curtain of espionage during WW2. Makes me wonder about the amazing amoung of leaked detail about a missle strike on Syria.
 
 Could it be a total spoof, and even as we speak, special forces are infiltrating Damascus and doing their thing? And “whoops” – did I just give it all away?

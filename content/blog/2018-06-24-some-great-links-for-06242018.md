@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  06/24/2018"
-subtitle: "Active Job Basics — Ruby on Rails Guides"
-category: "538"
-tags: []
-date: "2018-06-24"
-type: "wp"
+category: '538'
+date: '2018-06-24'
+subtitle: Active Job Basics — Ruby on Rails Guides
+tags:
+- ruby-on-rails
+title: Some great links for  06/24/2018
+type: wp
 wordpress_id: 2363
 ---
+
 [Active Job Basics — Ruby on Rails Guides](http://guides.rubyonrails.org/active_job_basics.html) 
 
  tags: [active](https://www.diigo.com/user/pitosalas/active) [job](https://www.diigo.com/user/pitosalas/job) [ruby](https://www.diigo.com/user/pitosalas/ruby) [ruby on rails](https://www.diigo.com/user/pitosalas/ruby on rails) [guides](https://www.diigo.com/user/pitosalas/guides)

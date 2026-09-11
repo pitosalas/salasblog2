@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/28/2018"
-subtitle: "We’re Finally Learning the Lesson of Y2K — and It’s Too Late"
-category: "301"
+category: '301'
+date: '2018-12-27'
+subtitle: We’re Finally Learning the Lesson of Y2K — and It’s Too Late
+tag_review: no_fit
 tags: []
-date: "2018-12-27"
-type: "wp"
+title: Some great links for  12/28/2018
+type: wp
 wordpress_id: 2514
 ---
+
 [We’re Finally Learning the Lesson of Y2K — and It’s Too Late](https://link.medium.com/b3wRq9eHZS) 
 
 I remember taking out hundreds of dollars 

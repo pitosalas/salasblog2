@@ -1,12 +1,15 @@
 ---
-title: "Confessions of an economic hit man"
-subtitle: "You should read this book: Confessions of an Economic Hit Man"
-category: "1"
-tags: ["1081", "1466", "1484", "1963", "2094"]
-date: "2013-09-08"
-type: "wp"
+category: '1'
+date: '2013-09-08'
+subtitle: 'You should read this book: Confessions of an Economic Hit Man'
+tags:
+- books
+- politics
+title: Confessions of an economic hit man
+type: wp
 wordpress_id: 165
 ---
+
 You should read this book: [Confessions of an Economic Hit Man](http://www.amazon.com/gp/product/0452287081/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0452287081&linkCode=as2&tag=blogbridge-20)![](http://ir-na.amazon-adsystem.com/e/ir?t=blogbridge-20&l=as2&o=1&a=0452287081).  It’s shocking and insightful.
 
 Basically the book explains and teaches that when you hear, for example, that Egypt is getting a billion US$ in military aid, that’s not what it sounds like. We are not sending them a check for a million bucks. We are actually sending the million bucks to US millitary corporations.

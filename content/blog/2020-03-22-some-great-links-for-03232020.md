@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  03/23/2020"
-subtitle: "Test Double | Our Blog | Improving Dev Experience with Overmind"
-category: "301"
-tags: []
-date: "2020-03-22"
-type: "wp"
+category: '301'
+date: '2020-03-22'
+subtitle: Test Double | Our Blog | Improving Dev Experience with Overmind
+tags:
+- ruby-on-rails
+title: Some great links for  03/23/2020
+type: wp
 wordpress_id: 2738
 ---
+
 [Test Double | Our Blog | Improving Dev Experience with Overmind](https://blog.testdouble.com/posts/2020-03-17-improving-dev-experience-with-overmind/) 
 
 Foreman is now superseded by overmind, which is better and more awesome. Worth a look. 

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/11/2018"
-subtitle: "Regexper"
-category: "538"
-tags: []
-date: "2018-04-11"
-type: "wp"
+category: '538'
+date: '2018-04-11'
+subtitle: Regexper
+tags:
+- ruby-on-rails
+title: Some great links for  04/11/2018
+type: wp
 wordpress_id: 2187
 ---
+
 [Regexper](https://regexper.com/?utm_source=hackernewsletter&utm_medium=email&utm_term=show_hn) 
 
  tags: [regexp](https://www.diigo.com/user/pitosalas/regexp) [regularexpressions](https://www.diigo.com/user/pitosalas/regularexpressions)

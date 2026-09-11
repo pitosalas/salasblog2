@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Social login buttons considered harmful"
-subtitle: "You probably don’t know what a social login button is so forgive this bit of geekyness. I am sure yo..."
-category: "1"
-tags: ["667", "1037", "1121", "1399", "2047", "2060"]
-date: "2013-07-08"
-type: "wp"
+category: '1'
+date: '2013-07-08'
+subtitle: You probably don’t know what a social login button is so forgive this bit
+  of geekyness. I am sure yo...
+tags:
+- technology
+title: '[GEEKY] Social login buttons considered harmful'
+type: wp
 wordpress_id: 188
 ---
+
 You probably don’t know what a social login button is so forgive this bit of geekyness. I am sure you’ve seen them: “login with facebook or twitter?” If an app or a site wants to “save you the trouble” of registering a username and password, they may “make your life easier” by allowing you to register using your facebook or twitter password. Conventional wisdom in the world of apps has been that this is a user requirement, and plus beneficial to the business as well. Here’s an interesting article that refutes that belief, at least in certain significant scenarios.
 
 [Social Login Buttons Aren’t Worth It | MailChimp Email Marketing Blog](http://blog.mailchimp.com/social-login-buttons-arent-worth-it/):

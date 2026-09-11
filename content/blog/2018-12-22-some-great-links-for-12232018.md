@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/23/2018"
-subtitle: "Algorithm Archive · GitBook"
-category: "301"
-tags: []
-date: "2018-12-22"
-type: "wp"
+category: '301'
+date: '2018-12-22'
+subtitle: Algorithm Archive · GitBook
+tags:
+- algorithms
+title: Some great links for  12/23/2018
+type: wp
 wordpress_id: 2510
 ---
+
 [Algorithm Archive · GitBook](https://www.algorithm-archive.org) 
 
 There are lots of algorithm libraries. This one is a nice one!

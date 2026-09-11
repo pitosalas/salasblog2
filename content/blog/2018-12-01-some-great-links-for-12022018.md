@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  12/02/2018"
-subtitle: "https://link.medium.com/Cd6lBUGriS"
-category: "301"
+category: '301'
+date: '2018-12-01'
+subtitle: https://link.medium.com/Cd6lBUGriS
+tag_review: no_fit
 tags: []
-date: "2018-12-01"
-type: "wp"
+title: Some great links for  12/02/2018
+type: wp
 wordpress_id: 2491
 ---
+
 [https://link.medium.com/Cd6lBUGriS](https://link.medium.com/Cd6lBUGriS) 
 
 InterSystems perspectives on being a researcher and scientist 

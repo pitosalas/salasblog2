@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/07/2019"
-subtitle: "Installing Ubuntu on an external SSD drive on a Macbook – Floris van Breugel"
-category: "301"
-tags: []
-date: "2019-08-06"
-type: "wp"
+category: '301'
+date: '2019-08-06'
+subtitle: Installing Ubuntu on an external SSD drive on a Macbook – Floris van Breugel
+tags:
+- linux
+title: Some great links for  08/07/2019
+type: wp
 wordpress_id: 2628
 ---
+
 [Installing Ubuntu on an external SSD drive on a Macbook – Floris van Breugel](https://florisvanbreugel.wordpress.com/2018/03/23/installing-ubuntu-on-an-external-ssd-drive-on-a-macbook/) 
 
 This is harder than you think. I’ve messed with many different instructions for this and some work and some dont.

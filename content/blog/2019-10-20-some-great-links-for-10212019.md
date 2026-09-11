@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/21/2019"
-subtitle: "a list of open source alternatives to google internal tools."
-category: "301"
+category: '301'
+date: '2019-10-20'
+subtitle: a list of open source alternatives to google internal tools.
+tag_review: no_fit
 tags: []
-date: "2019-10-20"
-type: "wp"
+title: Some great links for  10/21/2019
+type: wp
 wordpress_id: 2652
 ---
+
 [a list of open source alternatives to google internal tools.](https://github.com/jhuangtw-dev/xg2xg) 
 
 There are numerous tools used by internal google developers that are not available outside. This is a list of similar tools that are open source and available to all. 

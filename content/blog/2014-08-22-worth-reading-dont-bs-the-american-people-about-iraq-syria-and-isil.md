@@ -1,12 +1,15 @@
 ---
-title: "Worth reading: Don’t BS the American People About Iraq, Syria, and ISIL"
-subtitle: "This is worth looking at: The apparent beheading of American journalist James Foley by the Islamic S..."
-category: "1"
-tags: []
-date: "2014-08-22"
-type: "wp"
+category: '1'
+date: '2014-08-22'
+subtitle: 'This is worth looking at: The apparent beheading of American journalist
+  James Foley by the Islamic S...'
+tags:
+- politics
+title: 'Worth reading: Don’t BS the American People About Iraq, Syria, and ISIL'
+type: wp
 wordpress_id: 22
 ---
+
 This is worth looking at: The apparent beheading of American journalist James Foley by the Islamic State of Iraq and the Levant (ISIL) is a stark reminder of the group’s terrible brutality and the seriousness required to counter them.
 
 > 

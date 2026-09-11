@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  11/14/2018"
-subtitle: "Getafix: How Facebook tools learn to fix bugs automatically – Facebook Code"
-category: "301"
-tags: []
-date: "2018-11-13"
-type: "wp"
+category: '301'
+date: '2018-11-13'
+subtitle: 'Getafix: How Facebook tools learn to fix bugs automatically – Facebook
+  Code'
+tags:
+- ai
+title: Some great links for  11/14/2018
+type: wp
 wordpress_id: 2484
 ---
+
 [Getafix: How Facebook tools learn to fix bugs automatically – Facebook Code](https://code.fb.com/developer-tools/getafix-how-facebook-tools-learn-to-fix-bugs-automatically/) 
 
 Amazing automated bug discovery and fixing tool

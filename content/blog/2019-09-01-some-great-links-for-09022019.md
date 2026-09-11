@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/02/2019"
-subtitle: "WTF :: WTF – the terminal dashboard"
-category: "301"
+category: '301'
+date: '2019-09-01'
+subtitle: 'WTF :: WTF – the terminal dashboard'
+tag_review: no_fit
 tags: []
-date: "2019-09-01"
-type: "wp"
+title: Some great links for  09/02/2019
+type: wp
 wordpress_id: 2639
 ---
+
 [WTF :: WTF – the terminal dashboard](https://wtfutil.com) 
 
 A kind of crazy cool dashboard for all kinds of info all in text suitable for display in. Terminal window. 

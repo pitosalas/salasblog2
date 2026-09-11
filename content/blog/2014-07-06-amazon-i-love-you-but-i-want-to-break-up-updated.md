@@ -1,12 +1,14 @@
 ---
-title: "Amazon, I love you, But I want to break up [UPDATED]"
-subtitle: "Email I just sent to Amazon."
-category: "1"
-tags: ["596", "622", "1350"]
-date: "2014-07-06"
-type: "wp"
+category: '1'
+date: '2014-07-06'
+subtitle: Email I just sent to Amazon.
+tag_review: no_fit
+tags: []
+title: Amazon, I love you, But I want to break up [UPDATED]
+type: wp
 wordpress_id: 61
 ---
+
 Email I just sent to Amazon.
 
 > Dear Amazon: I can’t believe you stoop as low as that and hide the ability to close my account so thoroughly that I now have to engage in a multi-message email discussion with you to convince you to do so. Please CLOSE my account!

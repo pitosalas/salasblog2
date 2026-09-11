@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  08/14/2019"
-subtitle: "A Complete Guide to the Ruby Programming World – Learn Worthy"
-category: "301"
-tags: []
-date: "2019-08-13"
-type: "wp"
+category: '301'
+date: '2019-08-13'
+subtitle: A Complete Guide to the Ruby Programming World – Learn Worthy
+tags:
+- ruby
+title: Some great links for  08/14/2019
+type: wp
 wordpress_id: 2629
 ---
+
 [A Complete Guide to the Ruby Programming World – Learn Worthy](https://learnworthy.net/a-complete-guide-to-the-ruby-programming-world/) 
 
 A nice comprehensive review of the world of the ruby programming language, my personal favorite right now. 

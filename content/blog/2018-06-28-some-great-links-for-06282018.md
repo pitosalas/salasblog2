@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  06/28/2018"
-subtitle: "[Decoding Rails Magic: How Does ActiveJob work? – Karol Galanciak – Ruby on Rails and Ember.js consu..."
-category: "538"
-tags: []
-date: "2018-06-28"
-type: "wp"
+category: '538'
+date: '2018-06-28'
+subtitle: '[Decoding Rails Magic: How Does ActiveJob work? – Karol Galanciak – Ruby
+  on Rails and Ember.js consu...'
+tags:
+- ruby-on-rails
+title: Some great links for  06/28/2018
+type: wp
 wordpress_id: 2371
 ---
+
 [Decoding Rails Magic: How Does ActiveJob work? – Karol Galanciak – Ruby on Rails and Ember.js consultant](https://karolgalanciak.com/blog/2016/09/25/decoding-rails-magic-how-does-activejob-work/) 
 
  tags: [rails](https://www.diigo.com/user/pitosalas/rails) [magic](https://www.diigo.com/user/pitosalas/magic) [ruby on rails](https://www.diigo.com/user/pitosalas/ruby on rails) [internals](https://www.diigo.com/user/pitosalas/internals)

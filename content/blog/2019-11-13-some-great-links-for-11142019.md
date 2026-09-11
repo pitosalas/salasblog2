@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/14/2019"
-subtitle: "PathFinding.js"
-category: "301"
-tags: []
-date: "2019-11-13"
-type: "wp"
+category: '301'
+date: '2019-11-13'
+subtitle: PathFinding.js
+tags:
+- robotics
+title: Some great links for  11/14/2019
+type: wp
 wordpress_id: 2657
 ---
+
 [PathFinding.js](https://qiao.github.io/PathFinding.js/visual/) 
 
 A fantastic visualization of various path finding algorithms

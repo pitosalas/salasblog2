@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  09/24/2018"
-subtitle: "rlabbe/Kalman-and-Bayesian-Filters-in-Python"
-category: "301"
-tags: []
-date: "2018-09-23"
-type: "wp"
+category: '301'
+date: '2018-09-23'
+subtitle: rlabbe/Kalman-and-Bayesian-Filters-in-Python
+tags:
+- robotics
+title: Some great links for  09/24/2018
+type: wp
 wordpress_id: 2467
 ---
+
 [rlabbe/Kalman-and-Bayesian-Filters-in-Python](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python) 
 
 I’m trying to get smart about Kalman filters. This is a great resource 

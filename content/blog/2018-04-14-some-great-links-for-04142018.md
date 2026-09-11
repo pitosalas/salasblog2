@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  04/14/2018"
-subtitle: "Build a Text Classification Program: An NLP Tutorial"
-category: "538"
-tags: []
-date: "2018-04-14"
-type: "wp"
+category: '538'
+date: '2018-04-14'
+subtitle: 'Build a Text Classification Program: An NLP Tutorial'
+tags:
+- ai
+- pandas
+title: Some great links for  04/14/2018
+type: wp
 wordpress_id: 2214
 ---
+
 [Build a Text Classification Program: An NLP Tutorial](https://www.toptal.com/machine-learning/nlp-tutorial-text-classification?utm_campaign=Toptal%20Engineering%20Blog&utm_source=hs_email&utm_medium=email&utm_content=62089346&_hsenc=p2ANqtz--gEkRMBaymhGJImEFjbSnMg5bLtVzt7dY99Bg5nRGgXetEr7zb7PICia0ib64PbVSntAX6o9HdLnCUyFZrJdZnI5EZBw&_hsmi=62089346) 
 
 A little difficult but one can follow and try this out.

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/22/2019"
-subtitle: "Dockerize the multi-services application for local development"
-category: "301"
+category: '301'
+date: '2019-04-21'
+subtitle: Dockerize the multi-services application for local development
+tag_review: no_fit
 tags: []
-date: "2019-04-21"
-type: "wp"
+title: Some great links for  04/22/2019
+type: wp
 wordpress_id: 2568
 ---
+
 [Dockerize the multi-services application for local development](https://dev.to/amplifr/dockerize-the-multi-services-application-for-local-development-2oig?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
 Combining multiple services in a container makes local development easier. 

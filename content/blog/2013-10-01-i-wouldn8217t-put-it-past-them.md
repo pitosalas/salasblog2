@@ -1,12 +1,15 @@
 ---
-title: "I wouldn’t put it past them"
-subtitle: "How much do you want to bet that somewhere someone in this country a malware or other attack is bein..."
-category: "1"
-tags: ["1151", "1180", "1196", "1544"]
-date: "2013-10-01"
-type: "wp"
+category: '1'
+date: '2013-10-01'
+subtitle: How much do you want to bet that somewhere someone in this country a malware
+  or other attack is bein...
+tags:
+- politics
+title: I wouldn’t put it past them
+type: wp
 wordpress_id: 156
 ---
+
 How much do you want to bet that somewhere someone in this country a malware or other attack is being launched against the new [“Obamacare” Web site?](http://www.healthcare.gov) 
 
 I have great sympathy for the team(s) that put up that web site, back end and other support infrastructure for this site. And in the best of possible conditions there will be hiccups in deploying such a complex system. Add to that that at 8:00am today everyone on earth knew that the site was up and that they could start playing with it, and you are facing a real challenge. So don’t be surprised if there’s a small or big hiccup in the first few weeks and months.

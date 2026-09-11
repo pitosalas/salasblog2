@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/12/2020"
-subtitle: "App Downloads – GeoGebra"
-category: "301"
-tags: []
-date: "2020-11-11"
-type: "wp"
+category: '301'
+date: '2020-11-11'
+subtitle: App Downloads – GeoGebra
+tags:
+- mathematics
+title: Some great links for  11/12/2020
+type: wp
 wordpress_id: 2772
 ---
+
 [App Downloads – GeoGebra](http://Amazing trigonometry visual calculator) 
 
 Ok you don’t need this more than once every decade, but if you do need help in remembering how complicated trigonometry scenarios work this is a beautiful tool. When you are working on navigation and Kalman Filters, its a helpful reminder of those sines and cosines!

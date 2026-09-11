@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/22/2018"
-subtitle: "How to improve your workflow with VS Code and Jupyter Notebook"
-category: "538"
-tags: []
-date: "2018-04-22"
-type: "wp"
+category: '538'
+date: '2018-04-22'
+subtitle: How to improve your workflow with VS Code and Jupyter Notebook
+tags:
+- design
+title: Some great links for  04/22/2018
+type: wp
 wordpress_id: 2289
 ---
+
 [How to improve your workflow with VS Code and Jupyter Notebook](https://towardsdatascience.com/how-to-improve-your-workflow-with-vs-code-and-jupyter-notebook-f96777f8f1bd?source=userActivityShare-d383785221d0-1524315624) 
 
  tags: [jupyter](https://www.diigo.com/user/pitosalas/jupyter) [vscode](https://www.diigo.com/user/pitosalas/vscode)

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  05/16/2019"
-subtitle: "How the Boeing 737 Max Disaster Looks to a Software Developer"
-category: "301"
+category: '301'
+date: '2019-05-15'
+subtitle: How the Boeing 737 Max Disaster Looks to a Software Developer
+tag_review: no_fit
 tags: []
-date: "2019-05-15"
-type: "wp"
+title: Some great links for  05/16/2019
+type: wp
 wordpress_id: 2575
 ---
+
 [How the Boeing 737 Max Disaster Looks to a Software Developer](https://spectrum.ieee.org/aerospace/aviation/how-the-boeing-737-max-disaster-looks-to-a-software-developer) 
 
 A great analysis of this terrible example of the impact of bugs

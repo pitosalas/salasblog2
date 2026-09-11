@@ -1,12 +1,14 @@
 ---
-title: "Interesting links I found today 04/03/2018"
-subtitle: "IMSLP/Petrucci Music Library: Free Public Domain Sheet Music"
-category: "1"
-tags: []
-date: "2018-04-03"
-type: "wp"
+category: '1'
+date: '2018-04-03'
+subtitle: 'IMSLP/Petrucci Music Library: Free Public Domain Sheet Music'
+tags:
+- music
+title: Interesting links I found today 04/03/2018
+type: wp
 wordpress_id: 2146
 ---
+
 [IMSLP/Petrucci Music Library: Free Public Domain Sheet Music](http://imslp.org/wiki/Main_Page) 
 
 Great resource

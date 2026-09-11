@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  03/15/2019"
-subtitle: "Myo | How I learned to Stop Worrying and Love Quaternions"
-category: "301"
-tags: []
-date: "2019-03-14"
-type: "wp"
+category: '301'
+date: '2019-03-14'
+subtitle: Myo | How I learned to Stop Worrying and Love Quaternions
+tags:
+- robotics
+- mathematics
+title: Some great links for  03/15/2019
+type: wp
 wordpress_id: 2552
 ---
+
 [Myo | How I learned to Stop Worrying and Love Quaternions](http://developerblog.myo.com/quaternions/) 
 
 Quaternions are a really complicated mathematical concept which are used extensively in 3d robotics. They are really hard to understand. This article helps.

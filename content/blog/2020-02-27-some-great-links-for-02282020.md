@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  02/28/2020"
-subtitle: "How to write Javascript in Rails 6 | Webpacker, Yarn and Sprockets"
-category: "301"
-tags: []
-date: "2020-02-27"
-type: "wp"
+category: '301'
+date: '2020-02-27'
+subtitle: How to write Javascript in Rails 6 | Webpacker, Yarn and Sprockets
+tags:
+- ruby-on-rails
+title: Some great links for  02/28/2020
+type: wp
 wordpress_id: 2732
 ---
+
 [How to write Javascript in Rails 6 | Webpacker, Yarn and Sprockets](https://blog.capsens.eu/how-to-write-javascript-in-rails-6-webpacker-yarn-and-sprockets-cdf990387463) 
 
 A good introduction to the very confusing combination of JavaScript, yarn, css, etc in rails 6. Hopefully they will clean this up in rails 7. 

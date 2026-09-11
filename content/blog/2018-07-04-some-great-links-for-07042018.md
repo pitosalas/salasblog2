@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/04/2018"
-subtitle: "Editors | Drifting Ruby"
-category: "538"
-tags: []
-date: "2018-07-04"
-type: "wp"
+category: '538'
+date: '2018-07-04'
+subtitle: Editors | Drifting Ruby
+tags:
+- ruby-on-rails
+title: Some great links for  07/04/2018
+type: wp
 wordpress_id: 2387
 ---
+
 [Editors | Drifting Ruby](https://www.driftingruby.com/episodes/editors) 
 
  tags: [editors](https://www.diigo.com/user/pitosalas/editors) [ruby](https://www.diigo.com/user/pitosalas/ruby) [driftingruby](https://www.diigo.com/user/pitosalas/driftingruby)

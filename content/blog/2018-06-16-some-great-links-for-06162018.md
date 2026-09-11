@@ -1,12 +1,15 @@
 ---
-title: "Some great links for  06/16/2018"
-subtitle: "[An intro to Stimulus JS: well-factored JavaScript for server-rendered applications – Superset Blog]..."
-category: "538"
-tags: []
-date: "2018-06-16"
-type: "wp"
+category: '538'
+date: '2018-06-16'
+subtitle: '[An intro to Stimulus JS: well-factored JavaScript for server-rendered
+  applications – Superset Blog]...'
+tags:
+- ruby-on-rails
+title: Some great links for  06/16/2018
+type: wp
 wordpress_id: 2353
 ---
+
 [An intro to Stimulus JS: well-factored JavaScript for server-rendered applications – Superset Blog](https://blog.supersetinc.com/2018/01/11/well-factored-javascript-server-rendered-applications-using-stimulus/) 
 
  tags: [stimulus](https://www.diigo.com/user/pitosalas/stimulus) [javascript](https://www.diigo.com/user/pitosalas/javascript) [rails](https://www.diigo.com/user/pitosalas/rails)

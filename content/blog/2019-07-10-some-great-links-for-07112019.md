@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/11/2019"
-subtitle: "strong_password v0.0.7 rubygem hijacked"
-category: "301"
-tags: []
-date: "2019-07-10"
-type: "wp"
+category: '301'
+date: '2019-07-10'
+subtitle: strong_password v0.0.7 rubygem hijacked
+tags:
+- ruby
+title: Some great links for  07/11/2019
+type: wp
 wordpress_id: 2607
 ---
+
 [strong_password v0.0.7 rubygem hijacked](https://withatwist.dev/strong-password-rubygem-hijacked.html) 
 
 Interesting description of how a public library or gem can be taken over, and modified to create an all powerful backdoor. 

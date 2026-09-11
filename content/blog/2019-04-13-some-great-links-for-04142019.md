@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  04/14/2019"
-subtitle: "Maintain the “GitHub flow” with Gitpod, an online, browser IDE – JAXenter"
-category: "301"
+category: '301'
+date: '2019-04-13'
+subtitle: Maintain the “GitHub flow” with Gitpod, an online, browser IDE – JAXenter
+tag_review: no_fit
 tags: []
-date: "2019-04-13"
-type: "wp"
+title: Some great links for  04/14/2019
+type: wp
 wordpress_id: 2564
 ---
+
 [Maintain the “GitHub flow” with Gitpod, an online, browser IDE – JAXenter](https://jaxenter.com/gitpod-github-ide-157678.html) 
 
 Looks quite useful if it works nicely. 

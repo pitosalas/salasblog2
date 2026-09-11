@@ -1,12 +1,15 @@
 ---
-title: "More about GreenGoose and the Brush Monkey"
-subtitle: "Amazing story of a great looking product, and awesome demo, on the spot investment of $100,000 and s..."
-category: "1"
-tags: ["1006", "1165", "1357", "1918"]
-date: "2013-10-19"
-type: "wp"
+category: '1'
+date: '2013-10-19'
+subtitle: Amazing story of a great looking product, and awesome demo, on the spot
+  investment of $100,000 and s...
+tags:
+- business
+title: More about GreenGoose and the Brush Monkey
+type: wp
 wordpress_id: 149
 ---
+
 Amazing story of a great looking product, and awesome demo, on the spot investment of $100,000 and still… **It didn’t work.** The story was told by Scott Kirsner in the Boston Globe:
 
 > 

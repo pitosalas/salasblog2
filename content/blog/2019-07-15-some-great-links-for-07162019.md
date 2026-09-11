@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/16/2019"
-subtitle: "Linux Applications Performance: Introduction – Unixism"
-category: "301"
-tags: []
-date: "2019-07-15"
-type: "wp"
+category: '301'
+date: '2019-07-15'
+subtitle: 'Linux Applications Performance: Introduction – Unixism'
+tags:
+- linux
+title: Some great links for  07/16/2019
+type: wp
 wordpress_id: 2609
 ---
+
 [Linux Applications Performance: Introduction – Unixism](https://unixism.net/2019/04/linux-applications-performance-introduction/) 
 
 A comprehensive look at how web (http) servers work

@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/06/2020"
-subtitle: "Welcome to Streamlit — Streamlit 0.62.1 documentation"
-category: "301"
-tags: []
-date: "2020-07-05"
-type: "wp"
+category: '301'
+date: '2020-07-05'
+subtitle: Welcome to Streamlit — Streamlit 0.62.1 documentation
+tags:
+- python
+title: Some great links for  07/06/2020
+type: wp
 wordpress_id: 2757
 ---
+
 [Welcome to Streamlit — Streamlit 0.62.1 documentation](https://docs.streamlit.io/en/stable/) 
 
 Very nice and free visualization tool in python. 

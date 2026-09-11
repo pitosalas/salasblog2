@@ -1,12 +1,14 @@
 ---
-title: "Trouble in password land, again?"
-subtitle: "I was rather pleased with myself!"
-category: "1"
-tags: ["667", "1399", "1590", "1822"]
-date: "2013-08-27"
-type: "wp"
+category: '1'
+date: '2013-08-27'
+subtitle: I was rather pleased with myself!
+tag_review: no_fit
+tags: []
+title: Trouble in password land, again?
+type: wp
 wordpress_id: 173
 ---
+
 I was rather pleased with myself!
 
 I have been changing all my passwords to easier to remember but supposedly harder to crack passwords. I had read, on good authority, that making a password longer was a better protection that using lots of funky characters. So for example, I set my gmail password to “when-i-need-to-send-mail”. Nice and long. Also, sites that check a password for safety, tell me that’s a good password. http://www.passwordmeter.com gives it a 100% – “Very Strong”.

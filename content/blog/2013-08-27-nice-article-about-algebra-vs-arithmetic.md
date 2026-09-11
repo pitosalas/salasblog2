@@ -1,12 +1,16 @@
 ---
-title: "Nice article about Algebra vs. Arithmetic"
-subtitle: "If you are anything like me, this is something you’ve try to articulate. Here’s a great article on t..."
-category: "1"
-tags: ["618", "650", "1445", "1446"]
-date: "2013-08-27"
-type: "wp"
+category: '1'
+date: '2013-08-27'
+subtitle: If you are anything like me, this is something you’ve try to articulate.
+  Here’s a great article on t...
+tags:
+- mathematics
+- education
+title: Nice article about Algebra vs. Arithmetic
+type: wp
 wordpress_id: 174
 ---
+
 If you are anything like me, this is something you’ve try to articulate. Here’s a great article on that arcane topic!
 
 [What is algebra? | profkeithdevlin](http://profkeithdevlin.org/2011/11/20/what-is-algebra/):

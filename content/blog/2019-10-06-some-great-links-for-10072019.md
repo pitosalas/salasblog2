@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/07/2019"
-subtitle: "SQL queries don’t start with SELECT – Julia Evans"
-category: "301"
+category: '301'
+date: '2019-10-06'
+subtitle: SQL queries don’t start with SELECT – Julia Evans
+tag_review: no_fit
 tags: []
-date: "2019-10-06"
-type: "wp"
+title: Some great links for  10/07/2019
+type: wp
 wordpress_id: 2647
 ---
+
 [SQL queries don’t start with SELECT – Julia Evans](https://jvns.ca/blog/2019/10/03/sql-queries-don-t-start-with-select/) 
 
 Surprising and useful way to think about correct SQL statements. 

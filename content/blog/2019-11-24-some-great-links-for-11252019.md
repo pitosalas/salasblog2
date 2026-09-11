@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  11/25/2019"
-subtitle: "How to Process Passwords as a Software Developer – DEV Community"
-category: "301"
+category: '301'
+date: '2019-11-24'
+subtitle: How to Process Passwords as a Software Developer – DEV Community
+tag_review: no_fit
 tags: []
-date: "2019-11-24"
-type: "wp"
+title: Some great links for  11/25/2019
+type: wp
 wordpress_id: 2658
 ---
+
 [How to Process Passwords as a Software Developer – DEV Community ](https://dev.to/nathilia_pierce/how-to-process-passwords-as-a-software-developer-3dkh) 
 
 Very useful tips and techniques on handling of passwords. 

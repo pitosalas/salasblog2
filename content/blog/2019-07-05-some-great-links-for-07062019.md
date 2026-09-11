@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  07/06/2019"
-subtitle: "Don’t miss out on css variables"
-category: "301"
+category: '301'
+date: '2019-07-05'
+subtitle: Don’t miss out on css variables
+tag_review: no_fit
 tags: []
-date: "2019-07-05"
-type: "wp"
+title: Some great links for  07/06/2019
+type: wp
 wordpress_id: 2606
 ---
+
 [Don’t miss out on css variables](https://dev.to/timdeschryver/don-t-miss-out-on-css-variables-4708?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email) 
 
 This seems very useful!

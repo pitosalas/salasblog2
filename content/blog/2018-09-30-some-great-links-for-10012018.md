@@ -1,12 +1,14 @@
 ---
-title: "Some great links for  10/01/2018"
-subtitle: "Is your Rails app ready for Production? | AkitaOnRails.com"
-category: "301"
-tags: []
-date: "2018-09-30"
-type: "wp"
+category: '301'
+date: '2018-09-30'
+subtitle: Is your Rails app ready for Production? | AkitaOnRails.com
+tags:
+- ruby-on-rails
+title: Some great links for  10/01/2018
+type: wp
 wordpress_id: 2470
 ---
+
 [Is your Rails app ready for Production? | AkitaOnRails.com](http://www.akitaonrails.com/2016/03/22/is-your-rails-app-ready-for-production) 
 
 An excellent review of the various issues you have to consider when deciding the put your rails app into production.
