@@ -1,12 +1,14 @@
 ---
-title: "Peggy Noonan columns are a pleasure to read"
-subtitle: "![](https://i0.wp.com/s.wsj.net/public/resources/images/OB-CI045_noonan_D_20080912160135.jpg?resize=..."
-category: "298"
-tags: []
-date: "2008-10-27"
-type: "wp"
+category: '298'
+date: '2008-10-27'
+subtitle: '![](https://i0.wp.com/s.wsj.net/public/resources/images/OB-CI045_noonan_D_20080912160135.jpg?resize=...'
+tags:
+- politics
+title: Peggy Noonan columns are a pleasure to read
+type: wp
 wordpress_id: 963
 ---
+
 ![](https://i0.wp.com/s.wsj.net/public/resources/images/OB-CI045_noonan_D_20080912160135.jpg?resize=155%2C102)I’ve been a [Peggy Noonan](http://online.wsj.com/public/page/peggy-noonan.html) fan for a while. Yes she is politically more conservative than I am, but she is such a literate writer it is always a pleasure to [read her stuff](http://www.peggynoonan.com/archive.php?archive=2). Here are some recent good ones:
 [Palin’s Failin’ – “At any rate, come and get me, copper.”](http://online.wsj.com/article/SB122419210832542317.html)
 

@@ -1,12 +1,14 @@
 ---
-title: "Virtual Cable takes your GPS and raises you a heads-up display"
-subtitle: "This is really cool! Check out this post"
-category: "50"
-tags: []
-date: "2008-02-04"
-type: "wp"
+category: '50'
+date: '2008-02-04'
+subtitle: This is really cool! Check out this post
+tags:
+- technology
+title: Virtual Cable takes your GPS and raises you a heads-up display
+type: wp
 wordpress_id: 1119
 ---
+
 This is really cool! Check out [this post](http://feeds.autoblog.com/~r/weblogsinc/autoblog/~3/202445315/) from [Autoblog](http://www.autoblog.com):
 > Filed under: Safety, TechTwo things plague GPS users: being forced to deal with dubious direction vocalizations and the amount of time spent looking at the screen when you should be paying attention to the road. MVS is developing a solution and it’s likely the most revolutionary concept to date.
 

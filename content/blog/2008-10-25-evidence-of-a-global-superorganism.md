@@ -1,12 +1,15 @@
 ---
-title: "Evidence of a Global SuperOrganism"
-subtitle: "Check out this post Evidence of a Global SuperOrganism"
-category: "298"
-tags: ["1339"]
-date: "2008-10-25"
-type: "wp"
+category: '298'
+date: '2008-10-25'
+subtitle: Check out this post Evidence of a Global SuperOrganism
+tags:
+- technology
+- science
+title: Evidence of a Global SuperOrganism
+type: wp
 wordpress_id: 965
 ---
+
 Check out this post [Evidence of a Global SuperOrganism](http://www.kk.org/thetechnium/archives/2008/10/evidence_of_a_g.php):
 > “So far the proposition that a global superorganism is forming along the internet power lines has been treated as a lyrical metaphor at best, and as a mystical illusion at worst. I’ve decided to treat the idea of a global superorganism seriously, and to see if I could muster a falsifiable claim and evidence for its emergence.” (**from: **from [The Technium](http://www.kk.org/thetechnium/index.rdf))
 

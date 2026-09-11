@@ -1,12 +1,15 @@
 ---
-title: "[SEMI-GEEK] Are activation emails needed – and if so – how do we convince you they aren’t spam?"
-subtitle: "Here’s an odd but important problem, at least for us here at BlogBridge."
-category: "50"
+category: '50'
+date: '2007-02-22'
+subtitle: Here’s an odd but important problem, at least for us here at BlogBridge.
+tag_review: no_fit
 tags: []
-date: "2007-02-22"
-type: "wp"
+title: '[SEMI-GEEK] Are activation emails needed – and if so – how do we convince
+  you they aren’t spam?'
+type: wp
 wordpress_id: 1324
 ---
+
 Here’s an odd but important problem, at least for us here at BlogBridge. 
 When you sign up for a BlogBridge account, we, like many other sites, send you a confirmation email to verify that your email is for real.
 

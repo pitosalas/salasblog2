@@ -1,12 +1,14 @@
 ---
-title: "Doomsday Cult"
-subtitle: "Scott Adams as usual is hillarious in this post Doomsday Cult"
-category: "50"
+category: '50'
+date: '2008-04-02'
+subtitle: Scott Adams as usual is hillarious in this post Doomsday Cult
+tag_review: no_fit
 tags: []
-date: "2008-04-02"
-type: "wp"
+title: Doomsday Cult
+type: wp
 wordpress_id: 1075
 ---
+
 Scott Adams as usual is hillarious in this post [Doomsday Cult](http://dilbertblog.typepad.com/the_dilbert_blog/2008/04/doomsday-cult.html) from [The Dilbert Blog](http://dilbertblog.typepad.com/the_dilbert_blog/index.rdf):
 > "A Russian cult emerged from the cave they were hiding in while waiting for the end of the world.
 

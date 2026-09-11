@@ -1,12 +1,14 @@
 ---
-title: "Fad 2.0: Is Twitter just another PR channel?"
-subtitle: "You’ve seen and heard of Twitter, haven’t you? If not, congratulations fo..."
-category: "298"
+category: '298'
+date: '2007-05-07'
+subtitle: You’ve seen and heard of Twitter, haven’t you? If not, congratulations fo...
+tag_review: no_fit
 tags: []
-date: "2007-05-07"
-type: "wp"
+title: 'Fad 2.0: Is Twitter just another PR channel?'
+type: wp
 wordpress_id: 1273
 ---
+
 You’ve seen and heard of [Twitter](http://twitter.com/home), haven’t you? If not, congratulations for being immune to the latest Fad 2.0.
 Other than the occasional “I just had a delicious hamburger”, many if not most of my tweets are an announcement (read traffic bait) of one thing or another, usually including a link. 
 

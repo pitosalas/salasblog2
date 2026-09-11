@@ -1,12 +1,15 @@
 ---
-title: "Bourne Redundancy?"
-subtitle: "Quick movie review: two movies of more or less the same flavor: [[tag]The Bourne Ultimatum[/tag]](ht..."
-category: "298"
+category: '298'
+date: '2007-08-08'
+subtitle: 'Quick movie review: two movies of more or less the same flavor: [[tag]The
+  Bourne Ultimatum[/tag]](ht...'
+tag_review: no_fit
 tags: []
-date: "2007-08-08"
-type: "wp"
+title: Bourne Redundancy?
+type: wp
 wordpress_id: 1230
 ---
+
 Quick movie review: two movies of more or less the same flavor: [[tag]The Bourne Ultimatum[/tag]](http://www.imdb.com/title/tt0440963/) with heart-throb [Matt Damon](http://www.imdb.com/name/nm0000354/) vs. [Live Free or Die Hard](http://www.imdb.com/title/tt0337978/) with old-dude [Bruce Willis](http://www.imdb.com/name/nm0000246/).
 Both good movies (for their genre), but I give the **nod to [tag]Live Free or Die Hard[/tag]**.
 

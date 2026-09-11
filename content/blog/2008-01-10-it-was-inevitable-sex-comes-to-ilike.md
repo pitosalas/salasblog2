@@ -1,12 +1,14 @@
 ---
-title: "It was inevitable: Sex comes to iLike"
-subtitle: "!iLike iTunes"
-category: "298"
-tags: []
-date: "2008-01-10"
-type: "wp"
+category: '298'
+date: '2008-01-10'
+subtitle: '!iLike iTunes'
+tags:
+- music
+title: 'It was inevitable: Sex comes to iLike'
+type: wp
 wordpress_id: 1140
 ---
+
 ![iLike iTunes ](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/imagewell//ilikesex.jpg?w=584)iLike is this really cool, really popular service which compares the music you like with others’ tastes as they play music in iTunes.
 It’s a handy way to discover new music. As you can see in the screenshot to the left, it displays all this in a very nice little window to the right of the iTunes window. All very cool.
 

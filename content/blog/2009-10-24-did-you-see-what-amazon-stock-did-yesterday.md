@@ -1,12 +1,15 @@
 ---
-title: "Did you see what Amazon Stock did yesterday?"
-subtitle: "I have believed that Amazon is a much bigger deal than people realize. Not only are they the ultimat..."
-category: "298"
-tags: []
-date: "2009-10-24"
-type: "wp"
+category: '298'
+date: '2009-10-24'
+subtitle: I have believed that Amazon is a much bigger deal than people realize. Not
+  only are they the ultimat...
+tags:
+- business
+title: Did you see what Amazon Stock did yesterday?
+type: wp
 wordpress_id: 786
 ---
+
 I have believed that Amazon is a much bigger deal than people realize. Not only are they the ultimate retailer that seem to have everything, at better prices, more conveniently offered, than anyone else, but, the technology (in software and process) that they have invented and built is extremely unique and impossible to replicate. In other words, there’s a lot more to Amazon than most people think. In my opinion.
 Well something happened yesterday, and their stock shot up 25% in one day. Let’s see what happens next week. Is there a rumor that I didn’t see? 
 

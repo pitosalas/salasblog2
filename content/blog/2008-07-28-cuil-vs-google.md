@@ -1,12 +1,15 @@
 ---
-title: "Cuil vs. Google"
-subtitle: "By now if you probably heard about Cuil, the new search engine that claims to be the biggest (since ..."
-category: "538"
-tags: ["1815"]
-date: "2008-07-28"
-type: "wp"
+category: '538'
+date: '2008-07-28'
+subtitle: By now if you probably heard about Cuil, the new search engine that claims
+  to be the biggest (since ...
+tags:
+- technology
+title: Cuil vs. Google
+type: wp
 wordpress_id: 1001
 ---
+
 By now if you probably heard about Cuil, the new search engine that claims to be the biggest (since when does size matter when it comes to search engines?) And secondly is being given a [PR pass because it was created by ‘ex-Google employees’](http://www.techcrunch.com/2008/07/27/cuill-launches-a-massive-search-engine/) – I guess that’s a major element for success?
 Anyway, after doing my obvious test searches, like [Curacao](http://www.cuil.com/search?q=curacao&sl=long), [Arlington Mass](http://www.cuil.com/search?q=arlington+massachusetts), and [BlogBridge](http://www.cuil.com/search?q=blogbridge), I thought I would try each against an actual useful search I had been doing over the weekend:
 

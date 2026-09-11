@@ -1,12 +1,15 @@
 ---
-title: "Great new information about blogging"
-subtitle: "I just wrote a few brief tutorials that I thought might be of interest to you and, well, everyone. P..."
-category: "51"
-tags: ["2108"]
-date: "2008-04-17"
-type: "wp"
+category: '51'
+date: '2008-04-17'
+subtitle: I just wrote a few brief tutorials that I thought might be of interest to
+  you and, well, everyone. P...
+tag_review: no_fit
+tags: []
+title: Great new information about blogging
+type: wp
 wordpress_id: 1064
 ---
+
 I just wrote a few brief tutorials that I thought might be of interest to you and, well, everyone. Please check them out – if you find them useful, please pass them on to your friends!
  
 - [“What’s the difference between a blog and a web site?”](http://www.squidoo.com/differenceblogandwebsite/) – That perennial question that people first discovering blogging often ask. My short and sweet explanation.

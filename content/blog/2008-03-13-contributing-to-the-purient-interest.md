@@ -1,12 +1,15 @@
 ---
-title: "Contributing to the purient interest"
-subtitle: "No less an authority as the **Freakonomics dudes** offer an article about “[A Call Girl’s View of th..."
-category: "298"
-tags: []
-date: "2008-03-13"
-type: "wp"
+category: '298'
+date: '2008-03-13'
+subtitle: No less an authority as the **Freakonomics dudes** offer an article about
+  “[A Call Girl’s View of th...
+tags:
+- politics
+title: Contributing to the purient interest
+type: wp
 wordpress_id: 1089
 ---
+
 No less an authority as the **Freakonomics dudes** offer an article about “[A Call Girl’s View of the Spitzer Affair”](http://freakonomics.blogs.nytimes.com/2008/03/12/a-call-girls-view-of-the-spitzer-affair/) Read this Q & A and many more like it.
 > “Q. Have you ever had a client as powerful or well-known as Eliot Spitzer? (You haven’t had Spitzer himself as a client, have you?)
 

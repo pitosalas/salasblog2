@@ -1,12 +1,15 @@
 ---
-title: "How does Fake Steve get away with this?"
-subtitle: "Everyone by now has heard that the Diary of Fake Steve Jobs is actually written"
-category: "298"
+category: '298'
+date: '2007-11-28'
+subtitle: Everyone by now has heard that the Diary of Fake Steve Jobs is actually
+  written
+tag_review: no_fit
 tags: []
-date: "2007-11-28"
-type: "wp"
+title: How does Fake Steve get away with this?
+type: wp
 wordpress_id: 1171
 ---
+
 Everyone by now has heard that the Diary of [Fake Steve Jobs is actually written](http://tech.monstersandcritics.com/news/article_1339469.php) by [Daniel Lyons, a Senior Editor at Forbes](http://www.nytimes.com/2007/08/06/technology/06steve.html).
 In a recent article, as an example, you can see, Fake Steve can be downright catty:
 

@@ -1,12 +1,14 @@
 ---
-title: "“Society doesn’t need newspapers. What we need is journalism”"
-subtitle: "Clay Shirkey writes an article called “Newspapers and Thinking the Unthinkable”."
-category: "298"
-tags: []
-date: "2009-03-16"
-type: "wp"
+category: '298'
+date: '2009-03-16'
+subtitle: Clay Shirkey writes an article called “Newspapers and Thinking the Unthinkable”.
+tags:
+- business
+title: “Society doesn’t need newspapers. What we need is journalism”
+type: wp
 wordpress_id: 871
 ---
+
 [Clay Shirkey writes an article called “Newspapers and Thinking the Unthinkable”.](http://www.shirky.com/weblog/2009/03/newspapers-and-thinking-the-unthinkable/) I thought this was an excellent discussion about a topic [I’ve written, with much less insight](/2009/02/14/saving-the-newspapers/), in the past. For me a crucial passage of his article is:
 > “Society doesn’t need newspapers. What we need is journalism. For a century, the imperatives to strengthen journalism and to strengthen newspapers have been so tightly wound as to be indistinguishable. That’s been a fine accident to have, but when that accident stops, as it is stopping before our eyes, we’re going to need lots of other ways to strengthen journalism instead” (from [Thinking the Unthinkable](http://www.shirky.com/weblog/2009/03/newspapers-and-thinking-the-unthinkable/))
 

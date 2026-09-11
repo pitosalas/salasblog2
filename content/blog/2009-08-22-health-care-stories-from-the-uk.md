@@ -1,12 +1,16 @@
 ---
-title: "Health Care Stories from the U.K."
-subtitle: "Sure, one isolated story doesn’t prove anything, but then our health care debate often seems to be c..."
-category: "298"
-tags: []
-date: "2009-08-22"
-type: "wp"
+category: '298'
+date: '2009-08-22'
+subtitle: Sure, one isolated story doesn’t prove anything, but then our health care
+  debate often seems to be c...
+tags:
+- politics
+- health
+title: Health Care Stories from the U.K.
+type: wp
 wordpress_id: 811
 ---
+
 Sure, one isolated story doesn’t prove anything, but then our health care debate often seems to be carried on the basis of isolated stories, so [here’s an article about the British Health Care system](http://www.salon.com/opinion/feature/2009/08/22/nhs/index.html?source=rss&aim=/opinion/feature) that I came across this morning. From that article:
 **
 > “[…]This, I learned, is what the NHS is about — common decency. It is about the shared belief that all the people who live in the United Kingdom constitute a society, and a decent society provides certain necessities for its members. Freedom from hunger is one. Police protection is another. Free healthcare from the cradle to the grave is simply one more item on this list.[…]” (from** [Salon, Why I love Britain’s health care system”)](http://www.salon.com/opinion/feature/2009/08/22/nhs/index.html?source=rss&aim=/opinion/feature)

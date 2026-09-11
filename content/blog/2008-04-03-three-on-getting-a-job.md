@@ -1,12 +1,14 @@
 ---
-title: "Three on getting a job"
-subtitle: "Check this post Three on getting a job"
-category: "50"
-tags: []
-date: "2008-04-03"
-type: "wp"
+category: '50'
+date: '2008-04-03'
+subtitle: Check this post Three on getting a job
+tags:
+- business
+title: Three on getting a job
+type: wp
 wordpress_id: 1074
 ---
+
 Check this post [Three on getting a job](http://feeds.feedburner.com/~r/NewmarksDoor/~3/261854454/three-on-gettin.html) from [Newmark’s Door.](http://newmarksdoor.typepad.com/mainblog/atom.xml) Where Craig turns us on to these three fun links for job hunters (Dan are you listening?):
 > 
 

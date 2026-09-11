@@ -1,12 +1,14 @@
 ---
-title: "Halo: Supposed to be the most unbelievably great Video Conferencing system"
-subtitle: "Halo, from HP. Really?"
-category: "298"
-tags: []
-date: "2008-10-15"
-type: "wp"
+category: '298'
+date: '2008-10-15'
+subtitle: Halo, from HP. Really?
+tags:
+- technology
+title: 'Halo: Supposed to be the most unbelievably great Video Conferencing system'
+type: wp
 wordpress_id: 968
 ---
+
 [Halo, from HP. Really?](http://www.hp.com/halo/what_is.html)
 Unfortunately it is outrageously expensive. Can’t find the number online but I heard 50-100K.
 

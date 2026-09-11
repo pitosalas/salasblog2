@@ -1,12 +1,15 @@
 ---
-title: "Clean up your Amazon Wishlist!"
-subtitle: "If you are anything like me, you are constantly coming across books and other goodies that look inte..."
-category: "298"
-tags: []
-date: "2008-11-25"
-type: "wp"
+category: '298'
+date: '2008-11-25'
+subtitle: If you are anything like me, you are constantly coming across books and
+  other goodies that look inte...
+tags:
+- personal
+title: Clean up your Amazon Wishlist!
+type: wp
 wordpress_id: 941
 ---
+
 If you are anything like me, you are constantly coming across books and other goodies that look interesting but not interesting enough to actually get. 
 In my house, there are several shelves that contain books purchased but not yet read. It’s my queue. I love them . It’s like having a personal bookstore with only books that I love. Or at least, I think I will love. 
 

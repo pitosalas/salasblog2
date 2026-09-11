@@ -1,12 +1,14 @@
 ---
-title: "Once more, why dos’t thou blog?"
-subtitle: "Recently there was a comment to one of my post asking the perennial question"
-category: "51"
+category: '51'
+date: '2007-12-06'
+subtitle: Recently there was a comment to one of my post asking the perennial question
+tag_review: no_fit
 tags: []
-date: "2007-12-06"
-type: "wp"
+title: Once more, why dos’t thou blog?
+type: wp
 wordpress_id: 1164
 ---
+
 [Recently there was a comment to one of my post asking the perennial question](/2007/11/26/the-f-word/#comments) that non-bloggers ask of bloggers, (and bloggers ask of themselve all the time too 🙂
 > “Hello,
 I was wondering if you could answer these 3 simple questions for a school project about blogging. It would be great if you could help me out. THANKS

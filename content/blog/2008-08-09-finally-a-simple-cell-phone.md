@@ -1,12 +1,14 @@
 ---
-title: "Finally, a simple cell phone!"
-subtitle: "![](https://i0.wp.com/www.gizmodo.com/images/Simple.jpg?w=584)"
-category: "298"
-tags: []
-date: "2008-08-09"
-type: "wp"
+category: '298'
+date: '2008-08-09'
+subtitle: '![](https://i0.wp.com/www.gizmodo.com/images/Simple.jpg?w=584)'
+tags:
+- technology
+title: Finally, a simple cell phone!
+type: wp
 wordpress_id: 998
 ---
+
 ![](https://i0.wp.com/www.gizmodo.com/images/Simple.jpg?w=584)
 My Treo 600 recently died a hard death. I had to learn a new cell phone, a relatively low end one, and it was a serious undertaking.
 

@@ -1,12 +1,15 @@
 ---
-title: "Is twitter for people or for marketing?"
-subtitle: "As you may have noticed, I am using Twitter a little more often now. As mu..."
-category: "298"
+category: '298'
+date: '2008-12-23'
+subtitle: As you may have noticed, I am using Twitter a little more often now. As
+  mu...
+tag_review: no_fit
 tags: []
-date: "2008-12-23"
-type: "wp"
+title: Is twitter for people or for marketing?
+type: wp
 wordpress_id: 921
 ---
+
 As you may have noticed, I am using [Twitter](http://www.twitter.com) a little more often now. As much as anything it is to learn more about what it’s like, because we are working on full Twitter support in [BlogBridge](http://www.blogbridge.com), which should be cool. The question is, what should it look like? Anyway, more on that on the [BlogBridge blog](http://www.blogbridge.com).
 For now, here are some interesting pointers I have come across that you might find enlightening:
 

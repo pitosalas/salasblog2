@@ -1,12 +1,14 @@
 ---
-title: "Who Killed the Electric Car? (And why Wikipedia is GREAT)"
-subtitle: "I just saw the movie “Who Killed the Electric Car”"
-category: "298"
-tags: []
-date: "2008-08-06"
-type: "wp"
+category: '298'
+date: '2008-08-06'
+subtitle: I just saw the movie “Who Killed the Electric Car”
+tags:
+- wikipedia
+title: Who Killed the Electric Car? (And why Wikipedia is GREAT)
+type: wp
 wordpress_id: 1000
 ---
+
 I just saw the [movie “Who Killed the Electric Car”](http://www.sonyclassics.com/whokilledtheelectriccar/) which makes a **pretty compelling** case that years ago General Motors had a **working and practical** electric car which they took off the market under what are portrayed as **suspicious circumstances**. 
 It’s an interesting movie but part of me, while never **underestimating the corruption and incompetence** in government and industry, still felt like there must be another side of the story.
 

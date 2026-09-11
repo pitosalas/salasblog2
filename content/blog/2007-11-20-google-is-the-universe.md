@@ -1,12 +1,15 @@
 ---
-title: "Google is the universe"
-subtitle: "As you may have heard, I’ve been learning all about Search Engine Optimization (SEO) lately. I just ..."
-category: "538"
-tags: ["1578"]
-date: "2007-11-20"
-type: "wp"
+category: '538'
+date: '2007-11-20'
+subtitle: As you may have heard, I’ve been learning all about Search Engine Optimization
+  (SEO) lately. I just ...
+tags:
+- technology
+title: Google is the universe
+type: wp
 wordpress_id: 1178
 ---
+
 As you may have heard, I’ve been learning all about Search Engine Optimization (SEO) lately. I just came across this amazing little service called the [DigPageRank Pagerank Checker](http://digpagerank.com/index.php). The story goes something like this.
 Google assigns every single page in the whole internet a numerical score called the [Page Rank](http://www.google.com/url?sa=t&ct=res&cd=1&url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPageRank&ei=Wi1CR6C3J5PkeZTMqboK&usg=AFQjCNEC6uBONjN7_DGwupaCx2_xT7KLUw&sig2=KyYQgijwkrL7JDSZ1z0WdA) (PR). It somehow says something about how **important** that page is and consequently how high it should appear in your Google search results.
 

@@ -1,12 +1,15 @@
 ---
-title: "Lexington Public Library’s responsible for the computer revolution?"
-subtitle: "Did you know of the Lexington Public Library’s role in the founding of DEC (Digital Equipment Corpor..."
-category: "298"
-tags: []
-date: "2009-10-23"
-type: "wp"
+category: '298'
+date: '2009-10-23'
+subtitle: Did you know of the Lexington Public Library’s role in the founding of DEC
+  (Digital Equipment Corpor...
+tags:
+- technology
+title: Lexington Public Library’s responsible for the computer revolution?
+type: wp
 wordpress_id: 789
 ---
+
 Did you know of the Lexington Public Library’s role in the founding of DEC (Digital Equipment Corporation) and so part of the creation of the computer revolution we’ve been living through the last 50 of so years?
 **“Other than our lunch hour visits to the Lexington Public Library to study their collection of business books, our experience had been limited to making budgets for engineering expenses at Lincoln.  These did not, of course, include things like overhead, income, sales expense, accounts receivable, cash flow, balance sheets, etc.” (from** [Harlan Anderson’s blog](http://harlaneanderson.com/2009/08/24/bitten-by-the-idea-of-starting-digital-equipment-corporation/))
 

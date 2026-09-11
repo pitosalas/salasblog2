@@ -1,12 +1,15 @@
 ---
-title: "Big Numbers"
-subtitle: "Like everyone else, I’ve been following the drama on Wall Street, Main Street, Washington DC and so ..."
-category: "298"
-tags: []
-date: "2008-09-28"
-type: "wp"
+category: '298'
+date: '2008-09-28'
+subtitle: Like everyone else, I’ve been following the drama on Wall Street, Main Street,
+  Washington DC and so ...
+tags:
+- business
+title: Big Numbers
+type: wp
 wordpress_id: 973
 ---
+
 Like everyone else, I’ve been following the drama on Wall Street, Main Street, Washington DC and so on.
 Bless their hearts, they have posted a document called[ “firstdraft.pdf”](http://money.cnn.com/2008/09/28/news/pdf/index.htm) to allow the masses to examine the bill which will authorize the bailout (a bit of irony?)
 

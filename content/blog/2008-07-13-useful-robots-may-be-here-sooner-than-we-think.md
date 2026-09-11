@@ -1,12 +1,15 @@
 ---
-title: "Useful robots may be here sooner than we think"
-subtitle: "> “The Most Advanced Quadruped Robot on Earth — BigDog is the alpha male of the Boston Dynamics fami..."
-category: "298"
-tags: []
-date: "2008-07-13"
-type: "wp"
+category: '298'
+date: '2008-07-13'
+subtitle: '> “The Most Advanced Quadruped Robot on Earth — BigDog is the alpha male
+  of the Boston Dynamics fami...'
+tags:
+- robotics
+title: Useful robots may be here sooner than we think
+type: wp
 wordpress_id: 1012
 ---
+
 > “The Most Advanced Quadruped Robot on Earth — BigDog is the alpha male of the Boston Dynamics family of robots. It is a quadruped robot that walks, runs, and climbs on rough terrain and carries heavy loads. BigDog is powered by a gasoline engine that drives a hydraulic actuation system. BigDog’s legs are articulated like an animal’s, and have compliant elements that absorb shock and recycle energy from one step to the next.”
 
 [Check it out and watch the BostonDynamics video.](http://www.bostondynamics.com/content/sec.php?section=BigDog) Pretty cool and surprising. Your tax dollars at work!

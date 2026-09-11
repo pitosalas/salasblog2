@@ -1,12 +1,16 @@
 ---
-title: "Cloud Computing case studies"
-subtitle: "I’ve written about some of the [considerations that go into the choice between physical infrastructu..."
-category: "538"
-tags: []
-date: "2008-08-30"
-type: "wp"
+category: '538'
+date: '2008-08-30'
+subtitle: I’ve written about some of the [considerations that go into the choice between
+  physical infrastructu...
+tags:
+- technology
+- business
+title: Cloud Computing case studies
+type: wp
 wordpress_id: 985
 ---
+
 I’ve written about some of the [considerations that go into the choice between physical infrastructure and new SAAS services such as Amazon’s S3 and EC2](/2008/02/18/about-amzn-and-cloud-computing/). I also covered [why the fact that you are comfortable relying on a hosting provider for rack mounted servers (so called ping & power) doesn’t mean necessarily that you would come to the same conclusion about SAAS services.](/2008/02/19/about-amzn-and-cloud-computing-continued)
 Here’s what the Wall Street Journal had to say about that tradeoff a little while ago:
 

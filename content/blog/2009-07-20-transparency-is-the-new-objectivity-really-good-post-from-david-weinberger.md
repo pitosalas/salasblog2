@@ -1,12 +1,14 @@
 ---
-title: "Transparency is the new objectivity: Really good post from David Weinberger"
-subtitle: "Check this excerpt from a post by David Weinberger ..."
-category: "50"
-tags: []
-date: "2009-07-20"
-type: "wp"
+category: '50'
+date: '2009-07-20'
+subtitle: Check this excerpt from a post by David Weinberger ...
+tags:
+- david-weinberger
+title: 'Transparency is the new objectivity: Really good post from David Weinberger'
+type: wp
 wordpress_id: 822
 ---
+
 Check this excerpt from a post by [David Weinberger](http://en.wikipedia.org/wiki/David_Weinberger) called [Transparency is the new objectivity](http://www.hyperorg.com/blogger/2009/07/19/transparency-is-the-new-objectivity/) from [Joho the Blog](http://www.hyperorg.com/blogger/feed/):
 > “A friend asked me to post an explanation of what I meant when I said at [PDF09](http://personaldemocracy.com/pdf-conference/personal-democracy-forum-conference) that “transparency is the new objectivity.” […snip…]”
 

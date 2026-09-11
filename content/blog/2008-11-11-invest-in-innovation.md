@@ -1,12 +1,16 @@
 ---
-title: "Invest in Innovation"
-subtitle: "Jim Manzi (of Lotus fame) has an interesting article in “The Nation” about [our need, as a nation, t..."
-category: "298"
-tags: []
-date: "2008-11-11"
-type: "wp"
+category: '298'
+date: '2008-11-11'
+subtitle: Jim Manzi (of Lotus fame) has an interesting article in “The Nation” about
+  [our need, as a nation, t...
+tags:
+- business
+- politics
+title: Invest in Innovation
+type: wp
 wordpress_id: 952
 ---
+
 Jim Manzi (of Lotus fame) has an interesting article in “The Nation” about [our need, as a nation, to invest just a little bit more in innovation](http://www.thenation.com/doc/20081117/henry_manzi):
 > “But with only a little bit of extra funding, foresight and determination, it may be possible to kick-start an innovation revival. Especially at the federal level, we see an opportunity for a modest investment to create a whole new generation of idea-growing, job-creating technology hubs all across the country–perhaps even an “automotive Silicon Valley” in otherwise moribund Detroit.” (from [Invest in Innovation](http://www.thenation.com/doc/20081117/henry_manzi))
 

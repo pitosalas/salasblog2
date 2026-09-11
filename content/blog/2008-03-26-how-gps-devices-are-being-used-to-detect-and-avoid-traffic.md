@@ -1,12 +1,15 @@
 ---
-title: "How GPS devices are being used to detect and avoid traffic"
-subtitle: "This is relevant to the discussion about [congestion pricing, mesh networks and avoiding traffic jam..."
-category: "298"
-tags: []
-date: "2008-03-26"
-type: "wp"
+category: '298'
+date: '2008-03-26'
+subtitle: This is relevant to the discussion about [congestion pricing, mesh networks
+  and avoiding traffic jam...
+tags:
+- technology
+title: How GPS devices are being used to detect and avoid traffic
+type: wp
 wordpress_id: 1079
 ---
+
 This is relevant to the discussion about [congestion pricing, mesh networks and avoiding traffic jams](/2008/03/22/what-does-urban-congestion-have-to-do-with-mesh-networks/), a topic that I am getting interested in as you could see from this previous post.
 > [… snip]  Now help is at hand. As satellite-navigation devices become more widely used, networking effects are making them more powerful. This is because vehicles themselves are starting to relay real-time traffic data—and he more that do so, the more accurate traffic information will become.  [snip…] (from [The Economist](http://www.economist.com/science/displaystory.cfm?story_id=10843094))
 

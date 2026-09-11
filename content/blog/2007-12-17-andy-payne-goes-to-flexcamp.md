@@ -1,12 +1,14 @@
 ---
-title: "Andy Payne goes to Flexcamp"
-subtitle: "Andy went to FlexCamp last week and..."
-category: "538"
-tags: []
-date: "2007-12-17"
-type: "wp"
+category: '538'
+date: '2007-12-17'
+subtitle: Andy went to FlexCamp last week and...
+tags:
+- technology
+title: Andy Payne goes to Flexcamp
+type: wp
 wordpress_id: 1154
 ---
+
 [Andy went to FlexCamp](http://blog.payne.org/2007/12/08/report-flexcamp-boston-2007/) last week and was good enough to [write up his observations. He says:
 ](http://blog.payne.org/2007/12/08/report-flexcamp-boston-2007/)
 > “The new Flash 9 Player puts Flash squarely on par with Java (technology-wise), with a high-performance JIT VM ([AVM2](http://www.adobe.com/products/flashplayer/productinfo/features/#vm)), a real programming language ([ActionScript](http://www.adobe.com/devnet/actionscript/)), and a mature tool set.” (from [blog.payne.org](http://blog.payne.org/2007/12/08/report-flexcamp-boston-2007/))

@@ -1,12 +1,15 @@
 ---
-title: "Phone spam, charities and trust"
-subtitle: "In the [New York Times, an editorial talks about a study that reveals rampant abuses in certain char..."
-category: "298"
-tags: ["787", "1090"]
-date: "2008-01-03"
-type: "wp"
+category: '298'
+date: '2008-01-03'
+subtitle: In the [New York Times, an editorial talks about a study that reveals rampant
+  abuses in certain char...
+tag_review: no_fit
+tags: []
+title: Phone spam, charities and trust
+type: wp
 wordpress_id: 1142
 ---
+
 In the [New York Times, an editorial talks about a study that reveals rampant abuses in certain charitable causes ](http://www.nytimes.com/2007/12/25/opinion/25tue3.html)(or organizations passing themselves as such)
 > “The public has rightly shown its empathy with wounded and troubled war veterans, contributing hundreds of millions of dollars to private charities that claim to have the veterans’ best interests at heart. A new study details rampant abuses of the money flow.” (from [New York Times](http://www.nytimes.com/2007/12/25/opinion/25tue3.html))
 

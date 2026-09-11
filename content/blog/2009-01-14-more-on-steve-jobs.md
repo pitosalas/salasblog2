@@ -1,10 +1,14 @@
 ---
-title: "More on Steve Jobs"
-subtitle: "Breaking news from CNN: “Apple CEO Steve Jobs takes leave until end of June; Jobs says health issues..."
-category: "298"
-tags: ["1925"]
-date: "2009-01-14"
-type: "wp"
+category: '298'
+date: '2009-01-14'
+subtitle: 'Breaking news from CNN: “Apple CEO Steve Jobs takes leave until end of
+  June; Jobs says health issues...'
+tags:
+- apple
+- health
+title: More on Steve Jobs
+type: wp
 wordpress_id: 908
 ---
+
 Breaking news from CNN: “Apple CEO Steve Jobs takes leave until end of June; Jobs says health issues “more complex than I originally thought.”

@@ -1,12 +1,15 @@
 ---
-title: "interesting stuff in the paper today"
-subtitle: "Here are some random goodies that caught my eye this morning. Don’ t count on my being your clipping..."
-category: "298"
-tags: []
-date: "2007-04-11"
-type: "wp"
+category: '298'
+date: '2007-04-11'
+subtitle: Here are some random goodies that caught my eye this morning. Don’ t count
+  on my being your clipping...
+tags:
+- politics
+title: interesting stuff in the paper today
+type: wp
 wordpress_id: 1288
 ---
+
 Here are some random goodies that caught my eye this morning. Don’ t count on my being your clipping service from now on, — these just caught my eye 🙂 
 
 - [NYT Editorial about the Rutgers team and Imus](http://www.nytimes.com/2007/04/11/opinion/11wed2.html?_r=1&oref=slogin)

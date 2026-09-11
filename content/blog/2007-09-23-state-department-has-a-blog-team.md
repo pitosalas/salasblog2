@@ -1,12 +1,15 @@
 ---
-title: "State department has a blog team"
-subtitle: "Apparently the US State Department has a team of bloggers who get into discussions on boards and blo..."
-category: "298"
-tags: []
-date: "2007-09-23"
-type: "wp"
+category: '298'
+date: '2007-09-23'
+subtitle: Apparently the US State Department has a team of bloggers who get into discussions
+  on boards and blo...
+tags:
+- politics
+title: State department has a blog team
+type: wp
 wordpress_id: 1205
 ---
+
 Apparently the US State Department has a team of bloggers who get into discussions on boards and blogs around the world, taking an interesting alternative approach to the usual formal, high level diplomacy:
 
 > “…The State Department team members themselves said they thought they would be immediately flamed, or insulted and blocked from posting….”

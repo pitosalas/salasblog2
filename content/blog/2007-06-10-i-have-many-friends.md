@@ -1,12 +1,14 @@
 ---
-title: "I have many friends"
-subtitle: "A funny article in the New York Times the other day:"
-category: "298"
+category: '298'
+date: '2007-06-10'
+subtitle: 'A funny article in the New York Times the other day:'
+tag_review: no_fit
 tags: []
-date: "2007-06-10"
-type: "wp"
+title: I have many friends
+type: wp
 wordpress_id: 1256
 ---
+
 A funny article in the New York Times the other day:
 **“[…snap] I HAVE reached a curious point in life. Although I feel like the same precocious know-it-all cynic I always was, I suddenly am surrounded by younger precocious know-it-all cynics whose main purpose appears to be to remind me that I’ve lost my edge.[snap…]” from** ‘[omg my mom joined facebook](http://www.nytimes.com/2007/06/07/fashion/07Cyber.html?_r=1&oref=slogin)‘
 

@@ -1,12 +1,14 @@
 ---
-title: "Manny being Manny"
-subtitle: "Check this post Thank you Jason Bay"
-category: "298"
+category: '298'
+date: '2009-05-08'
+subtitle: Check this post Thank you Jason Bay
+tag_review: no_fit
 tags: []
-date: "2009-05-08"
-type: "wp"
+title: Manny being Manny
+type: wp
 wordpress_id: 846
 ---
+
 Check this post [Thank you Jason Bay](http://38pitches.weei.com/sports/boston/baseball/curt-schilling/general/thank-you-jason-bay/) from [38 Pitches](http://38pitches.com/feed/):
 > “… Yet somehow we’re hearing these same people talk about being struck momentarily stupid when West African bullfrog semen is found in their blood. “What? How’d that get there????”
 

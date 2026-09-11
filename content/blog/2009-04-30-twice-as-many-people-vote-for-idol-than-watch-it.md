@@ -1,12 +1,14 @@
 ---
-title: "Twice as many people vote for Idol than watch it?"
-subtitle: "This does not compute:"
-category: "298"
+category: '298'
+date: '2009-04-30'
+subtitle: 'This does not compute:'
+tag_review: no_fit
 tags: []
-date: "2009-04-30"
-type: "wp"
+title: Twice as many people vote for Idol than watch it?
+type: wp
 wordpress_id: 851
 ---
+
 This does not compute:
 **“As the final five contestants on “American Idol” competed for a chance at the top prize on Tuesday, Fox once again took first place in the night’s ratings. 
 

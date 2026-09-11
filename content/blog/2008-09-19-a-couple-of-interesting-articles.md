@@ -1,12 +1,15 @@
 ---
-title: "A couple of interesting articles"
-subtitle: "A very interesting article in Edge.org (by the way, an always interesting site.) This one is called ..."
-category: "298"
-tags: []
-date: "2008-09-19"
-type: "wp"
+category: '298'
+date: '2008-09-19'
+subtitle: A very interesting article in Edge.org (by the way, an always interesting
+  site.) This one is called ...
+tags:
+- science
+title: A couple of interesting articles
+type: wp
 wordpress_id: 974
 ---
+
 A very interesting article in Edge.org (by the way, an always interesting site.) This one is called [Moral Psychology and the misunderstanding of religion:](http://www.edge.org/3rd_culture/haidt07/haidt07_index.html)
 > “I study morality from every angle I can find. Morality is one of those basic aspects of humanity, like sexuality and eating, that can’t fit into one or two academic fields. I think morality is unique, however, in having a kind of spell that disguises it. We all care about morality so passionately that it’s hard to look straight at it. We all look at the world through some kind of moral lens, and because most of the academic community uses the same lens, we validate each other’s visions and distortions. I think this problem is particularly acute in some of the new scientific writing about religion. ” (from [Edge.org](http://www.edge.org/3rd_culture/haidt07/haidt07_index.html))
 

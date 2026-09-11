@@ -1,12 +1,16 @@
 ---
-title: "The torture discussion back in 2001"
-subtitle: "Recently of course, because of the ‘torture memos’, the topic is all over the papers and cable ‘news..."
-category: "298"
-tags: []
-date: "2009-04-23"
-type: "wp"
+category: '298'
+date: '2009-04-23'
+subtitle: Recently of course, because of the ‘torture memos’, the topic is all over
+  the papers and cable ‘news...
+tags:
+- politics
+- legal
+title: The torture discussion back in 2001
+type: wp
 wordpress_id: 854
 ---
+
 Recently of course, because of the ‘torture memos’, the topic is all over the papers and cable ‘news’ programs. It’s brought back to mind a discussion that was raging hot and heavy, starting back in 2001, about the idea of allowing the issuance of ‘**Torture Warrants**‘. 
 [Alan Dershowitz](http://en.wikipedia.org/wiki/Alan_Dershowitz), famous Harvard Law Professor first espoused that in 2001 (as best I can determine) in [this article in the LA Times.](http://groups.google.com/group/alt.impeach.bush/msg/814527884aa6c904) If you [search google you](http://www.google.com/search?q=torture+warrants+dershowitz&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a) will see lots of hits on the topic, starting then leading up to today.
 

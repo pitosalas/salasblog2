@@ -1,12 +1,14 @@
 ---
-title: "More than Charisma"
-subtitle: "From Bob Herbert, in today’s New York Times"
-category: "298"
-tags: ["795", "1202", "1543"]
-date: "2009-01-24"
-type: "wp"
+category: '298'
+date: '2009-01-24'
+subtitle: From Bob Herbert, in today’s New York Times
+tags:
+- politics
+title: More than Charisma
+type: wp
 wordpress_id: 904
 ---
+
 From [Bob Herbert, in today’s New York Times](http://www.nytimes.com/2009/01/24/opinion/24herbert.html?_r=1&scp=2&sq=clownish&st=cse):
 > “… [we’ve witnessed] the almost desperate hunger in this country for mature leadership, for someone who is not recless and clownish, shortsighted and self-absorbed.” (**from** [The New York Times](http://www.nytimes.com/2009/01/24/opinion/24herbert.html?_r=1&scp=2&sq=clownish&st=cse))
 

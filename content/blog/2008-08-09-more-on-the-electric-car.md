@@ -1,12 +1,14 @@
 ---
-title: "More on the Electric Car"
-subtitle: "After an interesting comment"
-category: "298"
-tags: []
-date: "2008-08-09"
-type: "wp"
+category: '298'
+date: '2008-08-09'
+subtitle: After an interesting comment
+tags:
+- technology
+title: More on the Electric Car
+type: wp
 wordpress_id: 997
 ---
+
 After an [interesting comment](/2008/08/06/who-killed-the-electric-car-and-why-wikipedia-is-great/#comment-41711) on [my previous post on Electric Cars topic, “Who Killed the Electric Car”](/2008/08/06/who-killed-the-electric-car-and-why-wikipedia-is-great/) suddenly I am seeing stuff about this topic all over the place.
 Here’s a great article from the current Atlantic Monthly about GM’s new shot at electric car fame and fortune (hopefully)
 

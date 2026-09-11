@@ -1,12 +1,15 @@
 ---
-title: "AllOfMp3 saga continues"
-subtitle: "Regular readers of this blog know about AllOfMp3.com, a Russian music si..."
-category: "298"
-tags: []
-date: "2007-05-28"
-type: "wp"
+category: '298'
+date: '2007-05-28'
+subtitle: Regular readers of this blog know about AllOfMp3.com, a Russian music si...
+tags:
+- music
+- legal
+title: AllOfMp3 saga continues
+type: wp
 wordpress_id: 1264
 ---
+
 Regular readers of this blog know about A[llOfMp3.com](http://www.allofmp3.com/), a Russian music site that sells music of all kinds for a ridiculously low price. It’s kind of like the [iTunes](http://www.apple.com/itunes/store/) or [EMusic](http://www.emusic.com) store, but at a fraction of the price.
 Every so often there is news that they are about to be shut down because they are fraudulently selling copyrighted music. They say that what they are doing is strictly legal by Russian law. 
 

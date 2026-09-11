@@ -1,12 +1,15 @@
 ---
-title: "American Airlines kinda-fail"
-subtitle: "I am traveling on my *usually* favorite Airline; and of course everyone knows that they are sufferin..."
-category: "298"
-tags: []
-date: "2009-10-22"
-type: "wp"
+category: '298'
+date: '2009-10-22'
+subtitle: I am traveling on my *usually* favorite Airline; and of course everyone
+  knows that they are sufferin...
+tags:
+- travel
+title: American Airlines kinda-fail
+type: wp
 wordpress_id: 790
 ---
+
 I am traveling on my *usually* favorite Airline; and of course everyone knows that they are suffering, right? And yes, the flight to L.A. is ridiculously inexpensive. But still, let’s say these raised my eyebrows:
 
 - When I checked in, I looked at the seat assignment chart and there were no free seats (I wanted to switch to an aisle seat.) Over the P.A. they said, more than once, that the plane was **totally totally full**. Yet when the doors closed, there were **at least 8 empty seats visible** to me from where I was sitting, including two whole rows. Don’t they have, like, computers, to keep track of who is on the plane and how many seats it has?

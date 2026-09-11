@@ -1,12 +1,14 @@
 ---
-title: "Field notes from a Nature Conservancy meeting"
-subtitle: "Check out this post Field notes from a Nature Conservancy meeting"
-category: "298"
-tags: []
-date: "2008-10-25"
-type: "wp"
+category: '298'
+date: '2008-10-25'
+subtitle: Check out this post Field notes from a Nature Conservancy meeting
+tags:
+- science
+title: Field notes from a Nature Conservancy meeting
+type: wp
 wordpress_id: 964
 ---
+
 Check out this post [Field notes from a Nature Conservancy meeting](http://www.realclimate.org/index.php/archives/2008/10/field-notes-from-a-nature-conservancy-meeting/):
 > “First, the Nature Conservancy has a strongly science-based policy for making land-purchasing decisions. They take into account things like the minimum viable ecosystem size in determining which acquisitions will actually have lasting impact.
 

@@ -1,12 +1,16 @@
 ---
-title: "WebInno is back in town"
-subtitle: "If you live in the Boston area and are in the tech business you should check out the more or less mo..."
-category: "298"
-tags: []
-date: "2008-07-01"
-type: "wp"
+category: '298'
+date: '2008-07-01'
+subtitle: If you live in the Boston area and are in the tech business you should check
+  out the more or less mo...
+tags:
+- webinno
+- boston
+title: WebInno is back in town
+type: wp
 wordpress_id: 1019
 ---
+
 If you live in the Boston area and are in the tech business you should check out the more or less monthly Web Innovators gathering sometimes referred to in shorthand as WebInno. Here is the [WebInnot blog](http://www.webinnovatorsgroup.com/category/blog/) and here is the [WebInno registration page](http://webinno18.eventbrite.com/) and announcement of the next WebInno event.
 For all of y’all who suffer from the boston-isnt-as-cool-as-silicon-valley syndrome, I strongly recommend you check out the next WebInno. Here again are the coordinates:
 

@@ -1,12 +1,15 @@
 ---
-title: "Upcoming Web Innovators Group meeting"
-subtitle: "Just found out that the WebInno group i..."
-category: "298"
-tags: ["729", "1007", "1120", "2105"]
-date: "2009-09-16"
-type: "wp"
+category: '298'
+date: '2009-09-16'
+subtitle: Just found out that the WebInno group i...
+tags:
+- webinno
+- boston
+title: Upcoming Web Innovators Group meeting
+type: wp
 wordpress_id: 801
 ---
+
 Just found out that the [WebInno group](http://www.eventbrite.com/contact-organizer?eid=389656473) is back in session after a summer hiatus. This is one of the best open meetings for techies and entrepreneurs to meet and talk and see each other’s stuff. Here’s the official blurb:
 > “The Web Innovators Group (WebInno) is comprised of people engaged in internet and mobile innovation in the Boston area. We aim to support entrepreneurs, visionaries, and creative thinkers in the field by holding events which foster community interaction.
 

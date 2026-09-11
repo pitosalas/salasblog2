@@ -1,12 +1,15 @@
 ---
-title: "From Demo 2008: Silobreaker – A unique new research tool"
-subtitle: "Joining the ranks of the growing number of **news aggregation and research** sites is Silobreaker"
-category: "298"
-tags: []
-date: "2008-02-29"
-type: "wp"
+category: '298'
+date: '2008-02-29'
+subtitle: Joining the ranks of the growing number of **news aggregation and research**
+  sites is Silobreaker
+tags:
+- demo-conference
+title: 'From Demo 2008: Silobreaker – A unique new research tool'
+type: wp
 wordpress_id: 1100
 ---
+
 Joining the ranks of the growing number of **news aggregation and research** sites is [Silobreaker](http://www.silobreaker.com), which I first met at Demo 2008.  **Two things** catch my interest with Silobreaker – try it by [clicking here for a search on the topic ‘Google’](http://www.silobreaker.com/Search.aspx?q=google&rd=true)
  
 - The result displayed for a search is **mult-dimensional or multi-media or whatever** you want to call it. In addition to the usual top stories about Google (for example) you find the top Videos about Google, a histogram showing article volume about Google over the last week, a concept network around Google. a map showing where in the world people are writing about Google. And more. Check it out yourself to see what I mean.

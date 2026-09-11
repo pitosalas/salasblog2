@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Weakness in Mac OS X Software Update"
-subtitle: "Everyone loves how much easier Mac OS X makes it to install software. Well sort of. It’s a place whe..."
-category: "538"
-tags: []
-date: "2007-10-15"
-type: "wp"
+category: '538'
+date: '2007-10-15'
+subtitle: Everyone loves how much easier Mac OS X makes it to install software. Well
+  sort of. It’s a place whe...
+tags:
+- macos
+title: '[GEEKY] Weakness in Mac OS X Software Update'
+type: wp
 wordpress_id: 1194
 ---
+
 Everyone loves how much easier Mac OS X makes it to install software. Well sort of. It’s a place where new users easily get stumped. What the heck are those .dmg files anyway, and where’s the installer? Well this post isn’t about that. After all, it wouldn’t count as [GEEKY] if that’s all it did.
 Being a neat freak, I have sub folders in my Applications folder, which as you know is the default place for software to be installed (“just copy the file, what could be easier?”)
 

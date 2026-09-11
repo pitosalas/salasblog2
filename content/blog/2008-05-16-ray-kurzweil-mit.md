@@ -1,12 +1,16 @@
 ---
-title: "Ray Kurzweil @ MIT"
-subtitle: "Went to hear Ray Kurzweil yesterday at MIT, at an [event jointly sponsored by IEEE and GBC/ACM Robot..."
-category: "298"
-tags: []
-date: "2008-05-16"
-type: "wp"
+category: '298'
+date: '2008-05-16'
+subtitle: Went to hear Ray Kurzweil yesterday at MIT, at an [event jointly sponsored
+  by IEEE and GBC/ACM Robot...
+tags:
+- ai
+- robotics
+title: Ray Kurzweil @ MIT
+type: wp
 wordpress_id: 1046
 ---
+
 Went to hear Ray Kurzweil yesterday at MIT, at an [event jointly sponsored by IEEE and GBC/ACM Robotics Sigs](http://www.ieeeboston.org/robotics_and_automation.htm). The blurb said:
 > “[…] With input from people around the world, an international group of leading technological thinkers were asked to identify the Grand Challenges for Engineering in the 21st Century [
 http://www.engineeringchallenges.org/](http://www.engineeringchallenges.org/). We’ve invited one of the leading authors of the report, Ray Kurzweil, to present some of its findings, give his impressions of the important technological trends and challenges likely to occur over the next hundred years or so, and challenge you, some of the leading students, researchers, and industry practitioners from the Boston and New England area, to help solve them.” (from [Event Invitation](http://www.ieeeboston.org/robotics_and_automation.htm))

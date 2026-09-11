@@ -1,12 +1,14 @@
 ---
-title: "Arnold is a cool governator"
-subtitle: "Check out Schwarzenegger Gives California Legislature A Hidden Finger"
-category: "422"
-tags: []
-date: "2009-10-28"
-type: "wp"
+category: '422'
+date: '2009-10-28'
+subtitle: Check out Schwarzenegger Gives California Legislature A Hidden Finger
+tags:
+- politics
+title: Arnold is a cool governator
+type: wp
 wordpress_id: 785
 ---
+
 Check out [Schwarzenegger Gives California Legislature A Hidden Finger ](http://feedproxy.google.com/~r/Techcrunch/~3/4oTAz5xglu0/)(**from** [TechCrunch](http://feeds.feedburner.com/Techcrunch):
 ** "![](https://i0.wp.com/cache0.techcrunch.com/wp-content/uploads/2009/10/fu.jpg?w=584)
 

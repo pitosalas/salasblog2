@@ -1,12 +1,14 @@
 ---
-title: "How Corrupt is Our Language in Economic Discourse?"
-subtitle: "Check out this post How Corrupt is Our Language in Economic Discourse?"
-category: "410"
-tags: []
-date: "2009-02-11"
-type: "wp"
+category: '410'
+date: '2009-02-11'
+subtitle: Check out this post How Corrupt is Our Language in Economic Discourse?
+tags:
+- politics
+title: How Corrupt is Our Language in Economic Discourse?
+type: wp
 wordpress_id: 889
 ---
+
 Check out this post [How Corrupt is Our Language in Economic Discourse?](http://austrianeconomists.typepad.com/weblog/2009/02/how-corrupt-is-our-language-in-economic-discourse.html):
 > "And as Deirdre McCloskey has put it, when your intellectual range is from M-N you think you are being open minded when you look at M and you look at N, but you certainly don’t see A or Z.  " (**from: **from [The Austrian Economists](http://austrianeconomists.typepad.com/weblog/atom.xml)) 
 

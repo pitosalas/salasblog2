@@ -1,12 +1,15 @@
 ---
-title: "Send Club Passim some click love"
-subtitle: "!passimlogo"
-category: "298"
-tags: []
-date: "2009-02-06"
-type: "wp"
+category: '298'
+date: '2009-02-06'
+subtitle: '!passimlogo'
+tags:
+- music
+- boston
+title: Send Club Passim some click love
+type: wp
 wordpress_id: 894
 ---
+
 ![passimlogo](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/2009/02/passimlogo.gif?resize=226%2C167)Hey, how about doing me a favor?
 It will only take you a minute or less. It won’t cost a penny. Help the [famous and wonderful Club Passim](http://www.clubpassim.org/) win a grant from, who else, Virgin America.
 

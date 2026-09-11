@@ -1,12 +1,14 @@
 ---
-title: "How to Opt Out of Junk Mail and Catalogs: Useful from Chris Pirillo"
-subtitle: "Check out this post"
-category: "298"
+category: '298'
+date: '2007-10-25'
+subtitle: Check out this post
+tag_review: no_fit
 tags: []
-date: "2007-10-25"
-type: "wp"
+title: 'How to Opt Out of Junk Mail and Catalogs: Useful from Chris Pirillo'
+type: wp
 wordpress_id: 1186
 ---
+
 Check out [this post](http://chris.pirillo.com/2007/10/24/how-to-opt-out-of-junk-mail-and-catalogs-2/) from [Chris Pirillo](http://chris.pirillo.com):
 > 
 

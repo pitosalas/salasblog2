@@ -1,12 +1,15 @@
 ---
-title: "Great magazine articles"
-subtitle: "I was going to wait until I had read each of these great articles that all won the [“Sidney Awards”]..."
-category: "298"
+category: '298'
+date: '2008-02-05'
+subtitle: I was going to wait until I had read each of these great articles that all
+  won the [“Sidney Awards”]...
+tag_review: no_fit
 tags: []
-date: "2008-02-05"
-type: "wp"
+title: Great magazine articles
+type: wp
 wordpress_id: 1118
 ---
+
 I was going to wait until I had read each of these great articles that all won the [“Sidney Awards”](http://www.nytimes.com/2007/12/25/opinion/25brooks.html?_r=1&ref=opinion&oref=slogin) but this post was getting stale. And then [part two of the Sidney awards](http://www.nytimes.com/2007/12/28/opinion/28brooks.html?_r=1&ref=opinion&oref=slogin) article came out, and I still hadn’t published this. So, enough already.
 If you appreciate really excellent non fiction writing, you owe it to yourself to read some of these. All the ones I’ve read so far, about topics I didn’t know I would find interesting, have been excellent.
 

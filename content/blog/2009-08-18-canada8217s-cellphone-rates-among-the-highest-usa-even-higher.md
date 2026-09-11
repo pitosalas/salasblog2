@@ -1,12 +1,15 @@
 ---
-title: "Canada’s cellphone rates among the highest, USA even higher!"
-subtitle: "Did you think you pay a lot for cellphone coverage? An [article in the Globe and Mail about cellphon..."
-category: "538"
-tags: []
-date: "2009-08-18"
-type: "wp"
+category: '538'
+date: '2009-08-18'
+subtitle: Did you think you pay a lot for cellphone coverage? An [article in the Globe
+  and Mail about cellphon...
+tags:
+- technology
+title: Canada’s cellphone rates among the highest, USA even higher!
+type: wp
 wordpress_id: 813
 ---
+
 Did you think you pay a lot for cellphone coverage? An [article in the Globe and Mail about cellphone rates](http://www.theglobeandmail.com/news/technology/canadas-cellphone-rates-among-highest/article1247843/) states that while Canada’s cellphone rates are really high compared to other countries, the USA pays even more:
 > “In each category, however, services in Canada rated less expensive than those in the United States, which ranked most expensive in low and medium usage and sixth most expensive in the high-use category.” (from [The Globe and Mail](http://www.theglobeandmail.com/news/technology/canadas-cellphone-rates-among-highest/article1247843/))
 

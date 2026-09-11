@@ -1,12 +1,14 @@
 ---
-title: "I am convinced by this"
-subtitle: "Sergey Brin of Google has an op-ed in today’s New York Times"
-category: "298"
-tags: []
-date: "2009-10-09"
-type: "wp"
+category: '298'
+date: '2009-10-09'
+subtitle: Sergey Brin of Google has an op-ed in today’s New York Times
+tags:
+- books
+title: I am convinced by this
+type: wp
 wordpress_id: 797
 ---
+
 Sergey Brin of Google has an op-ed in today’s [New York Times](http://www.nytimes.com/2009/10/09/opinion/09brin.html?_r=1&partner=rss&emc=rss), making the case for Google Books:
 **“But the vast majority of books ever written are not accessible to anyone except the most tenacious researchers at premier academic libraries. Books written after 1923 quickly disappear into a literary black hole. With rare exceptions, one can buy them only for the small number of years they are in print. After that, they are found only in a vanishing number of libraries and used book stores. As the years pass, contracts get lost and forgotten, authors and publishers disappear, the rights holders become impossible to track down.” (from** [A Library to Last Forever](http://www.nytimes.com/2009/10/09/opinion/09brin.html?_r=1&partner=rss&emc=rss))
 

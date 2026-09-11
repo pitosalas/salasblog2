@@ -1,12 +1,14 @@
 ---
-title: "Life Lock’s CEO Identity Stolen"
-subtitle: "Check this post Life Lock’s CEO Identity Stolen"
-category: "50"
+category: '50'
+date: '2008-05-30'
+subtitle: Check this post Life Lock’s CEO Identity Stolen
+tag_review: no_fit
 tags: []
-date: "2008-05-30"
-type: "wp"
+title: Life Lock’s CEO Identity Stolen
+type: wp
 wordpress_id: 1037
 ---
+
 Check this post [Life Lock’s CEO Identity Stolen](http://www.metafilter.com/72057/Life-Locks-CEO-Identity-Stolen) from [MetaFilter](http://xml.metafilter.com/rss.xml):
 > [Life Lock CEO’s Identify Stolen](http://www.cnn.com/2008/CRIME/05/22/lifelock.flap.ap/) Remember all those commercials recently tell us to steal Life Lock’s CEO Todd Davis’ Identity? Well seems as though someone did.
 

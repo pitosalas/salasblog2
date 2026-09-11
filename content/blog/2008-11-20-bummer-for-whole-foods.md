@@ -1,12 +1,15 @@
 ---
-title: "Bummer for Whole Foods"
-subtitle: "Not than anyone is buying any stocks these days (are you?) but I happened to have a very small numbe..."
-category: "298"
-tags: []
-date: "2008-11-20"
-type: "wp"
+category: '298'
+date: '2008-11-20'
+subtitle: Not than anyone is buying any stocks these days (are you?) but I happened
+  to have a very small numbe...
+tags:
+- business
+title: Bummer for Whole Foods
+type: wp
 wordpress_id: 944
 ---
+
 Not than anyone is buying any stocks these days (are you?) but I happened to have a very small number of Whole Foods shares, so [this bit of news explains why Whole Foods have been tanking](http://seekingalpha.com/article/105807-whole-foods-in-a-whole-lot-of-trouble) (other than the general lowering tide which lowers all boats)
 > “… Whole Foods has had a cult like following amongst upscale urban
 professionals. Aspirational shoppers even mocked their own spending by

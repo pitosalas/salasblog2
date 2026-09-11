@@ -1,12 +1,14 @@
 ---
-title: "Dave (not that one) writes about Fear of Failure"
-subtitle: "I just came across Dave Dupre’s blog. Some good reading there, for example:"
-category: "422"
-tags: []
-date: "2008-06-27"
-type: "wp"
+category: '422'
+date: '2008-06-27'
+subtitle: 'I just came across Dave Dupre’s blog. Some good reading there, for example:'
+tags:
+- business
+title: Dave (not that one) writes about Fear of Failure
+type: wp
 wordpress_id: 1022
 ---
+
 I just came across [Dave Dupre’s blog](http://davedupre.com). Some good reading there, for example:
 > “[…snip] If the single test does not show a huge improvement, the project is considered a failure and scrapped. This happens all the time, and it always stifles innovation. Why propose something new if you have to be right all the time?
 

@@ -1,12 +1,15 @@
 ---
-title: "Subscribe to Pandora!"
-subtitle: "I’ve known about Pandora for ages, and the last month or so have been usin..."
-category: "298"
-tags: ["1091", "1492", "1580"]
-date: "2009-02-01"
-type: "wp"
+category: '298'
+date: '2009-02-01'
+subtitle: I’ve known about Pandora for ages, and the last month or so have been usin...
+tags:
+- music
+- technology
+title: Subscribe to Pandora!
+type: wp
 wordpress_id: 899
 ---
+
 I’ve known about [Pandora](http://www.pandora.com) for ages, and the last month or so have been using it again, a lot. It’s quite amazing: **constant, free, music**. Based on your interests.
 How does it work? Well just go to [Pandora](http://www.pandora.com), set up a free account, and indicate, for example, an artist or style you like. It begins playing songs, one after another which people who’ve liked what you like have also liked. You hear a song or artist you don’t know, indicate with a thumb up or down how you like it. That’s it.
 

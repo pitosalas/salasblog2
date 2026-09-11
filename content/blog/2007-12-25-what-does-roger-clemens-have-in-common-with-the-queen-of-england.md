@@ -1,12 +1,14 @@
 ---
-title: "What does Roger Clemens have in  common with the Queen of England?"
-subtitle: "> Here is Roger Clemens denying his use of steroids….."
-category: "298"
+category: '298'
+date: '2007-12-25'
+subtitle: '> Here is Roger Clemens denying his use of steroids…..'
+tag_review: no_fit
 tags: []
-date: "2007-12-25"
-type: "wp"
+title: What does Roger Clemens have in  common with the Queen of England?
+type: wp
 wordpress_id: 1148
 ---
+
 Youtube!
 > [Here is Roger Clemens denying his use of steroids…..](http://www.youtube.com/watch?v=vD0GHx980CU)
 

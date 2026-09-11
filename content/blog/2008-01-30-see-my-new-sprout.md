@@ -1,12 +1,14 @@
 ---
-title: "See my new sprout"
-subtitle: "http://farm.sproutbuilder.com/2341/load/cACdIgrQADCA209Z.swf"
-category: "298"
-tags: []
-date: "2008-01-30"
-type: "wp"
+category: '298'
+date: '2008-01-30'
+subtitle: http://farm.sproutbuilder.com/2341/load/cACdIgrQADCA209Z.swf
+tags:
+- technology
+title: See my new sprout
+type: wp
 wordpress_id: 1125
 ---
+
 [http://farm.sproutbuilder.com/2341/load/cACdIgrQADCA209Z.swf](http://farm.sproutbuilder.com/2341/load/cACdIgrQADCA209Z.swf)![](https://i0.wp.com/counters.gigya.com/wildfire/CIMP/Jmx*PTEyMDE2NzEwODc1NDgmcHQ9MTIwMTY3MTA5ODU4NiZwPTEyMDc*MSZkPTI3Nzkmbj*=.jpg?resize=0%2C0)
 The widget to the left was created using [Sprout](http://www.sproutbuilder.com) – in fact they insist that those be called “Sprouts” – don’t ask me why. Notice how it’s spinning and counting down? It’s flash.
 

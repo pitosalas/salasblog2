@@ -1,12 +1,15 @@
 ---
-title: "Join the club: I saw, I touched, an iPhone"
-subtitle: "I am not going to write yet another long review or commentary. But I can’t resist a few crass words:"
-category: "298"
-tags: []
-date: "2007-07-09"
-type: "wp"
+category: '298'
+date: '2007-07-09'
+subtitle: 'I am not going to write yet another long review or commentary. But I can’t
+  resist a few crass words:'
+tags:
+- iphone
+title: 'Join the club: I saw, I touched, an iPhone'
+type: wp
 wordpress_id: 1242
 ---
+
 I am not going to write yet another long review or commentary. But I can’t resist a few crass words:
  
 - It’s real and it works. They had 4 of them in stock at my neighborhood ATT/Cingular shop. It is indeed gorgeous. Sleek, star-trekky. It does everything you see in the ads (and I am sure, much much more.)

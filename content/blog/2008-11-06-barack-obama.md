@@ -1,12 +1,15 @@
 ---
-title: "Barack Obama"
-subtitle: "!["
-category: "298"
-tags: []
-date: "2008-11-06"
-type: "wp"
+category: '298'
+date: '2008-11-06'
+subtitle: '!['
+tags:
+- politics
+- personal
+title: Barack Obama
+type: wp
 wordpress_id: 955
 ---
+
 [![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/2008/11/photo0019-300x225.jpg?resize=300%2C225)On Tuesday, Chris and I volunteered for Barack Obama. I got a very interesting perspective on the election process in the US, and to tell you the truth, it was impressive.](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/2008/11/photo0019.jpg)
 We drove up to New Hampshire, and checked into the Plymouth democratic campaign headquarters. They promptly dispatched us to [Benton, NH](http://www.nh.gov/nhes/elmi/htmlprofiles/benton.html), apparently half an hour from the Canadian border.
 

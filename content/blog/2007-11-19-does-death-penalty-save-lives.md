@@ -1,12 +1,15 @@
 ---
-title: "Does Death Penalty Save Lives?"
-subtitle: "Very interesting article in the New York Times discussing whether the death penalty saves lives"
-category: "298"
-tags: []
-date: "2007-11-19"
-type: "wp"
+category: '298'
+date: '2007-11-19'
+subtitle: Very interesting article in the New York Times discussing whether the death
+  penalty saves lives
+tags:
+- politics
+title: Does Death Penalty Save Lives?
+type: wp
 wordpress_id: 1179
 ---
+
 Very interesting [article in the New York Times discussing whether the death penalty saves lives](http://www.nytimes.com/2007/11/18/us/18deter.html),
 “According to roughly a dozen recent studies, executions save lives. For each inmate put to death, the studies say, 3 to 18 murders are prevented.
 

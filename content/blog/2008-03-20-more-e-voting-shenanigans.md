@@ -1,12 +1,15 @@
 ---
-title: "More e-Voting shenanigans"
-subtitle: "You know I follow the vagaries of computer voting machines, right? Here’s an interesting article abo..."
-category: "298"
-tags: []
-date: "2008-03-20"
-type: "wp"
+category: '298'
+date: '2008-03-20'
+subtitle: You know I follow the vagaries of computer voting machines, right? Here’s
+  an interesting article abo...
+tags:
+- trustthevote
+title: More e-Voting shenanigans
+type: wp
 wordpress_id: 1083
 ---
+
 You know I follow the vagaries of computer voting machines, right? Here’s an interesting article about how one e-voting machine maker is trying to prohibit a researcher from studying the security (= trying to hack into) one of their machines:
 > “Princeton Professor **Edward Felten** astonished Congress and increased doubts about electronic voting two years ago when he showed a House committee how easily he could open a Diebold touch-screen machine, insert new software and alter vote totals.
 

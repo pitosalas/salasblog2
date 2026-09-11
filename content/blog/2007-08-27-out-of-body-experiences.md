@@ -1,12 +1,15 @@
 ---
-title: "Out of body experiences"
-subtitle: "A really interesting experiment reported in various places trigger the sensation of an [tag]out of b..."
-category: "298"
-tags: []
-date: "2007-08-27"
-type: "wp"
+category: '298'
+date: '2007-08-27'
+subtitle: A really interesting experiment reported in various places trigger the sensation
+  of an [tag]out of b...
+tags:
+- science
+title: Out of body experiences
+type: wp
 wordpress_id: 1221
 ---
+
 A really interesting experiment reported in various places trigger the sensation of an [tag]out of body experience[/tag]. I read about it first in the New York Times: [“Scientists induce Out-of-Body Sensation.”](http://www.nytimes.com/2007/08/23/science/23cnd-body.html?_r=1&oref=slogin) 
 But here are some additional links about it: 
 

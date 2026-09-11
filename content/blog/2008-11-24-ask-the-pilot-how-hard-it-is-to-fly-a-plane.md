@@ -1,12 +1,15 @@
 ---
-title: "Ask the pilot how hard it is to fly a plane"
-subtitle: "Ask The Pilot is a regular Salon column. Recently there was a good one, essentially about [how hard ..."
-category: "298"
+category: '298'
+date: '2008-11-24'
+subtitle: Ask The Pilot is a regular Salon column. Recently there was a good one,
+  essentially about [how hard ...
+tag_review: no_fit
 tags: []
-date: "2008-11-24"
-type: "wp"
+title: Ask the pilot how hard it is to fly a plane
+type: wp
 wordpress_id: 943
 ---
+
 Ask The Pilot is a regular Salon column. Recently there was a good one, essentially about [how hard or easy it is to fly and land a plane](http://www.salon.com/tech/col/smith/2008/11/14/askthepilot298/index.html) nowadays:
 > “But wait, he goes on. “Most of the time,” says heyja, “pilots will push the seats back, push a button, never look out the window, arranging their Jeppsens [sic], drink their coffee, whine about the Democrats and their disappearing pensions.” (from [Ask The Pilot](http://www.salon.com/tech/col/smith/2008/11/14/askthepilot298/index.html))
 

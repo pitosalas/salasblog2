@@ -1,12 +1,14 @@
 ---
-title: "Remember to change your clocks tonight"
-subtitle: "> “Revelers will have an extra second to enjoy the New Year celebrations."
-category: "298"
-tags: ["1524", "1818", "2005"]
-date: "2008-12-31"
-type: "wp"
+category: '298'
+date: '2008-12-31'
+subtitle: '> “Revelers will have an extra second to enjoy the New Year celebrations.'
+tags:
+- science
+title: Remember to change your clocks tonight
+type: wp
 wordpress_id: 916
 ---
+
 > “Revelers will have an extra second to enjoy the New Year celebrations.
 
 Drunken party goers may not notice but, thanks to the Earth’s erratic rotation, the countdown to 2009 will last a moment longer.

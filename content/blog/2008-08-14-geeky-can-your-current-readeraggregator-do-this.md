@@ -1,12 +1,14 @@
 ---
-title: "[GEEKY] Can your current reader/aggregator do this?"
-subtitle: "Check out the latest summary of amazing feats"
-category: "50"
+category: '50'
+date: '2008-08-14'
+subtitle: Check out the latest summary of amazing feats
+tag_review: no_fit
 tags: []
-date: "2008-08-14"
-type: "wp"
+title: '[GEEKY] Can your current reader/aggregator do this?'
+type: wp
 wordpress_id: 995
 ---
+
 Check out the [latest summary of amazing feats ](http://www.blogbridge.com/products-services/blogbridge/visual-tour/)by BlogBridge. I don’t want to be too cheeky, but there are some pretty cool things that you get from BlogBridge (for free) that you can’t get anywhere else.
 BlogBridge is definitely a serious tool which is why I bit my tongue and marked this post ‘geeky’ but really it’s also, as you know, my labor of love, so I can’t resist showing it off. [Hope you take a moment to try it!](http://www.blogbridge.com/look)
 

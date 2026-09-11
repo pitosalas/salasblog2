@@ -1,12 +1,14 @@
 ---
-title: "From Demo 2008: Cool research site – SiloBreaker"
-subtitle: "Take a look at SiloBreaker (don’t ask me why it’s called that; is it ..."
-category: "298"
-tags: []
-date: "2008-02-13"
-type: "wp"
+category: '298'
+date: '2008-02-13'
+subtitle: Take a look at SiloBreaker (don’t ask me why it’s called that; is it ...
+tags:
+- demo-conference
+title: 'From Demo 2008: Cool research site – SiloBreaker'
+type: wp
 wordpress_id: 1113
 ---
+
 Take a look at [SiloBreaker](http://www.silobreaker.com/) (don’t ask me why it’s called that; is it supposed to break down silos?)
 Try typing something into the search box, say “Pakistan”. You will see that it identifies it as a country (it would also identify companies, people, and who knows what else.) Right off that’s interesting, right?
 

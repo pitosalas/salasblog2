@@ -1,12 +1,14 @@
 ---
-title: "What I am reading this morning"
-subtitle: "A few really quick links:"
-category: "298"
+category: '298'
+date: '2008-11-29'
+subtitle: 'A few really quick links:'
+tag_review: no_fit
 tags: []
-date: "2008-11-29"
-type: "wp"
+title: What I am reading this morning
+type: wp
 wordpress_id: 937
 ---
+
 A few really quick links:
 
 - [Responsible Tweeting](http://www.poynter.org/column.asp?id=31&aid=154820), about the role of Twitter ‘news’ in influencing real world events.

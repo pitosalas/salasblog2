@@ -1,12 +1,15 @@
 ---
-title: "iPhone pricing detail"
-subtitle: "I was chatting with my neighborhood iPhone (Cingular/AT&T) dealer and learned this interesting detai..."
-category: "298"
-tags: []
-date: "2007-07-14"
-type: "wp"
+category: '298'
+date: '2007-07-14'
+subtitle: I was chatting with my neighborhood iPhone (Cingular/AT&T) dealer and learned
+  this interesting detai...
+tags:
+- iphone
+title: iPhone pricing detail
+type: wp
 wordpress_id: 1240
 ---
+
 I was chatting with my neighborhood iPhone (Cingular/AT&T) dealer and learned this interesting detail (which all you hard code iPhone fanatics out there I am sure know all about.)
 The price of an iPhone ($500 and $700) is the same whether you are activating a new service with Cingular or want to use the phone on an existing contract.
 

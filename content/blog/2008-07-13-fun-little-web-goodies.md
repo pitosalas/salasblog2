@@ -1,12 +1,14 @@
 ---
-title: "Fun little web goodies"
-subtitle: "Check out “Forget Photoshop: 15 Online Graphics Generators"
-category: "298"
-tags: ["1162"]
-date: "2008-07-13"
-type: "wp"
+category: '298'
+date: '2008-07-13'
+subtitle: 'Check out “Forget Photoshop: 15 Online Graphics Generators'
+tags:
+- design
+title: Fun little web goodies
+type: wp
 wordpress_id: 1013
 ---
+
 Check out “[Forget Photoshop: 15 Online Graphics Generators](http://mashable.com/2007/05/28/generators/)“:
 > “Shiny edges, reflections, neat 3D effects – you love them and can’t get enough of them. Well, there’s no reason to spend any time in Photoshop creating them since there are so many tools out there that will do the dirty work for you. Without further ado, here’s a roundup of 15 online Web 2.0 graphics generators.” (from “[Forget Photoshop: 15 Online Graphics Generators](http://mashable.com/2007/05/28/generators/)“)
 

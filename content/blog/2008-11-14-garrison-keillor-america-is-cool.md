@@ -1,12 +1,14 @@
 ---
-title: "Garrison Keillor: America is cool!"
-subtitle: "A neat article in Salon, by Garrison Keillor – America is cool:"
-category: "298"
-tags: []
-date: "2008-11-14"
-type: "wp"
+category: '298'
+date: '2008-11-14'
+subtitle: 'A neat article in Salon, by Garrison Keillor – America is cool:'
+tags:
+- politics
+title: 'Garrison Keillor: America is cool!'
+type: wp
 wordpress_id: 949
 ---
+
 A neat article in [Salon, by Garrison Keillor – America is cool](/wp-admin/post-new.php):
 > “The world expects us to elect pompous yahoos and instead we have us a 47-year-old prince from the prairie who cheerfully ran the race, and when his opponents threw sand at him, he just smiled back.
 

@@ -1,12 +1,14 @@
 ---
-title: "Just when I was thinking about stopping my NetFlix subscription"
-subtitle: "TIVO keeps on getting cooler and cooler:"
-category: "298"
+category: '298'
+date: '2009-06-10'
+subtitle: 'TIVO keeps on getting cooler and cooler:'
+tag_review: no_fit
 tags: []
-date: "2009-06-10"
-type: "wp"
+title: Just when I was thinking about stopping my NetFlix subscription
+type: wp
 wordpress_id: 838
 ---
+
 [TIVO keeps on getting cooler and cooler:](http://online.wsj.com/article/SB122533284014583011.html?mod=djemTECH)
 > “Netflix said it will begin testing a service Thursday that lets users with TiVo’s latest DVR models access movies and television shows from an online library of 12,000 Netflix titles. The service will be available at no additional charge to subscribers of Netflix’s DVD rental service, as long as the Netflix customers are on rental plans that cost at least $8.99 a month.” (from [WSJ](http://online.wsj.com/article/SB122533284014583011.html?mod=djemTECH))
 

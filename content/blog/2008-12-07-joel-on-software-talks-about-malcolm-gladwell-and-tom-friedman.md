@@ -1,12 +1,15 @@
 ---
-title: "Joel on Software talks about Malcolm Gladwell and Tom Friedman"
-subtitle: "There have been a number of articles taking shots at some of Malcolm Gladwell’s latest book, “Outlie..."
-category: "298"
-tags: []
-date: "2008-12-07"
-type: "wp"
+category: '298'
+date: '2008-12-07'
+subtitle: There have been a number of articles taking shots at some of Malcolm Gladwell’s
+  latest book, “Outlie...
+tags:
+- books
+title: Joel on Software talks about Malcolm Gladwell and Tom Friedman
+type: wp
 wordpress_id: 931
 ---
+
 There have been a number of articles taking shots at some of Malcolm Gladwell’s latest book, “Outliers”. No doubt Mr. Gladwell is really good at getting visibility for his books and has hit upon a formula with The Tipping Point and Blink which are fascinating reads, with profound insights, that happen to sell well.
 [Michiko Kakutani in the New York Times](http://www.nytimes.com/2008/11/18/books/18kaku.html?_r=2) was the first one I saw being not 100% flattering about the book, saying:
 

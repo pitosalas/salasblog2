@@ -1,12 +1,15 @@
 ---
-title: "The *myth* of multi-tasking"
-subtitle: 'I sometimes feel like I don’t multi-task quite as well as "everyone else". So I was interested in [t...'
-category: "50"
+category: '50'
+date: '2007-04-02'
+subtitle: I sometimes feel like I don’t multi-task quite as well as "everyone else".
+  So I was interested in [t...
+tag_review: no_fit
 tags: []
-date: "2007-04-02"
-type: "wp"
+title: The *myth* of multi-tasking
+type: wp
 wordpress_id: 1294
 ---
+
 I sometimes feel like I don’t multi-task quite as well as "everyone else". So I was interested in [this post](http://feeds.feedburner.com/~r/43Folders/~3/104476049/) from [43 Folders](http://www.43folders.com):
 > 
  Yesterday’s *New York Times* front page ran an article pulling together the results of several recent studies looking at how interruptions and attempts to multitask can affect the quality of work as well as the length of recovery time. 
