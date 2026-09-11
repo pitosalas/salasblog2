@@ -3,6 +3,7 @@ category: '298'
 date: '2006-03-10'
 subtitle: Hello sports fans. We are having another super-informal-geeky-but-not-exclusively-geeks
   geek dinner,...
+tag_review: no_fit
 tags: []
 title: 'RSS Alley Geek Dinner: March 29th – 6:30pm – Harvard Square? Should be even
   more fun than the last one!'

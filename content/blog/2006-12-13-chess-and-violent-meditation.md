@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-12-13'
 subtitle: Check out this post from [empire
+tag_review: no_fit
 tags: []
 title: Chess and Violent Meditation
 type: wp

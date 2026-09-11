@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-06-19'
 subtitle: Guy Kawasaki with another one of his great posts
+tag_review: no_fit
 tags: []
 title: Top Ten Lies
 type: wp

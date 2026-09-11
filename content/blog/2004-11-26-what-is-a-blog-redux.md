@@ -2,6 +2,7 @@
 category: '51'
 date: '2004-11-26'
 subtitle: I just came across a good summary o...
+tag_review: no_fit
 tags: []
 title: What is a Blog, redux
 type: wp

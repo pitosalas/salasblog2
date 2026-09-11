@@ -2,6 +2,7 @@
 category: '298'
 date: '2007-01-09'
 subtitle: A very interesting commentary on the phenomenon of blogging. Is what we
+tag_review: no_fit
 tags: []
 title: Drama in Blog Time.
 type: wp

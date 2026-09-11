@@ -3,6 +3,7 @@ category: '50'
 date: '2004-09-26'
 subtitle: We are **looking for a few people **who would be willing to give verbal
   feedback on BlogBridge usabi...
+tag_review: no_fit
 tags: []
 title: BlogBridge Usability Victims
 type: wp

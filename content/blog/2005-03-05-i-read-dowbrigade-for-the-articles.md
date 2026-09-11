@@ -2,6 +2,7 @@
 category: '298'
 date: '2005-03-05'
 subtitle: Do you know Dowbrigade? An almost always interesting blo...
+tag_review: no_fit
 tags: []
 title: I read Dowbrigade for the articles
 type: wp

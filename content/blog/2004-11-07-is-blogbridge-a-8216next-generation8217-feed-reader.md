@@ -3,6 +3,7 @@ category: '50'
 date: '2004-11-07'
 subtitle: In response to a query from Andrew Watt and Danny Ayers about what they
   called next-generation infro...
+tag_review: no_fit
 tags: []
 title: Is BlogBridge a ‘next generation’ Feed Reader?
 type: wp

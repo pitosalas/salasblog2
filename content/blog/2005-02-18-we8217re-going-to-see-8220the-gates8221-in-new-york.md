@@ -2,6 +2,7 @@
 category: '298'
 date: '2005-02-18'
 subtitle: '![snap.jpg'
+tag_review: no_fit
 tags: []
 title: We’re going to see “The Gates” in New York
 type: wp

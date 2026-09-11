@@ -3,6 +3,7 @@ category: '538'
 date: '2006-10-30'
 subtitle: Over on our new BlogBridge site, we’ve been working on a new set of Screencasts.
   We discovered vario...
+tag_review: no_fit
 tags: []
 title: Experiences creating new BlogBridge screencasts
 type: wp

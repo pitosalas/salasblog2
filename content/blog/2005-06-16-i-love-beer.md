@@ -2,6 +2,7 @@
 category: '298'
 date: '2005-06-16'
 subtitle: Ok, but, unlike Simplebits, this picture
+tag_review: no_fit
 tags: []
 title: I love beer
 type: wp

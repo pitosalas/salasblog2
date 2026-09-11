@@ -2,6 +2,7 @@
 category: '538'
 date: '2006-02-16'
 subtitle: '!100319926 6Bac19F6Bc'
+tag_review: no_fit
 tags: []
 title: Geek Dinner a great success!
 type: wp

@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-08-02'
 subtitle: Yeah this is **extraordinarily weird**. As Yakov Smirnov
+tag_review: no_fit
 tags: []
 title: 'Look closely: it’s a mermaid!'
 type: wp

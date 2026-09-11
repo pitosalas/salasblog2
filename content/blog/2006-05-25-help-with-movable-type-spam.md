@@ -3,6 +3,7 @@ category: '51'
 date: '2006-05-25'
 subtitle: Both this blog and the BlogBridge have been getting spammed more and with
   both comment and trackback...
+tag_review: no_fit
 tags: []
 title: Help with movable type spam?
 type: wp

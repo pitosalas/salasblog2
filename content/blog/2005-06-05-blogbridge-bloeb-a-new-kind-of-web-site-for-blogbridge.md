@@ -3,6 +3,7 @@ category: '50'
 date: '2005-06-05'
 subtitle: We’ve been experimenting with a **switcharoo** of the BlogBridge web site
   – a major overhaul conceiv...
+tag_review: no_fit
 tags: []
 title: '[BLOGBRIDGE] Bloeb: A new kind of web site for BlogBridge'
 type: wp

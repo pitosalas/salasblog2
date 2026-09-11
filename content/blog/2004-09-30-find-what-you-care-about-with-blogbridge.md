@@ -3,6 +3,7 @@ category: '50'
 date: '2004-09-30'
 subtitle: We just got a **totally cool **new BlogBridge feature working, which actually
   was suggested by a use...
+tag_review: no_fit
 tags: []
 title: Find what you care about with BlogBridge
 type: wp

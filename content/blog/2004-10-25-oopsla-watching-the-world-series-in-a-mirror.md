@@ -2,6 +2,7 @@
 category: '298'
 date: '2004-10-25'
 subtitle: Just got to Vancouver for OOPSLA. Just checked int...
+tag_review: no_fit
 tags: []
 title: '[OOPSLA] Watching the World Series in a mirror'
 type: wp

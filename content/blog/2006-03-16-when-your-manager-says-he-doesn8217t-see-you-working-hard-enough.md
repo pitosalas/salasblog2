@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-03-16'
 subtitle: 'Here’s a clever retort that I heard from a colleague today:'
+tag_review: no_fit
 tags: []
 title: When your manager says he doesn’t see you working hard enough
 type: wp

@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-12-14'
 subtitle: Check out [this
+tag_review: no_fit
 tags: []
 title: A good bit by Bruce Schneier about “Real-World Passwords”
 type: wp

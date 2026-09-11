@@ -3,6 +3,7 @@ category: '50'
 date: '2004-11-20'
 subtitle: Hey, sorry if you aren’t a BlogBridge user yet, but I just can’t resist
   some news here.
+tag_review: no_fit
 tags: []
 title: New BlogBridge Alpha
 type: wp

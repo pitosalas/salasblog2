@@ -3,6 +3,7 @@ category: '298'
 date: '2006-11-29'
 subtitle: Some clever scientists are trying to measure how fast meme’s travel on the
   web. My contribution to t...
+tag_review: no_fit
 tags: []
 title: What’s a meme and how fast does it travel?
 type: wp

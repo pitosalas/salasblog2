@@ -2,6 +2,7 @@
 category: '422'
 date: '2005-08-23'
 subtitle: I’ve subscribed to this list from OCI
+tag_review: no_fit
 tags: []
 title: '[Geek] Good Java Mailing List'
 type: wp

@@ -2,6 +2,7 @@
 category: '50'
 date: '2004-03-11'
 subtitle: We made some major new progress since the last update.
+tag_review: no_fit
 tags: []
 title: BlogBridge Major architectural progress
 type: wp

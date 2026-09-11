@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-03-16'
 subtitle: Tivo has been doing more and more cool things with their little box.
+tag_review: no_fit
 tags: []
 title: American Idol fans with Tivo
 type: wp

@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-09-26'
 subtitle: Click here to see the picture. OUCH! No additional words needed!
+tag_review: no_fit
 tags: []
 title: That’s gotta hurt!
 type: wp

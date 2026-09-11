@@ -3,6 +3,7 @@ category: '298'
 date: '2005-09-01'
 subtitle: I’ve been away for several days, while following the catastrophe in the
   gulf unfolding, via TV and r...
+tag_review: no_fit
 tags: []
 title: New Orleans
 type: wp

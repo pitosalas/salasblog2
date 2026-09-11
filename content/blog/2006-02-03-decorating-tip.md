@@ -3,6 +3,7 @@ category: '298'
 date: '2006-02-03'
 subtitle: Hanging a picture on the wall? The perennial question, “how high should
   it be”?
+tag_review: no_fit
 tags: []
 title: Decorating tip
 type: wp

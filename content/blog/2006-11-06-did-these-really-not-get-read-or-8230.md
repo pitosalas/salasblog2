@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-11-06'
 subtitle: 'This just struck me as curious: “Letters to God end up in ocean, unread”'
+tag_review: no_fit
 tags: []
 title: Did these really not get read, or, …?
 type: wp

@@ -3,6 +3,7 @@ category: '51'
 date: '2005-01-29'
 subtitle: It’s **one thing** to be interested in blogs so you can read and learn and
   become aware of new ideas...
+tag_review: no_fit
 tags: []
 title: Too much information!
 type: wp

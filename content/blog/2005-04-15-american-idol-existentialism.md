@@ -3,6 +3,7 @@ category: '298'
 date: '2005-04-15'
 subtitle: For you closet viewers of American Idol (the TV Show), I thought you’d be
   a...
+tag_review: no_fit
 tags: []
 title: American Idol Existentialism
 type: wp

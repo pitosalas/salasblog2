@@ -2,6 +2,7 @@
 category: '51'
 date: '2005-03-21'
 subtitle: If you are a blog aficionado then you’ve followed this debate, ad *something*.
+tag_review: no_fit
 tags: []
 title: Blogging and journalism … again?
 type: wp

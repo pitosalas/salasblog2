@@ -3,6 +3,7 @@ category: '298'
 date: '2006-04-16'
 subtitle: Boy, blogs sure are **hot**, aren’t they? I’ve been noticing the New York
   Times regularly quoting bl...
+tag_review: no_fit
 tags: []
 title: Blogging is “essential” to a good career
 type: wp

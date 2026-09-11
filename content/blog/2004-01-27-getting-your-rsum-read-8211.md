@@ -2,6 +2,7 @@
 category: '1'
 date: '2004-01-27'
 subtitle: '**Getting Your R©sum© Read – From Joel Spolsky'
+tag_review: no_fit
 tags: []
 title: Getting Your R�sum� Read –
 type: wp

@@ -3,6 +3,7 @@ category: '298'
 date: '2006-05-10'
 subtitle: This just struck me ironic because I just finished reading an interesting
   article in [The Atlantic a...
+tag_review: no_fit
 tags: []
 title: eHarmony should use their own matching algorithm
 type: wp

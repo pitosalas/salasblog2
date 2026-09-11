@@ -2,6 +2,7 @@
 category: '538'
 date: '2005-12-05'
 subtitle: Check out Liam Breck’s new blog.
+tag_review: no_fit
 tags: []
 title: Web 2.0, I knew ye well. Here comes Web 2.5
 type: wp

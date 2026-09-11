@@ -3,6 +3,7 @@ category: '298'
 date: '2004-02-04'
 subtitle: '**Stern on Jackson: **What total sillyness, all the outrage over Janet
   Jackson’s'
+tag_review: no_fit
 tags: []
 title: Stern on Jackson
 type: wp

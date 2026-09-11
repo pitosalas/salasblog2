@@ -2,6 +2,7 @@
 category: '51'
 date: '2007-01-22'
 subtitle: Check out this post from [Sc...
+tag_review: no_fit
 tags: []
 title: 'Salute to Dave Winer: 10 Year Anniversary of Scripting news'
 type: wp

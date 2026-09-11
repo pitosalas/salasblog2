@@ -3,6 +3,7 @@ category: '1'
 date: '2006-10-18'
 subtitle: 'Bloggers and others are notoriously obcessed with metrics: how many hits,
   what’s my rank etc. As a ...'
+tag_review: no_fit
 tags: []
 title: Interesting analysis of accuracy
 type: wp

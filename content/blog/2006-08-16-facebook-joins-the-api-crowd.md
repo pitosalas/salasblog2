@@ -2,6 +2,7 @@
 category: '538'
 date: '2006-08-16'
 subtitle: It is said that you can’t be a true Web 2.0 application witho...
+tag_review: no_fit
 tags: []
 title: Facebook joins the API crowd
 type: wp

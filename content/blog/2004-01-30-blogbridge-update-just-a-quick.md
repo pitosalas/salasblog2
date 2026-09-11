@@ -2,6 +2,7 @@
 category: '1'
 date: '2004-01-30'
 subtitle: '**BlogBridge update: **Just a quick note about what’s up with BlogBridge'
+tag_review: no_fit
 tags: []
 title: 'BlogBridge update: Just a quick'
 type: wp

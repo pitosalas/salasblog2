@@ -3,6 +3,7 @@ category: '298'
 date: '2006-08-02'
 subtitle: Look closely at this screen grab off the New York Times site. It was published
   on August 6, 2006. Lo...
+tag_review: no_fit
 tags: []
 title: New York Times from the future
 type: wp

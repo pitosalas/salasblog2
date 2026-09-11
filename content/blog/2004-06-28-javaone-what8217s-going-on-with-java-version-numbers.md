@@ -2,6 +2,7 @@
 category: '538'
 date: '2004-06-28'
 subtitle: What’s going on with Java version numbers?
+tag_review: no_fit
 tags: []
 title: '[JAVAONE] What’s going on with Java version numbers?'
 type: wp

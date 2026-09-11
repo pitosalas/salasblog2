@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-04-01'
 subtitle: King Kong in 30 seconds. Funny.
+tag_review: no_fit
 tags: []
 title: “It was beauty killed the beast”
 type: wp

@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-02-17'
 subtitle: '![](http://www.bobcongdon.net/media...'
+tag_review: no_fit
 tags: []
 title: The world is flat, part deux
 type: wp

@@ -2,6 +2,7 @@
 category: '50'
 date: '2005-05-17'
 subtitle: Check out the BlogBridge blog and site
+tag_review: no_fit
 tags: []
 title: BlogBridge 1.5 Weekly released today
 type: wp

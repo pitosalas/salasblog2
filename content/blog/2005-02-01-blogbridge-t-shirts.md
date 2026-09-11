@@ -2,6 +2,7 @@
 category: '298'
 date: '2005-02-01'
 subtitle: This may be a first! Get your cool BlogBridge t-shirts here!
+tag_review: no_fit
 tags: []
 title: BlogBridge T-shirts
 type: wp

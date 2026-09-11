@@ -3,6 +3,7 @@ category: '51'
 date: '2005-02-12'
 subtitle: If you are interested in blogging you certainly have come across Robert
   Scoble’s blog
+tag_review: no_fit
 tags: []
 title: Modesty isn’t dead
 type: wp

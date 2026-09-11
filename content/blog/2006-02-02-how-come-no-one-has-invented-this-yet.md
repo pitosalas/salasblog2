@@ -3,6 +3,7 @@ category: '298'
 date: '2006-02-02'
 subtitle: "I write a lot of emails and IMs with smileys \U0001F642 and big smileys
   \U0001F600 in them. It’s very effective. But ..."
+tag_review: no_fit
 tags: []
 title: How come no-one has invented this yet :?
 type: wp

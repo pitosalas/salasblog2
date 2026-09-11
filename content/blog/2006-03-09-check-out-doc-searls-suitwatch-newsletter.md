@@ -3,6 +3,7 @@ category: '410'
 date: '2006-03-09'
 subtitle: There are a few **really good** newsletters that have not moved over to
   a blog which I read religio...
+tag_review: no_fit
 tags: []
 title: Check out Doc Searls Suitwatch newsletter
 type: wp

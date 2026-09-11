@@ -3,6 +3,7 @@ category: '298'
 date: '2006-10-12'
 subtitle: Yesterday’s post drew some interesting comments and emails. Several people
   wondered what the heck I ...
+tag_review: no_fit
 tags: []
 title: The answer is not a better RSS Aggregator, continued
 type: wp

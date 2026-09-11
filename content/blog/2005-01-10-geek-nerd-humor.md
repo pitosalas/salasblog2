@@ -2,6 +2,7 @@
 category: '422'
 date: '2005-01-10'
 subtitle: Amusing. Do you recognize yours...
+tag_review: no_fit
 tags: []
 title: '[GEEK] Nerd Humor'
 type: wp

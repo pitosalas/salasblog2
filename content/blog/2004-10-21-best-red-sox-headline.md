@@ -3,6 +3,7 @@ category: '298'
 date: '2004-10-21'
 subtitle: '**Isn’t it sweet! **Did you know you could get a big collection of front
   pages of newspapers at the ...'
+tag_review: no_fit
 tags: []
 title: Best Red Sox Headline
 type: wp

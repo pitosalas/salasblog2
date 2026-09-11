@@ -3,6 +3,7 @@ category: '50'
 date: '2004-05-12'
 subtitle: It’s been quiet but we’ve been busy. We are getting ready to put up a major
   new revision of BlogBrid...
+tag_review: no_fit
 tags: []
 title: BlogBridge – Quiet but Busy!
 type: wp

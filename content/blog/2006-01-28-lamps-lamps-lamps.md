@@ -3,6 +3,7 @@ category: '298'
 date: '2006-01-28'
 subtitle: This is pretty mundane, but if you happen to be looking for a lamp, [this
   is the most comprehensive]...
+tag_review: no_fit
 tags: []
 title: Lamps, Lamps, Lamps
 type: wp

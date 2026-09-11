@@ -3,6 +3,7 @@ category: '1'
 date: '2004-03-15'
 subtitle: '**Stewart Alsop ” the best political columnist of the past century”: **Well,
   that’s high praise from...'
+tag_review: no_fit
 tags: []
 title: Stewart Alsop ” the best
 type: wp

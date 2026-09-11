@@ -2,6 +2,7 @@
 category: '538'
 date: '2005-06-12'
 subtitle: You’ve heard me complain about comment spam befor...
+tag_review: no_fit
 tags: []
 title: Looks like I’ve beat comment spam — for now!
 type: wp

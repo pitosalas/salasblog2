@@ -2,6 +2,7 @@
 category: '298'
 date: '2004-12-26'
 subtitle: Adam Bossworth is a guy who I’ve written about before, in a very te...
+tag_review: no_fit
 tags: []
 title: Seeing the other side of someone
 type: wp

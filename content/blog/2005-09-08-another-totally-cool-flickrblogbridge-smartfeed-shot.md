@@ -2,6 +2,7 @@
 category: '1'
 date: '2005-09-08'
 subtitle: '![](http://www.flickr.com/...'
+tag_review: no_fit
 tags: []
 title: Another totally cool Flickr/BlogBridge SmartFeed shot
 type: wp

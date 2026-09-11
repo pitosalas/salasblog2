@@ -3,6 +3,7 @@ category: '298'
 date: '2006-07-12'
 subtitle: If you ever thought it might be fun to learn how to skydive, check this
   out
+tag_review: no_fit
 tags: []
 title: 'Another funny video for your entertainment: luckiest guy in the world?'
 type: wp

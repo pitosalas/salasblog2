@@ -2,6 +2,7 @@
 category: '298'
 date: '2004-12-20'
 subtitle: The Boston Globe writes an insightful article
+tag_review: no_fit
 tags: []
 title: Boston Globe on PodCasting
 type: wp

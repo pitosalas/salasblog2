@@ -2,6 +2,7 @@
 category: '298'
 date: '2004-06-01'
 subtitle: Pop!Tech is one of my all time favorite conferences
+tag_review: no_fit
 tags: []
 title: Pop!Tech Ticket!
 type: wp

@@ -2,6 +2,7 @@
 category: '298'
 date: '2004-08-15'
 subtitle: This is a really interesting new site where the posters, apparentl...
+tag_review: no_fit
 tags: []
 title: This Is Rumor Control
 type: wp

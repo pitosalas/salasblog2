@@ -2,6 +2,7 @@
 category: '538'
 date: '2005-12-16'
 subtitle: Om Malik writes that “The Web 2.0 Hit By ...
+tag_review: no_fit
 tags: []
 title: Web Two Point No?
 type: wp

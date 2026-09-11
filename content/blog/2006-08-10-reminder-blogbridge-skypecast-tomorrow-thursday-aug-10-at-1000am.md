@@ -2,6 +2,7 @@
 category: '50'
 date: '2006-08-10'
 subtitle: Check here for the details! This...
+tag_review: no_fit
 tags: []
 title: 'Reminder: BlogBridge Skypecast tomorrow, Thursday, Aug 10, at 10:00am'
 type: wp

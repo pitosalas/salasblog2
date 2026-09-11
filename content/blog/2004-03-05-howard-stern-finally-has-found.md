@@ -3,6 +3,7 @@ category: '1'
 date: '2004-03-05'
 subtitle: '**Howard Stern finally has found his match. **You know I am a Howard Stern
   fan. It looks like'
+tag_review: no_fit
 tags: []
 title: Howard Stern finally has found
 type: wp

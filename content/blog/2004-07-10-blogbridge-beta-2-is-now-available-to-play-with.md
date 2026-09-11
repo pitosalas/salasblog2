@@ -2,6 +2,7 @@
 category: '50'
 date: '2004-07-10'
 subtitle: Hey, check out our new and improved web site. There is lots of new cont...
+tag_review: no_fit
 tags: []
 title: BlogBridge Beta 2 is now available to play with
 type: wp

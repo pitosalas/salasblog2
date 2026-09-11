@@ -3,6 +3,7 @@ category: '298'
 date: '2005-01-03'
 subtitle: 'I just finished watching “Lord of the Rings: The Return of the King” which
   had some really cool scen...'
+tag_review: no_fit
 tags: []
 title: Elephants are cool!
 type: wp

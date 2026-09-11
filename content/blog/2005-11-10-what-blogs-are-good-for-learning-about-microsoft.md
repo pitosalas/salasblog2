@@ -3,6 +3,7 @@ category: '298'
 date: '2005-11-10'
 subtitle: So can you learn anything useful from a blog? I’ve often **spoken admiringly**
   to friends [about Mic...
+tag_review: no_fit
 tags: []
 title: 'What blogs are good for: Learning about Microsoft'
 type: wp

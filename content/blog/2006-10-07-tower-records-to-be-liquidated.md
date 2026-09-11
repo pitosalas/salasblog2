@@ -3,6 +3,7 @@ category: '298'
 date: '2006-10-07'
 subtitle: 'Just came across this surprising little bit: [AP Wire | 10/06/2006 | Group
   plans to liquidate Tower ...'
+tag_review: no_fit
 tags: []
 title: Tower Records to be liquidated
 type: wp

@@ -3,6 +3,7 @@ category: '1'
 date: '2006-12-17'
 subtitle: '![](https://i0.wp.com/www.bathsheba.com/sculpt/mg/mg.jpg?w=584)Everyone
   has a column or article thes...'
+tag_review: no_fit
 tags: []
 title: Holiday gift for the geek who has everything
 type: wp

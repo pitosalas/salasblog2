@@ -2,6 +2,7 @@
 category: '51'
 date: '2006-10-29'
 subtitle: From LifeHacker (o...
+tag_review: no_fit
 tags: []
 title: '[SEMI GEEKY] Blogs That Matter: really interesting'
 type: wp

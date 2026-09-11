@@ -2,6 +2,7 @@
 category: '298'
 date: '2005-03-02'
 subtitle: '![5607434_77c4bfa47d_m.jpg'
+tag_review: no_fit
 tags: []
 title: Is this picture classified?
 type: wp

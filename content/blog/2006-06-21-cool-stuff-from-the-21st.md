@@ -2,6 +2,7 @@
 category: '538'
 date: '2006-06-21'
 subtitle: Some cool stuff
+tag_review: no_fit
 tags: []
 title: Cool stuff from the 21st!
 type: wp

@@ -2,6 +2,7 @@
 category: '298'
 date: '2005-05-05'
 subtitle: '![Picture 1-1'
+tag_review: no_fit
 tags: []
 title: 'LinkedIn: Highly connected?'
 type: wp

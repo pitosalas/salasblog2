@@ -3,6 +3,7 @@ category: '51'
 date: '2006-09-29'
 subtitle: While I was on vacation I often had an idea pop in my head and feel the
   urge to write about it my bl...
+tag_review: no_fit
 tags: []
 title: Why do I blog, anyway?
 type: wp

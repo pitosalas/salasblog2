@@ -3,6 +3,7 @@ category: '538'
 date: '2004-08-13'
 subtitle: As you know, [I am quite impressed with Microsoft’s ability to build and
   ship and deploy and sell an...
+tag_review: no_fit
 tags: []
 title: XP SP2 Makes a Hash Of It
 type: wp

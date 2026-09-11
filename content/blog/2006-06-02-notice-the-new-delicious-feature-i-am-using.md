@@ -3,6 +3,7 @@ category: '51'
 date: '2006-06-02'
 subtitle: The feature isn’t new, it’s actually pretty **old**. It’s also very poorly
   documented. But it’s **ne...
+tag_review: no_fit
 tags: []
 title: Notice the new del.icio.us feature I am using?
 type: wp

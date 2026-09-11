@@ -2,6 +2,7 @@
 category: '50'
 date: '2004-10-15'
 subtitle: Hey, this is **really cool**. BlogBridge made a “Top 10 Java Web Start Apps”
+tag_review: no_fit
 tags: []
 title: BlogBridge makes top 10 List!
 type: wp

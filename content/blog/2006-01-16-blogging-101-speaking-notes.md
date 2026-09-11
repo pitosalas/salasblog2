@@ -2,6 +2,7 @@
 category: '538'
 date: '2006-01-16'
 subtitle: Over on the BlogBridge blog, I pos...
+tag_review: no_fit
 tags: []
 title: 'Blogging 101: Speaking Notes'
 type: wp

@@ -2,6 +2,7 @@
 category: '1'
 date: '2004-12-07'
 subtitle: Someone just pointed me to this item on Mike Zellers blog
+tag_review: no_fit
 tags: []
 title: What’s the world coming to?
 type: wp

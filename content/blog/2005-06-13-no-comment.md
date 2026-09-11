@@ -2,6 +2,7 @@
 category: '298'
 date: '2005-06-13'
 subtitle: 'States Ranked: Smartest to Dumbest.'
+tag_review: no_fit
 tags: []
 title: No Comment
 type: wp

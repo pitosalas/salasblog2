@@ -2,6 +2,7 @@
 category: '50'
 date: '2004-08-26'
 subtitle: 'Here are two very interesting posts on the question of Feed Readers:'
+tag_review: no_fit
 tags: []
 title: What’s wrong with Feed Readers?
 type: wp

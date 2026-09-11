@@ -3,6 +3,7 @@ category: '51'
 date: '2004-12-31'
 subtitle: Recently in a conversation I was asked to comment on what really was the
   big difference between a **...
+tag_review: no_fit
 tags: []
 title: What is the difference between a blog and a newsgroup?
 type: wp

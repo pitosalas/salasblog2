@@ -2,6 +2,7 @@
 category: '538'
 date: '2006-04-12'
 subtitle: Adam’s been busy moving the plans for OPML Camp
+tag_review: no_fit
 tags: []
 title: Agenda for OPML Camp coming together
 type: wp

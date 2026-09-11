@@ -2,6 +2,7 @@
 category: '51'
 date: '2004-05-17'
 subtitle: I’ve seen some discussion on [the i...
+tag_review: no_fit
 tags: []
 title: Moving from Radio to Movable Type
 type: wp

@@ -3,6 +3,7 @@ category: '298'
 date: '2006-03-30'
 subtitle: Last night’s event was a **lot of fun**. A ton of energy in the room, people
   huddling around compari...
+tag_review: no_fit
 tags: []
 title: RSS Alley Geek Dinner II – A great time was had by all!
 type: wp

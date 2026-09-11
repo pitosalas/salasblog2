@@ -3,6 +3,7 @@ category: '50'
 date: '2006-06-09'
 subtitle: I couldn’t **resist**, and so who knows why, we (Aleksey and I) have **built
   a new product **in the ...
+tag_review: no_fit
 tags: []
 title: Yeah, we’re building another product
 type: wp

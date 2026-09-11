@@ -3,6 +3,7 @@ category: '50'
 date: '2005-10-18'
 subtitle: Over the last week or so I’ve been working around the clock preparing for
   BlogBridge’s
+tag_review: no_fit
 tags: []
 title: I am my own PR agency
 type: wp

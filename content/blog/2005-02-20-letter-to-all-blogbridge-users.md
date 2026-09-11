@@ -2,6 +2,7 @@
 category: '50'
 date: '2005-02-20'
 subtitle: Dear users, ex-users, and future users of BlogBridge,
+tag_review: no_fit
 tags: []
 title: Letter to all BlogBridge users
 type: wp

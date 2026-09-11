@@ -3,6 +3,7 @@ category: '50'
 date: '2004-06-02'
 subtitle: The beta test is almost ready to go. The plan is that it will start very
   small, with only a few user...
+tag_review: no_fit
 tags: []
 title: BlogBridge beta update
 type: wp

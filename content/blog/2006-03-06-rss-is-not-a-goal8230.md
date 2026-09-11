@@ -2,6 +2,7 @@
 category: '50'
 date: '2006-03-06'
 subtitle: glenn has been busy today. A series of very intriguing pos...
+tag_review: no_fit
 tags: []
 title: RSS is not a goal…
 type: wp

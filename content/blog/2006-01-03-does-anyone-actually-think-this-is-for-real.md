@@ -2,6 +2,7 @@
 category: '298'
 date: '2006-01-03'
 subtitle: Did you see this clever site? Million Dollar Home Page
+tag_review: no_fit
 tags: []
 title: Does anyone actually think this is for real?
 type: wp
