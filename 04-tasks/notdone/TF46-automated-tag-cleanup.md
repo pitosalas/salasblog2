@@ -325,3 +325,49 @@ Confirmed the fix: `select_posts_needing_cleanup` dropped from 2,385 to
 `TestSelectPostsNeedingCleanup` and `TestApplyTagProposal` gained cases for
 the marker being set, cleared, and respected during selection (including
 that numeric junk overrides it).
+
+## TF46.11 — Usage counts annotated on every tag-hints.md entry
+
+**Status**: done
+
+**Description**: At the user's request, annotated every Curated/Proposed
+entry in `02-doc/tag-hints.md` with how many real posts currently carry it
+(`N uses`/`N use`), computed by scanning all posts' actual frontmatter
+tags on production. One-off content edit, no code change - confirmed every
+then-Proposed tag showed 0 real uses (never applied, as designed). Done a
+second time after batches 9-12 made the first pass stale (`technology`
+82->232, `ruby` 4->124, `python` 1->80, etc.) - worth remembering these
+counts need refreshing after every batch, not just once.
+
+**Test**: none - pure content annotation, no behavior change.
+
+## TF46.12 — Usage-count-first line format; single curated list, no queue
+
+**Status**: done
+
+**Description**: Two related user-directed changes to `02-doc/tag-hints.md`:
+
+1. **Line format reversed**: every entry is now `NNNNNNN tag-name
+   (comment)` - the usage count first (left-justified, 9-char field: a new
+   `format_tag_hints_line()`/`TAG_HINTS_COUNT_FIELD_WIDTH` in `utils.py`),
+   tag name second, optional comment last. `parse_tag_hints_section()`
+   updated to strip an optional leading `\d+\s+` count before extracting
+   the tag name - a line with no count prefix (e.g. one written by hand)
+   still parses correctly.
+2. **The Proposed Tags queue is gone.** TF46.7-TF46.9's two-tier design
+   (a separate "awaiting approval" section for recurring non-curated
+   tags) was reversed - there is now exactly one list. A tag recurring on
+   `MIN_RECURRENCE_FOR_PROPOSED_TAG` (3+) posts in a batch is appended
+   directly to the single Curated Tags list (available starting the next
+   batch), not held in a separate section pending manual promotion.
+   `record_recurring_candidates()` renamed to `promote_recurring_candidates()`
+   to match; it now targets `utils.CURATED_TAGS_HEADER` instead of a
+   removed `PROPOSED_TAGS_HEADER`. All 33 tags that had accumulated in the
+   old Proposed Tags section across batches 7-12 were merged directly into
+   Curated Tags in the same pass. The MANDATORY (never remove a tag) and
+   GOAL (all tags come from this one list) rules are unchanged; only the
+   JUDGEMENT rule's destination changed.
+
+**Test**: `TestPromoteRecurringCandidates` (renamed from
+`TestRecordRecurringCandidates`) updated - asserts a promoted tag appears
+in `load_curated_tags()`'s result directly, not in a separate section.

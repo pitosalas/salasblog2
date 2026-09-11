@@ -10,11 +10,12 @@ CLI adapter for the tag-cleanup pipeline (F46). Combines a candidates file
 (from select_tag_candidates.py) with a decisions file - tag choices made by
 Claude acting directly in an assisted session, or by a human - into the
 reviewable proposals JSON. Per 02-doc/tag-hints.md's rules: a newly proposed
-tag is only applied if it's in that file's curated vocabulary; anything else
-that recurs across more than one post in the batch gets appended to
-tag-hints.md's "Proposed Tags" section for the user to approve, not applied
-directly. Sanitization also drops numeric junk, empty strings, and
-duplicates before anything is written.
+tag is only applied to a post if it's already in that file's curated
+vocabulary; anything else that recurs across at least
+MIN_RECURRENCE_FOR_PROPOSED_TAG posts in the batch gets appended directly to
+that same Curated Tags list (available starting the next batch, not applied
+retroactively to this one). Sanitization also drops numeric junk, empty
+strings, and duplicates before anything is written.
 
 Decisions file schema: a JSON list of {"filename": ..., "tags": [...]}.
 
@@ -31,7 +32,7 @@ from salasblog2.tag_cleanup import (
     PostSummary,
     build_proposal,
     proposals_to_json,
-    record_recurring_candidates,
+    promote_recurring_candidates,
 )
 from salasblog2.utils import load_curated_tags
 
@@ -71,10 +72,10 @@ def main() -> None:
     args.output.write_text(proposals_to_json(proposals), encoding="utf-8")
     logger.info("Wrote %d proposals to %s", len(proposals), args.output)
 
-    new_candidates = record_recurring_candidates(proposals, args.tag_hints)
+    new_candidates = promote_recurring_candidates(proposals, args.tag_hints)
     if new_candidates:
         logger.info(
-            "Added %d recurring candidate tag(s) to %s for approval: %s",
+            "Promoted %d recurring candidate tag(s) into %s's Curated Tags list: %s",
             len(new_candidates),
             args.tag_hints,
             ", ".join(new_candidates),

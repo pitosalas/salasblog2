@@ -1,103 +1,103 @@
 # Tag Cleanup rules
 
 * GOAL: The ending state is that all tags are taken from the Curated Tags List
-* MANDATORY:During the cleanup process no tag is ever removed from an item
-* JUDGEMENT: If a tag appears in the data more than once and it is not on this list, then it is added to the Proposed Tags list for my approval
+* MANDATORY: During the cleanup process no tag is ever removed from an item
+* JUDGEMENT: If a tag appears in the data 3 or more times and it is not on this list, it is added to the Curated Tags list directly
 
 # Curated Tags
 
-technology (232 uses)
-programming (152 uses)
-robotics (79 uses)
-ai (69 uses)
-design (63 uses)
-science (60 uses)
-personal (32 uses)
-travel (36 uses)
-food (16 uses)
-books (46 uses)
-music (41 uses)
-health (30 uses)
-politics (169 uses)
-business (205 uses)
-education (81 uses)
-curacao (22 uses)
-jewish (9 uses)
-brandeis (12 uses)
-arlington (4 uses)
-boston (41 uses)
-wikipedia (26 uses)
-ros2 (20 uses)
-robot (22 uses)
-mathematics (20 uses)
-algorithms (21 uses)
-computer-science (24 uses)
-chat-gpt (15 uses)
-claude-code (0 uses)
-codex (1 use)
-llm (2 uses)
-law (4 uses)
-legal (29 uses)
-vscode (5 uses)
-software-engineering (58 uses)
-apple (74 uses)
-macos (59 uses)
-ipad (2 uses)
-ios (4 uses)
-iphone (28 uses)
-linux (25 uses)
-unix (9 uses)
-ruby (124 uses)
-ruby-on-rails (97 uses)
-maps (17 uses)
-pivot-table (4 uses)
-eroom (9 uses)
-lotus (14 uses)
-numpy (2 uses)
-pandas (5 uses)
-python (80 uses)
-rust (3 uses)
-hugo-chavez (not bare chavez; 4 uses)
-demo-conference (29 uses)
-sun-microsystems (or a specific product like mysql/java — not bare sun; 9 uses)
-mike-arrington (not michael-arrington — TechCrunch founder; 4 uses)
-david-weinberger (not dave-weinberger — Cluetrain Manifesto co-author; 6 uses)
-trustthevote (Pito's Open Source Digital Voting Foundation project, one word, no hyphen; 12 uses)
-webinno (recurring Boston tech meetup, distinct from geek-dinner; 5 uses)
-datarss (Pito's own project — kept this name even after he renamed it "Decentralized Data Discovery (DDD)" mid-series; 2 uses)
-
-# Proposed Tags
-blogbridge (0 uses)
-blogging (0 uses)
-etech (0 uses)
-folksonomy (0 uses)
-gmail (0 uses)
-java (0 uses)
-microsoft (0 uses)
-orkut (0 uses)
-podcasting (0 uses)
-red-sox (0 uses)
-security (0 uses)
-spam (0 uses)
-tivo (0 uses)
-web2.0 (0 uses)
-agile (0 uses)
-geek-dinner (0 uses)
-gnomedex (0 uses)
-howard-stern (0 uses)
-opml (0 uses)
-social-networking (0 uses)
-games (0 uses)
-theatre (0 uses)
-css (0 uses)
-flask (0 uses)
-git (0 uses)
-kubernetes (0 uses)
-raspberry-pi (0 uses)
-startup (0 uses)
-woodworking (0 uses)
-excel (0 uses)
-graphql (0 uses)
-portfolio (0 uses)
-postgres (0 uses)
-sqlite (0 uses)
+232      technology
+152      programming
+79       robotics
+69       ai
+63       design
+60       science
+32       personal
+36       travel
+16       food
+46       books
+41       music
+30       health
+169      politics
+205      business
+81       education
+22       curacao
+9        jewish
+12       brandeis
+4        arlington
+41       boston
+26       wikipedia
+20       ros2
+22       robot
+20       mathematics
+21       algorithms
+24       computer-science
+15       chat-gpt
+0        claude-code
+1        codex
+2        llm
+4        law
+29       legal
+5        vscode
+58       software-engineering
+74       apple
+59       macos
+2        ipad
+4        ios
+28       iphone
+25       linux
+9        unix
+124      ruby
+97       ruby-on-rails
+17       maps
+4        pivot-table
+9        eroom
+14       lotus
+2        numpy
+5        pandas
+80       python
+3        rust
+4        hugo-chavez (not bare chavez)
+29       demo-conference
+9        sun-microsystems (or a specific product like mysql/java — not bare sun)
+4        mike-arrington (not michael-arrington — TechCrunch founder)
+6        david-weinberger (not dave-weinberger — Cluetrain Manifesto co-author)
+12       trustthevote (Pito's Open Source Digital Voting Foundation project, one word, no hyphen)
+5        webinno (recurring Boston tech meetup, distinct from geek-dinner)
+2        datarss (Pito's own project — kept this name even after he renamed it "Decentralized Data Discovery (DDD)" mid-series)
+0        tools
+0        cli
+0        blogbridge
+0        blogging
+0        etech
+0        folksonomy
+0        gmail
+0        java
+0        microsoft
+0        orkut
+0        podcasting
+0        red-sox
+0        security
+0        spam
+0        tivo
+0        web2.0
+0        agile
+0        geek-dinner
+0        gnomedex
+0        howard-stern
+0        opml
+0        social-networking
+0        games
+0        theatre
+0        css
+0        flask
+0        git
+0        kubernetes
+0        raspberry-pi
+0        startup
+0        woodworking
+0        excel
+0        graphql
+0        portfolio
+0        postgres
+0        sqlite

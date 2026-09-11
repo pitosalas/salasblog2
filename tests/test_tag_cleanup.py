@@ -20,14 +20,15 @@ from salasblog2.tag_cleanup import (
     build_proposal,
     has_numeric_tag,
     needs_tag_cleanup,
+    promote_recurring_candidates,
     proposals_to_json,
-    record_recurring_candidates,
     select_posts_needing_cleanup,
     split_new_tags,
     summaries_to_json,
     summarize_post,
     validate_proposed_tags,
 )
+from salasblog2.utils import load_curated_tags
 
 
 def write_post(
@@ -223,11 +224,11 @@ class TestBuildProposal:
         assert proposal.no_fit is True
 
 
-class TestRecordRecurringCandidates:
+class TestPromoteRecurringCandidates:
     def make_hints(self, tmp_path, extra=""):
         path = tmp_path / "tag-hints.md"
         path.write_text(
-            "# Curated Tags\n\nrobotics\n\n# Proposed Tags\n" + extra, encoding="utf-8"
+            "# Curated Tags\n\nrobotics\n" + extra, encoding="utf-8"
         )
         return path
 
@@ -242,20 +243,20 @@ class TestRecordRecurringCandidates:
         proposals = self.make_proposals(
             ["a.md", "b.md"]
         )  # 2 < MIN_RECURRENCE_FOR_PROPOSED_TAG
-        assert record_recurring_candidates(proposals, path) == []
+        assert promote_recurring_candidates(proposals, path) == []
         assert "mars" not in path.read_text(encoding="utf-8")
 
-    def test_appends_candidates_meeting_threshold(self, tmp_path):
+    def test_appends_candidates_meeting_threshold_to_curated_list(self, tmp_path):
         path = self.make_hints(tmp_path)
         proposals = self.make_proposals(["a.md", "b.md", "c.md"])
-        added = record_recurring_candidates(proposals, path)
+        added = promote_recurring_candidates(proposals, path)
         assert added == ["mars"]
-        assert "mars" in path.read_text(encoding="utf-8")
+        assert load_curated_tags(path) == ["robotics", "mars"]
 
-    def test_does_not_duplicate_already_listed_candidate(self, tmp_path):
+    def test_does_not_duplicate_already_listed_tag(self, tmp_path):
         path = self.make_hints(tmp_path, extra="mars\n")
         proposals = self.make_proposals(["a.md", "b.md", "c.md"])
-        assert record_recurring_candidates(proposals, path) == []
+        assert promote_recurring_candidates(proposals, path) == []
 
 
 class TestTagProposal:

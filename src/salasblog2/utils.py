@@ -25,8 +25,10 @@ _logger = logging.getLogger(__name__)
 
 def parse_tag_hints_section(text: str, header: str) -> List[str]:
     """Return the bare tag names listed under a `# <header>` section of
-    tag-hints.md, in file order, stripping any trailing `(clarification)`
-    comment. Stops at the next top-level heading.
+    tag-hints.md, in file order. Each line is `[usage-count] tag-name
+    [(clarification)]` - an optional leading usage count and/or trailing
+    parenthetical comment, both stripped. Stops at the next top-level
+    heading.
     """
     tags = []
     in_section = False
@@ -36,10 +38,24 @@ def parse_tag_hints_section(text: str, header: str) -> List[str]:
             in_section = stripped == header
             continue
         if in_section and stripped:
+            stripped = re.sub(r"^\d+\s+", "", stripped)
             tag = stripped.split("(", 1)[0].strip()
             if tag:
                 tags.append(tag)
     return tags
+
+
+TAG_HINTS_COUNT_FIELD_WIDTH = 9
+CURATED_TAGS_HEADER = "# Curated Tags"
+
+
+def format_tag_hints_line(count: int, tag: str, comment: str = "") -> str:
+    """Format one tag-hints.md line: a left-justified usage count, the tag
+    name, and an optional parenthetical comment - the inverse of
+    `parse_tag_hints_section`'s parsing.
+    """
+    line = f"{count:<{TAG_HINTS_COUNT_FIELD_WIDTH}}{tag}"
+    return f"{line} ({comment})" if comment else line
 
 
 def load_curated_tags(tag_hints_path: Path) -> List[str]:
@@ -48,7 +64,7 @@ def load_curated_tags(tag_hints_path: Path) -> List[str]:
     MarsEdit's category picker, and enforced by the F46 tag-cleanup pipeline.
     """
     text = tag_hints_path.read_text(encoding="utf-8")
-    return parse_tag_hints_section(text, "# Curated Tags")
+    return parse_tag_hints_section(text, CURATED_TAGS_HEADER)
 
 
 def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:

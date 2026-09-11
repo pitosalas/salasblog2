@@ -13,10 +13,13 @@ session - no separate paid API call) to propose tags from, and sanitizing
 those proposals before they're written.
 
 Per the rules in `02-doc/tag-hints.md`: the ending state is that every tag
-on a post comes from that file's "Curated Tags" list. A newly proposed tag
-outside that list is never applied to a post - if it recurs across more than
-one post in a batch, `record_recurring_candidates` appends it to tag-hints's
-"Proposed Tags" section instead, for the user to approve or reject by hand.
+on a post comes from that file's single "Curated Tags" list. A newly
+proposed tag outside that list is never applied to a post on its own batch -
+if it recurs across at least `MIN_RECURRENCE_FOR_PROPOSED_TAG` posts in a
+batch, `promote_recurring_candidates` appends it directly to that same
+Curated Tags list, so it's available to every batch after this one (there is
+no separate "awaiting approval" list - a prior design with a second,
+distinct "Proposed Tags" section was reversed in favor of one list).
 Existing tags are never removed regardless of curated-list membership - that
 rule is absolute, independent of the curated-vocabulary one. Sanitization
 also drops what's actually junk: numeric leftovers, empty strings, and
@@ -46,12 +49,16 @@ from pathlib import Path
 
 import frontmatter
 
-from salasblog2.utils import create_excerpt, parse_tag_hints_section
+from salasblog2.utils import (
+    CURATED_TAGS_HEADER,
+    create_excerpt,
+    format_tag_hints_line,
+    parse_tag_hints_section,
+)
 
 logger = logging.getLogger(__name__)
 
 EXCERPT_LENGTH_FOR_TAGGING = 800
-PROPOSED_TAGS_HEADER = "# Proposed Tags"
 NO_FIT_MARKER_FIELD = "tag_review"
 NO_FIT_MARKER_VALUE = "no_fit"
 
@@ -171,7 +178,7 @@ def build_proposal(
     Additive-only: the post's existing tags are always kept, regardless of
     curated-vocabulary membership - that rule is absolute. A newly proposed
     tag is applied only if it's in `curated_tags`; anything else lands in
-    `candidate_tags` instead of being written, for `record_recurring_candidates`
+    `candidate_tags` instead of being written, for `promote_recurring_candidates`
     to surface later. Numeric junk is sanitized away regardless of source.
     """
     accepted, candidates = split_new_tags(summary.current_tags, tags, curated_tags)
@@ -188,14 +195,15 @@ def build_proposal(
 MIN_RECURRENCE_FOR_PROPOSED_TAG = 3
 
 
-def record_recurring_candidates(
+def promote_recurring_candidates(
     proposals: list[TagProposal], tag_hints_path: Path
 ) -> list[str]:
     """Tally candidate tags (proposed but outside the curated vocabulary)
     across a batch. Any tag recurring on at least `MIN_RECURRENCE_FOR_PROPOSED_TAG`
-    posts gets appended to tag-hints.md's "Proposed Tags" section, for the
-    user to approve or reject by hand - never applied to a post directly.
-    Already-listed candidates are skipped. Returns the newly added tags.
+    posts gets appended directly to tag-hints.md's single "Curated Tags"
+    list - available to every batch after this one, not applied
+    retroactively to posts already decided in this batch. Already-listed
+    tags are skipped. Returns the newly added tags.
     """
     counts = Counter(tag for p in proposals for tag in p.candidate_tags)
     recurring = sorted(
@@ -205,12 +213,13 @@ def record_recurring_candidates(
         return []
 
     text = tag_hints_path.read_text(encoding="utf-8")
-    already_listed = set(parse_tag_hints_section(text, PROPOSED_TAGS_HEADER))
+    already_listed = set(parse_tag_hints_section(text, CURATED_TAGS_HEADER))
     new_entries = [tag for tag in recurring if tag not in already_listed]
     if not new_entries:
         return []
 
-    text = text.rstrip("\n") + "\n" + "\n".join(new_entries) + "\n"
+    new_lines = [format_tag_hints_line(0, tag) for tag in new_entries]
+    text = text.rstrip("\n") + "\n" + "\n".join(new_lines) + "\n"
     tag_hints_path.write_text(text, encoding="utf-8")
     return new_entries
 
