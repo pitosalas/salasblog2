@@ -2,7 +2,8 @@
 category: '50'
 date: '2004-05-24'
 subtitle: Scoble bemoans the fact that folks aren’t all using the XML Icon, and ...
-tags: []
+tags:
+- technology
 title: Discovering RSS feed URLs
 type: wp
 wordpress_id: 1997

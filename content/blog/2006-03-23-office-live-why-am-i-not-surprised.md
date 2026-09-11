@@ -1,12 +1,14 @@
 ---
-title: "Office Live: Why am I not surprised?"
-subtitle: "Have you heard how Microsoft is shipping Windows **Live** and Office **Live** and **this-live** and ..."
-category: "298"
+category: '298'
+date: '2006-03-23'
+subtitle: Have you heard how Microsoft is shipping Windows **Live** and Office **Live**
+  and **this-live** and ...
 tags: []
-date: "2006-03-23"
-type: "wp"
+title: 'Office Live: Why am I not surprised?'
+type: wp
 wordpress_id: 1573
 ---
+
 Have you heard how Microsoft is shipping Windows **Live** and Office **Live** and **this-live** and **that-live**? I’ve seen this **movie** before and I have to say that I am skeptical. A competitor starts getting successful with a line that Microsoft doesn’t own and out comes the** “me-too-FUD”** based on smoke and mirrors.
 
 After all, Office has had ActiveX controls **forever**, and I would just not be too surprised if Office Live is just a re-**assembly** of some cool parts that they had **lying around** with a really great marketing push. Color me skeptical. Or cynical.

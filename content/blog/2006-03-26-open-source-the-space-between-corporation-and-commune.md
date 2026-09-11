@@ -1,12 +1,13 @@
 ---
-title: "Open Source: the space between Corporation and Commune?"
-subtitle: "In The Economist, there’s an ..."
-category: "298"
+category: '298'
+date: '2006-03-26'
+subtitle: In The Economist, there’s an ...
 tags: []
-date: "2006-03-26"
-type: "wp"
+title: 'Open Source: the space between Corporation and Commune?'
+type: wp
 wordpress_id: 1570
 ---
+
 In [The Economist](http://www.economist.com/business/displaystory.cfm?story_id=5624944), there’s an interesting overview of Open Source, what it is, strengths, weaknesses, and what’s in store for it. It introduces the catchy metaphor (or is it simile) “… occupying the space between a Corporation and a Commune:
 
 > “Even if the cracks in the management of open source can be plugged by some fairly straightforward organisational controls, might it nevertheless remain only a niche activity—occupying, essentially, the space between a corporation and a commune?” (from “[The Economist](http://www.economist.com/business/displaystory.cfm?story_id=5624944)“)

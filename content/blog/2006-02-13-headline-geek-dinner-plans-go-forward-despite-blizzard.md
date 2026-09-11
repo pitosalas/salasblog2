@@ -2,7 +2,8 @@
 category: '298'
 date: '2006-02-13'
 subtitle: 'Just a quick reminder of a Geek Dinner organized by three of us: Ada...'
-tags: []
+tags:
+- boston
 title: 'Headline: Geek Dinner plans go forward despite blizzard'
 type: wp
 wordpress_id: 1597

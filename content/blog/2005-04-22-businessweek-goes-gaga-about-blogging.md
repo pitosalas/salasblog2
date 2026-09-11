@@ -3,7 +3,8 @@ category: '51'
 date: '2005-04-22'
 subtitle: In the continuing series of “this blog things is really getting big”, the
   most recent issue of [Busi...
-tags: []
+tags:
+- business
 title: BusinessWeek goes gaga about blogging
 type: wp
 wordpress_id: 1798

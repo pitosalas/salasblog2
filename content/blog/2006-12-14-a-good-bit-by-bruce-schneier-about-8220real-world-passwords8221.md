@@ -1,12 +1,13 @@
 ---
-title: "A good bit by Bruce Schneier about “Real-World Passwords”"
-subtitle: "Check out [this"
-category: "298"
+category: '298'
+date: '2006-12-14'
+subtitle: Check out [this
 tags: []
-date: "2006-12-14"
-type: "wp"
+title: A good bit by Bruce Schneier about “Real-World Passwords”
+type: wp
 wordpress_id: 1383
 ---
+
 Check out [this 
  post](http://www.schneier.com/blog/archives/2006/12/realworld_passw.html) from [Schneier on Security](http://www.schneier.com/blog/):
 

@@ -1,12 +1,14 @@
 ---
-title: "FooPlot – looks quite cool!"
-subtitle: "Check out [this"
-category: "298"
-tags: []
-date: "2007-01-04"
-type: "wp"
+category: '298'
+date: '2007-01-04'
+subtitle: Check out [this
+tags:
+- mathematics
+title: FooPlot – looks quite cool!
+type: wp
 wordpress_id: 1365
 ---
+
 Check out [this 
  post](http://ajaxian.com/archives/fooplot-function-plotting) from [Ajaxian](http://ajaxian.com):
 

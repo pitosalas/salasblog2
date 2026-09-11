@@ -1,12 +1,14 @@
 ---
-title: "Do you really really really want an iPhone?"
-subtitle: "Check out [this"
-category: "298"
-tags: []
-date: "2007-01-10"
-type: "wp"
+category: '298'
+date: '2007-01-10'
+subtitle: Check out [this
+tags:
+- iphone
+title: Do you really really really want an iPhone?
+type: wp
 wordpress_id: 1357
 ---
+
 Check out [this 
  post](http://lifehacker.com/software/cell-phone/ditch-your-phone-contract-with-celltrade-227611.php) from [Lifehacker](http://www.lifehacker.com):
 

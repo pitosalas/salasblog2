@@ -2,7 +2,8 @@
 category: '538'
 date: '2004-08-24'
 subtitle: A very thought provoking speech by Bruce Sterling at SigGraph 2004. Recommended.
-tags: []
+tags:
+- technology
 title: 'A new term: Blobjects'
 type: wp
 wordpress_id: 1945

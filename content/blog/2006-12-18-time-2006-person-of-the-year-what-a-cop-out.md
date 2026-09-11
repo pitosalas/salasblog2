@@ -1,12 +1,13 @@
 ---
-title: "TIME 2006 Person Of The Year: What a cop out!"
-subtitle: 'Time Magazine news "You?" as the person of the year? What a cop-out!'
-category: "298"
+category: '298'
+date: '2006-12-18'
+subtitle: Time Magazine news "You?" as the person of the year? What a cop-out!
 tags: []
-date: "2006-12-18"
-type: "wp"
+title: 'TIME 2006 Person Of The Year: What a cop out!'
+type: wp
 wordpress_id: 1381
 ---
+
 Time Magazine news "You?" as the person of the year? What a cop-out!
 Check out [this 
  post](http://bagnewsnotes.typepad.com/bagnews/2006/12/time_2006_perso.html) from [BAGnewsNotes](http://bagnewsnotes.typepad.com/bagnews/):

@@ -1,12 +1,14 @@
 ---
-title: "Pandora helps me discover Beth Nielsen Chapman"
-subtitle: "I’ve experimented with all kinds of novel music related services and products."
-category: "298"
-tags: []
-date: "2006-03-04"
-type: "wp"
+category: '298'
+date: '2006-03-04'
+subtitle: I’ve experimented with all kinds of novel music related services and products.
+tags:
+- music
+title: Pandora helps me discover Beth Nielsen Chapman
+type: wp
 wordpress_id: 1584
 ---
+
 I’ve experimented with all  kinds of novel music related services and products. 
 
 My favorite is [Pandora](http://www.pandora.com/). This is a a site that helps me discover new music that I like. It’s introduced me to several artists that I had never heard of before which are now favorites. In this case I am plugging **[Beth Nielsen Chapman](http://bethnielsenchapman.com/)**. A wonderful singer songwriter, I think from Europe, that has the sound I really like. It’s quite wonderful to create a Bob Dylan or Joni Mitchell or Bill Evans channel discover new artists. 

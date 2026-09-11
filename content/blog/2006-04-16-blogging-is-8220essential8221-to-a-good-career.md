@@ -1,12 +1,14 @@
 ---
-title: "Blogging is “essential” to a good career"
-subtitle: "Boy, blogs sure are **hot**, aren’t they? I’ve been noticing the New York Times regularly quoting bl..."
-category: "298"
+category: '298'
+date: '2006-04-16'
+subtitle: Boy, blogs sure are **hot**, aren’t they? I’ve been noticing the New York
+  Times regularly quoting bl...
 tags: []
-date: "2006-04-16"
-type: "wp"
+title: Blogging is “essential” to a good career
+type: wp
 wordpress_id: 1554
 ---
+
 Boy, blogs sure are **hot**, aren’t they? I’ve been noticing the New York Times regularly quoting bloggers as legitimate sources side by side with witnesses, experts, politicians. And now the [Boston Globe has a bit](http://bostonworks.boston.com/news/articles/2006/04/16/blogs_essential_to_a_good_career/) about blogging your way to a job:
 
 > “Blogging is good for your career. A well-executed blog sets you apart as an expert in your field.” 

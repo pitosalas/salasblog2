@@ -1,12 +1,14 @@
 ---
-title: "Why do I blog, anyway?"
-subtitle: "While I was on vacation I often had an idea pop in my head and feel the urge to write about it my bl..."
-category: "51"
+category: '51'
+date: '2006-09-29'
+subtitle: While I was on vacation I often had an idea pop in my head and feel the
+  urge to write about it my bl...
 tags: []
-date: "2006-09-29"
-type: "wp"
+title: Why do I blog, anyway?
+type: wp
 wordpress_id: 1429
 ---
+
 While I was on vacation I often had an idea pop in my head and feel the urge to write about it my blog. Why, why, why?
 
 I think I’ve been writing this blog for over three years. [Here is my very first post.](/weblogs/archives/2003_05.php) Since then  I must have spent innumerable hours writing. It is *almost * like an addiction. 

@@ -1,12 +1,14 @@
 ---
-title: "Neat Bank of America site security feature doesn’t do anything !"
-subtitle: "If you use the Bank of America online banking site you’ve seen what they call the ‘Site Identity’ f..."
-category: "298"
+category: '298'
+date: '2007-02-05'
+subtitle: If you use the Bank of America online banking site you’ve seen what they
+  call the ‘Site Identity’ f...
 tags: []
-date: "2007-02-05"
-type: "wp"
+title: Neat Bank of America site security feature doesn’t do anything !
+type: wp
 wordpress_id: 1339
 ---
+
 If you use the Bank of America online banking site  you’ve seen what they call the ‘Site Identity’ feature that is supposed to save you from being phished:
 
 > “…  online banking customers are asked to select an image, like a dog or chess piece, that they will see every time they log in to their account. 

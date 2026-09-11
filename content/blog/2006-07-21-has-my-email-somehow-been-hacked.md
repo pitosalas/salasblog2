@@ -1,12 +1,14 @@
 ---
-title: "Has my email somehow been hacked?"
-subtitle: "Ok, oh wise listeners out there. Here’s what’s happened to me twice now in the last week."
-category: "538"
+category: '538'
+date: '2006-07-21'
+subtitle: Ok, oh wise listeners out there. Here’s what’s happened to me twice now
+  in the last week.
 tags: []
-date: "2006-07-21"
-type: "wp"
+title: Has my email somehow been hacked?
+type: wp
 wordpress_id: 1486
 ---
+
 Ok, oh wise listeners out there. Here’s what’s happened to me twice now in the last week. 
 
 Basically I receive a large number of email bounce messages which were sent ‘from’ xxx@blogbridge.com, where I never heard of xxx. And there are a ton of different xxx’s. When I say a large number, it’s around 100 of them.  None of them actually exist.

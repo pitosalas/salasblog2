@@ -2,7 +2,8 @@
 category: '51'
 date: '2004-05-17'
 subtitle: Various people are [saying tha...
-tags: []
+tags:
+- technology
 title: Opera and RSS
 type: wp
 wordpress_id: 2003

@@ -1,12 +1,13 @@
 ---
-title: "Chess and Violent Meditation"
-subtitle: "Check out this post from [empire"
-category: "298"
+category: '298'
+date: '2006-12-13'
+subtitle: Check out this post from [empire
 tags: []
-date: "2006-12-13"
-type: "wp"
+title: Chess and Violent Meditation
+type: wp
 wordpress_id: 1384
 ---
+
 Check out [this post](http://get.wis.dm/danielsalas/?p=50) from [empire 
 state blues.](http://get.wis.dm/danielsalas):
 

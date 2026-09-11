@@ -1,12 +1,14 @@
 ---
-title: "In-depth analysis of Microsoft content syndication platform patent application"
-subtitle: "A bit of a debate is developing regarding Microsoft’s recent patent for"
-category: "538"
-tags: []
-date: "2006-12-23"
-type: "wp"
+category: '538'
+date: '2006-12-23'
+subtitle: A bit of a debate is developing regarding Microsoft’s recent patent for
+tags:
+- legal
+title: In-depth analysis of Microsoft content syndication platform patent application
+type: wp
 wordpress_id: 1375
 ---
+
 A bit of a debate is developing regarding Microsoft’s recent patent for 
  (and here’s where the editorializing starts) "RSS". It’s only a slightly 
  interesting question which is why I won’t pursue it, save to say that 

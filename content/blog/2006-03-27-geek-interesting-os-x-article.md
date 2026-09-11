@@ -1,12 +1,14 @@
 ---
-title: "[GEEK] Interesting OS X article"
-subtitle: "Ever wonder how Mac’s OS X program launch and execution works? No? Hmm."
-category: "538"
-tags: []
-date: "2006-03-27"
-type: "wp"
+category: '538'
+date: '2006-03-27'
+subtitle: Ever wonder how Mac’s OS X program launch and execution works? No? Hmm.
+tags:
+- macos
+title: '[GEEK] Interesting OS X article'
+type: wp
 wordpress_id: 1569
 ---
+
 Ever wonder how Mac’s OS X program launch and execution works? No? Hmm. 
 
 Anyway, [here’s a fascinating](http://0xfe.blogspot.com/2006/03/how-os-x-executes-applications.html) article telling you more than you ever thought you wanted to know!

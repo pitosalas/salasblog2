@@ -1,12 +1,13 @@
 ---
-title: "Read this and guess where it’s from…. Is the Matrix upon us?"
-subtitle: "** [3:56 pm PST] In an effort to improve the performance of teleports"
-category: "298"
+category: '298'
+date: '2007-01-15'
+subtitle: '** [3:56 pm PST] In an effort to improve the performance of teleports'
 tags: []
-date: "2007-01-15"
-type: "wp"
+title: Read this and guess where it’s from…. Is the Matrix upon us?
+type: wp
 wordpress_id: 1352
 ---
+
 ** [3:56 pm PST] In an effort to improve the performance of teleports 
  across the grid, we are going to rebalance our bandwidth to some 
  simulators in our co-location facilities. This will entail taking 164 

@@ -1,12 +1,16 @@
 ---
-title: "“Getting the cool kids to try your technology isn’t the same thing as having a long-term business proposition.”"
-subtitle: "Scoble has a good commentary and links to more commentary about Kiko. Kiko is a web 2.0 / ajax / coo..."
-category: "538"
-tags: []
-date: "2006-08-18"
-type: "wp"
+category: '538'
+date: '2006-08-18'
+subtitle: Scoble has a good commentary and links to more commentary about Kiko. Kiko
+  is a web 2.0 / ajax / coo...
+tags:
+- business
+title: “Getting the cool kids to try your technology isn’t the same thing as having
+  a long-term business proposition.”
+type: wp
 wordpress_id: 1446
 ---
+
 Scoble has a good commentary and links to more commentary about Kiko. Kiko is a web 2.0 / ajax / cool calendar application that appears to be throwing in the towel.
 Here’s what Scoble had to say: Does Kiko predict more Web 2.0 failures?” href=”http://scobleizer.wordpress.com/2006/08/17/does-kiko-predict-more-web-20-failures/”>Scobleizer – Tech Geek Blogger > Does Kiko predict more Web 2.0 failures?
 

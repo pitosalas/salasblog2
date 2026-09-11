@@ -1,12 +1,14 @@
 ---
-title: "Guy Kawasaki misses the most important ‘Art of Firing’"
-subtitle: "[http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=1591840562&IS1=1&nou=1&fc1=000000<..."
-category: "298"
-tags: []
-date: "2006-07-25"
-type: "wp"
+category: '298'
+date: '2006-07-25'
+subtitle: '[http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=1591840562&IS1=1&nou=1&fc1=000000<...'
+tags:
+- business
+title: Guy Kawasaki misses the most important ‘Art of Firing’
+type: wp
 wordpress_id: 1481
 ---
+
 [http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=1591840562&IS1=1&nou=1&fc1=000000&lt1=_blank&lc1=0000ff&bc1=ffffff&bg1=ffffff&f=ifr](http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=1591840562&IS1=1&nou=1&fc1=000000&lt1=_blank&lc1=0000ff&bc1=ffffff&bg1=ffffff&f=ifr)Guy is one of my heroes and [his blog is one of my favorites](http://blog.guykawasaki.com/).
 
 A [post today](http://blog.guykawasaki.com/2006/07/the_art_of_firi.html) on the ‘Art of Firing’ is a good summary:

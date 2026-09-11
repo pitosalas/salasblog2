@@ -1,12 +1,13 @@
 ---
-title: "[SEMI GEEKY] Blogs That Matter: really interesting"
-subtitle: "From LifeHacker (o..."
-category: "51"
+category: '51'
+date: '2006-10-29'
+subtitle: From LifeHacker (o...
 tags: []
-date: "2006-10-29"
-type: "wp"
+title: '[SEMI GEEKY] Blogs That Matter: really interesting'
+type: wp
 wordpress_id: 1410
 ---
+
 From [LifeHacker](http://www.lifehacker.com/software/bloglines/find-feeds-that-matter-209796.php) (one of my new favorite sites) comes a pointer to a site called [FeedsThatMatter](http://morpheus.cs.umbc.edu/bloglines/).
 
 What it seems to do is to look at public subscriptions listed in BlogLines, do a tag analysis, and display a [tag cloud](http://morpheus.cs.umbc.edu/bloglines/). BlogLines is a huge web based aggregator service and so I’d guess that their subscriptions are relatively representative of the whole blogosphere.

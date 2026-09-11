@@ -1,12 +1,14 @@
 ---
-title: "Interesting analysis of accuracy"
-subtitle: "Bloggers and others are notoriously obcessed with metrics: how many hits, what’s my rank etc. As a ..."
-category: "1"
+category: '1'
+date: '2006-10-18'
+subtitle: 'Bloggers and others are notoriously obcessed with metrics: how many hits,
+  what’s my rank etc. As a ...'
 tags: []
-date: "2006-10-18"
-type: "wp"
+title: Interesting analysis of accuracy
+type: wp
 wordpress_id: 1416
 ---
+
 Bloggers and others are notoriously  obcessed with metrics: how many hits, what’s my rank etc. As a result there are numerous services which try to analyze sites and blogs etc, to help measure this. Not insignificantly, a site’s revenue potential is tied closely to this as well.  [Seomoz.org has put together a pretty interesting study](http://www.seomoz.org/articles/search-blog-stats.php) doing a somehwhat empirical analysis of this question. 
 **“This project’s primary objective is to determine the relative levels of 
  accuracy for external metrics (from sites like Technorati, Alexa, Compete, 

@@ -1,12 +1,14 @@
 ---
-title: "James Fallows: “The War on Terror is Over”"
-subtitle: "Another great article in The Atlantic, Jame..."
-category: "298"
-tags: []
-date: "2006-08-11"
-type: "wp"
+category: '298'
+date: '2006-08-11'
+subtitle: Another great article in The Atlantic, Jame...
+tags:
+- politics
+title: 'James Fallows: “The War on Terror is Over”'
+type: wp
 wordpress_id: 1457
 ---
+
 Another [great article](http://www.theatlantic.com/doc/200609/fallows_victory) in The Atlantic, James Fallows: “[Declaring Victory](http://www.theatlantic.com/doc/200609/fallows_victory)“
 
 > “The United States is **succeeding** in its struggle against terrorism. The time has come to **declare** the war on terror **over**, so that an even more effective military and diplomatic campaign can begin.” (James Fallows, **from** [Declaring Victory](http://www.theatlantic.com/doc/200609/fallows_victory))

@@ -1,12 +1,14 @@
 ---
-title: "Don’t you just hate the term Web 2.0?"
-subtitle: "Actually, I **don’t** hate it. It’s not clear exactly what it means, but it means something. Is it A..."
-category: "538"
+category: '538'
+date: '2006-03-16'
+subtitle: Actually, I **don’t** hate it. It’s not clear exactly what it means, but
+  it means something. Is it A...
 tags: []
-date: "2006-03-16"
-type: "wp"
+title: Don’t you just hate the term Web 2.0?
+type: wp
 wordpress_id: 1576
 ---
+
 Actually, I **don’t** hate it. It’s not clear exactly what it means, but it means something. Is it Ajax, Web services, REST, RSS, OPML, XML? Who knows?
 
 But more interesting, check out this [amazing list of products](http://www.sacredcowdung.com/archives/2006/03/all_things_web.html) that one way or another are connected to Web 2.0.

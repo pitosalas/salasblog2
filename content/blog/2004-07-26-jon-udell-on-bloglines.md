@@ -3,7 +3,8 @@ category: '51'
 date: '2004-07-26'
 subtitle: '[Jon (and many others) really like Bloglines a lot; I recommend his article
   – there’s a lot to learn...'
-tags: []
+tags:
+- technology
 title: Jon Udell on Bloglines
 type: wp
 wordpress_id: 1960

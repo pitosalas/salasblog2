@@ -3,7 +3,8 @@ category: '410'
 date: '2005-11-12'
 subtitle: I’ve read several accounts relating to Microsoft’s recently ‘leaked’ documents
   about the new strateg...
-tags: []
+tags:
+- business
 title: Did MSFT leak on purpose, or did they know they could easily be leaked?
 type: wp
 wordpress_id: 1657

@@ -1,12 +1,15 @@
 ---
-title: "Reminder: Tomorrow, Geek Dinner, July 19 (tomorrow!)"
-subtitle: "Just a quick reminder that we are having another super-informal-geeky-but-not-exclusively-geeks **Ge..."
-category: "298"
-tags: []
-date: "2006-07-18"
-type: "wp"
+category: '298'
+date: '2006-07-18'
+subtitle: Just a quick reminder that we are having another super-informal-geeky-but-not-exclusively-geeks
+  **Ge...
+tags:
+- boston
+title: 'Reminder: Tomorrow, Geek Dinner, July 19 (tomorrow!)'
+type: wp
 wordpress_id: 1488
 ---
+
 Just a quick reminder that we are having another super-informal-geeky-but-not-exclusively-geeks **Geek Dinner**, and we have a **lovely** new location, sponsored by our friends at [Permabit](http://www.permabit.com/). The location is on First Street, in Cambridge, MA, USA, in the so-called Davenport Building, on the second floor.
 
 **See you there!**

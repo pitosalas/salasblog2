@@ -1,12 +1,15 @@
 ---
-title: "RSS Alley Geek Dinner: March 29th – 6:30pm – Harvard Square? Should be even more fun than the last one!"
-subtitle: "Hello sports fans. We are having another super-informal-geeky-but-not-exclusively-geeks geek dinner,..."
-category: "298"
+category: '298'
+date: '2006-03-10'
+subtitle: Hello sports fans. We are having another super-informal-geeky-but-not-exclusively-geeks
+  geek dinner,...
 tags: []
-date: "2006-03-10"
-type: "wp"
+title: 'RSS Alley Geek Dinner: March 29th – 6:30pm – Harvard Square? Should be even
+  more fun than the last one!'
+type: wp
 wordpress_id: 1580
 ---
+
 Hello sports fans. We are having another super-informal-geeky-but-not-exclusively-geeks geek dinner, this time using the well-known PaB/Free Pattern. 
 
 Who is we, again? [Bela Labovitch](http://blogs.opml.org/BelaLabovitch), [Adam Green](http://www.darwinianweb.com/) and me. We are fortunate that the folks at [Top Ten Sources](http://www.toptensources.com/toptensources/home.aspx) and RSS Labs are again letting use their space. **Thanks**!

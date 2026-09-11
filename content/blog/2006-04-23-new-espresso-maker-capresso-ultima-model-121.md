@@ -1,12 +1,14 @@
 ---
-title: "New espresso maker: Capresso Ultima (Model 121)"
-subtitle: "I’m a big coffee drinker, ok? I’ve been putting my Keurig"
-category: "298"
-tags: []
-date: "2006-04-23"
-type: "wp"
+category: '298'
+date: '2006-04-23'
+subtitle: I’m a big coffee drinker, ok? I’ve been putting my Keurig
+tags:
+- food
+title: 'New espresso maker: Capresso Ultima (Model 121)'
+type: wp
 wordpress_id: 1549
 ---
+
 I’m a big coffee drinker, ok? I’ve been putting [my Keurig](http://www.keurig.com/B50.asp?mscsid=JT5G4FGRFQFE9MS776CMNW8RE681124E) single serving machine through it’s paces for the last few months and I really like it. I’ve already spent more on little coffee pods from Keurig than the machine ever cost. Another post will go into what I’ve learned from that.
 
 Recently though I’ve gotten enamored of short non-fat Lattes at [Starbucks](http://www.starbucks.com/default.asp?cookie%5Ftest=1). That’s a story in and of itself, which again will wait for another post.

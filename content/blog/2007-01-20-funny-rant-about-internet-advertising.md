@@ -1,12 +1,13 @@
 ---
-title: "Funny rant about internet advertising"
-subtitle: "Check out this post from [Saint"
-category: "298"
+category: '298'
+date: '2007-01-20'
+subtitle: Check out this post from [Saint
 tags: []
-date: "2007-01-20"
-type: "wp"
+title: Funny rant about internet advertising
+type: wp
 wordpress_id: 1345
 ---
+
 Check out [this post](http://get.wis.dm/danielsalas/?p=56) from [Saint 
  John the Conqueror](http://get.wis.dm/danielsalas):
 

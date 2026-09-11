@@ -1,12 +1,14 @@
 ---
-title: "wis.dm now in beta – A social network of ideas"
-subtitle: "![Picture 2-26"
-category: "298"
-tags: []
-date: "2007-02-13"
-type: "wp"
+category: '298'
+date: '2007-02-13'
+subtitle: '![Picture 2-26'
+tags:
+- business
+title: wis.dm now in beta – A social network of ideas
+type: wp
 wordpress_id: 1332
 ---
+
 [![Picture 2-26](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/weblog/images/Picture%25202-26-tm.jpg?resize=240%2C189)](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/weblog/images/Picture%25202-26.png)
 
 A little while back I mentioned [wis.dm](http://wis.dm/), a site that I’ve been helping with for about the last year. Rafe Needleman refers to it as a **“Social Network of Ideas”**

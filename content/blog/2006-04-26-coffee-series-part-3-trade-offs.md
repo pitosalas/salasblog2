@@ -1,12 +1,15 @@
 ---
-title: "Coffee Series, Part 3: Trade offs"
-subtitle: "**First** I was an instant coffee guy. Then I got into brewing **whole** pots, which led to my **was..."
-category: "298"
-tags: []
-date: "2006-04-26"
-type: "wp"
+category: '298'
+date: '2006-04-26'
+subtitle: '**First** I was an instant coffee guy. Then I got into brewing **whole**
+  pots, which led to my **was...'
+tags:
+- food
+title: 'Coffee Series, Part 3: Trade offs'
+type: wp
 wordpress_id: 1547
 ---
+
 **First** I was an instant coffee guy. Then I got into brewing **whole** pots, which led to my **wasting** a lot of coffee. Then, my friend [Charlie](http://www.championmetrics.com/) started working at [Keurig](http://www.keurig.com/), and so I got exposed to that machine and how **wonderful** it was, and one year I got it as a Christmas gift. 
 
 We still use the [Keurig](http://www.keurig.com/) a lot, but truth is that we’ve been going through about 10 K-Cups per Day! I was starting to **notice** that this [wasn’t a good deal](http://www.coffeewhiz.com/). Not to speak of the [Starbucks](http://www.starbucks.com/default.asp?cookie%5Ftest=1) card which I’d been **reloading** from time to time. So you can see, I’ve worked myself up (or down) the **evolutionary tree**.

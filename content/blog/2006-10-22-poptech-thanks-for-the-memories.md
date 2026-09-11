@@ -1,12 +1,14 @@
 ---
-title: "Pop!Tech: Thanks for the memories"
-subtitle: "Well it’s over and I am getting ready to head back to real life. Pop!Tech remains my favorite confer..."
-category: "1"
+category: '1'
+date: '2006-10-22'
+subtitle: Well it’s over and I am getting ready to head back to real life. Pop!Tech
+  remains my favorite confer...
 tags: []
-date: "2006-10-22"
-type: "wp"
+title: 'Pop!Tech: Thanks for the memories'
+type: wp
 wordpress_id: 1414
 ---
+
 Well it’s over and I am getting ready to head back to real life. Pop!Tech remains my favorite conference (and not just because I can drive here from my house.) It’s hard to capture what it’s like but if you are interested, here are some links that could give you a flavor. Thanks to all the diligent bloggers ([most especially Ethan Zuckerman](http://www.ethanzuckerman.com/blog/)) who did all this writing so I didn’t have to!
 
 - [You had me at “erinaeous”](http://www.ethanzuckerman.com/blog/?p=1058) – Erin McKean

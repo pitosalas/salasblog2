@@ -1,12 +1,14 @@
 ---
-title: "After the nuclear war"
-subtitle: "Actually this is a fascinating photo essay of an abandoned city in the Soviet Union, left to gradual..."
-category: "298"
+category: '298'
+date: '2006-09-06'
+subtitle: Actually this is a fascinating photo essay of an abandoned city in the Soviet
+  Union, left to gradual...
 tags: []
-date: "2006-09-06"
-type: "wp"
+title: After the nuclear war
+type: wp
 wordpress_id: 1437
 ---
+
 Actually this is a fascinating photo essay of an abandoned city in the Soviet Union, left to gradually die off while the USSR collapsed.
 Check out An Abandoned City” href=”http://englishrussia.com/?p=276″>An Abandoned City
 

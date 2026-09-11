@@ -1,12 +1,14 @@
 ---
-title: "A Great Math Site: Understanding the Analemma"
-subtitle: "When I was a kid I remember reading about this pattern. I never knew it"
-category: "298"
-tags: []
-date: "2006-12-30"
-type: "wp"
+category: '298'
+date: '2006-12-30'
+subtitle: When I was a kid I remember reading about this pattern. I never knew it
+tags:
+- mathematics
+title: 'A Great Math Site: Understanding the Analemma'
+type: wp
 wordpress_id: 1369
 ---
+
 When I was a kid I remember reading about this pattern. I never knew it 
  was called a, what, Analemma??? Anyway, Check out [this 
  post](http://scienceblogs.com/goodmath/2006/12/a_great_math_site_understandin.php) from [Good Math, Bad 

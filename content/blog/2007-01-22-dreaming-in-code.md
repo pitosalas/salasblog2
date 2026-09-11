@@ -1,12 +1,15 @@
 ---
-title: "Dreaming in code"
-subtitle: "I heard about this book, “Dreaming in Code”… it looks really inter..."
-category: "538"
-tags: []
-date: "2007-01-22"
-type: "wp"
+category: '538'
+date: '2007-01-22'
+subtitle: I heard about this book, “Dreaming in Code”… it looks really inter...
+tags:
+- books
+- software-engineering
+title: Dreaming in code
+type: wp
 wordpress_id: 1341
 ---
+
 I heard about this book, [“Dreaming in Code”](http://www.dreamingincode.com/)… it looks really interesting but kind of depressing to read which is why I didn’t run out to buy it. 
 Building software is just really really hard and for some reason no matter how smart and experienced we are, projects still can easily run themselves into the ground. 
 

@@ -2,7 +2,8 @@
 category: '538'
 date: '2004-10-13'
 subtitle: A very interesting piece
-tags: []
+tags:
+- technology
 title: Why don’t you check your email?
 type: wp
 wordpress_id: 1927

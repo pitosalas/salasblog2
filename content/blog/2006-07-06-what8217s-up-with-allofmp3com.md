@@ -1,12 +1,15 @@
 ---
-title: "What’s up with AllofMP3.com?"
-subtitle: "I was probably the last one to hear about AllofMp3.com. It’s this massiv..."
-category: "298"
-tags: []
-date: "2006-07-06"
-type: "wp"
+category: '298'
+date: '2006-07-06'
+subtitle: I was probably the last one to hear about AllofMp3.com. It’s this massiv...
+tags:
+- music
+- legal
+title: What’s up with AllofMP3.com?
+type: wp
 wordpress_id: 1501
 ---
+
 I was probably the last one to hear about [AllofMp3.com](http://www.allofmp3.com/). It’s this massive, well organized and **apparently solid** Mp3 download site. Music is not free, but extremely cheap. It’s apparently hosted in Russia or somewhere else.
 
 The question is of course, “is it legal” and “is it ethical”? Friends of mine who’ve known about it for years (claim to) never use it. I have to say it gives me pause to download the whole “Tapestry” Album (**Carole King**, from the **Jurasic Period**) for something like $1.50. Ridonculous.

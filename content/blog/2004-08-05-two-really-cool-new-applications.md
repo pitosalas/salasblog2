@@ -3,7 +3,8 @@ category: '538'
 date: '2004-08-05'
 subtitle: Today I was introduced by two totally different people to **two really cool
   little utilities**.
-tags: []
+tags:
+- technology
 title: Two really cool new applications
 type: wp
 wordpress_id: 1953

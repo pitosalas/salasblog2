@@ -1,12 +1,15 @@
 ---
-title: "Technie note: Ethernet vs. USB-2 External Hard Disk"
-subtitle: "I am enhancing the backup methodology here at BlogBridge Enterprises and was selecting a new 500Gb e..."
-category: "538"
-tags: []
-date: "2007-01-03"
-type: "wp"
+category: '538'
+date: '2007-01-03'
+subtitle: I am enhancing the backup methodology here at BlogBridge Enterprises and
+  was selecting a new 500Gb e...
+tags:
+- technology
+title: 'Technie note: Ethernet vs. USB-2 External Hard Disk'
+type: wp
 wordpress_id: 1366
 ---
+
 I am enhancing the backup methodology here at BlogBridge Enterprises and was selecting a new 500Gb external hard disk. One choice I made was whether to get an **Ethernet**, i.e. network attached, hard disk or connect one directly to my Mac via **USB-2** or FireWire.
 
 Admittedly being too **lazy** to do calculations I guessed that the limiting factor on speed of a hard disk would be the hard disk transfer speed itself not the speed of Ethernet-100 vs. USB-2. 

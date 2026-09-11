@@ -1,12 +1,14 @@
 ---
-title: "What’s a meme and how fast does it travel?"
-subtitle: "Some clever scientists are trying to measure how fast meme’s travel on the web. My contribution to t..."
-category: "298"
+category: '298'
+date: '2006-11-29'
+subtitle: Some clever scientists are trying to measure how fast meme’s travel on the
+  web. My contribution to t...
 tags: []
-date: "2006-11-29"
-type: "wp"
+title: What’s a meme and how fast does it travel?
+type: wp
 wordpress_id: 1397
 ---
+
 Some clever scientists are trying to measure how fast meme’s travel on the web. My contribution to the experiment is to [add a link to their article to my article.](http://acephalous.typepad.com/acephalous/2006/11/measuring_the_s.html)
 What’s a meme, anyway? Think of ideas as little organisms that live in a person’s mind (metaphorically.) And think of how good, meaningful ideas will tend to infect other minds, almost in a biological sense. And how some ideas are so powerful that they travel incredibly fast until everyone understands and thinks in those terms. 
 

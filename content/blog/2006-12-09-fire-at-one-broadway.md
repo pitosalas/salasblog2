@@ -1,12 +1,14 @@
 ---
-title: "fire at one broadway"
-subtitle: "My buddies at wis.dm had a real scare"
-category: "298"
-tags: []
-date: "2006-12-09"
-type: "wp"
+category: '298'
+date: '2006-12-09'
+subtitle: My buddies at wis.dm had a real scare
+tags:
+- personal
+title: fire at one broadway
+type: wp
 wordpress_id: 1390
 ---
+
 My buddies at [wis.dm](http://wis.dm) had a real scare 
  today as our offices and the rest of the building was evacuated in a big 
  rush due to a terrible and terrifying explosion in the 

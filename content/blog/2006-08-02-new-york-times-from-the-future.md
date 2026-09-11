@@ -1,12 +1,14 @@
 ---
-title: "New York Times from the future"
-subtitle: "Look closely at this screen grab off the New York Times site. It was published on August 6, 2006. Lo..."
-category: "298"
+category: '298'
+date: '2006-08-02'
+subtitle: Look closely at this screen grab off the New York Times site. It was published
+  on August 6, 2006. Lo...
 tags: []
-date: "2006-08-02"
-type: "wp"
+title: New York Times from the future
+type: wp
 wordpress_id: 1474
 ---
+
 Look closely at this screen grab off the New York Times site. It was published on August 6, 2006. Look at the calendar on the wall. It’s only August 2, at least here in Boston. Maybe time moves quicker in New York?
 
 ![Picture 2-24](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/Picture%25202-24.png?resize=464%2C306)
