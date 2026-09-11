@@ -81,3 +81,9 @@ security
 spam
 tivo
 web2.0
+agile
+geek-dinner
+gnomedex
+howard-stern
+opml
+social-networking
