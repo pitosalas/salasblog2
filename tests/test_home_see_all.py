@@ -82,7 +82,7 @@ def test_read_more_link_shown_when_truncated():
     """Regression: the home page had no way to reach the full post for a
     truncated excerpt — blog_list.html already had this, home.html didn't."""
     html = render_home(is_truncated=True)
-    assert 'href="/blog/p.html" class="small">Read more' in html
+    assert 'href="/blog/p.html" class="read-more">Read more' in html
 
 
 def test_read_more_link_absent_when_not_truncated():

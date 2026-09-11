@@ -1,0 +1,26 @@
+/* layout.css — shared page shell: main content area, footer, markdown content. */
+
+.site-main { max-width: 980px; margin: 0 auto; padding: 0 32px 32px; }
+
+.excerpt-heading { font-size: 1.08em; }
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: zoom-in;
+}
+
+.images-small img  { max-width: 25%; height: auto; }
+.images-medium img { max-width: 50%; height: auto; }
+.images-large img  { max-width: 75%; height: auto; }
+.images-full img   { max-width: 100%; height: auto; }
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 32px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}

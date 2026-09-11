@@ -1,0 +1,43 @@
+/* stats-page.css — pre-generated stats page, embedded via iframe in admin.html. */
+
+body {
+    margin: 0;
+    padding: 8px;
+    font-size: 0.85rem;
+    background: transparent;
+    font-family: var(--font-mono);
+    color: var(--fg);
+}
+
+.updated { color: var(--muted); font-size: 0.85em; margin: 0 0 12px 0; }
+
+.period-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+.period-btn {
+    font-family: inherit;
+    font-size: 0.85em;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--fg);
+    cursor: pointer;
+}
+.period-btn.active { border-color: var(--accent); color: var(--accent); }
+
+.period-pane { display: none; }
+.period-pane.active { display: block; }
+
+.total-visits { color: var(--muted); font-size: 0.9em; margin: 0 0 12px 0; }
+
+.stats-table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+.stats-table th, .stats-table td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; }
+.stats-table th {
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 0.04em;
+}
+.stats-table td.path { font-family: var(--font-mono); }
+
+.empty-note { color: var(--muted); font-style: italic; }

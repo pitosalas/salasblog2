@@ -60,7 +60,10 @@ def make_post(title="Test Post", url="/blog/test/"):
 
 
 class TestLinkIconInRaindropsList:
-    def test_link_icon_present_in_raindrops_list(self):
+    """F47 dropped the icon library; raindrops_list.html no longer marks
+    each entry with a Bootstrap Icons class."""
+
+    def test_link_icon_absent_in_raindrops_list(self):
         env = make_env()
         tpl = env.get_template("raindrops_list.html")
         html = tpl.render(
@@ -71,9 +74,10 @@ class TestLinkIconInRaindropsList:
             pagination=None,
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert "bi-link-45deg" in html
+        assert "bi-link-45deg" not in html
+        assert "entry-post" in html
 
-    def test_link_icon_per_item_in_raindrops_list(self):
+    def test_link_icon_absent_per_item_in_raindrops_list(self):
         env = make_env()
         tpl = env.get_template("raindrops_list.html")
         raindrops = [
@@ -87,11 +91,15 @@ class TestLinkIconInRaindropsList:
             pagination=None,
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert html.count("bi-link-45deg") >= 3
+        assert "bi-link-45deg" not in html
+        assert html.count("entry-post") >= 3
 
 
 class TestPostIconInBlogList:
-    def test_post_icon_present_in_blog_list(self):
+    """F47 dropped the icon library; blog_list.html no longer marks each
+    post with a Bootstrap Icons class."""
+
+    def test_post_icon_absent_in_blog_list(self):
         env = make_env()
         tpl = env.get_template("blog_list.html")
         html = tpl.render(
@@ -99,22 +107,14 @@ class TestPostIconInBlogList:
             pagination=None,
             total_posts=1,
         )
-        assert "bi-file-text" in html
-
-    def test_post_icon_per_item_in_blog_list(self):
-        env = make_env()
-        tpl = env.get_template("blog_list.html")
-        posts = [make_post(f"Post {i}", f"/blog/post{i}/") for i in range(3)]
-        html = tpl.render(
-            posts=posts,
-            pagination=None,
-            total_posts=3,
-        )
-        assert html.count("bi-file-text") >= 3
+        assert "bi-file-text" not in html
+        assert "entry-post" in html
 
 
 class TestIconsInDetailTemplates:
-    def test_post_icon_in_blog_post_header(self):
+    """F47 dropped the icon library from both detail templates."""
+
+    def test_post_icon_absent_in_blog_post_header(self):
         env = make_env()
         tpl = env.get_template("blog_post.html")
         post = {**make_post(), "content": "<p>body</p>", "filename": "test-post"}
@@ -125,9 +125,10 @@ class TestIconsInDetailTemplates:
             prev_post=None,
             next_post=None,
         )
-        assert "bi-file-text" in html
+        assert "bi-file-text" not in html
+        assert "post-title" in html
 
-    def test_link_icon_in_raindrop_post_header(self):
+    def test_link_icon_absent_in_raindrop_post_header(self):
         env = make_env()
         tpl = env.get_template("raindrop_post.html")
         post = {**make_raindrop(), "filename": "test-raindrop", "note": None}
@@ -138,11 +139,16 @@ class TestIconsInDetailTemplates:
             prev_post=None,
             next_post=None,
         )
-        assert "bi-link-45deg" in html
+        assert "bi-link-45deg" not in html
+        assert "post-title" in html
 
 
-class TestIconsOnHomePage:
-    def test_post_icon_on_home_recent_posts(self):
+class TestContentTypeDistinguishedByColumnOnHome:
+    """F47 dropped the icon library from home.html; posts vs. raindrops are
+    now distinguished by which labeled column (Recent Posts / Link Blog)
+    they render in, not by a Bootstrap Icons class."""
+
+    def test_home_recent_posts_has_no_icon_classes(self):
         env = make_env()
         tpl = env.get_template("home.html")
         html = tpl.render(
@@ -152,9 +158,10 @@ class TestIconsOnHomePage:
             site_title="Test",
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert "bi-file-text" in html
+        assert "bi-file-text" not in html
+        assert "Recent Posts" in html
 
-    def test_link_icon_on_home_recent_raindrops(self):
+    def test_home_recent_raindrops_has_no_icon_classes(self):
         env = make_env()
         tpl = env.get_template("home.html")
         html = tpl.render(
@@ -164,4 +171,5 @@ class TestIconsOnHomePage:
             site_title="Test",
             NOTE_TRUNCATE_LENGTH=200,
         )
-        assert "bi-link-45deg" in html
+        assert "bi-link-45deg" not in html
+        assert "Link Blog" in html

@@ -1,0 +1,84 @@
+/*
+ * entries.css — shared hairline entry-list pattern used by home.html,
+ * blog_list.html, and later list-style templates (raindrops_list.html,
+ * tag_page.html).
+ */
+
+.page-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+.page-title { margin: 0 0 6px 0; font-size: 1.4em; font-weight: 600; }
+.page-subtitle { margin: 0; color: var(--muted); font-size: 0.95em; }
+.page-meta { margin: 8px 0 0 0; color: var(--muted); font-size: 0.85em; }
+
+.section-heading {
+    margin: 50px 0 18px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.section-heading.flush { margin-top: 0; }
+
+.empty-state { text-align: center; color: var(--muted); padding: 60px 0; font-style: italic; }
+
+.pagination-nav { margin-top: 32px; display: flex; justify-content: center; }
+.pagination { display: flex; list-style: none; margin: 0; padding: 0; gap: 6px; flex-wrap: wrap; }
+.page-link {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    color: var(--fg);
+    font-size: 0.85em;
+}
+.page-link:hover { border-color: var(--muted); }
+.page-item.active .page-link { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.page-item.disabled .page-link { color: var(--muted); cursor: default; }
+
+.entry-list { list-style: none; margin: 0; padding: 0; }
+
+.entry {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+}
+.entry:first-child { padding-top: 0; }
+.entry:last-child { border-bottom: none; }
+
+.entry-date { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+
+/* Two-part entries: a fixed-width date rail beside title/body/tags. */
+.entry-post { display: flex; gap: 20px; }
+.entry-post .entry-date { flex: 0 0 90px; margin-bottom: 0; }
+.entry-post .entry-content { flex: 1; min-width: 0; }
+
+@media (max-width: 480px) {
+    .entry-post { flex-direction: column; gap: 4px; }
+    .entry-post .entry-date { flex: none; }
+}
+
+.entry-title { margin: 0 0 6px 0; font-size: 1.05em; font-weight: 600; }
+.entry-title a:hover { text-decoration: underline; }
+
+.entry-excerpt { color: var(--muted); font-size: 0.92em; }
+.entry-excerpt p { margin: 0; }
+
+.read-more { display: inline-block; margin-top: 6px; font-size: 0.85em; color: var(--muted); }
+.read-more:hover { color: var(--accent); }
+
+.entry-tags { margin-top: 8px; display: flex; gap: 10px; flex-wrap: wrap; }
+.tag { color: var(--accent); font-size: 0.85em; }
+.tag:hover { text-decoration: underline; }
+
+.see-all {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 0.9em;
+    color: var(--muted);
+}
+.see-all:hover { color: var(--accent); }

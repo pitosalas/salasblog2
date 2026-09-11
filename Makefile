@@ -11,7 +11,20 @@ CHANGED_PY := $(shell { \
 	git ls-files --others --exclude-standard -- '*.py'; \
 } | sort -u)
 
-.PHONY: setup fmt lint test check run local deploy
+.PHONY: help setup fmt lint test check generate run local deploy
+.DEFAULT_GOAL := setup
+
+help:
+	@echo "Targets:"
+	@echo "  setup    - install/sync dependencies"
+	@echo "  fmt      - format changed .py files"
+	@echo "  lint     - lint changed .py files"
+	@echo "  test     - run the test suite"
+	@echo "  check    - fmt + lint + test"
+	@echo "  generate - regenerate the static site into output/"
+	@echo "  run      - run the server"
+	@echo "  local    - regenerate the static site, then run the server with --reload"
+	@echo "  deploy   - build and deploy to fly.io"
 
 setup:
 	uv sync
@@ -35,10 +48,13 @@ test:
 
 check: fmt lint test
 
+generate:
+	uv run bg generate
+
 run:
 	uv run bg server
 
-local:
+local: generate
 	uv run bg server --reload
 
 deploy:

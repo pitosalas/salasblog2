@@ -187,7 +187,8 @@ type: "page"
         content = response.text
 
         # Check for header/nav structure
-        assert "navbar" in content
+        assert "site-header" in content
+        assert "site-nav" in content
 
         # Check for menu items
         assert 'href="/"' in content  # Home link
@@ -213,10 +214,10 @@ type: "page"
         page_files = list(self.pages_dir.glob("*.md"))
         expected_count = len(page_files)
 
-        # Count page cards in the HTML
-        page_card_count = content.count('<div class="card h-100">')
+        # Count page entries in the HTML
+        page_entry_count = content.count('<li class="entry">')
 
-        assert page_card_count == expected_count == 3
+        assert page_entry_count == expected_count == 3
 
         # Also verify against the loaded pages
         assert len(pages) == expected_count
@@ -398,7 +399,7 @@ type: "page"
         # Count items in the generated HTML
         response = self.client.get("/pages/")
         content = response.text
-        html_count = content.count('<div class="card h-100">')
+        html_count = content.count('<li class="entry">')
 
         # All counts should match
         assert directory_count == loaded_count == html_count == 3
@@ -424,16 +425,15 @@ type: "page"
             assert page["url"].endswith(".html")
 
     def test_pages_css_and_styling(self):
-        """Test that pages listing includes proper CSS and styling."""
+        """Test that pages listing uses the Console entry-list styling, not Bootstrap cards."""
         # Generate the site first
         self.generate_test_site()
 
         response = self.client.get("/pages/")
         content = response.text
 
-        # Check for Bootstrap CSS classes used in the listing template
-        assert "row row-cols-1" in content
-        assert "card h-100" in content
+        assert "entry-list" in content
+        assert "card h-100" not in content
 
     def test_pages_with_no_admin_password(self):
         """Test pages behavior when no admin password is set."""
@@ -562,8 +562,8 @@ This is page {i} content.""")
         assert "Page 1" in content
         assert "Page 2" in content
 
-        # Should contain the proper number of page cards
-        assert content.count('<div class="card h-100">') == 3
+        # Should contain the proper number of page entries
+        assert content.count('<li class="entry">') == 3
 
 
 class TestPagesAdminFeatures:

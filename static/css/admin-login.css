@@ -1,0 +1,53 @@
+/* admin-login.css — standalone admin login form. */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 360px;
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg-alt);
+}
+
+.login-title { margin: 0 0 20px 0; font-size: 1.2em; font-weight: 600; text-align: center; }
+
+.login-card form { display: flex; flex-direction: column; }
+
+.form-label { font-size: 0.85em; color: var(--muted); margin-bottom: 6px; }
+
+.form-input {
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: var(--bg);
+    color: var(--fg);
+    margin-bottom: 16px;
+}
+.form-input:focus { outline: none; border-color: var(--accent); }
+
+.login-submit {
+    font-family: inherit;
+    font-size: 0.95em;
+    padding: 8px 12px;
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--accent);
+    cursor: pointer;
+}
+.login-submit:hover { background: var(--accent); color: var(--bg); }
+
+.login-error { margin-top: 12px; color: #c0392b; font-size: 0.85em; }
+
+.login-back { margin-top: 16px; text-align: center; }
+.login-back a { color: var(--muted); font-size: 0.85em; }
+.login-back a:hover { color: var(--accent); }

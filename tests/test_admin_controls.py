@@ -26,24 +26,24 @@ def test_blog_post_admin_controls_hidden_by_default():
     assert "admin-controls d-none" in content
 
 
-def test_blog_post_edit_button_uses_warning_style():
-    """Edit button uses btn-warning to distinguish it from outline-secondary nav buttons."""
+def test_blog_post_edit_button_uses_edit_style():
+    """Edit button uses btn-edit to distinguish it from plain nav links."""
     content = (TEMPLATES_DIR / "blog_post.html").read_text()
-    assert "btn-warning" in content
+    assert "btn-edit" in content
     assert "Edit this post" in content
 
 
-def test_blog_post_derive_button_uses_info_style():
-    """Derive button uses btn-info to distinguish it from nav and edit buttons."""
+def test_blog_post_derive_button_uses_derive_style():
+    """Derive button uses btn-derive to distinguish it from edit/delete buttons."""
     content = (TEMPLATES_DIR / "blog_post.html").read_text()
-    assert "btn-info" in content
+    assert "btn-derive" in content
     assert "New post based on this one" in content
 
 
-def test_blog_post_nav_buttons_use_outline_secondary():
-    """Prev/next nav buttons use btn-outline-secondary, visually distinct from action buttons."""
+def test_blog_post_nav_buttons_use_plain_links():
+    """Prev/next nav buttons use post-nav-link (no button chrome), visually distinct from action buttons."""
     content = (TEMPLATES_DIR / "blog_post.html").read_text()
-    assert "btn-outline-secondary" in content
+    assert "post-nav-link" in content
 
 
 def test_new_post_button_hidden_via_d_none_not_inline_style():

@@ -4,32 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Visit Statistics</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<style>
-  body { font-size: 0.85rem; background: transparent; }
-  .period-pane { display: none; }
-  .period-pane.active { display: block; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/theme.css">
+<link rel="stylesheet" href="/static/css/stats-page.css">
 </head>
-<body class="p-2">
-<p class="text-muted small mb-2">Last updated: {{ generated_at }}</p>
-<div class="btn-group btn-group-sm mb-3" role="group">
+<body>
+<p class="updated">Last updated: {{ generated_at }}</p>
+<div class="period-tabs">
   {% for key, label in periods %}
-  <button type="button" class="btn btn-outline-primary period-btn {% if loop.first %}active{% endif %}"
+  <button type="button" class="period-btn {% if loop.first %}active{% endif %}"
           onclick="showPeriod('{{ key }}', this)">{{ label }}</button>
   {% endfor %}
 </div>
 
 {% for key, label in periods %}
 <div class="period-pane {% if loop.first %}active{% endif %}" id="pane-{{ key }}">
-  <p class="text-muted small">Total visits: <strong>{{ stats[key]['total'] }}</strong></p>
+  <p class="total-visits">Total visits: <strong>{{ stats[key]['total'] }}</strong></p>
   {% if stats[key]['counts'] %}
-  <table class="table table-sm table-hover table-striped">
-    <thead class="table-dark"><tr><th>Path</th><th>Visits</th><th>Human</th><th>Bot</th><th>Search</th></tr></thead>
+  <table class="stats-table">
+    <thead><tr><th>Path</th><th>Visits</th><th>Human</th><th>Bot</th><th>Search</th></tr></thead>
     <tbody>
     {% for row in stats[key]['counts'] %}
     <tr>
-      <td class="font-monospace small">{{ row.path }}</td>
+      <td class="path">{{ row.path }}</td>
       <td>{{ row.total }}</td>
       <td>{{ row.by_type.get('human', 0) }}</td>
       <td>{{ row.by_type.get('bot', 0) }}</td>
@@ -39,7 +38,7 @@
     </tbody>
   </table>
   {% else %}
-  <p class="text-muted fst-italic">No visits recorded for this period.</p>
+  <p class="empty-note">No visits recorded for this period.</p>
   {% endif %}
 </div>
 {% endfor %}

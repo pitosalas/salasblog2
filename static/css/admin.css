@@ -1,0 +1,147 @@
+/*
+ * admin.css — the admin SPA. Loads theme.css/header.css/layout.css for
+ * the shared shell (site-header/site-footer/site-main), then:
+ * (1) admin-specific chrome (tabs, panes), and
+ * (2) a Bootstrap-class-compatible utility shim, since this page's
+ * ~700 lines of inline JS build HTML strings using literal Bootstrap
+ * class names (btn, alert, badge, table, spinner-border, text-muted,
+ * etc.) — renaming every occurrence across that JS was judged too
+ * high-risk for a visual-only pass with no test coverage on this file,
+ * so those class names are kept and simply redefined here.
+ */
+
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.admin-heading { margin: 0; font-size: 1.3em; font-weight: 600; }
+
+.admin-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.admin-tab {
+    font-family: inherit;
+    font-size: 0.85em;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: transparent;
+    color: var(--fg);
+    cursor: pointer;
+}
+.admin-tab:hover { border-color: var(--muted); }
+.admin-tab.active { border-color: var(--accent); color: var(--accent); }
+.admin-tab-danger { color: #c0392b; border-color: #c0392b; }
+
+.admin-pane h2 { font-size: 1.05em; font-weight: 600; margin: 0 0 8px 0; }
+.admin-pane h2.h5 { font-size: 1.05em; }
+
+/* ---- Bootstrap-compatible utility shim ---- */
+
+.btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.9em;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 7px 14px;
+    cursor: pointer;
+    color: var(--fg);
+    text-decoration: none;
+}
+.btn:hover { border-color: var(--muted); }
+.btn-sm { font-size: 0.8em; padding: 4px 10px; }
+.btn-primary, .btn-outline-primary { color: var(--accent); border-color: var(--accent); }
+.btn-success, .btn-outline-success { color: #2e7d32; border-color: #2e7d32; }
+.btn-danger, .btn-outline-danger { color: #c0392b; border-color: #c0392b; }
+.btn-warning { color: #b7791f; border-color: #b7791f; }
+.btn-primary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover,
+.btn-outline-primary:hover, .btn-outline-success:hover, .btn-outline-danger:hover {
+    opacity: 0.8;
+}
+
+.alert {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 0.9em;
+    margin-bottom: 12px;
+}
+.alert-success { border-color: #2e7d32; color: #2e7d32; }
+.alert-danger { border-color: #c0392b; color: #c0392b; }
+.alert-info { border-color: var(--accent); color: var(--accent); }
+.alert-light { border-color: var(--border); color: var(--fg); background: var(--bg-alt); }
+
+.badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.75em;
+    border: 1px solid var(--border);
+    color: var(--fg);
+}
+.bg-secondary { border-color: var(--border); color: var(--muted); }
+.bg-success { border-color: #2e7d32; color: #2e7d32; }
+
+.spinner-border {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    border: 2px solid var(--border);
+    border-right-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+.spinner-border-sm { width: 0.8em; height: 0.8em; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+.table th, .table td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; }
+.table thead.table-dark th, .table .table-dark th {
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    letter-spacing: 0.04em;
+}
+.table-hover tbody tr:hover { background: var(--bg-alt); }
+.table-bordered td, .table-bordered th { border: 1px solid var(--border); }
+.w-auto { width: auto; }
+
+.text-muted { color: var(--muted); }
+.text-danger { color: #c0392b; }
+.text-white { color: var(--fg); }
+.fw-bold { font-weight: 600; }
+.small { font-size: 0.85em; }
+.text-nowrap { white-space: nowrap; }
+.text-center { text-align: center; }
+.fst-italic { font-style: italic; }
+
+.d-none { display: none; }
+.d-flex { display: flex; }
+.d-block { display: block; }
+.flex-wrap { flex-wrap: wrap; }
+.justify-content-between { justify-content: space-between; }
+.align-items-center { align-items: center; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-2 { margin-bottom: 8px; }
+.mb-3 { margin-bottom: 12px; }
+.mb-4 { margin-bottom: 16px; }
+.mt-2 { margin-top: 8px; }
+.mt-4 { margin-top: 16px; }
+.ms-1 { margin-left: 4px; }
+.ms-2 { margin-left: 8px; }
+.me-1 { margin-right: 4px; }
+.me-2 { margin-right: 8px; }
+
+.border { border: 1px solid var(--border); border-radius: 3px; padding: 10px; }
+.border-start { border-left: 2px solid var(--border); padding-left: 10px; }
+.border-primary { border-color: var(--accent); }
+.rounded { border-radius: 3px; }
+.font-monospace { font-family: var(--font-mono); }
+
+code { font-family: var(--font-mono); color: var(--accent); }
