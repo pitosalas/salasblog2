@@ -1,0 +1,53 @@
+/*
+ * theme.css — Console theme color tokens and base reset.
+ * Light is default; dark applies via [data-theme="dark"] or, absent an
+ * explicit choice, the OS preference (see theme-toggle.js).
+ */
+
+:root {
+    --bg: #ece5d6;
+    --bg-alt: #e2dac6;
+    --header-bg: #e2dac6;
+    --fg: #1c1c1a;
+    --muted: #726d63;
+    --border: #d8cfba;
+    --accent: #c1712f;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #191815;
+        --bg-alt: #221f1a;
+        --header-bg: #221f1a;
+        --fg: #e9e7e0;
+        --muted: #948e82;
+        --border: #322f28;
+        --accent: #d98a4d;
+    }
+}
+
+:root[data-theme="dark"] {
+    --bg: #191815;
+    --bg-alt: #221f1a;
+    --header-bg: #221f1a;
+    --fg: #e9e7e0;
+    --muted: #948e82;
+    --border: #322f28;
+    --accent: #d98a4d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-mono);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.d-none { display: none; }

@@ -1,0 +1,44 @@
+/* raindrops-list.css — link-blog index: collection filter chips, entry extras. */
+
+.collection-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.collection-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 0.85em;
+    color: var(--fg);
+}
+.collection-chip:hover { border-color: var(--accent); color: var(--accent); }
+.chip-count { color: var(--muted); }
+
+.entry-cover {
+    float: left;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    margin: 0 12px 8px 0;
+}
+
+.entry-source { color: var(--muted); font-size: 0.85em; margin-bottom: 4px; }
+
+.entry-note {
+    color: var(--muted);
+    font-size: 0.9em;
+    font-style: italic;
+    border-left: 2px solid var(--border);
+    padding-left: 10px;
+    margin: 6px 0;
+}
+
+.entry-source-url a { color: var(--muted); font-size: 0.8em; word-break: break-all; }
+.entry-source-url a:hover { color: var(--accent); }

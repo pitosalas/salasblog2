@@ -4,75 +4,66 @@
 
 {% block description %}{{ post.excerpt or post.title }}{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/raindrops-list.css">
+{% endblock %}
+
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-lg-8">
-        <article>
-            <header class="mb-3">
-                <h1 class="display-6 mb-2">{{ post.title }} <i class="bi bi-link-45deg text-secondary fs-4 align-middle"></i></h1>
-                <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
-                    <time datetime="{{ post.date }}" class="text-muted small">
-                        {{ post.date | strftime('%B %d, %Y') }}
-                    </time>
-                    {% if post.collection %}
-                    <a href="/raindrops/{{ post.collection | slugify }}/" class="badge bg-primary text-decoration-none">{{ post.collection }}</a>
-                    {% endif %}
-                </div>
-                
-                {% if post.raindrop_url %}
-                <div class="mb-2">
-                    <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener noreferrer" class="text-break">
-                        {{ post.raindrop_url }}
-                    </a>
-                </div>
-                {% endif %}
-            </header>
-
-            {% if post.excerpt %}
-            <div class="card bg-light mb-3">
-                <div class="card-body py-2">
-                    <p class="mb-0 small">{{ post.excerpt }}</p>
-                </div>
-            </div>
+<article>
+    <header class="post-header">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <div class="post-meta">
+            <time datetime="{{ post.date }}">{{ post.date | dd_mm_yyyy }}</time>
+            {% if post.collection %}
+            <a href="/raindrops/{{ post.collection | slugify }}/" class="tag">{{ post.collection }}</a>
             {% endif %}
+        </div>
+        {% if post.raindrop_url %}
+        <div class="entry-source-url">
+            <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener noreferrer">{{ post.raindrop_url }}</a>
+        </div>
+        {% endif %}
+    </header>
 
-            {% if post.note %}
-            <div class="mb-3">
-                <h5 class="h6 text-muted mb-1">My Comment</h5>
-                <div class="small">
-                    {{ post.note | markdown | safe }}
-                </div>
-            </div>
-            {% endif %}
+    <div class="post-body">
+        {% if post.excerpt %}
+        <blockquote class="post-excerpt">{{ post.excerpt }}</blockquote>
+        {% endif %}
 
-            {% if post.tags and post.tags[0] %}
-            <div class="mb-3">
-                {% for tag in post.tags %}
-                <a href="/tags/{{ tag | slugify }}/index.html" class="badge bg-secondary text-decoration-none me-1">{{ tag }}</a>
-                {% endfor %}
-            </div>
-            {% endif %}
+        {% if post.note %}
+        <div class="post-note">
+            <h2 class="label-heading">My Comment</h2>
+            {{ post.note | markdown | safe }}
+        </div>
+        {% endif %}
 
-            <footer>
-                <div class="admin-controls d-none mb-3 p-3 bg-light border rounded">
-                    <h4 class="h6 mb-2">Admin Actions</h4>
-                    <div class="d-flex gap-2 flex-wrap">
-                        <button onclick="deleteRaindrop('{{ post.filename }}.md', this)" class="btn btn-danger btn-sm">Delete Raindrop</button>
-                    </div>
-                </div>
-
-                <nav class="d-flex justify-content-between border-top pt-3 mt-3">
-                    {% if prev_post %}
-                    <a href="{{ prev_post.url }}" class="btn btn-outline-secondary btn-sm">&larr; Previous</a>
-                    {% else %}
-                    <span></span>
-                    {% endif %}
-                    {% if next_post %}
-                    <a href="{{ next_post.url }}" class="btn btn-outline-secondary btn-sm">Next &rarr;</a>
-                    {% endif %}
-                </nav>
-            </footer>
-        </article>
+        {% if post.tags and post.tags[0] %}
+        <div class="entry-tags">
+            {% for tag in post.tags %}
+            <a href="/tags/{{ tag | slugify }}/index.html" class="tag">#{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
-</div>
+
+    <footer>
+        <div class="admin-controls d-none admin-panel">
+            <h4 class="label-heading">Admin Actions</h4>
+            <div class="admin-actions">
+                <button onclick="deleteRaindrop('{{ post.filename }}.md', this)" class="btn btn-delete">Delete Raindrop</button>
+            </div>
+        </div>
+
+        <nav class="post-nav">
+            {% if prev_post %}
+            <a href="{{ prev_post.url }}" class="post-nav-link">&larr; Previous</a>
+            {% else %}
+            <span></span>
+            {% endif %}
+            {% if next_post %}
+            <a href="{{ next_post.url }}" class="post-nav-link">Next &rarr;</a>
+            {% endif %}
+        </nav>
+    </footer>
+</article>
 {% endblock %}

@@ -2,96 +2,82 @@
 
 {% block title %}Link Blog{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/raindrops-list.css">
+{% endblock %}
+
 {% block content %}
-<div class="mb-3">
-    <h1 class="display-6">Link Blog</h1>
+<div class="page-header">
+    <h1 class="page-title">Link Blog</h1>
+    {% if collections %}
+    <p class="page-meta">{{ collections|length }} collections &middot; {{ total_posts }} total posts</p>
+    {% endif %}
 </div>
 
 {% if collections %}
-<div class="mb-4">
-    <div class="d-flex flex-wrap gap-2 mb-2">
-        {% for collection in collections %}
-        <a href="/raindrops/{{ collection | slugify }}/" class="btn btn-primary btn-sm">
-            {{ collection }} <span class="badge bg-light text-dark ms-1">{{ collection_counts.get(collection, 0) }}</span>
-        </a>
-        {% endfor %}
-    </div>
-    <div class="text-muted small">
-        <strong>{{ collections|length }}</strong> collections · <strong>{{ total_posts }}</strong> total posts
-    </div>
+<div class="collection-filters">
+    {% for collection in collections %}
+    <a href="/raindrops/{{ collection | slugify }}/" class="collection-chip">
+        {{ collection }} <span class="chip-count">{{ collection_counts.get(collection, 0) }}</span>
+    </a>
+    {% endfor %}
 </div>
 {% endif %}
 
 {% if posts|length == 0 %}
-<p class="text-center text-muted fst-italic py-5">No link blog posts found.</p>
+<p class="empty-state">No link blog posts found.</p>
 {% else %}
 
 {% set grouped_posts = posts | group_by_month %}
 {% for month_group in grouped_posts %}
-<section class="mb-4">
-    <h2 class="h5 border-bottom border-primary pb-1 mb-3">{{ month_group.month_name }}</h2>
-
+<h2 class="section-heading{% if loop.first %} flush{% endif %}">{{ month_group.month_name }}</h2>
+<ul class="entry-list">
     {% for post in month_group.posts %}
-    <article class="card mb-3">
-        <div class="card-body">
-            <div class="d-flex align-items-center gap-2 mb-1">
-                <small class="text-muted fw-bold">{{ post.date | dd_mm_yyyy }}</small>
-                {% if post.important %}<span title="Important">&#11088;</span>{% endif %}
-                {% if post.broken %}<span title="Broken link">&#9888;&#65039;</span>{% endif %}
-            </div>
-
-            <div class="d-flex gap-3 align-items-start">
-                {% if post.cover %}
-                <div class="flex-shrink-0">
-                    <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy" class="rounded" style="width:100px; height:auto;">
-                </div>
-                {% endif %}
-
-                <div class="flex-grow-1">
-                    <h3 class="h6 mb-1">
-                        <a href="{{ post.url }}" class="text-decoration-none">{{ post.title }}</a> <i class="bi bi-link-45deg text-secondary small"></i>
-                    </h3>
-
-                    {% if post.domain %}
-                    <div class="text-muted small mb-1"><strong>Source:</strong> {{ post.domain }}</div>
-                    {% endif %}
-
-                    {% if post.excerpt %}
-                    <div class="small mb-1">{{ post.excerpt | markdown | safe }}</div>
-                    {% endif %}
-
-                    {% if post.note %}
-                    <div class="small border-start border-primary ps-2 fst-italic mb-1">
-                        {{ post.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
-                    </div>
-                    {% endif %}
-
-                    {% if post.raindrop_url %}
-                    <div class="small text-muted mb-1">
-                        <strong>URL:</strong> <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener" class="text-break">{{ post.raindrop_url }}</a>
-                    </div>
-                    {% endif %}
-
-                    {% if post.tags and post.tags[0] %}
-                    <div class="mt-1">
-                        {% for tag in post.tags %}
-                        <a href="/tags/{{ tag | slugify }}/index.html" class="badge bg-secondary text-decoration-none me-1">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
+    <li class="entry entry-post">
+        <div class="entry-date">
+            {{ post.date | dd_mm_yyyy }}
+            {% if post.important %}<span title="Important">&#9733;</span>{% endif %}
+            {% if post.broken %}<span title="Broken link">&#9888;</span>{% endif %}
         </div>
-    </article>
+        <div class="entry-content">
+            {% if post.cover %}
+            <img src="{{ post.cover }}" alt="{{ post.title }}" loading="lazy" class="entry-cover">
+            {% endif %}
+            <h3 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            {% if post.domain %}
+            <div class="entry-source">{{ post.domain }}</div>
+            {% endif %}
+            {% if post.excerpt %}
+            <div class="entry-excerpt">{{ post.excerpt | markdown | safe }}</div>
+            {% endif %}
+            {% if post.note %}
+            <div class="entry-note">
+                {{ post.note | truncate(NOTE_TRUNCATE_LENGTH, killwords=False, end='…') | markdown | safe }}
+            </div>
+            {% endif %}
+            {% if post.raindrop_url %}
+            <div class="entry-source-url">
+                <a href="{{ post.raindrop_url }}" target="_blank" rel="noopener">{{ post.raindrop_url }}</a>
+            </div>
+            {% endif %}
+            {% if post.tags and post.tags[0] %}
+            <div class="entry-tags">
+                {% for tag in post.tags %}
+                <a href="/tags/{{ tag | slugify }}/index.html" class="tag">#{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </li>
     {% endfor %}
-</section>
+</ul>
 {% endfor %}
 
 {% endif %}
 
 {% if pagination and pagination.total_pages > 1 %}
-<nav aria-label="Link blog pagination" class="mt-4">
-    <ul class="pagination justify-content-center flex-wrap">
+<nav aria-label="Link blog pagination" class="pagination-nav">
+    <ul class="pagination">
         {% if pagination.has_prev %}
         <li class="page-item">
             <a class="page-link" href="{{ pagination.prev_url }}">&laquo; Previous</a>

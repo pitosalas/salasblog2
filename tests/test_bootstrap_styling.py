@@ -98,7 +98,7 @@ def render(template_name, context):
     return env.get_template(template_name).render(**context)
 
 
-def test_base_contains_navbar():
+def test_base_contains_console_header():
     html = render(
         "home.html",
         {
@@ -106,10 +106,10 @@ def test_base_contains_navbar():
             "recent_raindrops": [fake_raindrop()],
         },
     )
-    assert "navbar" in html
+    assert "site-header" in html
 
 
-def test_base_loads_bootstrap_cdn():
+def test_base_loads_console_css_not_bootstrap():
     html = render(
         "home.html",
         {
@@ -117,10 +117,11 @@ def test_base_loads_bootstrap_cdn():
             "recent_raindrops": [],
         },
     )
-    assert "bootstrap" in html.lower()
+    assert "theme.css" in html
+    assert "bootstrap" not in html.lower()
 
 
-def test_home_uses_card_class():
+def test_home_uses_console_entry_list():
     html = render(
         "home.html",
         {
@@ -128,10 +129,11 @@ def test_home_uses_card_class():
             "recent_raindrops": [],
         },
     )
-    assert "card" in html
+    assert "entry-list" in html
+    assert "card" not in html
 
 
-def test_home_uses_bootstrap_grid():
+def test_home_uses_console_grid_not_bootstrap():
     html = render(
         "home.html",
         {
@@ -139,7 +141,8 @@ def test_home_uses_bootstrap_grid():
             "recent_raindrops": [],
         },
     )
-    assert "col-md-" in html
+    assert "home-grid" in html
+    assert "col-md-" not in html
 
 
 def test_blog_list_uses_pagination_class():
@@ -165,7 +168,7 @@ def test_blog_list_uses_pagination_class():
     assert "page-link" in html
 
 
-def test_raindrops_list_uses_card():
+def test_raindrops_list_uses_console_entries():
     html = render(
         "raindrops_list.html",
         {
@@ -174,10 +177,11 @@ def test_raindrops_list_uses_card():
             "total_posts": 1,
         },
     )
-    assert "card" in html
+    assert "entry-post" in html
+    assert "card" not in html
 
 
-def test_pages_list_uses_card():
+def test_pages_list_uses_console_entries():
     html = render(
         "pages_list.html",
         {
@@ -185,10 +189,11 @@ def test_pages_list_uses_card():
             "site_title": "Salas Blog",
         },
     )
-    assert "card" in html
+    assert "entry-list" in html
+    assert "card" not in html
 
 
-def test_blog_post_uses_container_grid():
+def test_blog_post_uses_post_body_not_bootstrap_grid():
     html = render(
         "blog_post.html",
         {
@@ -197,10 +202,11 @@ def test_blog_post_uses_container_grid():
             "next_post": None,
         },
     )
-    assert "col-lg-" in html
+    assert "post-body" in html
+    assert "col-lg-" not in html
 
 
-def test_raindrop_post_uses_container_grid():
+def test_raindrop_post_uses_post_body_not_bootstrap_grid():
     html = render(
         "raindrop_post.html",
         {
@@ -209,19 +215,21 @@ def test_raindrop_post_uses_container_grid():
             "next_post": None,
         },
     )
-    assert "col-lg-" in html
+    assert "post-body" in html
+    assert "col-lg-" not in html
 
 
-def test_page_template_uses_container_grid():
+def test_page_template_uses_post_body_not_bootstrap_grid():
     html = render("page.html", {"page": fake_page()})
-    assert "col-lg-" in html
+    assert "post-body" in html
+    assert "col-lg-" not in html
 
 
-def test_404_uses_bootstrap_btn():
+def test_404_uses_console_btn():
     html = render("404.html", {})
-    assert "btn btn-primary" in html
+    assert "btn btn-edit" in html
 
 
-def test_footer_uses_bootstrap_bg():
+def test_footer_uses_console_style():
     html = render("home.html", {"recent_posts": [], "recent_raindrops": []})
-    assert "bg-secondary" in html
+    assert "site-footer" in html

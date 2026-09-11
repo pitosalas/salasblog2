@@ -1,0 +1,82 @@
+/*
+ * post-detail.css — shared single-post-view furniture used by
+ * blog_post.html and (next task) raindrop_post.html: header, admin
+ * panel, prev/next navigation.
+ */
+
+.post-header {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+.post-title { margin: 0 0 10px 0; font-size: 1.6em; font-weight: 600; }
+
+.post-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 0.85em;
+}
+.post-meta .tag-list { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.post-body { margin-bottom: 32px; }
+
+.post-excerpt {
+    margin: 0 0 20px 0;
+    padding: 12px 16px;
+    border-left: 2px solid var(--border);
+    background: var(--bg-alt);
+    color: var(--muted);
+    font-size: 0.92em;
+}
+
+.post-note { margin-bottom: 24px; }
+.post-note p:last-child { margin-bottom: 0; }
+
+.admin-panel {
+    margin-top: 24px;
+    padding: 16px;
+    border: 1px solid var(--border);
+    background: var(--bg-alt);
+    border-radius: 4px;
+}
+.label-heading {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+.admin-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+
+.btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 0.85em;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: var(--fg);
+}
+.btn:hover { border-color: var(--muted); }
+
+.btn-edit, .btn-primary { color: var(--accent); border-color: var(--accent); }
+.btn-derive { color: var(--fg); }
+.btn-delete, .btn-danger { color: #c0392b; border-color: #c0392b; }
+.btn-sm { font-size: 0.8em; padding: 4px 10px; }
+
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+.post-nav-link { color: var(--muted); font-size: 0.9em; max-width: 45%; }
+.post-nav-link:hover { color: var(--accent); }

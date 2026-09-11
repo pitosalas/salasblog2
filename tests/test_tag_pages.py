@@ -142,7 +142,7 @@ def test_numeric_tags_are_not_displayed():
     assert '">615<' not in html
     assert '">1797<' not in html
     # Real text tag should still appear
-    assert ">python<" in html
+    assert ">#python<" in html
 
 
 def test_tag_link_resolves_to_generated_page(tmp_path):
