@@ -1,12 +1,14 @@
 ---
-title: "Amazing article about what’s going on in Syria"
-subtitle: "!MarieColvin"
-category: "1"
-tags: ["1326", "1434", "1737", "1940", "1963", "2094"]
-date: "2012-02-26"
-type: "wp"
+category: '1'
+date: '2012-02-26'
+subtitle: '!MarieColvin'
+tags:
+- politics
+title: Amazing article about what’s going on in Syria
+type: wp
 wordpress_id: 382
 ---
+
 ![MarieColvin](https://i0.wp.com/www.havantchildrensuniversity.co.uk/public/images/logos-small/sunday-times-logo.gif?w=584)
 
 In the Sunday Times (of London, I gather, but they don’t feel the need to include that in their name) I saw this outstanding article about what’s going on in Syria. (No I don’t regularly read the Sunday Times, I got this through a link.

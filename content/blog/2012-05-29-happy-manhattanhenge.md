@@ -1,12 +1,14 @@
 ---
-title: "Happy Manhattanhenge"
-subtitle: "!ManhattanSunset SmallToday (May 29) is Manhatten..."
-category: "1"
-tags: ["661", "1540"]
-date: "2012-05-29"
-type: "wp"
+category: '1'
+date: '2012-05-29'
+subtitle: '!ManhattanSunset SmallToday (May 29) is Manhatten...'
+tags:
+- science
+title: Happy Manhattanhenge
+type: wp
 wordpress_id: 324
 ---
+
 ![ManhattanSunset Small](//pending/E6BF01EC-1313-4179-B16B-505AC16EB3D7/)Today (May 29) is Manhattenhenge. One of two days every year when sunrise and sunset are exactly aligned with the Manhattan (New York City, New York, USA) street grid. Just a fun fact. 
 
 > 

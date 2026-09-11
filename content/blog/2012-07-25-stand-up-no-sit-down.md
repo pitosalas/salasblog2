@@ -1,12 +1,15 @@
 ---
-title: "Stand up! No, Sit Down!"
-subtitle: "You know the old joke that today they say something is good for you, tomorrow it’s bad, and the day ..."
-category: "1"
-tags: ["1194", "1198", "1378", "1379", "1864"]
-date: "2012-07-25"
-type: "wp"
+category: '1'
+date: '2012-07-25'
+subtitle: You know the old joke that today they say something is good for you, tomorrow
+  it’s bad, and the day ...
+tags:
+- health
+title: Stand up! No, Sit Down!
+type: wp
 wordpress_id: 308
 ---
+
 You know the old joke that today they say something is good for you, tomorrow it’s bad, and the day after it’s good again? Recently there was a lot of press that sitting 3 hours a day could take years off your lifespan. “[Sitting for More Than Three Hours a Day Cuts Life Expectancy”, so said the Wall Street Journal:](http://online.wsj.com/article/SB10001424052702303343404577516853567934264.html)
 
 > 

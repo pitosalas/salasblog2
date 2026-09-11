@@ -1,12 +1,14 @@
 ---
-title: "Bertrand Russell through the echo chamber"
-subtitle: "I saw this in Marginal Revolution"
-category: "1"
-tags: ["698", "717", "976"]
-date: "2012-05-09"
-type: "wp"
+category: '1'
+date: '2012-05-09'
+subtitle: I saw this in Marginal Revolution
+tag_review: no_fit
+tags: []
+title: Bertrand Russell through the echo chamber
+type: wp
 wordpress_id: 334
 ---
+
 I saw this in [Marginal Revolution](http://marginalrevolution.com/marginalrevolution/2012/05/bertrand-russells-10-commandments-for-teachers.html), who saw this in [BrainPickings](http://www.brainpickings.org/index.php/page/3/) who got this somehow from [Bertrand Russell.](http://en.wikipedia.org/wiki/Bertrand_Russell) Still some **thought provoking** and **maybe** good advice:
 
 - Do not feel absolutely certain of anything.

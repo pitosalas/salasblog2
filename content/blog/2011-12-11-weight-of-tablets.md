@@ -1,12 +1,16 @@
 ---
-title: "Weight of tablets"
-subtitle: "I’ve been playing around with each of the major tablets while considering ‘my next move’ 🙂"
-category: "1"
-tags: ["622", "639", "1066", "1297", "1532", "1968", "2109"]
-date: "2011-12-11"
-type: "wp"
+category: '1'
+date: '2011-12-11'
+subtitle: "I’ve been playing around with each of the major tablets while considering
+  ‘my next move’ \U0001F642"
+tags:
+- technology
+- ipad
+title: Weight of tablets
+type: wp
 wordpress_id: 442
 ---
+
 I’ve been playing around with each of the major tablets while considering ‘my next move’ 🙂
 
 Oddly I have not been able to find a side by side comparison of their weights. After googling for 3 minutes. So as a public service let me transcribe my notes on this vital topic.

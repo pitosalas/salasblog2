@@ -1,12 +1,15 @@
 ---
-title: "Facebook – Group your Place on a List and Put it on A page … or something"
-subtitle: "I am a big fan of Facebook. They are doing so many things well. They have become so pervasive that i..."
-category: "1"
-tags: ["1037", "2062"]
-date: "2011-11-08"
-type: "wp"
+category: '1'
+date: '2011-11-08'
+subtitle: I am a big fan of Facebook. They are doing so many things well. They have
+  become so pervasive that i...
+tag_review: no_fit
+tags: []
+title: Facebook – Group your Place on a List and Put it on A page … or something
+type: wp
 wordpress_id: 474
 ---
+
 I am a big fan of Facebook. They are doing so many things well. They have become so pervasive that if anyone is doing anything that involves a group of people online the first and biggest question should be, why should we not put this on Facebook? Because it works on so many levels.
 
 ![Screen Shot 2011 11 08 at 1 14 43 PM](https://i0.wp.com/salas.com/wp-content/uploads/2011/11/aa48c-screen20shot202011-11-0820at201-14-4320pm.png?w=250&ssl=1)

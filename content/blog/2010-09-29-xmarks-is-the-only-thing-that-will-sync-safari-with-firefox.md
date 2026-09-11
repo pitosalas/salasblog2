@@ -1,12 +1,14 @@
 ---
-title: "XMarks is the only thing that will sync Safari with Firefox"
-subtitle: "And, it’s leaving us:"
-category: "298"
-tags: ["1917", "1945", "1974", "2068", "2139"]
-date: "2010-09-29"
-type: "wp"
+category: '298'
+date: '2010-09-29'
+subtitle: 'And, it’s leaving us:'
+tags:
+- technology
+title: XMarks is the only thing that will sync Safari with Firefox
+type: wp
 wordpress_id: 660
 ---
+
 And, it’s leaving us:
 > “The past four years have been a wild ride for us: growing something from nothing to substantial scale, providing a simple service that people love because it simplifies their lives. We’ve learned tons along the way, often by making big mistakes. We’re really sorry that this last lesson means that you’ll have to find an alternative to Xmarks, but the alternatives exist and you’ll have no problem finding them.” (from [Xmarks Blog](http://blog.xmarks.com/?p=1886))
 

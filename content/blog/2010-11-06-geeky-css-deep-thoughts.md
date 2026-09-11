@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] CSS Deep Thoughts"
-subtitle: "I feel that I am finally mastering CSS and in doing so I am seeing some interesting patterns. It see..."
-category: "422"
-tags: []
-date: "2010-11-06"
-type: "wp"
+category: '422'
+date: '2010-11-06'
+subtitle: I feel that I am finally mastering CSS and in doing so I am seeing some
+  interesting patterns. It see...
+tags:
+- programming
+title: '[GEEKY] CSS Deep Thoughts'
+type: wp
 wordpress_id: 646
 ---
+
 I feel that I am finally mastering CSS and in doing so I am seeing some interesting patterns. It seems to me that it’s very easy to get into a situation where you have too many CSS rules that overlap and override each other in ways that are more complex than necessary.
 It seems like there could and should be a tool to ‘simplify’ or ‘clean up’ css and reduce the rules to the minimum necessary set to accomplish what you want. Clearly the browser when it applies CSS, no matter how messy and redundant, figures it out and does the right thing.
 

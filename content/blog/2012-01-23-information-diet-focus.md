@@ -1,12 +1,14 @@
 ---
-title: "Information Diet: Focus"
-subtitle: "While I am in the mood to reveal some of my weaknesses (see post on Dieting"
-category: "1"
-tags: ["849", "947", "1264", "1574"]
-date: "2012-01-23"
-type: "wp"
+category: '1'
+date: '2012-01-23'
+subtitle: While I am in the mood to reveal some of my weaknesses (see post on Dieting
+tag_review: no_fit
+tags: []
+title: 'Information Diet: Focus'
+type: wp
 wordpress_id: 410
 ---
+
 While I am in the mood to reveal some of my weaknesses ([see post on Dieting ](/imported-20111103233638/2012/1/21/secret-trick-for-losing-weight.html)two days ago) let’s talk about information overload.
 
 I employ various tools and tricks to make sure I can focus on what is important to me and shut out distractions. I’ve written about them before. Two of my favorites are [so-called self binding](/imported-20111103233638/2010/10/11/do-you-procrastinate-i-do.html) (sounds weird  but it’s not) and a utility app called [Concentrate](http://getconcentrating.com/).

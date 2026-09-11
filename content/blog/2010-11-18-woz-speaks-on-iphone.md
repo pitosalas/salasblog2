@@ -1,12 +1,16 @@
 ---
-title: "Woz speaks (on iPhone)"
-subtitle: "I happen to be reading iWoz, which is Steve Wozniak’s memoir/biography/whatever. It’s a very breezy ..."
-category: "50"
-tags: ["629", "1002", "1298"]
-date: "2010-11-18"
-type: "wp"
+category: '50'
+date: '2010-11-18'
+subtitle: I happen to be reading iWoz, which is Steve Wozniak’s memoir/biography/whatever.
+  It’s a very breezy ...
+tags:
+- iphone
+- apple
+title: Woz speaks (on iPhone)
+type: wp
 wordpress_id: 638
 ---
+
 I happen to be reading iWoz, which is Steve Wozniak’s memoir/biography/whatever. It’s a very breezy easy read and fun if you follow this kind of thing. So naturally this caught my eye:
 > “Woz then moved on to the topic of Android saying that Android smartphones, not the iPhone, would become dominant, noting that the Google OS is likely to win the race similarly to the way that Windows ultimately dominated the PC world. Woz stressed that the iPhone, “Has very few weak points. There aren’t any real complaints and problems.” (from “Steve Wozniak[: Android will be the dominant smartphone platform](http://www.engadget.com/2010/11/18/steve-wozniak-android-will-be-the-dominant-smartphone-platform/)“)
 

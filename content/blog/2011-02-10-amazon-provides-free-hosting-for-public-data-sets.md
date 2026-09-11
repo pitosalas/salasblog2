@@ -1,12 +1,15 @@
 ---
-title: "Amazon provides free hosting for public data sets"
-subtitle: "If you work with non-profit projects that collect or disseminate large amounts of public data, you w..."
-category: "298"
-tags: ["622", "679", "1558", "1688"]
-date: "2011-02-10"
-type: "wp"
+category: '298'
+date: '2011-02-10'
+subtitle: If you work with non-profit projects that collect or disseminate large amounts
+  of public data, you w...
+tags:
+- technology
+title: Amazon provides free hosting for public data sets
+type: wp
 wordpress_id: 597
 ---
+
 If you work with non-profit projects that collect or disseminate large amounts of public data, you would find this interesting.
 
 [Amazon offers FREE storage for huge public datasets](http://aws.amazon.com/datasets). So in otherwords, Amazon’s ‘cloud based’ storage service (known as S3) will offer, for no charge, to store a dataset if it is open to the public and somehow for the public good.

@@ -1,12 +1,16 @@
 ---
-title: "A travesty in a wealthy country"
-subtitle: "From the New York Times, an [article by Nick Kristof, describing a real-life story of a friend of hi..."
-category: "1"
-tags: ["768", "1195", "1542"]
-date: "2012-10-15"
-type: "wp"
+category: '1'
+date: '2012-10-15'
+subtitle: From the New York Times, an [article by Nick Kristof, describing a real-life
+  story of a friend of hi...
+tags:
+- health
+- politics
+title: A travesty in a wealthy country
+type: wp
 wordpress_id: 294
 ---
+
 From the New York Times, an [article by Nick Kristof, describing a real-life story of a friend of his and health care.](http://www.nytimes.com/2012/10/14/opinion/sunday/kristof-a-possibly-fatal-mistake.html)
 
 Whenever I hear, “We have the best health care in the world”, I think of stories like this. It is a travesty that in a wealthy country like the USA, there are 48 million Americans uninsured. Some 27,000 Americans between the ages of 25 and 65 die prematurely every year because they don’t have health insurance. From the [article](http://www.nytimes.com/2012/10/14/opinion/sunday/kristof-a-possibly-fatal-mistake.html):

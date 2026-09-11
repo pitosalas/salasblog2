@@ -1,12 +1,15 @@
 ---
-title: "Advice for New Graduate Students"
-subtitle: "If you know anyone in graduate school (oops, or if you are in graduate school yourself, or planning ..."
-category: "298"
-tags: []
-date: "2010-09-29"
-type: "wp"
+category: '298'
+date: '2010-09-29'
+subtitle: If you know anyone in graduate school (oops, or if you are in graduate school
+  yourself, or planning ...
+tags:
+- education
+title: Advice for New Graduate Students
+type: wp
 wordpress_id: 659
 ---
+
 If you know anyone in graduate school (oops, or if you are in graduate school yourself, or planning to go to one), this is interesting reading: [Advice for New Graduate Students](http://freedom-to-tinker.com/blog/jrex/advice-new-graduate-students) from [Freedom to Tinker](http://freedom-to-tinker.com/rss.xml):
 > *[Ed Felten says: This is the time of year when professors offer advice to new students. My colleague Prof. Jennifer Rexford gave a great talk to a group of our incoming engineering Ph.D. students, about how to make the most of graduate school. Here’s what she said: ]*
 

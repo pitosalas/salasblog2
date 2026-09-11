@@ -1,12 +1,16 @@
 ---
-title: "Great new book on Object Oriented design (in Ruby)"
-subtitle: "I first came across Sandy Metz in this video:"
-category: "1"
-tags: ["937", "1545", "1772"]
-date: "2012-09-23"
-type: "wp"
+category: '1'
+date: '2012-09-23'
+subtitle: 'I first came across Sandy Metz in this video:'
+tags:
+- programming
+- ruby
+- books
+title: Great new book on Object Oriented design (in Ruby)
+type: wp
 wordpress_id: 301
 ---
+
 I first came across Sandy Metz in this video:
 
 [vimeo 12350535 w=500 h=281]

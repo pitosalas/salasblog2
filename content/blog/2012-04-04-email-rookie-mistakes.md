@@ -1,12 +1,15 @@
 ---
-title: "Email Rookie Mistakes"
-subtitle: "I’ve watched some people struggling with some email blow ups and frustrations over the years and I w..."
-category: "1"
-tags: ["998", "1022", "1172", "1762"]
-date: "2012-04-04"
-type: "wp"
+category: '1'
+date: '2012-04-04'
+subtitle: I’ve watched some people struggling with some email blow ups and frustrations
+  over the years and I w...
+tag_review: no_fit
+tags: []
+title: Email Rookie Mistakes
+type: wp
 wordpress_id: 360
 ---
+
 I’ve watched some people struggling with some email blow ups and frustrations over the years and I was just thinking about some of the ways I’ve developed to avoid them. I am not going into the best salutation or the best conclusion but more touchy-feely things. Here are my guidelines:
 
 - **Write the email as if it might show up on the front page of the paper tomorrow morning.** Because it might. Or it might be forwarded to the wrong person. Or you may accidentally send it to the wrong person. Worse, to a long mailing list of the wrong people. Don’t include anything that you would be embarrassed or worse, ashamed, to have to explain.

@@ -1,12 +1,14 @@
 ---
-title: "How to write dramatically"
-subtitle: "David Mamet (supposedly) wrote this compelling note to tv writers"
-category: "298"
+category: '298'
+date: '2010-03-24'
+subtitle: David Mamet (supposedly) wrote this compelling note to tv writers
+tag_review: no_fit
 tags: []
-date: "2010-03-24"
-type: "wp"
+title: How to write dramatically
+type: wp
 wordpress_id: 733
 ---
+
 [David Mamet (supposedly) wrote this compelling note to tv writers](http://www.slashfilm.com/2010/03/23/a-letter-from-david-mamet-to-the-writers-of-the-unit/) for the now-defunct tv show “The Unit” (which I thought was a really good tv show.) If you like TV you will enjoy reading this. Gems such as:
 > “THE PROBLEM IS THIS: TO DIFFERENTIATE BETWEEN *DRAMA* AND NON-DRAMA. LET ME BREAK-IT-DOWN-NOW.”
 

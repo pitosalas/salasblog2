@@ -1,12 +1,15 @@
 ---
-title: "commonplace, ordinary, usual, common"
-subtitle: "I just came across an excellent speech given by William Deresiewics (I didn’t know who he was either..."
-category: "298"
-tags: ["987", "1362", "1889"]
-date: "2011-01-02"
-type: "wp"
+category: '298'
+date: '2011-01-02'
+subtitle: I just came across an excellent speech given by William Deresiewics (I didn’t
+  know who he was either...
+tags:
+- education
+title: commonplace, ordinary, usual, common
+type: wp
 wordpress_id: 615
 ---
+
 I just came across an excellent speech given by William Deresiewics (I didn’t know who he was either) to the plebe class at the United States Military Academy at West Point. The title of the speech is [Solitude and Leadership](http://www.theamericanscholar.org/solitude-and-leadership/).
 
 I had a hard time finding a representative quote from the article that would suck you in to reading it. This is a quote from the speech, where he is quoting the famous novel “[Heart of Darkness”](http://en.wikipedia.org/wiki/Heart_of_Darkness) by Joseph Conrad:

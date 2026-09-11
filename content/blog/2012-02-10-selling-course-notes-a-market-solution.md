@@ -1,12 +1,15 @@
 ---
-title: "Selling course notes: a market solution"
-subtitle: "Should it be ok for students to **take notes **during a class and turn them into a marketable produc..."
-category: "1"
-tags: ["884", "1484", "1681", "1934", "1973"]
-date: "2012-02-10"
-type: "wp"
+category: '1'
+date: '2012-02-10'
+subtitle: Should it be ok for students to **take notes **during a class and turn them
+  into a marketable produc...
+tags:
+- education
+title: 'Selling course notes: a market solution'
+type: wp
 wordpress_id: 392
 ---
+
 Should it be ok for students to **take notes **during a class and turn them into a marketable product that they **make money on**?
 
 If I am teaching the same class again this year, students could buy the course notes and potentially do better, or learn more. That’s a good thing, right?

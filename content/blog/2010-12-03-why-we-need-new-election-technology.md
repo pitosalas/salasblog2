@@ -1,12 +1,16 @@
 ---
-title: "Why we need new election technology"
-subtitle: "I work at the Open Source Digital Voting Foundation, where we are creating ne..."
-category: "410"
-tags: ["990", "1569", "2036"]
-date: "2010-12-03"
-type: "wp"
+category: '410'
+date: '2010-12-03'
+subtitle: I work at the Open Source Digital Voting Foundation, where we are creating
+  ne...
+tags:
+- trustthevote
+- politics
+title: Why we need new election technology
+type: wp
 wordpress_id: 633
 ---
+
 I work at the [Open Source Digital Voting Foundation](http://www.osdv.org), where we are creating new, modern, open source, and publicly owned  technology for operating all aspects of voting in the US.
 
 By the way, do not assume this means ‘internet voting’ — it does not. There is a lot of old technology use to run elections today, a lot of it developed and sold (expensive) by for profit companies. And there’s a lot more to running an election than how a voter casts a vote. We aim to develop tools and technology that is made [available for free to anyone who wants it](https://github.com/trustthevote).

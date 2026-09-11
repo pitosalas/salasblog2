@@ -1,12 +1,15 @@
 ---
-title: "Advice about listening to yoruself"
-subtitle: "A few months ago, a friend of mine told me he was struggling, really struggling with a big career de..."
-category: "1"
-tags: ["608", "930", "1378"]
-date: "2011-12-02"
-type: "wp"
+category: '1'
+date: '2011-12-02'
+subtitle: A few months ago, a friend of mine told me he was struggling, really struggling
+  with a big career de...
+tags:
+- personal
+title: Advice about listening to yoruself
+type: wp
 wordpress_id: 451
 ---
+
 A few months ago, a friend of mine told me he was struggling, really struggling with a big career decision. Here’s what I told him, and what I believe and have applied to my own decisions:
 
 > 

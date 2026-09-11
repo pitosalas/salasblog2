@@ -1,12 +1,14 @@
 ---
-title: "Losing Our Way"
-subtitle: "This New York Times Op-Ed piece by Bob Herbert"
-category: "298"
-tags: ["1542", "1668", "2094"]
-date: "2011-03-31"
-type: "wp"
+category: '298'
+date: '2011-03-31'
+subtitle: This New York Times Op-Ed piece by Bob Herbert
+tags:
+- politics
+title: Losing Our Way
+type: wp
 wordpress_id: 578
 ---
+
 This [New York Times Op-Ed piece by Bob Herbert](http://www.nytimes.com/2011/03/26/opinion/26herbert.html?_r=1&ref=bobherbert) really hits home:
 
 > 

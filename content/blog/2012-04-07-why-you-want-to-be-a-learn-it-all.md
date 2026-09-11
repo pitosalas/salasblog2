@@ -1,12 +1,14 @@
 ---
-title: "Why You Want To Be A Learn-it-All"
-subtitle: "A provocatively titled article (Why Youth Has an Advantage In Innovation)"
-category: "1"
-tags: ["1266", "1368", "1935", "2145"]
-date: "2012-04-07"
-type: "wp"
+category: '1'
+date: '2012-04-07'
+subtitle: A provocatively titled article (Why Youth Has an Advantage In Innovation)
+tags:
+- business
+title: Why You Want To Be A Learn-it-All
+type: wp
 wordpress_id: 358
 ---
+
 A provocatively titled article ([Why Youth Has an Advantage In Innovation)](http://abovethecrowd.com/2012/03/26/why-youth-has-an-advantage-in-innovation-why-you-want-to-be-a-learn-it-all/) argues that to innovate you have to be an **omnivorous** and **promiscuous** consumer of new stuff. Try this list on for size, does it fit?
 
 > 

@@ -1,12 +1,15 @@
 ---
-title: "Swipely, cool but scary?"
-subtitle: "So there’s this rather cool new service that says they will find and give you special deals to the s..."
-category: "298"
-tags: ["1090", "1822", "1958"]
-date: "2011-09-28"
-type: "wp"
+category: '298'
+date: '2011-09-28'
+subtitle: So there’s this rather cool new service that says they will find and give
+  you special deals to the s...
+tag_review: no_fit
+tags: []
+title: Swipely, cool but scary?
+type: wp
 wordpress_id: 493
 ---
+
 So there’s this rather cool new service that says they will find and give you special deals to the stores and merchants you use already. The way they do it is to examine your credit card bills and help you find deals. They say:
 
 > 

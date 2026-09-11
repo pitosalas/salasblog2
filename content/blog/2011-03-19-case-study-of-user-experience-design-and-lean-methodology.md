@@ -1,12 +1,16 @@
 ---
-title: "Case Study of User Experience Design and Lean Methodology"
-subtitle: "A good read if you are interested in fast iteration in user experience design and redesign:"
-category: "538"
-tags: ["1366", "2064"]
-date: "2011-03-19"
-type: "wp"
+category: '538'
+date: '2011-03-19'
+subtitle: 'A good read if you are interested in fast iteration in user experience
+  design and redesign:'
+tags:
+- design
+- business
+title: Case Study of User Experience Design and Lean Methodology
+type: wp
 wordpress_id: 581
 ---
+
 A good read if you are interested in [fast iteration in user experience design and redesign:](http://www.startuplessonslearned.com/2011/01/case-study-ux-design-and-food-on-table.html)
 
 > 

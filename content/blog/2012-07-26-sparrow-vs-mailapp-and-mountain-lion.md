@@ -1,12 +1,15 @@
 ---
-title: "Sparrow vs. Mail.app and Mountain Lion"
-subtitle: "Did you hear that Google bought Sparrow? Sparrow is a really cool email..."
-category: "1"
-tags: ["639", "998", "1407", "1423", "1570", "1896"]
-date: "2012-07-26"
-type: "wp"
+category: '1'
+date: '2012-07-26'
+subtitle: Did you hear that Google bought Sparrow? Sparrow is a really cool email...
+tags:
+- apple
+- macos
+title: Sparrow vs. Mail.app and Mountain Lion
+type: wp
 wordpress_id: 305
 ---
+
 Did you hear that [Google bought Sparrow?](http://sparrowmailapp.com) Sparrow is a really cool email client that I for one have been using very happily for a while now.
 
 Did you hear the announcement that [there would be no more development of sparrow](http://www.readwriteweb.com/archives/google-acquires-sparrow-email-app-a-trojan-horse-for-google.php)?

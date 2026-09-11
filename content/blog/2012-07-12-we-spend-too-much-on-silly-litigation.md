@@ -1,12 +1,15 @@
 ---
-title: "We spend too much on silly litigation"
-subtitle: "Lucky Me! After **tortured litigation** and lots of legal fees (not mine, of course), I am receiving..."
-category: "1"
-tags: ["793", "1370", "1392"]
-date: "2012-07-12"
-type: "wp"
+category: '1'
+date: '2012-07-12'
+subtitle: Lucky Me! After **tortured litigation** and lots of legal fees (not mine,
+  of course), I am receiving...
+tags:
+- legal
+title: We spend too much on silly litigation
+type: wp
 wordpress_id: 314
 ---
+
 Lucky Me! After **tortured litigation** and lots of legal fees (not mine, of course), I am receiving a check for $0.47 as my **payout** for the litigation between Hanson and Google.
 
 What, never heard of Hanson? Well apparently the law suit was about **Google doing something wrong in how the charged or paid for Google Adwords.** Which I think I might have used a little some long time ago.

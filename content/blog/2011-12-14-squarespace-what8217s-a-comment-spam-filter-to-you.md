@@ -1,12 +1,14 @@
 ---
-title: "Squarespace: What’s a comment spam filter to you?"
-subtitle: "You may have noticed that this Blog is now hosted on SquareSpace. I’v..."
-category: "1"
-tags: ["830", "1909", "1954"]
-date: "2011-12-14"
-type: "wp"
+category: '1'
+date: '2011-12-14'
+subtitle: You may have noticed that this Blog is now hosted on SquareSpace. I’v...
+tags:
+- technology
+title: 'Squarespace: What’s a comment spam filter to you?'
+type: wp
 wordpress_id: 440
 ---
+
 You may have noticed that this Blog is now hosted on [SquareSpace](http://www.squarespace.com/). I’ve been pretty happy with it so far. While it is kind of a closed system, there are extensive customization features that allow me to get pretty much what I want.
 
 And their support is 24×7 and **very responsive.** Although **not necessarily always helpful**. Note that I am not the first to observe this. [Joannes Vermorel’s Blog](http://vermorel.com/journal/2011/6/29/squarespace-and-blog-spam-filtering-epic-fail.html) says:

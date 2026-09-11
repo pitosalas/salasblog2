@@ -1,12 +1,16 @@
 ---
-title: "Costa Rica Travel and Google 3D"
-subtitle: "We are thinking of planning a trip to Costa Rica. Part of the trip is to get from Tabacon to Monteve..."
-category: "1"
-tags: ["590", "878", "1147"]
-date: "2012-01-19"
-type: "wp"
+category: '1'
+date: '2012-01-19'
+subtitle: We are thinking of planning a trip to Costa Rica. Part of the trip is to
+  get from Tabacon to Monteve...
+tags:
+- travel
+- maps
+title: Costa Rica Travel and Google 3D
+type: wp
 wordpress_id: 415
 ---
+
 We are thinking of planning a trip to Costa Rica. Part of the trip is to get from Tabacon to Monteverde, which I gather is a very popular tourist route, being between two of the most scenic parts of the country.
 
 We are trying to gather information about that drive. Is it realistically 3 hours? Or is it more like 6 hours?

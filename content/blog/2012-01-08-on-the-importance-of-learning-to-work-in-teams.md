@@ -1,12 +1,15 @@
 ---
-title: "On the importance of learning to work in teams"
-subtitle: "David Colletta shared this link in comments to my [rece..."
-category: "1"
-tags: ["1204", "1475", "1609", "1976"]
-date: "2012-01-08"
-type: "wp"
+category: '1'
+date: '2012-01-08'
+subtitle: David Colletta shared this link in comments to my [rece...
+tags:
+- education
+- brandeis
+title: On the importance of learning to work in teams
+type: wp
 wordpress_id: 422
 ---
+
 David Colletta shared [this link in comments](http://www.evanjones.ca/farewell-mit.html) to my [recent post about team work](/imported-20111103233638/2012/1/4/teaching-group-projects.html). David’s link was good enough that I thought I should excerpt it to increase the chances that my colleagues and students at Brandeis see it.
 
 Here’s an excerpt from it:

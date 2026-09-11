@@ -1,12 +1,15 @@
 ---
-title: "Football Lingo"
-subtitle: "As a naturalized citizen who’s lived here for most of his life, Football used to be foreign to me. I..."
-category: "298"
-tags: ["732", "1079", "1316", "1594"]
-date: "2011-01-18"
-type: "wp"
+category: '298'
+date: '2011-01-18'
+subtitle: As a naturalized citizen who’s lived here for most of his life, Football
+  used to be foreign to me. I...
+tag_review: no_fit
+tags: []
+title: Football Lingo
+type: wp
 wordpress_id: 608
 ---
+
 As a naturalized citizen who’s lived here for most of his life, Football used to be foreign to me. I grew up knowing soccer and baseball but for the first years Football was a mystery.
 
 Now I have a pretty good grasp of football and enjoy watching games on TV. But then I come across something like this, and I am stumped and can’t decode it. If only there was a good football tutorial (don’t worry I already have “Football for Dummies”.)

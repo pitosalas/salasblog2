@@ -1,12 +1,15 @@
 ---
-title: "Don’t work. Avoid telling the truth. Be hated. Love someone."
-subtitle: "Ok, I don’t agree with all of “Don’t work. Avoid telling the truth. Be hated. Love someone”"
-category: "1"
-tags: ["603", "1372", "1378", "2124"]
-date: "2012-04-14"
-type: "wp"
+category: '1'
+date: '2012-04-14'
+subtitle: Ok, I don’t agree with all of “Don’t work. Avoid telling the truth. Be hated.
+  Love someone”
+tag_review: no_fit
+tags: []
+title: Don’t work. Avoid telling the truth. Be hated. Love someone.
+type: wp
 wordpress_id: 354
 ---
+
 Ok, I don’t agree with all of “[Don’t work. Avoid telling the truth. Be hated. Love someone”](http://halfhalf.posterous.com/dont-work-be-hated-love-someone):
 
 > 

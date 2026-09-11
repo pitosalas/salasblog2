@@ -1,12 +1,16 @@
 ---
-title: "A philosopher defends religion"
-subtitle: "I recently subscribed to the New York Review of Books. Not sure this was a good decision as the last..."
-category: "1"
-tags: ["1541", "1611", "1732"]
-date: "2012-09-25"
-type: "wp"
+category: '1'
+date: '2012-09-25'
+subtitle: I recently subscribed to the New York Review of Books. Not sure this was
+  a good decision as the last...
+tags:
+- books
+- science
+title: A philosopher defends religion
+type: wp
 wordpress_id: 298
 ---
+
 I recently subscribed to the New York Review of Books. Not sure this was a good decision as the last thing I need is more stuff to read. I came to it because I kept seeing interesting articles from the NYRB come up on various blogs and searches. 
 
 Here’s quite an [interesting book review](http://www.amazon.com/gp/product/0199812098?ie=UTF8&assoc_ss_swlb=1&creativeASIN=0199812098&redirect=true) of “[Where the Conflict Really Lies: Science, Religion, and Naturalism](http://www.amazon.com/gp/product/0199812098/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0199812098&linkCode=as2&tag=blogbridge-20)![](http://www.assoc-amazon.com/e/ir?t=blogbridge-20&l=as2&o=1&a=0199812098) “. This sets the tone:

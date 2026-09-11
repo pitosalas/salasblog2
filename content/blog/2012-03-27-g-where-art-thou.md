@@ -1,12 +1,14 @@
 ---
-title: "G+ Where Art Thou?"
-subtitle: "Here is a a really good commentary on Google Plus (G+)."
-category: "1"
-tags: ["1107", "1145", "1978"]
-date: "2012-03-27"
-type: "wp"
+category: '1'
+date: '2012-03-27'
+subtitle: Here is a a really good commentary on Google Plus (G+).
+tag_review: no_fit
+tags: []
+title: G+ Where Art Thou?
+type: wp
 wordpress_id: 364
 ---
+
 Here is a a [really good commentary on Google Plus (G+). ](http://techcrunch.com/2012/03/26/google-the-charge-of-the-like-brigade/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+Techcrunch+%28TechCrunch%29)I have to say that analyzing such a large system and a phenomenon involving millions of users is kind of a fools errand. (Remember “Everything is Obvious”). Still if you are interested in the evolution of social networks it is a good read:
 
 > 

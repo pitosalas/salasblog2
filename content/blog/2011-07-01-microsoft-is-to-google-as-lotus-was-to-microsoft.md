@@ -1,12 +1,16 @@
 ---
-title: "Microsoft is to Google as Lotus was to Microsoft"
-subtitle: "This isn’t a huge new insight but it’s interesting to see **history kind of repeating itself**."
-category: "298"
-tags: ["586", "1029", "1145", "1404", "1464"]
-date: "2011-07-01"
-type: "wp"
+category: '298'
+date: '2011-07-01'
+subtitle: This isn’t a huge new insight but it’s interesting to see **history kind
+  of repeating itself**.
+tags:
+- business
+- lotus
+title: Microsoft is to Google as Lotus was to Microsoft
+type: wp
 wordpress_id: 537
 ---
+
 This isn’t a huge new insight but it’s interesting to see **history kind of repeating itself**.
 
 Sometimes a product is so **locked in** and so entrenched that it looks like it will never be beat. After all, no one ever got fired for buying IBM right? And you’d have to be **crazy** to try to build a new spreadsheet to compete with Excel, because companies large and small have an unbelievable investment in training, familiarity and documents so that any change is extremely hard and costly.

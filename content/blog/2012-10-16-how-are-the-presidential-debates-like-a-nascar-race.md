@@ -1,12 +1,15 @@
 ---
-title: "How are the presidential debates like a Nascar race?"
-subtitle: "I am looking forward to watching the Presidential debates tonight. But for all the **wrong** reasons..."
-category: "1"
-tags: ["759", "925", "1502", "1645", "1665"]
-date: "2012-10-16"
-type: "wp"
+category: '1'
+date: '2012-10-16'
+subtitle: I am looking forward to watching the Presidential debates tonight. But for
+  all the **wrong** reasons...
+tags:
+- politics
+title: How are the presidential debates like a Nascar race?
+type: wp
 wordpress_id: 290
 ---
+
 I am looking forward to watching the Presidential debates tonight. But for all the **wrong** reasons.
 
 I believe I **know pretty clearly **what each side’s positions are and what they points will be. So, like when I watch a car race (which is rarely) secretly I have to admit that I will enjoy the suspense of seeing **the big crash**: the screwup, mistake or unscripted moment.

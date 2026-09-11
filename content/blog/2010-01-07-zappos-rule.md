@@ -1,12 +1,15 @@
 ---
-title: "Zappos Rule"
-subtitle: "I don’t own or buy many shoes. Recently I needed to replace a shoe and visited my previously favorit..."
-category: "298"
-tags: ["1185", "1850", "2147"]
-date: "2010-01-07"
-type: "wp"
+category: '298'
+date: '2010-01-07'
+subtitle: I don’t own or buy many shoes. Recently I needed to replace a shoe and visited
+  my previously favorit...
+tags:
+- business
+title: Zappos Rule
+type: wp
 wordpress_id: 759
 ---
+
 I don’t own or buy many shoes. Recently I needed to replace a shoe and visited my previously favorite shoe store, twice (they had to get the right size from the other store, or something…) but left not satisfied. This is a really good store, but they  didn’t have what I needed
 Also, I found that, like salesmen everywhere, they made up stories to explain a price differential (“it’s more expensive because it has goretex”) or tried to convince me to take an ill-fitting shoe (“you can just cut the toe off the removable insert and it will be perfect.”)
 

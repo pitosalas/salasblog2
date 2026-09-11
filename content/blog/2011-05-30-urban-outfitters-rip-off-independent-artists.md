@@ -1,12 +1,15 @@
 ---
-title: "Urban Outfitters Rip Off Independent Artists?"
-subtitle: "This article, “[Anatomy of a Trending Topic: How Twitter & the crafting community put the smackdown ..."
-category: "298"
-tags: ["2047", "2057"]
-date: "2011-05-30"
-type: "wp"
+category: '298'
+date: '2011-05-30'
+subtitle: 'This article, “[Anatomy of a Trending Topic: How Twitter & the crafting
+  community put the smackdown ...'
+tags:
+- business
+title: Urban Outfitters Rip Off Independent Artists?
+type: wp
 wordpress_id: 554
 ---
+
 This article, “[Anatomy of a Trending Topic: How Twitter & the crafting community put the smackdown on Urban Outfitters](http://www.myaimistrue.com/2011/05/urban-outfitters-ripoff-trending-topic/)” is interesting for two reasons:
 
 - Photographs that show graphically that Urban Outfitters, in at least one case, seems to have totally ripped off an independent jewelry designer.

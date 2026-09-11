@@ -1,12 +1,14 @@
 ---
-title: "[GAMING] Article about game designer Jonathan Blow"
-subtitle: "A good article in the Atlantic about game designer Jonathan Blow"
-category: "1"
-tags: ["653", "869", "937", "1085", "1113"]
-date: "2012-05-07"
-type: "wp"
+category: '1'
+date: '2012-05-07'
+subtitle: A good article in the Atlantic about game designer Jonathan Blow
+tag_review: no_fit
+tags: []
+title: '[GAMING] Article about game designer Jonathan Blow'
+type: wp
 wordpress_id: 335
 ---
+
 A good [article in the Atlantic about game designer Jonathan Blow](http://www.theatlantic.com/magazine/archive/2012/05/the-most-dangerous-gamer/8928/). Interesting quote:
 
 > 

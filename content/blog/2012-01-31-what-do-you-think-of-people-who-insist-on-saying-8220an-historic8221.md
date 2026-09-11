@@ -1,12 +1,14 @@
 ---
-title: "What do you think of people who insist on saying “AN historic”?"
-subtitle: "I know (at least I believe) that, for example,"
-category: "1"
-tags: ["1004", "1877", "2132"]
-date: "2012-01-31"
-type: "wp"
+category: '1'
+date: '2012-01-31'
+subtitle: I know (at least I believe) that, for example,
+tag_review: no_fit
+tags: []
+title: What do you think of people who insist on saying “AN historic”?
+type: wp
 wordpress_id: 404
 ---
+
 I know (at least I believe) that, for example,
 
 “… Scott Brown and I reached an historic agreement…”

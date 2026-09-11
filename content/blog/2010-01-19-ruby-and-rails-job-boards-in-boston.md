@@ -1,12 +1,18 @@
 ---
-title: "Ruby and Rails job boards in Boston"
-subtitle: "I get asked from time to time to recommend ruby, rails, and other developers in the Boston area, eit..."
-category: "422"
-tags: ["729", "1317", "1319"]
-date: "2010-01-19"
-type: "wp"
+category: '422'
+date: '2010-01-19'
+subtitle: I get asked from time to time to recommend ruby, rails, and other developers
+  in the Boston area, eit...
+tags:
+- ruby
+- ruby-on-rails
+- boston
+- webinno
+title: Ruby and Rails job boards in Boston
+type: wp
 wordpress_id: 751
 ---
+
 I get asked from time to time to recommend ruby, rails, and other developers in the Boston area, either for full time or part time gigs. I’m developing a list of good local job resources – started so far with the help of pal [Brian D:](http://hybernaut.com/)
 
 - [Dave Beisel](http://www.genuinevc.com/)‘s WebInno Job Board:[ http://jobs.webinnovatorsgroup.com](http://jobs.webinnovatorsgroup.com/)

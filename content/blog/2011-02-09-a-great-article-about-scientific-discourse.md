@@ -1,12 +1,15 @@
 ---
-title: "A great article about scientific discourse"
-subtitle: "This article is called “Fact and Folklore In Software Engineering”"
-category: "422"
-tags: ["1074", "1802", "1856", "1886"]
-date: "2011-02-09"
-type: "wp"
+category: '422'
+date: '2011-02-09'
+subtitle: This article is called “Fact and Folklore In Software Engineering”
+tags:
+- software-engineering
+- science
+title: A great article about scientific discourse
+type: wp
 wordpress_id: 598
 ---
+
 This article is called [“Fact and Folklore In Software Engineering” ](http://morendil.github.com/folklore.html) and while it is about that, the part that was more interesting to me was the first section talking about Scientific Discourse:
 
 > 

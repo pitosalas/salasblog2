@@ -1,12 +1,15 @@
 ---
-title: "Texting: Left and Right Hand of Government"
-subtitle: "Do you agree that prohibiting texting while driving is **contradictory** to texting as a way to deli..."
-category: "1"
-tags: ["1151", "1298", "1787", "1990"]
-date: "2012-01-03"
-type: "wp"
+category: '1'
+date: '2012-01-03'
+subtitle: Do you agree that prohibiting texting while driving is **contradictory**
+  to texting as a way to deli...
+tags:
+- politics
+title: 'Texting: Left and Right Hand of Government'
+type: wp
 wordpress_id: 425
 ---
+
 Do you agree that prohibiting texting while driving is **contradictory** to texting as a way to deliver of major emergency messages?
 
 > 

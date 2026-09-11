@@ -1,12 +1,15 @@
 ---
-title: "Aaron Swartz Links"
-subtitle: "If you are in the tech community you’ve likely heard that Aaron Swartz committed suicide yesterday i..."
-category: "1"
-tags: ["594"]
-date: "2013-01-13"
-type: "wp"
+category: '1'
+date: '2013-01-13'
+subtitle: If you are in the tech community you’ve likely heard that Aaron Swartz committed
+  suicide yesterday i...
+tags:
+- legal
+title: Aaron Swartz Links
+type: wp
 wordpress_id: 255
 ---
+
 If you are in the tech community you’ve likely heard that Aaron Swartz committed suicide yesterday in New York. I didn’t know him but I was in the same room with him, at conferences or conversations a few times about 10 years ago. I certainly knew of him.
 
 I’ve read many things about him in the last 24 hours. Here are some of the ones that spoke to me the most:

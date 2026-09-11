@@ -1,12 +1,15 @@
 ---
-title: "Launch Conference: Day One"
-subtitle: "The Launch Conference is starting today. It is descended from many venerabl..."
-category: "1"
-tags: ["852", "1121", "1356", "1679"]
-date: "2012-03-07"
-type: "wp"
+category: '1'
+date: '2012-03-07'
+subtitle: The Launch Conference is starting today. It is descended from many venerabl...
+tags:
+- demo-conference
+- business
+title: 'Launch Conference: Day One'
+type: wp
 wordpress_id: 371
 ---
+
 The [Launch Conference](http://www.launch.co/) is starting today. It is descended from many venerable conferences, particularly like [Demo](http://www.demo.com/ehome/index.php?eventid=29414&). I was a fairly regular attendee at the Demo conference over the years, and so far, Launch seems to be continuing that heritage in a very impressive way.
 
 Basically this conference is about Products, Products, Products. Particularly software and web and mobile products. There’s a really good energy in the room, like the start of another gold rush 🙂 It is overlaid with the usual Silicon Valley attitude and posturing, but that’s ok, I kind of like that.

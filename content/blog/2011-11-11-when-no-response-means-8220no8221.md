@@ -1,12 +1,15 @@
 ---
-title: "When no response means “no”"
-subtitle: "Here’s a tiny social conundrum. When someone writes you, calls you and leave a message, calls and do..."
-category: "1"
-tags: ["998", "1022"]
-date: "2011-11-11"
-type: "wp"
+category: '1'
+date: '2011-11-11'
+subtitle: Here’s a tiny social conundrum. When someone writes you, calls you and leave
+  a message, calls and do...
+tags:
+- personal
+title: When no response means “no”
+type: wp
 wordpress_id: 469
 ---
+
 Here’s a tiny social conundrum. When someone writes you, calls you and leave a message, calls and doesn’t, or even texts you, what is your obligation to respond? If the question is “are you free for lunch today” and you know you are not, is it OK to just not answer? If the question is “have you seen this?.”
 
 This seems to come up, and different people and different communities seem to have different rules about this. So before you take offense at the lack of response, consider that it might just be a different social protocol that you may not necessarily adhere to!

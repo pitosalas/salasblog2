@@ -1,12 +1,15 @@
 ---
-title: "Are smartphone apps “applications” or “features”?"
-subtitle: "Andy Payne wrote an interesting analysis about the future of the “software industry”"
-category: "1"
-tags: ["981", "1050", "1263", "1873"]
-date: "2013-02-17"
-type: "wp"
+category: '1'
+date: '2013-02-17'
+subtitle: Andy Payne wrote an interesting analysis about the future of the “software
+  industry”
+tags:
+- business
+title: Are smartphone apps “applications” or “features”?
+type: wp
 wordpress_id: 241
 ---
+
 Andy [Payne wrote an interesting analysis about the future of the “software industry”](http://blog.payne.org/2013/02/16/this-is-not-your-fathers-software-industry/) or whatever we should call it nowadays (e.g. is Amazon a software company?)
 
 Not long ago a classic “put down” of a business idea was: “that’s not a business, it’s a product”, or worse, “that’s not a product it’s a feature.” Andy asks:

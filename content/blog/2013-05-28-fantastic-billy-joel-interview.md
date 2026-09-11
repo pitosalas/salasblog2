@@ -1,12 +1,15 @@
 ---
-title: "Fantastic Billy Joel Interview"
-subtitle: "If you are, or ever were, a Billy Joel Fan you will really like this interview. Fascinating to read ..."
-category: "1"
-tags: ["710", "1285", "1492", "1542", "1759"]
-date: "2013-05-28"
-type: "wp"
+category: '1'
+date: '2013-05-28'
+subtitle: If you are, or ever were, a Billy Joel Fan you will really like this interview.
+  Fascinating to read ...
+tags:
+- music
+title: Fantastic Billy Joel Interview
+type: wp
 wordpress_id: 197
 ---
+
 If you are, or ever were, a Billy Joel Fan you will really like this interview. Fascinating to read what seem to be the reasonably honest thoughts and feelings of a Rock Star!
 
 [Billy Joel on Not Working and Not Giving Up Drinking – NYTimes.com](http://www.nytimes.com/2013/05/26/magazine/billy-joel-on-not-working-and-not-giving-up-drinking.html?_r=0):

@@ -1,12 +1,15 @@
 ---
-title: "Teaching at Olin College next year"
-subtitle: "!College photo 10842 130x0"
-category: "1"
-tags: ["846", "1006", "1556", "1973"]
-date: "2012-11-25"
-type: "wp"
+category: '1'
+date: '2012-11-25'
+subtitle: '!College photo 10842 130x0'
+tags:
+- education
+- personal
+title: Teaching at Olin College next year
+type: wp
 wordpress_id: 262
 ---
+
 ![College photo 10842 130x0](https://i0.wp.com/salas.com/wp-content/uploads/2012/11/83b41-college-photo_10842-_130x0.jpg?resize=130%2C94&ssl=1)I’m excited to tell you that I just accepted a position as Visiting Lecturer at **[Olin College](http://colleges.usnews.rankingsandreviews.com/best-colleges/franklin-w-olin-college-of-engineering-39463) **for Spring 2013! Actually the full name is Olin College of Engineering.
 
 Olin is a small engineering college, actually in the [top ten of engineering colleges](http://colleges.usnews.rankingsandreviews.com/best-colleges/rankings/engineering-no-doctorate) according to US News’ Rankings. [Olin is a very young college:](http://www.wickedlocal.com/needham/news/x1831588790/A-gamble-in-higher-ed-Olin-College-celebrates-10-years?zc_p=0#axzz2DCB97NPR) it just celebrated its 10th year! 

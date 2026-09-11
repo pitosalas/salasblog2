@@ -1,12 +1,15 @@
 ---
-title: "Groupon success catastrophe"
-subtitle: "I bought a Groupon for a local restaurant. About 1 week before it expired I went to make a dinner re..."
-category: "1"
-tags: ["756", "899", "1169", "1979"]
-date: "2011-12-02"
-type: "wp"
+category: '1'
+date: '2011-12-02'
+subtitle: I bought a Groupon for a local restaurant. About 1 week before it expired
+  I went to make a dinner re...
+tags:
+- business
+title: Groupon success catastrophe
+type: wp
 wordpress_id: 450
 ---
+
 I bought a Groupon for a local restaurant. About 1 week before it expired I went to make a dinner reservation and it turned out that they were booked up for the next 3 months – and so effectively I could not use the groupon for dinner. I have to use it for lunch, and given the price and the value of the coupon, I need to go with a group of 4 people!
 
 I spoke to the owner about the situation, and based on his sad tone I asked him if the groupon promotion had been a good thing. He was adamant that it was the worse thing they had ever done and he would never do it again! They had sold tons of groupons and everyone waited till the last week or two to try to book and suddenly they are overrun.

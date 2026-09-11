@@ -1,12 +1,16 @@
 ---
-title: "Support your local bookstore"
-subtitle: "I have a **warm spot** in my heart for independent bookstores, as such a store **paid for my college..."
-category: "1"
-tags: ["622", "726", "1260"]
-date: "2012-01-26"
-type: "wp"
+category: '1'
+date: '2012-01-26'
+subtitle: I have a **warm spot** in my heart for independent bookstores, as such a
+  store **paid for my college...
+tags:
+- books
+- personal
+title: Support your local bookstore
+type: wp
 wordpress_id: 408
 ---
+
 I have a **warm spot** in my heart for independent bookstores, as such a store **paid for my college education.** My family business was a bookstore. It is no longer around however, having gone out of business years ago. Blame **Amazon**?
 
 Secondly, I read **lots of books**, and own even more. (Yes that implies that I buy books that I don’t read. I don’t feel bad about that. I **enjoy** books.)

@@ -1,12 +1,14 @@
 ---
-title: "Really good advice"
-subtitle: "Robert Krulwich gave this graduation speech"
-category: "298"
-tags: ["1318", "1325"]
-date: "2011-06-11"
-type: "wp"
+category: '298'
+date: '2011-06-11'
+subtitle: Robert Krulwich gave this graduation speech
+tag_review: no_fit
+tags: []
+title: Really good advice
+type: wp
 wordpress_id: 553
 ---
+
 [Robert Krulwich gave this graduation speech](http://blogs.discovermagazine.com/notrocketscience/2011/05/12/“there-are-some-people-who-don’t-wait-”-robert-krulwich-on-the-future-of-journalism/). While it is aimed at Journalism students, it has some good stories:
 > “As I say, he was a news writer, writing copy off in a corner, sometimes for Murrow, but he’s pretty much an indoors guy, and he’s dreaming of course, of getting outdoors where things are happening and one night – in the middle of the night, on the graveyard shift, two a.m.—the bell on the wire ticker goes off and says an airplane has just fallen short of the runway at LaGuardia Airport and is sinking in the East River, right now.” (from [Robert Krulwich Graduation Speech)](http://blogs.discovermagazine.com/notrocketscience/2011/05/12/“there-are-some-people-who-don’t-wait-”-robert-krulwich-on-the-future-of-journalism/)
 

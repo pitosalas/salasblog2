@@ -1,12 +1,16 @@
 ---
-title: "Launch Conference, Day Two"
-subtitle: "Yesterday was great. The buzz in the place is unbelievable. This place is the Launch Conference. Org..."
-category: "1"
-tags: ["760", "1356", "1679", "1791"]
-date: "2012-03-08"
-type: "wp"
+category: '1'
+date: '2012-03-08'
+subtitle: Yesterday was great. The buzz in the place is unbelievable. This place is
+  the Launch Conference. Org...
+tags:
+- demo-conference
+- boston
+title: Launch Conference, Day Two
+type: wp
 wordpress_id: 370
 ---
+
 Yesterday was great. The buzz in the place is unbelievable. This place is the Launch Conference. Organized and run beautifully by [Jason Calacanis (](http://calacanis.com/)who has become much more warm and fuzzy than I remember). Here is [Rafe Needleman’s summary of day one.](http://news.cnet.com/8301-19882_3-57393002-250/from-scooters-to-servers-the-best-of-launch-day-one/)
 
 And with all due respect to Boston and [Scott Kirsner](http://www.scottkirsner.com/) in particular, I cannot see a gathering like this happening in Boston. There just are not nearly enough interesting startups to pick from. Now, no, I don’t claim to know anything like all of them. I am sure there are lots of great projects I know nothing about. I am just going by proportions and gut feel. It seems like around every corner is another incubator and every one is an angel investor or is looking for one to fund their idea that is going to change the world. It’s inspiring and intoxicating!

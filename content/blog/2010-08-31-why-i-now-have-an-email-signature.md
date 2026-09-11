@@ -1,12 +1,15 @@
 ---
-title: "Why I now have an email signature"
-subtitle: "We’ve been on an **SEO** binge over the last 4-6 weeks. I’ve been educating myself by listening and ..."
-category: "298"
-tags: []
-date: "2010-08-31"
-type: "wp"
+category: '298'
+date: '2010-08-31'
+subtitle: We’ve been on an **SEO** binge over the last 4-6 weeks. I’ve been educating
+  myself by listening and ...
+tags:
+- business
+title: Why I now have an email signature
+type: wp
 wordpress_id: 677
 ---
+
 We’ve been on an **SEO** binge over the last 4-6 weeks. I’ve been educating myself by listening and reading to everything I can find my hands on.
 What’s SEO anyway? It stands for “Search Engine Optimization” and it refers to the **science and art of getting your site to come up when people are searching** with Google or one of the other search engines.
 

@@ -1,12 +1,15 @@
 ---
-title: "Windows 8: Getting a new filesystem"
-subtitle: "I don’t pay much attention to Microsoft and Windows these days. I admit it, I am a hardcore Mac and ..."
-category: "1"
-tags: ["1063", "1464", "2119"]
-date: "2012-01-27"
-type: "wp"
+category: '1'
+date: '2012-01-27'
+subtitle: I don’t pay much attention to Microsoft and Windows these days. I admit
+  it, I am a hardcore Mac and ...
+tags:
+- technology
+title: 'Windows 8: Getting a new filesystem'
+type: wp
 wordpress_id: 407
 ---
+
 I don’t pay much attention to Microsoft and Windows these days. I admit it, I am a hardcore Mac and Linux user, more comfortable in the unix shell than I ever was at a Dos prompt.
 
 It’s easy to forget the layers and layers and layers of complexity that exist in any operating system nowadays, even a little Android tablet (which I am spending lots of time with lately.)

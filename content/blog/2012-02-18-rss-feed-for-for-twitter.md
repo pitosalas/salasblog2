@@ -1,12 +1,14 @@
 ---
-title: "RSS feed for for twitter"
-subtitle: "A simple question that for some reason does not have a simple answer:"
-category: "1"
-tags: ["718", "1053", "1121", "1770", "1943", "2047"]
-date: "2012-02-18"
-type: "wp"
+category: '1'
+date: '2012-02-18'
+subtitle: 'A simple question that for some reason does not have a simple answer:'
+tag_review: no_fit
+tags: []
+title: RSS feed for for twitter
+type: wp
 wordpress_id: 387
 ---
+
 A simple question that for some reason does not have a simple answer:
 
 > 

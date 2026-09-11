@@ -1,12 +1,15 @@
 ---
-title: "MapReduce Patterns and Examples"
-subtitle: "Great review article:"
-category: "1"
-tags: ["1121", "1432", "1684", "1793"]
-date: "2012-02-17"
-type: "wp"
+category: '1'
+date: '2012-02-17'
+subtitle: 'Great review article:'
+tags:
+- computer-science
+- algorithms
+title: MapReduce Patterns and Examples
+type: wp
 wordpress_id: 388
 ---
+
 Great review article:
 
 > 

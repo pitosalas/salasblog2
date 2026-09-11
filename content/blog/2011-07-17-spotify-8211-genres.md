@@ -1,12 +1,15 @@
 ---
-title: "Spotify – genres?"
-subtitle: "Ok a few hours into it, I’ve located what looks like a major weakness in Spotify. One of the fun thi..."
-category: "298"
-tags: ["1126", "1902"]
-date: "2011-07-17"
-type: "wp"
+category: '298'
+date: '2011-07-17'
+subtitle: Ok a few hours into it, I’ve located what looks like a major weakness in
+  Spotify. One of the fun thi...
+tags:
+- music
+title: Spotify – genres?
+type: wp
 wordpress_id: 527
 ---
+
 Ok a few hours into it, I’ve located what looks like a major weakness in Spotify. One of the fun things about Rhapsody is discovering new music. What are the top albums in “Piano Jazz”. Had to look and look for a similar feature in Spotify. The closest I can find is to type this into the search box:
 
 genre:”piano jazz”

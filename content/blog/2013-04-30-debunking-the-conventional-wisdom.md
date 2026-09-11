@@ -1,12 +1,15 @@
 ---
-title: "Debunking the conventional wisdom"
-subtitle: "What do you think, are younger people better programmers? Are they more productive, more clever, wor..."
-category: "1"
-tags: ["610", "1678", "1683", "1740"]
-date: "2013-04-30"
-type: "wp"
+category: '1'
+date: '2013-04-30'
+subtitle: What do you think, are younger people better programmers? Are they more
+  productive, more clever, wor...
+tags:
+- programming
+title: Debunking the conventional wisdom
+type: wp
 wordpress_id: 209
 ---
+
 What do you think, are younger people better programmers? Are they more productive, more clever, work longer hours? Or do older people have some advantages? Here’s a bit of research that says they do!
 
 [NC State News :: NC State News and Information » Older Is Wiser: Study Shows Software Developers’ Skills Improve Over Time](http://news.ncsu.edu/releases/wms-murphyhill-age-2013/):

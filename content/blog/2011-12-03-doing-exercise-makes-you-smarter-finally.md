@@ -1,12 +1,15 @@
 ---
-title: "Doing exercise makes you smarter. Finally!"
-subtitle: "From the New York Times, How Exercise Benefits the Brain:"
-category: "1"
-tags: ["1030", "1194", "1542"]
-date: "2011-12-03"
-type: "wp"
+category: '1'
+date: '2011-12-03'
+subtitle: 'From the New York Times, How Exercise Benefits the Brain:'
+tags:
+- health
+- science
+title: Doing exercise makes you smarter. Finally!
+type: wp
 wordpress_id: 449
 ---
+
 From the New York Times, [How Exercise Benefits the Brain:](http://well.blogs.nytimes.com/2011/11/30/how-exercise-benefits-the-brain/)
 
 > 

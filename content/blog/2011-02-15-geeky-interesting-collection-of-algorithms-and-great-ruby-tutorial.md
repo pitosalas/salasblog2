@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] Interesting collection of algorithms and great Ruby tutorial"
-subtitle: "Over the last several months I’ve been following a series of blog postings by Jamis Buck"
-category: "422"
-tags: ["620", "1449", "1772"]
-date: "2011-02-15"
-type: "wp"
+category: '422'
+date: '2011-02-15'
+subtitle: Over the last several months I’ve been following a series of blog postings
+  by Jamis Buck
+tags:
+- algorithms
+- ruby
+title: '[GEEKY] Interesting collection of algorithms and great Ruby tutorial'
+type: wp
 wordpress_id: 596
 ---
+
 Over the last several months I’ve been following a series of blog postings by [Jamis Buck ](http://weblog.jamisbuck.org/)on the esoteric and quirky topic of writing programs to design mazes.
 
 For reasons that are not clear, Jamis developed an obsession with mazes and has collected a series of articles detailing many different algorithms, their tradeoffs and concepts and writing them up beautifully.

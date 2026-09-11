@@ -1,12 +1,14 @@
 ---
-title: "Paul Graham: Fear and Startup Ideas"
-subtitle: "Paul Graham’s new essay is “Frighteningly Ambitious Startup Ideas.”"
-category: "1"
-tags: ["704", "1048", "1145", "1598", "1918"]
-date: "2012-03-15"
-type: "wp"
+category: '1'
+date: '2012-03-15'
+subtitle: Paul Graham’s new essay is “Frighteningly Ambitious Startup Ideas.”
+tags:
+- business
+title: 'Paul Graham: Fear and Startup Ideas'
+type: wp
 wordpress_id: 366
 ---
+
 Paul Graham’s new essay is “[Frighteningly Ambitious Startup Ideas.”](http://www.paulgraham.com/ambitious.html) From my reading of it, it talks about great startup ideas, fear and cynicism. The meat of the article is a series of shall we say audacious startup ideas, most of which you’ve had yourself and in each case you may have thought: “You’d have to be crazy to try this!”.
 
 I once read, “*If you’re not a little bit nervous, you’re not pushing yourself enough”. *I like that mantra. It works for me. This essay is related to that thought:

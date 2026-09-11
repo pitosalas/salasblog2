@@ -1,12 +1,14 @@
 ---
-title: "[GEEKY] JavaScript – Universal Language of the Future"
-subtitle: "JavaScript is the language of the future. Why do I say this?"
-category: "298"
-tags: ["1311", "1353", "1684"]
-date: "2011-06-26"
-type: "wp"
+category: '298'
+date: '2011-06-26'
+subtitle: JavaScript is the language of the future. Why do I say this?
+tags:
+- programming
+title: '[GEEKY] JavaScript – Universal Language of the Future'
+type: wp
 wordpress_id: 541
 ---
+
 JavaScript is the language of the future. Why do I say this?
 
 I love Ruby, I respect Java, and I am jealous of Python. And of course I have a warm spot in my heart for C++. Think about it. JavaScript is unique among all those languages:

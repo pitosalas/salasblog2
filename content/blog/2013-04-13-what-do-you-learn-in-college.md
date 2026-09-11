@@ -1,12 +1,14 @@
 ---
-title: "What do you learn in college?"
-subtitle: "![](https://i0.wp.com/www.vias.org/glazebrook_practphys/img/glazebrook_practical_physics-584.png?w=5..."
-category: "1"
-tags: ["823", "915", "1363", "1542", "1556", "1849", "2054"]
-date: "2013-04-13"
-type: "wp"
+category: '1'
+date: '2013-04-13'
+subtitle: '![](https://i0.wp.com/www.vias.org/glazebrook_practphys/img/glazebrook_practical_physics-584.png?w=5...'
+tags:
+- education
+title: What do you learn in college?
+type: wp
 wordpress_id: 215
 ---
+
 ![](https://i0.wp.com/www.vias.org/glazebrook_practphys/img/glazebrook_practical_physics-584.png?w=584)
 
 As you know the topic of the future of the university, the role of MOOCs, and online learning, is highly topical these days. I happen to be interested in it too so I refer you to this [David Brooks Article, called, The Practical University](http://www.nytimes.com/2013/04/05/opinion/Brooks-The-Practical-University.html). It’s an interesting angle.

@@ -1,12 +1,15 @@
 ---
-title: "Frank Rick (again): The other plot"
-subtitle: "Ok, I am on a [Frank Rich binge, but he does have one thought provoking article after another. In hi..."
-category: "410"
-tags: ["978", "1089", "1439", "1440"]
-date: "2010-01-14"
-type: "wp"
+category: '410'
+date: '2010-01-14'
+subtitle: Ok, I am on a [Frank Rich binge, but he does have one thought provoking
+  article after another. In hi...
+tags:
+- politics
+title: 'Frank Rick (again): The other plot'
+type: wp
 wordpress_id: 755
 ---
+
 Ok, I am on a [Frank Rich binge, but he does have one thought provoking article after another. In his column recently he wrote about The Other Plot to Wreck America:](http://www.nytimes.com/2010/01/10/opinion/10rich.html)
 > “If they all skate away yet again by deflecting blame or mouthing pro forma mea culpas, it will be a sign that this inquiry, like so many other promises of reform since 9/15, is likely to leave Wall Street’s status quo largely intact. That’s the ticking-bomb scenario that truly imperils us all.” (**from** “The Other Plot to Wreck America”)
 

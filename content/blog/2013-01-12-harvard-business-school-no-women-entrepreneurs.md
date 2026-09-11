@@ -1,12 +1,16 @@
 ---
-title: "Harvard Business School: No Women Entrepreneurs"
-subtitle: "I was surfing around preparing for my class and happened to look at [this page on the Harvard Busine..."
-category: "1"
-tags: ["1007", "1191", "1193", "2126"]
-date: "2013-01-12"
-type: "wp"
+category: '1'
+date: '2013-01-12'
+subtitle: I was surfing around preparing for my class and happened to look at [this
+  page on the Harvard Busine...
+tags:
+- business
+- education
+title: 'Harvard Business School: No Women Entrepreneurs'
+type: wp
 wordpress_id: 256
 ---
+
 I was surfing around preparing for my class and happened to look at [this page on the Harvard Business School web site.](http://www.hbs.edu/entrepreneurs/) The page is called “**Entrepreneurs**” and it says, among other things:
 
 > 

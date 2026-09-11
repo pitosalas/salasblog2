@@ -1,12 +1,14 @@
 ---
-title: "Is this article a joke? “When Truisms are true”"
-subtitle: "!26GRAYMATTER-articleInline.jpg"
-category: "1"
-tags: ["734", "1230", "1305", "1324", "1542", "1740"]
-date: "2012-03-02"
-type: "wp"
+category: '1'
+date: '2012-03-02'
+subtitle: '!26GRAYMATTER-articleInline.jpg'
+tags:
+- science
+title: Is this article a joke? “When Truisms are true”
+type: wp
 wordpress_id: 375
 ---
+
 ![26GRAYMATTER-articleInline.jpg](https://i0.wp.com/graphics8.nytimes.com/images/2012/02/26/sunday-review/26GRAYMATTER/26GRAYMATTER-articleInline.jpg?w=584)
 
 I saw this [article in the Sunday New York Times ](http://www.nytimes.com/2012/02/26/opinion/sunday/when-truisms-are-true.html)today which starts promising but then becomes a bit ridiculous and makes a **mockery of serious research,** in my humble opinion.

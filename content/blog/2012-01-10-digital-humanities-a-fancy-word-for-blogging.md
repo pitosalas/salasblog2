@@ -1,12 +1,15 @@
 ---
-title: "Digital Humanities: A fancy word for blogging?"
-subtitle: "Here’s an interesting [article in “The Opinionator” of the New York Times about blogging, scholarly ..."
-category: "1"
-tags: ["719", "948", "1284", "1798"]
-date: "2012-01-10"
-type: "wp"
+category: '1'
+date: '2012-01-10'
+subtitle: Here’s an interesting [article in “The Opinionator” of the New York Times
+  about blogging, scholarly ...
+tags:
+- education
+title: 'Digital Humanities: A fancy word for blogging?'
+type: wp
 wordpress_id: 421
 ---
+
 Here’s an interesting [article in “The Opinionator” of the New York Times about blogging, scholarly writing and the tension between the two.](http://opinionator.blogs.nytimes.com/2012/01/09/the-digital-humanities-and-the-transcending-of-mortality/) He says:
 
 > 

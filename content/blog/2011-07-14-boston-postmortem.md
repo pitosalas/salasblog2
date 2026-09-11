@@ -1,12 +1,14 @@
 ---
-title: "Boston Postmortem"
-subtitle: "We just got back from the monthly meeting of “Boston Postmortem“..."
-category: "298"
-tags: ["1113", "2093"]
-date: "2011-07-14"
-type: "wp"
+category: '298'
+date: '2011-07-14'
+subtitle: We just got back from the monthly meeting of “Boston Postmortem“...
+tags:
+- boston
+title: Boston Postmortem
+type: wp
 wordpress_id: 533
 ---
+
 We just got back from the monthly meeting of “[Boston Postmortem](http://www.bostonpostmortem.org/)“.
 
 Huh, what is that? Well as a result of my teaching at Brandeis this summer – [Mobile and Game Software Development](https://sites.google.com/site/jbs2011mobile/lectures/week/04-3d-graphics-and-opengl) – I have developed a greater appreciation for the gaming world. When we had Ed Baraf of Blue Fang games speak to our class, among the many things he taught us was that there’s this great meetup in Waltham called the [Boston Postmortem.](http://www.bostonpostmortem.org/)

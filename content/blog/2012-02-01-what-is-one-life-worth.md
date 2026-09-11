@@ -1,12 +1,14 @@
 ---
-title: "What is one life worth?"
-subtitle: "A fascinating article,..."
-category: "1"
-tags: ["1272", "1442", "1487", "1501", "1672", "1894", "1945"]
-date: "2012-02-01"
-type: "wp"
+category: '1'
+date: '2012-02-01'
+subtitle: A fascinating article,...
+tag_review: no_fit
+tags: []
+title: What is one life worth?
+type: wp
 wordpress_id: 402
 ---
+
 A [fascinating article,](http://reason.com/archives/2012/01/26/how-much-is-an-astronauts-life-worth) which is hard to disagree with, although the conclusion is a little counter-intuitive:
 
 > 

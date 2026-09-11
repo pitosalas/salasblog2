@@ -1,12 +1,15 @@
 ---
-title: "Do you remember “Twin Peaks”?"
-subtitle: "“Harry, I’m going to let you in on a little secret. Every day, once a day, give yourself a present. ..."
-category: "298"
+category: '298'
+date: '2010-08-26'
+subtitle: “Harry, I’m going to let you in on a little secret. Every day, once a day,
+  give yourself a present. ...
+tag_review: no_fit
 tags: []
-date: "2010-08-26"
-type: "wp"
+title: Do you remember “Twin Peaks”?
+type: wp
 wordpress_id: 680
 ---
+
 “Harry, I’m going to let you in on a little secret. Every day, once a day, give yourself a present. Don’t plan it,, don’t wait for it, just … let it happen. Could be a new shirt at the men’s store, a catnap in your office chair, or two cups of good, hot, black coffee…”*([Dale Cooper, in Twin Peaks](http://www.imdb.com/title/tt0098936/quotes))*
 Don’t ask me why, the quote just strikes me as funny!
 

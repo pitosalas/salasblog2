@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Resfulie GEM for Rails and RESˇ"
-subtitle: "This is really nice: Restfulie – Rest from Scratch. It’s a packag..."
-category: "422"
-tags: ["1121", "1711", "1742"]
-date: "2010-12-14"
-type: "wp"
+category: '422'
+date: '2010-12-14'
+subtitle: 'This is really nice: Restfulie – Rest from Scratch. It’s a packag...'
+tags:
+- ruby-on-rails
+- programming
+title: '[GEEKY] Resfulie GEM for Rails and RESˇ'
+type: wp
 wordpress_id: 624
 ---
+
 This is really nice: [Restfulie – Rest from Scratch](http://restfulie.caelum.com.br/). It’s a package of code for creating REST clients and servers with built in content type negotiation and other goodies. Watch the fun tour-do-force video too:
 
 [http://vimeo.com/moogaloop.swf?clip_id=11294789&server=vimeo.com&show_title=1&show_byline=1&show_portrait=1&color=&fullscreen=1&autoplay=0&loop=0](http://vimeo.com/moogaloop.swf?clip_id=11294789&server=vimeo.com&show_title=1&show_byline=1&show_portrait=1&color=&fullscreen=1&autoplay=0&loop=0)

@@ -1,12 +1,15 @@
 ---
-title: "[EDUCATION] Crowd Sourcing your Strategy"
-subtitle: "The other day I referenced an [article questioning the motivation and effectiveness of large scale s..."
-category: "1"
-tags: ["755", "1204", "1931"]
-date: "2012-05-17"
-type: "wp"
+category: '1'
+date: '2012-05-17'
+subtitle: The other day I referenced an [article questioning the motivation and effectiveness
+  of large scale s...
+tags:
+- education
+title: '[EDUCATION] Crowd Sourcing your Strategy'
+type: wp
 wordpress_id: 331
 ---
+
 The other day I referenced an [article questioning the motivation and effectiveness of large scale strategic planning exercises in universities today.](/imported-20111103233638/2012/5/4/education-strategic-plans-are-they-worth-the-paper-they-are.html) 
 
 In this vein I was interested to see this [article describing how certain organizations have totally thrown open the process of developing and communicating strategy](https://www.mckinseyquarterly.com/Strategy/Strategy_in_Practice/The_social_side_of_strategy_2965) by employing some good old crowd sourcing.

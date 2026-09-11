@@ -1,12 +1,15 @@
 ---
-title: "Funny: Are computers boys or are they girls?"
-subtitle: "A SPANISH Teacher was explaining to her class that in Spanish, unlike English, nouns are designated ..."
-category: "1"
-tags: ["846", "1230"]
-date: "2012-05-03"
-type: "wp"
+category: '1'
+date: '2012-05-03'
+subtitle: A SPANISH Teacher was explaining to her class that in Spanish, unlike English,
+  nouns are designated ...
+tag_review: no_fit
+tags: []
+title: 'Funny: Are computers boys or are they girls?'
+type: wp
 wordpress_id: 346
 ---
+
 A SPANISH Teacher was explaining to her class that in Spanish, unlike English, nouns are designated as either masculine or feminine.
 ‘House’ for instance, is feminine: ‘la casa.’
 ‘Pencil,’ however, is masculine: ‘el lapiz.’

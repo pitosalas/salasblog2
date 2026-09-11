@@ -1,12 +1,15 @@
 ---
-title: "[EDUCATION] Is the innovators’ dilemma coming to higher ed?"
-subtitle: "An interesting fact:"
-category: "1"
-tags: ["738", "987", "1191", "1204", "1475"]
-date: "2012-06-30"
-type: "wp"
+category: '1'
+date: '2012-06-30'
+subtitle: 'An interesting fact:'
+tags:
+- education
+- business
+title: '[EDUCATION] Is the innovators’ dilemma coming to higher ed?'
+type: wp
 wordpress_id: 319
 ---
+
 An interesting fact:
 
 > 

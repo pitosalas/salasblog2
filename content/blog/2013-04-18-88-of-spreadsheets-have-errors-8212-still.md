@@ -1,12 +1,14 @@
 ---
-title: "88% of spreadsheets have errors — Still!"
-subtitle: "A long long time ago there was a product called Lotus Improv"
-category: "1"
-tags: ["1016", "1254", "1904"]
-date: "2013-04-18"
-type: "wp"
+category: '1'
+date: '2013-04-18'
+subtitle: A long long time ago there was a product called Lotus Improv
+tags:
+- lotus
+title: 88% of spreadsheets have errors — Still!
+type: wp
 wordpress_id: 214
 ---
+
 A long long time ago there was a product called [Lotus Improv](http://en.wikipedia.org/wiki/Lotus_Improv). Our premise was that complex spreadsheets were very difficult to maintain, to audit and to modify. So much so that we had heard stories about companies fearing making any change to the spreadsheets they run their business on.
 
 Maybe the person who created the monster was no longer with the company or maybe the spreadsheet was so complicated (and untestable) that the benefits of making a change did not outweigh the risk of introducing an error. That was around 1987.

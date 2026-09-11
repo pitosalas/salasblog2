@@ -1,12 +1,14 @@
 ---
-title: "Why doing design for Facebook is a thankless job"
-subtitle: "A friend of mine hates, HATES, the new Facebook timeline. She ..."
-category: "1"
-tags: ["937", "1037", "2006", "2052", "2064"]
-date: "2012-03-13"
-type: "wp"
+category: '1'
+date: '2012-03-13'
+subtitle: A friend of mine hates, HATES, the new Facebook timeline. She ...
+tags:
+- design
+title: Why doing design for Facebook is a thankless job
+type: wp
 wordpress_id: 368
 ---
+
 A friend of mine hates, HATES, the new [Facebook timeline.](https://www.facebook.com/pitosalas) She wants to turn it off, but can’t. I happen to think the timeline is really cool, well designed, useful. On occasion it even gives me goosebumps. **But. She. Hates. It. **Wants to turn it off. Can’t.
 
 I was thinking, Facebook has something like 700,000,000 users, right? I don’t know the right number or how many are online every day. But **there are many.**

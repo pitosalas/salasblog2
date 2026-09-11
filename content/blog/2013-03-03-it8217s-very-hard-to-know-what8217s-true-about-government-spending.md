@@ -1,12 +1,15 @@
 ---
-title: "It’s very hard to know what’s true about government spending"
-subtitle: "I saw this in the Boston Globe this morning and I jotted it down because yet again a bit of totally ..."
-category: "1"
-tags: ["932", "1832", "1900"]
-date: "2013-03-03"
-type: "wp"
+category: '1'
+date: '2013-03-03'
+subtitle: I saw this in the Boston Globe this morning and I jotted it down because
+  yet again a bit of totally ...
+tags:
+- politics
+title: It’s very hard to know what’s true about government spending
+type: wp
 wordpress_id: 229
 ---
+
 I saw this in the Boston Globe this morning and I jotted it down because yet again a bit of totally counterintuitive and confusing info: 
 
 > 

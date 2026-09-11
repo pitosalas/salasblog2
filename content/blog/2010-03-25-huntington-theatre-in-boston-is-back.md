@@ -1,12 +1,15 @@
 ---
-title: "Huntington Theatre in Boston IS BACK!"
-subtitle: "They may not like me to say this, but as a longtime subscriber, I’ve been very disappointed for the ..."
-category: "298"
-tags: ["1232", "1635", "1994"]
-date: "2010-03-25"
-type: "wp"
+category: '298'
+date: '2010-03-25'
+subtitle: They may not like me to say this, but as a longtime subscriber, I’ve been
+  very disappointed for the ...
+tags:
+- boston
+title: Huntington Theatre in Boston IS BACK!
+type: wp
 wordpress_id: 732
 ---
+
 They may not like me to say this, but as a longtime subscriber, I’ve been very disappointed for the last several seasons at the [Huntington Theater in Boston](http://www.huntingtontheatre.org). A very hit or miss program with only a few memorable plays. 
 Well I did stick with the [Huntington](http://www.huntingtontheatre.org) and it’s time for me to say, like, [Randy Jackson](http://www.americanidol.com/bio/randy_jackson/) of American Idol: “The Huntington Theatre **Is Back** (man)”
 

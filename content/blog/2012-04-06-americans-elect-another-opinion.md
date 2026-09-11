@@ -1,12 +1,15 @@
 ---
-title: "Americans Elect: Another Opinion"
-subtitle: "A month or two ago I read an article by Thomas Friedman introducing Americans Elect,"
-category: "1"
-tags: ["625", "990", "1108", "1645", "1972", "2001"]
-date: "2012-04-06"
-type: "wp"
+category: '1'
+date: '2012-04-06'
+subtitle: A month or two ago I read an article by Thomas Friedman introducing Americans
+  Elect,
+tags:
+- politics
+title: 'Americans Elect: Another Opinion'
+type: wp
 wordpress_id: 359
 ---
+
 A month or two ago I read an [article by Thomas Friedman introducing Americans Elect,](http://www.nytimes.com/2011/07/24/opinion/sunday/24friedman.html?_r=1) an innovative concept for bringing a third major presidential candidate to the table for this year’s Presidential contest. I liked it so much I wrote about in on my blog.
 
 So it is with great interest that I came across this recent article by [Gail Collins totally hating the Americans Elect concept](http://www.nytimes.com/2012/03/31/opinion/collins-time-to-elect-the-worst-idea.html?_r=1):

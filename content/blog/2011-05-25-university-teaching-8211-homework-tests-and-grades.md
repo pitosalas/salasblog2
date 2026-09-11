@@ -1,12 +1,16 @@
 ---
-title: "University Teaching – homework, tests and grades?"
-subtitle: "I am about a week from beginning teaching my course at Brandeis University. The curriculum is a litt..."
-category: "298"
-tags: ["1156", "1204", "2054"]
-date: "2011-05-25"
-type: "wp"
+category: '298'
+date: '2011-05-25'
+subtitle: I am about a week from beginning teaching my course at Brandeis University.
+  The curriculum is a litt...
+tags:
+- education
+- brandeis
+title: University Teaching – homework, tests and grades?
+type: wp
 wordpress_id: 559
 ---
+
 I am about a week from beginning teaching my course at Brandeis University. The curriculum is a little different from last year, focusing on **mobile software engineering** and **game development**. This is different from last year, where we focused both on web and mobile software engineering.
 
 The structure is that we teach during june and july, 4 days a week, and the students end up with 3 courses worth of credits. The students are both graduate and undergraduate. Given the time frame you can see that it’s an intensive boot camp-like experience. It’s a lot of work and a lot of fun.

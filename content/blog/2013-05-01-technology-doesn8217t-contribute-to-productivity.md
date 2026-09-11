@@ -1,12 +1,15 @@
 ---
-title: "Technology doesn’t contribute to productivity?"
-subtitle: "Here’s what I think: If economic analysis says that technology does not contribute to the overall pr..."
-category: "1"
-tags: ["978", "1517", "1678", "1920"]
-date: "2013-05-01"
-type: "wp"
+category: '1'
+date: '2013-05-01'
+subtitle: 'Here’s what I think: If economic analysis says that technology does not
+  contribute to the overall pr...'
+tags:
+- technology
+title: Technology doesn’t contribute to productivity?
+type: wp
 wordpress_id: 207
 ---
+
 Here’s what I think: If economic analysis says that technology does not contribute to the overall productivity of the country, check the analysis. It’s incorrect.
 
 It’s self evident and obvious that technology – computers, smart phones, tablets, cloud computing, robotics, and on and on make us more productive. I say, send the economists back to the drawing board to **look again.**

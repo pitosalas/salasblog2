@@ -1,12 +1,15 @@
 ---
-title: "Patents and perpetual motion machines"
-subtitle: "An interesting commentary on a couple of patents that issued from the US Patent Office:"
-category: "1"
-tags: ["911", "1446", "1592", "1800"]
-date: "2011-11-12"
-type: "wp"
+category: '1'
+date: '2011-11-12'
+subtitle: 'An interesting commentary on a couple of patents that issued from the US
+  Patent Office:'
+tags:
+- legal
+title: Patents and perpetual motion machines
+type: wp
 wordpress_id: 468
 ---
+
 An [interesting commentary on a couple of patents that issued from the US Patent Office:](http://gailly.net/05533051.html)
 
 > 

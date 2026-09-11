@@ -1,12 +1,15 @@
 ---
-title: "Security by obscurity and other slogans"
-subtitle: "If you’ve been in computing for any time you may have been hit over the head by the slogan “Security..."
-category: "410"
-tags: ["1145", "1822"]
-date: "2010-04-23"
-type: "wp"
+category: '410'
+date: '2010-04-23'
+subtitle: If you’ve been in computing for any time you may have been hit over the
+  head by the slogan “Security...
+tag_review: no_fit
+tags: []
+title: Security by obscurity and other slogans
+type: wp
 wordpress_id: 728
 ---
+
 If you’ve been in computing for any time you may have been hit over the head by the slogan “Security by Obscurity is No Security”. As I have understood the argument it has a few components:
 
 - If your security relies on secret tricks, trap doors, and a hope that no one will be able to find out or guess the work around, then you’re fooling yourself. Sooner or later someone will be able to guess the trick, see the code, quit your company and take the secret with them.

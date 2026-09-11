@@ -1,12 +1,16 @@
 ---
-title: "Clever iPhone app vs. the Transistor"
-subtitle: "This interesting, and I think, correct [article, makes the argument that the word ‘innovation’ is be..."
-category: "1"
-tags: ["644", "695", "1266", "2022"]
-date: "2012-03-01"
-type: "wp"
+category: '1'
+date: '2012-03-01'
+subtitle: This interesting, and I think, correct [article, makes the argument that
+  the word ‘innovation’ is be...
+tags:
+- iphone
+- technology
+title: Clever iPhone app vs. the Transistor
+type: wp
 wordpress_id: 377
 ---
+
 This interesting, and I think, correct [article, makes the argument that the word ‘innovation’ is being watered down ](http://www.nytimes.com/2012/02/26/opinion/sunday/innovation-and-the-bell-labs-miracle.html?pagewanted=3&_r=1&ref=opinion)and even getting **cheapened**. It says, about “innovation”,
 
 > 

@@ -1,12 +1,15 @@
 ---
-title: "Update about Spotify"
-subtitle: "So I have now been using Spotify for about a week after sumarily deserting Rhapsody (no stickyness a..."
-category: "298"
-tags: ["1748", "1902"]
-date: "2011-07-21"
-type: "wp"
+category: '298'
+date: '2011-07-21'
+subtitle: So I have now been using Spotify for about a week after sumarily deserting
+  Rhapsody (no stickyness a...
+tags:
+- music
+title: Update about Spotify
+type: wp
 wordpress_id: 524
 ---
+
 So I have now been using Spotify for about a week after sumarily deserting Rhapsody (no stickyness at all!) Here’s my summary:
 
 **Pro Spotify**

@@ -1,12 +1,15 @@
 ---
-title: "Getting the best deals… Check out decide.com"
-subtitle: "A **useful** article in the New York Times today, just in time for the holidays. A[ new site that tr..."
-category: "1"
-tags: ["921", "1542", "1853"]
-date: "2011-11-27"
-type: "wp"
+category: '1'
+date: '2011-11-27'
+subtitle: A **useful** article in the New York Times today, just in time for the holidays.
+  A[ new site that tr...
+tags:
+- ai
+title: Getting the best deals… Check out decide.com
+type: wp
 wordpress_id: 456
 ---
+
 A **useful** article in the New York Times today, just in time for the holidays. A[ new site that tries to forecast the best time to buy that item you really want. ](http://www.nytimes.com/2011/11/25/business/fridays-deals-may-not-be-the-best.html)It seems to draw a graph showing how the price of, for example, a Nikon 50-300mm Zoom Lens has varied over the last 3 months and whether I should buy it today or wait till next month. It’s a very nicely done site and if it works, it could be very useful. The site is [decide.com.](http://www.decide.com/)
 
 > 

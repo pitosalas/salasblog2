@@ -1,12 +1,14 @@
 ---
-title: "There’s more to life than Kickstarter (revised)"
-subtitle: "Everyone (almost) has heard of Kickstarter, right? It’s the best known..."
-category: "1"
-tags: ["893", "894", "1341"]
-date: "2012-11-09"
-type: "wp"
+category: '1'
+date: '2012-11-09'
+subtitle: Everyone (almost) has heard of Kickstarter, right? It’s the best known...
+tags:
+- business
+title: There’s more to life than Kickstarter (revised)
+type: wp
 wordpress_id: 269
 ---
+
 Everyone (almost) has heard of [Kickstarter](http://www.kickstarter.com), right? It’s the best known (I think) of the so-called **Crowd Funding** services. Let’s say you have a project – it can be anything – a record, a book, some kind of invention – and you need funding. The crowd funding sites give you a **tool to propose your project** to everyone on the web and it makes it easy for you to motivate them to donate or fund, and it makes it easy for them to do so. **Cool idea.**
 
 And like any cool idea, there are lots of variations. I don’t want to say that their knockoffs because they all have different flavors, focuses, types of users, size of funding and so on. Here’s a helpful list that I came across. The editorial comments are mine.

@@ -1,12 +1,15 @@
 ---
-title: "I wonder when this will come to iPhone!"
-subtitle: "This is a very unusual Android app that I came across. It looks like they are just starting so it’s ..."
-category: "298"
-tags: ["629", "637", "1186", "1298"]
-date: "2011-07-11"
-type: "wp"
+category: '298'
+date: '2011-07-11'
+subtitle: This is a very unusual Android app that I came across. It looks like they
+  are just starting so it’s ...
+tag_review: no_fit
+tags: []
+title: I wonder when this will come to iPhone!
+type: wp
 wordpress_id: 535
 ---
+
 This is a very unusual Android app that I came across. It looks like they are just starting so it’s a bit crude, but highly intriguing…
 > 
 

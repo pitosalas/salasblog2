@@ -1,12 +1,15 @@
 ---
-title: "Zero Dark Thirty"
-subtitle: "I saw this movie last night and really thought it was great. I had read some[ negative commentary ab..."
-category: "1"
-tags: ["1490", "2148"]
-date: "2013-02-03"
-type: "wp"
+category: '1'
+date: '2013-02-03'
+subtitle: I saw this movie last night and really thought it was great. I had read
+  some[ negative commentary ab...
+tag_review: no_fit
+tags: []
+title: Zero Dark Thirty
+type: wp
 wordpress_id: 249
 ---
+
 I saw this movie last night and really thought it was great. I had read some[ negative commentary about Zero Dark Thirty](http://www.nybooks.com/articles/archives/2013/feb/07/disturbing-misleading-zero-dark-thirty/?pagination=false):
 
 > 

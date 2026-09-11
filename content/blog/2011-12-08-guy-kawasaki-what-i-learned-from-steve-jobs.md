@@ -1,12 +1,16 @@
 ---
-title: "Guy Kawasaki: What I learned from Steve Jobs"
-subtitle: "Interesting article by famous Guy Kawasaki about what he learned from Steve Jobs"
-category: "1"
-tags: ["1177", "1924", "2124"]
-date: "2011-12-08"
-type: "wp"
+category: '1'
+date: '2011-12-08'
+subtitle: Interesting article by famous Guy Kawasaki about what he learned from Steve
+  Jobs
+tags:
+- apple
+- business
+title: 'Guy Kawasaki: What I learned from Steve Jobs'
+type: wp
 wordpress_id: 445
 ---
+
 Interesting [article by famous Guy Kawasaki about what he learned from Steve Jobs](http://blog.guykawasaki.com/2011/10/what-i-learned-from-steve-jobs.html#axzz1fxoYzTQr):
 
 > 

@@ -1,12 +1,14 @@
 ---
-title: "Aw, come on: Apple iPhone spontaneously combusts aboard flight in Australia"
-subtitle: "This is just a weird story:"
-category: "1"
-tags: ["1066", "1298", "2112"]
-date: "2011-11-28"
-type: "wp"
+category: '1'
+date: '2011-11-28'
+subtitle: 'This is just a weird story:'
+tags:
+- iphone
+title: 'Aw, come on: Apple iPhone spontaneously combusts aboard flight in Australia'
+type: wp
 wordpress_id: 454
 ---
+
 This is just a [weird story:](http://www.bgr.com/2011/11/28/apple-iphone-spontaneously-combusts-aboard-flight-in-australia/)
 
 > 

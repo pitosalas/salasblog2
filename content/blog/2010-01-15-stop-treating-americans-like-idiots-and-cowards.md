@@ -1,12 +1,15 @@
 ---
-title: "Stop treating Americans like idiots and cowards"
-subtitle: "An [excellent article in the Wall Street Journal about the way the media and politicians want us to ..."
-category: "298"
-tags: ["616", "1822"]
-date: "2010-01-15"
-type: "wp"
+category: '298'
+date: '2010-01-15'
+subtitle: An [excellent article in the Wall Street Journal about the way the media
+  and politicians want us to ...
+tags:
+- politics
+title: Stop treating Americans like idiots and cowards
+type: wp
 wordpress_id: 754
 ---
+
 An [excellent article in the Wall Street Journal about the way the media and politicians want us to react to the recent Christmas Day attempted terrorist attack](http://online.wsj.com/article/SB10001424052748704130904574644651587677752.html). 
 **“No amount of statistical evidence, however, will make any difference to those who give themselves over to almost completely irrational fears. Such people, and there are apparently a lot of them in America right now, are in fact real victims of terrorism. They also make possible the current ascendancy of the politics of cowardice—the cynical exploitation of fear for political gain.” (from** [Paul Campos writing in the Wall Street Journal](http://online.wsj.com/article/SB10001424052748704130904574644651587677752.html))
 

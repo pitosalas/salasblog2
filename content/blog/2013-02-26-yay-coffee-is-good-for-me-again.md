@@ -1,12 +1,15 @@
 ---
-title: "Yay! Coffee is good for me (again)"
-subtitle: "Well these stories appear from time to time, either saying it’s good or bad for you. What’s an addic..."
-category: "1"
-tags: ["820", "1194", "1740"]
-date: "2013-02-26"
-type: "wp"
+category: '1'
+date: '2013-02-26'
+subtitle: Well these stories appear from time to time, either saying it’s good or
+  bad for you. What’s an addic...
+tags:
+- health
+title: Yay! Coffee is good for me (again)
+type: wp
 wordpress_id: 235
 ---
+
 Well these stories appear from time to time, either saying it’s good or bad for you. What’s an addict to do?
 
 ![](https://i0.wp.com/img.gawkerassets.com/img/18fn4pcke7mkyjpg/original.jpg?w=300)

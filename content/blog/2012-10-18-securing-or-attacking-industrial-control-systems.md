@@ -1,12 +1,15 @@
 ---
-title: "Securing or attacking Industrial Control Systems"
-subtitle: "It turns out that Kaspersky Labs is developing a [brand new operating system specifically designed t..."
-category: "1"
-tags: ["1181", "1237", "1337", "1822"]
-date: "2012-10-18"
-type: "wp"
+category: '1'
+date: '2012-10-18'
+subtitle: It turns out that Kaspersky Labs is developing a [brand new operating system
+  specifically designed t...
+tags:
+- technology
+title: Securing or attacking Industrial Control Systems
+type: wp
 wordpress_id: 289
 ---
+
 It turns out that Kaspersky Labs is developing a [brand new operating system specifically designed to be used in embedded industrial systems and industrial control systems](http://eugene.kaspersky.com/2012/10/16/kl-developing-its-own-operating-system-we-confirm-the-rumors-and-end-the-speculation/).
 
 In this article, [Eugene Kaspersky explains why his company decided to embark on the creation of an operating system designed specifically and only for embedded industrial control systems.](http://eugene.kaspersky.com/2012/10/16/kl-developing-its-own-operating-system-we-confirm-the-rumors-and-end-the-speculation/)

@@ -1,12 +1,15 @@
 ---
-title: "Interesting view on Tumblr/Yahoo deal"
-subtitle: "Yahoo, Tumblr, and the Loyalty Factor – Ben Gomes-Casseres – Harvard Business Review"
-category: "1"
-tags: ["599", "1882", "1931", "2040", "2140"]
-date: "2013-05-20"
-type: "wp"
+category: '1'
+date: '2013-05-20'
+subtitle: Yahoo, Tumblr, and the Loyalty Factor – Ben Gomes-Casseres – Harvard Business
+  Review
+tags:
+- business
+title: Interesting view on Tumblr/Yahoo deal
+type: wp
 wordpress_id: 201
 ---
+
 [Yahoo, Tumblr, and the Loyalty Factor – Ben Gomes-Casseres – Harvard Business Review](http://blogs.hbr.org/cs/2013/05/yahoo_tumblr_and_the_loyalty_f.html): a blog post analyzing f some of the strategic issues underlying the Tumblr/Yahoo deal: 
 
 > “…Still, after the initial shock subsides, can Yahoo count on Tumblr users staying on? That is probably how the investment bankers framed it — as a question of switching costs, lock-in, network externalities, and the like. Where are these users to go? There is no equivalent forum of this type, richness, and network size (at least not yet). It would seem that the 18-24 year-old demographic that Yahoo is pining for does not have an easy exit choice….” (**from:

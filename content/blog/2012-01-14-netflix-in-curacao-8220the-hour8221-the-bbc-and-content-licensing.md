@@ -1,12 +1,15 @@
 ---
-title: "Netflix in Curaçao: “The Hour”, the BBC, and content licensing"
-subtitle: "I was recently visiting Curaçao and remembered that I had read that **Netflix was now available in S..."
-category: "1"
-tags: ["693", "900", "1418", "1508", "1997"]
-date: "2012-01-14"
-type: "wp"
+category: '1'
+date: '2012-01-14'
+subtitle: I was recently visiting Curaçao and remembered that I had read that **Netflix
+  was now available in S...
+tags:
+- curacao
+title: 'Netflix in Curaçao: “The Hour”, the BBC, and content licensing'
+type: wp
 wordpress_id: 418
 ---
+
 I was recently visiting Curaçao and remembered that I had read that **Netflix was now available in South America** so I thought I would check it out. (Curaçao is not technically in South America but close enough!) Well, it worked.
 
 For one reason or another, I found a british program called “[The Hour](http://www.bbcamerica.com/the-hour/)” which I also remembered having been positioned as the BBC’s answer to [Madmen](http://www.amctv.com/shows/mad-men). Which it is not.

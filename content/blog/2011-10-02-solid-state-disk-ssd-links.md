@@ -1,12 +1,15 @@
 ---
-title: "Solid State Disk (SSD) links"
-subtitle: "I’ve been looking into changing up the primary (and only) disk in my 2 year old Mac Pro to a Solid S..."
-category: "538"
-tags: ["1407", "1912"]
-date: "2011-10-02"
-type: "wp"
+category: '538'
+date: '2011-10-02'
+subtitle: I’ve been looking into changing up the primary (and only) disk in my 2 year
+  old Mac Pro to a Solid S...
+tags:
+- technology
+title: Solid State Disk (SSD) links
+type: wp
 wordpress_id: 488
 ---
+
 I’ve been looking into changing up the primary (and only) disk in my 2 year old Mac Pro to a Solid State Disk (SSD). Based on what I’ve seen on the new Mac Airs I think it will **boost performance a lot **more than adding more memory would.
 
 The problem is that these beasts are **pretty expensive,** so I am not going to replace my 400G Hard Disk with a 400G SSD. Instead I will have a much smaller SSD to boot from and run from, and leave the larger 400G to carry the load of large files that I don’t use a lot.

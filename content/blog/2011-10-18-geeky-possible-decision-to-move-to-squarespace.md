@@ -1,12 +1,14 @@
 ---
-title: "[GEEKY] Possible Decision to move to SquareSpace"
-subtitle: "I finally got my new blog on WordPress.com working. That should have bee..."
-category: "538"
-tags: ["1909", "2131"]
-date: "2011-10-18"
-type: "wp"
+category: '538'
+date: '2011-10-18'
+subtitle: I finally got my new blog on WordPress.com working. That should have bee...
+tag_review: no_fit
+tags: []
+title: '[GEEKY] Possible Decision to move to SquareSpace'
+type: wp
 wordpress_id: 481
 ---
+
 I finally got my new blog on [WordPress.com](http://www.wordpress.com) working. That should have been the simplest but their automatic spam detector encountered a single post referencing some free iPhone upgrade service I once mentioned. I had no idea that they were not legitimate at the time but anyway, I deleted that mention and all was well again.
 
 So now [WordPress.com](wordpress.com) looks like a good candidate. I know [wordpress](http://www.wordpress.org) and I can run my blog, essentially unaltered on their site, for free, and ditch my $25/month server that does almost nothing other than serve up my blog.

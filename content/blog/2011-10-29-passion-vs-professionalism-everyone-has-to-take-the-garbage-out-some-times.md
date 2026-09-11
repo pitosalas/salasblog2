@@ -1,12 +1,15 @@
 ---
-title: "Passion vs. Professionalism: Everyone has to take the garbage out some times"
-subtitle: "Interesting article with a provocative title: “[The Designer’s Notebook: Passion Versus Professional..."
-category: "298"
-tags: ["1111", "1589", "1680"]
-date: "2011-10-29"
-type: "wp"
+category: '298'
+date: '2011-10-29'
+subtitle: 'Interesting article with a provocative title: “[The Designer’s Notebook:
+  Passion Versus Professional...'
+tags:
+- business
+title: 'Passion vs. Professionalism: Everyone has to take the garbage out some times'
+type: wp
 wordpress_id: 476
 ---
+
 Interesting article with a provocative title: “[The Designer’s Notebook: Passion Versus Professionalism](http://www.gamasutra.com/view/feature/6523/the_designers_notebook_passion_.php?print=1)“. This is a topic that interests me. He says:
 
 > 

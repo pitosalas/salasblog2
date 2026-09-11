@@ -1,12 +1,15 @@
 ---
-title: "Mysql – NoSql – KnowSql"
-subtitle: "A catchy headline, but is it true? “Facebook Trapped in MySql ‘a fate worse than death’."
-category: "1"
-tags: ["910", "1498", "1534"]
-date: "2011-11-20"
-type: "wp"
+category: '1'
+date: '2011-11-20'
+subtitle: A catchy headline, but is it true? “Facebook Trapped in MySql ‘a fate worse
+  than death’.
+tags:
+- programming
+title: Mysql – NoSql – KnowSql
+type: wp
 wordpress_id: 461
 ---
+
 A catchy headline, but is it true? “[Facebook Trapped in MySql ‘a fate worse than death’. ](http://gigaom.com/cloud/facebook-trapped-in-mysql-fate-worse-than-death/)This is a quote of what Michael Stonebreaker supposedly said in this interview article:
 
 > 

@@ -1,12 +1,15 @@
 ---
-title: "The flaw in the deal"
-subtitle: "I am assuming that you’ve followed the nonsense that has been going on in Washington D.C. about our ..."
-category: "298"
-tags: ["926", "1645"]
-date: "2011-08-01"
-type: "wp"
+category: '298'
+date: '2011-08-01'
+subtitle: I am assuming that you’ve followed the nonsense that has been going on in
+  Washington D.C. about our ...
+tags:
+- politics
+title: The flaw in the deal
+type: wp
 wordpress_id: 513
 ---
+
 I am assuming that you’ve followed the nonsense that has been going on in Washington D.C. about our so-called debt ceiling. If not this post will be meaninless and boring to you.
 
 [The deal stipulates that a new super-commision will be formed to sort out the additional 1+ Trillion in defecit reduction.  A majority of the commission has to agree on the particular program which will then be sent to the Congress for a “simple” up or down vote.](http://online.wsj.com/article/SB10001424053111903520204576480123949521268.html?mod=WSJ_Home_largeHeadline)

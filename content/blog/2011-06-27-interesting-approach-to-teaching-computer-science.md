@@ -1,12 +1,16 @@
 ---
-title: "Interesting approach to teaching computer science"
-subtitle: "Fun article about Ben Hescott who has some unique – and **impressive** – approaches to teaching an a..."
-category: "298"
-tags: ["884", "1973", "2054"]
-date: "2011-06-27"
-type: "wp"
+category: '298'
+date: '2011-06-27'
+subtitle: Fun article about Ben Hescott who has some unique – and **impressive** –
+  approaches to teaching an a...
+tags:
+- computer-science
+- education
+title: Interesting approach to teaching computer science
+type: wp
 wordpress_id: 540
 ---
+
 Fun article about Ben Hescott who has some unique – and **impressive** – approaches to teaching an abstract topic:
 
 > 

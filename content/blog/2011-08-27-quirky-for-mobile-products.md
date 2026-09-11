@@ -1,12 +1,15 @@
 ---
-title: "Quirky for Mobile Products?"
-subtitle: "I read about Quirky.com in the paper the other day."
-category: "422"
-tags: ["1477", "1702"]
-date: "2011-08-27"
-type: "wp"
+category: '422'
+date: '2011-08-27'
+subtitle: I read about Quirky.com in the paper the other day.
+tags:
+- business
+- design
+title: Quirky for Mobile Products?
+type: wp
 wordpress_id: 503
 ---
+
 I read about [Quirky.com](http://www.quirky.com/) in the [paper the other day.](http://www.nytimes.com/2011/08/25/garden/ben-kaufman-quirkycom-founder-on-problem-solving-qa.html) From my perusal it’s a site where people (you and me) can submit ideas for manufactured products.
 
 For example, let’s say I have an idea for a dog leash with a built in flashlight. Clever eh? Well, you can describe it to the best of your ability and submit it to the Quirky.com site.

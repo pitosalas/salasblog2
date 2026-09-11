@@ -1,12 +1,14 @@
 ---
-title: "Pogue does not love the new Kindle Fire"
-subtitle: "I was excited to hear about the Kindle Fire."
-category: "1"
-tags: ["622", "919", "1066", "1342"]
-date: "2011-11-14"
-type: "wp"
+category: '1'
+date: '2011-11-14'
+subtitle: I was excited to hear about the Kindle Fire.
+tags:
+- technology
+title: Pogue does not love the new Kindle Fire
+type: wp
 wordpress_id: 467
 ---
+
 I was excited to hear about the [Kindle Fire.](http://www.google.com/search?client=safari&rls=en&q=kindle+fire&ie=UTF-8&oe=UTF-8) But I was waiting to read some impartial reviews of one before running off and buying one. After all I am a big fan of the Kindle (gen 2) and enjoy reading books on Kindles. And, believe it or not, I don’t yet own an iPad.
 
 So the Fire seems like a match made in heaven, right?

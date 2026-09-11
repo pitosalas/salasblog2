@@ -1,12 +1,14 @@
 ---
-title: "Do you procrastinate? I do…"
-subtitle: "Here’s an insightful New Yorker article about procrastination"
-category: "298"
+category: '298'
+date: '2010-10-11'
+subtitle: Here’s an insightful New Yorker article about procrastination
+tag_review: no_fit
 tags: []
-date: "2010-10-11"
-type: "wp"
+title: Do you procrastinate? I do…
+type: wp
 wordpress_id: 652
 ---
+
 Here’s an insightful [New Yorker article about procrastination](http://www.newyorker.com/arts/critics/books/2010/10/11/101011crbo_books_surowiecki?currentPage=all). There are some useful ideas and techniques in this article. One of my favorites is the concept of ‘self-binding’ (not a form of masochism):
 > “The idea of the divided self, though discomfiting to some, can be liberating in practical terms, because it encourages you to stop thinking about procrastination as something you can beat by just trying harder. Instead, we should rely on what Joseph Heath and Joel Anderson, in their essay in “The Thief of Time,” call “the extended will”—external tools and techniques to help the parts of our selves that want to work. A classic illustration of the extended will at work is Ulysses’ decision to have his men bind him to the mast of his ship.
 

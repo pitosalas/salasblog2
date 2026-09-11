@@ -1,12 +1,14 @@
 ---
-title: "What is the cellphone equivalent of a hat rack?"
-subtitle: "!Screen shot 2012 12 06 at 4 26 50 pm"
-category: "1"
-tags: ["601", "664", "782", "949"]
-date: "2012-12-09"
-type: "wp"
+category: '1'
+date: '2012-12-09'
+subtitle: '!Screen shot 2012 12 06 at 4 26 50 pm'
+tags:
+- technology
+title: What is the cellphone equivalent of a hat rack?
+type: wp
 wordpress_id: 260
 ---
+
 ![Screen shot 2012 12 06 at 4 26 50 pm](https://i0.wp.com/salas.com/wp-content/uploads/2012/12/c5f2b-screen-shot-2012-12-06-at-4-26-50-pm.png?resize=258%2C299&ssl=1)
 
 I am just as guilty as anyone of being overly addicted to looking at my cellphone, and that’s not an original observation! It’s a cliché that has been written and talked about ad nauseum.

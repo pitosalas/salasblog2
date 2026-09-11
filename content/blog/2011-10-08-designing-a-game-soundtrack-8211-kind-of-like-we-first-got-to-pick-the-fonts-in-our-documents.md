@@ -1,12 +1,16 @@
 ---
-title: "Designing a game soundtrack – kind of like we first got to pick the fonts in our documents"
-subtitle: "Can you compose crappy music? I had a field day today ‘designing’ a bit of music for my “Game Of Lif..."
-category: "298"
-tags: ["665", "1076", "1112", "1414", "1492"]
-date: "2011-10-08"
-type: "wp"
+category: '298'
+date: '2011-10-08'
+subtitle: Can you compose crappy music? I had a field day today ‘designing’ a bit
+  of music for my “Game Of Lif...
+tag_review: no_fit
+tags: []
+title: Designing a game soundtrack – kind of like we first got to pick the fonts in
+  our documents
+type: wp
 wordpress_id: 483
 ---
+
 Can you compose crappy music? I had a field day today ‘designing’ a bit of music for my “Game Of Life” Android game. In the old old days, when computers for the first time allowed you to choose a font for your text. we all became bad amateur typographers and book designers. Do you remember the “ransom note” font in the original Macintosh (yeah, that was 1984?) It looked like this:
 
 ![Ransom note](https://i0.wp.com/salas.com/wp-content/uploads/2011/10/123ba-ransom-note.jpg?resize=477%2C144&ssl=1)

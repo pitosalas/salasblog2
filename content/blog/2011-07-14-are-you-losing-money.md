@@ -1,12 +1,14 @@
 ---
-title: "Are you losing money?"
-subtitle: "From ABC News, but I’ve seen a similar story elsewhere:"
-category: "298"
+category: '298'
+date: '2011-07-14'
+subtitle: 'From ABC News, but I’ve seen a similar story elsewhere:'
+tag_review: no_fit
 tags: []
-date: "2011-07-14"
-type: "wp"
+title: Are you losing money?
+type: wp
 wordpress_id: 534
 ---
+
 From ABC News, but I’ve seen a similar story elsewhere:
 
 > 

@@ -1,12 +1,14 @@
 ---
-title: "“Gods of Carnage” – Huntington Theatre"
-subtitle: "I Just came back from seeing “Gods Of Carnage”"
-category: "1"
-tags: ["733", "1231", "1995"]
-date: "2012-01-16"
-type: "wp"
+category: '1'
+date: '2012-01-16'
+subtitle: I Just came back from seeing “Gods Of Carnage”
+tags:
+- boston
+title: “Gods of Carnage” – Huntington Theatre
+type: wp
 wordpress_id: 417
 ---
+
 I Just came back from seeing “[Gods Of Carnage”](http://www.huntingtontheatre.org/season/production.aspx?id=10226&src=t) at the [Huntington Theatre (in Boston)](http://www.huntingtontheatre.org/index2.aspx) tonight. Couldn’t wait to post my recommendation.
 
 It’s short (about 80 minutes – no intermission), fast paced, well acted and funny. It’s a story about two couples who are thrown together to discuss a playground altercation between their two sons. That’s the set up.

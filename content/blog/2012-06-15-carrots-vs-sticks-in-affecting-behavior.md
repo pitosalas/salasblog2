@@ -1,12 +1,15 @@
 ---
-title: "Carrots vs. Sticks in affecting behavior"
-subtitle: "Instead of charging extra (‘congestion pricing’) to drive your car during rush hour, how about givin..."
-category: "1"
-tags: ["729", "779", "804", "1503", "2019"]
-date: "2012-06-15"
-type: "wp"
+category: '1'
+date: '2012-06-15'
+subtitle: Instead of charging extra (‘congestion pricing’) to drive your car during
+  rush hour, how about givin...
+tags:
+- science
+title: Carrots vs. Sticks in affecting behavior
+type: wp
 wordpress_id: 322
 ---
+
 Instead of charging extra (‘congestion pricing’) to drive your car during rush hour, how about giving me a reward (a lottery ticket) for driving using less congested routes? That’s a clever idea that is being tested by a Stanford professor:
 
 > 

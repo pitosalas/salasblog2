@@ -1,12 +1,15 @@
 ---
-title: "How far does idealism get you"
-subtitle: "[David Brooks of the New York Times, in an article about (my interpretation) the limits of idealism:..."
-category: "1"
-tags: ["785", "915", "1239", "1789"]
-date: "2012-04-16"
-type: "wp"
+category: '1'
+date: '2012-04-16'
+subtitle: '[David Brooks of the New York Times, in an article about (my interpretation)
+  the limits of idealism:...'
+tags:
+- politics
+title: How far does idealism get you
+type: wp
 wordpress_id: 353
 ---
+
 [David Brooks of the New York Times, in an article about (my interpretation) the limits of idealism:](http://www.nytimes.com/2012/04/13/opinion/brooks-sam-spade-at-starbucks.html?_r=1&partner=rssnyt&emc=rss)
 
 > 

@@ -1,12 +1,15 @@
 ---
-title: "A list of UI and UX books, articles and links"
-subtitle: "I created this quick and dirty list of useful resources for some friends who wanted to dig into the ..."
-category: "1"
-tags: ["725", "1385", "2052", "2064"]
-date: "2012-09-22"
-type: "wp"
+category: '1'
+date: '2012-09-22'
+subtitle: I created this quick and dirty list of useful resources for some friends
+  who wanted to dig into the ...
+tags:
+- design
+title: A list of UI and UX books, articles and links
+type: wp
 wordpress_id: 303
 ---
+
 I created this quick and dirty list of useful resources for some friends who wanted to dig into the latest thinking on web and mobile user interface design. I am sure this list is incomplete and quirky but I thought it would be good to share:
 
 - I’ve had great luck with Lynda.com courses. It’s only $25 per month, and you can watch as many as you like. Here’s one [about CSSS for Developers](http://www.lynda.com/CSS-tutorials/for-developers/52341-2.html)

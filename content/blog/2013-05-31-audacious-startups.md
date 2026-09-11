@@ -1,12 +1,15 @@
 ---
-title: "Audacious startups"
-subtitle: "I remember when this project was first announced and ‘PR’d. It’s just another good reminder about th..."
-category: "1"
-tags: ["692", "992", "1001", "1658", "1918"]
-date: "2013-05-31"
-type: "wp"
+category: '1'
+date: '2013-05-31'
+subtitle: I remember when this project was first announced and ‘PR’d. It’s just another
+  good reminder about th...
+tags:
+- business
+title: Audacious startups
+type: wp
 wordpress_id: 196
 ---
+
 I remember when this project was first announced and ‘PR’d. It’s just another good reminder about the unpredictability of these world-changing projects. Sad but interesting:
 
 [Electric car company Better Place shuts down after burning through $850M | VentureBeat](http://venturebeat.com/2013/05/26/electric-car-company-better-place-shuts-down-after-burning-through-850m/):

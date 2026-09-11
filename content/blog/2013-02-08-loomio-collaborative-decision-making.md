@@ -1,12 +1,14 @@
 ---
-title: "Loomio: Collaborative Decision Making"
-subtitle: "Loomio is a new app looks quite cool and worth checking out:"
-category: "1"
-tags: ["822", "929", "930", "1403"]
-date: "2013-02-08"
-type: "wp"
+category: '1'
+date: '2013-02-08'
+subtitle: 'Loomio is a new app looks quite cool and worth checking out:'
+tags:
+- technology
+title: 'Loomio: Collaborative Decision Making'
+type: wp
 wordpress_id: 246
 ---
+
 [Loomio](https://www.loomio.org) is a new app looks quite cool and worth checking out:
 
 > 

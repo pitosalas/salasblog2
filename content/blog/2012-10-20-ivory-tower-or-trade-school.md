@@ -1,12 +1,16 @@
 ---
-title: "Ivory Tower or Trade school?"
-subtitle: "One of the tensions that I have seen in teaching software engineering is whether something should be..."
-category: "1"
-tags: ["942", "987", "1740"]
-date: "2012-10-20"
-type: "wp"
+category: '1'
+date: '2012-10-20'
+subtitle: One of the tensions that I have seen in teaching software engineering is
+  whether something should be...
+tags:
+- education
+- computer-science
+title: Ivory Tower or Trade school?
+type: wp
 wordpress_id: 287
 ---
+
 One of the tensions that I have seen in teaching software engineering is whether something should be viewed as legitimate research or part of the craft of computer engineering.
 
 It’s a slippery slope that I myself didn’t have a good articulation for.

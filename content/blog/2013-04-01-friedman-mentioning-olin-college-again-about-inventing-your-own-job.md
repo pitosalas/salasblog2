@@ -1,12 +1,16 @@
 ---
-title: "Friedman, mentioning Olin College: again about inventing your own job"
-subtitle: "Tom Friedman, quoting Tony Wagner, describes what he thinks should be taught today (that isn’t reall..."
-category: "1"
-tags: ["1095", "1318", "1517", "1556"]
-date: "2013-04-01"
-type: "wp"
+category: '1'
+date: '2013-04-01'
+subtitle: Tom Friedman, quoting Tony Wagner, describes what he thinks should be taught
+  today (that isn’t reall...
+tags:
+- education
+- business
+title: 'Friedman, mentioning Olin College: again about inventing your own job'
+type: wp
 wordpress_id: 223
 ---
+
 Tom Friedman, quoting Tony Wagner, describes what he thinks should be taught today (that isn’t really being taught:)
 
 > 

@@ -1,12 +1,14 @@
 ---
-title: "Did someone actually have to invent that?"
-subtitle: "!NewImage"
-category: "1"
-tags: ["695", "1290", "1982", "2014", "2060", "2064"]
-date: "2013-02-11"
-type: "wp"
+category: '1'
+date: '2013-02-11'
+subtitle: '!NewImage'
+tags:
+- design
+title: Did someone actually have to invent that?
+type: wp
 wordpress_id: 244
 ---
+
 ![NewImage](https://i0.wp.com/salas.com/wp-content/uploads/2013/02/2cb42-newimage.png?resize=190%2C169&ssl=1)
 
 A really charming article about [John Karlin who was one of the first UX guys](http://www.nytimes.com/2013/02/09/business/john-e-karlin-who-led-the-way-to-all-digit-dialing-dies-at-94.html). He worked at Bell Labs back in the day and helped determine lots of little details about how telephones are designed. Simple silly things like that putting a dot (to “aim” at) visible through each finger hole of a dial phone improved accuracy and speed of dialing.

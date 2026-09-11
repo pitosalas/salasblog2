@@ -1,12 +1,14 @@
 ---
-title: "[ELECTIONS] Continuing debate on hand vs. machine counting"
-subtitle: "Just from today’s New York Times:"
-category: "1"
-tags: ["880", "990", "1542", "2087"]
-date: "2012-07-03"
-type: "wp"
+category: '1'
+date: '2012-07-03'
+subtitle: 'Just from today’s New York Times:'
+tags:
+- politics
+title: '[ELECTIONS] Continuing debate on hand vs. machine counting'
+type: wp
 wordpress_id: 318
 ---
+
 Just from today’s New York Times:
 
 > 

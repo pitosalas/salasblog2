@@ -1,12 +1,15 @@
 ---
-title: "Bill Gates and Microsoft"
-subtitle: "I still **don’t love Microsoft**. I used to, actually, use Windows day in and day out, for years. Bu..."
-category: "298"
-tags: ["705", "1464"]
-date: "2011-07-25"
-type: "wp"
+category: '298'
+date: '2011-07-25'
+subtitle: I still **don’t love Microsoft**. I used to, actually, use Windows day in
+  and day out, for years. Bu...
+tags:
+- business
+title: Bill Gates and Microsoft
+type: wp
 wordpress_id: 520
 ---
+
 I still **don’t love Microsoft**. I used to, actually, use Windows day in and day out, for years. But I am known to **frown** a the thought of sitting down and usingn Windows 7 or whatever it’s called these days.
 
 But isn’t **Bill Gates awesome**? After building Microsoft into a hugely successful business behemoth he takes his money and builds an awesome charitable behemoth:

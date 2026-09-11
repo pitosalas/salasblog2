@@ -1,12 +1,15 @@
 ---
-title: "Teaching: Group Projects"
-subtitle: "I’ve had occasion as you know to teach a few times at Brandeis University."
-category: "1"
-tags: ["738", "1031", "1157", "1314", "1368", "1428", "1973", "1975"]
-date: "2012-01-04"
-type: "wp"
+category: '1'
+date: '2012-01-04'
+subtitle: I’ve had occasion as you know to teach a few times at Brandeis University.
+tags:
+- education
+- brandeis
+title: 'Teaching: Group Projects'
+type: wp
 wordpress_id: 424
 ---
+
 I’ve had occasion as you know to [teach a few times at Brandeis University.](https://sites.google.com/site/brandeiscosijbs/) The courses were in Web Development, Mobile Development and Game Development. A major component was a Product Incubator where students worked in teams to develop a product. The organizational and logistical questions as well as the dynamics around team work were **significant** and **challenging**.
 
 In my mind the **overall benefit **of team student projects are:

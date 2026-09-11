@@ -1,12 +1,15 @@
 ---
-title: "Startup vs. Company"
-subtitle: "**“Oh yeah, I’ve started 6 companies, and right now I have 3 startups going. I just love starting co..."
-category: "298"
-tags: ["834", "1026", "1917", "2068"]
-date: "2011-03-23"
-type: "wp"
+category: '298'
+date: '2011-03-23'
+subtitle: '**“Oh yeah, I’ve started 6 companies, and right now I have 3 startups going.
+  I just love starting co...'
+tags:
+- business
+title: Startup vs. Company
+type: wp
 wordpress_id: 580
 ---
+
 **“Oh yeah, I’ve started 6 companies, and right now I have 3 startups going. I just love starting companies. I don’t know what’s wrong with me….”**
 
 Have you ever heard statements like that?

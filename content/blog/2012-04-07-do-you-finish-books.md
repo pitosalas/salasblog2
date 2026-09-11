@@ -1,12 +1,15 @@
 ---
-title: "Do you finish books?"
-subtitle: "I **love** this article. It’s by an actual author talking about whether it ..."
-category: "1"
-tags: ["669", "725", "1000", "1718"]
-date: "2012-04-07"
-type: "wp"
+category: '1'
+date: '2012-04-07'
+subtitle: I **love** this article. It’s by an actual author talking about whether
+  it ...
+tags:
+- books
+title: Do you finish books?
+type: wp
 wordpress_id: 356
 ---
+
 I **love** this article. It’s by an [actual author ](http://tim-parks.com/)talking about whether it matters if a reader reads a book through to the very end.
 
 He starts with the basics, claiming that serious (‘**mature**‘) readers don’t feel self-imposed pressure to read a book to its very last syllable:

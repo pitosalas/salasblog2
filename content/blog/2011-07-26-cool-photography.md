@@ -1,12 +1,14 @@
 ---
-title: "Cool Photography"
-subtitle: "!NewImage"
-category: "298"
-tags: ["1320", "1614"]
-date: "2011-07-26"
-type: "wp"
+category: '298'
+date: '2011-07-26'
+subtitle: '!NewImage'
+tag_review: no_fit
+tags: []
+title: Cool Photography
+type: wp
 wordpress_id: 519
 ---
+
 ![NewImage](https://i0.wp.com/salas.com/wp-content/uploads/2011/07/98d63-newimage.png?resize=584%2C390&ssl=1)
 
 [Very cool photographs:](http://www.mymodernmet.com/profiles/blogs/before-and-after-shots-of-jogg)

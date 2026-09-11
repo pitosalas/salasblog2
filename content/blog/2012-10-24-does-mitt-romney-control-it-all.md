@@ -1,12 +1,14 @@
 ---
-title: "Does Mitt Romney control it all?"
-subtitle: "Another conspiracy"
-category: "1"
-tags: ["862", "1761", "2087", "2088"]
-date: "2012-10-24"
-type: "wp"
+category: '1'
+date: '2012-10-24'
+subtitle: Another conspiracy
+tags:
+- politics
+title: Does Mitt Romney control it all?
+type: wp
 wordpress_id: 281
 ---
+
 [Another conspiracy](http://truth-out.org/news/item/12204-does-the-romney-family-now-own-your-e-vote) story claiming that Romney through several levels of company, controls a company that makes a type of voting machine that is used in many parts of the country:
 
 > 

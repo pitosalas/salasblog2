@@ -1,12 +1,15 @@
 ---
-title: "Mark Twain: All Ideas are Second-Hand"
-subtitle: "I have often been heard to say: “Ideas are Cheap”, by which I mean to say that my admiration goes mo..."
-category: "1"
-tags: ["791", "1240", "1266", "1436"]
-date: "2012-05-16"
-type: "wp"
+category: '1'
+date: '2012-05-16'
+subtitle: 'I have often been heard to say: “Ideas are Cheap”, by which I mean to say
+  that my admiration goes mo...'
+tag_review: no_fit
+tags: []
+title: 'Mark Twain: All Ideas are Second-Hand'
+type: wp
 wordpress_id: 332
 ---
+
 I have often been heard to say: “Ideas are Cheap”, by which I mean to say that my admiration goes more with the implementation, the making real and tangible, of an idea than the idea itself. It’s much easier to come up with something that would be cool and useful (“A solar powered ambulance”, “a retractable and reusable parachute”, “email on steroids”) than actually design it, build it, realize it. 
 
 I believe that as much about my own ideas as about anyone else’s. BlogBridge was supposed to be “an RSS reader done right”.

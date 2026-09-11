@@ -1,12 +1,16 @@
 ---
-title: "Mac Mystery"
-subtitle: "Just reaching out you mac experts. I used to think I was one, but this one has me stumped."
-category: "538"
-tags: ["1077", "1786"]
-date: "2011-05-09"
-type: "wp"
+category: '538'
+date: '2011-05-09'
+subtitle: Just reaching out you mac experts. I used to think I was one, but this one
+  has me stumped.
+tags:
+- macos
+- apple
+title: Mac Mystery
+type: wp
 wordpress_id: 569
 ---
+
 Just reaching out you mac experts. I used to think I was one, but this one has me stumped.
 
 Using Safari, every so often, while I am doing something (what?) shrinks the fonts of the page being displayed. In other words, does the equivalent of a Command/- or Command/+. It seems to have something to do with dragging the mouse while doing something else.

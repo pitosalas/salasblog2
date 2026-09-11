@@ -1,12 +1,14 @@
 ---
-title: "Is Amazon using Wish List entries to pre-position inventory?"
-subtitle: "This happened: I had a book on my Amazon wish list for several months."
-category: "1"
-tags: ["622", "1291", "1400", "2125"]
-date: "2012-02-02"
-type: "wp"
+category: '1'
+date: '2012-02-02'
+subtitle: 'This happened: I had a book on my Amazon wish list for several months.'
+tags:
+- business
+title: Is Amazon using Wish List entries to pre-position inventory?
+type: wp
 wordpress_id: 401
 ---
+
 This happened: I had a book on my Amazon wish list for several months.
 
 **Yesterday**, I finally **placed** the order at around **3pm** and **today** the book is in my **hands**, just about 24 hours later. And this is with regular Prime shipping, which is supposedly two days.

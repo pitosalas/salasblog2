@@ -1,12 +1,14 @@
 ---
-title: "High Reactives"
-subtitle: "What are high reactives?"
-category: "298"
-tags: []
-date: "2010-08-27"
-type: "wp"
+category: '298'
+date: '2010-08-27'
+subtitle: What are high reactives?
+tags:
+- science
+title: High Reactives
+type: wp
 wordpress_id: 679
 ---
+
 What are high reactives?
 > “Temperament is a complex, multilayered thing, and for the sake of clarity, Kagan was tracking it along a single dimension: whether babies were easily upset when exposed to new things. He chose this characteristic both because it could be measured and because it seemed to explain much of normal human variation. He suspected, extrapolating from a study he had just completed on toddlers, that the most edgy infants were more likely to grow up to be inhibited, shy and anxious. Eager to take a peek at the early results, he grabbed the videotapes of the first babies in the study, looking for the irritable behavior he would later call high-reactive.” (**from** [Understanding the Anxious Mind](http://www.nytimes.com/2009/10/04/magazine/04anxiety-t.html?em=&pagewanted=all))
 

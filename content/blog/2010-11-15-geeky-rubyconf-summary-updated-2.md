@@ -1,12 +1,15 @@
 ---
-title: "[Geeky] RubyConf Summary (updated 2)"
-subtitle: "RubyConf 2010 was excellent. It was my first and probably not my last. Some general thoughts and the..."
-category: "422"
-tags: ["817", "1711", "1772", "1775"]
-date: "2010-11-15"
-type: "wp"
+category: '422'
+date: '2010-11-15'
+subtitle: RubyConf 2010 was excellent. It was my first and probably not my last. Some
+  general thoughts and the...
+tags:
+- ruby
+title: '[Geeky] RubyConf Summary (updated 2)'
+type: wp
 wordpress_id: 640
 ---
+
 RubyConf 2010 was excellent. It was my first and probably not my last. Some general thoughts and then a master list of links (the real meat.)
  
 - Unlike most all ‘business’ type conferences and talks I have gone to, the RubyConf style of presentation (and perhaps the Rails or Ruby community — I don’t know where it stops) is beautifully minimalist. Very few words on slides, large and impactful photographs. Is it because no one uses PowerPoint and few even use Keynote? I don’t know. But there were no text heavy, bullet heavy word slides. And also, lots and lots of code (that part is definitely a geek thing.)

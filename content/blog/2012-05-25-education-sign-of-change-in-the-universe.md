@@ -1,12 +1,15 @@
 ---
-title: "[EDUCATION] Sign of change in the universe"
-subtitle: "I would love to see this trend accelerate:"
-category: "1"
-tags: ["775", "889", "1006", "1204", "1266"]
-date: "2012-05-25"
-type: "wp"
+category: '1'
+date: '2012-05-25'
+subtitle: 'I would love to see this trend accelerate:'
+tags:
+- education
+- business
+title: '[EDUCATION] Sign of change in the universe'
+type: wp
 wordpress_id: 328
 ---
+
 I would love to see this trend accelerate:
 
 > 

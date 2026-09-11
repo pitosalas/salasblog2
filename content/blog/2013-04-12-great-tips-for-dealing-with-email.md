@@ -1,12 +1,15 @@
 ---
-title: "Great tips for dealing with email"
-subtitle: "This is a tired topic but this [article from the New York Times does have some good tips on managing..."
-category: "1"
-tags: ["998", "1424", "1517"]
-date: "2013-04-12"
-type: "wp"
+category: '1'
+date: '2013-04-12'
+subtitle: This is a tired topic but this [article from the New York Times does have
+  some good tips on managing...
+tags:
+- technology
+title: Great tips for dealing with email
+type: wp
 wordpress_id: 217
 ---
+
 This is a tired topic but this [article from the New York Times does have some good tips on managing your avalanche of email](http://www.nytimes.com/2013/04/11/technology/personaltech/how-to-lighten-the-crush-of-e-mail.html?pagewanted=all&_r=0) …
 
 > 

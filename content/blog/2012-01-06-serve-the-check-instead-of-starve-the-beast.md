@@ -1,12 +1,14 @@
 ---
-title: "Serve-the-check instead of Starve-the-beast"
-subtitle: "Here’s an interesting article “Modernizing Conservatism”"
-category: "1"
-tags: ["861", "931", "1645", "1738"]
-date: "2012-01-06"
-type: "wp"
+category: '1'
+date: '2012-01-06'
+subtitle: Here’s an interesting article “Modernizing Conservatism”
+tags:
+- politics
+title: Serve-the-check instead of Starve-the-beast
+type: wp
 wordpress_id: 423
 ---
+
 Here’s an interesting article “[Modernizing Conservatism”](http://breakthroughjournal.org/content/issues/issue-2/modernizing-conservatism.shtml), yes, not my typical subject matter. Written from a Conservative’s viewpoint it critiques some of the pillars of American Conservatism that might not be effective or useful anymore.
 
 The part I found the **most interesting** is the argument against the popular **Starve The Beast **concept in our current political discourse. As I understand it (a big caveat) the Starve The Beast idea is that the only way to shrink the size of government is by cutting budgets severely. Because, while everyone agrees that government is too big (!) congress does not have the will to shrink it by eliminating parts of it.

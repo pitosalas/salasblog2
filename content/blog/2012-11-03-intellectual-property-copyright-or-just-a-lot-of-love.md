@@ -1,12 +1,16 @@
 ---
-title: "Intellectual Property? Copyright? Or just a lot of LOVE?"
-subtitle: "I was rather proud of the art I designed for a t-shirt this summer. It’s cool but of course it’s a d..."
-category: "1"
-tags: ["873", "937", "1161", "1276", "1406", "1753"]
-date: "2012-11-03"
-type: "wp"
+category: '1'
+date: '2012-11-03'
+subtitle: I was rather proud of the art I designed for a t-shirt this summer. It’s
+  cool but of course it’s a d...
+tags:
+- legal
+- design
+title: Intellectual Property? Copyright? Or just a lot of LOVE?
+type: wp
 wordpress_id: 275
 ---
+
 I was rather proud of the art I designed for a t-shirt this summer. It’s cool but of course it’s a direct ripoff, um, no, I mean, it was inspired by a well known piece. If I show you my design, below:
 
 ![JBSlogoonly](https://i0.wp.com/salas.com/wp-content/uploads/2012/11/8c814-jbslogoonly.png?resize=300%2C275&ssl=1)

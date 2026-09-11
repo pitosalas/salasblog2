@@ -1,12 +1,14 @@
 ---
-title: "Stewart Alsop, Droid Doesn’t, Google UI"
-subtitle: "This is an insider’s three-fer"
-category: "298"
-tags: []
-date: "2009-12-01"
-type: "wp"
+category: '298'
+date: '2009-12-01'
+subtitle: This is an insider’s three-fer
+tags:
+- technology
+title: Stewart Alsop, Droid Doesn’t, Google UI
+type: wp
 wordpress_id: 771
 ---
+
 This is an [insider’s three-fer](http://alsop-louie.com/gadgets/droid-doesnt-its-not-ready-for-prime-time/). In this article, Stewart describes his [horrible personal experience](http://alsop-louie.com/gadgets/droid-doesnt-its-not-ready-for-prime-time/) with the Verizon Droid. It’s a fun read. Three angles:
 (1) It’s been years and years since I’ve seen Stewart Alsop [publishing a product review](http://alsop-louie.com/gadgets/droid-doesnt-its-not-ready-for-prime-time/). Stewart, years ago, was totally famous in the tech world as software taste maker par-excellence. Kind of like [Walt Mossberg](http://ptech.allthingsd.com/) is today (whoops – you don’t know who Mossberg is?) 
 

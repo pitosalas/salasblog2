@@ -1,12 +1,14 @@
 ---
-title: "What do pig intestines and squid have in common"
-subtitle: "This is just funny. Ok it’s also a little scary as I love Calamari!"
-category: "1"
-tags: ["761", "1078", "1538", "1621", "1910", "2000"]
-date: "2013-01-16"
-type: "wp"
+category: '1'
+date: '2013-01-16'
+subtitle: This is just funny. Ok it’s also a little scary as I love Calamari!
+tags:
+- food
+title: What do pig intestines and squid have in common
+type: wp
 wordpress_id: 253
 ---
+
 This is just funny. Ok it’s also a little scary as I love Calamari!
 
 > 

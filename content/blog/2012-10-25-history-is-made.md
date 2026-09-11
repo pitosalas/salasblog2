@@ -1,12 +1,15 @@
 ---
-title: "History is made"
-subtitle: "The first personal **computer actually made by Microsoft**! That’s **history**. They’ve made mice, a..."
-category: "1"
-tags: ["1464", "1955", "1968", "2119"]
-date: "2012-10-25"
-type: "wp"
+category: '1'
+date: '2012-10-25'
+subtitle: The first personal **computer actually made by Microsoft**! That’s **history**.
+  They’ve made mice, a...
+tag_review: no_fit
+tags: []
+title: History is made
+type: wp
 wordpress_id: 280
 ---
+
 The first personal **computer actually made by Microsoft**! That’s **history**. They’ve made mice, and X-boxes, but never desktops, laptops, or tablets. 
 
 What **impressive** me about this computer is that it’s **not a me-too.** **Unlike Android**, you can’t pigeonhole it as just another iPhone knock off. It’s fundamentally different user interface is **stunning and unique**.

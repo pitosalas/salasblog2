@@ -1,12 +1,15 @@
 ---
-title: "Order in Google arguments"
-subtitle: "Does Google give a different answer if you reorder the words in the search? What? A trivial question..."
-category: "1"
-tags: ["1145", "1816", "1962"]
-date: "2012-10-15"
-type: "wp"
+category: '1'
+date: '2012-10-15'
+subtitle: Does Google give a different answer if you reorder the words in the search?
+  What? A trivial question...
+tags:
+- algorithms
+title: Order in Google arguments
+type: wp
 wordpress_id: 292
 ---
+
 Does Google give a different answer if you reorder the words in the search? What? A trivial question? Have you ever tried to refine a search by reordering the words? Wouldn’t it be useful if you knew for sure that it would or would not make a difference?
 
 Experiment:

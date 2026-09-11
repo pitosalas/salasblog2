@@ -1,12 +1,14 @@
 ---
-title: "[GEEKY] Full Applications that run in the browser"
-subtitle: "Sproutcore is a JavaScript framework for writing powerful web ap..."
-category: "538"
-tags: ["1311", "1471", "1684", "1905"]
-date: "2011-06-29"
-type: "wp"
+category: '538'
+date: '2011-06-29'
+subtitle: Sproutcore is a JavaScript framework for writing powerful web ap...
+tags:
+- programming
+title: '[GEEKY] Full Applications that run in the browser'
+type: wp
 wordpress_id: 539
 ---
+
 [Sproutcore](http://www.sproutcore.com/about/) is a JavaScript framework for writing powerful web applications with less code. It looks to me as a way to write a lot more of your application in JavaScript running in the browser. And this involves moving the logic of the application’s own logic there.
 
 [Sproutcore](http://www.sproutcore.com/about/) is a big complicated system that I have not fully investigated. It comes with a good pedigree though and is very nicely documented and designed. Worth a look if you want to have a super responsive browser based app that will continue to work even when the network connection is gone.

@@ -1,12 +1,16 @@
 ---
-title: "Designed As Designer"
-subtitle: "If you are interested in design and especially design and architecture of software, and you have a p..."
-category: "1"
-tags: ["847", "937", "1003", "1886"]
-date: "2012-01-21"
-type: "wp"
+category: '1'
+date: '2012-01-21'
+subtitle: If you are interested in design and especially design and architecture of
+  software, and you have a p...
+tags:
+- design
+- computer-science
+title: Designed As Designer
+type: wp
 wordpress_id: 412
 ---
+
 If you are interested in design and especially design and architecture of software, and you have a philosophical bent, you will enjoy this essay… I can’t even attempt to summarize it’s content, and even the abstract from the paper itself is quite inscrutable:
 
 > 

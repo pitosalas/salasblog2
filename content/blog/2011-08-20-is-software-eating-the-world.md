@@ -1,12 +1,16 @@
 ---
-title: "Is Software Eating the World"
-subtitle: "Marc Andreeson has a [really good, optimistic article in the Wall Street Journal about the future fo..."
-category: "298"
-tags: ["628", "1886"]
-date: "2011-08-20"
-type: "wp"
+category: '298'
+date: '2011-08-20'
+subtitle: Marc Andreeson has a [really good, optimistic article in the Wall Street
+  Journal about the future fo...
+tags:
+- technology
+- business
+title: Is Software Eating the World
+type: wp
 wordpress_id: 507
 ---
+
 Marc Andreeson has a [really good, optimistic article in the Wall Street Journal about the future foundational role of Software in all industries of the world’s economy:](http://online.wsj.com/article/SB10001424053111903480904576512250915629460.html)
 
 > 

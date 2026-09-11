@@ -1,12 +1,14 @@
 ---
-title: "MSFT and Skype, my angle"
-subtitle: "Check this post Why Microsoft bought Skype"
-category: "298"
-tags: []
-date: "2011-05-12"
-type: "wp"
+category: '298'
+date: '2011-05-12'
+subtitle: Check this post Why Microsoft bought Skype
+tags:
+- business
+title: MSFT and Skype, my angle
+type: wp
 wordpress_id: 567
 ---
+
 Check this post [Why Microsoft bought Skype](http://www.cringely.com/2011/05/why-microsoft-bought-skype/) from [I, Cringely](http://www.cringely.com/feed/):
 
 > There is so much to write about but I’ll begin with Microsoft buying Skype for $8.5 billion. The pundits are debating whether this move by Microsoft CEO Steve Ballmer makes good business sense, but that’s the wrong way to look at it. The better approach is to wonder what would have happened had Microsoft not bought Skype? Based on the high price alone I’m fairly confident that Ballmer felt he had no choice but to buy. In fact I’m fairly certain he felt that not buying could have doomed Microsoft.

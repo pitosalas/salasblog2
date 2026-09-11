@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] REST and the PATCH verb"
-subtitle: "Last year when teaching REST concepts at Brandeis Universi..."
-category: "538"
-tags: ["1121", "1224", "1591", "1652", "1691"]
-date: "2011-05-23"
-type: "wp"
+category: '538'
+date: '2011-05-23'
+subtitle: Last year when teaching REST concepts at Brandeis Universi...
+tags:
+- programming
+- brandeis
+title: '[GEEKY] REST and the PATCH verb'
+type: wp
 wordpress_id: 561
 ---
+
 Last year when teaching [REST](http://www.packetizer.com/ws/rest.html) concepts at Brandeis University I proved the truism that there’s no better way to learn about something than to try and teach it. We (all) wrapped ourselves around the axle trying to understand HTTP “PUT” versus HTTP “POST” and learned new english words like Idempotency. I won’t go into the whole story because it’s kind of long.
 
 **** But one of the keys ideas that is tricky to understand is the difference between PUT and POST in REST as it is implemented using HTTP. PUT replaces a specific resource (think of it as a record for a specific key) while POST creates a new resource. ****

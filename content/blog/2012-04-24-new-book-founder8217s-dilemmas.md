@@ -1,12 +1,16 @@
 ---
-title: "New Book: Founder’s Dilemmas"
-subtitle: "This book looks good: “Founder’s Dilemmas: Anticipating and Avoiding the pitfalls that can sink a st..."
-category: "1"
-tags: ["725", "1012", "1292", "1918"]
-date: "2012-04-24"
-type: "wp"
+category: '1'
+date: '2012-04-24'
+subtitle: 'This book looks good: “Founder’s Dilemmas: Anticipating and Avoiding the
+  pitfalls that can sink a st...'
+tags:
+- business
+- books
+title: 'New Book: Founder’s Dilemmas'
+type: wp
 wordpress_id: 349
 ---
+
 This book looks good: “Founder’s Dilemmas: Anticipating and Avoiding the pitfalls that can sink a startup”. I came across it in the “Startup Lessons Learned” Blog, which may be the best blog about leann startups.
 
 This excerpt talks about a common scenario with startups, where the founders assume that they way they chose to split equity on day 0 will continue to work for them as time goes on:

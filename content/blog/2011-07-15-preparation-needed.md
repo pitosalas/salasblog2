@@ -1,12 +1,16 @@
 ---
-title: "Preparation needed"
-subtitle: "I’ve been thinking a lot lately about what kind of preparation college students need as they graduat..."
-category: "298"
-tags: ["823", "1095", "1542", "1918", "1934"]
-date: "2011-07-15"
-type: "wp"
+category: '298'
+date: '2011-07-15'
+subtitle: I’ve been thinking a lot lately about what kind of preparation college students
+  need as they graduat...
+tags:
+- education
+- business
+title: Preparation needed
+type: wp
 wordpress_id: 531
 ---
+
 I’ve been thinking a lot lately about what kind of preparation college students need as they graduate to pursue their futures. Thomas Friedman writes an excellent column in the New York Times where he says:
 
 > 

@@ -1,12 +1,14 @@
 ---
-title: "Nice bibliography for game designers"
-subtitle: "I got some of this list from Lee Sheldon’s course syllabus."
-category: "298"
-tags: ["937", "1113"]
-date: "2011-09-13"
-type: "wp"
+category: '298'
+date: '2011-09-13'
+subtitle: I got some of this list from Lee Sheldon’s course syllabus.
+tags:
+- books
+title: Nice bibliography for game designers
+type: wp
 wordpress_id: 499
 ---
+
 I got some of this list from [Lee Sheldon’s course syllabus.](http://gamingtheclassroom.wordpress.com/syllabus/) I have not read all these books but I want to:
 
 - Designing Virtual Worlds. Richard Bartle.

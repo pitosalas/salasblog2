@@ -1,12 +1,15 @@
 ---
-title: "An interesting paper about compassion and action"
-subtitle: "Ethan Zuckerman’s blog is more like a magazine of insightful, well written papers. I liked [From com..."
-category: "298"
+category: '298'
+date: '2009-11-27'
+subtitle: Ethan Zuckerman’s blog is more like a magazine of insightful, well written
+  papers. I liked [From com...
+tag_review: no_fit
 tags: []
-date: "2009-11-27"
-type: "wp"
+title: An interesting paper about compassion and action
+type: wp
 wordpress_id: 773
 ---
+
 Ethan Zuckerman’s blog is more like a magazine of insightful, well written papers. I liked [From compassion to action, from action to knowledge](http://www.ethanzuckerman.com/blog/2009/11/19/from-compassion-to-action-from-action-to-knowledge/). Here’s a key bit:
 **“If the inability to act makes us bored, cynical and apathetic, is it possible that doing something – even something that’s ultimately ineffective – could keep us engaged and compassionate? If so, is there an interplay between action and information-gathering that could turn a story into a movement that builds public will?” (from** [From compassion to action, from action to knowledge](http://www.ethanzuckerman.com/blog/2009/11/19/from-compassion-to-action-from-action-to-knowledge/))
 

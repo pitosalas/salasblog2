@@ -1,12 +1,15 @@
 ---
-title: "TSA: Smokescreening"
-subtitle: "An interesting and fun to read article in Vanity Fair about the security check procedures"
-category: "1"
-tags: ["615", "1797", "1822", "2038", "2067"]
-date: "2012-01-01"
-type: "wp"
+category: '1'
+date: '2012-01-01'
+subtitle: An interesting and fun to read article in Vanity Fair about the security
+  check procedures
+tag_review: no_fit
+tags: []
+title: 'TSA: Smokescreening'
+type: wp
 wordpress_id: 428
 ---
+
 An interesting and fun to read [article in Vanity Fair about the security check procedures](http://www.vanityfair.com/culture/features/2011/12/tsa-insanity-201112) established by the TSA:
 
 > 

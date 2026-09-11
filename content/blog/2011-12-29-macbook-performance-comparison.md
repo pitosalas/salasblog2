@@ -1,12 +1,16 @@
 ---
-title: "MacBook Performance comparison"
-subtitle: "Due to an unusual set of coincidences I have 3 different Macintosh computers in my office today so I..."
-category: "1"
-tags: ["639", "1410", "1414", "1416", "1605"]
-date: "2011-12-29"
-type: "wp"
+category: '1'
+date: '2011-12-29'
+subtitle: Due to an unusual set of coincidences I have 3 different Macintosh computers
+  in my office today so I...
+tags:
+- apple
+- technology
+title: MacBook Performance comparison
+type: wp
 wordpress_id: 430
 ---
+
 Due to an unusual set of coincidences I have 3 different Macintosh computers in my office today so I could run performance comparisons. After a brief bit of research I came across [XBench](http://xbench.com/), a free, open source benchmarking suite. I am not positive that it is the state of the art, but it’s quite popular. Here’s what I found:
 
 **Mac Pro, Early 2009, with 6 Gig of memory and a Solid State Disk (SDD) (MacPro4,1)**

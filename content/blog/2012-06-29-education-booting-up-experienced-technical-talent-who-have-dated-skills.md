@@ -1,12 +1,15 @@
 ---
-title: "[EDUCATION] Booting up experienced technical talent who have dated skills"
-subtitle: "As you may know, I’ve been working on launching **Bootup Academy**, whi..."
-category: "1"
-tags: ["728", "987", "1204", "1542"]
-date: "2012-06-29"
-type: "wp"
+category: '1'
+date: '2012-06-29'
+subtitle: As you may know, I’ve been working on launching **Bootup Academy**, whi...
+tags:
+- education
+- business
+title: '[EDUCATION] Booting up experienced technical talent who have dated skills'
+type: wp
 wordpress_id: 321
 ---
+
 As you may know, I’ve been working on launching [**Bootup Academy**](http://www.webbootup.com/), which will offer applied computer science or engineering programs to college students who want to supplement their studies with an intensive 10 week summer program. That’s why you may have seen more posts here labeled [EDUCATION].
 
 We’re now adding an additional focus, Booting Up experienced technical folks who have never put together a web or mobile application, have not worked in an agile environment, and so may not have the right check boxes on their resume.

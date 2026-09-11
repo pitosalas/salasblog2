@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Magic Rails Applications with Hobo"
-subtitle: "Another tidbit I came across at RailsConf is Hobo. I haven’t tr..."
-category: "538"
-tags: ["1211", "1421", "1711", "1713"]
-date: "2011-05-20"
-type: "wp"
+category: '538'
+date: '2011-05-20'
+subtitle: Another tidbit I came across at RailsConf is Hobo. I haven’t tr...
+tags:
+- programming
+- ruby-on-rails
+title: '[GEEKY] Magic Rails Applications with Hobo'
+type: wp
 wordpress_id: 564
 ---
+
 Another tidbit I came across at RailsConf is [Hobo](http://www.hobocentral.net/about/). I haven’t tried it myself but did just go through the screencast and tutorial. I think it’s worth a closer look.
 
 > 

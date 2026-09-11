@@ -1,12 +1,15 @@
 ---
-title: "LinkedIn Passwords: Who stores passwords in the clear"
-subtitle: "I am a pretty regular LinkedIn user, so the [news that some unspecified number of LinkedIn users had..."
-category: "1"
-tags: ["1383", "1590", "1822"]
-date: "2012-06-07"
-type: "wp"
+category: '1'
+date: '2012-06-07'
+subtitle: I am a pretty regular LinkedIn user, so the [news that some unspecified
+  number of LinkedIn users had...
+tag_review: no_fit
+tags: []
+title: 'LinkedIn Passwords: Who stores passwords in the clear'
+type: wp
 wordpress_id: 323
 ---
+
 I am a pretty regular LinkedIn user, so the [news that some unspecified number of LinkedIn users had their passwords compromised](http://blog.linkedin.com/2012/06/06/linkedin-member-passwords-compromised/) was of some interest to me.
 
 Here’s what a recent post on their blog says:

@@ -1,12 +1,16 @@
 ---
-title: "[GEEKY] Yes, Virginia, Rails DOES scale"
-subtitle: "Why doesn’t every one **love Rails**? I am surprised when I run into someone (Pat?) who’s not so sur..."
-category: "538"
-tags: ["1713", "1777", "1795"]
-date: "2011-05-19"
-type: "wp"
+category: '538'
+date: '2011-05-19'
+subtitle: Why doesn’t every one **love Rails**? I am surprised when I run into someone
+  (Pat?) who’s not so sur...
+tags:
+- programming
+- ruby-on-rails
+title: '[GEEKY] Yes, Virginia, Rails DOES scale'
+type: wp
 wordpress_id: 565
 ---
+
 Why doesn’t every one **love Rails**? I am surprised when I run into someone (Pat?) who’s not so sure about Rails. Usually it’s about scalability.
 
 [I warned you this is a geeky post]

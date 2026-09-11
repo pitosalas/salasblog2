@@ -1,12 +1,15 @@
 ---
-title: "How to be a star engineer!"
-subtitle: "We all want to be star engineers, right? Here’s an intriguing article from about ten years ago engin..."
-category: "1"
-tags: ["597", "836", "1003", "1499"]
-date: "2013-02-14"
-type: "wp"
+category: '1'
+date: '2013-02-14'
+subtitle: We all want to be star engineers, right? Here’s an intriguing article from
+  about ten years ago engin...
+tags:
+- software-engineering
+title: How to be a star engineer!
+type: wp
 wordpress_id: 243
 ---
+
 We all want to be star engineers, right? Here’s an intriguing article from about ten years ago engineers from top companies helped to [dispel the myths about star performers and uncover the surprising secrets of stellar achievement for engineers.](http://vlsicad.ucsd.edu/Research/Advice/star_engineer.pdf):
 
 > 

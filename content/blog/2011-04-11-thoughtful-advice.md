@@ -1,12 +1,15 @@
 ---
-title: "Thoughtful advice"
-subtitle: "No need to paraphrase or editorialize. Just read the whole thing, will ya? Lots of good advice that ..."
-category: "298"
-tags: ["608", "654", "657", "1240", "1395", "1921"]
-date: "2011-04-11"
-type: "wp"
+category: '298'
+date: '2011-04-11'
+subtitle: No need to paraphrase or editorialize. Just read the whole thing, will ya?
+  Lots of good advice that ...
+tag_review: no_fit
+tags: []
+title: Thoughtful advice
+type: wp
 wordpress_id: 573
 ---
+
 No need to paraphrase or editorialize. Just read the whole thing, will ya? Lots of good advice that I wish I had gotten years ago.
 
 **[How to steal like an artist (and 9 other things nobody told me)](http://www.austinkleon.com/2011/03/30/how-to-steal-like-an-artist-and-9-other-things-nobody-told-me/)**

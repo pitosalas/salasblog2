@@ -1,12 +1,15 @@
 ---
-title: "Game Design: Tiled Game Boards"
-subtitle: "I’ve spent the last few weeks in dribs and drabs building a new game for Android. Lately I got deepe..."
-category: "1"
-tags: ["1111", "1161", "2004"]
-date: "2011-11-09"
-type: "wp"
+category: '1'
+date: '2011-11-09'
+subtitle: I’ve spent the last few weeks in dribs and drabs building a new game for
+  Android. Lately I got deepe...
+tags:
+- programming
+title: 'Game Design: Tiled Game Boards'
+type: wp
 wordpress_id: 472
 ---
+
 I’ve spent the last few weeks in dribs and drabs building a new game for Android. Lately I got deeper on what it means to have a ’tiled’ game space display where you construct the appearance of the game space by arranging a series of graphic images based on what’s needed for a certain level of the game. The idea is that you get essentially data driven graphics.
 
 In my case the game space is a maze, ostensibly a map of a neighborhood. Creating these, still rather ugly tiles, is fairly painstaking both to understand what the tiles are in your vocabulary to be able to create a variety of game levels, and then to do the graphic design and actual image files for these baybies.

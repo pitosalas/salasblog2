@@ -1,12 +1,16 @@
 ---
-title: "Election Meltdown"
-subtitle: "I was a **volunteer** for the Democratic Committee in Arlington Mass. They have an **impressive** op..."
-category: "1"
-tags: ["888", "910", "1464", "1761", "2103"]
-date: "2012-11-10"
-type: "wp"
+category: '1'
+date: '2012-11-10'
+subtitle: I was a **volunteer** for the Democratic Committee in Arlington Mass. They
+  have an **impressive** op...
+tags:
+- politics
+- arlington
+title: Election Meltdown
+type: wp
 wordpress_id: 268
 ---
+
 I was a **volunteer** for the Democratic Committee in Arlington Mass. They have an **impressive** operation, just like what you’ve heard. For example, the systems they used to deploy us volunteers.
 
 I walked in the campaign office, **untrained** and **unschooled**. Within minutes I was **assigned my very own ‘turf’.** What is a turf? A turf is a neighborhood of about two to four streets  assigned to me and only me. 

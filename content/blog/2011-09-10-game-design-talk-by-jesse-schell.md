@@ -1,12 +1,15 @@
 ---
-title: "Game Design talk by Jesse Schell"
-subtitle: "If you are interested in Game Design you have probably seen this video… I finally watched it and tho..."
-category: "298"
-tags: ["1112", "1796"]
-date: "2011-09-10"
-type: "wp"
+category: '298'
+date: '2011-09-10'
+subtitle: If you are interested in Game Design you have probably seen this video…
+  I finally watched it and tho...
+tag_review: no_fit
+tags: []
+title: Game Design talk by Jesse Schell
+type: wp
 wordpress_id: 502
 ---
+
 If you are interested in Game Design you have probably seen this video… I finally watched it and thought it was really worth sharing. I definitely recommend it. [Jesse Schell](http://www.schellgames.com/) is funny and engaging to listen to and has great insights to offer. The last 7 or so minutes is a fantastic riff on how gaming might / will invade our everyday life in the future. Very plausible.
 
 [http://www.g4tv.com/lv3/44277](http://www.g4tv.com/lv3/44277)

@@ -1,12 +1,14 @@
 ---
-title: "The Impending Flash Crisis?"
-subtitle: "An interesting article about this impending crisis. Although it’s im..."
-category: "422"
-tags: ["891", "953", "1912"]
-date: "2011-10-26"
-type: "wp"
+category: '422'
+date: '2011-10-26'
+subtitle: An interesting article about this impending crisis. Although it’s im...
+tags:
+- technology
+title: The Impending Flash Crisis?
+type: wp
 wordpress_id: 479
 ---
+
 An interesting article about this [impending crisis.](http://blog.vivekhaldar.com/) Although it’s impending, I had never heard about before, despite the claim that “This impending “flash crisis” is well known in system circles. It’s almost like a mini Y2K.” Ok, tell me more…
 
 The core does make a great point:

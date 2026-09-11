@@ -1,12 +1,14 @@
 ---
-title: "BillGuard"
-subtitle: "This site looks really good, but I am not signing up yet."
-category: "298"
-tags: ["708", "1820", "1822"]
-date: "2011-07-17"
-type: "wp"
+category: '298'
+date: '2011-07-17'
+subtitle: This site looks really good, but I am not signing up yet.
+tag_review: no_fit
+tags: []
+title: BillGuard
+type: wp
 wordpress_id: 529
 ---
+
 This [site looks really good](http://www.billguard.com/), but I am not signing up yet.
 
 ![Screen shot 2011 07 17 at 9 58 01 AM](https://i0.wp.com/salas.com/wp-content/uploads/2011/07/fb22c-screen-shot-2011-07-17-at-95801-am.png?resize=230%2C170&ssl=1)

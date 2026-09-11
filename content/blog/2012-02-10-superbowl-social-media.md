@@ -1,12 +1,15 @@
 ---
-title: "Superbowl Social Media"
-subtitle: "Here’s a really interesting article about how the Superbowl used Social Media"
-category: "1"
-tags: ["677", "1884", "1953"]
-date: "2012-02-10"
-type: "wp"
+category: '1'
+date: '2012-02-10'
+subtitle: Here’s a really interesting article about how the Superbowl used Social
+  Media
+tag_review: no_fit
+tags: []
+title: Superbowl Social Media
+type: wp
 wordpress_id: 393
 ---
+
 Here’s a really interesting [article about how the Superbowl used Social Media ](http://socialmediatoday.com/elizabeth-lupfer/440875/exclusive-look-why-super-bowl-s-social-media-command-center-scores-winning-t)to enhance the experience:
 
 > 

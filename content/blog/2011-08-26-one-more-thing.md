@@ -1,12 +1,14 @@
 ---
-title: "One More Thing…"
-subtitle: "Check this post One More Thing… from [T..."
-category: "298"
-tags: []
-date: "2011-08-26"
-type: "wp"
+category: '298'
+date: '2011-08-26'
+subtitle: Check this post One More Thing… from [T...
+tags:
+- apple
+title: One More Thing…
+type: wp
 wordpress_id: 504
 ---
+
 Check this post [One More Thing…](http://feedproxy.google.com/~r/Techcrunch/~3/ag8UJf5_HY4/) from [TechCrunch](http://feeds.feedburner.com/Techcrunch):
 > "So instead I read what everyone else had to say. Some articles were excellent, many were very good, others read far too much like obituaries. More came today. I kept reading. Slowly, two things struck me. First, I’ve never seen anything quite like the outpouring of emotion that people are showing in response to this news. Second, what we’re witnessing right now is Jobs’ final masterstroke." (**from:** [TechCrunch)](http://feeds.feedburner.com/Techcrunch) 
 

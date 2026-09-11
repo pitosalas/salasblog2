@@ -1,12 +1,15 @@
 ---
-title: "Nation Building"
-subtitle: "Here’s a topic I have never written about before… Nation Building. I just want to point you to a gre..."
-category: "298"
-tags: ["609", "1087", "1303", "1645"]
-date: "2011-10-04"
-type: "wp"
+category: '298'
+date: '2011-10-04'
+subtitle: Here’s a topic I have never written about before… Nation Building. I just
+  want to point you to a gre...
+tags:
+- politics
+title: Nation Building
+type: wp
 wordpress_id: 486
 ---
+
 Here’s a topic I have never written about before… Nation Building. I just want to point you to a great article I read in the Globe yesterday that puts some meat on the question of “Nation Building,” when has it happened before? How long does it take? What is really happening? How does it start and how does it finish?
 
 Here’s the crux of the argument in [“How to build a nation” – The Boston Globe](http://www.bostonglobe.com/ideas/2011/10/01/how-build-nation/0xbYDVALs87xCw4wcnHQcM/story.xml)

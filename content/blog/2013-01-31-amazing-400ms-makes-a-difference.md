@@ -1,12 +1,15 @@
 ---
-title: "Amazing: 400ms makes a difference"
-subtitle: "Under the header “Natural Gas News Leak” (funny) there’s a [story about how the securities market re..."
-category: "1"
-tags: ["1438", "2018"]
-date: "2013-01-31"
-type: "wp"
+category: '1'
+date: '2013-01-31'
+subtitle: Under the header “Natural Gas News Leak” (funny) there’s a [story about
+  how the securities market re...
+tags:
+- algorithms
+title: 'Amazing: 400ms makes a difference'
+type: wp
 wordpress_id: 250
 ---
+
 Under the header “Natural Gas News Leak” (funny) there’s a [story about how the securities market reacted 400ms before a bit of news came out of the government](http://www.nanex.net/aqck2/4090.html) and they reacted by trading on the news. The article has lots of charts and graphs which may say whether or how much money was made or lost. The article says: 
 
 > 

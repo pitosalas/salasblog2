@@ -1,12 +1,14 @@
 ---
-title: "Give more to receive more"
-subtitle: "![](https://i0.wp.com/blog.kidsemail.org/wp-content/uploads/2012/11/gifts.jpg?w=584)"
-category: "1"
-tags: ["1130", "1137", "1678", "1846", "2113"]
-date: "2013-04-02"
-type: "wp"
+category: '1'
+date: '2013-04-02'
+subtitle: '![](https://i0.wp.com/blog.kidsemail.org/wp-content/uploads/2012/11/gifts.jpg?w=584)'
+tags:
+- business
+title: Give more to receive more
+type: wp
 wordpress_id: 222
 ---
+
 ![](https://i0.wp.com/blog.kidsemail.org/wp-content/uploads/2012/11/gifts.jpg?w=584)
 
 Here’s a really interesting article: [“Is Giving the Secret to Getting Ahead”? ](http://www.nytimes.com/2013/03/31/magazine/is-giving-the-secret-to-getting-ahead.html?ref=magazine)from the New York Times. It’s about a Wharton Professor that sounds just too good to be true:

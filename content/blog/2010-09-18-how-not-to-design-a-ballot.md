@@ -1,12 +1,16 @@
 ---
-title: "How (not) to design a ballot"
-subtitle: "My head is full of democracy and elections these days. How come, you ask? Well for the last year or ..."
-category: "298"
-tags: ["687", "937", "990"]
-date: "2010-09-18"
-type: "wp"
+category: '298'
+date: '2010-09-18'
+subtitle: My head is full of democracy and elections these days. How come, you ask?
+  Well for the last year or ...
+tags:
+- design
+- trustthevote
+title: How (not) to design a ballot
+type: wp
 wordpress_id: 667
 ---
+
 My head is full of democracy and elections these days. How come, you ask? Well for the last year or so I’ve been working for the Open Source Digital Voting Foundation, on elections technology. This month’s focus is generating ballots for two elections happening in November. So more than usual, I am dreaming in black and white forms. Anyway…
 I came across a couple of instructive blog posts about the new non-lever voting that New York unveiled this month. Predictably, when dealing with humans, some people don’t like them. You can’t please them all, right? But really the objections raised here are quite legitimate.
 

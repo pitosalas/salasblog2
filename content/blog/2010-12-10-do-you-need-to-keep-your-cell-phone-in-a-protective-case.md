@@ -1,12 +1,16 @@
 ---
-title: "Do you need to keep your cell phone in a protective case?"
-subtitle: "Check out this really interesting [Pogue article in the New York Times: “Gorilla Glass, the Smartpho..."
-category: "298"
-tags: []
-date: "2010-12-10"
-type: "wp"
+category: '298'
+date: '2010-12-10'
+subtitle: 'Check out this really interesting [Pogue article in the New York Times:
+  “Gorilla Glass, the Smartpho...'
+tags:
+- technology
+- iphone
+title: Do you need to keep your cell phone in a protective case?
+type: wp
 wordpress_id: 626
 ---
+
 Check out this really interesting [Pogue article in the New York Times: “Gorilla Glass, the Smartphone’s Unsung Hero”](http://pogue.blogs.nytimes.com/2010/12/09/gorilla-glass-the-smartphones-unsung-hero/?partner=rss&emc=rss). Here’s a tidbit:
 
 > 

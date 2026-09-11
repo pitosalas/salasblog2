@@ -1,12 +1,15 @@
 ---
-title: "What’s all the fuss about Facebook’s IPO?"
-subtitle: "I totally agree with Frank Bruni’s account of the Facebook’s IPO. It seems to me that if the current..."
-category: "1"
-tags: ["1037", "1065", "1088", "1301", "1927"]
-date: "2012-05-27"
-type: "wp"
+category: '1'
+date: '2012-05-27'
+subtitle: I totally agree with Frank Bruni’s account of the Facebook’s IPO. It seems
+  to me that if the current...
+tags:
+- business
+title: What’s all the fuss about Facebook’s IPO?
+type: wp
 wordpress_id: 327
 ---
+
 I totally agree with Frank Bruni’s account of the Facebook’s IPO. It seems to me that if the current price of FB is pretty close to the offering price, then the bankers were doing their job.
 
 I mean, as I see it, their job is to open the stock at a price that’s as close as possible to it’s true price, that is, what the market will think its worth. And common sense says the only way to find that out (‘what the market will bear’) is to put it on the market and see what the market will bear. If their research is excellent they will be able to somehow figure out what the market will bear, ahead of time, and offer it there.

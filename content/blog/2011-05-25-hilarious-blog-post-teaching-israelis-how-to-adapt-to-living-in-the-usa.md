@@ -1,12 +1,15 @@
 ---
-title: "Hilarious blog post teaching Israelis how to adapt to living in the USA"
-subtitle: "This is too funny. Here’s a taste, but you should read the whole article saying [how an Israeli shou..."
-category: "298"
-tags: ["1306", "2059"]
-date: "2011-05-25"
-type: "wp"
+category: '298'
+date: '2011-05-25'
+subtitle: This is too funny. Here’s a taste, but you should read the whole article
+  saying [how an Israeli shou...
+tags:
+- jewish
+title: Hilarious blog post teaching Israelis how to adapt to living in the USA
+type: wp
 wordpress_id: 560
 ---
+
 This is too funny. Here’s a taste, but you should read the whole article saying [how an Israeli should adapt to living in the United States.](http://avi-rubin.blogspot.com/2011/05/advice-for-israelis-coming-to-us.html) For example, this is about the express line in the super market:
 
 > 

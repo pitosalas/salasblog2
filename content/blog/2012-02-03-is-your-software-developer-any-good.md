@@ -1,12 +1,15 @@
 ---
-title: "Is your software developer any good?"
-subtitle: "Are you thinking about hiring a software developer to build your system? Here are “[8 Things You Oug..."
-category: "1"
-tags: ["608", "942", "1459", "1886"]
-date: "2012-02-03"
-type: "wp"
+category: '1'
+date: '2012-02-03'
+subtitle: Are you thinking about hiring a software developer to build your system?
+  Here are “[8 Things You Oug...
+tags:
+- software-engineering
+title: Is your software developer any good?
+type: wp
 wordpress_id: 399
 ---
+
 Are you thinking about hiring a software developer to build your system? Here are “[8 Things You Ought to Know If You Do Not Know Anything About Hiring a Software Developer](http://blog.8thlight.com/angelique-martin/2012/01/19/8-thing-you-ought-to-know.html)“. He says:
 
 > 

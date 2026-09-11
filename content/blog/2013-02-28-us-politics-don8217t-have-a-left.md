@@ -1,12 +1,14 @@
 ---
-title: "US Politics don’t have a left?"
-subtitle: "An interesting international perspective on politics:"
-category: "1"
-tags: ["1374", "1645", "1752", "1957"]
-date: "2013-02-28"
-type: "wp"
+category: '1'
+date: '2013-02-28'
+subtitle: 'An interesting international perspective on politics:'
+tags:
+- politics
+title: US Politics don’t have a left?
+type: wp
 wordpress_id: 232
 ---
+
 An interesting international perspective on politics:
 
 > 

@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Sublime Text surpassing TextMate?"
-subtitle: "I’ve been doing some more coding these days in Ruby."
-category: "1"
-tags: ["1121", "1684", "1711", "1941", "1991"]
-date: "2012-04-02"
-type: "wp"
+category: '1'
+date: '2012-04-02'
+subtitle: I’ve been doing some more coding these days in Ruby.
+tags:
+- ruby
+- programming
+title: '[GEEKY] Sublime Text surpassing TextMate?'
+type: wp
 wordpress_id: 361
 ---
+
 I’ve been doing some more coding these days in Ruby.
 
 I’ve had great success and fun (especially when debugging) using [RadRails](http://www.aptana.com/products/radrails), which is an [Eclipse](http://www.eclipse.org/) based IDE for Ruby and Rails. It’s quite nice.

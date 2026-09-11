@@ -1,12 +1,15 @@
 ---
-title: "Ongoing coverage of MOOCs: How good are they really?"
-subtitle: "This trend is now unstoppable – massive open online courses – or MOOCs – are constantly in the news...."
-category: "1"
-tags: ["883", "1204", "1486", "1517", "2054"]
-date: "2013-04-22"
-type: "wp"
+category: '1'
+date: '2013-04-22'
+subtitle: This trend is now unstoppable – massive open online courses – or MOOCs –
+  are constantly in the news....
+tags:
+- education
+title: 'Ongoing coverage of MOOCs: How good are they really?'
+type: wp
 wordpress_id: 212
 ---
+
 This trend is now unstoppable – massive open online courses – or MOOCs – are constantly in the news. The angle often seems to be about whether or how or how much they will impact higher education and education in general. It’s a topic I am very interested in.
 
 [Here’s another piece of the puzzle, this time from the New York Times. In this article a reporter signs up for ten different online courses in a quest to assess from his personal experience along these dimensions:](http://www.nytimes.com/2013/04/21/opinion/sunday/grading-the-mooc-university.html?pagewanted=3&ref=todayspaper&pagewanted=all)

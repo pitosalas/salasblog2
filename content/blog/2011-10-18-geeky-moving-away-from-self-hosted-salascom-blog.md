@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] Moving away from self-hosted salas.com blog"
-subtitle: "Running my own Linux server has lost it’s sex appeal. Now I am going for simplicity and so I am expl..."
-category: "538"
-tags: ["1654", "1909", "2040", "2131"]
-date: "2011-10-18"
-type: "wp"
+category: '538'
+date: '2011-10-18'
+subtitle: Running my own Linux server has lost it’s sex appeal. Now I am going for
+  simplicity and so I am expl...
+tag_review: no_fit
+tags: []
+title: '[GEEKY] Moving away from self-hosted salas.com blog'
+type: wp
 wordpress_id: 482
 ---
+
 Running my own Linux server has lost it’s sex appeal. Now I am going for simplicity and so I am exploring simply not having my own server but using one of the several cloud services. It turns out that there are lots of little bumps in the road to move from one to the other:
 
 - I like [Tumblr](http://www.tumblr.com). But there are no good ways to move from WordPress to [Tumblr](http://www.tumblr.com). Worse, when you move from one to the other, you have to deal with images yourself, in other words, [Tumblr](http://www.tumblr.com) doesn’t let you upload your embedded images into their service. Hence I would not be able to Kill my old [www.salas.com](/) server.

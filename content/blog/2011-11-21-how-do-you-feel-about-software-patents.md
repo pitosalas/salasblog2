@@ -1,12 +1,15 @@
 ---
-title: "How do you feel about Software Patents?"
-subtitle: "I am not dead set against software patents, although I’ve been on both sides of the issue."
-category: "1"
-tags: ["1592", "1593", "1886"]
-date: "2011-11-21"
-type: "wp"
+category: '1'
+date: '2011-11-21'
+subtitle: I am not dead set against software patents, although I’ve been on both sides
+  of the issue.
+tags:
+- legal
+title: How do you feel about Software Patents?
+type: wp
 wordpress_id: 460
 ---
+
 I am not dead set against software patents, although I’ve been on both sides of the issue.
 
 I am the proud inventor listed on 3 or 4 patents. Some are more worthy in my opinion that others. I was also leading a development team that had to stand on its head to avoid conflicting with a patent that everyone agreed should never have issued, but we didn’t have the nerve or resources to contest.

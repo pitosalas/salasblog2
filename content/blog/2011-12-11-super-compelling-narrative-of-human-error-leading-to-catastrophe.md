@@ -1,12 +1,15 @@
 ---
-title: "Super compelling: Narrative of human error leading to catastrophe"
-subtitle: "A remarkable article in Popular Mechanics (remember them?) about the crash of Air France 447."
-category: "1"
-tags: ["612", "613", "1073", "1229", "1648"]
-date: "2011-12-11"
-type: "wp"
+category: '1'
+date: '2011-12-11'
+subtitle: A remarkable article in Popular Mechanics (remember them?) about the crash
+  of Air France 447.
+tag_review: no_fit
+tags: []
+title: 'Super compelling: Narrative of human error leading to catastrophe'
+type: wp
 wordpress_id: 443
 ---
+
 A remarkable [article in Popular Mechanics (remember them?) about the crash of Air France 447.](http://www.popularmechanics.com/technology/aviation/crashes/what-really-happened-aboard-air-france-447-6611877) It was apparent clear case of human error and resulted in the death of 228 people. It is a compelling narrative.
 
 > 

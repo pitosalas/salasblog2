@@ -1,12 +1,15 @@
 ---
-title: "Fibonacci series and Photography"
-subtitle: "You can’t be a self-respecting computer or science geek and not have heard about the Fibonacci serie..."
-category: "1"
-tags: ["838", "937", "1056", "1446", "1614"]
-date: "2012-01-23"
-type: "wp"
+category: '1'
+date: '2012-01-23'
+subtitle: You can’t be a self-respecting computer or science geek and not have heard
+  about the Fibonacci serie...
+tags:
+- mathematics
+title: Fibonacci series and Photography
+type: wp
 wordpress_id: 411
 ---
+
 You can’t be a self-respecting computer or science geek and not have heard about the Fibonacci series. You know, 1-1-2-3-5-8… etc. How about Fibonacci’s Ratio? How about the Golden Mean or the Divine Proportion? Not sure, right?
 
 Fibonacci, and its role in art, design and photography is a little less well known. As I continue to study photography and art I came across this excellent article about that very topic:

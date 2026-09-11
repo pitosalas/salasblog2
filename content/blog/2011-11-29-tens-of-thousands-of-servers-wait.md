@@ -1,12 +1,14 @@
 ---
-title: "Tens of Thousands of Servers. Wait."
-subtitle: "Just one phrase that jumped out of the new missive from Zuck about privacy:"
-category: "1"
-tags: ["1037", "1793", "1835", "1979", "2103"]
-date: "2011-11-29"
-type: "wp"
+category: '1'
+date: '2011-11-29'
+subtitle: 'Just one phrase that jumped out of the new missive from Zuck about privacy:'
+tags:
+- technology
+title: Tens of Thousands of Servers. Wait.
+type: wp
 wordpress_id: 452
 ---
+
 Just one phrase that jumped out of the [new missive from Zuck about privacy:](http://blog.facebook.com/blog.php?post=10150378701937131)
 
 > 

@@ -1,12 +1,15 @@
 ---
-title: "Field Of Dreams: Americans Elect"
-subtitle: "Americans Elect got Tom Friedman to endorse their effort to get a third party presidential ballot in..."
-category: "1"
-tags: ["625", "1060", "1645"]
-date: "2012-05-06"
-type: "wp"
+category: '1'
+date: '2012-05-06'
+subtitle: Americans Elect got Tom Friedman to endorse their effort to get a third
+  party presidential ballot in...
+tags:
+- politics
+title: 'Field Of Dreams: Americans Elect'
+type: wp
 wordpress_id: 339
 ---
+
 Americans Elect got Tom Friedman to endorse their effort to get a third party presidential ballot in November. He wrote about it and convinced me too that it was a good idea. A month or two ago I started having misgivings and now, it seems like things are really turning sour for Americans Elect. 
 
 An [article in Techpresident.Com ](http://techpresident.com/news/22148/op-ed-americans-elect-they-built-it-and-nobody-came#.T6Pvbfdd82E.twitter)paints a pretty bleak picture: 

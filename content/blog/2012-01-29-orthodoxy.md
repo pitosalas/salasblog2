@@ -1,12 +1,15 @@
 ---
-title: "Orthodoxy"
-subtitle: "I’d be the last one to wade into commentary on religious topics, so I just share this link"
-category: "1"
-tags: ["1331", "1568"]
-date: "2012-01-29"
-type: "wp"
+category: '1'
+date: '2012-01-29'
+subtitle: I’d be the last one to wade into commentary on religious topics, so I just
+  share this link
+tags:
+- jewish
+title: Orthodoxy
+type: wp
 wordpress_id: 406
 ---
+
 I’d be the last one to wade into commentary on religious topics, so I just [share this link](http://joshyuter.com/2011/12/06/judaism/the-selective-sanctimony-of-orthodox-judaism/) because for me it was interesting reading:
 
 > 

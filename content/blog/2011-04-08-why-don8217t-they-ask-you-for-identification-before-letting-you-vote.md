@@ -1,12 +1,15 @@
 ---
-title: "Why don’t they ask you for identification before letting you vote?"
-subtitle: "Every time there’s an election it seems like someone brings up the odd fact that you are not asked f..."
-category: "298"
-tags: ["934", "2087"]
-date: "2011-04-08"
-type: "wp"
+category: '298'
+date: '2011-04-08'
+subtitle: Every time there’s an election it seems like someone brings up the odd fact
+  that you are not asked f...
+tags:
+- politics
+title: Why don’t they ask you for identification before letting you vote?
+type: wp
 wordpress_id: 575
 ---
+
 Every time there’s an election it seems like someone brings up the odd fact that you are not asked for ID here in Massachusetts before being allowed to cast your ballot. It seems to me that this is especially surprising to people from other countries. Here’s a good [article that explores some of the reasons and arguments for and against requiring identification at the polling place.](http://freedom-to-tinker.com/blog/jeremyepstein/do-photo-ids-help-prevent-vote-fraud)
 
 The gist of it is here:

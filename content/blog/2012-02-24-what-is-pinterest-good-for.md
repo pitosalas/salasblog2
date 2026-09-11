@@ -1,12 +1,15 @@
 ---
-title: "What is Pinterest good for?"
-subtitle: "Funny thing, I like many people are trying to figure out what Pinterest is good..."
-category: "1"
-tags: ["1250", "1622"]
-date: "2012-02-24"
-type: "wp"
+category: '1'
+date: '2012-02-24'
+subtitle: Funny thing, I like many people are trying to figure out what Pinterest
+  is good...
+tags:
+- design
+title: What is Pinterest good for?
+type: wp
 wordpress_id: 384
 ---
+
 Funny thing, I like many people are trying to figure out what [Pinterest](www.pinterest.com) is good for. Well I found a use.
 
 From yesterday’s post, you saw that I am searching for a new application icon for [BlogBridge](http://www.blogbridge.com). In fact I listed a series of out/crowdsource design options. What I need to do now is to provide them with design guidance, a design brief.

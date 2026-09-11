@@ -1,12 +1,14 @@
 ---
-title: "Experts are clueless"
-subtitle: "One of the lessons that Guy Kawasaki learned from Steve Jobs"
-category: "1"
-tags: ["832", "1177", "1548", "1924"]
-date: "2011-12-25"
-type: "wp"
+category: '1'
+date: '2011-12-25'
+subtitle: One of the lessons that Guy Kawasaki learned from Steve Jobs
+tags:
+- business
+title: Experts are clueless
+type: wp
 wordpress_id: 434
 ---
+
 One of the [lessons that Guy Kawasaki learned from Steve Jobs](http://blog.guykawasaki.com/2011/10/what-i-learned-from-steve-jobs.html#axzz1h7dQ0xtj), which really rings true to me:
 
 > 

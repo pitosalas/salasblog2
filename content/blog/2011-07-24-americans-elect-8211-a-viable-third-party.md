@@ -1,12 +1,14 @@
 ---
-title: "Americans Elect – A viable third party?"
-subtitle: "It’s unusual to see Thomas Friedman"
-category: "298"
-tags: ["625", "990", "1645", "2001"]
-date: "2011-07-24"
-type: "wp"
+category: '298'
+date: '2011-07-24'
+subtitle: It’s unusual to see Thomas Friedman
+tags:
+- politics
+title: Americans Elect – A viable third party?
+type: wp
 wordpress_id: 521
 ---
+
 It’s unusual to see [Thomas Friedman](http://topics.nytimes.com/top/opinion/editorialsandoped/oped/columnists/thomaslfriedman/index.html?inline=nyt-per) to throw his weight this thoroughly behind an outside organization:
 
 > 

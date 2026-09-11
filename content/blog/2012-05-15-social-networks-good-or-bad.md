@@ -1,12 +1,15 @@
 ---
-title: "Social Networks: Good or Bad?"
-subtitle: "I’ve been doing quite a bit of reading about social networks in preparation for the 2012 edition of ..."
-category: "1"
-tags: ["738", "833", "1024", "1036", "1037", "1278", "1882", "2047"]
-date: "2012-05-15"
-type: "wp"
+category: '1'
+date: '2012-05-15'
+subtitle: I’ve been doing quite a bit of reading about social networks in preparation
+  for the 2012 edition of ...
+tags:
+- education
+title: 'Social Networks: Good or Bad?'
+type: wp
 wordpress_id: 333
 ---
+
 I’ve been doing quite a bit of reading about social networks in preparation for the 2012 edition of my Brandeis University Course, “[Web and Social Applications](https://sites.google.com/site/jbs2012cosiwebsocial/)“. This morning I was preparing lecture notes for “Current Issues In Social Networks”. Here are some good current links I have been able to find:
 
 - [Is Facebook Making Us Lonely?](http://www.theatlantic.com/magazine/archive/2012/05/is-facebook-making-us-lonely/8930/)

@@ -1,12 +1,14 @@
 ---
-title: "Ok, but what’s a quango?"
-subtitle: "A BBC Headline says:"
-category: "298"
-tags: []
-date: "2010-09-24"
-type: "wp"
+category: '298'
+date: '2010-09-24'
+subtitle: 'A BBC Headline says:'
+tags:
+- politics
+title: Ok, but what’s a quango?
+type: wp
 wordpress_id: 664
 ---
+
 A BBC [Headline](http://www.bbc.co.uk/news/uk-politics-11405096) says:
 > “Leaked list suggests 180 quangos to be abolished” (**from** [BBC Web Site](http://www.bbc.co.uk/news/uk-politics-11405096))
 

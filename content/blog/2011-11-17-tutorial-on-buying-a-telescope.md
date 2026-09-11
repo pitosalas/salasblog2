@@ -1,12 +1,15 @@
 ---
-title: "Tutorial on buying a telescope"
-subtitle: "Out of left (star) field. Here’s a succinct tutorial on buying a telescope that my friend [Ben Gomes..."
-category: "1"
-tags: ["661", "696", "1983"]
-date: "2011-11-17"
-type: "wp"
+category: '1'
+date: '2011-11-17'
+subtitle: Out of left (star) field. Here’s a succinct tutorial on buying a telescope
+  that my friend [Ben Gomes...
+tags:
+- science
+title: Tutorial on buying a telescope
+type: wp
 wordpress_id: 464
 ---
+
 Out of left (star) field. Here’s a succinct tutorial on buying a telescope that my friend [Ben Gomes Casseres ](http://www.linkedin.com/profile/view?id=2741471&authType=name&authToken=8vju&locale=en_US&pvs=pp&trk=ppro_viewmore)emailed me which I thought might be of general interest. You can see [Ben’s own astronomy work here](http://www.alliancestrategy.com/Astro).
 
 If you are thinking of buying a telescope (or giving one as a gift), Ben says:

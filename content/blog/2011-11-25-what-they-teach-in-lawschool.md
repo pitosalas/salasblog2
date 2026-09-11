@@ -1,12 +1,16 @@
 ---
-title: "What they teach in lawschool"
-subtitle: "This article gives a [fascinating perspective on the disconnect between what they teach in law schoo..."
-category: "1"
-tags: ["1205", "1358", "1360", "1542"]
-date: "2011-11-25"
-type: "wp"
+category: '1'
+date: '2011-11-25'
+subtitle: This article gives a [fascinating perspective on the disconnect between
+  what they teach in law schoo...
+tags:
+- education
+- law
+title: What they teach in lawschool
+type: wp
 wordpress_id: 457
 ---
+
 This article gives a [fascinating perspective on the disconnect between what they teach in law school and what knowledge is required to actually be an effective lawyer.](http://www.nytimes.com/2011/11/20/business/after-law-school-associates-learn-to-be-lawyers.html) Some great facts from the article:
 
 > 

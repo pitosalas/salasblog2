@@ -1,12 +1,15 @@
 ---
-title: "Crowdsourcing a new BlogBridge icon"
-subtitle: "Well, it’s been about 5 years with the same (lovely) BlogBridge application icon and as we are redes..."
-category: "1"
-tags: ["718", "894", "937", "1160", "1235", "1401"]
-date: "2012-02-23"
-type: "wp"
+category: '1'
+date: '2012-02-23'
+subtitle: Well, it’s been about 5 years with the same (lovely) BlogBridge application
+  icon and as we are redes...
+tags:
+- design
+title: Crowdsourcing a new BlogBridge icon
+type: wp
 wordpress_id: 385
 ---
+
 Well, it’s been about 5 years with the same (lovely) BlogBridge application icon and as we are redesigning the web site and releasing a major new release of the product, we thought, hey, it’s time to update the icon to something, ahem, a little more modern.
 
 In case you forgot (or never knew),here’s what the BlogBridge app icon looks like today:

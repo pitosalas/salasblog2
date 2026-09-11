@@ -1,12 +1,15 @@
 ---
-title: "We’re not going back to the moon"
-subtitle: "This is kind of depressing, but I don’t know why – but NASA administrator Bolden says that NASA has ..."
-category: "1"
-tags: ["636", "1487", "1501", "2059"]
-date: "2013-04-08"
-type: "wp"
+category: '1'
+date: '2013-04-08'
+subtitle: This is kind of depressing, but I don’t know why – but NASA administrator
+  Bolden says that NASA has ...
+tags:
+- science
+title: We’re not going back to the moon
+type: wp
 wordpress_id: 220
 ---
+
 This is kind of depressing, but I don’t know why – but NASA administrator Bolden says that NASA has no plans to lead another mission to the moon within our lifetime:
 
 > 

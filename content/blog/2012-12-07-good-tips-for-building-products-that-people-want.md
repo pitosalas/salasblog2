@@ -1,12 +1,15 @@
 ---
-title: "Good tips for building products that people want"
-subtitle: "Here is [a good cheat sheet on how to build products that people really want. It is cribbed from thi..."
-category: "1"
-tags: ["1006", "1364", "1679", "1918"]
-date: "2012-12-07"
-type: "wp"
+category: '1'
+date: '2012-12-07'
+subtitle: Here is [a good cheat sheet on how to build products that people really
+  want. It is cribbed from thi...
+tags:
+- business
+title: Good tips for building products that people want
+type: wp
 wordpress_id: 261
 ---
+
 Here is [a good cheat sheet on how to build products that people really want. It is cribbed from this article on TechCrunch.](http://techcrunch.com/2012/11/30/instagram-co-founder-mike-kriegers-8-principles-for-building-products-people-want/)
 
 > 

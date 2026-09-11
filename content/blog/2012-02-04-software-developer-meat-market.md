@@ -1,12 +1,16 @@
 ---
-title: "Software Developer Meat Market"
-subtitle: "An interesting article in Forbes about Software Developers and Development in general, [The Rise of ..."
-category: "1"
-tags: ["942", "978", "1080", "1886"]
-date: "2012-02-04"
-type: "wp"
+category: '1'
+date: '2012-02-04'
+subtitle: An interesting article in Forbes about Software Developers and Development
+  in general, [The Rise of ...
+tags:
+- software-engineering
+- business
+title: Software Developer Meat Market
+type: wp
 wordpress_id: 398
 ---
+
 An interesting article in Forbes about Software Developers and Development in general, [The Rise of Developeronomics](http://www.forbes.com/sites/venkateshrao/2011/12/05/the-rise-of-developeronomics/). While here and there he is promoting old chestnuts which may or may not be true there is a core argument which is quite intriguing. It goes something like this:
 
 - All companies are becoming software companies, meaning they are driven by software whatever their business actually is.

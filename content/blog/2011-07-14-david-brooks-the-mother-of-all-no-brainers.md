@@ -1,12 +1,14 @@
 ---
-title: "David Brooks: The Mother of All No-Brainers"
-subtitle: "Another on the mark article by David Brooks: the mother of all no brainers"
-category: "410"
-tags: ["742", "1542"]
-date: "2011-07-14"
-type: "wp"
+category: '410'
+date: '2011-07-14'
+subtitle: 'Another on the mark article by David Brooks: the mother of all no brainers'
+tags:
+- politics
+title: 'David Brooks: The Mother of All No-Brainers'
+type: wp
 wordpress_id: 532
 ---
+
 Another on the mark article by [David Brooks: the mother of all no brainers](http://www.nytimes.com/2011/07/05/opinion/05brooks.html?_r=1&src=ISMR_HP_LI_LST_FB).
 
 I can’t help it but I am riveted by this debt ceiling debacle. Like many I want them to stop bickering and reach and agreement. I know there will be parts of it that I hate, but I know that overall I will be thrilled that this particular soap opera/drama/crisis is over, and that our leaders have stopped acting like children:

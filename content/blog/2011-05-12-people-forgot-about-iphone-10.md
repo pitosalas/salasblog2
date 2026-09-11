@@ -1,12 +1,15 @@
 ---
-title: "People forgot about iPhone 1.0"
-subtitle: "Funny to read this:"
-category: "298"
-tags: ["644", "1298"]
-date: "2011-05-12"
-type: "wp"
+category: '298'
+date: '2011-05-12'
+subtitle: 'Funny to read this:'
+tags:
+- iphone
+- apple
+title: People forgot about iPhone 1.0
+type: wp
 wordpress_id: 568
 ---
+
 Funny to read this:
 
 > 

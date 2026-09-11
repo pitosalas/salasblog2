@@ -1,12 +1,15 @@
 ---
-title: "Must See: “Luck of the Irish” at the Huntington Theatre"
-subtitle: "If you are a theatre fan I strongly recommend a play I just saw last night. It’s called “Luck of the..."
-category: "1"
-tags: ["1231", "1233", "1634", "1995"]
-date: "2012-04-18"
-type: "wp"
+category: '1'
+date: '2012-04-18'
+subtitle: If you are a theatre fan I strongly recommend a play I just saw last night.
+  It’s called “Luck of the...
+tags:
+- boston
+title: 'Must See: “Luck of the Irish” at the Huntington Theatre'
+type: wp
 wordpress_id: 351
 ---
+
 If you are a theatre fan I strongly recommend a play I just saw last night. It’s called “Luck of the Irish”. From a [review on Boston.com:](http://articles.boston.com/2012-04-13/arts/31325980_1_white-couple-black-homebuyers-lucy)
 
 > 

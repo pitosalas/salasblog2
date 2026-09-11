@@ -1,12 +1,14 @@
 ---
-title: "Number crunching smartphone app success"
-subtitle: "Here’s my five-step plan for world domination:"
-category: "1"
-tags: ["644", "972", "1682", "1873", "1920"]
-date: "2013-05-06"
-type: "wp"
+category: '1'
+date: '2013-05-06'
+subtitle: 'Here’s my five-step plan for world domination:'
+tags:
+- technology
+title: Number crunching smartphone app success
+type: wp
 wordpress_id: 205
 ---
+
 Here’s my five-step plan for world domination:
 
 1. I am creating a **comprehensive taxonomy **of characteristics of smartphone apps. Much more detailed than a feature list: “is it on android or iPhone” but really micro. I will have 20 different user interface ‘styles’ defined scientifically. I will analyze all 11 different variations on viral growth models and describe them scientifically. I will classify the color schemes, fonts used, left versur right swiping, number of customizable characters, and that’s just the start!

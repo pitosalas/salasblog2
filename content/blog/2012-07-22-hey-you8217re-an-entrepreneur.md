@@ -1,12 +1,14 @@
 ---
-title: "Hey, you’re an entrepreneur!"
-subtitle: "I like this quote:"
-category: "1"
-tags: ["1006", "1527", "1542", "1858"]
-date: "2012-07-22"
-type: "wp"
+category: '1'
+date: '2012-07-22'
+subtitle: 'I like this quote:'
+tags:
+- business
+title: Hey, you’re an entrepreneur!
+type: wp
 wordpress_id: 310
 ---
+
 I like this quote:
 
 “Everyone here introduces themselves as an “entrepreneur.” It’s as if they hand out the title at the airport when you arrive. “Welcome to San Francisco, you are now an entrepreneur! Which start-up T-shirt would you like?”

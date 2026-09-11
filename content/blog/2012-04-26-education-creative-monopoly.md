@@ -1,12 +1,15 @@
 ---
-title: "[education] Creative Monopoly"
-subtitle: "An interesting [article by David Brooks in the New York Times commenting on the views of the always ..."
-category: "1"
-tags: ["987", "1368", "2054"]
-date: "2012-04-26"
-type: "wp"
+category: '1'
+date: '2012-04-26'
+subtitle: An interesting [article by David Brooks in the New York Times commenting
+  on the views of the always ...
+tags:
+- education
+title: '[education] Creative Monopoly'
+type: wp
 wordpress_id: 348
 ---
+
 An interesting [article by David Brooks in the New York Times commenting on the views of the always controversial Peter Thiel.](http://www.nytimes.com/2012/04/24/opinion/brooks-the-creative-monopoly.html?_r=1)
 
 [Why is he controversial? Because he h[as a grant program for students who are so passionate about their startup idea that they are willing to drop out of college to get the grant](http://www.thielfellowship.org/become-a-fellow/about-the-program/). Which is ironic because in the article, Brooks is citing what Thiel is teaching in his Stanford COURSE!]

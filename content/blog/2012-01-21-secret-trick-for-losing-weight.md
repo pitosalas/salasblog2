@@ -1,12 +1,15 @@
 ---
-title: "Secret trick for losing weight"
-subtitle: "I am going to share my **secret technology** for losing weight. It’s a mental exercise that really w..."
-category: "1"
-tags: ["626", "1467", "2110"]
-date: "2012-01-21"
-type: "wp"
+category: '1'
+date: '2012-01-21'
+subtitle: I am going to share my **secret technology** for losing weight. It’s a mental
+  exercise that really w...
+tags:
+- health
+title: Secret trick for losing weight
+type: wp
 wordpress_id: 413
 ---
+
 I am going to share my **secret technology** for losing weight. It’s a mental exercise that really works. It is inspired by the neuro-economics concept of “[anchoring](http://en.wikipedia.org/wiki/Anchoring)“. Here’s how it works:
 
 Every morning you step on your scale, right? I do. Well let’s say my weight yesterday was 171lbs. Let’s say my goal weight is 165lbs. Before stepping on the scale, I **think** “165” and **visualize** seeing “165” on the read out. Then I step on the scale. I

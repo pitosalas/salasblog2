@@ -1,12 +1,15 @@
 ---
-title: "Designed in California, Made in China"
-subtitle: "James Dyson (the vacuum cleaner guy) said something which may seem obvious but is nonetheless very c..."
-category: "1"
-tags: ["639", "937", "1922", "1923"]
-date: "2012-10-21"
-type: "wp"
+category: '1'
+date: '2012-10-21'
+subtitle: James Dyson (the vacuum cleaner guy) said something which may seem obvious
+  but is nonetheless very c...
+tags:
+- apple
+title: Designed in California, Made in China
+type: wp
 wordpress_id: 285
 ---
+
 James Dyson (the vacuum cleaner guy) said something which may seem obvious but is nonetheless very controversial:
 
 > 

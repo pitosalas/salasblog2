@@ -1,12 +1,14 @@
 ---
-title: "Interesting article about technology and risk"
-subtitle: "David Brooks of the New York Times writes about technology and risk"
-category: "298"
-tags: []
-date: "2010-05-28"
-type: "wp"
+category: '298'
+date: '2010-05-28'
+subtitle: David Brooks of the New York Times writes about technology and risk
+tags:
+- technology
+title: Interesting article about technology and risk
+type: wp
 wordpress_id: 715
 ---
+
 [David Brooks of the New York Times writes about technology and risk](http://www.nytimes.com/2010/05/28/opinion/28brooks.html), in the context of the drilling disaster in the Gulf:
 **“Second, people have a tendency to get acclimated to risk. As the physicist Richard Feynman wrote in a report on the Challenger disaster, as years went by, NASA officials got used to living with small failures. If faulty O rings didn’t produce a catastrophe last time, they probably won’t this time, they figured.
 

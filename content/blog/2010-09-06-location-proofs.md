@@ -1,12 +1,15 @@
 ---
-title: "Location Proofs"
-subtitle: "The more businesses reward me for showing up at their establishments, the more likely it will be tha..."
-category: "298"
-tags: ["1396", "1397", "1740", "1822"]
-date: "2010-09-06"
-type: "wp"
+category: '298'
+date: '2010-09-06'
+subtitle: The more businesses reward me for showing up at their establishments, the
+  more likely it will be tha...
+tags:
+- technology
+title: Location Proofs
+type: wp
 wordpress_id: 674
 ---
+
 The more businesses reward me for showing up at their establishments, the more likely it will be that a bad guy would want to pretend that they were there to garner those rewards.
 I came across a very interesting paper that proposes the notion of ‘location proofs.’:  [Enabling new mobile applications with location proofs](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.143.9580&rep=rep1&type=pdf))
 

@@ -1,12 +1,14 @@
 ---
-title: "Get a free shipping box from the US Postal Service"
-subtitle: "Just go to this link."
-category: "298"
+category: '298'
+date: '2010-09-20'
+subtitle: Just go to this link.
+tag_review: no_fit
 tags: []
-date: "2010-09-20"
-type: "wp"
+title: Get a free shipping box from the US Postal Service
+type: wp
 wordpress_id: 666
 ---
+
 Just go to this link.
 [United States Postal Service: Free Shipping Box](http://prioritymail.com/boxes102)
 

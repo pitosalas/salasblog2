@@ -1,12 +1,15 @@
 ---
-title: "Vote Buying measures and countermeasures"
-subtitle: "An interesting question, and an expert answer from a friend of mine. If you are interested in electi..."
-category: "1"
-tags: ["990", "2085", "2086", "2087"]
-date: "2012-10-12"
-type: "wp"
+category: '1'
+date: '2012-10-12'
+subtitle: An interesting question, and an expert answer from a friend of mine. If
+  you are interested in electi...
+tags:
+- politics
+title: Vote Buying measures and countermeasures
+type: wp
 wordpress_id: 296
 ---
+
 An interesting question, and an expert answer from a friend of mine. If you are interested in elections and voting and how they can and cannot be bought, you might find this intriguing. By the way, this scheme would never work in the US as we have many mechanisms that would prevent that, but these might apply in other countries that are not as sophisticated. 
 
 Scenario:

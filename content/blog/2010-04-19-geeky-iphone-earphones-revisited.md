@@ -1,12 +1,15 @@
 ---
-title: "[GEEKY] iPhone earphones revisited"
-subtitle: "The earphone/microphone that came with my iPhone is acting odd. First I thought it was a problem wit..."
-category: "298"
-tags: []
-date: "2010-04-19"
-type: "wp"
+category: '298'
+date: '2010-04-19'
+subtitle: The earphone/microphone that came with my iPhone is acting odd. First I
+  thought it was a problem wit...
+tags:
+- iphone
+title: '[GEEKY] iPhone earphones revisited'
+type: wp
 wordpress_id: 729
 ---
+
 The earphone/microphone that came with my iPhone is acting odd. First I thought it was a problem with my ear, then with my iPhone, but it seems to be a problem with the earphones, which I never thought of as something that could actually fail, except if I broke it physically.
 The sound quality is just fine, but it only gets 1/2 as loud as it should. How do I know? If I plug in a pair of brand-x earphones, I get the right sound level. Is this a plausible failure mode for the earphones?
 

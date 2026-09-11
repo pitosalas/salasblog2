@@ -1,12 +1,15 @@
 ---
-title: "Mint.com no longer supports Bank of America"
-subtitle: "It’s **hard to believe**, but here is what I got from Mint.com when I asked why my Bank of America i..."
-category: "298"
-tags: ["688", "1289", "1472"]
-date: "2011-03-16"
-type: "wp"
+category: '298'
+date: '2011-03-16'
+subtitle: It’s **hard to believe**, but here is what I got from Mint.com when I asked
+  why my Bank of America i...
+tags:
+- technology
+title: Mint.com no longer supports Bank of America
+type: wp
 wordpress_id: 582
 ---
+
 It’s **hard to believe**, but here is what I got from Mint.com when I asked why my Bank of America info was not updating on Mint:
 
 > 

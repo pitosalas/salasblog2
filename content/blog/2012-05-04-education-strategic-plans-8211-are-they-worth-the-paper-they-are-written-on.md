@@ -1,12 +1,15 @@
 ---
-title: "[EDUCATION] Strategic Plans – are they worth the paper they are written on?"
-subtitle: "I came across a very [provocative article about why and how universities seem to often get buried in..."
-category: "1"
-tags: ["987", "1204", "1629", "1931", "2054"]
-date: "2012-05-04"
-type: "wp"
+category: '1'
+date: '2012-05-04'
+subtitle: I came across a very [provocative article about why and how universities
+  seem to often get buried in...
+tags:
+- education
+title: '[EDUCATION] Strategic Plans – are they worth the paper they are written on?'
+type: wp
 wordpress_id: 343
 ---
+
 I came across a very [provocative article about why and how universities seem to often get buried in a time consuming and torturous process of strategic planning](http://chronicle.com/article/The-Strategic-Plan-Neither/128227/).
 
 My experience in the private sector is that it is **very easy** to get sucked into a process that takes on a life of its own and sucks a massive amount of time out of the organization for very questionable outcomes.

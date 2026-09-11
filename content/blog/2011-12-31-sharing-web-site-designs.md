@@ -1,12 +1,15 @@
 ---
-title: "Sharing Web Site Designs"
-subtitle: "Recently I wanted to get feedback on one of several ideas for the design of the new BlogBridge"
-category: "1"
-tags: ["718", "937", "2107"]
-date: "2011-12-31"
-type: "wp"
+category: '1'
+date: '2011-12-31'
+subtitle: Recently I wanted to get feedback on one of several ideas for the design
+  of the new BlogBridge
+tags:
+- design
+title: Sharing Web Site Designs
+type: wp
 wordpress_id: 429
 ---
+
 Recently I wanted to get feedback on one of several ideas for the design of the new [BlogBridge](http://www.blogbridge.com/) web site. I had selected 6 product web sites that had a nice look and wanted to somehow visually compare them. Here are two free tools I used:
 
 - [Papparazzi](http://derailer.org/paparazzi/)! is a free Mac utility that does one thing and does it well. It makes a screen shot from a URL of a web site, importantly, including the whole page not just the part that is visible without scrolling.

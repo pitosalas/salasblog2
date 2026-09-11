@@ -1,12 +1,15 @@
 ---
-title: "Mad Men Going Nuts"
-subtitle: "Do you watch Mad Men? I know it’s very good. I always watch it. But sometimes, it doesn’t make sense..."
-category: "1"
-tags: ["1476", "1984", "2045"]
-date: "2013-05-24"
-type: "wp"
+category: '1'
+date: '2013-05-24'
+subtitle: Do you watch Mad Men? I know it’s very good. I always watch it. But sometimes,
+  it doesn’t make sense...
+tag_review: no_fit
+tags: []
+title: Mad Men Going Nuts
+type: wp
 wordpress_id: 198
 ---
+
 Do you watch Mad Men? I know it’s very good. I always watch it. But sometimes, it doesn’t make sense, and I wonder, have I been sucked into a reality distortion field myself? Is it really good?
 
 [REVIEW: Mad Men – Episode 8: The Crash – Celebrity Gossip, News & Photos, Movie Reviews, Competitions – Entertainmentwise](http://www.entertainmentwise.com/news/115635/REVIEW-Mad-Men-Episode-8-The-Crash-):

@@ -1,12 +1,15 @@
 ---
-title: "Bluetooth Powered Speakers"
-subtitle: "I am considering these Bluetooth Wireless Powered Speakers… which should I get?"
-category: "1"
-tags: ["721", "1297", "1298", "1897"]
-date: "2012-07-09"
-type: "wp"
+category: '1'
+date: '2012-07-09'
+subtitle: I am considering these Bluetooth Wireless Powered Speakers… which should
+  I get?
+tags:
+- technology
+title: Bluetooth Powered Speakers
+type: wp
 wordpress_id: 317
 ---
+
 I am considering these Bluetooth Wireless Powered Speakers… which should I get?
 
 - [Jawbone JAMBOX Wireless Bluetooth Speaker](http://www.amazon.com/Jawbone-JAMBOX-Wireless-Bluetooth-Speaker/dp/B004E10KI8/ref=wl_it_dp_o_pdT1_nS_nC?ie=UTF8&colid=2XUJCTYQQHZPJ&coliid=I1BVDQ15IHSJCC)

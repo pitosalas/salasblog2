@@ -1,12 +1,15 @@
 ---
-title: "Make it matter"
-subtitle: "Chris Shipley of Guidewire Group has a [great post bemoaning how entrepreneurs are driven to invest ..."
-category: "1"
-tags: ["758", "801", "1009", "1251"]
-date: "2011-11-10"
-type: "wp"
+category: '1'
+date: '2011-11-10'
+subtitle: Chris Shipley of Guidewire Group has a [great post bemoaning how entrepreneurs
+  are driven to invest ...
+tags:
+- business
+title: Make it matter
+type: wp
 wordpress_id: 470
 ---
+
 Chris Shipley of Guidewire Group has a [great post bemoaning how entrepreneurs are driven to invest their time and energy and (other peoples’ money) on more and more vacuous projects:](http://guidewiregroup.com/2011/11/make-it-matter/)
 
 > “Indeed, the collective attention of young entrepreneurs seems be have been hijacked by all things trivial. How many knock-off AirBnB sites does the world need? Or new vertical social networks for niche groups that can’t figure out how to create a Facebook page? Or Foursqure meets Match.com meets World of Warcraft?

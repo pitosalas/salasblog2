@@ -1,12 +1,14 @@
 ---
-title: "My review of A Reliable Wife"
-subtitle: "!A Reliable Wife"
-category: "298"
-tags: ["725"]
-date: "2011-10-05"
-type: "wp"
+category: '298'
+date: '2011-10-05'
+subtitle: '!A Reliable Wife'
+tags:
+- books
+title: My review of A Reliable Wife
+type: wp
 wordpress_id: 485
 ---
+
 [![A Reliable Wife](https://i0.wp.com/photo.goodreads.com/books/1267035347m/4929705.jpg?w=584)](http://www.goodreads.com/book/show/4929705-a-reliable-wife)[A Reliable Wife](http://www.goodreads.com/book/show/4929705-a-reliable-wife) by [Robert Goolrick](http://www.goodreads.com/author/show/266461.Robert_Goolrick)
  My rating: [4 of 5 stars](http://www.goodreads.com/review/show/211415270)
 

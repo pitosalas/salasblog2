@@ -1,12 +1,15 @@
 ---
-title: "I wish I knew more JavaScript"
-subtitle: "I know basic Javascript. I think I will be learning more soon. I think JavaScript is the language of..."
-category: "1"
-tags: ["1121", "1311", "1321", "1340", "1353", "1684"]
-date: "2012-01-02"
-type: "wp"
+category: '1'
+date: '2012-01-02'
+subtitle: I know basic Javascript. I think I will be learning more soon. I think JavaScript
+  is the language of...
+tags:
+- programming
+title: I wish I knew more JavaScript
+type: wp
 wordpress_id: 426
 ---
+
 I know basic Javascript. I think I will be learning more soon. I think JavaScript is the language of the (near) future. Predicting what the language of the (further) future is would be impossible, as programming languages come and go. Hopefully they get better as they evolve.
 
 Why do I say that it is the language of the (near) future? Compared, for example to Java, or Ruby or Python, or even Erlang? Here’s an article I wrote about that: [how JavaScript may be the most important language for the web for the near future](/imported-20111103233638/2011/6/25/geeky-javascript-universal-language-of-the-future.html). Do you agree?

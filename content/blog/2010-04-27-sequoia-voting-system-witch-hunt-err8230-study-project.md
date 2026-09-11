@@ -1,12 +1,14 @@
 ---
-title: "Sequoia Voting System Witch Hunt, err… Study Project"
-subtitle: "Check this post Sequoia Voting System Witch Hunt, err… Study Project"
-category: "538"
+category: '538'
+date: '2010-04-27'
+subtitle: Check this post Sequoia Voting System Witch Hunt, err… Study Project
+tag_review: no_fit
 tags: []
-date: "2010-04-27"
-type: "wp"
+title: Sequoia Voting System Witch Hunt, err… Study Project
+type: wp
 wordpress_id: 726
 ---
+
 Check this post [Sequoia Voting System Witch Hunt, err… Study Project](http://www.codersrevolution.com/index.cfm/2009/10/21/Sequoia-Voting-System-Witch-Hunt-err-Study-Project) from [Coder’s Revolution](http://www.codersrevolution.com/rss.cfm?mode=full):
 > [Matt Woodward](http://mpwoodward.posterous.com) [pointed out](http://mpwoodward.posterous.com/sequoia-voting-systems-source-code-released) this [Slash Dot article](http://politics.slashdot.org/story/09/10/20/2254210/Sequoia-Voting-Systems-Source-Code-Released?from=rss) today about the accidental release of code from the [Sequoia Voting Systems](http://www.sequoiavote.com/) and a [web site](http://studysequoia.wikispaces.com/) dedicated to studying that code. Apparently the Election Defense Alliance obtained a copy of the election data for Riverside County, California. It came in the form of a Microsoft SQL Server backup that was SUPPOSED to have all the code such as stored procs and triggers redacted. I wandered over to the “Sequoia Voting System Study Project” and scored me a copy of the data. [More] (**from: **[Sequoia Voting System Witch Hunt, err… Study Project](http://www.codersrevolution.com/index.cfm/2009/10/21/Sequoia-Voting-System-Witch-Hunt-err-Study-Project))
 

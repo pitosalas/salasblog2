@@ -1,12 +1,15 @@
 ---
-title: "Practice makes perfect?"
-subtitle: "![](https://i0.wp.com/www.cjspianos.com/piano_player.jpg?w=584)"
-category: "1"
-tags: ["1368", "1618", "1660"]
-date: "2013-03-23"
-type: "wp"
+category: '1'
+date: '2013-03-23'
+subtitle: '![](https://i0.wp.com/www.cjspianos.com/piano_player.jpg?w=584)'
+tags:
+- personal
+- music
+title: Practice makes perfect?
+type: wp
 wordpress_id: 225
 ---
+
 ![](https://i0.wp.com/www.cjspianos.com/piano_player.jpg?w=584)
 
 I am (after 10 years) a beginner pianist who wants to improve. I practice, but not diligently enough. On average I think I practice 5 days a week, for about 1/2 hour, so that’s less than 3 hours a week. Clearly I could do better. But I am proud of the effort I put in and I definitely have made a lot of progress. But I am at best still an advanced beginner. 

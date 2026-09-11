@@ -1,12 +1,15 @@
 ---
-title: "Keeping emails and security under control"
-subtitle: "Do you receive tons of notification emails form your various subscriptions or social sites like Twit..."
-category: "1"
-tags: ["1037", "1537", "1822", "2047"]
-date: "2012-01-24"
-type: "wp"
+category: '1'
+date: '2012-01-24'
+subtitle: Do you receive tons of notification emails form your various subscriptions
+  or social sites like Twit...
+tag_review: no_fit
+tags: []
+title: Keeping emails and security under control
+type: wp
 wordpress_id: 409
 ---
+
 Do you receive tons of notification emails form your various subscriptions or social sites like Twitter and Facebook and the others? Have you thought about the impact on your productivity all these teasers are?
 
 Well, you might have forgotten (or are you too busy to figure out) how to manage or shutdown the notifications. Check out this handy toy that I just came across: [Notification Control.](http://notificationcontrol.com/)

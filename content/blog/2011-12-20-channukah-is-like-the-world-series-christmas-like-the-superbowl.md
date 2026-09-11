@@ -1,12 +1,14 @@
 ---
-title: "Channukah is like the World Series, Christmas like the superbowl"
-subtitle: "Ned Batchelder, my pal, points out that:"
-category: "1"
-tags: ["786", "802", "1953", "2134"]
-date: "2011-12-20"
-type: "wp"
+category: '1'
+date: '2011-12-20'
+subtitle: 'Ned Batchelder, my pal, points out that:'
+tags:
+- jewish
+title: Channukah is like the World Series, Christmas like the superbowl
+type: wp
 wordpress_id: 438
 ---
+
 Ned Batchelder, my pal, points out that:
 
 > 

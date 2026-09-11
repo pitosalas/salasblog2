@@ -1,12 +1,14 @@
 ---
-title: "Patents: Innovation Nation"
-subtitle: "An interesting view on patents from Judge Posner"
-category: "1"
-tags: ["1276", "1332", "1517", "1592"]
-date: "2013-02-10"
-type: "wp"
+category: '1'
+date: '2013-02-10'
+subtitle: An interesting view on patents from Judge Posner
+tags:
+- legal
+title: 'Patents: Innovation Nation'
+type: wp
 wordpress_id: 245
 ---
+
 An [interesting view on patents from Judge Posner](http://www.nytimes.com/2013/02/09/opinion/nocera-innovation-nation-at-war.html):
 
 > 

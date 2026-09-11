@@ -1,12 +1,15 @@
 ---
-title: "Wikileaks"
-subtitle: "Like many, I don’t know yet whether I **support or condemn** the Wikileaks action that has been disc..."
-category: "298"
-tags: ["1082", "1820", "1822", "2116"]
-date: "2010-12-14"
-type: "wp"
+category: '298'
+date: '2010-12-14'
+subtitle: Like many, I don’t know yet whether I **support or condemn** the Wikileaks
+  action that has been disc...
+tags:
+- politics
+title: Wikileaks
+type: wp
 wordpress_id: 623
 ---
+
 Like many, I don’t know yet whether I **support or condemn** the Wikileaks action that has been discussed and debated at length on all fora. You have to agree that it has yielded some **interesting insights** about the way the world works.
 
 First of all: as far as a diplomat making **snide comments** about one world leader or another, **big deal**! I mean it’s embarrassing (like someone hacking your email account or finding your personal diary) but certainly no one is surprised — **gossiping** and **show boating** is human nature, yes?

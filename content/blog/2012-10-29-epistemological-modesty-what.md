@@ -1,12 +1,15 @@
 ---
-title: "Epistemological Modesty… What?"
-subtitle: "I was listening to an interview with David Brooks the other day. The interview was conducted by, of ..."
-category: "1"
-tags: ["915", "1481", "1611"]
-date: "2012-10-29"
-type: "wp"
+category: '1'
+date: '2012-10-29'
+subtitle: I was listening to an interview with David Brooks the other day. The interview
+  was conducted by, of ...
+tag_review: no_fit
+tags: []
+title: Epistemological Modesty… What?
+type: wp
 wordpress_id: 278
 ---
+
 I was listening to an interview with David Brooks the other day. The interview was conducted by, of all people, Alec Baldwin on “Here’s the Thing”, a show I discovered on public radio.
 
 Alec Baldwin is a good actor for a certain kind of role, and can be quite funny, but [we have learned things about him which are not very likable at all,](http://www.people.com/people/article/0,,20285148,00.html) right? But who knew that he was very intelligent and quite a good interviewer?

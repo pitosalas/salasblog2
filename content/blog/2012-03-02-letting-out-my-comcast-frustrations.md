@@ -1,12 +1,14 @@
 ---
-title: "Letting out my Comcast frustrations"
-subtitle: "“Dear Kelley"
-category: "1"
-tags: ["758", "827", "1098", "1946", "2071"]
-date: "2012-03-02"
-type: "wp"
+category: '1'
+date: '2012-03-02'
+subtitle: “Dear Kelley
+tag_review: no_fit
+tags: []
+title: Letting out my Comcast frustrations
+type: wp
 wordpress_id: 376
 ---
+
 > 
 “Dear Kelley
 

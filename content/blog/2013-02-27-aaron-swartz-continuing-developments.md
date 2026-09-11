@@ -1,12 +1,15 @@
 ---
-title: "Aaron Swartz: continuing developments"
-subtitle: "In the continuing stories around Aaron Swartz and events that led to his tragic suicide recently:"
-category: "1"
-tags: ["594", "962", "1370"]
-date: "2013-02-27"
-type: "wp"
+category: '1'
+date: '2013-02-27'
+subtitle: 'In the continuing stories around Aaron Swartz and events that led to his
+  tragic suicide recently:'
+tags:
+- legal
+title: 'Aaron Swartz: continuing developments'
+type: wp
 wordpress_id: 234
 ---
+
 In the continuing stories around Aaron Swartz and events that led to his tragic suicide recently:
 
 > 

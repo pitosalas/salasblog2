@@ -1,12 +1,15 @@
 ---
-title: "A fascinating story of Curt Shilling’s game company’s demise"
-subtitle: "This is from the [New York Time’s article about Curt Shilling’s ill fated game company “38 Studios”:..."
-category: "1"
-tags: ["902", "1006", "1113", "1749", "2068", "2070"]
-date: "2013-04-21"
-type: "wp"
+category: '1'
+date: '2013-04-21'
+subtitle: This is from the [New York Time’s article about Curt Shilling’s ill fated
+  game company “38 Studios”:...
+tags:
+- business
+title: A fascinating story of Curt Shilling’s game company’s demise
+type: wp
 wordpress_id: 213
 ---
+
 This is from the [New York Time’s article about Curt Shilling’s ill fated game company “38 Studios”:](http://www.nytimes.com/2013/04/21/business/curt-schilling-rhode-island-and-the-fall-of-38-studios.html?smid=pl-share)
 
 > 

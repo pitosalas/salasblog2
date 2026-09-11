@@ -1,12 +1,14 @@
 ---
-title: "Pivotal Tracker, watch out for Trajectory"
-subtitle: "I’ve been an avid user and recommender of Pivotal Tracker, an exce..."
-category: "538"
-tags: ["1627", "1810", "1929"]
-date: "2011-07-30"
-type: "wp"
+category: '538'
+date: '2011-07-30'
+subtitle: I’ve been an avid user and recommender of Pivotal Tracker, an exce...
+tags:
+- software-engineering
+title: Pivotal Tracker, watch out for Trajectory
+type: wp
 wordpress_id: 515
 ---
+
 I’ve been an avid user and recommender of [Pivotal Tracker](https://www.pivotaltracker.com), an excellent, simple to use, Scrum based project manager. I still love it a lot. ![Screen Shot 2011 07 29 at 4 49 33 PM](https://i0.wp.com/salas.com/wp-content/uploads/2011/07/2d560-screen-shot-2011-07-29-at-44933-pm.png?resize=584%2C452&ssl=1)
 
 But, today I came across a very clean and simple alternative called [Trajectory](https://www.apptrajectory.com/).

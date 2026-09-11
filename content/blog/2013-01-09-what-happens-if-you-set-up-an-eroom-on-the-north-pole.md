@@ -1,12 +1,14 @@
 ---
-title: "What happens if you set up an eRoom on the North Pole?"
-subtitle: "Here’s a new product I just saw, Igloo. It’s very nice and it r..."
-category: "1"
-tags: ["1015", "1244"]
-date: "2013-01-09"
-type: "wp"
+category: '1'
+date: '2013-01-09'
+subtitle: Here’s a new product I just saw, Igloo. It’s very nice and it r...
+tags:
+- eroom
+title: What happens if you set up an eRoom on the North Pole?
+type: wp
 wordpress_id: 257
 ---
+
 Here’s a new product I just saw, [Igloo](http://www.igloosoftware.com/tour). It’s very nice and it reminds me of what eRoom might have looked like if we designed it 15 years later. They have a beautiful product. Here’s what they say:
 
 > 

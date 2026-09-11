@@ -1,12 +1,15 @@
 ---
-title: "How much power does it take?"
-subtitle: "I remember wondering about this when I was in college — this is before I really knew anything about ..."
-category: "1"
-tags: ["815", "1010", "1658", "2097"]
-date: "2012-09-24"
-type: "wp"
+category: '1'
+date: '2012-09-24'
+subtitle: I remember wondering about this when I was in college — this is before I
+  really knew anything about ...
+tags:
+- computer-science
+title: How much power does it take?
+type: wp
 wordpress_id: 300
 ---
+
 I remember wondering about this when I was in college — this is before I really knew anything about computers.
 
 I noticed that our computer center charged by the** minute of processor time and** it was a lot! I remember people freaking out because their random prime number generator ran overnight and the department got billed an unexpected $1,000.00. And they were in trouble!

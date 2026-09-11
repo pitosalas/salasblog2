@@ -1,12 +1,15 @@
 ---
-title: "New York Times Grammar and Style"
-subtitle: "Listen, I **love** the New York Times. I read it cover to cover (or pixel to pixel) every day and ha..."
-category: "1"
-tags: ["985", "1158", "1542", "1938", "2137"]
-date: "2012-04-17"
-type: "wp"
+category: '1'
+date: '2012-04-17'
+subtitle: Listen, I **love** the New York Times. I read it cover to cover (or pixel
+  to pixel) every day and ha...
+tag_review: no_fit
+tags: []
+title: New York Times Grammar and Style
+type: wp
 wordpress_id: 352
 ---
+
 Listen, I **love** the New York Times. I read it cover to cover (or pixel to pixel) every day and have it delivered in dead-tree format to my doorstep each morning.
 
 But so often I come across an awkward sentence which I have to read and re-read several times to understand.

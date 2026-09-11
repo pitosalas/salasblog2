@@ -1,12 +1,14 @@
 ---
-title: "We need a debt rating service rating service"
-subtitle: "Very meta. Who rates the rating services?"
-category: "298"
-tags: []
-date: "2010-05-28"
-type: "wp"
+category: '298'
+date: '2010-05-28'
+subtitle: Very meta. Who rates the rating services?
+tags:
+- business
+title: We need a debt rating service rating service
+type: wp
 wordpress_id: 714
 ---
+
 Very meta. Who rates the rating services?
 I saw this in the [Wall Street Journal, an article today called Stocks Wind Down a Brutal May:](http://online.wsj.com/article/SB10001424052748704596504575272002400905196.html?mod=WSJ_hpp_MIDDLETopStories#printMode)
 

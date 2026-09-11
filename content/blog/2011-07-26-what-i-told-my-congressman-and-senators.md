@@ -1,12 +1,14 @@
 ---
-title: "What I told my Congressman and Senators"
-subtitle: "“Dear Congressman,"
-category: "298"
-tags: ["748", "858", "1151", "1830"]
-date: "2011-07-26"
-type: "wp"
+category: '298'
+date: '2011-07-26'
+subtitle: “Dear Congressman,
+tags:
+- politics
+title: What I told my Congressman and Senators
+type: wp
 wordpress_id: 518
 ---
+
 “Dear Congressman,
 
 I implore you to PLEASE do all you can to break the deadlock and the impasse. I am not saying what proposal I would like you to back. What I want is that you compromise and get others to compromise so that this thing is solved TODAY.

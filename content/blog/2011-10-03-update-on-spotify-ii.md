@@ -1,12 +1,15 @@
 ---
-title: "Update on Spotify II"
-subtitle: "I have become a total Spotify addict. I have almost totally stopped downloading MP3s and am graduall..."
-category: "298"
-tags: ["1307", "1580", "1902"]
-date: "2011-10-03"
-type: "wp"
+category: '298'
+date: '2011-10-03'
+subtitle: I have become a total Spotify addict. I have almost totally stopped downloading
+  MP3s and am graduall...
+tags:
+- music
+title: Update on Spotify II
+type: wp
 wordpress_id: 487
 ---
+
 I have become a total Spotify addict. I have almost totally stopped downloading MP3s and am gradually locating all my favorite music on Spotify. I posed a couple of semi-sceptical notes when I first started using Spotify and so I am due for an update, right?
 
 - [Cancelled Rhapsory, trying Spotify](/2011/07/17/cancelled-rhapsody-trying-spotify/)
