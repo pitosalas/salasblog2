@@ -4,7 +4,6 @@ date: '2005-03-25'
 subtitle: '*I wrote this in response [to this post, which ha...'
 tags:
 - technology
-- business
 title: Remix Remixed
 type: wp
 wordpress_id: 1819

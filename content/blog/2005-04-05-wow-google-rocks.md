@@ -3,8 +3,7 @@ category: '298'
 date: '2005-04-05'
 subtitle: '![Picture 1-2'
 tags:
-- technology
-- google-maps
+- maps
 title: Wow! Google rocks!
 type: wp
 wordpress_id: 1809

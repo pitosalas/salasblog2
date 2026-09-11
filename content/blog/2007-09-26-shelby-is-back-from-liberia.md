@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-09-26'
-subtitle: My friend Shelby has been living and blogging from Africa over the last
-  year or so. From reading it ...
-tags:
-- personal
-- travel
-title: Shelby is back from Liberia
-type: wp
+title: "Shelby is back from Liberia"
+subtitle: "My friend Shelby has been living and blogging from Africa over the last year or so. From reading it ..."
+category: "298"
+tags: []
+date: "2007-09-26"
+type: "wp"
 wordpress_id: 1202
 ---
-
 My friend Shelby has been living and blogging from Africa over the last year or so. From reading it you can tell what a unique experience she has had, and that she comes back a changed person. Welcome back, Shelby!
 Check out [this post](http://allabuja.blogspot.com/2007/09/home-i-was-going-to-miss-my-connection.html) from [Plantains and Palm Trees](http://allabuja.blogspot.com/):
 

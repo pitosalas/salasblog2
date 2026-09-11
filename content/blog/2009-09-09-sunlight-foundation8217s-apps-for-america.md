@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-09-09'
-subtitle: Sunlight Foundation is a very cool organization that I’ve been close to.
-  They are involved with many...
-tags:
-- politics
-- sunlight-foundation
-title: Sunlight Foundation’s Apps for America
-type: wp
+title: "Sunlight Foundation’s Apps for America"
+subtitle: "Sunlight Foundation is a very cool organization that I’ve been close to. They are involved with many..."
+category: "298"
+tags: ["635", "1951"]
+date: "2009-09-09"
+type: "wp"
 wordpress_id: 805
 ---
-
 Sunlight Foundation is a very cool organization that I’ve been close to. They are involved with many efforts to further government transparency and accountability, often using technology, but not only.
 Recently they ran their second competition looking for interesting and useful applications and tools to be built using or leveraging data published by government.
 

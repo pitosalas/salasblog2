@@ -1,17 +1,12 @@
 ---
-category: '538'
-date: '2007-04-20'
-subtitle: I’ve been setting up a new Windows Vista notebook over the last few days
-  for use by a non technical ...
-tags:
-- technology
-- microsoft
-- steve-ballmer
-title: Steve Balmer read my blog (in my dream)
-type: wp
+title: "Steve Balmer read my blog (in my dream)"
+subtitle: "I’ve been setting up a new Windows Vista notebook over the last few days for use by a non technical ..."
+category: "538"
+tags: []
+date: "2007-04-20"
+type: "wp"
 wordpress_id: 1282
 ---
-
 I’ve been setting up a new Windows Vista notebook over the last few days for use by a non technical user. What a **basket case**. What a disaster. And I am referring to Vista not the user 🙂
 I’ve been mentally working on a blog post titled either “Has Microsoft Lost its mojo” or “Has Microsoft Jumped the shark”?
 

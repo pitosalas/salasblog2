@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2011-02-17'
-subtitle: An interesting article about how to think about [designing Artificial Intelligence
-  for playing poker...
-tags:
-- programming
-- ai
-title: '[GEEKY] Poker AI'
-type: wp
+title: "[GEEKY] Poker AI"
+subtitle: "An interesting article about how to think about [designing Artificial Intelligence for playing poker..."
+category: "298"
+tags: ["656", "1112", "1643"]
+date: "2011-02-17"
+type: "wp"
 wordpress_id: 595
 ---
-
 An interesting article about how to think about [designing Artificial Intelligence for playing poker](http://gamecareerguide.com/features/896/poker_ai_a_starting_.php). It’s high level but gives you a good feel about how this writer went about the design. You also learn the basics of Poker at the same time:
 
 > 

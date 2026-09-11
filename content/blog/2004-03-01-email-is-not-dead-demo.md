@@ -1,12 +1,16 @@
 ---
-title: "Email is not dead (Demo"
-subtitle: "**Email is not dead (Demo 2004 Series – 7) **I continue to be an avid follower of what’s going on in..."
-category: "1"
-tags: ["technology", "business"]
-date: "2004-03-01"
-type: "wp"
+category: '1'
+date: '2004-03-01'
+subtitle: '**Email is not dead (Demo 2004 Series – 7) **I continue to be an avid follower
+  of what’s going on in...'
+tags:
+- demo-conference
+- eroom
+title: Email is not dead (Demo
+type: wp
 wordpress_id: 2062
 ---
+
 **Email is not dead (Demo 2004 Series – 7) **I continue to be an avid follower of what’s going on in the email space. Why? Here are some things to think about:
 
 From my [eRoom and Collaboration](http://www.eroom.com) days, I’ve been very aware of the **challenges to achieving** adoption. My view is that the challenge exists whenever the adoption of a new application or system **requires some degree of coordination between a set of users**. Email is by far the greatest example of an application of computers which has very successfully overcome that barrier. I want to learn from that. 

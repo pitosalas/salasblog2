@@ -4,9 +4,7 @@ date: '2004-08-05'
 subtitle: I’ve done a little research about what the Open Source really means, legally,
   when it comes to [Blog...
 tags:
-- technology
-- blogbridge
-- business
+- legal
 title: BlogBridge open source license
 type: wp
 wordpress_id: 1955

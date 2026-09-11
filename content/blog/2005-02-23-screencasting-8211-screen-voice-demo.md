@@ -2,10 +2,7 @@
 category: '538'
 date: '2005-02-23'
 subtitle: Jon Udell coins a term
-tags:
-- technology
-- screencasting
-- blogbridge
+tags: []
 title: screencasting – Screen + Voice = demo
 type: wp
 wordpress_id: 1843

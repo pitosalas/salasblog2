@@ -3,8 +3,7 @@ category: '298'
 date: '2005-06-08'
 subtitle: '> “A man’s severed leg – with a white Adidas sneaker still attached – plummeted
   from the sky onto a ...'
-tags:
-- personal
+tags: []
 title: Creepy article!
 type: wp
 wordpress_id: 1762

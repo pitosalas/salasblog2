@@ -4,8 +4,6 @@ date: '2004-05-07'
 subtitle: 'Well, not really dark: This is in reference to Shel Isreal’s recent bit
   about LinkedIn.'
 tags:
-- technology
-- linkedin
 - business
 title: The “dark” side of LinkedIn
 type: wp

@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-08-25'
-subtitle: From TimesOnline, a good reminder to not forget that we do live in a USA
-  bubble sometimes, and don’t...
-tags:
-- technology
-- yandex
-title: Heard of Yandex?
-type: wp
+title: "Heard of Yandex?"
+subtitle: "From TimesOnline, a good reminder to not forget that we do live in a USA bubble sometimes, and don’t..."
+category: "298"
+tags: []
+date: "2008-08-25"
+type: "wp"
 wordpress_id: 987
 ---
-
 From TimesOnline, a good reminder to not forget that we do live in a USA bubble sometimes, and don’t pay enough attention to the rest of the world:
 “A little over two decades later, Arkady Volozh is the chief executive and one of the founders of [Yandex](http://en.wikipedia.org/wiki/Yandex), Russia’s most popular internet search engine, a company now valued at £2.5 billion. Widely described as Russia’s answer to Google, Yandex was launched only eight years ago but is now visited by 8m people a day. More impressive still, Yandex and Volozh are credited with humbling Google, by denting its global domination.” (from “Russians dent Google’s world domination”)
 

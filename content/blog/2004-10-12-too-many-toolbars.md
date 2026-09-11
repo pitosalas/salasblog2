@@ -3,10 +3,7 @@ category: '538'
 date: '2004-10-12'
 subtitle: Everyone wants to give me a toolbar! I’ve successfully fought back Yahoo’s
   and am a happy user of [G...
-tags:
-- technology
-- google
-- amazon
+tags: []
 title: Too Many Toolbars!
 type: wp
 wordpress_id: 1928

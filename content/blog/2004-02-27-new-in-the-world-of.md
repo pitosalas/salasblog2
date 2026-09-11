@@ -1,12 +1,15 @@
 ---
-title: "New in the world of"
-subtitle: "**New in the world of Digital Photography (Demo 2004 Series – 4) **The beat goes on in the world of ..."
-category: "1"
-tags: ["technology"]
-date: "2004-02-27"
-type: "wp"
+category: '1'
+date: '2004-02-27'
+subtitle: '**New in the world of Digital Photography (Demo 2004 Series – 4) **The
+  beat goes on in the world of ...'
+tags:
+- demo-conference
+title: New in the world of
+type: wp
 wordpress_id: 2067
 ---
+
 **New in the world of Digital Photography (Demo 2004 Series – 4) **The beat goes on in the world of Digital Photography. Two very nice (and one less nice) **Photo Sharing products** were launched at Demo this year. Quick notes on three of those.
 
 *[PhotoSite from Homestead](http://www.photosite.com/)***.  **This is a very nice simple online photo album. It’s customizable and has very attractive album pages. There is an annual charge, but it’s probably worth it. 

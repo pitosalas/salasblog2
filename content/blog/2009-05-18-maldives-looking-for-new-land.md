@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-05-18'
-subtitle: 'A while back I wrote a post saying that it was “[Official: The Maldives
-  is the most beautiful place ...'
-tags:
-- travel
-title: Maldives looking for new land
-type: wp
+title: "Maldives looking for new land"
+subtitle: "A while back I wrote a post saying that it was “[Official: The Maldives is the most beautiful place ..."
+category: "298"
+tags: []
+date: "2009-05-18"
+type: "wp"
 wordpress_id: 844
 ---
-
 A while back I wrote a post saying that it was “[Official: The Maldives is the most beautiful place on earth.](/2005/07/20/ok-its-official-the-maldives-is-the-most-beautiful-place-on-earth/)” So you know I have a warm spot for it (or is it *them?). 
 *[An article ran in the New York Times Magazine recently, saying](http://www.nytimes.com/2009/05/10/magazine/10MALDIVES-t.html):
 

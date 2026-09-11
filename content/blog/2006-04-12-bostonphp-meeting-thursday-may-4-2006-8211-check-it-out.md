@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2006-04-12'
-subtitle: I met Mark Mark Withington at the last Geek Dinner. He runs the Boston PHP
-  Group
-tags:
-- programming
-- php
-- boston
-title: 'BostonPHP Meeting: Thursday May 4, 2006 – Check it out!'
-type: wp
+title: "BostonPHP Meeting: Thursday May 4, 2006 – Check it out!"
+subtitle: "I met Mark Mark Withington at the last Geek Dinner. He runs the Boston PHP Group"
+category: "298"
+tags: []
+date: "2006-04-12"
+type: "wp"
 wordpress_id: 1557
 ---
-
 I met Mark Mark Withington at the last Geek Dinner. He runs the [Boston PHP Group](http://www.bostonphp.org/component/option,com_extcalendar/Itemid,33/extmode,view/extid,15/). They meet every month. This month’s meeting is about the [ZEND Framework](http://framework.zend.com/). Looks interesting. If you’re [PHP](http://www.php.net/) dude, check it out!
 
 When: Thursday, May 04, 2006 At 06:30 PM

@@ -3,8 +3,7 @@ category: '298'
 date: '2004-05-27'
 subtitle: Yes, I guess some of you have never seen American Idol, so you wouldn’t
   appreciate this ironic and f...
-tags:
-- politics
+tags: []
 title: Funny American Idol commentary
 type: wp
 wordpress_id: 1995

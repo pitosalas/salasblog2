@@ -1,16 +1,12 @@
 ---
-category: '422'
-date: '2010-08-05'
-subtitle: Check this post The flatfooted learning society
-tags:
-- technology
-- programming
-- david-weinberger
-title: 'David Weinberger has flat feet: Programming'
-type: wp
+title: "David Weinberger has flat feet: Programming"
+subtitle: "Check this post The flatfooted learning society"
+category: "422"
+tags: ["914", "916", "917", "1683", "2080"]
+date: "2010-08-05"
+type: "wp"
 wordpress_id: 691
 ---
-
 Check this post [The flatfooted learning society](http://www.hyperorg.com/blogger/2010/08/02/the-flatfooted-learning-society/) from [Joho the Blog](http://www.hyperorg.com/blogger/feed/):
 > But, I am a flatfooted “programmer” and always will be. I have limitations that would have kept me from ever becoming a professional. I have an odd inability to handle indirect relationships, e.g., pointers; I did fine with C, but bombed at C++. I have problems with recursion, so although I once did a fair bit of hobbyist Lisp “programming” (I once wrote a beginner’s guide to Lisp as a document extension language), I can’t handle the self-reflexive capabilities that turn Lisp into a super-tool for Paul Graham. I’m terrible at math. I simply could not have become a pro. (**from: **[The flatfooted learning society](http://www.hyperorg.com/blogger/2010/08/02/the-flatfooted-learning-society/))
 

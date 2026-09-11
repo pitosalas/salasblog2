@@ -1,16 +1,12 @@
 ---
-category: '422'
-date: '2009-06-09'
-subtitle: As you know from a previous post, I’ve been working on a “domain specific
-  language” for election bal...
-tags:
-- programming
-- ruby
-title: '[GEEKY] Check out Ruby Best Practices book (not yet out ! :)'
-type: wp
+title: "[GEEKY] Check out Ruby Best Practices book (not yet out ! :)"
+subtitle: "As you know from a previous post, I’ve been working on a “domain specific language” for election bal..."
+category: "422"
+tags: []
+date: "2009-06-09"
+type: "wp"
 wordpress_id: 839
 ---
-
 As you know from a previous post, I’ve been working on a “domain specific language” for election ballot processing. In my search for information I got a pointer to a book called: [Ruby Best Practices](http://www.amazon.com/gp/product/0596523009?ie=UTF8&tag=blogbridge-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596523009)![](http://www.assoc-amazon.com/e/ir?t=blogbridge-20&l=as2&o=1&a=0596523009). It’s not out yet, but it looks like it will be excellent.
 You can [get a sample chapter (which contained lots of information relevant to my domain specific language work) here.](http://cachefly.oreilly.com/catalogs/Mastering_the_Dynamic_Toolkit.pdf)
 

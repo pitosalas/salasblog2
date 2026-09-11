@@ -1,12 +1,16 @@
 ---
-title: "Mac OSX not easy to use!"
-subtitle: "Years ago I was a hardcore Mac fanatic. I was one of the creators of a long-gone early Macintosh app..."
-category: "538"
-tags: ["technology", "personal"]
-date: "2004-07-22"
-type: "wp"
+category: '538'
+date: '2004-07-22'
+subtitle: Years ago I was a hardcore Mac fanatic. I was one of the creators of a long-gone
+  early Macintosh app...
+tags:
+- apple
+- macos
+title: Mac OSX not easy to use!
+type: wp
 wordpress_id: 1963
 ---
+
 Years ago I was a hardcore Mac fanatic. I was one of the creators of a long-gone early Macintosh application called Jazz. I programmed on a Lisa in 68000 assembly language. As I said, a long time ago 🙂
 Anyway, for years I’ve been a PC guy, but still with a warm spot in my heart for Mac. Recently we got an iBook in our family and so I had a chance to reaquaint myself with how the world had changed.
 

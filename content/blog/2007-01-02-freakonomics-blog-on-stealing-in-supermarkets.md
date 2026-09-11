@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-01-02'
-subtitle: Check out [this
-tags:
-- business
-- freakonomics
-title: Freakonomics Blog on stealing in supermarkets
-type: wp
+title: "Freakonomics Blog on stealing in supermarkets"
+subtitle: "Check out [this"
+category: "298"
+tags: []
+date: "2007-01-02"
+type: "wp"
 wordpress_id: 1367
 ---
-
 Check out [this 
  post](http://feeds.feedburner.com/~r/FreakonomicsBlog/~3/69311101/) from [Freakonomics Blog](http://www.freakonomics.com/blog):
 

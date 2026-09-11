@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2006-05-22'
-subtitle: OPML Camp was yesterday and today, so it’s over now. We had **good atten...
-tags:
-- technology
-- opml
-title: '[GEEK] OPML Camp was a lot of fun!'
-type: wp
+title: "[GEEK] OPML Camp was a lot of fun!"
+subtitle: "OPML Camp was yesterday and today, so it’s over now. We had **good atten..."
+category: "538"
+tags: []
+date: "2006-05-22"
+type: "wp"
 wordpress_id: 1540
 ---
-
 [OPML Camp](http://www.opmlcamp.com/) was yesterday and today, so it’s over now. We had **good attendance** and some really **good discussions** and interesting demos. Here are some highlights:
 
 - We talked about tools, both brand new, not yet written, and existing

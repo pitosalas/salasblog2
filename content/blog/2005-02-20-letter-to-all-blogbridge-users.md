@@ -2,9 +2,7 @@
 category: '50'
 date: '2005-02-20'
 subtitle: Dear users, ex-users, and future users of BlogBridge,
-tags:
-- technology
-- blogbridge
+tags: []
 title: Letter to all BlogBridge users
 type: wp
 wordpress_id: 1844

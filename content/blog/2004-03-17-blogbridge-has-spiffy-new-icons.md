@@ -2,10 +2,7 @@
 category: '1'
 date: '2004-03-17'
 subtitle: '**BlogBridge has spiffy new icons. **More progress the last week or so,...'
-tags:
-- technology
-- blogbridge
-- design
+tags: []
 title: BlogBridge has spiffy new icons.
 type: wp
 wordpress_id: 2045

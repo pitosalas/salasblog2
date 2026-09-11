@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2008-09-09'
-subtitle: Maybe this is one more of the futile petitions
-tags:
-- politics
-title: Sign the letter!
-type: wp
+title: "Sign the letter!"
+subtitle: "Maybe this is one more of the futile petitions"
+category: "298"
+tags: []
+date: "2008-09-09"
+type: "wp"
 wordpress_id: 977
 ---
-
 Maybe this is one [more of the futile petitions](http://www.pgpf.org/getinvolved/letter-to-candidates/) that we send around and to each other, but the goal rings true to me:
 > “It is critical that our policymakers turn their attention to our
 deteriorating financial health which, if not addressed responsibly and

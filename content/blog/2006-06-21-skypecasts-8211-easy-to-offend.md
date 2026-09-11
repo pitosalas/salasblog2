@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2006-06-21'
-subtitle: I just discovered Skypecasts. Cool new (free!) servi...
-tags:
-- technology
-- blogbridge
-- skype
-title: Skypecasts – easy to offend?
-type: wp
+title: "Skypecasts – easy to offend?"
+subtitle: "I just discovered Skypecasts. Cool new (free!) servi..."
+category: "538"
+tags: []
+date: "2006-06-21"
+type: "wp"
 wordpress_id: 1511
 ---
-
 I just discovered [Skypecasts](https://skypecasts.skype.com/skypecasts/home). Cool new (free!) service. I haven’t tried it yet but it seems like an obvious way to continue getting the word out on [BlogBridge](http://www.blogbridge.com/) and [BlogBridge:Library](http://www.blogbridge.com/archive.php?a=product/bb_library). 
 
 Funny thing happened to me though. I used the Skypecast interface to schedule my very own [Skypecast](https://skypecasts.skype.com/skypecasts/skypecast/detailed.html?id_talk=11644). I called it “[BlogBridge:Library discussion](https://skypecasts.skype.com/skypecasts/skypecast/detailed.html?id_talk=11644)“, and the description was:

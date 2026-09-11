@@ -2,8 +2,7 @@
 category: '298'
 date: '2005-06-16'
 subtitle: Ok, but, unlike Simplebits, this picture
-tags:
-- personal
+tags: []
 title: I love beer
 type: wp
 wordpress_id: 1755

@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-07-09'
-subtitle: Check this post Food for thought fr...
-tags:
-- personal
-- paul-krugman
-title: Modesty or ego?
-type: wp
+title: "Modesty or ego?"
+subtitle: "Check this post Food for thought fr..."
+category: "298"
+tags: []
+date: "2009-07-09"
+type: "wp"
 wordpress_id: 827
 ---
-
 Check this post [Food for thought](http://krugman.blogs.nytimes.com/2009/07/09/food-for-thought/) from [Paul Krugman](http://krugman.blogs.nytimes.com/feed/):
 > According to a new site called Mediaite, Mark Bittman of the Times is the 8th most influential columnist in America, ahead of Arianna Huffington. It’s also noteworthy that Glenn Greenwald of Salon is #10. On the other hand, Christopher Hitchens is #5. Why would God allow that? And the less said about #1, the better … (**from: Food for thought**) 
 

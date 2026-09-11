@@ -5,7 +5,6 @@ subtitle: I just updated this site a little to have some more up to date informa
   about my consulting busin...
 tags:
 - personal
-- business
 title: In my other life…
 type: wp
 wordpress_id: 1737

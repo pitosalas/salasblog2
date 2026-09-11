@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2008-04-27'
-subtitle: 'Well it’s not really ‘coming’ – it was here all along, just dormant. Here’s
-  the down-lo:'
-tags:
-- technology
-- boston
-- barcamp
-title: Barcamp is coming to Boston again!
-type: wp
+title: "Barcamp is coming to Boston again!"
+subtitle: "Well it’s not really ‘coming’ – it was here all along, just dormant. Here’s the down-lo:"
+category: "298"
+tags: ["689"]
+date: "2008-04-27"
+type: "wp"
 wordpress_id: 1057
 ---
-
 Well it’s not really ‘coming’ – it was here all along, just dormant. Here’s the down-lo:
 > **BarCamp Boston 3
 May 17-18, 2008

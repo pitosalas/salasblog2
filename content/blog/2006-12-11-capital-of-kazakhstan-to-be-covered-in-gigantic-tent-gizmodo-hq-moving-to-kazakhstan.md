@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-12-11'
-subtitle: Check out [this
-tags:
-- personal
-title: Capital of Kazakhstan to be Covered in Gigantic Tent; Gizmodo HQ Moving to
-  Kazakhstan
-type: wp
+title: "Capital of Kazakhstan to be Covered in Gigantic Tent; Gizmodo HQ Moving to Kazakhstan"
+subtitle: "Check out [this"
+category: "298"
+tags: []
+date: "2006-12-11"
+type: "wp"
 wordpress_id: 1388
 ---
-
 Check out [this 
  post](http://www.gizmodo.com/gadgets/gadgets/capital-of-kazakhstan-to-be-covered-in-gigantic-tent-gizmodo-hq-moving-to-kazakhstan-220883.php) from [Gizmodo](http://www.gizmodo.com):
 

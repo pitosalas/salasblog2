@@ -2,10 +2,7 @@
 category: '50'
 date: '2005-03-09'
 subtitle: There are two very brief audio-visual overviews of ‘cool’ BlogBridge features.
-tags:
-- technology
-- blogbridge
-- screencasting
+tags: []
 title: '[BlogBridge] Screencast tutorials, so far'
 type: wp
 wordpress_id: 1830

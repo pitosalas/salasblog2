@@ -4,8 +4,7 @@ date: '2004-06-28'
 subtitle: As you know I am attending the JavaOne conference. I jotted down my key
   takeaways during the keynote...
 tags:
-- technology
-- javaone
+- sun-microsystems
 title: '[JAVAONE] JavaOne Keynote'
 type: wp
 wordpress_id: 1978

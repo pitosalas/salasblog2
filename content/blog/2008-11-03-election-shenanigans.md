@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2008-11-03'
-subtitle: I am **not at all sure** what to make of this. But a friend of mine pointed
-  me to some of the follow...
-tags:
-- politics
-title: Election shenanigans?
-type: wp
+title: "Election shenanigans?"
+subtitle: "I am **not at all sure** what to make of this. But a friend of mine pointed me to some of the follow..."
+category: "298"
+tags: []
+date: "2008-11-03"
+type: "wp"
 wordpress_id: 956
 ---
-
 I am **not at all sure** what to make of this. But a friend of mine pointed me to some of the following postings and reports which are interesting, and if true, **highly disturbing**.
  
 - Attorney [Cliff Arnebeck](http://en.wikipedia.org/wiki/Cliff_Arnebeck) on how the [Ohio Election was/might have been stolen](http://www.youtube.com/watch?v=gv4kRG9ne_g)

@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2007-05-21'
-subtitle: PC Magazine’s newest issue has a retrospective of their past 25 years and
-  Lotus[ Improv gets mention...
-tags:
-- technology
-- personal
-- lotus-improv
-title: 'Shamless self-promotion: Improv and moi mentioned in PC Magazine'
-type: wp
+title: "Shamless self-promotion: Improv and moi mentioned in PC Magazine"
+subtitle: "PC Magazine’s newest issue has a retrospective of their past 25 years and Lotus[ Improv gets mention..."
+category: "298"
+tags: []
+date: "2007-05-21"
+type: "wp"
 wordpress_id: 1269
 ---
-
 PC Magazine’s newest issue has a retrospective of their past 25 years and Lotus[ Improv gets mentioned for one of the big deals of 1993](http://www.pcmag.com/article2/0,1895,2129553,00.asp). And yes, you can see a bad picture of yours truly back in those days.
 > “**Innovators: Pito Salas**
 

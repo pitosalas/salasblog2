@@ -3,10 +3,7 @@ category: '50'
 date: '2005-05-21'
 subtitle: Just a quick note of the **very nice** mention of BlogBridge by almost-famous
   Dowbrigade
-tags:
-- technology
-- blogbridge
-- dowbrigade
+tags: []
 title: Dowbrigade and Bridge BlogBridge
 type: wp
 wordpress_id: 1779

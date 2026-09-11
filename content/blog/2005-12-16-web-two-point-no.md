@@ -2,10 +2,7 @@
 category: '538'
 date: '2005-12-16'
 subtitle: Om Malik writes that “The Web 2.0 Hit By ...
-tags:
-- technology
-- web2.0
-- om-malik
+tags: []
 title: Web Two Point No?
 type: wp
 wordpress_id: 1631

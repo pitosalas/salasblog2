@@ -1,16 +1,12 @@
 ---
-category: '50'
-date: '2008-07-14'
-subtitle: Check out these 10 Commandments for Facebook Applications
-tags:
-- technology
-- facebook
-- blogbridge
-title: 10 Commandments might apply to more than just Facebook!
-type: wp
+title: "10 Commandments might apply to more than just Facebook!"
+subtitle: "Check out these 10 Commandments for Facebook Applications"
+category: "50"
+tags: []
+date: "2008-07-14"
+type: "wp"
 wordpress_id: 1011
 ---
-
 Check out these [10 Commandments for Facebook Applications](http://facereviews.com/2007/12/27/10-commandments-for-facebook-applications/). They are pretty good commandments for software in general. I especially like:
 > “Make it simple. Users DO NOT read.”, **from** [FaceReviews](http://www.facereviews.com/)
 

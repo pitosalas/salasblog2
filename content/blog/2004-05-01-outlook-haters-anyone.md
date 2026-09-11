@@ -1,12 +1,14 @@
 ---
-title: "Outlook Haters, anyone?"
-subtitle: "David Coursey writes an interesting bit"
-category: "538"
-tags: ["technology"]
-date: "2004-05-01"
-type: "wp"
+category: '538'
+date: '2004-05-01'
+subtitle: David Coursey writes an interesting bit
+tags:
+- technology
+title: Outlook Haters, anyone?
+type: wp
 wordpress_id: 2020
 ---
+
 [David Coursey writes an interesting bit ](http://blog.ziffdavis.com/coursey/archive/2004/04/28/739.aspx)about how the competitors to Microft Office (i.e. Star Office, Word Perfect, what not) need to get themselves an Outlook competitor, because that’s the only (or main) reason standing in the way of folks switching from Microsoft. A couple of points:
 
 I can’t believe that David feels that Outlook 2003 is so much better than the previous version (Outlook XP.) I am usually a Microsoft fan but in this case [there are various really bad design choices which make Outlook 2003 a constant aggrevation for me to use](/weblogs/archives/000373.html). The Spam filtering is one thing that is new and good, but not meaningful to me because I am already using a very effective spam filtering app ([Matador](http://www.mailfrontier.com/products_matador.html))

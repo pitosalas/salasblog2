@@ -4,8 +4,7 @@ date: '2004-12-23'
 subtitle: So what might GMail’s strategy be? I listened to a wonderful Podcast with
   Georges Harik
 tags:
-- technology
-- gmail
+- business
 title: 'Gmail, Part Deux: Strategy'
 type: wp
 wordpress_id: 1888

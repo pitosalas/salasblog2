@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2007-01-09'
-subtitle: A very interesting commentary on the phenomenon of blogging. Is what we
-tags:
-- personal
-title: Drama in Blog Time.
-type: wp
+title: "Drama in Blog Time."
+subtitle: "A very interesting commentary on the phenomenon of blogging. Is what we"
+category: "298"
+tags: []
+date: "2007-01-09"
+type: "wp"
 wordpress_id: 1359
 ---
-
 A very interesting commentary on the phenomenon of blogging. Is what we 
  write ‘of little consequence’? Does the fact that we post again the next 
  day say that we ourselves feel that way?

@@ -2,8 +2,7 @@
 category: '298'
 date: '2005-03-07'
 subtitle: I thought this was an interesting article
-tags:
-- personal
+tags: []
 title: This is not a religious blog
 type: wp
 wordpress_id: 1832

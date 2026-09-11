@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2010-01-05'
-subtitle: I’ve been working quite a bit on the Open Source Digital Voting foundation
-  pr...
-tags:
-- technology
-- trustthevote
-- boston
-title: The Boston node of OSDV
-type: wp
+title: "The Boston node of OSDV"
+subtitle: "I’ve been working quite a bit on the Open Source Digital Voting foundation pr..."
+category: "298"
+tags: ["729", "942", "990", "1569", "1711", "1772", "2036"]
+date: "2010-01-05"
+type: "wp"
 wordpress_id: 760
 ---
-
 I’ve been working quite a bit on the [Open Source Digital Voting foundation](http://www.osdv.org) project over the last 9 months or so. It’s really weird but I’ve turned myself into a mini-expert on how elections are organized and run here in the USA. It’s fascinating and way complicated.
 OSDV is a non-profit organization dedicated to developing a suite of election (as in Democracy) hardware and software.
 

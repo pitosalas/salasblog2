@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-09-02'
-subtitle: An interesting article from Bruce Schneier about why he believes that TSA
-  requirement of photo IDs i...
-tags:
-- politics
-- bruce-schneier
-title: TSA and photo IDs
-type: wp
+title: "TSA and photo IDs"
+subtitle: "An interesting article from Bruce Schneier about why he believes that TSA requirement of photo IDs i..."
+category: "298"
+tags: []
+date: "2008-09-02"
+type: "wp"
 wordpress_id: 982
 ---
-
 An interesting article from Bruce Schneier about why he believes that TSA requirement of photo IDs is a waste of time:
 > “The problem is that it is unverified passenger names that get checked against the no-fly list. At security checkpoints, the TSA just matches IDs to whatever is printed on the boarding passes. The airline checks boarding passes against tickets when people board the plane. But because no one checks ticketed names against IDs, the security breaks down.” (from[ Los Angeles Times](http://www.latimes.com/news/opinion/la-oe-schneier28-2008aug28,0,3099808.story))
 

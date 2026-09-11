@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-12-14'
-subtitle: 'I discovered a new funny blog: it’s the List of Lists blog. For example,
-  check out this post'
-tags:
-- personal
-- travel
-title: 32 Places With Funny Names
-type: wp
+title: "32 Places With Funny Names"
+subtitle: "I discovered a new funny blog: it’s the List of Lists blog. For example, check out this post"
+category: "298"
+tags: []
+date: "2007-12-14"
+type: "wp"
 wordpress_id: 1157
 ---
-
 I discovered a new funny blog: it’s the List of Lists blog. For example, check out [this post](http://www.alistoflists.com/places-events/32-places-with-funny-names) from [A List of Lists](http://www.alistoflists.com):
 > Arsoli (Lazio, Italy)
 Bastard (Norway)

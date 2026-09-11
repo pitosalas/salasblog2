@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2011-03-02'
-subtitle: After attending the Lean Startup Machine weekend a few d...
-tags:
-- technology
-- greplin
-title: Greplin, actually a rather cool product!
-type: wp
+title: "Greplin, actually a rather cool product!"
+subtitle: "After attending the Lean Startup Machine weekend a few d..."
+category: "298"
+tags: ["1166", "1258", "1814"]
+date: "2011-03-02"
+type: "wp"
 wordpress_id: 587
 ---
-
 After attending the [Lean Startup Machine weekend](http://boston.theleanstartupmachine.com/) a few days ago, I pay more attention to these ‘I created this startup in 3 hours’ stories. So when I saw t[his in Inc. Magazine:](http://www.inc.com/articles/2011/03/how-19-year-old-daniel-gross-is-taking-on-google-with-greplin.html)
 
 > 

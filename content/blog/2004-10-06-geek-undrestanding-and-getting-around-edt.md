@@ -5,7 +5,6 @@ subtitle: No, **not **Eastern Daylight Time, the Swing **Event Dispatch Thread**
   **Duh**. If the abbreviation...
 tags:
 - programming
-- java
 title: '[GEEK] Undrestanding and getting around EDT'
 type: wp
 wordpress_id: 1929

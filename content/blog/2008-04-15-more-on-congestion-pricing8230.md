@@ -1,14 +1,12 @@
 ---
-category: '410'
-date: '2008-04-15'
-subtitle: From a few previous posts you know that I have a curiosity about congestion
-tags:
-- technology
-title: More on congestion pricing…
-type: wp
+title: "More on congestion pricing…"
+subtitle: "From a few previous posts you know that I have a curiosity about congestion"
+category: "410"
+tags: ["856"]
+date: "2008-04-15"
+type: "wp"
 wordpress_id: 1066
 ---
-
 From a few previous posts you know that I have a [curiosity about congestion](/2008/03/26/how-gps-devices-are-being-used-to-detect-and-avoid-traffic/avoid-traffic/) pricing as a [way to allay traffic jams](http://http//www.salas.com/2008/03/22/what-does-urban-congestion-have-to-do-with-mesh-networks/), while raising [money to improve infrastructure and alternative transportation.](/2008/03/18/casinos-in-mass-please-no/)
 In a recent post in the [Freakonomics Blog](http://http//freakonomics.blogs.nytimes.com/), which I recommend, there’s an interesting Q&A on that very topic that you may want to take a look at.
 

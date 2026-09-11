@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2010-04-27'
-subtitle: Ok, probably to a mathematician these are not arcane, but to normal people
-  (oops, sorry, I love math...
-tags:
-- science
-- mathematics
-title: Two fun (to me) articles about arcane mathematical topics
-type: wp
+title: "Two fun (to me) articles about arcane mathematical topics"
+subtitle: "Ok, probably to a mathematician these are not arcane, but to normal people (oops, sorry, I love math..."
+category: "298"
+tags: ["1446", "1507"]
+date: "2010-04-27"
+type: "wp"
 wordpress_id: 725
 ---
-
 Ok, probably to a mathematician these are not arcane, but to normal people (oops, sorry, I love mathematicians) I think they might be. Anyway, read and enjoy without any further commentary:
  
 - [Needle-in-a-haystack Problems](http://freedom-to-tinker.com/blog/felten/needle-haystack-problems): “[snip…]A needle-in-a-haystack problem is a problem where the right answer is very difficult to determine in advance, but it’s easy to recognize the right answer if someone points it out to you. Faced with a big haystack, it’s hard to find the needle; but if someone tells you where the needle is, it’s easy to verify that they’re right[snip…]”

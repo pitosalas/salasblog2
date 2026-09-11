@@ -3,9 +3,7 @@ category: '50'
 date: '2005-05-19'
 subtitle: One of the cool things about BlogBridge’s (free) companion service, is that
   keeps track for you what...
-tags:
-- technology
-- blogbridge
+tags: []
 title: '[BLOGBRIDGE] BlogBridge tracks unread articles!'
 type: wp
 wordpress_id: 1780

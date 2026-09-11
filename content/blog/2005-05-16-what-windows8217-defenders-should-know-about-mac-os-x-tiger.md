@@ -5,8 +5,6 @@ subtitle: I often hear folks beat up Microsoft Windows for being a breeding grou
   for viruses, spyware, and a...
 tags:
 - technology
-- microsoft
-- mac
 title: What Windows’ defenders should know about Mac OS X Tiger
 type: wp
 wordpress_id: 1784

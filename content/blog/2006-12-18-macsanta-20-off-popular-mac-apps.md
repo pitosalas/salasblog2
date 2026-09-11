@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-12-18'
-subtitle: Check out [this
-tags:
-- technology
-- mac
-title: 'MacSanta: 20% off popular Mac Apps'
-type: wp
+title: "MacSanta: 20% off popular Mac Apps"
+subtitle: "Check out [this"
+category: "298"
+tags: []
+date: "2006-12-18"
+type: "wp"
 wordpress_id: 1379
 ---
-
 Check out [this 
  post](http://feeds.tuaw.com/~r/weblogsinc/tuaw/~3/63387163/) from [The Unofficial Apple Weblog 
  (TUAW)](http://www.tuaw.com):

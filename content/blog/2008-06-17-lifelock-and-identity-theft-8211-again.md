@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2008-06-17'
-subtitle: I am a LifeLock customer and so I follow developments in this arena pretty
-  closely. Check this post ...
-tags:
-- technology
-- lifelock
-- bruce-schneier
-title: LifeLock and Identity Theft – again
-type: wp
+title: "LifeLock and Identity Theft – again"
+subtitle: "I am a LifeLock customer and so I follow developments in this arena pretty closely. Check this post ..."
+category: "298"
+tags: []
+date: "2008-06-17"
+type: "wp"
 wordpress_id: 1029
 ---
-
 I am a LifeLock customer and so I follow developments in this arena pretty closely. Check this post [LifeLock and Identity Theft](http://www.schneier.com/blog/archives/2008/06/lifelock_and_id.html) from [Schneier on Security](http://www.schneier.com/blog/index.rdf):
 > LifeLock does a **bunch of other clever things**. They monitor the national address database, and alert you if your address changes. They look for your credit and debit card numbers on hacker and criminal websites and such, and assist you in getting a new number if they see it. They have a million-dollar service guarantee — for complicated legal reasons, they can’t call it insurance — to help you recover if your identity is ever stolen.
 

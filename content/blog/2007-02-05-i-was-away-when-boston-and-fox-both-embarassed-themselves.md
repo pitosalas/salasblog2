@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-02-05'
-subtitle: Check out [this
-tags:
-- boston
-- personal
-title: I was away when Boston and Fox both embarassed themselves
-type: wp
+title: "I was away when Boston and Fox both embarassed themselves"
+subtitle: "Check out [this"
+category: "298"
+tags: []
+date: "2007-02-05"
+type: "wp"
 wordpress_id: 1338
 ---
-
 Check out [this 
  post](http://feeds.feedburner.com/~r/Bostonist/~3/86877983/where_the_mooninite_money_is_going.php) from [Bostonist](http://www.bostonist.com/):
 

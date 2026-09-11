@@ -2,10 +2,7 @@
 category: '298'
 date: '2004-12-20'
 subtitle: The Boston Globe writes an insightful article
-tags:
-- technology
-- podcasting
-- boston-globe
+tags: []
 title: Boston Globe on PodCasting
 type: wp
 wordpress_id: 1890

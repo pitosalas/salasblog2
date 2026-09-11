@@ -2,8 +2,7 @@
 category: '298'
 date: '2005-10-02'
 subtitle: Help me with my Instant Messaging **shorthand**…
-tags:
-- personal
+tags: []
 title: A big laugh
 type: wp
 wordpress_id: 1683

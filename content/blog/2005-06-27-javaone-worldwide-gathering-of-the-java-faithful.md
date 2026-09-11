@@ -2,9 +2,7 @@
 category: '422'
 date: '2005-06-27'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/weblogs/...'
-tags:
-- technology
-- javaone
+tags: []
 title: '[JAVAONE] Worldwide gathering of the Java faithful'
 type: wp
 wordpress_id: 1746

@@ -4,9 +4,7 @@ date: '2004-03-01'
 subtitle: '**Comparing this years Demo to previous years (Demo 2004 Series – 7A) **As
   I’ve been writing these ...'
 tags:
-- technology
-- business
-- demo2004
+- demo-conference
 title: Comparing this years Demo to
 type: wp
 wordpress_id: 2061

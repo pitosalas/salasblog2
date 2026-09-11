@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-01-11'
-subtitle: I am getting more and more paranoid about this. Lately I have started to
-tags:
-- technology
-- bruce-schneier
-title: Another good article about choosing passwords
-type: wp
+title: "Another good article about choosing passwords"
+subtitle: "I am getting more and more paranoid about this. Lately I have started to"
+category: "298"
+tags: []
+date: "2007-01-11"
+type: "wp"
 wordpress_id: 1356
 ---
-
 I am getting more and more paranoid about this. Lately I have started to 
  use an application called 1Passwd (which also includes a FireFox plug in.) 
  Anyway. check out [this 

@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-12-08'
-subtitle: VRM is a concept that’s been floating around for a while. Evangelized (and
-  perhaps coined) by [Doc S...
-tags:
-- technology
-- doc-searls
-title: VRM and Iammoving.com
-type: wp
+title: "VRM and Iammoving.com"
+subtitle: "VRM is a concept that’s been floating around for a while. Evangelized (and perhaps coined) by [Doc S..."
+category: "298"
+tags: []
+date: "2008-12-08"
+type: "wp"
 wordpress_id: 930
 ---
-
 VRM is a concept that’s been floating around for a while. Evangelized (and perhaps coined) by [Doc Searls](http://blogs.law.harvard.edu/doc/), it has developed a strong following. In their words:
 > “VRM, or Vendor Relationship Management, is the reciprocal of CRM or [Customer Relationship Management](http://en.wikipedia.org/wiki/Customer_Relationship_Management). It provides customers with tools for engaging with vendors in ways that work for both parties.
 

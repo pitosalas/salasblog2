@@ -4,8 +4,7 @@ date: '2004-07-31'
 subtitle: 'Here’s a nice bit of **civic participation**: the iTunes Music Store is
   offering single click, **FRE...'
 tags:
-- music
-- itunes
+- apple
 title: iTunes Rules
 type: wp
 wordpress_id: 1959

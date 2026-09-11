@@ -2,7 +2,7 @@
 title: "Alternate Python REPL – bpython"
 subtitle: "Alternate Python REPL – bpython –"
 category: "1"
-tags: ["programming", "technology"]
+tags: ["871", "1692", "2485"]
 date: "2023-06-07"
 type: "wp"
 wordpress_id: 4511

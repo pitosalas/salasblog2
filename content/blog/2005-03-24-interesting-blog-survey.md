@@ -2,8 +2,7 @@
 category: '51'
 date: '2005-03-24'
 subtitle: Blogads has conducted a survey of peop...
-tags:
-- technology
+tags: []
 title: Interesting blog survey
 type: wp
 wordpress_id: 1820

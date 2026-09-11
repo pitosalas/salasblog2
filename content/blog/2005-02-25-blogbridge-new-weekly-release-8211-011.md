@@ -3,9 +3,7 @@ category: '50'
 date: '2005-02-25'
 subtitle: Just a quick note that we’ve updated the weekly build to 0.11. Given that
   we are wrapping things up ...
-tags:
-- technology
-- blogbridge
+tags: []
 title: '[BlogBridge] New Weekly Release – 0.11'
 type: wp
 wordpress_id: 1841

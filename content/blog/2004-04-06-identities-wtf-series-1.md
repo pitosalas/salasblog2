@@ -3,9 +3,7 @@ category: '1'
 date: '2004-04-06'
 subtitle: Some say that it’s very important that they be able to use one identity
   while doing one thing, and a...
-tags:
-- technology
-- wtf-conference
+tags: []
 title: Identities (WTF Series, 1)
 type: wp
 wordpress_id: 2037

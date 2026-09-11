@@ -2,9 +2,7 @@
 category: '298'
 date: '2005-05-05'
 subtitle: '![Picture 1-1'
-tags:
-- technology
-- linkedin
+tags: []
 title: 'LinkedIn: Highly connected?'
 type: wp
 wordpress_id: 1793

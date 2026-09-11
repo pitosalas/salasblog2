@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2009-10-30'
-subtitle: I can’t vouch for the accuracy, but it is fun to see a [major league cat-fight
-  errupting between aca...
-tags:
-- science
-- freakonomics
-- steve-levitt
-title: Oh Snap! Detailed take down of Steve Levitt of SuperFreakonimics
-type: wp
+title: "Oh Snap! Detailed take down of Steve Levitt of SuperFreakonimics"
+subtitle: "I can’t vouch for the accuracy, but it is fun to see a [major league cat-fight errupting between aca..."
+category: "298"
+tags: []
+date: "2009-10-30"
+type: "wp"
 wordpress_id: 784
 ---
-
 I can’t vouch for the accuracy, but it is fun to see a [major league cat-fight errupting between academics](http://www.realclimate.org/index.php/archives/2009/10/an-open-letter-to-steve-levitt/). Here’s the conclusion:
 > 
 

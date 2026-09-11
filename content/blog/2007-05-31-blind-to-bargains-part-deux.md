@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2007-05-31'
-subtitle: I follow Chris Pirillo’s blog and other writings religiously. Two recen...
-tags:
-- technology
-- chris-pirillo
-title: Blind to Bargains, part deux
-type: wp
+title: "Blind to Bargains, part deux"
+subtitle: "I follow Chris Pirillo’s blog and other writings religiously. Two recen..."
+category: "538"
+tags: []
+date: "2007-05-31"
+type: "wp"
 wordpress_id: 1263
 ---
-
 I follow [Chris Pirillo’s blog](http://chris.pirillo.com/) and other writings religiously. Two recent, contrasting posts really caught my eye because I think they reflect the popular bias against software. That is, people are glad to pay a lot for hardware gadgets at the same time as they feel really unhappy about paying even a pittance for software. 
 Today, in [“I Purchased an Optimus Maximums keyboard”, Chris says:](http://chris.pirillo.com/2007/05/31/i-purchased-an-optimus-maximus-keyboard/)
 

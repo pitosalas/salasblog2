@@ -4,9 +4,7 @@ date: '2005-09-15'
 subtitle: 'This is pretty cool: a framework to easily manage the demonstration of
   UI elements, inspired by JUni...'
 tags:
-- technology
 - programming
-- java
 title: '[GEEK] JDemo: Java Demonstration Framework'
 type: wp
 wordpress_id: 1696

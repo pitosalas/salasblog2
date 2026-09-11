@@ -4,7 +4,7 @@ date: '2005-09-15'
 subtitle: Ever notice in restaurant menus how the dish descriptions are made to sound
   fancier and fancier by a...
 tags:
-- personal
+- programming
 title: Making it  sound better
 type: wp
 wordpress_id: 1695

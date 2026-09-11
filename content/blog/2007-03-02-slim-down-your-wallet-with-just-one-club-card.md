@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2007-03-02'
-subtitle: This looks kind of neat – check out this post
-tags:
-- technology
-title: Slim down your wallet with Just One Club Card
-type: wp
+title: "Slim down your wallet with Just One Club Card"
+subtitle: "This looks kind of neat – check out this post"
+category: "298"
+tags: []
+date: "2007-03-02"
+type: "wp"
 wordpress_id: 1317
 ---
-
 This looks kind of neat – check out [this post](http://lifehacker.com/software/wallet/slim-down-your-wallet-with-just-one-club-card-240816.php) from [Lifehacker](http://www.lifehacker.com): 
 > 
  Web site Just One Club Card lets you condense up to 8 different discount club cards onto one front-and-back card, meaning your back-breaking wallet is about to go on a big diet. 

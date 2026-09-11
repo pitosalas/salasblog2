@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2008-03-11'
-subtitle: Check out this post from [Planet RubyOnR...
-tags:
-- technology
-- apple
-- iphone
-title: 30% to Apple for folks selling iPhone apps??
-type: wp
+title: "30% to Apple for folks selling iPhone apps??"
+subtitle: "Check out this post from [Planet RubyOnR..."
+category: "538"
+tags: []
+date: "2008-03-11"
+type: "wp"
 wordpress_id: 1090
 ---
-
 Check out [this post](http://feeds.feedburner.com/%7Er/jutopia/%7E3/247128668/) from [Planet RubyOnRails](http://www.planetrubyonrails.org/):
 > I doubt few of my readers have missed that Apple just released the iPhone SDK. How many read through the fine print? Bottom line is: If you want to sell apps for the iPhone you gotta give Apple 30%. Thirty percent!? Why?! Apple is making ridiculous money off selling the iPhone. The more apps the iPhone gets, the […]
 

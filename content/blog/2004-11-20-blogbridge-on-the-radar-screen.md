@@ -2,9 +2,7 @@
 category: '50'
 date: '2004-11-20'
 subtitle: 'This is pretty cool: BlogBridge was picked up by Sun’s monthly ‘Swing Sightings’'
-tags:
-- technology
-- blogbridge
+tags: []
 title: BlogBridge on the radar screen?
 type: wp
 wordpress_id: 1911

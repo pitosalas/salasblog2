@@ -3,9 +3,7 @@ category: '298'
 date: '2005-04-20'
 subtitle: I have to admit to being **fascinated** with the Vatican, and the **ancient**,
   elaborate **tradition...
-tags:
-- technology
-- bruce-schneier
+tags: []
 title: Hacking the papal election
 type: wp
 wordpress_id: 1800

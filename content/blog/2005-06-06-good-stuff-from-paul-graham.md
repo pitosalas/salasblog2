@@ -4,8 +4,7 @@ date: '2005-06-06'
 subtitle: If you work with software developers you’ll **appreciate** these two pieces
   by **Paul Graham**, auth...
 tags:
-- technology
-- paul-graham
+- business
 title: Good stuff from Paul Graham
 type: wp
 wordpress_id: 1763

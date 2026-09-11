@@ -5,8 +5,6 @@ subtitle: So as not to leave you hanging, I just want to report that we are back
   had a great time in Spain...
 tags:
 - travel
-- personal
-- spain
 title: Back from spain
 type: wp
 wordpress_id: 2025

@@ -3,8 +3,7 @@ category: '1'
 date: '2004-03-08'
 subtitle: '**Flipstart from Vulcan (Demo 2004 Series – 9): **This is a **weird l...'
 tags:
-- technology
-- demo2004
+- demo-conference
 title: Flipstart from Vulcan (Demo 2004
 type: wp
 wordpress_id: 2052

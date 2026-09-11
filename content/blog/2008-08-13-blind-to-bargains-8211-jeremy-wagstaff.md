@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2008-08-13'
-subtitle: Here is a full article written by Jeremy Wagstaff…
-tags:
-- technology
-- business
-title: Blind to Bargains – Jeremy Wagstaff
-type: wp
+title: "Blind to Bargains – Jeremy Wagstaff"
+subtitle: "Here is a full article written by Jeremy Wagstaff…"
+category: "538"
+tags: []
+date: "2008-08-13"
+type: "wp"
 wordpress_id: 996
 ---
-
 Here is a full article written by Jeremy Wagstaff…
 > Blind to Bargains
 If We Won’t Pay for Software,

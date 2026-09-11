@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2010-09-23'
-subtitle: This never happened…
-tags:
-- personal
-title: 'This never happened: Russian Spy'
-type: wp
+title: "This never happened: Russian Spy"
+subtitle: "This never happened…"
+category: "298"
+tags: []
+date: "2010-09-23"
+type: "wp"
 wordpress_id: 665
 ---
-
 This never happened…
 We were working on some piece of software or something and the Russians invaded our workplace and demanded that we create it for them. We were threatened in big ways. We had a kind of a robot thing small which had a video camera and it was left in the Big room while we were put into a Small room. They demanded that we concede but we would not. 
 

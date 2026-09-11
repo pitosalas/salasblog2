@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-11-10'
-subtitle: Scott Kirsner of the Innovation Economy blog, as well of the [Boston Globe...
-tags:
-- technology
-- boston
-- boston-globe
-title: Boston tech scene could be more inviting to students
-type: wp
+title: "Boston tech scene could be more inviting to students"
+subtitle: "Scott Kirsner of the Innovation Economy blog, as well of the [Boston Globe..."
+category: "298"
+tags: []
+date: "2008-11-10"
+type: "wp"
 wordpress_id: 953
 ---
-
 Scott Kirsner of the [Innovation Economy](http://www.innoeco.com) blog, as well of the [Boston Globe](http://www.boston.com/business/technology/kirsner/) says that:
 > “To me, the **biggest** way to make Boston more competitive and innovative **right now** is to do a better job connecting students with our innovation economy. Which is why it **pains me** that our trade associations and networking groups make it **so hard** for students to get involved.” (**from** [Innovation Economy](http://www.innoeco.com/2008/11/bostons-biggest-trade-associations.html))
 

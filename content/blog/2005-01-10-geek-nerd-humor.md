@@ -2,9 +2,7 @@
 category: '422'
 date: '2005-01-10'
 subtitle: Amusing. Do you recognize yours...
-tags:
-- programming
-- personal
+tags: []
 title: '[GEEK] Nerd Humor'
 type: wp
 wordpress_id: 1873

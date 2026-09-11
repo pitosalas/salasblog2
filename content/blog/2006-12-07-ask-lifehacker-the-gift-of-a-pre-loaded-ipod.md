@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-12-07'
-subtitle: Check out [this
-tags:
-- technology
-- ipod
-title: 'Ask Lifehacker: The gift of a pre-loaded iPod'
-type: wp
+title: "Ask Lifehacker: The gift of a pre-loaded iPod"
+subtitle: "Check out [this"
+category: "298"
+tags: []
+date: "2006-12-07"
+type: "wp"
 wordpress_id: 1393
 ---
-
 Check out [this 
 post](http://www.lifehacker.com/software/ipod/ask-lifehacker-the-gift-of-a-preloaded-ipod-220169.php) from [Lifehacker](http://www.lifehacker.com):
 

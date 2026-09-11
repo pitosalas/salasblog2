@@ -5,8 +5,6 @@ subtitle: Java Web Start is a piece of Java platform that’s meant to ease the 
   and updating of Java ...
 tags:
 - programming
-- javaone
-- java-web-start
 title: '[GEEK/JAVAONE] Java Web Start – still falling short'
 type: wp
 wordpress_id: 1974

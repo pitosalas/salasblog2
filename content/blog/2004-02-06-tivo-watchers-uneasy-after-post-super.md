@@ -2,9 +2,7 @@
 category: '1'
 date: '2004-02-06'
 subtitle: '**TiVo watchers uneasy after post-Super Bowl reports:** CNET News.com'
-tags:
-- technology
-- tivo
+tags: []
 title: TiVo watchers uneasy after post-Super
 type: wp
 wordpress_id: 2079

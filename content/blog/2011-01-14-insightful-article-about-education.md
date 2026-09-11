@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2011-01-14'
-subtitle: 'An insightful article about higher education in the USA: The Disadvantages
-  of an Elite Education'
-tags:
-- education
-title: Insightful article about education
-type: wp
+title: "Insightful article about education"
+subtitle: "An insightful article about higher education in the USA: The Disadvantages of an Elite Education"
+category: "298"
+tags: ["987", "1156", "1277"]
+date: "2011-01-14"
+type: "wp"
 wordpress_id: 611
 ---
-
 An insightful article about higher education in the USA: [The Disadvantages of an Elite Education](http://www.theamericanscholar.org/the-disadvantages-of-an-elite-education/print/). Here are some interesting quotes. It’s a long article and all of it was quite interesting.
 
 > 

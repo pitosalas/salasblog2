@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-12-11'
-subtitle: Chris Herot tells the story of Convoq
-tags:
-- technology
-- business
-title: “Iterate in the marketplace, not in the conference room”
-type: wp
+title: "“Iterate in the marketplace, not in the conference room”"
+subtitle: "Chris Herot tells the story of Convoq"
+category: "298"
+tags: []
+date: "2007-12-11"
+type: "wp"
 wordpress_id: 1160
 ---
-
 Chris Herot tells the [story of Convoq](http://herot.typepad.com/cherot/2007/12/convoq-and-zing.html) (which then became Zingdom) from the very beginning to the very end. An interesting chronology, worth reading if you’re thinking of (or are currently) playing the startup game.
 > “The company formerly known as Convoq, and later as Zingdom Communications, closed its doors Friday, November 30th. It was the end of a five-year run that saw three rounds of capital and a comparable number of CEOs and product strategies.
 

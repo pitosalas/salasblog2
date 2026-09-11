@@ -4,8 +4,7 @@ date: '2004-01-31'
 subtitle: '**Sun still doesn’t get it! **Ouch this hurts. The UI below is what the
   vaunted Sun provides to Wind...'
 tags:
-- programming
-- java
+- sun-microsystems
 title: Sun still doesn’t get it!
 type: wp
 wordpress_id: 2085

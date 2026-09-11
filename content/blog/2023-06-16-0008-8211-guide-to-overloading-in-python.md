@@ -2,7 +2,7 @@
 title: "0008 – Guide to overloading in Python"
 subtitle: "0008 – Guide to overloading in Python"
 category: "1"
-tags: ["programming", "technology"]
+tags: ["1033", "2176", "1352", "2499", "1692"]
 date: "2023-06-16"
 type: "wp"
 wordpress_id: 4531

@@ -4,9 +4,7 @@ date: '2004-12-19'
 subtitle: If you read this blog at all, you know that I’ve been working on a piece
   of software (BlogBridge
 tags:
-- technology
-- blogbridge
-- boston-globe
+- business
 title: Coding as Writing
 type: wp
 wordpress_id: 1891

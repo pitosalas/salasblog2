@@ -5,7 +5,6 @@ subtitle: For some reason, it is not possible to get at the Socket object that t
   URL object uses for its net...
 tags:
 - programming
-- java
 title: '[GEEK] Getting URL objects to time out'
 type: wp
 wordpress_id: 1984

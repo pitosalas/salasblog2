@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-02-09'
-subtitle: A very interesting article about [volunteering, and applying the wikipedia
-  philosophy to volunteerin...
-tags:
-- personal
-title: Micro volunteering
-type: wp
+title: "Micro volunteering"
+subtitle: "A very interesting article about [volunteering, and applying the wikipedia philosophy to volunteerin..."
+category: "298"
+tags: []
+date: "2009-02-09"
+type: "wp"
 wordpress_id: 891
 ---
-
 A very interesting article about [volunteering, and applying the wikipedia philosophy to volunteering](http://www.techpresident.com/blog/entry/33677/information_age_volunteerism_open_sourced_crowdsourced). Here he sets the scene:
 > “People have a **problem with volunteerism**: Now this statement is **provocative**. It’s not said in polite company. We like to think that we’re too busy to volunteer, but it’s not true. We don’t volunteer because we don’t want to. Why? Either because we don’t care enough about giving back to our communities or **today’s volunteer opportunities aren’t suited to our lifestyles**. Being an optimist, I’m opting for the latter. And so, a corollary is required:
 

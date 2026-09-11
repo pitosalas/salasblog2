@@ -5,7 +5,6 @@ subtitle: I’ve been a quasi-believer about RD-ID technology for a while now. I
   more than several people w...
 tags:
 - technology
-- rfid
 title: RF-ID uptake slower than expected?
 type: wp
 wordpress_id: 2039

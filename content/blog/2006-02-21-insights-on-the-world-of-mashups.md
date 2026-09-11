@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2006-02-21'
-subtitle: Adam Green has two very insightful posts about Mashups inspired at [Mashu...
-tags:
-- technology
-- mashupcamp
-title: Insights on the world of mashups
-type: wp
+title: "Insights on the world of mashups"
+subtitle: "Adam Green has two very insightful posts about Mashups inspired at [Mashu..."
+category: "538"
+tags: []
+date: "2006-02-21"
+type: "wp"
 wordpress_id: 1588
 ---
-
 [Adam Green](//www.darwinianweb.com/) has two very insightful posts about Mashups inspired at [Mashup Camp](http://www.mashupcamp.com/):
 
 > All of this is very cool. At least that is what one side of my brain says. The other side is saying “How the hell is the average person going to understand any of this?” I even doubt if the average blogger is going to be able to follow all of this data flying around the Internet. (from “[Cognitive dissonance at Mashup Camp](http://mashup.darwinianweb.com/archive/2006/25.html)“)

@@ -1,14 +1,12 @@
 ---
-category: '50'
-date: '2006-03-06'
-subtitle: glenn has been busy today. A series of very intriguing pos...
-tags:
-- technology
-title: RSS is not a goal…
-type: wp
+title: "RSS is not a goal…"
+subtitle: "glenn has been busy today. A series of very intriguing pos..."
+category: "50"
+tags: []
+date: "2006-03-06"
+type: "wp"
 wordpress_id: 1583
 ---
-
 [glenn](http://www.furia.com/page.cgi?type=log) has been busy today. A series of very intriguing posts, all made today, a Sunday no less. I can remember when glenn insisted on keeping his Sunday’s clear of anything non-recreational. You should check out his [blog](http://www.furia.com/page.cgi?type=log), there’s lots of good stuff there.
 
 This one caught my eye – “[RSS is not a goal](http://www.furia.com/page.cgi?type=log&id=205)” wherein I encountered this especially meaningful (to me) paragraph:

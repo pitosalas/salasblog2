@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2008-11-13'
-subtitle: Michael Lewis writes a [great article in Portfolio online about the, let’s
-  say, inevitability, of wh...
-tags:
-- business
-- books
-- michael-lewis
-title: It’s even worse than you think
-type: wp
+title: "It’s even worse than you think"
+subtitle: "Michael Lewis writes a [great article in Portfolio online about the, let’s say, inevitability, of wh..."
+category: "298"
+tags: ["980"]
+date: "2008-11-13"
+type: "wp"
 wordpress_id: 950
 ---
-
 Michael Lewis writes a [great article in Portfolio online about the, let’s say, inevitability, of what’s happened to economy, or wall street, or the markets](http://www.portfolio.com/news-markets/national-news/portfolio/2008/11/11/The-End-of-Wall-Streets-Boom) — take your pick. You can file this under “if you’re so smart why aren’t you rich”, or, my personal favorite, “it seemed like a good idea at the time.”
 Michael Lewis is the author of two of my favorite non-fiction books, [Moneyball](http://www.amazon.com/Moneyball-Art-Winning-Unfair-Game/dp/0393057658) and [Liars Poker](http://www.amazon.com/Liars-Poker-Rising-Through-Wreckage/dp/0140143459/ref=sr_1_1?ie=UTF8&s=books&qid=1226603367&sr=1-1). Moneyball is about the use of modern statistical and quantitative methods in managing baseball, and Liars Poker about his experiences on Wall Street at 24. This is from the [Portfolio article:](http://www.portfolio.com/news-markets/national-news/portfolio/2008/11/11/The-End-of-Wall-Streets-Boom)
 

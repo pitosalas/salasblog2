@@ -1,12 +1,14 @@
 ---
-title: "[GEEK] Bootclasspath"
-subtitle: "In order to debug a hairy problem, I need to step into some Java system"
-category: "422"
-tags: ["programming", "technology"]
-date: "2004-05-08"
-type: "wp"
+category: '422'
+date: '2004-05-08'
+subtitle: In order to debug a hairy problem, I need to step into some Java system
+tags:
+- programming
+title: '[GEEK] Bootclasspath'
+type: wp
 wordpress_id: 2013
 ---
+
 In order to debug a hairy problem, I need to step into some Java system
 classes (hashmap.java) HashMap.class is to be found in rt.jar, part of the
 standard Java distribution (1.4.2_04) but it does NOT have debug info

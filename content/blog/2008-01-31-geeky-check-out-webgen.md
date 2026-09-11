@@ -1,17 +1,12 @@
 ---
-category: '538'
-date: '2008-01-31'
-subtitle: Sites that have to support a huge amount of traffic tend to want to be static
-  html. No matter how fa...
-tags:
-- technology
-- programming
-- ruby
-title: '[GEEKY] Check out WebGen'
-type: wp
+title: "[GEEKY] Check out WebGen"
+subtitle: "Sites that have to support a huge amount of traffic tend to want to be static html. No matter how fa..."
+category: "538"
+tags: []
+date: "2008-01-31"
+type: "wp"
 wordpress_id: 1122
 ---
-
 Sites that have to support a huge amount of traffic tend to want to be static html. No matter how fast PHP or perl is, in the end, static pages win. So tools pop up to allow you to generate a templated site, but generate it into static html to kind of have your cake and eat it too.
 [Webgen](http://webgen.rubyforge.org/index.html) is one of those static web site generators. Here’s what it does:
 

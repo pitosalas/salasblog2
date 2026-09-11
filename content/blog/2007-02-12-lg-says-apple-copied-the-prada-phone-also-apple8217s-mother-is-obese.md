@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-02-12'
-subtitle: Actually the funniest part of this was the headline… **“Also, Apple’s Mother
-  is Obese”**
-tags:
-- technology
-- apple
-title: LG Says Apple Copied the Prada Phone. Also, Apple’s Mother is Obese
-type: wp
+title: "LG Says Apple Copied the Prada Phone. Also, Apple’s Mother is Obese"
+subtitle: "Actually the funniest part of this was the headline… **“Also, Apple’s Mother is Obese”**"
+category: "298"
+tags: []
+date: "2007-02-12"
+type: "wp"
 wordpress_id: 1333
 ---
-
 Actually the funniest part of this was the headline… **“Also, Apple’s Mother is Obese”**
 
 Check out [this post](http://gizmodo.com/gadgets/cellphones/lg-says-apple-copied-the-prada-phone-also-apples-mother-is-obese-235933.php) from [Gizmodo](http://www.gizmodo.com):

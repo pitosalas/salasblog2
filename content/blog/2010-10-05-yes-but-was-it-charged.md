@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-10-05'
-subtitle: Check out Actor Tony Curtis Was Buried With His iPhone
-tags:
-- technology
-- tony-curtis
-title: Yes but was it charged?
-type: wp
+title: "Yes but was it charged?"
+subtitle: "Check out Actor Tony Curtis Was Buried With His iPhone"
+category: "298"
+tags: []
+date: "2010-10-05"
+type: "wp"
 wordpress_id: 655
 ---
-
 Check out [Actor Tony Curtis Was Buried With His iPhone](http://www.iphonedownloadblog.com/2010/10/04/actor-tony-curtis-was-buried-with-his-iphone/)(**from** [iPhone Download Blog](http://www.iphonedownloadblog.com/feed/):
 > "
 

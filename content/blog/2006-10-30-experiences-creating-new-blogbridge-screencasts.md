@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2006-10-30'
-subtitle: Over on our new BlogBridge site, we’ve been working on a new set of Screencasts.
-  We discovered vario...
-tags:
-- technology
-- blogbridge
-title: Experiences creating new BlogBridge screencasts
-type: wp
+title: "Experiences creating new BlogBridge screencasts"
+subtitle: "Over on our new BlogBridge site, we’ve been working on a new set of Screencasts. We discovered vario..."
+category: "538"
+tags: []
+date: "2006-10-30"
+type: "wp"
 wordpress_id: 1409
 ---
-
 Over on our new BlogBridge site, we’ve been working on a new set of Screencasts. We discovered various problems with what we had done before and thought, let’s try to make things better (as they say at Philips.)
 
 I thought I’d share my stream of consciousness notes from that experience.

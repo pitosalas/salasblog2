@@ -1,12 +1,15 @@
 ---
-title: "Search Innovations (Demo 2004 Series"
-subtitle: "**Search Innovations (Demo 2004 Series – 2) – **Two interesting Seach products were showcased: [Grok..."
-category: "1"
-tags: ["technology"]
-date: "2004-02-25"
-type: "wp"
+category: '1'
+date: '2004-02-25'
+subtitle: '**Search Innovations (Demo 2004 Series – 2) – **Two interesting Seach products
+  were showcased: [Grok...'
+tags:
+- demo-conference
+title: Search Innovations (Demo 2004 Series
+type: wp
 wordpress_id: 2071
 ---
+
 **Search Innovations (Demo 2004 Series – 2) – **Two interesting Seach products were showcased: [Grokker 2 from Groxis](http://www.groxis.com/service/grok/index.html) and [p-Zoom from Big On The Net](http://www.bigonthenet.com/news/press20040216.htm). They were both **variations** of a **similar** idea, with very different **visual** interfaces. 
 
 The **core** idea is to take the **results of a search** engine of some kind, and **cluster and organize** them to make them more understandable. Not a new idea, and in fact, there have been several products who have done this, none of which I can remember right off. Both Grokker and p-Zoom **seem to work but in my view they don’t do enough** in an effective enough way to be worth recommending. 

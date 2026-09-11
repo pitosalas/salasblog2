@@ -1,15 +1,12 @@
 ---
-category: '51'
-date: '2007-01-19'
-subtitle: Some people have such juice (i.e traffic) to their blog that they when
-tags:
-- technology
-- robert-scoble
-title: Link softly, but carry a big stick :)
-type: wp
+title: "Link softly, but carry a big stick :)"
+subtitle: "Some people have such juice (i.e traffic) to their blog that they when"
+category: "51"
+tags: []
+date: "2007-01-19"
+type: "wp"
 wordpress_id: 1347
 ---
-
 Some people have such juice (i.e traffic) to their blog that they when 
  they sneeze, the blogsphere gets a cold. In [this 
  post](http://scobleizer.com/2007/01/18/the-link-blog-effect/) from [Scobleizer – Tech Geek 

@@ -3,9 +3,7 @@ category: '538'
 date: '2004-10-15'
 subtitle: Here I go again, picking a out quote from a blogger who I really like ...
 tags:
-- technology
-- microsoft
-- robert-scoble
+- eroom
 title: Am I cranky today?
 type: wp
 wordpress_id: 1924

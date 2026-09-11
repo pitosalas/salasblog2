@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-02-23'
-subtitle: Following on on my post yesterday about “What we don’t understand.”
-tags:
-- technology
-- personal
-title: Everything is getting more complicated not simpler
-type: wp
+title: "Everything is getting more complicated not simpler"
+subtitle: "Following on on my post yesterday about “What we don’t understand.”"
+category: "298"
+tags: []
+date: "2010-02-23"
+type: "wp"
 wordpress_id: 737
 ---
-
 Following on on my post yesterday about “What we don’t understand.”
 As I was writing it, I was trying to use examples of simple things that just work without handholding, like an old dial telephone. Oh there’s an example. But did you notice how all the old examples are slowly falling away because they are also becoming too complex?
 

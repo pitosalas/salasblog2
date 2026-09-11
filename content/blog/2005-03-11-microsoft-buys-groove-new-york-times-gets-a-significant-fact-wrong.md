@@ -3,9 +3,7 @@ category: '538'
 date: '2005-03-11'
 subtitle: 'Scoble (and everyone else) comments:'
 tags:
-- business
-- microsoft
-- groove
+- technology
 title: 'Microsoft buys Groove: New York Times gets a significant fact wrong?'
 type: wp
 wordpress_id: 1829

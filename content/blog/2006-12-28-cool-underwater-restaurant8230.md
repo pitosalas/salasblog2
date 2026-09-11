@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2006-12-28'
-subtitle: Check out [this
-tags:
-- travel
-title: Cool underwater restaurant…
-type: wp
+title: "Cool underwater restaurant…"
+subtitle: "Check out [this"
+category: "298"
+tags: []
+date: "2006-12-28"
+type: "wp"
 wordpress_id: 1373
 ---
-
 Check out [this 
  post](http://crave.cnet.com/8301-1_105-9670397-1.html?part=rss&tag=feed&subj=Crave) from [Crave 
  RSS ](http://crave.cnet.com/?part=rss&tag=feed&subj=Crave):

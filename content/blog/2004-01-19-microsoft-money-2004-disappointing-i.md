@@ -5,7 +5,6 @@ subtitle: '**Microsoft Money 2004. Disappointing. **I started preparing my taxes
   so I thought I might upgra...'
 tags:
 - technology
-- microsoft
 title: Microsoft Money 2004. Disappointing. I
 type: wp
 wordpress_id: 2092

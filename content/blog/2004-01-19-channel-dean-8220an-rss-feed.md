@@ -4,7 +4,6 @@ date: '2004-01-19'
 subtitle: '**Channel Dean: “An RSS ****feed**'
 tags:
 - politics
-- rss
 title: 'Channel Dean: “An RSS feed'
 type: wp
 wordpress_id: 2091

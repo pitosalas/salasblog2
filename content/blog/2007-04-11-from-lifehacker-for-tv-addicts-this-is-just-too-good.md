@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-04-11'
-subtitle: Check out this post
-tags:
-- technology
-- mac
-title: From Lifehacker, for TV Addicts, this is just too good.
-type: wp
+title: "From Lifehacker, for TV Addicts, this is just too good."
+subtitle: "Check out this post"
+category: "298"
+tags: []
+date: "2007-04-11"
+type: "wp"
 wordpress_id: 1287
 ---
-
 Check out [this post](http://lifehacker.com/software/bittorrent/download-of-the-day-tvshows-mac-251442.php) from [Lifehacker](http://www.lifehacker.com): 
 > TVShows offers a Mac-only take on the previously mentioned, cross platform TED (Torrent Episode Downloader), but with a somewhat improved and simplified interface. If you want to turn your computer into your own little cable box, TVShows looks like a simple way that anyone could manage.
 

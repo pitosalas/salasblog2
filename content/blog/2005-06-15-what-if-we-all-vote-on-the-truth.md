@@ -3,7 +3,6 @@ category: '298'
 date: '2005-06-15'
 subtitle: 'A couple of interesting related articles on facts and non-facts:'
 tags:
-- technology
 - wikipedia
 title: What if we all vote on the truth?
 type: wp

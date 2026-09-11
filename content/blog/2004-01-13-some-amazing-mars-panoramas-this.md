@@ -4,7 +4,6 @@ date: '2004-01-13'
 subtitle: '**Some amazing (Mars) panoramas. **This is via [...'
 tags:
 - science
-- mars
 title: Some amazing (Mars) panoramas. This
 type: wp
 wordpress_id: 2097

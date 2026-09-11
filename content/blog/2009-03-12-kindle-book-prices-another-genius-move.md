@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-03-12'
-subtitle: Take a book that I was interested in, “The Lords of Finance”, by Liaquat
-  Ahamed
-tags:
-- technology
-- kindle
-title: 'Kindle book prices: another genius move'
-type: wp
+title: "Kindle book prices: another genius move"
+subtitle: "Take a book that I was interested in, “The Lords of Finance”, by Liaquat Ahamed"
+category: "298"
+tags: ["622", "724", "975", "1065", "1125", "1298", "1342", "1891", "1892"]
+date: "2009-03-12"
+type: "wp"
 wordpress_id: 872
 ---
-
 Take a book that I was interested in, [“The Lords of Finance”, by Liaquat Ahamed](http://www.amazon.com/Lords-Finance-Bankers-Broke-World/dp/159420182X/ref=sr_oe_1_1?ie=UTF8&s=digital-text&qid=1236871289&sr=1-1). This is a brand new book, very timely that I heard mentioned on TV.
 Prices:
 

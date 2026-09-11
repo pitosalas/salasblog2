@@ -5,7 +5,6 @@ subtitle: If I did things correctly, you should not have noticed too much differ
   But today, with the help ...
 tags:
 - technology
-- movable-type
 title: Welcome to Movable Type
 type: wp
 wordpress_id: 2033

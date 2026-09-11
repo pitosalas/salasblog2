@@ -2,7 +2,10 @@
 category: coding
 date: '2026-04-30'
 image_size: small
-tags: ["programming", "robotics", "technology"]
+tags:
+- Dockerfile
+- codex
+- robot
 title: Using Codex to create a Dockerfile from a running system
 type: blog
 ---

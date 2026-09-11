@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2008-05-01'
-subtitle: Bill Ives of the Portals and KM Blog writes an interesting two-part ...
-tags:
-- business
-- web2.0
-title: On the business impact of Web 2.0
-type: wp
+title: "On the business impact of Web 2.0"
+subtitle: "Bill Ives of the Portals and KM Blog writes an interesting two-part ..."
+category: "298"
+tags: ["757"]
+date: "2008-05-01"
+type: "wp"
 wordpress_id: 1055
 ---
-
 [Bill Ives of the Portals and KM Blog](http://billives.typepad.com/) writes an interesting two-part article on the business impact of Web 2.0:
 > “Now with Web 2.0 the open architecture, the refinement of web services, and the ability to put together applications through mashups makes the basic development costs much lower and time to market much quicker. More effort can be placed on making the tools actually serve business and consumer needs. Startups now can also benefit from looking back at the mistakes and successes of the first generation.” from [Portals and KM: The Business Impact of Web 2.0: Part One](http://billives.typepad.com/portals_and_km/2007/07/business-impact.html).
 

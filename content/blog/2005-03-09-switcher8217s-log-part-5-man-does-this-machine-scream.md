@@ -1,12 +1,15 @@
 ---
-title: "Switcher’s Log, Part 5: Man does this machine scream."
-subtitle: "For those who are following this narrative, this is a continuing narrative of my experiences after h..."
-category: "538"
-tags: ["technology", "personal"]
-date: "2005-03-09"
-type: "wp"
+category: '538'
+date: '2005-03-09'
+subtitle: For those who are following this narrative, this is a continuing narrative
+  of my experiences after h...
+tags:
+- macos
+title: 'Switcher’s Log, Part 5: Man does this machine scream.'
+type: wp
 wordpress_id: 1831
 ---
+
 For those who are following this narrative, this is a continuing narrative of my experiences after having **switched** from Windows XP to Mac OS X.
 One of my big concerns before switching to Mac was that it was going to be **sloooooow**. Of course this is an unfair comparison, between:
 

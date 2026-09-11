@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-04-30'
-subtitle: Lately, for some crazy reason, I’ve found myself, multiple times, in Toronto,
-  Canada, and Willemstad...
-tags:
-- travel
-- curacao
-title: Using a cell phone while out of the USA
-type: wp
+title: "Using a cell phone while out of the USA"
+subtitle: "Lately, for some crazy reason, I’ve found myself, multiple times, in Toronto, Canada, and Willemstad..."
+category: "298"
+tags: []
+date: "2007-04-30"
+type: "wp"
 wordpress_id: 1277
 ---
-
 Lately, for some crazy reason, I’ve found myself, multiple times, in Toronto, Canada, and Willemstad Curaçao. My Sprint phone doesn’t work in either place. As luck would have it, my Sprint contract is about to expire and so I am trying to figure out whether I should change carriers.
 If you are in the same boat, here are some very handy links that I came across:
 

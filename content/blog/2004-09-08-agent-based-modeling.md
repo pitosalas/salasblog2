@@ -1,12 +1,15 @@
 ---
-title: "Agent Based Modeling"
-subtitle: "And now for something completely different. I was reading this book: “It’s Alive"
-category: "538"
-tags: ["science", "technology"]
-date: "2004-09-08"
-type: "wp"
+category: '538'
+date: '2004-09-08'
+subtitle: 'And now for something completely different. I was reading this book: “It’s
+  Alive'
+tags:
+- science
+title: Agent Based Modeling
+type: wp
 wordpress_id: 1943
 ---
+
 And now for something completely different. I was reading this book: “[It’s Alive](http://www.amazon.com/exec/obidos/tg/detail/-/1400046416/102-3202368-3881736?v=glance)” over the weekend. Particularly of interest to me was all the discussion about so-called “Agent Based Modeling.” Agent based modeling is **a big word **for simulations used generally to research and understand systems involving many independent agents. 
 They often have very cool visual displays where you can see, variously the agents traversing their space, growing, reproducing, exchanging, consuming, etc. [There are lots and lots of cool examples of this.](http://www.google.com/search?sourceid=navclient&ie=UTF-8&q=agent+based+modeling)
 

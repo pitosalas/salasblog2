@@ -5,7 +5,6 @@ subtitle: '**Amazing little rover “calculates its own location in the universe
   Mars”: **I just can’t get e...'
 tags:
 - science
-- mars
 title: Amazing little rover “calculates its
 type: wp
 wordpress_id: 2069

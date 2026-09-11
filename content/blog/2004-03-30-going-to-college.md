@@ -3,8 +3,7 @@ category: '1'
 date: '2004-03-30'
 subtitle: Having someone in the family who applied to college (and got in) I really
   appreciate this article
-tags:
-- education
+tags: []
 title: Going to college?
 type: wp
 wordpress_id: 2038

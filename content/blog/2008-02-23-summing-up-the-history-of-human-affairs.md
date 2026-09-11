@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-02-23'
-subtitle: In the context of the current Wall Street excitement, I received a letter
-  of assurance from a mutual...
-tags:
-- business
-- personal
-title: Summing up the history of human affairs
-type: wp
+title: "Summing up the history of human affairs"
+subtitle: "In the context of the current Wall Street excitement, I received a letter of assurance from a mutual..."
+category: "298"
+tags: []
+date: "2008-02-23"
+type: "wp"
 wordpress_id: 1105
 ---
-
 In the context of the current Wall Street excitement, I received a letter of assurance from a mutual fund manager saying, among other things:
 > 
 

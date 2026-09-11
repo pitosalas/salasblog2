@@ -3,9 +3,7 @@ category: '298'
 date: '2005-10-13'
 subtitle: '![](https://i0.wp.com/salsop.typepad.com/westernstewart.jpg?w=584)Stewart
   Alsop'
-tags:
-- technology
-- stewart-alsop
+tags: []
 title: Stewart Alsop blogging!
 type: wp
 wordpress_id: 1677

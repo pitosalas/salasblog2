@@ -3,8 +3,6 @@ category: '298'
 date: '2005-11-04'
 subtitle: I assume you know about Wikis and the Wikipedia
 tags:
-- technology
-- blogbridge
 - wikipedia
 title: Wiki as in Wikipedia
 type: wp

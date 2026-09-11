@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-09-10'
-subtitle: Check out this post about the distri...
-tags:
-- technology
-- facebook
-title: The Long Tail of Facebook Applications
-type: wp
+title: "The Long Tail of Facebook Applications"
+subtitle: "Check out this post about the distri..."
+category: "298"
+tags: []
+date: "2007-09-10"
+type: "wp"
 wordpress_id: 1215
 ---
-
 Check out [this post](http://herot.typepad.com/cherot/2007/09/the-long-tail-o.html) about the distribution of Facebook applications on [Christopher Herot’s Weblog:](http://herot.typepad.com/cherot/)
 > 
  [![Applications_3](https://i0.wp.com/herot.typepad.com/cherot/images/2007/09/01/applications_3.jpg?resize=319%2C208) ](http://herot.typepad.com/.shared/image.html?/photos/uncategorized/2007/09/01/applications_3.jpg)

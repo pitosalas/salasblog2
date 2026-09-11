@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2008-04-16'
-subtitle: I am advising a client who is interested in reaching out to a huge existing
-  community of folks who t...
-tags:
-- business
-- facebook
-- ning
-title: 'Trade-off: Facebook vs. Ning'
-type: wp
+title: "Trade-off: Facebook vs. Ning"
+subtitle: "I am advising a client who is interested in reaching out to a huge existing community of folks who t..."
+category: "298"
+tags: ["1037", "1528", "1885"]
+date: "2008-04-16"
+type: "wp"
 wordpress_id: 1065
 ---
-
 I am advising a client who is interested in reaching out to a huge existing community of folks who they, historically and today, can count as their natural constituency.The problem is, they don’t have their names or email addresses and want to connect to them, and them to each other. The question is, how to do that.
 I explored three options with them: create a Facebook ‘Group’ and/or Application, create a Ning social network, or create a new and beautifully designed new web site to serve as the hub of the effort.
 

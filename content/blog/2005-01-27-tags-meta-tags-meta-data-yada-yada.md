@@ -3,9 +3,7 @@ category: '538'
 date: '2005-01-27'
 subtitle: It is of course impossible to keep up with the avalanche of discussion about
   the topic of tags, *fol...
-tags:
-- technology
-- folksonomy
+tags: []
 title: Tags, Meta Tags, Meta Data, Yada Yada
 type: wp
 wordpress_id: 1861

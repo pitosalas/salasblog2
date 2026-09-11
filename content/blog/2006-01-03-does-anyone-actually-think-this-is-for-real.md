@@ -2,10 +2,7 @@
 category: '298'
 date: '2006-01-03'
 subtitle: Did you see this clever site? Million Dollar Home Page
-tags:
-- technology
-- business
-- million-dollar-homepage
+tags: []
 title: Does anyone actually think this is for real?
 type: wp
 wordpress_id: 1623

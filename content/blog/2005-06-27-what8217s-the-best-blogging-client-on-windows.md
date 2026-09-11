@@ -5,7 +5,6 @@ subtitle: You can do your blogging by typing into a web browser form provided by
   Movable Type service. But...
 tags:
 - technology
-- blogjet
 title: What’s the best Blogging client on Windows?
 type: wp
 wordpress_id: 1745

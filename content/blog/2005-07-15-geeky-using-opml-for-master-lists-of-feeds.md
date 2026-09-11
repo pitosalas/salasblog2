@@ -3,10 +3,7 @@ category: '50'
 date: '2005-07-15'
 subtitle: I encounter more and more organizations or people who are collecting lists
   of feeds or blogs for one...
-tags:
-- technology
-- blogbridge
-- opml
+tags: []
 title: '[GEEKY] Using OPML for master lists of feeds'
 type: wp
 wordpress_id: 1735

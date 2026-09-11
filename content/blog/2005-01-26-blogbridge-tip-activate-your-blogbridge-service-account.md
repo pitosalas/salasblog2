@@ -2,9 +2,7 @@
 category: '50'
 date: '2005-01-26'
 subtitle: '*(If you are not a BlogBridge you will not find this very interesting)*'
-tags:
-- technology
-- blogbridge
+tags: []
 title: '[BlogBridge Tip] Activate your BlogBridge service account'
 type: wp
 wordpress_id: 1862

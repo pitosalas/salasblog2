@@ -2,9 +2,7 @@
 category: '1'
 date: '2005-09-07'
 subtitle: '![](http://www.flickr.com/...'
-tags:
-- personal
-- blogbridge
+tags: []
 title: New Orleans Flood Level
 type: wp
 wordpress_id: 1703

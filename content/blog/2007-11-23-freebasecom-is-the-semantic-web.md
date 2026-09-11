@@ -1,16 +1,12 @@
 ---
-category: '1'
-date: '2007-11-23'
-subtitle: I am not an expert in the semantic web but Freebase looks like it to me.
-  ...
-tags:
-- technology
-- freebase
-title: Freebase.com is the semantic web
-type: wp
+title: "Freebase.com is the semantic web"
+subtitle: "I am not an expert in the semantic web but Freebase looks like it to me. ..."
+category: "1"
+tags: []
+date: "2007-11-23"
+type: "wp"
 wordpress_id: 1175
 ---
-
 I am not an expert in the [semantic web but Freebase looks like it to me](http://www.freebase.com). I am surprised more hasn’t been written about it. It is absolutely amazing and head-spinning. I will have a hard time describing accurately, hence the headline.
 For me, it seems like Freebase does what the Semantic Web guys have been talking about forever.
 

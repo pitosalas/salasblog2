@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2006-04-22'
-subtitle: A friend of mine who used to work at **Microsoft** sent me a link to a very
-  interesting posting
-tags:
-- technology
-- business
-- microsoft
-title: If you are interested in Microsoft
-type: wp
+title: "If you are interested in Microsoft"
+subtitle: "A friend of mine who used to work at **Microsoft** sent me a link to a very interesting posting"
+category: "298"
+tags: []
+date: "2006-04-22"
+type: "wp"
 wordpress_id: 1550
 ---
-
 A friend of mine who used to work at **Microsoft** sent me a link to a [very interesting posting](http://www.qbrundage.com/michaelb/pubs/essays/working_at_microsoft.html) about what it’s like to work there. If you’re interested in the big MSFT, you might enjoy reading this. Here’s one telling bit:
 
 > “I joined Microsoft at the beginning of the antitrust litigation against the company. My NASA coworkers made all sorts of derogatory comments about my choice. I remember one began a conversation with “So you’ve decided to go work for The **Great Satan**, huh?” A lot of people who ought to know better are convinced Microsoft is evil. Apologies if you’re one of them — because these people are **idiots**.” (**from** [Working at Microsoft](http://www.qbrundage.com/michaelb/pubs/essays/working_at_microsoft.html))

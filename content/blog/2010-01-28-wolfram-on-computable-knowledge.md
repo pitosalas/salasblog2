@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-01-28'
-subtitle: Stephen Wolfram is a genius
-tags:
-- science
-- stephen-wolfram
-title: Wolfram on Computable Knowledge
-type: wp
+title: "Wolfram on Computable Knowledge"
+subtitle: "Stephen Wolfram is a genius"
+category: "298"
+tags: []
+date: "2010-01-28"
+type: "wp"
 wordpress_id: 750
 ---
-
 [Stephen Wolfram](http://en.wikipedia.org/wiki/Stephen_Wolfram) is a [genius](http://en.wikipedia.org/wiki/Genius). (Ok, he’s also a bit grandiose, self-promoting and arrogant, but I think he’s amazing. Kind of like I feel about [Ray Kurzweil](http://en.wikipedia.org/wiki/Ray_kurzweil), another genius IMHO.)
 [Wolfram|Alpha](http://www.wolframalpha.com/) is his latest product, and it’s a fascinating experiment. I can only imagine the work that has gone into it, both the Mathematica foundation and the data collection, cleansing and organization.  In my own experimentation with the site, I have had mixed results. It’s still growing up. I see the promise, and I am rooting for it. But for now it isn’t that useful, for me, anyway.
 

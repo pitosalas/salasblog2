@@ -1,12 +1,16 @@
 ---
-title: "Why Improv didn’t succeed, Part Deux"
-subtitle: "Seems like a dredged up some “old” (you know who you are) **Improv fans **with my earlier posting"
-category: "1"
-tags: ["business", "personal"]
-date: "2004-12-02"
-type: "wp"
+category: '1'
+date: '2004-12-02'
+subtitle: Seems like a dredged up some “old” (you know who you are) **Improv fans
+  **with my earlier posting
+tags:
+- lotus
+- business
+title: Why Improv didn’t succeed, Part Deux
+type: wp
 wordpress_id: 1903
 ---
+
 Seems like a dredged up some “old” (you know who you are) **Improv fans **with [my earlier posting](/weblogs/archives/000522.html), so I thought an additional comment or two might be in order.
 First off, **lest it be misunderstood**, in no way do I feel anything but totally proud about Imrpov as a concept and a product. I hope it is not inconsistent to feel that way, and yet agree that for a variety of reason it was not successful, as a product. 
 

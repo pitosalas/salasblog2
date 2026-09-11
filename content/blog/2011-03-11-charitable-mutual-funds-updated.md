@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2011-03-11'
-subtitle: '[**Note**: don’t assume you know what a Charitable Mutual Fund is. It’s
-  an evocative but really misl...'
-tags:
-- business
-title: Charitable Mutual Funds (updated)
-type: wp
+title: "Charitable Mutual Funds (updated)"
+subtitle: "[**Note**: don’t assume you know what a Charitable Mutual Fund is. It’s an evocative but really misl..."
+category: "298"
+tags: ["787", "1137", "1173"]
+date: "2011-03-11"
+type: "wp"
 wordpress_id: 584
 ---
-
 [**Note**: don’t assume you know what a Charitable Mutual Fund is. It’s an evocative but really misleading name but I don’t have a better handle for it yet. This is not an investment vehicle, it does not return any money. It is way to allow a donor to donate to one or more causes that match certain objectives. Please read on…]
 **Scenario**: What if I wanted to make a charitable gift to reputable non profits, who work in my state, who focus on homelessness? I could research it with various services (such as [GuideStar](http://www2.guidestar.org/)) I might see one or two that speak to me, and decide to write a check or two. Now of course they would come back to me a year later (or sooner) to ask for another donation, and maybe I would or maybe I’d like to pick a different one.
 

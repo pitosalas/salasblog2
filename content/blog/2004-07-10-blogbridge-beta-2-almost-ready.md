@@ -3,9 +3,7 @@ category: '50'
 date: '2004-07-10'
 subtitle: Well we’ve been **busy little beavers **and are getting ready to release
   BlogBridge Beta 2. It has q...
-tags:
-- technology
-- blogbridge
+tags: []
 title: BlogBridge Beta 2 almost ready
 type: wp
 wordpress_id: 1970

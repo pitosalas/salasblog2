@@ -3,10 +3,7 @@ category: '422'
 date: '2005-08-25'
 subtitle: One of the **hairier** and most interesting parts of **Swing** (Java’s GUI
   layer) are the so-called ...
-tags:
-- technology
-- programming
-- java
+tags: []
 title: '[GEEK} Good article about pluggable LAFs in Java'
 type: wp
 wordpress_id: 1710

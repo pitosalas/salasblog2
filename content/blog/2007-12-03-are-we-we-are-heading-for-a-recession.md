@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-12-03'
-subtitle: Just check out this well argued, detailed piece, “[Wake up to the dangers
-  of a deepening crisis”, by...
-tags:
-- business
-- lawrence-summers
-title: Are we (we are) heading for a recession?
-type: wp
+title: "Are we (we are) heading for a recession?"
+subtitle: "Just check out this well argued, detailed piece, “[Wake up to the dangers of a deepening crisis”, by..."
+category: "298"
+tags: []
+date: "2007-12-03"
+type: "wp"
 wordpress_id: 1167
 ---
-
 Just check out this well argued, detailed piece, “[Wake up to the dangers of a deepening crisis”, by Lawrence Summers](http://www.ft.com/cms/s/0/b56079a8-9b71-11dc-8aad-0000779fd2ac,dwp_uuid=95e85a0c-68fd-11db-b4c2-0000779e2340,print=yes.html):
 > “Three months ago it was reasonable to expect that the subprime credit crisis would be a financially significant event but not one that would threaten the overall pattern of economic growth. This is still a possible outcome but no longer the preponderant probability.
 

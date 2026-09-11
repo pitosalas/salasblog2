@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2008-12-20'
-subtitle: 'I have a new favorite web service: Mint. It’s a really nice implementation
-  o...'
-tags:
-- technology
-- personal
-- mint
-title: MINT and security
-type: wp
+title: "MINT and security"
+subtitle: "I have a new favorite web service: Mint. It’s a really nice implementation o..."
+category: "298"
+tags: ["1823"]
+date: "2008-12-20"
+type: "wp"
 wordpress_id: 922
 ---
-
 I have a new favorite web service: [Mint](http://www.mint.com/). It’s a really nice implementation of kind of a “Quicken” online, but with a few unique wrinkles. Here’s what it does:
  
 - Automatically and periodically downloads all the transactions from all your various accounts, banks, credit cards, etc.

@@ -5,7 +5,6 @@ subtitle: '**Scoble on Search.** Robert Scoble (of Microsoft fame) writes about 
   new search utility'
 tags:
 - technology
-- microsoft
 title: Scoble on Search. Robert Scoble
 type: wp
 wordpress_id: 2060

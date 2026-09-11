@@ -1,12 +1,13 @@
 ---
-title: "What’s a beta, anyway?"
-subtitle: "BlogBridge is getting ready to go into a limited beta test. The purpose..."
-category: "50"
-tags: ["business", "technology"]
-date: "2004-06-03"
-type: "wp"
+category: '50'
+date: '2004-06-03'
+subtitle: BlogBridge is getting ready to go into a limited beta test. The purpose...
+tags: []
+title: What’s a beta, anyway?
+type: wp
 wordpress_id: 1989
 ---
+
 [BlogBridge ](http://www.blogbridge.com)is getting ready to go into a limited beta test. The purpose is to get some early feedback on the basic User Interface model and the overall product vision. If you are interested in participating, please send an email to email@blogbridge.com.
 Doing a beta when you are operating a, shall we say, *boutique *software shop, is a different experience. The number of loose ends, bugs, procedural and process things that need to be nailed down are overwhelming. 
 

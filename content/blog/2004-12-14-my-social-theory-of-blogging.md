@@ -5,7 +5,6 @@ subtitle: We all love reading blogs **(right?), **and some of us even use their 
   time writing blogs. I...
 tags:
 - personal
-- technology
 title: My social theory of blogging
 type: wp
 wordpress_id: 1895

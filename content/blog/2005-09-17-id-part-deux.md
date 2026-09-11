@@ -4,8 +4,8 @@ date: '2005-09-17'
 subtitle: If you are interested in the **Intelligent Design** debate, this is an [fascinating
   and somewhat sur...
 tags:
-- politics
 - science
+- politics
 title: 'ID: Part Deux'
 type: wp
 wordpress_id: 1694

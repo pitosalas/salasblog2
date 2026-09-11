@@ -3,9 +3,7 @@ category: '51'
 date: '2005-08-03'
 subtitle: '!Blogonbuttonsm'
 tags:
-- technology
-- personal
-- blogon
+- demo-conference
 title: 'BlogOn Conference: I’m on the advisory board'
 type: wp
 wordpress_id: 1723

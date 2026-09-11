@@ -3,8 +3,7 @@ category: '538'
 date: '2005-02-01'
 subtitle: I used to have comments enabled on this blog until I got overrun by link
   spam. With comments my read...
-tags:
-- technology
+tags: []
 title: Link Spammers
 type: wp
 wordpress_id: 1859

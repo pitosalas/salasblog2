@@ -1,12 +1,13 @@
 ---
-title: "What’s up with Orkut? There’s"
-subtitle: "**What’s up with Orkut? **There’s this new [“online community tha..."
-category: "1"
-tags: ["technology"]
-date: "2004-01-24"
-type: "wp"
+category: '1'
+date: '2004-01-24'
+subtitle: '**What’s up with Orkut? **There’s this new [“online community tha...'
+tags: []
+title: What’s up with Orkut? There’s
+type: wp
 wordpress_id: 2089
 ---
+
 **What’s up with [Orkut](http://www.orkut.com/terms.html)? **There’s this new [“online community that connects people through a network of trusted friends”](http://www.orkut.com/) that’s causing quite a bit of comment here and there, in blogs and other newsgroups. After all the badmouthing that I’ve seen of services like LinkedIn and Plaxo, it’s funny to see the degree of interest. 
 
 Their secret ingredient, it would seem, is that **you can’t sign up! **What a clever marketing scheme,** exclusivity, **has built up quite a lot of attention. Anyone who knows a two year old knows that there’s no better way to generate interest than in denying access! Their other secret ingredient is that apparently they have [been acquired or backed by Google](http://www.infoworld.com/article/04/01/23/HNorkut_1.html), which is always a way to get attention.

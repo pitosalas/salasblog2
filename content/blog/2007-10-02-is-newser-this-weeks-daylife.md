@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-10-02'
-subtitle: 'Newser.com is a new news site, with the tag line: “Faster, Smarter News.”
-  ...'
-tags:
-- technology
-- business
-title: Is Newser this weeks Daylife?
-type: wp
+title: "Is Newser this weeks Daylife?"
+subtitle: "Newser.com is a new news site, with the tag line: “Faster, Smarter News.” ..."
+category: "298"
+tags: []
+date: "2007-10-02"
+type: "wp"
 wordpress_id: 1197
 ---
-
 [Newser.com](http://www.newser.com/) is a new news site, with the tag line: “Faster, Smarter News.” Seems like it does some kind of automatic classification of news by one of 9 major topics and organizes it automatically and attractively. It may or may not be trying to personalize what it displays for me.
 To my eye it is similar to [Daylife.com](http://www.daylife.com/home). Remember Daylife? It flashed pretty good a few months ago, but haven’t really heard much more about it. Again I am not sure whether it does any personalization or how that works.
 

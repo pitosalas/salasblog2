@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2007-01-01'
-subtitle: Check out [this
-tags:
-- technology
-- robert-scoble
-title: What planet is scoble living on?
-type: wp
+title: "What planet is scoble living on?"
+subtitle: "Check out [this"
+category: "538"
+tags: []
+date: "2007-01-01"
+type: "wp"
 wordpress_id: 1368
 ---
-
 Check out [this 
  post](http://scobleizer.com/2006/12/31/apple-rebooting-problem-hits-us/) from [Scobleizer – Tech Geek 
  Blogger](http://scobleizer.com):

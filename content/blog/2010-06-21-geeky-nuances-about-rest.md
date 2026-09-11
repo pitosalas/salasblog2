@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2010-06-21'
-subtitle: While teaching at Brandeis University this summer (see Cosi JBS Web Site
-tags:
-- programming
-- brandeis
-title: '[GEEKY] Nuances about REST'
-type: wp
+title: "[GEEKY] Nuances about REST"
+subtitle: "While teaching at Brandeis University this summer (see Cosi JBS Web Site"
+category: "538"
+tags: []
+date: "2010-06-21"
+type: "wp"
 wordpress_id: 706
 ---
-
 While teaching at Brandeis University this summer (see [Cosi JBS Web Site](http://iceland.cs.brandeis.edu/webapps/FrontPage?from=navigationbox)) I’ve come to think a lot more deeply about the often cliche’d ‘REST’ approach to developing Web Services APIs.
 As everyone always says, when you try and explain something, you discover the little gaps in your own understanding, and end up learning at least as much from your students as they are learning from you, which is cool, but for another day.
 

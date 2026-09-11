@@ -3,7 +3,6 @@ category: '50'
 date: '2006-01-29'
 subtitle: Here’s an interesting article
 tags:
-- technology
 - travel
 title: Bob Tedeschi on using RSS for travel information
 type: wp

@@ -1,16 +1,12 @@
 ---
-category: '410'
-date: '2009-02-02'
-subtitle: I’ve gotten interested in what is going on in the public sector, in particular
-  in the world of non p...
-tags:
-- programming
-- ruby
-title: '[GEEKY] Built my first gem (Ruby Gem that is)'
-type: wp
+title: "[GEEKY] Built my first gem (Ruby Gem that is)"
+subtitle: "I’ve gotten interested in what is going on in the public sector, in particular in the world of non p..."
+category: "410"
+tags: ["635", "1091", "1150", "1562", "1742", "1772", "1811", "1950", "2005"]
+date: "2009-02-02"
+type: "wp"
 wordpress_id: 898
 ---
-
 I’ve gotten interested in what is going on in the public sector, in particular in the world of non profits. I’ve learned a lot, met many people and been trying to define a project that would at the same time do something to better the world as be an interesting and fulfilling product challenge (notice, missing from that list is “make a lot of money”)
 I want to start posting some of the cool things I am figuring out but so far I haven’t because I can’t really figure out how to organize it.
 

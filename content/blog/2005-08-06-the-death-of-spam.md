@@ -1,12 +1,13 @@
 ---
-title: "The death of spam?"
-subtitle: "My friend Paul English has written an interesting bit about"
-category: "298"
-tags: ["technology"]
-date: "2005-08-06"
-type: "wp"
+category: '298'
+date: '2005-08-06'
+subtitle: My friend Paul English has written an interesting bit about
+tags: []
+title: The death of spam?
+type: wp
 wordpress_id: 1722
 ---
+
 My friend [Paul English](http://www.paulenglish.com/) has [written an interesting bit about](http://paulenglish.com/spam/) spam and ways that we need to combat it:  
 
 > “The keys to ending spam are (1) to eliminate the ability for spammers to falsely identify themselves and (2) to then determine which Email Service Providers (ESPs) actually prevent their correctly identified users from sending spam.”  (**From** [Sender Identification Rollout](http://www.paulenglish.com/spam/))”

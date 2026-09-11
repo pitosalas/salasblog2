@@ -2,10 +2,7 @@
 category: '538'
 date: '2004-08-11'
 subtitle: The Internet Explorer team at Microsoft has a blog.
-tags:
-- technology
-- microsoft
-- internet-explorer
+tags: []
 title: Microsoft Internet Explorer Blog
 type: wp
 wordpress_id: 1951

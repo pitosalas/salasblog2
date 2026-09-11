@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2006-07-09'
-subtitle: I saw these two books in Barnes and Noble. They look quite interesting.
-  I might get them.
-tags:
-- books
-- science
-title: Two books that look good…
-type: wp
+title: "Two books that look good…"
+subtitle: "I saw these two books in Barnes and Noble. They look quite interesting. I might get them."
+category: "298"
+tags: []
+date: "2006-07-09"
+type: "wp"
 wordpress_id: 1496
 ---
-
 I saw these two books in Barnes and Noble. They look quite interesting. I might get them.
 
 **The God Theory. **I am always interested in the various evolution vs. intelligent design debates, and this book claims to come up with a way to accommodate both into one framework or paradigm.

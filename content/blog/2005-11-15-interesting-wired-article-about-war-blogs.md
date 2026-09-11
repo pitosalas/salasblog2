@@ -3,7 +3,6 @@ category: '298'
 date: '2005-11-15'
 subtitle: I came across this a little while ago in W...
 tags:
-- technology
 - politics
 title: Interesting Wired article about War Blogs
 type: wp

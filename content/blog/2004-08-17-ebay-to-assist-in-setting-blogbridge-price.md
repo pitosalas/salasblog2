@@ -4,8 +4,6 @@ date: '2004-08-17'
 subtitle: So, some day we will consider BlogBridge complete enough to actually be...
 tags:
 - business
-- blogbridge
-- ebay
 title: eBay to assist in setting BlogBridge Price
 type: wp
 wordpress_id: 1947

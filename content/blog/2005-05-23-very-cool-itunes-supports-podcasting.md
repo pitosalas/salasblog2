@@ -3,9 +3,7 @@ category: '538'
 date: '2005-05-23'
 subtitle: 'Nothing to add:'
 tags:
-- technology
-- itunes
-- podcasting
+- apple
 title: 'Very Cool: iTunes supports Podcasting!'
 type: wp
 wordpress_id: 1777

@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2008-12-05'
-subtitle: From XConomy Seattle, this article covers ‘[an inspiring talk by Nick Hanauer
-  of Seattle-based Secon...
-tags:
-- business
-title: Ideas are still cheap, right?
-type: wp
+title: "Ideas are still cheap, right?"
+subtitle: "From XConomy Seattle, this article covers ‘[an inspiring talk by Nick Hanauer of Seattle-based Secon..."
+category: "298"
+tags: []
+date: "2008-12-05"
+type: "wp"
 wordpress_id: 933
 ---
-
 From XConomy Seattle, this article covers ‘[an inspiring talk by Nick Hanauer of Seattle-based Second Avenue Partners](http://www.xconomy.com/seattle/2008/12/03/how-to-spot-a-breakthrough-tips-from-early-amazon-investor-nick-hanauer/)‘. It’s a good read with lots of useful insights.
 Here’s his formula for judging whether your idea for a new product is any good. I am not sure whether I like these because they are cleverly worded and snarky or whether there’s a big grain of truth in them. Probably a little of both.
 

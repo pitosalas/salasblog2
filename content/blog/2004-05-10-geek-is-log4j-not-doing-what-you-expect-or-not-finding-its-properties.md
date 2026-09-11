@@ -5,7 +5,6 @@ subtitle: 'Here’s a handy bit of esoterica: To force Log4J to report on it’s
   sequence do this:'
 tags:
 - programming
-- log4j
 title: '[GEEK] Is Log4J not doing what you expect, or not finding its properties?'
 type: wp
 wordpress_id: 2012

@@ -1,14 +1,12 @@
 ---
-category: '538'
-date: '2006-06-21'
-subtitle: Some cool stuff
-tags:
-- technology
-title: Cool stuff from the 21st!
-type: wp
+title: "Cool stuff from the 21st!"
+subtitle: "Some cool stuff"
+category: "538"
+tags: []
+date: "2006-06-21"
+type: "wp"
 wordpress_id: 1512
 ---
-
 Some cool stuff
 
 - [Internship Mistakes](http://images.businessweek.com/ss/06/06/intern_mistakes/index_01.htm). For my friends who are interns or know an intern. Some decent advice! (tags: [internship](http://del.icio.us/pitosalas/internship) [funny](http://del.icio.us/pitosalas/funny))

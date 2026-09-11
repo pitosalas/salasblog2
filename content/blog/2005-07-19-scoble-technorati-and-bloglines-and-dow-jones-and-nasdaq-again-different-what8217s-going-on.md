@@ -1,12 +1,15 @@
 ---
-title: "Scoble, Technorati and Bloglines (and Dow Jones and Nasdaq AGAIN different?! What’s going on?)"
-subtitle: "**Scoble** has been really picking on Te..."
-category: "51"
-tags: ["technology"]
-date: "2005-07-19"
-type: "wp"
+category: '51'
+date: '2005-07-19'
+subtitle: '**Scoble** has been really picking on Te...'
+tags:
+- technology
+title: Scoble, Technorati and Bloglines (and Dow Jones and Nasdaq AGAIN different?!
+  What’s going on?)
+type: wp
 wordpress_id: 1733
 ---
+
 **Scoble** has been [really](http://padawan.info/weblog/weapons_of_mass_delusion.html) picking on Technorati recently, and I can’t figure out why. Given the **megaphone** that Robert has it has got to be really hurting Technorati. There has been a lot of detailed commentary about this, some of it quite good, for example [David Berlind](http://blogs.zdnet.com/BTL/?p=1609&part=rss&tag=feed&subj=zdblog) and [Dan Farber](http://blogs.zdnet.com/BTL/?p=1613&part=rss&tag=feed&subj=zdblog) on ZDNet and [Padawan](http://padawan.info/weblog/weapons_of_mass_delusion.html).info.
 
 My **modest contribution** to the debate is this: **Why** does it **shock** anyone that the number of **links** reported by Technorati is different than the number of **citations** counted by Bloglines? These are statistics for which there are no objective definitions. Both sites are measuring ***something*** but are they measuring the **same** thing? **No**!

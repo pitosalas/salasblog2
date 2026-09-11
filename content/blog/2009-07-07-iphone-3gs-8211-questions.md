@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-07-07'
-subtitle: Ok so I’ve had the new iPhone for a little while now. This is my first ever
-  iPhone and I have some q...
-tags:
-- technology
-- iphone
-title: iPhone 3GS – Questions
-type: wp
+title: "iPhone 3GS – Questions"
+subtitle: "Ok so I’ve had the new iPhone for a little while now. This is my first ever iPhone and I have some q..."
+category: "298"
+tags: ["1298"]
+date: "2009-07-07"
+type: "wp"
 wordpress_id: 831
 ---
-
 Ok so I’ve had the new iPhone for a little while now. This is my first ever iPhone and I have some questions. Maybe you can help me?
 
 - iPhone knows how to announce the album name and artist (using the voice recognition “what song is that” command.) Then why can’t I enable it to automatically announce each and every song?

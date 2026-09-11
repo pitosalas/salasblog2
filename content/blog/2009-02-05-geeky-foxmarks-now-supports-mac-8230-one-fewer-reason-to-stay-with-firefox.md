@@ -1,16 +1,12 @@
 ---
-category: '51'
-date: '2009-02-05'
-subtitle: I read in [Personal Technology (Wall Street Journal) today that Foxmarks,
-  the handy, free utility th...
-tags:
-- technology
-- firefox
-title: '[GEEKY] Foxmarks now supports Mac … one fewer reason to stay with Firefox'
-type: wp
+title: "[GEEKY] Foxmarks now supports Mac … one fewer reason to stay with Firefox"
+subtitle: "I read in [Personal Technology (Wall Street Journal) today that Foxmarks, the handy, free utility th..."
+category: "51"
+tags: []
+date: "2009-02-05"
+type: "wp"
 wordpress_id: 895
 ---
-
 I read in [Personal Technology (Wall Street Journal) today that Foxmarks, the handy, free utility that synchronizes my Firefox bookmarks between several computers, now works with Safari as well](http://online.wsj.com/article/SB123379804164650385.html?mod=hps_us_my_columnists). Great. I tested it, and it does work just fine. 
 This blog post is being written with another handy firefox plugin called [Scribefire](http://www.scribefire.com/), which lets me post to my blog directly from a page in the browser. It works really nicely and I use it frequently. I recommend it. Unfortunately they don’t support Safari yet. So I am staying with Firefox, for now.
 

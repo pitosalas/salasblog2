@@ -3,9 +3,7 @@ category: '1'
 date: '2004-03-05'
 subtitle: '**Social Networking (Demo 2004 Series – 8) **I’ve written a few times about...'
 tags:
-- technology
-- business
-- demo2004
+- demo-conference
 title: Social Networking (Demo 2004 Series
 type: wp
 wordpress_id: 2056

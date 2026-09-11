@@ -1,12 +1,14 @@
 ---
-title: "Walt Mossberg: “You may never"
-subtitle: "**Walt Mossberg:"
-category: "1"
-tags: ["technology"]
-date: "2004-01-08"
-type: "wp"
+category: '1'
+date: '2004-01-08'
+subtitle: '**Walt Mossberg:'
+tags:
+- technology
+title: 'Walt Mossberg: “You may never'
+type: wp
 wordpress_id: 2102
 ---
+
 **[Walt Mossberg:](http://online.wsj.com/article/0,,SB107351380768717600,00.html?mod=technology%5Ffeatured%5Fstories%5Fhs)** **“You may never go back to Internet Explorer again.” **In the current episode of Mossberg’s Personal Technology, he sings the praises of tabbed browsers. Of course old hat. 
 
 > 

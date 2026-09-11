@@ -4,9 +4,7 @@ date: '2006-02-17'
 subtitle: Check out this cool subject matter specific search site. Currently they
   ha...
 tags:
-- technology
-- demo2006
-- kosmix
+- demo-conference
 title: 'Demo 2006 Note: Kosmix'
 type: wp
 wordpress_id: 1594

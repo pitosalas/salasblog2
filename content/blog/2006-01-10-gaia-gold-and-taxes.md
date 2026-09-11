@@ -1,12 +1,13 @@
 ---
-title: "Gaia Gold and Taxes?"
-subtitle: "I recently had occasion to learn all about a really cool MMORPG"
-category: "298"
-tags: ["technology"]
-date: "2006-01-10"
-type: "wp"
+category: '298'
+date: '2006-01-10'
+subtitle: I recently had occasion to learn all about a really cool MMORPG
+tags: []
+title: Gaia Gold and Taxes?
+type: wp
 wordpress_id: 1618
 ---
+
 I recently had occasion to learn all about a really cool [MMORPG](http://en.wikipedia.org/wiki/MMORPG) (“massively multi player online role playing game”) called [Gaia Online](http://www.gaiaonline.com/). 
 
 Yes, I am not in its demographic, but it was **fascinating** to learn about how the world of gaming has developed a whole **economic** model in the form of “[XP” or “Experience Points”](http://en.wikipedia.org/wiki/Experience_point). Different worlds use different terms but generically, these are points earned within the game and then spent on game artifacts or items or abilities.

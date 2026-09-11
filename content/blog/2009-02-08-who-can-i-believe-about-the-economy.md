@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-02-08'
-subtitle: The problems in our economy right now are real, I believe. Tons of people
-  have lost jobs, and my inv...
-tags:
-- politics
-- business
-title: Who can I believe about the economy?
-type: wp
+title: "Who can I believe about the economy?"
+subtitle: "The problems in our economy right now are real, I believe. Tons of people have lost jobs, and my inv..."
+category: "298"
+tags: []
+date: "2009-02-08"
+type: "wp"
 wordpress_id: 892
 ---
-
 The problems in our economy right now are real, I believe. Tons of people have lost jobs, and my investment accounts also prove it. I guess there’s no debate about that. But the question is, what to do about it.
 My observations:
 

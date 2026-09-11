@@ -2,9 +2,7 @@
 category: '538'
 date: '2006-01-16'
 subtitle: Over on the BlogBridge blog, I pos...
-tags:
-- technology
-- blogbridge
+tags: []
 title: 'Blogging 101: Speaking Notes'
 type: wp
 wordpress_id: 1613

@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-03-16'
-subtitle: 'Here’s a clever retort that I heard from a colleague today:'
-tags:
-- personal
-- business
-title: When your manager says he doesn’t see you working hard enough
-type: wp
+title: "When your manager says he doesn’t see you working hard enough"
+subtitle: "Here’s a clever retort that I heard from a colleague today:"
+category: "298"
+tags: []
+date: "2006-03-16"
+type: "wp"
 wordpress_id: 1577
 ---
-
 Here’s a clever retort that I heard from a colleague today:
 
 “When you think I’m working, I’m not working, and 

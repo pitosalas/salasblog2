@@ -1,12 +1,15 @@
 ---
-title: "Spain Security Situation"
-subtitle: "Several people asked me about what the security situation in Spain felt like. I have to admit it did..."
-category: "410"
-tags: ["travel", "personal"]
-date: "2004-04-29"
-type: "wp"
+category: '410'
+date: '2004-04-29'
+subtitle: Several people asked me about what the security situation in Spain felt
+  like. I have to admit it did...
+tags:
+- travel
+title: Spain Security Situation
+type: wp
 wordpress_id: 2022
 ---
+
 Several people asked me about what the security situation in Spain felt like. I have to admit it did give me pause to be going to Spain little more than a month after the terrorist attack on the trains in Madrid. In fact our travel plans included several long train rides. I checked with friends who live in Spain, and also looked at the various State Department notices, and all in all decided that the risk wouldn’t be major. I did expect to see a major security presence — you know, soldiers with machine guns in the airports, etc. But otherwise I wasn’t especially worried, but curious what we’d find. I remember how shell shocked we were in the U.S. two months after 9/11.
 Well, here’s the surprising thing. There was almost no noticable security presence or sense of mourning, danger, worry. At the airports there was no more than the usual security presence. At the railstations there was nothing noticable. Nothing at all. 
 

@@ -3,9 +3,7 @@ category: '50'
 date: '2004-06-07'
 subtitle: "Here’s the beta invite email that just went out… Wow, this is exciting!
   \U0001F642"
-tags:
-- technology
-- blogbridge
+tags: []
 title: BlogBridge beta is ON!
 type: wp
 wordpress_id: 1986

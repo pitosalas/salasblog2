@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-01-25'
-subtitle: Now there’s a big topic, eh? A magazine that I don’t normally read has a
-  [good, in depth, thoughtful...
-tags:
-- science
-title: Science and Religion
-type: wp
+title: "Science and Religion"
+subtitle: "Now there’s a big topic, eh? A magazine that I don’t normally read has a [good, in depth, thoughtful..."
+category: "298"
+tags: ["1420", "1523", "1732", "1800"]
+date: "2009-01-25"
+type: "wp"
 wordpress_id: 903
 ---
-
 Now there’s a big topic, eh? A magazine that I don’t normally read has a [good, in depth, thoughtful article about the debate between Religion and Science](http://www.tnr.com/booksarts/story.html?id=1e3851a3-bdf7-438a-ac2a-a5e381a70472) (see what I just did?). It comes in the guise of a book review (oddly the author has, himself, recently come out with a competing book, which does undermine his objectivity a little bit.) Still, it’s an excellent overview.
 (Funnily enough, the factoid that stayed with me the longest from this article is that Abraham Lincoln and Charles Darwin were born on the exact same day. Talk about trivia!)
 

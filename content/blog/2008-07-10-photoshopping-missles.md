@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-07-10'
-subtitle: I recently saw a Nova episode about Hany Farid about so called “Digital
-  Forensics”, that is how to d...
-tags:
-- technology
-- science
-title: Photoshopping missles
-type: wp
+title: "Photoshopping missles"
+subtitle: "I recently saw a Nova episode about Hany Farid about so called “Digital Forensics”, that is how to d..."
+category: "298"
+tags: ["1302", "1474", "1616"]
+date: "2008-07-10"
+type: "wp"
 wordpress_id: 1014
 ---
-
 I recently saw a Nova episode about Hany Farid about so called “Digital Forensics”, that is how to detect and discover photos manipulated digitally. Here are some useful links if you are interested:
 [www.cs.dartmouth.edu/farid/research/](http://www.cs.dartmouth.edu/farid/research/)
 

@@ -1,17 +1,12 @@
 ---
-category: '51'
-date: '2006-06-02'
-subtitle: The feature isn’t new, it’s actually pretty **old**. It’s also very poorly
-  documented. But it’s **ne...
-tags:
-- technology
-- blogbridge
-- delicious
-title: Notice the new del.icio.us feature I am using?
-type: wp
+title: "Notice the new del.icio.us feature I am using?"
+subtitle: "The feature isn’t new, it’s actually pretty **old**. It’s also very poorly documented. But it’s **ne..."
+category: "51"
+tags: []
+date: "2006-06-02"
+type: "wp"
 wordpress_id: 1533
 ---
-
 The feature isn’t new, it’s actually pretty **old**. It’s also very poorly documented. But it’s **new** to me. I’ve configured del.icio.us to automatically create a post to my blog of all the tags I’ve submitted in the last 24 hours. 
 
 If you are a del.icio.us user, look under “settings”, “experimental”, “daily blog posting” for the setting. Then ask me or google for an **explanation** of what the fields mean.

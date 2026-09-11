@@ -4,9 +4,7 @@ date: '2004-11-06'
 subtitle: Ok, I am adjusting to the new reality of the lost election. The amount of
   coverage in the blogs I fr...
 tags:
-- personal
 - politics
-- boston
 title: At least we have the Redsox
 type: wp
 wordpress_id: 1918

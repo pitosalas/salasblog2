@@ -1,12 +1,16 @@
 ---
-title: "[QUASI-GEEK] Dan Bricklin describes how fiber to the home is installed in the real world"
-subtitle: "At a level of detail **only a geek could love** reading (or bother **writing**), Dan Bricklin gives ..."
-category: "298"
-tags: ["technology"]
-date: "2005-08-27"
-type: "wp"
+category: '298'
+date: '2005-08-27'
+subtitle: At a level of detail **only a geek could love** reading (or bother **writing**),
+  Dan Bricklin gives ...
+tags:
+- technology
+title: '[QUASI-GEEK] Dan Bricklin describes how fiber to the home is installed in
+  the real world'
+type: wp
 wordpress_id: 1708
 ---
+
 At a level of detail **only a geek could love** reading (or bother **writing**), Dan Bricklin gives us an interesting and fun  illustrated story of installing Verizon fiber to his home:
 
 “…… Once that was all done, the installer cleaned up all the dropped wire insulation, empty boxes, etc., and we said goodbye sometime around 4 PM. I then connected my line to the router and plugged it into my laptop upstairs. Things work well.” (**from** [“Installing Verizon FIOS fiber-optic Internet service to my house](http://www.bricklin.com/fiosinstall.htm)“)

@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2010-12-06'
-subtitle: I just returned from my mother’s birthday party with about 300 photos –
-  I would say 70% of them are ...
-tags:
-- technology
-- personal
-title: Photo sharing thoughts
-type: wp
+title: "Photo sharing thoughts"
+subtitle: "I just returned from my mother’s birthday party with about 300 photos – I would say 70% of them are ..."
+category: "298"
+tags: ["1037", "1072", "1096", "1300", "1478", "1615", "1846", "2142"]
+date: "2010-12-06"
+type: "wp"
 wordpress_id: 630
 ---
-
 I just returned from my mother’s birthday party with about 300 photos – I would say 70% of them are no good, so I selected about 40 of the best ones and then had to decide how to share them with everyone who cared.
 
 A little bit of research produced the following options which I am sharing with YOU to save you and me some time in the future.

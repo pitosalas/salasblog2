@@ -3,9 +3,7 @@ category: '50'
 date: '2005-04-01'
 subtitle: 'Doctor Scoble poses a provocative question: “Which aggregator do you like
   best”? Quite an amazing va...'
-tags:
-- technology
-- blogbridge
+tags: []
 title: Talking about RSS Aggregators
 type: wp
 wordpress_id: 1813

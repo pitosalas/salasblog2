@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2006-04-03'
-subtitle: On Wednesday of next week,
-tags:
-- personal
-title: Do you like meaningless coincidences?
-type: wp
+title: "Do you like meaningless coincidences?"
+subtitle: "On Wednesday of next week,"
+category: "298"
+tags: []
+date: "2006-04-03"
+type: "wp"
 wordpress_id: 1564
 ---
-
 On Wednesday of next week, 
 
 At two minutes and three seconds after 1:00 in the morning, 

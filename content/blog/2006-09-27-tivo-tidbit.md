@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-09-27'
-subtitle: '- You happen to have a Tivo'
-tags:
-- technology
-- tivo
-title: Tivo Tidbit
-type: wp
+title: "Tivo Tidbit"
+subtitle: "- You happen to have a Tivo"
+category: "298"
+tags: []
+date: "2006-09-27"
+type: "wp"
 wordpress_id: 1431
 ---
-
 If:
 
 - You happen to have a Tivo

@@ -1,12 +1,14 @@
 ---
-title: "Funny: Banana Problem"
-subtitle: "This is from a dictionary:"
-category: "298"
-tags: ["programming"]
-date: "2005-09-13"
-type: "wp"
+category: '298'
+date: '2005-09-13'
+subtitle: 'This is from a dictionary:'
+tags:
+- programming
+title: 'Funny: Banana Problem'
+type: wp
 wordpress_id: 1698
 ---
+
 This is from a dictionary:
 
 > **Banana problem**: *noun*

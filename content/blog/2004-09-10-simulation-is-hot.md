@@ -5,7 +5,6 @@ subtitle: Here’s an interesting link that continues on the theme from my previ
   post on Agent Based Modeling...
 tags:
 - science
-- technology
 title: Simulation is hot!
 type: wp
 wordpress_id: 1941

@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2008-12-05'
-subtitle: 'As a favor I am posting this notice about an event that looks like it might
-  be fun:'
-tags:
-- personal
-- boston
-- music
-title: XConomy’s Battle of the bands
-type: wp
+title: "XConomy’s Battle of the bands"
+subtitle: "As a favor I am posting this notice about an event that looks like it might be fun:"
+category: "298"
+tags: ["2138"]
+date: "2008-12-05"
+type: "wp"
 wordpress_id: 934
 ---
-
 As a favor I am posting this notice about an [event that looks like it might be fun:](http://www.xconomy.com/boston/2008/11/05/battle-of-the-tech-bands-2/)
 [**Battle of the Bands**](http://www.xconomy.com/boston/2008/11/05/battle-of-the-tech-bands-2/)
 

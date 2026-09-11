@@ -5,7 +5,6 @@ subtitle: I recently had to buy a new cell phone, and learning how to use it rem
   me again about how **com...
 tags:
 - technology
-- design
 title: Ease of use?
 type: wp
 wordpress_id: 1668

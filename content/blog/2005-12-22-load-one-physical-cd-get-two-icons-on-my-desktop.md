@@ -3,8 +3,7 @@ category: '538'
 date: '2005-12-22'
 subtitle: '!Picture 1-24'
 tags:
-- technology
-- sony-rootkit
+- apple
 title: Load one physical CD, get two icons on my desktop
 type: wp
 wordpress_id: 1628

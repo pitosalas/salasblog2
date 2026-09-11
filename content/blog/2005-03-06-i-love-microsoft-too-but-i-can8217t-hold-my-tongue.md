@@ -4,7 +4,6 @@ date: '2005-03-06'
 subtitle: Dave Winer points to [Kevin Shofield’s def...
 tags:
 - technology
-- microsoft
 title: I love Microsoft too, but I can’t hold my tongue
 type: wp
 wordpress_id: 1833

@@ -1,15 +1,12 @@
 ---
-category: '1'
-date: '2007-02-26'
-subtitle: Check out this post ...
-tags:
-- technology
-- xfruits
-title: '[GEEKY] Alternative to Yahoo Pipes? Looks really interesting…'
-type: wp
+title: "[GEEKY] Alternative to Yahoo Pipes? Looks really interesting…"
+subtitle: "Check out this post ..."
+category: "1"
+tags: []
+date: "2007-02-26"
+type: "wp"
 wordpress_id: 1321
 ---
-
 Check out [this post](http://lifehacker.com/software/rss/mash-up-rss-feeds-with-xfruits-239457.php) from [Lifehacker](http://www.lifehacker.com):
 > 
 “Want to play with RSS feeds? Try xFruits, where, according to tech enthusiast Steve Rubel, you can “teach your feeds all kinds of new tricks.” 

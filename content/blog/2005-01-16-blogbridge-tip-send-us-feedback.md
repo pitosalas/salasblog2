@@ -3,9 +3,7 @@ category: '50'
 date: '2005-01-16'
 subtitle: (Non-users of BlogBridge, this wil not be interesting to you. But you have
   to ask yourself, why are ...
-tags:
-- technology
-- blogbridge
+tags: []
 title: 'BlogBridge tip: Send us Feedback'
 type: wp
 wordpress_id: 1869

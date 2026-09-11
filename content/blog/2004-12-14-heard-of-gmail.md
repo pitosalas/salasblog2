@@ -4,7 +4,6 @@ date: '2004-12-14'
 subtitle: There are many interesting things about GMail, so this is either go...
 tags:
 - technology
-- gmail
 title: Heard of GMail?
 type: wp
 wordpress_id: 1894

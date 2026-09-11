@@ -5,7 +5,6 @@ subtitle: '[“But I am compelled to do this. And other than that, that’s as f
   I’m going to talk about my f...'
 tags:
 - politics
-- cindy-sheehan
 title: 'Compelling: interview of Cindy Sheehan with Chris Mathews of ‘Hardball’'
 type: wp
 wordpress_id: 1715

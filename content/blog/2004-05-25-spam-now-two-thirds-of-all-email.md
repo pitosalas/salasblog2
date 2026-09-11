@@ -3,8 +3,7 @@ category: '538'
 date: '2004-05-25'
 subtitle: 'It’s even worse than you thought: “E-mail security firm MessageLabs’ filtering
   statistics for April,...'
-tags:
-- technology
+tags: []
 title: Spam now two thirds of all email!
 type: wp
 wordpress_id: 1996

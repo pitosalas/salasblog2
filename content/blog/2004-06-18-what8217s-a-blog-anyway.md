@@ -1,12 +1,16 @@
 ---
-title: "What’s a blog anyway?"
-subtitle: "I am away from home, at my home in Curacao for a reunion of Salas folks from around the world. I saw..."
-category: "51"
-tags: ["personal", "curacao"]
-date: "2004-06-18"
-type: "wp"
+category: '51'
+date: '2004-06-18'
+subtitle: I am away from home, at my home in Curacao for a reunion of Salas folks
+  from around the world. I saw...
+tags:
+- curacao
+- personal
+title: What’s a blog anyway?
+type: wp
 wordpress_id: 1980
 ---
+
 I am away from home, at my home in Curacao for a reunion of Salas folks from around the world. I saw an childhood friend of mine, Raul, who asked me ‘So what’s a blog, anyway’? I was taken aback, because, what would Raul be doing, reading my blog, and especially with the rather ‘odd’ image that I left as the top entry before I headed down here?
 So, this is just a reminder of what I already knew, of course, that anyone around the world can read this. And secondly, that anyone with the name Salas might be tempted to see what’s to be seen on www.salas.com, so be careful what shows up on the front page!
 

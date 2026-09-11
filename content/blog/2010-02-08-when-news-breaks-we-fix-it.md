@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2010-02-08'
-subtitle: That was the old slogan of Jon Stewart’s Daily Show. This morning, w...
-tags:
-- personal
-title: When news breaks, we fix it
-type: wp
+title: "When news breaks, we fix it"
+subtitle: "That was the old slogan of Jon Stewart’s Daily Show. This morning, w..."
+category: "298"
+tags: []
+date: "2010-02-08"
+type: "wp"
 wordpress_id: 748
 ---
-
 That was the old slogan of [Jon Stewart’s Daily Show](http://www.thedailyshow.com/). This morning, while I was in a meeting, my cell phone reported the following ‘breaking news’ from [CNN](http://www.cnn.com/):
 “– An explosion at a Connecticut power plant near Hartford has caused “mass casualties,” authorities say.”
 

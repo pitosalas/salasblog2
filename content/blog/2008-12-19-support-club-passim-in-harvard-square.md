@@ -1,17 +1,12 @@
 ---
-category: '51'
-date: '2008-12-19'
-subtitle: Hey! If you live in Boston or Cambridge, and you like music, especially
-  Folk music, then you’ve prob...
-tags:
-- personal
-- music
-- boston
-title: Support Club Passim in Harvard Square!!!
-type: wp
+title: "Support Club Passim in Harvard Square!!!"
+subtitle: "Hey! If you live in Boston or Cambridge, and you like music, especially Folk music, then you’ve prob..."
+category: "51"
+tags: []
+date: "2008-12-19"
+type: "wp"
 wordpress_id: 923
 ---
-
 Hey! If you live in Boston or Cambridge, and you like music, especially Folk music, then you’ve probably been to [Club Passim in Cambridge](http://www.clubpassim.org/) – Harvard Square actually. It’s a lot more than a ‘Coffee House’ – it’s an **institution** where many of your favorite 70s acts got their start.
 Passim is a tiny little folk music club in Harvard Square that’s existed years and years and [where musicians like Joan Baez and Bob Dylan played at the very beginning](http://www.clubpassim.org/Page.asp?n=12788&snid=123649884&org=clubpassim.org) of their careers. I am friends with various people at Passim, over the year we have attended lots of shows there.
 

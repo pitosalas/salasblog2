@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2006-06-27'
-subtitle: We are having another super-informal-geeky-but-not-exclusively-geeks **Geek
-  Dinner**, and we have a ...
-tags:
-- personal
-- boston
-- geek-dinner
-title: 'YAGD: “yet another geek dinner” – July 19th 2006 – NEW LOCATION'
-type: wp
+title: "YAGD: “yet another geek dinner” – July 19th 2006 – NEW LOCATION"
+subtitle: "We are having another super-informal-geeky-but-not-exclusively-geeks **Geek Dinner**, and we have a ..."
+category: "298"
+tags: []
+date: "2006-06-27"
+type: "wp"
 wordpress_id: 1506
 ---
-
 We are having another super-informal-geeky-but-not-exclusively-geeks **Geek Dinner**, and we have a **lovely** new location, sponsored by our friends at [Permabit](http://www.permabit.com/) (Thanks Tom and Katie!)
 
 Who is **we**, again? [Bela Labovitch](http://blogs.opml.org/BelaLabovitch), [Adam Green](http://feedonomics.grazr.com/) and me. We’ve organized two of these this year, and they were lots-o-fun. People met, talked: no **cures for cancer** were discovered but in general people felt it was good enough to try again.

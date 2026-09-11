@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-12-02'
-subtitle: This post talks about the difference between owning, possessing and accessing
-  a book
-tags:
-- technology
-- books
-title: Dan Lewis, on what it means to ‘own’ something
-type: wp
+title: "Dan Lewis, on what it means to ‘own’ something"
+subtitle: "This post talks about the difference between owning, possessing and accessing a book"
+category: "298"
+tags: ["725", "975", "1342", "1532"]
+date: "2009-12-02"
+type: "wp"
 wordpress_id: 770
 ---
-
 [This post talks about the difference between owning, possessing and accessing a book](http://dlewis.net/2009/12/01/what-does-it-mean-to-buy-an-e-book/) or anything tangible:
 **“If I buy (”own”) a book, I expect to be able to do things such as re-sell, loan, rent, gift it. If I rent or borrow (”posses”) a book, I don’t, but expect to be able to do things like take it with me on a trip. If I am in your house and flip through (”access”) a book, you being a mensch aside, I probably can’t just walk out the door with it.” (from** [What does it mean to ‘buy’ an e-book’)](http://dlewis.net/2009/12/01/what-does-it-mean-to-buy-an-e-book/)
 

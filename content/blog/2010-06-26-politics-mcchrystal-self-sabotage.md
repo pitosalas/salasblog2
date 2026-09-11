@@ -1,15 +1,12 @@
 ---
-category: '410'
-date: '2010-06-26'
-subtitle: You can’t have missed the whole General Stanley McChrystal affair,
-tags:
-- politics
-- stanley-mcchrystal
-title: '[POLITICS] McChrystal self-sabotage'
-type: wp
+title: "[POLITICS] McChrystal self-sabotage"
+subtitle: "You can’t have missed the whole General Stanley McChrystal affair,"
+category: "410"
+tags: []
+date: "2010-06-26"
+type: "wp"
 wordpress_id: 703
 ---
-
 You can’t have missed the [whole General Stanley McChrystal affair,](http://www.washingtonpost.com/wp-dyn/content/article/2010/06/25/AR2010062504087_pf.html) where a decorated general who has spent his career in special operations and has been running the war in Afganistan in a moment of spectacular bad judgement let’s a young Rolling Stone magazine reporter witness McChrystal and his team bad-mouthing their civilian leadership, which ends up in the magazine under the headline “[The Runaway General](http://www.rollingstone.com/politics/news/17390/119236)“
 
 Now from what I understand about special operations, these guys work behind enemy lines, operate in small super secretive groups, need to mingle in with the population, are always on the lookout for double agents, informants and other attempts by the enemy to infiltrate and kill them. It is beyond belief that McChrystal found himself ‘accidentally’ spilling what was obvious very bad beans. That he didn’t realize that (whether or not there was a misunderstanding regarding ground rules) talking trash about the President and the Vice President in front of an outsider would cause irreparable damage.

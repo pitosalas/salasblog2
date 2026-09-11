@@ -4,8 +4,6 @@ date: '2005-04-19'
 subtitle: Microsoft and Apple are arguing about...
 tags:
 - technology
-- microsoft
-- apple
 title: Who thought of it first? Who cares?
 type: wp
 wordpress_id: 1801

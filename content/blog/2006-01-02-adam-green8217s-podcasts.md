@@ -4,8 +4,6 @@ date: '2006-01-02'
 subtitle: I came across a cool series of podcasts, done by **Adam Green**, on the...
 tags:
 - technology
-- podcasting
-- adam-green
 title: Adam Green’s Podcasts
 type: wp
 wordpress_id: 1624

@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-12-07'
-subtitle: After sending an email to Terroir Coffee asking them to explain the...
-tags:
-- technology
-- twitter
-title: First useful info from Twitter for me :)
-type: wp
+title: "First useful info from Twitter for me :)"
+subtitle: "After sending an email to Terroir Coffee asking them to explain the..."
+category: "298"
+tags: ["820", "1129", "1985"]
+date: "2009-12-07"
+type: "wp"
 wordpress_id: 767
 ---
-
 After sending an email to [Terroir Coffee](http://www.terroircoffee.com/) asking them to explain the roastiness terminology that they use for all their coffee. It’s obscure and not mentioned on the web site. No response. 
 I happened to note that [George Howell, who is their CEO and visionary](http://www.examiner.com/examiner/x-13642-Coffee-Examiner%7Ey2009m6d18-George-Howell-and-the-Cup-of-Excellence) was tweeting. So I posted the question to him on twitter for all the world to see, and lo-and-behold, I got an answer. 
 

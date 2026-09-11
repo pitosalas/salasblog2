@@ -2,9 +2,7 @@
 category: '50'
 date: '2004-12-08'
 subtitle: Yesterday I was interviewed about BlogBridge by ClientJava.com, a...
-tags:
-- technology
-- blogbridge
+tags: []
 title: BlogBridge interview
 type: wp
 wordpress_id: 1899

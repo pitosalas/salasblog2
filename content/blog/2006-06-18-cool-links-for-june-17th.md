@@ -1,16 +1,12 @@
 ---
-category: '51'
-date: '2006-06-18'
-subtitle: Guy Kawasaki — Bona tempora volvantu
-tags:
-- technology
-- politics
-- guy-kawasaki
-title: Cool links for June 17th
-type: wp
+title: "Cool links for June 17th"
+subtitle: "Guy Kawasaki — Bona tempora volvantu"
+category: "51"
+tags: []
+date: "2006-06-18"
+type: "wp"
 wordpress_id: 1516
 ---
-
 - 
 [ Guy Kawasaki — Bona tempora volvantu](http://blog.guykawasaki.com/index.rdf)
 

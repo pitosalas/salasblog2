@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2011-01-05'
-subtitle: Just came across this handy-dandy tool to run tests for Ruby and Rails,
-  and produce much nicer and r...
-tags:
-- programming
-- ruby
-title: '[GEEKY] Nicer way to run Ruby tests'
-type: wp
+title: "[GEEKY] Nicer way to run Ruby tests"
+subtitle: "Just came across this handy-dandy tool to run tests for Ruby and Rails, and produce much nicer and r..."
+category: "298"
+tags: ["1121", "1772", "1855", "1987"]
+date: "2011-01-05"
+type: "wp"
 wordpress_id: 614
 ---
-
 Just came across this handy-dandy tool to run tests for Ruby and Rails, and produce much nicer and readable traces so you have a prayer to sort out what is going on when stuff fails.
 
 [Test::Unit Reporter — A new look and feel for Test::Unit output](https://github.com/TwP/turn?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+railsquicktips+%28Rails+Quick+Tips%29)

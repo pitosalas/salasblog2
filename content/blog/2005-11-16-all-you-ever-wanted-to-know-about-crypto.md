@@ -3,7 +3,7 @@ category: '538'
 date: '2005-11-16'
 subtitle: Looks like this is practically an online book on t...
 tags:
-- technology
+- computer-science
 title: All you ever wanted to know about Crypto
 type: wp
 wordpress_id: 1655

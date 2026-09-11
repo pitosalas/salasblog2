@@ -1,12 +1,15 @@
 ---
-title: "Behavior Signature Analysis (Demo Series"
-subtitle: "**Behavior Signature Analysis (Demo Series 10) **This is a little arcane but I thought it was an int..."
-category: "1"
-tags: ["technology"]
-date: "2004-03-21"
-type: "wp"
+category: '1'
+date: '2004-03-21'
+subtitle: '**Behavior Signature Analysis (Demo Series 10) **This is a little arcane
+  but I thought it was an int...'
+tags:
+- demo-conference
+title: Behavior Signature Analysis (Demo Series
+type: wp
 wordpress_id: 2042
 ---
+
 **Behavior Signature Analysis (Demo Series 10) **This is a little arcane but I thought it was an interesting pattern among several products launched at Demo 2004. “Behavior Signature Analysis” is the idea of learning something about the intent or higher level purpose of an activity by doing pattern analysis on some aspect of it’s low level behavior. There were several companies showing products that tried to do this at the Method invocation and HTTP Request levels: that you can tell something about *meaning *strictly by analyzing patterns of low level. 
 
 [**Memento: **BC Krishna](http://www.memento-inc.com/) has built a really cool new solution to measure and understand the actual use of business application in the enterprise to demonstrate the value of the IT investment. So in contrast with Imperva, Memento uses patterns of object invocations as evidence that an application is being used in an expected fashion and using that information as evidence of business value. 

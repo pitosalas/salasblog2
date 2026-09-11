@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-10-24'
-subtitle: Doc Searls has a new post about Facebook
-tags:
-- technology
-- facebook
-- aol
-title: Facebook, the new America Online?
-type: wp
+title: "Facebook, the new America Online?"
+subtitle: "Doc Searls has a new post about Facebook"
+category: "298"
+tags: []
+date: "2007-10-24"
+type: "wp"
 wordpress_id: 1188
 ---
-
 [Doc Searls has a new post about Facebook](http://blogs.law.harvard.edu/doc/2007/10/23/too-much-facebook-time/) which I came across in [ Scoble’s Link Blog.](http://www.google.com/reader/public/atom/user/14480565058256660224/state/com.google/) It mentions something that I’ve been thinking about too.
 Is [[tag]Facebook[/tag]](http://brandeis.facebook.com/home.php?) the new [[tag]America Online[/tag]](http://www.aol.com/)? Here’s what I mean: Back in the bad old days, there were services like AOL, [tag]Compuserve[/tag] which were very popular. I was a committed user.
 

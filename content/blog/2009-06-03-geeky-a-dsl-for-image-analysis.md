@@ -1,16 +1,12 @@
 ---
-category: '422'
-date: '2009-06-03'
-subtitle: I have been working quite a lot on **Election Reform** over the last few
-  weeks, at least from the t...
-tags:
-- programming
-- politics
-title: '[GEEKY] A DSL for Image Analysis'
-type: wp
+title: "[GEEKY] A DSL for Image Analysis"
+subtitle: "I have been working quite a lot on **Election Reform** over the last few weeks, at least from the t..."
+category: "422"
+tags: []
+date: "2009-06-03"
+type: "wp"
 wordpress_id: 842
 ---
-
 I have been working quite a lot on **Election Reform**  over the last few weeks, at least from the technology side. 
 To be honest there is just so much I could be blogging about in this narrow specialized space that [my cup overfloweth](http://wiki.trustthevote.org/index.php/Main_Page), but also it has been an impediment, not knowing where to start. There’s so much background and new new learning (for me anyway) that it’s been daunting.
 

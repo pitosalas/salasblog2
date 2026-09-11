@@ -3,9 +3,8 @@ category: '538'
 date: '2004-11-29'
 subtitle: It’s been a while.
 tags:
-- technology
+- lotus
 - business
-- lotus-improv
 title: Why Improv didn’t succeed
 type: wp
 wordpress_id: 1905

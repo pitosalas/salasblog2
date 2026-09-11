@@ -4,9 +4,7 @@ date: '2005-01-09'
 subtitle: I really love her major novels although I haven’t looked at them in years.
   You know how you remember...
 tags:
-- personal
 - politics
-- ayn-rand
 title: When I was younger I used to admire Ayn Rand
 type: wp
 wordpress_id: 1875

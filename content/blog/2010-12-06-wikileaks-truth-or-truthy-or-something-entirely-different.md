@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-12-06'
-subtitle: David Weinberger has, as usual, an interesting take, and some in...
-tags:
-- politics
-- wikileaks
-title: 'Wikileaks: Truth or Truthy or something entirely different?'
-type: wp
+title: "Wikileaks: Truth or Truthy or something entirely different?"
+subtitle: "David Weinberger has, as usual, an interesting take, and some in..."
+category: "298"
+tags: ["1322", "2111", "2116"]
+date: "2010-12-06"
+type: "wp"
 wordpress_id: 631
 ---
-
 [David Weinberger](http://www.hyperorg.com/blogger/) has, as usual, an interesting take, and some interesting links relevant to our perception and the defense or offense of Wikileaks. From his post:
 > “I here just want to comment on a particular theory of truth that many are using to justify Wikileaks. This ideas says that “the truth” is a neutral and accurate depiction of how the world is. One is thus always justified in stating the truth.
 

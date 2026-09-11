@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2009-09-14'
-subtitle: I’ve been in the process of setting up a new computer and in the process,
-  as is expected, discoverin...
-tags:
-- technology
-- mac
-title: '[geeky] Odd stuff I’ve learned setting up a new Mac'
-type: wp
+title: "[geeky] Odd stuff I’ve learned setting up a new Mac"
+subtitle: "I’ve been in the process of setting up a new computer and in the process, as is expected, discoverin..."
+category: "538"
+tags: ["969", "1308", "1880"]
+date: "2009-09-14"
+type: "wp"
 wordpress_id: 803
 ---
-
 I’ve been in the process of setting up a new computer and in the process, as is expected, discovering long lost files and stuff that is easier or harder to move over. I thought I would capture some of the tidbits because there might be something useful here for you
  
 - To set the scene, this is a new Mac Pro (the tower, Intel, 64bit, running Snow Leopard) replacing an old Power Mac (the old tower, PowerPC, 32bit, running Leopard.) You can stop now if you’re a PC. To the untrained eye, these computers are exactly the same inside and out. But wait.

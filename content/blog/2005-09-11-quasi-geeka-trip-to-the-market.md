@@ -2,8 +2,7 @@
 category: '298'
 date: '2005-09-11'
 subtitle: Do you follow Ben Hyde’s blog? I **recommend** it – he has always fas...
-tags:
-- personal
+tags: []
 title: '[QUASI-GEEK]A trip to the market'
 type: wp
 wordpress_id: 1699

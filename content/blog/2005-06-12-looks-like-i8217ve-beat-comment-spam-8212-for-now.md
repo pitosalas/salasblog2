@@ -2,9 +2,7 @@
 category: '538'
 date: '2005-06-12'
 subtitle: You’ve heard me complain about comment spam befor...
-tags:
-- technology
-- movable-type
+tags: []
 title: Looks like I’ve beat comment spam — for now!
 type: wp
 wordpress_id: 1759

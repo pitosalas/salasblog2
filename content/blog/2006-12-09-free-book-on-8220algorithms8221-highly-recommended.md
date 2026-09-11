@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2006-12-09'
-subtitle: Check out [this
-tags:
-- programming
-- algorithms
-- books
-title: Free book on “Algorithms” highly recommended
-type: wp
+title: "Free book on “Algorithms” highly recommended"
+subtitle: "Check out [this"
+category: "538"
+tags: []
+date: "2006-12-09"
+type: "wp"
 wordpress_id: 1389
 ---
-
 Check out [this 
  post](http://www.dzone.com/rsslinks/free_book_on_algorithms_highly_recommended.html) from [dzone.com: latest front page](http://www.dzone.com/):
 

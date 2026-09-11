@@ -4,7 +4,6 @@ date: '2005-02-05'
 subtitle: An interesting article in News.Com
 tags:
 - business
-- technology
 title: VCs and Aggregators
 type: wp
 wordpress_id: 1853

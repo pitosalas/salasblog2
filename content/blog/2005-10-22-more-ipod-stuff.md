@@ -3,9 +3,7 @@ category: '298'
 date: '2005-10-22'
 subtitle: Continuing my iPod thoughts, today I read that a [lawsuit has been b...
 tags:
-- technology
-- ipod
-- poptech
+- apple
 title: More iPod stuff
 type: wp
 wordpress_id: 1674

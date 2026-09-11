@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-02-14'
-subtitle: I received this email from “Bank of America”. It obviously a phishing attack
-  but it sounds so legiti...
-tags:
-- technology
-title: I fear for the gullible user
-type: wp
+title: "I fear for the gullible user"
+subtitle: "I received this email from “Bank of America”. It obviously a phishing attack but it sounds so legiti..."
+category: "298"
+tags: []
+date: "2007-02-14"
+type: "wp"
 wordpress_id: 1331
 ---
-
 I received this email from “Bank of America”. It obviously a phishing attack but it sounds so legitimate and straightforward that I can easily see lots of people (including some I know) to fall for it. Scary, look: even the URL looks real:
 
 > Dear Customer:

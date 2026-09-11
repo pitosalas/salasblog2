@@ -3,8 +3,7 @@ category: '298'
 date: '2005-02-26'
 subtitle: There are two TV shows that it seems no one knows about, and yet, I think,
   are the very best on TV t...
-tags:
-- personal
+tags: []
 title: Two Best TV shows that no one has heard about
 type: wp
 wordpress_id: 1840

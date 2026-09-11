@@ -2,10 +2,7 @@
 category: '50'
 date: '2005-12-05'
 subtitle: Cori Schiegel convinced me
-tags:
-- technology
-- opml
-- attention-xml
+tags: []
 title: '[GEEK] Maybe Attention.xml and OPML shouldn’t always travel together'
 type: wp
 wordpress_id: 1639

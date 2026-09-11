@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-04-11'
-subtitle: This is probably not high on your radar, but if you have interest in the
-  island of Curaçao you may h...
-tags:
-- curacao
-- politics
-title: An excellent paper about Curaçao Politics
-type: wp
+title: "An excellent paper about Curaçao Politics"
+subtitle: "This is probably not high on your radar, but if you have interest in the island of Curaçao you may h..."
+category: "298"
+tags: ["863", "900", "1509", "1645", "1728"]
+date: "2009-04-11"
+type: "wp"
 wordpress_id: 858
 ---
-
 This is probably not high on your radar, but if you have interest in the island of Curaçao you may have heard about the big referendum issue that is being hotly debated these days.
 I won’t even try to capture the sides of the argument, rather I want to refer you to this outstanding paper written by people from Harvard Law School that cover the issues and sides thoroughly. It is, by the way, extremely well written.
 

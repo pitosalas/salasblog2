@@ -3,8 +3,7 @@ category: '298'
 date: '2005-04-13'
 subtitle: This is amusing. Ever since I learned from **glenn**, many years ago, that
   everyone uses “beg the qu...
-tags:
-- personal
+tags: []
 title: Beg the question? Beg your pardon?
 type: wp
 wordpress_id: 1804

@@ -3,9 +3,7 @@ category: '298'
 date: '2004-12-14'
 subtitle: In this morning’s Blog reading, I saw two references to Seinfeld episodes,
   in each case the referenc...
-tags:
-- personal
-- seinfeld
+tags: []
 title: How Seinfeld as shaped popular culture
 type: wp
 wordpress_id: 1896

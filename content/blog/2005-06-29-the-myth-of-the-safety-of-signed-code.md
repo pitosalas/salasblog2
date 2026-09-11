@@ -3,9 +3,7 @@ category: '538'
 date: '2005-06-29'
 subtitle: 'This is **commonly accepted wisdom**: When I download and install an application
   on my computer (any...'
-tags:
-- technology
-- programming
+tags: []
 title: The myth of the safety of signed code
 type: wp
 wordpress_id: 1743

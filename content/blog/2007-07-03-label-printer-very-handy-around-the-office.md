@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2007-07-03'
-subtitle: A few years ago I got the idea to get myself a label printer
-tags:
-- personal
-title: Label printer very handy around the office
-type: wp
+title: "Label printer very handy around the office"
+subtitle: "A few years ago I got the idea to get myself a label printer"
+category: "298"
+tags: []
+date: "2007-07-03"
+type: "wp"
 wordpress_id: 1244
 ---
-
 A few years ago I got the idea to get myself a [label printer](http://en.wikipedia.org/wiki/Label_printer) for around the office. Turns out that it’s been really really handy.
 Almost all the labels that I’ve printed have been for the myriad of cables, chargers and other doo-dads that one accumulates in this business. Labels like: “Sprint Sanyo Phone”, “Garmin GPS data cable”, and “iPod Firewire” become incredibly useful when you are trying to figure out what goes with what.
 

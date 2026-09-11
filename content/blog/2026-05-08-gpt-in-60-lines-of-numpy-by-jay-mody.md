@@ -1,6 +1,7 @@
 ---
 date: '2026-05-08'
-tags: ["ai", "programming"]
+tags:
+- ai
 title: GPT in 60 Lines of NumPy - by Jay Mody
 type: blog
 ---

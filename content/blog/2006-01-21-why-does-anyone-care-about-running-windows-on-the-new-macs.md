@@ -1,12 +1,15 @@
 ---
-title: "Why does anyone care about running Windows on the new Macs?"
-subtitle: "When you’re a blogger it’s sometimes a **strain** to say something **new** about a topic that’s [gon..."
-category: "298"
-tags: ["technology"]
-date: "2006-01-21"
-type: "wp"
+category: '298'
+date: '2006-01-21'
+subtitle: When you’re a blogger it’s sometimes a **strain** to say something **new**
+  about a topic that’s [gon...
+tags:
+- apple
+title: Why does anyone care about running Windows on the new Macs?
+type: wp
 wordpress_id: 1611
 ---
+
 When you’re a blogger it’s sometimes a **strain** to say something **new** about a topic that’s [gone around and around](http://www.google.com/search?q=intel%20mac%20vista%20xp). I am pretty sure you’ve seen the announcement from Apple that their [next generation of Macintosh computers will use Intel processors](http://www.apple.com/macbookpro/).
 
 Other than the industry **melodrama** about Steve Jobs embracing the very chips that for years he insulted, and perhaps bemusement of how Steve got that Intel Exec to dress up in a silly white costume while Steve looked cool in his traditional black turtle-neck.

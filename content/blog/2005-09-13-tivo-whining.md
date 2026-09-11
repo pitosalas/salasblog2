@@ -3,9 +3,7 @@ category: '298'
 date: '2005-09-13'
 subtitle: I’ve come across a flurry of commentary on the fact that apparently TiVo
   has added content protectio...
-tags:
-- technology
-- tivo
+tags: []
 title: TiVo whining?
 type: wp
 wordpress_id: 1697

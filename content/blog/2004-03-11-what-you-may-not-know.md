@@ -4,8 +4,7 @@ date: '2004-03-11'
 subtitle: '**What you may not know about Eclipse. (Demo 2004 Series 10) **If you are
   a Java developer and you h...'
 tags:
-- programming
-- eclipse
+- demo-conference
 title: What you may not know
 type: wp
 wordpress_id: 2049

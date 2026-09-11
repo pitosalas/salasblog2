@@ -1,16 +1,12 @@
 ---
-category: '410'
-date: '2008-01-26'
-subtitle: People wring their hands about the possibility of having Bill Clinton back
-  in the white house as the...
-tags:
-- politics
-- bill-clinton
-title: 'Bill Clinton: First Lad or …'
-type: wp
+title: "Bill Clinton: First Lad or …"
+subtitle: "People wring their hands about the possibility of having Bill Clinton back in the white house as the..."
+category: "410"
+tags: []
+date: "2008-01-26"
+type: "wp"
 wordpress_id: 1131
 ---
-
 People wring their hands about the possibility of having Bill Clinton back in the white house as the first ever First Spouse, working mano-a-mano with Hillary. I like Bill Clinton a lot – I did when he was president and I still do. Yet I can understand the misgivings.
 In [today’s New York times:](http://www.nytimes.com/2008/01/26/opinion/26wills.html?_r=1&ref=opinion&oref=slogin)
 

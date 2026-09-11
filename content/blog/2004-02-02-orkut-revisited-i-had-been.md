@@ -3,9 +3,7 @@ category: '1'
 date: '2004-02-02'
 subtitle: '**Orkut Revisited: **I had been wondering whether my negative vibes [about
   Orkut...'
-tags:
-- technology
-- orkut
+tags: []
 title: 'Orkut Revisited: I had been'
 type: wp
 wordpress_id: 2083

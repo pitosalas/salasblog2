@@ -2,9 +2,7 @@
 category: '1'
 date: '2004-03-12'
 subtitle: '**BlogBridge update. **In the last few days I’ve made some reasonable p...'
-tags:
-- technology
-- blogbridge
+tags: []
 title: BlogBridge update. In the last
 type: wp
 wordpress_id: 2047

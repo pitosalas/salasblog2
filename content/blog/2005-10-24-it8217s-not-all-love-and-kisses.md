@@ -3,7 +3,6 @@ category: '298'
 date: '2005-10-24'
 subtitle: We all love Wikipedia – I know I do. I’ve sung it’s praises to lots of ...
 tags:
-- technology
 - wikipedia
 title: It’s not all love and kisses
 type: wp

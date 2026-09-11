@@ -2,7 +2,7 @@
 title: "Capitol Reef"
 subtitle: "![](http://www.flickr.com..."
 category: "298"
-tags: ["travel"]
+tags: []
 date: "2006-10-03"
 type: "wp"
 wordpress_id: 1427

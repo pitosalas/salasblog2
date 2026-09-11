@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2008-01-24'
-subtitle: In the Portals and KM blog, a pair of great articles about “Enterprise 2.0”.
-  Bill Ives has been foll...
-tags:
-- technology
-- business
-- enterprise2.0
-title: Great coverage of Enterprise 2.0
-type: wp
+title: "Great coverage of Enterprise 2.0"
+subtitle: "In the Portals and KM blog, a pair of great articles about “Enterprise 2.0”. Bill Ives has been foll..."
+category: "298"
+tags: ["1005"]
+date: "2008-01-24"
+type: "wp"
 wordpress_id: 1132
 ---
-
 In the Portals and KM blog, a pair of great articles about “Enterprise 2.0”. Bill Ives has been following and covering Enterprise 2.0, which I’ve seen [defined as “the Application of Web 2.0 technologies to workers using network software within an organization or business.”](http://blogs.zdnet.com/Hinchcliffe/?p=71)
 Check out these two articles each of which are quite useful surveys of what’s going on in the space:
 

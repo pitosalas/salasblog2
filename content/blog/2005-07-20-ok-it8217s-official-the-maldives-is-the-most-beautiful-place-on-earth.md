@@ -5,7 +5,6 @@ subtitle: For a while now I’ve been fascinated with my Flickr SmartFeed of the
   The pictures are one ...
 tags:
 - travel
-- personal
 title: 'Ok it’s official: The Maldives is the most beautiful place on earth'
 type: wp
 wordpress_id: 1732

@@ -1,15 +1,12 @@
 ---
-category: '410'
-date: '2009-11-04'
-subtitle: I wrote the other day about the ‘amusing’ dust-up between
-tags:
-- science
-- freakonomics
-title: Follow-up up Wall Street Journal about Super Freakonomics Dustup
-type: wp
+title: "Follow-up up Wall Street Journal about Super Freakonomics Dustup"
+subtitle: "I wrote the other day about the ‘amusing’ dust-up between"
+category: "410"
+tags: []
+date: "2009-11-04"
+type: "wp"
 wordpress_id: 781
 ---
-
 I [wrote the other day about the ‘amusing’ dust-up between](/2009/10/30/oh-snap-detailed-take-down-of-steve-levitt-of-superfreakonimics/) the [RealClimate blog](http://www.realclimate.org/index.php/archives/2009/10/an-open-letter-to-steve-levitt/) and Levitt and Dubner, authors of [Super Freakonomics](http://superfreakonomicsbook.com/).
 Well today I see in the [Wall Street Journal](http://online.wsj.com/article/SB10001424052748704335904574495643459234318.html?mod=rss_most_emailed_week), a defense of Levitt and Dubner, but it’s an odd one. It actually supplies no facts (unlike the article I sited) just a criticism of ‘pro-climate-change’ (forgive the generalization) people [not being open to new ideas](http://online.wsj.com/article/SB10001424052748704335904574495643459234318.html?mod=rss_most_emailed_week):
 

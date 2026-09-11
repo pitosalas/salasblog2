@@ -3,9 +3,7 @@ category: '51'
 date: '2004-11-22'
 subtitle: 'My answer to the question: **“What is a Blog”, **which I get asked often,
   goes something like this:'
-tags:
-- personal
-- technology
+tags: []
 title: What is a blog, again?
 type: wp
 wordpress_id: 1910

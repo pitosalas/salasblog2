@@ -5,7 +5,6 @@ subtitle: 'Just an amusing little bit from the Wall Street Journal about the Toy
   Prius:'
 tags:
 - technology
-- toyota-prius
 title: What happens when your car’s (software) crashes?
 type: wp
 wordpress_id: 1781

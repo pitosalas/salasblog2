@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2010-08-21'
-subtitle: You may not have followed the discussion that ensued when Ray Kurzweil was
-  reported to ‘[not underst...
-tags:
-- technology
-- ai
-- ray-kurzweil
-title: Ray Kurzweil Responds
-type: wp
+title: "Ray Kurzweil Responds"
+subtitle: "You may not have followed the discussion that ensued when Ray Kurzweil was reported to ‘[not underst..."
+category: "298"
+tags: []
+date: "2010-08-21"
+type: "wp"
 wordpress_id: 682
 ---
-
 You may not have followed the discussion that ensued when Ray Kurzweil was reported to ‘[not understand the brain](http://scienceblogs.com/pharyngula/2010/08/ray_kurzweil_does_not_understa.php)‘, but it’s pretty fascinating. Here’s what PZ Meyers said:
 > “There he goes again, making up nonsense and making ridiculous claims that have no relationship to reality. Ray Kurzweil must be able to spin out a good line of bafflegab, because he seems to have the tech media convinced that he’s a genius, when he’s actually just another Deepak Chopra for the computer science cognoscenti.” (**from** [PZ eyers)](http://scienceblogs.com/pharyngula/2010/08/ray_kurzweil_does_not_understa.php)
 

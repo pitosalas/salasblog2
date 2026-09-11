@@ -1,12 +1,13 @@
 ---
-title: "BlogBridge Major architectural progress"
-subtitle: "We made some major new progress since the last update."
-category: "50"
-tags: ["business", "programming"]
-date: "2004-03-11"
-type: "wp"
+category: '50'
+date: '2004-03-11'
+subtitle: We made some major new progress since the last update.
+tags: []
+title: BlogBridge Major architectural progress
+type: wp
 wordpress_id: 2048
 ---
+
 We made some major new progress since the last update. 
 **Unread Management. **The persistent RSS layer (Informa) has been updated to support Unread management. This has been carried through the rest of BlogBridge, using Bold in the Channel Guide and in the Article list in the usual way to show read and uread. A set of new commands, Mark Read, Mark All Read have been added as well. Some of the other variations still need to be implemented.
 

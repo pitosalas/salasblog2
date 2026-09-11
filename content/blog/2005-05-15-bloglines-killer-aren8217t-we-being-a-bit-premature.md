@@ -4,7 +4,6 @@ date: '2005-05-15'
 subtitle: Richard MacManus made a statement in a p...
 tags:
 - technology
-- bloglines
 title: Bloglines Killer? Aren’t we being a bit premature?
 type: wp
 wordpress_id: 1786

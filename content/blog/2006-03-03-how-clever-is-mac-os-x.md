@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2006-03-03'
-subtitle: I guess because **deep down** I am still a paranoid **Windows** user, my
-  OS X is configured to **au...
-tags:
-- technology
-- macos
-title: How clever is Mac OS X?
-type: wp
+title: "How clever is Mac OS X?"
+subtitle: "I guess because **deep down** I am still a paranoid **Windows** user, my OS X is configured to **au..."
+category: "538"
+tags: []
+date: "2006-03-03"
+type: "wp"
 wordpress_id: 1586
 ---
-
 I guess because **deep down** I am still a paranoid **Windows** user, my OS X  is configured to **automatically reboot** every Saturday at 7:00am, “*just to clear out the cobwebs*.” A very **handy** setting by the way, which I wish that Windows XP also had.
 
 Am I **imagining** this?

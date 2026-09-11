@@ -3,9 +3,7 @@ category: '50'
 date: '2005-10-04'
 subtitle: His conundrum is that he loves both Web services (browser based applications)
   and Windows applicatio...
-tags:
-- technology
-- robert-scoble
+tags: []
 title: Scoble’s conundrum
 type: wp
 wordpress_id: 1681

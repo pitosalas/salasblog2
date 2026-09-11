@@ -4,9 +4,7 @@ date: '2005-06-04'
 subtitle: I just came off listening to Dan Bricklin’s first podcast, an interview
   with Linda Hamel
 tags:
-- technology
-- podcasting
-- dan-bricklin
+- legal
 title: Dan Bricklin doing some interesting podcasting
 type: wp
 wordpress_id: 1766

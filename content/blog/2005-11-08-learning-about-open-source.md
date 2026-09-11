@@ -3,8 +3,7 @@ category: '298'
 date: '2005-11-08'
 subtitle: '!Moldave'
 tags:
-- technology
-- personal
+- legal
 title: Learning about Open Source
 type: wp
 wordpress_id: 1660

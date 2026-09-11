@@ -4,9 +4,7 @@ date: '2005-09-01'
 subtitle: Robert Cringely has a relatively little known **quasi blog**, for some reason
   on www.pbs.org. The st...
 tags:
-- technology
 - business
-- skype
 title: Who will buy Skype, and why…
 type: wp
 wordpress_id: 1707

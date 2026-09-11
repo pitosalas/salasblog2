@@ -2,8 +2,7 @@
 category: '538'
 date: '2005-06-03'
 subtitle: What system is this from?
-tags:
-- personal
+tags: []
 title: Sorry, but I have to share this
 type: wp
 wordpress_id: 1769

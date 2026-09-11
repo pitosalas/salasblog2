@@ -2,9 +2,7 @@
 category: '1'
 date: '2005-08-24'
 subtitle: '![](http://www.flickr.com/p...'
-tags:
-- personal
-- blogbridge
+tags: []
 title: Incogruous
 type: wp
 wordpress_id: 1711

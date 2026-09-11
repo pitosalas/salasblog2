@@ -4,9 +4,7 @@ date: '2004-09-29'
 subtitle: 'Here’s a **cool **idea: using the web services of **Google **and **Technorati
   **together to find oth...'
 tags:
-- technology
-- blogbridge
-- google
+- programming
 title: Web Services gone wild
 type: wp
 wordpress_id: 1933

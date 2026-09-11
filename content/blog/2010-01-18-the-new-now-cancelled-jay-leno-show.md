@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2010-01-18'
-subtitle: Finally I found someone expressing what I have been thinking about [the
-  fracas about NBC, Jay Leno, ...
-tags:
-- personal
-- jay-leno
-- conan-obrien
-title: The new, now cancelled, Jay Leno Show
-type: wp
+title: "The new, now cancelled, Jay Leno Show"
+subtitle: "Finally I found someone expressing what I have been thinking about [the fracas about NBC, Jay Leno, ..."
+category: "298"
+tags: ["848", "1312", "1354", "1504", "1984"]
+date: "2010-01-18"
+type: "wp"
 wordpress_id: 753
 ---
-
 Finally I found someone expressing what I have been thinking about [the fracas about NBC, Jay Leno, Conan O’Brien](http://www.tvsquad.com/2010/01/18/jay-leno-and-the-missed-opportunity/) etc. etc. And while I didn’t know then what I know now, I did eagerly tune in for the first Jay Leno @ 10:00pm show, hoping to see the payoff to all the hype that preceded that first episode. Do you remember all the promos and the hints and speculation? Then, on that first night:
 **“What would Jerry Seinfeld — Jay’s good buddy — do with five hours of prime time real estate? How about some TV producers, Mark Burnett or Jerry Bruckheimer or Nigel Lythgoe? You think they would have simply recycled old material or would they have used the opportunity to innovate? Jay had the chance to reinvent himself. He didn’t have to do a tired, watered-down version of *The Tonight Show*. He didn’t have to do what he’s always done before. **He had the opening, if not the wherewithal, to break out of the mold.” (from [TV Squad](http://www.tvsquad.com/2010/01/18/jay-leno-and-the-missed-opportunity/))
 

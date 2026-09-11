@@ -4,7 +4,7 @@ date: '2005-04-12'
 subtitle: Doc comments with grudging admiration
 tags:
 - business
-- ibm
+- legal
 title: IBM Patent Benevolence?
 type: wp
 wordpress_id: 1805

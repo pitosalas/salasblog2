@@ -1,12 +1,13 @@
 ---
-title: "[OOPSLA] Where Wikis come from"
-subtitle: "I was lucky enough to meet and spend some time with **Ward Cunningham **"
-category: "538"
-tags: ["technology"]
-date: "2004-11-06"
-type: "wp"
+category: '538'
+date: '2004-11-06'
+subtitle: I was lucky enough to meet and spend some time with **Ward Cunningham **
+tags: []
+title: '[OOPSLA] Where Wikis come from'
+type: wp
 wordpress_id: 1917
 ---
+
 I was lucky enough to meet and spend some time with [**Ward Cunningham **](http://c2.com/cgi/wiki?WardCunningham)at [OOPSLA ](http://www.oopsla.org/2004/ShowPage.do?id=Home)this year. I also heard him present in a big hall. If you are a [Wiki ](http://en.wikipedia.org/wiki/Wiki)fan then you know that Ward is the one who invented the concept. 
 What seems to be a **little less well known **is how the idea evolved, where it came from. I am sure it’s written up somewhere. but I thought I’d write down my own idiosynchratic understanding of the story.
 

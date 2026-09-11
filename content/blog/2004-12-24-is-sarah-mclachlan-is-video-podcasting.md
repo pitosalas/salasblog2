@@ -2,10 +2,7 @@
 category: '51'
 date: '2004-12-24'
 subtitle: '!['
-tags:
-- music
-- podcasting
-- sarah-mclachlan
+tags: []
 title: Is Sarah McLachlan is Video Podcasting?
 type: wp
 wordpress_id: 1887

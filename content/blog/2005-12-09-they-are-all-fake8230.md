@@ -4,7 +4,7 @@ date: '2005-12-09'
 subtitle: Check out these amusing images which I came across on the Advertising/Design
   Goodness Blog
 tags:
-- personal
+- design
 title: They are all fake…
 type: wp
 wordpress_id: 1637

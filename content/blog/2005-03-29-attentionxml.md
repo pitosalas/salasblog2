@@ -2,10 +2,7 @@
 category: '50'
 date: '2005-03-29'
 subtitle: Steve Gilmor muses about the history of the Attenti...
-tags:
-- technology
-- blogbridge
-- attention-xml
+tags: []
 title: Attention.xml
 type: wp
 wordpress_id: 1817

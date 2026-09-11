@@ -5,7 +5,6 @@ subtitle: '**Wonderful Mars pictures? Unavailable! **I was looking around the Ma
   Rover Web'
 tags:
 - science
-- mars
 title: Wonderful Mars pictures? Unavailable! I
 type: wp
 wordpress_id: 2101

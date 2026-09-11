@@ -4,8 +4,7 @@ date: '2005-02-17'
 subtitle: Unless you have been living under a **rock** (or have **better** things
   to do with your time) you wi...
 tags:
-- technology
-- google-maps
+- maps
 title: Have you seen Google Maps?
 type: wp
 wordpress_id: 1847

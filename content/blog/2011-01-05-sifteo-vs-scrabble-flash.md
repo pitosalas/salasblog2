@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2011-01-05'
-subtitle: 'Scott Kirsner tweets:'
-tags:
-- technology
-- sifteo
-title: Sifteo vs. Scrabble Flash
-type: wp
+title: "Sifteo vs. Scrabble Flash"
+subtitle: "Scott Kirsner tweets:"
+category: "298"
+tags: ["1112", "1344", "1806"]
+date: "2011-01-05"
+type: "wp"
 wordpress_id: 613
 ---
-
 Scott Kirsner tweets:
 
 > “Invented at MIT, Sifteo cubes (tiny displays that talk to each other) are almost ready: http://bit.ly/eXsCQU / http://bit.ly/ehhZ1Q”

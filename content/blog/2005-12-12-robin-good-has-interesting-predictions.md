@@ -4,8 +4,6 @@ date: '2005-12-12'
 subtitle: Robin Good has some [interesting predictions and prognos...
 tags:
 - technology
-- business
-- robin-good
 title: Robin Good has interesting predictions
 type: wp
 wordpress_id: 1634

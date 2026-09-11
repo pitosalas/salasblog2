@@ -5,7 +5,6 @@ subtitle: I had the opportunity to be a guest lecturer at Brandeis University to
   which was fun. Brandeis o...
 tags:
 - brandeis
-- education
 title: Overview of Collaboration
 type: wp
 wordpress_id: 2040

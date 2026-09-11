@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-04-26'
-subtitle: CAPTCHA is the nickname of the venerable (ok only a few years of veneration)
-  technique of verifying ...
-tags:
-- technology
-title: CAPTCHA’s cracked
-type: wp
+title: "CAPTCHA’s cracked"
+subtitle: "CAPTCHA is the nickname of the venerable (ok only a few years of veneration) technique of verifying ..."
+category: "298"
+tags: ["773", "1649", "1822"]
+date: "2010-04-26"
+type: "wp"
 wordpress_id: 727
 ---
-
 CAPTCHA is the nickname of the venerable (ok only a few years of veneration) technique of verifying if the person on the other side of the screen is actually a person not a computer. We’ve all seen them a million times: a very hard to read bit of text in a small box, with a request that you decipher it and type in the text into another box. 
 Well it seems that spammers have figured out a way to defeat them: yes, you guessed it, “Captcha Farms.” I first thought they were some exaggerated fear mongering but I suppose their commonplace enough that it’s being reported even in, the, g-u-l-p, New York Times:
 

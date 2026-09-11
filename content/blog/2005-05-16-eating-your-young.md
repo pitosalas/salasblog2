@@ -3,8 +3,7 @@ category: '538'
 date: '2005-05-16'
 subtitle: 'I came across this bit:'
 tags:
-- business
-- lotus-improv
+- lotus
 title: Eating your young
 type: wp
 wordpress_id: 1785

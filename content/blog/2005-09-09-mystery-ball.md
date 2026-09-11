@@ -3,7 +3,7 @@ category: '298'
 date: '2005-09-09'
 subtitle: 'Yesterday, this appeared on my Mac desktop:'
 tags:
-- personal
+- macos
 title: Mystery Ball
 type: wp
 wordpress_id: 1700

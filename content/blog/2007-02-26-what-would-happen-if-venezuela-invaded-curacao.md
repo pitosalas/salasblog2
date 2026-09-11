@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2007-02-26'
-subtitle: Yeah a weird thought. So when I came across an [analysis called The Dutch
-  Defend Their World Empire]...
-tags:
-- politics
-- venezuela
-- curacao
-title: What would happen if Venezuela invaded Curaçao
-type: wp
+title: "What would happen if Venezuela invaded Curaçao"
+subtitle: "Yeah a weird thought. So when I came across an [analysis called The Dutch Defend Their World Empire]..."
+category: "298"
+tags: []
+date: "2007-02-26"
+type: "wp"
 wordpress_id: 1320
 ---
-
 Yeah a weird thought. So when I came across an [analysis called The Dutch Defend Their World Empire](http://www.strategypage.com/htmw/htworld/articles/20070225.aspx), I was fascinated, in a sick sort of way.
 > “[snip…]The Dutch problem can best be described with the words, “not enough”. Not enough forces to successfully repel an invasion of Aruba, Curacao, and Bonaire; not enough naval power to carry out operations to retake the islands; their fighters do not have enough range; and not enough logistical support to support an operation.[snip…] (**from** [The Dutch Defend Their Empire](http://www.strategypage.com/htmw/htworld/articles/20070225.aspx))
 

@@ -4,7 +4,7 @@ date: '2005-01-02'
 subtitle: In the realm of interesting visualizations, check this one
 tags:
 - technology
-- design
+- programming
 title: Incredibly cool visualizations
 type: wp
 wordpress_id: 1880

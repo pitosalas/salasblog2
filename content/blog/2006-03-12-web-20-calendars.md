@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2006-03-12'
-subtitle: Mike Arrington waxes poetic
-tags:
-- technology
-- web2.0
-- gmail
-title: Web 2.0 Calendars?
-type: wp
+title: "Web 2.0 Calendars?"
+subtitle: "Mike Arrington waxes poetic"
+category: "538"
+tags: []
+date: "2006-03-12"
+type: "wp"
 wordpress_id: 1579
 ---
-
 [Mike Arrington](http://www.techcrunch.com/) [waxes poetic](http://www.techcrunch.com/2006/03/11/30-boxes-ready-to-take-out-online-calendar-space/) about [30 Boxes](http://www.30boxes.com/), an entry in the, apparently, red-hot online calendar space. 
 
 **I’m not sure I get it.**

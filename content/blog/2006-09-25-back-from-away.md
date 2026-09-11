@@ -1,16 +1,12 @@
 ---
-category: '51'
-date: '2006-09-25'
-subtitle: I just returned from a trip in the American Southwest, starting in St. George
-  Utah, to Bryce Canyon ...
-tags:
-- personal
-- travel
-title: Back from away
-type: wp
+title: "Back from away"
+subtitle: "I just returned from a trip in the American Southwest, starting in St. George Utah, to Bryce Canyon ..."
+category: "51"
+tags: []
+date: "2006-09-25"
+type: "wp"
 wordpress_id: 1434
 ---
-
 I just returned from a trip in the American Southwest, starting in St. George Utah, to Bryce Canyon National Park, Capitol Reef Park, Arches National Park, Canyonlands National Park and ending in Mesa Verde National Park. A spectacular trip. I am now back, invigorated and ready for action.
 
 [http://wikimapia.org/s/#y=38324420&x=-110401611&z=7&l=0&m=a](http://wikimapia.org/s/#y=38324420&x=-110401611&z=7&l=0&m=a)

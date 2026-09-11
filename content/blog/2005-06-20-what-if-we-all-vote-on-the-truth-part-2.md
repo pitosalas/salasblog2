@@ -3,7 +3,6 @@ category: '298'
 date: '2005-06-20'
 subtitle: I wrote a few days ago about the coming LA Times initiative to crea...
 tags:
-- technology
 - wikipedia
 title: What if we all vote on the  truth, part 2
 type: wp

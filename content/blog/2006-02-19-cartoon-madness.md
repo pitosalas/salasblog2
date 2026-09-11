@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-02-19'
-subtitle: The Freakonomics blog often has good stuff in it, even if you haven’...
-tags:
-- politics
-- jewish
-title: Cartoon Madness
-type: wp
+title: "Cartoon Madness"
+subtitle: "The Freakonomics blog often has good stuff in it, even if you haven’..."
+category: "298"
+tags: []
+date: "2006-02-19"
+type: "wp"
 wordpress_id: 1591
 ---
-
 The [Freakonomics blog](http://www.freakonomics.com/) often has good stuff in it, even if you haven’t read the book, which also has good stuff in it.
 
 > “Mitai Sandy, a 29-year-old graphic artist and comic-book publisher in Tel Aviv, came up with the following solution: a new anti-Semitic cartoon contest, with the submissions drawn by Jews themselves.

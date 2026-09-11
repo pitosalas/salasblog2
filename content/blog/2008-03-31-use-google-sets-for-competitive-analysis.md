@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-03-31'
-subtitle: I bet you’ve not heard of another crazy-cool service from Google, Google
-  Sets. I first read about Go...
-tags:
-- technology
-- google
-title: Use Google Sets for competitive analysis
-type: wp
+title: "Use Google Sets for competitive analysis"
+subtitle: "I bet you’ve not heard of another crazy-cool service from Google, Google Sets. I first read about Go..."
+category: "298"
+tags: []
+date: "2008-03-31"
+type: "wp"
 wordpress_id: 1076
 ---
-
 I bet you’ve not heard of another crazy-cool service from Google, Google Sets. I first read about Google Sets some months ago but didn’t bother looking until today, Sunday, when i saw this interesting article about [Google Set’s patents.](http://googlesystem.blogspot.com/2008/03/google-sets-search-engine-for-lists.html)
 This is from that article:
 

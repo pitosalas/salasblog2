@@ -1,16 +1,12 @@
 ---
-category: '422'
-date: '2008-03-17'
-subtitle: So my little toy pedagogical application needed a pretty popup box. Actually
-  I wanted one so I could...
-tags:
-- programming
-- ruby-on-rails
-title: '[Geeky] Doing popups in Rails and elsewhere'
-type: wp
+title: "[Geeky] Doing popups in Rails and elsewhere"
+subtitle: "So my little toy pedagogical application needed a pretty popup box. Actually I wanted one so I could..."
+category: "422"
+tags: []
+date: "2008-03-17"
+type: "wp"
 wordpress_id: 1085
 ---
-
 So my little toy pedagogical application needed a pretty popup box. Actually I wanted one so I could see close up some of the alternatives. In the process I came across three different code snippets, each one doing it in a little bit different way. For you and me, here are the links:
  
 - The [DOM-popup kit, by Stuart Rackham](http://www.methods.co.nz/popup/popup.html)

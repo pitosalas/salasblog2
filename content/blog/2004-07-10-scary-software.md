@@ -1,12 +1,14 @@
 ---
-title: "Scary Software"
-subtitle: "**I love those security guys** just as much as the next guy but this certificate crazyness is ridicu..."
-category: "538"
-tags: ["technology"]
-date: "2004-07-10"
-type: "wp"
+category: '538'
+date: '2004-07-10'
+subtitle: '**I love those security guys** just as much as the next guy but this certificate
+  crazyness is ridicu...'
+tags: []
+title: Scary Software
+type: wp
 wordpress_id: 1968
 ---
+
 **I love those security guys** just as much as the next guy but this certificate crazyness is ridiculous. Look at this message that a poor unsuspecting user sees when they try to run a downloaded java application:
 ![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/scary.JPG?resize=432%2C284)
 

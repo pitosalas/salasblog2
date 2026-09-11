@@ -3,9 +3,7 @@ category: '50'
 date: '2004-09-26'
 subtitle: BlogBridge is going **“Great Guns”** as I told my friend David in answer
   to “What’s going on with Bl...
-tags:
-- technology
-- blogbridge
+tags: []
 title: BlogBridge releases coming fast and furious
 type: wp
 wordpress_id: 1937

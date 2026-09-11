@@ -5,7 +5,6 @@ subtitle: I have installed an interesting application – BlogJet. It’s a cool
   cl...
 tags:
 - technology
-- blogjet
 title: Testing BlogJet
 type: wp
 wordpress_id: 2019

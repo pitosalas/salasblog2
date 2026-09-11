@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2006-08-30'
-subtitle: Someone forwarded this
-tags:
-- technology
-- design
-title: 'Interesting article with a catchy title: “Surprising Truth about Ugly Websites”'
-type: wp
+title: "Interesting article with a catchy title: “Surprising Truth about Ugly Websites”"
+subtitle: "Someone forwarded this"
+category: "538"
+tags: []
+date: "2006-08-30"
+type: "wp"
 wordpress_id: 1438
 ---
-
 Someone forwarded [this](http://www.site-reference.com/articles/Website-Development/The-Surprising-Truth-About-Ugly-Websites.html) to me the other day. You might have seen it, but I still thought it was worth mentioning, because I had not come across it before. In fact I **didn’t** even know about the site where the article was published, [SiteReference](http://www.site-reference.com/). 
 
 Here are  a couple of brief excerpts:

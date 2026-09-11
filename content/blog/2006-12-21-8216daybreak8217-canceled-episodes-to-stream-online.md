@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-12-21'
-subtitle: This is too bad. Daybreak was one of the new shows I was enjoying (not ‘must-see-tv
-  but still entert...
-tags:
-- personal
-title: ‘Daybreak’ canceled, episodes to stream online
-type: wp
+title: "‘Daybreak’ canceled, episodes to stream online"
+subtitle: "This is too bad. Daybreak was one of the new shows I was enjoying (not ‘must-see-tv but still entert..."
+category: "298"
+tags: []
+date: "2006-12-21"
+type: "wp"
 wordpress_id: 1377
 ---
-
 This is too bad. Daybreak was one of the new shows I was enjoying (not ‘must-see-tv but still entertaining.) It was basically “Groundhog Day meets ’24’. Anyway, check out [this 
  post](http://feeds.feedburner.com/~r/LostRemote/~3/64461720/) from [Lost Remote](http://www.lostremote.com):
 

@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-10-03'
-subtitle: We saw the “Jersey Boys” musical in Chicago last night. It’s a lot...
-tags:
-- music
-- personal
-title: Jersey Boys
-type: wp
+title: "Jersey Boys"
+subtitle: "We saw the “Jersey Boys” musical in Chicago last night. It’s a lot..."
+category: "298"
+tags: []
+date: "2009-10-03"
+type: "wp"
 wordpress_id: 799
 ---
-
 We saw the [“Jersey Boys”](http://www.jerseyboysinfo.com/) musical in Chicago last night. It’s a lot of fun, even though the sound system at the [“Bank of America Theatre”](http://www.lasalle-bank-theater.com/) wasn’t up to par. Actually it was pretty awful.
 The music is great and the story is interesting. Who knew that [Joe Pesci](http://en.wikipedia.org/wiki/Joe_Pesci) had some connection with the [Four Seasons?](http://en.wikipedia.org/wiki/The_Four_Seasons_%28band%29)
 

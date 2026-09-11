@@ -3,9 +3,7 @@ category: '50'
 date: '2005-06-24'
 subtitle: Just in the unlikely event that you didn’t pick it up, a couple of days
   ago we released BlogBridge 1...
-tags:
-- technology
-- blogbridge
+tags: []
 title: Important new (weekly) release of BlogBridge
 type: wp
 wordpress_id: 1748

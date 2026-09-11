@@ -2,10 +2,7 @@
 category: '50'
 date: '2005-11-29'
 subtitle: There’s been a lot
-tags:
-- technology
-- programming
-- opml
+tags: []
 title: '[GEEK] Unified name space for aggregator extensions for OPML?'
 type: wp
 wordpress_id: 1642

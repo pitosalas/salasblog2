@@ -2,10 +2,7 @@
 category: '422'
 date: '2005-08-23'
 subtitle: I’ve subscribed to this list from OCI
-tags:
-- technology
-- programming
-- java
+tags: []
 title: '[Geek] Good Java Mailing List'
 type: wp
 wordpress_id: 1712

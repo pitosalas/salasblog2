@@ -1,12 +1,14 @@
 ---
-title: "RSS/Atom: An idea whose time"
-subtitle: "**RSS/Atom: An idea whose time has come. **Dave Winer"
-category: "1"
-tags: ["technology"]
-date: "2004-03-10"
-type: "wp"
+category: '1'
+date: '2004-03-10'
+subtitle: '**RSS/Atom: An idea whose time has come. **Dave Winer'
+tags:
+- technology
+title: 'RSS/Atom: An idea whose time'
+type: wp
 wordpress_id: 2050
 ---
+
 **RSS/Atom: An idea whose time has come. **[Dave Winer](http://archive.scripting.com/2004/03/09#rssIsRaging) is [reaching out](http://blogs.law.harvard.edu/crimson1/2004/03/08#a1243) to the Atom people to try for the grand unification of the two formats. If you look back at the history of how Atom came to be, and the public record of the debates, disagreements, potshots that have come before you see that this is a **couragous step** for Dave to be taking. It’s a first step which **we all hope** will lead to something great.
 
 People should read what was written closely: particularly that this is not meant to be a final proposal but an opening set of ideas on how the unification might be accomplished (e.g. *“And before stating the offer, let me say that I am open to counter-offers.”)* 

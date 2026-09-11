@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2006-03-25'
-subtitle: I’m a big fan of Wikipedia, and of course traditionally (like anyone) have
-  been an admirer of the En...
-tags:
-- technology
-- wikipedia
-title: Britannica vs. Wikipedia
-type: wp
+title: "Britannica vs. Wikipedia"
+subtitle: "I’m a big fan of Wikipedia, and of course traditionally (like anyone) have been an admirer of the En..."
+category: "298"
+tags: []
+date: "2006-03-25"
+type: "wp"
 wordpress_id: 1571
 ---
-
 I’m a big fan of Wikipedia, and of course traditionally (like anyone) have been an admirer of the Encyclopedia Britannica. 
 
 Recently the highly respected magazine Nature [published an article](http://www.nature.com/nature/journal/v438/n7070/full/438900a.html) describing a study in which they compared the two and found only slightly fewer inaccuracies in Wikipedia than in Britannica.

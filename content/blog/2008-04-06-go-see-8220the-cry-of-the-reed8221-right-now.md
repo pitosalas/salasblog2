@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2008-04-06'
-subtitle: I just came back from the theatre, the [Huntington Theatre, Boston’s, production
-  of a brand new play...
-tags:
-- personal
-- boston
-title: Go See “The Cry of the Reed” right now
-type: wp
+title: "Go See “The Cry of the Reed” right now"
+subtitle: "I just came back from the theatre, the [Huntington Theatre, Boston’s, production of a brand new play..."
+category: "298"
+tags: ["1996"]
+date: "2008-04-06"
+type: "wp"
 wordpress_id: 1073
 ---
-
 I just came back from the theatre, the [Huntington Theatre, Boston’s, production of a brand new play called “The Cry of the Reed” ](http://www.huntingtontheatre.org/season/production.aspx?id=4012&src=t)by [Sinan Ünel.](http://www.massculturalcouncil.org/gallery/artistDetail.asp?App=20072056) This play and production is truly amazing, great, dramatic, thought provoking, and overall excellent.
 We were discussing this play the whole drive home. Talking about war, religion, morality, ethics, human nature, theatre and drama.
 

@@ -4,7 +4,6 @@ date: '2005-06-30'
 subtitle: 'Another excellent **Peggy Noonan** column:'
 tags:
 - politics
-- peggy-noonan
 title: “Why are our politicians so full of themselves?”
 type: wp
 wordpress_id: 1742

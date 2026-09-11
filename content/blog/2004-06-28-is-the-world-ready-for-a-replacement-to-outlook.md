@@ -2,10 +2,7 @@
 category: '538'
 date: '2004-06-28'
 subtitle: Everyone loves to beat...
-tags:
-- technology
-- outlook
-- microsoft
+tags: []
 title: Is the world ready for a replacement to Outlook?
 type: wp
 wordpress_id: 1979

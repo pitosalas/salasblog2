@@ -3,7 +3,6 @@ category: '298'
 date: '2005-05-09'
 subtitle: '!Mpwacover300'
 tags:
-- personal
 - books
 title: Link to Susan Senator!
 type: wp

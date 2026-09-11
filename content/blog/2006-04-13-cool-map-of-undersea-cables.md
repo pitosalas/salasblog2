@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2006-04-13'
-subtitle: This is just a really cool map.
-tags:
-- science
-- technology
-title: Cool map of undersea cables
-type: wp
+title: "Cool map of undersea cables"
+subtitle: "This is just a really cool map."
+category: "538"
+tags: []
+date: "2006-04-13"
+type: "wp"
 wordpress_id: 1555
 ---
-
 This is just a really cool map.
 
 > “The vast bulk of international telephone and Internet traffic travels through underwater cables. This map shows the cables that were in use as of the end of 2004 and gives an indication of where traffic is heaviest.” (**from** [News.Com](http://news.com.com/2300-1033_3-6035611-1.html?part=rss&tag=6035611&subj=news))

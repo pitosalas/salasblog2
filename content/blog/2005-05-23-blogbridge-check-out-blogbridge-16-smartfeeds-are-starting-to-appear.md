@@ -2,9 +2,7 @@
 category: '50'
 date: '2005-05-23'
 subtitle: The latest weekly build has been posted, BlogBridge 1.6. Che...
-tags:
-- technology
-- blogbridge
+tags: []
 title: '[BLOGBRIDGE] Check out BlogBridge 1.6: SmartFeeds are starting to appear!'
 type: wp
 wordpress_id: 1776

@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2010-03-16'
-subtitle: I stopped posting thoughts about the mess that all of congress has made
-  of health care reform. There...
-tags:
-- politics
-- health
-title: Health Care Letdown
-type: wp
+title: "Health Care Letdown"
+subtitle: "I stopped posting thoughts about the mess that all of congress has made of health care reform. There..."
+category: "298"
+tags: []
+date: "2010-03-16"
+type: "wp"
 wordpress_id: 735
 ---
-
 I stopped posting thoughts about the mess that all of congress has made of health care reform. There are daily articles in the news to confirm the dysfunction in government today. Here are key quotes two from today which again hit home. I recommend that you read both articles in full:[Health Care Letdown in the New York Times](http://www.nytimes.com/2010/03/16/opinion/16pewen.html) and [The Spirit of Sympathy in The New York Times](http://www.nytimes.com/2010/03/16/opinion/16brooks.html)
 **“Three in four Americans say the health care system needs to be overhauled, and many provisions in the pending legislation have strong support. What’s more, the core of the Senate’s legislation closely resembles the very bill the Republicans offered in 1993 as an alternative to the Clinton plan. This makes clear that bipartisan reform was achievable, and indicts Congress for its failure to realize that goal with broad public support.”(from** [Health Care Letdown in the New York Times](http://www.nytimes.com/2010/03/16/opinion/16pewen.html))
 

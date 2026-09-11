@@ -5,7 +5,7 @@ subtitle: Good evening sportsfans. There’s a new version (4.5) of iTunes for W
   All I can see after a qu...
 tags:
 - technology
-- itunes
+- apple
 title: New version of iTunes
 type: wp
 wordpress_id: 2016

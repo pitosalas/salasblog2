@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2006-03-06'
-subtitle: This is only a **little** funny because Mac fans (and I am one of them)
-  can be **very smug** about O...
-tags:
-- technology
-- macos
-title: Mac OS X Hacked?
-type: wp
+title: "Mac OS X Hacked?"
+subtitle: "This is only a **little** funny because Mac fans (and I am one of them) can be **very smug** about O..."
+category: "538"
+tags: []
+date: "2006-03-06"
+type: "wp"
 wordpress_id: 1582
 ---
-
 This is only a **little** funny because Mac fans (and I am one of them) can be **very smug** about OS X security, saying things like: “There has been not a single case of a virus on Mac, ever.” Hard to prove or disprove but intuitively it’s kind of hard to believe.
 
 So when I saw commentary somewhere earlier today that Mac OS X was **hacked in less than 30** minutes I hesitated to post about it, thinking that it was yet another urban legend.

@@ -1,6 +1,7 @@
 ---
 date: '2004-01-08'
-tags: ["technology"]
+tags:
+- technology
 title: 'CRN: “NewsGator 2.0, which pulls'
 type: blog
 ---

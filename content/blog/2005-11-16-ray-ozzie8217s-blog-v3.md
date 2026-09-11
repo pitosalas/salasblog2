@@ -2,9 +2,7 @@
 category: '51'
 date: '2005-11-16'
 subtitle: Glad to see that Ray is blogging again. Now that he is at...
-tags:
-- technology
-- ray-ozzie
+tags: []
 title: Ray Ozzie’s Blog V3
 type: wp
 wordpress_id: 1654

@@ -5,8 +5,6 @@ subtitle: 'You’ve heard this one before: there are more and more truly outstan
   pieces of software coming ou...'
 tags:
 - technology
-- microsoft
-- firefox
 title: Day of reckoning coming for Microsoft?
 type: wp
 wordpress_id: 1866

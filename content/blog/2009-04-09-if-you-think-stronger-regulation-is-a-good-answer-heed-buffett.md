@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-04-09'
-subtitle: Check out this post If you think stronger regulation is a good answer, heed
-  Buffett
-tags:
-- business
-- warren-buffett
-title: If you think stronger regulation is a good answer, heed Buffett
-type: wp
+title: "If you think stronger regulation is a good answer, heed Buffett"
+subtitle: "Check out this post If you think stronger regulation is a good answer, heed Buffett"
+category: "298"
+tags: ["697", "1292", "1730"]
+date: "2009-04-09"
+type: "wp"
 wordpress_id: 860
 ---
-
 Check out this post [If you think stronger regulation is a good answer, heed Buffett](http://feeds.feedburner.com/~r/NewmarksDoor/~3/409097728/if-you-think-st.html):
 > “Warren Buffett gave a three-hour interview in August. Here’s an interesting [bit from the transcript](http://www.clusterstock.com/2008/8/that-awesome-warren-buffett-cnbc-interview):
 

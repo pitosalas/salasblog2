@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2011-03-14'
-subtitle: I know it’s a **provocative title**, and sadly I suspect that many of the
-  ‘intended audience’ will a...
-tags:
-- politics
-- fareed-zakaria
-title: 'Fareed Zakaria: “Are Americas Best Days Behind Us”?'
-type: wp
+title: "Fareed Zakaria: “Are Americas Best Days Behind Us”?"
+subtitle: "I know it’s a **provocative title**, and sadly I suspect that many of the ‘intended audience’ will a..."
+category: "298"
+tags: ["1042", "2005", "2059"]
+date: "2011-03-14"
+type: "wp"
 wordpress_id: 583
 ---
-
 I know it’s a **provocative title**, and sadly I suspect that many of the ‘intended audience’ will agree with much of what he says, but then also feel like there’s nothing that can be done about it.
 
 I am a **waning fan** of the Sunday TV news shows. Nowadays it is so easy if you are inclined to keep up with the news, moment by moment that it’s hard to find much more than the usual platitudes and repetition.

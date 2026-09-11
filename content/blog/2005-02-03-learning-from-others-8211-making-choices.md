@@ -3,9 +3,7 @@ category: '50'
 date: '2005-02-03'
 subtitle: Dave Winer makes a point which I **totally...
 tags:
-- design
-- blogbridge
-- lotus-improv
+- eroom
 title: Learning from others – Making choices
 type: wp
 wordpress_id: 1854

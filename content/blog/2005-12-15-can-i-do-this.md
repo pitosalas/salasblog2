@@ -3,8 +3,7 @@ category: '298'
 date: '2005-12-15'
 subtitle: I’d like to create a web page that list all web pages that don’t link to
   themselves.
-tags:
-- technology
+tags: []
 title: Can I do this?
 type: wp
 wordpress_id: 1632

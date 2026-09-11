@@ -4,7 +4,6 @@ date: '2004-11-30'
 subtitle: '*'
 tags:
 - technology
-- personal
 title: Predicting the future is hard
 type: wp
 wordpress_id: 1904

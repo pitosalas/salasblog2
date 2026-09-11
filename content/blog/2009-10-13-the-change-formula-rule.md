@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2009-10-13'
-subtitle: I attended BIF-5 (The Business Information Factory’s Annual Summit)
-tags:
-- business
-title: 'The Change Formula: Rule'
-type: wp
+title: "The Change Formula: Rule"
+subtitle: "I attended BIF-5 (The Business Information Factory’s Annual Summit)"
+category: "298"
+tags: []
+date: "2009-10-13"
+type: "wp"
 wordpress_id: 794
 ---
-
 I attended [BIF-5 (The Business Information Factory’s Annual Summit)](http://www.businessinnovationfactory.com/bif-5) last week, a great and stimulating experience. One of the speakers was Alan M. Weber taking some topics out of his new book, [Rules of Thumb](http://rulesofthumbbook.blogspot.com/). Some of what he said actually led me to buy his book at the mini bookstore they had set up there. (More some other time on the tradeoffs of paying full price for a book on the spot versus waiting a day and a half and getting it for much cheaper from Amazon.)
 I was reading this article this morning: “[Looking at Life as One Big Subscription](http://www.nytimes.com/2009/10/11/business/11every.html)” and buried in it was this sentence, about why it’s hard to get people to decide to replace a product they own for the latest model:
 

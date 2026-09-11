@@ -1,12 +1,14 @@
 ---
-title: "Musings on Open Source licensing"
-subtitle: "As I continue to make rapid progress on BlogBridge, now with a signifi..."
-category: "50"
-tags: ["business", "programming"]
-date: "2004-05-28"
-type: "wp"
+category: '50'
+date: '2004-05-28'
+subtitle: As I continue to make rapid progress on BlogBridge, now with a signifi...
+tags:
+- legal
+title: Musings on Open Source licensing
+type: wp
 wordpress_id: 1993
 ---
+
 As I continue to make rapid progress on [BlogBridge](http://www.blogbridge.com/), now with a significant amount of help, I am asking myself some tricky questions about licensing, which I thought I’d try out here. (By the way, BlogBridge is the blog reader that I’ve been working on and which is soon going to be available in beta form.) 
 
 BlogBridge is an [open source application](http://opensource.org/docs/definition.php). The source code is all available on [www.sourceforge.net ](https://sourceforge.net/projects/blogbridge/)for any and all to look at and play with. It’s open source also because of the license that you’ll see in each source file, the so-called “[Lesser GPL](http://opensource.org/licenses/lgpl-license.php).” I would like to say that I chose that one after long and careful thought, but the truth is that I picked it more or less randomly because another project that I am contributing to was using it. 

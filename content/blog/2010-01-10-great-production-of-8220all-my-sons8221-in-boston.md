@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2010-01-10'
-subtitle: I’ve been a subscriber at the Huntington Theater for years and years now
-  and this new play is the be...
-tags:
-- personal
-- boston
-title: Great production of “All My Sons” in Boston
-type: wp
+title: "Great production of “All My Sons” in Boston"
+subtitle: "I’ve been a subscriber at the Huntington Theater for years and years now and this new play is the be..."
+category: "298"
+tags: ["1185", "1850", "2147"]
+date: "2010-01-10"
+type: "wp"
 wordpress_id: 758
 ---
-
 I’ve been a subscriber at the Huntington Theater for years and years now and this new play is the best one by far this season and one of the best in the last few years.
 [“All My Sons” by Arthur Miller, at the Huntington Theater in Boston, MA, USA](http://feeds.feedburner.com/UrbanPlanningBlog)
 

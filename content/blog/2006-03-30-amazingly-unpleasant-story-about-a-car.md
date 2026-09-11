@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-03-30'
-subtitle: My friend Francois posts a horrifying real-life story
-tags:
-- personal
-- mercedes
-title: Amazing(ly unpleasant) story about a car
-type: wp
+title: "Amazing(ly unpleasant) story about a car"
+subtitle: "My friend Francois posts a horrifying real-life story"
+category: "298"
+tags: []
+date: "2006-03-30"
+type: "wp"
 wordpress_id: 1567
 ---
-
 My friend [Francois](http://www.emergencemarketing.com) posts a [horrifying real-life story](http://www.emergencemarketing.com/archives/2006/03/mercedes_a_case_study_on.php) about him and his Mercedes Benz. It makes a compelling read, kind of like **watching a train wreck** is compelling.
 
 > “My final analysis? No wonder **Mercedes has tumbled to 21st **in the most recent JD Power Satisfaction Survey. It is mind boggling (instructive too) to witness and experience how such a prestigious brand has fallen so far so fast. And while I’ve learned something, believe me that it’s been no fun being on the receiving end of this knowledge.” (**from** “[Mercedes – a case study on how to squander a great brand](http://www.emergencemarketing.com/archives/2006/03/mercedes_a_case_study_on.php)“)

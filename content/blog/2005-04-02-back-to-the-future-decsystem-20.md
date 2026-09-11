@@ -4,7 +4,6 @@ date: '2005-04-02'
 subtitle: Would you believe that someone is reading blogs
 tags:
 - technology
-- decsystem-20
 title: 'Back to the future: DECSYSTEM-20?'
 type: wp
 wordpress_id: 1812

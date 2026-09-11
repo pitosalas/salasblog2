@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2008-12-18'
-subtitle: Suddenly when you learn about something once, you start seein...
-tags:
-- health
-title: More on truly weird medical condition
-type: wp
+title: "More on truly weird medical condition"
+subtitle: "Suddenly when you learn about something once, you start seein..."
+category: "298"
+tags: []
+date: "2008-12-18"
+type: "wp"
 wordpress_id: 924
 ---
-
 Suddenly when you [learn about something once](/2008/11/18/ever-hear-of-teratomas/), you start seeing it everywhere…
 > “Dr. Paul Grabb, a pediatric brain surgeon, said he was surprised when
 he discovered a small foot growing inside the brain of 3-day-old Sam

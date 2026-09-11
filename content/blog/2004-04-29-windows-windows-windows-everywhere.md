@@ -5,7 +5,7 @@ subtitle: In the accompanying photo you can see one of the **ubiquitous TV scree
   **sprinkled all around the ...
 tags:
 - travel
-- spain
+- technology
 title: Windows, Windows, Windows Everywhere
 type: wp
 wordpress_id: 2023

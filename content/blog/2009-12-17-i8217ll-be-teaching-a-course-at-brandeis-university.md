@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2009-12-17'
-subtitle: '**Follow along as I develop the course: **[Brandeis University Web App
-  Dev, Mobile App Dev and Incub...'
-tags:
-- education
-- brandeis
-- technology
-title: I’ll be teaching a course at Brandeis University
-type: wp
+title: "I’ll be teaching a course at Brandeis University"
+subtitle: "**Follow along as I develop the course: **[Brandeis University Web App Dev, Mobile App Dev and Incub..."
+category: "298"
+tags: ["643", "738", "875", "942", "1259", "1477", "2103"]
+date: "2009-12-17"
+type: "wp"
 wordpress_id: 764
 ---
-
 **Follow along as I develop the course: **[Brandeis University Web App Dev, Mobile App Dev and Incubator](http://docs.google.com/View?id=ah8kcntpcgb9_29dpdk3thp)
 I’m fortunate to have the opportunity to co-teach 3 courses next year at [Brandeis University](http://www.brandeis.edu). It’s something that I have wanted to do for a long time now and I am looking forward to it. As an experiment, I thought I would [publish the course notes as I am developing them](http://docs.google.com/View?id=ah8kcntpcgb9_29dpdk3thp) and perhaps get some feedback, suggestions or even volunteer guest speakers.
 

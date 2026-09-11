@@ -3,8 +3,7 @@ category: '538'
 date: '2005-09-30'
 subtitle: This is one of those handy dandy tips that you wish were not hidden
 tags:
-- technology
-- mac
+- apple
 title: '[GEEKY] Why, oh, Why, Mr. Macintosh?'
 type: wp
 wordpress_id: 1684

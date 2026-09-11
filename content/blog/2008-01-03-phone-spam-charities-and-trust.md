@@ -2,7 +2,7 @@
 title: "Phone spam, charities and trust"
 subtitle: "In the [New York Times, an editorial talks about a study that reveals rampant abuses in certain char..."
 category: "298"
-tags: ["politics"]
+tags: ["787", "1090"]
 date: "2008-01-03"
 type: "wp"
 wordpress_id: 1142

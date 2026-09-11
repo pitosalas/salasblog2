@@ -1,12 +1,13 @@
 ---
-title: "Announcing… The BlogBridge Service ;-)"
-subtitle: "![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/hdrservi..."
-category: "50"
-tags: ["business", "technology"]
-date: "2004-07-24"
-type: "wp"
+category: '50'
+date: '2004-07-24'
+subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/hdrservi...'
+tags: []
+title: Announcing… The BlogBridge Service ;-)
+type: wp
 wordpress_id: 1961
 ---
+
 ![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/hdrservice.jpg?resize=374%2C142)
 Here’s a sneak preview of something a little bit different. As of the next beta, we will be running a BlogBridge service off our BlogBridge.com site. Initially all it will do for you is keep things in synch as you use BlogBridge on different computers. Keeping in synch means making sure that you have the same ‘favorites’ configured and that your unread information is kept consistent.
 

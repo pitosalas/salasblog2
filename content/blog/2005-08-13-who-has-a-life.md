@@ -2,9 +2,7 @@
 category: '50'
 date: '2005-08-13'
 subtitle: As you might have seen over at our **BlogBridge blog**, we are experim...
-tags:
-- technology
-- blogbridge
+tags: []
 title: Who has a  life?
 type: wp
 wordpress_id: 1717

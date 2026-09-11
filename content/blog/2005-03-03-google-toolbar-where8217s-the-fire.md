@@ -5,7 +5,6 @@ subtitle: In case you’ve come across the flaming debate about how the Google T
   is evil, you will [apprec...
 tags:
 - technology
-- google-toolbar
 title: 'Google Toolbar: Where’s the fire?'
 type: wp
 wordpress_id: 1835

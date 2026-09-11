@@ -1,12 +1,15 @@
 ---
-title: "Real Virtual Reality! (Demo 2004"
-subtitle: "**Real Virtual Reality! (Demo 2004 Series – 6)** I am not clear as to whether Total Immersion"
-category: "1"
-tags: ["technology"]
-date: "2004-02-27"
-type: "wp"
+category: '1'
+date: '2004-02-27'
+subtitle: '**Real Virtual Reality! (Demo 2004 Series – 6)** I am not clear as to whether
+  Total Immersion'
+tags:
+- demo-conference
+title: Real Virtual Reality! (Demo 2004
+type: wp
 wordpress_id: 2065
 ---
+
 **Real Virtual Reality! (Demo 2004 Series – 6)** I am not clear as to whether [Total Immersion](http://www.t-immersion.com/) is a product, company, research product or what. But they had the most compelling and memorable technology demonstration. It was an amazing virtual reality experience of what they called **“augmented reality.”**
 
 Basically what we saw was a video and audio display in real time. The camera started on the presenter as he was talking. In his hand was a long stemmed rose. Except in real life, he was holding his left hand in a fist, and the flower was added virtually. Every move, translation, rotation etc of his fist was perfectly matched with the movement of the rose creating a **perfect illusion**. And there was a lot more. The demo ended with a virtual helicopter flying over the heads of the audience. **Very impressive**! 

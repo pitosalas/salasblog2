@@ -4,7 +4,6 @@ date: '2004-01-17'
 subtitle: '**Goody, Goody! **Mary, over at LockerGnome'
 tags:
 - programming
-- blogbridge
 title: Goody, Goody! Mary, over at
 type: wp
 wordpress_id: 2093

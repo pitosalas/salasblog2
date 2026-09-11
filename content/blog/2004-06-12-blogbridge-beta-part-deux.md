@@ -1,12 +1,13 @@
 ---
-title: "BlogBridge Beta, part deux"
-subtitle: "I shoulda known…"
-category: "50"
-tags: ["business", "programming"]
-date: "2004-06-12"
-type: "wp"
+category: '50'
+date: '2004-06-12'
+subtitle: I shoulda known…
+tags: []
+title: BlogBridge Beta, part deux
+type: wp
 wordpress_id: 1982
 ---
+
 I shoulda known…
 There’s cross-platform and then there’s *cross-platform.* 
 

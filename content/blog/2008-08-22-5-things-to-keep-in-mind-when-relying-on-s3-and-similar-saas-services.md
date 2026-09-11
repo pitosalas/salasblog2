@@ -1,17 +1,12 @@
 ---
-category: '538'
-date: '2008-08-22'
-subtitle: On a project I worked on recently, I asked myself whether I should make
-  one or more of Amazon’s awes...
-tags:
-- technology
-- amazon
-- cloud-computing
-title: 5 things to keep in mind when relying on S3 and similar SAAS services
-type: wp
+title: "5 things to keep in mind when relying on S3 and similar SAAS services"
+subtitle: "On a project I worked on recently, I asked myself whether I should make one or more of Amazon’s awes..."
+category: "538"
+tags: []
+date: "2008-08-22"
+type: "wp"
 wordpress_id: 989
 ---
-
 On a project I worked on recently, I asked myself whether I should make one or more of Amazon’s awesome web services (AWS – Awesome Web Services) a mission critical part of the infrastructure of the product. I wrote yesterday about the [considerations that go into deciding to rely on services like Amazon’s web services as key infrastructure components](/2008/02/18/about-amzn-and-cloud-computing/).
 Of the five I mentioned, these two considerations were especially confusing to me:
 

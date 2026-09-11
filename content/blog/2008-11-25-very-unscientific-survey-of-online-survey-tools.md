@@ -1,15 +1,12 @@
 ---
-category: '538'
-date: '2008-11-25'
-subtitle: Because of a couple of projects that I am working on, I thought I might
-  be able to use some tool for...
-tags:
-- technology
-title: Very unscientific survey of online survey tools
-type: wp
+title: "Very unscientific survey of online survey tools"
+subtitle: "Because of a couple of projects that I am working on, I thought I might be able to use some tool for..."
+category: "538"
+tags: []
+date: "2008-11-25"
+type: "wp"
 wordpress_id: 942
 ---
-
 Because of a couple of projects that I am working on, I thought I might be able to use some tool for an online survey. I have two particular requirements: 
 
 - respondents can be anonymous

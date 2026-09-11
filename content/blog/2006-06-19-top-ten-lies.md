@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-06-19'
-subtitle: Guy Kawasaki with another one of his great posts
-tags:
-- business
-- guy-kawasaki
-title: Top Ten Lies
-type: wp
+title: "Top Ten Lies"
+subtitle: "Guy Kawasaki with another one of his great posts"
+category: "298"
+tags: []
+date: "2006-06-19"
+type: "wp"
 wordpress_id: 1514
 ---
-
 Guy Kawasaki with [another one of his great posts](http://blog.guykawasaki.com/2006/05/the_top_ten_lie_1.html). He’s always fun to read. And boy, do they ring true!
 
 - “I already have a meeting at lunch.” 

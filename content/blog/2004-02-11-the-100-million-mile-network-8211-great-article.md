@@ -4,7 +4,6 @@ date: '2004-02-11'
 subtitle: The 100-Million-Mile Network
 tags:
 - science
-- mars
 title: The 100-Million-Mile Network – Great article
 type: wp
 wordpress_id: 2077

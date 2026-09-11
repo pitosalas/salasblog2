@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2006-11-01'
-subtitle: '[http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=0465007805&fc1=000000&IS2=1<1=_bla...'
-tags:
-- books
-- long-now
-title: 'Book of Pop!Tech: Clock of the Long Now'
-type: wp
+title: "Book of Pop!Tech: Clock of the Long Now"
+subtitle: "[http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=0465007805&fc1=000000&IS2=1<1=_bla..."
+category: "298"
+tags: []
+date: "2006-11-01"
+type: "wp"
 wordpress_id: 1408
 ---
-
 [http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=0465007805&fc1=000000&IS2=1&lt1=_blank&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr](http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=0465007805&fc1=000000&IS2=1&lt1=_blank&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr)
 I just finished reading Steward Brand’s book [“The Clock of The Long Now”](http://www.amazon.com/Clock-Long-Now-Responsibility-Computer/dp/0465007805/sr=8-1/qid=1162344498/ref=pd_bbs_sr_1/104-6954476-0116706?ie=UTF8&s=books). It’s a quick, illuminating read, talking about the creation of a Clock and Library meant to last for 10,000 years, and how that thought and vision will affect the way we are. [I recommend the book!](http://www.amazon.com/Clock-Long-Now-Responsibility-Computer/dp/0465007805/sr=8-1/qid=1162344498/ref=pd_bbs_sr_1/104-6954476-0116706?ie=UTF8&s=books)
 

@@ -2,9 +2,7 @@
 category: '50'
 date: '2005-05-10'
 subtitle: Good morning sports-fans. We recently totally revamped the BlogBridge ...
-tags:
-- technology
-- blogbridge
+tags: []
 title: New BlogBridge web site, including a blog
 type: wp
 wordpress_id: 1788

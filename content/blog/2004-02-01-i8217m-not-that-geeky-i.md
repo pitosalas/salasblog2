@@ -1,12 +1,15 @@
 ---
-title: "I’m not *that* geeky: I"
-subtitle: "**I’m not *that* geeky: **I am totally fascinated and entralled with what’s going on on Mars right n..."
-category: "1"
-tags: ["personal", "science"]
-date: "2004-02-01"
-type: "wp"
+category: '1'
+date: '2004-02-01'
+subtitle: '**I’m not *that* geeky: **I am totally fascinated and entralled with what’s
+  going on on Mars right n...'
+tags:
+- science
+title: 'I’m not *that* geeky: I'
+type: wp
 wordpress_id: 2084
 ---
+
 **I’m not *that* geeky: **I am totally fascinated and entralled with what’s going on on Mars right now. I’ve followed all sorts of sources and recently came across this [blog by Susan Kitchens](http://discuss.2020hindsight.org/) who has very detailed posts about what’s going on. I don’t know who she is or how she’s connected, but it’s a pretty comprehensive way to keep up.
 
 As a software guy I am very interested in how the software for the Rover is put together. I asked Susan whether she could give me some pointers, which [led to this recent post in her blog](http://discuss.2020hindsight.org/2004/01/31), which I thought was amusing:

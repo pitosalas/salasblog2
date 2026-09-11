@@ -2,9 +2,7 @@
 category: '298'
 date: '2005-02-01'
 subtitle: Quite a bit [has ...
-tags:
-- technology
-- a9
+tags: []
 title: A9’s Photographic Yellow Pages
 type: wp
 wordpress_id: 1858

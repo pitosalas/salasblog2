@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-01-06'
-subtitle: Check out this post from [Between the Lines...
-tags:
-- technology
-- amazon
-title: A cautionary utility computing tale – or the dark side of Mashups
-type: wp
+title: "A cautionary utility computing tale – or the dark side of Mashups"
+subtitle: "Check out this post from [Between the Lines..."
+category: "298"
+tags: []
+date: "2007-01-06"
+type: "wp"
 wordpress_id: 1361
 ---
-
 Check out [this post](http://feeds.feedburner.com/~r/zdnet/BTL/~3/71375022/) from [Between the Lines](http://blogs.zdnet.com/BTL):
 > [snip…] “Yesterday Amazon’s S3 service suffered an outage that lasted more than long enough to miss the company’s self-imposed goal of 99.99% availability, at least for the next couple of months. Last November, Google Calendar was unavailable for the better part of a day. And famously, Salesforce.com suffered a string of outages this time last year. Unfortunately, my business relies on all three of these services.” [snip…]
 

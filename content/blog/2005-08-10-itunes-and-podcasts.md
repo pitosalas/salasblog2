@@ -4,9 +4,7 @@ date: '2005-08-10'
 subtitle: 'This is just a quickie: did you know that you can just drag and drop the
   URL of a Podcast RSS feed (...'
 tags:
-- technology
-- itunes
-- podcasting
+- apple
 title: iTunes and Podcasts
 type: wp
 wordpress_id: 1720

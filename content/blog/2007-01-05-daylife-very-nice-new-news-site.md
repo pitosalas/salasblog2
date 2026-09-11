@@ -1,17 +1,12 @@
 ---
-category: '298'
-date: '2007-01-05'
-subtitle: Notwithstanding the fact that Mike Arrington, an investor, doesn’t like
-  DayLife
-tags:
-- technology
-- daylife
-- mike-arrington
-title: 'DayLife: very nice new News Site'
-type: wp
+title: "DayLife: very nice new News Site"
+subtitle: "Notwithstanding the fact that Mike Arrington, an investor, doesn’t like DayLife"
+category: "298"
+tags: []
+date: "2007-01-05"
+type: "wp"
 wordpress_id: 1364
 ---
-
 Notwithstanding the fact that Mike Arrington, an investor, doesn’t like [DayLife](http://www.daylife.com/topstories) too much, I just spend a few minutes looking, and I think it’s very very nice.
 I’d say it’s definitely worth a look. 
 

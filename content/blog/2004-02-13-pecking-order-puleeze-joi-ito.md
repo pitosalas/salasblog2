@@ -1,12 +1,13 @@
 ---
-title: "Pecking order? Puleeze! Joi Ito"
-subtitle: "**Pecking order? Puleeze! **Joi Ito writes"
-category: "1"
-tags: ["personal"]
-date: "2004-02-13"
-type: "wp"
+category: '1'
+date: '2004-02-13'
+subtitle: '**Pecking order? Puleeze! **Joi Ito writes'
+tags: []
+title: Pecking order? Puleeze! Joi Ito
+type: wp
 wordpress_id: 2075
 ---
+
 **Pecking order? Puleeze! **[Joi Ito writes](http://joi.ito.com/archives/2004/02/12/pecking_at_etech.html) with apparent confusion about the a comment from [Russel Beattie who commented that](http://www.russellbeattie.com/notebook/1006105.html): “but boy it seemed like there were some serious pecking orders there.” (via [Jeremy Zawodny](http://jeremy.zawodny.com/blog/archives/001576.html).) While Russel’s comment is about ETech, a conference I am really sorry I had to miss, it **certainly doesn’t surprise** me, as it shouldn’t surprise Joi or others.
 
 In fact I am always **amused** and **bemused** (what’s the difference?) at the highly **structured** set of social behaviors are exhibited at conferences such as ETech (but equally at Agenda, PC Forum, Demo and I am sure all the others.) I am sure it is in evidence **wherever human beings** gather: academia, the US congress, **high school** and on and on and on. It’s kind of funny if people didn’t take it so seriously. 

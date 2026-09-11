@@ -1,12 +1,15 @@
 ---
-title: "I want RSS to disappear."
-subtitle: "**I want RSS to disappear. **The question was posed, “What do users want from RSS”? I thought long a..."
-category: "1"
-tags: ["technology"]
-date: "2004-01-14"
-type: "wp"
+category: '1'
+date: '2004-01-14'
+subtitle: '**I want RSS to disappear. **The question was posed, “What do users want
+  from RSS”? I thought long a...'
+tags:
+- technology
+title: I want RSS to disappear.
+type: wp
 wordpress_id: 2096
 ---
+
 **I want RSS to disappear. **The question was posed, “What do users want from RSS”? I thought long and hard about this and here’s where I come out.
 
 Speaking strictly as a user, what I care about are RSS **applications**. I care about reading, scanning, writing, absorbing, learning from, contributing, and sharing. **So what I want from RSS is to disappear into the plumbing**, and in every way possible enable and encourage great applications to be designed and built. 

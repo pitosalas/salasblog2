@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-06-01'
-subtitle: My friend Amy just recently arrived from an incredible trip through Asia.
-  If you are curious, check ...
-tags:
-- travel
-- personal
-title: Wandering through Asia
-type: wp
+title: "Wandering through Asia"
+subtitle: "My friend Amy just recently arrived from an incredible trip through Asia. If you are curious, check ..."
+category: "298"
+tags: []
+date: "2009-06-01"
+type: "wp"
 wordpress_id: 843
 ---
-
 My friend Amy just recently arrived from an incredible trip through Asia. If you are curious, check out [Amy’s blog](http://asquires.blogspot.com/2009_01_01_archive.html):
 > “My travels in Southern Laos were indeed more successful in terms of being able to get out and see things than my time in the capital. I took an overnight bus with beds down to Pakse. This sounds like a really nice way to travel but as we found our beds, the only other westerner on the bus and I realized that these twin size mattresses were for two people, not one. We asked to be put together but there were no changes allowed so we spent the evening sleeping with strangers. This is not a recommended bus experience but we arrived in one piece at our destination and I suppose that’s all you need.” (**from** one of many ‘interesting’ posts in [Wanderlust](http://asquires.blogspot.com/2009_01_01_archive.html))
 

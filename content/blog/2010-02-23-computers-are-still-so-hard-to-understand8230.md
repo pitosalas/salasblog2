@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2010-02-23'
-subtitle: '[Dave Winer wrote a bit recently called “What we don’t understand” that
-  lists all the ways in which ...'
-tags:
-- technology
-- dave-winer
-title: Computers are still so hard to understand…
-type: wp
+title: "Computers are still so hard to understand…"
+subtitle: "[Dave Winer wrote a bit recently called “What we don’t understand” that lists all the ways in which ..."
+category: "298"
+tags: []
+date: "2010-02-23"
+type: "wp"
 wordpress_id: 738
 ---
-
 [Dave Winer wrote a bit recently called “What we don’t understand” that lists all the ways in which computers are still so confusing](http://www.scripting.com/stories/2010/02/20/whatWeDontUnderstand.html), not **only to our elders** but also to many others who’s brains are not just wired that way. 
 I (we) am **not talking** about when your computer breaks, fails to print, hangs or crashes. That’s a different problem, also **pretty unacceptable**.
 

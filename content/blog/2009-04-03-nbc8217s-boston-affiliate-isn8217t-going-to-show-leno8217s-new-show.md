@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-04-03'
-subtitle: Check out this post NBC’s Boston affiliate isn’t going to show Leno’s new
-  show
-tags:
-- boston
-- jay-leno
-title: NBC’s Boston affiliate isn’t going to show Leno’s new show
-type: wp
+title: "NBC’s Boston affiliate isn’t going to show Leno’s new show"
+subtitle: "Check out this post NBC’s Boston affiliate isn’t going to show Leno’s new show"
+category: "298"
+tags: []
+date: "2009-04-03"
+type: "wp"
 wordpress_id: 865
 ---
-
 Check out this post [NBC’s Boston affiliate isn’t going to show Leno’s new show](http://feedproxy.google.com/~r/weblogsinc/tvsquad/~3/H6YZRExCcKI/):
 > "WHDH, the NBC affiliate in Boston (I’m watching it right now) says that they’re not going to show Leno’s new 10PM show. Starting in September, the station is going to show local news at 10PM instead!" (**from: **from [TV Squad](http://www.tvsquad.com/rss.xml)) 
 

@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2008-11-18'
-subtitle: Here’s a truly weird article
-tags:
-- health
-- science
-title: Ever hear of teratomas?
-type: wp
+title: "Ever hear of teratomas?"
+subtitle: "Here’s a truly weird article"
+category: "298"
+tags: []
+date: "2008-11-18"
+type: "wp"
 wordpress_id: 946
 ---
-
 Here’s a [truly weird article](http://www.nytimes.com/2008/11/09/magazine/09wwln-diagnosis-t.html?ref=magazine), which a sticks in my mind a week after reading it:
 > “Clark had seen teratomas. They were common in the reproductive tract, often found accidentally in the course of an operation or on a scan done for some other reason. 
 

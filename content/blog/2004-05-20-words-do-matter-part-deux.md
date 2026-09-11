@@ -3,8 +3,7 @@ category: '298'
 date: '2004-05-20'
 subtitle: I don’t know, this seems to be a topic near and dear to my heart! Thanks
   to Eric Heels
-tags:
-- personal
+tags: []
 title: Words do matter, Part Deux
 type: wp
 wordpress_id: 1999

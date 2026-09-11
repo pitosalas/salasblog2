@@ -4,8 +4,7 @@ date: '2004-07-23'
 subtitle: I was recently asked by a VC friend of mine what I thought of a certain
   Wiki product. I thought my r...
 tags:
-- technology
-- business
+- eroom
 title: Will Wikis Rule the World?
 type: wp
 wordpress_id: 1962

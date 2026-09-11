@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-12-04'
-subtitle: The thing about a bubble is that while people worry about it, no one is
-  actually sure whether they a...
-tags:
-- business
-title: Bubble Bubble Sign Of Trouble
-type: wp
+title: "Bubble Bubble Sign Of Trouble"
+subtitle: "The thing about a bubble is that while people worry about it, no one is actually sure whether they a..."
+category: "298"
+tags: ["747", "964", "1292", "1484"]
+date: "2010-12-04"
+type: "wp"
 wordpress_id: 632
 ---
-
 The thing about a bubble is that while people worry about it, no one is actually sure whether they are in one, and especially when it will be over. The other thing about bubbles is that they keep happening because they are the result of human nature (greed and self-deception):
 
 > 

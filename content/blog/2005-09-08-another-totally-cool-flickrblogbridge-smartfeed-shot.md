@@ -2,9 +2,7 @@
 category: '1'
 date: '2005-09-08'
 subtitle: '![](http://www.flickr.com/...'
-tags:
-- personal
-- blogbridge
+tags: []
 title: Another totally cool Flickr/BlogBridge SmartFeed shot
 type: wp
 wordpress_id: 1701

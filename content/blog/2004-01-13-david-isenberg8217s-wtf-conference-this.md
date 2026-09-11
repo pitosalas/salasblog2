@@ -1,12 +1,13 @@
 ---
-title: "David Isenberg’s WTF Conference: This"
-subtitle: "**David Isenberg’s WTF Conference:** Th..."
-category: "1"
-tags: ["technology"]
-date: "2004-01-13"
-type: "wp"
+category: '1'
+date: '2004-01-13'
+subtitle: '**David Isenberg’s WTF Conference:** Th...'
+tags: []
+title: 'David Isenberg’s WTF Conference: This'
+type: wp
 wordpress_id: 2098
 ---
+
 **[David Isenberg’s WTF Conference](http://www.isen.com/blog/archives/2004_01_01_archive.html):** This is from David’s newsletter, [SMART Letter](http://isen.com/):
 
 > 

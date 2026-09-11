@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2007-08-23'
-subtitle: Many consumer products, like cell phones, computers, and so on seem to come
-  with some kind of a [tag...
-tags:
-- personal
-title: Rebate trickery, again
-type: wp
+title: "Rebate trickery, again"
+subtitle: "Many consumer products, like cell phones, computers, and so on seem to come with some kind of a [tag..."
+category: "298"
+tags: []
+date: "2007-08-23"
+type: "wp"
 wordpress_id: 1223
 ---
-
 Many consumer products, like cell phones, computers, and so on seem to come with some kind of a [tag]rebate[/tag]. Buy now and get $50 back, and so on. I don’t quite understand the business or marketing intent of this scheme. 
 I just switched my whole kit and kaboodle cell phone business from Sprint to [tag]Cingular/AT&T[/tag]. And as encouragement I get $50 off on each of the phones, at least so they say. 
 

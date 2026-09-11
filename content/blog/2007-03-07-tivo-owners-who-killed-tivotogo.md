@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2007-03-07'
-subtitle: I am a die-hard Tivo user. Yesterday I stumbled across mention that TivoTogo
-  now worked on Macs, so ...
-tags:
-- technology
-- tivo
-title: '[Tivo Owners] Who Killed TivoToGo?'
-type: wp
+title: "[Tivo Owners] Who Killed TivoToGo?"
+subtitle: "I am a die-hard Tivo user. Yesterday I stumbled across mention that TivoTogo now worked on Macs, so ..."
+category: "538"
+tags: []
+date: "2007-03-07"
+type: "wp"
 wordpress_id: 1313
 ---
-
 I am a die-hard Tivo user. Yesterday I stumbled across mention that TivoTogo now worked on Macs, so the promise of watching Tivo’d content on my iPod led me to waste a couple of hours trying to get it to work.
 I am not sure yet, but it looks like TivoTogo is disabled on Tivo Series 3. It’s kind of hard to find anything definitive about this, but in the article “[Who Killed TivoTogo](http://www.eff.org/IP/pnp/cablewp.php)” I read:
 

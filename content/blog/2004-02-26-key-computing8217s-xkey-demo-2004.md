@@ -1,12 +1,14 @@
 ---
-title: "Key Computing’s Xkey: (Demo 2004"
-subtitle: "**Key Computing’s Xkey:**** (Demo 2004 Series – 3) **By my ..."
-category: "1"
-tags: ["technology"]
-date: "2004-02-26"
-type: "wp"
+category: '1'
+date: '2004-02-26'
+subtitle: '**Key Computing’s Xkey:**** (Demo 2004 Series – 3) **By my ...'
+tags:
+- demo-conference
+title: 'Key Computing’s Xkey: (Demo 2004'
+type: wp
 wordpress_id: 2068
 ---
+
 [**Key Computing’s Xkey:**](http://www.key-computing.com/XKey.asp)** (Demo 2004 Series – 3) **By my informal survey, this was the **favorite** at demo. XKey is a tiny USB port device (kind of like one of those little USB flash devices) which, by plugging into a laptop, **transforms the host computer into a private, isolated, separate computer, connected by VPN to the corporate network. **
 
 It’s hard to explain in a few words, but basically you plug it into the USB port while your computer is connected to your corporate LAN. Magically files, folders, exchange and outlook data, are all copied onto the device. When you take it and plug it into another (‘host’) computer, you get access to all your work, plus your Exchange/Outlook information. All the information is secured inside a ‘sandbox’ and you are protected from and prohibited from letting any of it leak onto the ‘host’ computer. As I said, hard to explain. Look at their web site for more details.

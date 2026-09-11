@@ -2,7 +2,7 @@
 title: "TSA has no clothes"
 subtitle: "Does creating something that demonstrates that a security scheme doesn’t work make you a suspect you..."
 category: "1"
-tags: ["politics"]
+tags: []
 date: "2006-10-27"
 type: "wp"
 wordpress_id: 1411

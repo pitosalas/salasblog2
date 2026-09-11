@@ -3,8 +3,8 @@ category: '298'
 date: '2005-05-21'
 subtitle: Michael Feldman of Dowbrigade has a [really interesting]...
 tags:
-- technology
 - boston
+- technology
 title: Boston is thinking about city-wide wi-fi access
 type: wp
 wordpress_id: 1778

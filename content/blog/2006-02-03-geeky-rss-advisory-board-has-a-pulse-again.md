@@ -2,8 +2,7 @@
 category: '538'
 date: '2006-02-03'
 subtitle: For those of you (like me) who have lots of dependency on RSS, this is...
-tags:
-- technology
+tags: []
 title: '[GEEKY] RSS Advisory board has a pulse again!'
 type: wp
 wordpress_id: 1601

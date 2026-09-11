@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2009-06-13'
-subtitle: I was shown a promising new site called TheRentables, for p...
-tags:
-- business
-title: Check out TheRentables.com
-type: wp
+title: "Check out TheRentables.com"
+subtitle: "I was shown a promising new site called TheRentables, for p..."
+category: "298"
+tags: []
+date: "2009-06-13"
+type: "wp"
 wordpress_id: 835
 ---
-
 I was shown a promising new site called [TheRentables](http://www.therentables.com/about.php), for people (I know at least 3) who are looking to rent an apartment. They say:
 “The Rentables takes a fundamentally different approach to rental property listings to deliver the most relevant, accurate and comprehensive housing information to anyone at any time.” (from [About TheRentables](http://www.therentables.com/about.php))
 

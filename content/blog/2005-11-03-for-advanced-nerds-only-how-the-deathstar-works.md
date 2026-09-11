@@ -2,8 +2,7 @@
 category: '298'
 date: '2005-11-03'
 subtitle: 'From **How Stuff Works**:'
-tags:
-- personal
+tags: []
 title: 'For advanced nerds only: How the deathstar works'
 type: wp
 wordpress_id: 1664

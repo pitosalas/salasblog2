@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2006-10-13'
-subtitle: 'One **correspondent** **asked**: “Isn’t this what bb:library is about or
-  Technorati Blog Directory o...'
-tags:
-- technology
-- blogbridge
-title: More musings on the not-better-RSS-aggregator
-type: wp
+title: "More musings on the not-better-RSS-aggregator"
+subtitle: "One **correspondent** **asked**: “Isn’t this what bb:library is about or Technorati Blog Directory o..."
+category: "298"
+tags: []
+date: "2006-10-13"
+type: "wp"
 wordpress_id: 1421
 ---
-
 One **correspondent** **asked**: “Isn’t this what bb:library is about or Technorati Blog Directory or egs. like [Corante Web Hub](http://web.corante.com/), [Global Voices](http://www.globalvoicesonline.org/), [World Changing](http://www.worldchanging.com/)?” 
 
 Well, it might be a **reinvention of those wheels**. I don’t know yet. I know I am **not interested** in reinventing wheels. But let me play some more. Here’s what I **wrote** back:

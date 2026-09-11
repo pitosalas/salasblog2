@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2008-12-03'
-subtitle: Yes, some people do fall for it
-tags:
-- technology
-title: Watch out for the ‘Nigerian Scam
-type: wp
+title: "Watch out for the ‘Nigerian Scam"
+subtitle: "Yes, some people do fall for it"
+category: "298"
+tags: []
+date: "2008-12-03"
+type: "wp"
 wordpress_id: 935
 ---
-
 Yes, some people do fall for it
 > “So how did this otherwise lucid, intelligent woman end up sending
 nearly half a million dollars to a bunch of con artists running what

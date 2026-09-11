@@ -2,9 +2,7 @@
 category: '538'
 date: '2004-07-12'
 subtitle: Continuing my complaints about Java Web Start, as if the message di...
-tags:
-- programming
-- java-web-start
+tags: []
 title: Scary Software, Part Deux
 type: wp
 wordpress_id: 1965

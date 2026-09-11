@@ -1,12 +1,14 @@
 ---
-title: "Push: An interesting looking new conference"
-subtitle: "I met Cecily Sommers at the Pop!Tech conference earlier this year. She heads up a new conference tha..."
-category: "298"
-tags: ["business"]
-date: "2006-01-20"
-type: "wp"
+category: '298'
+date: '2006-01-20'
+subtitle: I met Cecily Sommers at the Pop!Tech conference earlier this year. She heads
+  up a new conference tha...
+tags: []
+title: 'Push: An interesting looking new conference'
+type: wp
 wordpress_id: 1612
 ---
+
 I met Cecily Sommers at the Pop!Tech conference earlier this year. She heads up a new conference that I had read about previously, called **[Push](http://www.pushthefuture.org/welcome.asp)**. According to what I’d read, it was what Ted was 10 years ago or Pop!Tech was 2 years ago. 
 
 Here’s a pretty strong endorsement:

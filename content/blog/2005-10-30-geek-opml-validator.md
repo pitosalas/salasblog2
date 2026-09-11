@@ -2,10 +2,7 @@
 category: '538'
 date: '2005-10-30'
 subtitle: I just came across Dave Winer’s new, beta, OPML Validator
-tags:
-- technology
-- blogbridge
-- opml
+tags: []
 title: '[GEEK] OPML Validator'
 type: wp
 wordpress_id: 1666

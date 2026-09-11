@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2008-05-03'
-subtitle: 'TechCrunch:'
-tags:
-- programming
-- twitter
-- ruby-on-rails
-title: '[GEEKY] Twitter and Ruby on Rails'
-type: wp
+title: "[GEEKY] Twitter and Ruby on Rails"
+subtitle: "TechCrunch:"
+category: "538"
+tags: []
+date: "2008-05-03"
+type: "wp"
 wordpress_id: 1053
 ---
-
 TechCrunch:
 > “We’re hearing this from multiple sources: After nearly two years of [high](http://www.techcrunch.com/2007/12/20/twitter-downtime-on-the-upswing/) [profile](http://www.techcrunch.com/2008/01/15/twitter-fails-macworld-keynote-test/) scaling problems, [Twitter](http://www.twitter.com/) is planning to abandon Ruby on Rails as their web framework and start from scratch with PHP or Java (another solution is to stick with the Ruby language and move away from the Rails framework).” (from [TechCrunch](http://www.techcrunch.com/2008/05/01/twitter-said-to-be-abandoning-ruby-on-rails/))
 

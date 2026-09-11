@@ -5,7 +5,6 @@ subtitle: Struggling with debugging hairy focus and other UI problems in Swing (
   Here’s a handy little t...
 tags:
 - programming
-- java
 title: '[Geek] Debugging focus problems'
 type: wp
 wordpress_id: 1994

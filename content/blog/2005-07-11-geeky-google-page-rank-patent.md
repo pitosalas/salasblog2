@@ -5,7 +5,6 @@ subtitle: This is not about patents, it’s about technology. In Google’s rece
   application they reveal ...
 tags:
 - technology
-- google
 title: '[GEEKY] Google page rank patent'
 type: wp
 wordpress_id: 1739

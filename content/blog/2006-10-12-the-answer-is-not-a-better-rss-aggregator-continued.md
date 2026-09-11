@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2006-10-12'
-subtitle: Yesterday’s post drew some interesting comments and emails. Several people
-  wondered what the heck I ...
-tags:
-- technology
-- blogbridge
-title: The answer is not a better RSS Aggregator, continued
-type: wp
+title: "The answer is not a better RSS Aggregator, continued"
+subtitle: "Yesterday’s post drew some interesting comments and emails. Several people wondered what the heck I ..."
+category: "298"
+tags: []
+date: "2006-10-12"
+type: "wp"
 wordpress_id: 1422
 ---
-
 Yesterday’s post drew some interesting comments and emails. Several people wondered what the heck I was talking about. More about that later. First:
 
 A couple of good analogies were raised. Isn’t this idea a lot like Digg? Or like [Top Ten Sources](http://www.toptensources.com/)? For me the Top Ten Sources, which I know reasonably well, is the better analogy. Certainly Digg is hot but the reason it doesn’t work for what I am talking about is that it bring you links to content or sites that (random) others have marked as interesting. 

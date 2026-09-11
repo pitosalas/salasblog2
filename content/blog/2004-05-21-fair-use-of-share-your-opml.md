@@ -2,9 +2,7 @@
 category: '50'
 date: '2004-05-21'
 subtitle: One of the core goals of BlogBridge is to give a newbie a quick and del...
-tags:
-- technology
-- blogbridge
+tags: []
 title: Fair Use of Share-your-OPML?
 type: wp
 wordpress_id: 1998

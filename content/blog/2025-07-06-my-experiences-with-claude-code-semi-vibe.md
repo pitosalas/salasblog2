@@ -1,6 +1,10 @@
 ---
 category: General
 date: '2025-07-06'
+tags:
+- claude
+- coding
+- blog
 title: My experiences with Claude Code - semi vibe
 type: blog
 ---

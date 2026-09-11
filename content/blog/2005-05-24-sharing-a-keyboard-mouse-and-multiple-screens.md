@@ -4,7 +4,6 @@ date: '2005-05-24'
 subtitle: 'Check out Synergy:'
 tags:
 - technology
-- synergy
 title: Sharing a keyboard, mouse and multiple screens
 type: wp
 wordpress_id: 1775

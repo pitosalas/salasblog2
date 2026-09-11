@@ -5,7 +5,6 @@ subtitle: '**Google Coolness. **Well those **wacky guys and gals** at Google kee
   on coming out with **neat new...'
 tags:
 - technology
-- google
 title: Google Coolness. Well those wacky
 type: wp
 wordpress_id: 2059

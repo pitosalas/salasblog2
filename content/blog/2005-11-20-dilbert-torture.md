@@ -4,7 +4,6 @@ date: '2005-11-20'
 subtitle: According to Dilbert (or is it Scott Adams
 tags:
 - politics
-- dilbert
 title: Dilbert Torture
 type: wp
 wordpress_id: 1649

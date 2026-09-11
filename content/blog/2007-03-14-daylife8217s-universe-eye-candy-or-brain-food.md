@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2007-03-14'
-subtitle: Daylife is a new news oriented web site that came onto the scene a little
-  ...
-tags:
-- technology
-- daylife
-title: 'Daylife’s Universe: Eye Candy or Brain Food?'
-type: wp
+title: "Daylife’s Universe: Eye Candy or Brain Food?"
+subtitle: "Daylife is a new news oriented web site that came onto the scene a little ..."
+category: "298"
+tags: []
+date: "2007-03-14"
+type: "wp"
 wordpress_id: 1307
 ---
-
 [Daylife](http://www.daylife.com) is a new news oriented web site that came onto the scene a little while back to a lot of fanfare. I’ve used it on and off and it’s ok. It’s certainly a lot prettier to look at than things like [Google News](http://news.google.com/nwshp?ned=). Daylife’s emphasis on design and the use of photography both are quite striking and make the site worthwhile.
 Today they are introducing another wonderful bit, via [Daylife](http://www.daylife.com/labs) Labs (does everyone have to have a ‘labs’ now?) It’s called [Daylife Universe.](http://universe.daylife.com/) 
 

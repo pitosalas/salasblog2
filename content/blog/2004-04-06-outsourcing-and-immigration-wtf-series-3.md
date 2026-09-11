@@ -4,9 +4,7 @@ date: '2004-04-06'
 subtitle: What’s the relationship between offshore outsourcing and immigration? Here’s
   an interesting connecti...
 tags:
-- politics
 - business
-- wtf-conference
 title: Outsourcing and Immigration (WTF Series, 3)
 type: wp
 wordpress_id: 2035

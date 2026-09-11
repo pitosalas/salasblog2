@@ -1,12 +1,14 @@
 ---
-title: "Yahoo IM Spam"
-subtitle: "I have IM accounts on Yahoo, AOL and MSN. Actually I use the AOL by far the most, but I have an occa..."
-category: "538"
-tags: ["technology"]
-date: "2005-06-23"
-type: "wp"
+category: '538'
+date: '2005-06-23'
+subtitle: I have IM accounts on Yahoo, AOL and MSN. Actually I use the AOL by far
+  the most, but I have an occa...
+tags: []
+title: Yahoo IM Spam
+type: wp
 wordpress_id: 1749
 ---
+
 I have IM accounts on Yahoo, AOL and MSN. Actually I use the AOL by far the most, but I have an occasional correspondent on Yahoo and MSN. By the way, on Mac OS X, I use the terrific client “[Adium](http://www.adiumx.com/)” which talks all those protocols, and is free. It is a nice UI on to the well known [GAIM](http://gaim.sourceforge.net/) (GNU AIM) open source project.
 
 **Almost daily** I get one or two new IM pings from unknown people, or more likely, robots, with some kind of a spam element, which I have to block to stop. 

@@ -1,12 +1,14 @@
 ---
-title: "Scott Kirsner of the Boston"
-subtitle: "**Scott Kirsner of the Boston Globe:"
-category: "1"
-tags: ["business", "personal", "boston"]
-date: "2004-01-12"
-type: "wp"
+category: '1'
+date: '2004-01-12'
+subtitle: '**Scott Kirsner of the Boston Globe:'
+tags:
+- eroom
+title: Scott Kirsner of the Boston
+type: wp
 wordpress_id: 2099
 ---
+
 **[Scott Kirsner of the Boston Globe:](http://www.boston.com/business/technology/articles/2004/01/12/tech_negativity_bubble_begins_to_deflate/) “**Salas has spent the past few months developing **BlogBridge**, software that allows users to easily keep tabs on multiple weblogs — kind of a “Reader’s Digest” for the blog world.” Thanks for the mention, Scott. The whole bit is:
 
 **

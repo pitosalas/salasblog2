@@ -3,8 +3,7 @@ category: '1'
 date: '2004-03-09'
 subtitle: '**Update on Digital Photography. **When I wrote a few days ago about [OurPi...'
 tags:
-- technology
-- demo2004
+- demo-conference
 title: Update on Digital Photography. When
 type: wp
 wordpress_id: 2051

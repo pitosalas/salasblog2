@@ -4,9 +4,7 @@ date: '2004-08-13'
 subtitle: I’ve said (and believe) that there’s **no other company on earth** that
   has the capability to develo...
 tags:
-- technology
-- microsoft
-- windows-xp
+- business
 title: XP SP2 Shows Why Microsoft Is A Great Company
 type: wp
 wordpress_id: 1950

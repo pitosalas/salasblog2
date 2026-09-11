@@ -1,16 +1,12 @@
 ---
-category: '298'
-date: '2009-06-12'
-subtitle: My post about Barack Obama’s election was getting a bit long, so I thought
-  I’d break it up and get s...
-tags:
-- politics
-- barack-obama
-title: Election day in Benton, New Hampshire
-type: wp
+title: "Election day in Benton, New Hampshire"
+subtitle: "My post about Barack Obama’s election was getting a bit long, so I thought I’d break it up and get s..."
+category: "298"
+tags: []
+date: "2009-06-12"
+type: "wp"
 wordpress_id: 837
 ---
-
 My post about Barack Obama’s election was getting a bit long, so I thought I’d break it up and get some more blog miles out of the story.
 ![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/imagewell/Benton%2520map.jpg?resize=294%2C294) First of all, check out this election map from Google. A few things to notice. First of all,the outcome shows (as I said in the previous post) that Obama got a mere 9 votes less than McCain.
 

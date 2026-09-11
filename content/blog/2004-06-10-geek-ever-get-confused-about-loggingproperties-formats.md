@@ -5,7 +5,6 @@ subtitle: I know I do! Here’s a very concise summary of the syntax that will j
   memory when it needs to ...
 tags:
 - programming
-- log4j
 title: '[GEEK] Ever get confused about logging.properties formats?'
 type: wp
 wordpress_id: 1983

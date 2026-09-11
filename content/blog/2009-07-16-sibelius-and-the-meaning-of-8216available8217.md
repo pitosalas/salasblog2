@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-07-16'
-subtitle: There aren’t many good options for Music notation software. Sibelius
-tags:
-- music
-- sibelius
-title: Sibelius and the meaning of ‘available’
-type: wp
+title: "Sibelius and the meaning of ‘available’"
+subtitle: "There aren’t many good options for Music notation software. Sibelius"
+category: "298"
+tags: []
+date: "2009-07-16"
+type: "wp"
 wordpress_id: 823
 ---
-
 There aren’t many good options for Music notation software. [Sibelius](http://www.sibelius.com/home/index_flash.html) is in my opinion the best, which as this software goes is not saying all that much. For it’s functionality it’s quite good, as a piece of elegant and usable software, it gets a “B” at best.
 Over a month ago Sibelius [announced their Version 6](http://www.sibelius.com/products/sibelius/6/index.html). Like any software company they made a much bigger deal of it than the changes would justify. Still there were a few things in it that I wanted.
 

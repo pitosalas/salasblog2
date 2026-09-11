@@ -1,14 +1,12 @@
 ---
-category: '298'
-date: '2007-08-14'
-subtitle: '[tag]Funny[/tag]!'
-tags:
-- personal
-title: “The Most Expensive Bidder”
-type: wp
+title: "“The Most Expensive Bidder”"
+subtitle: "[tag]Funny[/tag]!"
+category: "298"
+tags: []
+date: "2007-08-14"
+type: "wp"
 wordpress_id: 1229
 ---
-
 [tag]Funny[/tag]!
 I saw this in Dilbert this weekend.
 

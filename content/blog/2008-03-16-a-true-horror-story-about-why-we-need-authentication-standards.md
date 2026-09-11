@@ -1,15 +1,12 @@
 ---
-category: '50'
-date: '2008-03-16'
-subtitle: I am constantly downloading applications and utilities off the web to try
-  this or that out. I am as ...
-tags:
-- technology
-title: A True Horror Story About Why We Need Authentication Standards
-type: wp
+title: "A True Horror Story About Why We Need Authentication Standards"
+subtitle: "I am constantly downloading applications and utilities off the web to try this or that out. I am as ..."
+category: "50"
+tags: []
+date: "2008-03-16"
+type: "wp"
 wordpress_id: 1086
 ---
-
 I am constantly downloading applications and utilities off the web to try this or that out. I am as paranoid as the next guy so I do think about where this app came from and what havock it may or may not be planning.
 Still, I often will choose to **ignore my most paranoid impulses **and go ahead. I came across a story of such a utility which in addition to doing something useful for the user, was stealing passwords.
 

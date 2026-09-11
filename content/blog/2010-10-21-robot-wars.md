@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-10-21'
-subtitle: Two very contrasting ways of looking at our **relationship with Pakistan.
-  **I don’t know where I sta...
-tags:
-- politics
-title: Robot wars
-type: wp
+title: "Robot wars"
+subtitle: "Two very contrasting ways of looking at our **relationship with Pakistan. **I don’t know where I sta..."
+category: "298"
+tags: []
+date: "2010-10-21"
+type: "wp"
 wordpress_id: 650
 ---
-
 Two very contrasting ways of looking at our **relationship with Pakistan. **I don’t know where I stand, to be honest.
 If you are interested in the topic you owe it to yourself to **read both articles**, because I had a hard time finding an appropriate section to quote in each case.
 

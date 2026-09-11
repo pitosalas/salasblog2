@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2009-01-29'
-subtitle: You’ve heard me bemoan the death of magazines, newspapers, and other valuable
-  things (radio? small s...
-tags:
-- business
-title: Going, going, gone…
-type: wp
+title: "Going, going, gone…"
+subtitle: "You’ve heard me bemoan the death of magazines, newspapers, and other valuable things (radio? small s..."
+category: "298"
+tags: []
+date: "2009-01-29"
+type: "wp"
 wordpress_id: 901
 ---
-
 You’ve heard me bemoan the death of magazines, newspapers, and other valuable things (radio? small software products) that we are killing by demanding and expecting them to become cheaper and cheaper, and eventually free. And after that, “gone”.
 Here’s an interesting idea: [make newspapers into non-profits, supported by endowments and fund raising, sort of like Public Radio and Television](http://www.nytimes.com/2009/01/28/opinion/28swensen.html?_r=1&hp). 
 

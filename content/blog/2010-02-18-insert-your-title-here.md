@@ -1,15 +1,12 @@
 ---
-category: '298'
-date: '2010-02-18'
-subtitle: “I am so disappointed in the government”
-tags:
-- politics
-- curacao
-title: '[insert your title here]'
-type: wp
+title: "[insert your title here]"
+subtitle: "“I am so disappointed in the government”"
+category: "298"
+tags: []
+date: "2010-02-18"
+type: "wp"
 wordpress_id: 741
 ---
-
 “I am so disappointed in the government”
 “Are we driving off a cliff with two sets of hands on the steering wheel?”
 “What is wrong with those people!”

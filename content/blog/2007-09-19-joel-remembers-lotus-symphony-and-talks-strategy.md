@@ -1,16 +1,12 @@
 ---
-category: '538'
-date: '2007-09-19'
-subtitle: Check out this post from Joel on Software
-tags:
-- technology
-- joel-spolsky
-- lotus-symphony
-title: Joel remembers Lotus Symphony and talks Strategy
-type: wp
+title: "Joel remembers Lotus Symphony and talks Strategy"
+subtitle: "Check out this post from Joel on Software"
+category: "538"
+tags: []
+date: "2007-09-19"
+type: "wp"
 wordpress_id: 1208
 ---
-
 Check out [this post](http://www.joelonsoftware.com/items/2007/09/18.html) from [Joel on Software](http://www.joelonsoftware.com): 
 **
  IBM just released an open-source office suite called IBM Lotus Symphony. Sounds like Yet Another StarOffice distribution. But I suspect they’re probably trying to wipe out the memory of the original Lotus Symphony, which had been hyped as the Second Coming and which fell totally flat. It was the software equivalent of Gigli. 

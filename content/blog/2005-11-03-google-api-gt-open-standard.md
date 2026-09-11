@@ -4,7 +4,6 @@ date: '2005-11-03'
 subtitle: 'I really like this idea that Dave Winer has put forward: “Let’s...'
 tags:
 - technology
-- google
 title: Google API -> Open Standard
 type: wp
 wordpress_id: 1665

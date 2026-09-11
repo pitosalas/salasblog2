@@ -4,8 +4,8 @@ date: '2005-01-12'
 subtitle: I’m seriously thinking about starting to use a Macintosh for my day to day
   work computer instead of ...
 tags:
-- technology
-- personal
+- macos
+- apple
 title: Thinking of being a deserter
 type: wp
 wordpress_id: 1872

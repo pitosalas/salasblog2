@@ -1,12 +1,14 @@
 ---
-title: "The Gates: What’s the point of taking pictures?"
-subtitle: "As I mentioned a few days ago, I went to see “The Gates” – Environmental art by Christo"
-category: "298"
-tags: ["personal"]
-date: "2005-02-24"
-type: "wp"
+category: '298'
+date: '2005-02-24'
+subtitle: As I mentioned a few days ago, I went to see “The Gates” – Environmental
+  art by Christo
+tags: []
+title: 'The Gates: What’s the point of taking pictures?'
+type: wp
 wordpress_id: 1842
 ---
+
 As I mentioned a few days ago, I went to see “The Gates” – [Environmental art by Christo](http://christojeanneclaude.net/tg.html). My reaction: much better and cooler than I thought it would be. 
 Not that there were any surprises – **it’s exactly what it was said to be**: a whole bunch of orange (oops, sorry, safron) rectangular ‘gates’ all over many of the paths and byways of Central Park in New York City. 
 

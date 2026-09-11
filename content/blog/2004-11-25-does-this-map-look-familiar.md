@@ -4,9 +4,7 @@ date: '2004-11-25'
 subtitle: '![](https://i0.wp.com/www.xandocosi.com/images/CosiMap2.gif?w=584) Have
   you seen this **map **before...'
 tags:
-- personal
 - politics
-- cosi
 title: Does this map look familiar?
 type: wp
 wordpress_id: 1909
