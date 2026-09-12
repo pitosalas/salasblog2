@@ -42,9 +42,9 @@
 body {
     margin: 0;
     background: var(--bg);
-    color: var(--fg);
+    color: var(--muted);
     font-family: var(--font-mono);
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6;
 }
 

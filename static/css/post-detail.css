@@ -9,7 +9,7 @@
     padding-bottom: 20px;
     border-bottom: 1px solid var(--border);
 }
-.post-title { margin: 0 0 10px 0; font-size: 1.6em; font-weight: 600; }
+.post-title { margin: 0 0 10px 0; font-size: 1.6em; font-weight: 600; color: var(--fg); }
 
 .post-meta {
     display: flex;
@@ -22,6 +22,38 @@
 .post-meta .tag-list { display: flex; gap: 10px; flex-wrap: wrap; }
 
 .post-body { margin-bottom: 32px; }
+
+/* Typography for markdown-rendered content (post.content) — otherwise
+   headings/links/lists/code fall back to raw browser defaults, which
+   clash with the rest of the hand-styled Console chrome. */
+.post-body p { margin: 0 0 16px 0; }
+.post-body h2 { margin: 32px 0 12px 0; font-size: 1.2em; font-weight: 600; color: var(--fg); }
+.post-body h3 { margin: 24px 0 10px 0; font-size: 1.05em; font-weight: 600; color: var(--fg); }
+.post-body h4 { margin: 20px 0 8px 0; font-size: 0.95em; font-weight: 600; color: var(--fg); }
+.post-body ul, .post-body ol { margin: 0 0 16px 0; padding-left: 24px; }
+.post-body li { margin-bottom: 6px; }
+.post-body a { color: var(--accent); text-decoration: underline; }
+.post-body a:hover { color: var(--fg); }
+.post-body code {
+    font-family: var(--font-mono);
+    background: var(--bg-alt);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+.post-body pre {
+    background: var(--bg-alt);
+    padding: 12px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+.post-body pre code { background: none; padding: 0; }
+.post-body blockquote {
+    margin: 0 0 16px 0;
+    padding-left: 14px;
+    border-left: 2px solid var(--border);
+    color: var(--muted);
+}
 
 .post-excerpt {
     margin: 0 0 20px 0;

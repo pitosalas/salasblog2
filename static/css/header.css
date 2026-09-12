@@ -16,7 +16,7 @@
     flex-wrap: wrap;
 }
 
-.brand { font-weight: 600; font-size: 15px; white-space: nowrap; }
+.brand { font-weight: 600; font-size: 15px; white-space: nowrap; color: var(--fg); }
 .brand .accent { color: var(--accent); }
 
 .site-nav { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }

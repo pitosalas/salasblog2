@@ -16,7 +16,7 @@
     align-items: center;
     margin-bottom: 20px;
 }
-.admin-heading { margin: 0; font-size: 1.3em; font-weight: 600; }
+.admin-heading { margin: 0; font-size: 1.3em; font-weight: 600; color: var(--fg); }
 
 .admin-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .admin-tab {
@@ -33,7 +33,7 @@
 .admin-tab.active { border-color: var(--accent); color: var(--accent); }
 .admin-tab-danger { color: #c0392b; border-color: #c0392b; }
 
-.admin-pane h2 { font-size: 1.05em; font-weight: 600; margin: 0 0 8px 0; }
+.admin-pane h2 { font-size: 1.05em; font-weight: 600; margin: 0 0 8px 0; color: var(--fg); }
 .admin-pane h2.h5 { font-size: 1.05em; }
 
 /* ---- Bootstrap-compatible utility shim ---- */

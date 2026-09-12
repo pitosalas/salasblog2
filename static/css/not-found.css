@@ -10,7 +10,7 @@
     line-height: 1;
 }
 
-.not-found-title { margin: 12px 0 8px 0; font-size: 1.3em; }
+.not-found-title { margin: 12px 0 8px 0; font-size: 1.3em; color: var(--fg); }
 .not-found-message { color: var(--muted); margin: 0 0 24px 0; }
 
 .not-found-actions {
