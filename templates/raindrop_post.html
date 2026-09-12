@@ -2,7 +2,7 @@
 
 {% block title %}{{ post.title }}{% endblock %}
 
-{% block description %}{{ post.excerpt or post.title }}{% endblock %}
+{% block description %}{{ (post.excerpt or post.title) | striptags | e }}{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="/static/css/raindrops-list.css">

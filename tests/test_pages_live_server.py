@@ -69,12 +69,14 @@ class TestPagesLiveServer:
         response = requests.get(f"{base_url}/pages/", timeout=10)
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # Look for page cards (Bootstrap card layout)
-        page_cards = soup.find_all("div", class_="card")
+        # F47 replaced the Bootstrap card grid with a plain entry list
+        page_cards = soup.find_all("li", class_="entry")
         if not page_cards:
             # Fallback to alternative selectors
-            page_cards = soup.find_all("article") or soup.find_all(
-                "div", class_="page-card"
+            page_cards = (
+                soup.find_all("div", class_="card")
+                or soup.find_all("article")
+                or soup.find_all("div", class_="page-card")
             )
 
         assert len(page_cards) > 0, "Should have at least one page listed"

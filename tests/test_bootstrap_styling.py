@@ -222,6 +222,44 @@ def test_raindrop_post_uses_post_body_not_bootstrap_grid():
 def test_page_template_uses_post_body_not_bootstrap_grid():
     html = render("page.html", {"page": fake_page()})
     assert "post-body" in html
+
+
+def test_blog_post_meta_description_strips_html_and_escapes():
+    """Regression: an excerpt containing embedded HTML (e.g. the
+    <strong class="excerpt-heading"> markup create_excerpt_with_info
+    inserts for a subheading) must never reach the <meta description>
+    attribute raw — an embedded quote there truncates the attribute and
+    corrupts the page (observed live: stray text rendered above the
+    header on a real post)."""
+    post = fake_post()
+    post["excerpt"] = (
+        'First paragraph. <strong class="excerpt-heading">A '
+        "Subheading</strong> More text with a \" quote and a & ampersand."
+    )
+    html = render(
+        "blog_post.html",
+        {"post": post, "prev_post": None, "next_post": None},
+    )
+    assert '<strong class="excerpt-heading">' not in html
+    assert 'content="First paragraph. A Subheading More text' in html
+    assert "&#34;" in html or "&quot;" in html
+    assert "&amp;" in html
+
+
+def test_raindrop_post_meta_description_strips_html_and_escapes():
+    """The excerpt's raw HTML is still allowed inside the body's
+    <blockquote> — only the <meta description> attribute must be
+    stripped/escaped, since that's the context an embedded quote
+    breaks."""
+    post = fake_raindrop()
+    post["excerpt"] = 'Some <em class="x">emphasis</em> and a " quote.'
+    html = render(
+        "raindrop_post.html",
+        {"post": post, "prev_post": None, "next_post": None},
+    )
+    meta_line = next(line for line in html.splitlines() if "name=\"description\"" in line)
+    assert '<em class="x">' not in meta_line
+    assert 'content="Some emphasis and a' in meta_line
     assert "col-lg-" not in html
 
 
