@@ -10,7 +10,7 @@ type: wp
 wordpress_id: 422
 ---
 
-David Colletta shared [this link in comments](http://www.evanjones.ca/farewell-mit.html) to my [recent post about team work](/imported-20111103233638/2012/1/4/teaching-group-projects.html). David’s link was good enough that I thought I should excerpt it to increase the chances that my colleagues and students at Brandeis see it.
+David Colletta shared [this link in comments](http://www.evanjones.ca/farewell-mit.html) to my [recent post about team work](/blog/2012-01-04-teaching-group-projects.html). David’s link was good enough that I thought I should excerpt it to increase the chances that my colleagues and students at Brandeis see it.
 
 Here’s an excerpt from it:
 

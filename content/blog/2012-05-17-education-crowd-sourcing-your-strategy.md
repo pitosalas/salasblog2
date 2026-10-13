@@ -10,7 +10,7 @@ type: wp
 wordpress_id: 331
 ---
 
-The other day I referenced an [article questioning the motivation and effectiveness of large scale strategic planning exercises in universities today.](/imported-20111103233638/2012/5/4/education-strategic-plans-are-they-worth-the-paper-they-are.html) 
+The other day I referenced an [article questioning the motivation and effectiveness of large scale strategic planning exercises in universities today.](/blog/2012-05-04-education-strategic-plans-8211-are-they-worth-the-paper-they-are-written-on.html) 
 
 In this vein I was interested to see this [article describing how certain organizations have totally thrown open the process of developing and communicating strategy](https://www.mckinseyquarterly.com/Strategy/Strategy_in_Practice/The_social_side_of_strategy_2965) by employing some good old crowd sourcing.
 

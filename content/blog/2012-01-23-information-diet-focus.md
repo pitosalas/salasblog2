@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 410
 ---
 
-While I am in the mood to reveal some of my weaknesses ([see post on Dieting ](/imported-20111103233638/2012/1/21/secret-trick-for-losing-weight.html)two days ago) let’s talk about information overload.
+While I am in the mood to reveal some of my weaknesses ([see post on Dieting ](/blog/2012-01-21-secret-trick-for-losing-weight.html)two days ago) let’s talk about information overload.
 
 I employ various tools and tricks to make sure I can focus on what is important to me and shut out distractions. I’ve written about them before. Two of my favorites are [so-called self binding](/blog/2010-10-11-do-you-procrastinate-i-do8230.html) (sounds weird  but it’s not) and a utility app called [Concentrate](http://getconcentrating.com/).
 

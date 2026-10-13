@@ -15,7 +15,7 @@ From an email I sent, just because: 
 
 I bet you won’t print this one! But maybe you can respond to me personally.
 
-[Check this out](/imported-20111103233638/2013/8/22/dear-consumer-reports-consumerreports.html)
+[Check this out](/blog/2013-08-22-dear-consumer-reports-consumerreports.html)
 
 CU itself is a bad actor when it comes to magazine subscription renewals.
 

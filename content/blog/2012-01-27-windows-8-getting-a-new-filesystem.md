@@ -23,6 +23,6 @@ Windows file systems are accessed by the widest array of application and system 
 
 Reading the article is not as satisfying as the build up. I guess not surprisingly, given that by definition the article has to over simplify and really hide the wheels within wheels.
 
-I have written many times about Microsoft’s [amazing ability to build complex products and support a user base across a crazy variety of versions, hardware, software, countries, eras and so on. ](/imported-20111103233638/2005/1/22/day-of-reckoning-coming-for-microsoft.html) The challenge that they take on with Windows 8, apparently massively changing the on-disk structures of their file system while preserving API compatibility is daunting.
+I have written many times about Microsoft’s [amazing ability to build complex products and support a user base across a crazy variety of versions, hardware, software, countries, eras and so on. ](/blog/2005-01-22-day-of-reckoning-coming-for-microsoft.html) The challenge that they take on with Windows 8, apparently massively changing the on-disk structures of their file system while preserving API compatibility is daunting.
 
 So while I am not a Microsoft fan or booster, I still have enormous respect for them.

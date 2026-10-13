@@ -12,7 +12,7 @@ wordpress_id: 426
 
 I know basic Javascript. I think I will be learning more soon. I think JavaScript is the language of the (near) future. Predicting what the language of the (further) future is would be impossible, as programming languages come and go. Hopefully they get better as they evolve.
 
-Why do I say that it is the language of the (near) future? Compared, for example to Java, or Ruby or Python, or even Erlang? Here’s an article I wrote about that: [how JavaScript may be the most important language for the web for the near future](/imported-20111103233638/2011/6/25/geeky-javascript-universal-language-of-the-future.html). Do you agree?
+Why do I say that it is the language of the (near) future? Compared, for example to Java, or Ruby or Python, or even Erlang? Here’s an article I wrote about that: [how JavaScript may be the most important language for the web for the near future](/blog/2011-06-26-geeky-javascript-8211-universal-language-of-the-future.html). Do you agree?
 
 With that context, I was very interested to see Jon Ressig’s article about how Khan Academy is thinking about teaching programming languages. You know I am a big fan of Khan Academy: see [Khan Academy to the Rescue.](/blog/2011-10-25-khan-academy-to-the-rescue.html)
 

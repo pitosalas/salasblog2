@@ -17,4 +17,4 @@ This is from the [New York Time’s article about Curt Shilling’s ill fated ga
 
 Read it, it’s a fascinating story.
 
-Oh and I had some comments about the story way back when: [“Can Shilling focus on 38 studios and still be great for the Red Sox?”](/imported-20111103233638/2007/7/18/can-shilling-focus-on-38-studios-and-still-be-a-great-for-th.html)
+Oh and I had some comments about the story way back when: [“Can Shilling focus on 38 studios and still be great for the Red Sox?”](/blog/2007-07-18-can-shilling-focus-on-38-studios-and-still-be-a-great-for-the-redsox.html)
