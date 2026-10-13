@@ -4,7 +4,7 @@
 
 **Date Created:** 2026-10-13
 
-**Done:** no
+**Done:** yes — verified live 2026-10-13; 21 unfixable dead self-links remain (see TF48.8)
 
 **Tasks File Created:** yes
 

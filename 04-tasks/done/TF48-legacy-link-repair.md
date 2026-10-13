@@ -124,7 +124,7 @@ Test: not feasible — this is a human review step.
 
 ## TF48.4 — Rewrite links in post content
 
-**Status**: not done
+**Status**: done
 
 **Description**: A rewrite command that replaces every mapped legacy URL in
 content with its new URL. It leaves unmatched links untouched.
@@ -187,10 +187,44 @@ Test: this task is the test task.
 
 ## TF48.8 — Production verification
 
-**Status**: not done
+**Status**: done
 
 **Description**: Deploy. Walk through the F48 demo steps against
 https://salas.com and run the checker against production content. Record
 the remaining unmatched count in the feature file.
 
 Test: manual — this verifies the live deployment.
+
+**Result (2026-10-13)**: deployed `c3ffa71` and then `8cacea8`. The rewrite
+was dry-run and then applied on `/data/content`: 135 links in round 1 and
+7 in round 2. The site was regenerated and `sync_to_github()` returned
+True both times. Local `main` was pulled.
+
+Live checks:
+
+* The Part Deux "my earlier posting" link points to
+  `/blog/2004-11-29-why-improv-didn8217t-succeed.html`, which returns 200.
+
+* `/weblogs/archives/000522.html`, `/2009/02/14/saving-the-newspapers/`, and
+  `/imported-20111103233638/2012/1/4/teaching-group-projects.html` all 301
+  to their posts.
+
+* `/weblogs/archives/000264.html` 301s to its Wayback copy.
+
+* `/2004/02/24.html` (unmapped) returns 404.
+
+`bg check-links` on production reports **21 remaining dead self-links**,
+none of them fixable:
+
+* the 5 reviewed-unmatched entries
+
+* 6 accidental `/wp-admin/...` links
+
+* `/mt/mt-comments-pitofake.cgi`, `/weblogs/archives/screen.jpg`, and
+  `/weblogs/archives/2003_05.php` (an MT month archive)
+
+* `/stories/rssprez.pdf` ×2 and the Brandeis slides frame
+
+* one malformed WP link with a duplicated segment
+
+* 3 `/robots/...` links on the robots page
