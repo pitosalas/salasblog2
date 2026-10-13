@@ -35,6 +35,11 @@ from salasblog2.legacy_links import (
             "http://www.salas.com/blog/2012/5/6/field-of-dreams.html",
             ("/blog/2012/5/6/field-of-dreams.html", "squarespace"),
         ),
+        (
+            "/imported-20111103233638/2012/1/4/teaching-group-projects.html",
+            ("/imported-20111103233638/2012/1/4/teaching-group-projects.html",
+             "squarespace"),
+        ),
         ("/2004/01/24.html#a155", ("/2004/01/24.html", "radio-day")),
     ],
 )

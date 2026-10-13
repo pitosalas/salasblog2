@@ -11,7 +11,7 @@ stripped:
 
 * `mt` - Movable Type, `/weblogs/archives/000522.html` (or `.php`)
 * `wp` - WordPress, `/2008/02/18/slug/`, optionally under `/imported-NNN/`
-* `squarespace` - `/blog/2012/5/6/slug.html`
+* `squarespace` - `/blog/2012/5/6/slug.html`, or under `/imported-NNN/`
 * `radio-day` - Radio UserLand day archive, `/2004/01/24.html`
 
 A link's *normalized path* (host, fragment, and trailing slash removed) is
@@ -28,7 +28,9 @@ SELF_HOST = r"(?:https?://(?:www\.)?(?:salas\.com|salascom\.wordpress\.com))?"
 SCHEME_PATTERNS = {
     "mt": re.compile(r"/weblogs/archives/\d+\.(?:html|php)"),
     "wp": re.compile(r"(?:/imported-\d+)?/\d{4}/\d{2}/\d{2}/[^/?#]+"),
-    "squarespace": re.compile(r"/blog/\d{4}/\d{1,2}/\d{1,2}/[^/?#]+\.html"),
+    "squarespace": re.compile(
+        r"(?:/blog|/imported-\d+)/\d{4}/\d{1,2}/\d{1,2}/[^/?#]+\.html"
+    ),
     "radio-day": re.compile(r"/\d{4}/\d{2}/\d{2}\.html"),
 }
 

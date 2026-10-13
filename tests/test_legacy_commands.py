@@ -56,6 +56,15 @@ def test_build_map_keeps_reviewed_entries(content_root, tmp_path):
     assert url_map["/weblogs/archives/000999.html"] == reviewed
 
 
+def test_build_map_keeps_entries_no_longer_linked(content_root, tmp_path):
+    map_file = tmp_path / "map.json"
+    rewritten = {"scheme": "wp", "new": "/blog/old.html", "confidence": "exact"}
+    map_file.write_text(json.dumps({"/2008/02/18/already-rewritten": rewritten}))
+    url_map = build_map(content_root, map_file, tmp_path / "cache.json")
+    assert url_map["/2008/02/18/already-rewritten"] == rewritten
+    assert "/weblogs/archives/000522.html" in url_map
+
+
 def test_rewrite_dry_run_leaves_files_alone(content_root, tmp_path, capsys):
     map_file = tmp_path / "map.json"
     build_map(content_root, map_file, tmp_path / "cache.json")

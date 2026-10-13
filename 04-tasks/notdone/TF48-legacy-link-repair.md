@@ -98,6 +98,28 @@ continued" post, and 3 ambiguous or empty Radio day pages.
 All decided entries carry `"reviewed": true`. 112 of 117 paths have a
 target, which covers 135 of the 140 links.
 
+**Round 2 (2026-10-13)**: the TF48.6 checker found 7 more legacy links of
+the form `/imported-NNN/2012/1/4/slug.html`. These are Squarespace URLs
+under the import prefix, with an unpadded month, which no pattern covered.
+
+* The `squarespace` pattern now accepts the `/imported-NNN/` prefix.
+
+* Result: 5 exact matches and 2 fuzzy (truncated slugs). The user approved
+  both fuzzy ones.
+
+* The map now has 124 entries, 119 of them with targets.
+
+**Bug found**: rebuilding the map after the round-1 rewrite dropped 92
+entries, because the scan no longer saw links that had already been
+rewritten.
+
+* `build_map` now keeps every previous entry the scan doesn't find, so the
+  map only grows.
+
+* Regression test: `test_build_map_keeps_entries_no_longer_linked`.
+
+* Production was never affected, since it reads only the committed map.
+
 Test: not feasible — this is a human review step.
 
 ## TF48.4 — Rewrite links in post content

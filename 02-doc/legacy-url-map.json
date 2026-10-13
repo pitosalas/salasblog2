@@ -1194,6 +1194,51 @@
       "2014-07-04-it8217s-probably-not-cool-to-say-but-i-am-not-sure-about-8220maydayus8221.md"
     ]
   },
+  "/imported-20111103233638/2005/1/22/day-of-reckoning-coming-for-microsoft.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2005-01-22-day-of-reckoning-coming-for-microsoft.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-01-22-day-of-reckoning-coming-for-microsoft.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-01-23-blogging-journalism-and-credibility-8211-harvard.html",
+        "score": 0.28
+      },
+      {
+        "url": "/blog/2005-01-24-blogbridge-tip-themes.html",
+        "score": 0.2
+      }
+    ],
+    "evidence": {
+      "slug": "day-of-reckoning-coming-for-microsoft",
+      "date": "2005-01-22"
+    },
+    "linked_from": [
+      "2012-01-27-windows-8-getting-a-new-filesystem.md"
+    ]
+  },
+  "/imported-20111103233638/2007/7/18/can-shilling-focus-on-38-studios-and-still-be-a-great-for-th.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2007-07-18-can-shilling-focus-on-38-studios-and-still-be-a-great-for-the-redsox.html",
+    "confidence": "fuzzy",
+    "candidates": [
+      {
+        "url": "/blog/2007-07-18-can-shilling-focus-on-38-studios-and-still-be-a-great-for-the-redsox.html",
+        "score": 0.93
+      }
+    ],
+    "evidence": {
+      "slug": "can-shilling-focus-on-38-studios-and-still-be-a-great-for-th",
+      "date": "2007-07-18"
+    },
+    "linked_from": [
+      "2013-04-21-a-fascinating-story-of-curt-shilling8217s-game-company8217s-demise.md"
+    ],
+    "reviewed": true
+  },
   "/imported-20111103233638/2010/10/11/do-you-procrastinate-i-do.html": {
     "scheme": "wp",
     "new": "/blog/2010-10-11-do-you-procrastinate-i-do8230.html",
@@ -1236,6 +1281,133 @@
     },
     "linked_from": [
       "2012-01-02-i-wish-i-knew-more-javascript.md"
+    ]
+  },
+  "/imported-20111103233638/2011/6/25/geeky-javascript-universal-language-of-the-future.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2011-06-26-geeky-javascript-8211-universal-language-of-the-future.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2011-06-26-geeky-javascript-8211-universal-language-of-the-future.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2011-06-27-interesting-approach-to-teaching-computer-science.html",
+        "score": 0.18
+      }
+    ],
+    "evidence": {
+      "slug": "geeky-javascript-universal-language-of-the-future",
+      "date": "2011-06-25"
+    },
+    "linked_from": [
+      "2012-01-02-i-wish-i-knew-more-javascript.md"
+    ]
+  },
+  "/imported-20111103233638/2012/1/21/secret-trick-for-losing-weight.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2012-01-21-secret-trick-for-losing-weight.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2012-01-21-secret-trick-for-losing-weight.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2012-01-21-designed-as-designer.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2012-01-23-fibonacci-series-and-photography.html",
+        "score": 0.25
+      }
+    ],
+    "evidence": {
+      "slug": "secret-trick-for-losing-weight",
+      "date": "2012-01-21"
+    },
+    "linked_from": [
+      "2012-01-23-information-diet-focus.md"
+    ]
+  },
+  "/imported-20111103233638/2012/1/4/teaching-group-projects.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2012-01-04-teaching-group-projects.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2012-01-04-teaching-group-projects.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2012-01-03-texting-left-and-right-hand-of-government.html",
+        "score": 0.25
+      },
+      {
+        "url": "/blog/2012-01-02-i-wish-i-knew-more-javascript.html",
+        "score": 0.22
+      }
+    ],
+    "evidence": {
+      "slug": "teaching-group-projects",
+      "date": "2012-01-04"
+    },
+    "linked_from": [
+      "2012-01-08-on-the-importance-of-learning-to-work-in-teams.md"
+    ]
+  },
+  "/imported-20111103233638/2012/5/4/education-strategic-plans-are-they-worth-the-paper-they-are.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2012-05-04-education-strategic-plans-8211-are-they-worth-the-paper-they-are-written-on.html",
+    "confidence": "fuzzy",
+    "candidates": [
+      {
+        "url": "/blog/2012-05-04-education-strategic-plans-8211-are-they-worth-the-paper-they-are-written-on.html",
+        "score": 0.88
+      },
+      {
+        "url": "/blog/2012-05-03-funny-are-computers-boys-or-are-they-girls.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2012-05-06-field-of-dreams-americans-elect.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "slug": "education-strategic-plans-are-they-worth-the-paper-they-are",
+      "date": "2012-05-04"
+    },
+    "linked_from": [
+      "2012-05-17-education-crowd-sourcing-your-strategy.md"
+    ],
+    "reviewed": true
+  },
+  "/imported-20111103233638/2013/8/22/dear-consumer-reports-consumerreports.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2013-08-22-dear-consumer-reports-consumerreports.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2013-08-22-dear-consumer-reports-consumerreports.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2013-08-22-interesting-article-about-moocs-and-higher-ed.html",
+        "score": 0.36
+      },
+      {
+        "url": "/blog/2013-08-21-anonymity-online-what-good-is-it.html",
+        "score": 0.33
+      }
+    ],
+    "evidence": {
+      "slug": "dear-consumer-reports-consumerreports",
+      "date": "2013-08-22"
+    },
+    "linked_from": [
+      "2013-12-03-dear-consumer-reports.md"
     ]
   },
   "/weblogs/archives/000264.html": {

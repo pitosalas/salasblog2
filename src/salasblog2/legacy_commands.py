@@ -6,9 +6,11 @@ Glue between `legacy_links` (scan/rewrite), `wayback` (archive lookups), and
 `legacy_match` (matching) for the `bg legacy-map` and `bg legacy-rewrite`
 commands.
 
-The map file is the reviewed source of truth. Rebuilding it keeps any entry
-marked `"reviewed": true` exactly as the reviewer left it, so a rerun after
-new legacy links appear never undoes a human decision.
+The map file is the reviewed source of truth and only ever grows. Rebuilding
+it keeps any entry marked `"reviewed": true` exactly as the reviewer left it,
+so a rerun never undoes a human decision. It also keeps every entry the scan
+no longer finds: once content is rewritten its legacy links are gone, but the
+redirects still need those entries for inbound links from other sites.
 """
 
 import difflib
@@ -55,7 +57,9 @@ def build_map(content_root: Path, map_file: Path, cache_file: Path) -> dict[str,
         entry["linked_from"] = sorted(sources[path])
 
     previous = load_url_map(map_file)
-    url_map.update({p: e for p, e in previous.items() if e.get("reviewed")})
+    url_map.update(
+        {p: e for p, e in previous.items() if e.get("reviewed") or p not in url_map}
+    )
     url_map = dict(sorted(url_map.items()))
     map_file.write_text(json.dumps(url_map, indent=2, ensure_ascii=False) + "\n")
     return url_map
