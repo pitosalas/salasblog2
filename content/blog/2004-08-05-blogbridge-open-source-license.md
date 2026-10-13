@@ -26,7 +26,7 @@ The effect of this is that the first objective above is fully achieved **implici
 
 Because the GPL is quite strict in its requirements of releasing any modifications, enhancements, etc also under the GPL, it makes the **source code as it stands **unsuitable for a commercial purpose. The obligations attached to modifying the source would really discourage anyone from building a business around it.
 
-(You might wonder, once you’ve released something as Open Source, can you decide to change the license? Isn’t that prohibited? [It turns out that it’s perfectly alright.](/weblogs/archives/000471.html))
+(You might wonder, once you’ve released something as Open Source, can you decide to change the license? Isn’t that prohibited? [It turns out that it’s perfectly alright.](/blog/2004-08-05-can-you-change-the-license-of-an-open-source-product.html))
 
 The code as it stands therefore is **incompatible **with a commercial project. If we decide that we want to embark on, or give someone else the ability to embark on a commercial project, what do we do?
 

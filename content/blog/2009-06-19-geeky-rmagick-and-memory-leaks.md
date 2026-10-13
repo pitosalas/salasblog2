@@ -11,8 +11,8 @@ type: wp
 wordpress_id: 833
 ---
 
-A [recent post talked about creating a “Domain Specific Language” for image processing of ballots](/2009/06/02/geeky-a-dsl-for-image-analysis/). I’ve made a lot of progress on that project and wanted to give an update.
-One [commenter (my pal Aleks) said to ‘watch out for RMagick as it has major memory leaks](/2009/06/02/geeky-a-dsl-for-image-analysis/#comment-59728). I talked to him further and he recommended using [MiniMagick](http://github.com/probablycorey/mini_magick/tree/master) instead. I investigated.
+A [recent post talked about creating a “Domain Specific Language” for image processing of ballots](/blog/2009-06-03-geeky-a-dsl-for-image-analysis.html). I’ve made a lot of progress on that project and wanted to give an update.
+One [commenter (my pal Aleks) said to ‘watch out for RMagick as it has major memory leaks](/blog/2009-06-03-geeky-a-dsl-for-image-analysis.html). I talked to him further and he recommended using [MiniMagick](http://github.com/probablycorey/mini_magick/tree/master) instead. I investigated.
 
 It turns out indeed that my [RMagick](http://rmagick.rubyforge.org/) app was gobbling up tons of memory.
 

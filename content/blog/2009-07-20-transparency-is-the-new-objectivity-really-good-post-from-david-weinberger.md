@@ -20,6 +20,6 @@ Over the years I’ve been convinced by David, (even though he wasn’t trying t
 
 My current obsession is **Voting Reform**, and so I’ve thought a lot about how we cast votes on ballots and then how they are counted. You might think that given a particular ballot or box of ballots, asking “how many votes did candidate X get” is a factual question to which there is an answer. Not so.
 
-To see why I say this, check out my [post about the ‘true’ result of an election.](/2009/06/16/what-is-the-true-result-of-an-election/)
+To see why I say this, check out my [post about the ‘true’ result of an election.](/blog/2009-06-16-what-is-the-8216true8217-result-of-an-election.html)
 
 [David Weinberger’s](http://en.wikipedia.org/wiki/David_Weinberger) post [Transparency is the new Objectivity](http://www.hyperorg.com/blogger/2009/07/19/transparency-is-the-new-objectivity/) tells a fascinating part of the story; you should read it.

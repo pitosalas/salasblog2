@@ -26,4 +26,4 @@ If you are a reader of this blog you know that this is a question that I’ve po
 
 > “I’ve written about this, and have spoken many times about it: Why do we all expect great software to be free? Why do people turn their noses up when they are asked for a measly $29.95 for a work that took hundreds if not thousands of person days to create? In my opinion it is because of that expectation that we are stuck with monopolies and hegemonies that are so totally locked in. No-one can afford to compete!”
 
-(I am not the only one to notice. Jeremy Wagstaff of the Wall Street Journal has pondered it too in [“Blind to Bargains”.)](/2007/04/28/blind-to-bargains-jeremy-wagstaff/)
+(I am not the only one to notice. Jeremy Wagstaff of the Wall Street Journal has pondered it too in [“Blind to Bargains”.)](/blog/2008-08-13-blind-to-bargains-8211-jeremy-wagstaff.html)

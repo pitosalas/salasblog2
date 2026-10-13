@@ -11,7 +11,7 @@ wordpress_id: 1578
 
 [Via MetaFilter](http://www.metafilter.com/mefi/49232): “Barbarians are at the gates, testing the locks, again.” 
 
-As [I’ve commented before](/weblogs/archives/001090.php), Mac OS X users are (appropriately) smug about the absence of viruses on that platform. Some say it’s only a matter of time. 
+As [I’ve commented before](/blog/2006-03-06-mac-os-x-hacked.html), Mac OS X users are (appropriately) smug about the absence of viruses on that platform. Some say it’s only a matter of time. 
 
 Here are the [interesting technical details](http://www.ambrosiasw.com/forums/index.php?showtopic=102379) of one recent attempt.
 

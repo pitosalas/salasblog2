@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 1164
 ---
 
-[Recently there was a comment to one of my post asking the perennial question](/2007/11/26/the-f-word/#comments) that non-bloggers ask of bloggers, (and bloggers ask of themselve all the time too 🙂
+[Recently there was a comment to one of my post asking the perennial question](/blog/2007-11-26-the-f-word.html) that non-bloggers ask of bloggers, (and bloggers ask of themselve all the time too 🙂
 > “Hello,
 I was wondering if you could answer these 3 simple questions for a school project about blogging. It would be great if you could help me out. THANKS
 

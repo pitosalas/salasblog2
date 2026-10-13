@@ -14,4 +14,4 @@ Here I go again, picking a out quote from a [blogger who I really like ](http://
 
 Maybe it’s because I come from the world of [**collaboration**](http://www.eroom.com), but I hate seeing people’s fascination and even **infatuation **with theh new stuff that’s no better than the old stuff, or sometimes way worse. 
 
-[I won’t pick on Wiki’s again](/weblogs/archives/000463.html) (although I still feel the same…), but how about IRC? I mean calling IRC ‘friction free’? Puleeez. I would call it maximum friction! Anyway, just cranky I guess.
+[I won’t pick on Wiki’s again](/blog/2004-07-23-will-wikis-rule-the-world.html) (although I still feel the same…), but how about IRC? I mean calling IRC ‘friction free’? Puleeez. I would call it maximum friction! Anyway, just cranky I guess.

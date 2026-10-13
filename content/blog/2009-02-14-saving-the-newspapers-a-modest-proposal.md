@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 888
 ---
 
-![](https://i0.wp.com/img.timeinc.net/time/magazine/archive/covers/2009/1101090216_400.jpg?resize=200%2C265)You know I am a fan of the Newspapers. I’ve written about it several times, [wondering out loud whether our collective desire to get everything for cheaper and cheaper, eventually for free, would eventually kill them.](/2009/01/29/going-going-gone/) This topic has been [discussed a lot in the press](http://www.time.com/time/business/article/0,8599,1877191,00.html) and blogs as well.
+![](https://i0.wp.com/img.timeinc.net/time/magazine/archive/covers/2009/1101090216_400.jpg?resize=200%2C265)You know I am a fan of the Newspapers. I’ve written about it several times, [wondering out loud whether our collective desire to get everything for cheaper and cheaper, eventually for free, would eventually kill them.](/blog/2009-01-29-going-going-gone8230.html) This topic has been [discussed a lot in the press](http://www.time.com/time/business/article/0,8599,1877191,00.html) and blogs as well.
 What if we apply the **principles of viral marketing** to supporting newspapers?
 
 How would that work?

@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 1750
 ---
 
-Just a final follow up on this [interesting](/weblogs/archives/000753.html) [story](http://www.buzzmachine.com/archives/2005_06_21.html#009908) (actually more of an event than a story because it was over so quickly:)
+Just a final follow up on this [interesting](/blog/2005-06-15-what-if-we-all-vote-on-the-truth.html) [story](http://www.buzzmachine.com/archives/2005_06_21.html#009908) (actually more of an event than a story because it was over so quickly:)
 
 Jeff Jarvis of **Buzzmachine** has an [interesting view](http://www.buzzmachine.com/archives/2005_06_21.html#009908) on why the Wikitorial experiment (seems to have) failed, and how to do it differently: 
 

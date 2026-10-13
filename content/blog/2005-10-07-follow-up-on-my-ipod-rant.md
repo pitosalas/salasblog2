@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 1680
 ---
 
-After [my rant a few days ago](/weblogs/archives/000891.php) about the **quality** of new-fangled electronic **gizmos** I got various emails. Most interesting was [this link](http://ptech.wsj.com/archive/mailbox-20051006.html) to Walt Mossberg’s comments about the scratching of the iPod nano’s, where he says:
+After [my rant a few days ago](/blog/2005-10-04-how-long-should-a-treo-600-last-how-about-an-ipod.html) about the **quality** of new-fangled electronic **gizmos** I got various emails. Most interesting was [this link](http://ptech.wsj.com/archive/mailbox-20051006.html) to Walt Mossberg’s comments about the scratching of the iPod nano’s, where he says:
 
 > “If I were reviewing the nano today, I would still call it “the best combination of beauty and functionality of any music player I’ve tested,” as I did in my review. But I would include a strong, prominent, warning that it scratches too easily in normal usage. This is a real downside to an otherwise excellent product.” (**from** [Mossberg’s Mailbox](http://ptech.wsj.com/archive/mailbox-20051006.html))
 

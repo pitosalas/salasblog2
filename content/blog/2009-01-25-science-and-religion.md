@@ -17,4 +17,4 @@ Now there’s a big topic, eh? A magazine that I don’t normally read has a [go
 
 And by the way, why does he pick on Turkey? At any rate the article is about much more (it’s long) and in my opinion well worth reading.
 
-p.s. Here’s another example of the unfortunate process which seems to [inevitably leading to putting magazines out of business](/2008/12/01/are-magazines-committing-suicide/). I read the article, am spreading the word, without looking at any ads as far as I can remember, and certainly not purchasing the magazine. We all want to get everything cheaper and cheaper or even free, and so we get what we want, although in getting it we may be killing the very thing.
+p.s. Here’s another example of the unfortunate process which seems to [inevitably leading to putting magazines out of business](/blog/2008-12-02-are-magazines-committing-suicide.html). I read the article, am spreading the word, without looking at any ads as far as I can remember, and certainly not purchasing the magazine. We all want to get everything cheaper and cheaper or even free, and so we get what we want, although in getting it we may be killing the very thing.

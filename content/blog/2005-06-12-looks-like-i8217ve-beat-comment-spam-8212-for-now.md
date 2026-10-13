@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 1759
 ---
 
-You’ve heard me [complain](http://weblogs) about [comment](/weblogs/archives/000570.html) spam before haven’t you? Comment Spam is when mysterious robot software attacks my blog and floods it with fake comments? 
+You’ve heard me [complain](http://weblogs) about [comment](/blog/2005-02-01-link-spammers.html) spam before haven’t you? Comment Spam is when mysterious robot software attacks my blog and floods it with fake comments? 
 
 I came across this [handy little document](http://www.sixapart.com/pronet/comment_spam) from Six Apart, the makers of Movable Type, the Blog software I use: [“Six Apart Guide to Comment Spam](http://www.sixapart.com/pronet/comment_spam)“:
 

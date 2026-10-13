@@ -21,6 +21,6 @@ On the one hand, I happen to be an existing Cingular customer, and so for me the
 
 On the other hand someone signing up anew with Cingular doesn’t have a special incentive to do so based on the price.
 
-Anyway, no, I am not getting an iPhone. I am so far [sticking with my opinion that it’s too precious and too delicate](/2007/07/08/join-the-club-i-saw-i-touched-an-iphone/). I will wait for version 2 or 3.
+Anyway, no, I am not getting an iPhone. I am so far [sticking with my opinion that it’s too precious and too delicate](/blog/2007-07-09-join-the-club-i-saw-i-touched-an-iphone.html). I will wait for version 2 or 3.
 
 By the way there are [rumors that the iPhone’s price is going to drop sharply](http://news.zdnet.com/2100-9595_22-6151185.html) sooner rather than later.

@@ -25,7 +25,7 @@ wordpress_id: 2139
 tags:[game](https://www.diigo.com/user/pitosalas/game) [part](https://www.diigo.com/user/pitosalas/part) [civilization](https://www.diigo.com/user/pitosalas/civilization)
 
 - 
-[Improv in Wikipedia | Pito Salas’ Blog](https://salascom.wordpress.com/2005/01/17/2005117improv-in-wikipedia-html/)
+[Improv in Wikipedia | Pito Salas’ Blog](/blog/2005-01-17-improv-in-wikipedia.html)
 
 - 
 [The Wall is the Wall: Why Fortresses Fail](https://warontherocks.com/2018/02/wall-wall-fortresses-fail/)
@@ -42,6 +42,6 @@ tags:[game](https://www.diigo.com/user/pitosalas/game) [part](https://www.diigo.
 Great explanation of stacks and queues
 
 - 
-[Why Improv didn’t succeed | Pito Salas’ Blog](https://salascom.wordpress.com/2004/11/29/20041129why-improv-didnt-succeed-html/)
+[Why Improv didn’t succeed | Pito Salas’ Blog](/blog/2004-11-29-why-improv-didn8217t-succeed.html)
 
 Posted from [Diigo](https://www.diigo.com). The rest of my favorite links are [here](https://www.diigo.com/user/pitosalas).

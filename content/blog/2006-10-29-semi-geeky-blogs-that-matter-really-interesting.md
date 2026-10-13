@@ -15,7 +15,7 @@ What it seems to do is to look at public subscriptions listed in BlogLines, do a
 
 [![Picture 1-40](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/Picture%25201-40-tm.jpg?resize=343%2C249)](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/images/Picture%25201-40.png)
 
-In light of my [recent](/weblogs/archives/001350.php) [musings](/weblogs/archives/001349.php) on [bridging the gap between all the great content out there in feed land and regular people](/weblogs/archives/001346.php), this algorithmic analysis of topics and interest levels is an interesting data point. You can see that the coverage is extremely spotty. I suppose you can draw different conclusions from this:
+In light of my [recent](/blog/2006-10-13-more-musings-on-the-not-better-rss-aggregator.html) [musings](/blog/2006-10-12-the-answer-is-not-a-better-rss-aggregator-continued.html) on [bridging the gap between all the great content out there in feed land and regular people](/blog/2006-10-11-the-answer-is-not-a-better-rss-aggregator.html), this algorithmic analysis of topics and interest levels is an interesting data point. You can see that the coverage is extremely spotty. I suppose you can draw different conclusions from this:
 
 - The feedosphere doesn’t come close to covering the breath of topics of interest that one might have
 

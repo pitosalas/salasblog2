@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 1964
 ---
 
-In [several ](/weblogs/archives/000449.html)previous [posts ](/weblogs/archives/000446.html)I’ve wondered aloud: “I can see that Sun spends a ton of money on Java. It must be astronomical. What’s the strategy behind that? How do they make money on that?”
+In [several ](/blog/2004-06-29-javaone-scott-mcnealy-keynote.html)previous [posts ](/blog/2004-06-28-javaone-javaone-keynote.html)I’ve wondered aloud: “I can see that Sun spends a ton of money on Java. It must be astronomical. What’s the strategy behind that? How do they make money on that?”
 Jonathan Schwartz, Sun’s President and COO, [answers that question directly in his new Blog.](http://blogs.sun.com/roller/page/jonathan/20040712)
 
 And in the **“you can’t win”** department: One of my observations about this year’s Java One was that there was a real contrast between the way Java ran this and the way, for example, Microsoft runs the PDC (Professional Developers Conference.) Microsoft works hard at and I think succeeds at painting a grand future for their stuff. Not only what is here today, but what will be coming in 12 months, 3 years, 5 years and even 10 years. A holistic and compelling vision.

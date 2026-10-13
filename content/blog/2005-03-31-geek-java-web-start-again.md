@@ -39,8 +39,8 @@ There’s [another flame-up](http://www.clientjava.com/blog/2005/03/28/111202998
 
 - [Also from there](http://www.clientjava.com/blog/2004/12/07/1102430658000.html#comment1102519273000)
 
-- [From my blog](/weblogs/archives/000529.html)
+- [From my blog](/blog/2004-12-08-geek-java-web-start.html)
 
-- [Also from my blog](/weblogs/archives/000441.html)
+- [Also from my blog](/blog/2004-06-12-blogbridge-beta-part-deux.html)
 
-- [And also from my blog](/weblogs/archives/000336.html)
+- [And also from my blog](/blog/2004-01-31-sun-still-doesn8217t-get-it.html)

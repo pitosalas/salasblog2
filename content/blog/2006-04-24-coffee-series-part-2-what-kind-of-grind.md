@@ -15,7 +15,7 @@ This is an **interim report** on “Life with a [Capresso espresso maker](http:/
 
 The [Capresso](http://www.capresso.com/prod_esp_ultima.html) which I bought from [WholeLatteLove](http://www.wholelattelove.com/) (**best** price, **free** shipping) came with a free pound of coffee beans. Being perhaps a little **too clever**, I asked my neighborhood [Starbucks](http://www.starbucks.com/) to grind it for me. I **believe** the ground it too fine, and so I’ve had several batches of  non-coffee – that is, the machine makes all the right sounds, but nothing comes out.
 
-As I mentioned in [my previous post](/weblogs/archives/001144.php), the [Capresso Ultima](http://www.capresso.com/prod_esp_ultima.html) has a rather **clever** way of ‘tamping’ the coffee which uses a lever (and so muscle power) but in a way that’s simple and fool proof. 
+As I mentioned in [my previous post](/blog/2006-04-23-new-espresso-maker-capresso-ultima-model-121.html), the [Capresso Ultima](http://www.capresso.com/prod_esp_ultima.html) has a rather **clever** way of ‘tamping’ the coffee which uses a lever (and so muscle power) but in a way that’s simple and fool proof. 
 
 Well **almost**. The only thing that’s not exactly clear is how hard to push the lever down. Not too **hard**. Not too **soft**. So when **no coffee** comes out of the nozzle I am left with the **question**: was the grind too fine, or did I press too hard, or both? 
 

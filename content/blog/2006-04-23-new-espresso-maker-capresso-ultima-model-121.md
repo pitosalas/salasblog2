@@ -23,11 +23,11 @@ And, the coffee is del.icio.us!
 
 I will be posting further observations of my experiences in the near future:
 
-- [What are the trade-offs that led me to this particular machine?](/weblogs/archives/001146.php)
+- [What are the trade-offs that led me to this particular machine?](/blog/2006-04-26-coffee-series-part-3-trade-offs.html)
 
 - How does it compare to the Keurig and does one replace the other?
 
-- [What have I learned so far about the kind of grind that works?](/weblogs/archives/001145.php)
+- [What have I learned so far about the kind of grind that works?](/blog/2006-04-24-coffee-series-part-2-what-kind-of-grind.html)
 
 - How hard is it to steam or foam milk?
 

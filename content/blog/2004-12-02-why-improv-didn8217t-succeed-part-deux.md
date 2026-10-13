@@ -11,7 +11,7 @@ type: wp
 wordpress_id: 1903
 ---
 
-Seems like a dredged up some “old” (you know who you are) **Improv fans **with [my earlier posting](/weblogs/archives/000522.html), so I thought an additional comment or two might be in order.
+Seems like a dredged up some “old” (you know who you are) **Improv fans **with [my earlier posting](/blog/2004-11-29-why-improv-didn8217t-succeed.html), so I thought an additional comment or two might be in order.
 First off, **lest it be misunderstood**, in no way do I feel anything but totally proud about Imrpov as a concept and a product. I hope it is not inconsistent to feel that way, and yet agree that for a variety of reason it was not successful, as a product. 
 
 The concept of an alternative (**not **replacement) for a spreadsheet for real financial modeling is, I think, quite sound. (Yes, I can do page layout in Microsoft Word, but if that’s my purpose, PageMaker is better. You could make an analogous point about PowerPoint and PhotoShop.)

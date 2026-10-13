@@ -12,11 +12,11 @@ wordpress_id: 487
 
 I have become a total Spotify addict. I have almost totally stopped downloading MP3s and am gradually locating all my favorite music on Spotify. I posed a couple of semi-sceptical notes when I first started using Spotify and so I am due for an update, right?
 
-- [Cancelled Rhapsory, trying Spotify](/2011/07/17/cancelled-rhapsody-trying-spotify/)
+- [Cancelled Rhapsory, trying Spotify](/blog/2011-07-17-cancelled-rhapsody-trying-spotify.html)
 
-- [Spotify, Genres???](/2011/07/17/spotify-generes/)
+- [Spotify, Genres???](/blog/2011-07-17-spotify-8211-genres.html)
 
-- [Update about Spotify I](/2011/07/21/update-about-spotify/)
+- [Update about Spotify I](/blog/2011-07-21-update-about-spotify.html)
 
 So what has happened since? I find that I am using Spotify on my iPhone and on my computer, all the time. Occasionally I will dip back into my large iTunes collection to remind me of artists that I want to listen to. But I promptly go onto Spotify, and search for the artist and grab all their albums not just the one or two I had in iTunes.
 

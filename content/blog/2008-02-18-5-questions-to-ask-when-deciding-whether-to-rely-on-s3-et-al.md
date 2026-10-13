@@ -10,7 +10,7 @@ type: wp
 wordpress_id: 1109
 ---
 
-Several products I’ve worked on recently have relied on Amazon’s really impressive web services. I’ve written before about how much [I admire services such as S3 and EC2, solid, commercial quality infrastructure services](/2008/01/11/rumorville-microsoft-amazon/).
+Several products I’ve worked on recently have relied on Amazon’s really impressive web services. I’ve written before about how much [I admire services such as S3 and EC2, solid, commercial quality infrastructure services](/blog/2008-01-11-rumorville-microsoft-8211-amazon.html).
 They address (and? or? solve) a big problem that application builders have:
 
 > “How many servers will I need, how many users will I have, how much storage will I need … and in the end, how much will all that cost?”.

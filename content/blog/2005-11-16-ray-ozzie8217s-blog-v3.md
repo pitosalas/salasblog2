@@ -15,6 +15,6 @@ Glad to see that [Ray is blogging again](http://spaces.msn.com/members/rayozzie/
 
 Looks like it will be really interesting to follow!
 
-Ray Ozzie of course is one of the original guys who built Lotus Notes, and launched [Groove](http://www.groove.net/home/index.cfm), and is now [CTO](http://www.microsoft.com/presspass/exec/ozzie/default.mspx) at Microsoft, [right in the middle of a lot of cool new stuff](/weblogs/archives/000951.php).
+Ray Ozzie of course is one of the original guys who built Lotus Notes, and launched [Groove](http://www.groove.net/home/index.cfm), and is now [CTO](http://www.microsoft.com/presspass/exec/ozzie/default.mspx) at Microsoft, [right in the middle of a lot of cool new stuff](/blog/2005-11-12-did-msft-leak-on-purpose-or-did-they-know-they-could-easily-be-leaked.html).
 
 Technorati Tags: [blog](http://www.technorati.com/tag/blog), [microsoft](http://www.technorati.com/tag/microsoft)

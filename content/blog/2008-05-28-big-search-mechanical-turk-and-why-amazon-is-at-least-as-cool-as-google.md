@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 1039
 ---
 
-[Adam Green](http://darwinianweb.com/archive/2005/1127.html#9:31AM) points to Scoble who re-discover and discover, respectively, Amazon’s street by street, address by address, photographic coverage of the map of, **what, the universe**? It’s a neat new user interface of something [they’ve had for a while](/weblogs/archives/000571.php), actually, but still, quite cool!
+[Adam Green](http://darwinianweb.com/archive/2005/1127.html#9:31AM) points to Scoble who re-discover and discover, respectively, Amazon’s street by street, address by address, photographic coverage of the map of, **what, the universe**? It’s a neat new user interface of something [they’ve had for a while](/blog/2005-02-01-a98217s-photographic-yellow-pages.html), actually, but still, quite cool!
 some nuggets:
 
 > “Will I use it? Hell, yeah, it is damn useful. I can point you to Border Cafe in Harvard Square, which just happens to be one of the best college student dives in the country.” (**from** [Darwinian Web](http://darwinianweb.com/archive/2005/1127.html#9:31AM), Adam’s new blog)
@@ -26,7 +26,7 @@ and finally…
 
 > “Unfortunately, the image defaults to the side of the street with Starbucks. You’ll have to click the film strip for the opposite side of Church Street.” (again **from** [Darwinian Web](http://darwinianweb.com/archive/2005/1127.html#9:31AM))
 
-Which brings up [Mechanical Turk](http://www.mturk.com/mturk/welcome), the new, totally clever Amazon service which some have written about but somehow seem to have [escaped Scoble’s all-seeing-eye](/weblogs/archives/000571.php).
+Which brings up [Mechanical Turk](http://www.mturk.com/mturk/welcome), the new, totally clever Amazon service which some have written about but somehow seem to have [escaped Scoble’s all-seeing-eye](/blog/2005-02-01-a98217s-photographic-yellow-pages.html).
 
 So [what is Mechanical Turk](http://www.mturk.com/mturk/help?helpPage=main) (see [this for the origin of the name](http://en.wikipedia.org/wiki/Mechanical_Turk))? It’s an Amazon service generates solutions to little problems or tasks which are trivial for humans and impossible for computers (exaggerating a **little** here.) What kinds of problems are these? Oh say choosing what photograph best represents the storefront of the Border Cafe!
 
