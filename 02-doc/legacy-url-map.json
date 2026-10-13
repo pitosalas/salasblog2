@@ -1,0 +1,2925 @@
+{
+  "/2003/06/01/ok-this-is-weird-after": {
+    "scheme": "wp",
+    "new": null,
+    "confidence": "unmatched",
+    "candidates": [],
+    "evidence": {
+      "slug": "ok-this-is-weird-after",
+      "date": "2003-06-01"
+    },
+    "linked_from": [
+      "2007-12-06-once-more-why-dos8217t-thou-blog.md"
+    ],
+    "reviewed": true
+  },
+  "/2004/01/09.html": {
+    "scheme": "radio-day",
+    "new": "/blog/2004-01-09-it8217s-easy-to-predict-the-future.html",
+    "confidence": "fuzzy",
+    "evidence": {
+      "date": "2004-01-09",
+      "posts_that_day": 1
+    },
+    "linked_from": [
+      "2004-03-29-rf-id-uptake-slower-than-expected.md"
+    ],
+    "reviewed": true
+  },
+  "/2004/01/24.html": {
+    "scheme": "radio-day",
+    "new": "/blog/2004-01-24-what8217s-up-with-orkut-there8217s.html",
+    "confidence": "fuzzy",
+    "evidence": {
+      "date": "2004-01-24",
+      "posts_that_day": 1
+    },
+    "linked_from": [
+      "2004-02-02-orkut-revisited-i-had-been.md",
+      "2004-03-05-social-networking-demo-2004-series.md"
+    ],
+    "reviewed": true
+  },
+  "/2004/01/29.html": {
+    "scheme": "radio-day",
+    "new": "/blog/2004-01-29-orkut8217s-back-up-8220i8217m-up.html",
+    "confidence": "fuzzy",
+    "evidence": {
+      "date": "2004-01-29",
+      "posts_that_day": 1
+    },
+    "linked_from": [
+      "2004-02-02-orkut-revisited-i-had-been.md"
+    ],
+    "reviewed": true
+  },
+  "/2004/02/04.html": {
+    "scheme": "radio-day",
+    "new": null,
+    "confidence": "unmatched",
+    "evidence": {
+      "date": "2004-02-04",
+      "posts_that_day": 2
+    },
+    "candidates": [
+      {
+        "url": "/blog/2004-02-04-did-you-know-how-closely.html"
+      },
+      {
+        "url": "/blog/2004-02-04-stern-on-jackson.html"
+      }
+    ],
+    "linked_from": [
+      "2004-02-06-tivo-watchers-uneasy-after-post-super.md"
+    ],
+    "reviewed": true
+  },
+  "/2004/02/24.html": {
+    "scheme": "radio-day",
+    "new": null,
+    "confidence": "unmatched",
+    "evidence": {
+      "date": "2004-02-24",
+      "posts_that_day": 0
+    },
+    "candidates": [],
+    "linked_from": [
+      "2004-03-01-scoble-on-search-robert-scoble.md"
+    ],
+    "reviewed": true
+  },
+  "/2004/02/27.html": {
+    "scheme": "radio-day",
+    "new": null,
+    "confidence": "unmatched",
+    "evidence": {
+      "date": "2004-02-27",
+      "posts_that_day": 3
+    },
+    "candidates": [
+      {
+        "url": "/blog/2004-02-27-adobe-enterprise-document-control-technology.html"
+      },
+      {
+        "url": "/blog/2004-02-27-new-in-the-world-of.html"
+      },
+      {
+        "url": "/blog/2004-02-27-real-virtual-reality-demo-2004.html"
+      }
+    ],
+    "linked_from": [
+      "2004-03-09-update-on-digital-photography-when.md"
+    ],
+    "reviewed": true
+  },
+  "/2004/06/12/balls": {
+    "scheme": "wp",
+    "new": "/blog/2004-06-13-balls.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-06-13-balls.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-06-12-blogbridge-beta-part-deux.html",
+        "score": 0.15
+      },
+      {
+        "url": "/blog/2004-06-10-geek-getting-url-objects-to-time-out.html",
+        "score": 0.11
+      }
+    ],
+    "evidence": {
+      "slug": "balls",
+      "date": "2004-06-12"
+    },
+    "linked_from": [
+      "2007-03-09-dave-dewalt-leaves-emc.md"
+    ]
+  },
+  "/2004/11/29/20041129why-improv-didnt-succeed-html": {
+    "scheme": "wp",
+    "new": "/blog/2004-11-29-why-improv-didn8217t-succeed.html",
+    "confidence": "fuzzy",
+    "candidates": [
+      {
+        "url": "/blog/2004-11-29-why-improv-didn8217t-succeed.html",
+        "score": 0.78
+      },
+      {
+        "url": "/blog/2004-11-30-predicting-the-future-is-hard.html",
+        "score": 0.17
+      },
+      {
+        "url": "/blog/2004-11-29-adam-bosworth-on-kiss.html",
+        "score": 0.08
+      }
+    ],
+    "evidence": {
+      "slug": "20041129why-improv-didnt-succeed-html",
+      "date": "2004-11-29"
+    },
+    "linked_from": [
+      "2018-03-31-interesting-links.md"
+    ],
+    "reviewed": true
+  },
+  "/2005/01/17/2005117improv-in-wikipedia-html": {
+    "scheme": "wp",
+    "new": "/blog/2005-01-17-improv-in-wikipedia.html",
+    "confidence": "fuzzy",
+    "candidates": [
+      {
+        "url": "/blog/2005-01-17-improv-in-wikipedia.html",
+        "score": 0.76
+      },
+      {
+        "url": "/blog/2005-01-16-peggy-noonan-on-media.html",
+        "score": 0.26
+      },
+      {
+        "url": "/blog/2005-01-16-blogbridge-tip-send-us-feedback.html",
+        "score": 0.25
+      }
+    ],
+    "evidence": {
+      "slug": "2005117improv-in-wikipedia-html",
+      "date": "2005-01-17"
+    },
+    "linked_from": [
+      "2018-03-31-interesting-links.md"
+    ],
+    "reviewed": true
+  },
+  "/2005/07/20/ok-its-official-the-maldives-is-the-most-beautiful-place-on-earth": {
+    "scheme": "wp",
+    "new": "/blog/2005-07-20-ok-it8217s-official-the-maldives-is-the-most-beautiful-place-on-earth.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-07-20-ok-it8217s-official-the-maldives-is-the-most-beautiful-place-on-earth.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-07-22-geek-this-may-be-good-news-for-java-long-term.html",
+        "score": 0.29
+      },
+      {
+        "url": "/blog/2005-07-21-microsoft-bought-one-bridge-maybe-they8217ll-buy-another.html",
+        "score": 0.28
+      }
+    ],
+    "evidence": {
+      "slug": "ok-its-official-the-maldives-is-the-most-beautiful-place-on-earth",
+      "date": "2005-07-20"
+    },
+    "linked_from": [
+      "2009-05-18-maldives-looking-for-new-land.md"
+    ]
+  },
+  "/2006/10/27/tsa-has-no-clothes": {
+    "scheme": "wp",
+    "new": "/blog/2006-10-27-tsa-has-no-clothes.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-10-27-tsa-has-no-clothes.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-10-29-semi-geeky-blogs-that-matter-really-interesting.html",
+        "score": 0.25
+      },
+      {
+        "url": "/blog/2006-10-25-interesting-video8217s-about-zune-the-new-ipod-killer-from-microsoft.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "slug": "tsa-has-no-clothes",
+      "date": "2006-10-27"
+    },
+    "linked_from": [
+      "2008-09-02-tsa-and-photo-ids.md"
+    ]
+  },
+  "/2007/01/06/a-cautionary-utility-computing-tale-or-the-dark-side-of-mashups": {
+    "scheme": "wp",
+    "new": "/blog/2007-01-06-a-cautionary-utility-computing-tale-8211-or-the-dark-side-of-mashups.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-01-06-a-cautionary-utility-computing-tale-8211-or-the-dark-side-of-mashups.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2007-01-05-i-love-radio-control-model-aircraft-this-one-totally-takes-the-cake.html",
+        "score": 0.29
+      },
+      {
+        "url": "/blog/2007-01-04-fooplot-8211-looks-quite-cool.html",
+        "score": 0.24
+      }
+    ],
+    "evidence": {
+      "slug": "a-cautionary-utility-computing-tale-or-the-dark-side-of-mashups",
+      "date": "2007-01-06"
+    },
+    "linked_from": [
+      "2008-08-30-cloud-computing-case-studies.md"
+    ]
+  },
+  "/2007/04/28/blind-to-bargains-jeremy-wagstaff": {
+    "scheme": "wp",
+    "new": "/blog/2008-08-13-blind-to-bargains-8211-jeremy-wagstaff.html",
+    "confidence": "unmatched",
+    "candidates": [
+      {
+        "url": "/blog/2007-04-27-are-you-blind-to-a-great-bargain.html",
+        "score": 0.51
+      },
+      {
+        "url": "/blog/2007-04-30-using-a-cell-phone-while-out-of-the-usa.html",
+        "score": 0.3
+      },
+      {
+        "url": "/blog/2007-04-26-a-good-analysis-of-the-recent-very-insider-dust-up-over-interviews.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "slug": "blind-to-bargains-jeremy-wagstaff",
+      "date": "2007-04-28"
+    },
+    "linked_from": [
+      "2007-05-31-blind-to-bargains-part-deux.md"
+    ],
+    "reviewed": true
+  },
+  "/2007/05/07/fad-20-is-twitter-just-another-pr-channel": {
+    "scheme": "wp",
+    "new": "/blog/2007-05-07-fad-20-is-twitter-just-another-pr-channel.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-05-07-fad-20-is-twitter-just-another-pr-channel.html",
+        "score": 1.0
+      }
+    ],
+    "evidence": {
+      "slug": "fad-20-is-twitter-just-another-pr-channel",
+      "date": "2007-05-07"
+    },
+    "linked_from": [
+      "2007-05-15-leaving-my-friends-8211-twitterspam.md"
+    ]
+  },
+  "/2007/07/08/join-the-club-i-saw-i-touched-an-iphone": {
+    "scheme": "wp",
+    "new": "/blog/2007-07-09-join-the-club-i-saw-i-touched-an-iphone.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-07-09-join-the-club-i-saw-i-touched-an-iphone.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2007-07-09-the-science-of-large-breasts-and-other-evolutionary-verities.html",
+        "score": 0.34
+      }
+    ],
+    "evidence": {
+      "slug": "join-the-club-i-saw-i-touched-an-iphone",
+      "date": "2007-07-08"
+    },
+    "linked_from": [
+      "2007-07-14-iphone-pricing-detail.md"
+    ]
+  },
+  "/2007/08/01/why-i-now-have-an-email-signature": {
+    "scheme": "wp",
+    "new": "/blog/2010-08-31-why-i-now-have-an-email-signature.html",
+    "confidence": "unmatched",
+    "candidates": [
+      {
+        "url": "/blog/2007-08-02-dirty-little-secrets-about-vcs.html",
+        "score": 0.15
+      }
+    ],
+    "evidence": {
+      "slug": "why-i-now-have-an-email-signature",
+      "date": "2007-08-01"
+    },
+    "linked_from": [
+      "2007-11-30-building-traffic-for-your-blog.md"
+    ],
+    "reviewed": true
+  },
+  "/2007/11/20/google-is-the-universe": {
+    "scheme": "wp",
+    "new": "/blog/2007-11-20-google-is-the-universe.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-11-20-google-is-the-universe.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2007-11-19-does-death-penalty-save-lives.html",
+        "score": 0.5
+      },
+      {
+        "url": "/blog/2007-11-21-shakey-bakey-security.html",
+        "score": 0.32
+      }
+    ],
+    "evidence": {
+      "slug": "google-is-the-universe",
+      "date": "2007-11-20"
+    },
+    "linked_from": [
+      "2007-12-10-what8217s-happening-to-google.md"
+    ]
+  },
+  "/2007/11/23/freebasecom-is-the-semantic-web": {
+    "scheme": "wp",
+    "new": "/blog/2007-11-23-freebasecom-is-the-semantic-web.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-11-23-freebasecom-is-the-semantic-web.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2007-11-21-shakey-bakey-security.html",
+        "score": 0.35
+      },
+      {
+        "url": "/blog/2007-11-22-the-time-machine-works.html",
+        "score": 0.35
+      }
+    ],
+    "evidence": {
+      "slug": "freebasecom-is-the-semantic-web",
+      "date": "2007-11-23"
+    },
+    "linked_from": [
+      "2010-02-24-the-semantic-web-rdf-freebase-and-now-dbpedia.md"
+    ]
+  },
+  "/2007/11/26/the-f-word": {
+    "scheme": "wp",
+    "new": "/blog/2007-11-26-the-f-word.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-11-26-the-f-word.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2007-11-24-the-system-administrators-song.html",
+        "score": 0.29
+      },
+      {
+        "url": "/blog/2007-11-27-geeky-dang-8211-i-was-looking-for-one-of-these-just-last-week.html",
+        "score": 0.15
+      }
+    ],
+    "evidence": {
+      "slug": "the-f-word",
+      "date": "2007-11-26"
+    },
+    "linked_from": [
+      "2007-12-06-once-more-why-dos8217t-thou-blog.md"
+    ]
+  },
+  "/2007/11/28/how-does-fake-steve-get-away-with-this": {
+    "scheme": "wp",
+    "new": "/blog/2007-11-28-how-does-fake-steve-get-away-with-this.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-11-28-how-does-fake-steve-get-away-with-this.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2007-11-29-how-to-be-creative.html",
+        "score": 0.3
+      },
+      {
+        "url": "/blog/2007-11-27-geeky-dang-8211-i-was-looking-for-one-of-these-just-last-week.html",
+        "score": 0.24
+      }
+    ],
+    "evidence": {
+      "slug": "how-does-fake-steve-get-away-with-this",
+      "date": "2007-11-28"
+    },
+    "linked_from": [
+      "2014-06-28-is-apple-trying-to-buy-off-8220fake-steve8221-or-is-it-april-1-in-december.md"
+    ]
+  },
+  "/2007/12/05/geeky-seo-expert-advice-debunked": {
+    "scheme": "wp",
+    "new": "/blog/2007-12-05-geeky-seo-expert-advice-debunked.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2007-12-05-geeky-seo-expert-advice-debunked.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2007-12-03-are-we-we-are-heading-for-a-recession.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2007-12-04-amazing-pictures.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "slug": "geeky-seo-expert-advice-debunked",
+      "date": "2007-12-05"
+    },
+    "linked_from": [
+      "2007-12-10-what8217s-happening-to-google.md"
+    ]
+  },
+  "/2008/01/11/rumorville-microsoft-amazon": {
+    "scheme": "wp",
+    "new": "/blog/2008-01-11-rumorville-microsoft-8211-amazon.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-01-11-rumorville-microsoft-8211-amazon.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-01-10-it-was-inevitable-sex-comes-to-ilike.html",
+        "score": 0.18
+      }
+    ],
+    "evidence": {
+      "slug": "rumorville-microsoft-amazon",
+      "date": "2008-01-11"
+    },
+    "linked_from": [
+      "2008-02-18-5-questions-to-ask-when-deciding-whether-to-rely-on-s3-et-al.md"
+    ]
+  },
+  "/2008/02/18/about-amzn-and-cloud-computing": {
+    "scheme": "wp",
+    "new": "/blog/2008-02-18-5-questions-to-ask-when-deciding-whether-to-rely-on-s3-et-al.html",
+    "confidence": "unmatched",
+    "candidates": [
+      {
+        "url": "/blog/2008-02-18-5-questions-to-ask-when-deciding-whether-to-rely-on-s3-et-al.html",
+        "score": 0.3
+      },
+      {
+        "url": "/blog/2008-02-16-the-downside-of-free-software.html",
+        "score": 0.16
+      }
+    ],
+    "evidence": {
+      "slug": "about-amzn-and-cloud-computing",
+      "date": "2008-02-18"
+    },
+    "linked_from": [
+      "2008-08-22-5-things-to-keep-in-mind-when-relying-on-s3-and-similar-saas-services.md",
+      "2008-08-30-cloud-computing-case-studies.md"
+    ],
+    "reviewed": true
+  },
+  "/2008/02/19/about-amzn-and-cloud-computing-continued": {
+    "scheme": "wp",
+    "new": null,
+    "confidence": "unmatched",
+    "candidates": [
+      {
+        "url": "/blog/2008-02-18-5-questions-to-ask-when-deciding-whether-to-rely-on-s3-et-al.html",
+        "score": 0.34
+      }
+    ],
+    "evidence": {
+      "slug": "about-amzn-and-cloud-computing-continued",
+      "date": "2008-02-19"
+    },
+    "linked_from": [
+      "2008-08-30-cloud-computing-case-studies.md"
+    ],
+    "reviewed": true
+  },
+  "/2008/03/18/casinos-in-mass-please-no": {
+    "scheme": "wp",
+    "new": "/blog/2008-03-19-casinos-in-mass-please-no.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-03-19-casinos-in-mass-please-no.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-03-17-geeky-doing-popups-in-rails-and-elsewhere.html",
+        "score": 0.29
+      },
+      {
+        "url": "/blog/2008-03-20-more-e-voting-shenanigans.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "slug": "casinos-in-mass-please-no",
+      "date": "2008-03-18"
+    },
+    "linked_from": [
+      "2008-04-15-more-on-congestion-pricing8230.md"
+    ]
+  },
+  "/2008/03/22/what-does-urban-congestion-have-to-do-with-mesh-networks": {
+    "scheme": "wp",
+    "new": "/blog/2008-03-22-what-does-urban-congestion-have-to-do-with-mesh-networks.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-03-22-what-does-urban-congestion-have-to-do-with-mesh-networks.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-03-21-verizon-opening-up-it8217s-network-somewhat.html",
+        "score": 0.37
+      },
+      {
+        "url": "/blog/2008-03-20-more-e-voting-shenanigans.html",
+        "score": 0.12
+      }
+    ],
+    "evidence": {
+      "slug": "what-does-urban-congestion-have-to-do-with-mesh-networks",
+      "date": "2008-03-22"
+    },
+    "linked_from": [
+      "2008-03-26-how-gps-devices-are-being-used-to-detect-and-avoid-traffic.md"
+    ]
+  },
+  "/2008/06/01/portland-or-smokes": {
+    "scheme": "wp",
+    "new": "/blog/2008-06-01-portland-or-smokes.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-06-01-portland-or-smokes.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-06-02-useful-and-cool-little-utility.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2008-05-30-life-lock8217s-ceo-identity-stolen.html",
+        "score": 0.14
+      }
+    ],
+    "evidence": {
+      "slug": "portland-or-smokes",
+      "date": "2008-06-01"
+    },
+    "linked_from": [
+      "2008-06-09-june-in-paradise.md"
+    ]
+  },
+  "/2008/07/28/cuil-vs-google": {
+    "scheme": "wp",
+    "new": "/blog/2008-07-28-cuil-vs-google.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-07-28-cuil-vs-google.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-07-26-should-he-have-signed-the-letter.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "slug": "cuil-vs-google",
+      "date": "2008-07-28"
+    },
+    "linked_from": [
+      "2008-08-25-heard-of-yandex.md"
+    ]
+  },
+  "/2008/08/06/who-killed-the-electric-car-and-why-wikipedia-is-great": {
+    "scheme": "wp",
+    "new": "/blog/2008-08-06-who-killed-the-electric-car-and-why-wikipedia-is-great.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-08-06-who-killed-the-electric-car-and-why-wikipedia-is-great.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-08-07-why-is-this-funny.html",
+        "score": 0.2
+      }
+    ],
+    "evidence": {
+      "slug": "who-killed-the-electric-car-and-why-wikipedia-is-great",
+      "date": "2008-08-06"
+    },
+    "linked_from": [
+      "2008-08-09-more-on-the-electric-car.md"
+    ]
+  },
+  "/2008/11/18/ever-hear-of-teratomas": {
+    "scheme": "wp",
+    "new": "/blog/2008-11-18-ever-hear-of-teratomas.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-11-18-ever-hear-of-teratomas.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-11-20-bummer-for-whole-foods.html",
+        "score": 0.26
+      },
+      {
+        "url": "/blog/2008-11-17-what-is-art-for.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "slug": "ever-hear-of-teratomas",
+      "date": "2008-11-18"
+    },
+    "linked_from": [
+      "2008-12-18-more-on-truly-weird-medical-condition.md"
+    ]
+  },
+  "/2008/12/01/are-magazines-committing-suicide": {
+    "scheme": "wp",
+    "new": "/blog/2008-12-02-are-magazines-committing-suicide.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-12-02-are-magazines-committing-suicide.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-11-29-what-i-am-reading-this-morning.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2008-12-03-watch-out-for-the-8216nigerian-scam.html",
+        "score": 0.29
+      }
+    ],
+    "evidence": {
+      "slug": "are-magazines-committing-suicide",
+      "date": "2008-12-01"
+    },
+    "linked_from": [
+      "2009-01-25-science-and-religion.md"
+    ]
+  },
+  "/2008/12/07/joel-on-software-talks-about-malcolm-gladwell-and-tom-friedman": {
+    "scheme": "wp",
+    "new": "/blog/2008-12-07-joel-on-software-talks-about-malcolm-gladwell-and-tom-friedman.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2008-12-07-joel-on-software-talks-about-malcolm-gladwell-and-tom-friedman.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2008-12-06-warning-email-sabbatical-is-imminent-and-other-random-thoughts.html",
+        "score": 0.39
+      },
+      {
+        "url": "/blog/2008-12-05-ideas-are-still-cheap-right.html",
+        "score": 0.32
+      }
+    ],
+    "evidence": {
+      "slug": "joel-on-software-talks-about-malcolm-gladwell-and-tom-friedman",
+      "date": "2008-12-07"
+    },
+    "linked_from": [
+      "2008-12-17-a-little-more-about-8220outliers8221.md"
+    ]
+  },
+  "/2009/01/29/going-going-gone": {
+    "scheme": "wp",
+    "new": "/blog/2009-01-29-going-going-gone8230.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-01-29-going-going-gone8230.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2009-01-28-geeky-where-are-the-east-coast-rails-ruby-conferences.html",
+        "score": 0.2
+      },
+      {
+        "url": "/blog/2009-01-30-what-life-asks-of-us.html",
+        "score": 0.13
+      }
+    ],
+    "evidence": {
+      "slug": "going-going-gone",
+      "date": "2009-01-29"
+    },
+    "linked_from": [
+      "2009-02-14-saving-the-newspapers-a-modest-proposal.md"
+    ]
+  },
+  "/2009/02/01/subscribe-to-pandora": {
+    "scheme": "wp",
+    "new": "/blog/2009-02-01-subscribe-to-pandora.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-02-01-subscribe-to-pandora.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2009-02-02-geeky-built-my-first-gem-ruby-gem-that-is.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2009-01-30-what-life-asks-of-us.html",
+        "score": 0.12
+      }
+    ],
+    "evidence": {
+      "slug": "subscribe-to-pandora",
+      "date": "2009-02-01"
+    },
+    "linked_from": [
+      "2009-07-08-pandora-is-saved.md"
+    ]
+  },
+  "/2009/02/08/who-can-i-believe-about-the-economy": {
+    "scheme": "wp",
+    "new": "/blog/2009-02-08-who-can-i-believe-about-the-economy.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-02-08-who-can-i-believe-about-the-economy.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2009-02-09-micro-volunteering.html",
+        "score": 0.3
+      },
+      {
+        "url": "/blog/2009-02-10-poem-tortoise-by-tim-mason.html",
+        "score": 0.27
+      }
+    ],
+    "evidence": {
+      "slug": "who-can-i-believe-about-the-economy",
+      "date": "2009-02-08"
+    },
+    "linked_from": [
+      "2009-02-11-how-corrupt-is-our-language-in-economic-discourse.md"
+    ]
+  },
+  "/2009/02/14/saving-the-newspapers": {
+    "scheme": "wp",
+    "new": "/blog/2009-02-14-saving-the-newspapers-a-modest-proposal.html",
+    "confidence": "fuzzy",
+    "candidates": [
+      {
+        "url": "/blog/2009-02-14-saving-the-newspapers-a-modest-proposal.html",
+        "score": 0.72
+      }
+    ],
+    "evidence": {
+      "slug": "saving-the-newspapers",
+      "date": "2009-02-14"
+    },
+    "linked_from": [
+      "2009-03-16-8220society-doesnt-need-newspapers-what-we-need-is-journalism8221.md"
+    ],
+    "reviewed": true
+  },
+  "/2009/04/13/geeky-how-datarss-might-work": {
+    "scheme": "wp",
+    "new": "/blog/2009-04-13-geeky-how-datarss-might-work.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-04-13-geeky-how-datarss-might-work.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2009-04-11-an-excellent-paper-about-curacao-politics.html",
+        "score": 0.2
+      }
+    ],
+    "evidence": {
+      "slug": "geeky-how-datarss-might-work",
+      "date": "2009-04-13"
+    },
+    "linked_from": [
+      "2009-06-08-open-government-remixing-government-data.md"
+    ]
+  },
+  "/2009/04/25/weapons-of-civic-mass-destruction-2522": {
+    "scheme": "wp",
+    "new": "/blog/2009-04-25-weapons-of-civic-mass-destruction.html",
+    "confidence": "fuzzy",
+    "candidates": [
+      {
+        "url": "/blog/2009-04-25-weapons-of-civic-mass-destruction.html",
+        "score": 0.94
+      },
+      {
+        "url": "/blog/2009-04-23-the-torture-discussion-back-in-2001.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2009-04-27-back-from-barcamp-boston.html",
+        "score": 0.3
+      }
+    ],
+    "evidence": {
+      "slug": "weapons-of-civic-mass-destruction-2522",
+      "date": "2009-04-25"
+    },
+    "linked_from": [
+      "2009-08-10-more-weapons-of-civic-mass-destruction.md"
+    ],
+    "reviewed": true
+  },
+  "/2009/06/02/geeky-a-dsl-for-image-analysis": {
+    "scheme": "wp",
+    "new": "/blog/2009-06-03-geeky-a-dsl-for-image-analysis.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-06-03-geeky-a-dsl-for-image-analysis.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2009-06-01-wandering-through-asia.html",
+        "score": 0.22
+      }
+    ],
+    "evidence": {
+      "slug": "geeky-a-dsl-for-image-analysis",
+      "date": "2009-06-02"
+    },
+    "linked_from": [
+      "2009-06-19-geeky-rmagick-and-memory-leaks.md"
+    ]
+  },
+  "/2009/06/16/what-is-the-true-result-of-an-election": {
+    "scheme": "wp",
+    "new": "/blog/2009-06-16-what-is-the-8216true8217-result-of-an-election.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-06-16-what-is-the-8216true8217-result-of-an-election.html",
+        "score": 1.0
+      }
+    ],
+    "evidence": {
+      "slug": "what-is-the-true-result-of-an-election",
+      "date": "2009-06-16"
+    },
+    "linked_from": [
+      "2009-07-20-transparency-is-the-new-objectivity-really-good-post-from-david-weinberger.md"
+    ]
+  },
+  "/2009/09/15/mint-being-acquired-by-intuit-good-or-bad": {
+    "scheme": "wp",
+    "new": "/blog/2009-09-15-mint-being-acquired-by-intuit-good-or-bad.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-09-15-mint-being-acquired-by-intuit-good-or-bad.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2009-09-16-upcoming-web-innovators-group-meeting.html",
+        "score": 0.21
+      },
+      {
+        "url": "/blog/2009-09-14-geeky-odd-stuff-i8217ve-learned-setting-up-a-new-mac.html",
+        "score": 0.16
+      }
+    ],
+    "evidence": {
+      "slug": "mint-being-acquired-by-intuit-good-or-bad",
+      "date": "2009-09-15"
+    },
+    "linked_from": [
+      "2009-09-18-interesting-further-commentary-on-intuit-purchase-of-mint.md"
+    ]
+  },
+  "/2009/10/30/oh-snap-detailed-take-down-of-steve-levitt-of-superfreakonimics": {
+    "scheme": "wp",
+    "new": "/blog/2009-10-30-oh-snap-detailed-take-down-of-steve-levitt-of-superfreakonimics.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2009-10-30-oh-snap-detailed-take-down-of-steve-levitt-of-superfreakonimics.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2009-10-28-arnold-is-a-cool-governator.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "slug": "oh-snap-detailed-take-down-of-steve-levitt-of-superfreakonimics",
+      "date": "2009-10-30"
+    },
+    "linked_from": [
+      "2009-11-04-follow-up-up-wall-street-journal-about-super-freakonomics-dustup.md"
+    ]
+  },
+  "/2010/02/17/roger-ebert-essential": {
+    "scheme": "wp",
+    "new": "/blog/2010-02-17-roger-ebert-essential.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2010-02-17-roger-ebert-essential.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2010-02-19-ebert-in-his-own-words.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2010-02-18-insert-your-title-here.html",
+        "score": 0.32
+      }
+    ],
+    "evidence": {
+      "slug": "roger-ebert-essential",
+      "date": "2010-02-17"
+    },
+    "linked_from": [
+      "2010-02-19-ebert-in-his-own-words.md"
+    ]
+  },
+  "/2010/08/05/david-weinberger-has-flat-feet-programming": {
+    "scheme": "wp",
+    "new": "/blog/2010-08-05-david-weinberger-has-flat-feet-programming.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2010-08-05-david-weinberger-has-flat-feet-programming.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2010-08-05-wave-goodbye-to-google-wave.html",
+        "score": 0.3
+      },
+      {
+        "url": "/blog/2010-08-03-blackberry-network-is-far-more-secure.html",
+        "score": 0.29
+      }
+    ],
+    "evidence": {
+      "slug": "david-weinberger-has-flat-feet-programming",
+      "date": "2010-08-05"
+    },
+    "linked_from": [
+      "2010-08-13-android-inventor-8211-not-ready-for-prime-time.md"
+    ]
+  },
+  "/2010/11/12/overreaction": {
+    "scheme": "wp",
+    "new": "/blog/2010-11-13-overreaction.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2010-11-13-overreaction.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2010-11-12-geeky-rubyconf.html",
+        "score": 0.4
+      },
+      {
+        "url": "/blog/2010-11-11-definitious.html",
+        "score": 0.35
+      }
+    ],
+    "evidence": {
+      "slug": "overreaction",
+      "date": "2010-11-12"
+    },
+    "linked_from": [
+      "2010-11-23-8216like-a-full-body-massage8217-thinking-about-the-tsa.md"
+    ]
+  },
+  "/2010/12/07/free-iphone-3gs-upgrade-to-iphone-4": {
+    "scheme": "wp",
+    "new": "/blog/2010-12-07-free-iphone-3gs-upgrade-to-iphone-4.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2010-12-07-free-iphone-3gs-upgrade-to-iphone-4.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2010-12-09-followup-upgraded-my-iphone-from-3gs-to-4-for-minus-4000.html",
+        "score": 0.43
+      },
+      {
+        "url": "/blog/2010-12-06-photo-sharing-thoughts.html",
+        "score": 0.33
+      }
+    ],
+    "evidence": {
+      "slug": "free-iphone-3gs-upgrade-to-iphone-4",
+      "date": "2010-12-07"
+    },
+    "linked_from": [
+      "2010-12-09-followup-upgraded-my-iphone-from-3gs-to-4-for-minus-4000.md"
+    ]
+  },
+  "/2011/07/17/cancelled-rhapsody-trying-spotify": {
+    "scheme": "wp",
+    "new": "/blog/2011-07-17-cancelled-rhapsody-trying-spotify.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2011-07-17-cancelled-rhapsody-trying-spotify.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2011-07-16-geeky-good-link-of-rails-tips.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2011-07-17-spotify-8211-genres.html",
+        "score": 0.33
+      }
+    ],
+    "evidence": {
+      "slug": "cancelled-rhapsody-trying-spotify",
+      "date": "2011-07-17"
+    },
+    "linked_from": [
+      "2011-10-03-update-on-spotify-ii.md"
+    ]
+  },
+  "/2011/07/17/spotify-generes": {
+    "scheme": "wp",
+    "new": "/blog/2011-07-17-spotify-8211-genres.html",
+    "confidence": "fuzzy",
+    "candidates": [
+      {
+        "url": "/blog/2011-07-17-spotify-8211-genres.html",
+        "score": 0.84
+      },
+      {
+        "url": "/blog/2011-07-17-cancelled-rhapsody-trying-spotify.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2011-07-18-big-announcement-about-twitter.html",
+        "score": 0.29
+      }
+    ],
+    "evidence": {
+      "slug": "spotify-generes",
+      "date": "2011-07-17"
+    },
+    "linked_from": [
+      "2011-10-03-update-on-spotify-ii.md"
+    ],
+    "reviewed": true
+  },
+  "/2011/07/21/update-about-spotify": {
+    "scheme": "wp",
+    "new": "/blog/2011-07-21-update-about-spotify.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2011-07-21-update-about-spotify.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2011-07-22-the-end-of-free-will.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2011-07-22-should-i-add-this-guy-to-a-google-circle.html",
+        "score": 0.16
+      }
+    ],
+    "evidence": {
+      "slug": "update-about-spotify",
+      "date": "2011-07-21"
+    },
+    "linked_from": [
+      "2011-10-03-update-on-spotify-ii.md"
+    ]
+  },
+  "/blog/2012/5/6/field-of-dreams-americans-elect.html": {
+    "scheme": "squarespace",
+    "new": "/blog/2012-05-06-field-of-dreams-americans-elect.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2012-05-06-field-of-dreams-americans-elect.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2012-05-04-education-strategic-plans-8211-are-they-worth-the-paper-they-are-written-on.html",
+        "score": 0.28
+      },
+      {
+        "url": "/blog/2012-05-07-gaming-article-about-game-designer-jonathan-blow.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "slug": "field-of-dreams-americans-elect",
+      "date": "2012-05-06"
+    },
+    "linked_from": [
+      "2014-07-04-it8217s-probably-not-cool-to-say-but-i-am-not-sure-about-8220maydayus8221.md"
+    ]
+  },
+  "/imported-20111103233638/2010/10/11/do-you-procrastinate-i-do.html": {
+    "scheme": "wp",
+    "new": "/blog/2010-10-11-do-you-procrastinate-i-do8230.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2010-10-11-do-you-procrastinate-i-do8230.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2010-10-12-tunnel-vision.html",
+        "score": 0.3
+      }
+    ],
+    "evidence": {
+      "slug": "do-you-procrastinate-i-do",
+      "date": "2010-10-11"
+    },
+    "linked_from": [
+      "2012-01-23-information-diet-focus.md"
+    ]
+  },
+  "/imported-20111103233638/2011/10/25/khan-academy-to-the-rescue.html": {
+    "scheme": "wp",
+    "new": "/blog/2011-10-25-khan-academy-to-the-rescue.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2011-10-25-khan-academy-to-the-rescue.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2011-10-26-the-impending-flash-crisis.html",
+        "score": 0.27
+      }
+    ],
+    "evidence": {
+      "slug": "khan-academy-to-the-rescue",
+      "date": "2011-10-25"
+    },
+    "linked_from": [
+      "2012-01-02-i-wish-i-knew-more-javascript.md"
+    ]
+  },
+  "/weblogs/archives/000264.html": {
+    "scheme": "mt",
+    "new": "http://web.archive.org/web/20040923191417/http://www.salas.com:80/weblogs/archives/000264.html",
+    "confidence": "unmatched",
+    "candidates": [],
+    "evidence": {
+      "title": "Pop!Tech - Ideas and links.",
+      "date": "2003-10-20",
+      "snapshot": "http://web.archive.org/web/20040923191417id_/http://www.salas.com:80/weblogs/archives/000264.html"
+    },
+    "linked_from": [
+      "2004-06-01-poptech-ticket.md"
+    ],
+    "reviewed": true
+  },
+  "/weblogs/archives/000266.html": {
+    "scheme": "mt",
+    "new": "http://web.archive.org/web/20050116204129/http://www.salas.com:80/weblogs/archives/000266.html",
+    "confidence": "unmatched",
+    "candidates": [],
+    "evidence": {
+      "title": "Here's a weird set of connections: Blogs and Partial Birth Abortion",
+      "date": "2003-10-26",
+      "snapshot": "http://web.archive.org/web/20050116204129id_/http://www.salas.com:80/weblogs/archives/000266.html"
+    },
+    "linked_from": [
+      "2004-05-18-words-do-matter.md"
+    ],
+    "reviewed": true
+  },
+  "/weblogs/archives/000295.html": {
+    "scheme": "mt",
+    "new": "http://web.archive.org/web/20041106103449/http://www.salas.com:80/weblogs/archives/000295.html",
+    "confidence": "unmatched",
+    "candidates": [],
+    "evidence": {
+      "title": "Dave is experimenting. There have",
+      "date": "2003-12-01",
+      "snapshot": "http://web.archive.org/web/20041106103449id_/http://www.salas.com:80/weblogs/archives/000295.html"
+    },
+    "linked_from": [
+      "2005-05-01-happy-birthday-dave.md"
+    ],
+    "reviewed": true
+  },
+  "/weblogs/archives/000336.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-01-31-sun-still-doesn8217t-get-it.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-01-31-sun-still-doesn8217t-get-it.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-02-01-i8217m-not-that-geeky-i.html",
+        "score": 0.35
+      },
+      {
+        "url": "/blog/2004-01-30-blogbridge-update-just-a-quick.html",
+        "score": 0.27
+      }
+    ],
+    "evidence": {
+      "title": "Sun still doesn't get it!",
+      "date": "2004-01-30",
+      "snapshot": "http://web.archive.org/web/20041107011758id_/http://www.salas.com:80/weblogs/archives/000336.html"
+    },
+    "linked_from": [
+      "2004-12-08-geek-java-web-start.md",
+      "2005-03-31-geek-java-web-start-again.md"
+    ]
+  },
+  "/weblogs/archives/000343.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-02-07-imho-i-started-and-stopped.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-02-07-imho-i-started-and-stopped.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-02-06-tivo-watchers-uneasy-after-post-super.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2004-02-05-joho-the-blog-the-semantic.html",
+        "score": 0.32
+      }
+    ],
+    "evidence": {
+      "title": "IMHO: I started and stopped",
+      "date": "2004-02-07",
+      "snapshot": "http://web.archive.org/web/20050119233350id_/http://www.salas.com:80/weblogs/archives/000343.html"
+    },
+    "linked_from": [
+      "2005-05-01-happy-birthday-dave.md"
+    ]
+  },
+  "/weblogs/archives/000373.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-03-18-outlook-2003-rant.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-03-18-outlook-2003-rant.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-03-17-blogbridge-has-spiffy-new-icons.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2004-03-17-open-source-icons-and-blogbridge.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "title": "Outlook 2003 Rant.",
+      "date": "2004-03-18",
+      "snapshot": "http://web.archive.org/web/20041021035108id_/http://www.salas.com:80/weblogs/archives/000373.html"
+    },
+    "linked_from": [
+      "2004-05-01-outlook-haters-anyone.md",
+      "2004-06-28-is-the-world-ready-for-a-replacement-to-outlook.md",
+      "2010-07-26-how-the-world-changes-was-is-the-world-ready-for-a-replacement-to-outlook.md"
+    ]
+  },
+  "/weblogs/archives/000385.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-04-10-your-morning-chuckle.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-04-10-your-morning-chuckle.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-04-08-geek-web-rich-text-editors-apropos-of-nothing.html",
+        "score": 0.25
+      }
+    ],
+    "evidence": {
+      "title": "Your morning chuckle",
+      "date": "2004-04-10",
+      "snapshot": "http://web.archive.org/web/20041107135845id_/http://www.salas.com:80/weblogs/archives/000385.html"
+    },
+    "linked_from": [
+      "2004-04-15-follow-up-to-subservient-chicken.md"
+    ]
+  },
+  "/weblogs/archives/000396.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-05-01-outlook-haters-anyone.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-05-01-outlook-haters-anyone.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-05-01-testing-blogjet.html",
+        "score": 0.36
+      },
+      {
+        "url": "/blog/2004-05-03-howard-stern-in-new-york-times.html",
+        "score": 0.36
+      }
+    ],
+    "evidence": {
+      "title": "Outlook Haters, anyone?",
+      "date": "2004-05-01",
+      "snapshot": "http://web.archive.org/web/20041107191320id_/http://www.salas.com:80/weblogs/archives/000396.html"
+    },
+    "linked_from": [
+      "2004-06-28-is-the-world-ready-for-a-replacement-to-outlook.md",
+      "2010-07-26-how-the-world-changes-was-is-the-world-ready-for-a-replacement-to-outlook.md"
+    ]
+  },
+  "/weblogs/archives/000441.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-06-12-blogbridge-beta-part-deux.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-06-12-blogbridge-beta-part-deux.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-06-10-geek-ever-get-confused-about-loggingproperties-formats.html",
+        "score": 0.26
+      },
+      {
+        "url": "/blog/2004-06-10-the-day-after-tomorrow.html",
+        "score": 0.24
+      }
+    ],
+    "evidence": {
+      "title": "BlogBridge Beta, part deux",
+      "date": "2004-06-11",
+      "snapshot": "http://web.archive.org/web/20040717202506id_/http://www.salas.com:80/weblogs/archives/000441.html"
+    },
+    "linked_from": [
+      "2004-12-08-geek-java-web-start.md",
+      "2005-03-31-geek-java-web-start-again.md"
+    ]
+  },
+  "/weblogs/archives/000446.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-06-28-javaone-javaone-keynote.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-06-28-javaone-javaone-keynote.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-06-29-javaone-scott-mcnealy-keynote.html",
+        "score": 0.72
+      },
+      {
+        "url": "/blog/2004-06-28-javaone-visiting-the-java-tribe.html",
+        "score": 0.54
+      }
+    ],
+    "evidence": {
+      "title": "[JAVAONE] JavaOne Keynote",
+      "date": "2004-06-28",
+      "snapshot": "http://web.archive.org/web/20040905105527id_/http://www.salas.com:80/weblogs/archives/000446.html"
+    },
+    "linked_from": [
+      "2004-07-13-java-onesun-answers-my-question.md"
+    ]
+  },
+  "/weblogs/archives/000449.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-06-29-javaone-scott-mcnealy-keynote.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-06-29-javaone-scott-mcnealy-keynote.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-06-28-javaone-javaone-keynote.html",
+        "score": 0.72
+      },
+      {
+        "url": "/blog/2004-06-28-javaone-visiting-the-java-tribe.html",
+        "score": 0.45
+      }
+    ],
+    "evidence": {
+      "title": "[JAVAONE] Scott McNealy Keynote",
+      "date": "2004-06-29",
+      "snapshot": "http://web.archive.org/web/20040803191330id_/http://www.salas.com:80/weblogs/archives/000449.html"
+    },
+    "linked_from": [
+      "2004-07-13-java-onesun-answers-my-question.md"
+    ]
+  },
+  "/weblogs/archives/000450.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-07-01-geekjavaone-java-web-start-8211-still-falling-short.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-07-01-geekjavaone-java-web-start-8211-still-falling-short.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-06-29-javaone-scott-mcnealy-keynote.html",
+        "score": 0.45
+      },
+      {
+        "url": "/blog/2004-06-28-javaone-javaone-keynote.html",
+        "score": 0.43
+      }
+    ],
+    "evidence": {
+      "title": "[GEEK/JAVAONE] Java Web Start - still falling short",
+      "date": "2004-06-30",
+      "snapshot": "http://web.archive.org/web/20040803154933id_/http://www.salas.com:80/weblogs/archives/000450.html"
+    },
+    "linked_from": [
+      "2004-07-10-java-web-start-sucks-eggs.md"
+    ]
+  },
+  "/weblogs/archives/000457.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-07-10-scary-software.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-07-10-scary-software.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-07-10-oddpost-sold-to-yahoo.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2004-07-10-java-web-start-sucks-eggs.html",
+        "score": 0.29
+      }
+    ],
+    "evidence": {
+      "title": "Scary Software",
+      "date": "2004-07-09",
+      "snapshot": "http://web.archive.org/web/20040823225520id_/http://www.salas.com:80/weblogs/archives/000457.html"
+    },
+    "linked_from": [
+      "2004-07-12-scary-software-part-deux.md"
+    ]
+  },
+  "/weblogs/archives/000460.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-07-12-scary-software-part-deux.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-07-12-scary-software-part-deux.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-07-10-scary-software.html",
+        "score": 0.76
+      },
+      {
+        "url": "/blog/2004-07-10-java-web-start-sucks-eggs.html",
+        "score": 0.33
+      }
+    ],
+    "evidence": {
+      "title": "Scary Software, Part Deux",
+      "date": "2004-07-12",
+      "snapshot": "http://web.archive.org/web/20040825114408id_/http://www.salas.com:80/weblogs/archives/000460.html"
+    },
+    "linked_from": [
+      "2004-08-13-xp-sp2-makes-a-hash-of-it.md"
+    ]
+  },
+  "/weblogs/archives/000463.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-07-23-will-wikis-rule-the-world.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-07-23-will-wikis-rule-the-world.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-07-24-announcing8230-the-blogbridge-service.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2004-07-22-mac-osx-not-easy-to-use.html",
+        "score": 0.05
+      }
+    ],
+    "evidence": {
+      "title": "Will Wikis Rule the World?",
+      "date": "2004-07-23",
+      "snapshot": "http://web.archive.org/web/20040825114532id_/http://www.salas.com:80/weblogs/archives/000463.html"
+    },
+    "linked_from": [
+      "2004-10-15-am-i-cranky-today.md"
+    ]
+  },
+  "/weblogs/archives/000464.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-07-24-announcing8230-the-blogbridge-service.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-07-24-announcing8230-the-blogbridge-service.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-07-22-mac-osx-not-easy-to-use.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2004-07-23-will-wikis-rule-the-world.html",
+        "score": 0.27
+      }
+    ],
+    "evidence": {
+      "title": "Announcing... The BlogBridge Service ;-)",
+      "date": "2004-07-23",
+      "snapshot": "http://web.archive.org/web/20040825114630id_/http://www.salas.com:80/weblogs/archives/000464.html"
+    },
+    "linked_from": [
+      "2004-08-10-blogbridge-beta-3.md"
+    ]
+  },
+  "/weblogs/archives/000471.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-08-05-can-you-change-the-license-of-an-open-source-product.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-08-05-can-you-change-the-license-of-an-open-source-product.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-08-05-blogbridge-open-source-license.html",
+        "score": 0.4
+      },
+      {
+        "url": "/blog/2004-08-03-joel-on-api-wars.html",
+        "score": 0.25
+      }
+    ],
+    "evidence": {
+      "title": "Can you change the license of an Open Source product?",
+      "date": "2004-08-05",
+      "snapshot": "http://web.archive.org/web/20040905105539id_/http://www.salas.com:80/weblogs/archives/000471.html"
+    },
+    "linked_from": [
+      "2004-08-05-blogbridge-open-source-license.md"
+    ]
+  },
+  "/weblogs/archives/000475.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-08-13-xp-sp2-shows-why-microsoft-is-a-great-company.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-08-13-xp-sp2-shows-why-microsoft-is-a-great-company.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-08-11-microsoft-internet-explorer-blog.html",
+        "score": 0.39
+      },
+      {
+        "url": "/blog/2004-08-13-xp-sp2-makes-a-hash-of-it.html",
+        "score": 0.39
+      }
+    ],
+    "evidence": {
+      "title": "XP SP2 Shows Why Microsoft Is A Great Company",
+      "date": "2004-08-12",
+      "snapshot": "http://web.archive.org/web/20040917203055id_/http://www.salas.com:80/weblogs/archives/000475.html"
+    },
+    "linked_from": [
+      "2004-08-13-xp-sp2-makes-a-hash-of-it.md",
+      "2005-03-06-i-love-microsoft-too-but-i-can8217t-hold-my-tongue.md"
+    ]
+  },
+  "/weblogs/archives/000494.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-09-30-find-what-you-care-about-with-blogbridge.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-09-30-find-what-you-care-about-with-blogbridge.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-09-29-why-google-is-great.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2004-09-29-web-services-gone-wild.html",
+        "score": 0.3
+      }
+    ],
+    "evidence": {
+      "title": "Find what you care about with BlogBridge",
+      "date": "2004-09-30",
+      "snapshot": "http://web.archive.org/web/20041009174441id_/http://www.salas.com:80/weblogs/archives/000494.html"
+    },
+    "linked_from": [
+      "2004-10-05-magic-links.md"
+    ]
+  },
+  "/weblogs/archives/000496.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-10-06-blogbridge-podcasting.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-10-06-blogbridge-podcasting.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-10-06-geek-undrestanding-and-getting-around-edt.html",
+        "score": 0.36
+      },
+      {
+        "url": "/blog/2004-10-05-magic-links.html",
+        "score": 0.2
+      }
+    ],
+    "evidence": {
+      "title": "BlogBridge Podcasting?",
+      "date": "2004-10-05",
+      "snapshot": "http://web.archive.org/web/20041012093753id_/http://www.salas.com:80/weblogs/archives/000496.html"
+    },
+    "linked_from": [
+      "2004-11-06-podcasting-less-important-than-8220it-conversations8221.md"
+    ]
+  },
+  "/weblogs/archives/000506.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-10-26-you-have-an-mp3-and-i-have-an-ipod.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-10-26-you-have-an-mp3-and-i-have-an-ipod.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-10-28-red-sox-moon.html",
+        "score": 0.17
+      },
+      {
+        "url": "/blog/2004-10-25-oopsla-watching-the-world-series-in-a-mirror.html",
+        "score": 0.1
+      }
+    ],
+    "evidence": {
+      "title": "You have an MP3 and I have an IPod",
+      "date": "2004-10-26",
+      "snapshot": "http://web.archive.org/web/20041207220200id_/http://www.salas.com:80/weblogs/archives/000506.html"
+    },
+    "linked_from": [
+      "2004-11-06-podcasting-less-important-than-8220it-conversations8221.md"
+    ]
+  },
+  "/weblogs/archives/000522.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-11-29-why-improv-didn8217t-succeed.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-11-29-why-improv-didn8217t-succeed.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-11-26-what-is-a-blog-redux.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2004-11-30-predicting-the-future-is-hard.html",
+        "score": 0.17
+      }
+    ],
+    "evidence": {
+      "title": "Why Improv didn't succeed",
+      "date": "2004-11-28",
+      "snapshot": "http://web.archive.org/web/20041212224601id_/http://www.salas.com:80/weblogs/archives/000522.html"
+    },
+    "linked_from": [
+      "2004-12-02-why-improv-didn8217t-succeed-part-deux.md",
+      "2004-12-26-seeing-the-other-side-of-someone.md",
+      "2005-01-17-improv-in-wikipedia.md"
+    ]
+  },
+  "/weblogs/archives/000523.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-11-30-predicting-the-future-is-hard.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-11-30-predicting-the-future-is-hard.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-11-29-adam-bosworth-on-kiss.html",
+        "score": 0.23
+      },
+      {
+        "url": "/blog/2004-11-29-why-improv-didn8217t-succeed.html",
+        "score": 0.22
+      }
+    ],
+    "evidence": {
+      "title": "Predicting the future is hard",
+      "date": "2004-11-29",
+      "snapshot": "http://web.archive.org/web/20041220085628id_/http://www.salas.com:80/weblogs/archives/000523.html"
+    },
+    "linked_from": [
+      "2004-12-12-i8217m-in-good-company.md"
+    ]
+  },
+  "/weblogs/archives/000524.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-12-02-why-improv-didn8217t-succeed-part-deux.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-12-02-why-improv-didn8217t-succeed-part-deux.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-12-03-is-this-a-good-idea.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2004-11-30-predicting-the-future-is-hard.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "title": "Why Improv didn't succeed, Part Deux",
+      "date": "2004-12-02",
+      "snapshot": "http://web.archive.org/web/20041220091702id_/http://www.salas.com:80/weblogs/archives/000524.html"
+    },
+    "linked_from": [
+      "2005-01-17-improv-in-wikipedia.md"
+    ]
+  },
+  "/weblogs/archives/000529.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-12-08-geek-java-web-start.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-12-08-geek-java-web-start.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-12-07-what8217s-the-world-coming-to.html",
+        "score": 0.27
+      },
+      {
+        "url": "/blog/2004-12-08-blogbridge-interview.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "title": "[GEEK] Java Web Start",
+      "date": "2004-12-08",
+      "snapshot": "http://web.archive.org/web/20041225162256id_/http://www.salas.com:80/weblogs/archives/000529.html"
+    },
+    "linked_from": [
+      "2005-03-31-geek-java-web-start-again.md"
+    ]
+  },
+  "/weblogs/archives/000533.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-12-14-heard-of-gmail.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-12-14-heard-of-gmail.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-12-14-my-social-theory-of-blogging.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2004-12-14-how-seinfeld-as-shaped-popular-culture.html",
+        "score": 0.22
+      }
+    ],
+    "evidence": {
+      "title": "Heard of GMail?",
+      "date": "2004-12-14",
+      "snapshot": "http://web.archive.org/web/20050101090904id_/http://www.salas.com:80/weblogs/archives/000533.html"
+    },
+    "linked_from": [
+      "2005-04-21-gmail-spam-filtering-degraded.md"
+    ]
+  },
+  "/weblogs/archives/000535.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-12-18-lightbulb-about-podcasting-8220some-stuff-i-just-figured-out8221.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-12-18-lightbulb-about-podcasting-8220some-stuff-i-just-figured-out8221.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-12-20-boston-globe-on-podcasting.html",
+        "score": 0.37
+      },
+      {
+        "url": "/blog/2004-12-19-coding-as-writing.html",
+        "score": 0.25
+      }
+    ],
+    "evidence": {
+      "title": "Lightbulb about Podcasting (\"Some stuff I just figured out\")",
+      "date": "2004-12-18",
+      "snapshot": "http://web.archive.org/web/20060221153817id_/http://www.salas.com:80/weblogs/archives/000535.html"
+    },
+    "linked_from": [
+      "2004-12-24-is-sarah-mclachlan-is-video-podcasting.md"
+    ]
+  },
+  "/weblogs/archives/000544.html": {
+    "scheme": "mt",
+    "new": "/blog/2004-12-26-seeing-the-other-side-of-someone.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2004-12-26-seeing-the-other-side-of-someone.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2004-12-27-8220pure-entrepreneurship8221-article-in-tbe-boston-globe.html",
+        "score": 0.31
+      },
+      {
+        "url": "/blog/2004-12-25-for-every-question-there-is-someone-who-is-interested-in-studying-it.html",
+        "score": 0.31
+      }
+    ],
+    "evidence": {
+      "title": "Seeing the other side of someone",
+      "date": "2004-12-25",
+      "snapshot": "http://web.archive.org/web/20050204152352id_/http://www.salas.com:80/weblogs/archives/000544.html"
+    },
+    "linked_from": [
+      "2005-01-04-read-this.md"
+    ]
+  },
+  "/weblogs/archives/000549.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-01-03-suckered-again-by-microsoft.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-01-03-suckered-again-by-microsoft.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-01-02-incredibly-cool-visualizations.html",
+        "score": 0.42
+      },
+      {
+        "url": "/blog/2005-01-03-elephants-are-cool.html",
+        "score": 0.3
+      }
+    ],
+    "evidence": {
+      "title": "Suckered again by Microsoft?",
+      "date": "2005-01-03",
+      "snapshot": "http://web.archive.org/web/20050216121326id_/http://www.salas.com:80/weblogs/archives/000549.html"
+    },
+    "linked_from": [
+      "2005-03-06-i-love-microsoft-too-but-i-can8217t-hold-my-tongue.md"
+    ]
+  },
+  "/weblogs/archives/000561.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-01-20-switcher8217s-log.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-01-20-switcher8217s-log.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-01-17-improv-in-wikipedia.html",
+        "score": 0.21
+      }
+    ],
+    "evidence": {
+      "title": "Switcher's Log",
+      "date": "2005-01-19",
+      "snapshot": "http://web.archive.org/web/20050209125315id_/http://www.salas.com:80/weblogs/archives/000561.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000566.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-01-26-do-mac-users-have-eye-problems-8211-switcher8217s-log-8211-part-2.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-01-26-do-mac-users-have-eye-problems-8211-switcher8217s-log-8211-part-2.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-01-24-blogbridge-tip-themes.html",
+        "score": 0.2
+      },
+      {
+        "url": "/blog/2005-01-26-blogbridge-tip-activate-your-blogbridge-service-account.html",
+        "score": 0.15
+      }
+    ],
+    "evidence": {
+      "title": "Do Mac users have eye problems - Switcher's Log - Part 2",
+      "date": "2005-01-25",
+      "snapshot": "http://web.archive.org/web/20050209112514id_/http://www.salas.com:80/weblogs/archives/000566.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000568.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-01-27-tags-meta-tags-meta-data-yada-yada.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-01-27-tags-meta-tags-meta-data-yada-yada.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-01-26-blogbridge-tip-activate-your-blogbridge-service-account.html",
+        "score": 0.23
+      },
+      {
+        "url": "/blog/2005-01-29-too-much-information.html",
+        "score": 0.17
+      }
+    ],
+    "evidence": {
+      "title": "Tags, Meta Tags, Meta Data, Yada Yada",
+      "date": "2005-01-27",
+      "snapshot": "http://web.archive.org/web/20050204060159id_/http://www.salas.com:80/weblogs/archives/000568.html"
+    },
+    "linked_from": [
+      "2005-01-29-too-much-information.md"
+    ]
+  },
+  "/weblogs/archives/000570.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-02-01-link-spammers.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-02-01-link-spammers.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-02-01-a98217s-photographic-yellow-pages.html",
+        "score": 0.21
+      },
+      {
+        "url": "/blog/2005-02-01-blogbridge-t-shirts.html",
+        "score": 0.21
+      }
+    ],
+    "evidence": {
+      "title": "Link Spammers",
+      "date": "2005-01-31",
+      "snapshot": "http://web.archive.org/web/20050209083441id_/http://www.salas.com:80/weblogs/archives/000570.html"
+    },
+    "linked_from": [
+      "2005-06-12-looks-like-i8217ve-beat-comment-spam-8212-for-now.md"
+    ]
+  },
+  "/weblogs/archives/000571.php": {
+    "scheme": "mt",
+    "new": "/blog/2005-02-01-a98217s-photographic-yellow-pages.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-02-01-a98217s-photographic-yellow-pages.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-02-03-social-networks-and-rss-aggregators.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2005-02-03-switcher8217s-log-part-3-what-i-miss-from-my-pc-days.html",
+        "score": 0.28
+      }
+    ],
+    "evidence": {
+      "title": "A9's Photographic Yellow Pages",
+      "date": "2005-02-01",
+      "snapshot": "http://web.archive.org/web/20060328025048id_/http://www.salas.com/weblogs/archives/000571.php"
+    },
+    "linked_from": [
+      "2008-05-28-big-search-mechanical-turk-and-why-amazon-is-at-least-as-cool-as-google.md"
+    ]
+  },
+  "/weblogs/archives/000573.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-02-03-switcher8217s-log-part-3-what-i-miss-from-my-pc-days.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-02-03-switcher8217s-log-part-3-what-i-miss-from-my-pc-days.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-02-03-social-networks-and-rss-aggregators.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2005-02-03-learning-from-others-8211-making-choices.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "title": "Switcher's Log, Part 3: What I miss from my PC Days",
+      "date": "2005-02-02",
+      "snapshot": "http://web.archive.org/web/20050211233530id_/http://www.salas.com:80/weblogs/archives/000573.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000575.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-02-03-learning-from-others-8211-making-choices.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-02-03-learning-from-others-8211-making-choices.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-02-01-link-spammers.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2005-02-05-vcs-and-aggregators.html",
+        "score": 0.29
+      }
+    ],
+    "evidence": {
+      "title": "Learning from others - Making choices",
+      "date": "2005-02-03",
+      "snapshot": "http://web.archive.org/web/20050211232011id_/http://www.salas.com:80/weblogs/archives/000575.html"
+    },
+    "linked_from": [
+      "2005-05-01-happy-birthday-dave.md"
+    ]
+  },
+  "/weblogs/archives/000579.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-02-12-switcher8217s-log-part-4-so-what-software-do-i-use-on-mac.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-02-12-switcher8217s-log-part-4-so-what-software-do-i-use-on-mac.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-02-09-two-really-interesting-bits-missed-by-msm.html",
+        "score": 0.21
+      },
+      {
+        "url": "/blog/2005-02-12-modesty-isn8217t-dead.html",
+        "score": 0.07
+      }
+    ],
+    "evidence": {
+      "title": "Switcher's Log, Part 4: So what software DO I use on Mac?",
+      "date": "2005-02-11",
+      "snapshot": "http://web.archive.org/web/20051122024442id_/http://www.salas.com:80/weblogs/archives/000579.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000598.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-03-09-switcher8217s-log-part-5-man-does-this-machine-scream.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-03-09-switcher8217s-log-part-5-man-does-this-machine-scream.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-03-09-blogbridge-screencast-tutorials-so-far.html",
+        "score": 0.29
+      },
+      {
+        "url": "/blog/2005-03-06-i-love-microsoft-too-but-i-can8217t-hold-my-tongue.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "title": "Switcher's Log, Part 5: Man does this machine scream.",
+      "date": "2005-03-08",
+      "snapshot": "http://web.archive.org/web/20050403171543id_/http://www.salas.com:80/weblogs/archives/000598.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000617.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-04-01-switcher8217s-log-part-6-all-is-not-honey-and-peaches-in-mac-os-x-land.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-04-01-switcher8217s-log-part-6-all-is-not-honey-and-peaches-in-mac-os-x-land.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-03-30-another-vc-is-blogging-8211-what8217s-going-on.html",
+        "score": 0.31
+      },
+      {
+        "url": "/blog/2005-04-01-talking-about-rss-aggregators.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "title": "Switcher's Log, Part 6: All is not honey and peaches in Mac OS X land",
+      "date": "2005-04-01",
+      "snapshot": "http://web.archive.org/web/20050403140056id_/http://www.salas.com:80/weblogs/archives/000617.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000622.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-04-05-switcher8217s-log-part-7-how-can-apple-be-so-brain-dead-about-usability.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-04-05-switcher8217s-log-part-7-how-can-apple-be-so-brain-dead-about-usability.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-04-06-switcher8217s-log-part-8-in-conclusion8230.html",
+        "score": 0.52
+      },
+      {
+        "url": "/blog/2005-04-03-blogbridge-blogbridge-10-is-out.html",
+        "score": 0.29
+      }
+    ],
+    "evidence": {
+      "title": "Switcher's Log, Part 7: How can Apple be so brain dead about usability?",
+      "date": "2005-04-04",
+      "snapshot": "http://web.archive.org/web/20050419003004id_/http://www.salas.com:80/weblogs/archives/000622.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000624.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-04-06-switcher8217s-log-part-8-in-conclusion8230.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-04-06-switcher8217s-log-part-8-in-conclusion8230.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-04-05-switcher8217s-log-part-7-how-can-apple-be-so-brain-dead-about-usability.html",
+        "score": 0.52
+      },
+      {
+        "url": "/blog/2005-04-08-is-google-setting-the-hook.html",
+        "score": 0.35
+      }
+    ],
+    "evidence": {
+      "title": "Switcher's log, Part 8: In conclusion...",
+      "date": "2005-04-06",
+      "snapshot": "http://web.archive.org/web/20060328030438id_/http://www.salas.com/weblogs/archives/000624.html"
+    },
+    "linked_from": [
+      "2005-05-28-come-on-over-the-water8217s-fine-look-who-is-recommending-macs.md"
+    ]
+  },
+  "/weblogs/archives/000637.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-04-20-hacking-the-papal-election.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-04-20-hacking-the-papal-election.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-04-18-losing-a-finger-over-biometrics.html",
+        "score": 0.32
+      },
+      {
+        "url": "/blog/2005-04-21-gmail-spam-filtering-degraded.html",
+        "score": 0.29
+      }
+    ],
+    "evidence": {
+      "title": "Hacking the papal election",
+      "date": "2005-04-20",
+      "snapshot": "http://web.archive.org/web/20050508123910id_/http://www.salas.com:80/weblogs/archives/000637.html"
+    },
+    "linked_from": [
+      "2005-05-11-comment-spam-again.md"
+    ]
+  },
+  "/weblogs/archives/000753.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-06-15-what-if-we-all-vote-on-the-truth.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-06-15-what-if-we-all-vote-on-the-truth.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-06-16-i-love-beer.html",
+        "score": 0.35
+      },
+      {
+        "url": "/blog/2005-06-17-making-money-with-aggregators.html",
+        "score": 0.31
+      }
+    ],
+    "evidence": {
+      "title": "What if we all vote on the truth?",
+      "date": "2005-06-15",
+      "snapshot": "http://web.archive.org/web/20060328030002id_/http://www.salas.com/weblogs/archives/000753.html"
+    },
+    "linked_from": [
+      "2005-06-20-what-if-we-all-vote-on-the-truth-part-2.md",
+      "2005-06-21-what-if-we-all-vote-on-the-truth-part-3.md"
+    ]
+  },
+  "/weblogs/archives/000805.html": {
+    "scheme": "mt",
+    "new": "/blog/2005-07-27-interesting-new-search-engines.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-07-27-interesting-new-search-engines.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-07-26-rss-in-the-academicresearchscientific-community.html",
+        "score": 0.46
+      },
+      {
+        "url": "/blog/2005-07-25-geek-site-referral-log-mystery-how-does-this-happen.html",
+        "score": 0.34
+      }
+    ],
+    "evidence": {
+      "title": "Interesting new search engines",
+      "date": "2005-07-27",
+      "snapshot": "http://web.archive.org/web/20060328025856id_/http://www.salas.com/weblogs/archives/000805.html"
+    },
+    "linked_from": [
+      "2005-08-11-check-out-findory.md"
+    ]
+  },
+  "/weblogs/archives/000891.php": {
+    "scheme": "mt",
+    "new": "/blog/2005-10-04-how-long-should-a-treo-600-last-how-about-an-ipod.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-10-04-how-long-should-a-treo-600-last-how-about-an-ipod.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-10-04-scoble8217s-conundrum.html",
+        "score": 0.25
+      },
+      {
+        "url": "/blog/2005-10-02-a-big-laugh.html",
+        "score": 0.12
+      }
+    ],
+    "evidence": {
+      "title": "How long should a Treo 600 last? How about an IPod?",
+      "date": "2005-10-03",
+      "snapshot": "http://web.archive.org/web/20051215031604id_/http://www.salas.com:80/weblogs/archives/000891.php"
+    },
+    "linked_from": [
+      "2005-10-07-follow-up-on-my-ipod-rant.md"
+    ]
+  },
+  "/weblogs/archives/000895.php": {
+    "scheme": "mt",
+    "new": "/blog/2005-10-07-follow-up-on-my-ipod-rant.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-10-07-follow-up-on-my-ipod-rant.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-10-04-scoble8217s-conundrum.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2005-10-04-how-long-should-a-treo-600-last-how-about-an-ipod.html",
+        "score": 0.27
+      }
+    ],
+    "evidence": {
+      "title": "Follow-up on my iPod Rant",
+      "date": "2005-10-06",
+      "snapshot": "http://web.archive.org/web/20051024002917id_/http://www.salas.com:80/weblogs/archives/000895.php"
+    },
+    "linked_from": [
+      "2005-10-22-more-ipod-stuff.md"
+    ]
+  },
+  "/weblogs/archives/000920.php": {
+    "scheme": "mt",
+    "new": "/blog/2005-10-28-thinking-about-business-models.html",
+    "confidence": "unmatched",
+    "candidates": [
+      {
+        "url": "/blog/2005-10-12-amusing8230.html",
+        "score": 0.29
+      },
+      {
+        "url": "/blog/2005-10-13-stewart-alsop-blogging.html",
+        "score": 0.17
+      }
+    ],
+    "evidence": {
+      "title": "Thinking about business models",
+      "date": "2005-10-13",
+      "snapshot": "http://web.archive.org/web/20060328031229id_/http://www.salas.com/weblogs/archives/000920.php"
+    },
+    "linked_from": [
+      "2006-05-21-check-out-inquisitor-for-the-web.md"
+    ],
+    "reviewed": true
+  },
+  "/weblogs/archives/000951.php": {
+    "scheme": "mt",
+    "new": "/blog/2005-11-12-did-msft-leak-on-purpose-or-did-they-know-they-could-easily-be-leaked.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-11-12-did-msft-leak-on-purpose-or-did-they-know-they-could-easily-be-leaked.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-11-11-roku-roku-roku-aint-technology-great.html",
+        "score": 0.23
+      },
+      {
+        "url": "/blog/2005-11-10-what-blogs-are-good-for-learning-about-microsoft.html",
+        "score": 0.19
+      }
+    ],
+    "evidence": {
+      "title": "Did MSFT leak on purpose, or did they know they could easily be leaked?",
+      "date": "2005-11-12",
+      "snapshot": "http://web.archive.org/web/20051126165939id_/http://www.salas.com:80/weblogs/archives/000951.php"
+    },
+    "linked_from": [
+      "2005-11-16-ray-ozzie8217s-blog-v3.md"
+    ]
+  },
+  "/weblogs/archives/001008.php": {
+    "scheme": "mt",
+    "new": "/blog/2005-12-22-why-is-everything-free.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2005-12-22-why-is-everything-free.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2005-12-22-load-one-physical-cd-get-two-icons-on-my-desktop.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2005-12-23-netherlands-antilles-set-to-be-dissolved.html",
+        "score": 0.19
+      }
+    ],
+    "evidence": {
+      "title": "Why is everything free?",
+      "date": "2005-12-21",
+      "snapshot": "http://web.archive.org/web/20051226050600id_/http://www.salas.com:80/weblogs/archives/001008.php"
+    },
+    "linked_from": [
+      "2008-02-16-the-downside-of-free-software.md"
+    ]
+  },
+  "/weblogs/archives/001050.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-01-29-geek-dinner-harvard-square-february-15th-should-be-fun.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-01-29-geek-dinner-harvard-square-february-15th-should-be-fun.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-01-30-interesting-wikipedia-situation-developing.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2006-01-30-an-actual-8220trial-balloon8221.html",
+        "score": 0.21
+      }
+    ],
+    "evidence": {
+      "title": "Geek Dinner? Harvard Square? February 15th? Should be fun!",
+      "date": "2006-01-29",
+      "snapshot": "http://web.archive.org/web/20060207120909id_/http://www.salas.com:80/weblogs/archives/001050.php"
+    },
+    "linked_from": [
+      "2006-02-13-headline-geek-dinner-plans-go-forward-despite-blizzard.md"
+    ]
+  },
+  "/weblogs/archives/001090.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-03-06-mac-os-x-hacked.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-03-06-mac-os-x-hacked.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-03-04-pandora-helps-me-discover-beth-nielsen-chapman.html",
+        "score": 0.19
+      },
+      {
+        "url": "/blog/2006-03-06-rss-is-not-a-goal8230.html",
+        "score": 0.16
+      }
+    ],
+    "evidence": {
+      "title": "Mac OS X Hacked?",
+      "date": "2006-03-06",
+      "snapshot": "http://web.archive.org/web/20060328024459id_/http://www.salas.com/weblogs/archives/001090.php"
+    },
+    "linked_from": [
+      "2006-03-14-very-interesting-discussion-of-an-os-x-trojan-8211-how-it-works-and-doesn8217t.md"
+    ]
+  },
+  "/weblogs/archives/001144.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-04-23-new-espresso-maker-capresso-ultima-model-121.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-04-23-new-espresso-maker-capresso-ultima-model-121.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-04-22-if-you-are-interested-in-microsoft.html",
+        "score": 0.24
+      },
+      {
+        "url": "/blog/2006-04-24-coffee-series-part-2-what-kind-of-grind.html",
+        "score": 0.23
+      }
+    ],
+    "evidence": {
+      "title": "New espresso maker: Capresso Ultima (Model 121)",
+      "date": "2006-04-23",
+      "snapshot": "http://web.archive.org/web/20060626135146id_/http://www.salas.com:80/weblogs/archives/001144.php"
+    },
+    "linked_from": [
+      "2006-04-24-coffee-series-part-2-what-kind-of-grind.md"
+    ]
+  },
+  "/weblogs/archives/001145.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-04-24-coffee-series-part-2-what-kind-of-grind.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-04-24-coffee-series-part-2-what-kind-of-grind.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-04-26-coffee-series-part-3-trade-offs.html",
+        "score": 0.69
+      },
+      {
+        "url": "/blog/2006-04-22-if-you-are-interested-in-microsoft.html",
+        "score": 0.26
+      }
+    ],
+    "evidence": {
+      "title": "Coffee Series part 2: What kind of grind?",
+      "date": "2006-04-24",
+      "snapshot": "http://web.archive.org/web/20060910220939id_/http://www.salas.com:80/weblogs/archives/001145.php"
+    },
+    "linked_from": [
+      "2006-04-23-new-espresso-maker-capresso-ultima-model-121.md"
+    ]
+  },
+  "/weblogs/archives/001146.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-04-26-coffee-series-part-3-trade-offs.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-04-26-coffee-series-part-3-trade-offs.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-04-24-coffee-series-part-2-what-kind-of-grind.html",
+        "score": 0.69
+      },
+      {
+        "url": "/blog/2006-04-23-new-espresso-maker-capresso-ultima-model-121.html",
+        "score": 0.25
+      }
+    ],
+    "evidence": {
+      "title": "Coffee Series, Part 3: Trade offs",
+      "date": "2006-04-25",
+      "snapshot": "http://web.archive.org/web/20060720193813id_/http://www.salas.com:80/weblogs/archives/001146.php"
+    },
+    "linked_from": [
+      "2006-04-23-new-espresso-maker-capresso-ultima-model-121.md"
+    ]
+  },
+  "/weblogs/archives/001162.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-05-25-help-with-movable-type-spam.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-05-25-help-with-movable-type-spam.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-05-26-oh-great-msft-proposing-a-jpeg-alternative.html",
+        "score": 0.2
+      },
+      {
+        "url": "/blog/2006-05-27-links-for-2006-05-27.html",
+        "score": 0.15
+      }
+    ],
+    "evidence": {
+      "title": "Help with movable type spam?",
+      "date": "2006-05-25",
+      "snapshot": "http://web.archive.org/web/20060614073018id_/http://www.salas.com:80/weblogs/archives/001162.php"
+    },
+    "linked_from": [
+      "2006-06-03-comment-spam-8211-solved-for-now.md"
+    ]
+  },
+  "/weblogs/archives/001280.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-08-06-atlantic-magazine-on-wikipedia.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-08-06-atlantic-magazine-on-wikipedia.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-08-04-mail-rule-to-catch-image-spam.html",
+        "score": 0.35
+      },
+      {
+        "url": "/blog/2006-08-03-the-role-of-rss-in-science-publishing.html",
+        "score": 0.28
+      }
+    ],
+    "evidence": {
+      "title": "Atlantic Magazine on Wikipedia",
+      "date": "2006-08-05",
+      "snapshot": "http://web.archive.org/web/20070729171605id_/http://www.salas.com/weblogs/archives/001280.php"
+    },
+    "linked_from": [
+      "2006-08-06-links-for-2006-08-06.md"
+    ]
+  },
+  "/weblogs/archives/001335.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-09-28-bryce-canyon-national-park.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-09-28-bryce-canyon-national-park.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-09-27-best-little-inn-in-maine.html",
+        "score": 0.33
+      },
+      {
+        "url": "/blog/2006-09-26-that8217s-gotta-hurt.html",
+        "score": 0.27
+      }
+    ],
+    "evidence": {
+      "title": "Bryce Canyon National Park",
+      "date": "2006-09-28",
+      "snapshot": "http://web.archive.org/web/20061017001631id_/http://www.salas.com:80/weblogs/archives/001335.php"
+    },
+    "linked_from": [
+      "2006-09-25-back-from-away.md"
+    ]
+  },
+  "/weblogs/archives/001336.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-09-29-why-do-i-blog-anyway.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-09-29-why-do-i-blog-anyway.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-09-28-bryce-canyon-national-park.html",
+        "score": 0.26
+      },
+      {
+        "url": "/blog/2006-09-27-best-little-inn-in-maine.html",
+        "score": 0.22
+      }
+    ],
+    "evidence": {
+      "title": "Why do I blog, anyway?",
+      "date": "2006-09-29",
+      "snapshot": "http://web.archive.org/web/20061016172412id_/http://www.salas.com:80/weblogs/archives/001336.php"
+    },
+    "linked_from": [
+      "2006-09-25-back-from-away.md"
+    ]
+  },
+  "/weblogs/archives/001338.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-10-03-capitol-reef.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-10-03-capitol-reef.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-10-01-geek-playing-with-ruby-on-mac.html",
+        "score": 0.11
+      }
+    ],
+    "evidence": {
+      "title": "Capitol Reef",
+      "date": "2006-10-02",
+      "snapshot": "http://web.archive.org/web/20061019103619id_/http://www.salas.com:80/weblogs/archives/001338.php"
+    },
+    "linked_from": [
+      "2006-09-25-back-from-away.md"
+    ]
+  },
+  "/weblogs/archives/001339.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-10-06-book-report-a-million-little-pieces.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-10-06-book-report-a-million-little-pieces.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-10-07-tower-records-to-be-liquidated.html",
+        "score": 0.39
+      },
+      {
+        "url": "/blog/2006-10-07-mars-exploration-8211-amazing-8211-opportunity-keeps-on-knocking.html",
+        "score": 0.31
+      }
+    ],
+    "evidence": {
+      "title": "Book report: A million little pieces",
+      "date": "2006-10-06",
+      "snapshot": "http://web.archive.org/web/20061020142628id_/http://www.salas.com/weblogs/archives/001339.php"
+    },
+    "linked_from": [
+      "2006-09-25-back-from-away.md"
+    ]
+  },
+  "/weblogs/archives/001346.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-10-11-the-answer-is-not-a-better-rss-aggregator.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-10-11-the-answer-is-not-a-better-rss-aggregator.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-10-12-the-answer-is-not-a-better-rss-aggregator-continued.html",
+        "score": 0.88
+      }
+    ],
+    "evidence": {
+      "title": "The answer is not a better RSS Aggregator",
+      "date": "2006-10-10",
+      "snapshot": "http://web.archive.org/web/20061029031951id_/http://www.salas.com:80/weblogs/archives/001346.php"
+    },
+    "linked_from": [
+      "2006-09-25-back-from-away.md",
+      "2006-10-29-semi-geeky-blogs-that-matter-really-interesting.md"
+    ]
+  },
+  "/weblogs/archives/001349.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-10-12-the-answer-is-not-a-better-rss-aggregator-continued.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-10-12-the-answer-is-not-a-better-rss-aggregator-continued.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-10-11-the-answer-is-not-a-better-rss-aggregator.html",
+        "score": 0.88
+      },
+      {
+        "url": "/blog/2006-10-13-more-musings-on-the-not-better-rss-aggregator.html",
+        "score": 0.62
+      }
+    ],
+    "evidence": {
+      "title": "The answer is not a better RSS Aggregator, continued",
+      "date": "2006-10-11",
+      "snapshot": "http://web.archive.org/web/20061104172553id_/http://salas.com/weblogs/archives/001349.php"
+    },
+    "linked_from": [
+      "2006-10-29-semi-geeky-blogs-that-matter-really-interesting.md"
+    ]
+  },
+  "/weblogs/archives/001350.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-10-13-more-musings-on-the-not-better-rss-aggregator.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-10-13-more-musings-on-the-not-better-rss-aggregator.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-10-11-the-answer-is-not-a-better-rss-aggregator.html",
+        "score": 0.69
+      },
+      {
+        "url": "/blog/2006-10-12-the-answer-is-not-a-better-rss-aggregator-continued.html",
+        "score": 0.62
+      }
+    ],
+    "evidence": {
+      "title": "More musings on the not-better-RSS-aggregator",
+      "date": "2006-10-12",
+      "snapshot": "http://web.archive.org/web/20061104172743id_/http://salas.com/weblogs/archives/001350.php"
+    },
+    "linked_from": [
+      "2006-09-25-back-from-away.md",
+      "2006-10-29-semi-geeky-blogs-that-matter-really-interesting.md"
+    ]
+  },
+  "/weblogs/archives/001353.php": {
+    "scheme": "mt",
+    "new": "/blog/2006-10-16-arches-national-park.html",
+    "confidence": "exact",
+    "candidates": [
+      {
+        "url": "/blog/2006-10-16-arches-national-park.html",
+        "score": 1.0
+      },
+      {
+        "url": "/blog/2006-10-13-what8217s-wrong-with-wikipedia.html",
+        "score": 0.29
+      },
+      {
+        "url": "/blog/2006-10-13-more-musings-on-the-not-better-rss-aggregator.html",
+        "score": 0.25
+      }
+    ],
+    "evidence": {
+      "title": "Arches National Park",
+      "date": "2006-10-15",
+      "snapshot": "http://web.archive.org/web/20061020142631id_/http://www.salas.com/weblogs/archives/001353.php"
+    },
+    "linked_from": [
+      "2006-09-25-back-from-away.md"
+    ]
+  }
+}

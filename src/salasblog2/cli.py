@@ -11,8 +11,21 @@ Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
 
 import argparse
 import os
+from pathlib import Path
+
 from dotenv import load_dotenv
 from salasblog2.generator import SiteGenerator
+from salasblog2.legacy_commands import (
+    URL_MAP_FILE,
+    WAYBACK_CACHE_FILE,
+    build_map,
+    content_dirs,
+    load_url_map,
+    redirect_targets,
+    rewrite_content,
+    summarize_map,
+)
+from salasblog2.link_check import find_dead_self_links
 from salasblog2.raindrop import RaindropDownloader
 
 load_dotenv()
@@ -44,6 +57,29 @@ def cmd_sync_raindrops(args):
     )
 
 
+def cmd_legacy_map(args):
+    """Build the reviewed legacy URL map from content links"""
+    url_map = build_map(Path(args.content), URL_MAP_FILE, WAYBACK_CACHE_FILE)
+    print(summarize_map(url_map))
+    print(f"wrote {URL_MAP_FILE}")
+
+
+def cmd_legacy_rewrite(args):
+    """Rewrite mapped legacy links in content (dry run unless --apply)"""
+    rewrite_content(Path(args.content), URL_MAP_FILE, is_dry_run=not args.apply)
+
+
+def cmd_check_links(args):
+    """Report self-links in content that resolve to nothing"""
+    redirects = redirect_targets(load_url_map(URL_MAP_FILE))
+    dead = find_dead_self_links(
+        content_dirs(Path(args.content)), Path(args.output), redirects
+    )
+    for link in dead:
+        print(f"{link.source_file}: {link.url}")
+    print(f"{len(dead)} dead self-links")
+
+
 def cmd_server(args):
     """Start the FastAPI server"""
     import uvicorn
@@ -73,6 +109,9 @@ def cmd_help(args):
     print(
         "  sync-raindrops     - Download new bookmarks from Raindrop.io (for link blog)"
     )
+    print("  legacy-map         - Build 02-doc/legacy-url-map.json from legacy links")
+    print("  legacy-rewrite     - Rewrite mapped legacy links (dry run unless --apply)")
+    print("  check-links        - Report self-links that resolve to nothing")
     print("  help               - Show this help message")
     print()
     print("Options:")
@@ -143,6 +182,29 @@ def main():
         help="Limit the number of link blog posts to download",
     )
     sync_parser.set_defaults(func=cmd_sync_raindrops)
+
+    # Legacy link repair commands
+    legacy_map_parser = subparsers.add_parser(
+        "legacy-map", help="Build the legacy URL map"
+    )
+    legacy_map_parser.add_argument("--content", default="content", help="Content root")
+    legacy_map_parser.set_defaults(func=cmd_legacy_map)
+
+    rewrite_parser = subparsers.add_parser(
+        "legacy-rewrite", help="Rewrite mapped legacy links in content"
+    )
+    rewrite_parser.add_argument("--content", default="content", help="Content root")
+    rewrite_parser.add_argument(
+        "--apply", action="store_true", help="Write changes (default: dry run)"
+    )
+    rewrite_parser.set_defaults(func=cmd_legacy_rewrite)
+
+    check_parser = subparsers.add_parser(
+        "check-links", help="Report dead self-links in content"
+    )
+    check_parser.add_argument("--content", default="content", help="Content root")
+    check_parser.add_argument("--output", default="output", help="Generated site dir")
+    check_parser.set_defaults(func=cmd_check_links)
 
     # Help command
     help_parser = subparsers.add_parser("help", help="Show help message")

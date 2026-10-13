@@ -76,3 +76,5 @@ temp/
 # j2 framework
 .j2/state.md
 .coverage
+# Local lookup caches (F48 Wayback results)
+.cache/

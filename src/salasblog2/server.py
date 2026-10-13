@@ -10,6 +10,7 @@ FastAPI server for Salasblog2 - serves static files + API endpoints.
 Includes Blogger API (XML-RPC) support for blog editors.
 """
 
+import functools
 import os
 import random
 import time
@@ -54,6 +55,8 @@ from salasblog2.stats import get_counter
 from salasblog2.visitor_type import classify_visitor
 from salasblog2.propose import get_proposed_posts, get_proposed_drops, DropFilter
 from salasblog2.draft_generator import generate_draft_from_drop, save_draft
+from salasblog2.legacy_commands import URL_MAP_FILE, load_url_map, redirect_targets
+from salasblog2.legacy_links import normalize_legacy_url
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -302,6 +305,21 @@ def _safe_resolve(base_dir: Path, file_path: str) -> Path | None:
     return full_path
 
 
+@functools.cache
+def legacy_redirect_targets() -> dict[str, str]:
+    """Reviewed legacy path -> current URL map, loaded once on first use."""
+    return redirect_targets(load_url_map(URL_MAP_FILE))
+
+
+def legacy_redirect(url_path: str) -> RedirectResponse | None:
+    """301 to the current post if url_path is a mapped pre-salasblog2 URL."""
+    classified = normalize_legacy_url(url_path)
+    if classified is None:
+        return None
+    new_url = legacy_redirect_targets().get(classified[0])
+    return None if new_url is None else RedirectResponse(new_url, status_code=301)
+
+
 @app.api_route("/static/{file_path:path}", methods=["GET", "HEAD"])
 async def serve_static_files(file_path: str, request: Request):
     """Custom static file serving with consistent GET/HEAD behavior"""
@@ -344,6 +362,9 @@ async def serve_blog_files(file_path: str, request: Request):
         full_path = full_path / "index.html"
 
     if not full_path.exists() or not full_path.is_file():
+        redirect = legacy_redirect(f"/blog/{file_path}")
+        if redirect is not None:
+            return redirect
         raise HTTPException(status_code=404, detail="Not found")
 
     content_type, _ = mimetypes.guess_type(str(full_path))
@@ -2271,6 +2292,10 @@ def create_xmlrpc_fault_with_code(fault_code, message):
 @app.api_route("/{path:path}", methods=["GET", "HEAD"])
 async def serve_root_files(path: str, request: Request):
     """Serve root-level files like index.html, robots.txt, etc."""
+    redirect = legacy_redirect(f"/{path}")
+    if redirect is not None:
+        return redirect
+
     # Only handle root-level files, not paths that start with mounted directories
     if "/" in path or path.startswith(("blog", "pages", "static")):
         raise HTTPException(status_code=404, detail="Not found")

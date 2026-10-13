@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<title>Pito's Blog: Why Improv didn't succeed</title>
+
+<link rel="stylesheet" href="http://www.salas.com/styles-site.css" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.salas.com/index.rdf" />
+
+<link rel="start" href="http://www.salas.com/" title="Home" />
+<link rel="prev" href="http://www.salas.com/weblogs/archives/000521.html" title="Adam Bosworth on KISS" />
+
+<link rel="next" href="http://www.salas.com/weblogs/archives/000523.html" title="Predicting the future is hard" />
+
+
+<script type="text/javascript" language="javascript">
+<!--
+
+function OpenTrackback (c) {
+    window.open(c,
+                    'trackback',
+                    'width=480,height=480,scrollbars=yes,status=yes');
+}
+
+var HOST = 'www.salas.com';
+
+// Copyright (c) 1996-1997 Athenia Associates.
+// http://www.webreference.com/js/
+// License is granted if and only if this entire
+// copyright notice is included. By Tomer Shiran.
+
+function setCookie (name, value, expires, path, domain, secure) {
+    var curCookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+    document.cookie = curCookie;
+}
+
+function getCookie (name) {
+    var prefix = name + '=';
+    var c = document.cookie;
+    var nullstring = '';
+    var cookieStartIndex = c.indexOf(prefix);
+    if (cookieStartIndex == -1)
+        return nullstring;
+    var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+    if (cookieEndIndex == -1)
+        cookieEndIndex = c.length;
+    return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+}
+
+function deleteCookie (name, path, domain) {
+    if (getCookie(name))
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+}
+
+function fixDate (date) {
+    var base = new Date(0);
+    var skew = base.getTime();
+    if (skew > 0)
+        date.setTime(date.getTime() - skew);
+}
+
+function rememberMe (f) {
+    var now = new Date();
+    fixDate(now);
+    now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+    setCookie('mtcmtauth', f.author.value, now, '', HOST, '');
+    setCookie('mtcmtmail', f.email.value, now, '', HOST, '');
+    setCookie('mtcmthome', f.url.value, now, '', HOST, '');
+}
+
+function forgetMe (f) {
+    deleteCookie('mtcmtmail', '', HOST);
+    deleteCookie('mtcmthome', '', HOST);
+    deleteCookie('mtcmtauth', '', HOST);
+    f.email.value = '';
+    f.author.value = '';
+    f.url.value = '';
+}
+
+//-->
+</script>
+
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about="http://www.salas.com/weblogs/archives/000522.html"
+    trackback:ping="http://www.salas.com/mt/mt-tb.cgi/515"
+    dc:title="Why Improv didn&apos;t succeed"
+    dc:identifier="http://www.salas.com/weblogs/archives/000522.html"
+    dc:subject="Technology"
+    dc:description="It&apos;s been a while. Which is why my heart beat just a little faster when I read a reference to Improv (not altogether flattering) in the Adam Bossworth piece I just wrote about, where he said: Consider the spreadsheet. It is a protean, sloppy, plastic, flexible medium that is, ironically, the despair of all accountants and auditors because it is virtually impossible to reliably understand a truly complex and rich spreadsheet. Lotus corporation (now IBM), filled with Harvard MBA’s and PhD’s in CS from MIT, built Improv. Improv set out &quot;to fix all this&quot;. It was an auditors dream. It provided rarified heights of abstraction, formalisms for rows and columns, and in short was truly comprehensible. It failed utterly, not because it failed in its ambitions but because it succeeded. I happen to know a little bit about this :-) I was the guy, for better or worse, who came up with the idea for Improv and got it built and shipped at Lotus. Let me start by saying I have neither a PhD nor an MBA (and proud of it!) And I am almost positive there was not a single one of those on the Improv team. But other than that, Adam makes I think an important and accurate observation. This is so many years ago now so I don&apos;t think about it much anymore. But at one point I was often asked and thought about what happened with Improv and why it failed. And while I had more complicated answers at the time, I have to say that there is a lot to what Adam says. It&apos;s easy to get all philosophical about what makes a spreadsheet a spreadsheet, what it&apos;s core essence is. And I have. It&apos;s hard to argue that one of the keys is the maleability of the spreadsheet as a medium. The fact that a spreadsheet can grow organically, be modified and grown in a kind of an Improvisational manner. But when spreadsheets get complicated they get messy and error-prone and this is what Improv set out to address. In the end it didn&apos;t go anywhere, probably because in setting out to improve on spreadsheets, Improv lost the essence of a spreadsheet and in doing so lost the market. Innovators Dilemma There is an interesting Innovators Dilemma kind of perspective here, referring to the now-classic book &quot;The Innovators Dilemma&quot; by Clayton M. Christensen. To summarize one of the key theses of the book extremely briefly: that a new technology might initially have a fatal flaw which makes it unsuitable for the purpose it was intended for. (For example, Electric cars don&apos;t have the range or speed to meet the needs of today&apos;s drivers.) An established maker of cars (e.g. Ford) has a strong disincentive to invest in Electric cars because it doesn&apos;t meet the need of it&apos;s existing customer base. An upstart competitor could identify a different market where the apparent flaws (speed and range) are actually &apos;features&apos; not &apos;bugs&apos; (for example a car..."
+    dc:creator="pitosalas"
+    dc:date="2004-11-28T20:47:20-05:00" />
+</rdf:RDF>
+-->
+
+
+
+
+</head>
+
+<body>
+
+<div id="banner">
+<h1><a href="http://www.salas.com/" accesskey="1">Pito's Blog</a></h1>
+<span class="description">Some stuff I just figured out</span>
+</div>
+
+<div id="container">
+
+<div class="blog">
+
+<div id="menu">
+<a href="http://www.salas.com/weblogs/archives/000521.html">&laquo; Adam Bosworth on KISS</a> |
+
+<a href="http://www.salas.com/">Main</a>
+| <a href="http://www.salas.com/weblogs/archives/000523.html">Predicting the future is hard &raquo;</a>
+
+</div>
+
+</div>
+
+
+<div class="blog">
+
+<h2 class="date">November 28, 2004</h2>
+
+<div class="blogbody">
+
+<h3 class="title">Why Improv didn't succeed</h3>
+
+<p>It's been a while.</p>
+
+<p>Which is why my heart beat just a <b>little faster </b>when I read a reference to Improv (not altogether flattering) in the <a href="http://www.adambosworth.net/archives/000031.html">Adam Bossworth piece </a>I just wrote about, where he said:</p>
+
+<blockquote><i>
+Consider the <b>spreadsheet</b>. It is a protean, sloppy, plastic, flexible medium that is, ironically, the despair of all accountants and auditors because it is virtually impossible to reliably understand a truly complex and rich spreadsheet. 
+
+<p>Lotus corporation (now IBM), filled with <b>Harvard MBA’s and PhD’s in CS </b>from MIT, built Improv. Improv set out "to fix all this". It was an auditors dream. It provided rarified heights of abstraction, formalisms for rows and columns, and in short was truly comprehensible. It <b>failed utterly</b>, not because it failed in its ambitions but because it succeeded.</i></blockquote></p>
+
+<p>I happen to know <b>a little bit</b> about this :-) <b>I was the guy</b>, for better or worse, who came up with the idea for <b>Improv </b>and got it built and shipped at Lotus. </p>
+
+<p>Let me start by saying I have neither a PhD nor an MBA (and proud of it!) And I am almost positive there was not a single one of those on the Improv team. But other than that, Adam makes I think an <b>important </b>and accurate observation.</p>
+
+<p>This is so many years ago now so I don't think about it much anymore. But at one point I was often asked and thought about what happened with Improv and why it failed. And while I had more complicated answers at the time, I have to say that <b>there is a lot</b> to what Adam says. </p>
+
+<p>It's easy to get all philosophical about what makes a spreadsheet a spreadsheet, what it's core essence is. And I have. It's hard to argue that one of the keys is the maleability of the spreadsheet as a medium. The fact that a spreadsheet can grow organically, be modified and grown in a kind of an Improvisational manner. But when spreadsheets get <b>complicated </b>they get messy and error-prone and this is what Improv set out to address.</p>
+
+<p>In the end it didn't go anywhere, probably because in setting out to improve on spreadsheets, Improv lost the essence of a spreadsheet and in doing so <b>lost the market</b>.</p>
+
+<p><b>Innovators Dilemma</b></p>
+
+<p>There is an interesting Innovators Dilemma kind of perspective here, referring to the now-classic book <a href="http://www.amazon.com/exec/obidos/tg/detail/-/0875845851/002-1504404-5645600?v=glance">"The Innovators Dilemma" by Clayton M. Christensen</a>. To summarize one of the key theses of the book extremely briefly:</p>
+
+<ol><li> that a new technology might initially have a fatal flaw which makes it unsuitable for the purpose it was intended for. (For example, Electric cars don't have the range or speed to meet the needs of today's drivers.) 
+<li>An established maker of cars (e.g. Ford) has a strong disincentive to invest in Electric cars because it doesn't meet the need of it's existing customer base. <li>An upstart competitor could identify a different market where the apparent flaws (speed and range) are actually 'features' not 'bugs' (for example a car specifically made for very young drivers) and use that market as a spring board to be able to perfect the technology. 
+<li>Eventually the upstart has years of experience with the new technology (the batteries and drive train) and improves it to the point where it actually does meet the need of mainstream customers, while the established player has been ignoring things and gets unseated.
+</ol>
+I am <b>not sure </b>it applies, but one could argue a parallel here with Improv. In particular this would lead you to the conclusion that the key strategy <b>mistake </b>was to try to market Improv to the existing spreadsheet market. Instead, if the product were marketed to a segment where the more structured model was a 'feature' not a 'bug' would have given Lotus the time to learn and improve and refine the model to a point where it would have <b>satisfied </b>the larger market as well.
+
+<p>Who knows. Ancient history.</p>
+
+<a name="more"></a>
+
+
+<span class="posted">Posted by pitosalas at November 28, 2004 08:47 PM
+| <a href="http://www.salas.com/mt/mt-tb.cgi?__mode=view&amp;entry_id=522" onclick="OpenTrackback(this.href); return false">TrackBack</a>
+
+<br /></span>
+
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
