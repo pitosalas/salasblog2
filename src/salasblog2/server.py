@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 4
+# Version: 5
 # Created: 2026-09-08
 # Updated: 2026-10-17
 # Open Source Under MIT license
@@ -10,53 +10,54 @@ FastAPI server for Salasblog2 - serves static files + API endpoints.
 Includes Blogger API (XML-RPC) support for blog editors.
 """
 
+import asyncio
 import functools
+import json
+import logging
+import mimetypes
 import os
 import random
-import time
-import yaml
-import xmlrpc.client as xmlrpc_client
-import logging
-import subprocess
-import asyncio
-import json
-import shutil
 import re
-import frontmatter
-import mimetypes
-from pathlib import Path
-from datetime import datetime, date
-from typing import List
+import shutil
+import subprocess
+import time
+import xmlrpc.client as xmlrpc_client
+from contextlib import asynccontextmanager
 from dataclasses import dataclass
+from datetime import date, datetime
+from pathlib import Path
+
+import frontmatter
+import yaml
 from fastapi import (
+    BackgroundTasks,
     FastAPI,
+    File,
+    Form,
     HTTPException,
     Request,
-    Form,
     UploadFile,
-    File,
-    BackgroundTasks,
 )
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import HTMLResponse, JSONResponse, Response, RedirectResponse
-from starlette.middleware.sessions import SessionMiddleware
-from contextlib import asynccontextmanager
 from jinja2 import Environment, FileSystemLoader
-from salasblog2.generator import SiteGenerator
-from salasblog2.raindrop import RaindropDownloader
+from starlette.middleware.sessions import SessionMiddleware
+
 from salasblog2.blogger_api import BloggerAPI
-from salasblog2.scheduler import get_scheduler
-from salasblog2.utils import (
-    process_markdown_to_html,
-    top_tags_by_frequency,
-    load_curated_tags,
-)
-from salasblog2.stats import get_counter
-from salasblog2.visitor_type import classify_visitor
-from salasblog2.propose import get_proposed_posts, get_proposed_drops, DropFilter
 from salasblog2.draft_generator import generate_draft_from_drop, save_draft
+from salasblog2.generator import SiteGenerator
 from salasblog2.legacy_commands import URL_MAP_FILE, load_url_map, redirect_targets
 from salasblog2.legacy_links import normalize_legacy_url
+from salasblog2.propose import DropFilter, get_proposed_drops, get_proposed_posts
+from salasblog2.raindrop import RaindropDownloader
+from salasblog2.scheduler import get_scheduler
+from salasblog2.stats import get_counter
+from salasblog2.utils import (
+    load_curated_tags,
+    process_markdown_to_html,
+    top_tags_by_frequency,
+)
+from salasblog2.visitor_type import classify_visitor
 
 # Global status tracking
 sync_status = {"running": False, "message": "Ready"}
@@ -580,7 +581,7 @@ def load_content_item(filename: str, content_type: str):
             f"Error loading {content_type} {filename}: {e}"
         )
         raise HTTPException(
-            status_code=500, detail=f"Error loading {content_type}: {str(e)}"
+            status_code=500, detail=f"Error loading {content_type}: {e!s}"
         )
 
 
@@ -660,7 +661,7 @@ def save_content_item(filename: str, content_type: str, fields: ContentFields) -
     except Exception as e:
         logger.error(f"Error saving {content_type} {filename}: {e}")
         raise HTTPException(
-            status_code=500, detail=f"Error saving {content_type}: {str(e)}"
+            status_code=500, detail=f"Error saving {content_type}: {e!s}"
         )
 
 
@@ -977,7 +978,7 @@ async def trigger_raindrop_sync(request: Request):
             )
     except Exception as e:
         logger.error(f"Manual Raindrop sync failed: {e}")
-        raise HTTPException(status_code=500, detail=f"Raindrop sync error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Raindrop sync error: {e!s}")
 
 
 @app.post("/api/scheduler/start")
@@ -1433,7 +1434,7 @@ async def save_edited_post(
     date: str = Form(...),
     type: str = Form(...),
     content: str = Form(...),
-    tags: List[str] = Form(default=[]),
+    tags: list[str] = Form(default=[]),
     image_size: str = Form(default=""),
     category: str = Form(default=""),
     loaded_mtime: str = Form(default=""),
@@ -1493,7 +1494,7 @@ async def create_new_post(
     date: str = Form(...),
     type: str = Form(...),
     content: str = Form(...),
-    tags: List[str] = Form(default=[]),
+    tags: list[str] = Form(default=[]),
     image_size: str = Form(default=""),
     category: str = Form(default=""),
 ):
@@ -1530,7 +1531,7 @@ async def create_new_post(
         raise
     except Exception as e:
         logging.getLogger(__name__).error(f"Error creating new post: {e}")
-        raise HTTPException(status_code=500, detail=f"Error creating post: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error creating post: {e!s}")
 
 
 # Page editing endpoints (reusing shared code)
@@ -1659,7 +1660,7 @@ async def create_new_page(
         raise
     except Exception as e:
         logging.getLogger(__name__).error(f"Error creating new page: {e}")
-        raise HTTPException(status_code=500, detail=f"Error creating page: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error creating page: {e!s}")
 
 
 @app.post("/admin/delete-post/{filename}")
@@ -1755,7 +1756,7 @@ async def preview_markdown(request: Request, content: str = Form(...)):
 
     except Exception as e:
         logging.getLogger(__name__).error(f"Error rendering markdown preview: {e}")
-        raise HTTPException(status_code=500, detail=f"Preview error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Preview error: {e!s}")
 
 
 # Raindrop sync and site generation endpoints with simplified logic

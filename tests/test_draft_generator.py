@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_draft_generator.py — Tests for draft blog post generation from raindrops
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from unittest.mock import patch
@@ -16,7 +16,6 @@ from salasblog2.draft_generator import (
     generate_draft_from_drop,
     save_draft,
 )
-
 
 SAMPLE_DROP = {
     "filename": "21-04-06-1-some-link.md",

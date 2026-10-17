@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # legacy_commands — CLI orchestration for building the legacy URL map and rewriting links
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 """
 Glue between `legacy_links` (scan/rewrite), `wayback` (archive lookups), and
 `legacy_match` (matching) for the `bg legacy-map` and `bg legacy-rewrite`
@@ -77,8 +80,12 @@ def rewrite_content(content_root: Path, map_file: Path, is_dry_run: bool) -> int
                 continue
             total += count
             diff = difflib.unified_diff(
-                text.splitlines(), new_text.splitlines(), str(md_file), str(md_file),
-                n=0, lineterm="",
+                text.splitlines(),
+                new_text.splitlines(),
+                str(md_file),
+                str(md_file),
+                n=0,
+                lineterm="",
             )
             print("\n".join(diff))
             if not is_dry_run:
@@ -92,6 +99,8 @@ def summarize_map(url_map: dict[str, dict]) -> str:
     counts = defaultdict(int)
     for entry in url_map.values():
         counts[(entry["scheme"], entry["confidence"])] += 1
-    lines = [f"{scheme:12} {confidence:10} {count}"
-             for (scheme, confidence), count in sorted(counts.items())]
+    lines = [
+        f"{scheme:12} {confidence:10} {count}"
+        for (scheme, confidence), count in sorted(counts.items())
+    ]
     return "\n".join(lines)

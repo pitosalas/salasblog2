@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # generator — Static site generator: renders markdown+frontmatter content into HTML
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
 # Updated: 2026-10-17
 # Open Source Under MIT license
@@ -9,29 +9,30 @@
 Static site generator for Salas Blog.
 """
 
+import json
 import os
 import shutil
 import subprocess
-from pathlib import Path
 from datetime import datetime
-import json
+from pathlib import Path
+
 import yaml as _yaml
 from jinja2 import Environment, FileSystemLoader
 
 from salasblog2.utils import (
-    format_date,
     create_excerpt_with_info,
     extract_first_paragraph,
-    process_markdown_to_html,
-    parse_frontmatter_file,
+    extract_unique_collections,
+    format_date,
     generate_url_from_filename,
-    sort_posts_by_date,
+    get_markdown_processor,
     group_posts_by_month,
     load_markdown_files_from_directory,
-    get_markdown_processor,
-    slugify_tag,
+    parse_frontmatter_file,
+    process_markdown_to_html,
     slugify_collection,
-    extract_unique_collections,
+    slugify_tag,
+    sort_posts_by_date,
 )
 
 
@@ -158,15 +159,11 @@ class SiteGenerator:
                     "cover": parsed["metadata"].get("cover", ""),
                     "domain": parsed["metadata"].get("domain", ""),
                     "media": parsed["metadata"].get("media", []),
-                    "raindrop_type": parsed["metadata"].get(
-                        "raindrop_type", ""
-                    ),
+                    "raindrop_type": parsed["metadata"].get("raindrop_type", ""),
                     "important": parsed["metadata"].get("important", False),
                     "broken": parsed["metadata"].get("broken", False),
                     "tags": parsed["metadata"].get("tags", []),
-                    "raindrop_url": parsed["metadata"].get(
-                        "url", ""
-                    ),  # Original URL
+                    "raindrop_url": parsed["metadata"].get("url", ""),  # Original URL
                     "collection": parsed["metadata"].get("collection", ""),
                     "note": note,
                 }

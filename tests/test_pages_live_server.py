@@ -7,10 +7,11 @@ Run with: uv run pytest tests/test_pages_live_server.py -v
 Note: These tests require internet connectivity and depend on the live server being up.
 """
 
+import time
+from urllib.parse import urljoin
+
 import pytest
 import requests
-from urllib.parse import urljoin
-import time
 from bs4 import BeautifulSoup
 
 
@@ -186,9 +187,7 @@ class TestPagesLiveServer:
         for css_link in css_links[:2]:  # Test first 2 CSS files
             css_href = css_link.get("href")
             if css_href:
-                if css_href.startswith("/"):
-                    css_url = urljoin(base_url, css_href)
-                elif not css_href.startswith("http"):
+                if css_href.startswith("/") or not css_href.startswith("http"):
                     css_url = urljoin(base_url, css_href)
                 else:
                     css_url = css_href

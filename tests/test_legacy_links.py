@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_legacy_links — Tests for legacy self-link classification, scanning, and rewrite
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 
 import pytest
 
@@ -37,8 +40,10 @@ from salasblog2.legacy_links import (
         ),
         (
             "/imported-20111103233638/2012/1/4/teaching-group-projects.html",
-            ("/imported-20111103233638/2012/1/4/teaching-group-projects.html",
-             "squarespace"),
+            (
+                "/imported-20111103233638/2012/1/4/teaching-group-projects.html",
+                "squarespace",
+            ),
         ),
         ("/2004/01/24.html#a155", ("/2004/01/24.html", "radio-day")),
     ],

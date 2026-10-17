@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # blogger_api — Blogger/MetaWeblog XML-RPC adapter for MarsEdit
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-08
-# Updated: 2026-09-08
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 Blogger API (XML-RPC) implementation for Salasblog2.
@@ -11,15 +11,17 @@ Implements the Blogger and MetaWeblog protocols for compatibility with
 MarsEdit and similar blog-editor clients.
 """
 
-from datetime import datetime
-from pathlib import Path
-import frontmatter
-import re
+import base64
 import logging
 import os
+import re
 import shutil
-import base64
+from datetime import datetime
+from pathlib import Path
 from xmlrpc.client import Fault
+
+import frontmatter
+
 from salasblog2.generator import SiteGenerator
 from salasblog2.utils import (
     create_filename_from_title,
@@ -242,7 +244,7 @@ class BloggerAPI:
             f"blogger_newPost called: appkey={appkey}, blogid={blogid}, username={username}, publish={publish}"
         )
         logger.info(f"blogger_newPost content type: {type(content)}")
-        logger.info(f"blogger_newPost full content: {repr(content)}")
+        logger.info(f"blogger_newPost full content: {content!r}")
 
         # Authenticate user
         self._authenticate_or_raise(username, password)
@@ -289,7 +291,7 @@ class BloggerAPI:
             f"blogger_editPost called: postid={postid}, username={username}, publish={publish}"
         )
         logger.info(f"blogger_editPost content type: {type(content)}")
-        logger.info(f"blogger_editPost full content: {repr(content)}")
+        logger.info(f"blogger_editPost full content: {content!r}")
 
         # Authenticate user
         self._authenticate_or_raise(username, password)
@@ -478,7 +480,7 @@ class BloggerAPI:
             logger.error(f"Failed to read post {postid}: {e}")
             self._create_fault(
                 500,
-                f"Unable to read post '{postid}'. The file may be corrupted or have invalid formatting. Error: {str(e)}",
+                f"Unable to read post '{postid}'. The file may be corrupted or have invalid formatting. Error: {e!s}",
             )
 
     def metaweblog_newMediaObject(

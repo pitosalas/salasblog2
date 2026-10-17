@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 # test_home_see_all.py — Tests that "see all" links appear on home page
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-08
-# Updated: 2026-09-08
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader
+
 from salasblog2.utils import (
     format_date,
-    group_posts_by_month,
     get_markdown_processor,
+    group_posts_by_month,
     slugify_tag,
 )
 
@@ -26,10 +28,8 @@ def make_env():
     env.filters["dd_mm_yyyy"] = lambda d: format_date(d, "%d-%m-%Y")
     env.filters["group_by_month"] = group_posts_by_month
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
-    env.filters["truncate"] = (
-        lambda s, n, killwords=False, end="...": s[:n] + end
-        if s and len(s) > n
-        else (s or "")
+    env.filters["truncate"] = lambda s, n, killwords=False, end="...": (
+        s[:n] + end if s and len(s) > n else (s or "")
     )
     env.filters["slugify"] = slugify_tag
     return env

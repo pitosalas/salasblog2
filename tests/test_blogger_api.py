@@ -4,11 +4,12 @@ Regression tests for BloggerAPI.
 Run with: uv run pytest tests/test_blogger_api.py -v
 """
 
-import pytest
 import base64
 from pathlib import Path
 from unittest.mock import patch
 from xmlrpc.client import Fault
+
+import pytest
 
 from salasblog2.blogger_api import BloggerAPI
 
@@ -233,9 +234,9 @@ class TestNewMediaObject:
                 "salasblog2.blogger_api.shutil.copy2",
                 side_effect=[None, OSError("no volume")],
             ),
+            pytest.raises(Fault),
         ):
-            with pytest.raises(Fault):
-                api.metaweblog_newMediaObject("1", "user", "pass", struct)
+            api.metaweblog_newMediaObject("1", "user", "pass", struct)
 
     def test_media_backup_skipped_without_volume(self, tmp_path):
         """Regression: when /data doesn't exist (local dev), media backup is a

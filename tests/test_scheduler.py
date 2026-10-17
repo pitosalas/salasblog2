@@ -4,12 +4,13 @@ Tests for the refactored scheduler module.
 Run with: uv run pytest tests/test_scheduler.py -v
 """
 
-import pytest
-import tempfile
 import os
+import subprocess
+import tempfile
 from pathlib import Path
 from unittest.mock import Mock, patch
-import subprocess
+
+import pytest
 
 from salasblog2.scheduler import Scheduler, SchedulerConfig, get_scheduler
 

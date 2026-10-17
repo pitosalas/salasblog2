@@ -2,9 +2,9 @@
 # test_console_styling.py — Repo-wide checks that F47's Console theme
 # fully replaced Bootstrap, across all 13 in-scope templates.
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-11
-# Updated: 2026-09-11
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
@@ -61,7 +61,12 @@ def test_base_html_has_theme_toggle_button():
 
 
 def test_admin_pages_link_theme_css():
-    for name in ["admin_login.html", "post_editor.html", "admin.html", "stats_page.html"]:
+    for name in [
+        "admin_login.html",
+        "post_editor.html",
+        "admin.html",
+        "stats_page.html",
+    ]:
         content = (TEMPLATES_DIR / name).read_text()
         assert "theme.css" in content, f"{name} doesn't link theme.css"
 

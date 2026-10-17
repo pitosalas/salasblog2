@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
+
 from salasblog2.generator import SiteGenerator
 from salasblog2.legacy_commands import (
     URL_MAP_FILE,

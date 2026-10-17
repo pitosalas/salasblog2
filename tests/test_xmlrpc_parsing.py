@@ -4,9 +4,10 @@ Tests for XML-RPC request parsing in server.py, focused on base64 support.
 Run with: uv run pytest tests/test_xmlrpc_parsing.py -v
 """
 
-import pytest
 import base64
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
+
+import pytest
 
 
 def _make_xmlrpc_body(method_name: str, params_xml: str) -> bytes:
@@ -16,7 +17,7 @@ def _make_xmlrpc_body(method_name: str, params_xml: str) -> bytes:
   <params>
     {params_xml}
   </params>
-</methodCall>""".encode("utf-8")
+</methodCall>""".encode()
 
 
 def _base64_param(data: bytes) -> str:
@@ -42,6 +43,7 @@ class TestBase64Parsing:
     def client(self, tmp_path):
         """FastAPI test client with isolated content directory."""
         from fastapi.testclient import TestClient
+
         from salasblog2.server import app, config
 
         config["output_dir"] = tmp_path / "output"
@@ -133,6 +135,7 @@ class TestArrayAndDateTimeParsing:
     @pytest.fixture
     def client(self, tmp_path):
         from fastapi.testclient import TestClient
+
         from salasblog2.server import app, config
 
         config["output_dir"] = tmp_path / "output"
@@ -229,6 +232,7 @@ class TestNonBlockingRegeneration:
     @pytest.fixture
     def client(self, tmp_path):
         from fastapi.testclient import TestClient
+
         from salasblog2.server import app, config
 
         config["output_dir"] = tmp_path / "output"
@@ -300,6 +304,7 @@ class TestFaultHandling:
     @pytest.fixture
     def client(self, tmp_path):
         from fastapi.testclient import TestClient
+
         from salasblog2.server import app, config
 
         config["output_dir"] = tmp_path / "output"

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # test_visitor_type.py — Tests for visitor type classifier
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 import pytest
+
 from salasblog2.visitor_type import classify_visitor
 
 

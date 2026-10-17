@@ -6,8 +6,8 @@ Development/troubleshooting utility for Fly.io deployment issues.
 Usage: python scripts/debug_content_dirs.py
 """
 
-from pathlib import Path
 import subprocess
+from pathlib import Path
 
 
 def check_directory(path_str, description):

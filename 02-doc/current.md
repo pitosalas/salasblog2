@@ -172,10 +172,10 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 ## Test status
 
 ```
-596 passed, 11 skipped, 3 warnings
+677 passed, 11 skipped, 3 warnings
 ```
 
-No failures as of 2026-09-11 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
+No failures as of 2026-10-17 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
 
 ---
 

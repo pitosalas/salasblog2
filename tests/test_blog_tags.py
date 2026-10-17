@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 # test_blog_tags.py — Tests for F23 tag selection for blog posts
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-08
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader
+
 from salasblog2.utils import (
     format_date,
     get_markdown_processor,

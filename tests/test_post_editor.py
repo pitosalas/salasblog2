@@ -16,7 +16,9 @@ from fastapi.testclient import TestClient
 @pytest.fixture
 def client(tmp_path):
     from pathlib import Path as _Path
+
     from jinja2 import Environment, FileSystemLoader
+
     from salasblog2.server import app, config
 
     config["root_dir"] = tmp_path
@@ -337,8 +339,9 @@ class TestTopTagsCache:
     generate_posts_index_cache() alongside admin-posts-index.json."""
 
     def test_generate_posts_index_cache_writes_top_tags(self, client, tmp_path):
-        from salasblog2.server import generate_posts_index_cache
         import json
+
+        from salasblog2.server import generate_posts_index_cache
 
         write_post(tmp_path, "2026-01-01-a.md", tags=["ai", "robotics"])
         write_post(tmp_path, "2026-01-02-b.md", tags=["ai"])
@@ -353,8 +356,9 @@ class TestTopTagsCache:
         """Regression: old WordPress-imported posts carry raw numeric category
         IDs as tags — real content confirmed this dominates a naive frequency
         count. Numeric tags must not appear in the suggestion list."""
-        from salasblog2.server import generate_posts_index_cache
         import json
+
+        from salasblog2.server import generate_posts_index_cache
 
         write_post(tmp_path, "2026-01-01-a.md", tags=["1221", "1772"])
         write_post(tmp_path, "2026-01-02-b.md", tags=["1221", "ai"])

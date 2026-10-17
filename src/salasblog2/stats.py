@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 # stats.py — Visit counter persisting per-path, per-visitor-type counts to JSON
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 import json
 import logging
 import threading
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -20,7 +20,7 @@ def _period_start(period: str | None) -> datetime | None:
     """Return the UTC datetime at the start of the requested period, or None for all-time."""
     if period is None:
         return None
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     if period == "today":
         return now.replace(hour=0, minute=0, second=0, microsecond=0)
     if period == "this_week":
@@ -118,9 +118,7 @@ class VisitCounter:
                 self._counts[path] = {}
             if visitor_type not in self._counts[path]:
                 self._counts[path][visitor_type] = []
-            self._counts[path][visitor_type].append(
-                datetime.now(timezone.utc).isoformat()
-            )
+            self._counts[path][visitor_type].append(datetime.now(UTC).isoformat())
             self._dirty = True
 
     def get(self, path: str) -> int:
@@ -161,7 +159,7 @@ def _parse_ts(ts: str) -> datetime:
     try:
         return datetime.fromisoformat(ts)
     except Exception:
-        return datetime.min.replace(tzinfo=timezone.utc)
+        return datetime.min.replace(tzinfo=UTC)
 
 
 _counter: VisitCounter | None = None

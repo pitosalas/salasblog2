@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_image_size.py — Tests for image_size frontmatter feature
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-08
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 
@@ -84,8 +84,9 @@ class TestImageSizeServerLoadSave:
             server.get_content_directory = original_func
 
     def test_save_content_item_writes_image_size(self, tmp_path):
-        from salasblog2 import server
         import frontmatter
+
+        from salasblog2 import server
 
         content_file = tmp_path / "test-post.md"
         content_file.write_text(
@@ -110,8 +111,9 @@ class TestImageSizeServerLoadSave:
             server.get_content_directory = original_func
 
     def test_save_content_item_omits_image_size_when_empty(self, tmp_path):
-        from salasblog2 import server
         import frontmatter
+
+        from salasblog2 import server
 
         content_file = tmp_path / "test-post.md"
         content_file.write_text(

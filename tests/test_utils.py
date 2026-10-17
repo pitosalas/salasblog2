@@ -8,18 +8,18 @@ from datetime import datetime
 from pathlib import Path
 
 from salasblog2.utils import (
-    format_date,
     create_excerpt,
-    parse_date_for_sorting,
-    process_markdown_to_html,
-    parse_frontmatter_file,
+    create_filename_from_title,
+    format_date,
+    format_raindrop_as_markdown,
+    generate_raindrop_filename,
     generate_url_from_filename,
-    sort_posts_by_date,
     group_posts_by_month,
     load_markdown_files_from_directory,
-    create_filename_from_title,
-    generate_raindrop_filename,
-    format_raindrop_as_markdown,
+    parse_date_for_sorting,
+    parse_frontmatter_file,
+    process_markdown_to_html,
+    sort_posts_by_date,
     top_tags_by_frequency,
 )
 

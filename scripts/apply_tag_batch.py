@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # apply_tag_batch.py — Apply a reviewed tag-proposal batch to content files
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 CLI adapter for the tag-cleanup pipeline (F46). Reads a proposals JSON file
@@ -37,9 +37,7 @@ def resolve_blog_dir() -> Path:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Apply a reviewed tag-proposal batch"
-    )
+    parser = argparse.ArgumentParser(description="Apply a reviewed tag-proposal batch")
     parser.add_argument("proposals", type=Path, help="Path to a proposals JSON file")
     args = parser.parse_args()
 

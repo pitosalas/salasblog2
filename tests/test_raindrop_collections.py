@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 # test_raindrop_collections.py — Tests for raindrop collection filtering
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
-import pytest
 from pathlib import Path
+
+import pytest
 from jinja2 import Environment, FileSystemLoader
 
-from salasblog2.utils import extract_unique_collections, slugify_collection, format_date
 from salasblog2.generator import SiteGenerator
+from salasblog2.utils import extract_unique_collections, format_date, slugify_collection
 
 
 def _make_template_env(templates_dir):
@@ -19,10 +20,8 @@ def _make_template_env(templates_dir):
     env.filters["slugify"] = lambda x: x.lower().replace(" ", "-")
     env.filters["strftime"] = lambda d, fmt: format_date(d, fmt)
     env.filters["dd_mm_yyyy"] = lambda d: format_date(d, "%d-%m-%Y")
-    env.filters["truncate"] = (
-        lambda s, n, killwords=False, end="...": (s[:n] + end)
-        if s and len(s) > n
-        else (s or "")
+    env.filters["truncate"] = lambda s, n, killwords=False, end="...": (
+        (s[:n] + end) if s and len(s) > n else (s or "")
     )
     return env
 

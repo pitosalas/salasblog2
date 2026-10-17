@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_wayback — Tests for parsing archived Movable Type pages
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 
 from pathlib import Path
 
@@ -33,7 +36,9 @@ def test_parse_php_era_page_uses_dc_date():
 def test_parse_posted_on_footer_with_padded_day():
     page = (FIXTURES / "mt_000571.html").read_text(encoding="latin-1")
     archived = parse_archived_post(page, "snap")
-    assert archived == ArchivedPost("A9's Photographic Yellow Pages", "2005-02-01", "snap")
+    assert archived == ArchivedPost(
+        "A9's Photographic Yellow Pages", "2005-02-01", "snap"
+    )
 
 
 def test_parse_posted_on_footer_when_no_other_date():
@@ -46,7 +51,7 @@ def test_parse_posted_on_footer_when_no_other_date():
 
 def test_parse_raises_without_title():
     with pytest.raises(ValueError, match="No <title>"):
-        parse_archived_post("<h2 class=\"date\">May 1, 2004</h2>", "s")
+        parse_archived_post('<h2 class="date">May 1, 2004</h2>', "s")
 
 
 def test_parse_raises_without_date():
@@ -135,8 +140,11 @@ def test_resolve_paths_looks_up_only_uncached(tmp_path, monkeypatch):
         lambda url, session: ArchivedPost("T", "2004-11-28", url),
     )
     resolved = resolve_paths(
-        ["/weblogs/archives/000001.html", "/weblogs/archives/000522.html",
-         "/weblogs/archives/000777.html"],
+        [
+            "/weblogs/archives/000001.html",
+            "/weblogs/archives/000522.html",
+            "/weblogs/archives/000777.html",
+        ],
         cache_file,
     )
     assert indexed_dirs == ["/weblogs/archives/"]

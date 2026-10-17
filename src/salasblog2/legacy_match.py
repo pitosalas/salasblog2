@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # legacy_match — Match legacy self-link URLs to current posts and build the reviewed URL map
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 """
 Builds `02-doc/legacy-url-map.json`: for each legacy normalized path (see
 `legacy_links`), the current post URL it should point to, a confidence
@@ -86,7 +89,9 @@ def load_current_posts(blog_dir: Path) -> list[CurrentPost]:
         if not raw_date:
             raise ValueError(f"{md_file.name} has no date in frontmatter or filename")
         post_date = date.fromisoformat(str(raw_date)[:10])
-        posts.append(CurrentPost(md_file.stem, str(metadata.get("title", "")), post_date))
+        posts.append(
+            CurrentPost(md_file.stem, str(metadata.get("title", "")), post_date)
+        )
     return posts
 
 
@@ -115,8 +120,11 @@ def match_archived(archived: ArchivedPost | None, posts: list[CurrentPost]) -> d
         return {"new": None, "confidence": "unmatched", "evidence": "not archived"}
     candidates = posts_near(posts, date.fromisoformat(archived.date))
     entry = best_match(candidates, lambda post: post.title, archived.title)
-    entry["evidence"] = {"title": archived.title, "date": archived.date,
-                         "snapshot": archived.snapshot_url}
+    entry["evidence"] = {
+        "title": archived.title,
+        "date": archived.date,
+        "snapshot": archived.snapshot_url,
+    }
     return entry
 
 
@@ -133,13 +141,19 @@ def match_dated_slug(path: str, posts: list[CurrentPost]) -> dict:
 
 def match_radio_day(path: str, posts: list[CurrentPost]) -> dict:
     year, month, day = URL_DATE.search(path).groups()
-    day_posts = [p for p in posts if p.post_date == date(int(year), int(month), int(day))]
+    day_posts = [
+        p for p in posts if p.post_date == date(int(year), int(month), int(day))
+    ]
     evidence = {"date": f"{year}-{month}-{day}", "posts_that_day": len(day_posts)}
     if len(day_posts) == 1:
         return {"new": day_posts[0].url, "confidence": "fuzzy", "evidence": evidence}
     candidates = [{"url": post.url} for post in day_posts]
-    return {"new": None, "confidence": "unmatched", "evidence": evidence,
-            "candidates": candidates}
+    return {
+        "new": None,
+        "confidence": "unmatched",
+        "evidence": evidence,
+        "candidates": candidates,
+    }
 
 
 def build_url_map(

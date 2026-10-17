@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 # test_bootstrap_styling.py — Tests confirming Bootstrap classes in rendered HTML
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader
+
 from salasblog2.utils import (
     format_date,
-    group_posts_by_month,
     get_markdown_processor,
+    group_posts_by_month,
     slugify_tag,
 )
 
@@ -26,10 +28,8 @@ def make_env():
     env.filters["dd_mm_yyyy"] = lambda d: format_date(d, "%d-%m-%Y")
     env.filters["group_by_month"] = group_posts_by_month
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
-    env.filters["truncate"] = (
-        lambda s, n, killwords=False, end="...": s[:n] + end
-        if s and len(s) > n
-        else (s or "")
+    env.filters["truncate"] = lambda s, n, killwords=False, end="...": (
+        s[:n] + end if s and len(s) > n else (s or "")
     )
     env.filters["slugify"] = slugify_tag
     return env
@@ -234,7 +234,7 @@ def test_blog_post_meta_description_strips_html_and_escapes():
     post = fake_post()
     post["excerpt"] = (
         'First paragraph. <strong class="excerpt-heading">A '
-        "Subheading</strong> More text with a \" quote and a & ampersand."
+        'Subheading</strong> More text with a " quote and a & ampersand.'
     )
     html = render(
         "blog_post.html",
@@ -257,7 +257,7 @@ def test_raindrop_post_meta_description_strips_html_and_escapes():
         "raindrop_post.html",
         {"post": post, "prev_post": None, "next_post": None},
     )
-    meta_line = next(line for line in html.splitlines() if "name=\"description\"" in line)
+    meta_line = next(line for line in html.splitlines() if 'name="description"' in line)
     assert '<em class="x">' not in meta_line
     assert 'content="Some emphasis and a' in meta_line
     assert "col-lg-" not in html

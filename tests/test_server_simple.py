@@ -4,18 +4,19 @@ Tests individual functions without complex mocking.
 Run with: uv run pytest tests/test_server_simple.py -v
 """
 
-import pytest
 import os
 from pathlib import Path
 from unittest.mock import Mock, patch
 
+import pytest
+
 # Import the specific functions we want to test
 from salasblog2.server import (
-    is_admin_authenticated,
-    create_xmlrpc_response,
-    create_xmlrpc_fault_with_code,
-    setup_logging,
     config,
+    create_xmlrpc_fault_with_code,
+    create_xmlrpc_response,
+    is_admin_authenticated,
+    setup_logging,
 )
 
 
@@ -58,8 +59,9 @@ class TestAdminStatusEndpoint:
 
     def test_admin_status_no_password_set(self, mock_config):
         """Test admin status when no password is configured."""
-        from salasblog2.server import get_admin_status
         import asyncio
+
+        from salasblog2.server import get_admin_status
 
         # Mock config with no admin password
         mock_config.__getitem__.return_value = None
@@ -79,8 +81,9 @@ class TestAdminStatusEndpoint:
 
     def test_admin_status_with_password_authenticated(self, mock_config):
         """Test admin status when password is set and user is authenticated."""
-        from salasblog2.server import get_admin_status
         import asyncio
+
+        from salasblog2.server import get_admin_status
 
         # Mock config with admin password
         mock_config.__getitem__.return_value = "test_password"
@@ -101,8 +104,9 @@ class TestAdminStatusEndpoint:
 
     def test_admin_status_with_password_not_authenticated(self, mock_config):
         """Test admin status when password is set and user is not authenticated."""
-        from salasblog2.server import get_admin_status
         import asyncio
+
+        from salasblog2.server import get_admin_status
 
         # Mock config with admin password
         mock_config.__getitem__.return_value = "test_password"
@@ -333,9 +337,9 @@ class TestServerImports:
     def test_import_helper_functions(self):
         """Test that helper functions can be imported."""
         from salasblog2.server import (
-            is_admin_authenticated,
-            create_xmlrpc_response,
             create_xmlrpc_fault_with_code,
+            create_xmlrpc_response,
+            is_admin_authenticated,
             setup_logging,
         )
 
@@ -358,6 +362,7 @@ class TestServerStructure:
         """Test that the refactoring removed large HTML chunks from functions."""
         # This tests that we successfully extracted HTML to templates
         import inspect
+
         from salasblog2 import server
 
         # Get all functions from the server module
@@ -387,6 +392,7 @@ class TestServerStructure:
     def test_imports_at_top(self):
         """Test that all imports are at the top of the file (except conditional imports)."""
         import ast
+
         import salasblog2.server as server_module
 
         # Read the source file
@@ -448,6 +454,7 @@ class TestBlogStatsTracking:
         """GET request to a blog HTML file must increment the visit counter."""
         import asyncio
         from unittest.mock import MagicMock, patch
+
         from salasblog2.server import serve_blog_files
 
         output_dir, _ = blog_html_file
@@ -473,6 +480,7 @@ class TestBlogStatsTracking:
         """HEAD request to a blog HTML file must NOT increment the visit counter."""
         import asyncio
         from unittest.mock import MagicMock, patch
+
         from salasblog2.server import serve_blog_files
 
         output_dir, _ = blog_html_file
@@ -496,6 +504,7 @@ class TestBlogStatsTracking:
         """GET request for a non-HTML blog asset must NOT increment the visit counter."""
         import asyncio
         from unittest.mock import MagicMock, patch
+
         from salasblog2.server import serve_blog_files
 
         output_dir, _ = blog_html_file

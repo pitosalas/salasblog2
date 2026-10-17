@@ -1,29 +1,30 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 6
+# Version: 7
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 Pure utility functions for content processing and site generation.
 These functions are completely independent and reusable.
 """
 
+import logging
 import os
 import re
-import logging
-import markdown
-import frontmatter
-import yaml
-from pathlib import Path
 from datetime import datetime
-from typing import List, Dict, Any, Optional
+from pathlib import Path
+from typing import Any
+
+import frontmatter
+import markdown
+import yaml
 
 _logger = logging.getLogger(__name__)
 
 
-def parse_tag_hints_section(text: str, header: str) -> List[str]:
+def parse_tag_hints_section(text: str, header: str) -> list[str]:
     """Return the bare tag names listed under a `# <header>` section of
     tag-hints.md, in file order. Each line is `[usage-count] tag-name
     [(clarification)]` - an optional leading usage count and/or trailing
@@ -58,7 +59,7 @@ def format_tag_hints_line(count: int, tag: str, comment: str = "") -> str:
     return f"{line} ({comment})" if comment else line
 
 
-def load_curated_tags(tag_hints_path: Path) -> List[str]:
+def load_curated_tags(tag_hints_path: Path) -> list[str]:
     """Load the single curated tag vocabulary from tag-hints.md's "Curated
     Tags" section - the one list offered by the post editor picklist,
     MarsEdit's category picker, and enforced by the F46 tag-cleanup pipeline.
@@ -67,7 +68,7 @@ def load_curated_tags(tag_hints_path: Path) -> List[str]:
     return parse_tag_hints_section(text, CURATED_TAGS_HEADER)
 
 
-def parse_curated_tag_aliases(text: str) -> Dict[str, str]:
+def parse_curated_tag_aliases(text: str) -> dict[str, str]:
     """Parse the "Curated Tags" section into a mapping of every known
     spelling - a primary tag itself, plus any secondary aliases it
     declares - to that primary tag's name.
@@ -81,7 +82,7 @@ def parse_curated_tag_aliases(text: str) -> Dict[str, str]:
     Every primary always maps to itself. A tag with no parenthetical has
     no secondaries.
     """
-    aliases: Dict[str, str] = {}
+    aliases: dict[str, str] = {}
     in_section = False
     for line in text.splitlines():
         stripped = line.strip()
@@ -105,7 +106,7 @@ def parse_curated_tag_aliases(text: str) -> Dict[str, str]:
     return aliases
 
 
-def load_curated_tag_aliases(tag_hints_path: Path) -> Dict[str, str]:
+def load_curated_tag_aliases(tag_hints_path: Path) -> dict[str, str]:
     """Load tag-hints.md's full primary+secondary alias map - see
     `parse_curated_tag_aliases`.
     """
@@ -113,7 +114,7 @@ def load_curated_tag_aliases(tag_hints_path: Path) -> Dict[str, str]:
     return parse_curated_tag_aliases(text)
 
 
-def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
+def _parse_iso_date(date_str: str | None) -> datetime | None:
     """Parse ISO date string into datetime object."""
     if not date_str:
         return None
@@ -132,7 +133,7 @@ def _parse_iso_date(date_str: Optional[str]) -> Optional[datetime]:
         return None
 
 
-def format_date(date_str: Optional[str], format_str: str = "%B %d, %Y") -> str:
+def format_date(date_str: str | None, format_str: str = "%B %d, %Y") -> str:
     """Format date string using strftime format."""
     date_obj = _parse_iso_date(date_str)
     if date_obj:
@@ -277,7 +278,7 @@ def extract_first_paragraph(content: str) -> str:
     return clean_content
 
 
-def parse_date_for_sorting(date_str: Optional[str]) -> datetime:
+def parse_date_for_sorting(date_str: str | None) -> datetime:
     """Parse date string for sorting, returns datetime.min if parsing fails."""
     date_obj = _parse_iso_date(date_str)
     if date_obj is None:
@@ -326,7 +327,7 @@ def process_markdown_to_html(content: str) -> str:
     return processor.convert(fixed_content)
 
 
-def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
+def parse_frontmatter_file(file_path: Path) -> dict[str, Any]:
     """Parse markdown file with frontmatter, returns dict with metadata and content."""
     try:
         with open(file_path, "r", encoding="utf-8") as f:
@@ -354,7 +355,7 @@ def parse_frontmatter_file(file_path: Path) -> Dict[str, Any]:
 
 def _parse_malformed_frontmatter(
     file_path: Path, original_error: Exception
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """Attempt to parse frontmatter with common YAML fixes."""
     try:
         with open(file_path, "r", encoding="utf-8") as f:
@@ -397,7 +398,7 @@ def _parse_malformed_frontmatter(
         return _create_fallback_metadata(file_path, error_content)
 
 
-def _create_fallback_metadata(file_path: Path, content: str) -> Dict[str, Any]:
+def _create_fallback_metadata(file_path: Path, content: str) -> dict[str, Any]:
     """Create fallback metadata when frontmatter parsing fails."""
     filename_stem = file_path.stem
     title = (
@@ -423,8 +424,8 @@ def generate_url_from_filename(filename: str, content_type: str) -> str:
 
 
 def sort_posts_by_date(
-    posts: List[Dict[str, Any]], reverse: bool = True
-) -> List[Dict[str, Any]]:
+    posts: list[dict[str, Any]], reverse: bool = True
+) -> list[dict[str, Any]]:
     """Sort posts by date, newest first by default."""
     return sorted(
         posts,
@@ -433,7 +434,7 @@ def sort_posts_by_date(
     )
 
 
-def group_posts_by_month(posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def group_posts_by_month(posts: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Group posts by month and year."""
     if not posts:
         return []
@@ -462,7 +463,7 @@ def group_posts_by_month(posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     return groups
 
 
-def load_markdown_files_from_directory(directory_path: Path) -> List[Path]:
+def load_markdown_files_from_directory(directory_path: Path) -> list[Path]:
     """Get all markdown files from directory."""
     if not directory_path.exists():
         return []
@@ -494,7 +495,7 @@ def create_filename_from_title(title: str) -> str:
     return f"{date_str}-{safe_title}.md"
 
 
-def generate_raindrop_filename(raindrop: Dict[str, Any], counter: int) -> str:
+def generate_raindrop_filename(raindrop: dict[str, Any], counter: int) -> str:
     """Create markdown filename from raindrop data and counter."""
     created = _parse_iso_date(raindrop.get("created", "")) or datetime.now()
     date_str = created.strftime("%y-%m-%d")
@@ -514,7 +515,7 @@ def slugify_tag(tag: str) -> str:
     return slug.strip("-")
 
 
-def extract_unique_collections(raindrops: List[Dict[str, Any]]) -> List[str]:
+def extract_unique_collections(raindrops: list[dict[str, Any]]) -> list[str]:
     """Extract unique collection names from raindrops, sorted alphabetically."""
     collections = set()
     for raindrop in raindrops:
@@ -530,10 +531,10 @@ def slugify_collection(name: str) -> str:
 
 
 def top_tags_by_frequency(
-    tag_lists: List[List[str]],
+    tag_lists: list[list[str]],
     limit: int = 100,
-    always_include: Optional[List[str]] = None,
-) -> List[str]:
+    always_include: list[str] | None = None,
+) -> list[str]:
     """Return the `limit` most-used tags across all posts, most-used first,
     followed by any `always_include` tags not already in that top set.
 
@@ -556,7 +557,7 @@ def top_tags_by_frequency(
     (Python's Counter otherwise preserves first-seen order for ties, which
     would depend on file iteration order — not what a stable cache wants).
     """
-    counts: Dict[str, int] = {}
+    counts: dict[str, int] = {}
     for tags in tag_lists:
         for tag in tags:
             if tag and not tag.isdigit():
@@ -569,7 +570,7 @@ def top_tags_by_frequency(
     return top
 
 
-def format_raindrop_as_markdown(raindrop: Dict[str, Any]) -> str:
+def format_raindrop_as_markdown(raindrop: dict[str, Any]) -> str:
     """Convert raindrop data to markdown with YAML frontmatter."""
     created = _parse_iso_date(raindrop.get("created", "")) or datetime.now()
 

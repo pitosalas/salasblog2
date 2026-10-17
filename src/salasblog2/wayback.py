@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # wayback — Recover title and date of archived legacy salas.com posts from the Wayback Machine
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 """
 Movable Type URLs (`/weblogs/archives/000522.html`) carry only an opaque
 numeric ID, and nothing in current post frontmatter records it. The Wayback
@@ -53,7 +56,9 @@ def parse_archived_post(page_html: str, snapshot_url: str) -> ArchivedPost:
         raise ValueError(f"No <title> in archived page {snapshot_url}")
     title = html.unescape(" ".join(title_match.group(1).split()))
     title = title.removeprefix(BLOG_TITLE_PREFIX)
-    return ArchivedPost(title, parse_archived_date(page_html, snapshot_url), snapshot_url)
+    return ArchivedPost(
+        title, parse_archived_date(page_html, snapshot_url), snapshot_url
+    )
 
 
 def parse_archived_date(page_html: str, snapshot_url: str) -> str:
@@ -105,7 +110,9 @@ def snapshot_index(directory: str, session: requests.Session) -> dict[str, str]:
     index = {}
     for timestamp, original in rows[1:]:
         path = urlsplit(original).path
-        index.setdefault(path, SNAPSHOT_URL.format(timestamp=timestamp, original=original))
+        index.setdefault(
+            path, SNAPSHOT_URL.format(timestamp=timestamp, original=original)
+        )
     return index
 
 
@@ -128,7 +135,9 @@ def resolve_paths(paths: list[str], cache_file: Path) -> dict[str, ArchivedPost 
         index.update(snapshot_index(directory, session))
     for path in uncached:
         snapshot_url = index.get(path)
-        archived = None if snapshot_url is None else fetch_archived_post(snapshot_url, session)
+        archived = (
+            None if snapshot_url is None else fetch_archived_post(snapshot_url, session)
+        )
         cache[path] = None if archived is None else asdict(archived)
         cache_file.parent.mkdir(parents=True, exist_ok=True)
         cache_file.write_text(json.dumps(cache, indent=2, sort_keys=True))

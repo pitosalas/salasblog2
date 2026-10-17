@@ -8,11 +8,12 @@ FastAPI's StaticFiles returned inconsistent MIME types between HEAD and GET.
 Run with: uv run pytest tests/test_mime_types.py -v
 """
 
-import pytest
-import requests
 import tempfile
 from pathlib import Path
 from unittest.mock import patch
+
+import pytest
+import requests
 from fastapi.testclient import TestClient
 
 from salasblog2.server import app, config

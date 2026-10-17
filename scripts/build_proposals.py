@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # build_proposals.py — Sanitize tag decisions, build the review file
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 CLI adapter for the tag-cleanup pipeline (F46). Combines a candidates file
@@ -31,8 +31,8 @@ from pathlib import Path
 from salasblog2.tag_cleanup import (
     PostSummary,
     build_proposal,
-    proposals_to_json,
     promote_recurring_candidates,
+    proposals_to_json,
 )
 from salasblog2.utils import load_curated_tags
 

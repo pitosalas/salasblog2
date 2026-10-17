@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 # test_admin_controls.py — Tests for admin controls visibility behavior
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
-
 
 TEMPLATES_DIR = Path(__file__).parent.parent / "templates"
 

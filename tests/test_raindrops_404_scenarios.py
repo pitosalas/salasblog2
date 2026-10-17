@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # test_raindrops_404_scenarios.py — 404 scenarios for the /raindrops/ endpoint
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
 from unittest.mock import patch
+
 from fastapi.testclient import TestClient
 
 from salasblog2.server import app, config

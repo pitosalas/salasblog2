@@ -1,6 +1,7 @@
+import os
+
 import anthropic
 import httpx
-import os
 
 print(f"API key present: {bool(os.environ.get('ANTHROPIC_API_KEY'))}")
 print(f"API key prefix: {os.environ.get('ANTHROPIC_API_KEY', '')[:8]}...")

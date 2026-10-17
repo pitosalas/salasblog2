@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_legacy_match — Tests for matching legacy URLs to current posts
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 
 from datetime import date
 
@@ -68,8 +71,12 @@ def test_mt_no_close_title_is_unmatched():
 
 def test_mt_not_archived_is_unmatched():
     entry = map_one("mt", "/weblogs/archives/000001.html", None)
-    assert entry == {"scheme": "mt", "new": None, "confidence": "unmatched",
-                     "evidence": "not archived"}
+    assert entry == {
+        "scheme": "mt",
+        "new": None,
+        "confidence": "unmatched",
+        "evidence": "not archived",
+    }
 
 
 def test_wp_slug_exact_match():
@@ -85,7 +92,9 @@ def test_wp_truncated_slug_is_fuzzy():
 
 
 def test_squarespace_unpadded_date():
-    entry = map_one("squarespace", "/blog/2008/2/18/about-amzn-and-cloud-computing.html")
+    entry = map_one(
+        "squarespace", "/blog/2008/2/18/about-amzn-and-cloud-computing.html"
+    )
     assert entry["confidence"] == "exact"
 
 
@@ -102,7 +111,9 @@ def test_radio_day_multiple_posts_is_unmatched():
 
 
 def test_load_current_posts_skips_drafts(tmp_path):
-    (tmp_path / "2004-11-29-a.md").write_text("---\ntitle: A\ndate: '2004-11-29'\n---\nx")
+    (tmp_path / "2004-11-29-a.md").write_text(
+        "---\ntitle: A\ndate: '2004-11-29'\n---\nx"
+    )
     (tmp_path / "draft-24-01-01-b.md").write_text("---\ntitle: B\n---\nx")
     (tmp_path / "2005-01-01-c.md").write_text("---\ntitle: C\n---\nx")
     posts = load_current_posts(tmp_path)

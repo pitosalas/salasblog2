@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
 # raindrop — Raindrop.io API client: syncs bookmarks into markdown+frontmatter content
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 Raindrop.io integration for downloading bookmarks and converting to markdown.
 """
 
-import os
 import json
-import requests
+import os
 import shutil
 from datetime import datetime
 from pathlib import Path
+
+import requests
 from dotenv import load_dotenv
+
 from salasblog2.utils import (
-    generate_raindrop_filename,
-    format_raindrop_as_markdown,
     _parse_iso_date,
+    format_raindrop_as_markdown,
+    generate_raindrop_filename,
 )
 
 # Constants

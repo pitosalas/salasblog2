@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 # test_content_type_badges.py — Tests for F24 content type visual indicators
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
+
 from jinja2 import Environment, FileSystemLoader
+
 from salasblog2.utils import format_date, get_markdown_processor, slugify_tag
 
 PROJECT_ROOT = Path(__file__).parent.parent
@@ -20,8 +22,8 @@ def make_env():
     env.filters["strftime"] = lambda d, fmt: format_date(d, fmt)
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
     env.filters["slugify"] = slugify_tag
-    env.filters["truncate"] = (
-        lambda text, length, **kwargs: text[:length] if text else ""
+    env.filters["truncate"] = lambda text, length, **kwargs: (
+        text[:length] if text else ""
     )
     env.filters["dd_mm_yyyy"] = lambda d: str(d)
     env.filters["group_by_month"] = lambda posts: [

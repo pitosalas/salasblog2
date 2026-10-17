@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 # conftest.py — Shared pytest fixtures for salasblog2 test suite
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
+
 import pytest
 from jinja2 import Environment, FileSystemLoader
+
 from salasblog2.generator import SiteGenerator
 from salasblog2.utils import format_date, group_posts_by_month, slugify_tag
 

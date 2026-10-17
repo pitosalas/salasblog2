@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 # test_propose.py — Tests for propose module: blog scoring and popular drop selection
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from datetime import date
 from unittest.mock import MagicMock
 
-
 from salasblog2.propose import (
-    DropFilter,
     RELEVANCE_KEYWORDS,
+    DropFilter,
     _extract_note_from_body,
     get_proposed_drops,
     get_proposed_posts,

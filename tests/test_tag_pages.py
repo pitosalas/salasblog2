@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 # test_tag_pages.py — Tests for F18 clickable tag pages
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 from pathlib import Path
+
 import pytest
 from jinja2 import Environment, FileSystemLoader
+
 from salasblog2.utils import (
     format_date,
-    group_posts_by_month,
     get_markdown_processor,
+    group_posts_by_month,
     slugify_tag,
 )
 
@@ -28,10 +30,8 @@ def make_env():
     env.filters["group_by_month"] = group_posts_by_month
     env.filters["markdown"] = lambda text: md.convert(text) if text else ""
     env.filters["slugify"] = slugify_tag
-    env.filters["truncate"] = (
-        lambda s, n, killwords=False, end="...": s[:n] + end
-        if s and len(s) > n
-        else (s or "")
+    env.filters["truncate"] = lambda s, n, killwords=False, end="...": (
+        s[:n] + end if s and len(s) > n else (s or "")
     )
     return env
 
@@ -148,6 +148,7 @@ def test_numeric_tags_are_not_displayed():
 def test_tag_link_resolves_to_generated_page(tmp_path):
     # Each tag badge link in rendered HTML must point to an actually-generated tag page
     import re
+
     from salasblog2.generator import SiteGenerator
 
     gen = SiteGenerator()

@@ -4,8 +4,9 @@ Tests for POST /api/upload-image endpoint.
 Run with: uv run pytest tests/test_upload_image.py -v
 """
 
-import pytest
 import re
+
+import pytest
 from fastapi.testclient import TestClient
 
 

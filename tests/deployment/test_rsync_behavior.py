@@ -3,12 +3,13 @@ Tests for rsync behavior with --update flag used in volume synchronization.
 Tests deployment scenarios for Fly.io persistent volume management.
 """
 
-import pytest
-import tempfile
+import os
 import subprocess
+import tempfile
 import time
 from pathlib import Path
-import os
+
+import pytest
 
 
 @pytest.fixture

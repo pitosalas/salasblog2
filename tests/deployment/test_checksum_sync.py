@@ -3,12 +3,13 @@ Tests for rsync behavior with --checksum flag used in volume synchronization.
 Validates content-based sync approach that solves MarsEdit timestamp issues.
 """
 
-import pytest
-import tempfile
-import subprocess
-import time
 import os
+import subprocess
+import tempfile
+import time
 from pathlib import Path
+
+import pytest
 
 
 @pytest.fixture

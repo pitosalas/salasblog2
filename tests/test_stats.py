@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # test_stats.py — Tests for F25/F26/F32 visit statistics
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 
 import json
-from datetime import datetime, timezone, timedelta
+from datetime import UTC, datetime, timedelta
+
 from salasblog2.stats import VisitCounter
 
 
@@ -46,7 +47,7 @@ class TestVisitCounter:
 
     def test_load_restores_counts(self, tmp_path):
         stats_file = tmp_path / "stats.json"
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         stats_file.write_text(
             json.dumps(
                 {
@@ -85,7 +86,7 @@ class TestVisitCounter:
 
     def test_get_all_sorted_by_total_descending(self, tmp_path):
         counter = _make_counter(tmp_path)
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         counter._counts = {
             "/": {"human": [now] * 3},
             "/raindrops/": {"human": [now] * 8, "ai_bot": [now] * 2},
@@ -97,7 +98,7 @@ class TestVisitCounter:
 
     def test_get_all_returns_all_entries(self, tmp_path):
         counter = _make_counter(tmp_path)
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         counter._counts = {"/": {"human": [now]}, "/raindrops/": {"ai_bot": [now, now]}}
         assert len(counter.get_all()) == 2
 
@@ -127,8 +128,8 @@ class TestVisitCounter:
 class TestVisitCounterPeriodFiltering:
     def test_get_all_no_period_returns_all(self, tmp_path):
         counter = _make_counter(tmp_path)
-        old_ts = (datetime.now(timezone.utc) - timedelta(days=400)).isoformat()
-        now_ts = datetime.now(timezone.utc).isoformat()
+        old_ts = (datetime.now(UTC) - timedelta(days=400)).isoformat()
+        now_ts = datetime.now(UTC).isoformat()
         counter._counts = {"/": {"human": [old_ts, now_ts]}}
         result = counter.get_all(period=None)
         assert len(result) == 1
@@ -136,8 +137,8 @@ class TestVisitCounterPeriodFiltering:
 
     def test_get_all_today_excludes_old_visits(self, tmp_path):
         counter = _make_counter(tmp_path)
-        yesterday = (datetime.now(timezone.utc) - timedelta(days=2)).isoformat()
-        today = datetime.now(timezone.utc).isoformat()
+        yesterday = (datetime.now(UTC) - timedelta(days=2)).isoformat()
+        today = datetime.now(UTC).isoformat()
         counter._counts = {"/": {"human": [yesterday, yesterday, today]}}
         result = counter.get_all(period="today")
         assert len(result) == 1
@@ -145,14 +146,14 @@ class TestVisitCounterPeriodFiltering:
 
     def test_get_all_today_empty_when_no_recent_visits(self, tmp_path):
         counter = _make_counter(tmp_path)
-        old = (datetime.now(timezone.utc) - timedelta(days=5)).isoformat()
+        old = (datetime.now(UTC) - timedelta(days=5)).isoformat()
         counter._counts = {"/": {"human": [old, old]}}
         result = counter.get_all(period="today")
         assert result == []
 
     def test_get_all_this_week_includes_recent(self, tmp_path):
         counter = _make_counter(tmp_path)
-        today = datetime.now(timezone.utc)
+        today = datetime.now(UTC)
         same_day = today.replace(
             hour=0, minute=1
         ).isoformat()  # definitely today = this week
@@ -166,7 +167,7 @@ class TestVisitCounterPeriodFiltering:
 
     def test_get_all_this_month_includes_this_month(self, tmp_path):
         counter = _make_counter(tmp_path)
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         this_month = now.replace(day=1, hour=12).isoformat()
         last_year = (now - timedelta(days=400)).isoformat()
         counter._counts = {"/": {"human": [this_month, last_year]}}
@@ -176,7 +177,7 @@ class TestVisitCounterPeriodFiltering:
 
     def test_get_all_this_year_includes_this_year(self, tmp_path):
         counter = _make_counter(tmp_path)
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         this_year = now.replace(month=1, day=2, hour=12).isoformat()
         last_year = (now - timedelta(days=400)).isoformat()
         counter._counts = {"/": {"human": [this_year, last_year]}}
@@ -186,7 +187,7 @@ class TestVisitCounterPeriodFiltering:
 
     def test_get_all_sorted_within_period(self, tmp_path):
         counter = _make_counter(tmp_path)
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         counter._counts = {
             "/": {"human": [now]},
             "/blog/a.html": {"human": [now, now, now]},

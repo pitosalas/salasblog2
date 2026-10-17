@@ -7,11 +7,12 @@ and edge cases in the custom file serving implementation.
 Run with: uv run pytest tests/test_file_serving_security.py -v
 """
 
-import pytest
-import tempfile
 import os
+import tempfile
 from pathlib import Path
 from unittest.mock import patch
+
+import pytest
 from fastapi.testclient import TestClient
 
 from salasblog2.server import app, config
@@ -356,7 +357,6 @@ class TestErrorHandling:
         """Test handling of permission denied errors."""
         # This test would require setting up files with restricted permissions
         # Implementation depends on the specific requirements and platform
-        pass
 
     def test_corrupted_file_handling(self, client):
         """Test handling of corrupted or problematic files."""

@@ -14,16 +14,18 @@ Tests cover:
 Run with: uv run pytest tests/test_pages_feature.py -v
 """
 
-import pytest
-import tempfile
 import os
 import shutil
+import tempfile
 from pathlib import Path
+
+import pytest
 from fastapi.testclient import TestClient
+
+from salasblog2.generator import SiteGenerator
 
 # Import the FastAPI app and related functions
 from salasblog2.server import app, config
-from salasblog2.generator import SiteGenerator
 from salasblog2.utils import load_markdown_files_from_directory
 
 
@@ -149,8 +151,8 @@ type: "page"
             loader=FileSystemLoader(generator.templates_dir)
         )
         generator.jinja_env.filters["strftime"] = generator.format_date
-        generator.jinja_env.filters["dd_mm_yyyy"] = (
-            lambda date_str: generator.format_date(date_str, "%d-%m-%Y")
+        generator.jinja_env.filters["dd_mm_yyyy"] = lambda date_str: (
+            generator.format_date(date_str, "%d-%m-%Y")
         )
         generator.jinja_env.filters["markdown"] = generator.markdown_to_html
 
@@ -665,8 +667,8 @@ This is a test page with **markdown** formatting."""
             loader=FileSystemLoader(generator.templates_dir)
         )
         generator.jinja_env.filters["strftime"] = generator.format_date
-        generator.jinja_env.filters["dd_mm_yyyy"] = (
-            lambda date_str: generator.format_date(date_str, "%d-%m-%Y")
+        generator.jinja_env.filters["dd_mm_yyyy"] = lambda date_str: (
+            generator.format_date(date_str, "%d-%m-%Y")
         )
         generator.jinja_env.filters["markdown"] = generator.markdown_to_html
 
@@ -933,8 +935,8 @@ type: "page"
             loader=FileSystemLoader(generator.templates_dir)
         )
         generator.jinja_env.filters["strftime"] = generator.format_date
-        generator.jinja_env.filters["dd_mm_yyyy"] = (
-            lambda date_str: generator.format_date(date_str, "%d-%m-%Y")
+        generator.jinja_env.filters["dd_mm_yyyy"] = lambda date_str: (
+            generator.format_date(date_str, "%d-%m-%Y")
         )
         generator.jinja_env.filters["markdown"] = generator.markdown_to_html
 
@@ -1377,8 +1379,9 @@ tags: ["link", "bookmark"]
 
     def test_production_edit_page_endpoint_with_admin_login(self):
         """Test that the production edit page endpoint works correctly when admin is logged in."""
-        import requests
         import os
+
+        import requests
 
         # Get admin password from environment or skip test
         admin_password = os.getenv("ADMIN_PASSWORD")
@@ -1497,8 +1500,9 @@ tags: ["link", "bookmark"]
 
     def test_production_page_can_be_edited(self):
         """Test that a page can be edited on the running production server."""
-        import requests
         import os
+
+        import requests
 
         # Get admin password from environment or skip test
         admin_password = os.getenv("ADMIN_PASSWORD")

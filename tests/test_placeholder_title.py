@@ -2,9 +2,11 @@
 Test the placeholder title functionality for frontmatter parsing failures.
 """
 
-import pytest
 import tempfile
 from pathlib import Path
+
+import pytest
+
 from salasblog2.generator import SiteGenerator
 
 

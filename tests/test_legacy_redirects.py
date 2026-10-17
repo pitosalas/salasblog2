@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_legacy_redirects — Tests for 301 redirects from pre-salasblog2 URLs
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 
 from unittest.mock import patch
 
@@ -34,7 +37,10 @@ def client(tmp_path):
         ("/weblogs/archives/000522.html", "/blog/2004-11-29-why-improv.html"),
         ("/2008/02/18/about-amzn/", "/blog/2008-02-18-about-amzn.html"),
         ("/2008/02/18/about-amzn", "/blog/2008-02-18-about-amzn.html"),
-        ("/blog/2012/5/6/field-of-dreams.html", "/blog/2012-05-06-field-of-dreams.html"),
+        (
+            "/blog/2012/5/6/field-of-dreams.html",
+            "/blog/2012-05-06-field-of-dreams.html",
+        ),
     ],
 )
 def test_mapped_legacy_url_redirects_permanently(client, legacy_url, new_url):

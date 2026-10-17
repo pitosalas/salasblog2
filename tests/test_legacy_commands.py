@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # test_legacy_commands — Tests for building the legacy URL map and rewriting content
 # Author: Pito Salas and Claude Code
+# Version: 1
+# Created: 2026-10-17
+# Updated: 2026-10-17
 
 import json
 
@@ -39,7 +42,10 @@ def content_root(tmp_path, monkeypatch):
 def test_build_map_records_matches_and_sources(content_root, tmp_path):
     map_file = tmp_path / "map.json"
     url_map = build_map(content_root, map_file, tmp_path / "cache.json")
-    assert url_map["/weblogs/archives/000522.html"]["new"] == "/blog/2004-11-29-why-improv.html"
+    assert (
+        url_map["/weblogs/archives/000522.html"]["new"]
+        == "/blog/2004-11-29-why-improv.html"
+    )
     assert url_map["/weblogs/archives/000522.html"]["linked_from"] == [
         "2004-12-02-part-deux.md"
     ]
@@ -49,8 +55,12 @@ def test_build_map_records_matches_and_sources(content_root, tmp_path):
 
 def test_build_map_keeps_reviewed_entries(content_root, tmp_path):
     map_file = tmp_path / "map.json"
-    reviewed = {"scheme": "mt", "new": "/blog/manual.html", "confidence": "fuzzy",
-                "reviewed": True}
+    reviewed = {
+        "scheme": "mt",
+        "new": "/blog/manual.html",
+        "confidence": "fuzzy",
+        "reviewed": True,
+    }
     map_file.write_text(json.dumps({"/weblogs/archives/000999.html": reviewed}))
     url_map = build_map(content_root, map_file, tmp_path / "cache.json")
     assert url_map["/weblogs/archives/000999.html"] == reviewed

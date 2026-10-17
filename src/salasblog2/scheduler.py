@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # scheduler — Background thread scheduling periodic GitHub and Raindrop.io sync
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 Scheduled tasks for automatic Git synchronization and Raindrop sync
@@ -17,12 +17,11 @@ import time
 from datetime import datetime
 from pathlib import Path
 from threading import Thread
-from typing import Optional, List
 
 import schedule
 
-from salasblog2.raindrop import RaindropDownloader
 from salasblog2.generator import SiteGenerator
+from salasblog2.raindrop import RaindropDownloader
 
 logger = logging.getLogger(__name__)
 
@@ -54,7 +53,7 @@ class Scheduler:
         self.raindrop_sync_count = 0
 
     def _run_command_with_retry(
-        self, cmd: List[str], retries: int = 2, timeout: int = 60
+        self, cmd: list[str], retries: int = 2, timeout: int = 60
     ) -> subprocess.CompletedProcess:
         """Run command with simple retry logic"""
         for attempt in range(retries + 1):
@@ -430,7 +429,7 @@ class Scheduler:
 
 
 # Global scheduler instance
-_scheduler_instance: Optional[Scheduler] = None
+_scheduler_instance: Scheduler | None = None
 
 
 def get_scheduler() -> Scheduler:
