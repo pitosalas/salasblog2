@@ -7,6 +7,8 @@ Run with: uv run pytest tests/test_post_editor.py -v
 """
 
 import time
+from pathlib import Path
+
 import pytest
 from fastapi.testclient import TestClient
 
@@ -146,6 +148,68 @@ class TestCategoryPersistence:
         assert response.status_code == 200
         saved = (tmp_path / "content" / "blog" / "2026-01-01-my-post.md").read_text()
         assert "Updated Category" in saved
+
+
+class TestPageRenderedBeforeResponse:
+    """The editor redirects to the new page 1.5s after saving; if the page is
+    only built by the slow background regeneration, that redirect 404s."""
+
+    @pytest.fixture
+    def no_background_regen(self, tmp_path, monkeypatch):
+        from salasblog2 import server
+
+        monkeypatch.chdir(tmp_path)
+        (tmp_path / "templates").symlink_to(Path(__file__).parent.parent / "templates")
+        monkeypatch.setattr(server, "_regenerate_in_background", lambda *args: None)
+
+    def test_new_post_html_exists_when_response_returns(
+        self, client, tmp_path, no_background_regen
+    ):
+        response = client.post(
+            "/admin/new-post",
+            data={
+                "title": "Fresh Post",
+                "date": "2026-01-01",
+                "type": "blog",
+                "content": "Body",
+            },
+        )
+        assert response.status_code == 200
+        html_name = response.json()["filename"].replace(".md", ".html")
+        assert (tmp_path / "output" / "blog" / html_name).exists()
+
+    def test_edited_post_html_reflects_edit_when_response_returns(
+        self, client, tmp_path, no_background_regen
+    ):
+        write_post(tmp_path, "2026-01-01-my-post.md")
+        response = client.post(
+            "/admin/edit-post/2026-01-01-my-post.md",
+            data={
+                "title": "Test Post",
+                "date": "2026-01-01",
+                "type": "blog",
+                "content": "Freshly edited body.",
+            },
+        )
+        assert response.status_code == 200
+        html = (tmp_path / "output" / "blog" / "2026-01-01-my-post.html").read_text()
+        assert "Freshly edited body." in html
+
+    def test_new_page_html_exists_when_response_returns(
+        self, client, tmp_path, no_background_regen
+    ):
+        response = client.post(
+            "/admin/new-page",
+            data={
+                "title": "Fresh Page",
+                "date": "2026-01-01",
+                "type": "page",
+                "content": "Body",
+            },
+        )
+        assert response.status_code == 200
+        html_name = response.json()["filename"].replace(".md", ".html")
+        assert (tmp_path / "output" / html_name).exists()
 
 
 class TestFreeFormTags:

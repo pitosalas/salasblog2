@@ -146,3 +146,19 @@ Also caught and corrected a factual error in this session's own reporting: batch
 
 ### F47 — Console theme visual refresh, started
 User handed off an external design spec (monospace UI, hairline rules, one amber accent, dark/light toggle) for the public-facing site. Investigated which templates are actually live (`generator.py`/`server.py`) versus dead (`admin_new.html` — never rendered by any route; `overview.html` — rendered but orphaned, not in nav, its would-be homepage variant `generate_overview_as_home` never called) before scoping. Feature/task files written (`03-features/notdone/F47-*.md`, `04-tasks/notdone/TF47-*.md`, 13 tasks) and stopped for approval per the process gate, as required — scope is `base.html` + the 9 live public templates; `admin.html`/`admin_login.html`/`post_editor.html`/`stats_page.html` (standalone, Bootstrap, no design reference given) explicitly excluded. User asked for the work to happen on a dedicated branch rather than this repo's usual direct-to-`main` workflow, given the size of the change — added as an explicit first/last task (create branch / merge back only after visual QA passes). No code written yet.
+
+## Session 2026-10-17: Web editor redirect 404 fix (chore)
+
+**Symptom**: creating a post in the web editor showed a JSON `{"detail":"Not found"}` page, and the post seemed missing. It did appear a little later.
+
+**Cause**: the editor redirects to the new post 1.5 s after saving. The post's HTML was written only by the background incremental regeneration, which re-parses the whole corpus. That took 1.5 s on a fast Mac and longer on fly, so the redirect always got there first.
+
+**Fix**:
+
+- New `SiteGenerator.regenerate_post_page()` renders one item's page from its own source file.
+- `load_posts()`' per-file parsing was extracted into `load_post()` to allow this.
+- New-post, edit-post, new-page and edit-page now await that render (`render_post_page_now`, via `run_in_executor`) before responding.
+- Listings, home and search still regenerate in the background.
+- Regression tests: `tests/test_post_editor.py::TestPageRenderedBeforeResponse`. They stub the background job and fail without the fix.
+
+**Also**: applied `ruff format` and ruff's safe auto-fixes repo-wide as a separate commit, at the user's choice. The non-auto-fixable violations were logged as an open chore.

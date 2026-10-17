@@ -1,5 +1,5 @@
 # Current State — salasblog2
-_Last updated: 2026-09-11_
+_Last updated: 2026-10-17_
 
 ---
 
@@ -160,6 +160,8 @@ Old posts linked to each other with Movable Type, WordPress, Squarespace and Rad
 F33 TF33.0 (the category/type field name fix in `script.js`) is already done. F33 TF33.1–TF33.3 (raindrop indexing, content truncation, tests) remain.
 
 F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they don't redo or contradict work those two features already did) — see `04-tasks/notdone/TF41-codebase-cleanup-architecture.md`. Recommended order if picking F41 up: after F44, since TF41.3/TF41.10 assume F44 has landed.
+
+**Ruff debt (open chore)**: after this session's safe auto-fixes, the repo still has ruff violations that need hand fixes (e.g. `subprocess.run` without `check`, implicit `Optional`, blocking calls in async routes). Tracked in `04-tasks/chores.md`.
 
 **Open issues** (`05-issues/open/`, found during literate-doc regeneration, not yet fixed): I01 (incremental regeneration drops content types from search/home), I02 (VisitCounter read/write race, no cross-process lock), I03 (scheduler.py's dead startup-job code).
 

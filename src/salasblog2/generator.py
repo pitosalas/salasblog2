@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # generator — Static site generator: renders markdown+frontmatter content into HTML
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 Static site generator for Salas Blog.
@@ -93,98 +93,111 @@ class SiteGenerator:
 
         for md_file in load_markdown_files_from_directory(content_dir):
             try:
-                parsed = parse_frontmatter_file(md_file)
-                filename = md_file.stem
-
-                # Extract frontmatter data
-                # Use a clear placeholder when title is missing from frontmatter
-                title = parsed["metadata"].get("title")
-                if not title:
-                    title = f"placeholder title: {filename.replace('_', ' ').replace('-', ' ').title()}"
-
-                if parsed["metadata"].get("draft"):
-                    continue
-
-                post_data = {
-                    "title": title,
-                    "date": parsed["metadata"].get("date", ""),
-                    "type": parsed["metadata"].get("type", content_type),
-                    "content": parsed["html_content"],
-                    "raw_content": parsed["content"],
-                    "filename": filename,
-                    "url": generate_url_from_filename(filename, content_type),
-                    "tags": parsed["metadata"].get("tags", []),
-                    "image_size": parsed["metadata"].get("image_size", ""),
-                }
-
-                # Add raindrop-specific fields if they exist
-                if content_type == "raindrops":
-                    # Extract notes from content if not in frontmatter
-                    note = parsed["metadata"].get("note", "")
-                    if not note and "**Notes:**" in parsed["content"]:
-                        # Extract notes from content
-                        lines = parsed["content"].split("\n")
-                        note_start = False
-                        note_lines = []
-                        for line in lines:
-                            if line.strip() == "**Notes:**":
-                                note_start = True
-                                continue
-                            elif (
-                                note_start
-                                and line.strip().startswith("**")
-                                and line.strip().endswith("**")
-                            ):
-                                # Hit another section, stop collecting notes
-                                break
-                            elif note_start:
-                                note_lines.append(line)
-                        note = "\n".join(note_lines).strip()
-
-                    post_data.update(
-                        {
-                            "cover": parsed["metadata"].get("cover", ""),
-                            "domain": parsed["metadata"].get("domain", ""),
-                            "media": parsed["metadata"].get("media", []),
-                            "raindrop_type": parsed["metadata"].get(
-                                "raindrop_type", ""
-                            ),
-                            "important": parsed["metadata"].get("important", False),
-                            "broken": parsed["metadata"].get("broken", False),
-                            "tags": parsed["metadata"].get("tags", []),
-                            "raindrop_url": parsed["metadata"].get(
-                                "url", ""
-                            ),  # Original URL
-                            "collection": parsed["metadata"].get("collection", ""),
-                            "note": note,
-                        }
-                    )
-
-                # Create excerpt - prefer frontmatter excerpt, fallback to content
-                frontmatter_excerpt = parsed["metadata"].get("excerpt", "")
-                if frontmatter_excerpt:
-                    post_data["excerpt"] = frontmatter_excerpt
-                    post_data["is_truncated"] = False
-                elif content_type == "pages":
-                    post_data["excerpt"] = extract_first_paragraph(parsed["content"])
-                    post_data["is_truncated"] = False
-                elif content_type == "raindrops":
-                    # Raindrop body contains raw metadata labels (**URL:**, **Type:**, etc.)
-                    # Note and URL are already rendered separately by the template
-                    post_data["excerpt"] = ""
-                    post_data["is_truncated"] = False
-                else:
-                    excerpt, is_truncated = create_excerpt_with_info(parsed["content"])
-                    post_data["excerpt"] = excerpt
-                    post_data["is_truncated"] = is_truncated
-
-                posts.append(post_data)
-
+                post_data = self.load_post(md_file, content_type)
             except Exception as e:
                 print(f"Error processing {md_file}: {e}")
+                continue
+            if post_data is not None:
+                posts.append(post_data)
 
         # Sort by date (newest first)
         return sort_posts_by_date(posts)
+
+    def load_post(self, md_file, content_type):
+        """Parse one markdown file into a post dict; None for drafts."""
+        parsed = parse_frontmatter_file(md_file)
+        filename = md_file.stem
+
+        # Extract frontmatter data
+        # Use a clear placeholder when title is missing from frontmatter
+        title = parsed["metadata"].get("title")
+        if not title:
+            title = f"placeholder title: {filename.replace('_', ' ').replace('-', ' ').title()}"
+
+        if parsed["metadata"].get("draft"):
+            return None
+
+        post_data = {
+            "title": title,
+            "date": parsed["metadata"].get("date", ""),
+            "type": parsed["metadata"].get("type", content_type),
+            "content": parsed["html_content"],
+            "raw_content": parsed["content"],
+            "filename": filename,
+            "url": generate_url_from_filename(filename, content_type),
+            "tags": parsed["metadata"].get("tags", []),
+            "image_size": parsed["metadata"].get("image_size", ""),
+        }
+
+        # Add raindrop-specific fields if they exist
+        if content_type == "raindrops":
+            # Extract notes from content if not in frontmatter
+            note = parsed["metadata"].get("note", "")
+            if not note and "**Notes:**" in parsed["content"]:
+                # Extract notes from content
+                lines = parsed["content"].split("\n")
+                note_start = False
+                note_lines = []
+                for line in lines:
+                    if line.strip() == "**Notes:**":
+                        note_start = True
+                        continue
+                    elif (
+                        note_start
+                        and line.strip().startswith("**")
+                        and line.strip().endswith("**")
+                    ):
+                        # Hit another section, stop collecting notes
+                        break
+                    elif note_start:
+                        note_lines.append(line)
+                note = "\n".join(note_lines).strip()
+
+            post_data.update(
+                {
+                    "cover": parsed["metadata"].get("cover", ""),
+                    "domain": parsed["metadata"].get("domain", ""),
+                    "media": parsed["metadata"].get("media", []),
+                    "raindrop_type": parsed["metadata"].get(
+                        "raindrop_type", ""
+                    ),
+                    "important": parsed["metadata"].get("important", False),
+                    "broken": parsed["metadata"].get("broken", False),
+                    "tags": parsed["metadata"].get("tags", []),
+                    "raindrop_url": parsed["metadata"].get(
+                        "url", ""
+                    ),  # Original URL
+                    "collection": parsed["metadata"].get("collection", ""),
+                    "note": note,
+                }
+            )
+
+        # Create excerpt - prefer frontmatter excerpt, fallback to content
+        frontmatter_excerpt = parsed["metadata"].get("excerpt", "")
+        if frontmatter_excerpt:
+            post_data["excerpt"] = frontmatter_excerpt
+            post_data["is_truncated"] = False
+        elif content_type == "pages":
+            post_data["excerpt"] = extract_first_paragraph(parsed["content"])
+            post_data["is_truncated"] = False
+        elif content_type == "raindrops":
+            # Raindrop body contains raw metadata labels (**URL:**, **Type:**, etc.)
+            # Note and URL are already rendered separately by the template
+            post_data["excerpt"] = ""
+            post_data["is_truncated"] = False
+        else:
+            excerpt, is_truncated = create_excerpt_with_info(parsed["content"])
+            post_data["excerpt"] = excerpt
+            post_data["is_truncated"] = is_truncated
+
+        return post_data
+
+    def regenerate_post_page(self, post_filename, content_type):
+        """Render only this post's own HTML page, reading just its source file."""
+        md_file = self.content_dir / content_type / post_filename
+        post = self.load_post(md_file, content_type)
+        if post is not None:
+            self.generate_individual_posts([post], content_type)
 
     def generate_search_index(self, all_posts):
         """Generate search index JSON"""

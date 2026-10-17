@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-08
-# Updated: 2026-09-09
+# Updated: 2026-10-17
 # Open Source Under MIT license
 """
 FastAPI server for Salasblog2 - serves static files + API endpoints.
@@ -679,6 +679,16 @@ def _regenerate_in_background(filename: str, content_type: str):
         logger.error(
             f"Background regeneration FAILED for {content_type} {filename}: {e}"
         )
+
+
+async def render_post_page_now(filename: str, content_type: str):
+    """Write the item's own HTML page before the save request returns, so the
+    editor's redirect to it never 404s. Listings, home and search stay in the
+    background regeneration, which is too slow to wait on."""
+    loop = asyncio.get_event_loop()
+    await loop.run_in_executor(
+        None, SiteGenerator().regenerate_post_page, filename, content_type
+    )
 
 
 def delete_content_item(content_dir: Path, filename: str):
@@ -1444,6 +1454,7 @@ async def save_edited_post(
         "blog",
         ContentFields(title, date, type, content, tags, image_size, category),
     )
+    await render_post_page_now(filename, "blog")
     background_tasks.add_task(_regenerate_in_background, filename, "blog")
     background_tasks.add_task(generate_posts_index_cache)
     return JSONResponse(
@@ -1504,6 +1515,7 @@ async def create_new_post(
             "blog",
             ContentFields(title, date, type, content, tags, image_size, category),
         )
+        await render_post_page_now(filename, "blog")
         background_tasks.add_task(_regenerate_in_background, filename, "blog")
         background_tasks.add_task(generate_posts_index_cache)
         return JSONResponse(
@@ -1577,6 +1589,7 @@ async def save_edited_page(
     new_mtime = save_content_item(
         filename, "pages", ContentFields(title, date, type, content, [])
     )
+    await render_post_page_now(filename, "pages")
     background_tasks.add_task(_regenerate_in_background, filename, "pages")
     background_tasks.add_task(generate_posts_index_cache)
     return JSONResponse(
@@ -1631,6 +1644,7 @@ async def create_new_page(
         save_content_item(
             filename, "pages", ContentFields(title, date, type, content, [])
         )
+        await render_post_page_now(filename, "pages")
         background_tasks.add_task(_regenerate_in_background, filename, "pages")
         background_tasks.add_task(generate_posts_index_cache)
         return JSONResponse(

@@ -1,6 +1,6 @@
 ---
-version: "1.0"
-generated: "2026-09-08"
+version: "1.1"
+generated: "2026-10-17"
 ---
 
 # `server.py` — The FastAPI Application
@@ -263,9 +263,26 @@ return JSONResponse(content={"status": "success", ...})
 
 This is used for every incremental site regeneration triggered by a
 post/page save or delete, and for the posts-index cache refresh. It's what
-lets the admin editor's "Save" button return in milliseconds instead of
-waiting for `SiteGenerator` to rewrite the post page, the blog listing,
-the home page, and the search index.
+lets the admin editor's "Save" button return quickly instead of waiting for
+`SiteGenerator` to rewrite the blog listing, the home page, and the search
+index.
+
+**The one exception is the saved item's own page.** The editor redirects to
+it 1.5 s after a create, so it must exist by then — and the background
+regeneration re-parses the whole corpus, which is slower than that on fly.
+So the four save/create routes first await a single-page render, off the
+event loop:
+
+```python
+async def render_post_page_now(filename: str, content_type: str):
+    loop = asyncio.get_event_loop()
+    await loop.run_in_executor(
+        None, SiteGenerator().regenerate_post_page, filename, content_type
+    )
+```
+
+It reads only that one source file (see `generator.py`'s
+`regenerate_post_page()`), so the added latency is one template render.
 
 **`loop.run_in_executor(None, fn)`**, for work whose *result* the caller
 does need back in the same response — this runs `fn` in a thread pool and

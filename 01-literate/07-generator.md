@@ -1,6 +1,6 @@
 ---
-version: "1.0"
-generated: "2026-09-08"
+version: "1.1"
+generated: "2026-10-17"
 ---
 
 # `generator.py` — The Static Site Builder
@@ -76,6 +76,12 @@ frontmatter into that shape, for whichever of the three content types is
 asked for — `'blog'`, `'raindrops'`, or `'pages'` — each backed by its own
 subdirectory under `content_dir`.
 
+The per-file work lives in its own method, **`load_post(md_file, content_type)`**,
+which returns one post dict, or `None` for a draft. `load_posts()` is just the
+directory loop around it: it logs and skips a file that raises, and sorts the
+result newest-first. Splitting it out means a single post can be parsed without
+touching the rest of the corpus — see *Rendering one page synchronously* below.
+
 For every file, it delegates the actual frontmatter/Markdown parsing to
 `utils.parse_frontmatter_file()` (which in turn wraps the `python-frontmatter`
 and `markdown` libraries, with fallbacks for malformed YAML), and then
@@ -83,7 +89,7 @@ assembles a `post_data` dict with the fields templates expect: `title`,
 `date`, `type`, rendered `content`, `raw_content`, `filename`, `url`,
 `tags`, and `image_size`. Two details are worth calling out:
 
-- **Draft posts are filtered out entirely** (`if parsed['metadata'].get('draft'): continue`)
+- **Draft posts are filtered out entirely** (`load_post()` returns `None`)
   — they're loaded from disk (so a stray parse error would still be logged)
   but never make it into the returned list, so they can't leak into
   listings, search, or their own individual page.
@@ -298,6 +304,33 @@ since the sort key is `date`. An edit that *does* change the date (e.g.
 backdating a post) could shift the post to a different page than the one
 that gets regenerated — an edge case the incremental path doesn't detect,
 though it would self-correct on the next full `generate_site()` run.
+
+## Rendering one page synchronously: `regenerate_post_page()`
+
+Even the incremental path below re-parses every blog post and raindrop
+(thousands of files), which takes seconds on fly's shared CPU. That's fine in
+the background — but the web editor redirects to the new post 1.5 s after
+saving, and used to land on a 404 because the page wasn't written yet.
+
+`regenerate_post_page(post_filename, content_type)` closes that gap with the
+smallest possible unit of work:
+
+```python
+md_file = self.content_dir / content_type / post_filename
+post = self.load_post(md_file, content_type)
+if post is not None:
+    self.generate_individual_posts([post], content_type)
+```
+
+- **One file read, one template render** — cheap enough to await inside the
+  save request.
+- **Drafts render nothing**, matching `load_posts()`'s rule that drafts never
+  get a page.
+- **Prev/next links are not set**, exactly as in the incremental path, which
+  also renders the post as a one-element list.
+
+The server calls this before responding, then still schedules the full
+incremental regeneration for listings, home and search.
 
 ## Incremental regeneration: the fast path
 
