@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 10
+# Version: 11
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -89,8 +89,8 @@ def add_curated_aliases(text: str, new_aliases: dict[str, list[str]]) -> str:
 
 def load_curated_tags(tag_hints_path: Path) -> list[str]:
     """Load the single curated tag vocabulary from tag-hints.md's "Curated
-    Tags" section - the one list offered by the post editor picklist,
-    MarsEdit's category picker, and enforced by the F46 tag-cleanup pipeline.
+    Tags" section - the one list offered by the post editor picklist and
+    enforced by the F46 tag-cleanup pipeline.
     """
     text = tag_hints_path.read_text(encoding="utf-8")
     return parse_tag_hints_section(text, CURATED_TAGS_HEADER)

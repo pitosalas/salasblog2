@@ -46,7 +46,7 @@
   "autoMode": {
     "environment": [
       "### Project: Salasblog2",
-      "**Purpose**: Personal blogging platform — Python static site generator + FastAPI server, with Raindrop.io link blog and XML-RPC Blogger API for MarsEdit",
+      "**Purpose**: Personal blogging platform — Python static site generator + FastAPI server, with Raindrop.io link blog and a web admin editor",
       "**Package manager**: uv",
       "**Run**: make run  (or: uv run bg server)",
       "**Test**: make test  (or: uv run pytest)",

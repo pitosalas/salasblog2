@@ -3,7 +3,7 @@
 
 ## TF52.0 — Remove the server routes and helpers
 
-**Status**: not done
+**Status**: done
 
 **Description**: In `server.py`, delete:
 
@@ -12,12 +12,13 @@
   and `create_xmlrpc_fault_with_code`
 * the `BloggerAPI` and `xmlrpc.client` imports
 
-**Test**: a server test asserts that `POST /xmlrpc` and `GET /rsd.xml`
-return 404.
+**Test**: `TestXmlRpcRemoved` in `tests/test_server_simple.py`.
+`GET /rsd.xml` returns 404. `POST /xmlrpc` returns 405, because the
+GET-only catch-all route answers it; the test accepts 404 or 405.
 
 ## TF52.1 — Delete `blogger_api.py`
 
-**Status**: not done
+**Status**: done
 
 **Description**: Delete `src/salasblog2/blogger_api.py`. A grep confirms
 nothing else imports it.
@@ -26,7 +27,7 @@ nothing else imports it.
 
 ## TF52.2 — Remove discovery links, admin note and config
 
-**Status**: not done
+**Status**: done
 
 **Description**:
 
@@ -35,11 +36,13 @@ nothing else imports it.
 * Delete the "XML-RPC endpoint for blog editors" note in `admin.html`.
 * Delete `RSD_API_TYPE` from `fly.toml`.
 
-**Test**: a render test asserts the home page has no `EditURI` link.
+**Test**: `TestXmlRpcRemoved` checks that `base.html` and `admin.html`
+have no `EditURI` or `rsd.xml`. The admin panel's API pane had no tab button
+and couldn't be reached, so it was deleted outright.
 
 ## TF52.3 — Remove XML-RPC-only tests
 
-**Status**: not done
+**Status**: done
 
 **Description**: Delete:
 
@@ -55,7 +58,7 @@ are kept.
 
 ## TF52.4 — Update docs
 
-**Status**: not done
+**Status**: done
 
 **Description**:
 
@@ -69,7 +72,7 @@ are kept.
 
 ## TF52.5 — Tests
 
-**Status**: not done
+**Status**: done
 
 **Description**: Add the TF52.0 and TF52.2 tests, then run the full suite.
 

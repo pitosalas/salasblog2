@@ -12,7 +12,7 @@ A personal blog platform for Pito Salas deployed on fly.io. It is a FastAPI serv
 - Uses **Claude AI** to auto-generate blog draft posts from popular raindrop link posts
 - Backs content up to **GitHub** on a schedule via git push
 - Stores persistent content on a **fly.io volume** at `/data/content/`
-- Supports **MarsEdit** (XML-RPC/MetaWeblog) as an alternate authoring path (F44)
+- The web admin editor is the only authoring path. XML-RPC/MarsEdit support was removed in F52 (2026-10-18).
 
 The server is the product — it IS the blog. There is no separate CMS.
 
@@ -25,7 +25,6 @@ salasblog2/
 ├── src/salasblog2/         # Python package (FastAPI server + site generator)
 │   ├── server.py           # 2221 lines — main FastAPI app, ALL routes, too much logic
 │   ├── generator.py        # 782 lines — static site generator
-│   ├── blogger_api.py      # 714 lines — XML-RPC / MarsEdit / MetaWeblog API
 │   ├── utils.py            # 449 lines — markdown processing, shared helpers
 │   ├── scheduler.py        # 399 lines — background job scheduler (git sync, raindrop sync)
 │   ├── raindrop.py         # 350 lines — Raindrop.io API client
@@ -93,7 +92,7 @@ Applied to: **stats page** (`output/admin-stats.html`, refreshed every 60s) and 
 **Not yet applied to**: propose lists, draft list (F41 TF41.5/TF41.6).
 
 ### Non-blocking I/O
-All blocking operations (Claude API, URL fetch, directory scans, site generation, XML-RPC post regeneration as of F44) run via `BackgroundTasks` or `loop.run_in_executor(None, fn)` to avoid blocking the FastAPI event loop.
+All blocking operations (Claude API, URL fetch, directory scans, site generation) run via `BackgroundTasks` or `loop.run_in_executor(None, fn)` to avoid blocking the FastAPI event loop.
 
 ### Post/page editing (unified, F42)
 `templates/post_editor.html` handles both create and edit, for both blog posts and pages, via an `is_edit` context flag — replacing the previously hand-duplicated `new_post.html`/`edit_post.html`. Includes: category field, free-form comma-separated tags (with `<datalist>` suggestions from `BLOG_TAGS`, not a hard vocabulary), EasyMDE autosave + `beforeunload` unsaved-changes guard, inline preview (via `/admin/preview-markdown`, no more round-trip to a new tab), and mtime-based concurrency conflict detection (`409` on stale save). Delete is real (`/admin/delete-post`, `/admin/delete-page`, `/admin/delete-raindrop`), backed by `static/js/admin-delete.js` loaded globally via `base.html`.
@@ -107,8 +106,8 @@ All blocking operations (Claude API, URL fetch, directory scans, site generation
 
 Generated drafts start with `Originally Posted on: [url](url)` and a 50–75 word Claude paragraph.
 
-### MarsEdit / XML-RPC (F44)
-`/xmlrpc` uses Python's stdlib `xmlrpc.client.loads()`/`dumps()` for marshalling (not hand-rolled `ElementTree`), so it correctly handles `dateTime.iso8601`, `<array>`, `<base64>` (as `xmlrpc.client.Binary`, unwrapped to plain `bytes` at the parsing boundary), and properly escapes response content. Response `Content-Type` must be left to `media_type="text/xml"` alone — an explicit `headers={"Content-Type": "text/xml"}` suppresses Starlette's automatic `; charset=utf-8`, which broke MarsEdit on any post with non-ASCII characters. Kept deliberately (not removed) to support MarsEdit alongside the web admin UI — see F44 for the "should we even keep XML-RPC" question, already answered.
+### XML-RPC removed (F52)
+The `/xmlrpc` Blogger/MetaWeblog API, `blogger_api.py` and `/rsd.xml` were removed on 2026-10-18 because the user no longer uses MarsEdit. `POST /xmlrpc` now gets 405 from the GET-only catch-all route, and `/rsd.xml` returns 404. F44 had fixed the implementation earlier and is closed, with its last manual check waived.
 
 ### Content storage (volume-first)
 - `/data/content/` — persistent fly.io volume, source of truth at runtime
@@ -126,13 +125,13 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 ## Open
 
-**F44 — Fix the MetaWeblog/XML-RPC Implementation**: 5 of 6 tasks done (see `04-tasks/notdone/TF44-fix-metaweblog-xmlrpc.md`). **TF44.4** (manual MarsEdit verification) still in progress: refresh, edit, and image upload confirmed working against production; create, delete, and a title/content with `&`/`<`/`>` still need verification. Full history of what was found/fixed getting here is in `02-doc/history.md`.
+**F44 — Fix the MetaWeblog/XML-RPC Implementation**: closed 2026-10-18. TF44.4 (the manual MarsEdit check) was waived because MarsEdit is no longer used.
+
+**F52 — Remove XML-RPC / MarsEdit Support**: done 2026-10-18 (`03-features/done/F52-*`).
+
+**F46 — Tag cleanup**: TF46.6 is complete, and no post on production needs tags. The TF46.13 normalization dry run would change only `2026-10-17-lotus-improv-pre-history.md` (`improv`, `pivot-table` → `lotus`). It is waiting on the user's decision.
 
 **F45 — Tag Suggestion Picklist for Post Editor**: done, confirmed working live by the user (`03-features/done/F45-tag-suggestion-picklist.md`). The post editor's Tags field offers a searchable picklist backed by real tag-frequency data (`output/top-tags.json`) merged with the curated vocabulary — now sourced from `02-doc/tag-hints.md` (the standalone `BLOG_TAGS` constant was consolidated away this session; see F46 below).
-
-**F46 — Automated Tag Cleanup for Full Blog Corpus**: `04-tasks/notdone/TF46-automated-tag-cleanup.md`, TF46.0-TF46.5 done, TF46.6 (autonomous batch run) in progress, TF46.7-TF46.10 (curated-vocabulary restriction, one unified curated list, 3+ recurrence threshold for Proposed Tags, no-fit posts no longer re-selected every batch) done. Batches 7-12 (3,000 posts, 2004-2023 archive era) run for real against **production's `/data/content/blog` volume** via `fly ssh` — earlier batches (1-6, before this session) only ever touched the local repo and never reached the live site (see the architecture note above). ~545 posts remained after batch 12 (the self-tracking selection order still has 2013-2023 and then 2023-2026 ahead of it). Full batch-by-batch numbers and the three design corrections that got here are in `02-doc/history.md`.
-
-`02-doc/tag-hints.md`'s **Proposed Tags** queue currently holds candidates awaiting the user's approval to promote into the Curated Tags list (or reject): `blogbridge`, `blogging`, `etech`, `folksonomy`, `gmail`, `java`, `microsoft`, `orkut`, `podcasting`, `red-sox`, `security`, `spam`, `tivo`, `web2.0`, `agile`, `geek-dinner`, `gnomedex`, `howard-stern`, `opml`, `social-networking`, `games`, `theatre`, `css`, `flask`, `git`, `kubernetes`, `raspberry-pi`, `startup`, `woodworking`, `excel`, `graphql`, `portfolio`, `postgres`, `sqlite`. None of these are applied to any post until promoted.
 
 **F48 — Repair Legacy Internal Links**: done 2026-10-13, see `03-features/done/F48-legacy-link-repair.md` and `04-tasks/done/TF48-legacy-link-repair.md`.
 

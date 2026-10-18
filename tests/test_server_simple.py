@@ -13,8 +13,6 @@ import pytest
 # Import the specific functions we want to test
 from salasblog2.server import (
     config,
-    create_xmlrpc_fault_with_code,
-    create_xmlrpc_response,
     is_admin_authenticated,
     setup_logging,
 )
@@ -126,123 +124,6 @@ class TestAdminStatusEndpoint:
         assert response_data["authenticated"] is False
 
 
-class TestXMLRPCHelpers:
-    """Test XML-RPC helper functions."""
-
-    def test_create_xmlrpc_response_string(self):
-        """Test XML-RPC response creation with string result."""
-        result = create_xmlrpc_response("Hello World")
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<methodResponse>" in result
-        assert "<string>Hello World</string>" in result
-        assert "<params>" in result
-        assert "<param>" in result
-        assert "<value>" in result
-
-    def test_create_xmlrpc_response_boolean_true(self):
-        """Test XML-RPC response creation with boolean true."""
-        result = create_xmlrpc_response(True)
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<boolean>1</boolean>" in result
-
-    def test_create_xmlrpc_response_boolean_false(self):
-        """Test XML-RPC response creation with boolean false."""
-        result = create_xmlrpc_response(False)
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<boolean>0</boolean>" in result
-
-    def test_create_xmlrpc_response_integer(self):
-        """Test XML-RPC response creation with integer."""
-        result = create_xmlrpc_response(42)
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<int>42</int>" in result
-
-    def test_create_xmlrpc_response_dict(self):
-        """Test XML-RPC response creation with dictionary."""
-        data = {"key": "value", "number": "123"}
-        result = create_xmlrpc_response(data)
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<struct>" in result
-        assert "<member>" in result
-        assert "<name>key</name>" in result
-        assert "<string>value</string>" in result
-        assert "<name>number</name>" in result
-        assert "<string>123</string>" in result
-
-    def test_create_xmlrpc_response_list_of_strings(self):
-        """Test XML-RPC response creation with list of strings."""
-        data = ["item1", "item2", "item3"]
-        result = create_xmlrpc_response(data)
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<array>" in result
-        assert "<data>" in result
-        assert "<string>item1</string>" in result
-        assert "<string>item2</string>" in result
-        assert "<string>item3</string>" in result
-
-    def test_create_xmlrpc_response_list_of_dicts(self):
-        """Test XML-RPC response creation with list of dictionaries."""
-        data = [{"title": "Post 1", "id": "1"}, {"title": "Post 2", "id": "2"}]
-        result = create_xmlrpc_response(data)
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<array>" in result
-        assert "<struct>" in result
-        assert "<name>title</name>" in result
-        assert "<string>Post 1</string>" in result
-        assert "<string>Post 2</string>" in result
-
-    def test_create_xmlrpc_response_float(self):
-        """Float results marshal to the native XML-RPC <double> type, not a string —
-        the old hand-rolled builder had no numeric-type handling and fell back to
-        stringifying everything it didn't recognize."""
-        result = create_xmlrpc_response(3.14)
-
-        assert "<?xml version=" in result and "1.0" in result
-        assert "<double>3.14</double>" in result
-
-    def test_create_xmlrpc_response_escapes_special_characters(self):
-        """A string containing &, <, > must be escaped in the response XML — the old
-        hand-rolled builder interpolated values directly with no escaping, producing
-        invalid XML for any post title/content containing these characters."""
-        result = create_xmlrpc_response("Cats & Dogs <3>")
-
-        assert "<string>Cats &amp; Dogs &lt;3&gt;</string>" in result
-        # And the result must actually be parseable as XML.
-        import xml.etree.ElementTree as ET
-
-        ET.fromstring(result)
-
-    def test_create_xmlrpc_fault_with_code(self):
-        """Test XML-RPC fault response creation."""
-        result = create_xmlrpc_fault_with_code(403, "Access denied")
-
-        assert '<?xml version="1.0"' in result or "<?xml version='1.0'" in result
-        assert "<methodResponse>" in result
-        assert "<fault>" in result
-        assert "<struct>" in result
-        assert "<name>faultCode</name>" in result
-        assert "<int>403</int>" in result
-        assert "<name>faultString</name>" in result
-        assert "<string>Access denied</string>" in result
-
-    def test_create_xmlrpc_fault_different_codes(self):
-        """Test XML-RPC fault response with different error codes."""
-        result404 = create_xmlrpc_fault_with_code(404, "Not found")
-        result500 = create_xmlrpc_fault_with_code(500, "Internal error")
-
-        assert "<int>404</int>" in result404
-        assert "<string>Not found</string>" in result404
-        assert "<int>500</int>" in result500
-        assert "<string>Internal error</string>" in result500
-
-
 class TestLoggingSetup:
     """Test logging configuration."""
 
@@ -337,15 +218,11 @@ class TestServerImports:
     def test_import_helper_functions(self):
         """Test that helper functions can be imported."""
         from salasblog2.server import (
-            create_xmlrpc_fault_with_code,
-            create_xmlrpc_response,
             is_admin_authenticated,
             setup_logging,
         )
 
         assert callable(is_admin_authenticated)
-        assert callable(create_xmlrpc_response)
-        assert callable(create_xmlrpc_fault_with_code)
         assert callable(setup_logging)
 
     def test_import_validation_functions(self):
@@ -528,3 +405,29 @@ class TestBlogStatsTracking:
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
+
+
+class TestXmlRpcRemoved:
+    """F52: the XML-RPC/MarsEdit API was removed."""
+
+    @pytest.fixture
+    def client(self):
+        from fastapi.testclient import TestClient
+
+        from salasblog2.server import app
+
+        return TestClient(app)
+
+    def test_xmlrpc_post_is_gone(self, client):
+        response = client.post("/xmlrpc", content="<methodCall/>")
+        assert response.status_code in (404, 405)
+
+    def test_rsd_is_gone(self, client):
+        assert client.get("/rsd.xml").status_code == 404
+
+    def test_pages_have_no_rsd_discovery_link(self):
+        project_root = Path(__file__).parents[1]
+        for template in ("base.html", "admin.html"):
+            html = (project_root / "templates" / template).read_text()
+            assert "EditURI" not in html
+            assert "rsd.xml" not in html

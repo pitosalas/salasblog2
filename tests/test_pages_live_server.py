@@ -402,16 +402,6 @@ class TestPagesLiveServerIntegration:
         except requests.exceptions.RequestException:
             pytest.skip("API endpoints not accessible")
 
-    def test_pages_rsd_xml(self, base_url="https://salas.com"):
-        """Test RSD XML endpoint for blog API discovery."""
-        try:
-            response = requests.get(f"{base_url}/rsd.xml", timeout=10)
-            assert response.status_code == 200
-            assert "application/rsd+xml" in response.headers.get("content-type", "")
-            assert "<rsd" in response.text
-        except requests.exceptions.RequestException:
-            pytest.skip("RSD XML endpoint not accessible")
-
     def test_pages_sitemap_includes_pages(self, base_url="https://salas.com"):
         """Test that sitemap includes pages."""
         try:

@@ -21,7 +21,6 @@ primary_region = 'ewr'
   GIT_BRANCH = "main"
   GIT_EMAIL = 'pitosalas@gmail.com'
   GIT_NAME = 'Pito Salas'
-  RSD_API_TYPE = 'metaweblog'
 
 [mounts]
   source = "blog_data"

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_blog_tags.py — Tests for F23 tag selection for blog posts
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-08
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 
 from pathlib import Path
@@ -115,57 +115,6 @@ class TestParseCuratedTagAliases:
             "eroom": "eroom",
             "lotus": "eroom",
         }
-
-
-class TestBloggerApiTagParsing:
-    def _make_api(self, tmp_path):
-        from salasblog2.blogger_api import BloggerAPI
-
-        api = BloggerAPI.__new__(BloggerAPI)
-        api.root_dir = tmp_path
-        api.blog_dir = tmp_path / "content" / "blog"
-        api.blog_dir.mkdir(parents=True)
-        return api
-
-    def test_parse_struct_with_mt_keywords(self, tmp_path):
-        api = self._make_api(tmp_path)
-        struct = {
-            "title": "My Post",
-            "description": "body",
-            "mt_keywords": "python, coding",
-        }
-        title, body, tags = api._parse_content_or_struct(struct)
-        assert "python" in tags
-        assert "coding" in tags
-
-    def test_parse_struct_with_tags_list(self, tmp_path):
-        api = self._make_api(tmp_path)
-        struct = {"title": "My Post", "description": "body", "tags": ["ai", "design"]}
-        title, body, tags = api._parse_content_or_struct(struct)
-        assert tags == ["ai", "design"]
-
-    def test_parse_struct_no_tags_returns_empty(self, tmp_path):
-        api = self._make_api(tmp_path)
-        struct = {"title": "My Post", "description": "body"}
-        title, body, tags = api._parse_content_or_struct(struct)
-        assert tags == []
-
-    def test_parse_string_returns_empty_tags(self, tmp_path):
-        api = self._make_api(tmp_path)
-        title, body, tags = api._parse_content_or_struct(
-            "Post Title\nBody content here."
-        )
-        assert tags == []
-
-    def test_create_post_frontmatter_includes_tags(self, tmp_path):
-        api = self._make_api(tmp_path)
-        post = api._create_post_frontmatter("Title", "Body", ["technology", "ai"])
-        assert post.metadata["tags"] == ["technology", "ai"]
-
-    def test_create_post_frontmatter_empty_tags(self, tmp_path):
-        api = self._make_api(tmp_path)
-        post = api._create_post_frontmatter("Title", "Body", [])
-        assert post.metadata["tags"] == []
 
 
 class TestTagsInTemplates:

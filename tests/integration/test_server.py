@@ -109,19 +109,6 @@ class TestServerEndpoints:
 
         assert found_page, f"At least one page should be accessible from {page_paths}"
 
-    def test_rsd_xml(self, base_url, check_server_running):
-        """Test RSD XML for blog API discovery."""
-        response = requests.get(f"{base_url}/rsd.xml", timeout=5)
-        assert response.status_code == 200
-        assert "application/rsd+xml" in response.headers.get("content-type", "")
-        assert "<rsd" in response.text, "Should contain RSD XML content"
-
-    def test_xmlrpc_endpoint(self, base_url, check_server_running):
-        """Test XML-RPC endpoint responds to GET."""
-        response = requests.get(f"{base_url}/xmlrpc", timeout=5)
-        assert response.status_code == 200
-        assert "XML-RPC endpoint ready" in response.text
-
 
 @pytest.mark.integration
 class TestServerAPI:

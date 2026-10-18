@@ -52,9 +52,10 @@
 **Description**: The scheduler drives git sync, raindrop sync, and stats cache refresh. The admin UI also triggers all three on demand. Assess: (a) is the `schedule` library the right tool or would `asyncio` periodic tasks be simpler? (b) is there a clear ownership boundary between scheduler-triggered and admin-triggered work, or do they duplicate logic? (c) could the pre-generation pattern (TF41.5, TF41.6) replace the scheduler for some jobs? Write findings to `process/arch-review.md`.
 
 ## TF41.10 — Architecture review: XML-RPC / Blogger API implementation
-**Status**: not done
+**Status**: not applicable
 
-**Description**: Whether to keep XML-RPC/`blogger_api.py` has already been decided — F44 fixes it (replacing hand-rolled parsing/response-building with stdlib `xmlrpc` marshalling) specifically to restore MarsEdit support, rather than removing it. Record that decision and its rationale in `process/arch-review.md` instead of re-assessing "should we remove it." What's still worth assessing here: given F44's fix, can the *implementation* be simplified further (e.g. fewer supported MetaWeblog/Blogger methods than currently implemented, if some are unused by MarsEdit in practice)?
+**Description**: XML-RPC support was removed entirely in F52 (2026-10-18),
+after the user stopped using MarsEdit. There is nothing left to review.
 
 ## TF41.11 — Architecture review: volume-first content architecture
 **Status**: not done

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 6
+# Version: 7
 # Created: 2026-09-08
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -21,7 +21,6 @@ import re
 import shutil
 import subprocess
 import time
-import xmlrpc.client as xmlrpc_client
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -43,7 +42,6 @@ from fastapi.staticfiles import StaticFiles
 from jinja2 import Environment, FileSystemLoader
 from starlette.middleware.sessions import SessionMiddleware
 
-from salasblog2.blogger_api import BloggerAPI
 from salasblog2.draft_generator import generate_draft_from_drop, save_draft
 from salasblog2.generator import SiteGenerator
 from salasblog2.legacy_commands import URL_MAP_FILE, load_url_map, redirect_targets
@@ -2102,195 +2100,6 @@ async def repost_page(filename: str, request: Request):
         "prefill_tags": post_data.get("tags", []),
     }
     return HTMLResponse(content=render_template("post_editor.html", context))
-
-
-# RSD and XML-RPC endpoints
-@app.get("/rsd.xml")
-async def serve_rsd(request: Request):
-    """Serve RSD (Really Simple Discovery) XML for blog API autodiscovery"""
-    base_url = f"{request.url.scheme}://{request.url.netloc}"
-    api_type = os.getenv("RSD_API_TYPE", "metaweblog").lower()
-
-    if api_type == "blogger":
-        api_name = "Blogger"
-        docs_url = "http://plant.blogger.com/api/index.html"
-    else:
-        api_name = "MetaWeblog"
-        docs_url = "http://www.xmlrpc.com/metaWeblogApi"
-
-    rsd_content = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rsd version="1.0" xmlns="http://archipelago.phrasewise.com/rsd">
-  <service>
-    <engineName>Salasblog2</engineName>
-    <engineLink>https://github.com/pitosalas/salasblog2</engineLink>
-    <homePageLink>{base_url}/</homePageLink>
-    <apis>
-      <api name="{api_name}" apiLink="{base_url}/xmlrpc" preferred="true" blogID="salasblog2">
-        <settings>
-          <docs>{docs_url}</docs>
-        </settings>
-      </api>
-    </apis>
-  </service>
-</rsd>"""
-
-    return Response(
-        content=rsd_content,
-        media_type="application/rsd+xml",
-        headers={"Content-Type": "application/rsd+xml; charset=utf-8"},
-    )
-
-
-@app.get("/xmlrpc")
-async def xmlrpc_get_endpoint(request: Request):
-    """Handle GET requests to XML-RPC endpoint for debugging"""
-    logging.getLogger(__name__).info("GET request received at /xmlrpc endpoint")
-    return Response(
-        content="XML-RPC endpoint ready. Use POST with XML-RPC payload.",
-        media_type="text/plain",
-    )
-
-
-def call_xmlrpc_method(api, method_name, method_args, background_tasks):
-    """Look up and invoke the right BloggerAPI method for an XML-RPC call.
-
-    Methods that create/edit/delete a post trigger site regeneration, so they
-    get background_tasks threaded through — this is what lets MarsEdit's
-    Post/Save return promptly instead of blocking on regeneration (same
-    pattern as the web admin form's saves). Read-only methods don't need it.
-    Raises HTTPException(400) for an unrecognized method name; whatever the
-    called method itself raises (Fault, etc.) propagates to the caller.
-    """
-    regenerating_methods = {
-        "blogger.newPost": api.blogger_newPost,
-        "blogger.editPost": api.blogger_editPost,
-        "blogger.deletePost": api.blogger_deletePost,
-        "metaWeblog.newPost": api.metaweblog_newPost,
-        "metaWeblog.editPost": api.metaweblog_editPost,
-    }
-    other_methods = {
-        "blogger.getRecentPosts": api.blogger_getRecentPosts,
-        "blogger.getUsersBlogs": api.blogger_getUsersBlogs,
-        "blogger.getPost": api.blogger_getPost,
-        "metaWeblog.getPost": api.metaweblog_getPost,
-        "metaWeblog.getRecentPosts": api.metaweblog_getRecentPosts,
-        "metaWeblog.getCategories": api.metaweblog_getCategories,
-        "metaWeblog.newMediaObject": api.metaweblog_newMediaObject,
-    }
-    if method_name in regenerating_methods:
-        return regenerating_methods[method_name](
-            *method_args, background_tasks=background_tasks
-        )
-    if method_name in other_methods:
-        return other_methods[method_name](*method_args)
-    logging.getLogger(__name__).error(f"Unknown XML-RPC method: {method_name}")
-    raise HTTPException(status_code=400, detail=f"Unknown method: {method_name}")
-
-
-@app.post("/xmlrpc")
-async def xmlrpc_endpoint(request: Request, background_tasks: BackgroundTasks):
-    """XML-RPC endpoint for Blogger API"""
-    logger = logging.getLogger(__name__)
-
-    body = await request.body()
-    user_agent = request.headers.get("user-agent", "unknown")
-    logger.info(
-        f"Received XML-RPC request, body length: {len(body)}, user-agent: {user_agent}"
-    )
-
-    # Parse XML-RPC request using the standard library's own marshalling, which
-    # correctly handles every XML-RPC type (dateTime.iso8601, array, nested struct,
-    # base64, nil) — the hand-rolled ElementTree parser this replaced only understood
-    # string/boolean/int/base64/one-level struct and silently dropped everything else.
-    try:
-        raw_params, method_name = xmlrpc_client.loads(body)
-    except Exception as e:
-        logger.exception(f"Malformed XML-RPC request: {e}")
-        fault_xml = create_xmlrpc_fault_with_code(
-            400, f"Malformed XML-RPC request: {e}"
-        )
-        return Response(content=fault_xml, media_type="text/xml", status_code=200)
-
-    # xmlrpc.client.loads() decodes <base64> values as xmlrpc.client.Binary wrappers,
-    # not plain bytes. Unwrap them here so blogger_api.py's methods keep receiving
-    # plain bytes as they already expect, rather than leaking an XML-RPC library type
-    # into the business-logic layer.
-    method_args = [unwrap_xmlrpc_binary(p) for p in raw_params]
-    logger.info(f"XML-RPC method: {method_name}, {len(method_args)} parameters")
-
-    try:
-        api = BloggerAPI()
-    except Exception:
-        logger.exception(f"BloggerAPI() construction failed for method {method_name}")
-        response_xml = xmlrpc_client.dumps(
-            xmlrpc_client.Fault(500, "Server failed to initialize BloggerAPI")
-        )
-        return Response(content=response_xml, media_type="text/xml", status_code=200)
-
-    try:
-        result = call_xmlrpc_method(api, method_name, method_args, background_tasks)
-    except xmlrpc_client.Fault as fault:
-        logger.info(f"XML-RPC Fault {fault.faultCode}: {fault.faultString}")
-        response_xml = xmlrpc_client.dumps(fault)
-        return Response(content=response_xml, media_type="text/xml", status_code=200)
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.exception(f"XML-RPC method {method_name} failed")
-        response_xml = xmlrpc_client.dumps(xmlrpc_client.Fault(500, str(e)))
-        return Response(content=response_xml, media_type="text/xml", status_code=200)
-
-    logger.info(
-        f"Method {method_name} completed successfully, "
-        f"result type={type(result).__name__}, result repr={repr(result)[:1000]}"
-    )
-
-    # Marshalling happens here, after the method has already succeeded — if xmlrpc_client
-    # can't serialize whatever the method returned, this must not crash uncaught, since an
-    # unhandled exception here makes FastAPI return a plain HTML 500 page instead of XML,
-    # which is exactly what produces MarsEdit's "XMLRPC Response Parsing Failed: (null)".
-    try:
-        response_xml = create_xmlrpc_response(result)
-    except Exception:
-        logger.exception(
-            f"Failed to marshal XML-RPC response for method {method_name}, "
-            f"result type={type(result).__name__}, result repr={repr(result)[:1000]}"
-        )
-        response_xml = xmlrpc_client.dumps(
-            xmlrpc_client.Fault(
-                500, f"Server failed to marshal response for {method_name}"
-            )
-        )
-        return Response(content=response_xml, media_type="text/xml", status_code=200)
-
-    logger.info(f"XML-RPC response length: {len(response_xml)}")
-    return Response(content=response_xml, media_type="text/xml")
-
-
-def unwrap_xmlrpc_binary(value):
-    """Recursively replace xmlrpc.client.Binary wrappers with plain bytes."""
-    if isinstance(value, xmlrpc_client.Binary):
-        return value.data
-    if isinstance(value, dict):
-        return {k: unwrap_xmlrpc_binary(v) for k, v in value.items()}
-    if isinstance(value, (list, tuple)):
-        return [unwrap_xmlrpc_binary(v) for v in value]
-    return value
-
-
-def create_xmlrpc_response(result):
-    """Create an XML-RPC methodResponse using the standard library's marshaller.
-
-    This correctly escapes string content (the old hand-built f-string version did
-    not, so a title/content containing `&`, `<`, or `>` produced invalid XML) and
-    correctly encodes datetime values as dateTime.iso8601 instead of a plain string.
-    """
-    return xmlrpc_client.dumps((result,), methodresponse=True)
-
-
-def create_xmlrpc_fault_with_code(fault_code, message):
-    """Create an XML-RPC fault response using the standard library's marshaller."""
-    return xmlrpc_client.dumps(xmlrpc_client.Fault(fault_code, message))
 
 
 # Catch-all route moved to end of file to ensure proper precedence

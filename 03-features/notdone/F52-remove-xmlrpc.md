@@ -51,14 +51,15 @@ now the only way to author posts.
 
 ## Behavior after removal
 
-* `POST /xmlrpc` and `GET /rsd.xml` return 404.
+* `GET /rsd.xml` returns 404.
+* `POST /xmlrpc` returns 405, from the GET-only catch-all route.
 * No other route, page or admin function changes.
 
 ## How to Demo
 **Setup**: deployed to production.
 
 **Steps**:
-1. `curl -i -X POST https://salas.com/xmlrpc` returns 404.
+1. `curl -i -X POST https://salas.com/xmlrpc` returns 405.
 2. `curl -i https://salas.com/rsd.xml` returns 404.
 3. Create and edit a post in the web admin editor, including an image
    upload, and check that it works as before.
