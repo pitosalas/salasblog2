@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-30'
 subtitle: Writing Code Without Plain Text Files –Many years ago there...
 tags:

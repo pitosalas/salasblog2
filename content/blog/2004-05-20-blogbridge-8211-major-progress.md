@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-05-20'
 subtitle: This is getting interesting. In the last few weeks we’ve added a bunch of
   new features and we are no...

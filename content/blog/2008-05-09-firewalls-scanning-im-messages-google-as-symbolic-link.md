@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-05-09'
 subtitle: Here’s something I **hadn’t seen before:** I IM’d a friend of mine at a
   Big Company and the message ...

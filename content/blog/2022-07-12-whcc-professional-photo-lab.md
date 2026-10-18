@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-12'
 subtitle: WHCC | Professional Photo Lab –WHCC is the premier provider of profession...
 tag_review: no_fit

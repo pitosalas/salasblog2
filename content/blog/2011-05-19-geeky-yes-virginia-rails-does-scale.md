@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-05-19'
 subtitle: Why doesn’t every one **love Rails**? I am surprised when I run into someone
   (Pat?) who’s not so sur...

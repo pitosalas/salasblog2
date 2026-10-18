@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-07-12'
 subtitle: 'Goodbye Microservices: From 100s of problem children to 1 superstar · Segment
   Blog'

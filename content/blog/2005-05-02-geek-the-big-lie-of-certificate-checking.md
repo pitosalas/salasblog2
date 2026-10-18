@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2005-05-02'
 subtitle: '!['
 tags:

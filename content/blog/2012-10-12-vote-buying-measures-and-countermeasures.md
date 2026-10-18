@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-12'
 subtitle: An interesting question, and an expert answer from a friend of mine. If
   you are interested in electi...

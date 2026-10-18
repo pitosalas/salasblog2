@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-29'
 subtitle: If you are interested in SEO, there are some good facts and factoids in
   this [interview by Guy Kawas...

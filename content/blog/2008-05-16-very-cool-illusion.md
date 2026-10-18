@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-05-16'
 subtitle: Try this out, it really worked for m...
 tags:

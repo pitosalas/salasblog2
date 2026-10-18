@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-04-10'
 subtitle: Cleaning and Prepping Data with Python for Data Science — Best Practices
   and Helpful Packages

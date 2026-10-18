@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-29'
 subtitle: I’ve been a quasi-believer about RD-ID technology for a while now. I know
   more than several people w...

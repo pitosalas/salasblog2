@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-19'
 subtitle: CSS Flexbox Nav Bar – Building a Blog, Part 1
 tag_review: no_fit

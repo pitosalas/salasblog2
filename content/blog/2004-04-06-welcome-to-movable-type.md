@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2004-04-06'
 subtitle: If I did things correctly, you should not have noticed too much different.
   But today, with the help ...

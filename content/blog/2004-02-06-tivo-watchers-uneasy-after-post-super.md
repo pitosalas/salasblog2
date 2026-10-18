@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-06'
 subtitle: '**TiVo watchers uneasy after post-Super Bowl reports:** CNET News.com'
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-13'
 subtitle: 'TechRabbit: Makara: a read-write splitting adapter for Active Record'
 tags:

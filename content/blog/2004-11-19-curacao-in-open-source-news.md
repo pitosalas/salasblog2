@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-11-19'
 subtitle: There’s this little island in the Caribean called Curacao....
 tags:

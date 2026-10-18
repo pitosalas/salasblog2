@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-12-05'
 subtitle: Check out Liam Breck’s new blog.
 tags:

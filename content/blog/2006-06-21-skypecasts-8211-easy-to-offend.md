@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-06-21'
 subtitle: I just discovered Skypecasts. Cool new (free!) servi...
 tags:

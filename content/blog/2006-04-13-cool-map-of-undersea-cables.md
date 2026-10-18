@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-04-13'
 subtitle: This is just a really cool map.
 tags:

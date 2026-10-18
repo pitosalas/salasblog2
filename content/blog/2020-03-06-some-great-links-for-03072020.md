@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-03-06'
 subtitle: Please stop recommending Git Flow! – George Stocker
 tag_review: no_fit

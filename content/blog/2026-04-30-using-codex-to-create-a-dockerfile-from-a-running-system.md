@@ -1,5 +1,4 @@
 ---
-category: coding
 date: '2026-04-30'
 image_size: small
 tags:

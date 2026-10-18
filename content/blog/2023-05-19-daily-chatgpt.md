@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-19'
 subtitle: I have been using ChatGPT on a daily basis. Not for joking or playing but
   for work. It is like a sup...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-02-25'
 subtitle: I’ve discovered how hard it is to work on a laptop with a tiny screen, 1.2GHz
   and, esepcially, 256Mb...

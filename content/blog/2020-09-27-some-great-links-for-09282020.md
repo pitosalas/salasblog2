@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-09-27'
 subtitle: Free Git GUI for Windows, Mac, Linux | GitKraken
 tag_review: no_fit

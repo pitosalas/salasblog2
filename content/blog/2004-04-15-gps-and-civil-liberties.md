@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-04-15'
 subtitle: How would you like to be able to “implant a GPS-microchip in the body of
   a human being”? [I came acr...

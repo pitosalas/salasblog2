@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-10'
 subtitle: roslocate – ROS Wiki –ROS tool to locate the source file for ROS ...
 tags:

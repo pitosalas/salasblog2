@@ -1,5 +1,4 @@
 ---
-category: '99'
 date: '2022-01-02'
 subtitle: 'Drewsif/PiShrink: Make your pi images smaller!'
 tags:

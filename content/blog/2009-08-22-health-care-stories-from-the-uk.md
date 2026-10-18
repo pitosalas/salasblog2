@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-08-22'
 subtitle: Sure, one isolated story doesn’t prove anything, but then our health care
   debate often seems to be c...

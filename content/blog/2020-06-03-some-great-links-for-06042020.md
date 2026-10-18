@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-06-03'
 subtitle: The Unreasonable Effectiveness of Method Chaining in Pandas
 tags:

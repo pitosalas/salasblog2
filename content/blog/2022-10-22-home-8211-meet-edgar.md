@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-22'
 subtitle: Home – Meet Edgar –Social Media automatic posting tool. Seems popular wi...
 tag_review: no_fit

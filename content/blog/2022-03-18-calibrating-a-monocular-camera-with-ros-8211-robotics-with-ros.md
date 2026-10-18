@@ -1,5 +1,4 @@
 ---
-category: '63'
 date: '2022-03-18'
 subtitle: Calibrating a Monocular Camera with ROS – Robotics with ROS
 tags:

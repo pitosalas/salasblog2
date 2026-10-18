@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-08-17'
 subtitle: So, some day we will consider BlogBridge complete enough to actually be...
 tags:

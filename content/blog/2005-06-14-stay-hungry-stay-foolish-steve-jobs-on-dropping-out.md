@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-14'
 subtitle: I came across what is supposed to be the ...
 tags:

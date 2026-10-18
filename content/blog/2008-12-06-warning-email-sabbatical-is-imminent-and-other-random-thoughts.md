@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-06'
 subtitle: 'I really like this approach to vacation. I think I will try it: Check out
   this post [Warning: Email ...'

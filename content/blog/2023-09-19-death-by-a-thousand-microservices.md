@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-19'
 subtitle: Death by a thousand microservices
 tags:

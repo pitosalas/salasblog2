@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-08-22'
 subtitle: Master’s Degree Is New Frontier of Study Online – NYTimes.com
 tags:

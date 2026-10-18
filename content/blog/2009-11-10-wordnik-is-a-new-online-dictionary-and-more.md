@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-11-10'
 subtitle: Just came across Wordnik, what looks like a mega
 tags:

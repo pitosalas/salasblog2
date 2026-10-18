@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-11'
 subtitle: Jim Manzi (of Lotus fame) has an interesting article in “The Nation” about
   [our need, as a nation, t...

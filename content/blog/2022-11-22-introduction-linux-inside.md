@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-22'
 subtitle: Introduction · Linux Inside
 tags:

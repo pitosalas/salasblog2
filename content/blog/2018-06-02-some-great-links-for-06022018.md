@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-06-02'
 subtitle: How to solve the Google recruiters’ puzzle about throwing eggs from a building
   | Codementor

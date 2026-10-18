@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-04'
 subtitle: “Every OS Crashes because Every OS Sucks”
 tags:

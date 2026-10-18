@@ -1,5 +1,4 @@
 ---
-category: Web
 date: '2006-08-26'
 tag_review: no_fit
 tags: []

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-11-09'
 subtitle: Everyone (almost) has heard of Kickstarter, right? It’s the best known...
 tags:

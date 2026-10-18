@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-06-01'
 subtitle: Pop!Tech is one of my all time favorite conferences
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '43'
 date: '2022-05-09'
 subtitle: '[ onceupon/Bash-Oneliner: A collection of handy Bash One-Liners and terminal
   tricks for data process...'

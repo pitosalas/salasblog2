@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-09-30'
 subtitle: 'Comparing Database Types: How Database Types Evolved to Meet Different
   Needs | Prisma'

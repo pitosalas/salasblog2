@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-04-27'
 subtitle: Check this post Sequoia Voting System Witch Hunt, err… Study Project
 tags:

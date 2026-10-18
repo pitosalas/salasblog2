@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-03-04'
 subtitle: If I could fool you into believing that a fake rubber hand that you were
   looking at was really your ...

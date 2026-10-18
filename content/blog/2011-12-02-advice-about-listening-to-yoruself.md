@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-02'
 subtitle: A few months ago, a friend of mine told me he was struggling, really struggling
   with a big career de...

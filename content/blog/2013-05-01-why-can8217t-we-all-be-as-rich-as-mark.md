@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-05-01'
 subtitle: In Venture Capital Deals, Not Every Founder Will Be a Zuckerberg – NYTimes.com
 tags:

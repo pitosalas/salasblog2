@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-13'
 subtitle: I attended BIF-5 (The Business Information Factory’s Annual Summit)
 tags:

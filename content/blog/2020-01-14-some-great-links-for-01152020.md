@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-14'
 subtitle: Academic Torrents
 tag_review: no_fit

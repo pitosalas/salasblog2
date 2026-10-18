@@ -1,5 +1,4 @@
 ---
-category: '152'
 date: '2021-10-15'
 subtitle: Docker concepts and terminology – Code with Jason
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-01-12'
 subtitle: I was surfing around preparing for my class and happened to look at [this
   page on the Harvard Busine...

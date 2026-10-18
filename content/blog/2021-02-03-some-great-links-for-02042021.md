@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-02-03'
 subtitle: 10 Ultimate Programming Jokes
 tag_review: no_fit

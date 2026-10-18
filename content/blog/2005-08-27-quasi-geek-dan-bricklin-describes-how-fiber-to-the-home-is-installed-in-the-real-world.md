@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-08-27'
 subtitle: At a level of detail **only a geek could love** reading (or bother **writing**),
   Dan Bricklin gives ...

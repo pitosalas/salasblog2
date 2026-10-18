@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-04'
 subtitle: Check this post The 7 deadly sins and 10 lessons of a failed startup
 tags:

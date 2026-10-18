@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-12-24'
 subtitle: I’ve seen **Path**, the new "un social" network (limit 50 friends) plugged
   by pundits and journalist...

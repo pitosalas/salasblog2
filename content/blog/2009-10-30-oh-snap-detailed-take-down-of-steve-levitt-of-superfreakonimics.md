@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-30'
 subtitle: I can’t vouch for the accuracy, but it is fun to see a [major league cat-fight
   errupting between aca...

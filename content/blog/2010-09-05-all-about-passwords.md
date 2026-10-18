@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-05'
 subtitle: Continuing my quest to get into the subtleties of security and measures
   to protect against ‘bad guys...

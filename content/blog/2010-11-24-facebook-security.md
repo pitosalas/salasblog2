@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-11-24'
 subtitle: '![screen-shot-2010-11-23-at-84149-pm'
 tags:

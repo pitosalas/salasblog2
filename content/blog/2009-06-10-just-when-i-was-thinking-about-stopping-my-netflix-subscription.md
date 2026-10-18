@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-06-10'
 subtitle: 'TIVO keeps on getting cooler and cooler:'
 tags:

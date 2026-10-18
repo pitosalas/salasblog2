@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2006-06-24'
 subtitle: BloggerCon IV is going on right now, in California. This is Dave Winer’s
   original ‘UnConference

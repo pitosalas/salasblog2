@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-06-19'
 subtitle: 'Behavior trees for AI: How they work'
 tags:

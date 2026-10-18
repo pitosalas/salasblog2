@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-17'
 subtitle: '![](https://i0.wp.com/karlalbrecht.com/images/bookpracticalintelligence.jpg?w=584)![](https://i0.wp....'
 tags:

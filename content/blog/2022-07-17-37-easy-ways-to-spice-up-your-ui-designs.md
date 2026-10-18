@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-17'
 subtitle: 37 Easy Ways to Spice Up Your UI Designs ...
 tags:

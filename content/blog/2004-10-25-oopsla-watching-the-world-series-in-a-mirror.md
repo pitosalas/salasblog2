@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-10-25'
 subtitle: Just got to Vancouver for OOPSLA. Just checked int...
 tags:

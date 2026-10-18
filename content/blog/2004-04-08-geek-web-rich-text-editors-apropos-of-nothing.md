@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2004-04-08'
 subtitle: I’ve had occasion to look into what kinds of rich text editors are availble
   out there, and I thought...

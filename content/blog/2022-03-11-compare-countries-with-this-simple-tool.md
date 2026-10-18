@@ -1,5 +1,4 @@
 ---
-category: '199'
 date: '2022-03-11'
 subtitle: Compare Countries With This Simple Tool
 tags:

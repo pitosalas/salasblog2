@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-07-23'
 subtitle: How to speed up Python application startup time
 tags:

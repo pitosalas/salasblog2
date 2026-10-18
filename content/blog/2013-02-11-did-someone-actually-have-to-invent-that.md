@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-11'
 subtitle: '!NewImage'
 tags:

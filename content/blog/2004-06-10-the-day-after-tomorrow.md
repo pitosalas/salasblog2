@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-06-10'
 subtitle: Occassionally, I will have either an incredibly **positive** or **negative**
   reaction to a book, pla...

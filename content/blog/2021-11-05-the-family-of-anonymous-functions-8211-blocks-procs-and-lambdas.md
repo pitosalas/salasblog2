@@ -1,5 +1,4 @@
 ---
-category: '48'
 date: '2021-11-05'
 subtitle: The family of anonymous functions – blocks, procs and lambdas
 tags:

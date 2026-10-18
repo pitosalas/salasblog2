@@ -1,5 +1,4 @@
 ---
-category: '178'
 date: '2022-04-02'
 subtitle: An Intuitive Guide to Linear Algebra – BetterExplained
 tags:

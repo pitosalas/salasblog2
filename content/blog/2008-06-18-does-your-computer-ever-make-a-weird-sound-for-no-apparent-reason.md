@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-06-18'
 subtitle: I am on a Mac and I have lots of odd little things running, doing backups,
   syncs, who knows what. Ev...

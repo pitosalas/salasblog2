@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2008-05-22'
 subtitle: I met with a potential client the other day who was on red alert because
   there were a lot of **nasty...

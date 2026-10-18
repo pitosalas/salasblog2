@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-29'
 subtitle: A Complete Guide to Lock Convoys | Dave Kilian’s Blog
 tags:

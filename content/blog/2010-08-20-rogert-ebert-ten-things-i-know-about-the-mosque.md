@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-20'
 subtitle: I bet many of you didn’t realize that Roger Ebert is still writing a fantastic
   column, with movie re...

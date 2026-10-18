@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-21'
 subtitle: James Dyson (the vacuum cleaner guy) said something which may seem obvious
   but is nonetheless very c...

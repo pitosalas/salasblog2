@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-07-16'
 subtitle: There aren’t many good options for Music notation software. Sibelius
 tags:

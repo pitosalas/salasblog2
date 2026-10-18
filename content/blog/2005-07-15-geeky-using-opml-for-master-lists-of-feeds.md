@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-07-15'
 subtitle: I encounter more and more organizations or people who are collecting lists
   of feeds or blogs for one...

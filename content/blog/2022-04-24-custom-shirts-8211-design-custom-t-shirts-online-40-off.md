@@ -1,5 +1,4 @@
 ---
-category: '126'
 date: '2022-04-24'
 subtitle: Custom Shirts – Design Custom T-Shirts Online | 40% OFF
 tags:

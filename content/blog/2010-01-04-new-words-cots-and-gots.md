@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-01-04'
 subtitle: In my work with the Open Source Digital Voting foundation, and [TrustTheVote]...
 tags:

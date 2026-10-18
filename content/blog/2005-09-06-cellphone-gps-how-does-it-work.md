@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-09-06'
 subtitle: My new cellphone **supposedly** has GPS capabilities. It has to do, apparently
   with the new E-911

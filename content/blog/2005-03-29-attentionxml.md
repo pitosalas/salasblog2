@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-03-29'
 subtitle: Steve Gilmor muses about the history of the Attenti...
 tags:

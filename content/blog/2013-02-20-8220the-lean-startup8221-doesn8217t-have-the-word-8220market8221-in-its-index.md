@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-20'
 subtitle: 'I am a really big fan of the book [The Lean Startup: How Today’s Entrepreneurs
   Use Continuous Innova...'

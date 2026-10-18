@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-16'
 subtitle: Tivo has been doing more and more cool things with their little box.
 tags:

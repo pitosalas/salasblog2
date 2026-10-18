@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-09-22'
 subtitle: View Submission | Gradescope
 tag_review: no_fit

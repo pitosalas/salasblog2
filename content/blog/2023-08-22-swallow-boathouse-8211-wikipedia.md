@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-08-22'
 subtitle: Swallow Boathouse – Wikipedia –
 tags:

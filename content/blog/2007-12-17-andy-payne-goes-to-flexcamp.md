@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-12-17'
 subtitle: Andy went to FlexCamp last week and...
 tags:

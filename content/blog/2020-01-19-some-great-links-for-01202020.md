@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-19'
 subtitle: My Favorite Macbook Tools
 tags:

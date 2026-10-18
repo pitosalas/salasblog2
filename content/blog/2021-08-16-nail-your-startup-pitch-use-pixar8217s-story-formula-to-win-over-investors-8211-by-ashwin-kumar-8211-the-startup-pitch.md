@@ -1,5 +1,4 @@
 ---
-category: '402'
 date: '2021-08-16'
 subtitle: '[ Nail Your Startup Pitch: Use Pixar’s Story Formula to Win Over Investors
   – by Ashwin Kumar – The S...'

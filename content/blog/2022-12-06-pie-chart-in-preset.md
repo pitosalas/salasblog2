@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-06'
 subtitle: Pie Chart in Preset –Description and usage of the Pie c...
 tag_review: no_fit

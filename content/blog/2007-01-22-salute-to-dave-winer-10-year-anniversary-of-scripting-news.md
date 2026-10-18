@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2007-01-22'
 subtitle: Check out this post from [Sc...
 tags:

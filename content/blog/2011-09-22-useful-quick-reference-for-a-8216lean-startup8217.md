@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-09-22'
 subtitle: Check this post How To Build a Web Startup – Lean LaunchPad Edition
 tags:

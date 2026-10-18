@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-18'
 subtitle: Radical Simplicity in Technology | Join the movement –For me, a ...
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-04-06'
 subtitle: One of the reason that society needs people to transact with each other
   using real identities, maybe...

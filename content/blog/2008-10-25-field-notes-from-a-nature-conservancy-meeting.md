@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-10-25'
 subtitle: Check out this post Field notes from a Nature Conservancy meeting
 tags:

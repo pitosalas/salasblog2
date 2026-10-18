@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-19'
 subtitle: '**Microsoft Money 2004. Disappointing. **I started preparing my taxes and
   so I thought I might upgra...'

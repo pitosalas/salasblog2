@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-03'
 subtitle: I saw this movie last night and really thought it was great. I had read
   some[ negative commentary ab...

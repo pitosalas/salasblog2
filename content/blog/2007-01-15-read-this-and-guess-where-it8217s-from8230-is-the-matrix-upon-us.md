@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-15'
 subtitle: '** [3:56 pm PST] In an effort to improve the performance of teleports'
 tags:

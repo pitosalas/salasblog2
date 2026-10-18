@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-10-04'
 subtitle: 'PART 1: THE ELDERS'
 tags:

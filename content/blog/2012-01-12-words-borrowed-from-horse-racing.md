@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-12'
 subtitle: I just finished reading the book Seabiscuit
 tags:

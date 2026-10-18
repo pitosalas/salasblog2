@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2005-08-23'
 subtitle: I’ve subscribed to this list from OCI
 tags:

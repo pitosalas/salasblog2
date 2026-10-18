@@ -1,5 +1,4 @@
 ---
-category: '84'
 date: '2021-09-08'
 subtitle: 'GitHub – mgdm/htmlq: Like jq, but for HTML.'
 tags:

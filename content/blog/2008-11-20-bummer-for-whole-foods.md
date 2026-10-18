@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-20'
 subtitle: Not than anyone is buying any stocks these days (are you?) but I happened
   to have a very small numbe...

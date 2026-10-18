@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-06'
 subtitle: SQL queries don’t start with SELECT – Julia Evans
 tag_review: no_fit

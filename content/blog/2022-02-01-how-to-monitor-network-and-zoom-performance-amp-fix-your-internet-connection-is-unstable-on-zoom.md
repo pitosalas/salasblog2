@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-02-01'
 subtitle: How to Monitor Network and Zoom Performance & Fix “Your Internet Connection
   is Unstable” on Zoom

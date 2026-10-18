@@ -1,5 +1,4 @@
 ---
-category: '120'
 date: '2021-11-10'
 subtitle: Make a Good Dupont Pin-Crimp EVERY TIME!
 tags:

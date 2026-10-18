@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-05-01'
 subtitle: David Coursey writes an interesting bit
 tags:

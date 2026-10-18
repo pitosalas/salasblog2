@@ -1,5 +1,4 @@
 ---
-category: '77'
 date: '2021-08-08'
 subtitle: 'New in Git: switch and restore'
 tags:

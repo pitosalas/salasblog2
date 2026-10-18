@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-13'
 subtitle: '![](https://i0.wp.com/salsop.typepad.com/westernstewart.jpg?w=584)Stewart
   Alsop'

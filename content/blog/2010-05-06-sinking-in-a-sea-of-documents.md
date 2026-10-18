@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-05-06'
 subtitle: Lately because of one of my projects I am having to work my way through
   a bunch of long, semi struct...

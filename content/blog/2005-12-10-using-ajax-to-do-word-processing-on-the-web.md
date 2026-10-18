@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-12-10'
 subtitle: You may not have heard of this, but we are now starting to see quite decent
   word processing applicat...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-26'
 subtitle: My friend Shelby has been living and blogging from Africa over the last
   year or so. From reading it ...

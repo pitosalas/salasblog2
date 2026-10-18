@@ -1,5 +1,4 @@
 ---
-category: '317'
 date: '2022-04-24'
 subtitle: Red Circle Postmark Logo | DesignEvo Logo Maker
 tags:

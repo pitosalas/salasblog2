@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-23'
 subtitle: I’m a big coffee drinker, ok? I’ve been putting my Keurig
 tags:

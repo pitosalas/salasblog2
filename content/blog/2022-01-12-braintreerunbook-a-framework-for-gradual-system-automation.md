@@ -1,5 +1,4 @@
 ---
-category: '30'
 date: '2022-01-12'
 subtitle: 'braintree/runbook: A framework for gradual system automation'
 tags:

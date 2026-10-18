@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-12-01'
 subtitle: With apologies for quoting a Foxnews story, and with thanks to [Scott Adam...
 tags:

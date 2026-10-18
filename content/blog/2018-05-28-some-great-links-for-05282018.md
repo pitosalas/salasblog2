@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-05-28'
 subtitle: Mainframe on the Macbook – Marianne Bellotti – Medium
 tags:

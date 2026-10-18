@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-03-25'
 subtitle: I’ve been using mint.com for years now but every month I hate it a little
   bit more. It’s too big, to...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-09-26'
 subtitle: 'Interesting and **amusing** little article from ACM Queue:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-05'
 subtitle: From XConomy Seattle, this article covers ‘[an inspiring talk by Nick Hanauer
   of Seattle-based Secon...

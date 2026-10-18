@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2008-08-21'
 subtitle: Jason Calcanis has stopped blogging and instead is d...
 tags:

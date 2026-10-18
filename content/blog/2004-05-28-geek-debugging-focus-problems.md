@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2004-05-28'
 subtitle: Struggling with debugging hairy focus and other UI problems in Swing (Java)?
   Here’s a handy little t...

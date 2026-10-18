@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-16'
 subtitle: How Fig improved my ZSH experience (Fig Autocomplete Tutorial Pt. 1)
 tags:

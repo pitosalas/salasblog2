@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-28'
 subtitle: Like everyone else, I’ve been following the drama on Wall Street, Main Street,
   Washington DC and so ...

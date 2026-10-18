@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-08-04'
 subtitle: Quite interesting analysis (at least to us Geeks) showing that the notion
   of a ‘WIndows XP’ standard...

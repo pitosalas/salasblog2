@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-10'
 subtitle: '[ GeorgeKaraszi/ActiveRecordExtended: Adds additional postgres functionality
   to an ActiveRecord / Ra...'

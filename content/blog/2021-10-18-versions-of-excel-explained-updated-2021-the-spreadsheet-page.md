@@ -1,5 +1,4 @@
 ---
-category: '405'
 date: '2021-10-18'
 subtitle: '[ Versions of Excel Explained [Updated 2021] » The Spreadsheet Page](https://spreadsheetpage.com/exc...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-05-23'
 subtitle: The latest weekly build has been posted, BlogBridge 1.6. Che...
 tags:

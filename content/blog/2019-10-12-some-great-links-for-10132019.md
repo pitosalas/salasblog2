@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-12'
 subtitle: Postgres Is Underrated—It Handles More than You Think – DEV Community
 tag_review: no_fit

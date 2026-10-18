@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-06-05'
 subtitle: '!Picture 2-4'
 tags:

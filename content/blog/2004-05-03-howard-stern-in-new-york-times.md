@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-05-03'
 subtitle: For Howard Stern fans out there, here’s a good article.
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2010-10-22'
 subtitle: This is a weird development. Java is a super well established language,
   why would Apple decide to st...

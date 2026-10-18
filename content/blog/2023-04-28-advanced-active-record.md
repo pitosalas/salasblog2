@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-28'
 subtitle: Advanced Active Record –Optimizing Performance...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-07'
 subtitle: 'Dave writes an enthousiastic review of this book: The Secret in Building
   26'

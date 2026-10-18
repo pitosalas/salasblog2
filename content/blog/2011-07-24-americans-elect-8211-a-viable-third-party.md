@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-24'
 subtitle: It’s unusual to see Thomas Friedman
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '463'
 date: '2022-03-18'
 subtitle: Introduction – Docs – Foxglove Studio
 tags:

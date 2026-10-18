@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-05-16'
 subtitle: I often hear folks beat up Microsoft Windows for being a breeding ground
   for viruses, spyware, and a...

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2011-03-01'
 subtitle: I had the interesting experience this weekend to attend the “[Lean Startup
   Machine” weekend at the M...

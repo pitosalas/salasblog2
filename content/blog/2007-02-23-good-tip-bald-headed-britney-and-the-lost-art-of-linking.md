@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2007-02-23'
 subtitle: 'If you blog, you might appreciate: loose wire blog: [Bald-headed Br...'
 tags:

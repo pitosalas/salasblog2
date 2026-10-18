@@ -1,5 +1,4 @@
 ---
-category: '131'
 date: '2022-03-23'
 subtitle: 'Building Scalable Databases: Pros and Cons of Various Database Sharding
   Schemes – Dare Obasanjo'

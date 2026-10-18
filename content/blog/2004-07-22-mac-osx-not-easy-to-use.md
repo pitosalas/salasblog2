@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-07-22'
 subtitle: Years ago I was a hardcore Mac fanatic. I was one of the creators of a long-gone
   early Macintosh app...

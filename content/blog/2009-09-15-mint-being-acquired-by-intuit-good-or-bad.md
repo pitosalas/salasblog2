@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-09-15'
 subtitle: I am a fairly avid fan of Mint.com. So it’s with mixed emotions that I read
   that [Mint is being acqu...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-10'
 subtitle: Ruby one-liners
 tags:

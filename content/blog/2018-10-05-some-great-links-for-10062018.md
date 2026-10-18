@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-05'
 subtitle: ngrok – secure introspectable tunnels to localhost
 tag_review: no_fit

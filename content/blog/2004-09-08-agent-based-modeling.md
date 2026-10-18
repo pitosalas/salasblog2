@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-09-08'
 subtitle: 'And now for something completely different. I was reading this book: “It’s
   Alive'

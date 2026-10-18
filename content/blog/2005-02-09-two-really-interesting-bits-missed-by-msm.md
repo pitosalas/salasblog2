@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-02-09'
 subtitle: '!capt.rom10501301246.vatican_pope_rom105.jpg'
 tags:

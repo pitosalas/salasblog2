@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-02'
 subtitle: Help me with my Instant Messaging **shorthand**…
 tags:

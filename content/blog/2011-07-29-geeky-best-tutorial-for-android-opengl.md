@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-07-29'
 subtitle: If you are interested in graphics programming and gaming, let me strongly
   recommend you take a look ...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-22'
 subtitle: An Introduction to Ractors in Ruby | AppSignal Blog
 tags:

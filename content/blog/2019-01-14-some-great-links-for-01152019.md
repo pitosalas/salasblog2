@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-14'
 subtitle: CSS doesn’t suck – Andy Bell
 tag_review: no_fit

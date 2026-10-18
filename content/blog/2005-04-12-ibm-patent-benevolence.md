@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-04-12'
 subtitle: Doc comments with grudging admiration
 tags:

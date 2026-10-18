@@ -1,5 +1,4 @@
 ---
-category: '41'
 date: '2022-01-07'
 subtitle: Wouter Klop / BalancingRobot
 tags:

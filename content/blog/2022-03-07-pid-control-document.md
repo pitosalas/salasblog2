@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-03-07'
 subtitle: Pid control document
 tags:

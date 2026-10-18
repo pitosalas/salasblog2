@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-12-28'
 subtitle: Refactoring and Design Patterns
 tags:

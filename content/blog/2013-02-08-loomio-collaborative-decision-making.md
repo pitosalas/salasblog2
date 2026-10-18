@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-08'
 subtitle: 'Loomio is a new app looks quite cool and worth checking out:'
 tags:

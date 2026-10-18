@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-19'
 subtitle: Zed – Code at the speed of thought –Just to prove that theres never the
   last w...

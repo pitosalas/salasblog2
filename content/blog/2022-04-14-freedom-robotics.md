@@ -1,5 +1,4 @@
 ---
-category: '65'
 date: '2022-04-14'
 subtitle: Freedom Robotics
 tags:

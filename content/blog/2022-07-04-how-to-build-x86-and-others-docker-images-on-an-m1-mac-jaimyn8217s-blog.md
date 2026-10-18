@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-04'
 subtitle: How to build x86 (and others!) Docker images on an M1 Mac – Jaimyn’s Blog
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-02'
 subtitle: 'This happened: I had a book on my Amazon wish list for several months.'
 tags:

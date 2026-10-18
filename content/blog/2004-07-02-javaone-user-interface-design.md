@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-07-02'
 subtitle: Someone whose oppinion I listen to, Karsten Lentzch, recommends these books
   about user interface des...

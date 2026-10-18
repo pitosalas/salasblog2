@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-02-27'
 subtitle: How to write Javascript in Rails 6 | Webpacker, Yarn and Sprockets
 tags:

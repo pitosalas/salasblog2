@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2008-07-06'
 subtitle: '!Wordpress Timestamp'
 tags:

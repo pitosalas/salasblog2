@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-28'
 subtitle: Fish shell 3.0
 tag_review: no_fit

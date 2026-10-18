@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-08'
 subtitle: This is kind of depressing, but I don’t know why – but NASA administrator
   Bolden says that NASA has ...

@@ -1,5 +1,4 @@
 ---
-category: '101'
 date: '2022-04-09'
 subtitle: 'Medical Imaging Interaction Toolkit: Main Page'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-17'
 subtitle: Ruby 3.2’s YJIT is Production-Ready –...
 tags:

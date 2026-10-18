@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-15'
 subtitle: Document Your Python Code and Projects With ChatGPT – Real Python
 tag_review: no_fit

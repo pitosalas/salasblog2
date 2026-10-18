@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-16'
 subtitle: A friend of mine has been experiencing debilitating back pain for a year
   now. He’s seen pain special...

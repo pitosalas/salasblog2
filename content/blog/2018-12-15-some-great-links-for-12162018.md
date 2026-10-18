@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-15'
 subtitle: Introducing Action Mailbox for Rails 6
 tag_review: no_fit

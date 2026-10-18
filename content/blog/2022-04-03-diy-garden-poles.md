@@ -1,5 +1,4 @@
 ---
-category: '151'
 date: '2022-04-03'
 subtitle: DIY Garden Poles
 tags:

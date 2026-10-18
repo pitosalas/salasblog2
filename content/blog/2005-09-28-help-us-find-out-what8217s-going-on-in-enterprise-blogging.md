@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-09-28'
 subtitle: Here’s a survey
 tags:

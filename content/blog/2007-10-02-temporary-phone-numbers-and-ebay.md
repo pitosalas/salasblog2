@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-02'
 subtitle: When you are selling or buying something on the web, say eBay or Craigslist,
   it always is a question...

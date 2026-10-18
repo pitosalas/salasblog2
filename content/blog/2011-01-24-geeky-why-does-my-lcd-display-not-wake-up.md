@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-01-24'
 subtitle: When my computer turns on it can often take 30 to 120 seconds for my Samsung
   LCD display to wake up....

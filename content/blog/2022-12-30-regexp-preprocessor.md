@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-30'
 subtitle: Regexp Preprocessor –Interesting but not...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-07-30'
 subtitle: 'Check out some really cool images: Soviet model makers built this spacecraft
   based on the designs an...'

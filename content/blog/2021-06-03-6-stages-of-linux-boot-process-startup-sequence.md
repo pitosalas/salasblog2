@@ -1,5 +1,4 @@
 ---
-category: '52'
 date: '2021-06-03'
 subtitle: 6 Stages of Linux Boot Process (Startup Sequence)
 tags:

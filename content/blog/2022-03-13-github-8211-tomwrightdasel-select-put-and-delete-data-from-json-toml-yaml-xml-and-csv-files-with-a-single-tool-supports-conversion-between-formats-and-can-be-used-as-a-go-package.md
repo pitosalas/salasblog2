@@ -1,5 +1,4 @@
 ---
-category: '84'
 date: '2022-03-13'
 subtitle: '[ GitHub – TomWright/dasel: Select, put and delete data from JSON, TOML,
   YAML, XML and CSV files wit...'

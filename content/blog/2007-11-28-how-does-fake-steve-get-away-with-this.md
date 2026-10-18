@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-11-28'
 subtitle: Everyone by now has heard that the Diary of Fake Steve Jobs is actually
   written

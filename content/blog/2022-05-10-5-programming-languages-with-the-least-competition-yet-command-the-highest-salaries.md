@@ -1,5 +1,4 @@
 ---
-category: '290'
 date: '2022-05-10'
 subtitle: 5 Programming Languages With the Least Competition Yet Command the Highest
   Salaries

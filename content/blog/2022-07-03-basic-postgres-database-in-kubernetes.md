@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-03'
 subtitle: Basic Postgres database in Kubernetes
 tag_review: no_fit

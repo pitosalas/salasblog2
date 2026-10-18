@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-07'
 subtitle: Are Your Students Ready for AI?
 tags:

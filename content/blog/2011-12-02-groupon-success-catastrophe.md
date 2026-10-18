@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-02'
 subtitle: I bought a Groupon for a local restaurant. About 1 week before it expired
   I went to make a dinner re...

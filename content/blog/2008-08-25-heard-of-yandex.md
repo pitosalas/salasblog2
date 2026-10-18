@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-25'
 subtitle: From TimesOnline, a good reminder to not forget that we do live in a USA
   bubble sometimes, and don’t...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-12-30'
 subtitle: Explore Integrations – IFTTT –Get more from the services you love on ...
 tag_review: no_fit

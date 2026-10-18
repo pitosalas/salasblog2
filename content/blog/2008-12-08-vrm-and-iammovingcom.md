@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-08'
 subtitle: VRM is a concept that’s been floating around for a while. Evangelized (and
   perhaps coined) by [Doc S...

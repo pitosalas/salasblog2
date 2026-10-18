@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-09'
 subtitle: You can read all about the potential acquisition of Yahoo by Microsoft,
   here for example, where Marc...

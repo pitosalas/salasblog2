@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-08'
 subtitle: '**Wonderful Mars pictures? Unavailable! **I was looking around the Mars
   Rover Web'

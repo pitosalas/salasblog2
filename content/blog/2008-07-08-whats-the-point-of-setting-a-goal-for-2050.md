@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-08'
 subtitle: How lame and do-nothing can you get when the best you can do is to set a
   goal to be met in 2050,

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-06'
 subtitle: A High-Level Grammar of Interactive Graphics | Vega-Lite
 tag_review: no_fit

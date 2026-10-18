@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-03-14'
 subtitle: 'Via MetaFilter: “Barbarians are at the gates, testing the lo...'
 tags:

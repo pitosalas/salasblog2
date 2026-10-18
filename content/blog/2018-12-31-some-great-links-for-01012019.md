@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-31'
 subtitle: Rethinking how we interview in Microsoft’s Developer Division
 tag_review: no_fit

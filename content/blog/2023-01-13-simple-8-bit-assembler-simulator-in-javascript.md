@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-13'
 subtitle: Simple 8-bit Assembler Simulator in Javascript ...
 tags:

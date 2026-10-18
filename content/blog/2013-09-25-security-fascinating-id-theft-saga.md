@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-25'
 subtitle: It is quite amazing (but not surprising) the degree of sophistication, care,
   and patience these hack...

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-11-27'
 subtitle: 13 port USB hub
 tags:

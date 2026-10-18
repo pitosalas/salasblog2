@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-02-19'
 subtitle: If you haven’t heard about Podcasting (what, are you living under a rock?)
   the New York Times has a ...

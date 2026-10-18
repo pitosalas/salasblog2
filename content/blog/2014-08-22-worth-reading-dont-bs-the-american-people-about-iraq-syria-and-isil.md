@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-08-22'
 subtitle: 'This is worth looking at: The apparent beheading of American journalist
   James Foley by the Islamic S...'

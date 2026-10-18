@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-28'
 subtitle: 'This is just a weird story:'
 tags:

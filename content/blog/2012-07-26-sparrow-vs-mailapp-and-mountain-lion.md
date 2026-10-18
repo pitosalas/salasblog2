@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-07-26'
 subtitle: Did you hear that Google bought Sparrow? Sparrow is a really cool email...
 tags:

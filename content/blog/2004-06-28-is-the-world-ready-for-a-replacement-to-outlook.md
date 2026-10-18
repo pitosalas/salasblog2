@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-06-28'
 subtitle: Everyone loves to beat...
 tags:

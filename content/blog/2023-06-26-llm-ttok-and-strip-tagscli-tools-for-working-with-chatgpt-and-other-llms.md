@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-26'
 subtitle: llm, ttok and strip-tags—CLI tools for working with ChatGPT and other LLMs
 tags:

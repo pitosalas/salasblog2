@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-16'
 subtitle: Came across this interesting article. You may agr...
 tags:

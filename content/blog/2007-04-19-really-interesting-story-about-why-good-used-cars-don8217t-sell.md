@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-04-19'
 subtitle: Ok it’s not exactly about that, but the answer to that question is answered.
   Check out this post

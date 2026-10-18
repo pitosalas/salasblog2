@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-10'
 subtitle: An interesting view on patents from Judge Posner
 tags:

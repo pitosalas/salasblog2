@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-10-24'
 subtitle: '> “Without a doubt, the concepts behind AJAX are providing the catalyst
   to move the web from its old...'

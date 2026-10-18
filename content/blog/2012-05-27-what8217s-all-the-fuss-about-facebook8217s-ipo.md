@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-27'
 subtitle: I totally agree with Frank Bruni’s account of the Facebook’s IPO. It seems
   to me that if the current...

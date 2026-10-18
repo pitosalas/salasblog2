@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-01-13'
 subtitle: This is just a great read.
 tags:

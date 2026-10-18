@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-10'
 subtitle: Effective Queries with Rails and PostgreSQL
 tags:

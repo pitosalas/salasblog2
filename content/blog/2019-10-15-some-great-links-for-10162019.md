@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-15'
 subtitle: How to Write Fast Code in Ruby on Rails – Shopify Engineering
 tags:

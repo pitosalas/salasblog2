@@ -1,5 +1,4 @@
 ---
-category: '93'
 date: '2022-06-10'
 subtitle: highlight.js demo
 tags:

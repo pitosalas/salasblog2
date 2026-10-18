@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-03'
 subtitle: 80 Characters per Line Is a Standard Worth Sticking to Even Today
 tag_review: no_fit

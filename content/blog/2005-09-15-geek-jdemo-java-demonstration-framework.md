@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-09-15'
 subtitle: 'This is pretty cool: a framework to easily manage the demonstration of
   UI elements, inspired by JUni...'

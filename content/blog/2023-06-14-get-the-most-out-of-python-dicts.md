@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-14'
 subtitle: Get the most out of Python dicts
 tags:

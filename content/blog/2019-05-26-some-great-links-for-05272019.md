@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-26'
 subtitle: On not using ROS for your robotics startup | The Construct
 tags:

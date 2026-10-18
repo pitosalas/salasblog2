@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-06-29'
 subtitle: I am just finished reading Devil In The White City
 tags:

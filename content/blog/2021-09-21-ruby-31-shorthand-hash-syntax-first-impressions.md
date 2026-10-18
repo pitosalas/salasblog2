@@ -1,5 +1,4 @@
 ---
-category: '239'
 date: '2021-09-21'
 subtitle: Ruby 3.1 – Shorthand Hash Syntax – First Impressions
 tags:

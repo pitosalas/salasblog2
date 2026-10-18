@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-01-31'
 subtitle: Sites that have to support a huge amount of traffic tend to want to be static
   html. No matter how fa...

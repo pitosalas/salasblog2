@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-01'
 subtitle: This isn’t a huge new insight but it’s interesting to see **history kind
   of repeating itself**.

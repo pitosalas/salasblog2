@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2004-06-10'
 subtitle: I know I do! Here’s a very concise summary of the syntax that will jog your
   memory when it needs to ...

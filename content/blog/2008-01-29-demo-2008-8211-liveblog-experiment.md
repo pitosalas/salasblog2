@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-01-29'
 subtitle: I’m at the Demo 2008 Conference today. Ever heard of Live Blogging? It’s
   when some crazy person deci...

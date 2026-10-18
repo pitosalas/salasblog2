@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: Find A Good Movie To Watch –A different movie recommender, w...
 tag_review: no_fit

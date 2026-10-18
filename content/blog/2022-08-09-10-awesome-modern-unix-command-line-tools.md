@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-09'
 subtitle: 10 Awesome Modern Unix Command-Line Tools –Are you Using Li...
 tags:

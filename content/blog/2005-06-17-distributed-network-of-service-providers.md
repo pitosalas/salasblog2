@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-17'
 subtitle: Not computer service providers, but folks like carpenters and plumbers….
 tags:

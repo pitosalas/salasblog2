@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-02-19'
 subtitle: A beautifully written comment (positive) by Roger Ebert
 tags:

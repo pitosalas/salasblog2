@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-20'
 subtitle: 'Transformer models: an introduction and catalog — 2023 Edition'
 tags:

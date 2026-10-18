@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-17'
 subtitle: Things you’re allowed to do
 tag_review: no_fit

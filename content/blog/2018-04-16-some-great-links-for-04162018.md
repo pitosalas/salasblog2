@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-16'
 subtitle: Top 5 Python IDEs For Data Science (article) – DataCamp
 tags:

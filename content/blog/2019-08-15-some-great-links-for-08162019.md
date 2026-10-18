@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-08-15'
 subtitle: Advanced multi-db techniques in Rails 6
 tags:

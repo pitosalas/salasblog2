@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-08-12'
 subtitle: Removing sensitive data from a repository – GitHub Docs
 tags:

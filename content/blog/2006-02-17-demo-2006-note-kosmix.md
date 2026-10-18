@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-02-17'
 subtitle: Check out this cool subject matter specific search site. Currently they
   ha...

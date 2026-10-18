@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-03-20'
 subtitle: 'Steve Jobs says: “I almost died” in interesting article: [Apple CEO Steve
   Jobs joins Schwarzenegger ...'

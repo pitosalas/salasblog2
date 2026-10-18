@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-03-14'
 subtitle: I know it’s a **provocative title**, and sadly I suspect that many of the
   ‘intended audience’ will a...

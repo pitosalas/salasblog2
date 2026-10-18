@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-02-17'
 subtitle: '![](http://www.bobcongdon.net/media...'
 tags:

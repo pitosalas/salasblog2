@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-08-01'
 subtitle: piotrmurach/tty-box
 tags:

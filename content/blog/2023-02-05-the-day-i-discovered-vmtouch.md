@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-05'
 subtitle: The day I discovered vmtouch –IntroductionLa...
 tag_review: no_fit

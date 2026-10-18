@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-24'
 subtitle: I spent 5 minutes perusing this site, and it looks really good. Wow, ma...
 tags:

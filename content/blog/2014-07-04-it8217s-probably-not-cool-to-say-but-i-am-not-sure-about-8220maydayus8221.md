@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-07-04'
 subtitle: “We’re kickstarting a Super PAC big enough to make it possible to win a
   Congress committed to fundam...

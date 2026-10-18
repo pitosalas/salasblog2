@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2004-11-26'
 subtitle: I just came across a good summary o...
 tags:

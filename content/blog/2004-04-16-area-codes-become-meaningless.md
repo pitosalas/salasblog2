@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-04-16'
 subtitle: A good little insight from Rafe Needleman
 tags:

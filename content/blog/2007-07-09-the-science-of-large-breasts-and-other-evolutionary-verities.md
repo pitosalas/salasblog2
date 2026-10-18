@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-07-09'
 subtitle: Hey, don’t blame me, I’m just posting a pointer to this interesting story
   over that the ever-legitim...

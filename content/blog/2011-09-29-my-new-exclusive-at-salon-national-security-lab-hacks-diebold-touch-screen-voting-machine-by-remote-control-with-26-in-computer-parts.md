@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-09-29'
 subtitle: Continuing my linking to Election related news, check out this post [Diebold
   Touch-Screen Voting Mac...

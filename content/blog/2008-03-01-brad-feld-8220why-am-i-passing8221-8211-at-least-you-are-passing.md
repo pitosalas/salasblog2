@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-03-01'
 subtitle: Brad Feld, **famous Venture Capitalis**t writes an interesting post about
   how he might get to the po...

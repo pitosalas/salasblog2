@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-26'
 subtitle: 'Laurence Tratt: Distinguishing an Interpreter from a Compiler'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-18'
 subtitle: Here’s a truly weird article
 tags:

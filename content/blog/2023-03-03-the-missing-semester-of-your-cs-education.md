@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-03'
 subtitle: The Missing Semester of Your CS Education
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-27'
 subtitle: GPS – Bartosz Ciechanowski –GPS i...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-07-09'
 subtitle: I saw these two books in Barnes and Noble. They look quite interesting.
   I might get them.

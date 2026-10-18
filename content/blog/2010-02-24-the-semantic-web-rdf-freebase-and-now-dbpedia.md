@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-02-24'
 subtitle: I was talking with Noah Mendelsohn this morning and we got into a di...
 tags:

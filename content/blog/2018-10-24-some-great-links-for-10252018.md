@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-24'
 subtitle: https://link.medium.com/0oNpyGJ4gR
 tags:

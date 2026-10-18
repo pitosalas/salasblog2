@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-05-18'
 subtitle: 'Just an amusing little bit from the Wall Street Journal about the Toyota
   Prius:'

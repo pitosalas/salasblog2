@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-02-03'
 subtitle: laser_pipeline/Tutorials/IntroductionToWorkingWithLaserScannerData – ROS
   Wiki

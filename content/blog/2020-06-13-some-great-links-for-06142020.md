@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-06-13'
 subtitle: Free illustrations for developers. – DEV
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2014-06-27'
 subtitle: Maybe it’s because I just arrived from a long drive and stay in New York
   where I was guided by the n...

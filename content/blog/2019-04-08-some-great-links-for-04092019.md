@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-08'
 subtitle: codercom/code-server
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-12-13'
 subtitle: In my graphic design work I’ve gotten to know scratchboard (aka clayboard.)
   It’s a very cool materia...

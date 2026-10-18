@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-12-31'
 subtitle: '!beard20084.jpg'
 tags:

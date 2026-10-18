@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-09'
 subtitle: '**Update on Digital Photography. **When I wrote a few days ago about [OurPi...'
 tag_review: no_fit

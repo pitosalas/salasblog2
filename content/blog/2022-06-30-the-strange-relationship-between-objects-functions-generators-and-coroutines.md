@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-30'
 subtitle: The strange relationship between objects, functions, generators and coroutines
 tags:

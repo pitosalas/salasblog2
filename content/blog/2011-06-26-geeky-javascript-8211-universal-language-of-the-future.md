@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-06-26'
 subtitle: JavaScript is the language of the future. Why do I say this?
 tags:

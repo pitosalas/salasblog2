@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-05-25'
 subtitle: Not that I’m an expert or anything…
 tags:

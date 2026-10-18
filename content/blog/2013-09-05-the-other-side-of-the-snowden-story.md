@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-05'
 subtitle: What Did Edward Snowden Get Wrong? Everything | RAND
 tags:

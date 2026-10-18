@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-11-03'
 subtitle: 'GitHub – iris-ua/iris_lama: LaMa – A Localization and Mapping library'
 tag_review: no_fit

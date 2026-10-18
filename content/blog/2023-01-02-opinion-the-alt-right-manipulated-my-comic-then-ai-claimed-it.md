@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-02'
 subtitle: Opinion | The Alt-Right Manipulated My Comic. Then A.I. Claimed It.
 tags:

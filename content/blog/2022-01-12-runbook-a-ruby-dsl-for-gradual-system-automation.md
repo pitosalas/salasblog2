@@ -1,5 +1,4 @@
 ---
-category: '30'
 date: '2022-01-12'
 subtitle: 'Runbook: A Ruby DSL for Gradual System Automation'
 tags:

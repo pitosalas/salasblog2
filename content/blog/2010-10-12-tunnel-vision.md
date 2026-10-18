@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-10-12'
 subtitle: This article by David Brooks in the New York Times
 tags:

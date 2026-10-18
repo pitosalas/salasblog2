@@ -1,5 +1,4 @@
 ---
-category: General
 date: '2025-08-20'
 tags:
 - software-engineering

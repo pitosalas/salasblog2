@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-21'
 subtitle: I wonder about this.
 tags:

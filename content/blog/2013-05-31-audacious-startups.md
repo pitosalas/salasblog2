@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-05-31'
 subtitle: I remember when this project was first announced and ‘PR’d. It’s just another
   good reminder about th...

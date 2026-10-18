@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-17'
 subtitle: Andy Payne wrote an interesting analysis about the future of the “software
   industry”

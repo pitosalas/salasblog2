@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-18'
 subtitle: Actually it’s about Twitter Support in BlogBridge
 tags:

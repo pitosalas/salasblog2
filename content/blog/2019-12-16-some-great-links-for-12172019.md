@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-16'
 subtitle: The Lesson to Unlearn
 tags:

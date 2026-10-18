@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-04-21'
 subtitle: In the last few weeks or so, I’ve noticed a marked increase in the number
   of spam emails that are ma...

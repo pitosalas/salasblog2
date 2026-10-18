@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-10'
 subtitle: I agree with this post
 tags:

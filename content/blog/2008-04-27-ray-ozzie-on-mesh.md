@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-04-27'
 subtitle: 'You might have missed the announcement of Microsoft Mesh. Cycnical me:
   these grand strategies come a...'

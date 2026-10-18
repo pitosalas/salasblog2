@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-08-21'
 subtitle: 'Specifications Grading: A Method for Improving Student Performance'
 tags:

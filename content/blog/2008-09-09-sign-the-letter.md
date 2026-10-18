@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-09'
 subtitle: Maybe this is one more of the futile petitions
 tags:

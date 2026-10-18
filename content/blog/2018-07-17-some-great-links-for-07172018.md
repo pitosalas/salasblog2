@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-07-17'
 subtitle: Top 8 Data Structures for Coding Interviews and practice interview questions
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-05-11'
 subtitle: Our friend Dave Weinberger shares
 tags:

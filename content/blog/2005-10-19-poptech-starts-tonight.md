@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-19'
 subtitle: Pop!Tech is my favorite conference, and it starts tonight, in Camden Main...
 tags:

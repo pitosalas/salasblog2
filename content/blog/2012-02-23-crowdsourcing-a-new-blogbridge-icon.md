@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-23'
 subtitle: Well, it’s been about 5 years with the same (lovely) BlogBridge application
   icon and as we are redes...

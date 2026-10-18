@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-25'
 subtitle: I’m a big fan of Wikipedia, and of course traditionally (like anyone) have
   been an admirer of the En...

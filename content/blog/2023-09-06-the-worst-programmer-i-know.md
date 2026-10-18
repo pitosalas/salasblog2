@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-06'
 subtitle: The Worst Programmer I Know
 tags:

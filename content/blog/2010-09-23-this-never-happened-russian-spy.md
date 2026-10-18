@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-23'
 subtitle: This never happened…
 tags:

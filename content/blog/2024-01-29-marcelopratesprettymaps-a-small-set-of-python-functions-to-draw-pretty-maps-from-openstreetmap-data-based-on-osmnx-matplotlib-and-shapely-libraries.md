@@ -1,5 +1,4 @@
 ---
-category: General
 date: '2025-07-03'
 title: 'prettymaps: Simple access to OpenStreetmaps'
 type: blog

@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-11-29'
 subtitle: There’s been a lot
 tags:

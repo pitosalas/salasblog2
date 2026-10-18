@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2004-12-24'
 subtitle: '!['
 tags:

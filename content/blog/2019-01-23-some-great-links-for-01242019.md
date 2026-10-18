@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-23'
 subtitle: 12 cool things you can do with GitHub – Hacker Noon
 tag_review: no_fit

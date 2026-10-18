@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-05-10'
 subtitle: And reached the same conclusion. I hope we ar...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-09-08'
 subtitle: More stuff that I learned at Transparency camp.
 tags:

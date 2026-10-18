@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-04-18'
 subtitle: '> “They stripped Mr Kumaran naked and left him by the side of the road
   – but not before **cutting of...'

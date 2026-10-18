@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-02-04'
 subtitle: How to Fake a Traffic Jam on Google Maps – VICE
 tag_review: no_fit

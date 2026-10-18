@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-12-02'
 subtitle: Seems like a dredged up some “old” (you know who you are) **Improv fans
   **with my earlier posting

@@ -1,5 +1,4 @@
 ---
-category: '172'
 date: '2021-05-31'
 subtitle: rubysolo/dentaku
 tags:

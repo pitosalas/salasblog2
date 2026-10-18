@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-07'
 subtitle: Isaac Asimov was a visonary don’t you think?
 tags:

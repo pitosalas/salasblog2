@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-29'
 subtitle: 'git-sim: Visually simulate Git operations in your own repos'
 tag_review: no_fit

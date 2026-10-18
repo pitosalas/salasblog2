@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-03-05'
 subtitle: Advanced Postgres Performance Tips
 tags:

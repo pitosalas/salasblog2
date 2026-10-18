@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-28'
 subtitle: Check out this post from [Freakonom...
 tags:

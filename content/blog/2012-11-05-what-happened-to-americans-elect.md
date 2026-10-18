@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-11-05'
 subtitle: 'Over the last year I mentioned “Americans Elect” several times: Americans
   Elect: Another Opinion'

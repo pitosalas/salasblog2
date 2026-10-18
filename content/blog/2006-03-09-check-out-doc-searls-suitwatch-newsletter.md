@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2006-03-09'
 subtitle: There are a few **really good** newsletters that have not moved over to
   a blog which I read religio...

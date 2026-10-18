@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-11-23'
 subtitle: Did you read the book “The Diving Bell and The Butterfly”
 tags:

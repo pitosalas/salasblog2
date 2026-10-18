@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-04-05'
 subtitle: The Art of Command Line
 tag_review: no_fit

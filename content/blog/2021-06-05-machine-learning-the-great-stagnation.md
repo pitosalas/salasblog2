@@ -1,5 +1,4 @@
 ---
-category: '24'
 date: '2021-06-05'
 subtitle: 'Machine Learning: The Great Stagnation'
 tags:

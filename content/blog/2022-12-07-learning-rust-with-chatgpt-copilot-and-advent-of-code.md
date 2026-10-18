@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-07'
 subtitle: Learning Rust with ChatGPT, Copilot and Advent of Code
 tags:

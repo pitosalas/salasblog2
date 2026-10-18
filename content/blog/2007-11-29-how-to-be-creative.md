@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-11-29'
 subtitle: I just came across this thoughtprovoking
 tags:

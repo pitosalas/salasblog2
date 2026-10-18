@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-05'
 subtitle: Automate the Little Things Too | Technical Explorations
 tags:

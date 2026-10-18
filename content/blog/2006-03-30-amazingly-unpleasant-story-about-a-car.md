@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-30'
 subtitle: My friend Francois posts a horrifying real-life story
 tags:

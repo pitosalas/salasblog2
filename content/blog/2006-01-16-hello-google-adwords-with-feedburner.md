@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-16'
 subtitle: 'Interesting: I write in two blogs: this one and the BlogBridge blog. In
   this one, I have a much high...'

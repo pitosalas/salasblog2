@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-05-17'
 subtitle: Check out the BlogBridge blog and site
 tags:

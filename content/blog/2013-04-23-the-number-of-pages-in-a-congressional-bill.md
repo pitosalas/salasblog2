@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-23'
 subtitle: I have to do a little research. It seems to be a favorite talking point
   by politicians on all sides ...

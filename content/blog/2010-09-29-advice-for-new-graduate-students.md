@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-29'
 subtitle: If you know anyone in graduate school (oops, or if you are in graduate school
   yourself, or planning ...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-11-24'
 subtitle: '> [“A song about those very special people that make sure your computer
   works. They are called Syste...'

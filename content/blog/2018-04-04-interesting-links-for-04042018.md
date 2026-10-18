@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2018-04-04'
 subtitle: 1.10. Decision Trees — scikit-learn 0.19.1 documentation
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-03-16'
 subtitle: I stopped posting thoughts about the mess that all of congress has made
   of health care reform. There...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-11-15'
 subtitle: This is very close to where I live, and people are amazed to know that you
   can actually go by boat f...

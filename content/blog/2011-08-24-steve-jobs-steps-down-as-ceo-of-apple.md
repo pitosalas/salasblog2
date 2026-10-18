@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-08-24'
 subtitle: 'This news saddens me:'
 tags:

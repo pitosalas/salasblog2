@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-05-01'
 subtitle: Bill Ives of the Portals and KM Blog writes an interesting two-part ...
 tags:

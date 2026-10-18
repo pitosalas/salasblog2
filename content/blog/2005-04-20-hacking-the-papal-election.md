@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-04-20'
 subtitle: I have to admit to being **fascinated** with the Vatican, and the **ancient**,
   elaborate **tradition...

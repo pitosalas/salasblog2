@@ -1,5 +1,4 @@
 ---
-category: '155'
 date: '2022-03-13'
 subtitle: 'OpenCV: OpenCV modules'
 tags:

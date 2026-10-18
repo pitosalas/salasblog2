@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-09'
 subtitle: I’ve spent the last few weeks in dribs and drabs building a new game for
   Android. Lately I got deepe...

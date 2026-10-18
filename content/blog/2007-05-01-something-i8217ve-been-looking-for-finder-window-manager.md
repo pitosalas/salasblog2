@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-05-01'
 subtitle: Check out this post from [The Unofficial A...
 tags:

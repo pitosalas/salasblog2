@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-08-03'
 subtitle: '!Blogonbuttonsm'
 tags:

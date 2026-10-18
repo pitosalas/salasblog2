@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-16'
 subtitle: typicode/json-server
 tag_review: no_fit

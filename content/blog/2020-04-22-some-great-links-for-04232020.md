@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-04-22'
 subtitle: Stripe is Silently Recording Your Movements On its Customers’ Websites ·
   mtlynch.io

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-02'
 subtitle: If you are a hardcore blog reader like I am, and like BlogBridge fans a...
 tags:

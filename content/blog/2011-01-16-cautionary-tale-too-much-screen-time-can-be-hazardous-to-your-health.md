@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-01-16'
 subtitle: 'From Science Daily: [Couch Potatoes Beware: Too Much Time Spent Watching
   TV Is Harmful to Heart Heal...'

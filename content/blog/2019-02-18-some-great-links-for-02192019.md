@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-18'
 subtitle: How Microservices Saved the Internet – Hacker Noon
 tag_review: no_fit

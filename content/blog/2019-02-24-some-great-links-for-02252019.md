@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-24'
 subtitle: The Testing Introduction I Wish I Had
 tag_review: no_fit

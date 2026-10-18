@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-27'
 subtitle: 'Life Is Not Short | DKB Show: The most surprising thing...'
 tag_review: no_fit

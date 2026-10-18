@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-08-01'
 subtitle: I am assuming that you’ve followed the nonsense that has been going on in
   Washington D.C. about our ...

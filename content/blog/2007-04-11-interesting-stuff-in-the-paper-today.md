@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-04-11'
 subtitle: Here are some random goodies that caught my eye this morning. Don’ t count
   on my being your clipping...

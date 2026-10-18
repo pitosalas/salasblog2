@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-11'
 subtitle: Sample diagrams — blockdiag 1.0 documentation –
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-17'
 subtitle: Something I’ve been thinking about a lot lately is the need for some kind
   of platform to match local...

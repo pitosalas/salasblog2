@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-12'
 subtitle: Actually the funniest part of this was the headline… **“Also, Apple’s Mother
   is Obese”**

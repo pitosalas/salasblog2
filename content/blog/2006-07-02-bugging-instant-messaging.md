@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-07-02'
 subtitle: I just walked by a room full of people working on computers during a break
   between presentations

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-15'
 subtitle: From the New York Times, an [article by Nick Kristof, describing a real-life
   story of a friend of hi...

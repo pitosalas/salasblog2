@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-01-31'
 subtitle: Michael Arrington is a famous Tech-pundit-commenta...
 tags:

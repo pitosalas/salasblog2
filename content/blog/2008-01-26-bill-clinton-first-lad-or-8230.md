@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2008-01-26'
 subtitle: People wring their hands about the possibility of having Bill Clinton back
   in the white house as the...

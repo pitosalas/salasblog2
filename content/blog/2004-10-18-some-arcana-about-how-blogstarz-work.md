@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-10-18'
 subtitle: '**Believe **me when I say that this **will only be interesting **to you
   if you are curious about the...'

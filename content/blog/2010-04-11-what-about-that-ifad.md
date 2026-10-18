@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-04-11'
 subtitle: I am not going to spend bits talking about the iFad (other than deploying
   my snarky nickname for it)...

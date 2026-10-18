@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-14'
 subtitle: As you know, I am a big big fan of Spotify. Lately I’ve been playing with
   the Last.FM integration. I...

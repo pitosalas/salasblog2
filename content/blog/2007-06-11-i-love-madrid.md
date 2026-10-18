@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-11'
 subtitle: '![Events in Madrid'
 tags:

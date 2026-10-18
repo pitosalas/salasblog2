@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-08-23'
 subtitle: Bill Ives of the [[tag]Portals and KM[/tag] blog](http://billives.typepad.com/portals_and_km/)
   did a...

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-06-04'
 subtitle: Netplan network configuration tutorial for beginners – LinuxConfig.org
 tags:

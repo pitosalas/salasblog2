@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-23'
 subtitle: 'Pretty good review of a broad topic: Negotiating Your Startup Offer'
 tags:

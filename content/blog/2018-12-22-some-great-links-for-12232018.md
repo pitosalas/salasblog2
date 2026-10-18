@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-22'
 subtitle: Algorithm Archive · GitBook
 tags:

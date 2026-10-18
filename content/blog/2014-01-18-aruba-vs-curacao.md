@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-01-18'
 subtitle: I admit I am always a little bit offended when I hear that a friend of mine
   (François?) chooses Arub...

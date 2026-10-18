@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-26'
 subtitle: 'Python mmap: Doing File I/O With Memory Mapping – Real Python'
 tags:

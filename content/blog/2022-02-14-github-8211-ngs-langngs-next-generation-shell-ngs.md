@@ -1,5 +1,4 @@
 ---
-category: '30'
 date: '2022-02-14'
 subtitle: 'GitHub – ngs-lang/ngs: Next Generation Shell (NGS)'
 tags:

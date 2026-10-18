@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2011-02-15'
 subtitle: Over the last several months I’ve been following a series of blog postings
   by Jamis Buck

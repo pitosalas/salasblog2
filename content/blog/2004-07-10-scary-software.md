@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-07-10'
 subtitle: '**I love those security guys** just as much as the next guy but this certificate
   crazyness is ridicu...'

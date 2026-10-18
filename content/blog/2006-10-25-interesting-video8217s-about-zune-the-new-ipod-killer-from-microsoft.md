@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-10-25'
 subtitle: Scoble writes about the Zune....
 tags:

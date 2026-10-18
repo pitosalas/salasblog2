@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-02-03'
 subtitle: Merging data from multiple LIDAR(s) in ROS
 tags:

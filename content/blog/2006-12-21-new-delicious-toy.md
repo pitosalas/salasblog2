@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-12-21'
 subtitle: What do you think?
 tags:

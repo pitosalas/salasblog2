@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2024-01-19'
 subtitle: Essay | Why Americans Have Lost Faith in the Value of College
 tag_review: no_fit

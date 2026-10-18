@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-07-05'
 subtitle: Welcome to Streamlit — Streamlit 0.62.1 documentation
 tags:

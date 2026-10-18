@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2010-08-05'
 subtitle: Check this post The flatfooted learning society
 tags:

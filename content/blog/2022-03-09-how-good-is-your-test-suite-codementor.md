@@ -1,5 +1,4 @@
 ---
-category: '346'
 date: '2022-03-09'
 subtitle: How Good Is Your Test Suite? | Codementor
 tags:

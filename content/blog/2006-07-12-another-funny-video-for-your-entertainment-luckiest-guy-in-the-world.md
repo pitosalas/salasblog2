@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-07-12'
 subtitle: If you ever thought it might be fun to learn how to skydive, check this
   out

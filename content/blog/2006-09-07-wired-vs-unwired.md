@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-09-07'
 subtitle: For you Wifi junkies, here is a list of America’s Most Wired Cities – Forbes.com
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-16'
 subtitle: Polar plots with Matplotlib –If y...
 tags:

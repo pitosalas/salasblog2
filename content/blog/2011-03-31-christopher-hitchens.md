@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-03-31'
 subtitle: 'A really excellent interview/review of Christopher Hitchens and his memoir,
   “Hitch-22”:'

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-11-30'
 subtitle: '*'
 tags:

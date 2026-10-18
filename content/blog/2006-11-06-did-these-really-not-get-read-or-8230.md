@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-11-06'
 subtitle: 'This just struck me as curious: “Letters to God end up in ocean, unread”'
 tags:

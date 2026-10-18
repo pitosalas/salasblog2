@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-07-01'
 subtitle: How to Remotely Troubleshoot Your Relative’s Computer
 tags:

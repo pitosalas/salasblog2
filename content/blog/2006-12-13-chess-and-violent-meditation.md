@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-12-13'
 subtitle: Check out this post from [empire
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2010-06-26'
 subtitle: You can’t have missed the whole General Stanley McChrystal affair,
 tags:

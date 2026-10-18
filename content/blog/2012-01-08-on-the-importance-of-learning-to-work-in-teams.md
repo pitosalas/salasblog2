@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-08'
 subtitle: David Colletta shared this link in comments to my [rece...
 tags:

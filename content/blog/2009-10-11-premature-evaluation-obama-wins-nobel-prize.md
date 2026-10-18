@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2009-10-11'
 subtitle: 'Check out Premature Evaluation?: Obama Wins Nobel Prize(**from** ...'
 tags:

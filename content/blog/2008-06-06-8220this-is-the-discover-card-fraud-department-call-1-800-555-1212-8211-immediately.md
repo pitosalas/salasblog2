@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-06-06'
 subtitle: Sounds ominous, right? So I call them up, and I hear a serious voice telling
   me to please hold on, t...

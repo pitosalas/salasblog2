@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2004-11-25'
 subtitle: '![](https://i0.wp.com/www.xandocosi.com/images/CosiMap2.gif?w=584) Have
   you seen this **map **before...'

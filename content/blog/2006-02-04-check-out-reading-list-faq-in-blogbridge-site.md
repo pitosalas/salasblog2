@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-02-04'
 subtitle: I just posted an intro to Reading ...
 tags:

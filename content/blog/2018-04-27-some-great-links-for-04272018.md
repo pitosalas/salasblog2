@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-27'
 subtitle: Results from the 2018 Rails Hosting Survey | Planet Argon
 tags:

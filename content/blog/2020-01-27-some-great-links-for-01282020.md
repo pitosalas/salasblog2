@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-27'
 subtitle: The Cost of Investing Too Heavily in a JavaScript Framework – DEV Community
 tag_review: no_fit

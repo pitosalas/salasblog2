@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-13'
 subtitle: Maintain the “GitHub flow” with Gitpod, an online, browser IDE – JAXenter
 tag_review: no_fit

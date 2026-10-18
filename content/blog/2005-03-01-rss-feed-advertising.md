@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-03-01'
 subtitle: From News.com, about Kaboodle BrightAds RSS
 tags:

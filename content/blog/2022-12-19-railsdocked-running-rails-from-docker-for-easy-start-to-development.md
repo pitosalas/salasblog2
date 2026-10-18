@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-19'
 subtitle: 'rails/docked: Running Rails from Docker for easy start to development'
 tags:

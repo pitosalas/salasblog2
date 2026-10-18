@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-08-23'
 subtitle: Many consumer products, like cell phones, computers, and so on seem to come
   with some kind of a [tag...

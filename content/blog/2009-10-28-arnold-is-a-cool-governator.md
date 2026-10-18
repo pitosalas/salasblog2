@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2009-10-28'
 subtitle: Check out Schwarzenegger Gives California Legislature A Hidden Finger
 tags:

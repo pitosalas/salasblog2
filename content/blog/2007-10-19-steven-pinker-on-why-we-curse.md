@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-19'
 subtitle: I know that access to my blog is blocked at least by EMC (heard so from
   friends there) so I will ref...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-03-24'
 subtitle: David Mamet (supposedly) wrote this compelling note to tv writers
 tags:

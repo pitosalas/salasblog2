@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-07-03'
 subtitle: 'Just from today’s New York Times:'
 tags:

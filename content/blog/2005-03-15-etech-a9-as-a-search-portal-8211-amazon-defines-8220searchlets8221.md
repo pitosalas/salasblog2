@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-03-15'
 subtitle: Jeff Bezos talked about a new feature of A9 which allows the basic A9 Search
   Page to be extended by ...

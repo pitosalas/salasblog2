@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-03-06'
 subtitle: There are fascinating shifts going on in higher education today, from MOOCs
   to the ‘flipped classroo...

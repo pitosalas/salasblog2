@@ -1,5 +1,4 @@
 ---
-category: '42'
 date: '2022-01-07'
 subtitle: 'High speed balancing robot: introduction – Elexperiment.nl'
 tags:

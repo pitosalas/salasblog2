@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-03'
 subtitle: How to setup a virtual desktop on Kubernetes in 15 minutes
 tag_review: no_fit

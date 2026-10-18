@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-03-07'
 subtitle: Integrate Bootstrap 4 and Font Awesome 5 in Rails 6
 tag_review: no_fit

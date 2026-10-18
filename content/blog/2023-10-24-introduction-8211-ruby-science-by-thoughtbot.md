@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-10-24'
 subtitle: Introduction – Ruby Science by thoughtbot
 tag_review: no_fit

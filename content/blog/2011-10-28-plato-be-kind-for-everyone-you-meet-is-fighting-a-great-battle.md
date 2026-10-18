@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-10-28'
 subtitle: That’s a great quote. And no, it’s not AT ALL autobiographical. It’s just
   something that I’ve though...

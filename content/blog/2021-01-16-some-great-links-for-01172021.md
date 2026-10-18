@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-01-16'
 subtitle: '[Building GitHub-style Hovercards with StimulusJS and HTML-over-the-wire
   | Boring Rails: Skip the bu...'

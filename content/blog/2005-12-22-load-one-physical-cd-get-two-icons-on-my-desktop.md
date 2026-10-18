@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-12-22'
 subtitle: '!Picture 1-24'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-17'
 subtitle: '**Good news**: I looked up what the trade-in value is for my iPhone 4S
   32Gig. Much to my pleasant su...'

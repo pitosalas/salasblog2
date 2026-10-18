@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-02-12'
 subtitle: '[youtube=http://www.youtube.com/watch?v=7xXNx7ccgD0&w=456&h=277]'
 tags:

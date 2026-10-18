@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-12-29'
 subtitle: A million years ago I used Lotus Notes … I think it was version 3 and 4.
 tags:

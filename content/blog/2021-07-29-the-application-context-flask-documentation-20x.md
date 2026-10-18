@@ -1,5 +1,4 @@
 ---
-category: '193'
 date: '2021-07-29'
 subtitle: The Application Context — Flask Documentation (2.0.x)
 tags:

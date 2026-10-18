@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-07-14'
 subtitle: styd/apexcharts.rb
 tag_review: no_fit

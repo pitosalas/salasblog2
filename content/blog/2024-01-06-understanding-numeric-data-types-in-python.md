@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2024-01-06'
 subtitle: Understanding numeric data types in python
 tag_review: no_fit

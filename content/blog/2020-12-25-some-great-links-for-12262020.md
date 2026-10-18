@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-12-25'
 subtitle: This Could Be the New Java
 tag_review: no_fit

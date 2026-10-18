@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-17'
 subtitle: The Best Smokers Under $500 for Ribs, Pork, Brisket, and More
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-23'
 subtitle: While I am in the mood to reveal some of my weaknesses (see post on Dieting
 tag_review: no_fit

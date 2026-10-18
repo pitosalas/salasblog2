@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-02-22'
 subtitle: 'Chris Herot writes about a new product called RulesBase: Check out this
   post'

@@ -1,5 +1,4 @@
 ---
-category: '100'
 date: '2022-04-14'
 subtitle: Engineering & Computer Science – Google Scholar Metrics
 tags:

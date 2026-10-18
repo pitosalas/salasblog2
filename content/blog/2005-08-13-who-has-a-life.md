@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-08-13'
 subtitle: As you might have seen over at our **BlogBridge blog**, we are experim...
 tags:

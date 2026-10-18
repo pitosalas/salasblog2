@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-20'
 subtitle: Heroku Alternatives for Python-based Applications
 tags:

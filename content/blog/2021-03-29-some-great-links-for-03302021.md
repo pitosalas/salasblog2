@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-03-29'
 subtitle: 15 Incredible Agile Project Management Statistics to Know
 tag_review: no_fit

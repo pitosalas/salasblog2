@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-12-30'
 subtitle: Static Site Generators –A static sit...
 tag_review: no_fit

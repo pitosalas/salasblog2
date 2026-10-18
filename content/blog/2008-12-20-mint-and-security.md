@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-20'
 subtitle: 'I have a new favorite web service: Mint. It’s a really nice implementation
   o...'

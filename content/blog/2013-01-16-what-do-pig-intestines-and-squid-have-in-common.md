@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-01-16'
 subtitle: This is just funny. Ok it’s also a little scary as I love Calamari!
 tags:

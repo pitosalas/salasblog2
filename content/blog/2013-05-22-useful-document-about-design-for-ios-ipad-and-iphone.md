@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-05-22'
 subtitle: 'Starters Guide to iOS Design:'
 tags:

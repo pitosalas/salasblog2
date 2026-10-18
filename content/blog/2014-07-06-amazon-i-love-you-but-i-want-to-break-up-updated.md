@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-07-06'
 subtitle: Email I just sent to Amazon.
 tags:

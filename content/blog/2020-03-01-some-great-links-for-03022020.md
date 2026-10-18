@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-03-01'
 subtitle: Google Interviewing Process for Software Developer Role in 2020 / Habr
 tag_review: no_fit

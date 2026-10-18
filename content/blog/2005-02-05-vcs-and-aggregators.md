@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-02-05'
 subtitle: An interesting article in News.Com
 tags:

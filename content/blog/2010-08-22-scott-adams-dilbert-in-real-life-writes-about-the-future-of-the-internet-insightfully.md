@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-22'
 subtitle: Check out this post Chefs and Editors from [Dilb...
 tags:

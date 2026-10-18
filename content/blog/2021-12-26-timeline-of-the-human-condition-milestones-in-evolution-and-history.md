@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-12-26'
 subtitle: Timeline of the human condition | Milestones in evolution and history
 tags:

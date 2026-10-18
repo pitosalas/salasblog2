@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-05-25'
 subtitle: 'It’s even worse than you thought: “E-mail security firm MessageLabs’ filtering
   statistics for April,...'

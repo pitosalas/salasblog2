@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-02'
 subtitle: An interesting article from Bruce Schneier about why he believes that TSA
   requirement of photo IDs i...

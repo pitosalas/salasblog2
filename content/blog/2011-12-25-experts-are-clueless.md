@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-25'
 subtitle: One of the lessons that Guy Kawasaki learned from Steve Jobs
 tags:

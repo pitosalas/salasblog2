@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-13'
 subtitle: 'States Ranked: Smartest to Dumbest.'
 tags:

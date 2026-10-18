@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-04'
 subtitle: 'Article: Tailwind is a Leaky Abstraction'
 tag_review: no_fit

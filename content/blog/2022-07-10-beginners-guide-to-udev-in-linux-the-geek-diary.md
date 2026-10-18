@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-10'
 subtitle: Beginners Guide to Udev in Linux – The Geek Diary
 tags:

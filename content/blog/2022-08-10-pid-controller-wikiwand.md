@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-10'
 subtitle: PID controller | Wikiwand –A proportional–integral–d...
 tags:

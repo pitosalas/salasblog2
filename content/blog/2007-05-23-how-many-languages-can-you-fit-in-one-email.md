@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-05-23'
 subtitle: Here’s an email I received recently. How many different languages do you
   count?

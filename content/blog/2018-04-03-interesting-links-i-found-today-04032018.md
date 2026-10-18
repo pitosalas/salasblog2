@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2018-04-03'
 subtitle: 'IMSLP/Petrucci Music Library: Free Public Domain Sheet Music'
 tags:

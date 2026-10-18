@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-11-01'
 subtitle: 'PyRobot: An Open Source Robotics Research Platform'
 tags:

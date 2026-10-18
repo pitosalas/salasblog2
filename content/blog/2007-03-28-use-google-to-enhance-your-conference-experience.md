@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-28'
 subtitle: I’m at the O’Reilly Emerging Technology Conference, aka ...
 tags:

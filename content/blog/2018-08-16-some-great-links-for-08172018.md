@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-16'
 subtitle: Python Tuples and Tuple Methods | Codementor
 tags:

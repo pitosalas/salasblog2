@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-05-17'
 subtitle: If you are doing Java programming, check out Hardcore Java
 tags:

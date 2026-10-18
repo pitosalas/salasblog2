@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-21'
 subtitle: I was amazed today when in a group of 25 undergraduate engineering students,
   only three had heard th...

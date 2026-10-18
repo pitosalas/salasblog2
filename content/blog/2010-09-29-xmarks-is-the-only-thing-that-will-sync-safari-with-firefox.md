@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-29'
 subtitle: 'And, it’s leaving us:'
 tags:

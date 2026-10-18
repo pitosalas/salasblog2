@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-10-08'
 subtitle: Check out Fort Knox vs. the Barking Dog
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '64'
 date: '2021-11-20'
 subtitle: Caddx Peanut Action Camera
 tags:

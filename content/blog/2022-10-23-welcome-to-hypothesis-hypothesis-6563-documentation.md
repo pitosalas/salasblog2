@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-23'
 subtitle: Welcome to Hypothesis! — Hypothesis 6.56.3 documentation
 tags:

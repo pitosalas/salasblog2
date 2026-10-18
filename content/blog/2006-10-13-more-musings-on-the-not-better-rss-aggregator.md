@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-10-13'
 subtitle: 'One **correspondent** **asked**: “Isn’t this what bb:library is about or
   Technorati Blog Directory o...'

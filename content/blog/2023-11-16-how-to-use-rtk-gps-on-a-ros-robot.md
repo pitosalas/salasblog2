@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-16'
 subtitle: How To Use RTK GPS On A ROS Robot
 tag_review: no_fit

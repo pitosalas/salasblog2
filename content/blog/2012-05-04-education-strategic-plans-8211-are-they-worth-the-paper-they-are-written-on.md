@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-04'
 subtitle: I came across a very [provocative article about why and how universities
   seem to often get buried in...

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2006-08-03'
 subtitle: 'This article: The Role of RSS in Science Publishing: Syndication and Annotation
   on the Web'

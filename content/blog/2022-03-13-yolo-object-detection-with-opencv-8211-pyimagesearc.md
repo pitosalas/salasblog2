@@ -1,5 +1,4 @@
 ---
-category: '127'
 date: '2022-03-13'
 subtitle: YOLO object detection with OpenCV – PyImageSearc
 tags:

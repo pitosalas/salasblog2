@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-22'
 subtitle: Microbenchmarks vs Macrobenchmarks (i.e. What’s a Microbenchmark?) — Appfolio
   Engineering

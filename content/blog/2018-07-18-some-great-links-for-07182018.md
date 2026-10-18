@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-07-18'
 subtitle: How to Approach Machine Learning Problems
 tags:

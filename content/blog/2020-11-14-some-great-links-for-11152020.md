@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-11-14'
 subtitle: Pauls Online Math Notes
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '147'
 date: '2021-05-06'
 subtitle: 'Guitar Scientist: Create Free Guitar Diagrams Online'
 tags:

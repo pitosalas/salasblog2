@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-05-03'
 subtitle: 'TechCrunch:'
 tags:

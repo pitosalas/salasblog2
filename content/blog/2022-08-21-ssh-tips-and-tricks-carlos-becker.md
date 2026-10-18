@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-21'
 subtitle: SSH Tips and Tricks | Carlos Becker –Since ...
 tag_review: no_fit

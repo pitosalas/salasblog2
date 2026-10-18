@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-02-13'
 subtitle: 'Reverse Tech Interview: Questions to Stump an Interviewer – DEV Community'
 tag_review: no_fit

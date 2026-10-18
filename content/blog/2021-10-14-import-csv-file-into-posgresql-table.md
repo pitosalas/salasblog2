@@ -1,5 +1,4 @@
 ---
-category: '123'
 date: '2021-10-14'
 subtitle: Import CSV File Into PosgreSQL Table
 tags:

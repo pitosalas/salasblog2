@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2008-03-17'
 subtitle: So my little toy pedagogical application needed a pretty popup box. Actually
   I wanted one so I could...

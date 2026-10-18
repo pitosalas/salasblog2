@@ -1,5 +1,4 @@
 ---
-category: '178'
 date: '2021-11-27'
 subtitle: Minimax algorithm and alpha-beta pruning
 tags:

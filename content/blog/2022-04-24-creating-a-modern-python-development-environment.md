@@ -1,5 +1,4 @@
 ---
-category: '105'
 date: '2022-04-24'
 subtitle: Creating A Modern Python Development Environment
 tags:

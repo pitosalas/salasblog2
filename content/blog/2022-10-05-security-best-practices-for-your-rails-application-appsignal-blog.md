@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-05'
 subtitle: Security Best Practices for Your Rails Application | AppSignal Blog
 tags:

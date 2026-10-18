@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-06-21'
 subtitle: While teaching at Brandeis University this summer (see Cosi JBS Web Site
 tags:

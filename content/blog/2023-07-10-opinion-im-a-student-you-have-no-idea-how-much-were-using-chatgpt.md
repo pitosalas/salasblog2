@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-10'
 subtitle: Opinion | I’m a Student. You Have No Idea How Much We’re Using ChatGPT.
 tags:

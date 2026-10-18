@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-24'
 subtitle: About 3 months ago I subscribed to Atlantic Magazine, which I really ...
 tags:

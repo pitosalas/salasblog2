@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-12-26'
 subtitle: If you keep up, you may have heard abou this. A new search engine coming
   from Wikipedia founder Jimm...

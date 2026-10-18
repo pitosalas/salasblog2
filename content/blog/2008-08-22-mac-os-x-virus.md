@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-08-22'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/imagew...'
 tags:

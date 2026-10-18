@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-05'
 subtitle: '**Social Networking (Demo 2004 Series – 8) **I’ve written a few times about...'
 tag_review: no_fit

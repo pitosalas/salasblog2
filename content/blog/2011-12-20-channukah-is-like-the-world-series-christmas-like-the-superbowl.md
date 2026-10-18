@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-20'
 subtitle: 'Ned Batchelder, my pal, points out that:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-30'
 subtitle: Who said “y**our TSA don’t dance and your USPTO don’t rock and roll**?”
   (One free copy of BlogBridge...

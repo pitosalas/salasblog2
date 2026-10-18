@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-01-10'
 subtitle: 'Flying back home yesterday I read this article about Wikipedia in the New
   York Times: [Wikipedia, Wh...'

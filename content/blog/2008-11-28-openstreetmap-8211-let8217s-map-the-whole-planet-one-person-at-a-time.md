@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-28'
 subtitle: Another crazy-brilliant site, [OpenStreetMap.org, is aiming to get all of
   us to annotate maps of all...

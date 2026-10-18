@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-08-21'
 subtitle: 'Seth Godin is said to have said that anonymous commenting is not a good
   thing:'

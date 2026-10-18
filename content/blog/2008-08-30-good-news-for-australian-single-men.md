@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-30'
 subtitle: '[An analysis of new census figures has shown that Australia is suffering
   from an unprecedented “man ...'

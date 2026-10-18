@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-16'
 subtitle: '**Did you hear this one? **(via some talkshow.) “President George Bush,
   trying to lay to rest concer...'

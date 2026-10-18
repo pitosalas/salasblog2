@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-24'
 subtitle: This is an **interim report** on “Life with a Capresso espresso maker
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-08'
 subtitle: I am a big fan of Facebook. They are doing so many things well. They have
   become so pervasive that i...

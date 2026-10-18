@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2022-03-11'
 subtitle: how hector slam works – Google Search
 tags:

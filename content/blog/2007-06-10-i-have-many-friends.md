@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-10'
 subtitle: 'A funny article in the New York Times the other day:'
 tags:

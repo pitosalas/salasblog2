@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-04-01'
 subtitle: FIND3 Overview · FIND3
 tag_review: no_fit

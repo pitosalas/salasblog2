@@ -1,5 +1,4 @@
 ---
-category: General
 date: '2025-07-04'
 title: Cheating using ChatGPT
 type: blog

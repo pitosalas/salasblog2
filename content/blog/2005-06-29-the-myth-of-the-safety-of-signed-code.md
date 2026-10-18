@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-06-29'
 subtitle: 'This is **commonly accepted wisdom**: When I download and install an application
   on my computer (any...'

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-16'
 subtitle: This new site looks quite cool. It’s a friendlier alternative to eVite,
 tags:

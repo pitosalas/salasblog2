@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-11-27'
 subtitle: Ethan Zuckerman’s blog is more like a magazine of insightful, well written
   papers. I liked [From com...

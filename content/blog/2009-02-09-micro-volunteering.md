@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-09'
 subtitle: A very interesting article about [volunteering, and applying the wikipedia
   philosophy to volunteerin...

@@ -1,5 +1,4 @@
 ---
-category: '230'
 date: '2021-05-06'
 subtitle: Grilling Food & Grilling Tips | Kingsford | Kingsford®
 tags:

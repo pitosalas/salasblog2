@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-21'
 subtitle: Top 7 Featured DEV Posts from the Past Week
 tag_review: no_fit

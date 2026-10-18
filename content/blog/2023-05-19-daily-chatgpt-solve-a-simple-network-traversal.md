@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-19'
 subtitle: Tell me how this is simple word completion. Can this be broadened to a more
   complicated network. Cou...

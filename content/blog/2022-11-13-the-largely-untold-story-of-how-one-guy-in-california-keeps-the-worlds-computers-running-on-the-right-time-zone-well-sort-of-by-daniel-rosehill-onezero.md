@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: '[ The Largely Untold Story Of How One Guy In California Keeps The World’s
   Computers Running On The R...'

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-10'
 subtitle: Three-Bucket Framework for Engineering Metrics
 tags:

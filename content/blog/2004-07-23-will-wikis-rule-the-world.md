@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-07-23'
 subtitle: I was recently asked by a VC friend of mine what I thought of a certain
   Wiki product. I thought my r...

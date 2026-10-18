@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2024-01-10'
 subtitle: Top Python libraries of 2023 –Exploring the...
 tag_review: no_fit

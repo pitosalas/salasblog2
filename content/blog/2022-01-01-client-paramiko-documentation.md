@@ -1,5 +1,4 @@
 ---
-category: '377'
 date: '2022-01-01'
 subtitle: Client — Paramiko documentation
 tags:

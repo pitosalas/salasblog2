@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-18'
 subtitle: Suddenly when you learn about something once, you start seein...
 tags:

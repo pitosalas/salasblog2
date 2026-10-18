@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-12-22'
 subtitle: 'First the **punchline**: go to this link, fill out a short questionaire,'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2007-01-19'
 subtitle: Some people have such juice (i.e traffic) to their blog that they when
 tags:

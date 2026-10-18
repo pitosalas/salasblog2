@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-03-19'
 subtitle: 'A good read if you are interested in fast iteration in user experience
   design and redesign:'

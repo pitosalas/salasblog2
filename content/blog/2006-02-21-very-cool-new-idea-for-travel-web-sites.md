@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-02-21'
 subtitle: You probably already follow TechCrunch but if you don’t take a look at Flyspy,
   a very clever new ide...

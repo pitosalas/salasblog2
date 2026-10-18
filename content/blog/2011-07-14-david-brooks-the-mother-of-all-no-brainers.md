@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2011-07-14'
 subtitle: 'Another on the mark article by David Brooks: the mother of all no brainers'
 tags:

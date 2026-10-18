@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-08-14'
 subtitle: '[tag]Funny[/tag]!'
 tags:

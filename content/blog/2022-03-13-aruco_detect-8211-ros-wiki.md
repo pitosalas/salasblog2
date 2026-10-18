@@ -1,5 +1,4 @@
 ---
-category: '27'
 date: '2022-03-13'
 subtitle: aruco_detect – ROS Wiki
 tags:

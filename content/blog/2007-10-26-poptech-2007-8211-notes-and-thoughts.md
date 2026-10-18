@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-26'
 subtitle: 'My purely biased view of the most memorable presenters, quotes and associated
   links:'

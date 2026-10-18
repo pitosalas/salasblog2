@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-04-05'
 subtitle: This is a topic that I’ve gotten somewhat interested in. If you search for
   Ruby Domain Specific Lang...

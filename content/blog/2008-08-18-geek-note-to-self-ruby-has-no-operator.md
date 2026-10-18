@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2008-08-18'
 subtitle: I don’t know why it don’t.
 tags:

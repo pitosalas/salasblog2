@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-22'
 subtitle: Check out The End of Free Will(**from** [Dilb...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2011-10-26'
 subtitle: An interesting article about this impending crisis. Although it’s im...
 tags:

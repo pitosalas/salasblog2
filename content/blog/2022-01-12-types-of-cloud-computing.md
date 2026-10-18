@@ -1,5 +1,4 @@
 ---
-category: '81'
 date: '2022-01-12'
 subtitle: Types of cloud computing
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-14'
 subtitle: I received this email from “Bank of America”. It obviously a phishing attack
   but it sounds so legiti...

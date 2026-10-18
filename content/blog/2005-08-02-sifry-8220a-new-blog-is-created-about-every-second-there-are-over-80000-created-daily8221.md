@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-08-02'
 subtitle: Dave Sifry of Technorati has an **interesting analysis** of the curr...
 tags:

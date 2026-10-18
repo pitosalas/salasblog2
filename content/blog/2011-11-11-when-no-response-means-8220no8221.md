@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-11'
 subtitle: Here’s a tiny social conundrum. When someone writes you, calls you and leave
   a message, calls and do...

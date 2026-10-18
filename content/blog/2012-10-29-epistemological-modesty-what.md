@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-29'
 subtitle: I was listening to an interview with David Brooks the other day. The interview
   was conducted by, of ...

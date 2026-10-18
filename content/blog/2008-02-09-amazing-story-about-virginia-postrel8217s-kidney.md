@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-09'
 subtitle: This is a dramatic and well told story of one patient’s patient search for
   a kidney donor.

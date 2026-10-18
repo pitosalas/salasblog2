@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-06'
 subtitle: Control The Sun!
 tags:

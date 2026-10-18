@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-05-24'
 subtitle: 'Check out Synergy:'
 tags:

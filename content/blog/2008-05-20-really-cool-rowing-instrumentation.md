@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-05-20'
 subtitle: If there are any rowing fanatics out there, or competitive rowing coaches,
   [take a look at this cool...

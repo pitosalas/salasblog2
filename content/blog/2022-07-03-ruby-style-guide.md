@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-03'
 subtitle: Ruby Style Guide –Shopify’s Ruby Style Guide. Always usef...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-02-17'
 subtitle: People are really crowing about Vista’s new "instant serach" and how wonderful
   it is and better than...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-12-18'
 subtitle: Time Magazine news "You?" as the person of the year? What a cop-out!
 tags:

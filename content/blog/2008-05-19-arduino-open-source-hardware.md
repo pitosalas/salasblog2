@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-05-19'
 subtitle: Check out Arduino, a totally cool tiny embedded computer suitable for crea...
 tags:

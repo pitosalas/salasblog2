@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-06-15'
 subtitle: Ten Reasons Why I Don’t Like Golang
 tag_review: no_fit

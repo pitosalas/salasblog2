@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-05'
 subtitle: If you use the Bank of America online banking site you’ve seen what they
   call the ‘Site Identity’ f...

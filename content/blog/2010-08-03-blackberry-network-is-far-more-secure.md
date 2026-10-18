@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-08-03'
 subtitle: I never realized this and I am surprised that BlackBerry and Research In
   Motion advertising have not...

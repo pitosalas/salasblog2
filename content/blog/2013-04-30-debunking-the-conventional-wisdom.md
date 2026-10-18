@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-30'
 subtitle: What do you think, are younger people better programmers? Are they more
   productive, more clever, wor...

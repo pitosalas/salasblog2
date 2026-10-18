@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-02'
 subtitle: 'Newser.com is a new news site, with the tag line: “Faster, Smarter News.”
   ...'

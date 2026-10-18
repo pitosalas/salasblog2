@@ -1,5 +1,4 @@
 ---
-category: '98'
 date: '2022-02-03'
 subtitle: RoboGrok University-Level Robotics Course and Parts Kit
 tags:

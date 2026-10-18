@@ -1,5 +1,4 @@
 ---
-category: '47'
 date: '2021-05-28'
 subtitle: Birdhouse Dimensions and Sizes
 tags:

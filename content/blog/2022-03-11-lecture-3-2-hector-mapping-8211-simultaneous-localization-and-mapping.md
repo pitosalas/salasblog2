@@ -1,5 +1,4 @@
 ---
-category: '240'
 date: '2022-03-11'
 subtitle: 'Lecture 3 2: Hector Mapping – Simultaneous Localization and Mapping'
 tags:

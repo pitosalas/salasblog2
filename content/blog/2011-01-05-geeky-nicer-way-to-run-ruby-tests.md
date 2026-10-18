@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-01-05'
 subtitle: Just came across this handy-dandy tool to run tests for Ruby and Rails,
   and produce much nicer and r...

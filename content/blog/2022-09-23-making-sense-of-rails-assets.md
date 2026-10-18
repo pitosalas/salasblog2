@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-23'
 subtitle: Making Sense of Rails Assets –Rails ...
 tags:

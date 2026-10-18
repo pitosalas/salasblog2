@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2007-04-26'
 subtitle: Check out this post from [BuzzMachi...
 tags:

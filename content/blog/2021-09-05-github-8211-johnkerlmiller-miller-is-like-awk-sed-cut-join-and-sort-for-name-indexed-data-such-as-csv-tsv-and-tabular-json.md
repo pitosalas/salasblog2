@@ -1,5 +1,4 @@
 ---
-category: '84'
 date: '2021-09-05'
 subtitle: '[ GitHub – johnkerl/miller: Miller is like awk, sed, cut, join, and sort
   for name-indexed data such ...'

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-10-28'
 subtitle: I came across a wonderful quote about intellectual property. I am not sure
   I agree with it myself bu...

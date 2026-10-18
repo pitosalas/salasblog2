@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-10'
 subtitle: Why we don’t trust software for voting
 tag_review: no_fit

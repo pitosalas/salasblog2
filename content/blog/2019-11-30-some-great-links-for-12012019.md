@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-11-30'
 subtitle: Markov Localization for Mobile Robots in Dynamic Environments
 tag_review: no_fit

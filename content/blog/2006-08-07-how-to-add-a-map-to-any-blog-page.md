@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-08-07'
 subtitle: 'I came across this interesting bit in LifeHacker: [WikiMapia – The geo...'
 tags:

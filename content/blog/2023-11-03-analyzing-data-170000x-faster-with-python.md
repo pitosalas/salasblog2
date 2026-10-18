@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-03'
 subtitle: Analyzing Data 170,000x Faster with Python
 tag_review: no_fit

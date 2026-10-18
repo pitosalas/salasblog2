@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-11'
 subtitle: When to use gRPC vs GraphQL ...
 tags:

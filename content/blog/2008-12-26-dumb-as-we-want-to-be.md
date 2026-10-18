@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-26'
 subtitle: Thomas Friedman with another thought provoking column. I know not everyone
   likes his perspective but...

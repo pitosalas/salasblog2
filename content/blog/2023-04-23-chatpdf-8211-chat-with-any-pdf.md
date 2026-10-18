@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-23'
 subtitle: ChatPDF – Chat with any PDF! –ChatPDF is the fast and easy way to chat...
 tags:

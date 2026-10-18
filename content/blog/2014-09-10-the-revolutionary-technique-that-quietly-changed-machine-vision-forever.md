@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-09-10'
 subtitle: In the world of machine vision, the equivalent goal is to win the ImageNet
   Large-Scale Visual Recogn...

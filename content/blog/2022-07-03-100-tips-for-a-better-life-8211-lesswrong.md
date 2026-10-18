@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-03'
 subtitle: 100 Tips for a Better Life – LessWrong
 tag_review: no_fit

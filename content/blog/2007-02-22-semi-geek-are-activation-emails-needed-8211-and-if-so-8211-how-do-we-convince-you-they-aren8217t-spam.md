@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2007-02-22'
 subtitle: Here’s an odd but important problem, at least for us here at BlogBridge.
 tags:

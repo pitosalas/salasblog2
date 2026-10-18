@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-25'
 subtitle: The first personal **computer actually made by Microsoft**! That’s **history**.
   They’ve made mice, a...

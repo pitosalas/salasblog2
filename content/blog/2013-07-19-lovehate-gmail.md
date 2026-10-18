@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-07-19'
 subtitle: I’ve been using Gmail like forever now and have converted many friends and
   family members to using i...

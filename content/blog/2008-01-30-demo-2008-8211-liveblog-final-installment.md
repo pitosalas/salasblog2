@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2008-01-30'
 subtitle: Sadly we are to the last of the Demo 2008 events. I am writing at the 3/4
   point and so far it has be...

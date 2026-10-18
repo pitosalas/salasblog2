@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-08-26'
 subtitle: 'Here are two very interesting posts on the question of Feed Readers:'
 tags:

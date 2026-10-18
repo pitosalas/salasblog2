@@ -1,5 +1,4 @@
 ---
-category: '149'
 date: '2022-01-22'
 subtitle: Portfolio or Resume? When To Use Each
 tags:

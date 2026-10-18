@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-02-23'
 subtitle: '[Dave Winer wrote a bit recently called “What we don’t understand” that
   lists all the ways in which ...'

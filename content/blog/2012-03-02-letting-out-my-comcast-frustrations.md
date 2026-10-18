@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-02'
 subtitle: “Dear Kelley
 tags:

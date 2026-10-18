@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-08'
 subtitle: Interesting article by famous Guy Kawasaki about what he learned from Steve
   Jobs

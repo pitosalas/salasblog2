@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-01-22'
 subtitle: There’s been some back and forth silliness about whether Barack Obama can
   keep his Blackberry. All t...

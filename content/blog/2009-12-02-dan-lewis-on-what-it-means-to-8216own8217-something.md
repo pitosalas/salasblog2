@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-12-02'
 subtitle: This post talks about the difference between owning, possessing and accessing
   a book

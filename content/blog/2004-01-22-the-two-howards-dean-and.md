@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-22'
 subtitle: '**The two Howards: Dean and Stern. **Everyone is **wringing their hands**
   about the way Howard Dean ...'

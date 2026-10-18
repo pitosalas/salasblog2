@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2004-07-07'
 subtitle: In tracking down a ‘bug’ in BlogBridge I discovered that my RSS feed for
   this blog has abbreviated i...

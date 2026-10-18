@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-08-28'
 subtitle: 'I am reading a really cool book right now: GARBO: The Spy Who Saved D-Day'
 tags:

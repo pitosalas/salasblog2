@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-01'
 subtitle: There’s a new **meme floating** around, “*...
 tags:

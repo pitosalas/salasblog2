@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-10'
 subtitle: '**Tortoise**'
 tags:

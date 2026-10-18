@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-17'
 subtitle: 'Learn SQL: Aggregate Functions –Aggrega...'
 tag_review: no_fit

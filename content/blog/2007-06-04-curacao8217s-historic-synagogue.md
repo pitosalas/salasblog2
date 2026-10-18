@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-04'
 subtitle: Recently I visited Curaçao
 tags:

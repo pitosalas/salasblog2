@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-07-04'
 subtitle: Editors | Drifting Ruby
 tags:

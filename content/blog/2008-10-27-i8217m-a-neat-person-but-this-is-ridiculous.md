@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-10-27'
 subtitle: 'Check out this weird new practice called 5S:'
 tags:

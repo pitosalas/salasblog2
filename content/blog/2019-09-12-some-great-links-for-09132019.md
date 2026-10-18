@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-09-12'
 subtitle: Best Free Bootstrap UI Kits of All Time – DEV Community
 tags:

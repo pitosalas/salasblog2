@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-23'
 subtitle: GitHub Copilot investigation · Joseph Saveri Law Firm & Matthew Butterick
 tags:

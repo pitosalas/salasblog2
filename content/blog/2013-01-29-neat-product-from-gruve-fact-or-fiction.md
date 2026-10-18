@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-01-29'
 subtitle: There’s something about this Gruve product that ...
 tags:

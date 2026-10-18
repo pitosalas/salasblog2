@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-15'
 subtitle: JupyterLab is Ready for Users – Jupyter Blog
 tags:

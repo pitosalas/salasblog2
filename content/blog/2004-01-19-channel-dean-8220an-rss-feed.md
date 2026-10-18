@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-19'
 subtitle: '**Channel Dean: “An RSS ****feed**'
 tags:

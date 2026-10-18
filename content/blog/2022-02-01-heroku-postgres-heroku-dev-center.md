@@ -1,5 +1,4 @@
 ---
-category: '113'
 date: '2022-02-01'
 subtitle: Heroku Postgres | Heroku Dev Center
 tags:

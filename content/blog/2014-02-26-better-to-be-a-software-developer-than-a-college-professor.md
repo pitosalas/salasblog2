@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-02-26'
 subtitle: Other than the headline, which is amusing, I am not sure about the methodology
   or significance of th...

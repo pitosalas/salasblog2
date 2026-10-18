@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-04-19'
 subtitle: The earphone/microphone that came with my iPhone is acting odd. First I
   thought it was a problem wit...

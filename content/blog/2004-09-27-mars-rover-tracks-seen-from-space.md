@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-09-27'
 subtitle: 'You know I am a fan of the cool **little Mars Rovers**. Here’s an interesting
   little bit from Nasa:'

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-29'
 subtitle: 'Check out this post from [WSJ.com: He...'
 tags:

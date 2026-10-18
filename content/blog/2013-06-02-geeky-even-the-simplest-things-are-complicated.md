@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-06-02'
 subtitle: I love this article revealing the beautiful hidden complexity of the lowly
   magsafe connector.

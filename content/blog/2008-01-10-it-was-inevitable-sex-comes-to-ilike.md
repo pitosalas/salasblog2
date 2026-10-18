@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-01-10'
 subtitle: '!iLike iTunes'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2009-09-08'
 subtitle: I agree with this point from the post My Take On The Healthcare Debate
 tags:

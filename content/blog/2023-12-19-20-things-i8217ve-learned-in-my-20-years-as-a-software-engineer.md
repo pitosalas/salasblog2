@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-12-19'
 subtitle: 20 Things I’ve Learned in my 20 Years as a Software Engineer
 tag_review: no_fit

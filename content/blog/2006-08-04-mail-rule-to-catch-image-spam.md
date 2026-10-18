@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-08-04'
 subtitle: This is Mac specific, but I wouldn’t be surprised if people with more primitive
   computers could do s...

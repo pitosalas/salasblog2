@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2007-02-23'
 subtitle: If you are a blogger then you probably keep an eye out on the ‘circulation’
   of your blog. It’s a bla...

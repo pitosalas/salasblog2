@@ -1,5 +1,4 @@
 ---
-category: '388'
 date: '2022-01-11'
 subtitle: ServoCity – Servos, Actobotics, Gears, Motors and More!
 tags:

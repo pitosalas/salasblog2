@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-11-17'
 subtitle: 'Fast line-following robots part 1: control'
 tags:

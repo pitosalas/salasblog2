@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-29'
 subtitle: 'Here’s another cute one I came across, at BlogOn 2005:'
 tags:

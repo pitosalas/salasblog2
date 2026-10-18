@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-02-23'
 subtitle: Jon Udell coins a term
 tags:

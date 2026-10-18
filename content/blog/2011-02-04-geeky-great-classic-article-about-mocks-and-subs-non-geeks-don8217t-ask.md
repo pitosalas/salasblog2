@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-02-04'
 subtitle: 'A seminal article about an advanced topic in software testing: Mocks aren’t
   Subs'

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-07'
 subtitle: 'A few less-known Ruby (on Rails) methods, pt 1.: Array'
 tags:

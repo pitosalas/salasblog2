@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-10-08'
 subtitle: Packaging Python Projects — Python Packaging User Guide
 tag_review: no_fit

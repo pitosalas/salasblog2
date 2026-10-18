@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-05'
 subtitle: Pretty amazing that the govt is actually placing [all the code for healthcare.gov
   on github for all ...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-05-05'
 subtitle: This word “QUOTIDIAN” seems to have become popular suddenly. Did you notice?
 tags:

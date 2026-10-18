@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2011-08-06'
 subtitle: Check this post Connecting Web Apps with Web Intents
 tags:

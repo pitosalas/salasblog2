@@ -1,5 +1,4 @@
 ---
-category: '104'
 date: '2022-03-05'
 subtitle: PostgreSQL Performance Enabling pg_stat_statements
 tags:

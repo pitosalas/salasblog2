@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-26'
 subtitle: “Harry, I’m going to let you in on a little secret. Every day, once a day,
   give yourself a present. ...

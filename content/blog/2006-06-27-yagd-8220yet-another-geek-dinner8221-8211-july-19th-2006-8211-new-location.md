@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-06-27'
 subtitle: We are having another super-informal-geeky-but-not-exclusively-geeks **Geek
   Dinner**, and we have a ...

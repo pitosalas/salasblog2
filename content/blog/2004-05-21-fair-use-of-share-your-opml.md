@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-05-21'
 subtitle: One of the core goals of BlogBridge is to give a newbie a quick and del...
 tags:

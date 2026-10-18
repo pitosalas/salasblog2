@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2008-06-09'
 subtitle: This is a question I hear all the time. I thought I’d write a bit of an
   introduction to the topic. C...

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-06-30'
 subtitle: If you, like me, are a space buff, you will find these pieces about space-shuttle
   safety very intere...

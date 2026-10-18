@@ -1,5 +1,4 @@
 ---
-category: '83'
 date: '2022-05-09'
 subtitle: 'pkolaczk/fclones: Efficient Duplicate File Finder'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-01'
 subtitle: King Kong in 30 seconds. Funny.
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-01-22'
 subtitle: '!Discontinuity'
 tags:

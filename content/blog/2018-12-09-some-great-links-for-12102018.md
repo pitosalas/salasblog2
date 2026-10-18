@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-09'
 subtitle: Qt 5.12 LTS Released – Qt Blog
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-05-21'
 subtitle: How to build authentication into Rails applications? Well, at least at RailsConf
   2011, the buzz was ...

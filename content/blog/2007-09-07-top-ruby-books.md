@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-07'
 subtitle: '!toprubybooks1.jpg'
 tags:

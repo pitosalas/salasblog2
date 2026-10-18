@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-06-13'
 subtitle: A couple of New York Times articles today that point out (what others have
   pointed out too) that the...

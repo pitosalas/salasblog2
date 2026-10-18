@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2009-06-03'
 subtitle: I have been working quite a lot on **Election Reform** over the last few
   weeks, at least from the t...

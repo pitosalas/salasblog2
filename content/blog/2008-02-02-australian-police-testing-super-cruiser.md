@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-02'
 subtitle: Check out this post from [Autoblog...
 tags:

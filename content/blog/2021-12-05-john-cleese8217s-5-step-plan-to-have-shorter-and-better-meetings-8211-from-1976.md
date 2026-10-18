@@ -1,5 +1,4 @@
 ---
-category: '164'
 date: '2021-12-05'
 subtitle: John Cleese’s 5-step plan to have shorter and better meetings – from 1976!
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-21'
 subtitle: I came across a good story about ModestNeeds.org from [Deborah Finn’s...
 tags:

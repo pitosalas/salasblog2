@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-01-28'
 subtitle: Stephen Wolfram is a genius
 tags:

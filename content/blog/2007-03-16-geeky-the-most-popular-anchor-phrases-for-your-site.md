@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-03-16'
 subtitle: Useful and interesting information from Google for Webmasters. Chec out
   this post

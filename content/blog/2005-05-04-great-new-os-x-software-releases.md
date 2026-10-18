@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-05-04'
 subtitle: '***Two of my all time favorite Mac OS X applications just came out with
   new releases:***'

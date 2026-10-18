@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-12'
 subtitle: It’s hard to get good data on this, and I keep get wildly varying opinions.
   I haven’t fully formed m...

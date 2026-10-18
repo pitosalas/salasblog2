@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-05-02'
 subtitle: Seven Do’s And Three Don’ts For Creating New Web Products
 tags:

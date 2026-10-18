@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-01'
 subtitle: Understanding Zeitwerk in Rails 6
 tags:

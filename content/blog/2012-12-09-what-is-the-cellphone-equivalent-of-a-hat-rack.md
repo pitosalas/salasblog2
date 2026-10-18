@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-12-09'
 subtitle: '!Screen shot 2012 12 06 at 4 26 50 pm'
 tags:

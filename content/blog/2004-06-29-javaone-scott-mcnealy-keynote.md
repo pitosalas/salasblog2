@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-06-29'
 subtitle: I had never heard him speak – He’s a lot of fun to listen to – funny and
   with a sense of his audienc...

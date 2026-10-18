@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-05-26'
 subtitle: The great thing about standards is that there are just so many different
   ones to pick from!

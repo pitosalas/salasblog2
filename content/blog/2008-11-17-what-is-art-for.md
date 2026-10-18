@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-17'
 subtitle: A really good article in the New York Times Magazine today about Lewis Hyde
 tags:

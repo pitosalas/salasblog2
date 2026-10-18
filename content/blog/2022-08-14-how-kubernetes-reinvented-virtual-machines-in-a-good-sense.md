@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-14'
 subtitle: How Kubernetes Reinvented Virtual Machines (in a good sense)
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-11'
 subtitle: 'karpathy/nanoGPT: The simplest, fastest repository for training/finetuning
   medium-sized GPTs.'

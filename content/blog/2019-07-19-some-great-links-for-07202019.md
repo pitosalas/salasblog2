@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-07-19'
 subtitle: Goodbye ActiveRecord! – Inside Aircall – Medium
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-03'
 subtitle: Just check out this well argued, detailed piece, “[Wake up to the dangers
   of a deepening crisis”, by...

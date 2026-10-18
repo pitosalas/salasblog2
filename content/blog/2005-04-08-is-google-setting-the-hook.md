@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-04-08'
 subtitle: Recently, GMail *raised *the free storage available to all subscribers to
   2 Gig! Amazing isn’t it? I...

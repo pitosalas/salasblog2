@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-11-15'
 subtitle: I feel really bad for President Obama and I am still a big fan. But. As
   we all know now, this is a t...

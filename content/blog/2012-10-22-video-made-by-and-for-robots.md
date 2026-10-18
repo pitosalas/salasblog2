@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-22'
 subtitle: http://images.travelpod.com/bin/tripwow/flash/tripwow.swf
 tags:

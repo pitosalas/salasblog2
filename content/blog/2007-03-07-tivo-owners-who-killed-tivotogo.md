@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-03-07'
 subtitle: I am a die-hard Tivo user. Yesterday I stumbled across mention that TivoTogo
   now worked on Macs, so ...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-08'
 subtitle: A good article in the New York Times Magazine about the so-called ‘ambient
   awareness’ phenomenon

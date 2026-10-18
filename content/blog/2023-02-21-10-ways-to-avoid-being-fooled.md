@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-21'
 subtitle: 10 Ways to Avoid Being Fooled
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-08-17'
 subtitle: 'From ZDNet: Federal judge orders halt to NSA spy program | Tech News on
   ZDNet'

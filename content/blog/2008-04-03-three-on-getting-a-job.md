@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-04-03'
 subtitle: Check this post Three on getting a job
 tags:

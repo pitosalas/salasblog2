@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-07-25'
 subtitle: Can someone explain why my referrer log for this site is full of spamish-looking
   like urls, none of ...

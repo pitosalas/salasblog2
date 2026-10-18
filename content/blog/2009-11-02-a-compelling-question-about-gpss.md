@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-11-02'
 subtitle: “GPS satellites tell us where we are, but what tells them where they are?”.
   **Good question**. [This...

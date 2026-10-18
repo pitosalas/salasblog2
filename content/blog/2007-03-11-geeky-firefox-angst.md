@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-03-11'
 subtitle: On Mac, I’ve been using only FireFox for a while now. But lately I’ve seen
   some things that have mad...

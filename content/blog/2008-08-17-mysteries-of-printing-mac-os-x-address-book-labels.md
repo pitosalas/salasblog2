@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-08-17'
 subtitle: Apple always, or almost always, thinks through the user interface carefully
   and includes all kinds o...

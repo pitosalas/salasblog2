@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-08-23'
 subtitle: '[ GitHub – public-api-lists/public-api-lists: A collective list of free
   APIs for use in software and...'

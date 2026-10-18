@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-13'
 subtitle: No less an authority as the **Freakonomics dudes** offer an article about
   “[A Call Girl’s View of th...

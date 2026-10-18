@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-06-09'
 subtitle: Yay! One reason holding me to using FireFox on Mac was that I rely heavily
   on Scribefire

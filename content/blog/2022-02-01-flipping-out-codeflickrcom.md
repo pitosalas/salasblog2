@@ -1,5 +1,4 @@
 ---
-category: '90'
 date: '2022-02-01'
 subtitle: Flipping Out | code.flickr.com
 tags:

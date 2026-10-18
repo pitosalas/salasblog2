@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-05-21'
 subtitle: Understanding the Numbers and Letters on a LiPo Battery
 tags:

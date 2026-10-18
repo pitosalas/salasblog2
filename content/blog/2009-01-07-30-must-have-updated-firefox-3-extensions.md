@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-01-07'
 subtitle: Check this post 30+ Must-Have Updated Firefox 3 Extensions
 tags:

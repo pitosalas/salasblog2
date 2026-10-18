@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-03-15'
 subtitle: A memorable quote (from George Bernard Shaw)
 tags:

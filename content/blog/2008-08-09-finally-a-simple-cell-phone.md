@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-09'
 subtitle: '![](https://i0.wp.com/www.gizmodo.com/images/Simple.jpg?w=584)'
 tags:

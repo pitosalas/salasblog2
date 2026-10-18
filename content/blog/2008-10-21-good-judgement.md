@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-10-21'
 subtitle: This has been picked up all over the place, so you might have already seen
   it. I thought it was good...

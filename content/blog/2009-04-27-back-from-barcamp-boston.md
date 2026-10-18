@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-27'
 subtitle: '![](h...'
 tags:

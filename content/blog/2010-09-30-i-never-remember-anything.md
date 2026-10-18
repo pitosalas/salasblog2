@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-30'
 subtitle: Finally someone writes about something
 tags:

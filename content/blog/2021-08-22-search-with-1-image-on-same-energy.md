@@ -1,5 +1,4 @@
 ---
-category: '111'
 date: '2021-08-22'
 subtitle: Search with 1 image on Same Energy
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-14'
 subtitle: We all want to be star engineers, right? Here’s an intriguing article from
   about ten years ago engin...

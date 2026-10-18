@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-12-23'
 subtitle: So what might GMail’s strategy be? I listened to a wonderful Podcast with
   Georges Harik

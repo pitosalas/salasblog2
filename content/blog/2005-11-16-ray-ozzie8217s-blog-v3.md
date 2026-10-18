@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-11-16'
 subtitle: Glad to see that Ray is blogging again. Now that he is at...
 tags:

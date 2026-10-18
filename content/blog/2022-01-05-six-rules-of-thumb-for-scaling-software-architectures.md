@@ -1,5 +1,4 @@
 ---
-category: '467'
 date: '2022-01-05'
 subtitle: Six Rules of Thumb for Scaling Software Architectures
 tags:

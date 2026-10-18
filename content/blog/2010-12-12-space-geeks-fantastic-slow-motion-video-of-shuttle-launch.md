@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-12-12'
 subtitle: I’ve always been a major space travel fan and geek. This video linked from
   Engadget incredibly had m...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-14'
 subtitle: '**I want RSS to disappear. **The question was posed, “What do users want
   from RSS”? I thought long a...'

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-26'
 subtitle: 10 practices for writing readable code
 tags:

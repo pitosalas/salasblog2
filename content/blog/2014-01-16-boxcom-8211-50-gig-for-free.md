@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-01-16'
 subtitle: '**Forget Dropbox**, I just heard that Box.com gives you **50gig for free
   **upon signup. I just signe...'

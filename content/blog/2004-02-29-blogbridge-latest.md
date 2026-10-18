@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-02-29'
 subtitle: Just a quick note about what’s up with BlogBridge. My time has been severely
   drained by a new consul...

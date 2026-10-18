@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-03-11'
 subtitle: Check out this post from [Planet RubyOnR...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-22'
 subtitle: 20 Type Hinting Techniques and Tools for Better Python Code
 tags:

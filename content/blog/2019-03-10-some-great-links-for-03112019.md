@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-10'
 subtitle: How to scale Ruby on Rails with Redis | Opensource.com
 tags:

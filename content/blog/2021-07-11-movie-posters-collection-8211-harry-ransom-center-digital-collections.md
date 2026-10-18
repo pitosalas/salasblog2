@@ -1,5 +1,4 @@
 ---
-category: '92'
 date: '2021-07-11'
 subtitle: Movie Posters Collection – Harry Ransom Center Digital Collections
 tags:

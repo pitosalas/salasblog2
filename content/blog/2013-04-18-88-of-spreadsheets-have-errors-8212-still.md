@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-18'
 subtitle: A long long time ago there was a product called Lotus Improv
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-06'
 subtitle: Creating a Chart –I’ve been experimenting with Apa...
 tag_review: no_fit

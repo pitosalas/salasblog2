@@ -1,5 +1,4 @@
 ---
-category: '109'
 date: '2021-06-18'
 subtitle: Retro Gaming with Raspberry Pi
 tags:

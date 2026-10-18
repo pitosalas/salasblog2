@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-18'
 subtitle: '[](https://www.reddit.com/r/compsci/comments/9oztot/algorithms_tutorial_series_for_beginners/?st=JNE...'
 tags:

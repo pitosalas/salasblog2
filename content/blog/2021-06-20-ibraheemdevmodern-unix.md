@@ -1,5 +1,4 @@
 ---
-category: '45'
 date: '2021-06-20'
 subtitle: ibraheemdev/modern-unix
 tags:

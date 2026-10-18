@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-11-06'
 subtitle: Ok, I am adjusting to the new reality of the lost election. The amount of
   coverage in the blogs I fr...

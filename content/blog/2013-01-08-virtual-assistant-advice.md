@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-01-08'
 subtitle: I have a regular need for a small project to be done, a little bit of research,
   some following up on...

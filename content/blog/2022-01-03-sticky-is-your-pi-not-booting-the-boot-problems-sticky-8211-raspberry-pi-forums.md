@@ -1,5 +1,4 @@
 ---
-category: '52'
 date: '2022-01-03'
 subtitle: 'STICKY: Is your Pi not booting? (The Boot Problems Sticky) – Raspberry
   Pi Forums'

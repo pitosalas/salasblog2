@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-17'
 subtitle: Testing Guide
 tag_review: no_fit

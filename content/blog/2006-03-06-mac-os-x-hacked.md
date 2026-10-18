@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-03-06'
 subtitle: This is only a **little** funny because Mac fans (and I am one of them)
   can be **very smug** about O...

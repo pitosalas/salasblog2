@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-07'
 subtitle: Visual design rules you can safely follow every time
 tags:

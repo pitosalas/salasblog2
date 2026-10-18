@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2008-04-15'
 subtitle: From a few previous posts you know that I have a curiosity about congestion
 tags:

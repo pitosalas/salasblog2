@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2004-07-01'
 subtitle: Java Web Start is a piece of Java platform that’s meant to ease the deployment
   and updating of Java ...

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-06-10'
 subtitle: For some reason, it is not possible to get at the Socket object that the
   URL object uses for its net...

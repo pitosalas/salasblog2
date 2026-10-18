@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-07'
 subtitle: Experiential Robotics Platform (XRP) Kit – Beta –The XRP...
 tags:

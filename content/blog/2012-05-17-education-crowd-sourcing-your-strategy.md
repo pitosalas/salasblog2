@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-17'
 subtitle: The other day I referenced an [article questioning the motivation and effectiveness
   of large scale s...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-19'
 subtitle: Programming is Hard
 tags:

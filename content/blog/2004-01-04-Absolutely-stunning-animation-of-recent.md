@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-04'
 subtitle: '**Absolutely stunning animation of recent mars landing. **I do not exagerate!
   Check it out.'

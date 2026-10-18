@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-12-04'
 subtitle: The thing about a bubble is that while people worry about it, no one is
   actually sure whether they a...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-06'
 subtitle: How to Frame a Roof (with Pictures) – wikiHow –How did thi...
 tag_review: no_fit

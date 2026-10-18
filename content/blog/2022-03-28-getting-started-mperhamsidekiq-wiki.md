@@ -1,5 +1,4 @@
 ---
-category: '28'
 date: '2022-03-28'
 subtitle: Getting Started · mperham/sidekiq Wiki
 tags:

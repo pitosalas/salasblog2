@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-25'
 subtitle: I still **don’t love Microsoft**. I used to, actually, use Windows day in
   and day out, for years. Bu...

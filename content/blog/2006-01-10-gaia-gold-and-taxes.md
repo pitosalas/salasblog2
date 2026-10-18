@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-10'
 subtitle: I recently had occasion to learn all about a really cool MMORPG
 tags:

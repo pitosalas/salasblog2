@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-18'
 subtitle: My head is full of democracy and elections these days. How come, you ask?
   Well for the last year or ...

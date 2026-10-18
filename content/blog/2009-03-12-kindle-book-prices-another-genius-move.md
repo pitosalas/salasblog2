@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-12'
 subtitle: Take a book that I was interested in, “The Lords of Finance”, by Liaquat
   Ahamed

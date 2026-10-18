@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-02-18'
 subtitle: '![snap.jpg'
 tags:

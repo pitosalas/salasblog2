@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-06-26'
 subtitle: I always thought that startups are over glamorized. They are not for everyone.
   On the other hand, so...

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-03-15'
 subtitle: I am participating in the “[Institute of Management Consultants” New England
   Chapter program tonight...

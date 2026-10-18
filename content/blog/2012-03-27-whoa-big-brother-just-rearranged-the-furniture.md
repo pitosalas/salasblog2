@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-27'
 subtitle: That’s my Gmail window. The black bar is Google’s toolbar.
 tags:

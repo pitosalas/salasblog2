@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-26'
 subtitle: CutList Optimizer
 tag_review: no_fit

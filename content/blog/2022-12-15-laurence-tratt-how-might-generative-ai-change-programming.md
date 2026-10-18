@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-15'
 subtitle: 'Laurence Tratt: How Might Generative AI Change Programming?'
 tags:

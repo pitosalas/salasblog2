@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-12'
 subtitle: I met Mark Mark Withington at the last Geek Dinner. He runs the Boston PHP
   Group

@@ -1,5 +1,4 @@
 ---
-category: '187'
 date: '2022-04-01'
 subtitle: demos/follow.py at master · UbiquityRobotics/demos
 tags:

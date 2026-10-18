@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-04-13'
 subtitle: This is amusing. Ever since I learned from **glenn**, many years ago, that
   everyone uses “beg the qu...

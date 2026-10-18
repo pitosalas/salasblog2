@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-14'
 subtitle: 'What does ActivityPub do, no bullshit please. · Issue #1 · scripting/reallySimpleActivityPub'
 tag_review: no_fit

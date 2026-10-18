@@ -1,5 +1,4 @@
 ---
-category: '2'
 date: '2022-01-31'
 subtitle: '[ RobustFieldAutonomyLab/LeGO-LOAM: LeGO-LOAM: Lightweight and Ground-Optimized
   Lidar Odometry and M...'

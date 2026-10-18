@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-11-23'
 subtitle: I’ve written about AllOfMp3.com before. I can’t say other than it’s a pir...
 tags:

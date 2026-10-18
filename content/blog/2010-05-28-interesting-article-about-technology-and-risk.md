@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-05-28'
 subtitle: David Brooks of the New York Times writes about technology and risk
 tags:

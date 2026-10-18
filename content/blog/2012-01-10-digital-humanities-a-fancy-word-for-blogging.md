@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-10'
 subtitle: Here’s an interesting [article in “The Opinionator” of the New York Times
   about blogging, scholarly ...

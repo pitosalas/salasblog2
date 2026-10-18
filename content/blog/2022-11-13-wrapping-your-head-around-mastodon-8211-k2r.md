@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: Wrapping Your Head Around Mastodon – K²R ...
 tag_review: no_fit

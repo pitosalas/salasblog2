@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-02-18'
 subtitle: Several products I’ve worked on recently have relied on Amazon’s really
   impressive web services. I’v...

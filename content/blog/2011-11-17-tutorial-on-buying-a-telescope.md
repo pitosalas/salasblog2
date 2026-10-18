@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-17'
 subtitle: Out of left (star) field. Here’s a succinct tutorial on buying a telescope
   that my friend [Ben Gomes...

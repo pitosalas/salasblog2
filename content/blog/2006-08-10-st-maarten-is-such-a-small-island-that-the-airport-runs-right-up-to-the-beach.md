@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-08-10'
 subtitle: Check out this picture!
 tags:

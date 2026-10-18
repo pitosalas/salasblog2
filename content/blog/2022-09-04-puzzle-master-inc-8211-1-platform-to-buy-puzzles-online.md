@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-04'
 subtitle: 'Puzzle Master Inc – #1 Platform to Buy Puzzles Online'
 tag_review: no_fit

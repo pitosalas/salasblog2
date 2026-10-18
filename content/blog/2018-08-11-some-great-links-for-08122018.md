@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-11'
 subtitle: 'Webmentions: Enabling Better Communication on the Internet'
 tag_review: no_fit

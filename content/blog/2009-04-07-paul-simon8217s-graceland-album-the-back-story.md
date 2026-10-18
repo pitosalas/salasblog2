@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-07'
 subtitle: Ethan Zuckerman writes a great piece about how Paul Simon’s Graceland album
   came to be, with some of...

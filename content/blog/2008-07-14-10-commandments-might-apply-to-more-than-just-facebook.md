@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-07-14'
 subtitle: Check out these 10 Commandments for Facebook Applications
 tags:

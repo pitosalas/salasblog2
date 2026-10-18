@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-05'
 subtitle: First it was Facebook, then (I think) it was Plaxo
 tags:

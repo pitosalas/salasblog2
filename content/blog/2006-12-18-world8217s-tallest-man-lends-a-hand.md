@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-12-18'
 subtitle: I just thought [this
 tags:

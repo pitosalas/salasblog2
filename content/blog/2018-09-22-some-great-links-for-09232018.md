@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-22'
 subtitle: FREE Tutorials on React.js, Ruby on Rails, JavaScript
 tags:

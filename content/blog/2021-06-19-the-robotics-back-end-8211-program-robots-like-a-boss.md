@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-06-19'
 subtitle: The Robotics Back-End – Program Robots Like a Boss
 tags:

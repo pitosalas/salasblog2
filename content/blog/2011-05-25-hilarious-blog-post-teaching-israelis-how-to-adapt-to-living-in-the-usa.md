@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-05-25'
 subtitle: This is too funny. Here’s a taste, but you should read the whole article
   saying [how an Israeli shou...

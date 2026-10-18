@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-24'
 subtitle: Eric Ries is locally famous as being one of the strong...
 tags:

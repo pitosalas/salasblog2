@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-05-21'
 subtitle: Michael Feldman of Dowbrigade has a [really interesting]...
 tags:

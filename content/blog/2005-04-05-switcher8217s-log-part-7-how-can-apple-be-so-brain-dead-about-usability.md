@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-04-05'
 subtitle: Everyone says that the reason they like the Mac and OS X is that *it’s so
   easy to use!* I am **not s...

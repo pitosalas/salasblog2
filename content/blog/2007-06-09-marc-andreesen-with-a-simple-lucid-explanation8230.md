@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-09'
 subtitle: This is an explanation (part 1 of 2) of why and who should seek VC for their
   new business. From what...

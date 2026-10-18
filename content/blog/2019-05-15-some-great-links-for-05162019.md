@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-15'
 subtitle: How the Boeing 737 Max Disaster Looks to a Software Developer
 tag_review: no_fit

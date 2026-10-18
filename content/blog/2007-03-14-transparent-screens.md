@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-14'
 subtitle: 'These are really funny and clever: Transparent Screens'
 tags:

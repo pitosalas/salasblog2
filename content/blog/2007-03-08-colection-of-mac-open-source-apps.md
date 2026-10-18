@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-03-08'
 subtitle: 'A handy list: “Open Source Apps on Mac from Linux and Open Source”'
 tags:

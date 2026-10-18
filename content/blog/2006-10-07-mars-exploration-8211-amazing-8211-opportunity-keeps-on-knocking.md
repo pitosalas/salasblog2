@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-10-07'
 subtitle: Saw this in the newspaper today – “Mars Rover Visits Crater, Then Poses
   for a Picture.

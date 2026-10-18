@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-09-04'
 subtitle: As you can imagine I’ve been reading and learning more about security with
   my work in Elections (htt...

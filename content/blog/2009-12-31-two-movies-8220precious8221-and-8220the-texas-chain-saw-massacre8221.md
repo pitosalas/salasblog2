@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-12-31'
 subtitle: '(**Note**: Spoilers for both movies, but nothing that everyone probably
   has already been exposed to)'

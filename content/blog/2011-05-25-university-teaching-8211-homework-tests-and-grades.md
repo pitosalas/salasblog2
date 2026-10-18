@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-05-25'
 subtitle: I am about a week from beginning teaching my course at Brandeis University.
   The curriculum is a litt...

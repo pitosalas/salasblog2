@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-07'
 subtitle: Get Started with Hotwire in Your Ruby on Rails App | AppSignal Blog
 tags:

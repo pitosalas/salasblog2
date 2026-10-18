@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-04-16'
 subtitle: '[David Brooks of the New York Times, in an article about (my interpretation)
   the limits of idealism:...'

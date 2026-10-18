@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-12-03'
 subtitle: This article is a bit harsh/one-sided, but I still thought it was interesting
   to see an attempt at c...

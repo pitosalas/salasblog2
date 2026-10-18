@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-07-11'
 subtitle: This is not about patents, it’s about technology. In Google’s recent patent
   application they reveal ...

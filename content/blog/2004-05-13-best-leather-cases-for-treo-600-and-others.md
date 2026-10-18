@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-05-13'
 subtitle: '**Scott Kirsner** turned me on to Vaja Leather Products. This outfit su...'
 tags:

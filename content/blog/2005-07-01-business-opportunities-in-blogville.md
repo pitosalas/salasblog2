@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-07-01'
 subtitle: All software has bugs, no doubt. So pulling out one story to make a point
   isn’t really fair. (Especi...

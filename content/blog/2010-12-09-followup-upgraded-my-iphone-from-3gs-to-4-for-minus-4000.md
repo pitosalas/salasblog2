@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-12-09'
 subtitle: Following up from yesterday’s post, in fact, I w...
 tags:

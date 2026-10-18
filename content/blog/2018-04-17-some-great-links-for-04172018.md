@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-17'
 subtitle: The Truth About Microservices
 tags:

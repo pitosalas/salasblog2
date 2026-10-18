@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2006-06-18'
 subtitle: Guy Kawasaki — Bona tempora volvantu
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2024-01-23'
 subtitle: ServoEasing/examples at master · ArminJo/ServoEasing
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-03-12'
 subtitle: Mike Arrington waxes poetic
 tags:

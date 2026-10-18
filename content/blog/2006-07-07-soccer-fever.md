@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-07-07'
 subtitle: '[youtube http://www.youtube.com/watch?v=xrShK-NVMIU]'
 tags:

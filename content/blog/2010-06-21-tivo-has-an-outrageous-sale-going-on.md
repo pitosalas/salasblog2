@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-06-21'
 subtitle: Right now, take a look at Tivo’s Site
 tags:

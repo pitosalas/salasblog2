@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-06-30'
 subtitle: '[[EN][Keynote] Parallel and Thread-Safe Ruby at High-Speed with TruffleRuby
   / Benoit Daloze @eregont...'

@@ -1,5 +1,4 @@
 ---
-category: '159'
 date: '2022-03-20'
 subtitle: 11 rules for buying an ebike, and the 11 ebikes to buy now
 tags:

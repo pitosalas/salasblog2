@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-06-27'
 subtitle: Wikipedia – How to milk the ole cow
 tags:

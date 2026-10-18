@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-11-10'
 subtitle: I was a **volunteer** for the Democratic Committee in Arlington Mass. They
   have an **impressive** op...

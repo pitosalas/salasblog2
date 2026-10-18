@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-09-26'
 subtitle: I often cite Microsoft as an exa...
 tags:

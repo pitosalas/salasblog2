@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-09-10'
 subtitle: I came across a fascinating article, a t...
 tags:

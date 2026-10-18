@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-21'
 subtitle: For no apparent reason, my Holiday packages are being **delivered to our
   side door**. We’ve had that...

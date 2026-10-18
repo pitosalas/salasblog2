@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-20'
 subtitle: The Founders Talk podcast –In-depth, one-on-one conversation...
 tags:

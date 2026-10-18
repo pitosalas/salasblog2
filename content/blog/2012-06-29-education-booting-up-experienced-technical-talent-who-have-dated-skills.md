@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-06-29'
 subtitle: As you may know, I’ve been working on launching **Bootup Academy**, whi...
 tags:

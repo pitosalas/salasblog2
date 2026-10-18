@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-11-24'
 subtitle: How to Process Passwords as a Software Developer – DEV Community
 tag_review: no_fit

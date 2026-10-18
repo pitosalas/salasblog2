@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-14'
 subtitle: 'I discovered a new funny blog: it’s the List of Lists blog. For example,
   check out this post'

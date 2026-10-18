@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-19'
 subtitle: Stop Learning Frameworks – Lifehacks for Developers by Eduards Sizovs
 tag_review: no_fit

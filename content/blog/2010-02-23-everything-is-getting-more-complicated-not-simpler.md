@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-02-23'
 subtitle: Following on on my post yesterday about “What we don’t understand.”
 tags:

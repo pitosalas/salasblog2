@@ -1,5 +1,4 @@
 ---
-category: '68'
 date: '2021-12-16'
 subtitle: 'CardBoard Basics: Full Series with Advanced Basics plus Tools'
 tags:

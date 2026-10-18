@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-01'
 subtitle: '**I’m not *that* geeky: **I am totally fascinated and entralled with what’s
   going on on Mars right n...'

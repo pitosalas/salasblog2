@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-08-11'
 subtitle: It strikes me that the way speakers are being shouted down at these (now)
   famous town hall meetings ...

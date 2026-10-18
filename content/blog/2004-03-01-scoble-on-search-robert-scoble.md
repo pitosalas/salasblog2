@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-01'
 subtitle: '**Scoble on Search.** Robert Scoble (of Microsoft fame) writes about a
   new search utility'

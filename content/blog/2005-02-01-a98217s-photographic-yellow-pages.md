@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-02-01'
 subtitle: Quite a bit [has ...
 tags:

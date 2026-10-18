@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-06'
 subtitle: '![Sw-00039-T'
 tags:

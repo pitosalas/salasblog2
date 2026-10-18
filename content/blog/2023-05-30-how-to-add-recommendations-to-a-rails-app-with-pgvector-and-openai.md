@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-30'
 subtitle: How-To Add Recommendations to a Rails App with pgvector and OpenAI
 tags:

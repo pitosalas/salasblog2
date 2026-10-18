@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-15'
 subtitle: Check out [this
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-12'
 subtitle: No, just kidding, I am **not. **Some of my best friends are headhunters
   and I wouldn’t want to compe...

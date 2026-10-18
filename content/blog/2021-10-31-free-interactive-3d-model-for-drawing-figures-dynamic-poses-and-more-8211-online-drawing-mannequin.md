@@ -1,5 +1,4 @@
 ---
-category: '190'
 date: '2021-10-31'
 subtitle: '[ Free Interactive 3D Model for Drawing Figures, Dynamic Poses, and More
   – Online Drawing Mannequin]...'

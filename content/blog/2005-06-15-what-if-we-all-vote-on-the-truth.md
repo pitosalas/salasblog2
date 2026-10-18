@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-15'
 subtitle: 'A couple of interesting related articles on facts and non-facts:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-03'
 subtitle: Are you thinking about hiring a software developer to build your system?
   Here are “[8 Things You Oug...

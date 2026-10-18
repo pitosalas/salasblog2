@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-12-07'
 subtitle: So, if you are writing one of those emails that you have to get right, and
   you plan to check and pro...

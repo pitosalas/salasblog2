@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-13'
 subtitle: Have you had this debate? Does cold weather cause people to catch colds
   more easily or not? Well her...

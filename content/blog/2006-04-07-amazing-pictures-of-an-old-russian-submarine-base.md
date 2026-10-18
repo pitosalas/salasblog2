@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-07'
 subtitle: '![Bal-825-39-S'
 tags:

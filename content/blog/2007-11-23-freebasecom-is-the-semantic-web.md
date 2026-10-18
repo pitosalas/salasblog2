@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2007-11-23'
 subtitle: I am not an expert in the semantic web but Freebase looks like it to me.
   ...

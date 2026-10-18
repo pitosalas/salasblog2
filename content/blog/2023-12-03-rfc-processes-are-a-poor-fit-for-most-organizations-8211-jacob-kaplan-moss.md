@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-12-03'
 subtitle: RFC processes are a poor fit for most organizations – Jacob Kaplan-Moss
 tag_review: no_fit

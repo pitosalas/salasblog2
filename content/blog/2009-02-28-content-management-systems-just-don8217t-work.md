@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-02-28'
 subtitle: I am often asked what technology someone should use to create their web
   presence. I know Ruby on Rai...

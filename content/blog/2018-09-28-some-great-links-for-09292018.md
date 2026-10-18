@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-28'
 subtitle: ebobby/has-many-with-set
 tags:

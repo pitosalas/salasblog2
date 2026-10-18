@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-24'
 subtitle: I came across this note that the fairly famous spat between Apple Gossip
   site Think Secret and Apple...

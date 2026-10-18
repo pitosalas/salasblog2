@@ -1,5 +1,4 @@
 ---
-category: '179'
 date: '2022-05-07'
 subtitle: Bartosz Ciechanowski
 tags:

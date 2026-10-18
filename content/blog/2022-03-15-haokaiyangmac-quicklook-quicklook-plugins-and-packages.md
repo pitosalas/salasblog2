@@ -1,5 +1,4 @@
 ---
-category: '316'
 date: '2022-03-15'
 subtitle: 'haokaiyang/Mac-QuickLook: QuickLook plugins and packages'
 tags:

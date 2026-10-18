@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-08-02'
 subtitle: Look closely at this screen grab off the New York Times site. It was published
   on August 6, 2006. Lo...

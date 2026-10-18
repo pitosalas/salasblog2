@@ -1,5 +1,4 @@
 ---
-category: '368'
 date: '2022-02-01'
 subtitle: Free Online Robotics Courses for 2022 – Asian Robotics Review
 tags:

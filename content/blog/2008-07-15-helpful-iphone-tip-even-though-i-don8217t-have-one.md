@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-15'
 subtitle: 'I saw this somewhere and I thought I would share as it seems very useful,
   yet obscure:'

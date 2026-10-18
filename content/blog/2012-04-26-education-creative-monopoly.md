@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-04-26'
 subtitle: An interesting [article by David Brooks in the New York Times commenting
   on the views of the always ...

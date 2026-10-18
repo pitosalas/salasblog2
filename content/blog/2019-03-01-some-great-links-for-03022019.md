@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-01'
 subtitle: The Easiest Programming Language To Learn Is… – Codesmith Development
 tag_review: no_fit

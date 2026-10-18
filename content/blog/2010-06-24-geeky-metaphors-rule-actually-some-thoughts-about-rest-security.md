@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-06-24'
 subtitle: I don’t know yet whether I agree with or disagree with what is said in “[REST
   Security (or lack ther...

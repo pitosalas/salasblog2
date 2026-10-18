@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-02-23'
 subtitle: Some choice quotes to introduce a good lecture about Engineering
 tags:

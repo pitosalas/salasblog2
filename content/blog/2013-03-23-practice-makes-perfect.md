@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-03-23'
 subtitle: '![](https://i0.wp.com/www.cjspianos.com/piano_player.jpg?w=584)'
 tags:

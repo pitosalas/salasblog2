@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-11-06'
 subtitle: I was lucky enough to meet and spend some time with **Ward Cunningham **
 tags:

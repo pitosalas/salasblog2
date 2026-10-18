@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-07'
 subtitle: '!['
 tag_review: no_fit

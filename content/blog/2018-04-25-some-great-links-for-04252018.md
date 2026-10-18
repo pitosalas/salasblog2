@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-25'
 subtitle: 'Microservice boundaries: five characteristics to guide your design'
 tags:

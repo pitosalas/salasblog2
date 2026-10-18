@@ -1,5 +1,4 @@
 ---
-category: '177'
 date: '2022-04-04'
 subtitle: '[ Kalman Filter: An Algorithm for making sense from the insights of various
   sensors fused together.]...'

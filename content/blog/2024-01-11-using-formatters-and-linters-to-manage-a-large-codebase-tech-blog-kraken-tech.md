@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2024-01-11'
 subtitle: Using formatters and linters to manage a large codebase | Tech blog | Kraken
   Tech

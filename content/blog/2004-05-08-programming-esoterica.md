@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2004-05-08'
 subtitle: As I delve into programming esoterica, in the past I’ve written down little
   handy items of informati...

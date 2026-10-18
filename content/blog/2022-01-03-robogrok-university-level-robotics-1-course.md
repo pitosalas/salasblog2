@@ -1,5 +1,4 @@
 ---
-category: '116'
 date: '2022-01-03'
 subtitle: RoboGrok University-Level Robotics 1 Course
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-11-11'
 subtitle: '![Sb-M1000-Small'
 tags:

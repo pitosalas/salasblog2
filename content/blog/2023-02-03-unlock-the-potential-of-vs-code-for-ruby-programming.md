@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-03'
 subtitle: Unlock the Potential of VS Code for Ruby Programming
 tags:

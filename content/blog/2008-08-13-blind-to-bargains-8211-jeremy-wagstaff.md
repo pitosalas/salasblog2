@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-08-13'
 subtitle: Here is a full article written by Jeremy Wagstaff…
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-17'
 subtitle: Dave Sifry, of Technorati, periodically reports **interesting statisti...
 tags:

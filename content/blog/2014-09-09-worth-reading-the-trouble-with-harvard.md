@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-09-09'
 subtitle: The most-read article in the history of [The New Republic] is not about
   war, politics, or great work...

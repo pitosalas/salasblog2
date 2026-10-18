@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2010-06-18'
 subtitle: Check out Introducing the Google Command Line Tool
 tags:

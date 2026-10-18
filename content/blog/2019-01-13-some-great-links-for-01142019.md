@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-13'
 subtitle: VC article in the NYT
 tag_review: no_fit

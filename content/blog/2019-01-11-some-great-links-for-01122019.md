@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-11'
 subtitle: '[Did you know that you can use Bundler without Gemfile? | Blog | Victor
   Afanasev — Web Developer and...'

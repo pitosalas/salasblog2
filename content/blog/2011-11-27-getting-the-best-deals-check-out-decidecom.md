@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-27'
 subtitle: A **useful** article in the New York Times today, just in time for the holidays.
   A[ new site that tr...

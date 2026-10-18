@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-19'
 subtitle: Not my usual topic, but I came across a rather [interesting article about
   the history of the famous ...

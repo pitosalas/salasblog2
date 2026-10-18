@@ -1,5 +1,4 @@
 ---
-category: '75'
 date: '2021-08-09'
 subtitle: 'wadetb/eliza: Python implementation of the Eliza chatbot'
 tags:

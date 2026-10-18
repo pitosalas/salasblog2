@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-07-14'
 subtitle: I was chatting with my neighborhood iPhone (Cingular/AT&T) dealer and learned
   this interesting detai...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-15'
 subtitle: Ruby From Other Languages
 tags:

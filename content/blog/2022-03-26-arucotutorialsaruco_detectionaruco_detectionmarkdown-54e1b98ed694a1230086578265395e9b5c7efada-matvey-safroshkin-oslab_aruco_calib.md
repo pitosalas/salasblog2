@@ -1,5 +1,4 @@
 ---
-category: '26'
 date: '2022-03-26'
 subtitle: '[ aruco/tutorials/aruco_detection/aruco_detection.markdown · 54e1b98ed694a1230086578265395e9b5c7efad...'
 tags:

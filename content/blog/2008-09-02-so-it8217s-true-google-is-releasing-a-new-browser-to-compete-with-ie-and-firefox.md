@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-09-02'
 subtitle: '*(updated at 12:08pm Sept 2)*'
 tags:

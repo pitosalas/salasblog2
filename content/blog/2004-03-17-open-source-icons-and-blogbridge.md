@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-03-17'
 subtitle: The beat goes on. Now that we have Unread working, the time was ripe to
   add several new commands to ...

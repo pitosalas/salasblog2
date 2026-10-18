@@ -1,5 +1,4 @@
 ---
-category: '47'
 date: '2021-06-19'
 subtitle: How To Make a DIY Modern Birdhouse
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-01-28'
 subtitle: How to Get a Software Developer Internship
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-04-30'
 subtitle: Dan Bricklin’s written a bit on a topic that’s been indirectly on my mind
   lately

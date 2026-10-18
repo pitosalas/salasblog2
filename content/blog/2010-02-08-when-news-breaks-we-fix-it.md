@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-02-08'
 subtitle: That was the old slogan of Jon Stewart’s Daily Show. This morning, w...
 tags:

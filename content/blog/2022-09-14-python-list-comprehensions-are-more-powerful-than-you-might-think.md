@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-14'
 subtitle: Python List Comprehensions Are More Powerful Than You Might Think
 tags:

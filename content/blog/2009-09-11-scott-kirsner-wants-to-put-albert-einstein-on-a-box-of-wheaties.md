@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-09-11'
 subtitle: This is actually a pretty cool idea
 tags:

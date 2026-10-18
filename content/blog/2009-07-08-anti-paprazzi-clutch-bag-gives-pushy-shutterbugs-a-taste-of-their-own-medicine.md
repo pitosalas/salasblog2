@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-07-08'
 subtitle: Not that I care about Paprazzi countermeasures, but this is just c-l-e-v-e-r!
   Check this post [Anti-...

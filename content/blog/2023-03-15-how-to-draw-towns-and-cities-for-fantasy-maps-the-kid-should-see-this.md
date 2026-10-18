@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-15'
 subtitle: How to draw towns and cities for fantasy maps | The Kid Should See This
 tag_review: no_fit

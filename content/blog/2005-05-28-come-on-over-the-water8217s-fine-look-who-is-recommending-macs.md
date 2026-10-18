@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-05-28'
 subtitle: I love my **Mac**, as y’all know. I was amused to read about **Intel CEO**
   **Paul Otellini** who pub...

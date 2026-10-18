@@ -1,5 +1,4 @@
 ---
-category: '28'
 date: '2022-01-25'
 subtitle: '[ Remote Teaching: Synchronous vs. Asynchronous | Center for Teaching and
   Learning | Worcester State...'

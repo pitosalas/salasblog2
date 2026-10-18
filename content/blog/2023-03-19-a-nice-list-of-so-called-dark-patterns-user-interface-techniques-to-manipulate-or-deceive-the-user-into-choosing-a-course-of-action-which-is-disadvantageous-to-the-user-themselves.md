@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-19'
 subtitle: '[ A nice list of so-called “dark patterns”, user interface techniques to
   manipulate or deceive the u...'

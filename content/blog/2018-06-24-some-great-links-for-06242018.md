@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-06-24'
 subtitle: Active Job Basics — Ruby on Rails Guides
 tags:

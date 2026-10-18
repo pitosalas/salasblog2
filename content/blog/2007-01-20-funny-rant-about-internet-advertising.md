@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-20'
 subtitle: Check out this post from [Saint
 tags:

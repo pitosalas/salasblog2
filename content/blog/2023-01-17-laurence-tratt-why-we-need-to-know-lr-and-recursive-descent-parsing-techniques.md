@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-17'
 subtitle: 'Laurence Tratt: Why We Need to Know LR and Recursive Descent Parsing Techniques'
 tags:

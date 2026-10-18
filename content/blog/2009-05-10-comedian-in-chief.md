@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-05-10'
 subtitle: You’ve heard about (or maybe you haven’t) President Obama’s turn as a comedian
   at the White House Co...

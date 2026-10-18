@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-19'
 subtitle: How a Kalman filter works, in pictures
 tags:

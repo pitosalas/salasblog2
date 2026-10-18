@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-07'
 subtitle: Javalin – A lightweight Java and Kotlin web framework
 tag_review: no_fit

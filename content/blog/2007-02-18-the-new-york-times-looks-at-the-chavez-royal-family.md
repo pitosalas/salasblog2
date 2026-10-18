@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-18'
 subtitle: If you keep up with what’s going on in Venezuela, you might want to check
   out this post

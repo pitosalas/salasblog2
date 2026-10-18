@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-24'
 subtitle: Funny thing, I like many people are trying to figure out what Pinterest
   is good...

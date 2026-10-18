@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-02-27'
 subtitle: Different Ways to Handle JSON in a Linux Shell
 tags:

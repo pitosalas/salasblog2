@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-12-05'
 subtitle: Cori Schiegel convinced me
 tags:

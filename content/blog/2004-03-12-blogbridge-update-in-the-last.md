@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-12'
 subtitle: '**BlogBridge update. **In the last few days I’ve made some reasonable p...'
 tag_review: no_fit

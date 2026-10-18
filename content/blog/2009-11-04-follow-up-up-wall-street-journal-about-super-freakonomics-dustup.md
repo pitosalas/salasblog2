@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2009-11-04'
 subtitle: I wrote the other day about the ‘amusing’ dust-up between
 tags:

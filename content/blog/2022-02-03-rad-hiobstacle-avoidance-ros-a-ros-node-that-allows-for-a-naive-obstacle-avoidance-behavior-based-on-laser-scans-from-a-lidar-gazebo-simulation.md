@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-02-03'
 subtitle: '[ Rad-hi/Obstacle-Avoidance-ROS: A ROS node that allows for a naive obstacle
   avoidance behavior base...'

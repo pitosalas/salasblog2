@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-17'
 subtitle: Top 5 Contemporary Software Engineering Books – KI labs Engineering – Medium
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-01-12'
 subtitle: Another great column from Frank Rich — Tiger Woods, Person of The Year
 tags:

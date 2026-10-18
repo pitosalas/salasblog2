@@ -1,5 +1,4 @@
 ---
-category: General
 date: '2026-02-24'
 title: Salas.com rebuilt and cleaned up with the help of Claude Code
 type: blog

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: How to Post to Mastodon From Anything Using IFTTT – K²R
 tag_review: no_fit

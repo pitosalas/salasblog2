@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-05-25'
 subtitle: 'How to build just one package using catkin_make? – ROS Answers: Open Source
   Q&A Forum'

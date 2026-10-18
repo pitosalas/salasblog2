@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-06-14'
 subtitle: The U.S. government is helping create parallel internets
 tags:

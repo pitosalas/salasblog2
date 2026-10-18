@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-03-30'
 subtitle: For you slow pokes who have not yet upgraded to Leopard, my continuing experience
   might be of intere...

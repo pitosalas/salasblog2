@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-08-17'
 subtitle: Check out this insightful editorial in Sunday’s New York by Frank Rich
 tags:

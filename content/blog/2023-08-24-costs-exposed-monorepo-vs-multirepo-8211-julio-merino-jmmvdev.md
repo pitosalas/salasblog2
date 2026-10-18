@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-08-24'
 subtitle: 'Costs exposed: Monorepo vs. multirepo – Julio Merino (jmmv.dev)'
 tags:

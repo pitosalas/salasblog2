@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-05-10'
 subtitle: '[International Space Station switches from Windows to Linux, for improved
   reliability | ExtremeTech]...'

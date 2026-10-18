@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-06-01'
 subtitle: My friend Amy just recently arrived from an incredible trip through Asia.
   If you are curious, check ...

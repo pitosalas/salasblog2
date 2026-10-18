@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-05-07'
 subtitle: You’ve seen and heard of Twitter, haven’t you? If not, congratulations fo...
 tags:

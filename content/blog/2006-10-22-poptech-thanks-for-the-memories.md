@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-10-22'
 subtitle: Well it’s over and I am getting ready to head back to real life. Pop!Tech
   remains my favorite confer...

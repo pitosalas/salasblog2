@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-05-25'
 subtitle: The Definitive Guide to Python import Statements | Chris Yeh
 tags:

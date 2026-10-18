@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-04-12'
 subtitle: Adam’s been busy moving the plans for OPML Camp
 tags:

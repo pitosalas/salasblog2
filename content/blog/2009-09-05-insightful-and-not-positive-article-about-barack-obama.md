@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2009-09-05'
 subtitle: Peggy Noonan is al...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '82'
 date: '2021-08-22'
 subtitle: Wheel of Names
 tags:

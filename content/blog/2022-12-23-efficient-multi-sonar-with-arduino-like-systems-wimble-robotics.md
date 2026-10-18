@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-23'
 subtitle: Efficient multi-SONAR with Arduino-like systems – Wimble Robotics
 tags:

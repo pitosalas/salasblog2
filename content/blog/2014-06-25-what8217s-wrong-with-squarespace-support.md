@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-06-25'
 subtitle: In moving my blog to Squarespace 6 I’ve had a lot of contact with their
   support service. They are ‘j...

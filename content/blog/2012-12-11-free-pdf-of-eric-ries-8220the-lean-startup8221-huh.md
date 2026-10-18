@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-12-11'
 subtitle: I am a big fan of this book, so I was really surprised to find a freely
   downloadable copy of the fil...

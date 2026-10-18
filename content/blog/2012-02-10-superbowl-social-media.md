@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-10'
 subtitle: Here’s a really interesting article about how the Superbowl used Social
   Media

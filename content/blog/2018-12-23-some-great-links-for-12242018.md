@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-23'
 subtitle: André Staltz – JavaScript Getter-Setter Pyramid
 tag_review: no_fit

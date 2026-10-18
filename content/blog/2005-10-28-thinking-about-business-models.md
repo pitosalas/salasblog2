@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-28'
 subtitle: Inquisitor is a really cool program that augments the search b...
 tags:

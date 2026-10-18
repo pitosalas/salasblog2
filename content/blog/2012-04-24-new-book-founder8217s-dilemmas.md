@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-04-24'
 subtitle: 'This book looks good: “Founder’s Dilemmas: Anticipating and Avoiding the
   pitfalls that can sink a st...'

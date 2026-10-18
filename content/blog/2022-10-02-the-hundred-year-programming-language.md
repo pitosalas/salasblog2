@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-02'
 subtitle: The Hundred-Year Programming Language
 tags:

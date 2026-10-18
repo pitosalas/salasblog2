@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-04-10'
 subtitle: '!Funny comment by Apple about Windoze'
 tags:

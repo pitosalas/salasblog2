@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-11-03'
 subtitle: 'From **How Stuff Works**:'
 tags:

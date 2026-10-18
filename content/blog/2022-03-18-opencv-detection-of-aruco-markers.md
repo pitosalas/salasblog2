@@ -1,5 +1,4 @@
 ---
-category: '101'
 date: '2022-03-18'
 subtitle: 'OpenCV: Detection of ArUco Markers'
 tags:

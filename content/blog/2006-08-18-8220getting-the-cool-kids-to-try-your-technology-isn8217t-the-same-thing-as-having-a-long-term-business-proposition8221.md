@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-08-18'
 subtitle: Scoble has a good commentary and links to more commentary about Kiko. Kiko
   is a web 2.0 / ajax / coo...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-07'
 subtitle: This article is somewhat mathematical but...
 tags:

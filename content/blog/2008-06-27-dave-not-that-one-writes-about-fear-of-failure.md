@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2008-06-27'
 subtitle: 'I just came across Dave Dupre’s blog. Some good reading there, for example:'
 tags:

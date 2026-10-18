@@ -1,5 +1,4 @@
 ---
-category: '26'
 date: '2022-03-26'
 subtitle: Marker detection · Clover
 tags:

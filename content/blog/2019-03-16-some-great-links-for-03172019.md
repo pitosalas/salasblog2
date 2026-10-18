@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-16'
 subtitle: Presenting XXH3
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '113'
 date: '2022-01-12'
 subtitle: So what’s this GraphQL thing I keep hearing about?
 tags:

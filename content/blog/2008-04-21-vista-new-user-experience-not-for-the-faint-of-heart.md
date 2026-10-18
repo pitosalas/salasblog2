@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-04-21'
 subtitle: '![Microsoft Vista new user experience'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-03-11'
 subtitle: '[**Note**: don’t assume you know what a Charitable Mutual Fund is. It’s
   an evocative but really misl...'

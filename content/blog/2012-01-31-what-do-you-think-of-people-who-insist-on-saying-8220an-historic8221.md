@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-31'
 subtitle: I know (at least I believe) that, for example,
 tag_review: no_fit

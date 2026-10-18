@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2004-05-11'
 subtitle: Hard to believe what we are hearing these days
 tags:

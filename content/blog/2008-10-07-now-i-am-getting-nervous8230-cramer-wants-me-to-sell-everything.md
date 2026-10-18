@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-10-07'
 subtitle: 'Check out this post Henry Blodget: Should You Really Panic And Sell Everything
   Like Cramer Says?'

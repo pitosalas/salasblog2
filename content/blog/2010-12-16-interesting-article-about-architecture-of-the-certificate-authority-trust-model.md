@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2010-12-16'
 subtitle: Check out The Flawed Legal Architecture of the Certificate Authority Trust
   Model

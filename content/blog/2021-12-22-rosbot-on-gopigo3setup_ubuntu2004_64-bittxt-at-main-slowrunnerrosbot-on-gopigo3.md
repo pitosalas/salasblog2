@@ -1,5 +1,4 @@
 ---
-category: '223'
 date: '2021-12-22'
 subtitle: rosbot-on-gopigo3/Setup_Ubuntu20.04_64-bit.txt at main · slowrunner/rosbot-on-gopigo3
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-10'
 subtitle: Tutorial on how to write basic udev rules in Linux
 tags:

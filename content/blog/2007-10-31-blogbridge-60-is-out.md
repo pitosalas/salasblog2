@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2007-10-31'
 subtitle: We just released BlogBridge 6.0
 tags:

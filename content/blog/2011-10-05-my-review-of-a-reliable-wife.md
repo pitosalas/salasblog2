@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-10-05'
 subtitle: '!A Reliable Wife'
 tags:

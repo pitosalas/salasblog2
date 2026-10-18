@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-10'
 subtitle: Bindings and Lexical Scope in Ruby
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '64'
 date: '2022-06-11'
 subtitle: 'HuskyLens – An AI Camera: Click, Learn, and Play | Vision Sensor | DFRobot
   Electronics'

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-01-14'
 subtitle: I think the **Segway Human Transporter **is really cool, and I’ve read many
   articles about how they ...

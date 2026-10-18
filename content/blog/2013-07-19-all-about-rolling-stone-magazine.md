@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-07-19'
 subtitle: About a year ago I started reading Rolling Stone magazine. It’s true what
   Taibbi says, it’s definite...

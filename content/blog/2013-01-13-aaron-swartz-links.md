@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-01-13'
 subtitle: If you are in the tech community you’ve likely heard that Aaron Swartz committed
   suicide yesterday i...

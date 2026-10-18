@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-20'
 subtitle: I wrote a few days ago about the coming LA Times initiative to crea...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-15'
 subtitle: I’ve been a member of Costco for years. Yeah, you always buy more stuff
   th...

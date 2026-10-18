@@ -1,5 +1,4 @@
 ---
-category: '393'
 date: '2021-12-05'
 subtitle: 12ft – Hop any paywall
 tags:

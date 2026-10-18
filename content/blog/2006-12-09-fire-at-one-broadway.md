@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-12-09'
 subtitle: My buddies at wis.dm had a real scare
 tags:

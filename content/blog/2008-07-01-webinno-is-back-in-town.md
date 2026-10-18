@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-01'
 subtitle: If you live in the Boston area and are in the tech business you should check
   out the more or less mo...

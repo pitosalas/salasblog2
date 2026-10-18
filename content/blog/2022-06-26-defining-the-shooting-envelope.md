@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-26'
 subtitle: Defining the shooting envelope https://ift.tt/bI0tjwU latent consultant
   in me emerges. I’ve gotten a...

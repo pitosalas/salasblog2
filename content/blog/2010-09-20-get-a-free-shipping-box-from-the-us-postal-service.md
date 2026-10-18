@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-20'
 subtitle: Just go to this link.
 tags:

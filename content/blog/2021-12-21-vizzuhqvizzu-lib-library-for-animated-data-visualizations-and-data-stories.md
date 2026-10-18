@@ -1,5 +1,4 @@
 ---
-category: '296'
 date: '2021-12-21'
 subtitle: 'vizzuhq/vizzu-lib: Library for animated data visualizations and data stories.'
 tags:

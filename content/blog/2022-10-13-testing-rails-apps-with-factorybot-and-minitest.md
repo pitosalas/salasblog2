@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-13'
 subtitle: Testing Rails Apps with FactoryBot and MiniTest
 tags:

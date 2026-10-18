@@ -1,5 +1,4 @@
 ---
-category: '463'
 date: '2022-04-23'
 subtitle: navigation/Troubleshooting – ROS Wiki
 tags:

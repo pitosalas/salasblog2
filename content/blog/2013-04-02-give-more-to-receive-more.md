@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-02'
 subtitle: '![](https://i0.wp.com/blog.kidsemail.org/wp-content/uploads/2012/11/gifts.jpg?w=584)'
 tags:

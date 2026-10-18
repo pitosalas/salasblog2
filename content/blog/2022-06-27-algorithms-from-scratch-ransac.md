@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-27'
 subtitle: 'Algorithms from scratch: RANSAC: RANSAC stands for Random S...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-10'
 subtitle: Chris Shipley of Guidewire Group has a [great post bemoaning how entrepreneurs
   are driven to invest ...

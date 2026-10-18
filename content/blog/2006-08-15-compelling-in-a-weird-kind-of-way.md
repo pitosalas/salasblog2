@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-08-15'
 subtitle: Just take a good look at these pictures!
 tags:

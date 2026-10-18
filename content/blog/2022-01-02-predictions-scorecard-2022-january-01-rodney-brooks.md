@@ -1,5 +1,4 @@
 ---
-category: '276'
 date: '2022-01-02'
 subtitle: Predictions Scorecard, 2022 January 01 – Rodney Brooks
 tags:

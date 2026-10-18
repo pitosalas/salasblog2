@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-23'
 subtitle: Rosetta Code –Rosetta Code is a programming chrestoma...
 tags:

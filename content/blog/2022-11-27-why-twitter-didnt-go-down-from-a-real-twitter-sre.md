@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-27'
 subtitle: 'Why Twitter Didn’t Go Down: From a Real Twitter SRE'
 tags:

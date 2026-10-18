@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-05-17'
 subtitle: As you know we are developing BlogBridge, “a new kind of blog reader.” ...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-09-23'
 subtitle: 'I first came across Sandy Metz in this video:'
 tags:

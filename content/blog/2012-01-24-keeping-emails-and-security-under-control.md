@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-24'
 subtitle: Do you receive tons of notification emails form your various subscriptions
   or social sites like Twit...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-23'
 subtitle: This was a fun read with lots of cool insights. If your blood pressure surges
   and adrenalin courses ...

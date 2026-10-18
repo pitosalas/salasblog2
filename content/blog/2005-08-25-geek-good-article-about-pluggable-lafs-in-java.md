@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2005-08-25'
 subtitle: One of the **hairier** and most interesting parts of **Swing** (Java’s GUI
   layer) are the so-called ...

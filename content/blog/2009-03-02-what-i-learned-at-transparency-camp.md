@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-02'
 subtitle: There are people in our government who are **strongly pushing** for more
   openness and who are very f...

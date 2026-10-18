@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-15'
 subtitle: 'How to Use AI to Do Stuff: An Opinionated Guide'
 tags:

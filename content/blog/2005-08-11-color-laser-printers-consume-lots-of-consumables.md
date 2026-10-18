@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-08-11'
 subtitle: Color laser printers are **wonderful**. The one I use is a Konica Minolta
   QMS 2200

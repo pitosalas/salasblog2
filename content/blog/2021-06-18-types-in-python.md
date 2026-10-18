@@ -1,5 +1,4 @@
 ---
-category: '130'
 date: '2021-06-18'
 subtitle: Types in Python
 tags:

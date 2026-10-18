@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-01-31'
 subtitle: Under the header “Natural Gas News Leak” (funny) there’s a [story about
   how the securities market re...

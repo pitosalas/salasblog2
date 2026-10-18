@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-17'
 subtitle: Farnsworth House – Wikipedia –
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-11-03'
 subtitle: I was rather proud of the art I designed for a t-shirt this summer. It’s
   cool but of course it’s a d...

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-05-23'
 subtitle: Last year when teaching REST concepts at Brandeis Universi...
 tags:

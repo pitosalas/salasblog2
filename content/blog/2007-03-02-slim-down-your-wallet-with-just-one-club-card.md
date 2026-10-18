@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-02'
 subtitle: This looks kind of neat – check out this post
 tags:

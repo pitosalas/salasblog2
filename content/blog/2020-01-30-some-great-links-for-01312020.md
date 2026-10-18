@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-30'
 subtitle: Different Ways to Set Attributes in ActiveRecord (Rails 6)
 tags:

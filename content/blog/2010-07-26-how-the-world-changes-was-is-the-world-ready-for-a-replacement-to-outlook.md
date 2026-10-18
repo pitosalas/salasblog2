@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-07-26'
 subtitle: Now that I’ve been blogging for a while, it’s fun and instructive sometimes
   to see some of the older...

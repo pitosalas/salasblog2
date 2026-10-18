@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-23'
 subtitle: '[ GitHub – gregmolnar/prepper: Prepper is a simple server provisioning
   tool, built on top of SSHKit....'

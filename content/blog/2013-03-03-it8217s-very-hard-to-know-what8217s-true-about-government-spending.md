@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-03-03'
 subtitle: I saw this in the Boston Globe this morning and I jotted it down because
   yet again a bit of totally ...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-27'
 subtitle: Here is a a really good commentary on Google Plus (G+).
 tags:

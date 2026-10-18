@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-08-02'
 subtitle: Scott Kirsner writes about VC’s this post
 tags:

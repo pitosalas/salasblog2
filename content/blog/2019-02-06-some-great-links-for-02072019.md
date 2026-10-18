@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-06'
 subtitle: Design follows data structures
 tags:

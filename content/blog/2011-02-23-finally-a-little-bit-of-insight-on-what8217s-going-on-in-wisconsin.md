@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-02-23'
 subtitle: I’ve seen several interviews with Scott Walker
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-03-23'
 subtitle: I have been noticing more and more **serialized tweets**. In other words,
   someone tweets several tim...

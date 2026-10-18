@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2024-01-16'
 subtitle: Do we think of git commits as diffs, snapshots, and/or histories?
 tag_review: no_fit

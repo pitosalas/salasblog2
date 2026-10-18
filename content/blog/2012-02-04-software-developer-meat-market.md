@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-04'
 subtitle: An interesting article in Forbes about Software Developers and Development
   in general, [The Rise of ...

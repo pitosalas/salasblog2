@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-24'
 subtitle: I have believed that Amazon is a much bigger deal than people realize. Not
   only are they the ultimat...

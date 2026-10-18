@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-01-20'
 subtitle: 'Who is he? The CEO of Sun Microsystems. Check out the video:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '151'
 date: '2022-05-10'
 subtitle: Wooden machines and contraptions
 tags:

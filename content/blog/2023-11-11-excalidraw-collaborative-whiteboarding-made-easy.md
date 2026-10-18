@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-11'
 subtitle: Excalidraw — Collaborative whiteboarding made easy –Excalidraw is a vir...
 tag_review: no_fit

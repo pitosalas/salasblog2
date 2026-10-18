@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-21'
 subtitle: I am going to share my **secret technology** for losing weight. It’s a mental
   exercise that really w...

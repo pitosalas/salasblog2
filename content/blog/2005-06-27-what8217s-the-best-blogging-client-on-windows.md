@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-06-27'
 subtitle: You can do your blogging by typing into a web browser form provided by the
   Movable Type service. But...

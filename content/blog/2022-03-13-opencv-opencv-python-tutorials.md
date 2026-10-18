@@ -1,5 +1,4 @@
 ---
-category: '370'
 date: '2022-03-13'
 subtitle: 'OpenCV: OpenCV-Python Tutorials'
 tags:

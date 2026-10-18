@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-30'
 subtitle: If you know or remember the great Inner Beauty hot sauce, then you will
   be interested in this artic...

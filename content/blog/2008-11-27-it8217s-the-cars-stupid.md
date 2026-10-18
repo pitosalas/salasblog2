@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-27'
 subtitle: Robert X. Cringely’s prescription for Detroit automakers
 tags:

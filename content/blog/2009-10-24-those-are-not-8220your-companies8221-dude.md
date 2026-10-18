@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-10-24'
 subtitle: Check out It’s Not My Company
 tags:

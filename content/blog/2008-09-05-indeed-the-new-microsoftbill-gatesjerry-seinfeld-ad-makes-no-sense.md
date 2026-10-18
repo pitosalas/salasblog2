@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-05'
 subtitle: Gizmodo shows the first ad, and even though I love Jerry and like Bill,
   it, indeed, makes no sense.

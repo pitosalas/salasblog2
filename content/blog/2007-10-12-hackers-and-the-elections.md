@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-12'
 subtitle: In New Scientist Tech, an interesting article about [h...
 tags:

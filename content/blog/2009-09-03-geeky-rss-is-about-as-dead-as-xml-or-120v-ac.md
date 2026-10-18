@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-09-03'
 subtitle: I’ve seen a couple of “RSS is dead” he...
 tags:

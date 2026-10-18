@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-07-15'
 subtitle: 'Linux Applications Performance: Introduction – Unixism'
 tags:

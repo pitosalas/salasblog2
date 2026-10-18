@@ -1,5 +1,4 @@
 ---
-category: '84'
 date: '2022-01-04'
 subtitle: 'cantino/mcfly: Fly through your shell history. Great Scott!'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-06-26'
 subtitle: Really good article, albeit quite geeky, about concurrency in general, and
   using Go-like primitives ...

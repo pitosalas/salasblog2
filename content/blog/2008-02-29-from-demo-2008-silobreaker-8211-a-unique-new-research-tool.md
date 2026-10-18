@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-29'
 subtitle: Joining the ranks of the growing number of **news aggregation and research**
   sites is Silobreaker

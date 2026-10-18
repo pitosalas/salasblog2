@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-17'
 subtitle: 101 Bash Commands and Tips for Beginners to Experts
 tag_review: no_fit

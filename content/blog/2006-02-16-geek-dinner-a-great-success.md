@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-02-16'
 subtitle: '!100319926 6Bac19F6Bc'
 tags:

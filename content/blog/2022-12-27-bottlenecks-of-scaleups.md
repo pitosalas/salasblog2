@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-27'
 subtitle: Bottlenecks of Scaleups –Common bott...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-17'
 subtitle: Rails Generate Migration — Everything you need to know
 tags:

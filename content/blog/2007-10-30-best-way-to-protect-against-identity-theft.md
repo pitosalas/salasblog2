@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-30'
 subtitle: I’ve come across these two services, priced similarly, sound similar.
 tags:

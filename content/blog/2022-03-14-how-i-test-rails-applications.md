@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-03-14'
 subtitle: How I test Rails applications
 tags:

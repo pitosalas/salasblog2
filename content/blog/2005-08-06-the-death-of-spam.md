@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-08-06'
 subtitle: My friend Paul English has written an interesting bit about
 tags:

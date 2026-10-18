@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-01'
 subtitle: Tom Friedman, quoting Tony Wagner, describes what he thinks should be taught
   today (that isn’t reall...

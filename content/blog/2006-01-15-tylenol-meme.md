@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-15'
 subtitle: Amusingly, several
 tags:

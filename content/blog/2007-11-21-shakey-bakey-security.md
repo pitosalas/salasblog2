@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-11-21'
 subtitle: “Establishing a secure wireless link between two gadgets could soon be purely
   a matter of holding th...

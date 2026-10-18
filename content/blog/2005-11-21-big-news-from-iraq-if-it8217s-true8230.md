@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-11-21'
 subtitle: Zarqawi probably killed! according to Iraq the Model.
 tags:

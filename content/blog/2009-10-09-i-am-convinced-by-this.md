@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-09'
 subtitle: Sergey Brin of Google has an op-ed in today’s New York Times
 tags:

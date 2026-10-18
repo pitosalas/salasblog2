@@ -1,5 +1,4 @@
 ---
-category: improv
 date: '2026-10-17'
 tags: []
 title: Lotus Improv Pre-History

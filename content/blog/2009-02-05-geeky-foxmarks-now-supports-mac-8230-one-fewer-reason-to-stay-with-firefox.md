@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2009-02-05'
 subtitle: I read in [Personal Technology (Wall Street Journal) today that Foxmarks,
   the handy, free utility th...

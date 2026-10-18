@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-08'
 subtitle: Learn something new on Wyzant.com! –With over 10 million hours of instru...
 tags:

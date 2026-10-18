@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-12-05'
 subtitle: 4 Advanced Tricks With Python Functions You Might Not Know
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-11-13'
 subtitle: PathFinding.js
 tags:

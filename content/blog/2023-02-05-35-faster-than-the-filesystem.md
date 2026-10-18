@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-05'
 subtitle: 35% Faster Than The Filesystem –An interesting study o...
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-21'
 subtitle: Who knew that a story about behind-the-scenes of a big restaurant could
   be gripping, but this one is...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-12-18'
 subtitle: When Should You NOT Use Rails?
 tags:

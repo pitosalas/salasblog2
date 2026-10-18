@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-16'
 subtitle: Rewriting the Ruby parser –At Sho...
 tags:

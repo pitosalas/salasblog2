@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-28'
 subtitle: 'This is just a weird weird happening:'
 tags:

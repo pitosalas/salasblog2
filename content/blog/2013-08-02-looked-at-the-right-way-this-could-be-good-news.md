@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-08-02'
 subtitle: I came across this article a few days ago. The Ticktock of the Death Clock
   – NYTimes.com

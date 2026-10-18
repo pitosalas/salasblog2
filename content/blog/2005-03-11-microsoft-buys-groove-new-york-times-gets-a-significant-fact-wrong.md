@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-03-11'
 subtitle: 'Scoble (and everyone else) comments:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-08-21'
 subtitle: Gavin Murphy (of Annkissam) a...
 tags:

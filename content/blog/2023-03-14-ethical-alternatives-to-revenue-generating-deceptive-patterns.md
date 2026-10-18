@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-14'
 subtitle: Ethical alternatives to revenue-generating deceptive patterns
 tags:

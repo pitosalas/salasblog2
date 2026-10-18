@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-17'
 subtitle: A Quick and Easy Guide to the Asset Pipeline in Rails 7 | Mix & Go
 tags:

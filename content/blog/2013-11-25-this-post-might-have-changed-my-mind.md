@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-11-25'
 subtitle: Scott Adams is the guy behind the famous Dilbert comics. I’ve not worked
   in a big corporation for a ...

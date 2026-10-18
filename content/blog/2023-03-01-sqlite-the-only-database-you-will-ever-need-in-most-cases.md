@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-01'
 subtitle: SQLite the only database you will ever need in most cases
 tag_review: no_fit

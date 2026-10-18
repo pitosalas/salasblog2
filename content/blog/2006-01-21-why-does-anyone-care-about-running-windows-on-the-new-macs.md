@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-21'
 subtitle: When you’re a blogger it’s sometimes a **strain** to say something **new**
   about a topic that’s [gon...

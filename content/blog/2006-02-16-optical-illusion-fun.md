@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-02-16'
 subtitle: I got this in an email, not sure exactly where it came from but it’s pretty
   cool. The image looks l...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-16'
 subtitle: "GitHub – postlight/mercury-parser: \U0001F4DC Extract meaningful content
   from the chaos of a web page"

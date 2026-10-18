@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-02-17'
 subtitle: An interesting article about how to think about [designing Artificial Intelligence
   for playing poker...

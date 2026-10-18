@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-28'
 subtitle: This is from a play we saw last year at the Huntington Theatre. ...
 tags:

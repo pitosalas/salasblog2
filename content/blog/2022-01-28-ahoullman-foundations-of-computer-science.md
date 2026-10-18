@@ -1,5 +1,4 @@
 ---
-category: '100'
 date: '2022-01-28'
 subtitle: Aho/Ullman Foundations of Computer Science
 tags:

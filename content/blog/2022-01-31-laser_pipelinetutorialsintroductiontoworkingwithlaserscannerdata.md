@@ -1,5 +1,4 @@
 ---
-category: '2'
 date: '2022-01-31'
 subtitle: laser_pipeline/Tutorials/IntroductionToWorkingWithLaserScannerData
 tags:

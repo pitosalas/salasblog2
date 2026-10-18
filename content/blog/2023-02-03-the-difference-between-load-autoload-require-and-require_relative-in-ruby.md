@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-03'
 subtitle: "The Difference Between load, autoload, require, and require_relative in
   Ruby \U0001F4D6"

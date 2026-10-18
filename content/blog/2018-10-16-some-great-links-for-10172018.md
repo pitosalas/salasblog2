@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-16'
 subtitle: alexmojaki/birdseye
 tags:

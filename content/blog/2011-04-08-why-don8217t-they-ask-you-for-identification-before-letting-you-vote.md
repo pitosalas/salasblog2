@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-04-08'
 subtitle: Every time there’s an election it seems like someone brings up the odd fact
   that you are not asked f...

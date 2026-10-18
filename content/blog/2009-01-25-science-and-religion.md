@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-01-25'
 subtitle: Now there’s a big topic, eh? A magazine that I don’t normally read has a
   [good, in depth, thoughtful...

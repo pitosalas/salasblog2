@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-12-23'
 subtitle: A bit of a debate is developing regarding Microsoft’s recent patent for
 tags:

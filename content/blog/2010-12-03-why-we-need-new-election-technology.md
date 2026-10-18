@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2010-12-03'
 subtitle: I work at the Open Source Digital Voting Foundation, where we are creating
   ne...

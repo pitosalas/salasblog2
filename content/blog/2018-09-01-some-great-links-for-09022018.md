@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-01'
 subtitle: westonganger (Weston Ganger)
 tags:

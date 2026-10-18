@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-15'
 subtitle: 'GitHub – volution/z-tokens: z-tokens — random tokens generation and related
   tools'

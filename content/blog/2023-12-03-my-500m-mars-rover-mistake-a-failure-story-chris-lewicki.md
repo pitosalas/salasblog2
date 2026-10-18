@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-12-03'
 subtitle: 'My $500M Mars Rover Mistake: A Failure Story — Chris Lewicki'
 tag_review: no_fit

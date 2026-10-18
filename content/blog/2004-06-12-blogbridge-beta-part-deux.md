@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-06-12'
 subtitle: I shoulda known…
 tags:

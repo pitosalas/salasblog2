@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-03-22'
 subtitle: '![](https://i0.wp.com/salas.com/wp-content/uploads/2013/03/692dd-wizard-of-ozbehindthecurtain.jpg?w=...'
 tags:

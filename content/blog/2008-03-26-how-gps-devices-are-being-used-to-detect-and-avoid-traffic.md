@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-26'
 subtitle: This is relevant to the discussion about [congestion pricing, mesh networks
   and avoiding traffic jam...

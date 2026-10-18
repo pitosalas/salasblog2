@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-27'
 subtitle: 'Zulip: Slack alternative Chat for distributed teams –Now that slack changed
   ...'

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-06-08'
 subtitle: An amusing article in Newsweek about Peter Arnell, self-styled renaissance
   man, inventor of the “[Pe...

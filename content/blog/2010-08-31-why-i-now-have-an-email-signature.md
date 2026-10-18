@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-31'
 subtitle: We’ve been on an **SEO** binge over the last 4-6 weeks. I’ve been educating
   myself by listening and ...

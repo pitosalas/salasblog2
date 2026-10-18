@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-05-27'
 subtitle: Just a quick read of this post showed me several great gems that I want
   to try right away! If you’re...

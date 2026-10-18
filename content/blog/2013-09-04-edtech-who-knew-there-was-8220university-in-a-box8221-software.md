@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-04'
 subtitle: I stumbled across this web site. I can’t say anything about their status
   or quality but I was supris...

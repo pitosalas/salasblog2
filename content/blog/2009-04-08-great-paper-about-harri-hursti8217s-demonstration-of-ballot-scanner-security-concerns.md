@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-08'
 subtitle: I recently saw the movie Hacking Democracy. It’s absolutely fasc...
 tags:

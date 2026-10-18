@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-11'
 subtitle: Where in the US is hottest for Cloud Computing, or for Big Data, or for
   No Sql? Curious? Yeah, then ...

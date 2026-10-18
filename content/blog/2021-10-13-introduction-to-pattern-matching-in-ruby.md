@@ -1,5 +1,4 @@
 ---
-category: '389'
 date: '2021-10-13'
 subtitle: Introduction to Pattern Matching in Ruby
 tags:

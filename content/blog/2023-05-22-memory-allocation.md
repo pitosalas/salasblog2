@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-22'
 subtitle: Memory Allocation –For those of you learning C or C++, th...
 tags:

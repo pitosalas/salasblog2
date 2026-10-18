@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-06-29'
 subtitle: Sproutcore is a JavaScript framework for writing powerful web ap...
 tags:

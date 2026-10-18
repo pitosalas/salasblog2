@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-02-14'
 subtitle: A Carrotmob is a network of consumers (?) who buy products in order to rewa...
 tags:

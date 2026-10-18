@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2010-11-12'
 subtitle: The problem with conferences is knowing what session to go to, right?
 tags:

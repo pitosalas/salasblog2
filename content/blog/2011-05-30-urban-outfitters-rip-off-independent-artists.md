@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-05-30'
 subtitle: 'This article, “[Anatomy of a Trending Topic: How Twitter & the crafting
   community put the smackdown ...'

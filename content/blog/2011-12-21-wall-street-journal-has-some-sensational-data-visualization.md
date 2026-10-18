@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-21'
 subtitle: I don’t know if you need [an account to see the amazingly useful, elegant
   and well implemented bit o...

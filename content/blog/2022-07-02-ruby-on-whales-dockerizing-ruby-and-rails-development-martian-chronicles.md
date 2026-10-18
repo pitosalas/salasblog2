@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-02'
 subtitle: 'RUby on Whales: Dockerizing Ruby and Rails'
 tags:

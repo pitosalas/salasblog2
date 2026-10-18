@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-02-24'
 subtitle: As I mentioned a few days ago, I went to see “The Gates” – Environmental
   art by Christo

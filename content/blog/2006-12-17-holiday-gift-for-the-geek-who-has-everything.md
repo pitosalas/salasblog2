@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-12-17'
 subtitle: '![](https://i0.wp.com/www.bathsheba.com/sculpt/mg/mg.jpg?w=584)Everyone
   has a column or article thes...'

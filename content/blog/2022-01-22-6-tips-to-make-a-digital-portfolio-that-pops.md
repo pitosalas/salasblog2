@@ -1,5 +1,4 @@
 ---
-category: '149'
 date: '2022-01-22'
 subtitle: 6 Tips to Make a Digital Portfolio That Pops
 tag_review: no_fit

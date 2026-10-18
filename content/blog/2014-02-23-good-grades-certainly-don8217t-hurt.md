@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-02-23'
 subtitle: 'How to Get a Job at Google – NYTimes.com:'
 tags:

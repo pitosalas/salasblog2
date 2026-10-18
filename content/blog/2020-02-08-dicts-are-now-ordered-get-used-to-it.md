@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-02-08'
 subtitle: Dicts are now ordered, get used to it
 tags:

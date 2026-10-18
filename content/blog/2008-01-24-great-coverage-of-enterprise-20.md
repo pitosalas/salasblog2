@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-01-24'
 subtitle: In the Portals and KM blog, a pair of great articles about “Enterprise 2.0”.
   Bill Ives has been foll...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-07-27'
 subtitle: There’s a lot of buzz right now about the leaked documents related to the
   war in Afghanistan. I am n...

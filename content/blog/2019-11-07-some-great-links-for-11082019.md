@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-11-07'
 subtitle: A Recipe for Training Neural Networks
 tags:

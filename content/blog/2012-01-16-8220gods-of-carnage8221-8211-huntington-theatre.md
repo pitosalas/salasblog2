@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-16'
 subtitle: I Just came back from seeing “Gods Of Carnage”
 tags:

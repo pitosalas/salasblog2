@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-07'
 subtitle: Alternate Python REPL – bpython –
 tags:

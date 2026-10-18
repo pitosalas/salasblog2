@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-06-30'
 subtitle: 'An interesting fact:'
 tags:

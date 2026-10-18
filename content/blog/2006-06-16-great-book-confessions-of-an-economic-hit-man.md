@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-06-16'
 subtitle: I just finished reading an **excellent** book called Confessions of an Econmonic
   Hit Man

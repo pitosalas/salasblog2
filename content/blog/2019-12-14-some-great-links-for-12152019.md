@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-14'
 subtitle: Why NUKEMAP isn’t on Google Maps anymore | Restricted Data
 tags:

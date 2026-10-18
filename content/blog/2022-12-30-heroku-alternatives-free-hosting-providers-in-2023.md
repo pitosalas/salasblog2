@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-30'
 subtitle: 'Heroku alternatives: Free Hosting Providers in 2023 –Now th...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-11-23'
 subtitle: 'Ok, assembled masses: I’ve rearranged my office and now my USB connected
   printers are farther away f...'

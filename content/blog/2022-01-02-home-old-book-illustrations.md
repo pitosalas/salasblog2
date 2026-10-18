@@ -1,5 +1,4 @@
 ---
-category: '111'
 date: '2022-01-02'
 subtitle: Home | Old Book Illustrations
 tags:

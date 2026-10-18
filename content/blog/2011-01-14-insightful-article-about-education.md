@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-01-14'
 subtitle: 'An insightful article about higher education in the USA: The Disadvantages
   of an Elite Education'

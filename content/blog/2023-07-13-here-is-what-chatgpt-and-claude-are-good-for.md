@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-13'
 subtitle: '![](https://i0.wp.com/salas.com/wp-content/uploads/2023/07/Screenshot-2023-07-13-at-3.53.58-PM.png?r...'
 tags:

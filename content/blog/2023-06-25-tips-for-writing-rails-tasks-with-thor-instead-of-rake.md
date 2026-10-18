@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-25'
 subtitle: Tips for writing Rails tasks with Thor instead of Rake
 tags:

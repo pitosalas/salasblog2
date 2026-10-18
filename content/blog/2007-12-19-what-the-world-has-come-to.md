@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-19'
 subtitle: Andrew Sullivan of The Atlantic with a interesting article about torture.
 tags:

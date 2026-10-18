@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-19'
 subtitle: A british organization (or should I say organisation?) called mySociety
   has done some **really cool*...

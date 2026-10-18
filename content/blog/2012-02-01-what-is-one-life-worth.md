@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-01'
 subtitle: A fascinating article,...
 tags:

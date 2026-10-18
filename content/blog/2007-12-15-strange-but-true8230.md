@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-15'
 subtitle: Just a curious fact from Scientific American
 tags:

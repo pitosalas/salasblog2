@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-03-22'
 subtitle: Test Double | Our Blog | Improving Dev Experience with Overmind
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-30'
 subtitle: learn PID without a PhD!
 tags:

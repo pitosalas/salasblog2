@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-06'
 subtitle: How to diagnose and control login and background items
 tags:

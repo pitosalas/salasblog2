@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-23'
 subtitle: Lago Blog – ORMs are criticized for the wrong reasons
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-07-09'
 subtitle: I am considering these Bluetooth Wireless Powered Speakers… which should
   I get?

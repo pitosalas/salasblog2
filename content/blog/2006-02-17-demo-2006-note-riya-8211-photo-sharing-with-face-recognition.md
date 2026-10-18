@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-02-17'
 subtitle: This one was probably one of the most talked about sites. The principle
   is, F...

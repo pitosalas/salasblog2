@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-03'
 subtitle: Check out this post The Stimulus Gets Its Own Logo
 tags:

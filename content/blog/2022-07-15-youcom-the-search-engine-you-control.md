@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-15'
 subtitle: You.com | The search engine you control. –Good luck to the world with another
   ...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-08'
 subtitle: Database Performance Optimization and Scaling in Rails | AppSignal Blog
 tags:

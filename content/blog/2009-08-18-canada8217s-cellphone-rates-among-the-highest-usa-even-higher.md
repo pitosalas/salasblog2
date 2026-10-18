@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-08-18'
 subtitle: Did you think you pay a lot for cellphone coverage? An [article in the Globe
   and Mail about cellphon...

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-08-01'
 subtitle: MicroK8s – Zero-ops Kubernetes for developers, edge and IoT | MicroK8s
 tags:

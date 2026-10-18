@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-29'
 subtitle: ‘Succession’ and the Future of Social Media
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-23'
 subtitle: 'Heads up: “Phone Bill Fees: How to identify 3rd-party charges and protect
   yourself'

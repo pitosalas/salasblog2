@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-03-23'
 subtitle: '**“Oh yeah, I’ve started 6 companies, and right now I have 3 startups going.
   I just love starting co...'

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-19'
 subtitle: If you are a Ruby On Rails developer you might want to check out this post
 tags:

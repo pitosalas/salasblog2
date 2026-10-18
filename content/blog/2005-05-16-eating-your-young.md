@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-05-16'
 subtitle: 'I came across this bit:'
 tags:

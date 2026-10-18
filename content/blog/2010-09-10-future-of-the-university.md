@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-10'
 subtitle: I saw an article in the New York Times and other places about the future
   of the University, and even...

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-05-22'
 subtitle: OPML Camp was yesterday and today, so it’s over now. We had **good atten...
 tags:

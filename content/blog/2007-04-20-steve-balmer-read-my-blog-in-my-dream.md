@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-04-20'
 subtitle: I’ve been setting up a new Windows Vista notebook over the last few days
   for use by a non technical ...

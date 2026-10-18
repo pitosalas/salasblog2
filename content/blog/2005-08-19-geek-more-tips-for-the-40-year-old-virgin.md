@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-08-19'
 subtitle: 'Here’s something **funny** I came across: “Sex Tips for Geeks: How to be
   Sexy” where we learn such g...'

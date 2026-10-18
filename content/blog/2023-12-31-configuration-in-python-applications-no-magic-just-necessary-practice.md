@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-12-31'
 subtitle: 'Configuration in Python Applications: No Magic, Just Necessary Practice'
 tag_review: no_fit

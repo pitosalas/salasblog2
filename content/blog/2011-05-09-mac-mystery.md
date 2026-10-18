@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-05-09'
 subtitle: Just reaching out you mac experts. I used to think I was one, but this one
   has me stumped.

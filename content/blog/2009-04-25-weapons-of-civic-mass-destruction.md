@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-25'
 subtitle: I am struck by how broken our political process is. I’m not the first nor
   the last to make this obse...

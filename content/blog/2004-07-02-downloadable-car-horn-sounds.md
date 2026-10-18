@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-07-02'
 subtitle: Did you know that you (or your teenager) can buy cool new ring tones for
   their cell phone? They cost...

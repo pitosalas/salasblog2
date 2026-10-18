@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-11-26'
 subtitle: Netflix has a box to stream video into my living room. TIVO ha...
 tags:

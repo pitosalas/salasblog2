@@ -1,5 +1,4 @@
 ---
-category: '214'
 date: '2021-06-09'
 subtitle: Welcome to the QGIS project!
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-13'
 subtitle: It’s Time to Say Goodbye to These Obsolete Python Libraries –p
 tags:

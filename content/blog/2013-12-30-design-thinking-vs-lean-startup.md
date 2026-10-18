@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-12-30'
 subtitle: Solving Problems for Real World, Using Design – NYTimes.com
 tags:

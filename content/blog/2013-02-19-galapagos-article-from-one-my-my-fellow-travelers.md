@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-19'
 subtitle: Last year we went with National Geographic to the Galapagos islands for
   an amazing journey of discov...

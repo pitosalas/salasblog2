@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-01-05'
 subtitle: '[ Scalable application design without magic – Leveraging client computing
   power for high performance...'

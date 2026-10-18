@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-08-08'
 subtitle: 'Quick movie review: two movies of more or less the same flavor: [[tag]The
   Bourne Ultimatum[/tag]](ht...'

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-05-21'
 subtitle: '[ Raspberry Pi Headless Setup Using Linux [Step by Step]](https://linuxhandbook.com/raspberry-pi-hea...'
 tags:

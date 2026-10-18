@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-14'
 subtitle: The Case for Models | Concerning Quality –An interesting ...
 tags:

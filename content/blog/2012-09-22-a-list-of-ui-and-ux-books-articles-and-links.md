@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-09-22'
 subtitle: I created this quick and dirty list of useful resources for some friends
   who wanted to dig into the ...

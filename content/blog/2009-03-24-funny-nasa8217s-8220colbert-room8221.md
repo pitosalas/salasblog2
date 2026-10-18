@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-24'
 subtitle: '[NASA’s online contest to name a new room at the international space station
   went awry. Comedian Ste...'

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-14'
 subtitle: I’ve been doing quite a bit of traveling lately and have been experimenting
   with those noise cancell...

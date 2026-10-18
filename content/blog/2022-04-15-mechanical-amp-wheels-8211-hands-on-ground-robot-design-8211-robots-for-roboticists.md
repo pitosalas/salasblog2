@@ -1,5 +1,4 @@
 ---
-category: '237'
 date: '2022-04-15'
 subtitle: Mechanical & Wheels – Hands On Ground Robot Design – Robots For Roboticists
 tags:

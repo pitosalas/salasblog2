@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-23'
 subtitle: So I received two new **Discover cards**, with supposed enhanced security
   features. I didn’t ask for...

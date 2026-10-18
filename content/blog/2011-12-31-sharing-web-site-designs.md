@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-31'
 subtitle: Recently I wanted to get feedback on one of several ideas for the design
   of the new BlogBridge

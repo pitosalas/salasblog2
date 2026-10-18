@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2006-02-05'
 subtitle: Amyloo has an interesting post
 tags:

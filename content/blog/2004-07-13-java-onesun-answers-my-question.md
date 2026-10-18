@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-07-13'
 subtitle: In several previous posts I’ve won...
 tags:

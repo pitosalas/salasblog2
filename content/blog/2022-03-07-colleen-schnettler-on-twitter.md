@@ -1,5 +1,4 @@
 ---
-category: '7'
 date: '2022-03-07'
 subtitle: Colleen Schnettler on Twitter
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-08-24'
 subtitle: Ruby’s Hash is a Swiss-Army Knife
 tags:

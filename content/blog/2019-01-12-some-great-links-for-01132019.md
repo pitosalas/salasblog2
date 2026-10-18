@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-12'
 subtitle: Scooter startup Bird tried to silence a journalist. It did not go well.
   – TechCrunch

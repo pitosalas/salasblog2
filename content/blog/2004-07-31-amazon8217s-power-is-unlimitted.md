@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-07-31'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/amazon.j...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '21'
 date: '2021-10-19'
 subtitle: SUMPRODUCT function
 tags:

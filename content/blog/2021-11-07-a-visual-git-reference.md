@@ -1,5 +1,4 @@
 ---
-category: '178'
 date: '2021-11-07'
 subtitle: A Visual Git Reference
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-04-28'
 subtitle: Scott Kirsner summarizes a new book “Mastering the VC game” and [re-...
 tags:

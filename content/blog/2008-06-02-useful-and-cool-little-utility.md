@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-06-02'
 subtitle: Ever wonder what speed your internet connection *really *has?
 tags:

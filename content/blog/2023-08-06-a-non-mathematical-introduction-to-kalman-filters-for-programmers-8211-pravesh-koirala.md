@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-08-06'
 subtitle: A non-mathematical introduction to Kalman Filters for programmers – Pravesh
   Koirala

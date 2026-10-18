@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-15'
 subtitle: Ok, that’s my own curious headline for this interesting article in the New
   York Times

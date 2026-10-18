@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-03-26'
 subtitle: Enabling & Increasing Raspberry Pi Swap – Neblio
 tags:

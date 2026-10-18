@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-11-20'
 subtitle: As you may have heard, I’ve been learning all about Search Engine Optimization
   (SEO) lately. I just ...

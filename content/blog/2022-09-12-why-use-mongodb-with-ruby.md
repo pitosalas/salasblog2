@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-12'
 subtitle: Why Use MongoDB with Ruby
 tags:

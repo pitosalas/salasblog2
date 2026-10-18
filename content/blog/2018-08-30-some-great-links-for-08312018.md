@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-30'
 subtitle: iridakos – Creating a Linux Desktop application with Ruby
 tags:

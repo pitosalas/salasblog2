@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-13'
 subtitle: '**Pecking order? Puleeze! **Joi Ito writes'
 tag_review: no_fit

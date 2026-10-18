@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-07-20'
 subtitle: 'It always happens and I really try not to have buyers remorse, but: “Apple
   Updates MacBook Air”'

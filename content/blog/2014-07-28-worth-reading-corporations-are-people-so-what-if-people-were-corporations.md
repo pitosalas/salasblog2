@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-07-28'
 subtitle: '![](https://i0.wp.com/salas.com/wp-content/uploads/2014/07/a15f5-1406547544949.jpg?w=584&ssl=1)'
 tag_review: no_fit

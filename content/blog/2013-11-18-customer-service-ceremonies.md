@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-11-18'
 subtitle: Nowadays, when I am done talking to telephone suport of any company, they
   seem to be trained to go t...

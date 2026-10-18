@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2007-04-02'
 subtitle: I sometimes feel like I don’t multi-task quite as well as "everyone else".
   So I was interested in [t...

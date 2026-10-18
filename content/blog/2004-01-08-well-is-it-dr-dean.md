@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-08'
 subtitle: '**Well, is it Dr. Dean or Governor Dean? **It’s funny to me when people
   try to build up Howard Dean’...'

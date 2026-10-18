@@ -1,5 +1,4 @@
 ---
-category: '86'
 date: '2021-12-03'
 subtitle: Climate Change Education Across the Curricula, Across the Globe
 tags:

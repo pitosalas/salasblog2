@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-03-04'
 subtitle: I was glad to see that the FireFox add-in for del.icio.us
 tags:

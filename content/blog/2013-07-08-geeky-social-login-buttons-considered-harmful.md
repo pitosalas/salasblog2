@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-07-08'
 subtitle: You probably don’t know what a social login button is so forgive this bit
   of geekyness. I am sure yo...

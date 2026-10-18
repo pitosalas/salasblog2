@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-09'
 subtitle: Check out this post If you think stronger regulation is a good answer, heed
   Buffett

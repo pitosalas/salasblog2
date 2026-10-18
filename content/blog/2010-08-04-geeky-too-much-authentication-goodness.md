@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-04'
 subtitle: It seems like nowadays, to be a cool, 21st century kind of application,
   you need to allow me to use ...

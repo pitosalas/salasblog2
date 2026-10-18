@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-09'
 subtitle: Tom Friedman recently had a good column about global warming (“global climate
   change”) and what is, ...

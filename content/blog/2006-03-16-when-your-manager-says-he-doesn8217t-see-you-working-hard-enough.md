@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-16'
 subtitle: 'Here’s a clever retort that I heard from a colleague today:'
 tags:

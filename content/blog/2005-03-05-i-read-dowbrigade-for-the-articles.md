@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-03-05'
 subtitle: Do you know Dowbrigade? An almost always interesting blo...
 tags:

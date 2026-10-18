@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-09-27'
 subtitle: '- You happen to have a Tivo'
 tags:

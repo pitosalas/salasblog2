@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-31'
 subtitle: Funny insider lingo. I am sure you’d be able to do a similar video for Washington
   DC (politics) and ...

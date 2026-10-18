@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-05-09'
 subtitle: '!Mpwacover300'
 tags:

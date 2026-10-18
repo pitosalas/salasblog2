@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-05-29'
 subtitle: 'Note to self:'
 tags:

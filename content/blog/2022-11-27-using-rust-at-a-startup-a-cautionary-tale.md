@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-27'
 subtitle: 'Using Rust at a startup: A cautionary tale'
 tags:

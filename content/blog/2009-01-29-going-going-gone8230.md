@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-01-29'
 subtitle: You’ve heard me bemoan the death of magazines, newspapers, and other valuable
   things (radio? small s...

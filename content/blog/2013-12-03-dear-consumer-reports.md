@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-12-03'
 subtitle: 'From an email I sent, just because:'
 tags:

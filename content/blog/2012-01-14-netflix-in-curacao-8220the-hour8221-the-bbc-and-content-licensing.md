@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-14'
 subtitle: I was recently visiting Curaçao and remembered that I had read that **Netflix
   was now available in S...

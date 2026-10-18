@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-11-20'
 subtitle: A fascinating although quite long article by Michael Lewis in Vanity Fair.
   Michael Lewis is an amazi...

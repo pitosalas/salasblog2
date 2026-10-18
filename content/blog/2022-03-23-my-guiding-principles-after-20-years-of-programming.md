@@ -1,5 +1,4 @@
 ---
-category: '46'
 date: '2022-03-23'
 subtitle: My guiding principles after 20 years of programming
 tags:

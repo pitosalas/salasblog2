@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-04-27'
 subtitle: Ok, probably to a mathematician these are not arcane, but to normal people
   (oops, sorry, I love math...

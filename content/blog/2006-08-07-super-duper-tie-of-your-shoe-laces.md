@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-08-07'
 subtitle: Ever have your shoe laces come undone, over and over again? The usual mommy
   double know doesn’t work...

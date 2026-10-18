@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-06-04'
 subtitle: I came across this good post from Don Dodge
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-17'
 subtitle: Reading this article about The Casualties Of the NFL, in Men’s Journal
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '208'
 date: '2021-05-28'
 subtitle: verlab/gazebo_ros_model_color
 tags:

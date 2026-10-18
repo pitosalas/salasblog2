@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-07'
 subtitle: A good article in the Atlantic about game designer Jonathan Blow
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-01-04'
 subtitle: There has been a lot of traffic on this new meme “Folksonomies”. This Slashdot
   bit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-01-15'
 subtitle: An [excellent article in the Wall Street Journal about the way the media
   and politicians want us to ...

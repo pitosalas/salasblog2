@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2010-05-27'
 subtitle: 'I saw this bit today: “Apple: Will Steve Balmer Show Up At The WWDC Keynote?”.'
 tags:

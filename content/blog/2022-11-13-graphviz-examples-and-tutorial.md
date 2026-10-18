@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: GraphViz Examples and Tutorial –I hope you know GraphViz. ...
 tags:

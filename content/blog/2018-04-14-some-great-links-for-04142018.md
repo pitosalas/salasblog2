@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-14'
 subtitle: 'Build a Text Classification Program: An NLP Tutorial'
 tags:

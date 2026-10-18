@@ -1,5 +1,4 @@
 ---
-category: '115'
 date: '2022-03-13'
 subtitle: 'OpenCV: Contours in OpenCV'
 tags:

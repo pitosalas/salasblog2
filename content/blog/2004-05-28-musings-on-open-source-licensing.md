@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-05-28'
 subtitle: As I continue to make rapid progress on BlogBridge, now with a signifi...
 tags:

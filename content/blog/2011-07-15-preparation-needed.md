@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-15'
 subtitle: I’ve been thinking a lot lately about what kind of preparation college students
   need as they graduat...

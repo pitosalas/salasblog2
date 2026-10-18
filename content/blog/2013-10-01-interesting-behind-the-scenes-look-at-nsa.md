@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-01'
 subtitle: Zegart joins scholars at NSA for rare briefing on spy agency’s woes – CISAC
 tags:

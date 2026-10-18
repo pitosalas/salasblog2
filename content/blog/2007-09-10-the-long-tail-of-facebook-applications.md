@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-10'
 subtitle: Check out this post about the distri...
 tags:

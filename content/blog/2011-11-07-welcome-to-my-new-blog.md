@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-07'
 subtitle: So after some trouble porting the content I am now running my blog on Squarespace
 tags:

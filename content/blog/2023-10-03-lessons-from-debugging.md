@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-10-03'
 subtitle: Lessons From Debugging
 tag_review: no_fit

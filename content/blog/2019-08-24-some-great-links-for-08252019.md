@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-08-24'
 subtitle: The GVL and C Extensions – a cooperative partnership
 tag_review: no_fit

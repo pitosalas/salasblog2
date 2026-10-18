@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-12'
 subtitle: '**Scott Kirsner of the Boston Globe:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-12-07'
 subtitle: Here is [a good cheat sheet on how to build products that people really
   want. It is cribbed from thi...

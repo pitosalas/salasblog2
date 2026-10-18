@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-29'
 subtitle: 'Pleasantly surprised to see this, and I didn’t even know it was checking
   for me:'

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-13'
 subtitle: '**David Isenberg’s WTF Conference:** Th...'
 tag_review: no_fit

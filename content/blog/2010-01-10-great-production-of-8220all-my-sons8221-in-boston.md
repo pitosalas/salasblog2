@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-01-10'
 subtitle: I’ve been a subscriber at the Huntington Theater for years and years now
   and this new play is the be...

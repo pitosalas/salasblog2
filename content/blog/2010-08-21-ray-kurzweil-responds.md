@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-21'
 subtitle: You may not have followed the discussion that ensued when Ray Kurzweil was
   reported to ‘[not underst...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-02-12'
 subtitle: 15 Python Packages You Probably Don’t Know Exits
 tags:

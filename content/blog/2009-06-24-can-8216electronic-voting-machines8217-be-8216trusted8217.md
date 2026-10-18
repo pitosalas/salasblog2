@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-06-24'
 subtitle: Leaving aside *what* exactly an Electronic Voting Machine *is*, the New
   York Times weighed in with t...

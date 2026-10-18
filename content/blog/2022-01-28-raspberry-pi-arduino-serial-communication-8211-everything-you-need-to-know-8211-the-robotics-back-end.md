@@ -1,5 +1,4 @@
 ---
-category: '18'
 date: '2022-01-28'
 subtitle: Raspberry Pi Arduino Serial Communication – Everything You Need To Know
   – The Robotics Back-End

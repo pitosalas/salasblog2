@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-06-21'
 subtitle: Check out this post
 tags:

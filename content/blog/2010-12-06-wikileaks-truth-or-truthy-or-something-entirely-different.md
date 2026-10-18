@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-12-06'
 subtitle: David Weinberger has, as usual, an interesting take, and some in...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-21'
 subtitle: Dockerize the multi-services application for local development
 tag_review: no_fit

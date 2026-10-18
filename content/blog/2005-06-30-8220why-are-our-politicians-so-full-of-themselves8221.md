@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-30'
 subtitle: 'Another excellent **Peggy Noonan** column:'
 tags:

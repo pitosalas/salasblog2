@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-03'
 subtitle: 'Getting Ready for ROS Part 7: Describing a robot with URDF'
 tags:

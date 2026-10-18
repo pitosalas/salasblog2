@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-03-09'
 subtitle: For those who are following this narrative, this is a continuing narrative
   of my experiences after h...

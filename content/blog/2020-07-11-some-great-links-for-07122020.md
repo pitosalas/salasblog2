@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-07-11'
 subtitle: PEP 622 — Structural Pattern Matching | Python.org
 tags:

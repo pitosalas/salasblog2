@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-09-01'
 subtitle: 'WTF :: WTF – the terminal dashboard'
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-23'
 subtitle: Recently of course, because of the ‘torture memos’, the topic is all over
   the papers and cable ‘news...

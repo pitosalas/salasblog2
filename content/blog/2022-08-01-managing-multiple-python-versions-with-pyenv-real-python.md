@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-01'
 subtitle: Managing Multiple Python Versions With pyenv – Real Python
 tags:

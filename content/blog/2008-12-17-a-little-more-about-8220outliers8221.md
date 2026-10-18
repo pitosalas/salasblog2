@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-17'
 subtitle: Since I wrote a somewhat negative post mentioning Outliers and Malcolm Gladwell
 tags:

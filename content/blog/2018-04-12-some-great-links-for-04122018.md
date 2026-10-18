@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-12'
 subtitle: 'Micromessaging: Connecting Heroku Microservices w/Redis and RabbitMQ'
 tags:

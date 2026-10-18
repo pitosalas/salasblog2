@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-12-08'
 subtitle: 7 Deadly Sins Python Developers Do
 tags:

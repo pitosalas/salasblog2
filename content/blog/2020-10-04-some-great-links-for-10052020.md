@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-10-04'
 subtitle: One-liner introduction – Ruby one-liners cookbook
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-30'
 subtitle: '[ pawurb/rails-brotli-cache: Rails cache using the Brotli algorithm offers
   better compression and pe...'

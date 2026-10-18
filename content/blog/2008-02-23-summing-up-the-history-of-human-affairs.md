@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-23'
 subtitle: In the context of the current Wall Street excitement, I received a letter
   of assurance from a mutual...

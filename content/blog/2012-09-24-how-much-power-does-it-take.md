@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-09-24'
 subtitle: I remember wondering about this when I was in college — this is before I
   really knew anything about ...

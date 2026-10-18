@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-10'
 subtitle: I’ve been an American Idol fan for a while now, in fact from the very start.
   I’ve been commenting to...

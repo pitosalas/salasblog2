@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-11-21'
 subtitle: An article from Canadian Healthcare Technology notes that [US Healthcare
   wastes up to $800 billion a...

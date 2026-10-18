@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-09-29'
 subtitle: I’ve written about this before, I think, but I am once again **pleasantly
   amazed **by Google.

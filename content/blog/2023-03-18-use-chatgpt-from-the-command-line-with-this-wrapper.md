@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-18'
 subtitle: Use ChatGPT From The Command Line With This Wrapper
 tags:

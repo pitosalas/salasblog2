@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-25'
 subtitle: Everything I’ve learned in 10 years of Blogging
 tag_review: no_fit

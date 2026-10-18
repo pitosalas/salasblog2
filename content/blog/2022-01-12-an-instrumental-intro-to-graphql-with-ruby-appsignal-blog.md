@@ -1,5 +1,4 @@
 ---
-category: '113'
 date: '2022-01-12'
 subtitle: An instrumental intro to GraphQL with Ruby | AppSignal Blog
 tags:

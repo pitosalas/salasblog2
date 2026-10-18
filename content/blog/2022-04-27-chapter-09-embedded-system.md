@@ -1,5 +1,4 @@
 ---
-category: '18'
 date: '2022-04-27'
 subtitle: Chapter 09 Embedded System
 tags:

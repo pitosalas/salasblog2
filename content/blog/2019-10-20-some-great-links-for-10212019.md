@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-20'
 subtitle: a list of open source alternatives to google internal tools.
 tag_review: no_fit

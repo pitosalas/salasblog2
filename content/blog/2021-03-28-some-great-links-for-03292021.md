@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-03-28'
 subtitle: create regexp from a set of examples
 tag_review: no_fit

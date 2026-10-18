@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-01-02'
 subtitle: I just came across an excellent speech given by William Deresiewics (I didn’t
   know who he was either...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-29'
 subtitle: '99designs is #1 for Button & Icon Design'
 tags:

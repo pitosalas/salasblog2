@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-03'
 subtitle: On Wednesday of next week,
 tags:

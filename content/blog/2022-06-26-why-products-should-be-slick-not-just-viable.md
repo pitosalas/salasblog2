@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-26'
 subtitle: Why products should be “slick”, not just viableI hate t...
 tags:

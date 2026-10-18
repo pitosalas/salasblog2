@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-09-08'
 subtitle: 'Robin Good points to:'
 tags:

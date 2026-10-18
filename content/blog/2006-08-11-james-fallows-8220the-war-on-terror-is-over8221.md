@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-08-11'
 subtitle: Another great article in The Atlantic, Jame...
 tags:

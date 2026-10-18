@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-12-17'
 subtitle: Check out Stuxnet apparently as effective as a military strike
 tags:

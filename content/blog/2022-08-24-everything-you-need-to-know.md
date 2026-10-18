@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-24'
 subtitle: Everything you need to know
 tags:

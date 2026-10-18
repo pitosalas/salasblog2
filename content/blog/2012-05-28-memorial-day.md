@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-28'
 subtitle: '!LastNightTogether'
 tag_review: no_fit

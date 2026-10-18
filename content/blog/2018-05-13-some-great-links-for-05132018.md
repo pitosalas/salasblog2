@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-05-13'
 subtitle: 'Apache Cordova Tutorial: Developing Mobile Applications with Cordova'
 tags:

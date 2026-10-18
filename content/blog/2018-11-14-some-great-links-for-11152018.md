@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-11-14'
 subtitle: Home | web.dev
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-12-04'
 subtitle: Unfortunately students can be quite focused on their grades, and as a result
   I end up paying more at...

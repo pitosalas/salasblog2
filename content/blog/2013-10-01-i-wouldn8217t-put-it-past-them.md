@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-01'
 subtitle: How much do you want to bet that somewhere someone in this country a malware
   or other attack is bein...

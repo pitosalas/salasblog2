@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-30'
 subtitle: Last night’s event was a **lot of fun**. A ton of energy in the room, people
   huddling around compari...

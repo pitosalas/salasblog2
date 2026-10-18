@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-26'
 subtitle: '**Key Computing’s Xkey:**** (Demo 2004 Series – 3) **By my ...'
 tag_review: no_fit

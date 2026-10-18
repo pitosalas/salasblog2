@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-07-10'
 subtitle: strong_password v0.0.7 rubygem hijacked
 tags:

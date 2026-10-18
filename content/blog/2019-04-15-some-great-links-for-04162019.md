@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-15'
 subtitle: Faster PostgreSQL Counting
 tag_review: no_fit

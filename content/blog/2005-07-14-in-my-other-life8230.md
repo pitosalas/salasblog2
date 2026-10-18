@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-07-14'
 subtitle: I just updated this site a little to have some more up to date information
   about my consulting busin...

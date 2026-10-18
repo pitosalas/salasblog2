@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2010-01-14'
 subtitle: Ok, I am on a [Frank Rich binge, but he does have one thought provoking
   article after another. In hi...

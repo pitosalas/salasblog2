@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-09-29'
 subtitle: 'Here’s a **cool **idea: using the web services of **Google **and **Technorati
   **together to find oth...'

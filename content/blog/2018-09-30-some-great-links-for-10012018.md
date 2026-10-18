@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-30'
 subtitle: Is your Rails app ready for Production? | AkitaOnRails.com
 tags:

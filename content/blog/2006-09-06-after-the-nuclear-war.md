@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-09-06'
 subtitle: Actually this is a fascinating photo essay of an abandoned city in the Soviet
   Union, left to gradual...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-06-30'
 subtitle: It’s hard to comprehend people who feel that it is reasonable (let alone
   ethical, let alone bankers)...

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2004-05-17'
 subtitle: Various people are [saying tha...
 tags:

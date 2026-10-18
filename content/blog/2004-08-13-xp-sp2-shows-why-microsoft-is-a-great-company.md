@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-08-13'
 subtitle: I’ve said (and believe) that there’s **no other company on earth** that
   has the capability to develo...

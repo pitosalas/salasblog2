@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-03'
 subtitle: I am **not at all sure** what to make of this. But a friend of mine pointed
   me to some of the follow...

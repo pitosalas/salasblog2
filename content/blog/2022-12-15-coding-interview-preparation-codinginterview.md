@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-15'
 subtitle: Coding Interview Preparation | Codinginterview –A very interes...
 tags:

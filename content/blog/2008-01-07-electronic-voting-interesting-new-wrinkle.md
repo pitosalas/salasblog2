@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-01-07'
 subtitle: A lot has been written about electronic voting machines and their vulnerabilities.
 tags:

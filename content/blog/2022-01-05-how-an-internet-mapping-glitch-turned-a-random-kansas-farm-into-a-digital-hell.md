@@ -1,5 +1,4 @@
 ---
-category: '217'
 date: '2022-01-05'
 subtitle: How an internet mapping glitch turned a random Kansas farm into a digital
   hell

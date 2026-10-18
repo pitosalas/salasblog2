@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-22'
 subtitle: 'Thinking in Hotwire: Progressive Enhancement'
 tags:

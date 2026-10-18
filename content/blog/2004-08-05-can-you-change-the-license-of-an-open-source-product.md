@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-08-05'
 subtitle: '**This puzzled me. **Once we released the BlogBridge source code under
   ...'

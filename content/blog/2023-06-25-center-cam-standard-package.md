@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-25'
 subtitle: Center Cam Standard Package –Cente...
 tag_review: no_fit

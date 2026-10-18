@@ -1,5 +1,4 @@
 ---
-category: '101'
 date: '2021-05-19'
 subtitle: Neural Magic
 tags:

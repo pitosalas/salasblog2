@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-20'
 subtitle: 'What You Need to Know About Netflix’s ‘Jupyter Killer’: Polynote'
 tags:

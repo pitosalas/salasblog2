@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-04-03'
 subtitle: '**It’s here! **We are officially declaring BlogBridge as a 1.0 product!
   The site is updated, the fea...'

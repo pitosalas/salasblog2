@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-04-22'
 subtitle: Amazing idea from Scott Adams. Dilbert Mashups. Check this post [What’s
   Your Best Dilbert Punch Line...

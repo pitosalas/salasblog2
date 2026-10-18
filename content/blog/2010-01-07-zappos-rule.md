@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-01-07'
 subtitle: I don’t own or buy many shoes. Recently I needed to replace a shoe and visited
   my previously favorit...

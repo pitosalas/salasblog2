@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-15'
 subtitle: Does Google give a different answer if you reorder the words in the search?
   What? A trivial question...

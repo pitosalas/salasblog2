@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-20'
 subtitle: In the past, clever **[tag]entrepreneurs[/tag]** (yours truly not included,
   alas) have built compani...

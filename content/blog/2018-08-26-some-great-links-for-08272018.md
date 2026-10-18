@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-26'
 subtitle: How to configure RSpec in Ruby on Rails
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-19'
 subtitle: A very interesting article in Edge.org (by the way, an always interesting
   site.) This one is called ...

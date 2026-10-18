@@ -1,5 +1,4 @@
 ---
-category: '131'
 date: '2021-06-20'
 subtitle: Scaling relational SQL databases
 tags:

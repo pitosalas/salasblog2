@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-05-06'
 subtitle: 'Here’s my five-step plan for world domination:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-11-03'
 subtitle: 'I really like this idea that Dave Winer has put forward: “Let’s...'
 tags:

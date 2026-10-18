@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-01'
 subtitle: In recent weeks there have been two exciting announcements of acquisitions
   of companies started by f...

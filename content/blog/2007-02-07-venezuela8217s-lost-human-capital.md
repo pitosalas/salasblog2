@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-07'
 subtitle: Really interesting article about what is going on in Venezuela and the impact
   of Hugo Chavez’ polici...

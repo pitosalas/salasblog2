@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-12-26'
 subtitle: Wandermap – Your hiking routes online
 tags:

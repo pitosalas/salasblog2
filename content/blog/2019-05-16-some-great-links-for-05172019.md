@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-16'
 subtitle: We Can Do Better Than SQL
 tags:

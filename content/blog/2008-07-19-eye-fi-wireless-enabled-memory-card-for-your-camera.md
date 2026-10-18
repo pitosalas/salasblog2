@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-19'
 subtitle: If you haven’t seen this and you shoot a lot of digital photos, you will
   love this product; also see...

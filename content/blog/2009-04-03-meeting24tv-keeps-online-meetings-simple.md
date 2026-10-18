@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2009-04-03'
 subtitle: Check out this post Meeting24.tv Keeps Online Meetings Simple
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: 58 bytes of css to look great nearly everywhere
 tag_review: no_fit

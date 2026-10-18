@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-19'
 subtitle: '[ From Ruby to Crystal? Writing and distributing a CLI tool—Martian Chronicles,
   Evil Martians’ team ...'

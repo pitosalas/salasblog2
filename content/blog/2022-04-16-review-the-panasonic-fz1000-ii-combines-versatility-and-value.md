@@ -1,5 +1,4 @@
 ---
-category: '64'
 date: '2022-04-16'
 subtitle: 'Review: The Panasonic FZ1000 II combines versatility and value'
 tags:

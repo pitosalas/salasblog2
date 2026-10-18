@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-07'
 subtitle: 'GPT Engineer: Build an Entire App with a Single Prompt'
 tags:

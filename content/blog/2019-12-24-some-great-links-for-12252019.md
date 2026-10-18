@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-24'
 subtitle: more handy python snippets
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '61'
 date: '2022-01-23'
 subtitle: Why skyscrapers are so short – Works in Progress
 tag_review: no_fit

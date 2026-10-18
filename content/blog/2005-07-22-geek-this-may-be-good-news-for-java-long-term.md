@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2005-07-22'
 subtitle: '> “IBM has announced that it will be joining the Harmony open source Java
   project. Although right no...'

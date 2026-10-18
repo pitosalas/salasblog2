@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-29'
 subtitle: '[ A closer look at Acorn, our open source precision farming rover – Research
   Blog – Twisted Fields c...'

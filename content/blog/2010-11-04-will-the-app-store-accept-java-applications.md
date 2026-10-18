@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2010-11-04'
 subtitle: Check out Apple Begins Accepting Submissions for Mac App Store
 tags:

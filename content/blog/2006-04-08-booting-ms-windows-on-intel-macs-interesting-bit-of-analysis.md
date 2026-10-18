@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-08'
 subtitle: To be honest, hardly followed the pages and pages
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-28'
 subtitle: 'An interesting international perspective on politics:'
 tags:

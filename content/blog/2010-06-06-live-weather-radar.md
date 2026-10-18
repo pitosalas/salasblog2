@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-06-06'
 subtitle: It was dark and thundering and lightening today at 4 in the afternoon. I
   found this really nice anim...

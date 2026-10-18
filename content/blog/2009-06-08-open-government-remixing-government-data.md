@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-06-08'
 subtitle: I found this article to be a good primer on what’s going on with open government
   data. [Remixing Gov...

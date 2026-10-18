@@ -1,5 +1,4 @@
 ---
-category: '108'
 date: '2021-08-01'
 subtitle: Why you should build on Kubernetes from day one – Stack Overflow Blog
 tags:

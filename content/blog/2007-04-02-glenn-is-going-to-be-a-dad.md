@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-04-02'
 subtitle: Read this essay describing the feelings of someone who will soon be a first
   time parent. It sounds l...

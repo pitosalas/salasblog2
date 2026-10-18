@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-02'
 subtitle: 'Adrian Boeing: Blog: Dynamic Window Algorithm motion planning'
 tags:

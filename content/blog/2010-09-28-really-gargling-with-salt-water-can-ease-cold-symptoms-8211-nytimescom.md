@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-28'
 subtitle: Another old-wives-tail bunked. *(opposite of de-bunked?)*
 tags:

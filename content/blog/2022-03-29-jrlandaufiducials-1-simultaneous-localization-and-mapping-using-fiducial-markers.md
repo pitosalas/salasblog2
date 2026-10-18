@@ -1,5 +1,4 @@
 ---
-category: '26'
 date: '2022-03-29'
 subtitle: 'jrlandau/fiducials-1: Simultaneous localization and mapping using fiducial
   markers.'

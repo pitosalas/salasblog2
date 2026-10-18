@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-11-03'
 subtitle: I want to direct your attention ton interesting article about $1 Billion
   Startups – “Unicorns” – on ...

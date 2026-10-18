@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-10-15'
 subtitle: Halo, from HP. Really?
 tags:

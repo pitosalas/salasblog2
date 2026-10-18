@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-07-27'
 subtitle: There was a recent interesting article in the New York Times
 tags:

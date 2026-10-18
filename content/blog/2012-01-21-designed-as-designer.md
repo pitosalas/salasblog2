@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-21'
 subtitle: If you are interested in design and especially design and architecture of
   software, and you have a p...

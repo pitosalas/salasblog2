@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-21'
 subtitle: GigaBrain – Search Reddit and Other Communities for Answers from Real People
 tags:

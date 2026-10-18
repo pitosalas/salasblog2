@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-15'
 subtitle: Why I Stopped Using Sorbet in All My Ruby Projects –And why...
 tags:

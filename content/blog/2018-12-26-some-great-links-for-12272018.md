@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-26'
 subtitle: 'Deep Rails: How to use Abstract Classes'
 tag_review: no_fit

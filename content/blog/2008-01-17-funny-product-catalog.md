@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-01-17'
 subtitle: '!['
 tags:

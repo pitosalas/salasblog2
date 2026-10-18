@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-02-14'
 subtitle: Happy Valentines Day. As you can see, there is a new web site design. This
   one was created by a desi...

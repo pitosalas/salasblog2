@@ -1,5 +1,4 @@
 ---
-category: '405'
 date: '2021-10-18'
 subtitle: The history of spreadsheets
 tags:

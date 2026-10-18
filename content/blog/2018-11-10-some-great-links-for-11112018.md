@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-11-10'
 subtitle: Crystal is not Ruby Pt. 2 – Runtime Revolution
 tags:

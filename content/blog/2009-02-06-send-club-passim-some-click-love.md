@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-06'
 subtitle: '!passimlogo'
 tags:

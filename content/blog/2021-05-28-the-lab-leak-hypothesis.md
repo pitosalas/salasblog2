@@ -1,5 +1,4 @@
 ---
-category: '23'
 date: '2021-05-28'
 subtitle: The Lab-Leak Hypothesis
 tags:

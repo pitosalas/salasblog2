@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-14'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/images/2004/02/13/Office+...'
 tags:

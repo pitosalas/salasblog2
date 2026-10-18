@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2009-03-23'
 subtitle: Check out this post Incommunicado, probably
 tags:

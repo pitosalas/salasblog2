@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-03'
 subtitle: Did you see this clever site? Million Dollar Home Page
 tags:

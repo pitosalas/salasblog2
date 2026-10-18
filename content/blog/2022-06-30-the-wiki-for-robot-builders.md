@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-30'
 subtitle: Robotics Knowledge Base:The Wiki for Robot BuildersThis is a id...
 tags:

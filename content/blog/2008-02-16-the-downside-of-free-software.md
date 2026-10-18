@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-16'
 subtitle: Yesterday the [New York Times had an interesting article about our expectation
   that software (and we...

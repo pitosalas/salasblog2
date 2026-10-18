@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-05'
 subtitle: Jeremy Wagstaff, in his regular “Loose Wires”
 tags:

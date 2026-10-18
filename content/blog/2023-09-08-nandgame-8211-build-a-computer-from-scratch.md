@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-08'
 subtitle: NandGame – Build a computer from scratch. –An educational puzzle game. Sol...
 tags:

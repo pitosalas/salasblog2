@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-11-23'
 subtitle: Fibers Are the Right Solution
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-21'
 subtitle: Have you ever heard a politician or pundit say, with self-assurance, America
   is a **Right of Center*...

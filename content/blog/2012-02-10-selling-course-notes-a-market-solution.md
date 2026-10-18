@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-10'
 subtitle: Should it be ok for students to **take notes **during a class and turn them
   into a marketable produc...

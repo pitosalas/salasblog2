@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-01-23'
 subtitle: I was lucky enough to be able to participate in a [conference on Blogging,
   Journalism and Credibilit...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-02-25'
 subtitle: jq – CLI for JSON files
 tag_review: no_fit

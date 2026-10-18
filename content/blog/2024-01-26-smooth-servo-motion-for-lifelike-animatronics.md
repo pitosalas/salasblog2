@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2024-01-26'
 subtitle: Smooth Servo Motion For Lifelike Animatronics
 tag_review: no_fit

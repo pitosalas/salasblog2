@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-08-30'
 subtitle: Someone forwarded this
 tags:

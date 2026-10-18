@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-11'
 subtitle: This is a very unusual Android app that I came across. It looks like they
   are just starting so it’s ...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-03'
 subtitle: Do you agree that prohibiting texting while driving is **contradictory**
   to texting as a way to deli...

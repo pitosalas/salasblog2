@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-14'
 subtitle: 'If you get it, you may want to get it: Create UML Diagrams from the command
   line'

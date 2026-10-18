@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-21'
 subtitle: Python built-ins worth learning – Trey Hunner
 tag_review: no_fit

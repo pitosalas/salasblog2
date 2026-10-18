@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-10'
 subtitle: How to be more productive on GitHub – freeCodeCamp.org
 tag_review: no_fit

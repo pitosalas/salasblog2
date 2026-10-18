@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-10'
 subtitle: Some possible reasons for 8-bit bytes
 tags:

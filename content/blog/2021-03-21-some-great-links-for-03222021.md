@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-03-21'
 subtitle: '[GitHub – Overv/outrun: Execute a local command using the processing power
   of another Linux machine....'

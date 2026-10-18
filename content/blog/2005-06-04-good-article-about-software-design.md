@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-06-04'
 subtitle: 'Just add this one to your reading list:'
 tags:

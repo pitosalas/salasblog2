@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-12-12'
 subtitle: This is a public service to my readers. Here’s the coupon.
 tag_review: no_fit

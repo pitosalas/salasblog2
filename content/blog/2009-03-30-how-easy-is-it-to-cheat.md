@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-30'
 subtitle: I’ve gotten very interested in Election Reform lately, and I’ve delved into
   how the overall voting s...

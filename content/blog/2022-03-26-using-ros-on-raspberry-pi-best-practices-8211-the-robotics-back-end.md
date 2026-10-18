@@ -1,5 +1,4 @@
 ---
-category: '104'
 date: '2022-03-26'
 subtitle: 'Using ROS on Raspberry Pi: Best Practices – The Robotics Back-End'
 tags:

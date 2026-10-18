@@ -1,5 +1,4 @@
 ---
-category: '180'
 date: '2022-01-20'
 subtitle: Awesome VS Code Extensions For Python
 tags:

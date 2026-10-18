@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2005-03-31'
 subtitle: There’s another flame-up on the WebS...
 tags:

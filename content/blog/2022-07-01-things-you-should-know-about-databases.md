@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-01'
 subtitle: Things You Should Know About Databases
 tags:

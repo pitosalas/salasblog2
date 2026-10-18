@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-06'
 subtitle: Huh? Don’t know who Mr. Spock is? Don’t know about the Vulcan greeting?
   Please! How dare you to be r...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-04'
 subtitle: I just saw references to these two books. I am putting them on my reading
   list.

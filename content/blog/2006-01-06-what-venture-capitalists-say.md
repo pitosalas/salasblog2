@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-06'
 subtitle: Guy Kawasaki writes a nice little bit about VCs (some of my best friends
   are VCs) and about entrepre...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-11'
 subtitle: The 100-Million-Mile Network
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-05-28'
 subtitle: Very meta. Who rates the rating services?
 tags:

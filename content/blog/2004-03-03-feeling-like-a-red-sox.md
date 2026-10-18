@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-03'
 subtitle: '**Feeling like a Red Sox Fan. **Kerry seems to have won the Democratic
   nomination, and convincingly....'

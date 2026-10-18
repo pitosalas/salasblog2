@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-27'
 subtitle: We’re Finally Learning the Lesson of Y2K — and It’s Too Late
 tag_review: no_fit

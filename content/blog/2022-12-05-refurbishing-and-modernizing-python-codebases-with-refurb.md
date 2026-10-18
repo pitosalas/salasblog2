@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-05'
 subtitle: Refurbishing and modernizing Python codebases with refurb –...
 tags:

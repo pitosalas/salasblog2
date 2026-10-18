@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-23'
 subtitle: As you may have noticed, I am using Twitter a little more often now. As
   mu...

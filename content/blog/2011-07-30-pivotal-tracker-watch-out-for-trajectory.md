@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-07-30'
 subtitle: I’ve been an avid user and recommender of Pivotal Tracker, an exce...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2004-05-10'
 subtitle: 'Here’s a handy bit of esoterica: To force Log4J to report on it’s initialization
   sequence do this:'

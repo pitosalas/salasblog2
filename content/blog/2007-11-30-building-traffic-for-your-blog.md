@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-11-30'
 subtitle: If you’re a regular reader you know that I’ve been studying Search Engine
   Optimization. As I’ve said...

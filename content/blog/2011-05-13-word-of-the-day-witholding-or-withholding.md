@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-05-13'
 subtitle: One or two H’s? Don’t look it up!
 tags:

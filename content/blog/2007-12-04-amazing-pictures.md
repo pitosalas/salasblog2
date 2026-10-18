@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-04'
 subtitle: '!Amazing pictures'
 tags:

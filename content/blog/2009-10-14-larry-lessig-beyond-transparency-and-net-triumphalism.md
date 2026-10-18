@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-14'
 subtitle: As David W. says, there’s a lot that’s been written in response to the provocative
   article by Larry ...

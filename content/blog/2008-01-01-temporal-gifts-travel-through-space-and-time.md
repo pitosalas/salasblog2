@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-01-01'
 subtitle: Handmeon.com is a cool idea
 tags:

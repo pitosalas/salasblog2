@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-07-09'
 subtitle: '!['
 tags:

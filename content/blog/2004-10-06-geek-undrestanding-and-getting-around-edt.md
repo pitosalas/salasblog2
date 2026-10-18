@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2004-10-06'
 subtitle: No, **not **Eastern Daylight Time, the Swing **Event Dispatch Thread**.
   **Duh**. If the abbreviation...

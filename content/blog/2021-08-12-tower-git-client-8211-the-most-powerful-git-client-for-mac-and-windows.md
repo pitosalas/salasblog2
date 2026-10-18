@@ -1,5 +1,4 @@
 ---
-category: '111'
 date: '2021-08-12'
 subtitle: Tower Git Client – The most powerful Git client for Mac and Windows
 tags:

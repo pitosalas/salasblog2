@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-01-17'
 subtitle: 'You might be interested in what BlogBridge is doing about twittering from
   more than one account:'

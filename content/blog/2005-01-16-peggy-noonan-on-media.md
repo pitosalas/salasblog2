@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-01-16'
 subtitle: Peggy Noonan is a great, albeit a little on the conservative side, columnist
   that I read whenever I ...

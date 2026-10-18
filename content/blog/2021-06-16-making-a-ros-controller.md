@@ -1,5 +1,4 @@
 ---
-category: '205'
 date: '2021-06-16'
 subtitle: Making a ROS Controller
 tags:

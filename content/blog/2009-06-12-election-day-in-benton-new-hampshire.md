@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-06-12'
 subtitle: My post about Barack Obama’s election was getting a bit long, so I thought
   I’d break it up and get s...

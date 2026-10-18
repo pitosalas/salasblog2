@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-29'
 subtitle: I always love Kevin Kelly’s writing
 tags:

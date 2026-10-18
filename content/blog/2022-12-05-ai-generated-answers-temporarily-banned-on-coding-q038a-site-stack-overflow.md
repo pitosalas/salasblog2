@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-05'
 subtitle: AI-generated answers temporarily banned on coding Q&A site Stack Overflow
 tags:

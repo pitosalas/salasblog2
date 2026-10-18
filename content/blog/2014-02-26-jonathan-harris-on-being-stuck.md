@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-02-26'
 subtitle: Jonathan Harris is the creator of several really interesting web sites that
   in very creative ways co...

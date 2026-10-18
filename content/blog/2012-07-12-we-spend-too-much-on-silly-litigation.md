@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-07-12'
 subtitle: Lucky Me! After **tortured litigation** and lots of legal fees (not mine,
   of course), I am receiving...

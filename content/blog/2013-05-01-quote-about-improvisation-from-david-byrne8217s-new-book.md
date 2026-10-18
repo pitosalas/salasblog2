@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-05-01'
 subtitle: 'I picked up David Byrne’s new book: How Music Works'
 tags:

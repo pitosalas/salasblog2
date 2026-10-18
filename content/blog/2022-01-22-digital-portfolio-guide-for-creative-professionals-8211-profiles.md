@@ -1,5 +1,4 @@
 ---
-category: '149'
 date: '2022-01-22'
 subtitle: Digital Portfolio Guide for Creative Professionals – Profiles
 tag_review: no_fit

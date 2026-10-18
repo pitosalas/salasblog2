@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-06'
 subtitle: Here’s an interesting article “Modernizing Conservatism”
 tags:

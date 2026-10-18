@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2014-06-28'
 subtitle: I wrote [recently about Fake Steve and wondered aloud how he could get away
   with what he gets away w...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-17'
 subtitle: Welcome to Bashly | Bashly – Bash CLI Framework –Bashly is a command ...
 tags:

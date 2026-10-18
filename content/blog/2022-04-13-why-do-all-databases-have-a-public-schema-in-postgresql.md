@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2022-04-13'
 subtitle: Why do all databases have a public schema in PostgreSQL?
 tags:

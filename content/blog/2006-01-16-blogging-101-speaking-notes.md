@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-01-16'
 subtitle: Over on the BlogBridge blog, I pos...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-01-15'
 subtitle: 'It’s just the title of this post that caught my eye: “[What Every Programmer
   Should Know About Memor...'

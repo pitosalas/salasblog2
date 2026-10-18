@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-03-02'
 subtitle: Standard Deviation is an Inferior Measurement*
 tags:

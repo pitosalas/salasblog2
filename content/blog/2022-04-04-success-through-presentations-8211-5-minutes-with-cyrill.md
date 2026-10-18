@@ -1,5 +1,4 @@
 ---
-category: '5'
 date: '2022-04-04'
 subtitle: Success Through Presentations – 5 Minutes with Cyrill
 tags:

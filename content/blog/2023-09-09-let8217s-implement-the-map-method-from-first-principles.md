@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-09'
 subtitle: Let’s Implement the Map Method from First Principles
 tags:

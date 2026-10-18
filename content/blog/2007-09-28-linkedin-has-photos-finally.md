@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-09-28'
 subtitle: Finally, [welcome to the 20th century, [tag]LinkedIn[/tag]](http://www.techcrunch.com/2007/09/27/pi...
 tags:

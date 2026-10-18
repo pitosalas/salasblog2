@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-11-06'
 subtitle: I was working out, listening an IT Conversations interview with [...
 tags:

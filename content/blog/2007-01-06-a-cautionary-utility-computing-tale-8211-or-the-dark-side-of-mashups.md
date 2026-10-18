@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-06'
 subtitle: Check out this post from [Between the Lines...
 tags:

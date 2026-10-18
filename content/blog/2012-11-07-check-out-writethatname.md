@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-11-07'
 subtitle: I’ve been using a app called “WriteThatName
 tags:

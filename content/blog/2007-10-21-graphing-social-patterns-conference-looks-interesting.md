@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-10-21'
 subtitle: A very interesting talk by Tim O’Reilly at the Graphing Social Patterns
   conference

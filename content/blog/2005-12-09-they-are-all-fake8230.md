@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-12-09'
 subtitle: Check out these amusing images which I came across on the Advertising/Design
   Goodness Blog

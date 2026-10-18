@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-22'
 subtitle: Why OO Sucks
 tags:

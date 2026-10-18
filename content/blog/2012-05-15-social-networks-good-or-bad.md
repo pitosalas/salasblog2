@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-15'
 subtitle: I’ve been doing quite a bit of reading about social networks in preparation
   for the 2012 edition of ...

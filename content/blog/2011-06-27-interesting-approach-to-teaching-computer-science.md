@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-06-27'
 subtitle: Fun article about Ben Hescott who has some unique – and **impressive** –
   approaches to teaching an a...

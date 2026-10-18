@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-25'
 subtitle: '> Here is Roger Clemens denying his use of steroids…..'
 tags:

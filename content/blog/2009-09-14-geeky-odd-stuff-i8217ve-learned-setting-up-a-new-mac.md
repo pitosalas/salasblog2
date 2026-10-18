@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-09-14'
 subtitle: I’ve been in the process of setting up a new computer and in the process,
   as is expected, discoverin...

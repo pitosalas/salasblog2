@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-11-05'
 subtitle: Intro to web scraping with Ruby
 tags:

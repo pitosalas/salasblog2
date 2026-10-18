@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-28'
 subtitle: TSPSIs and How I Write
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-09-23'
 subtitle: rlabbe/Kalman-and-Bayesian-Filters-in-Python
 tags:

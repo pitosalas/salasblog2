@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-04'
 subtitle: I’ve had occasion as you know to teach a few times at Brandeis University.
 tags:

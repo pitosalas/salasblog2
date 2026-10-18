@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2005-09-15'
 subtitle: Ever notice in restaurant menus how the dish descriptions are made to sound
   fancier and fancier by a...

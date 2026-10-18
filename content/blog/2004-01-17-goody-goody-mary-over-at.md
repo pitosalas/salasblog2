@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-17'
 subtitle: '**Goody, Goody! **Mary, over at LockerGnome'
 tags:

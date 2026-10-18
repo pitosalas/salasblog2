@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-09'
 subtitle: '**It’s easy to predict the future. **Tim Bray has just concluded an interesting
   series of postings o...'

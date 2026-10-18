@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-03-27'
 subtitle: Ever wonder how Mac’s OS X program launch and execution works? No? Hmm.
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-11-09'
 subtitle: Bilgin’s Blog | Kalman Filter For Dummies
 tags:

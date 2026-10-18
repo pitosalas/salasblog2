@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-20'
 subtitle: 'Copilot Leaks: Code I Should Not Have Seen –The number of le...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-10-28'
 subtitle: I am not sure I am reading this right, but it looks like Comcast is giving
   my home internet connect...

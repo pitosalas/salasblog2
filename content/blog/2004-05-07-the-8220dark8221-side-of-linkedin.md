@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-05-07'
 subtitle: 'Well, not really dark: This is in reference to Shel Isreal’s recent bit
   about LinkedIn.'

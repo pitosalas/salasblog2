@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-14'
 subtitle: 'From ABC News, but I’ve seen a similar story elsewhere:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-18'
 subtitle: 'Pmarchive · Pmarca Guide to Career Planning: Skills and education'
 tags:

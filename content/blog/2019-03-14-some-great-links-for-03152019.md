@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-14'
 subtitle: Myo | How I learned to Stop Worrying and Love Quaternions
 tags:

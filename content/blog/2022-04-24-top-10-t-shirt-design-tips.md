@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-04-24'
 subtitle: Top 10 T-shirt Design Tips
 tags:

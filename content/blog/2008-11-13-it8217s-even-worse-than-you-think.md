@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-13'
 subtitle: Michael Lewis writes a [great article in Portfolio online about the, let’s
   say, inevitability, of wh...

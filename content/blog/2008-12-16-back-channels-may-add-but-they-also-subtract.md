@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-16'
 subtitle: I totally agree. Is it just part of the tendency of those people to always
   want to be the center of ...

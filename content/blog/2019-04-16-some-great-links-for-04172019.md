@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-16'
 subtitle: '[textacular/textacular: Textacular exposes full text search capabilities
   from PostgreSQL, and allows...'

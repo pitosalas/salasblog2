@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-08-08'
 subtitle: 'Hey, I just came across this:'
 tags:

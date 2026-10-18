@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-14'
 subtitle: '![](https://i0.wp.com/img.timeinc.net/time/magazine/archive/covers/2009/1101090216_400.jpg?resize=20...'
 tags:

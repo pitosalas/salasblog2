@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-01-08'
 subtitle: 'Python Code Tips: 4 Ways to Debug Your Python Code Without IDE'
 tags:

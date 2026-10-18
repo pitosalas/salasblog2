@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-07-26'
 subtitle: I recently wondered out loud (on a couple of mailing lists) how much action
   there is with RSS and Bl...

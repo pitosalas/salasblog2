@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-10'
 subtitle: The What, the Why, and the How of Bloom Filter – The Lean Software Boutique
 tags:

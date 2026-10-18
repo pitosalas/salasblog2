@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-10-13'
 subtitle: A very interesting piece
 tags:

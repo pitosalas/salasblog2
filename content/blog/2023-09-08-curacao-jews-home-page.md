@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-08'
 subtitle: 'Curaçao Jews Home page –Learn about the Jews of Curaçao: their rich his...'
 tags:

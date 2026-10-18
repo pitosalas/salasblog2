@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-05-15'
 subtitle: I’ve been **de-friending** one person after another on Twitter. Why? Because
   many of them are A-list...

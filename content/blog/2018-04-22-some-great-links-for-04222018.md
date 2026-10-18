@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-22'
 subtitle: How to improve your workflow with VS Code and Jupyter Notebook
 tags:

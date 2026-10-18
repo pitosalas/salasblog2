@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-10-27'
 subtitle: 'Check out this post In Defense of Raising Money: a Manifesto for NonProfit
   CEOs:'

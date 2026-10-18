@@ -1,5 +1,4 @@
 ---
-category: '39'
 date: '2022-02-17'
 subtitle: 'Delayed Job vs. Sidekiq: Which Is Better? | AppSignal Blog'
 tags:

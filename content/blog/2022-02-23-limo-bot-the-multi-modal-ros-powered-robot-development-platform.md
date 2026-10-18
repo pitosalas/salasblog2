@@ -1,5 +1,4 @@
 ---
-category: '66'
 date: '2022-02-23'
 subtitle: Limo Bot | The Multi-modal ROS Powered Robot Development Platform
 tags:

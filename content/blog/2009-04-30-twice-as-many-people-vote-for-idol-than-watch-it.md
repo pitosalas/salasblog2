@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-30'
 subtitle: 'This does not compute:'
 tags:

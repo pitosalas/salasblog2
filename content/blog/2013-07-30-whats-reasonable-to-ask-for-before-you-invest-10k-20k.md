@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-07-30'
 subtitle: A couple of entrepreneurs asked me whether I’d be interested in investing
   in their project at a very...

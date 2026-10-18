@@ -1,5 +1,4 @@
 ---
-category: '64'
 date: '2022-04-17'
 subtitle: 'Panasonic Lumix DMC-ZS100 (Lumix DMC-TZ100): Digital Photography Review'
 tags:

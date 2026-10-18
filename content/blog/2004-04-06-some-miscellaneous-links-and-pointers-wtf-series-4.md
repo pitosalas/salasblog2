@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-04-06'
 subtitle: I am at the WTF conference (more of a retreat.) IN addition to the more...
 tags:

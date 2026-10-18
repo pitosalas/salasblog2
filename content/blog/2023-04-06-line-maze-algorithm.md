@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-06'
 subtitle: Line maze algorithm –If you are exper...
 tags:

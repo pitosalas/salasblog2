@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-11'
 subtitle: Don’t confuse Ruby’s ‘throw’ statement with ‘raise’ (Example)
 tag_review: no_fit

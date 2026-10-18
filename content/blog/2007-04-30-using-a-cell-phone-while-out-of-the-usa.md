@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-04-30'
 subtitle: Lately, for some crazy reason, I’ve found myself, multiple times, in Toronto,
   Canada, and Willemstad...

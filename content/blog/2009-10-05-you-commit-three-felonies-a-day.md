@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-05'
 subtitle: Interesting commentary
 tags:

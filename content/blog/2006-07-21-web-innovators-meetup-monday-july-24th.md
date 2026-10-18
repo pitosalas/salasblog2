@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-07-21'
 subtitle: Yes the meetups keep on coming fast and furious. [Che...
 tags:

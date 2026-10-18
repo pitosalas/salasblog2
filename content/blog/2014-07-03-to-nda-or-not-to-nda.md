@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-07-03'
 subtitle: We all have heard more than once that “VCs will NOT sign NDAs, don’t even
   ask!”. And we’ve also hear...

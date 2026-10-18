@@ -1,5 +1,4 @@
 ---
-category: '248'
 date: '2021-06-29'
 subtitle: Creating Local Python Packages with __init__.py
 tags:

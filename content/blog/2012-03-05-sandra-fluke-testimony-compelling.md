@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-05'
 subtitle: '[youtube http://www.youtube.com/watch?v=xlRC0nsjtKQ&w=420&h=315]'
 tags:

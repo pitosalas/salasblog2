@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-01'
 subtitle: Why AI Will Save the World | Andreessen Horowitz
 tags:

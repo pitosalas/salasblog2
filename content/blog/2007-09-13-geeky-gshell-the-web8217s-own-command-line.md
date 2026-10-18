@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-09-13'
 subtitle: You remember back in the **stone ages** we all interacted with computers
   by typing [tag]command line...

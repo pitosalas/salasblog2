@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-16'
 subtitle: '![](http://www.triplemint.com/.a/6a00d834517dbc69e2010534a36f66970b-pi)I
   came across this ad in the ...'

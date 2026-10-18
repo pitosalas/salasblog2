@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-29'
 subtitle: Import Maps Under the Hood in Rails 7 | AppSignal Blog
 tags:

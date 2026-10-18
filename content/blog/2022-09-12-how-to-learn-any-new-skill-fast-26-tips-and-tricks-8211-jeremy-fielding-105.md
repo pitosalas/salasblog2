@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-12'
 subtitle: 'How To Learn Any New Skill Fast: 26 Tips and Tricks – Jeremy Fielding 105'
 tag_review: no_fit

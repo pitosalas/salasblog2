@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-05-21'
 subtitle: Many more where this one came from. Good for a chuckle ...
 tags:

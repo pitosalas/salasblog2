@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-04-19'
 subtitle: Microsoft and Apple are arguing about...
 tags:

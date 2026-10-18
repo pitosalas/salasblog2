@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-15'
 subtitle: Introducing scikit-geometry –...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2009-02-11'
 subtitle: Check out this post How Corrupt is Our Language in Economic Discourse?
 tags:

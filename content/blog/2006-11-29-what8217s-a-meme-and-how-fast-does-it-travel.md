@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-11-29'
 subtitle: Some clever scientists are trying to measure how fast meme’s travel on the
   web. My contribution to t...

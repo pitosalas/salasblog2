@@ -1,5 +1,4 @@
 ---
-category: '33'
 date: '2021-09-08'
 subtitle: DiceBear Avatars
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-01'
 subtitle: 'Concerns in Rails: Everything You Need to Know'
 tags:

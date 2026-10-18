@@ -1,7 +1,6 @@
 ---
 title: "Kagi Search"
 subtitle: "Kagi Search –Better search results with no ads. Welcome to Kagi (pronounced k..."
-category: "1"
 tags: []
 date: "2023-12-22"
 type: "wp"

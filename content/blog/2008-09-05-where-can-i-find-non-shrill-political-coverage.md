@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-05'
 subtitle: I read the New York Times, and magazines like The Atlantic
 tags:

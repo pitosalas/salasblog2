@@ -1,5 +1,4 @@
 ---
-category: '405'
 date: '2021-10-18'
 subtitle: An Introduction to Pivot Tables Using Excel 2000
 tags:

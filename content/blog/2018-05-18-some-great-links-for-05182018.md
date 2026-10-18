@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-05-18'
 subtitle: Python Multithreading and Multiprocessing Tutorial
 tags:

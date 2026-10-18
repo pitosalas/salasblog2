@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-10-18'
 subtitle: Running my own Linux server has lost it’s sex appeal. Now I am going for
   simplicity and so I am expl...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-14'
 subtitle: How do I know whether my Rails app is thread-safe or not?
 tags:

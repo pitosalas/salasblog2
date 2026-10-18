@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-09-15'
 subtitle: Ganbreeder
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '31'
 date: '2022-03-22'
 subtitle: The Ultimate Guide to Real-Time Lane Detection Using OpenCV – Automatic
   Addison

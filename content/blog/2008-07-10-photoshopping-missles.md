@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-10'
 subtitle: I recently saw a Nova episode about Hany Farid about so called “Digital
   Forensics”, that is how to d...

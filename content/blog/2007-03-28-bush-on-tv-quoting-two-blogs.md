@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-28'
 subtitle: Is this a sign of the times? President Bush is on TV right now giving a
   speech about why he’s right ...

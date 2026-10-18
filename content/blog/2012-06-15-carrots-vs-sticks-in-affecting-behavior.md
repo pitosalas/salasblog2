@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-06-15'
 subtitle: Instead of charging extra (‘congestion pricing’) to drive your car during
   rush hour, how about givin...

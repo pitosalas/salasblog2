@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-04-01'
 subtitle: When things go wrong is when you start seeing some of the disadvantages
   of being on the 5% pc platfo...

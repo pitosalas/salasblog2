@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-31'
 subtitle: I bet you’ve not heard of another crazy-cool service from Google, Google
   Sets. I first read about Go...

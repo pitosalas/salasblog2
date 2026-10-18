@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-11'
 subtitle: Check this link out, there are lots of really fun drawings
 tags:

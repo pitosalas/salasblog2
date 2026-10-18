@@ -1,5 +1,4 @@
 ---
-category: '3'
 date: '2022-04-29'
 subtitle: Yale OpenHand Project
 tags:

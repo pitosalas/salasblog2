@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-21'
 subtitle: This is from the [New York Time’s article about Curt Shilling’s ill fated
   game company “38 Studios”:...

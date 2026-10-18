@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-26'
 subtitle: '**Amazing little rover “calculates its own location in the universe…..on
   Mars”: **I just can’t get e...'

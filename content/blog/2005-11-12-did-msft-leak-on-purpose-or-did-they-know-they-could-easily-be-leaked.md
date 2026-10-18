@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2005-11-12'
 subtitle: I’ve read several accounts relating to Microsoft’s recently ‘leaked’ documents
   about the new strateg...

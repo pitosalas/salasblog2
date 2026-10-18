@@ -1,5 +1,4 @@
 ---
-category: '152'
 date: '2022-04-08'
 subtitle: Head-First Kubernetes
 tags:

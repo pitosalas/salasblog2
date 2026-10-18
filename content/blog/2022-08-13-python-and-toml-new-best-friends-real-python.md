@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-13'
 subtitle: 'Python and TOML: New Best Friends – Real Python'
 tags:

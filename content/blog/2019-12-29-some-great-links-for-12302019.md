@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-29'
 subtitle: 'Altair: Declarative Visualization in Python'
 tags:

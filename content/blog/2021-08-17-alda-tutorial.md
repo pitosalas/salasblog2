@@ -1,5 +1,4 @@
 ---
-category: '158'
 date: '2021-08-17'
 subtitle: Alda tutorial
 tags:

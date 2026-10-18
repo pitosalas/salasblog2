@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-02'
 subtitle: 20 Docker commands use cases for developers
 tag_review: no_fit

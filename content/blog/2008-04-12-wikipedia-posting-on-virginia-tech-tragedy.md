@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-04-12'
 subtitle: People wonder about Wikipdia and what it’s good for. This is an example
   from a **while back**, of Wi...

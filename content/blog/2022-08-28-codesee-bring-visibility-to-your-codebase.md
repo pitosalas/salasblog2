@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-28'
 subtitle: CodeSee – Bring visibility to your codebase –CodeSee is the world’s...
 tags:

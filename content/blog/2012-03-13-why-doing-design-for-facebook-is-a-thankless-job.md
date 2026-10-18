@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-13'
 subtitle: A friend of mine hates, HATES, the new Facebook timeline. She ...
 tags:

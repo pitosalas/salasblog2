@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-07-10'
 subtitle: Hey, check out our new and improved web site. There is lots of new cont...
 tags:

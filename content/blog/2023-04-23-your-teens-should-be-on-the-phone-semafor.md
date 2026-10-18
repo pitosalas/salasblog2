@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-23'
 subtitle: Your teens should be on the phone | Semafor
 tag_review: no_fit

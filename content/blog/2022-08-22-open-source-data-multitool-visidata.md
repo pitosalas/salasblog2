@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-22'
 subtitle: Open-source data multitool | VisiData
 tags:

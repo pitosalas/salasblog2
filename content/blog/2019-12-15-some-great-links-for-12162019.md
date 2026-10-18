@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-15'
 subtitle: 'Git: Cheat Sheet (advanced) – DEV Community'
 tag_review: no_fit

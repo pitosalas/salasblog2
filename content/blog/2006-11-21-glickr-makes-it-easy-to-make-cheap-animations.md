@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-11-21'
 subtitle: '![Gif animations at Gickr.com'
 tags:

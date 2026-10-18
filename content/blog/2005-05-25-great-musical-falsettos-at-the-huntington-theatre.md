@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-05-25'
 subtitle: '!Htcfalsettosprod'
 tags:

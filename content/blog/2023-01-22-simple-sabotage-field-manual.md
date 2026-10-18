@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-22'
 subtitle: Simple sabotage field manual
 tag_review: no_fit

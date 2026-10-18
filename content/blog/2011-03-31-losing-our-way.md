@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-03-31'
 subtitle: This New York Times Op-Ed piece by Bob Herbert
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-22'
 subtitle: Why You Should Use Data Classes in Python | Giuliano Pertile
 tags:

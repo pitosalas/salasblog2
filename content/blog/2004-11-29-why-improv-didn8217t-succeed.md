@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-11-29'
 subtitle: It’s been a while.
 tags:

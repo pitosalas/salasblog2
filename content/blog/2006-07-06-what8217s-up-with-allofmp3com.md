@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-07-06'
 subtitle: I was probably the last one to hear about AllofMp3.com. It’s this massiv...
 tags:

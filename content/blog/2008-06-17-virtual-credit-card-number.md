@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-06-17'
 subtitle: My Citibank MasterCard allows me to generate a virtual credit card number,
   pretty simply, using a fa...

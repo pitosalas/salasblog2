@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-16'
 subtitle: A Nibble of Content-Defined Chunking
 tags:

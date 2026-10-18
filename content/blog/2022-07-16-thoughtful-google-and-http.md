@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-16'
 subtitle: 'Thoughtful: Google and HTTP –Google is a guest on the web, as we...'
 tags:

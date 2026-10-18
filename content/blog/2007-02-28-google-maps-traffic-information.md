@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-28'
 subtitle: One more reason to Love Google! Check out this post
 tags:

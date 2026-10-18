@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-31'
 subtitle: Shell Script Best Practices — The Sharat’s
 tags:

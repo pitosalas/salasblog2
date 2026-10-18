@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-27'
 subtitle: 'In the continuing stories around Aaron Swartz and events that led to his
   tragic suicide recently:'

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-07'
 subtitle: Fox News debuts bizarre, giant tablets in its outrageous new newsroom |
   The Verge

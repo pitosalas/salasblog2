@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-09-10'
 subtitle: Here’s an interesting link that continues on the theme from my previous
   post on Agent Based Modeling...

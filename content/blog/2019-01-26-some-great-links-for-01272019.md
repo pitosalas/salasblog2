@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-26'
 subtitle: Beware of Java Stream API Habits when Writing Kotlin Code | Codementor
 tag_review: no_fit

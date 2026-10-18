@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-08'
 subtitle: Docker on MacOS is slow and how to fix it · Paolo Mainardi
 tags:

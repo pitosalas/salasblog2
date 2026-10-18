@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-08-22'
 subtitle: On a project I worked on recently, I asked myself whether I should make
   one or more of Amazon’s awes...

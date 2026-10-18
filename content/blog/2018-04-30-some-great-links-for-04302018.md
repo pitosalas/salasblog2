@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-30'
 subtitle: 'Low-hanging design fruit: why you should use Google Font Superfamilies'
 tags:

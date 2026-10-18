@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-12-14'
 subtitle: Like many, I don’t know yet whether I **support or condemn** the Wikileaks
   action that has been disc...

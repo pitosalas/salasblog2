@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-09'
 subtitle: 10 Signs You Will Suck at Programming – Noteworthy – The Journal Blog
 tags:

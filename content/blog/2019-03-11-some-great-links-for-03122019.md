@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-11'
 subtitle: An introduction to Redis data types and abstractions – Redis
 tag_review: no_fit

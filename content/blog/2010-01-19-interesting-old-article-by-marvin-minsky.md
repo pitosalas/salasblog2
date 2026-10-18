@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-01-19'
 subtitle: Just came across this odd link somewhere. He’s a good and clear writer,
   enjoyable to read whether yo...

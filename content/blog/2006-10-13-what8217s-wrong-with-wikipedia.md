@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-10-13'
 subtitle: Larry Sanger, the co-founder of Wikipedia who later quite the project over
   differences in vision, ju...

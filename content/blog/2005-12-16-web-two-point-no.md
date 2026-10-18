@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-12-16'
 subtitle: Om Malik writes that “The Web 2.0 Hit By ...
 tags:

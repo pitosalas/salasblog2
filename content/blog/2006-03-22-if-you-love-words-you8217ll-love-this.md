@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-22'
 subtitle: All the words of the english language, ordered by frequency, coupled with
   some really nifty graphic ...

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2006-06-03'
 subtitle: The other day I complained about comment spam on my two blogs. Comme...
 tags:

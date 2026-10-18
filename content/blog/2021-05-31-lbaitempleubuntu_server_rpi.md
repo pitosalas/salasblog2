@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-05-31'
 subtitle: lbaitemple/ubuntu_server_rpi
 tags:

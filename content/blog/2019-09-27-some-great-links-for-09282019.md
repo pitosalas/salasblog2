@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-09-27'
 subtitle: 'Goodhart’s Law: Are Academic Metrics Being Gamed?'
 tag_review: no_fit

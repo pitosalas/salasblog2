@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-11-05'
 subtitle: Finite State Machines are dead. Long life Behavior Trees
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-25'
 subtitle: 'git branches: intuition & reality'
 tag_review: no_fit

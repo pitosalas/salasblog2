@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2014-06-27'
 subtitle: Now I’ve been a mac for about 4 years now, so I generally don’t pay too
   much attention to Microsoft’...

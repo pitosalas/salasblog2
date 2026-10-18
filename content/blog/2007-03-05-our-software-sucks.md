@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-03-05'
 subtitle: Dave Winer says it well (a...
 tags:

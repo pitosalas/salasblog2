@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2022-06-29'
 subtitle: I recommended Crystal is not Ruby Part 1
 tags:

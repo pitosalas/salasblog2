@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-05'
 subtitle: r/webdev – How to prep your GitHub for job seeking
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-23'
 subtitle: Look for our BlogBridge Release 5.0 in the next several days. You will ...
 tags:

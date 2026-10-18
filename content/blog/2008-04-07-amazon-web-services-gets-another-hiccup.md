@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-04-07'
 subtitle: I’ve wondered and written before about the ‘downside’ or ‘risk’ of building
   your application based o...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-04-09'
 subtitle: Saturday Night Live is having the **best season in years*...
 tags:

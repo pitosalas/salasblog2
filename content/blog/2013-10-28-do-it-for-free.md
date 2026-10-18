@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-28'
 subtitle: Tim Kreider’s essay could apply as easily to all those people who complain
   that an iPhone app is not...

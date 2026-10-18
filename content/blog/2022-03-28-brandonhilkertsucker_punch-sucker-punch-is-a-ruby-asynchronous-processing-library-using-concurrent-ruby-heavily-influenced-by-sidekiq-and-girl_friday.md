@@ -1,5 +1,4 @@
 ---
-category: '38'
 date: '2022-03-28'
 subtitle: '[ brandonhilkert/sucker_punch: Sucker Punch is a Ruby asynchronous processing
   library using concurre...'

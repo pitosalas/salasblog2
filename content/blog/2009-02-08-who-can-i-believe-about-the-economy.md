@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-08'
 subtitle: The problems in our economy right now are real, I believe. Tons of people
   have lost jobs, and my inv...

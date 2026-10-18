@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-10'
 subtitle: Scott Kirsner of the Innovation Economy blog, as well of the [Boston Globe...
 tags:

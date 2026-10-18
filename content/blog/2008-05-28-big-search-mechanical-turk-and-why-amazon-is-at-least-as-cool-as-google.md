@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-05-28'
 subtitle: Adam Green points to Scoble who re-discover...
 tags:

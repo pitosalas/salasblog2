@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-24'
 subtitle: Doc Searls has a new post about Facebook
 tags:

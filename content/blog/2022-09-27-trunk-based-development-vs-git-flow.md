@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-27'
 subtitle: Trunk-based Development vs. Git Flow
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-10'
 subtitle: 'The Growth Hacking Playbook: Your Ultimate List of Growth Hack Resources'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-15'
 subtitle: Paul Graham’s new essay is “Frighteningly Ambitious Startup Ideas.”
 tags:

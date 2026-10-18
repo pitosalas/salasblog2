@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2010-01-13'
 subtitle: Thomas Geoghegan has a fantastic column in the New York Times [explaining
   the mess we are in because...

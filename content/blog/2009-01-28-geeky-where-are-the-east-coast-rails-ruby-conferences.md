@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2009-01-28'
 subtitle: '> “So yet another way you can help Ruby and Rails Activism is by attending'
 tags:

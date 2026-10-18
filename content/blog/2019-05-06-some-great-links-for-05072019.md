@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-06'
 subtitle: Instrumenting Ruby on Rails with Prometheus
 tag_review: no_fit

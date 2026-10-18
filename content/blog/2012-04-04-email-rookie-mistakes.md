@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-04-04'
 subtitle: I’ve watched some people struggling with some email blow ups and frustrations
   over the years and I w...

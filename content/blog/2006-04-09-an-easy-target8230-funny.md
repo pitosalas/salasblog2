@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-09'
 subtitle: '*So, what happened to Alfred E. Newman?*'
 tags:

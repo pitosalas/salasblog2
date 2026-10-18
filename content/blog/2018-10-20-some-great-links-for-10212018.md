@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-20'
 subtitle: A collection of awesome Ruby libraries, tools, frameworks and software
 tags:

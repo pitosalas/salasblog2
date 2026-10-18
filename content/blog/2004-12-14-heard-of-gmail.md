@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-12-14'
 subtitle: There are many interesting things about GMail, so this is either go...
 tags:

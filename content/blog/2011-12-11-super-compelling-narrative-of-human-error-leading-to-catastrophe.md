@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-11'
 subtitle: A remarkable article in Popular Mechanics (remember them?) about the crash
   of Air France 447.

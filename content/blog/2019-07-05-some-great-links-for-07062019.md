@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-07-05'
 subtitle: Don’t miss out on css variables
 tag_review: no_fit

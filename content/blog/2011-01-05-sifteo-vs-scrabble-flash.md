@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-01-05'
 subtitle: 'Scott Kirsner tweets:'
 tags:

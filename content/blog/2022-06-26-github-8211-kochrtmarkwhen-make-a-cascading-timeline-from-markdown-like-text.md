@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-26'
 subtitle: Make a cascading timeline from markdown-like text. Supports simple American/European
   date styles, IS...

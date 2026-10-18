@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-07'
 subtitle: End-to-End Arguments in System Design | the morning paper
 tag_review: no_fit

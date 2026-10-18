@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-04-26'
 subtitle: 'Check this post Twitter’s Lead Architect Leaves: It’s Not You, It’s Me'
 tags:

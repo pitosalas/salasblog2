@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-27'
 subtitle: I don’t pay much attention to Microsoft and Windows these days. I admit
   it, I am a hardcore Mac and ...

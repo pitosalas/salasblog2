@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-11-11'
 subtitle: If you haven’t heard about Wikipedia, you should check it ...
 tags:

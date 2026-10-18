@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-06-03'
 subtitle: 'Another article in the New York Times about RSS:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-04-16'
 subtitle: I am advising a client who is interested in reaching out to a huge existing
   community of folks who t...

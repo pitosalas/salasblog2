@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-01-09'
 subtitle: 'Check out this post Greg Mitchell: Bono Replacing Bill Kristol at New York
   Times?'

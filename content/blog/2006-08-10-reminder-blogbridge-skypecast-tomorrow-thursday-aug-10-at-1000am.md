@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2006-08-10'
 subtitle: Check here for the details! This...
 tags:

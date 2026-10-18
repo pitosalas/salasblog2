@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-11-19'
 subtitle: Very interesting article in the New York Times discussing whether the death
   penalty saves lives

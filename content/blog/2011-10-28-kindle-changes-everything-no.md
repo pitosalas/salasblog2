@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-10-28'
 subtitle: This link lets you see all the passages in Steve Jobs’ new biography that
   were underlined

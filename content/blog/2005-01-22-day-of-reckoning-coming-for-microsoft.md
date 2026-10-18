@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-01-22'
 subtitle: 'You’ve heard this one before: there are more and more truly outstanding
   pieces of software coming ou...'

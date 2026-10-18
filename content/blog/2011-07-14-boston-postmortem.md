@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-14'
 subtitle: We just got back from the monthly meeting of “Boston Postmortem“...
 tags:

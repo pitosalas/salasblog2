@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-09-17'
 subtitle: 'Listen Notes: The best podcast search engine'
 tag_review: no_fit

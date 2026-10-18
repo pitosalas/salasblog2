@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-08'
 subtitle: Check this post iPhones Help Cops Solve Crimes By Capturing Everything You
   Type, Do

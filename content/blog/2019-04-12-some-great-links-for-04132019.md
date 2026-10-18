@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-12'
 subtitle: 'Hire People or Optimize Processes: A cost-benefit analysis for engineering
   leaders'

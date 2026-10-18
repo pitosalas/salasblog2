@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-05-18'
 subtitle: I was scanning Jon Udell’s blog and came across...
 tags:

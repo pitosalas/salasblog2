@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-09-05'
 subtitle: The quote below is from this post
 tags:

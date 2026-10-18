@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-15'
 subtitle: If you’veheard of Dilbert, then you may have heard about the author Scott
 tags:

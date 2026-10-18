@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-10-26'
 subtitle: Developing a Multithreaded Kernel From Scratch!
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-01-11'
 subtitle: Ruby 3.1 – Pattern Matching – Lee Jarvis
 tags:

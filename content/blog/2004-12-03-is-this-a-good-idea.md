@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-12-03'
 subtitle: I never was a fan of Tommy Thomson – what a name! I am no expert on terrorism,
   but it seems to [me t...

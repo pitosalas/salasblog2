@@ -1,5 +1,4 @@
 ---
-category: '58'
 date: '2021-07-29'
 subtitle: Preserving global state in a flask application
 tags:

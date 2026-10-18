@@ -1,5 +1,4 @@
 ---
-category: '27'
 date: '2022-03-18'
 subtitle: Fiducial-Based Localization
 tags:

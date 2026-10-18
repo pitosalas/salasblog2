@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-13'
 subtitle: Take a look at SiloBreaker (don’t ask me why it’s called that; is it ...
 tags:

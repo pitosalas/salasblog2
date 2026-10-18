@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-15'
 subtitle: List of Lists is an entertaining blog. He doesn’t post that often but when
   he does it’s usually inte...

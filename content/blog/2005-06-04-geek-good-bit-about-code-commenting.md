@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2005-06-04'
 subtitle: 'Another neat link I was shown:'
 tags:

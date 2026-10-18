@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-04-16'
 subtitle: Did you wonder how those snipers were able to shoot those pirates when both
   groups were on boats on ...

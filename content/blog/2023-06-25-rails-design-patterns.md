@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-25'
 subtitle: Rails design patterns –This article i...
 tags:

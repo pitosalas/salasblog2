@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-08-17'
 subtitle: thisredone/rb
 tags:

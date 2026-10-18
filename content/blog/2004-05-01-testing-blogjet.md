@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-05-01'
 subtitle: I have installed an interesting application – BlogJet. It’s a cool Windows
   cl...

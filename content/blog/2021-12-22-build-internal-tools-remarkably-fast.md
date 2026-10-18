@@ -1,5 +1,4 @@
 ---
-category: '128'
 date: '2021-12-22'
 subtitle: Build internal tools, remarkably fast.
 tags:

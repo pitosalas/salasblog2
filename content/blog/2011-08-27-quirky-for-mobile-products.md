@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2011-08-27'
 subtitle: I read about Quirky.com in the paper the other day.
 tags:

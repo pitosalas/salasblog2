@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-31'
 subtitle: The Curiosity Chronicle | The Most Powerful Decision Making Razors
 tag_review: no_fit

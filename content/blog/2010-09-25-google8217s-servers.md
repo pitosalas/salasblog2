@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-09-25'
 subtitle: 'From an article about Google’s hardware:'
 tags:

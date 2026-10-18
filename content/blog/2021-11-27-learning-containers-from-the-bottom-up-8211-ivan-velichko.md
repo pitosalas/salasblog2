@@ -1,5 +1,4 @@
 ---
-category: '107'
 date: '2021-11-27'
 subtitle: Learning Containers From The Bottom Up – Ivan Velichko
 tags:

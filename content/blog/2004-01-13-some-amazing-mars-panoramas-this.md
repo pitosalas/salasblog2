@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-13'
 subtitle: '**Some amazing (Mars) panoramas. **This is via [...'
 tags:

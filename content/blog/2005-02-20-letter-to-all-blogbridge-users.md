@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-02-20'
 subtitle: Dear users, ex-users, and future users of BlogBridge,
 tags:

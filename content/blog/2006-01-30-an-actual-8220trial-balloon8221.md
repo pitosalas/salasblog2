@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-01-30'
 subtitle: A company that was launched at the Demo conference (which i am going to
   this year) is deploying in N...

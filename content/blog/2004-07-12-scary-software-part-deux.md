@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-07-12'
 subtitle: Continuing my complaints about Java Web Start, as if the message di...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-10-15'
 subtitle: Everyone loves how much easier Mac OS X makes it to install software. Well
   sort of. It’s a place whe...

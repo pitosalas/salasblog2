@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2011-05-20'
 subtitle: Another tidbit I came across at RailsConf is Hobo. I haven’t tr...
 tags:

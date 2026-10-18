@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-08'
 subtitle: 'Tracing the Lines: From the Telephone to Unix'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-19'
 subtitle: Write tests. Not too many. Mostly integration. – kentcdodds
 tags:

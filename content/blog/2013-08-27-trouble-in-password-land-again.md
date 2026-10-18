@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-08-27'
 subtitle: I was rather pleased with myself!
 tags:

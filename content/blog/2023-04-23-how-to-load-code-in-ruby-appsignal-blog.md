@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-23'
 subtitle: How to Load Code in Ruby | AppSignal Blog
 tags:

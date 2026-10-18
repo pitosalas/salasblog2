@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-29'
 subtitle: 'A few really quick links:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2011-02-09'
 subtitle: This article is called “Fact and Folklore In Software Engineering”
 tags:

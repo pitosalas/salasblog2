@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-10'
 subtitle: You know I am a fan of Google. But lately I’ve had some conve...
 tags:

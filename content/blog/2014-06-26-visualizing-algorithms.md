@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-06-26'
 subtitle: Check out this really interesting article plus lovely animations. I have
   to go find out how it actua...

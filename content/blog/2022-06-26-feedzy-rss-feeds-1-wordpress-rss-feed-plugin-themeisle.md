@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-26'
 subtitle: Display RSS feeds in WordPress posts and pages using simple shortcodes or
   blocks. Pick a plan to get...

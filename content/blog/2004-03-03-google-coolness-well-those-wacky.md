@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-03'
 subtitle: '**Google Coolness. **Well those **wacky guys and gals** at Google keep
   on coming out with **neat new...'

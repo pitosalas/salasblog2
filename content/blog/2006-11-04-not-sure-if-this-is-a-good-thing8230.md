@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-11-04'
 subtitle: For those of you who avidly follow Curaçao politics, yes, all two of you,
   and I know who you are, do...

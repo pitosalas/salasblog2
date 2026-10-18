@@ -1,5 +1,4 @@
 ---
-category: '111'
 date: '2021-08-07'
 subtitle: Getting Started on Okteto Cloud in 5 minutes | Okteto Documentation
 tags:

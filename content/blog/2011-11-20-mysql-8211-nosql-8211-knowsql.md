@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-20'
 subtitle: A catchy headline, but is it true? “Facebook Trapped in MySql ‘a fate worse
   than death’.

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-02-01'
 subtitle: I recommend this article, “Fatboy in A Lean World”
 tags:

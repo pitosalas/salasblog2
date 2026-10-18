@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-12'
 subtitle: '!41drc4B3yOL._SL500_AA300_.jpg'
 tags:

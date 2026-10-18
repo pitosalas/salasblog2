@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-11-24'
 subtitle: Irene goodnight, Irene goodnight
 tags:

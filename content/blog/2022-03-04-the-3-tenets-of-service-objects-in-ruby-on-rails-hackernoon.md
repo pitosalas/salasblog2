@@ -1,5 +1,4 @@
 ---
-category: '114'
 date: '2022-03-04'
 subtitle: The 3 Tenets of Service Objects in Ruby on Rails | HackerNoon
 tags:

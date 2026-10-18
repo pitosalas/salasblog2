@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-02-25'
 subtitle: Working on installation and deployment features. We will be using Java Web
   Start for this. We have n...

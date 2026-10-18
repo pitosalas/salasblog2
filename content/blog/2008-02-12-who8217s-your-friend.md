@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-02-12'
 subtitle: I just looked through my friend list and I see some people who’s name I
   recognize but don’t know exa...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-06-12'
 subtitle: Mike Taibi writes in [Rolling Stone about some fairly outrageous doings
   between Washington D.C. and ...

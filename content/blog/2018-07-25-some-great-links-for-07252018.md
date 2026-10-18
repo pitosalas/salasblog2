@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-07-25'
 subtitle: Orange Computers – HP ProLiant and Dell PowerEdge Servers
 tags:

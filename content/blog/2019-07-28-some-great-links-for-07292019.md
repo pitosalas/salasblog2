@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-07-28'
 subtitle: Scripting and automating git processes
 tag_review: no_fit

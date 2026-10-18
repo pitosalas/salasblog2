@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-23'
 subtitle: 'Microsoft Launches Bosque: An Open Source Programming Language'
 tags:

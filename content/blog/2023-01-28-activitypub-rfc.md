@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-28'
 subtitle: ActivityPub RFC –The ActivityPub protocol is a decentra...
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-01-01'
 subtitle: Python SSH Tutorial
 tags:

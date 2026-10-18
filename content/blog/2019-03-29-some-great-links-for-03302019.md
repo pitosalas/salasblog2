@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-29'
 subtitle: Scaling a Ruby on Rails app on Heroku
 tag_review: no_fit

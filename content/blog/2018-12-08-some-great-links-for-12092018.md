@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-08'
 subtitle: Save a month of your life by using these keyboard shortcuts
 tag_review: no_fit

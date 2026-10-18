@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-05'
 subtitle: Notwithstanding the fact that Mike Arrington, an investor, doesn’t like
   DayLife

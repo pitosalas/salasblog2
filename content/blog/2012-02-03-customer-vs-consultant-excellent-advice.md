@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-03'
 subtitle: From an article called “Effective Customer Consultant Relationships”
 tags:

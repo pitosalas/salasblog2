@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-06'
 subtitle: I just saw the movie “Who Killed the Electric Car”
 tags:

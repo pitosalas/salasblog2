@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-20'
 subtitle: Building a Rails CI pipeline with GitHub Actions
 tags:

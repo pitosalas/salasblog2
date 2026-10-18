@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-09-23'
 subtitle: The Open Mind –None
 tag_review: no_fit

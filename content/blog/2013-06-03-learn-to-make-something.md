@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-06-03'
 subtitle: This bit of advice rings very true to me. Read the whole article, but here’s
   a tasty bit.

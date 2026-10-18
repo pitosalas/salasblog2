@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-12-25'
 subtitle: MC8-ToolkitRC co., ltd.
 tag_review: no_fit

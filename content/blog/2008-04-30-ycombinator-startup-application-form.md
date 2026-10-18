@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-04-30'
 subtitle: I came across this very cool and simple set of [criteria or rules to apply
   for funding from YCombina...

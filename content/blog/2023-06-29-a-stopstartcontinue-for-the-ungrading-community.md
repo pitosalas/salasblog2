@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-29'
 subtitle: A stop/start/continue for the ungrading community
 tags:

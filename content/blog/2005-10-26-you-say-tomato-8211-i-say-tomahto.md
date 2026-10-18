@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-26'
 subtitle: filled with tomatoes,
 tags:

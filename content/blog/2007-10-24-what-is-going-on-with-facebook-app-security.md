@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-10-24'
 subtitle: Here’s what my iLike Facebook application is showing me… Now what’s Mark
   Zuckerberg’s name doing the...

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2010-07-15'
 subtitle: Check out 10 Tools for Distributed Developer Teams
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-02-01'
 subtitle: I’m trying something – organize a bloggie meetup
 tags:

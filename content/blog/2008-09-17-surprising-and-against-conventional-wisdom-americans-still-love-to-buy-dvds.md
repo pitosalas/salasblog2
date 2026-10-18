@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-17'
 subtitle: Interesting article about the sale of DVDs
 tags:

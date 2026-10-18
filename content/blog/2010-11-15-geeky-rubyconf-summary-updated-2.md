@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2010-11-15'
 subtitle: RubyConf 2010 was excellent. It was my first and probably not my last. Some
   general thoughts and the...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-10-21'
 subtitle: Two very contrasting ways of looking at our **relationship with Pakistan.
   **I don’t know where I sta...

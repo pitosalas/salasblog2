@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-05-06'
 subtitle: One of my computers has gone totally haywire with spyware, popups popping
   all over the place, and mo...

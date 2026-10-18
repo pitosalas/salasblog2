@@ -1,5 +1,4 @@
 ---
-category: '19'
 date: '2021-12-03'
 subtitle: Argo (oceanography) – Wikipedia)
 tags:

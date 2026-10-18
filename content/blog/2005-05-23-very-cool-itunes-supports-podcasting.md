@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-05-23'
 subtitle: 'Nothing to add:'
 tags:

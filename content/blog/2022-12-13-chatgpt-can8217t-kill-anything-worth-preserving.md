@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-13'
 subtitle: ChatGPT Can’t Kill Anything Worth Preserving
 tags:

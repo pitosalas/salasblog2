@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-11'
 subtitle: "I’ve been playing around with each of the major tablets while considering
   ‘my next move’ \U0001F642"

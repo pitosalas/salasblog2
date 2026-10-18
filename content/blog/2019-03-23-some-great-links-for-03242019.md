@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-23'
 subtitle: Redis streams as a pure data structure
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-04-13'
 subtitle: How to Set Up the ROS Navigation Stack on a Robot – Automatic Addison
 tags:

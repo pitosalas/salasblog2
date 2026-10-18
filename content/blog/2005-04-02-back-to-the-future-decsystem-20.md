@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-04-02'
 subtitle: Would you believe that someone is reading blogs
 tags:

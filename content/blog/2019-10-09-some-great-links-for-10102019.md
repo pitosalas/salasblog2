@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-09'
 subtitle: Rails Performance Tips
 tags:

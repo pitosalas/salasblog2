@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-11-12'
 subtitle: I just posted an update on our work on BlogBridge for the iPhone
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-06'
 subtitle: '**Open Source, BlogBridge and Offshore Development. **I’ve been using several
   neat offshore developm...'

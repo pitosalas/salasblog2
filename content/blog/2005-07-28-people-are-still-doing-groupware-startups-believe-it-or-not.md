@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-07-28'
 subtitle: Being a veteran of the groupware movement (worked at Lotus for years, and
   co-founded eRoom Technolog...

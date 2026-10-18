@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-14'
 subtitle: Ruby goes Serverless! – Apache OpenWhisk adds native support for Ruby
 tags:

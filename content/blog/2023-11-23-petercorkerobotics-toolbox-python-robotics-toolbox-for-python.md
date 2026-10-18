@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-23'
 subtitle: 'petercorke/robotics-toolbox-python: Robotics Toolbox for Python'
 tag_review: no_fit

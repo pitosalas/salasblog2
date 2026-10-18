@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-08-11'
 subtitle: I was talking about search engines the other day. I guess Findory i...
 tags:

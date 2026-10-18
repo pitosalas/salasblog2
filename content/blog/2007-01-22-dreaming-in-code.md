@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-01-22'
 subtitle: I heard about this book, “Dreaming in Code”… it looks really inter...
 tags:

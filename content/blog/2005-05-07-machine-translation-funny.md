@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-05-07'
 subtitle: The highly anticipated Mac OS X “Tiger” arrived in my hot little hands,
   and I’ve spent most of the d...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-05-10'
 subtitle: Remember when the Berlin wall came down and the Soviet Union ended up breaking
   up? People talked abo...

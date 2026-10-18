@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-06-17'
 subtitle: '!Compare Bin Laden to Bruins'
 tags:

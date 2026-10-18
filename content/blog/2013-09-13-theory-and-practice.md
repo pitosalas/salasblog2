@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-13'
 subtitle: '[In theory there is no difference between theory and practice. In practice
   there is. – Yogi Berra at...'

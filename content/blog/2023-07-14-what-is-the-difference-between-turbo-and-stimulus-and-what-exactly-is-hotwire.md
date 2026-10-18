@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-14'
 subtitle: What is the difference between Turbo and Stimulus, and what exactly is Hotwire?
 tags:

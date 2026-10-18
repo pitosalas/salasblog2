@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-05-06'
 subtitle: The National Trust of Historic Preservation and American Express are giving
   away $100,000.00 to a Ma...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-05'
 subtitle: What if when I typed into the search box in Safari (Mac OS X’s web browser)
   the text is interpreted ...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-04-07'
 subtitle: A provocatively titled article (Why Youth Has an Advantage In Innovation)
 tags:

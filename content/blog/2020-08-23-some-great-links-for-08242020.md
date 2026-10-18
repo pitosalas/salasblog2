@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-08-23'
 subtitle: 'Rodauth: A Refreshing Authentication Solution for Ruby | Janko’s Blog'
 tags:

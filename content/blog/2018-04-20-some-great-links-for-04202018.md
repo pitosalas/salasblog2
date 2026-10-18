@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-20'
 subtitle: 7 Practical Tips for Cheating at Design – Refactoring UI – Medium
 tags:

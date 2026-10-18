@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-12-08'
 subtitle: You might think it’s a bad idea for me to complain about Java Web Start.
   Well the truth is that I re...

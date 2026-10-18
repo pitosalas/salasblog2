@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-02-04'
 subtitle: This is really cool! Check out this post
 tags:

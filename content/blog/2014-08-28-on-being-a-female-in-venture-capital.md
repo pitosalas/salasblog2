@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-08-28'
 subtitle: Interesting story…
 tags:

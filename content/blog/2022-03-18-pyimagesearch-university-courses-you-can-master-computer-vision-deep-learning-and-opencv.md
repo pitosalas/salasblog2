@@ -1,5 +1,4 @@
 ---
-category: '116'
 date: '2022-03-18'
 subtitle: 'PyImageSearch University Courses: You can master Computer Vision, Deep
   Learning, and OpenCV'

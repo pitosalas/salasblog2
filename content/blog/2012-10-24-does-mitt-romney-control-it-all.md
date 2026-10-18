@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-24'
 subtitle: Another conspiracy
 tags:

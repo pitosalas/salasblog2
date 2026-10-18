@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-02-17'
 subtitle: You may or may not remember Roger Ebert who not very long ago was co-host
   with Gene Siskel on the be...

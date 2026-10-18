@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-12-12'
 subtitle: Robin Good has some [interesting predictions and prognos...
 tags:

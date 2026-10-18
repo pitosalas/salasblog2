@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-02-13'
 subtitle: '![Picture 2-26'
 tags:

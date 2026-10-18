@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-28'
 subtitle: CapRover · Free and Open Source PaaS! ...
 tags:

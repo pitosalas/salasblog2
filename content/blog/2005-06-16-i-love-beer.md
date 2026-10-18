@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-16'
 subtitle: Ok, but, unlike Simplebits, this picture
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-03-28'
 subtitle: Here’s a really interesting article
 tags:

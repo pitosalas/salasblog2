@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-08-25'
 subtitle: 4 Rules for Intuitive UX – Learn UI Design
 tag_review: no_fit

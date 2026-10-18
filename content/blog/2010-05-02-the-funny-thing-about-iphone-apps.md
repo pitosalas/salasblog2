@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-05-02'
 subtitle: So a friend of mine told me of his iPhone app, called Etude. He sung the
   pra...

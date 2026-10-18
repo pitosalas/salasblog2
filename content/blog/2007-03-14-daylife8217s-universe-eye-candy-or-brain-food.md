@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-14'
 subtitle: Daylife is a new news oriented web site that came onto the scene a little
   ...

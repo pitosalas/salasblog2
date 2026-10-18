@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-09'
 subtitle: I guess that many of you who read this blog are eRoom, Documentum and EMC
   alums so you’d be interest...

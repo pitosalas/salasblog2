@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-02'
 subtitle: The Ultimate Guide to Building Your Personal K3S Cluster
 tag_review: no_fit

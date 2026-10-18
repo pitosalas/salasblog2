@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-12-08'
 subtitle: I am at the 2006 Fall Leadership Forum in Sonoma, C...
 tags:

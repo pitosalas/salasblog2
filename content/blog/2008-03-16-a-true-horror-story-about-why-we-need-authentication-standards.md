@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-03-16'
 subtitle: I am constantly downloading applications and utilities off the web to try
   this or that out. I am as ...

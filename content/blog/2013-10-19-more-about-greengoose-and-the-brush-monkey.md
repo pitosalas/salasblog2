@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-19'
 subtitle: Amazing story of a great looking product, and awesome demo, on the spot
   investment of $100,000 and s...

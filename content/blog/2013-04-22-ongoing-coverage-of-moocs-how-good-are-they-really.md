@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-04-22'
 subtitle: This trend is now unstoppable – massive open online courses – or MOOCs –
   are constantly in the news....

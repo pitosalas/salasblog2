@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-09'
 subtitle: 5 Python Libraries That Make Everyday Coding Simpler –A bun...
 tags:

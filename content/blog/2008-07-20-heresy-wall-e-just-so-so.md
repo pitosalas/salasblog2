@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-20'
 subtitle: Yeah I know all the reviews have been raving – “Best movi...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-05-24'
 subtitle: Caching in Ruby on Rails 5.2 – Ruby Inside – Medium
 tags:

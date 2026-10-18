@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-06-10'
 subtitle: CS81 Fall 2017
 tag_review: no_fit

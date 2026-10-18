@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-09-08'
 subtitle: I was looking at the Apple LED Cinema Display 24
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-07'
 subtitle: Picking a colour scale for scientific graphics | Better Figures
 tags:

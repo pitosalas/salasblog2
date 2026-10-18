@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-09-10'
 subtitle: I just downloaded the new ITunes 8. It has this new thing called the iTunes
   Genius which seems like ...

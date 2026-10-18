@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-04-05'
 subtitle: I love Craig’s List. If you’ve heard of it (!) and are interested in online
   factoids, you’ll may be ...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-01'
 subtitle: '> “Each morning when he arrives at the Oval Office, President Obama asks
   his staff to deliver him a ...'

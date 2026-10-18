@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-23'
 subtitle: Apparently the US State Department has a team of bloggers who get into discussions
   on boards and blo...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-07-18'
 subtitle: Just a quick reminder that we are having another super-informal-geeky-but-not-exclusively-geeks
   **Ge...

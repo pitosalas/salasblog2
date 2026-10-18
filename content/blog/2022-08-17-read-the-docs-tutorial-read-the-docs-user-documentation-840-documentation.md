@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-17'
 subtitle: Read the Docs tutorial — Read the Docs user documentation 8.4.0 documentation
 tags:

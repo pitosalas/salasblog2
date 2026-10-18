@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-05-30'
 subtitle: Check this post Life Lock’s CEO Identity Stolen
 tags:

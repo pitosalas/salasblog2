@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2010-12-14'
 subtitle: 'This is really nice: Restfulie – Rest from Scratch. It’s a packag...'
 tags:

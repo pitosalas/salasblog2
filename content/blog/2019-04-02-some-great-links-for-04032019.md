@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-04-02'
 subtitle: Architecting Ruby on Rails Apps as Microservices | Codeship | via @codeship
 tags:

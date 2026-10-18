@@ -1,5 +1,4 @@
 ---
-category: '71'
 date: '2021-10-11'
 subtitle: Every Woodworker—From Rookie to Pro—Needs These Essential Hand Tools in
   Their Arsenal – Wood

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-12-18'
 subtitle: I attended a Podcasting meeting at Berkman a [couple of days a...
 tags:

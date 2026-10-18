@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-08-26'
 subtitle: Check this post One More Thing… from [T...
 tags:

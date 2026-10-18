@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-12-05'
 subtitle: Search Engine Optimization is a weird wacky world with experts, oracles,
   analysis, opinion and super...

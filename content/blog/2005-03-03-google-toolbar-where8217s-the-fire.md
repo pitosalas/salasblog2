@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-03-03'
 subtitle: In case you’ve come across the flaming debate about how the Google Toolbar
   is evil, you will [apprec...

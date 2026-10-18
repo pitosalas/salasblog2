@@ -1,5 +1,4 @@
 ---
-category: '104'
 date: '2021-07-16'
 subtitle: How to Setup Passwordless SSH Login
 tags:

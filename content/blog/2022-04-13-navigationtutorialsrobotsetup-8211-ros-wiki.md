@@ -1,5 +1,4 @@
 ---
-category: '463'
 date: '2022-04-13'
 subtitle: navigation/Tutorials/RobotSetup – ROS Wiki
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-17'
 subtitle: As I said in the previous post, I am a bit of a promiscuous signer upper.
   From a cursory look, Rhaps...

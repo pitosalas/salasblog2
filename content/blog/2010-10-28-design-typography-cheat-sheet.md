@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-10-28'
 subtitle: If you are into fonts and typography, you might enjoy this Infographic that
   will help you choose

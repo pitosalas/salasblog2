@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-11-30'
 subtitle: I went to RubyConf and heard a detailed presentation on a new possible feature
   of possible Ruby 2.0 ...

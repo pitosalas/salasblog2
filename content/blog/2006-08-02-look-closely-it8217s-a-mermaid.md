@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-08-02'
 subtitle: Yeah this is **extraordinarily weird**. As Yakov Smirnov
 tags:

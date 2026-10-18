@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-01-09'
 subtitle: Here’s a new product I just saw, Igloo. It’s very nice and it r...
 tags:

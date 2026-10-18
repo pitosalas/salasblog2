@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-04-20'
 subtitle: Do a google search for a FedEx tracking number, and Google figures out that
   this is what it is and s...

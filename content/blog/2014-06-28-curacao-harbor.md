@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-06-28'
 subtitle: Just playing with my new blogging platform to see if it works ok!
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-06-28'
 subtitle: I am here at JavaOne and living among a very different crowd than I’ve been
   in lately. It’s the gath...

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-21'
 subtitle: Plotly | Make charts and dashboards online
 tag_review: no_fit

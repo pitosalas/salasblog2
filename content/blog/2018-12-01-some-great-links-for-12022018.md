@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-01'
 subtitle: https://link.medium.com/Cd6lBUGriS
 tag_review: no_fit

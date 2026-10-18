@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-18'
 subtitle: Random Forest in Python – Towards Data Science
 tags:

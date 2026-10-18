@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-12-17'
 subtitle: '**Follow along as I develop the course: **[Brandeis University Web App
   Dev, Mobile App Dev and Incub...'

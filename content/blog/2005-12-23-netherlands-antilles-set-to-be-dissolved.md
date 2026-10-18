@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-12-23'
 subtitle: I don’t know how I missed this article, bu...
 tags:

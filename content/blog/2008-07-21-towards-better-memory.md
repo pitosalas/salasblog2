@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-21'
 subtitle: An interesting, quirky, though-provoking — memorable article in Wired about
   Memory

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-08-22'
 subtitle: The New York Times is running a series
 tags:

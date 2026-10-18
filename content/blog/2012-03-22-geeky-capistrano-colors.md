@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-22'
 subtitle: 'A random, highly specific and geeky tip:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-03'
 subtitle: 'Enjoy: [Amazon.com: 50 Ways to Protect Your Identity in a Digital Age:
   New Financial Threats You Nee...'

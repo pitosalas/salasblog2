@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-01-21'
 subtitle: I’ve been learning and thinking about Facebook applications, which everyone
   else is also writing and...

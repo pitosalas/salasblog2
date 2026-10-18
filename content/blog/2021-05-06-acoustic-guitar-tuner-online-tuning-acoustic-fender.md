@@ -1,5 +1,4 @@
 ---
-category: '6'
 date: '2021-05-06'
 subtitle: Acoustic Guitar Tuner Online | Tuning Acoustic | Fender
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-06'
 subtitle: Git is simply too hard –Git is actually sooo...
 tags:

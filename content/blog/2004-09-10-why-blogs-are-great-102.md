@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2004-09-10'
 subtitle: I am often asked **what’s so special about blogging**. I always answer,
   technically it’s pretty simp...

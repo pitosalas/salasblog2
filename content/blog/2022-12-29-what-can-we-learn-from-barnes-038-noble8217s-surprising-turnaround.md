@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-29'
 subtitle: What Can We Learn from Barnes & Noble’s Surprising Turnaround?
 tags:

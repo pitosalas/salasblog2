@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-04'
 subtitle: How to Post to Mastodon From Anything Using IFTTT – Welcome to HostRooster
   web hosting community

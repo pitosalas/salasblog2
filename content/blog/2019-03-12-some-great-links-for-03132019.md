@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-12'
 subtitle: Scalable architecture without magic (and how to build it if you’re not Google)
 tag_review: no_fit

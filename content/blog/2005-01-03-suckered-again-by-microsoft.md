@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-01-03'
 subtitle: I’ve been using **Microsoft Money ** (their personal finance package) for
   years now (after having sw...

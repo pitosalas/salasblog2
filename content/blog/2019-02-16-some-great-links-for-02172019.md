@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-16'
 subtitle: Opinion | No, You Can’t Ignore Email. It’s Rude.
 tag_review: no_fit

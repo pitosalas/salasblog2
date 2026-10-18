@@ -1,5 +1,4 @@
 ---
-category: '67'
 date: '2022-03-13'
 subtitle: 'OpenCV: Canny Edge Detection'
 tags:

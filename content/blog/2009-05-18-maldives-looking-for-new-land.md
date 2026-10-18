@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-05-18'
 subtitle: 'A while back I wrote a post saying that it was “[Official: The Maldives
   is the most beautiful place ...'

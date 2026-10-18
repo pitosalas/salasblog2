@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-11-16'
 subtitle: The Waiting Time Paradox, or, Why Is My Bus Always Late?
 tag_review: no_fit

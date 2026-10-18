@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-02-23'
 subtitle: It’s obvious if you think about it, but this article drives some points
   home. If you use some kind o...

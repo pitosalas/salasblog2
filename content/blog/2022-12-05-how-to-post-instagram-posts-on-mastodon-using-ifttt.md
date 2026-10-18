@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-05'
 subtitle: How to post Instagram posts on Mastodon using IFTTT
 tag_review: no_fit

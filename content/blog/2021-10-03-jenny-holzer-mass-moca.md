@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-10-03'
 subtitle: Jenny Holzer | MASS MoCA
 tag_review: no_fit

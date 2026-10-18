@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-11-19'
 subtitle: Yes, every year some wag writes a funny article about carving a turkey,
   but this one is *really* fun...

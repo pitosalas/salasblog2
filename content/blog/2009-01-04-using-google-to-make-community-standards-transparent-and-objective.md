@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-01-04'
 subtitle: This New York Times article, “What’s Obscene? Google Could Have an Answer”
 tags:

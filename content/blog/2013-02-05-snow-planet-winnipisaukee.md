@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-02-05'
 subtitle: '!IMG 0072'
 tag_review: no_fit

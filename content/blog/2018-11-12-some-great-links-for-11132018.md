@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-11-12'
 subtitle: A Safer RuboCop
 tags:

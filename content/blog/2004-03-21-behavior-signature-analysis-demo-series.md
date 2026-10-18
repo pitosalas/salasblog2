@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-21'
 subtitle: '**Behavior Signature Analysis (Demo Series 10) **This is a little arcane
   but I thought it was an int...'

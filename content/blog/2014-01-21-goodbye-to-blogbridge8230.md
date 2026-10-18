@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-01-21'
 subtitle: '![](https://i0.wp.com/static.squarespace.com/static/50734a43c4aa091ef5261c5a/53a8d945e4b0457dcd6e167...'
 tags:

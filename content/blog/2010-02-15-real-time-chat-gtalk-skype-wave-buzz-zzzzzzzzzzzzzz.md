@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-02-15'
 subtitle: I just accidentally pinged someone over wave who I wanted to chat with,
   thinking that it would go ov...

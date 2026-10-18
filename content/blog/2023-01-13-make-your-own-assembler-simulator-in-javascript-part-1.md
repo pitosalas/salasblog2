@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-13'
 subtitle: Make your own assembler simulator in JavaScript (Part 1)
 tags:

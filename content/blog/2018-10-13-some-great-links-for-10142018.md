@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-13'
 subtitle: Creating Powerful Command Line Tools in Ruby – via @codeship | via @codeship
 tags:

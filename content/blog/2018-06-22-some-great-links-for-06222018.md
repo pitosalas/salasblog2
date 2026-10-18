@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-06-22'
 subtitle: P. Maier GmbH Watch Shop – P. Maier GmbH
 tags:

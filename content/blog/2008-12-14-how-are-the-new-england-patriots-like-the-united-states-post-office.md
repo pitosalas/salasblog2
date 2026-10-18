@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-14'
 subtitle: I’ve gotten more interested in logos and graphic design lately so I guess
   I am noticing stuff like t...

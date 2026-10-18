@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-11'
 subtitle: Teaching Robotics With ROS | The Construct
 tags:

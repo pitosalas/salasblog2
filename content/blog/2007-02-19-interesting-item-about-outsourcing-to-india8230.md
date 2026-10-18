@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-02-19'
 subtitle: Check out this post from GigaOM
 tags:

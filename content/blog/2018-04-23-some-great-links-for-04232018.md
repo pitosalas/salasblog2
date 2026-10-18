@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-04-23'
 subtitle: Why Scrum is the Wrong Way to Build Software – Adam Ard – Medium
 tags:

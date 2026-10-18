@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-01-09'
 subtitle: VSCode Marketplace can be abused to host malicious extensions
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-26'
 subtitle: 'urdf-viz: visualize URDFvisualize URDF/XACRO file, URDF View...'
 tags:

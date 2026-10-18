@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-24'
 subtitle: '> “NASA’s Phoenix lander may have captured the first images of liquid water
   on Mars – droplets that ...'

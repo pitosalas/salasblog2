@@ -1,5 +1,4 @@
 ---
-category: '36'
 date: '2022-01-04'
 subtitle: AWK-ward Ruby
 tags:

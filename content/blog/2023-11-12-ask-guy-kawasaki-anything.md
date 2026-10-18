@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-11-12'
 subtitle: Ask Guy Kawasaki Anything –Let AI answer your questions based on G...
 tag_review: no_fit

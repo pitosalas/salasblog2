@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-10-16'
 subtitle: '![](http://www.flickr.co...'
 tags:

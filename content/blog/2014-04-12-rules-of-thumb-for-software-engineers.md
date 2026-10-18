@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-04-12'
 subtitle: Based on my own experience, some of my favorite books and blog posts, and
   advice from friends, I’ve ...

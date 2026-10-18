@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-09'
 subtitle: '[Podcast: Can Machine Learning Solve the Challenges of Cloud Computing?
   | Graduate School of Arts an...'

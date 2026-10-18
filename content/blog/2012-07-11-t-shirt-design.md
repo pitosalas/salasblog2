@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-07-11'
 subtitle: Code T-Shirt, © Pito Salas, 2012. Let me know if you want to order one!
 tags:

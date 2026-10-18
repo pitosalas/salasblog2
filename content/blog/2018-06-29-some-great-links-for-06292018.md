@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-06-29'
 subtitle: Ruby’s Powerful Method Arguments & How To Use Them Correctly – RubyGuides
 tags:

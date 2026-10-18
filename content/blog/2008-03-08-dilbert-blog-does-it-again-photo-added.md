@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-08'
 subtitle: '![](https://i0.wp.com/mdn.mainichi.jp/national/news/images/20080304p2a00m0na027000p_size5.jpg?resize...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-08-18'
 subtitle: 'This is worth looking at: John Graham-Cumming wrote an article today complaining
   about how a compute...'

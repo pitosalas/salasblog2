@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-07-28'
 subtitle: By now if you probably heard about Cuil, the new search engine that claims
   to be the biggest (since ...

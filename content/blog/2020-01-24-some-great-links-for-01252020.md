@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-24'
 subtitle: How I write backends
 tags:

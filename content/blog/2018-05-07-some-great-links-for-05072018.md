@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-05-07'
 subtitle: 'Frontier AI: How far are we from artificial “general” intelligence, really?'
 tags:

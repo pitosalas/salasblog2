@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-12-30'
 subtitle: Git Commands to Live By
 tag_review: no_fit

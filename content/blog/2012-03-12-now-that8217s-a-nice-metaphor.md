@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-12'
 subtitle: 'I love this metaphor – or is it a simile – or a malapropism – who knows:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-02-12'
 subtitle: This is a topic of continuing interest to people who hear that I switched.
   Here are some general com...

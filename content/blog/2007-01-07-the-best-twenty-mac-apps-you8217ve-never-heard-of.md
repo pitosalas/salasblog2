@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-01-07'
 subtitle: Some good mac applications referenced in [this
 tags:

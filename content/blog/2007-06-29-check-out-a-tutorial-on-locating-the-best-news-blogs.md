@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-06-29'
 subtitle: I wrote this really simple introduction to locating and following news and
   current affairs blogs

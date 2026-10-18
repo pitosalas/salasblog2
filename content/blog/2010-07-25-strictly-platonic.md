@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-07-25'
 subtitle: An interesting article in the [New York Times Magazine today about ‘Strictly
   Platonic Relationships]...

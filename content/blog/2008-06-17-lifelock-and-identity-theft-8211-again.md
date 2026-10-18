@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-06-17'
 subtitle: I am a LifeLock customer and so I follow developments in this arena pretty
   closely. Check this post ...

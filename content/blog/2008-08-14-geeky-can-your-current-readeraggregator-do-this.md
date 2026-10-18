@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-08-14'
 subtitle: Check out the latest summary of amazing feats
 tags:

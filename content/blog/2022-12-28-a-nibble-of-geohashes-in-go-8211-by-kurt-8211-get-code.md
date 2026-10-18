@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-28'
 subtitle: A Nibble of Geohashes in Go – by Kurt – Get Code
 tags:

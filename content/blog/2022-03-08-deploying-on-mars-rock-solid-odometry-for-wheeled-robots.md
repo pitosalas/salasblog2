@@ -1,5 +1,4 @@
 ---
-category: '63'
 date: '2022-03-08'
 subtitle: 'Deploying on Mars: Rock solid Odometry for Wheeled Robots'
 tags:

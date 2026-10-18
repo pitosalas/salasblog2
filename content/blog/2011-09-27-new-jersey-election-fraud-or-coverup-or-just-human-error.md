@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-09-27'
 subtitle: Andrew Appel is one of the best known academics studying and ...
 tags:

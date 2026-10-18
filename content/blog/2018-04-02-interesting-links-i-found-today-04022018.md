@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2018-04-02'
 subtitle: '[Rails Refactoring Techniques – Concerns | Best Practice on Ruby on Rails
   | Hire Ruby on Rails devel...'

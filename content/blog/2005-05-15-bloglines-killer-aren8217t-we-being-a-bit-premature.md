@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-05-15'
 subtitle: Richard MacManus made a statement in a p...
 tags:

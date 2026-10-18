@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-08-10'
 subtitle: We just put up **BlogBridge Beta 3**. Check it out. It’s got many neat new
   features, most particular...

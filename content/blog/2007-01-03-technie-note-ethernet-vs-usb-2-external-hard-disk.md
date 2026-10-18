@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-01-03'
 subtitle: I am enhancing the backup methodology here at BlogBridge Enterprises and
   was selecting a new 500Gb e...

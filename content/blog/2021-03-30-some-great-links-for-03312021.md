@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-03-30'
 subtitle: Comprehensive Python OpenCV Tutorial For Beginners Part I | by Yukon Peng
   | Medium

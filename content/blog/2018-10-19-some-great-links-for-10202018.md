@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-19'
 subtitle: 'Minitest Tutorial: Getting Started with Minitest | Codeship | via @codeship'
 tags:

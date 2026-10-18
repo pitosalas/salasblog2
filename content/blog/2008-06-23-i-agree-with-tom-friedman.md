@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-06-23'
 subtitle: '![](http://www.fli...'
 tags:

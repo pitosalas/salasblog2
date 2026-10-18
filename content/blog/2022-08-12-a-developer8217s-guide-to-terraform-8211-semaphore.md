@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-12'
 subtitle: A Developer’s Guide to Terraform – Semaphore –Terraform ...
 tags:

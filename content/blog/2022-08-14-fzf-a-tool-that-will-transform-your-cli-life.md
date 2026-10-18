@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-14'
 subtitle: 'Fzf: A tool that will transform your CLI life –I’m a CLI ju...'
 tags:

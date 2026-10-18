@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-10-15'
 subtitle: I’m a huge fan of Talking Points Memo, Josh Marshall’s blog. In...
 tags:

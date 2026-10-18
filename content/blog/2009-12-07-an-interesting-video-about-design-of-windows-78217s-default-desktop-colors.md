@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-12-07'
 subtitle: If you’re interested in design and illustration, you might like this video
   of how Microsoft went abo...

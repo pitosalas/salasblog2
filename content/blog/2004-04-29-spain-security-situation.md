@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2004-04-29'
 subtitle: Several people asked me about what the security situation in Spain felt
   like. I have to admit it did...

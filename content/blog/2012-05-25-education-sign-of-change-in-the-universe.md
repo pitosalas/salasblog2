@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-25'
 subtitle: 'I would love to see this trend accelerate:'
 tags:

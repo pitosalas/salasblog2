@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-09-18'
 subtitle: 'What an antiquated term: Full Duplex. I don’t know if that term is used
   anymore but what i mean is t...'

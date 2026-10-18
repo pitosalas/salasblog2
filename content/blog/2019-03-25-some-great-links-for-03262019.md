@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-25'
 subtitle: Drawing Graphs using Dot and Graphviz
 tag_review: no_fit

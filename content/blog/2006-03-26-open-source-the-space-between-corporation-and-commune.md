@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-26'
 subtitle: In The Economist, there’s an ...
 tags:

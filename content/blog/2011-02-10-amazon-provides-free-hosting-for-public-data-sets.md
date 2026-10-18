@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-02-10'
 subtitle: If you work with non-profit projects that collect or disseminate large amounts
   of public data, you w...

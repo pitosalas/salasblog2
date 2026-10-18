@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-03-04'
 subtitle: Why You Should Find Product-Market Fit Before Sniffing Around For Venture
   Money

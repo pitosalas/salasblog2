@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-23'
 subtitle: The Most Important Non-Programming Skills for Programmers
 tags:

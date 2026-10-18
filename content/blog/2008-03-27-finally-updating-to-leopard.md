@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-27'
 subtitle: Usually more on the bleeding edge than this, I decided to wait until now
   to upgrade my macs to Leopa...

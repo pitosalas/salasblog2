@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-24'
 subtitle: I stumbled across this article while waiting for a meeting to start. It
   is a bit “inside baseball”, ...

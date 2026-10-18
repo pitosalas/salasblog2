@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-24'
 subtitle: 'From speech to insights: The value of the human voice'
 tags:

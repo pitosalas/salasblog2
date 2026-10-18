@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-10-11'
 subtitle: Here’s an insightful New Yorker article about procrastination
 tags:

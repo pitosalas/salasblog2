@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-27'
 subtitle: 'huginn/huginn: Create agents that monitor and act on your behalf.'
 tags:

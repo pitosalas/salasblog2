@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-27'
 subtitle: A non-computer-person’s guide to how Mastodon instances work
 tag_review: no_fit

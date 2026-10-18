@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-29'
 subtitle: '**Forced to use Atom. **Well, it’s happening… My friend Paul English ...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '17'
 date: '2021-07-26'
 subtitle: Structuring a Large Production Flask Application
 tags:

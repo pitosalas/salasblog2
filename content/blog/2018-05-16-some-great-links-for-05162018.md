@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-05-16'
 subtitle: 'Weekly Command: managing processes with htop'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2009-06-09'
 subtitle: As you know from a previous post, I’ve been working on a “domain specific
   language” for election bal...

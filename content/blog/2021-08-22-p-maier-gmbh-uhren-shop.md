@@ -1,5 +1,4 @@
 ---
-category: '35'
 date: '2021-08-22'
 subtitle: P. Maier GmbH Uhren Shop
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-08-09'
 subtitle: After an interesting comment
 tags:

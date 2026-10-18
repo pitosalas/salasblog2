@@ -1,5 +1,4 @@
 ---
-category: '123'
 date: '2022-01-24'
 subtitle: "secretGeek/AwesomeCSV: \U0001F576️A curated list of awesome tools for dealing
   with CSV."

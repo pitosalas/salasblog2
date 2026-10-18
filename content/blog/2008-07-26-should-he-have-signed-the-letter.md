@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-26'
 subtitle: Ok this is a bit irreverent.
 tags:

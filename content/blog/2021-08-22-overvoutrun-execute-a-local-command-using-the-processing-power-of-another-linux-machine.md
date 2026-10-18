@@ -1,5 +1,4 @@
 ---
-category: '84'
 date: '2021-08-22'
 subtitle: 'Overv/outrun: Execute a local command using the processing power of another
   Linux machine.'

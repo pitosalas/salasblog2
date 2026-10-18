@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-09-10'
 subtitle: I’ve seen commentary that it’s “disappointingly familiar”
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-09-30'
 subtitle: '![Ss Inbox Tn'
 tags:

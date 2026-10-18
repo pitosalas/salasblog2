@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-02-10'
 subtitle: SSL Cert Rotation with Runbook | dev/blesi
 tag_review: no_fit

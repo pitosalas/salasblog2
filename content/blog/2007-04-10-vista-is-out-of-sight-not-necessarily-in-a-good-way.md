@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-04-10'
 subtitle: I just had the pleasure of going through the initial set up of Windows Vista
   on a brand new HP noteb...

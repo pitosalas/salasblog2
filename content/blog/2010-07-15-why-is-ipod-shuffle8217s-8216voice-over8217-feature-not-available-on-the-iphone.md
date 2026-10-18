@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2010-07-15'
 subtitle: Just wonderin’ — the iPod Shuffle has a really cool feature where a synthesized
   voice will announce ...

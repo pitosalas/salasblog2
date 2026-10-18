@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-12-07'
 subtitle: '[From ActiveRecord callbacks to Publish/Subscribe pattern and event-driven
   design – Karol Galanciak ...'

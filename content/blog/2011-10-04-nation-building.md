@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-10-04'
 subtitle: Here’s a topic I have never written about before… Nation Building. I just
   want to point you to a gre...

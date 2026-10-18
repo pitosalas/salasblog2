@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-08-21'
 subtitle: Specifications grading with the EMRF rubric –A useful ...
 tags:

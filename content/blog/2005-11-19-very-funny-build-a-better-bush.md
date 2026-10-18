@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-11-19'
 subtitle: '!Picture 1-21'
 tags:

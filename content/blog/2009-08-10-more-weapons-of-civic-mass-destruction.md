@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-08-10'
 subtitle: A while ago I wrote about weapons of civic mass destruction
 tags:

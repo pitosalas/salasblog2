@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-06-07'
 subtitle: 'datas-frame – Modern Pandas (Part 2): Method Chaining'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-01'
 subtitle: Whether you agree or not, it is [thoughtful and thought provoking discussion
   of Bubbles and Financia...

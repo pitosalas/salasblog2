@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-04-06'
 subtitle: A month or two ago I read an article by Thomas Friedman introducing Americans
   Elect,

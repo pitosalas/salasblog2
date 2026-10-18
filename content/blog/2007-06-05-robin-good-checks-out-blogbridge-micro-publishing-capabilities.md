@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2007-06-05'
 subtitle: Today a major review came out in Robin Good’s influential Master New Media
   blog

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-01-31'
 subtitle: '[5 Quick & Easy Hacks to Write More Computationally Efficient Code | by
   Andre Ye | Analytics Vidhya ...'

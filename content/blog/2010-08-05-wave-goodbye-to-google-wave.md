@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-05'
 subtitle: Google leaves products in Beta forever, they say.
 tags:

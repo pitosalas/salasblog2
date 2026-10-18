@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-03'
 subtitle: Yes, some people do fall for it
 tags:

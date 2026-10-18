@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2014-06-27'
 subtitle: About a week ago the new version of the Safari Browser came out for Mac
   OS X. I was swayed by the pr...

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-05-31'
 subtitle: 'Interesting article about counting blogs makes a **good point** right off
   the bat:'

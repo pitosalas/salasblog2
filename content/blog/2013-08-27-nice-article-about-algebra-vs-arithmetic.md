@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-08-27'
 subtitle: If you are anything like me, this is something you’ve try to articulate.
   Here’s a great article on t...

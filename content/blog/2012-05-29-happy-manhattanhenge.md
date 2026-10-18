@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-29'
 subtitle: '!ManhattanSunset SmallToday (May 29) is Manhatten...'
 tags:

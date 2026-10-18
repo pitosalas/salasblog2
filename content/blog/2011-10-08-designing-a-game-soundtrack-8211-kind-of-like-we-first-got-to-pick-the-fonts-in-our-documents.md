@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-10-08'
 subtitle: Can you compose crappy music? I had a field day today ‘designing’ a bit
   of music for my “Game Of Lif...

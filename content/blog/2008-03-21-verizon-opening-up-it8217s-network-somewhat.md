@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-21'
 subtitle: I am starting to follow the world of mesh networks and things...
 tags:

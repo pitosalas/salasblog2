@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-12'
 subtitle: What is Steampipe? –Seems useful fo...
 tags:

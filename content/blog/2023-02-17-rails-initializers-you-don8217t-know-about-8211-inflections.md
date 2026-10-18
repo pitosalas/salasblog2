@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-17'
 subtitle: Rails initializers you don’t know about – Inflections
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-01-26'
 subtitle: Goodbye, Clean Code — Overreacted
 tags:

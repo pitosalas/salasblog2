@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-12-01'
 subtitle: This is an insider’s three-fer
 tags:

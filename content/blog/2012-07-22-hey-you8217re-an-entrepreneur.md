@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-07-22'
 subtitle: 'I like this quote:'
 tags:

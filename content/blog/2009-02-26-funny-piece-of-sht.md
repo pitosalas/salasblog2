@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-02-26'
 subtitle: http://www.theonion.com/content/themes/common/assets/onn_embed/embedded_player.swf
 tags:

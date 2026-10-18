@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-12-14'
 subtitle: I guess it’s not surprising that people’s Facebook and twitter accounts
   are getting compromised

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-09-25'
 subtitle: I don’t follow the Identify world that closely and like everyone I’ve now
   come across services who s...

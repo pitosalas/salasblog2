@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: The Walt List.xlsx – Google Sheets
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-11-16'
 subtitle: Came across Jonathan Coulton, the songwriter who embarked on a ridiculous
   challenge to write a song ...

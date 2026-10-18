@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-03-16'
 subtitle: Actually, I **don’t** hate it. It’s not clear exactly what it means, but
   it means something. Is it A...

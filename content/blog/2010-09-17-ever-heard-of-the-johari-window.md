@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-17'
 subtitle: I came across the idea of the Johari Window during one...
 tags:

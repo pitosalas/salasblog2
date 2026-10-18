@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-01-13'
 subtitle: Here’s a show with a plot that is quite unusual, set as a m...
 tags:

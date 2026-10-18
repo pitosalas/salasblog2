@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-05-22'
 subtitle: '[ Kanaries/Rath: Next generation of automated data exploratory analysis
   and visualization platform.]...'

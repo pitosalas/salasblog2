@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-03-16'
 subtitle: On a lark, I used my frequent flyer miles to fly First Class on American
   Airlines today, heading out...

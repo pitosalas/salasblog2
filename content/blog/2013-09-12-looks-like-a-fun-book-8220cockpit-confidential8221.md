@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-12'
 subtitle: The Many Mysteries of Air Travel – NYTimes.com
 tags:

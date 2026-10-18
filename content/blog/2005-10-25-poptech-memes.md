@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-25'
 subtitle: Pop!Tech 2005 was a great conference, again. I made notes only when somet...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-27'
 subtitle: What are high reactives?
 tags:

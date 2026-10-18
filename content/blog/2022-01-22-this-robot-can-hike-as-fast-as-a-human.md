@@ -1,5 +1,4 @@
 ---
-category: '13'
 date: '2022-01-22'
 subtitle: This robot can hike as fast as a human
 tags:

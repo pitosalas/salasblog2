@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-05-10'
 subtitle: This just struck me ironic because I just finished reading an interesting
   article in [The Atlantic a...

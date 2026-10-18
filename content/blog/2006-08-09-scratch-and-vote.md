@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-08-09'
 subtitle: Here’s an interesting new development to apply technology to voter fraud
   and better voting. Technolo...

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-06-19'
 subtitle: Smart Weather Station Indoor Outdoor | Netatmo
 tags:

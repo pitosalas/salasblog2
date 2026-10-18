@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-07-22'
 subtitle: '![picture-1'
 tags:

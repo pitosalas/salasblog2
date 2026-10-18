@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-08-06'
 subtitle: Installing Ubuntu on an external SSD drive on a Macbook – Floris van Breugel
 tags:

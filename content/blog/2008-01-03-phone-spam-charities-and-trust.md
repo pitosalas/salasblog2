@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-01-03'
 subtitle: In the [New York Times, an editorial talks about a study that reveals rampant
   abuses in certain char...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-14'
 subtitle: A Big List of Mastodon Resources
 tag_review: no_fit

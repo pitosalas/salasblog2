@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2021-05-21'
 subtitle: 'nmcli: NetworkManager Reference Manual'
 tags:

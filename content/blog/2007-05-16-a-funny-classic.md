@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-05-16'
 subtitle: '![](https://i0.wp.com/www...'
 tags:

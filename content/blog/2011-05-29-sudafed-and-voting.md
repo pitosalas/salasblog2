@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-05-29'
 subtitle: A theme that I have followed in this blog is the question of whether it’s
   a good idea to require a p...

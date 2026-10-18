@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-01-09'
 subtitle: I really love her major novels although I haven’t looked at them in years.
   You know how you remember...

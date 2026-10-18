@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-05-01'
 subtitle: How I Almost Destroyed a £50 million War Plane and The Normalisation of
   Deviance.

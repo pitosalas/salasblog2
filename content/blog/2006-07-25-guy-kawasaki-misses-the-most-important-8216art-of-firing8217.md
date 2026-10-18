@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-07-25'
 subtitle: '[http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=1591840562&IS1=1&nou=1&fc1=000000<...'
 tags:

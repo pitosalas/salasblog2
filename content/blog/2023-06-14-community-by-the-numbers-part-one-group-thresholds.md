@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-14'
 subtitle: 'Community by the Numbers, Part One: Group Thresholds'
 tag_review: no_fit

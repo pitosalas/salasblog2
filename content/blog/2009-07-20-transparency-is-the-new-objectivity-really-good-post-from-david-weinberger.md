@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2009-07-20'
 subtitle: Check this excerpt from a post by David Weinberger ...
 tags:

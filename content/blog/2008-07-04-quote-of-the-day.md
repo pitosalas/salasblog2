@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-04'
 subtitle: — the great city builder Daniel H. Burnham
 tags:

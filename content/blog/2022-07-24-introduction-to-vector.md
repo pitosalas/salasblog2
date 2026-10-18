@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-24'
 subtitle: Introduction to Vector –Looks useful ...
 tags:

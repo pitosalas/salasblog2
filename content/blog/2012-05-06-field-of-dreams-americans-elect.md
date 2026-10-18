@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-06'
 subtitle: Americans Elect got Tom Friedman to endorse their effort to get a third
   party presidential ballot in...

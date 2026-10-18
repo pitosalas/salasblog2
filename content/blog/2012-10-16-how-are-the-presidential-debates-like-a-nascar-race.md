@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-16'
 subtitle: I am looking forward to watching the Presidential debates tonight. But for
   all the **wrong** reasons...

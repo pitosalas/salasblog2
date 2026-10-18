@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-29'
 subtitle: I just received this notification from AT&T. Pretty innocuous, but, what’s
   up with using Hebrew lett...

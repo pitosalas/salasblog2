@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2006-02-21'
 subtitle: Adam Green has two very insightful posts about Mashups inspired at [Mashu...
 tags:

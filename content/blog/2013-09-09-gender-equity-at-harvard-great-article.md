@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-09-09'
 subtitle: Harvard Business School Case Study – Gender Equity – NYTimes.com
 tags:

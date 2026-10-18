@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-19'
 subtitle: '[youtube http://www.youtube.com/watch?v=ZfWsfDweeM4&hl=en]I found my way
   onto Robin Chase’s blog, [N...'

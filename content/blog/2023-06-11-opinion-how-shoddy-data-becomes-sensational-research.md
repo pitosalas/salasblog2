@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-11'
 subtitle: Opinion | How Shoddy Data Becomes Sensational Research
 tags:

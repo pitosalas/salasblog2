@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-12-17'
 subtitle: Tim Bray likes Adium, the Mac OS X inter-network IM client
 tags:

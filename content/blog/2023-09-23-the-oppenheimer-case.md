@@ -1,7 +1,6 @@
 ---
 title: "The Oppenheimer Case"
 subtitle: "The Oppenheimer Case"
-category: "1"
 tags: []
 date: "2023-09-23"
 type: "wp"

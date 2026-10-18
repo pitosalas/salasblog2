@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-09'
 subtitle: What would you do if you received **two letters** from a collection agency
   saying that you owed $5,0...

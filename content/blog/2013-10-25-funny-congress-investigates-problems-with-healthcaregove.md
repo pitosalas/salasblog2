@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-10-25'
 subtitle: Really, this is NO JOKING MATTER
 tags:

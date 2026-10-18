@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-25'
 subtitle: The Ruby on Rails SaaS Template | Bullet Train –Bullet Train is a Ruby ...
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-11-13'
 subtitle: 'Getafix: How Facebook tools learn to fix bugs automatically – Facebook
   Code'

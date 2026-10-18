@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-17'
 subtitle: What Should You Do with Your Life? Directions and Advice – Alexey Guzey
 tag_review: no_fit

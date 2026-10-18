@@ -1,5 +1,4 @@
 ---
-category: General
 date: '2026-02-27'
 tags: []
 title: Major improvements in this blog

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-10-17'
 subtitle: 'Learn SQL: How to Write a Complex SELECT Query'
 tag_review: no_fit

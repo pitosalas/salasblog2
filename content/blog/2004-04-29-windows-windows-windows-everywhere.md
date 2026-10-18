@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2004-04-29'
 subtitle: In the accompanying photo you can see one of the **ubiquitous TV screens
   **sprinkled all around the ...

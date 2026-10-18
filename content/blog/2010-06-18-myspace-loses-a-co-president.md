@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2010-06-18'
 subtitle: Check out MySpace Loses a Co-President(**...
 tags:

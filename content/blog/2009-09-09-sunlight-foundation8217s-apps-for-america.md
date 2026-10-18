@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-09-09'
 subtitle: Sunlight Foundation is a very cool organization that I’ve been close to.
   They are involved with many...

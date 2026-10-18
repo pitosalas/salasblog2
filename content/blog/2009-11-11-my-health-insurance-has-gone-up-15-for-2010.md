@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-11-11'
 subtitle: Yeah, I just received the renewal paperwork for health insurance, and i**t’s
   up**. This is with [Blu...

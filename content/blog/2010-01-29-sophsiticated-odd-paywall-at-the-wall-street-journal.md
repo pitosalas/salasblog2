@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-01-29'
 subtitle: So I am trying to decide whether I should renew my subscription to Wall
   Street Journal online. I rea...

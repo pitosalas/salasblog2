@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-08-04'
 subtitle: Gobot – Golang framework for robotics, drones, and the Internet of Things
   (IoT)

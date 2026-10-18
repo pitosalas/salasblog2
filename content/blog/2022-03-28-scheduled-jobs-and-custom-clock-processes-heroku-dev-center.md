@@ -1,5 +1,4 @@
 ---
-category: '39'
 date: '2022-03-28'
 subtitle: Scheduled Jobs and Custom Clock Processes | Heroku Dev Center
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-02'
 subtitle: I Was Wrong About Mastodon – EscapingTech
 tag_review: no_fit

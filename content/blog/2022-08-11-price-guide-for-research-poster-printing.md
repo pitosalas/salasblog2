@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-11'
 subtitle: Price guide for research poster printing –...
 tag_review: no_fit

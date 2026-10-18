@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-01-28'
 subtitle: 40 Best Ruby Gems We Can’t Live Without
 tags:

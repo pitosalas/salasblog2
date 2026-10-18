@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-23'
 subtitle: Did you know of the Lexington Public Library’s role in the founding of DEC
   (Digital Equipment Corpor...

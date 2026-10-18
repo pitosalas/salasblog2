@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-07-11'
 subtitle: Maybe I’ve been out of the corporate world for too long. And I do wish Microsoft
   well because Google...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-13'
 subtitle: Excel is Pretty Dang Cool
 tag_review: no_fit

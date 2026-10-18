@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-05-31'
 subtitle: I follow Chris Pirillo’s blog and other writings religiously. Two recen...
 tags:

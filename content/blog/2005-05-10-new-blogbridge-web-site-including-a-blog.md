@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2005-05-10'
 subtitle: Good morning sports-fans. We recently totally revamped the BlogBridge ...
 tags:

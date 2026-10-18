@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-03-01'
 subtitle: Everything’s a camp today, Foo Camp, Bar Camp and now Transparency Camp
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-02'
 subtitle: I know basic Javascript. I think I will be learning more soon. I think JavaScript
   is the language of...

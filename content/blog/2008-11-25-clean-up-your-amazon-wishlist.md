@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-11-25'
 subtitle: If you are anything like me, you are constantly coming across books and
   other goodies that look inte...

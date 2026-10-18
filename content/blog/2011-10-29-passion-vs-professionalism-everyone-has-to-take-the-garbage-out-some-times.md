@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-10-29'
 subtitle: 'Interesting article with a provocative title: “[The Designer’s Notebook:
   Passion Versus Professional...'

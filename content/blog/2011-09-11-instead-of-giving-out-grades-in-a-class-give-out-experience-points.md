@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-09-11'
 subtitle: If you watched (or didn’t) the preceding video by Jesse Schell you mi...
 tags:

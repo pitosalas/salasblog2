@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-02-18'
 subtitle: 'A simple question that for some reason does not have a simple answer:'
 tags:

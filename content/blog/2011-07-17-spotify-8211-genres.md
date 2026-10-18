@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-17'
 subtitle: Ok a few hours into it, I’ve located what looks like a major weakness in
   Spotify. One of the fun thi...

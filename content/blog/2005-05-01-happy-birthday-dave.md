@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-05-01'
 subtitle: '!Picture 1-3'
 tags:

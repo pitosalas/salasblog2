@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-18'
 subtitle: Scott Adams of course is the evil genius behind Dilbert, which as you know
   I am a big fan of. Scott ...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-04'
 subtitle: '**Did you know how closely you were being watched by your TIVO? **A by-product
   of the Janet Jackson ...'

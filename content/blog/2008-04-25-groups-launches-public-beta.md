@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-04-25'
 subtitle: Check this post Grou.ps Launches Public Beta
 tags:

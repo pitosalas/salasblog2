@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2010-11-06'
 subtitle: I feel that I am finally mastering CSS and in doing so I am seeing some
   interesting patterns. It see...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-06-27'
 subtitle: I came across this video by Armando Fox with his views of what went wrong
   with the Obamacare website...

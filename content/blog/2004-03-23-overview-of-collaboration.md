@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-23'
 subtitle: I had the opportunity to be a guest lecturer at Brandeis University today,
   which was fun. Brandeis o...

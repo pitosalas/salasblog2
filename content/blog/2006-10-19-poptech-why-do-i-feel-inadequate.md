@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2006-10-19'
 subtitle: Ok, Pop!Tech is a wonderful conference, already, and I am learning and...
 tag_review: no_fit

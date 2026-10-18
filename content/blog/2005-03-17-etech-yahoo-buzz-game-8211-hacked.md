@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-03-17'
 subtitle: There was some buzz here at ETECH about Yahoo Research’s announcement of
   the Buzz Game

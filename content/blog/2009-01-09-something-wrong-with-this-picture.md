@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-01-09'
 subtitle: '!Take a close look at the url and the page'
 tags:

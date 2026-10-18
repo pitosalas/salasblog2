@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-28'
 subtitle: I recently had to buy a new cell phone, and learning how to use it reminded
   me again about how **com...

@@ -1,5 +1,4 @@
 ---
-category: '178'
 date: '2021-07-17'
 subtitle: 'Python behind the scenes #11: how the Python import system works'
 tags:

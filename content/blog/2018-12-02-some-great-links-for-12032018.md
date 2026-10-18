@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-12-02'
 subtitle: jarun/nnn
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-06'
 subtitle: Optimize animated GIF
 tag_review: no_fit

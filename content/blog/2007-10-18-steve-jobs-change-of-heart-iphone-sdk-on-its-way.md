@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-10-18'
 subtitle: Check out this post from Mashable!
 tags:

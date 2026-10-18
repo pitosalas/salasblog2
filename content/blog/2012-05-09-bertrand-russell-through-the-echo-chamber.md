@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-05-09'
 subtitle: I saw this in Marginal Revolution
 tag_review: no_fit

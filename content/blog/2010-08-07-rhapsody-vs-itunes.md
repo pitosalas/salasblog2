@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-08-07'
 subtitle: I think I might be entering a new phase in my music listening. I listen
   to a ton of music, on my iPh...

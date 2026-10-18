@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-14'
 subtitle: You may have noticed that this Blog is now hosted on SquareSpace. I’v...
 tags:

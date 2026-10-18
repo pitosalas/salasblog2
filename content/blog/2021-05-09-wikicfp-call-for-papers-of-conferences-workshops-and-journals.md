@@ -1,5 +1,4 @@
 ---
-category: '103'
 date: '2021-05-09'
 subtitle: 'WikiCFP : Call For Papers of Conferences, Workshops and Journals'
 tags:

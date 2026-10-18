@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-26'
 subtitle: The costly mistake so many make with numpy and pandas
 tags:

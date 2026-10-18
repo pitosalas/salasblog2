@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-03-22'
 subtitle: 'I just stumbled (get it?) across this:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-03-30'
 subtitle: If you are interested in some **thoughtful** perspectives about the world
   of **Venture Capital**, fr...

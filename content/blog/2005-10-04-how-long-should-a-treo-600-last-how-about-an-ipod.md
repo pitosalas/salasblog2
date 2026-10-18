@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-04'
 subtitle: 'A confluence of five events:'
 tags:

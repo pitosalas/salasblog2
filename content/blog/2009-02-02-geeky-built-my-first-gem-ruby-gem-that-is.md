@@ -1,5 +1,4 @@
 ---
-category: '410'
 date: '2009-02-02'
 subtitle: I’ve gotten interested in what is going on in the public sector, in particular
   in the world of non p...

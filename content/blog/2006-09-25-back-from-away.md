@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2006-09-25'
 subtitle: I just returned from a trip in the American Southwest, starting in St. George
   Utah, to Bryce Canyon ...

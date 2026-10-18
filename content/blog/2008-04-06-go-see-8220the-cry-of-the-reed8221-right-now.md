@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-04-06'
 subtitle: I just came back from the theatre, the [Huntington Theatre, Boston’s, production
   of a brand new play...

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-10'
 subtitle: '**RSS/Atom: An idea whose time has come. **Dave Winer'
 tags:

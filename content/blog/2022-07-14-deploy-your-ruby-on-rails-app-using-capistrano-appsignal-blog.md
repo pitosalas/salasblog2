@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-14'
 subtitle: Deploy Your Ruby on Rails App Using Capistrano | AppSignal Blog
 tags:

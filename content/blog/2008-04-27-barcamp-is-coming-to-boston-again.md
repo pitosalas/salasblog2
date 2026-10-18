@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-04-27'
 subtitle: 'Well it’s not really ‘coming’ – it was here all along, just dormant. Here’s
   the down-lo:'

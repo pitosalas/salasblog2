@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2018-10-21'
 subtitle: danburzo/percollate
 tags:

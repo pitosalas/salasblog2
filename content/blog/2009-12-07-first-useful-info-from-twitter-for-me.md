@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-12-07'
 subtitle: After sending an email to Terroir Coffee asking them to explain the...
 tags:

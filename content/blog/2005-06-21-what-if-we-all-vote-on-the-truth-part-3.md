@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-06-21'
 subtitle: Just a final follow up on this interesting story
 tags:

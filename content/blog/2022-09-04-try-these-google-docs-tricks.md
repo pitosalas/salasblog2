@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-09-04'
 subtitle: "Try these Google Docs Tricks \U0001FA84"
 tags:

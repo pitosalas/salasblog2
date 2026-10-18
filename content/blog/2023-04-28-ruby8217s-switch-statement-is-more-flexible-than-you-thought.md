@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-04-28'
 subtitle: Ruby’s Switch Statement is More Flexible Than You Thought
 tags:

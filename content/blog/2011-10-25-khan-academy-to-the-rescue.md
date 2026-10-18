@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-10-25'
 subtitle: If you haven’t heard about Khan Academy, let me be the first one to in...
 tags:

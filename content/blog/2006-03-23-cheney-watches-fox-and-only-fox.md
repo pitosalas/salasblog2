@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-23'
 subtitle: This is just silly-funny. Here are what ...
 tags:

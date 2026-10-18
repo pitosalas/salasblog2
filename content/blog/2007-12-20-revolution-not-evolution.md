@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-12-20'
 subtitle: Check out this post from [I, ...
 tags:

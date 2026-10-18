@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2004-04-15'
 subtitle: The true story comes out about the most excellent subservient chicken gimick.
   I mentioned it

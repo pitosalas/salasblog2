@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-12'
 subtitle: GPT in 60 Lines of NumPy | Jay Mody –Implementing a...
 tags:

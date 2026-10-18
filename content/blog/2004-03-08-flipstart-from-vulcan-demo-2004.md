@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-03-08'
 subtitle: '**Flipstart from Vulcan (Demo 2004 Series – 9): **This is a **weird l...'
 tag_review: no_fit

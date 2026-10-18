@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-06-18'
 subtitle: '![Dcp 1921'
 tags:

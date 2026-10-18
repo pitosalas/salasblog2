@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-08-17'
 subtitle: '[“But I am compelled to do this. And other than that, that’s as far as
   I’m going to talk about my f...'

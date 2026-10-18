@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2008-01-27'
 subtitle: It’s a little hard to explain and I didn’t manage to get it working myself
   yet, but still I am highl...

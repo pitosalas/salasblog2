@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-09'
 subtitle: Building a Creative Practice
 tags:

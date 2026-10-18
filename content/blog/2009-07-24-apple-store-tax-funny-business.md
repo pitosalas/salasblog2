@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-07-24'
 subtitle: A friend of mine pointed out that for some reason when he ordered is (wonderful)
   iPhone 3GS, the App...

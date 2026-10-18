@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-01-24'
 subtitle: '**What’s up with Orkut? **There’s this new [“online community tha...'
 tag_review: no_fit

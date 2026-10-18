@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-11'
 subtitle: '**Echo Chamber, redux: **Are we **wasting** our **valuable** brain cells
   **duplicating** each other’...'

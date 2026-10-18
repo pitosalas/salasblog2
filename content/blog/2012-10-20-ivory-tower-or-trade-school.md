@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-20'
 subtitle: One of the tensions that I have seen in teaching software engineering is
   whether something should be...

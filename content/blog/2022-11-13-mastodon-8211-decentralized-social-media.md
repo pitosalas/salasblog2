@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: Mastodon – Decentralized social media –Learn more about Mastodon, the...
 tag_review: no_fit

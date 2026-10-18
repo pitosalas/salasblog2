@@ -1,5 +1,4 @@
 ---
-category: '222'
 date: '2021-06-06'
 subtitle: 5 Python Libraries That You Don’t Know, But Should
 tags:

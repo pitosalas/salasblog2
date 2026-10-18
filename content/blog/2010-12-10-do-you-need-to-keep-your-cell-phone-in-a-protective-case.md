@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-12-10'
 subtitle: 'Check out this really interesting [Pogue article in the New York Times:
   “Gorilla Glass, the Smartpho...'

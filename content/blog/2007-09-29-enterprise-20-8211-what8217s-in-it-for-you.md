@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-09-29'
 subtitle: Enterprise 2.0 is one of those terms that is being ba...
 tags:

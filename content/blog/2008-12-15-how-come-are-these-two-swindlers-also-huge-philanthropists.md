@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-12-15'
 subtitle: 'The irony and paradox confounds:'
 tags:

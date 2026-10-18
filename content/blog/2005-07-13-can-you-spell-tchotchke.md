@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-07-13'
 subtitle: '!DSCF0009.JPG'
 tags:

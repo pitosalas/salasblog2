@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-11-22'
 subtitle: Kottke points to an amusing set of logic q...
 tags:

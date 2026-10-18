@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-08-13'
 subtitle: A Complete Guide to the Ruby Programming World – Learn Worthy
 tags:

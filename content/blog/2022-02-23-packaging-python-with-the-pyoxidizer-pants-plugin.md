@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-02-23'
 subtitle: Packaging Python with the PyOxidizer Pants Plugin
 tags:

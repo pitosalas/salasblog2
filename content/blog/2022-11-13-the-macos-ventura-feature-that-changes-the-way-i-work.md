@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-11-13'
 subtitle: The macOS Ventura Feature that Changes the Way I Work
 tags:

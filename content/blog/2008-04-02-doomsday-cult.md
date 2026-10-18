@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2008-04-02'
 subtitle: Scott Adams as usual is hillarious in this post Doomsday Cult
 tags:

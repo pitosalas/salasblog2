@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-06-03'
 subtitle: What system is this from?
 tags:

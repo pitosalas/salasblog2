@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2010-09-24'
 subtitle: 'A BBC Headline says:'
 tags:

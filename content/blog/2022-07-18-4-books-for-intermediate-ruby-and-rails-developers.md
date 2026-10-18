@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-18'
 subtitle: 4 Books For Intermediate Ruby And Rails Developers.
 tags:

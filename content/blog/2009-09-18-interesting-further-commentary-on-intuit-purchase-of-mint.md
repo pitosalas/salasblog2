@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-09-18'
 subtitle: I wrote about the Mint/Intuit deal the oth...
 tags:

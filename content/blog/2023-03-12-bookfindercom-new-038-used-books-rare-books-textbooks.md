@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-03-12'
 subtitle: 'BookFinder.com: New & Used Books, Rare Books, Textbooks –Aggregates...'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-01-19'
 subtitle: We are thinking of planning a trip to Costa Rica. Part of the trip is to
   get from Tabacon to Monteve...

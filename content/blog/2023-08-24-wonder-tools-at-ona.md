@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-08-24'
 subtitle: Wonder Tools at ONA ⚡️
 tag_review: no_fit

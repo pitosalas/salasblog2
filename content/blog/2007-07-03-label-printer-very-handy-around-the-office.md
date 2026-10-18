@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2007-07-03'
 subtitle: A few years ago I got the idea to get myself a label printer
 tags:

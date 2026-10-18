@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-04-06'
 subtitle: What’s the relationship between offshore outsourcing and immigration? Here’s
   an interesting connecti...

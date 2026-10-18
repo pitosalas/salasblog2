@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-15'
 subtitle: 'Why did the #TwitterMigration fail?'
 tag_review: no_fit

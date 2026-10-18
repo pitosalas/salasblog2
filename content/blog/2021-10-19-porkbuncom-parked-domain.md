@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2021-10-19'
 subtitle: porkbun.com | parked domain
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2006-10-01'
 subtitle: I’m getting a little **fascinated** with **Ruby** and **Rails** so I’ve
   been getting acquainted with...

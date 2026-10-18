@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-10-07'
 subtitle: After my rant a few days ago about the **quality** of new-fangled el...
 tags:

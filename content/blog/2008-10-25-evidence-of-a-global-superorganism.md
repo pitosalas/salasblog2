@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-10-25'
 subtitle: Check out this post Evidence of a Global SuperOrganism
 tags:

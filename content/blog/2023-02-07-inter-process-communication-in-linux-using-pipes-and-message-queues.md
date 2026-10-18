@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-07'
 subtitle: 'Inter-process communication in Linux: Using pipes and message queues'
 tags:

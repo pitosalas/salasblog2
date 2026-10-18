@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-02-03'
 subtitle: I just saw Blue Jasmine, the latest Woody Allen movie. It is excellent and
   I recommend it. I also ha...

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-07-13'
 subtitle: '> “The Most Advanced Quadruped Robot on Earth — BigDog is the alpha male
   of the Boston Dynamics fami...'

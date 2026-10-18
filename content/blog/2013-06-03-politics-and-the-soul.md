@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-06-03'
 subtitle: An interesting post from my pal Peter Miller about how we all view the world
   through our own biases ...

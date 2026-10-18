@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-02-17'
 subtitle: What Is ChatGPT Doing … and Why Does It Work?
 tags:

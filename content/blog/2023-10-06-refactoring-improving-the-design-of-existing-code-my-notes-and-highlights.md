@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-10-06'
 subtitle: 'Refactoring: Improving the Design of Existing Code (My Notes and Highlights)'
 tag_review: no_fit

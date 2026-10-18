@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-27'
 subtitle: Stop using so many divs! An intro to semantic HTML
 tag_review: no_fit

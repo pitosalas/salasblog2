@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-10-22'
 subtitle: I am traveling on my *usually* favorite Airline; and of course everyone
   knows that they are sufferin...

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-03-10'
 subtitle: To Render or to Redirect, that is the Question…
 tags:

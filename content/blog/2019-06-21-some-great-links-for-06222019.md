@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-06-21'
 subtitle: 'Open-sourcing Sorbet: a fast, powerful type checker for Ruby · Sorbet'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-02-04'
 subtitle: How to Encourage Students to Speak Up in Virtual Classes
 tags:

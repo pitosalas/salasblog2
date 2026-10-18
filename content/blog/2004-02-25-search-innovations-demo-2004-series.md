@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-02-25'
 subtitle: '**Search Innovations (Demo 2004 Series – 2) – **Two interesting Seach products
   were showcased: [Grok...'

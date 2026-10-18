@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-04'
 subtitle: Swurl – Search everything instantly –Played with this a little. While google...
 tags:

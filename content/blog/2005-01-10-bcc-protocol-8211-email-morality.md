@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-01-10'
 subtitle: What does the existence of “BCC” (which I think stands for the anachronism
   “blind carbon copy”) tell...

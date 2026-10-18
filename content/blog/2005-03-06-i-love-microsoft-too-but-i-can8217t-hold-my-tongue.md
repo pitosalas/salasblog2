@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-03-06'
 subtitle: Dave Winer points to [Kevin Shofield’s def...
 tags:

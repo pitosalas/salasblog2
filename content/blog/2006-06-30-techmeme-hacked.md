@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-06-30'
 subtitle: 'I am at Gnomedex and the news is spreading like wildfire: TechMeme'
 tags:

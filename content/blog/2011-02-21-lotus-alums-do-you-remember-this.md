@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-02-21'
 subtitle: '!Visonary'
 tags:

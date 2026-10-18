@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-10-14'
 subtitle: 6 Ways to Prevent Your Heroku App From Sleeping | Quick Left
 tag_review: no_fit

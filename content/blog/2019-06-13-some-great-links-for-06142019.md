@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-06-13'
 subtitle: Enhanced Shell Scripting with Ruby
 tags:

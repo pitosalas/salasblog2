@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2005-07-20'
 subtitle: For a while now I’ve been fascinated with my Flickr SmartFeed of the Maldives.
   The pictures are one ...

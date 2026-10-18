@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-12-27'
 subtitle: I saw this movie, Altered States, again last night. It’s eve...
 tags:

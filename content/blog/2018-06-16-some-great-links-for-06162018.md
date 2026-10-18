@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2018-06-16'
 subtitle: '[An intro to Stimulus JS: well-factored JavaScript for server-rendered
   applications – Superset Blog]...'

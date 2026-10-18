@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-16'
 subtitle: The Standards Innovation Paradox –“The great thing about st...
 tags:

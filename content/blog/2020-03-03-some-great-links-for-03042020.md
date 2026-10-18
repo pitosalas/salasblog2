@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-03-03'
 subtitle: Ruby on Rails Mistakes that could kill Your Production Servers
 tags:

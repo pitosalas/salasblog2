@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-03-02'
 subtitle: '!26GRAYMATTER-articleInline.jpg'
 tags:

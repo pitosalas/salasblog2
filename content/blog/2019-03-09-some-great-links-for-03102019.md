@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-03-09'
 subtitle: David Dollar
 tags:

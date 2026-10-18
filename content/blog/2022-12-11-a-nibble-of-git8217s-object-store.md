@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-11'
 subtitle: A Nibble of Git’s Object Store
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2009-06-16'
 subtitle: With what’s going on in Iran right now
 tags:

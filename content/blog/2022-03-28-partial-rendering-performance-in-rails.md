@@ -1,5 +1,4 @@
 ---
-category: '249'
 date: '2022-03-28'
 subtitle: Partial rendering performance in Rails
 tags:

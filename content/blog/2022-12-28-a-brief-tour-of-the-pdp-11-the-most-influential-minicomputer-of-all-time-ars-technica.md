@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-28'
 subtitle: A brief tour of the PDP-11, the most influential minicomputer of all time
   | Ars Technica

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-12-28'
 subtitle: If you’re a blogger or read blogs you might have come across the debate,
 tags:

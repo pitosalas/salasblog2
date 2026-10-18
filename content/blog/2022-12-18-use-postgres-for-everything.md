@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-18'
 subtitle: Use Postgres for everything! –Insights abou...
 tag_review: no_fit

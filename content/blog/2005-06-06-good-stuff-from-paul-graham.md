@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2005-06-06'
 subtitle: If you work with software developers you’ll **appreciate** these two pieces
   by **Paul Graham**, auth...

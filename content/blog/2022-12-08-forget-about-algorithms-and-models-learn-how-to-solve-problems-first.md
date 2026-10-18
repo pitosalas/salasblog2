@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-08'
 subtitle: Forget about algorithms and models — learn how to solve problems first
 tags:

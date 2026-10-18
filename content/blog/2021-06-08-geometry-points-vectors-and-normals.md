@@ -1,5 +1,4 @@
 ---
-category: '178'
 date: '2021-06-08'
 subtitle: Geometry (Points, Vectors and Normals)
 tags:

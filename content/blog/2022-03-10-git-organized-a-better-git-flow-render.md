@@ -1,5 +1,4 @@
 ---
-category: '8'
 date: '2022-03-10'
 subtitle: 'Git Organized: A Better Git Flow | Render'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-06-26'
 subtitle: This is a really good video which anyone who is looking for a new position
   should watch!

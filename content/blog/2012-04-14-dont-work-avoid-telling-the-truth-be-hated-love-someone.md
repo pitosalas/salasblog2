@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-04-14'
 subtitle: Ok, I don’t agree with all of “Don’t work. Avoid telling the truth. Be hated.
   Love someone”

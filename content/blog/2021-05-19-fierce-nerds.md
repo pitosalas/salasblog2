@@ -1,5 +1,4 @@
 ---
-category: '173'
 date: '2021-05-19'
 subtitle: Fierce Nerds
 tag_review: no_fit

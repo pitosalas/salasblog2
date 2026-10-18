@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-12-04'
 subtitle: Building A Virtual Machine inside ChatGPT
 tags:

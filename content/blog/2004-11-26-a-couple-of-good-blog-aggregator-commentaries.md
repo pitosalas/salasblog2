@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2004-11-26'
 subtitle: Here are two interesting bits that look at all the aggregators and have
   some interesting comments ab...

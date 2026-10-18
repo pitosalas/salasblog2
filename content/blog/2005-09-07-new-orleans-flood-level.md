@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2005-09-07'
 subtitle: '![](http://www.flickr.com/...'
 tag_review: no_fit

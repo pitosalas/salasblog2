@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-07-20'
 subtitle: '![](https://i0.wp.com/graphics8.nytimes.com/images/section/learning/general/onthisday/big/0720_big.g...'
 tags:

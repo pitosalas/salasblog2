@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-06-11'
 subtitle: Robert Krulwich gave this graduation speech
 tags:

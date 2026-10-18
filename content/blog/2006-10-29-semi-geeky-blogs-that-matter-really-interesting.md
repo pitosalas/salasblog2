@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2006-10-29'
 subtitle: From LifeHacker (o...
 tags:

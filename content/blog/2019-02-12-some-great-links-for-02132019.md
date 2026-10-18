@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-12'
 subtitle: Understanding Database Sharding | DigitalOcean
 tag_review: no_fit

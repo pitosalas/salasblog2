@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-07-11'
 subtitle: Very clever!
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-07-02'
 subtitle: 'k8s vs k3s: The Comprehensive Difference | by Ostride Labs:'
 tag_review: no_fit

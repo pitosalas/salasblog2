@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-03-25'
 subtitle: It’s rare that I watch/listen to a whole Youtube. But here you go…
 tags:

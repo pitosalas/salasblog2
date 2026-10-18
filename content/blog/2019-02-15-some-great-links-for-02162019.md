@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2019-02-15'
 subtitle: What’s coming to Rails 6.0? – Ruby Inside – Medium
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-22'
 subtitle: '!Screen shot 2011 07 22 at 9 12 39 AM'
 tags:

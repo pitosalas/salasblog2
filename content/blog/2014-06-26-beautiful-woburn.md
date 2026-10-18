@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-06-26'
 subtitle: I bet you didn’t know there was a forest like this in Woburn!
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-07-19'
 subtitle: '**Scoble** has been really picking on Te...'
 tags:

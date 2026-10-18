@@ -1,5 +1,4 @@
 ---
-category: '51'
 date: '2005-09-17'
 subtitle: If you are interested in the **Intelligent Design** debate, this is an [fascinating
   and somewhat sur...

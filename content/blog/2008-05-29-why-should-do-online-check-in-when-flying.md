@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2008-05-29'
 subtitle: 'This, from American Airlines:'
 tags:

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2012-10-19'
 subtitle: I don’t know why this **has not gotten more press. **You should take a look
   at Microsoft’s new Gmail...

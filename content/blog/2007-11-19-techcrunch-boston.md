@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2007-11-19'
 subtitle: Two nights ago, Friday, I got to go to the **TechCrunch Boston party
 tags:

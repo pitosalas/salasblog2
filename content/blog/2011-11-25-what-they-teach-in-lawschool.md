@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2011-11-25'
 subtitle: This article gives a [fascinating perspective on the disconnect between
   what they teach in law schoo...

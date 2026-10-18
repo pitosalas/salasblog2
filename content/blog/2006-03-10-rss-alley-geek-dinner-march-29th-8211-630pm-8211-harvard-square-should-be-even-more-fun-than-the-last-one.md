@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2006-03-10'
 subtitle: Hello sports fans. We are having another super-informal-geeky-but-not-exclusively-geeks
   geek dinner,...

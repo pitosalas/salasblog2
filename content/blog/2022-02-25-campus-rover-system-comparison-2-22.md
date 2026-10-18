@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2022-02-25'
 subtitle: Campus Rover System Comparison 2 22
 tags:

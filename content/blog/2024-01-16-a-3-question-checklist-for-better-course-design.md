@@ -1,5 +1,4 @@
 ---
-category: General
 date: '2025-07-04'
 title: Three questions towards a better course design
 type: blog

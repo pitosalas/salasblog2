@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-06-25'
 subtitle: PocketTube – YouTube Subscription Manager –The better way to group and or...
 tag_review: no_fit

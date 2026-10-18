@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-03-16'
 subtitle: It’s **hard to believe**, but here is what I got from Mint.com when I asked
   why my Bank of America i...

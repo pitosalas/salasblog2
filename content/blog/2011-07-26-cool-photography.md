@@ -1,5 +1,4 @@
 ---
-category: '298'
 date: '2011-07-26'
 subtitle: '!NewImage'
 tags:

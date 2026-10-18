@@ -1,5 +1,4 @@
 ---
-category: '50'
 date: '2004-09-14'
 subtitle: Ok, guys, we have another beta release with lots of great new goodies! It
   will be up on the web site...

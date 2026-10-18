@@ -1,5 +1,4 @@
 ---
-category: '301'
 date: '2020-03-25'
 subtitle: Facade Pattern in Rails for Performance and Maintainability | AppSignal
   Blog

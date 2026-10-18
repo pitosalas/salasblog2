@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2014-08-30'
 subtitle: '![](https://i0.wp.com/salas.com/wp-content/uploads/2014/08/70ddb-1409411014455.jpg?w=584&ssl=1)'
 tags:

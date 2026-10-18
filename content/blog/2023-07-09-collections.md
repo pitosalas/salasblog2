@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2023-07-09'
 subtitle: Collections –We curate collections of images, books,...
 tags:

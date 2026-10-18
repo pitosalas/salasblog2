@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2022-08-11'
 subtitle: 'Poster Prints | Print Custom Posters Online : Mpix'
 tag_review: no_fit

@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2013-05-20'
 subtitle: Yahoo, Tumblr, and the Loyalty Factor – Ben Gomes-Casseres – Harvard Business
   Review

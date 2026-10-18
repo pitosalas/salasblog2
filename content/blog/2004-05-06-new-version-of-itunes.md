@@ -1,5 +1,4 @@
 ---
-category: '1'
 date: '2004-05-06'
 subtitle: Good evening sportsfans. There’s a new version (4.5) of iTunes for Windows.
   All I can see after a qu...

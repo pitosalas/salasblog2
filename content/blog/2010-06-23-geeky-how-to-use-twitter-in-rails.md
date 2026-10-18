@@ -1,5 +1,4 @@
 ---
-category: '422'
 date: '2010-06-23'
 subtitle: This looks like a really nice and detailed tutorial on how to use Twitter
   in Rails

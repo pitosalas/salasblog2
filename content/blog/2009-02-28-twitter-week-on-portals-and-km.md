@@ -1,5 +1,4 @@
 ---
-category: '538'
 date: '2009-02-28'
 subtitle: Bill Ives has been running “twitter week” this week on his blog Portals
   and KM

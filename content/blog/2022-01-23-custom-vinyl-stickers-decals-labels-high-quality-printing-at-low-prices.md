@@ -1,5 +1,4 @@
 ---
-category: '160'
 date: '2022-01-23'
 subtitle: Custom vinyl stickers, decals, labels. High quality printing at low prices!
 tags:
