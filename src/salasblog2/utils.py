@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 7
+# Version: 8
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 """
 Pure utility functions for content processing and site generation.
@@ -57,6 +57,34 @@ def format_tag_hints_line(count: int, tag: str, comment: str = "") -> str:
     """
     line = f"{count:<{TAG_HINTS_COUNT_FIELD_WIDTH}}{tag}"
     return f"{line} ({comment})" if comment else line
+
+
+def add_curated_aliases(text: str, new_aliases: dict[str, list[str]]) -> str:
+    """Return tag-hints.md text with each `{primary: [aliases]}` appended to
+    that primary's parenthetical alias list in the "Curated Tags" section.
+
+    Aliases already on the line are not repeated. Raises if a primary isn't
+    a curated tag, rather than inventing a line for it.
+    """
+    pending = {primary: list(aliases) for primary, aliases in new_aliases.items()}
+    lines = []
+    in_section = False
+    for line in text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("# "):
+            in_section = stripped == CURATED_TAGS_HEADER
+        match = re.match(r"^(\d+)\s+(.*?)(?:\s*\((.*)\))?\s*$", stripped)
+        if in_section and match and match.group(2) in pending:
+            count, primary, comment = match.groups()
+            existing = [a.strip() for a in (comment or "").split(",") if a.strip()]
+            added = [a for a in pending.pop(primary) if a not in existing]
+            line = format_tag_hints_line(
+                int(count), primary, ", ".join(existing + added)
+            )
+        lines.append(line)
+    if pending:
+        raise ValueError(f"not curated tags in tag-hints.md: {sorted(pending)}")
+    return "\n".join(lines) + "\n"
 
 
 def load_curated_tags(tag_hints_path: Path) -> list[str]:

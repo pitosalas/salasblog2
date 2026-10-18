@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -11,6 +11,7 @@ Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
 
 import argparse
 import os
+from collections import Counter
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -28,7 +29,17 @@ from salasblog2.legacy_commands import (
 )
 from salasblog2.link_check import find_dead_self_links
 from salasblog2.raindrop import RaindropDownloader
+from salasblog2.tag_cleanup import proposals_to_json
 from salasblog2.wp_media import extract_media, rewrite_media_content, url_status
+from salasblog2.wp_taxonomy import (
+    MERGES_FILE,
+    build_wp_proposals,
+    index_local_posts,
+    load_merges,
+    match_posts,
+    parse_wxr,
+    promote_terms,
+)
 
 load_dotenv()
 
@@ -97,6 +108,29 @@ def cmd_wp_media(args):
             print(f"{url_status(url)}  {url}")
 
 
+def cmd_wp_tags(args):
+    """Promote WordPress terms into tag-hints.md, or write tag proposals"""
+    wp_posts = parse_wxr(Path(args.wxr))
+    merges = load_merges(MERGES_FILE)
+    tag_hints = Path(args.tag_hints)
+    if args.promote:
+        promoted, aliases = promote_terms(wp_posts, merges, tag_hints)
+        print(f"promoted {len(promoted)} tags: {', '.join(promoted)}")
+        print(f"added aliases to {len(aliases)} curated tags")
+        return
+    blog_dir = Path(args.content) / "blog"
+    matched, unmatched = match_posts(wp_posts, *index_local_posts(blog_dir))
+    proposals = build_wp_proposals(blog_dir, matched, merges, tag_hints)
+    Path(args.out).write_text(proposals_to_json(proposals), encoding="utf-8")
+    gained = Counter(
+        tag for p in proposals for tag in set(p.proposed_tags) - set(p.current_tags)
+    )
+    print(f"matched {len(matched)} posts, {len(unmatched)} unmatched")
+    print(f"{len(proposals)} posts gain tags; wrote {args.out}")
+    for tag, count in gained.most_common():
+        print(f"  {count:5} {tag}")
+
+
 def cmd_server(args):
     """Start the FastAPI server"""
     import uvicorn
@@ -130,6 +164,7 @@ def cmd_help(args):
     print("  legacy-rewrite     - Rewrite mapped legacy links (dry run unless --apply)")
     print("  check-links        - Report self-links that resolve to nothing")
     print("  wp-media           - Self-host WordPress images, repair links (--apply)")
+    print("  wp-tags            - WordPress terms -> tag-hints.md or tag proposals")
     print("  help               - Show this help message")
     print()
     print("Options:")
@@ -241,6 +276,22 @@ def main():
         "--report", action="store_true", help="HEAD-check unmatched URLs"
     )
     wp_media_parser.set_defaults(func=cmd_wp_media)
+
+    wp_tags_parser = subparsers.add_parser(
+        "wp-tags", help="Use WordPress categories/tags as a tag signal"
+    )
+    wp_tags_parser.add_argument("--wxr", required=True, help="WordPress export file")
+    wp_tags_parser.add_argument("--content", default="content", help="Content root")
+    wp_tags_parser.add_argument(
+        "--tag-hints", default="02-doc/tag-hints.md", help="Curated tag list"
+    )
+    wp_tags_parser.add_argument(
+        "--promote", action="store_true", help="Update tag-hints.md from the terms"
+    )
+    wp_tags_parser.add_argument(
+        "--out", default="wp-tag-proposals.json", help="Proposals JSON to write"
+    )
+    wp_tags_parser.set_defaults(func=cmd_wp_tags)
 
     # Help command
     help_parser = subparsers.add_parser("help", help="Show help message")

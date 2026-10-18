@@ -3,7 +3,7 @@
 
 ## TF50.0 — WXR parsing
 
-**Status**: not done
+**Status**: done
 
 **Description**: Pure function in a new `src/salasblog2/wp_taxonomy.py`.
 
@@ -16,7 +16,7 @@ attachment. Only the published post comes back, with the right terms.
 
 ## TF50.1 — Matching WordPress posts to local posts
 
-**Status**: not done
+**Status**: done
 
 **Description**: Match each record to a content file.
 
@@ -30,7 +30,7 @@ title-only match, a non-ASCII title (`Curaçao`) and no match.
 
 ## TF50.2 — Term-to-curated-tag mapping
 
-**Status**: not done
+**Status**: done
 
 **Description**: Build the term-to-tag map from `02-doc/tag-hints.md`.
 
@@ -38,22 +38,25 @@ title-only match, a non-ASCII title (`Curaçao`) and no match.
 * The existing tag-hints parser is reused, not duplicated.
 * `uncategorized` and `post-format-*` are ignored.
 * Unmapped terms are counted for the report.
-* An exclusion list in `config.yaml` (`wp_tags.exclude_mappings`) lets the
-  user switch off a mapping, such as `technology`.
+* Merge and ignore decisions live in `02-doc/wp-term-merges.json`, a
+  reviewed data file. Each entry maps a term to a target tag, or to `null`
+  to ignore that term. It replaces the planned `config.yaml` exclusion list.
+  With the user's blanket approval (2026-10-18), `technology` was kept.
 
 **Test**: a synonym maps to its parent, a structural term is ignored, an
 excluded mapping is skipped, and an unmapped term is counted.
 
 ## TF50.2a — Promote frequent non-curated terms
 
-**Status**: not done
+**Status**: done
 
 **Description**: Count unmapped terms across the published posts. Any term
 on **4 or more** posts becomes a promotion candidate.
 
 * This reuses F46's `promote_recurring_candidates` in `tag_cleanup.py`
   rather than duplicating it.
-  That function's threshold becomes a parameter, so F50 can pass 4.
+  No threshold parameter was needed, because TF46.14 already set F46's
+  constant to 4.
 * Near-synonyms are merged before promotion.
   That covers variants of a curated tag (`robots` → `robotics`), variants
   of each other (`tool`/`tools`, `scale`/`scaling`/`scalability`), and
@@ -69,6 +72,8 @@ on **4 or more** posts becomes a promotion candidate.
   parent's parentheses.
 * The term-to-tag map is then rebuilt, so the promoted terms get applied
   in TF50.3.
+* Duplicate WordPress posts (the same post republished under a later date)
+  that match one local file have their terms unioned.
 
 **Test**: the threshold boundary (3 posts isn't promoted, 4 is), and a
 term counts once per post. The `tag-hints.md` writer is checked for new
@@ -77,7 +82,7 @@ must re-parse afterwards.
 
 ## TF50.3 — Proposals and CLI `bg wp-tags`
 
-**Status**: not done
+**Status**: done
 
 **Description**: Turn each matched post's mapped tags into an F46 proposal
 via `build_proposal`, which keeps the merge additive.
@@ -91,7 +96,7 @@ fixture posts. Existing tags are kept and bodies are byte-identical.
 
 ## TF50.4 — Tests
 
-**Status**: not done
+**Status**: done
 
 **Description**: Dedicated `tests/test_wp_taxonomy.py` covering TF50.0-TF50.3,
 then a full-suite run.
