@@ -18,6 +18,6 @@ But dig a little deeper and you will find that you can enable something called �
 
 The beauty here is that this takes literally zero effort on your part: it just happens. And sometimes the creations are just downright…. AWESOME! Here’s a before and after to whet your appetite:
 
- ![](https://i0.wp.com/salas.com/wp-content/uploads/2014/07/1865d-img_0293.jpg?w=584&ssl=1)
+ ![](/static/images/wp/2014/07/1865d-img_0293.jpg)
 
- ![](https://i0.wp.com/salas.com/wp-content/uploads/2014/07/4872c-img_0293-effects.jpg?w=584&ssl=1)
+ ![](/static/images/wp/2014/07/4872c-img_0293-effects.jpg)

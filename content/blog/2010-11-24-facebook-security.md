@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 636
 ---
 
-[![screen-shot-2010-11-23-at-84149-pm](https://i0.wp.com/salas.com/wp-content/uploads/2010/11/dd648-screen-shot-2010-11-23-at-84149-pm.png?resize=300%2C169&ssl=1)](https://i0.wp.com/salas.com/wp-content/uploads/2010/11/dd648-screen-shot-2010-11-23-at-84149-pm.png?ssl=1)I was experimenting with a little known feature in Facebook, “Download Your Information” which will actually supposedly give you a copy of everything that is ‘yours’ on Facebook.
+[![screen-shot-2010-11-23-at-84149-pm](/static/images/wp/2010/11/dd648-screen-shot-2010-11-23-at-84149-pm.png)](/static/images/wp/2010/11/dd648-screen-shot-2010-11-23-at-84149-pm.png)I was experimenting with a little known feature in Facebook, “Download Your Information” which will actually supposedly give you a copy of everything that is ‘yours’ on Facebook.
 The definition of what is ‘yours’ is fairly tricky of course: is what you posted on someone else’s wall ‘yours’ or ‘theirs’? And so on.
 
 But what interested me was how they made double and triple sure that in fact it was me who was downloading my information.

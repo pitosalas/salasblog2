@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 175
 ---
 
-![](https://i0.wp.com/salas.com/wp-content/uploads/2013/08/b4582-img_2028.jpg?w=584&ssl=1)
+![](/static/images/wp/2013/08/b4582-img_2028.jpg)
 
 The way you try to get me to renew my subscription is just as bad as many of the merchants you call out in your reviews.
 

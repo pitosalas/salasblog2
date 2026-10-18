@@ -18,4 +18,4 @@ Here you can see a basic game space over three generations of my art work, from 
 
 If you look closely you will notice that the ‘topology’ of the game space is the same, just the images in each of the tiles have changed:
 
-[![](https://i0.wp.com/salas.com/wp-content/uploads/2011/11/8872e-12439792-15047853-thumbnail.jpg?w=584&ssl=1)](Y.Squarespace.Utils.lightboxAsset()First Generation [![](https://i0.wp.com/salas.com/wp-content/uploads/2011/11/42ca1-12439792-15047867-thumbnail.jpg?w=584&ssl=1)](Y.Squarespace.Utils.lightboxAsset()Second Generation [![](https://i0.wp.com/salas.com/wp-content/uploads/2011/11/63af6-12439792-15047898-thumbnail.jpg?w=584&ssl=1)](Y.Squarespace.Utils.lightboxAsset()Third generation
+[![](/static/images/wp/2011/11/8872e-12439792-15047853-thumbnail.jpg)](Y.Squarespace.Utils.lightboxAsset()First Generation [![](/static/images/wp/2011/11/42ca1-12439792-15047867-thumbnail.jpg)](Y.Squarespace.Utils.lightboxAsset()Second Generation [![](/static/images/wp/2011/11/63af6-12439792-15047898-thumbnail.jpg)](Y.Squarespace.Utils.lightboxAsset()Third generation

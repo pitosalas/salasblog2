@@ -16,4 +16,4 @@ What, never heard of Hanson? Well apparently the law suit was about **Google doi
 
 But really, how does it make sense to pay out 47 cents? I am sure the lawyers (for both sides) are laughing **all the way to the bank!**
 
-![Stupidcheck 2](https://i0.wp.com/salas.com/wp-content/uploads/2012/07/1d3b2-stupidcheck-2.png?resize=584%2C438&ssl=1)
+![Stupidcheck 2](/static/images/wp/2012/07/1d3b2-stupidcheck-2.png)

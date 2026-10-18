@@ -10,7 +10,7 @@ type: wp
 wordpress_id: 252
 ---
 
-[![](https://i0.wp.com/salas.com/wp-content/uploads/2013/01/8dd58-12439792-21674846-thumbnail.png?w=584&ssl=1)](Y.Squarespace.Utils.lightboxAsset()I designed the calendar to the right to help me keep track of my piano practice. As you know, maybe, to learn piano you need to practice every day. Well I don’t do that regularly enough, and as a result (and general clumsyness) my piano study is going at a snails pace. So of course, technology to the rescue.
+[![](/static/images/wp/2013/01/8dd58-12439792-21674846-thumbnail.png)](Y.Squarespace.Utils.lightboxAsset()I designed the calendar to the right to help me keep track of my piano practice. As you know, maybe, to learn piano you need to practice every day. Well I don’t do that regularly enough, and as a result (and general clumsyness) my piano study is going at a snails pace. So of course, technology to the rescue.
 
 Jerry Seinfeld described how he would force himself to do something every day. In his case, work on his comedy. He would put an X on each day in his calendar when he worked. He would then psych himself up to never break the string of X’s, and the longer the string was, the more it hurt to break it. Sounded like a fine idea to me.
 

@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 519
 ---
 
-![NewImage](https://i0.wp.com/salas.com/wp-content/uploads/2011/07/98d63-newimage.png?resize=584%2C390&ssl=1)
+![NewImage](/static/images/wp/2011/07/98d63-newimage.png)
 
 [Very cool photographs:](http://www.mymodernmet.com/profiles/blogs/before-and-after-shots-of-jogg)
 

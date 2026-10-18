@@ -16,4 +16,4 @@ I have to admit that when I walk around town I am constantly noticing the width 
 
 Anyway, here is what I have so far. How do you like it?
 
-![Streetscene](https://i0.wp.com/salas.com/wp-content/uploads/2011/12/d349a-streetscene.png?resize=480%2C600&ssl=1)
+![Streetscene](/static/images/wp/2011/12/d349a-streetscene.png)

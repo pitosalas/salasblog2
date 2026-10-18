@@ -14,7 +14,7 @@ Well, it’s been about 5 years with the same (lovely) BlogBridge application ic
 
 In case you forgot (or never knew),here’s what the BlogBridge app icon looks like today:
 
-![Blogbridge](https://i0.wp.com/salas.com/wp-content/uploads/2012/02/13d01-blogbridge.gif?resize=128%2C128&ssl=1)
+![Blogbridge](/static/images/wp/2012/02/13d01-blogbridge.gif)
 
 I guess, nice, but boring, yes?
 

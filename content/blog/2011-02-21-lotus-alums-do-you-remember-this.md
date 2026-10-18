@@ -9,4 +9,4 @@ type: wp
 wordpress_id: 594
 ---
 
-![Visonary](https://i0.wp.com/salas.com/wp-content/uploads/2011/02/45492-visonary.jpg?resize=298%2C236&ssl=1)
+![Visonary](/static/images/wp/2011/02/45492-visonary.jpg)

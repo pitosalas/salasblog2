@@ -17,7 +17,7 @@ So here’s an idea that (literally) came to me in a dream. I don’t remember t
 
 What if there was an organization (itself a non-profit) that automated this and did this for me. In other words, I would fill out a form describing the kind of work I wanted to support:
 
-![Screen shot 2011 03 11 at 11 05 21 AM](https://i0.wp.com/salas.com/wp-content/uploads/2011/03/33084-screen-shot-2011-03-11-at-110521-am.png?resize=462%2C278&ssl=1)
+![Screen shot 2011 03 11 at 11 05 21 AM](/static/images/wp/2011/03/33084-screen-shot-2011-03-11-at-110521-am.png)
 
 With that information I sent in a check for say $1,000.00. They would **immediately apportion** that check according to my specification and make one or more donations on my behalf. If I wanted to do this say annually, they would could manage that as well.
 

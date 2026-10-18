@@ -13,7 +13,7 @@ wordpress_id: 483
 
 Can you compose crappy music? I had a field day today ‘designing’ a bit of music for my “Game Of Life” Android game. In the old old days, when computers for the first time allowed you to choose a font for your text. we all became bad amateur typographers and book designers. Do you remember the “ransom note” font in the original Macintosh (yeah, that was 1984?) It looked like this:
 
-![Ransom note](https://i0.wp.com/salas.com/wp-content/uploads/2011/10/123ba-ransom-note.jpg?resize=477%2C144&ssl=1)
+![Ransom note](/static/images/wp/2011/10/123ba-ransom-note.jpg)
 
 We loved it and everyone played with it. And there were lots of other ugly fonts but how did we love them.
 

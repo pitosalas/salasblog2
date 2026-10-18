@@ -9,7 +9,7 @@ type: wp
 wordpress_id: 226
 ---
 
-![](https://i0.wp.com/salas.com/wp-content/uploads/2013/03/692dd-wizard-of-ozbehindthecurtain.jpg?w=584&ssl=1)
+![](/static/images/wp/2013/03/692dd-wizard-of-ozbehindthecurtain.jpg)
 
 I’ve used the now-famous internetty car service Über a couple of times. The prices for the two rides I took were about 20-25% more expensive than taxis. Which made me **wonder about how the prices are set** for Über rides. Are they set in Silicon Valley by some all-knowing **limousine wizard?** Does it allow for competition, that is, can an enterprising Über-enabled driver choose to offer a lower price?
 

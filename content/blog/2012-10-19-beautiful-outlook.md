@@ -12,7 +12,7 @@ wordpress_id: 288
 
 I don’t know why this **has not gotten more press. **You should take a look at Microsoft’s new Gmail killer, [outlook.com](http://www.outlook.com). It’s a totally web based email client, like Gmail, but the user experience is **miles and miles better** than Gmail.
 
-![Screen Shot 2012 10 16 at 10 31 48 PM](https://i0.wp.com/salas.com/wp-content/uploads/2012/10/dc112-screen20shot202012-10-1620at2010-31-4820pm.png?resize=400%2C240&ssl=1)
+![Screen Shot 2012 10 16 at 10 31 48 PM](/static/images/wp/2012/10/dc112-screen20shot202012-10-1620at2010-31-4820pm.png)
 
 Now I am a **huge Gmail user,** and generally I get along really well with it. It has years of my emails and I have fully mastered its tricks and hacks. It **works**, it’s reliable and it’s free.
 

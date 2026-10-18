@@ -11,7 +11,7 @@ wordpress_id: 529
 
 This [site looks really good](http://www.billguard.com/), but I am not signing up yet.
 
-![Screen shot 2011 07 17 at 9 58 01 AM](https://i0.wp.com/salas.com/wp-content/uploads/2011/07/fb22c-screen-shot-2011-07-17-at-95801-am.png?resize=230%2C170&ssl=1)
+![Screen shot 2011 07 17 at 9 58 01 AM](/static/images/wp/2011/07/fb22c-screen-shot-2011-07-17-at-95801-am.png)
 
 I am famously promiscuous signing up with new services just so I can ‘know what’s going on’, but when the first thing I have to do is to give this site my account and password for a credit card that I use, I stop and take a breath.
 
