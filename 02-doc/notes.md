@@ -42,3 +42,61 @@ the production volume were both lost at the same time, there'd be
 nothing to recover raindrops from. Considered an acceptable,
 much-lower-probability risk than the routine "forgot to back it up"
 case GitHub sync guards against for blog posts/pages.
+
+## How curated tags interact with other tags
+
+The single source is the **Curated Tags** list in `02-doc/tag-hints.md`.
+
+* Each line is a usage count, a primary tag, and optional aliases in
+  parentheses: `79       robotics (robot, ros, ros2, lidar, ...)`.
+* As of 2026-10-18 there are 80 primaries and 271 aliases.
+
+Three rules apply at different levels of strictness, **on purpose**.
+
+### 1. Hand-entered tags: free-form
+
+* The post editor's picklist suggests curated tags plus the
+  most-used tags (`output/top-tags.json`).
+* Any tag can be typed. It is saved exactly as entered, never blocked or
+  rewritten.
+
+### 2. Display: every tag is equal
+
+* Every tag on a post gets a badge and a `/tags/<slug>/` page, curated or
+  not (`SiteGenerator.generate_tag_pages`).
+* Raindrop tags come from Raindrop.io and are displayed the same way.
+* The only exception is numeric WordPress-import leftovers (`1221`). They
+  are hidden in templates and left out of the top-tags list.
+
+### 3. Automated tagging: curated-only and additive
+
+This covers F46 tag cleanup (`tag_cleanup.py`) and F50's WordPress import
+(`wp_taxonomy.py`).
+
+* They add only curated tags, with an alias resolved to its primary
+  (`robots` → `robotics`).
+* They **never remove** a tag already on a post. The one exception is
+  numeric junk.
+* A wanted tag outside the list is held back. Once it recurs on **4 or
+  more** posts (`MIN_RECURRENCE_FOR_PROPOSED_TAG`), it is appended to the
+  curated list and usable from then on.
+* `apply_tag_proposal` refuses a post with CR line endings rather than
+  flatten it (I04).
+
+### The one strict tool: normalization (TF46.13)
+
+* `scripts/normalize_tag_aliases.py` rewrites an alias to its primary
+  (`pivot-table` → `lotus`), and drops any tag that is neither a primary nor
+  an alias.
+* It runs only by hand and has never been run for real.
+* Its 2026-10-18 dry run would change one post and drop no tags.
+
+### Consequences
+
+* **Hand-picked tags win.** They are stored and displayed as typed.
+* **The curated list steers automation** and feeds editor suggestions.
+* Aliases matter only to the automated tagging and to normalization.
+* **Aliases are not merged for display.** A hand-typed alias like `improv`
+  gets its own `/tags/improv/` page, separate from `/tags/lotus/`. Folding
+  aliases into their primary would mean running normalization, or a small
+  feature that resolves aliases in the editor or in tag-page generation.
