@@ -1,10 +1,10 @@
 # F52 — Remove XML-RPC / MarsEdit Support
 **Priority**: Medium
 **Date Created:** 2026-10-18
-**Done:** no
+**Done:** yes
 **Tasks File Created:** yes
-**Tests Written:** no
-**Test Passing:** no
+**Tests Written:** yes
+**Test Passing:** yes
 **Description**: Remove the XML-RPC Blogger/MetaWeblog API.
 
 It existed only so MarsEdit could post to the blog. **The user no longer

@@ -78,7 +78,7 @@ are kept.
 
 ## TF52.6 — Deploy and verify
 
-**Status**: not done
+**Status**: done
 
 **Description**:
 
@@ -88,3 +88,16 @@ are kept.
 4. Create, edit and delete a throwaway post through the web editor.
 
 **Test**: manual. Record the curl status codes.
+
+**Result (2026-10-18)**: deployed `7aec0a74`. On `https://salas.com`:
+
+* `POST /xmlrpc` returns 405.
+* `GET /rsd.xml` returns 404.
+* `/`, `/blog/` and `/admin` return 200.
+* `/admin/new-post` returns 302 to login, as expected without a session.
+* The home page has no `EditURI` link.
+
+The throwaway-post round trip through the web editor was **not run**. It
+needs the admin password, and the session couldn't read it. Editor
+create, edit and delete are covered by `tests/test_post_editor.py` (692
+passed, 9 skipped).
