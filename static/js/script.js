@@ -24,8 +24,7 @@ function performSearch(query) {
     const queryLower = query.toLowerCase();
     return searchData.filter(item => {
         return item.title.toLowerCase().includes(queryLower) ||
-               item.content.toLowerCase().includes(queryLower) ||
-               item.type.toLowerCase().includes(queryLower);
+               item.content.toLowerCase().includes(queryLower);
     }).slice(0, 10); // Limit to 10 results
 }
 

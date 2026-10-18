@@ -20,3 +20,24 @@
 **Status**: not done
 
 **Description**: Add tests in `tests/test_search.py` covering: search index contains entries for all content types, all required fields present (`title`, `url`, `type`, `excerpt`, `content`), raindrop entries have non-empty content, blog post content is not cut short.
+
+## TF33.4 — Stop matching search queries against content type
+**Status**: done
+
+**Description**: TF33.0 swapped `item.category` for `item.type` in
+`performSearch()`, so every query was also matched against the content
+type. Short or common queries then returned whole content types unrelated
+to the query:
+
+* "blog" or "log" returned every `blog`-type post.
+* "page" returned the pages.
+* "drop" or "op" returned every raindrop.
+* "wp" returned the 2,801 WordPress-imported posts, which carry
+  `type: wp`.
+
+Search now matches only title and content (2026-10-18).
+
+**Test**: `tests/test_search_js.py` runs the real `static/js/script.js`
+under Node with a stubbed `document`, and checks that a type-only query
+finds nothing while title and content matches still work. It is skipped
+when `node` isn't installed.
