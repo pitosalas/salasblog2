@@ -161,6 +161,17 @@ Old posts linked to each other with Movable Type, WordPress, Squarespace and Rad
 * The tag-promotion threshold is now **4+ posts** (TF46.14) for both F46
   and F50.
 
+**F51 — Retire Post Categories**: done 2026-10-18 (`03-features/done/F51-*`).
+
+* The Category field is gone from the editor, the server, `overview.html`
+  and the unused `search.js`.
+* `bg strip-categories` removed the `category:` line from all 2,815
+  production posts and pages.
+* Tags now carry what categories used to.
+
+**Post editor**: the title field now has its own full-width row (chore,
+2026-10-18).
+
 **F47 — Console Theme Visual Refresh**: done, `03-features/done/F47-console-theme-refresh.md` / `04-tasks/done/TF47-*.md` (20 tasks, all done). Replaced Bootstrap with a monospace "Console" theme (hairline rules, one amber accent, light/dark toggle persisted via `localStorage`) — design source was two screenshots the user provided directly, not the external `des-hand` handoff folder. Started scoped to the 9 public-facing templates only; mid-feature the user expanded scope to the 4 standalone admin/editor pages (`admin_login.html`, `post_editor.html`, `admin.html`, `stats_page.html`) as well, which had no design reference and were restyled by inference. CSS split into small single-concern files (`static/css/theme.css`, `header.css`, `layout.css`, `entries.css`, `post-detail.css`, plus one per template as needed) rather than one stylesheet, per the user's modular-files preference. `admin.html`'s extensive inline JS and its Bootstrap-class-named HTML-string generation were left untouched (no test coverage on that file's rendered output to safely refactor against); a CSS shim in `admin.css` redefines those class names against the Console tokens instead. Also deleted confirmed-dead templates found while scoping: `admin_new.html` and the three unused `templates/includes/*` partials. Built on `feature/site-redesign`, merged back into `main` and pushed (2026-09-11) after a full visual QA pass and the test suite going green (613 passed, 11 skipped).
 
 **F35 — Fix admin sync button after GIT_TOKEN rotation**: the immediate symptom is fixed — the production `GIT_TOKEN` secret was found to be genuinely invalid (not just stale-in-container as originally hypothesized), the user rotated it via `fly secrets set`, and `sync_to_github()` is now confirmed working end-to-end. The actual code fix this feature describes (reconstruct the git remote URL from the env var at sync time, so a *future* rotation doesn't require a restart) is still not implemented — feature stays open.
@@ -180,7 +191,7 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 
 **Ruff debt (open chore)**: after this session's safe auto-fixes, the repo still has ruff violations that need hand fixes (e.g. `subprocess.run` without `check`, implicit `Optional`, blocking calls in async routes). Tracked in `04-tasks/chores.md`.
 
-**Open issues** (`05-issues/open/`, found during literate-doc regeneration, not yet fixed): I01 (incremental regeneration drops content types from search/home), I02 (VisitCounter read/write race, no cross-process lock), I03 (scheduler.py's dead startup-job code).
+**Open issues** (`05-issues/open/`, found during literate-doc regeneration, not yet fixed): I01 (incremental regeneration drops content types from search/home), I02 (VisitCounter read/write race, no cross-process lock), I03 (scheduler.py's dead startup-job code), I04 (F46's `apply_tag_proposal` flattens CRLF posts to LF).
 
 **Deferred**: F43 (token-authenticated REST API for posting from a phone, `03-features/deferred/`) — parked, not abandoned, independent of everything else.
 
@@ -189,7 +200,7 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 ## Test status
 
 ```
-711 passed, 11 skipped, 3 warnings
+723 passed, 11 skipped, 1 warning
 ```
 
 No failures as of 2026-10-18 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
@@ -220,5 +231,6 @@ Deployed app: https://salasblog2.fly.dev
 - `mount_static_files()` is defined but intentionally disabled at startup (replaced by custom endpoints) — dead code. F41 TF41.12 candidate.
 - `_check_single_instance()` depends on the `fly` CLI being present in the container — fragile.
 - `raindrop_post.html` has no admin edit flow (raindrops are Raindrop.io-synced, not manually authored) — only delete was added in F42; this is intentional, not a gap, but worth knowing if someone expects an edit button there.
+- `content/pages/` holds two identical pages that differ only in case, `Recommendations.md` and `recommendations.md`. On a case-insensitive Mac checkout they collide.
 - `templates/overview.html` is orphaned — rendered to a real file (`output/overview.html`) but not linked from the site's nav, and `generate_overview_as_home()` (the function that would make it the homepage) is never called. Found while scoping F47; not touched.
 - `templates/macros.html`'s four macros (`render_navigation`, `render_pagination`, `render_post_navigation`, `render_status_message`, `admin_controls`) are all dead code — none is actually invoked by any template (`blog_post.html` even imports `admin_controls` and never calls it). Found while restyling `blog_post.html` for F47; not touched. Deletion candidate for a future chore.
