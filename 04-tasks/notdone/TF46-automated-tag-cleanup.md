@@ -423,3 +423,20 @@ stripped, stops at next heading, file-loading wrapper) and
 `TestNormalizePostTags` (6 cases: keep/rewrite/drop, dedup when both
 primary and secondary present on one post, mixed keep+rewrite+drop, empty
 input).
+
+## TF46.14 — Raise the promotion threshold from 3+ to 4+ posts
+
+**Status**: done
+
+**Description**: At the user's request (2026-10-18), a non-curated tag is now
+promoted into the Curated Tags list only once it recurs on **4 or more**
+posts.
+
+This brings F46 in line with F50, which uses the same threshold for
+WordPress terms.
+
+* `MIN_RECURRENCE_FOR_PROPOSED_TAG` in `tag_cleanup.py` changes from 3 to 4.
+* The JUDGEMENT rule in `02-doc/tag-hints.md` now says 4 or more.
+
+**Test**: `TestPromoteRecurringCandidates` now checks the boundary: 3 posts
+aren't promoted and 4 are.

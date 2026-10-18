@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_tag_cleanup.py — Tests for the automated tag-cleanup pipeline (F46)
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-18
 # Open Source Under MIT license
 
 import json
@@ -240,21 +240,21 @@ class TestPromoteRecurringCandidates:
     def test_ignores_candidates_below_threshold(self, tmp_path):
         path = self.make_hints(tmp_path)
         proposals = self.make_proposals(
-            ["a.md", "b.md"]
-        )  # 2 < MIN_RECURRENCE_FOR_PROPOSED_TAG
+            ["a.md", "b.md", "c.md"]
+        )  # 3 < MIN_RECURRENCE_FOR_PROPOSED_TAG
         assert promote_recurring_candidates(proposals, path) == []
         assert "mars" not in path.read_text(encoding="utf-8")
 
     def test_appends_candidates_meeting_threshold_to_curated_list(self, tmp_path):
         path = self.make_hints(tmp_path)
-        proposals = self.make_proposals(["a.md", "b.md", "c.md"])
+        proposals = self.make_proposals(["a.md", "b.md", "c.md", "d.md"])
         added = promote_recurring_candidates(proposals, path)
         assert added == ["mars"]
         assert load_curated_tags(path) == ["robotics", "mars"]
 
     def test_does_not_duplicate_already_listed_tag(self, tmp_path):
         path = self.make_hints(tmp_path, extra="mars\n")
-        proposals = self.make_proposals(["a.md", "b.md", "c.md"])
+        proposals = self.make_proposals(["a.md", "b.md", "c.md", "d.md"])
         assert promote_recurring_candidates(proposals, path) == []
 
 

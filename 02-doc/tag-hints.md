@@ -2,7 +2,7 @@
 
 * GOAL: The ending state is that all tags are taken from the Curated Tags List
 * MANDATORY: During the cleanup process no tag is ever removed from an item
-* JUDGEMENT: If a tag appears in the data 3 or more times and it is not on this list, it is added to the Curated Tags list directly
+* JUDGEMENT: If a tag appears in the data 4 or more times and it is not on this list, it is added to the Curated Tags list directly
 
 # Curated Tags
 

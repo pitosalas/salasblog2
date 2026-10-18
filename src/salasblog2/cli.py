@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 """
 Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
@@ -28,6 +28,7 @@ from salasblog2.legacy_commands import (
 )
 from salasblog2.link_check import find_dead_self_links
 from salasblog2.raindrop import RaindropDownloader
+from salasblog2.wp_media import extract_media, rewrite_media_content, url_status
 
 load_dotenv()
 
@@ -81,6 +82,21 @@ def cmd_check_links(args):
     print(f"{len(dead)} dead self-links")
 
 
+def cmd_wp_media(args):
+    """Self-host WordPress-era images and repair the post links to them"""
+    media_dir = Path(args.media_dir)
+    if args.extract:
+        count = extract_media(Path(args.extract), media_dir)
+        print(f"extracted {count} files into {media_dir}")
+        return
+    unmatched = rewrite_media_content(
+        content_dirs(Path(args.content)), media_dir, is_dry_run=not args.apply
+    )
+    if args.report:
+        for url in sorted(set(unmatched)):
+            print(f"{url_status(url)}  {url}")
+
+
 def cmd_server(args):
     """Start the FastAPI server"""
     import uvicorn
@@ -113,6 +129,7 @@ def cmd_help(args):
     print("  legacy-map         - Build 02-doc/legacy-url-map.json from legacy links")
     print("  legacy-rewrite     - Rewrite mapped legacy links (dry run unless --apply)")
     print("  check-links        - Report self-links that resolve to nothing")
+    print("  wp-media           - Self-host WordPress images, repair links (--apply)")
     print("  help               - Show this help message")
     print()
     print("Options:")
@@ -206,6 +223,24 @@ def main():
     check_parser.add_argument("--content", default="content", help="Content root")
     check_parser.add_argument("--output", default="output", help="Generated site dir")
     check_parser.set_defaults(func=cmd_check_links)
+
+    wp_media_parser = subparsers.add_parser(
+        "wp-media", help="Self-host WordPress images and repair post links"
+    )
+    wp_media_parser.add_argument("--content", default="content", help="Content root")
+    wp_media_parser.add_argument(
+        "--media-dir", default="static/images/wp", help="Local media directory"
+    )
+    wp_media_parser.add_argument(
+        "--extract", metavar="TAR", help="Copy the media tar into --media-dir"
+    )
+    wp_media_parser.add_argument(
+        "--apply", action="store_true", help="Write changes (default: dry run)"
+    )
+    wp_media_parser.add_argument(
+        "--report", action="store_true", help="HEAD-check unmatched URLs"
+    )
+    wp_media_parser.set_defaults(func=cmd_wp_media)
 
     # Help command
     help_parser = subparsers.add_parser("help", help="Show help message")

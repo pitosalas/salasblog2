@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # tag_cleanup — Selection and Claude-based tag proposals for the tag-cleanup pipeline
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-18
 # Open Source Under MIT license
 """
 Pure logic for the automated tag-cleanup pipeline (F46): selecting posts that
@@ -199,7 +199,7 @@ def build_proposal(
     )
 
 
-MIN_RECURRENCE_FOR_PROPOSED_TAG = 3
+MIN_RECURRENCE_FOR_PROPOSED_TAG = 4
 
 
 def promote_recurring_candidates(
