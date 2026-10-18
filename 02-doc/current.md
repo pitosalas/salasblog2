@@ -191,7 +191,7 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 
 **Ruff debt (open chore)**: after this session's safe auto-fixes, the repo still has ruff violations that need hand fixes (e.g. `subprocess.run` without `check`, implicit `Optional`, blocking calls in async routes). Tracked in `04-tasks/chores.md`.
 
-**Open issues** (`05-issues/open/`, found during literate-doc regeneration, not yet fixed): I01 (incremental regeneration drops content types from search/home), I02 (VisitCounter read/write race, no cross-process lock), I03 (scheduler.py's dead startup-job code), I04 (F46's `apply_tag_proposal` flattens CRLF posts to LF).
+**Open issues**: none. I01-I04 were resolved 2026-10-18 and are in `05-issues/closed/`.
 
 **Deferred**: F43 (token-authenticated REST API for posting from a phone, `03-features/deferred/`) — parked, not abandoned, independent of everything else.
 
@@ -200,7 +200,7 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 ## Test status
 
 ```
-723 passed, 11 skipped, 1 warning
+725 passed, 11 skipped, 2 warnings
 ```
 
 No failures as of 2026-10-18 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
