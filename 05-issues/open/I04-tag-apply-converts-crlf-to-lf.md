@@ -28,3 +28,15 @@
   the broken "only tags change" guarantee.
 * A fix would write tags with a line-level edit that preserves endings,
   instead of re-serializing the frontmatter.
+
+## Resolution (2026-10-18)
+
+* `apply_tag_proposal` now refuses a post containing `\r` and raises
+  `ValueError` without writing.
+  Re-serializing can't preserve CRLF or mixed endings, and the
+  parsed-body check can't detect the conversion.
+* No blog post has CR endings today. The only CRLF content files are the
+  two `pages/Recommendations.md` copies, which tag cleanup doesn't touch.
+  So no current batch is affected.
+* Regression test:
+  `TestApplyTagProposal::test_refuses_crlf_post_and_leaves_it_untouched`.

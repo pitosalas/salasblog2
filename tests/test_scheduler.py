@@ -440,10 +440,10 @@ class TestScheduler:
             patch.object(scheduler, "_handle_sync_result") as mock_handle,
             patch.object(scheduler, "sync_to_github"),
         ):
-            scheduler._sync_wrapper("git", is_startup=False)
+            scheduler._sync_wrapper("git")
 
             mock_run.assert_called_once()
-            mock_handle.assert_called_once_with(True, "Git", False)
+            mock_handle.assert_called_once_with(True, "Git")
 
     def test_sync_wrapper_raindrop_success(self, scheduler):
         """Test sync wrapper for raindrop sync"""
@@ -454,21 +454,10 @@ class TestScheduler:
             patch.object(scheduler, "_handle_sync_result") as mock_handle,
             patch.object(scheduler, "sync_raindrops"),
         ):
-            scheduler._sync_wrapper("raindrop", is_startup=False)
+            scheduler._sync_wrapper("raindrop")
 
             mock_run.assert_called_once()
-            mock_handle.assert_called_once_with(True, "Raindrop", False)
-
-    def test_sync_wrapper_startup_cancellation(self, scheduler):
-        """Test that startup sync jobs are cancelled after running"""
-        with (
-            patch.object(scheduler, "_run_async_in_thread", return_value=True),
-            patch.object(scheduler, "_handle_sync_result"),
-            patch.object(scheduler, "_cleanup_startup_job") as mock_cleanup,
-        ):
-            scheduler._sync_wrapper("git", is_startup=True)
-
-            mock_cleanup.assert_called_once_with("git", "Git")
+            mock_handle.assert_called_once_with(True, "Raindrop")
 
     def test_get_sync_method_git(self, scheduler):
         """Test _get_sync_method for git sync"""
@@ -485,28 +474,17 @@ class TestScheduler:
     def test_handle_sync_result_success_scheduled(self, scheduler):
         """Test _handle_sync_result for successful scheduled sync"""
         with patch("salasblog2.scheduler.logger") as mock_logger:
-            scheduler._handle_sync_result(True, "Git", False)
+            scheduler._handle_sync_result(True, "Git")
             mock_logger.info.assert_called_once_with(
                 "Scheduled Git sync completed successfully"
             )
 
-    def test_handle_sync_result_failure_startup(self, scheduler):
-        """Test _handle_sync_result for failed startup sync"""
+    def test_handle_sync_result_failure(self, scheduler):
+        """Test _handle_sync_result for a failed sync"""
         with patch("salasblog2.scheduler.logger") as mock_logger:
-            scheduler._handle_sync_result(False, "Raindrop", True)
-            mock_logger.warning.assert_called_once_with("Startup Raindrop sync failed")
-
-    def test_cleanup_startup_job(self, scheduler):
-        """Test _cleanup_startup_job"""
-        with (
-            patch("schedule.clear") as mock_clear,
-            patch("salasblog2.scheduler.logger") as mock_logger,
-        ):
-            scheduler._cleanup_startup_job("git", "Git")
-
-            mock_clear.assert_called_once_with("git_startup")
-            mock_logger.info.assert_called_once_with(
-                "Startup Git sync job cancelled (one-time only)"
+            scheduler._handle_sync_result(False, "Raindrop")
+            mock_logger.warning.assert_called_once_with(
+                "Scheduled Raindrop sync failed"
             )
 
     def test_start_scheduler_already_running(self, scheduler):

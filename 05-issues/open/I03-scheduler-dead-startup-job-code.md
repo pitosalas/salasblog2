@@ -54,3 +54,14 @@
   touching it, since removing it is a bigger call than it looks — it's the
   only piece of the sync path that runs any job immediately rather than
   waiting for the first scheduled interval.
+
+## Resolution (2026-10-18)
+
+* Deleted the dead code:
+  * `_cleanup_startup_job()`
+  * the `is_startup` parameter on `_sync_wrapper()` and
+    `_handle_sync_result()`
+  * the "Startup" log label
+* No startup sync run was added, because nobody asked for one.
+* The tests that only exercised the dead path were removed. The rest were
+  updated to the new signatures.

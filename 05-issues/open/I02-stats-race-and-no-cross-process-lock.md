@@ -65,3 +65,17 @@
   or multi-machine deployment, since each process holds its own independent
   in-memory `self._counts` and the last one to flush simply clobbers the
   file.
+
+## Resolution (2026-10-18)
+
+* **The race is fixed.**
+  * `get()` reads under `self._lock`.
+  * `get_all()` copies the counts under the lock, then does the slow
+    period counting outside it, so visits aren't blocked.
+* Regression test: `TestVisitCounterConcurrentRead` in
+  `tests/test_stats.py` records a new path during `get_all`. It fails
+  without the fix.
+* **The cross-process overwrite is closed as not applicable.**
+  Production runs one machine with one process.
+  If that ever changes, `stats.json` needs a file lock or a
+  read-merge-write, and this issue should be reopened.

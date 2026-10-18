@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 # test_stats.py — Tests for F25/F26/F32 visit statistics
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 
 import json
 from datetime import UTC, datetime, timedelta
+from unittest.mock import patch
 
+from salasblog2 import stats
 from salasblog2.stats import VisitCounter
 
 
@@ -206,3 +208,21 @@ class TestVisitCounterPeriodFiltering:
         # Migrated entries have no real timestamp — should not appear in today's filter
         result = counter.get_all(period="today")
         assert result == []
+
+
+class TestVisitCounterConcurrentRead:
+    def test_get_all_survives_new_path_recorded_mid_read(self, tmp_path):
+        """Regression (I02): a first visit to a new path while the stats page
+        was being built raised 'dictionary changed size during iteration'."""
+        counter = _make_counter(tmp_path)
+        now = datetime.now(UTC).isoformat()
+        counter._counts = {"/a": {"human": [now]}, "/b": {"human": [now]}}
+        real_parse = stats._parse_ts
+
+        def parse_and_visit(ts):
+            counter.increment(f"/new-{len(counter._counts)}", "human")
+            return real_parse(ts)
+
+        with patch("salasblog2.stats._parse_ts", side_effect=parse_and_visit):
+            result = counter.get_all(period="today")
+        assert sorted(path for path, _ in result) == ["/a", "/b"]

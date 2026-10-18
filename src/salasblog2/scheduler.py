@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # scheduler — Background thread scheduling periodic GitHub and Raindrop.io sync
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 """
 Scheduled tasks for automatic Git synchronization and Raindrop sync
@@ -301,32 +301,23 @@ class Scheduler:
         finally:
             loop.close()
 
-    def _handle_sync_result(self, success: bool, operation: str, is_startup: bool):
+    def _handle_sync_result(self, success: bool, operation: str):
         """Handle the result of a sync operation"""
-        status = "Startup" if is_startup else "Scheduled"
         if success:
-            logger.info(f"{status} {operation} sync completed successfully")
+            logger.info(f"Scheduled {operation} sync completed successfully")
         else:
-            logger.warning(f"{status} {operation} sync failed")
+            logger.warning(f"Scheduled {operation} sync failed")
 
-    def _cleanup_startup_job(self, sync_type: str, operation: str):
-        """Clean up startup job after completion"""
-        schedule.clear(f"{sync_type}_startup")
-        logger.info(f"Startup {operation} sync job cancelled (one-time only)")
-
-    def _sync_wrapper(self, sync_type: str, is_startup: bool = False):
+    def _sync_wrapper(self, sync_type: str):
         """Generic wrapper for sync operations"""
         sync_method, operation = self._get_sync_method(sync_type)
 
         try:
             success = self._run_async_in_thread(sync_method())
-            self._handle_sync_result(success, operation, is_startup)
+            self._handle_sync_result(success, operation)
 
         except Exception as e:
             logger.error(f"Error in {sync_type} sync: {e}")
-        finally:
-            if is_startup:
-                self._cleanup_startup_job(sync_type, operation)
 
     def start_scheduler(
         self, git_interval_hours: float = None, raindrop_interval_hours: float = None
@@ -351,12 +342,12 @@ class Scheduler:
         # Schedule the sync jobs
         if git_minutes > 0:
             schedule.every(git_minutes).minutes.do(
-                lambda: self._sync_wrapper("git", False)
+                lambda: self._sync_wrapper("git")
             ).tag("git_sync")
 
         if raindrop_minutes > 0:
             schedule.every(raindrop_minutes).minutes.do(
-                lambda: self._sync_wrapper("raindrop", False)
+                lambda: self._sync_wrapper("raindrop")
             ).tag("raindrop_sync")
 
         self.is_running = True

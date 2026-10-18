@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_generator.py — Tests for SiteGenerator
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-18
 # Open Source Under MIT license
 
 import json
@@ -495,6 +495,38 @@ class TestIncrementalRegenerate:
         make_blog_post(blog_dir, "2025-03-01-hello.md", "Hello Post", "2025-03-01")
         g.incremental_regenerate_post("2025-03-01-hello.md", "blog")
         assert (g.output_dir / "index.html").exists()
+
+
+class TestIncrementalKeepsOtherContentTypes:
+    """Regression (I01): an incremental regen dropped the content types that
+    hadn't changed from search.json and the home page."""
+
+    def make_site(self, g, tmp_path):
+        for name in ("blog", "raindrops", "pages"):
+            (tmp_path / name).mkdir()
+        g.blog_dir = tmp_path / "blog"
+        g.raindrops_dir = tmp_path / "raindrops"
+        g.pages_dir = tmp_path / "pages"
+        make_blog_post(g.blog_dir, "2025-03-01-hello.md", "Hello Post", "2025-03-01")
+        make_raindrop(g.raindrops_dir, "2025-03-02-link.md", "A Link", "2025-03-02")
+        make_page(g.pages_dir, "about.md", "About Page", "2025-01-01")
+
+    def search_titles(self, g):
+        data = json.loads((g.output_dir / "search.json").read_text())
+        return {item["title"] for item in data}
+
+    def test_blog_edit_keeps_pages_in_search(self, generator, tmp_path):
+        g = generator
+        self.make_site(g, tmp_path)
+        g.incremental_regenerate_post("2025-03-01-hello.md", "blog")
+        assert self.search_titles(g) == {"Hello Post", "A Link", "About Page"}
+
+    def test_page_edit_keeps_raindrops_in_search_and_home(self, generator, tmp_path):
+        g = generator
+        self.make_site(g, tmp_path)
+        g.incremental_regenerate_post("about.md", "pages")
+        assert self.search_titles(g) == {"Hello Post", "A Link", "About Page"}
+        assert "A Link" in (g.output_dir / "index.html").read_text()
 
 
 # ---------------------------------------------------------------------------

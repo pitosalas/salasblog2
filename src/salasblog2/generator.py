@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # generator — Static site generator: renders markdown+frontmatter content into HTML
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 """
 Static site generator for Salas Blog.
@@ -763,10 +763,9 @@ class SiteGenerator:
     ):
         """Incrementally regenerate site after a single post change.
 
-        Only loads content types that are actually needed:
-        - The changed type is always loaded (individual post + listing).
-        - Other types are loaded only if required for home page / search index,
-          and only the changed type is ever read in full from disk.
+        Only the changed post's page and its listing page are rewritten, but
+        every content type is loaded, because the home page and the search
+        index cover all of them.
         """
         print(f"🔄 Incremental regeneration for {content_type}: {post_filename}")
 
@@ -775,20 +774,15 @@ class SiteGenerator:
         # Load only the changed content type from disk
         changed_posts = self.load_posts(content_type)
 
-        # For home page and search we need blog + raindrops, but avoid a full
-        # disk read for the type that didn't change.
-        if content_type == "blog":
-            blog_posts = changed_posts
-            raindrops = self.load_posts("raindrops")
-            pages = []
-        elif content_type == "raindrops":
-            blog_posts = self.load_posts("blog")
-            raindrops = changed_posts
-            pages = []
-        else:  # pages
-            blog_posts = self.load_posts("blog")
-            raindrops = []
-            pages = changed_posts
+        # Home page and search need every content type; reuse the changed
+        # one rather than reading it from disk twice.
+        loaded = {content_type: changed_posts}
+        for other_type in ("blog", "raindrops", "pages"):
+            if other_type not in loaded:
+                loaded[other_type] = self.load_posts(other_type)
+        blog_posts = loaded["blog"]
+        raindrops = loaded["raindrops"]
+        pages = loaded["pages"]
 
         # Find the specific post that changed
         changed_post = next(

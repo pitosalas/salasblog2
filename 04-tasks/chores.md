@@ -19,3 +19,8 @@
 - [x] Applied `ruff format` and ruff's safe auto-fixes (`ruff check --fix`) repo-wide, as a separate commit from any behaviour change. Reverted the edits ruff also made to the code excerpts in `01-literate/*.md`, which are illustrative, not runnable.
 - [ ] Fix the ~204 remaining ruff violations that need hand fixes (no safe auto-fix): e.g. `subprocess.run` without `check` (PLW1510), unused unpacked variables (RUF059), implicit `Optional` (RUF013), blocking subprocess/`open` calls in async routes (ASYNC221/ASYNC230), vanilla `raise Exception` (TRY002). Several of these touch error handling, so each needs a real look rather than a mechanical fix.
 - [x] Post editor: the title field gets its own full-width row, with Date and Image Size wrapping below it. The user asked for much more room for the title (2026-10-18).
+- [x] Resolved open issues I01-I04 (2026-10-18). Each one's resolution is recorded in its file in `05-issues/closed/`:
+  * I01: incremental regeneration now keeps every content type in search and on the home page.
+  * I02: fixed the VisitCounter read race. The multi-process half is not applicable.
+  * I03: deleted the dead startup-job scheduler code.
+  * I04: tag apply now refuses CRLF posts instead of flattening them.

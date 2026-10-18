@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # test_tag_cleanup.py — Tests for the automated tag-cleanup pipeline (F46)
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -287,6 +287,14 @@ class TestProposalsToJson:
 
 
 class TestApplyTagProposal:
+    def test_refuses_crlf_post_and_leaves_it_untouched(self, tmp_path):
+        """Regression (I04): re-serializing flattened CRLF posts to LF."""
+        original = b"---\r\ntitle: T\r\ntags: []\r\n---\r\nBody\r\n"
+        (tmp_path / "post.md").write_bytes(original)
+        with pytest.raises(ValueError, match="CR line endings"):
+            apply_tag_proposal(tmp_path, "post.md", ["ai"])
+        assert (tmp_path / "post.md").read_bytes() == original
+
     def test_writes_tags_and_preserves_body(self, tmp_path):
         write_post(tmp_path / "post.md", ["1234"], body="Original body text.")
         apply_tag_proposal(tmp_path, "post.md", ["ai", "programming"])

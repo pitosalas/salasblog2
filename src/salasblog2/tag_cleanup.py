@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # tag_cleanup — Selection and Claude-based tag proposals for the tag-cleanup pipeline
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -258,9 +258,13 @@ def apply_tag_proposal(blog_dir: Path, filename: str, tags: list[str]) -> None:
     if a later call gives the post real tags.
 
     Raises with context rather than silently skipping or coercing a post
-    whose body changed unexpectedly or whose tags didn't persist.
+    whose body changed unexpectedly or whose tags didn't persist. Also
+    refuses a post with CR line endings: re-serializing would rewrite every
+    line as LF, which the parsed-body check can't see.
     """
     path = blog_dir / filename
+    if b"\r" in path.read_bytes():
+        raise ValueError(f"{filename}: has CR line endings; tags not written")
     with open(path, "r", encoding="utf-8") as f:
         post = frontmatter.load(f)
     original_body = post.content

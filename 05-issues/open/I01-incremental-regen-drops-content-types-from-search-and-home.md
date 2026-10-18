@@ -48,3 +48,12 @@
   excluded from search or the home page — this looks like an oversight in
   which lists were considered "not needed" for the search/home step, not an
   intentional trade-off.
+
+## Resolution (2026-10-18)
+
+* Fixed. `incremental_regenerate_post` now loads all three content types,
+  reusing the changed one, so the home page and `search.json` always get
+  complete lists.
+* Trade-off: a page edit now also reads the ~1,500 raindrop files.
+* Regression tests: `TestIncrementalKeepsOtherContentTypes` in
+  `tests/test_generator.py`. Both fail without the fix.

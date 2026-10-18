@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # stats.py — Visit counter persisting per-path, per-visitor-type counts to JSON
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 
 import json
@@ -123,7 +123,8 @@ class VisitCounter:
 
     def get(self, path: str) -> int:
         """Return total visit count across all visitor types for path."""
-        return sum(len(v) for v in self._counts.get(path, {}).values())
+        with self._lock:
+            return sum(len(v) for v in self._counts.get(path, {}).values())
 
     def get_all(self, period: str | None = None) -> list[tuple[str, dict]]:
         """Return all paths with their type breakdown, sorted by total count descending.
@@ -134,9 +135,16 @@ class VisitCounter:
         Returns list of (path, {visitor_type: count}) tuples.
         """
         cutoff = _period_start(period)
+        # Snapshot under the lock so a concurrent increment() can't resize
+        # the dicts mid-iteration; the slow counting runs outside it.
+        with self._lock:
+            snapshot = {
+                path: {vtype: list(ts) for vtype, ts in types.items()}
+                for path, types in self._counts.items()
+            }
 
         result = []
-        for path, types in self._counts.items():
+        for path, types in snapshot.items():
             counts = {}
             for vtype, timestamps in types.items():
                 if cutoff is None:
