@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
 # Author: Pito Salas and Claude Code
-# Version: 4
+# Version: 5
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -29,6 +29,7 @@ from salasblog2.legacy_commands import (
 )
 from salasblog2.link_check import find_dead_self_links
 from salasblog2.raindrop import RaindropDownloader
+from salasblog2.utils import remove_frontmatter_key
 from salasblog2.tag_cleanup import proposals_to_json
 from salasblog2.wp_media import extract_media, rewrite_media_content, url_status
 from salasblog2.wp_taxonomy import (
@@ -131,6 +132,29 @@ def cmd_wp_tags(args):
         print(f"  {count:5} {tag}")
 
 
+def cmd_strip_categories(args):
+    """Remove the retired `category:` line from post and page frontmatter"""
+    changed = 0
+    for content_dir in content_dirs(Path(args.content)):
+        for md_file in sorted(content_dir.glob("*.md")):
+            text = md_file.read_text(encoding="utf-8")
+            new_text = remove_frontmatter_key(text, "category")
+            if new_text == text:
+                continue
+            removed = set(text.splitlines()) - set(new_text.splitlines())
+            if len(text.splitlines()) - len(new_text.splitlines()) != 1 or not all(
+                line.startswith("category:") for line in removed
+            ):
+                raise ValueError(
+                    f"{md_file}: strip changed more than its category line"
+                )
+            changed += 1
+            if args.apply:
+                md_file.write_text(new_text, encoding="utf-8")
+    action = "stripped" if args.apply else "would strip"
+    print(f"{action} category from {changed} files")
+
+
 def cmd_server(args):
     """Start the FastAPI server"""
     import uvicorn
@@ -165,6 +189,9 @@ def cmd_help(args):
     print("  check-links        - Report self-links that resolve to nothing")
     print("  wp-media           - Self-host WordPress images, repair links (--apply)")
     print("  wp-tags            - WordPress terms -> tag-hints.md or tag proposals")
+    print(
+        "  strip-categories   - Remove retired category lines (dry run unless --apply)"
+    )
     print("  help               - Show this help message")
     print()
     print("Options:")
@@ -292,6 +319,15 @@ def main():
         "--out", default="wp-tag-proposals.json", help="Proposals JSON to write"
     )
     wp_tags_parser.set_defaults(func=cmd_wp_tags)
+
+    strip_parser = subparsers.add_parser(
+        "strip-categories", help="Remove category lines from frontmatter"
+    )
+    strip_parser.add_argument("--content", default="content", help="Content root")
+    strip_parser.add_argument(
+        "--apply", action="store_true", help="Write changes (default: dry run)"
+    )
+    strip_parser.set_defaults(func=cmd_strip_categories)
 
     # Help command
     help_parser = subparsers.add_parser("help", help="Show help message")

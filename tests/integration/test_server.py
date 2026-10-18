@@ -69,7 +69,7 @@ class TestServerEndpoints:
         # Try common static file paths
         static_paths = [
             "/static/css/style.css",
-            "/static/js/search.js",
+            "/static/js/script.js",
             "/static/css/main.css",  # Alternative path
         ]
 

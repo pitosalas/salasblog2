@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # test_wp_media — Tests for self-hosting WordPress images and repairing post links
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-18
 # Updated: 2026-10-18
 
@@ -18,9 +18,9 @@ from salasblog2.wp_media import (
     media_key,
     rewrite_media_content,
     rewrite_wp_media,
-    split_frontmatter,
     url_status,
 )
+from salasblog2.utils import split_frontmatter
 
 KEYS = {"2014/08/img.jpg", "2011/03/screen shot.png"}
 

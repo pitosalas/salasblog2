@@ -18,9 +18,6 @@
                 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                 <div class="item-meta">
                     <time datetime="{{ post.date }}">{{ post.date | strftime('%b %d, %Y') }}</time>
-                    {% if post.category %}
-                    <span class="item-category">{{ post.category }}</span>
-                    {% endif %}
                 </div>
                 {% if post.excerpt %}
                 <p class="item-excerpt">{{ post.excerpt }}</p>

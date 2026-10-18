@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 5
+# Version: 6
 # Created: 2026-09-08
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 """
 FastAPI server for Salasblog2 - serves static files + API endpoints.
@@ -571,7 +571,6 @@ def load_content_item(filename: str, content_type: str):
                 "type", content_type.rstrip("s")
             ),  # 'blog' or 'page'
             "tags": item.metadata.get("tags", []),
-            "category": item.metadata.get("category", ""),
             "image_size": item.metadata.get("image_size", ""),
             "content": item.content,
             "loaded_mtime": content_file.stat().st_mtime,
@@ -625,7 +624,6 @@ class ContentFields:
     content: str
     tags: list
     image_size: str = ""
-    category: str = ""
 
 
 def save_content_item(filename: str, content_type: str, fields: ContentFields) -> float:
@@ -648,8 +646,6 @@ def save_content_item(filename: str, content_type: str, fields: ContentFields) -
         }
         if fields.image_size:
             item.metadata["image_size"] = fields.image_size
-        if fields.category:
-            item.metadata["category"] = fields.category.strip()
 
         with open(content_file, "w", encoding="utf-8") as f:
             f.write(frontmatter.dumps(item))
@@ -1436,7 +1432,6 @@ async def save_edited_post(
     content: str = Form(...),
     tags: list[str] = Form(default=[]),
     image_size: str = Form(default=""),
-    category: str = Form(default=""),
     loaded_mtime: str = Form(default=""),
 ):
     """Save edited post to file and regenerate site"""
@@ -1453,7 +1448,7 @@ async def save_edited_post(
     new_mtime = save_content_item(
         filename,
         "blog",
-        ContentFields(title, date, type, content, tags, image_size, category),
+        ContentFields(title, date, type, content, tags, image_size),
     )
     await render_post_page_now(filename, "blog")
     background_tasks.add_task(_regenerate_in_background, filename, "blog")
@@ -1496,7 +1491,6 @@ async def create_new_post(
     content: str = Form(...),
     tags: list[str] = Form(default=[]),
     image_size: str = Form(default=""),
-    category: str = Form(default=""),
 ):
     """Create a new blog post with generated filename"""
     if config["admin_password"] and not is_admin_authenticated(request):
@@ -1514,7 +1508,7 @@ async def create_new_post(
         save_content_item(
             filename,
             "blog",
-            ContentFields(title, date, type, content, tags, image_size, category),
+            ContentFields(title, date, type, content, tags, image_size),
         )
         await render_post_page_now(filename, "blog")
         background_tasks.add_task(_regenerate_in_background, filename, "blog")

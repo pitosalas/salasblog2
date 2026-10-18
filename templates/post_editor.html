@@ -39,11 +39,6 @@
                     <input type="date" id="date" name="date" class="field-input" required value="{{ date|default('') }}">
                 </div>
                 {% if content_type == 'blog' %}
-                <div class="field field-category">
-                    <label for="category" class="field-label">Category</label>
-                    <input type="text" id="category" name="category" class="field-input"
-                           value="{{ category|default('') }}" placeholder="e.g. General">
-                </div>
                 <div class="field field-image-size">
                     <label for="image_size" class="field-label">Image Size</label>
                     <select id="image_size" name="image_size" class="field-select">

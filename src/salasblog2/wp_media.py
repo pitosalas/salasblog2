@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # wp_media — self-host WordPress-era images and repair the post links to them
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-18
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -24,6 +24,8 @@ import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from salasblog2.utils import split_frontmatter
+
 MEDIA_URL_PREFIX = "/static/images/wp"
 MEDIA_KEY = re.compile(r"^\d{4}/\d{2}/[^/]+$")
 URL_CHARS = r"[^\s\"'()<>\[\]?#]"
@@ -31,7 +33,6 @@ WP_MEDIA_URL = re.compile(
     rf"https?://(?:i\d\.wp\.com/)?(?:www\.)?salas\.com/wp-content/uploads/"
     rf"(\d{{4}}/\d{{2}}/{URL_CHARS}+)(?:\?[^\s\"'()<>\[\]#]*)?"
 )
-FRONTMATTER_END = "\n---\n"
 
 
 @dataclass
@@ -50,17 +51,6 @@ def media_key(encoded_path: str) -> str:
     while "%" in key and urllib.parse.unquote(key) != key:
         key = urllib.parse.unquote(key)
     return key
-
-
-def split_frontmatter(text: str) -> tuple[str, str]:
-    """Split a post into (frontmatter block including its fences, body)."""
-    if not text.startswith("---\n"):
-        return "", text
-    end = text.find(FRONTMATTER_END, 4)
-    if end == -1:
-        raise ValueError("frontmatter opened with --- but never closed")
-    cut = end + len(FRONTMATTER_END)
-    return text[:cut], text[cut:]
 
 
 def rewrite_wp_media(text: str, available_keys: set[str]) -> MediaRewrite:

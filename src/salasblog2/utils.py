@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 8
+# Version: 9
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -140,6 +140,37 @@ def load_curated_tag_aliases(tag_hints_path: Path) -> dict[str, str]:
     """
     text = tag_hints_path.read_text(encoding="utf-8")
     return parse_curated_tag_aliases(text)
+
+
+FRONTMATTER_END = "\n---\n"
+
+
+def split_frontmatter(text: str) -> tuple[str, str]:
+    """Split a post into (frontmatter block including its fences, body)."""
+    if not text.startswith("---\n"):
+        return "", text
+    end = text.find(FRONTMATTER_END, 4)
+    if end == -1:
+        raise ValueError("frontmatter opened with --- but never closed")
+    cut = end + len(FRONTMATTER_END)
+    return text[:cut], text[cut:]
+
+
+def remove_frontmatter_key(text: str, key: str) -> str:
+    """Return `text` with the single-line top-level `key:` entry removed from
+    its frontmatter, every other byte unchanged. Raises if the value spans
+    more than one line, rather than guessing where it ends."""
+    frontmatter_block, body = split_frontmatter(text)
+    lines = frontmatter_block.split("\n")
+    kept = []
+    for i, line in enumerate(lines):
+        if not line.startswith(f"{key}:"):
+            kept.append(line)
+            continue
+        next_line = lines[i + 1] if i + 1 < len(lines) else ""
+        if next_line.startswith((" ", "\t", "-")) and next_line != "---":
+            raise ValueError(f"multi-line {key!r} value in frontmatter")
+    return "\n".join(kept) + body
 
 
 def _parse_iso_date(date_str: str | None) -> datetime | None:

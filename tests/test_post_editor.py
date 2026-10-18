@@ -1,6 +1,6 @@
 """
 Tests for the unified post/page editor and admin content management (F42):
-delete endpoints for posts/pages/raindrops, category persistence, concurrency
+delete endpoints for posts/pages/raindrops, retired categories (F51), concurrency
 conflict detection, and the "All Posts" admin index.
 
 Run with: uv run pytest tests/test_post_editor.py -v
@@ -116,14 +116,14 @@ class TestDeleteRaindrop:
         assert not (raindrops_dir / "2026-01-01-a-link.md").exists()
 
 
-class TestCategoryPersistence:
-    """F42 point 7: category wasn't editable anywhere in the admin UI."""
+class TestCategoryRetired:
+    """F51: categories were retired; tags carry what they used to."""
 
-    def test_create_post_with_category(self, client, tmp_path):
+    def test_create_post_does_not_write_category(self, client, tmp_path):
         response = client.post(
             "/admin/new-post",
             data={
-                "title": "Categorized Post",
+                "title": "Uncategorized Post",
                 "date": "2026-01-01",
                 "type": "blog",
                 "content": "Body",
@@ -133,10 +133,10 @@ class TestCategoryPersistence:
         assert response.status_code == 200
         filename = response.json()["filename"]
         saved = (tmp_path / "content" / "blog" / filename).read_text()
-        assert "category: Technology" in saved or 'category: "Technology"' in saved
+        assert "category" not in saved
 
-    def test_edit_post_updates_category(self, client, tmp_path):
-        write_post(tmp_path, "2026-01-01-my-post.md", category="General")
+    def test_edit_post_drops_old_category(self, client, tmp_path):
+        write_post(tmp_path, "2026-01-01-my-post.md", category="298")
         response = client.post(
             "/admin/edit-post/2026-01-01-my-post.md",
             data={
@@ -144,12 +144,18 @@ class TestCategoryPersistence:
                 "date": "2026-01-01",
                 "type": "blog",
                 "content": "Body content.",
-                "category": "Updated Category",
             },
         )
         assert response.status_code == 200
         saved = (tmp_path / "content" / "blog" / "2026-01-01-my-post.md").read_text()
-        assert "Updated Category" in saved
+        assert "category" not in saved
+
+    def test_editor_has_no_category_field(self, client, tmp_path):
+        write_post(tmp_path, "2026-01-01-my-post.md", category="298")
+        for url in ["/admin/new-post", "/admin/edit-post/2026-01-01-my-post.md"]:
+            response = client.get(url)
+            assert response.status_code == 200
+            assert 'name="category"' not in response.text
 
 
 class TestPageRenderedBeforeResponse:
@@ -435,13 +441,3 @@ class TestUnifiedEditorTemplate:
         response = client.get("/admin/new-post")
         assert response.status_code == 200
         assert 'id="image_size"' in response.text
-
-    def test_new_post_page_has_category_field(self, client):
-        response = client.get("/admin/new-post")
-        assert 'id="category"' in response.text
-
-    def test_edit_post_page_has_category_field(self, client, tmp_path):
-        write_post(tmp_path, "2026-01-01-my-post.md")
-        response = client.get("/admin/edit-post/2026-01-01-my-post.md")
-        assert response.status_code == 200
-        assert 'id="category"' in response.text
