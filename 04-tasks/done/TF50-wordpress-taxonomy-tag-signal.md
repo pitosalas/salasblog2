@@ -103,7 +103,7 @@ then a full-suite run.
 
 ## TF50.5 — Review and production run
 
-**Status**: not done
+**Status**: done
 
 **Description**:
 
@@ -116,3 +116,32 @@ then a full-suite run.
 
 **Test**: manual. Record the command, the counts, the mappings excluded
 and a spot-check of five posts.
+
+**Result (2026-10-18)**:
+
+* The review was waived: the user gave blanket approval to every open
+  question.
+  * Merges were judged in-session and recorded in
+    `02-doc/wp-term-merges.json`.
+  * `technology` was kept.
+  * Noise terms were ignored: `links`, `list`, `time`, `usa`,
+    `background`, `free`, `interesting`, `article`, `description`.
+* Locally, `bg wp-tags --wxr <export> --promote` added **41 curated tags**
+  and added aliases to 46 existing ones. This was committed in `1ce25b5f`.
+* The production `/app` checkout was refreshed with `git fetch` and
+  `checkout`, and the export was uploaded to `/tmp/wp-export.xml`.
+* On production, `bg wp-tags --content /data/content` matched 2,453 local
+  posts. 4 WordPress posts didn't match.
+  * **1,821 posts gain tags.** The biggest gains were `personal` 890,
+    `technology` 668, `blogging` 183, `howto` 129 and `politics` 54.
+  * No proposal dropped an existing tag.
+* `scripts/apply_tag_batch.py /tmp/wp-proposals.json` applied tags to
+  1,821 posts. Then `bg generate` ran and `sync_to_github()` returned True.
+* Sync commit `74a3596b` touched 1,821 files, all in `content/blog/`.
+  A per-file check against the parent commit found:
+  * 0 body changes
+  * 0 frontmatter changes other than `tags`/`tag_review`
+  * 0 real tags lost
+* Spot check: `/tags/howto/` returns 200, and
+  `/blog/2011-02-23-engineering.html` lists `personal`,
+  `software-engineering` and `technology`.

@@ -1,5 +1,5 @@
 # Current State — salasblog2
-_Last updated: 2026-10-17_
+_Last updated: 2026-10-18_
 
 ---
 
@@ -144,6 +144,23 @@ Old posts linked to each other with Movable Type, WordPress, Squarespace and Rad
 * **Production**: 142 links were rewritten on `/data/content`, and 21 dead self-links remain, none fixable.
 * **For a future run**: rewrite on production with `--content /data/content`, then regenerate, run `sync_to_github()` and pull. Don't edit and commit local content.
 
+**F49 — Self-host WordPress-era Images**: done 2026-10-18 (`03-features/done/F49-*`).
+
+* The WordPress media export (110 files) now lives in `static/images/wp/`.
+* `bg wp-media --apply` repaired 72 broken salas.com image links in 57
+  posts on production.
+* 4 links remain unmatched. They are 2023-07 screenshots not in the
+  export.
+
+**F50 — WordPress Categories/Tags as Tag Signal**: done 2026-10-18 (`03-features/done/F50-*`).
+
+* `bg wp-tags` maps the old WordPress terms onto the curated list.
+* Merge and ignore decisions live in `02-doc/wp-term-merges.json`.
+* It added 41 curated tags plus aliases to `tag-hints.md`.
+* It added curated tags to 1,821 production posts, additive only.
+* The tag-promotion threshold is now **4+ posts** (TF46.14) for both F46
+  and F50.
+
 **F47 — Console Theme Visual Refresh**: done, `03-features/done/F47-console-theme-refresh.md` / `04-tasks/done/TF47-*.md` (20 tasks, all done). Replaced Bootstrap with a monospace "Console" theme (hairline rules, one amber accent, light/dark toggle persisted via `localStorage`) — design source was two screenshots the user provided directly, not the external `des-hand` handoff folder. Started scoped to the 9 public-facing templates only; mid-feature the user expanded scope to the 4 standalone admin/editor pages (`admin_login.html`, `post_editor.html`, `admin.html`, `stats_page.html`) as well, which had no design reference and were restyled by inference. CSS split into small single-concern files (`static/css/theme.css`, `header.css`, `layout.css`, `entries.css`, `post-detail.css`, plus one per template as needed) rather than one stylesheet, per the user's modular-files preference. `admin.html`'s extensive inline JS and its Bootstrap-class-named HTML-string generation were left untouched (no test coverage on that file's rendered output to safely refactor against); a CSS shim in `admin.css` redefines those class names against the Console tokens instead. Also deleted confirmed-dead templates found while scoping: `admin_new.html` and the three unused `templates/includes/*` partials. Built on `feature/site-redesign`, merged back into `main` and pushed (2026-09-11) after a full visual QA pass and the test suite going green (613 passed, 11 skipped).
 
 **F35 — Fix admin sync button after GIT_TOKEN rotation**: the immediate symptom is fixed — the production `GIT_TOKEN` secret was found to be genuinely invalid (not just stale-in-container as originally hypothesized), the user rotated it via `fly secrets set`, and `sync_to_github()` is now confirmed working end-to-end. The actual code fix this feature describes (reconstruct the git remote URL from the env var at sync time, so a *future* rotation doesn't require a restart) is still not implemented — feature stays open.
@@ -172,10 +189,10 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 ## Test status
 
 ```
-677 passed, 11 skipped, 3 warnings
+711 passed, 11 skipped, 3 warnings
 ```
 
-No failures as of 2026-10-17 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
+No failures as of 2026-10-18 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
 
 ---
 

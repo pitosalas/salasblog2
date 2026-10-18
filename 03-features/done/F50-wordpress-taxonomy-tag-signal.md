@@ -1,10 +1,10 @@
 # F50 — Use WordPress Categories and Tags as a Tag-Cleanup Signal
 **Priority**: Medium
 **Date Created:** 2026-10-18
-**Done:** no
+**Done:** yes
 **Tasks File Created:** yes
-**Tests Written:** no
-**Test Passing:** no
+**Tests Written:** yes
+**Test Passing:** yes
 **Description**: The WordPress export (`~/Desktop/wordpress-export/pitosalas039blog.wordpress.2022-06-04.000.xml`)
 records the categories and tags each post had on the old blog. The
 Markdown import didn't keep many of them.
