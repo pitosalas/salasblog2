@@ -1,9 +1,12 @@
 ---
-title: "Robotics in Education (RiE) 2024"
-subtitle: "Robotics in Education (RiE) 2024 –"
-tags: []
-date: "2023-12-12"
-type: "wp"
+date: '2023-12-12'
+subtitle: Robotics in Education (RiE) 2024 –
+tags:
+- robotics
+- education
+title: Robotics in Education (RiE) 2024
+type: wp
 wordpress_id: 4695
 ---
+
 [ Robotics in Education (RiE) 2024]( https://rie.science/2024/index.html) –

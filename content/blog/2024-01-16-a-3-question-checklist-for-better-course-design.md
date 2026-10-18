@@ -1,5 +1,7 @@
 ---
 date: '2025-07-04'
+tags:
+- education
 title: Three questions towards a better course design
 type: blog
 ---

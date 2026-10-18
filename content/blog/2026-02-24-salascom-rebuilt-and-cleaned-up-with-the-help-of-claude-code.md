@@ -1,5 +1,9 @@
 ---
 date: '2026-02-24'
+tags:
+- blogging
+- ai
+- python
 title: Salas.com rebuilt and cleaned up with the help of Claude Code
 type: blog
 ---

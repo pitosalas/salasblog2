@@ -1,5 +1,8 @@
 ---
 date: '2025-07-03'
+tags:
+- python
+- maps
 title: 'prettymaps: Simple access to OpenStreetmaps'
 type: blog
 ---

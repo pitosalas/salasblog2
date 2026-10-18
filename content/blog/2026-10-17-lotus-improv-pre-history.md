@@ -1,6 +1,9 @@
 ---
 date: '2026-10-17'
-tags: []
+tags:
+- improv
+- lotus
+- pivot-table
 title: Lotus Improv Pre-History
 type: blog
 ---

@@ -1,6 +1,7 @@
 ---
 date: '2026-02-27'
-tags: []
+tags:
+- blogging
 title: Major improvements in this blog
 type: blog
 ---
