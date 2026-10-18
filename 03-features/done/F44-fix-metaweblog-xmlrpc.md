@@ -2,10 +2,10 @@
 ## F44 — Fix the MetaWeblog/XML-RPC Implementation (MarsEdit Support)
 **Priority**: High
 **Date Created:** 2026-09-08
-**Done:** no
+**Done:** yes
 **Tasks File Created:** yes
-**Tests Written:** no
-**Test Passing:** no
+**Tests Written:** yes
+**Test Passing:** yes
 **Description**: `/xmlrpc` (`server.py`) and `blogger_api.py` hand-roll XML-RPC parsing and response building with `xml.etree.ElementTree` instead of using a real XML-RPC implementation, and it's broken in two independent ways:
 
 1. **Request parsing** (`xmlrpc_endpoint()`) only understands `<string>`, `<boolean>`, `<int>`/`<i4>`, `<base64>`, and one level of `<struct>` — it has no handling for `<array>` or `<dateTime.iso8601>`. MarsEdit routinely sends `dateCreated` as `dateTime.iso8601` and categories/keywords as arrays; both silently fall through to `value_elem.text or ""` and get dropped or mangled. This is very likely why MarsEdit "doesn't work at all" today.
