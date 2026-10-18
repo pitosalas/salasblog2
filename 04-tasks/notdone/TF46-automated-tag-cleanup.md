@@ -109,7 +109,7 @@ validation/proposal building → apply-with-verification. Reverted afterward
 
 ## TF46.5 — 100-post validation trial
 
-**Status**: in progress
+**Status**: done
 
 **Description**: Run the pipeline on a 100-post trial batch against real
 content. Build a review artifact from the proposals for the user to
@@ -144,7 +144,7 @@ human judgment call on real output, not a new code path.
 
 ## TF46.6 — Autonomous run over the remaining corpus
 
-**Status**: in progress
+**Status**: done
 
 **Description**: Run the batch+apply scripts repeatedly (`config.yaml`
 `tag_cleanup.batch_size`, 500 — raised from 100 partway through per user
@@ -199,6 +199,16 @@ GitHub - not just a "nice to have."
 
 **Test**: none beyond TF46.0-TF46.3's automated coverage - this step is
 operational execution, not new logic.
+
+**Final batch (2026-10-18)**:
+
+* F50 tagged most of the backlog from the WordPress export, which left
+  only 12 posts needing tags on production.
+* Their tags were decided in-session from the curated list, then built and
+  applied on the box with `build_proposals.py` and `apply_tag_batch.py`.
+* `select_tag_candidates.py` now selects **0** posts.
+* Sync commit `24594886`: each post's metadata and body are unchanged
+  apart from `tags`. The frontmatter was re-serialized as usual.
 
 ## TF46.7 — Curated-vocabulary restriction and Proposed Tags queue
 
@@ -374,8 +384,8 @@ in `load_curated_tags()`'s result directly, not in a separate section.
 
 ## TF46.13 — Secondary-tag normalization (built, not yet run)
 
-**Status**: code and tests done; not run against real content - user is
-still hand-editing `02-doc/tag-hints.md` to add secondaries
+**Status**: dry run done (2026-10-18); applying waits on one user
+decision
 
 **Description**: A curated tag can now declare secondary/alias spellings
 that should be rewritten to it wherever found - e.g. a post tagged `robot`
@@ -440,3 +450,15 @@ WordPress terms.
 
 **Test**: `TestPromoteRecurringCandidates` now checks the boundary: 3 posts
 aren't promoted and 4 are.
+
+**TF46.13 dry run (2026-10-18)**: `normalize_tag_aliases.py --dry-run` ran
+on production after F50 added about 200 aliases.
+
+* Only **1 post** would change, and **0 tags** would be dropped corpus-wide.
+* That post is `2026-10-17-lotus-improv-pre-history.md`.
+  `['improv', 'lotus', 'pivot-table']` would become `['lotus']`, because
+  `improv` and `pivot-table` are aliases of `lotus`.
+* Not applied, for two reasons:
+  * the user hand-picked those tags the same day
+  * the post has CRLF line endings, so `apply_tag_proposal` refuses it
+    (I04)
