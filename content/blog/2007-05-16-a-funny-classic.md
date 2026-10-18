@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-05-16'
 subtitle: '![](https://i0.wp.com/www...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: A funny classic
 type: wp
 wordpress_id: 1270

@@ -4,6 +4,8 @@ date: '2021-07-16'
 subtitle: How to Setup Passwordless SSH Login
 tags:
 - linux
+- configuration
+- cli
 title: How to Setup Passwordless SSH Login
 type: wp
 wordpress_id: 2999

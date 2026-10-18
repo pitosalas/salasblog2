@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-05-05'
 subtitle: '![Picture 1-1'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'LinkedIn: Highly connected?'
 type: wp
 wordpress_id: 1793

@@ -5,6 +5,9 @@ subtitle: 'Here’s what I think: If economic analysis says that technology does
   contribute to the overall pr...'
 tags:
 - technology
+- business
+- nyt
+- mathematics
 title: Technology doesn’t contribute to productivity?
 type: wp
 wordpress_id: 207

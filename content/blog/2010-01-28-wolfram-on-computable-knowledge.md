@@ -4,6 +4,7 @@ date: '2010-01-28'
 subtitle: Stephen Wolfram is a genius
 tags:
 - technology
+- personal
 title: Wolfram on Computable Knowledge
 type: wp
 wordpress_id: 750

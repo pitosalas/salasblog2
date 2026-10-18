@@ -6,6 +6,8 @@ subtitle: I met Mark Mark Withington at the last Geek Dinner. He runs the Boston
 tags:
 - boston
 - programming
+- personal
+- technology
 title: 'BostonPHP Meeting: Thursday May 4, 2006 – Check it out!'
 type: wp
 wordpress_id: 1557

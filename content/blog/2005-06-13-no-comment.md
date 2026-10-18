@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-06-13'
 subtitle: 'States Ranked: Smartest to Dumbest.'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: No Comment
 type: wp
 wordpress_id: 1758

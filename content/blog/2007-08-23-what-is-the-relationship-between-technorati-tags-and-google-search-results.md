@@ -3,8 +3,9 @@ category: '298'
 date: '2007-08-23'
 subtitle: Bill Ives of the [[tag]Portals and KM[/tag] blog](http://billives.typepad.com/portals_and_km/)
   did a...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: What is the relationship between Technorati tags and Google search results?
 type: wp
 wordpress_id: 1224

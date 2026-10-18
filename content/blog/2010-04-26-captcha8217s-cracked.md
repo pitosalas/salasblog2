@@ -3,8 +3,10 @@ category: '298'
 date: '2010-04-26'
 subtitle: CAPTCHA is the nickname of the venerable (ok only a few years of veneration)
   technique of verifying ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- security
+- technology
 title: CAPTCHA’s cracked
 type: wp
 wordpress_id: 727

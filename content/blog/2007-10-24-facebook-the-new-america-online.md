@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-10-24'
 subtitle: Doc Searls has a new post about Facebook
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Facebook, the new America Online?
 type: wp
 wordpress_id: 1188

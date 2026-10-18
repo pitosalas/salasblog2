@@ -6,6 +6,7 @@ subtitle: You may not follow the news, but Curaçao is undergoing major constitu
 tags:
 - curacao
 - politics
+- personal
 title: Big Changes coming in Curaçao!
 type: wp
 wordpress_id: 653

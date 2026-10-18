@@ -4,6 +4,7 @@ date: '2008-04-03'
 subtitle: Check this post Three on getting a job
 tags:
 - business
+- blogging
 title: Three on getting a job
 type: wp
 wordpress_id: 1074

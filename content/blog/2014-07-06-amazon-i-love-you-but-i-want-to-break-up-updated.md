@@ -2,8 +2,8 @@
 category: '1'
 date: '2014-07-06'
 subtitle: Email I just sent to Amazon.
-tag_review: no_fit
-tags: []
+tags:
+- amazon
 title: Amazon, I love you, But I want to break up [UPDATED]
 type: wp
 wordpress_id: 61

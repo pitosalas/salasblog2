@@ -4,6 +4,9 @@ date: '2022-03-04'
 subtitle: Testing network services in Ruby is easier than you think
 tags:
 - ruby
+- brandeis
+- soa
+- software-engineering
 title: Testing network services in Ruby is easier than you think
 type: wp
 wordpress_id: 3273

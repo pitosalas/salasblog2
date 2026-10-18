@@ -5,6 +5,7 @@ subtitle: Ok a few hours into it, I’ve located what looks like a major weaknes
   Spotify. One of the fun thi...
 tags:
 - music
+- personal
 title: Spotify – genres?
 type: wp
 wordpress_id: 527

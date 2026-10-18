@@ -3,8 +3,8 @@ category: '298'
 date: '2005-11-04'
 subtitle: '> “The sword passes within millimetres of the heart, aorta, and other vitals
   but, surprisingly, few ...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Swallowing an umbrella
 type: wp
 wordpress_id: 1662

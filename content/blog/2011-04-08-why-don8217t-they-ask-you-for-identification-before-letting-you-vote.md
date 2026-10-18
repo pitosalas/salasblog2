@@ -5,6 +5,8 @@ subtitle: Every time there’s an election it seems like someone brings up the o
   that you are not asked f...
 tags:
 - politics
+- personal
+- technology
 title: Why don’t they ask you for identification before letting you vote?
 type: wp
 wordpress_id: 575

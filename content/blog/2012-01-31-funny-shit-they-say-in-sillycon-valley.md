@@ -5,6 +5,8 @@ subtitle: Funny insider lingo. I am sure you’d be able to do a similar video f
   DC (politics) and ...
 tags:
 - technology
+- humor
+- video
 title: 'Funny: Shit they say in Sillycon Valley'
 type: wp
 wordpress_id: 403

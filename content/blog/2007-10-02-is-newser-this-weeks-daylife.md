@@ -5,6 +5,7 @@ subtitle: 'Newser.com is a new news site, with the tag line: “Faster, Smarter 
   ...'
 tags:
 - technology
+- personal
 title: Is Newser this weeks Daylife?
 type: wp
 wordpress_id: 1197

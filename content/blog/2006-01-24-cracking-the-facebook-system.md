@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-01-24'
 subtitle: So we’ve all heard about Facebook but only the ones of us who have a .ed...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Cracking the Facebook System
 type: wp
 wordpress_id: 1610

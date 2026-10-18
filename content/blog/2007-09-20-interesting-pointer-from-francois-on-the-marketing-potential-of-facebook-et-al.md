@@ -4,6 +4,7 @@ date: '2007-09-20'
 subtitle: Check out this post
 tags:
 - business
+- technology
 title: Interesting pointer from Francois on the marketing potential of Facebook et
   al
 type: wp

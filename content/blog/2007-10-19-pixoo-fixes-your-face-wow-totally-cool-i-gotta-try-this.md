@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-10-19'
 subtitle: 'Check out this post from Mashable!:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Pixoo Fixes Your Face: Wow, totally cool. I gotta try this :)'
 type: wp
 wordpress_id: 1192

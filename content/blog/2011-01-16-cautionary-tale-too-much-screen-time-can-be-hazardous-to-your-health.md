@@ -5,6 +5,9 @@ subtitle: 'From Science Daily: [Couch Potatoes Beware: Too Much Time Spent Watch
   TV Is Harmful to Heart Heal...'
 tags:
 - health
+- personal
+- technology
+- tv
 title: Cautionary Tale? Too much screen time can be hazardous to your health!
 type: wp
 wordpress_id: 609

@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-05-16'
 subtitle: Try this out, it really worked for m...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Very cool illusion
 type: wp
 wordpress_id: 1047

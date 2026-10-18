@@ -5,6 +5,9 @@ subtitle: I just returned from my mother’s birthday party with about 300 photo
   I would say 70% of them are ...
 tags:
 - apple
+- social-media
+- personal
+- technology
 title: Photo sharing thoughts
 type: wp
 wordpress_id: 630

@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-08-15'
 subtitle: Just take a good look at these pictures!
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Compelling, in a weird kind of way
 type: wp
 wordpress_id: 1452

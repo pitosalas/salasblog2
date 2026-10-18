@@ -5,6 +5,7 @@ subtitle: '!passimlogo'
 tags:
 - music
 - boston
+- personal
 title: Send Club Passim some click love
 type: wp
 wordpress_id: 894

@@ -5,6 +5,9 @@ subtitle: Joel Spolsky of Joel on Software gave an outstanding talk at Yale whic
   he has written up on his blo...
 tags:
 - computer-science
+- personal
+- programming
+- technology
 title: 'Computer Science: Theory and Practice'
 type: wp
 wordpress_id: 1163

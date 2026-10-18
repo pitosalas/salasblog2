@@ -5,6 +5,7 @@ subtitle: From an article called â€œEffective Customer Consultant Relationshipsâ
 tags:
 - business
 - software-engineering
+- technology
 title: 'Customer vs. Consultant: Excellent advice'
 type: wp
 wordpress_id: 400

@@ -4,6 +4,8 @@ date: '2013-05-19'
 subtitle: How to Be a ‘Woman Programmer’ – NYTimes.com
 tags:
 - programming
+- careers
+- nyt
 title: How to be a “woman programmer”
 type: wp
 wordpress_id: 202

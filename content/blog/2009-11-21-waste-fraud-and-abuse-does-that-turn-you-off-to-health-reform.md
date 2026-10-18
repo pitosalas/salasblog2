@@ -6,6 +6,8 @@ subtitle: An article from Canadian Healthcare Technology notes that [US Healthca
 tags:
 - politics
 - health
+- personal
+- technology
 title: 'Waste, Fraud and Abuse: does that turn you off to health reform?'
 type: wp
 wordpress_id: 775

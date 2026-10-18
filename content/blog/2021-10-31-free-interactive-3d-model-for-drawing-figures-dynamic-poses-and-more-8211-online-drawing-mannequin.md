@@ -5,6 +5,7 @@ subtitle: '[ Free Interactive 3D Model for Drawing Figures, Dynamic Poses, and M
   – Online Drawing Mannequin]...'
 tags:
 - design
+- art
 title: Free Interactive 3D Model for Drawing Figures, Dynamic Poses, and More – Online
   Drawing Mannequin
 type: wp

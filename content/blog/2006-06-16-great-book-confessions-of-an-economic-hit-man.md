@@ -6,6 +6,7 @@ subtitle: I just finished reading an **excellent** book called Confessions of an
 tags:
 - books
 - politics
+- personal
 title: 'Great book: Confessions of an Economic Hit Man'
 type: wp
 wordpress_id: 1517

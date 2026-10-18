@@ -4,6 +4,7 @@ date: '2008-08-09'
 subtitle: After an interesting comment
 tags:
 - technology
+- personal
 title: More on the Electric Car
 type: wp
 wordpress_id: 997

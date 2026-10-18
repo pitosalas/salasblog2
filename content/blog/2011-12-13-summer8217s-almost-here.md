@@ -3,8 +3,8 @@ category: '1'
 date: '2011-12-13'
 subtitle: I noticed yesterday that sunset is now occurring at 4:12pm. The day before
   it was 4:11pm. So **sunse...
-tag_review: no_fit
-tags: []
+tags:
+- science
 title: Summer’s almost here
 type: wp
 wordpress_id: 441

@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-03-05'
 subtitle: First it was Facebook, then (I think) it was Plaxo
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Do I need yet another site doing life streaming?
 type: wp
 wordpress_id: 1095

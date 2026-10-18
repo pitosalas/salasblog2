@@ -4,6 +4,9 @@ date: '2022-03-26'
 subtitle: 'Using ROS on Raspberry Pi: Best Practices – The Robotics Back-End'
 tags:
 - robotics
+- configuration
+- performance
+- technology
 title: 'Using ROS on Raspberry Pi: Best Practices – The Robotics Back-End'
 type: wp
 wordpress_id: 3384

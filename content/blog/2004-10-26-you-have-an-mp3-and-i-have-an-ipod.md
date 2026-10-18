@@ -5,6 +5,7 @@ subtitle: You have an MP3 and I have an IPod. I want to listen to that MP3 while
   walking, or working ...
 tags:
 - apple
+- technology
 title: You have an MP3 and I have an IPod
 type: wp
 wordpress_id: 1920

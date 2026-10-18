@@ -6,6 +6,7 @@ subtitle: I am about a week from beginning teaching my course at Brandeis Univer
 tags:
 - education
 - brandeis
+- personal
 title: University Teaching – homework, tests and grades?
 type: wp
 wordpress_id: 559

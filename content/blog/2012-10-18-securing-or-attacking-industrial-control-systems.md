@@ -5,6 +5,7 @@ subtitle: It turns out that Kaspersky Labs is developing a [brand new operating 
   specifically designed t...
 tags:
 - technology
+- security
 title: Securing or attacking Industrial Control Systems
 type: wp
 wordpress_id: 289

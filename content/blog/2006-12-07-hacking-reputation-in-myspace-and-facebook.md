@@ -4,6 +4,7 @@ date: '2006-12-07'
 subtitle: Check out [this
 tags:
 - technology
+- personal
 title: Hacking Reputation in MySpace and Facebook
 type: wp
 wordpress_id: 1396

@@ -5,6 +5,7 @@ subtitle: '!['
 tags:
 - personal
 - music
+- design
 title: How do you fit a 365 day calendar on an index card?
 type: wp
 wordpress_id: 252

@@ -5,6 +5,9 @@ subtitle: The more businesses reward me for showing up at their establishments, 
   more likely it will be tha...
 tags:
 - technology
+- personal
+- research
+- security
 title: Location Proofs
 type: wp
 wordpress_id: 674

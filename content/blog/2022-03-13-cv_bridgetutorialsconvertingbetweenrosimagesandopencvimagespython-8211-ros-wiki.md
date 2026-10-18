@@ -6,6 +6,7 @@ subtitle: cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython â€
 tags:
 - robotics
 - python
+- computer-vision
 title: cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython â€“ ROS Wiki
 type: wp
 wordpress_id: 3338

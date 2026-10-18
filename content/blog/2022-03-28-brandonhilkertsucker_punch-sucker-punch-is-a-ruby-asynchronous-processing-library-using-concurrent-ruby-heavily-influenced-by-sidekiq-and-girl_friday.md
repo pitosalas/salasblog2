@@ -5,6 +5,8 @@ subtitle: '[ brandonhilkert/sucker_punch: Sucker Punch is a Ruby asynchronous pr
   library using concurre...'
 tags:
 - ruby
+- heroku
+- howto
 title: 'brandonhilkert/sucker_punch: Sucker Punch is a Ruby asynchronous processing
   library using concurrent-ruby, heavily influenced by Sidekiq and girl_friday.'
 type: wp

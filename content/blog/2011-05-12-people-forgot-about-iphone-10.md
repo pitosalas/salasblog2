@@ -4,6 +4,8 @@ date: '2011-05-12'
 subtitle: 'Funny to read this:'
 tags:
 - apple
+- technology
+- personal
 title: People forgot about iPhone 1.0
 type: wp
 wordpress_id: 568

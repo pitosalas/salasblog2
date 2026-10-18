@@ -3,8 +3,8 @@ category: '538'
 date: '2006-05-26'
 subtitle: The great thing about standards is that there are just so many different
   ones to pick from!
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Oh, great. MSFT proposing a JPEG alternative
 type: wp
 wordpress_id: 1538

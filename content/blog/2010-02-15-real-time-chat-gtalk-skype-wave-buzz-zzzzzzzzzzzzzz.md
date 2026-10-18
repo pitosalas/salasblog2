@@ -3,8 +3,8 @@ category: '538'
 date: '2010-02-15'
 subtitle: I just accidentally pinged someone over wave who I wanted to chat with,
   thinking that it would go ov...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: 'Real time chat: gtalk? skype? wave? buzz? Zzzzzzzzzzzzzz'
 type: wp
 wordpress_id: 743

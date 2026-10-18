@@ -4,6 +4,7 @@ date: '2018-07-13'
 subtitle: Measuring Performance Metrics in Rails – via @codeship
 tags:
 - ruby
+- technology
 title: Some great links for  07/13/2018
 type: wp
 wordpress_id: 2394

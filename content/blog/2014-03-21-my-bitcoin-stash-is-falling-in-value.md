@@ -3,8 +3,8 @@ category: '1'
 date: '2014-03-21'
 subtitle: Yes, I have about $100 in Bitcoin and today was a bad day. It droppped from
   around $630 to around $5...
-tag_review: no_fit
-tags: []
+tags:
+- wsj
 title: My Bitcoin stash is falling in value!
 type: wp
 wordpress_id: 110

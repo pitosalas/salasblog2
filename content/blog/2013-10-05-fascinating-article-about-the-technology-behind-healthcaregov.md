@@ -6,6 +6,7 @@ subtitle: Pretty amazing that the govt is actually placing [all the code for hea
 tags:
 - technology
 - politics
+- health
 title: Fascinating article about the technology behind Healthcare.gov
 type: wp
 wordpress_id: 155

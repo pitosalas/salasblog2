@@ -4,6 +4,7 @@ date: '2009-10-28'
 subtitle: Check out Schwarzenegger Gives California Legislature A Hidden Finger
 tags:
 - politics
+- programming
 title: Arnold is a cool governator
 type: wp
 wordpress_id: 785

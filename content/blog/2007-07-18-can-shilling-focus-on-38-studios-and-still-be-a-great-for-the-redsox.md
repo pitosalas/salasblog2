@@ -3,8 +3,9 @@ category: '298'
 date: '2007-07-18'
 subtitle: Far be it from me to comment on sports… In fact this is exactly the first
   sports related post for th...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Can Shilling focus on 38 Studios and still be a great for the Redsox?
 type: wp
 wordpress_id: 1238

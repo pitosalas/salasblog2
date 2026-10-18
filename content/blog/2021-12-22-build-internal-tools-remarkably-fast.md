@@ -4,6 +4,8 @@ date: '2021-12-22'
 subtitle: Build internal tools, remarkably fast.
 tags:
 - software-engineering
+- howto
+- tools
 title: Build internal tools, remarkably fast.
 type: wp
 wordpress_id: 3145

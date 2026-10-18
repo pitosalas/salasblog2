@@ -5,6 +5,7 @@ subtitle: There’s been some back and forth silliness about whether Barack Obam
   keep his Blackberry. All t...
 tags:
 - politics
+- personal
 title: Not surprised that he gets to keep it
 type: wp
 wordpress_id: 905

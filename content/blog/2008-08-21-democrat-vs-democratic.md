@@ -4,6 +4,7 @@ date: '2008-08-21'
 subtitle: I wonder about this.
 tags:
 - politics
+- personal
 title: Democrat vs. Democratic
 type: wp
 wordpress_id: 990

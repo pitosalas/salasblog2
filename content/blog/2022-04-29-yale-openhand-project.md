@@ -4,6 +4,7 @@ date: '2022-04-29'
 subtitle: Yale OpenHand Project
 tags:
 - robotics
+- howto
 title: Yale OpenHand Project
 type: wp
 wordpress_id: 3454

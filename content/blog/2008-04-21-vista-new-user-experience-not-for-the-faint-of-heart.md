@@ -2,8 +2,9 @@
 category: '298'
 date: '2008-04-21'
 subtitle: '![Microsoft Vista new user experience'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Vista new user experience not for the faint of heart
 type: wp
 wordpress_id: 1063

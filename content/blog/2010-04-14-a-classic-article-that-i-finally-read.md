@@ -4,6 +4,8 @@ date: '2010-04-14'
 subtitle: The article “Reflections on Trusting Trust” is often m...
 tags:
 - computer-science
+- programming
+- technology
 title: A classic article that I finally read
 type: wp
 wordpress_id: 730

@@ -6,6 +6,7 @@ subtitle: Check out this really interesting article plus lovely animations. I ha
 tags:
 - computer-science
 - python
+- design
 title: Visualizing Algorithms
 type: wp
 wordpress_id: 101

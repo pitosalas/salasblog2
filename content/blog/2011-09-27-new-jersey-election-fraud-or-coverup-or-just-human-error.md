@@ -4,6 +4,9 @@ date: '2011-09-27'
 subtitle: Andrew Appel is one of the best known academics studying and ...
 tags:
 - politics
+- security
+- personal
+- technology
 title: New Jersey election fraud? Or coverup? Or just human error?
 type: wp
 wordpress_id: 495

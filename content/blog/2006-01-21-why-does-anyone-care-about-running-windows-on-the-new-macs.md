@@ -5,6 +5,8 @@ subtitle: When you’re a blogger it’s sometimes a **strain** to say something
   about a topic that’s [gon...
 tags:
 - apple
+- personal
+- technology
 title: Why does anyone care about running Windows on the new Macs?
 type: wp
 wordpress_id: 1611

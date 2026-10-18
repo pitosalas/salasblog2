@@ -4,6 +4,7 @@ date: '2006-09-28'
 subtitle: '![](http://www.flickr.co...'
 tags:
 - travel
+- personal
 title: Bryce Canyon National Park
 type: wp
 wordpress_id: 1430

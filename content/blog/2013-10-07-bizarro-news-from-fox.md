@@ -5,6 +5,7 @@ subtitle: Fox News debuts bizarre, giant tablets in its outrageous new newsroom 
   The Verge
 tags:
 - technology
+- tv
 title: Bizarro News from Fox
 type: wp
 wordpress_id: 152

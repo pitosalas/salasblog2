@@ -4,6 +4,8 @@ date: '2007-03-07'
 subtitle: Isaac Asimov was a visonary don’t you think?
 tags:
 - robotics
+- personal
+- technology
 title: Robot Ethics
 type: wp
 wordpress_id: 1312

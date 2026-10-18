@@ -5,6 +5,7 @@ subtitle: Yeah, I just received the renewal paperwork for health insurance, and 
   up**. This is with [Blu...
 tags:
 - health
+- personal
 title: My health insurance has gone up 15% for 2010
 type: wp
 wordpress_id: 778

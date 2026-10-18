@@ -2,8 +2,9 @@
 category: '298'
 date: '2006-07-09'
 subtitle: 'A typewriter, you know: **a printer with a keyboard built right into it**?'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- politics
 title: Can you believe these dudes still use typewriters?
 type: wp
 wordpress_id: 1495

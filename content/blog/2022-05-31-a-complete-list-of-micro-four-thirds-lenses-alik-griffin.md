@@ -2,8 +2,9 @@
 category: '72'
 date: '2022-05-31'
 subtitle: A Complete List Of Micro Four Thirds Lenses | Alik Griffin
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- photography
 title: A Complete List Of Micro Four Thirds Lenses | Alik Griffin
 type: wp
 wordpress_id: 3478

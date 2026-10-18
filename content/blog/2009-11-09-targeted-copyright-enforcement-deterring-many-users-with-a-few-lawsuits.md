@@ -5,6 +5,8 @@ subtitle: 'Check out Targeted Copyright Enforcement: Deterring Many Users with a
   Lawsuits'
 tags:
 - legal
+- politics
+- technology
 title: 'Targeted Copyright Enforcement: Deterring Many Users with a Few Lawsuits'
 type: wp
 wordpress_id: 780

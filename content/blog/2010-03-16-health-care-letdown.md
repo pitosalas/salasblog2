@@ -6,6 +6,7 @@ subtitle: I stopped posting thoughts about the mess that all of congress has mad
 tags:
 - politics
 - health
+- personal
 title: Health Care Letdown
 type: wp
 wordpress_id: 735

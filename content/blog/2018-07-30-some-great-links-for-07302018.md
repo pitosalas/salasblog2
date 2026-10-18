@@ -4,6 +4,7 @@ date: '2018-07-30'
 subtitle: 'Keyword (Named) Arguments in Python: How to Use Them – Trey Hunner'
 tags:
 - python
+- technology
 title: Some great links for  07/30/2018
 type: wp
 wordpress_id: 2413

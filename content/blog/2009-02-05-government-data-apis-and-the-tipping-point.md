@@ -6,6 +6,7 @@ subtitle: I’ve been discovering the mass of information that is created by the
 tags:
 - technology
 - politics
+- personal
 title: Government Data, Apis, and the tipping point
 type: wp
 wordpress_id: 896

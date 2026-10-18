@@ -6,6 +6,8 @@ subtitle: Fun article about Ben Hescott who has some unique – and **impressive
 tags:
 - computer-science
 - education
+- personal
+- programming
 title: Interesting approach to teaching computer science
 type: wp
 wordpress_id: 540

@@ -4,6 +4,7 @@ date: '2009-01-28'
 subtitle: '> “So yet another way you can help Ruby and Rails Activism is by attending'
 tags:
 - ruby
+- programming
 title: '[GEEKY] Where are the east coast Rails / Ruby conferences?'
 type: wp
 wordpress_id: 902

@@ -5,6 +5,7 @@ subtitle: I’m seriously thinking about starting to use a Macintosh for my day 
   work computer instead of ...
 tags:
 - apple
+- technology
 title: Thinking of being a deserter
 type: wp
 wordpress_id: 1872

@@ -2,8 +2,8 @@
 category: '21'
 date: '2021-10-19'
 subtitle: SUMPRODUCT function
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: SUMPRODUCT function
 type: wp
 wordpress_id: 3101

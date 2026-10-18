@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-06-30'
 subtitle: 'I am at Gnomedex and the news is spreading like wildfire: TechMeme'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Techmeme Hacked
 type: wp
 wordpress_id: 1504

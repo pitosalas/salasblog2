@@ -6,6 +6,10 @@ subtitle: '**Follow along as I develop the course: **[Brandeis University Web Ap
 tags:
 - brandeis
 - education
+- software-engineering
+- personal
+- mobile
+- web
 title: I’ll be teaching a course at Brandeis University
 type: wp
 wordpress_id: 764

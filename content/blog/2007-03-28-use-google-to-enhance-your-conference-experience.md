@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-03-28'
 subtitle: I’m at the O’Reilly Emerging Technology Conference, aka ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Use Google to enhance your conference experience
 type: wp
 wordpress_id: 1297

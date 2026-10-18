@@ -5,6 +5,8 @@ subtitle: This article is somewhat mathematical but...
 tags:
 - mathematics
 - business
+- personal
+- technology
 title: A (fairly) understandable explanation of the math behind the market meltdown
 type: wp
 wordpress_id: 874

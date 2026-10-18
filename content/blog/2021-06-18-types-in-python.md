@@ -4,6 +4,7 @@ date: '2021-06-18'
 subtitle: Types in Python
 tags:
 - python
+- howto
 title: Types in Python
 type: wp
 wordpress_id: 2959

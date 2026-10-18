@@ -4,6 +4,7 @@ date: '2007-06-21'
 subtitle: Check out this post
 tags:
 - ruby
+- technology
 title: Interesting bit of Ruby magic
 type: wp
 wordpress_id: 1251

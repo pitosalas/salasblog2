@@ -5,6 +5,7 @@ subtitle: After attending the Lean Startup Machine weekend a few d...
 tags:
 - business
 - technology
+- personal
 title: Greplin, actually a rather cool product!
 type: wp
 wordpress_id: 587

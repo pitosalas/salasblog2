@@ -5,6 +5,7 @@ subtitle: '[Jon (and many others) really like Bloglines a lot; I recommend his a
   – there’s a lot to learn...'
 tags:
 - technology
+- blogging
 title: Jon Udell on Bloglines
 type: wp
 wordpress_id: 1960

@@ -4,6 +4,7 @@ date: '2022-03-13'
 subtitle: 'OpenCV: OpenCV modules'
 tags:
 - robotics
+- computer-vision
 title: 'OpenCV: OpenCV modules'
 type: wp
 wordpress_id: 3322

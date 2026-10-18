@@ -5,6 +5,7 @@ subtitle: 'I really like this approach to vacation. I think I will try it: Check
   this post [Warning: Email ...'
 tags:
 - personal
+- technology
 title: 'Warning: Email Sabbatical is Imminent .. and other random thoughts'
 type: wp
 wordpress_id: 932

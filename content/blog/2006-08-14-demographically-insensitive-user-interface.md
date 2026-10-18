@@ -2,8 +2,9 @@
 category: '298'
 date: '2006-08-14'
 subtitle: '!Picture 1-1'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Demographically insensitive user interface
 type: wp
 wordpress_id: 1454

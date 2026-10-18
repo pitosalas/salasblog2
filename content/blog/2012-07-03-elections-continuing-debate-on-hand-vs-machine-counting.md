@@ -4,6 +4,7 @@ date: '2012-07-03'
 subtitle: 'Just from today’s New York Times:'
 tags:
 - politics
+- nyt
 title: '[ELECTIONS] Continuing debate on hand vs. machine counting'
 type: wp
 wordpress_id: 318

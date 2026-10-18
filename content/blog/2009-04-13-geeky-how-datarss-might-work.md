@@ -3,8 +3,11 @@ category: '51'
 date: '2009-04-13'
 subtitle: '**Editors Note (that’s me, Pito): I’ve decided to change the name of this
   thing to “Decentralized Da...'
-tag_review: no_fit
-tags: []
+tags:
+- api
+- blogging
+- programming
+- technology
 title: '[GEEKY] How DataRSS might work'
 type: wp
 wordpress_id: 857

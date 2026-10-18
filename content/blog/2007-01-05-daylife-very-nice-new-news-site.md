@@ -3,8 +3,9 @@ category: '298'
 date: '2007-01-05'
 subtitle: Notwithstanding the fact that Mike Arrington, an investor, doesn’t like
   DayLife
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: 'DayLife: very nice new News Site'
 type: wp
 wordpress_id: 1364

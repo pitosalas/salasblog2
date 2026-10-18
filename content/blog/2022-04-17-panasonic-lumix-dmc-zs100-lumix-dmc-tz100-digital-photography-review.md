@@ -2,8 +2,9 @@
 category: '64'
 date: '2022-04-17'
 subtitle: 'Panasonic Lumix DMC-ZS100 (Lumix DMC-TZ100): Digital Photography Review'
-tag_review: no_fit
-tags: []
+tags:
+- photography
+- zoom
 title: 'Panasonic Lumix DMC-ZS100 (Lumix DMC-TZ100): Digital Photography Review'
 type: wp
 wordpress_id: 3438

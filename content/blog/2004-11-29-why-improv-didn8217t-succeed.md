@@ -5,6 +5,7 @@ subtitle: It’s been a while.
 tags:
 - lotus
 - business
+- technology
 title: Why Improv didn’t succeed
 type: wp
 wordpress_id: 1905

@@ -3,8 +3,9 @@ category: '298'
 date: '2007-10-29'
 subtitle: 'Pleasantly surprised to see this, and I didn’t even know it was checking
   for me:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Magic Firefox Phishing Message
 type: wp
 wordpress_id: 1183

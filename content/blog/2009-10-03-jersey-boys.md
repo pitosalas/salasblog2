@@ -4,6 +4,7 @@ date: '2009-10-03'
 subtitle: We saw the “Jersey Boys” musical in Chicago last night. It’s a lot...
 tags:
 - music
+- personal
 title: Jersey Boys
 type: wp
 wordpress_id: 799

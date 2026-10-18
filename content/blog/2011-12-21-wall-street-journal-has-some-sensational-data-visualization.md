@@ -5,6 +5,8 @@ subtitle: I don’t know if you need [an account to see the amazingly useful, el
   and well implemented bit o...
 tags:
 - design
+- politics
+- wsj
 title: Wall Street Journal has some sensational data visualization
 type: wp
 wordpress_id: 436

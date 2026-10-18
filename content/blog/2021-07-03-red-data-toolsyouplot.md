@@ -4,6 +4,9 @@ date: '2021-07-03'
 subtitle: red-data-tools/YouPlot
 tags:
 - ruby
+- cli
+- howto
+- tools
 title: red-data-tools/YouPlot
 type: wp
 wordpress_id: 2983

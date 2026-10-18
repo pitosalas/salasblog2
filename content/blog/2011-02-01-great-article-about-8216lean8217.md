@@ -4,6 +4,10 @@ date: '2011-02-01'
 subtitle: I recommend this article, “Fatboy in A Lean World”
 tags:
 - business
+- startups
+- personal
+- programming
+- technology
 title: Great article about ‘lean’
 type: wp
 wordpress_id: 601

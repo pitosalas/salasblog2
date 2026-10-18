@@ -3,8 +3,10 @@ category: '51'
 date: '2008-04-17'
 subtitle: I just wrote a few brief tutorials that I thought might be of interest to
   you and, well, everyone. P...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
+- technology
 title: Great new information about blogging
 type: wp
 wordpress_id: 1064

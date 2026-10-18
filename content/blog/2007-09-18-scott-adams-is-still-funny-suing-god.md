@@ -3,8 +3,8 @@ category: '298'
 date: '2007-09-18'
 subtitle: Scott Adams of course is the evil genius behind Dilbert, which as you know
   I am a big fan of. Scott ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Scott Adams is still funny: Suing God'
 type: wp
 wordpress_id: 1209

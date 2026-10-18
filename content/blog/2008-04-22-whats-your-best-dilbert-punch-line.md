@@ -3,8 +3,8 @@ category: '298'
 date: '2008-04-22'
 subtitle: Amazing idea from Scott Adams. Dilbert Mashups. Check this post [What’s
   Your Best Dilbert Punch Line...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: What’s Your Best Dilbert Punch Line?
 type: wp
 wordpress_id: 1062

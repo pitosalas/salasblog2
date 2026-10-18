@@ -3,8 +3,8 @@ category: '51'
 date: '2004-11-22'
 subtitle: 'My answer to the question: **“What is a Blog”, **which I get asked often,
   goes something like this:'
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: What is a blog, again?
 type: wp
 wordpress_id: 1910

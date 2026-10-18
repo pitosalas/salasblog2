@@ -5,6 +5,7 @@ subtitle: AWK-ward Ruby
 tags:
 - ruby
 - programming
+- howto
 title: AWK-ward Ruby
 type: wp
 wordpress_id: 3181

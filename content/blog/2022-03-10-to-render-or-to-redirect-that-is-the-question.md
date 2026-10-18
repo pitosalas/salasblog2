@@ -5,6 +5,7 @@ subtitle: To Render or to Redirect, that is the Question…
 tags:
 - ruby
 - programming
+- howto
 title: To Render or to Redirect, that is the Question…
 type: wp
 wordpress_id: 3310

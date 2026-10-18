@@ -4,6 +4,7 @@ date: '2008-08-06'
 subtitle: I just saw the movie “Who Killed the Electric Car”
 tags:
 - wikipedia
+- personal
 title: Who Killed the Electric Car? (And why Wikipedia is GREAT)
 type: wp
 wordpress_id: 1000

@@ -4,6 +4,7 @@ date: '2005-12-22'
 subtitle: '!Picture 1-24'
 tags:
 - apple
+- technology
 title: Load one physical CD, get two icons on my desktop
 type: wp
 wordpress_id: 1628

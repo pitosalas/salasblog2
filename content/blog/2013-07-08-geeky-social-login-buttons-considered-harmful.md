@@ -5,6 +5,9 @@ subtitle: You probably don’t know what a social login button is so forgive thi
   of geekyness. I am sure yo...
 tags:
 - technology
+- security
+- social-media
+- design
 title: '[GEEKY] Social login buttons considered harmful'
 type: wp
 wordpress_id: 188

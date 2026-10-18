@@ -4,6 +4,7 @@ date: '2005-07-27'
 subtitle: There was a recent interesting article in the New York Times
 tags:
 - technology
+- personal
 title: Interesting new search engines
 type: wp
 wordpress_id: 1727

@@ -5,6 +5,7 @@ subtitle: Sinatra Forms Params – Learn.co
 tags:
 - ruby
 - programming
+- howto
 title: Sinatra Forms Params – Learn.co
 type: wp
 wordpress_id: 3306

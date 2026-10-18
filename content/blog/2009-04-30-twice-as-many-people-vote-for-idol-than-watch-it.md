@@ -2,8 +2,8 @@
 category: '298'
 date: '2009-04-30'
 subtitle: 'This does not compute:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Twice as many people vote for Idol than watch it?
 type: wp
 wordpress_id: 851

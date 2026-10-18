@@ -4,6 +4,7 @@ date: '2022-04-24'
 subtitle: Top 10 T-shirt Design Tips
 tags:
 - design
+- howto
 title: Top 10 T-shirt Design Tips
 type: wp
 wordpress_id: 3448

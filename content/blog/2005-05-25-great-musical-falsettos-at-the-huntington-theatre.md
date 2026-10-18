@@ -5,6 +5,7 @@ subtitle: '!Htcfalsettosprod'
 tags:
 - music
 - boston
+- personal
 title: 'Great musical: Falsettos at the Huntington Theatre'
 type: wp
 wordpress_id: 1774

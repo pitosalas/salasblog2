@@ -5,6 +5,8 @@ subtitle: So a friend of mine told me of his iPhone app, called Etude. He sung t
   pra...
 tags:
 - apple
+- personal
+- technology
 title: The funny thing about iPhone apps
 type: wp
 wordpress_id: 722

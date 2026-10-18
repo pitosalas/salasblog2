@@ -4,6 +4,8 @@ date: '2021-06-29'
 subtitle: Python Modules and Packages – An Introduction – Real Python
 tags:
 - python
+- howto
+- software-engineering
 title: Python Modules and Packages – An Introduction – Real Python
 type: wp
 wordpress_id: 2979

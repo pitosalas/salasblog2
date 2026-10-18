@@ -3,8 +3,8 @@ category: '298'
 date: '2008-05-17'
 subtitle: “No language is perfect, and English is no exception. There are always words
   or expressions that can...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Amusing: French words missing in English'
 type: wp
 wordpress_id: 1045

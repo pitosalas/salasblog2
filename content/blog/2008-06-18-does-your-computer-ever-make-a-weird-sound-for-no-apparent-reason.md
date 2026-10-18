@@ -3,8 +3,9 @@ category: '298'
 date: '2008-06-18'
 subtitle: I am on a Mac and I have lots of odd little things running, doing backups,
   syncs, who knows what. Ev...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Does your computer ever make a weird sound for no apparent reason?
 type: wp
 wordpress_id: 1027

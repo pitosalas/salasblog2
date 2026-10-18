@@ -5,6 +5,7 @@ subtitle: Sites that have to support a huge amount of traffic tend to want to be
   html. No matter how fa...
 tags:
 - ruby
+- technology
 title: '[GEEKY] Check out WebGen'
 type: wp
 wordpress_id: 1122

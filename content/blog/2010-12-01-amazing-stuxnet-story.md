@@ -2,8 +2,9 @@
 category: '538'
 date: '2010-12-01'
 subtitle: With apologies for quoting a Foxnews story, and with thanks to [Scott Adam...
-tag_review: no_fit
-tags: []
+tags:
+- security
+- technology
 title: Amazing Stuxnet story
 type: wp
 wordpress_id: 634

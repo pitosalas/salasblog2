@@ -5,6 +5,7 @@ subtitle: This is a dramatic and well told story of one patient’s patient sear
   a kidney donor.
 tags:
 - health
+- personal
 title: Amazing story about Virginia Postrel’s kidney
 type: wp
 wordpress_id: 1115

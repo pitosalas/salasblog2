@@ -2,8 +2,8 @@
 category: '298'
 date: '2009-07-22'
 subtitle: '![picture-1'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Bank Of America advises me to save $NaN
 type: wp
 wordpress_id: 821

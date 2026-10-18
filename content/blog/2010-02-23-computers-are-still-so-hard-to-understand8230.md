@@ -5,6 +5,7 @@ subtitle: '[Dave Winer wrote a bit recently called “What we don’t understand
   lists all the ways in which ...'
 tags:
 - technology
+- personal
 title: Computers are still so hard to understand…
 type: wp
 wordpress_id: 738

@@ -4,6 +4,7 @@ date: '2010-06-18'
 subtitle: Check out Introducing the Google Command Line Tool
 tags:
 - technology
+- blogging
 title: 'We go full circle: Google Command Line Tool'
 type: wp
 wordpress_id: 708

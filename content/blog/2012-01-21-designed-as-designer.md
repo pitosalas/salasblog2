@@ -6,6 +6,8 @@ subtitle: If you are interested in design and especially design and architecture
 tags:
 - design
 - computer-science
+- software-engineering
+- technology
 title: Designed As Designer
 type: wp
 wordpress_id: 412

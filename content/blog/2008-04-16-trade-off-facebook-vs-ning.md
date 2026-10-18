@@ -5,6 +5,9 @@ subtitle: I am advising a client who is interested in reaching out to a huge exi
   community of folks who t...
 tags:
 - business
+- social-media
+- personal
+- technology
 title: 'Trade-off: Facebook vs. Ning'
 type: wp
 wordpress_id: 1065

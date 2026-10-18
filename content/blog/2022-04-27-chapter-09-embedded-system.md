@@ -4,6 +4,8 @@ date: '2022-04-27'
 subtitle: Chapter 09 Embedded System
 tags:
 - robotics
+- technology
+- howto
 title: Chapter 09 Embedded System
 type: wp
 wordpress_id: 3452

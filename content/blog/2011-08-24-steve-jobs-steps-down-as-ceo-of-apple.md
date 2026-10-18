@@ -4,6 +4,8 @@ date: '2011-08-24'
 subtitle: 'This news saddens me:'
 tags:
 - apple
+- personal
+- technology
 title: Steve Jobs steps down as CEO of Apple
 type: wp
 wordpress_id: 505

@@ -6,6 +6,8 @@ subtitle: It’s hard to comprehend people who feel that it is reasonable (let a
 tags:
 - business
 - politics
+- movies
+- personal
 title: Inside Job
 type: wp
 wordpress_id: 538

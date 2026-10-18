@@ -4,6 +4,7 @@ date: '2021-09-26'
 subtitle: styleguide
 tags:
 - python
+- technology
 title: styleguide
 type: wp
 wordpress_id: 3073

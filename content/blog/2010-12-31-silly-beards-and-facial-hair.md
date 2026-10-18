@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-12-31'
 subtitle: '!beard20084.jpg'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: '[SILLY] Beards and Facial Hair'
 type: wp
 wordpress_id: 616

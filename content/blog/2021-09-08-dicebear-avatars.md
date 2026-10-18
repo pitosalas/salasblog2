@@ -4,6 +4,9 @@ date: '2021-09-08'
 subtitle: DiceBear Avatars
 tags:
 - design
+- images
+- api
+- tools
 title: DiceBear Avatars
 type: wp
 wordpress_id: 3067

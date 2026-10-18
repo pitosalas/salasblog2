@@ -5,6 +5,7 @@ subtitle: laser_pipeline/Tutorials/IntroductionToWorkingWithLaserScannerData –
   Wiki
 tags:
 - robotics
+- howto
 title: laser_pipeline/Tutorials/IntroductionToWorkingWithLaserScannerData – ROS Wiki
 type: wp
 wordpress_id: 3253

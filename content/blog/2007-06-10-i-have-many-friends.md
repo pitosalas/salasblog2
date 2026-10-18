@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-06-10'
 subtitle: 'A funny article in the New York Times the other day:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: I have many friends
 type: wp
 wordpress_id: 1256

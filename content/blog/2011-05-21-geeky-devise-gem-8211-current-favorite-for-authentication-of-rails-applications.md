@@ -6,6 +6,8 @@ subtitle: How to build authentication into Rails applications? Well, at least at
 tags:
 - programming
 - ruby
+- security
+- technology
 title: '[GEEKY] Devise Gem – current favorite for authentication of Rails Applications'
 type: wp
 wordpress_id: 563

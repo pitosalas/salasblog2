@@ -4,6 +4,7 @@ date: '2005-10-26'
 subtitle: filled with tomatoes,
 tags:
 - food
+- personal
 title: You say tomato – I say tomahto
 type: wp
 wordpress_id: 1670

@@ -5,6 +5,7 @@ subtitle: I was probably the last one to hear about AllofMp3.com. It’s this ma
 tags:
 - music
 - legal
+- personal
 title: What’s up with AllofMP3.com?
 type: wp
 wordpress_id: 1501

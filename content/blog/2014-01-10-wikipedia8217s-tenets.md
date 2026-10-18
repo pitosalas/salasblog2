@@ -5,6 +5,7 @@ subtitle: 'Flying back home yesterday I read this article about Wikipedia in the
   York Times: [Wikipedia, Wh...'
 tags:
 - wikipedia
+- nyt
 title: Wikipedia’s tenets
 type: wp
 wordpress_id: 131

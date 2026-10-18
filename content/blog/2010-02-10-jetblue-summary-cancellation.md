@@ -5,6 +5,9 @@ subtitle: I was supposed to fly from San Fransisco to Boston today. Monday (2 da
   ago) I got an email from [J...
 tags:
 - travel
+- games
+- personal
+- science
 title: 'JetBlue: Summary cancellation'
 type: wp
 wordpress_id: 747

@@ -5,6 +5,7 @@ subtitle: Really interesting article about what is going on in Venezuela and the
   of Hugo Chavez’ polici...
 tags:
 - politics
+- personal
 title: Venezuela’s lost human capital
 type: wp
 wordpress_id: 1337

@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-02-19'
 subtitle: A beautifully written comment (positive) by Roger Ebert
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Ebert, in his own words
 type: wp
 wordpress_id: 740

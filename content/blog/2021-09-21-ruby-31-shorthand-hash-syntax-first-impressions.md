@@ -4,6 +4,7 @@ date: '2021-09-21'
 subtitle: Ruby 3.1 – Shorthand Hash Syntax – First Impressions
 tags:
 - ruby
+- howto
 title: Ruby 3.1 – Shorthand Hash Syntax – First Impressions
 type: wp
 wordpress_id: 3069

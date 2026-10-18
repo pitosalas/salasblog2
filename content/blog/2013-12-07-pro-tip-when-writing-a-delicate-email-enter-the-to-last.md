@@ -3,8 +3,8 @@ category: '1'
 date: '2013-12-07'
 subtitle: So, if you are writing one of those emails that you have to get right, and
   you plan to check and pro...
-tag_review: no_fit
-tags: []
+tags:
+- email
 title: '[Pro-Tip] When writing a delicate email, enter the To: last'
 type: wp
 wordpress_id: 134

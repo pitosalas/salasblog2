@@ -3,8 +3,8 @@ category: '298'
 date: '2008-02-05'
 subtitle: I was going to wait until I had read each of these great articles that all
   won the [“Sidney Awards”]...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Great magazine articles
 type: wp
 wordpress_id: 1118

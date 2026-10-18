@@ -4,6 +4,9 @@ date: '2009-03-16'
 subtitle: Clay Shirkey writes an article called “Newspapers and Thinking the Unthinkable”.
 tags:
 - business
+- personal
+- politics
+- technology
 title: “Society doesn’t need newspapers. What we need is journalism”
 type: wp
 wordpress_id: 871

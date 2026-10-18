@@ -2,8 +2,8 @@
 category: '538'
 date: '2004-12-18'
 subtitle: I attended a Podcasting meeting at Berkman a [couple of days a...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Lightbulb about Podcasting (“Some stuff I just figured out”)
 type: wp
 wordpress_id: 1892

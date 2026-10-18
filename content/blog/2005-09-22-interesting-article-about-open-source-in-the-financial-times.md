@@ -5,6 +5,7 @@ subtitle: And in classic **Blogosphere** form, you can find a report on the repo
 tags:
 - technology
 - business
+- personal
 title: Interesting article  about Open Source in the Financial Times
 type: wp
 wordpress_id: 1690

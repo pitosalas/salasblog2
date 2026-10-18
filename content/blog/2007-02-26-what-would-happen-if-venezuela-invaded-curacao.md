@@ -6,6 +6,7 @@ subtitle: Yeah a weird thought. So when I came across an [analysis called The Du
 tags:
 - curacao
 - politics
+- personal
 title: What would happen if Venezuela invaded Curaçao
 type: wp
 wordpress_id: 1320

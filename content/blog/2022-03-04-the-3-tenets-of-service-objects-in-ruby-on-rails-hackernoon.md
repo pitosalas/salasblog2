@@ -4,6 +4,8 @@ date: '2022-03-04'
 subtitle: The 3 Tenets of Service Objects in Ruby on Rails | HackerNoon
 tags:
 - ruby
+- brandeis
+- howto
 title: The 3 Tenets of Service Objects in Ruby on Rails | HackerNoon
 type: wp
 wordpress_id: 3277

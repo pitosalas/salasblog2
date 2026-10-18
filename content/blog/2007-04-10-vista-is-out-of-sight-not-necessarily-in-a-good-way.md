@@ -3,8 +3,8 @@ category: '538'
 date: '2007-04-10'
 subtitle: I just had the pleasure of going through the initial set up of Windows Vista
   on a brand new HP noteb...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Vista is out-of-sight (not necessarily in a good way)
 type: wp
 wordpress_id: 1289

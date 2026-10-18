@@ -4,6 +4,8 @@ date: '2005-07-21'
 subtitle: 'Check this out: Microsoft Announces Plans to Acquire FrontBridge'
 tags:
 - business
+- blogging
+- technology
 title: Microsoft bought one Bridge, maybe they’ll buy another
 type: wp
 wordpress_id: 1731

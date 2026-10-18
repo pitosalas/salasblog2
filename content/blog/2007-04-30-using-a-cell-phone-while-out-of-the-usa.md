@@ -5,6 +5,8 @@ subtitle: Lately, for some crazy reason, I’ve found myself, multiple times, in
   Canada, and Willemstad...
 tags:
 - travel
+- personal
+- technology
 title: Using a cell phone while out of the USA
 type: wp
 wordpress_id: 1277

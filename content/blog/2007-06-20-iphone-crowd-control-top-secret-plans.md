@@ -4,6 +4,8 @@ date: '2007-06-20'
 subtitle: Check out this post from [The Unofficial A...
 tags:
 - apple
+- personal
+- technology
 title: 'iPhone crowd control: Top Secret Plans'
 type: wp
 wordpress_id: 1252

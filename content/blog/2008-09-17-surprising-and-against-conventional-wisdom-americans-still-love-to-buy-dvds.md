@@ -4,6 +4,8 @@ date: '2008-09-17'
 subtitle: Interesting article about the sale of DVDs
 tags:
 - business
+- personal
+- technology
 title: 'Surprising and against conventional wisdom: Americans still love to buy DVDs'
 type: wp
 wordpress_id: 975

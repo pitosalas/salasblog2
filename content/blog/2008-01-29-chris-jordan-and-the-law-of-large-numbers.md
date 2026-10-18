@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-01-29'
 subtitle: I saw Chris Jordan
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Chris Jordan and the law of large numbers
 type: wp
 wordpress_id: 1128

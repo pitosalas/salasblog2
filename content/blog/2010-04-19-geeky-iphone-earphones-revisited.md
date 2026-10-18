@@ -5,6 +5,7 @@ subtitle: The earphone/microphone that came with my iPhone is acting odd. First 
   thought it was a problem wit...
 tags:
 - apple
+- personal
 title: '[GEEKY] iPhone earphones revisited'
 type: wp
 wordpress_id: 729

@@ -5,6 +5,7 @@ subtitle: Came across Jonathan Coulton, the songwriter who embarked on a ridicul
   challenge to write a song ...
 tags:
 - music
+- personal
 title: 'Code Monkey: Funny'
 type: wp
 wordpress_id: 1404

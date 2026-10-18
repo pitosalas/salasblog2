@@ -4,6 +4,8 @@ date: '2006-06-27'
 subtitle: Wikipedia – How to milk the ole cow
 tags:
 - wikipedia
+- personal
+- technology
 title: June 27th – Wonderful miraculous stuff
 type: wp
 wordpress_id: 1507

@@ -4,6 +4,7 @@ date: '2007-02-05'
 subtitle: Check out [this
 tags:
 - boston
+- personal
 title: I was away when Boston and Fox both embarassed themselves
 type: wp
 wordpress_id: 1338

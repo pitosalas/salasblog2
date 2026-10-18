@@ -3,8 +3,8 @@ category: '538'
 date: '2007-03-15'
 subtitle: I am participating in the “[Institute of Management Consultants” New England
   Chapter program tonight...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: 'RSS: What’s in it for you?'
 type: wp
 wordpress_id: 1304

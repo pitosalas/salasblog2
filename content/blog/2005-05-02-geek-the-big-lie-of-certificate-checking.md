@@ -2,8 +2,9 @@
 category: '422'
 date: '2005-05-02'
 subtitle: '!['
-tag_review: no_fit
-tags: []
+tags:
+- programming
+- technology
 title: '[GEEK] The BIG LIE of certificate checking'
 type: wp
 wordpress_id: 1796

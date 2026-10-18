@@ -5,6 +5,7 @@ subtitle: I really love her major novels although I haven’t looked at them in 
   You know how you remember...
 tags:
 - politics
+- personal
 title: When I was younger I used to admire Ayn Rand
 type: wp
 wordpress_id: 1875

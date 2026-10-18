@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-03-14'
 subtitle: 'These are really funny and clever: Transparent Screens'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Transparent screens
 type: wp
 wordpress_id: 1306

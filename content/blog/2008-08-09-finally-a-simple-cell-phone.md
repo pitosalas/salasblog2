@@ -4,6 +4,7 @@ date: '2008-08-09'
 subtitle: '![](https://i0.wp.com/www.gizmodo.com/images/Simple.jpg?w=584)'
 tags:
 - technology
+- personal
 title: Finally, a simple cell phone!
 type: wp
 wordpress_id: 998

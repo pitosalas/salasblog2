@@ -2,8 +2,11 @@
 category: '298'
 date: '2011-07-18'
 subtitle: Actually it’s about Twitter Support in BlogBridge
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
+- technology
+- social-media
 title: Big announcement about twitter
 type: wp
 wordpress_id: 526

@@ -4,6 +4,7 @@ date: '2022-01-31'
 subtitle: laser_pipeline/Tutorials/IntroductionToWorkingWithLaserScannerData
 tags:
 - robotics
+- howto
 title: laser_pipeline/Tutorials/IntroductionToWorkingWithLaserScannerData
 type: wp
 wordpress_id: 3241

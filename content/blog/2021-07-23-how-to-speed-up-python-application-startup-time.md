@@ -4,6 +4,8 @@ date: '2021-07-23'
 subtitle: How to speed up Python application startup time
 tags:
 - python
+- howto
+- performance
 title: How to speed up Python application startup time
 type: wp
 wordpress_id: 3005

@@ -3,8 +3,9 @@ category: '298'
 date: '2010-08-04'
 subtitle: It seems like nowadays, to be a cool, 21st century kind of application,
   you need to allow me to use ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: '[GEEKY] Too much authentication goodness'
 type: wp
 wordpress_id: 692

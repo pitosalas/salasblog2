@@ -4,6 +4,7 @@ date: '2011-10-05'
 subtitle: '!A Reliable Wife'
 tags:
 - books
+- personal
 title: My review of A Reliable Wife
 type: wp
 wordpress_id: 485

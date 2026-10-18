@@ -4,6 +4,7 @@ date: '2022-05-08'
 subtitle: Our Golang Frameworks vs Ruby Frameworks Expert Guide for Software Developers
 tags:
 - ruby
+- web
 title: Our Golang Frameworks vs Ruby Frameworks Expert Guide for Software Developers
 type: wp
 wordpress_id: 3458

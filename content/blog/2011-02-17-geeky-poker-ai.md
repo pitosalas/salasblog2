@@ -5,6 +5,10 @@ subtitle: An interesting article about how to think about [designing Artificial 
   for playing poker...
 tags:
 - ai
+- games
+- personal
+- programming
+- technology
 title: '[GEEKY] Poker AI'
 type: wp
 wordpress_id: 595

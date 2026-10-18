@@ -5,6 +5,7 @@ subtitle: I never was a fan of Tommy Thomson – what a name! I am no expert on 
   but it seems to [me t...
 tags:
 - politics
+- personal
 title: Is this a good idea?
 type: wp
 wordpress_id: 1902

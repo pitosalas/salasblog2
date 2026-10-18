@@ -3,8 +3,9 @@ category: '298'
 date: '2009-04-16'
 subtitle: Did you wonder how those snipers were able to shoot those pirates when both
   groups were on boats on ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- politics
 title: Inside the Shot Heard ‘Round the World
 type: wp
 wordpress_id: 856

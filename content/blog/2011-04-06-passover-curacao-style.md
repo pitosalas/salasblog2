@@ -6,6 +6,7 @@ tags:
 - jewish
 - curacao
 - food
+- personal
 title: Passover, Curaçao style
 type: wp
 wordpress_id: 577

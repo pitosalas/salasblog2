@@ -4,6 +4,8 @@ date: '2005-05-03'
 subtitle: '!['
 tags:
 - design
+- personal
+- technology
 title: 'Too much good stuff: makes me feel inadequate :-)'
 type: wp
 wordpress_id: 1795

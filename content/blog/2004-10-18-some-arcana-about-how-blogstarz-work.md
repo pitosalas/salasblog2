@@ -3,8 +3,8 @@ category: '50'
 date: '2004-10-18'
 subtitle: '**Believe **me when I say that this **will only be interesting **to you
   if you are curious about the...'
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Some arcana about how BlogStarz! work
 type: wp
 wordpress_id: 1923

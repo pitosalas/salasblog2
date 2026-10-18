@@ -6,6 +6,8 @@ subtitle: I get asked from time to time to recommend ruby, rails, and other deve
 tags:
 - ruby
 - boston
+- programming
+- technology
 title: Ruby and Rails job boards in Boston
 type: wp
 wordpress_id: 751

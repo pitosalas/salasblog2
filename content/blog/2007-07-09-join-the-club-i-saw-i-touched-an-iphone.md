@@ -5,6 +5,8 @@ subtitle: 'I am not going to write yet another long review or commentary. But I 
   resist a few crass words:'
 tags:
 - apple
+- personal
+- technology
 title: 'Join the club: I saw, I touched, an iPhone'
 type: wp
 wordpress_id: 1242

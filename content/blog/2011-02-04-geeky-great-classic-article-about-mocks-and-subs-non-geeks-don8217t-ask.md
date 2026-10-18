@@ -6,6 +6,7 @@ subtitle: 'A seminal article about an advanced topic in software testing: Mocks 
 tags:
 - programming
 - software-engineering
+- personal
 title: '[GEEKY] Great classic article about Mocks and Subs (non-geeks: don’t ask!)'
 type: wp
 wordpress_id: 599

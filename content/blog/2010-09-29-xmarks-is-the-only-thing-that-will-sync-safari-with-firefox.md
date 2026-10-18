@@ -4,6 +4,8 @@ date: '2010-09-29'
 subtitle: 'And, it’s leaving us:'
 tags:
 - technology
+- personal
+- startups
 title: XMarks is the only thing that will sync Safari with Firefox
 type: wp
 wordpress_id: 660

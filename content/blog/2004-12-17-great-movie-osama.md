@@ -3,8 +3,8 @@ category: '298'
 date: '2004-12-17'
 subtitle: No it’s not about Osama Bin Laden (UBL) but about a little girl called Osama,
   living in Taliban Kabu...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Great Movie: Osama'
 type: wp
 wordpress_id: 1893

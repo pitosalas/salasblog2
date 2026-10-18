@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-08-14'
 subtitle: '[tag]Funny[/tag]!'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: “The Most Expensive Bidder”
 type: wp
 wordpress_id: 1229

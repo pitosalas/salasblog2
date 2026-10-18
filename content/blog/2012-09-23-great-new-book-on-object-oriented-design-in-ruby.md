@@ -6,6 +6,7 @@ tags:
 - programming
 - ruby
 - books
+- design
 title: Great new book on Object Oriented design (in Ruby)
 type: wp
 wordpress_id: 301

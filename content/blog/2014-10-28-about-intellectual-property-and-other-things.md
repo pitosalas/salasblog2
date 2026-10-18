@@ -5,6 +5,7 @@ subtitle: I came across a wonderful quote about intellectual property. I am not 
   I agree with it myself bu...
 tags:
 - legal
+- music
 title: About intellectual property and other things
 type: wp
 wordpress_id: 2901

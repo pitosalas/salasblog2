@@ -4,6 +4,7 @@ date: '2018-07-18'
 subtitle: How to Approach Machine Learning Problems
 tags:
 - ai
+- technology
 title: Some great links for  07/18/2018
 type: wp
 wordpress_id: 2408

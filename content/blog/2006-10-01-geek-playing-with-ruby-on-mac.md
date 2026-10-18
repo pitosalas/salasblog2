@@ -6,6 +6,7 @@ subtitle: I’m getting a little **fascinated** with **Ruby** and **Rails** so I
 tags:
 - ruby
 - apple
+- programming
 title: '[GEEK] Playing with Ruby on Mac'
 type: wp
 wordpress_id: 1428

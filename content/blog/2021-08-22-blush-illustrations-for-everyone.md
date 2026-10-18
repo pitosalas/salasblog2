@@ -4,6 +4,8 @@ date: '2021-08-22'
 subtitle: 'Blush: Illustrations for everyone'
 tags:
 - design
+- howto
+- images
 title: 'Blush: Illustrations for everyone'
 type: wp
 wordpress_id: 3041

@@ -2,8 +2,9 @@
 category: '298'
 date: '2006-09-27'
 subtitle: '- You happen to have a Tivo'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Tivo Tidbit
 type: wp
 wordpress_id: 1431

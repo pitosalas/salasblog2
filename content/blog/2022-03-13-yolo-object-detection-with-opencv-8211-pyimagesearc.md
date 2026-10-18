@@ -5,6 +5,7 @@ subtitle: YOLO object detection with OpenCV – PyImageSearc
 tags:
 - robotics
 - python
+- computer-vision
 title: YOLO object detection with OpenCV – PyImageSearc
 type: wp
 wordpress_id: 3334

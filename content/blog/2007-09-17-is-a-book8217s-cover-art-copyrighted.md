@@ -4,6 +4,7 @@ date: '2007-09-17'
 subtitle: '![](https://i0.wp.com/karlalbrecht.com/images/bookpracticalintelligence.jpg?w=584)![](https://i0.wp....'
 tags:
 - legal
+- personal
 title: Is a book’s cover art copyrighted?
 type: wp
 wordpress_id: 1210

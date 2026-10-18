@@ -4,6 +4,9 @@ date: '2022-01-22'
 subtitle: This robot can hike as fast as a human
 tags:
 - robotics
+- navigation
+- research
+- video
 title: This robot can hike as fast as a human
 type: wp
 wordpress_id: 3219

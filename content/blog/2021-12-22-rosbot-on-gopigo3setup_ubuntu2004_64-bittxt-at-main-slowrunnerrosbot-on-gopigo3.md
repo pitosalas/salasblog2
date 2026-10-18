@@ -4,6 +4,9 @@ date: '2021-12-22'
 subtitle: rosbot-on-gopigo3/Setup_Ubuntu20.04_64-bit.txt at main · slowrunner/rosbot-on-gopigo3
 tags:
 - robotics
+- howto
+- technology
+- linux
 title: rosbot-on-gopigo3/Setup_Ubuntu20.04_64-bit.txt at main · slowrunner/rosbot-on-gopigo3
 type: wp
 wordpress_id: 3147

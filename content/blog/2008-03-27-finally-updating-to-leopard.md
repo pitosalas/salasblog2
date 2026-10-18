@@ -5,6 +5,7 @@ subtitle: Usually more on the bleeding edge than this, I decided to wait until n
   to upgrade my macs to Leopa...
 tags:
 - apple
+- personal
 title: Finally updating to Leopard
 type: wp
 wordpress_id: 1078

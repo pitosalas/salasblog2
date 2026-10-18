@@ -5,6 +5,7 @@ subtitle: Everyone says that the reason they like the Mac and OS X is that *itâ€
   easy to use!* I am **not s...
 tags:
 - apple
+- technology
 title: 'Switcherâ€™s Log, Part 7: How can Apple be so brain dead about usability?'
 type: wp
 wordpress_id: 1810

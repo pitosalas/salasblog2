@@ -6,6 +6,7 @@ subtitle: Due to an unusual set of coincidences I have 3 different Macintosh com
 tags:
 - apple
 - technology
+- performance
 title: MacBook Performance comparison
 type: wp
 wordpress_id: 430

@@ -5,6 +5,7 @@ subtitle: Larry Sanger, the co-founder of Wikipedia who later quite the project 
   differences in vision, ju...
 tags:
 - wikipedia
+- personal
 title: What’s wrong with Wikipedia?
 type: wp
 wordpress_id: 1420

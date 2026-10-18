@@ -4,6 +4,9 @@ date: '2011-11-29'
 subtitle: 'Just one phrase that jumped out of the new missive from Zuck about privacy:'
 tags:
 - technology
+- social-media
+- scalability
+- web
 title: Tens of Thousands of Servers. Wait.
 type: wp
 wordpress_id: 452

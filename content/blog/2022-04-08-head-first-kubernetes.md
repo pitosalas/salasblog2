@@ -2,8 +2,12 @@
 category: '152'
 date: '2022-04-08'
 subtitle: Head-First Kubernetes
-tag_review: no_fit
-tags: []
+tags:
+- docker
+- explainer
+- howto
+- technology
+- python
 title: Head-First Kubernetes
 type: wp
 wordpress_id: 3418

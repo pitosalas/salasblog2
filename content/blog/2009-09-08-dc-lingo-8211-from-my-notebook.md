@@ -4,6 +4,8 @@ date: '2009-09-08'
 subtitle: More stuff that I learned at Transparency camp.
 tags:
 - politics
+- humor
+- personal
 title: DC Lingo – from my notebook
 type: wp
 wordpress_id: 806

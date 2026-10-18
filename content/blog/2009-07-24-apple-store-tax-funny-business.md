@@ -5,6 +5,7 @@ subtitle: A friend of mine pointed out that for some reason when he ordered is (
   iPhone 3GS, the App...
 tags:
 - apple
+- personal
 title: Apple Store Tax Funny Business?
 type: wp
 wordpress_id: 820

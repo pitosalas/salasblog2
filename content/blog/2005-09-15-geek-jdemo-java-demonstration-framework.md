@@ -5,6 +5,7 @@ subtitle: 'This is pretty cool: a framework to easily manage the demonstration o
   UI elements, inspired by JUni...'
 tags:
 - programming
+- technology
 title: '[GEEK] JDemo: Java Demonstration Framework'
 type: wp
 wordpress_id: 1696

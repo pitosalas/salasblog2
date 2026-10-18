@@ -2,8 +2,8 @@
 category: '51'
 date: '2010-07-15'
 subtitle: Check out 10 Tools for Distributed Developer Teams
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: 'From Mashable: The beat goes on'
 type: wp
 wordpress_id: 702

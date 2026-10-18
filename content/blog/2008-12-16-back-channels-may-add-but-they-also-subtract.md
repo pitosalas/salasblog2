@@ -3,8 +3,9 @@ category: '298'
 date: '2008-12-16'
 subtitle: I totally agree. Is it just part of the tendency of those people to always
   want to be the center of ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Back Channels May Add, But They Also Subtract
 type: wp
 wordpress_id: 927

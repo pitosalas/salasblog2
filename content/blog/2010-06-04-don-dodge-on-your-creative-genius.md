@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-06-04'
 subtitle: I came across this good post from Don Dodge
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Don Dodge on your creative genius
 type: wp
 wordpress_id: 713

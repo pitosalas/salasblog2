@@ -4,6 +4,7 @@ date: '2018-06-24'
 subtitle: Active Job Basics — Ruby on Rails Guides
 tags:
 - ruby
+- technology
 title: Some great links for  06/24/2018
 type: wp
 wordpress_id: 2363

@@ -5,6 +5,8 @@ subtitle: '> “NASA’s Phoenix lander may have captured the first images of li
   on Mars – droplets that ...'
 tags:
 - science
+- personal
+- technology
 title: Liquid water on mars
 type: wp
 wordpress_id: 885

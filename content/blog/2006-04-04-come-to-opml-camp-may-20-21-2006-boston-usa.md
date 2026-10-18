@@ -5,6 +5,7 @@ subtitle: There is a *lot of stuff going on with OPML* these days. OPML stands f
   Out...
 tags:
 - boston
+- technology
 title: 'Come to OPML Camp: May 20-21, 2006, Boston, USA!'
 type: wp
 wordpress_id: 1562

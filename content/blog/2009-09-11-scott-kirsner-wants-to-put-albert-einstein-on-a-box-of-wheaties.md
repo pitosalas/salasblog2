@@ -4,6 +4,8 @@ date: '2009-09-11'
 subtitle: This is actually a pretty cool idea
 tags:
 - science
+- personal
+- technology
 title: Scott Kirsner wants to put Albert Einstein on a box of wheaties
 type: wp
 wordpress_id: 804

@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-09-28'
 subtitle: 'This is just a weird weird happening:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Owner of Segway dies in Segway accident
 type: wp
 wordpress_id: 662

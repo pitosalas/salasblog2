@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-12-28'
 subtitle: If you’re a blogger or read blogs you might have come across the debate,
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Joel on Software on bribing and ethics
 type: wp
 wordpress_id: 1372

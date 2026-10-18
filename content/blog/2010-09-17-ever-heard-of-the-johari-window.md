@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-09-17'
 subtitle: I came across the idea of the Johari Window during one...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Ever heard of the Johari Window?
 type: wp
 wordpress_id: 668

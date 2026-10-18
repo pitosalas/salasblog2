@@ -5,6 +5,7 @@ subtitle: Bartosz Ciechanowski
 tags:
 - science
 - mathematics
+- explainer
 title: Bartosz Ciechanowski
 type: wp
 wordpress_id: 3456

@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-12-29'
 subtitle: Check out this post
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: All I need is a pair of pants
 type: wp
 wordpress_id: 1146

@@ -5,6 +5,7 @@ subtitle: Ever notice in restaurant menus how the dish descriptions are made to 
   fancier and fancier by a...
 tags:
 - programming
+- technology
 title: Making it  sound better
 type: wp
 wordpress_id: 1695

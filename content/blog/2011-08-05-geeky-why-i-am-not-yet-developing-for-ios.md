@@ -5,6 +5,7 @@ subtitle: Check this post A strong argument for why iOS development is winning
 tags:
 - apple
 - programming
+- technology
 title: '[GEEKY] Why I am not yet developing for iOS'
 type: wp
 wordpress_id: 512

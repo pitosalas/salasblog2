@@ -4,6 +4,7 @@ date: '2008-01-07'
 subtitle: A lot has been written about electronic voting machines and their vulnerabilities.
 tags:
 - politics
+- technology
 title: 'Electronic Voting: interesting new wrinkle'
 type: wp
 wordpress_id: 1141

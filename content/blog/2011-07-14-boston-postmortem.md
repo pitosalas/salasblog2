@@ -4,6 +4,10 @@ date: '2011-07-14'
 subtitle: We just got back from the monthly meeting of “Boston Postmortem“...
 tags:
 - boston
+- games
+- personal
+- programming
+- technology
 title: Boston Postmortem
 type: wp
 wordpress_id: 533

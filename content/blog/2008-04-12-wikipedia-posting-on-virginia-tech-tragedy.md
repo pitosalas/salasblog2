@@ -5,6 +5,8 @@ subtitle: People wonder about Wikipdia and what it’s good for. This is an exam
   from a **while back**, of Wi...
 tags:
 - wikipedia
+- personal
+- politics
 title: Wikipedia posting on Virginia Tech Tragedy
 type: wp
 wordpress_id: 1067

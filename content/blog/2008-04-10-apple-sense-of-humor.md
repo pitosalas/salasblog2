@@ -4,6 +4,7 @@ date: '2008-04-10'
 subtitle: '!Funny comment by Apple about Windoze'
 tags:
 - apple
+- technology
 title: Apple sense of humor
 type: wp
 wordpress_id: 1069

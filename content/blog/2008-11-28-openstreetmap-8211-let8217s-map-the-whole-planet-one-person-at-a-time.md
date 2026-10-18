@@ -6,6 +6,7 @@ subtitle: Another crazy-brilliant site, [OpenStreetMap.org, is aiming to get all
 tags:
 - technology
 - maps
+- personal
 title: OpenStreetMap – Let’s map the whole planet, one person at a time
 type: wp
 wordpress_id: 938

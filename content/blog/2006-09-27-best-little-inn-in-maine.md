@@ -5,6 +5,7 @@ subtitle: If you’re looking for a really wonderful place to stay while in Bar 
   you should check out the...
 tags:
 - travel
+- personal
 title: Best little Inn in Maine
 type: wp
 wordpress_id: 1432

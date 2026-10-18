@@ -5,6 +5,9 @@ subtitle: '[ Scalable application design without magic – Leveraging client com
   power for high performance...'
 tags:
 - software-engineering
+- cloud
+- howto
+- scalability
 title: Scalable application design without magic – Leveraging client computing power
   for high performance with many users
 type: wp

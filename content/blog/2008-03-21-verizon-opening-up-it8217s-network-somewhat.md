@@ -4,6 +4,7 @@ date: '2008-03-21'
 subtitle: I am starting to follow the world of mesh networks and things...
 tags:
 - technology
+- personal
 title: Verizon opening up it’s network somewhat
 type: wp
 wordpress_id: 1082

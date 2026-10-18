@@ -4,6 +4,9 @@ date: '2022-03-18'
 subtitle: 'OpenCV: Detection of ArUco Markers'
 tags:
 - robotics
+- computer-vision
+- education
+- howto
 title: 'OpenCV: Detection of ArUco Markers'
 type: wp
 wordpress_id: 3358

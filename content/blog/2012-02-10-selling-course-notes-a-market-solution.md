@@ -5,6 +5,7 @@ subtitle: Should it be ok for students to **take notes **during a class and turn
   into a marketable produc...
 tags:
 - education
+- business
 title: 'Selling course notes: a market solution'
 type: wp
 wordpress_id: 392

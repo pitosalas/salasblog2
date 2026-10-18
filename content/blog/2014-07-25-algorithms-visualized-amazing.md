@@ -5,6 +5,8 @@ subtitle: Check out this article that shows off how visualizations can help you 
   how algorithms work...
 tags:
 - computer-science
+- programming
+- design
 title: 'Algorithms Visualized: amazing'
 type: wp
 wordpress_id: 48

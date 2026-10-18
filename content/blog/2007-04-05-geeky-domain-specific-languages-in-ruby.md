@@ -6,6 +6,7 @@ subtitle: This is a topic that I’ve gotten somewhat interested in. If you sear
 tags:
 - ruby
 - programming
+- technology
 title: '[GEEKY] Domain specific languages in Ruby'
 type: wp
 wordpress_id: 1291

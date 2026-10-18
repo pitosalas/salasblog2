@@ -4,6 +4,8 @@ date: '2008-01-22'
 subtitle: '!Discontinuity'
 tags:
 - business
+- personal
+- politics
 title: What is a discontinuity?
 type: wp
 wordpress_id: 1133

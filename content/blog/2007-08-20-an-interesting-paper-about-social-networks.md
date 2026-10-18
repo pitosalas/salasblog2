@@ -3,8 +3,8 @@ category: '538'
 date: '2007-08-20'
 subtitle: The [guy who created [tag]Live Journal[/tag]](http://www.bradfitz.com/)
   (Brad Fitzpatrick) has a man...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: An interesting paper about social networks
 type: wp
 wordpress_id: 1226

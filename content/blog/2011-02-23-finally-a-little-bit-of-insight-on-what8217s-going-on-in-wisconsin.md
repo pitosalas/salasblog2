@@ -4,6 +4,7 @@ date: '2011-02-23'
 subtitle: I’ve seen several interviews with Scott Walker
 tags:
 - politics
+- personal
 title: Finally a little bit of insight on what’s going on in Wisconsin
 type: wp
 wordpress_id: 592

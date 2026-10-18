@@ -2,8 +2,8 @@
 category: '538'
 date: '2004-07-13'
 subtitle: In several previous posts I’ve won...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: '[JAVA ONE]Sun answers my question'
 type: wp
 wordpress_id: 1964

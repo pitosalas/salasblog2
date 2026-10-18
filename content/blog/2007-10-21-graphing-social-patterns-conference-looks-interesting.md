@@ -3,8 +3,8 @@ category: '538'
 date: '2007-10-21'
 subtitle: A very interesting talk by Tim O’Reilly at the Graphing Social Patterns
   conference
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Graphing Social Patterns conference looks interesting
 type: wp
 wordpress_id: 1189

@@ -3,8 +3,8 @@ category: '298'
 date: '2007-04-01'
 subtitle: I don’t want to label myself as a fuddie-duddie. I keep thinking back to
   this talk at ETech. [Quinn ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Most memorable, interesting ETECH talk
 type: wp
 wordpress_id: 1295

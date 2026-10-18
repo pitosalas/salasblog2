@@ -2,8 +2,8 @@
 category: '298'
 date: '2009-11-10'
 subtitle: Just came across Wordnik, what looks like a mega
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Wordnik is a new online dictionary and more
 type: wp
 wordpress_id: 779

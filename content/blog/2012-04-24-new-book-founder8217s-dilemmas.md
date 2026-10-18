@@ -6,6 +6,7 @@ subtitle: 'This book looks good: “Founder’s Dilemmas: Anticipating and Avoid
 tags:
 - business
 - books
+- startups
 title: 'New Book: Founder’s Dilemmas'
 type: wp
 wordpress_id: 349

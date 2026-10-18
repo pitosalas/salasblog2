@@ -2,8 +2,9 @@
 category: '249'
 date: '2022-03-27'
 subtitle: Managing remote repositories – GitHub Docs
-tag_review: no_fit
-tags: []
+tags:
+- cli
+- howto
 title: Managing remote repositories – GitHub Docs
 type: wp
 wordpress_id: 3390

@@ -5,6 +5,8 @@ subtitle: I just came off listening to Dan Bricklin’s first podcast, an interv
   with Linda Hamel
 tags:
 - legal
+- personal
+- technology
 title: Dan Bricklin doing some interesting podcasting
 type: wp
 wordpress_id: 1766

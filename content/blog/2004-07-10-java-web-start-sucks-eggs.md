@@ -2,8 +2,8 @@
 category: '538'
 date: '2004-07-10'
 subtitle: I’ve written about this before, and after all it is fairly (no, ver...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Java Web Start Sucks Eggs
 type: wp
 wordpress_id: 1969

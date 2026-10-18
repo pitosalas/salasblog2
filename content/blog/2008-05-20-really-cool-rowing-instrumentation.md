@@ -3,8 +3,8 @@ category: '298'
 date: '2008-05-20'
 subtitle: If there are any rowing fanatics out there, or competitive rowing coaches,
   [take a look at this cool...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Really cool rowing instrumentation
 type: wp
 wordpress_id: 1043

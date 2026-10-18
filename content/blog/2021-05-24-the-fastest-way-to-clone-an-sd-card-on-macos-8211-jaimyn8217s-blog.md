@@ -4,6 +4,9 @@ date: '2021-05-24'
 subtitle: The fastest way to clone an SD card on macOS – Jaimyn’s Blog
 tags:
 - apple
+- howto
+- technology
+- robotics
 title: The fastest way to clone an SD card on macOS – Jaimyn’s Blog
 type: wp
 wordpress_id: 2912

@@ -3,8 +3,8 @@ category: '298'
 date: '2014-06-27'
 subtitle: 'Interesting article: [The media loves the “wrong speed” theory, but a lightning
   strike and electrica...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Flight 447 from a pilot’s perspective
 type: wp
 wordpress_id: 84

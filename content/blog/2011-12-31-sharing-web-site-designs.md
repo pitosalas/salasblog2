@@ -5,6 +5,7 @@ subtitle: Recently I wanted to get feedback on one of several ideas for the desi
   of the new BlogBridge
 tags:
 - design
+- blogging
 title: Sharing Web Site Designs
 type: wp
 wordpress_id: 429

@@ -5,6 +5,8 @@ subtitle: Check this post iPhones Help Cops Solve Crimes By Capturing Everything
   Type, Do
 tags:
 - apple
+- personal
+- technology
 title: iPhones record everything you do?
 type: wp
 wordpress_id: 687

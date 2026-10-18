@@ -3,8 +3,9 @@ category: '1'
 date: '2012-04-17'
 subtitle: Listen, I **love** the New York Times. I read it cover to cover (or pixel
   to pixel) every day and ha...
-tag_review: no_fit
-tags: []
+tags:
+- nyt
+- wsj
 title: New York Times Grammar and Style
 type: wp
 wordpress_id: 352

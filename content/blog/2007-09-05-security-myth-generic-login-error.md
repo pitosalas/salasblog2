@@ -2,8 +2,8 @@
 category: '538'
 date: '2007-09-05'
 subtitle: Check out this post from...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: 'Security Myth: Generic Login Error'
 type: wp
 wordpress_id: 1219

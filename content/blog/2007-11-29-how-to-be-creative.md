@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-11-29'
 subtitle: I just came across this thoughtprovoking
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: How to be creative
 type: wp
 wordpress_id: 1170

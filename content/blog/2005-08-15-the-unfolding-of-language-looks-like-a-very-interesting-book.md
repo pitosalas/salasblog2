@@ -4,6 +4,7 @@ date: '2005-08-15'
 subtitle: '[http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=0805079076&fc1=000000&lc1=0000ff&bc1...'
 tags:
 - books
+- personal
 title: 'The unfolding of language: Looks like a very interesting book'
 type: wp
 wordpress_id: 1716

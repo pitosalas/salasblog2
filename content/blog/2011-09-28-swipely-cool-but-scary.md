@@ -3,8 +3,10 @@ category: '298'
 date: '2011-09-28'
 subtitle: So there’s this rather cool new service that says they will find and give
   you special deals to the s...
-tag_review: no_fit
-tags: []
+tags:
+- security
+- personal
+- technology
 title: Swipely, cool but scary?
 type: wp
 wordpress_id: 493

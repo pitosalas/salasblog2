@@ -4,6 +4,11 @@ date: '2022-03-09'
 subtitle: Randall Degges – Heroku and SOA
 tags:
 - software-engineering
+- design
+- heroku
+- howto
+- soa
+- api
 title: Randall Degges – Heroku and SOA
 type: wp
 wordpress_id: 3304

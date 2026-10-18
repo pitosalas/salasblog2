@@ -3,8 +3,8 @@ category: '298'
 date: '2007-03-05'
 subtitle: Really interesting article which asks whether a [recent incident on an Americann
   Airlines flight in ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: AA Flight 62 – A terrorist probe?
 type: wp
 wordpress_id: 1314

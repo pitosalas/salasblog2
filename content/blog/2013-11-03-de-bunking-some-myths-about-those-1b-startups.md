@@ -5,6 +5,7 @@ subtitle: I want to direct your attention ton interesting article about $1 Billi
   Startups – “Unicorns” – on ...
 tags:
 - business
+- startups
 title: (De) bunking some myths about those $1b startups
 type: wp
 wordpress_id: 144

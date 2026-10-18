@@ -2,8 +2,9 @@
 category: '249'
 date: '2021-05-21'
 subtitle: Understanding the Numbers and Letters on a LiPo Battery
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- robotics
 title: Understanding the Numbers and Letters on a LiPo Battery
 type: wp
 wordpress_id: 2906

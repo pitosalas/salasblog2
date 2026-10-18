@@ -6,6 +6,8 @@ subtitle: Why doesn’t every one **love Rails**? I am surprised when I run into
 tags:
 - programming
 - ruby
+- scalability
+- technology
 title: '[GEEKY] Yes, Virginia, Rails DOES scale'
 type: wp
 wordpress_id: 565

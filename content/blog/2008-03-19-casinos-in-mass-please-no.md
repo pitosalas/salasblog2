@@ -5,6 +5,7 @@ subtitle: '[youtube http://www.youtube.com/watch?v=ZfWsfDweeM4&hl=en]I found my 
   onto Robin Chase’s blog, [N...'
 tags:
 - politics
+- personal
 title: Casinos in Mass? Please, No!
 type: wp
 wordpress_id: 1084

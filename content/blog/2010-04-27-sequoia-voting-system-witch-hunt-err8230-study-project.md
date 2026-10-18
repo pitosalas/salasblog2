@@ -2,8 +2,8 @@
 category: '538'
 date: '2010-04-27'
 subtitle: Check this post Sequoia Voting System Witch Hunt, err… Study Project
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Sequoia Voting System Witch Hunt, err… Study Project
 type: wp
 wordpress_id: 726

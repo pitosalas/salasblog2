@@ -5,6 +5,7 @@ subtitle: I spent over an frustrating hour on the phone yesterday with Bank Of A
   and Paypal trying to so...
 tags:
 - personal
+- tv
 title: The dark side of low prices
 type: wp
 wordpress_id: 2900

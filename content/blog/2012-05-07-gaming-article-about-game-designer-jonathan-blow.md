@@ -2,8 +2,9 @@
 category: '1'
 date: '2012-05-07'
 subtitle: A good article in the Atlantic about game designer Jonathan Blow
-tag_review: no_fit
-tags: []
+tags:
+- design
+- games
 title: '[GAMING] Article about game designer Jonathan Blow'
 type: wp
 wordpress_id: 335

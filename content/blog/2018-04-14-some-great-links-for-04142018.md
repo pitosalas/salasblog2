@@ -5,6 +5,7 @@ subtitle: 'Build a Text Classification Program: An NLP Tutorial'
 tags:
 - ai
 - python
+- technology
 title: Some great links for  04/14/2018
 type: wp
 wordpress_id: 2214

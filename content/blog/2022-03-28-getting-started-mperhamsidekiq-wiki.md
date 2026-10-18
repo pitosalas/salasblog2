@@ -4,6 +4,10 @@ date: '2022-03-28'
 subtitle: Getting Started · mperham/sidekiq Wiki
 tags:
 - ruby
+- concurrency
+- howto
+- performance
+- scalability
 title: Getting Started · mperham/sidekiq Wiki
 type: wp
 wordpress_id: 3400

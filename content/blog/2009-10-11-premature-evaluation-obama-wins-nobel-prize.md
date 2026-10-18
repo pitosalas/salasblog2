@@ -4,6 +4,7 @@ date: '2009-10-11'
 subtitle: 'Check out Premature Evaluation?: Obama Wins Nobel Prize(**from** ...'
 tags:
 - politics
+- blogging
 title: 'Premature Evaluation?: Obama Wins Nobel Prize'
 type: wp
 wordpress_id: 795

@@ -2,8 +2,10 @@
 category: '113'
 date: '2022-01-12'
 subtitle: The Anatomy of a GraphQL Query – Apollo GraphQL Blog
-tag_review: no_fit
-tags: []
+tags:
+- api
+- brandeis
+- howto
 title: The Anatomy of a GraphQL Query – Apollo GraphQL Blog
 type: wp
 wordpress_id: 3207

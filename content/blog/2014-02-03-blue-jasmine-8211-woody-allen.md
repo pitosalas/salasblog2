@@ -3,8 +3,8 @@ category: '1'
 date: '2014-02-03'
 subtitle: I just saw Blue Jasmine, the latest Woody Allen movie. It is excellent and
   I recommend it. I also ha...
-tag_review: no_fit
-tags: []
+tags:
+- movies
 title: Blue Jasmine – Woody Allen
 type: wp
 wordpress_id: 120

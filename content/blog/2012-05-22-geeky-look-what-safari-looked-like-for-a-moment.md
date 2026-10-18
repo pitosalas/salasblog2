@@ -3,8 +3,9 @@ category: '1'
 date: '2012-05-22'
 subtitle: I can’t explain it but I was just scrolling around some pdf in Safari and
   it actually turned my worl...
-tag_review: no_fit
-tags: []
+tags:
+- technology
+- apple
 title: '[GEEKY] Look what Safari looked like for a moment'
 type: wp
 wordpress_id: 329

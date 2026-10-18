@@ -4,6 +4,7 @@ date: '2007-01-22'
 subtitle: I don’t know, maybe it’s because he’s a mini celebrity but I found the
 tags:
 - health
+- personal
 title: Another fascinating post from Scott Adams
 type: wp
 wordpress_id: 1342

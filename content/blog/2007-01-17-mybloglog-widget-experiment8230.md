@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-01-17'
 subtitle: 'How do you like this:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: MyBlogLog Widget experiment…
 type: wp
 wordpress_id: 1348

@@ -3,8 +3,8 @@ category: '298'
 date: '2008-02-12'
 subtitle: I just looked through my friend list and I see some people who’s name I
   recognize but don’t know exa...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Who’s your friend?
 type: wp
 wordpress_id: 1114

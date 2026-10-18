@@ -3,8 +3,8 @@ category: '50'
 date: '2005-01-04'
 subtitle: There has been a lot of traffic on this new meme “Folksonomies”. This Slashdot
   bit
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Folksonomies – Collaborative Classification
 type: wp
 wordpress_id: 1876

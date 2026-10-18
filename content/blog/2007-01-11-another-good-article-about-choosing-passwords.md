@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-01-11'
 subtitle: I am getting more and more paranoid about this. Lately I have started to
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Another good article about choosing passwords
 type: wp
 wordpress_id: 1356

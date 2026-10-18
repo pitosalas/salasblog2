@@ -2,8 +2,8 @@
 category: '1'
 date: '2012-03-27'
 subtitle: That’s my Gmail window. The black bar is Google’s toolbar.
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Whoa! Big Brother just rearranged the furniture
 type: wp
 wordpress_id: 363

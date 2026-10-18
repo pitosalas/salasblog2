@@ -6,6 +6,8 @@ subtitle: Sunlight Foundation is a very cool organization that I’ve been close
 tags:
 - politics
 - technology
+- api
+- personal
 title: Sunlight Foundation’s Apps for America
 type: wp
 wordpress_id: 805

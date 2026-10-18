@@ -6,6 +6,9 @@ subtitle: I was a **volunteer** for the Democratic Committee in Arlington Mass. 
 tags:
 - politics
 - boston
+- database
+- technology
+- web
 title: Election Meltdown
 type: wp
 wordpress_id: 268

@@ -5,6 +5,7 @@ subtitle: I’ve been doing quite a bit of traveling lately and have been experi
   with those noise cancell...
 tags:
 - technology
+- personal
 title: Noise cancelling headphones
 type: wp
 wordpress_id: 1254

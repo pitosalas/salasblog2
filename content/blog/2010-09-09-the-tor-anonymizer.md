@@ -5,6 +5,8 @@ subtitle: Have you heard of this thing, the Tor Anonymizer? Ok again admittedly 
   highly geeky system, b...
 tags:
 - technology
+- personal
+- security
 title: The Tor Anonymizer
 type: wp
 wordpress_id: 672

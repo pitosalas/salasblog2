@@ -5,6 +5,10 @@ subtitle: If you watched (or didn’t) the preceding video by Jesse Schell you m
 tags:
 - education
 - brandeis
+- games
+- personal
+- politics
+- technology
 title: Instead of giving out grades in a class, give out experience points
 type: wp
 wordpress_id: 500

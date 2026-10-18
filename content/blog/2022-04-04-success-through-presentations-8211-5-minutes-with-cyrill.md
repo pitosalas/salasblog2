@@ -2,8 +2,10 @@
 category: '5'
 date: '2022-04-04'
 subtitle: Success Through Presentations – 5 Minutes with Cyrill
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- education
+- video
 title: Success Through Presentations – 5 Minutes with Cyrill
 type: wp
 wordpress_id: 3414

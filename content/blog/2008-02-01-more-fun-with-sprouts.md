@@ -4,6 +4,7 @@ date: '2008-02-01'
 subtitle: http://farm.sproutbuilder.com/2341/load/5QDs6GRmAGexSWMQ.swf
 tags:
 - technology
+- personal
 title: More fun with sprouts
 type: wp
 wordpress_id: 1121

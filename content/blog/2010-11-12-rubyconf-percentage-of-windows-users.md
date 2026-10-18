@@ -5,6 +5,8 @@ subtitle: Odd thing happened in a talk at RubyConf. Speaker asks all attendees w
   ...
 tags:
 - ruby
+- programming
+- technology
 title: '[RubyConf] Percentage of Windows users'
 type: wp
 wordpress_id: 643

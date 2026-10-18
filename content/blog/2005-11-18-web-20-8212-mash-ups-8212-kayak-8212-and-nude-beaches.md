@@ -5,6 +5,8 @@ subtitle: Did you know that Curacao is the 7th favorite
 tags:
 - curacao
 - travel
+- personal
+- technology
 title: Web 2.0 — mash ups — Kayak — and nude beaches ?!
 type: wp
 wordpress_id: 1652

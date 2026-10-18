@@ -5,6 +5,7 @@ subtitle: Gobot – Golang framework for robotics, drones, and the Internet of T
   (IoT)
 tags:
 - robotics
+- technology
 title: Some great links for  08/04/2018
 type: wp
 wordpress_id: 2440

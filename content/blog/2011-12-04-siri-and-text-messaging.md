@@ -6,6 +6,7 @@ subtitle: A lot has been written about Siri (the new voice activated assistant i
 tags:
 - apple
 - ai
+- technology
 title: Siri and Text Messaging
 type: wp
 wordpress_id: 448

@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-07-03'
 subtitle: A few years ago I got the idea to get myself a label printer
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Label printer very handy around the office
 type: wp
 wordpress_id: 1244

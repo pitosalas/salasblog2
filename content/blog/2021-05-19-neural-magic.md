@@ -4,6 +4,9 @@ date: '2021-05-19'
 subtitle: Neural Magic
 tags:
 - ai
+- computer-vision
+- cli
+- howto
 title: Neural Magic
 type: wp
 wordpress_id: 2904

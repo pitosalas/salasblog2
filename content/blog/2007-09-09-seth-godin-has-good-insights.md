@@ -5,6 +5,8 @@ subtitle: Check out this post
 tags:
 - apple
 - business
+- personal
+- technology
 title: Seth Godin has good insights
 type: wp
 wordpress_id: 1216

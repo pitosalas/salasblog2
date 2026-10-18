@@ -4,6 +4,7 @@ date: '2005-12-17'
 subtitle: Tim Bray likes Adium, the Mac OS X inter-network IM client
 tags:
 - technology
+- personal
 title: The future of software?
 type: wp
 wordpress_id: 1630

@@ -4,6 +4,7 @@ date: '2021-12-21'
 subtitle: 'vizzuhq/vizzu-lib: Library for animated data visualizations and data stories.'
 tags:
 - programming
+- design
 title: 'vizzuhq/vizzu-lib: Library for animated data visualizations and data stories.'
 type: wp
 wordpress_id: 3143

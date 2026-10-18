@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-10-25'
 subtitle: Check out this post
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'How to Opt Out of Junk Mail and Catalogs: Useful from Chris Pirillo'
 type: wp
 wordpress_id: 1186

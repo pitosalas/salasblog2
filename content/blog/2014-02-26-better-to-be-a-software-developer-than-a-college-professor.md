@@ -5,6 +5,8 @@ subtitle: Other than the headline, which is amusing, I am not sure about the met
   or significance of th...
 tags:
 - software-engineering
+- careers
+- technology
 title: Better to be a software developer than a college professor?
 type: wp
 wordpress_id: 116

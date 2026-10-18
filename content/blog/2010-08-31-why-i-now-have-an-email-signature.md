@@ -5,6 +5,8 @@ subtitle: We’ve been on an **SEO** binge over the last 4-6 weeks. I’ve been 
   myself by listening and ...
 tags:
 - business
+- personal
+- technology
 title: Why I now have an email signature
 type: wp
 wordpress_id: 677

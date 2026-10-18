@@ -2,8 +2,9 @@
 category: '1'
 date: '2013-02-06'
 subtitle: '!Screen Shot 2013 02 06 at 3 38 32 PM'
-tag_review: no_fit
-tags: []
+tags:
+- games
+- science
 title: 'Awesome: Big Blizzard Coming'
 type: wp
 wordpress_id: 247

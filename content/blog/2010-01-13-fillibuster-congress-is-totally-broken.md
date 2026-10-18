@@ -5,6 +5,7 @@ subtitle: Thomas Geoghegan has a fantastic column in the New York Times [explain
   the mess we are in because...
 tags:
 - politics
+- nyt
 title: 'Fillibuster: Congress is totally broken'
 type: wp
 wordpress_id: 756

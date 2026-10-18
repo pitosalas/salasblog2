@@ -2,8 +2,8 @@
 category: '1'
 date: '2011-12-27'
 subtitle: I saw this movie, Altered States, again last night. It’s eve...
-tag_review: no_fit
-tags: []
+tags:
+- movies
 title: Altered States
 type: wp
 wordpress_id: 431

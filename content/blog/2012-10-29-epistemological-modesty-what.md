@@ -3,8 +3,8 @@ category: '1'
 date: '2012-10-29'
 subtitle: I was listening to an interview with David Brooks the other day. The interview
   was conducted by, of ...
-tag_review: no_fit
-tags: []
+tags:
+- philosophy
 title: Epistemological Modesty… What?
 type: wp
 wordpress_id: 278

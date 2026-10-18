@@ -5,6 +5,8 @@ subtitle: This is from the [New York Time’s article about Curt Shilling’s il
   game company “38 Studios”:...
 tags:
 - business
+- startups
+- games
 title: A fascinating story of Curt Shilling’s game company’s demise
 type: wp
 wordpress_id: 213

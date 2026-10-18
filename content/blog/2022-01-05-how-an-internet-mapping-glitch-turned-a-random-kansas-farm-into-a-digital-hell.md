@@ -5,6 +5,8 @@ subtitle: How an internet mapping glitch turned a random Kansas farm into a digi
   hell
 tags:
 - maps
+- humor
+- web
 title: How an internet mapping glitch turned a random Kansas farm into a digital hell
 type: wp
 wordpress_id: 3183

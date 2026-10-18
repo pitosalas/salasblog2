@@ -4,6 +4,7 @@ date: '2006-12-18'
 subtitle: Check out [this
 tags:
 - apple
+- personal
 title: 'MacSanta: 20% off popular Mac Apps'
 type: wp
 wordpress_id: 1379

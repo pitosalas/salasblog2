@@ -4,6 +4,7 @@ date: '2021-05-06'
 subtitle: 'Guitar Scientist: Create Free Guitar Diagrams Online'
 tags:
 - music
+- howto
 title: 'Guitar Scientist: Create Free Guitar Diagrams Online'
 type: wp
 wordpress_id: 2884

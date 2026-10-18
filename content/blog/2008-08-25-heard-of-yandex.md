@@ -5,6 +5,7 @@ subtitle: From TimesOnline, a good reminder to not forget that we do live in a U
   bubble sometimes, and don’t...
 tags:
 - technology
+- personal
 title: Heard of Yandex?
 type: wp
 wordpress_id: 987

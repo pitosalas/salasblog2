@@ -4,6 +4,9 @@ date: '2022-03-14'
 subtitle: 'Sinatra Best Practices: Part One'
 tags:
 - ruby
+- software-engineering
+- design
+- howto
 title: 'Sinatra Best Practices: Part One'
 type: wp
 wordpress_id: 3346

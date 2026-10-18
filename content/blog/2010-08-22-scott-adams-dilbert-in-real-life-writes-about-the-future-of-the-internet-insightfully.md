@@ -4,6 +4,7 @@ date: '2010-08-22'
 subtitle: Check out this post Chefs and Editors from [Dilb...
 tags:
 - technology
+- personal
 title: Scott Adams (Dilbert in real life) Writes about the future of the internet.
   Insightfully.
 type: wp

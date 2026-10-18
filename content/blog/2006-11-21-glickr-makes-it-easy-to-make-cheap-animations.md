@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-11-21'
 subtitle: '![Gif animations at Gickr.com'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Glickr Makes It Easy to Make Cheap Animations
 type: wp
 wordpress_id: 1402

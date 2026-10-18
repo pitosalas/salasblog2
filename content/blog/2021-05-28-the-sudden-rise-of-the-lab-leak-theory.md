@@ -4,6 +4,8 @@ date: '2021-05-28'
 subtitle: The Sudden Rise of the Lab-Leak Theory
 tags:
 - science
+- health
+- security
 title: The Sudden Rise of the Lab-Leak Theory
 type: wp
 wordpress_id: 2917

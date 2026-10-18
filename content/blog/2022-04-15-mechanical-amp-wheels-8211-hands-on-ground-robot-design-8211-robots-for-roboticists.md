@@ -4,6 +4,9 @@ date: '2022-04-15'
 subtitle: Mechanical & Wheels – Hands On Ground Robot Design – Robots For Roboticists
 tags:
 - robotics
+- design
+- technology
+- howto
 title: Mechanical & Wheels – Hands On Ground Robot Design – Robots For Roboticists
 type: wp
 wordpress_id: 3434

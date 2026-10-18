@@ -5,6 +5,10 @@ subtitle: Ok, that’s my own curious headline for this interesting article in t
   York Times
 tags:
 - design
+- mobile
+- apple
+- personal
+- technology
 title: Fun article about faux-physical UI metaphors
 type: wp
 wordpress_id: 684

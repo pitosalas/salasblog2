@@ -5,6 +5,7 @@ subtitle: Ruby 3.1 – Pattern Matching – Lee Jarvis
 tags:
 - ruby
 - programming
+- howto
 title: Ruby 3.1 – Pattern Matching – Lee Jarvis
 type: wp
 wordpress_id: 3199

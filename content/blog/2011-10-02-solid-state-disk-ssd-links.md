@@ -5,6 +5,7 @@ subtitle: I’ve been looking into changing up the primary (and only) disk in my
   old Mac Pro to a Solid S...
 tags:
 - technology
+- apple
 title: Solid State Disk (SSD) links
 type: wp
 wordpress_id: 488

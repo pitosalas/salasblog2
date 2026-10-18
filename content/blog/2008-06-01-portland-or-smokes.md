@@ -5,6 +5,7 @@ subtitle: I’m in Portland Oregon for a few days for a conference, and this may
   an unfair sample, but I was ...
 tags:
 - travel
+- personal
 title: Portland OR smokes
 type: wp
 wordpress_id: 1036

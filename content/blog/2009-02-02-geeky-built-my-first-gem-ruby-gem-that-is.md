@@ -6,6 +6,9 @@ subtitle: I’ve gotten interested in what is going on in the public sector, in 
 tags:
 - programming
 - ruby
+- api
+- opensource
+- politics
 title: '[GEEKY] Built my first gem (Ruby Gem that is)'
 type: wp
 wordpress_id: 898

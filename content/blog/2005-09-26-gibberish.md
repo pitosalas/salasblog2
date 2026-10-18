@@ -4,6 +4,7 @@ date: '2005-09-26'
 subtitle: 'Interesting and **amusing** little article from ACM Queue:'
 tags:
 - computer-science
+- personal
 title: Gibberish?
 type: wp
 wordpress_id: 1688

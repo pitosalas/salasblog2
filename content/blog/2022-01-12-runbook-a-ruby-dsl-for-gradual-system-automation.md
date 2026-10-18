@@ -4,6 +4,9 @@ date: '2022-01-12'
 subtitle: 'Runbook: A Ruby DSL for Gradual System Automation'
 tags:
 - ruby
+- brandeis
+- software-engineering
+- howto
 title: 'Runbook: A Ruby DSL for Gradual System Automation'
 type: wp
 wordpress_id: 3213

@@ -5,6 +5,7 @@ subtitle: VRM is a concept that’s been floating around for a while. Evangelize
   perhaps coined) by [Doc S...
 tags:
 - technology
+- personal
 title: VRM and Iammoving.com
 type: wp
 wordpress_id: 930

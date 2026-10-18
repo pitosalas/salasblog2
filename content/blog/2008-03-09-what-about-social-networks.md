@@ -3,8 +3,8 @@ category: '298'
 date: '2008-03-09'
 subtitle: An interesting post by Cringely, forseeing the imminent demise of most 350
   social networks. This quo...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: What about social networks?
 type: wp
 wordpress_id: 1093

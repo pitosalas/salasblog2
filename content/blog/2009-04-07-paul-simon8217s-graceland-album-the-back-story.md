@@ -5,6 +5,7 @@ subtitle: Ethan Zuckerman writes a great piece about how Paul Simon’s Gracelan
   came to be, with some of...
 tags:
 - music
+- personal
 title: 'Paul Simon’s Graceland Album: the back story'
 type: wp
 wordpress_id: 862

@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-08-19'
 subtitle: Check out this post
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Would this have saved JFK Jr?
 type: wp
 wordpress_id: 1227

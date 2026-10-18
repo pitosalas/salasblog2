@@ -5,6 +5,7 @@ subtitle: Several people asked me about what the security situation in Spain fel
   like. I have to admit it did...
 tags:
 - travel
+- politics
 title: Spain Security Situation
 type: wp
 wordpress_id: 2022

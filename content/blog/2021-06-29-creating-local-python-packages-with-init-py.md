@@ -4,6 +4,8 @@ date: '2021-06-29'
 subtitle: Creating Local Python Packages with __init__.py
 tags:
 - python
+- software-engineering
+- programming
 title: Creating Local Python Packages with __init__.py
 type: wp
 wordpress_id: 2977

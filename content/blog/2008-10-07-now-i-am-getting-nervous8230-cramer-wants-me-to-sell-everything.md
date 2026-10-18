@@ -5,6 +5,7 @@ subtitle: 'Check out this post Henry Blodget: Should You Really Panic And Sell E
   Like Cramer Says?'
 tags:
 - business
+- blogging
 title: Now I am getting nervous… Cramer wants me to sell everything?
 type: wp
 wordpress_id: 970

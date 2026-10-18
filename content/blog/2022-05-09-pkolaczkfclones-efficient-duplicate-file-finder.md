@@ -4,6 +4,7 @@ date: '2022-05-09'
 subtitle: 'pkolaczk/fclones: Efficient Duplicate File Finder'
 tags:
 - programming
+- cli
 title: 'pkolaczk/fclones: Efficient Duplicate File Finder'
 type: wp
 wordpress_id: 3462

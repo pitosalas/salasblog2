@@ -4,6 +4,8 @@ date: '2021-06-04'
 subtitle: How to Add Swap Space on Ubuntu 20.04
 tags:
 - linux
+- howto
+- technology
 title: How to Add Swap Space on Ubuntu 20.04
 type: wp
 wordpress_id: 2939

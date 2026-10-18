@@ -6,6 +6,8 @@ subtitle: This isn’t a huge new insight but it’s interesting to see **histor
 tags:
 - business
 - lotus
+- technology
+- personal
 title: Microsoft is to Google as Lotus was to Microsoft
 type: wp
 wordpress_id: 537

@@ -4,6 +4,8 @@ date: '2005-09-26'
 subtitle: I often cite Microsoft as an exa...
 tags:
 - business
+- personal
+- technology
 title: 'Microsoft blogging: “What do managers do…”'
 type: wp
 wordpress_id: 1689

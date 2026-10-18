@@ -4,6 +4,7 @@ date: '2005-09-02'
 subtitle: '!Images-2'
 tags:
 - politics
+- personal
 title: 'Katrina, New Orleans: Unforgivable'
 type: wp
 wordpress_id: 1705

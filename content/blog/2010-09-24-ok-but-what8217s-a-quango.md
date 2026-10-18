@@ -4,6 +4,7 @@ date: '2010-09-24'
 subtitle: 'A BBC Headline says:'
 tags:
 - politics
+- personal
 title: Ok, but what’s a quango?
 type: wp
 wordpress_id: 664

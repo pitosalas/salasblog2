@@ -3,8 +3,8 @@ category: '298'
 date: '2008-06-06'
 subtitle: Sounds ominous, right? So I call them up, and I hear a serious voice telling
   me to please hold on, t...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: “This is the Discover card Fraud department. Call 1-800-555-1212 – IMMEDIATELY
 type: wp
 wordpress_id: 1033

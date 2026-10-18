@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-01-01'
 subtitle: Handmeon.com is a cool idea
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Temporal Gifts: travel through space and time'
 type: wp
 wordpress_id: 1143

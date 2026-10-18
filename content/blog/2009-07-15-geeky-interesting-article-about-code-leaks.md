@@ -6,6 +6,7 @@ subtitle: Check out this interesting case study of how one awful memory leak was
 tags:
 - ruby
 - programming
+- technology
 title: '[GEEKY] Interesting article about code leaks'
 type: wp
 wordpress_id: 824

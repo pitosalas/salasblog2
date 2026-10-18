@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-05-26'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/2010/0...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: I guess it’s 2010 and this is Cambridge
 type: wp
 wordpress_id: 717

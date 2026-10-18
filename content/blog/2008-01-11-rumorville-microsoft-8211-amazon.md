@@ -4,6 +4,8 @@ date: '2008-01-11'
 subtitle: Yes there’s been lots of rumors of Microsoft acquiring Yahoo, or Logitech.
 tags:
 - business
+- personal
+- technology
 title: 'Rumorville: Microsoft – Amazon'
 type: wp
 wordpress_id: 1139

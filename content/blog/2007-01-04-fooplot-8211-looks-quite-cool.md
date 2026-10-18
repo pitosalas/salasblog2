@@ -4,6 +4,7 @@ date: '2007-01-04'
 subtitle: Check out [this
 tags:
 - mathematics
+- personal
 title: FooPlot – looks quite cool!
 type: wp
 wordpress_id: 1365

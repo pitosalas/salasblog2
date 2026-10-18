@@ -5,6 +5,7 @@ subtitle: '[ onceupon/Bash-Oneliner: A collection of handy Bash One-Liners and t
   tricks for data process...'
 tags:
 - linux
+- howto
 title: 'onceupon/Bash-Oneliner: A collection of handy Bash One-Liners and terminal
   tricks for data processing and Linux system maintenance.'
 type: wp

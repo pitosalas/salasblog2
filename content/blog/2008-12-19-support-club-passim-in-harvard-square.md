@@ -6,6 +6,8 @@ subtitle: Hey! If you live in Boston or Cambridge, and you like music, especiall
 tags:
 - music
 - boston
+- blogging
+- personal
 title: Support Club Passim in Harvard Square!!!
 type: wp
 wordpress_id: 923

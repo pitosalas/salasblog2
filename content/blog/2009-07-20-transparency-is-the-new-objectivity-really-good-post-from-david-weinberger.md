@@ -2,8 +2,8 @@
 category: '50'
 date: '2009-07-20'
 subtitle: Check this excerpt from a post by David Weinberger ...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: 'Transparency is the new objectivity: Really good post from David Weinberger'
 type: wp
 wordpress_id: 822

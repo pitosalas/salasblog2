@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-05-28'
 subtitle: Mainframe on the Macbook – Marianne Bellotti – Medium
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  05/28/2018
 type: wp
 wordpress_id: 2341

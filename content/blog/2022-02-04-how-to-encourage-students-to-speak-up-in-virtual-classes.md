@@ -4,6 +4,9 @@ date: '2022-02-04'
 subtitle: How to Encourage Students to Speak Up in Virtual Classes
 tags:
 - education
+- howto
+- otp
+- zoom
 title: How to Encourage Students to Speak Up in Virtual Classes
 type: wp
 wordpress_id: 3259

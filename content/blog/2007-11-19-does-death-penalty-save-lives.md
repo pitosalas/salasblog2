@@ -5,6 +5,7 @@ subtitle: Very interesting article in the New York Times discussing whether the 
   penalty saves lives
 tags:
 - politics
+- personal
 title: Does Death Penalty Save Lives?
 type: wp
 wordpress_id: 1179

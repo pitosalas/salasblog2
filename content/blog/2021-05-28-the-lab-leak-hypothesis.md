@@ -4,6 +4,7 @@ date: '2021-05-28'
 subtitle: The Lab-Leak Hypothesis
 tags:
 - science
+- security
 title: The Lab-Leak Hypothesis
 type: wp
 wordpress_id: 2915

@@ -5,6 +5,9 @@ subtitle: I happen to be reading iWoz, which is Steve Wozniak’s memoir/biograp
   It’s a very breezy ...
 tags:
 - apple
+- mobile
+- blogging
+- technology
 title: Woz speaks (on iPhone)
 type: wp
 wordpress_id: 638

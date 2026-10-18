@@ -5,6 +5,7 @@ subtitle: I’ve been doing some more coding these days in Ruby.
 tags:
 - ruby
 - programming
+- technology
 title: '[GEEKY] Sublime Text surpassing TextMate?'
 type: wp
 wordpress_id: 361

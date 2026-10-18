@@ -5,6 +5,8 @@ subtitle: Refactoring and Design Patterns
 tags:
 - programming
 - software-engineering
+- howto
+- ruby
 title: Refactoring and Design Patterns
 type: wp
 wordpress_id: 3157

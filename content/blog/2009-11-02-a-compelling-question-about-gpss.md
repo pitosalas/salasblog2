@@ -5,6 +5,7 @@ subtitle: “GPS satellites tell us where we are, but what tells them where they
   **Good question**. [This...
 tags:
 - technology
+- personal
 title: A compelling question about GPSs
 type: wp
 wordpress_id: 782

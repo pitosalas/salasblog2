@@ -5,6 +5,7 @@ subtitle: My new cellphone **supposedly** has GPS capabilities. It has to do, ap
   with the new E-911
 tags:
 - technology
+- personal
 title: 'Cellphone GPS: How does it work?'
 type: wp
 wordpress_id: 1704

@@ -4,6 +4,8 @@ date: '2005-10-22'
 subtitle: Continuing my iPod thoughts, today I read that a [lawsuit has been b...
 tags:
 - apple
+- personal
+- technology
 title: More iPod stuff
 type: wp
 wordpress_id: 1674

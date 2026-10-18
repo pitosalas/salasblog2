@@ -6,6 +6,8 @@ subtitle: 'In case you didn’t see this, it’s kind of interesting if you foll
 tags:
 - apple
 - health
+- personal
+- technology
 title: Update on Jobs’ health
 type: wp
 wordpress_id: 913

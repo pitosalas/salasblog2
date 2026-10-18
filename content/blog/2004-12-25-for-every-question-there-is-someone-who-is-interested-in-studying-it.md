@@ -3,8 +3,8 @@ category: '298'
 date: '2004-12-25'
 subtitle: Yes I have to admit it’s something that I too have wondered about, and now,
   there’s a study about it...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: For every question there is someone who is interested in studying it
 type: wp
 wordpress_id: 1886

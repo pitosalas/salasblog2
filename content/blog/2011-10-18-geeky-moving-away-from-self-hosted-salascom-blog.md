@@ -3,8 +3,9 @@ category: '538'
 date: '2011-10-18'
 subtitle: Running my own Linux server has lost it’s sex appeal. Now I am going for
   simplicity and so I am expl...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- technology
 title: '[GEEKY] Moving away from self-hosted salas.com blog'
 type: wp
 wordpress_id: 482

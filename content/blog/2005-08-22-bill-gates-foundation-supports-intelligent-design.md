@@ -4,6 +4,7 @@ date: '2005-08-22'
 subtitle: The New York Times is running a series
 tags:
 - science
+- personal
 title: Bill Gates Foundation supports Intelligent Design?
 type: wp
 wordpress_id: 1713

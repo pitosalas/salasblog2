@@ -5,6 +5,7 @@ subtitle: As you know from a previous post, I’ve been working on a “domain s
   language” for election bal...
 tags:
 - ruby
+- programming
 title: '[GEEKY] Check out Ruby Best Practices book (not yet out ! :)'
 type: wp
 wordpress_id: 839

@@ -4,6 +4,10 @@ date: '2021-06-09'
 subtitle: Welcome to the QGIS project!
 tags:
 - maps
+- howto
+- otp
+- tools
+- design
 title: Welcome to the QGIS project!
 type: wp
 wordpress_id: 2951

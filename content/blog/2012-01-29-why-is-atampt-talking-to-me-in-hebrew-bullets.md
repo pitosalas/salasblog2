@@ -3,8 +3,8 @@ category: '1'
 date: '2012-01-29'
 subtitle: I just received this notification from AT&T. Pretty innocuous, but, what’s
   up with using Hebrew lett...
-tag_review: no_fit
-tags: []
+tags:
+- email
 title: Why is AT&T talking to me in Hebrew bullets?
 type: wp
 wordpress_id: 405

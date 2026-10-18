@@ -3,8 +3,8 @@ category: '50'
 date: '2004-09-14'
 subtitle: Ok, guys, we have another beta release with lots of great new goodies! It
   will be up on the web site...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: 'BlogBridge Beta 4: Sept 15, 2004'
 type: wp
 wordpress_id: 1938

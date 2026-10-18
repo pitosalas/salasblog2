@@ -5,6 +5,7 @@ subtitle: '[International Space Station switches from Windows to Linux, for impr
   reliability | ExtremeTech]...'
 tags:
 - linux
+- technology
 title: WIndows no longer out of this world!
 type: wp
 wordpress_id: 204

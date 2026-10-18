@@ -2,8 +2,12 @@
 category: '124'
 date: '2021-08-22'
 subtitle: Documentary Mania – Free Documentaries Online
-tag_review: no_fit
-tags: []
+tags:
+- art
+- movies
+- history
+- science
+- video
 title: Documentary Mania – Free Documentaries Online
 type: wp
 wordpress_id: 3043

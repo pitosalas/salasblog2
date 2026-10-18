@@ -4,6 +4,8 @@ date: '2021-05-31'
 subtitle: lbaitemple/ubuntu_server_rpi
 tags:
 - linux
+- howto
+- technology
 title: lbaitemple/ubuntu_server_rpi
 type: wp
 wordpress_id: 2929

@@ -4,6 +4,7 @@ date: '2013-02-23'
 subtitle: 'Pretty good review of a broad topic: Negotiating Your Startup Offer'
 tags:
 - business
+- startups
 title: Negotiating your startup offer
 type: wp
 wordpress_id: 236

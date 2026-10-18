@@ -4,6 +4,10 @@ date: '2011-09-13'
 subtitle: I got some of this list from Lee Sheldon’s course syllabus.
 tags:
 - books
+- design
+- games
+- personal
+- technology
 title: Nice bibliography for game designers
 type: wp
 wordpress_id: 499

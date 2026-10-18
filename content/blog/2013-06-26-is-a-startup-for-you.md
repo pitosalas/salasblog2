@@ -5,6 +5,8 @@ subtitle: I always thought that startups are over glamorized. They are not for e
   On the other hand, so...
 tags:
 - business
+- careers
+- startups
 title: Is a startup for you?
 type: wp
 wordpress_id: 190

@@ -6,6 +6,7 @@ subtitle: I saw these two books in Barnes and Noble. They look quite interesting
 tags:
 - books
 - science
+- personal
 title: Two books that look good…
 type: wp
 wordpress_id: 1496

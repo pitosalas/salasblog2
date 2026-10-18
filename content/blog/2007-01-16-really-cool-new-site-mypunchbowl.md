@@ -4,6 +4,7 @@ date: '2007-01-16'
 subtitle: This new site looks quite cool. It’s a friendlier alternative to eVite,
 tags:
 - business
+- personal
 title: 'Really cool new site: MyPunchBowl'
 type: wp
 wordpress_id: 1349

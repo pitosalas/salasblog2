@@ -5,6 +5,7 @@ subtitle: It strikes me that the way speakers are being shouted down at these (n
   famous town hall meetings ...
 tags:
 - politics
+- personal
 title: '[Random Geek Thought] Human DoS'
 type: wp
 wordpress_id: 815

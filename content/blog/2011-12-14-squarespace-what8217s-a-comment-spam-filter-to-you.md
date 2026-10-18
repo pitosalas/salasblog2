@@ -4,6 +4,7 @@ date: '2011-12-14'
 subtitle: You may have noticed that this Blog is now hosted on SquareSpace. I’v...
 tags:
 - technology
+- blogging
 title: 'Squarespace: What’s a comment spam filter to you?'
 type: wp
 wordpress_id: 440

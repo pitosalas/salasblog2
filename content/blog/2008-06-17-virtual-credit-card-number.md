@@ -3,8 +3,8 @@ category: '298'
 date: '2008-06-17'
 subtitle: My Citibank MasterCard allows me to generate a virtual credit card number,
   pretty simply, using a fa...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Virtual credit card number
 type: wp
 wordpress_id: 1030

@@ -5,6 +5,7 @@ subtitle: Check out this post from Joel on Software
 tags:
 - lotus
 - business
+- technology
 title: Joel remembers Lotus Symphony and talks Strategy
 type: wp
 wordpress_id: 1208

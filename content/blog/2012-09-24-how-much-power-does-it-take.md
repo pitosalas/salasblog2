@@ -5,6 +5,7 @@ subtitle: I remember wondering about this when I was in college — this is befo
   really knew anything about ...
 tags:
 - computer-science
+- cloud
 title: How much power does it take?
 type: wp
 wordpress_id: 300

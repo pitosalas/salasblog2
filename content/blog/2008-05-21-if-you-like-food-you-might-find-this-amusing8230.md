@@ -4,6 +4,7 @@ date: '2008-05-21'
 subtitle: Many more where this one came from. Good for a chuckle ...
 tags:
 - food
+- personal
 title: If you like food you might find this amusing…
 type: wp
 wordpress_id: 1042

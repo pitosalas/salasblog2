@@ -4,6 +4,7 @@ date: '2007-11-22'
 subtitle: Check out this post from [blog...
 tags:
 - apple
+- technology
 title: The Time Machine Works!
 type: wp
 wordpress_id: 1176

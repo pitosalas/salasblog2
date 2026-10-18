@@ -6,6 +6,7 @@ subtitle: For those of you who avidly follow Curaçao politics, yes, all two of 
 tags:
 - curacao
 - politics
+- personal
 title: Not sure if this is a good thing…
 type: wp
 wordpress_id: 1406

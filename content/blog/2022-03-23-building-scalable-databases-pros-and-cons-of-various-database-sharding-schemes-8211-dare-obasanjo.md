@@ -5,6 +5,9 @@ subtitle: 'Building Scalable Databases: Pros and Cons of Various Database Shardi
   Schemes – Dare Obasanjo'
 tags:
 - software-engineering
+- database
+- performance
+- scalability
 title: 'Building Scalable Databases: Pros and Cons of Various Database Sharding Schemes
   – Dare Obasanjo'
 type: wp

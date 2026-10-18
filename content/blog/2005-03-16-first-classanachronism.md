@@ -5,6 +5,7 @@ subtitle: On a lark, I used my frequent flyer miles to fly First Class on Americ
   Airlines today, heading out...
 tags:
 - travel
+- personal
 title: First Class/Anachronism
 type: wp
 wordpress_id: 1825

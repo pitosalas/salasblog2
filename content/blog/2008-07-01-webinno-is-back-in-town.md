@@ -5,6 +5,7 @@ subtitle: If you live in the Boston area and are in the tech business you should
   out the more or less mo...
 tags:
 - boston
+- personal
 title: WebInno is back in town
 type: wp
 wordpress_id: 1019

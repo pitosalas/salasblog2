@@ -2,8 +2,8 @@
 category: '50'
 date: '2004-08-20'
 subtitle: Finally. Ever since we started working on BlogBridge, I’ve been talking...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: BlogBridge Starz!
 type: wp
 wordpress_id: 1946

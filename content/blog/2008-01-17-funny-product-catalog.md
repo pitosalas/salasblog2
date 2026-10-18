@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-01-17'
 subtitle: '!['
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Funny product catalog
 type: wp
 wordpress_id: 1135

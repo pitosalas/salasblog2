@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-05-31'
 subtitle: 'wrotniak.net: Lenses for Olympus E-System Cameras'
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  05/31/2018
 type: wp
 wordpress_id: 2345

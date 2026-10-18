@@ -5,6 +5,7 @@ subtitle: Someone whose oppinion I listen to, Karsten Lentzch, recommends these 
   about user interface des...
 tags:
 - design
+- technology
 title: '[JAVAONE] User Interface Design'
 type: wp
 wordpress_id: 1973

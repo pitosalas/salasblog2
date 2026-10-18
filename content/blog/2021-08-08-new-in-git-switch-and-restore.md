@@ -2,8 +2,9 @@
 category: '77'
 date: '2021-08-08'
 subtitle: 'New in Git: switch and restore'
-tag_review: no_fit
-tags: []
+tags:
+- cli
+- howto
 title: 'New in Git: switch and restore'
 type: wp
 wordpress_id: 3019

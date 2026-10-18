@@ -4,6 +4,7 @@ date: '2007-12-20'
 subtitle: Check out this post from [I, ...
 tags:
 - science
+- technology
 title: Revolution, Not Evolution
 type: wp
 wordpress_id: 1151

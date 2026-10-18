@@ -4,6 +4,9 @@ date: '2009-02-04'
 subtitle: Check this post The 7 deadly sins and 10 lessons of a failed startup
 tags:
 - business
+- personal
+- technology
+- startups
 title: The 7 deadly sins and 10 lessons of a failed startup
 type: wp
 wordpress_id: 897

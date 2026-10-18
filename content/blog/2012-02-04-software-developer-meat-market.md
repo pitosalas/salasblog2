@@ -6,6 +6,7 @@ subtitle: An interesting article in Forbes about Software Developers and Develop
 tags:
 - software-engineering
 - business
+- technology
 title: Software Developer Meat Market
 type: wp
 wordpress_id: 398

@@ -3,8 +3,8 @@ category: '298'
 date: '2009-12-31'
 subtitle: '(**Note**: Spoilers for both movies, but nothing that everyone probably
   has already been exposed to)'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Two movies: “Precious” and “The Texas Chain Saw Massacre”'
 type: wp
 wordpress_id: 763

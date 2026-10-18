@@ -5,6 +5,9 @@ subtitle: I had the interesting experience this weekend to attend the “[Lean S
   Machine” weekend at the M...
 tags:
 - business
+- blogging
+- startups
+- technology
 title: Lean Startups and Custdev
 type: wp
 wordpress_id: 590

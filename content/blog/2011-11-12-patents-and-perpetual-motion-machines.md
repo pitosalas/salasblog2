@@ -5,6 +5,8 @@ subtitle: 'An interesting commentary on a couple of patents that issued from the
   Patent Office:'
 tags:
 - legal
+- mathematics
+- science
 title: Patents and perpetual motion machines
 type: wp
 wordpress_id: 468

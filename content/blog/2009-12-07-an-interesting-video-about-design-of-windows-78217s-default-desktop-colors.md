@@ -5,6 +5,7 @@ subtitle: If you’re interested in design and illustration, you might like this
   of how Microsoft went abo...
 tags:
 - design
+- technology
 title: An interesting video about design of Windows 7’s default desktop colors
 type: wp
 wordpress_id: 768

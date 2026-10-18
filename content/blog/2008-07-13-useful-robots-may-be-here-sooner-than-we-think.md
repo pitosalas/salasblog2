@@ -5,6 +5,8 @@ subtitle: '> “The Most Advanced Quadruped Robot on Earth — BigDog is the alp
   of the Boston Dynamics fami...'
 tags:
 - robotics
+- personal
+- technology
 title: Useful robots may be here sooner than we think
 type: wp
 wordpress_id: 1012

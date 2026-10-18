@@ -4,6 +4,8 @@ date: '2021-06-19'
 subtitle: The Robotics Back-End – Program Robots Like a Boss
 tags:
 - robotics
+- education
+- howto
 title: The Robotics Back-End – Program Robots Like a Boss
 type: wp
 wordpress_id: 2971

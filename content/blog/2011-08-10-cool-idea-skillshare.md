@@ -4,6 +4,7 @@ date: '2011-08-10'
 subtitle: Check this post With Skillshare, everyone can be a teacher
 tags:
 - business
+- personal
 title: 'Cool idea: Skillshare'
 type: wp
 wordpress_id: 509

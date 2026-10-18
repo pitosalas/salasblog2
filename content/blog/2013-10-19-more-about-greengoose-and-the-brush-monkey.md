@@ -5,6 +5,7 @@ subtitle: Amazing story of a great looking product, and awesome demo, on the spo
   investment of $100,000 and s...
 tags:
 - business
+- startups
 title: More about GreenGoose and the Brush Monkey
 type: wp
 wordpress_id: 149

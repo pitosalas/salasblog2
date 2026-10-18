@@ -4,6 +4,8 @@ date: '2008-05-01'
 subtitle: Bill Ives of the Portals and KM Blog writes an interesting two-part ...
 tags:
 - business
+- personal
+- technology
 title: On the business impact of Web 2.0
 type: wp
 wordpress_id: 1055

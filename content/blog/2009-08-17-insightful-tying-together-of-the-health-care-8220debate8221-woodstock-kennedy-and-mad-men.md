@@ -4,6 +4,7 @@ date: '2009-08-17'
 subtitle: Check out this insightful editorial in Sunday’s New York by Frank Rich
 tags:
 - politics
+- personal
 title: Insightful tying together of the Health Care “debate”, Woodstock, Kennedy and
   Mad Men
 type: wp

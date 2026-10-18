@@ -4,6 +4,7 @@ date: '2018-04-20'
 subtitle: 7 Practical Tips for Cheating at Design – Refactoring UI – Medium
 tags:
 - design
+- technology
 title: Some great links for  04/20/2018
 type: wp
 wordpress_id: 2279

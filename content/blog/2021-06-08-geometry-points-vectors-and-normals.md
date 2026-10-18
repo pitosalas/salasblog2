@@ -4,6 +4,7 @@ date: '2021-06-08'
 subtitle: Geometry (Points, Vectors and Normals)
 tags:
 - mathematics
+- explainer
 title: Geometry (Points, Vectors and Normals)
 type: wp
 wordpress_id: 2947

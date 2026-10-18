@@ -5,6 +5,7 @@ subtitle: This is relevant to the discussion about [congestion pricing, mesh net
   and avoiding traffic jam...
 tags:
 - technology
+- personal
 title: How GPS devices are being used to detect and avoid traffic
 type: wp
 wordpress_id: 1079

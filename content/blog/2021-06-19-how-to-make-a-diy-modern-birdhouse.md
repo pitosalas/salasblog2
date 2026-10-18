@@ -2,8 +2,8 @@
 category: '47'
 date: '2021-06-19'
 subtitle: How To Make a DIY Modern Birdhouse
-tag_review: no_fit
-tags: []
+tags:
+- woodworking
 title: How To Make a DIY Modern Birdhouse
 type: wp
 wordpress_id: 2967

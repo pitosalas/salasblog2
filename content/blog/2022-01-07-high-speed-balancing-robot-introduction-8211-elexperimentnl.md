@@ -4,6 +4,7 @@ date: '2022-01-07'
 subtitle: 'High speed balancing robot: introduction – Elexperiment.nl'
 tags:
 - robotics
+- howto
 title: 'High speed balancing robot: introduction – Elexperiment.nl'
 type: wp
 wordpress_id: 3193

@@ -5,6 +5,7 @@ subtitle: The demos at this year’s DEMO are quite good. One interesting thing 
   is that there are [sev...
 tags:
 - legal
+- technology
 title: '[Demo 2005] The Enron Corpus'
 type: wp
 wordpress_id: 1848

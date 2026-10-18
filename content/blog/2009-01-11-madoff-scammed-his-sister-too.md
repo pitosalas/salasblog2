@@ -4,6 +4,7 @@ date: '2009-01-11'
 subtitle: Check out this post Madoff Scammed His Sister, Too!
 tags:
 - business
+- personal
 title: Madoff Scammed His Sister, Too!
 type: wp
 wordpress_id: 909

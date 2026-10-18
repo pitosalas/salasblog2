@@ -4,6 +4,9 @@ date: '2022-03-28'
 subtitle: Partial rendering performance in Rails
 tags:
 - ruby
+- howto
+- performance
+- scalability
 title: Partial rendering performance in Rails
 type: wp
 wordpress_id: 3394

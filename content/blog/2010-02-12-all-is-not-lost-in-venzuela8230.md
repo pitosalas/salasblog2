@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-02-12'
 subtitle: '[youtube=http://www.youtube.com/watch?v=7xXNx7ccgD0&w=456&h=277]'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: All is not lost in Venzuela…
 type: wp
 wordpress_id: 745

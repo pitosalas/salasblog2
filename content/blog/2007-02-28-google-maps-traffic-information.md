@@ -4,6 +4,7 @@ date: '2007-02-28'
 subtitle: One more reason to Love Google! Check out this post
 tags:
 - maps
+- personal
 title: Google Maps traffic information
 type: wp
 wordpress_id: 1319

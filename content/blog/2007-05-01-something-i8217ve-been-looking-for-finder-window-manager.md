@@ -4,6 +4,7 @@ date: '2007-05-01'
 subtitle: Check out this post from [The Unofficial A...
 tags:
 - apple
+- technology
 title: 'Something I’ve been looking for: Finder Window Manager'
 type: wp
 wordpress_id: 1276

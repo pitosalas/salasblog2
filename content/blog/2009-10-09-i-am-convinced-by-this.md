@@ -4,6 +4,7 @@ date: '2009-10-09'
 subtitle: Sergey Brin of Google has an op-ed in today’s New York Times
 tags:
 - books
+- personal
 title: I am convinced by this
 type: wp
 wordpress_id: 797

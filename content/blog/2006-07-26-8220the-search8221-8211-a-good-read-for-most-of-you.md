@@ -5,6 +5,8 @@ subtitle: 'If you read my blog chances are you’ll **really enjoy** John Batell
   book [The Search: How Google ...'
 tags:
 - books
+- personal
+- technology
 title: “The Search” – A good read for most of you
 type: wp
 wordpress_id: 1480

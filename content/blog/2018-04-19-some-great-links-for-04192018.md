@@ -4,6 +4,7 @@ date: '2018-04-19'
 subtitle: Write tests. Not too many. Mostly integration. – kentcdodds
 tags:
 - ruby
+- technology
 title: Some great links for  04/19/2018
 type: wp
 wordpress_id: 2259

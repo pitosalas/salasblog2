@@ -4,6 +4,7 @@ date: '2018-05-29'
 subtitle: Automated Machine Learning on the Cloud in Python – Towards Data Science
 tags:
 - ai
+- technology
 title: Some great links for  05/29/2018
 type: wp
 wordpress_id: 2344

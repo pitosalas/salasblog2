@@ -4,6 +4,7 @@ date: '2021-05-28'
 subtitle: verlab/gazebo_ros_model_color
 tags:
 - robotics
+- howto
 title: verlab/gazebo_ros_model_color
 type: wp
 wordpress_id: 2919

@@ -6,6 +6,7 @@ subtitle: Have you had this debate? Does cold weather cause people to catch cold
 tags:
 - science
 - health
+- personal
 title: Old wives tale, once more, turns out to be true
 type: wp
 wordpress_id: 1158

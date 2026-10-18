@@ -4,6 +4,7 @@ date: '2005-07-13'
 subtitle: '!DSCF0009.JPG'
 tags:
 - personal
+- technology
 title: Can you spell Tchotchke?
 type: wp
 wordpress_id: 1738

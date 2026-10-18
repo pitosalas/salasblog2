@@ -4,6 +4,8 @@ date: '2021-11-10'
 subtitle: Make a Good Dupont Pin-Crimp EVERY TIME!
 tags:
 - robotics
+- howto
+- tools
 title: Make a Good Dupont Pin-Crimp EVERY TIME!
 type: wp
 wordpress_id: 3113

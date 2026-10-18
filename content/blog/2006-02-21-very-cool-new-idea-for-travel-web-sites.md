@@ -5,6 +5,8 @@ subtitle: You probably already follow TechCrunch but if you don’t take a look 
   a very clever new ide...
 tags:
 - travel
+- personal
+- technology
 title: Very cool new idea for travel web sites
 type: wp
 wordpress_id: 1589

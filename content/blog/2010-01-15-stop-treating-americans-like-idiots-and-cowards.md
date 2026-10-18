@@ -5,6 +5,9 @@ subtitle: An [excellent article in the Wall Street Journal about the way the med
   and politicians want us to ...
 tags:
 - politics
+- personal
+- security
+- technology
 title: Stop treating Americans like idiots and cowards
 type: wp
 wordpress_id: 754

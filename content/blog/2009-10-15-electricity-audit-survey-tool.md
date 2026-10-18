@@ -3,8 +3,8 @@ category: '298'
 date: '2009-10-15'
 subtitle: I want to do an electricity audit for my house. I am looking for a web site
   that lets me complete a ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Electricity Audit Survey Tool?
 type: wp
 wordpress_id: 791

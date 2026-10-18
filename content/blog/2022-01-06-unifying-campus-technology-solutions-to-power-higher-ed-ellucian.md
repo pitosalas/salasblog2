@@ -4,6 +4,8 @@ date: '2022-01-06'
 subtitle: Unifying Campus Technology Solutions to Power Higher Ed | Ellucian
 tags:
 - education
+- otp
+- technology
 title: Unifying Campus Technology Solutions to Power Higher Ed | Ellucian
 type: wp
 wordpress_id: 3191

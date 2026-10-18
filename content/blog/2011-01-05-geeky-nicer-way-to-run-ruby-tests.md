@@ -6,6 +6,8 @@ subtitle: Just came across this handy-dandy tool to run tests for Ruby and Rails
 tags:
 - ruby
 - programming
+- technology
+- personal
 title: '[GEEKY] Nicer way to run Ruby tests'
 type: wp
 wordpress_id: 614

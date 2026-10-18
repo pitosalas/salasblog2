@@ -2,8 +2,10 @@
 category: '249'
 date: '2021-06-01'
 subtitle: How to Set Up Wi-Fi and Bluetooth on Raspberry Pi
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- technology
+- tools
 title: How to Set Up Wi-Fi and Bluetooth on Raspberry Pi
 type: wp
 wordpress_id: 2931

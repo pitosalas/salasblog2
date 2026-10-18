@@ -2,8 +2,9 @@
 category: '99'
 date: '2022-01-02'
 subtitle: 'Drewsif/PiShrink: Make your pi images smaller!'
-tag_review: no_fit
-tags: []
+tags:
+- images
+- technology
 title: 'Drewsif/PiShrink: Make your pi images smaller!'
 type: wp
 wordpress_id: 3171

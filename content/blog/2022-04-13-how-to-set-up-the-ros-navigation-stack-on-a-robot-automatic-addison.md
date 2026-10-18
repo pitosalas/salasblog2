@@ -4,6 +4,8 @@ date: '2022-04-13'
 subtitle: How to Set Up the ROS Navigation Stack on a Robot – Automatic Addison
 tags:
 - robotics
+- howto
+- navigation
 title: How to Set Up the ROS Navigation Stack on a Robot – Automatic Addison
 type: wp
 wordpress_id: 3424

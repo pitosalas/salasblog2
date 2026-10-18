@@ -3,8 +3,8 @@ category: '298'
 date: '2008-02-06'
 subtitle: Huh? Don’t know who Mr. Spock is? Don’t know about the Vulcan greeting?
   Please! How dare you to be r...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Mr. Spock reveals the origins of the Vulcan greeting
 type: wp
 wordpress_id: 1117

@@ -4,6 +4,7 @@ date: '2011-07-24'
 subtitle: It’s unusual to see Thomas Friedman
 tags:
 - politics
+- personal
 title: Americans Elect – A viable third party?
 type: wp
 wordpress_id: 521

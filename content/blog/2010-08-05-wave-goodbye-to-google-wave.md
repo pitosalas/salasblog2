@@ -4,6 +4,7 @@ date: '2010-08-05'
 subtitle: Google leaves products in Beta forever, they say.
 tags:
 - technology
+- personal
 title: Wave goodbye to Google Wave
 type: wp
 wordpress_id: 690

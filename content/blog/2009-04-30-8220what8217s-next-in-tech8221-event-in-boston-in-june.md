@@ -6,6 +6,7 @@ subtitle: If you live in the Boston area and somehow connected to technology pro
 tags:
 - boston
 - technology
+- startups
 title: “What’s next in tech” event in Boston in June
 type: wp
 wordpress_id: 850

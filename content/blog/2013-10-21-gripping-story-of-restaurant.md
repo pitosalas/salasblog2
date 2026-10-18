@@ -5,6 +5,7 @@ subtitle: Who knew that a story about behind-the-scenes of a big restaurant coul
   be gripping, but this one is...
 tags:
 - food
+- nyt
 title: Gripping story of restaurant
 type: wp
 wordpress_id: 148

@@ -5,6 +5,8 @@ subtitle: You may not have followed the discussion that ensued when Ray Kurzweil
   reported to ‘[not underst...
 tags:
 - ai
+- personal
+- technology
 title: Ray Kurzweil Responds
 type: wp
 wordpress_id: 682

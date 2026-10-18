@@ -4,6 +4,8 @@ date: '2022-01-12'
 subtitle: An instrumental intro to GraphQL with Ruby | AppSignal Blog
 tags:
 - ruby
+- brandeis
+- howto
 title: An instrumental intro to GraphQL with Ruby | AppSignal Blog
 type: wp
 wordpress_id: 3205

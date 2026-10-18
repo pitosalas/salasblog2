@@ -5,6 +5,7 @@ subtitle: Hey, don’t blame me, I’m just posting a pointer to this interestin
   over that the ever-legitim...
 tags:
 - science
+- personal
 title: The Science of Large Breasts, and Other Evolutionary Verities
 type: wp
 wordpress_id: 1241

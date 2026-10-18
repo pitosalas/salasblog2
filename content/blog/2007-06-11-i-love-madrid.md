@@ -4,6 +4,7 @@ date: '2007-06-11'
 subtitle: '![Events in Madrid'
 tags:
 - travel
+- personal
 title: I love Madrid!
 type: wp
 wordpress_id: 1255

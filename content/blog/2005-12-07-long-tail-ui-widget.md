@@ -5,6 +5,8 @@ subtitle: '!Picture 8-2'
 tags:
 - music
 - design
+- personal
+- technology
 title: Long tail UI Widget
 type: wp
 wordpress_id: 1638

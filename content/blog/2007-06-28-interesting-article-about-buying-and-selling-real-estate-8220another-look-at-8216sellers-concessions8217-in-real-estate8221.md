@@ -4,6 +4,7 @@ date: '2007-06-28'
 subtitle: Check out this post from [Freakonom...
 tags:
 - business
+- personal
 title: 'Interesting article about buying and selling real estate: “Another Look at
   ‘Sellers’ Concessions’ in Real Estate”'
 type: wp

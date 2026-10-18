@@ -4,6 +4,7 @@ date: '2006-10-03'
 subtitle: '![](http://www.flickr.com...'
 tags:
 - travel
+- personal
 title: Capitol Reef
 type: wp
 wordpress_id: 1427

@@ -4,6 +4,7 @@ date: '2008-10-27'
 subtitle: 'Check out this weird new practice called 5S:'
 tags:
 - business
+- personal
 title: I’m a neat person, but, THIS, is ridiculous
 type: wp
 wordpress_id: 962

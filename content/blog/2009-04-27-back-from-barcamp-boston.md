@@ -5,6 +5,7 @@ subtitle: '![](h...'
 tags:
 - boston
 - technology
+- personal
 title: Back from Barcamp Boston
 type: wp
 wordpress_id: 852

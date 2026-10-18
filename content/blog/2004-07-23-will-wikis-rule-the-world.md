@@ -5,6 +5,7 @@ subtitle: I was recently asked by a VC friend of mine what I thought of a certai
   Wiki product. I thought my r...
 tags:
 - eroom
+- technology
 title: Will Wikis Rule the World?
 type: wp
 wordpress_id: 1962

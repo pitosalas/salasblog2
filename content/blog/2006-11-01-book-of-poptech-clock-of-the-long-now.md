@@ -4,6 +4,7 @@ date: '2006-11-01'
 subtitle: '[http://rcm.amazon.com/e/cm?t=blogbridge-20&o=1&p=8&l=as1&asins=0465007805&fc1=000000&IS2=1<1=_bla...'
 tags:
 - books
+- personal
 title: 'Book of Pop!Tech: Clock of the Long Now'
 type: wp
 wordpress_id: 1408

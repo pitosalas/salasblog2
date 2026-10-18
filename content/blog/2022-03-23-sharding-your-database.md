@@ -4,6 +4,9 @@ date: '2022-03-23'
 subtitle: Sharding your database
 tags:
 - software-engineering
+- database
+- scalability
+- performance
 title: Sharding your database
 type: wp
 wordpress_id: 3378

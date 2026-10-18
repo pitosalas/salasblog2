@@ -5,6 +5,9 @@ subtitle: I still **don’t love Microsoft**. I used to, actually, use Windows d
   and day out, for years. Bu...
 tags:
 - business
+- personal
+- technology
+- politics
 title: Bill Gates and Microsoft
 type: wp
 wordpress_id: 520

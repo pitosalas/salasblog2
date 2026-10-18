@@ -3,8 +3,9 @@ category: '298'
 date: '2010-09-05'
 subtitle: Continuing my quest to get into the subtleties of security and measures
   to protect against ‘bad guys...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: All about passwords
 type: wp
 wordpress_id: 675

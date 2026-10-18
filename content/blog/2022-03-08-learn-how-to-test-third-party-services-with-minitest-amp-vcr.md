@@ -4,6 +4,9 @@ date: '2022-03-08'
 subtitle: Learn How to Test Third Party Services With Minitest & VCR
 tags:
 - ruby
+- api
+- software-engineering
+- soa
 title: Learn How to Test Third Party Services With Minitest & VCR
 type: wp
 wordpress_id: 3300

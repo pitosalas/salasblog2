@@ -2,8 +2,11 @@
 category: '298'
 date: '2010-11-24'
 subtitle: '![screen-shot-2010-11-23-at-84149-pm'
-tag_review: no_fit
-tags: []
+tags:
+- social-media
+- personal
+- security
+- technology
 title: Facebook security
 type: wp
 wordpress_id: 636

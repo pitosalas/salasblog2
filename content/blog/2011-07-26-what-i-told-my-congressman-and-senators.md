@@ -4,6 +4,7 @@ date: '2011-07-26'
 subtitle: “Dear Congressman,
 tags:
 - politics
+- personal
 title: What I told my Congressman and Senators
 type: wp
 wordpress_id: 518

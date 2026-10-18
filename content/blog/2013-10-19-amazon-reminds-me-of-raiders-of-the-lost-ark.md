@@ -3,8 +3,8 @@ category: '1'
 date: '2013-10-19'
 subtitle: The only difference is that Amazon seems to know exactly every little item
   is in this crazy warehous...
-tag_review: no_fit
-tags: []
+tags:
+- amazon
 title: Amazon reminds me of Raiders of the Lost Ark
 type: wp
 wordpress_id: 150

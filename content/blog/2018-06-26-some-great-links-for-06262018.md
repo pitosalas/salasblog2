@@ -4,6 +4,7 @@ date: '2018-06-26'
 subtitle: Crystal is not Ruby Pt. 2 – Runtime Revolution
 tags:
 - ruby
+- technology
 title: Some great links for  06/26/2018
 type: wp
 wordpress_id: 2370

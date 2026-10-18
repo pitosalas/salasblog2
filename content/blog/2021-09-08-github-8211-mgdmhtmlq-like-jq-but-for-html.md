@@ -4,6 +4,9 @@ date: '2021-09-08'
 subtitle: 'GitHub – mgdm/htmlq: Like jq, but for HTML.'
 tags:
 - programming
+- cli
+- tools
+- database
 title: 'GitHub – mgdm/htmlq: Like jq, but for HTML.'
 type: wp
 wordpress_id: 3065

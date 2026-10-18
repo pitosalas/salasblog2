@@ -2,8 +2,9 @@
 category: '151'
 date: '2022-05-10'
 subtitle: Wooden machines and contraptions
-tag_review: no_fit
-tags: []
+tags:
+- woodworking
+- howto
 title: Wooden machines and contraptions
 type: wp
 wordpress_id: 3464

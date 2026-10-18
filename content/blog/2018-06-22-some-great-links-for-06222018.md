@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-06-22'
 subtitle: P. Maier GmbH Watch Shop – P. Maier GmbH
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  06/22/2018
 type: wp
 wordpress_id: 2362

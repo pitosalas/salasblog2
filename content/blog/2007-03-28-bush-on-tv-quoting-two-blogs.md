@@ -5,6 +5,7 @@ subtitle: Is this a sign of the times? President Bush is on TV right now giving 
   speech about why he’s right ...
 tags:
 - politics
+- personal
 title: Bush on TV, quoting two blogs
 type: wp
 wordpress_id: 1296

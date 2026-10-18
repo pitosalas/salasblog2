@@ -3,8 +3,9 @@ category: '410'
 date: '2009-11-15'
 subtitle: I was following a series of articles about the Brazilian e-voting system,
   which apparently underwent...
-tag_review: no_fit
-tags: []
+tags:
+- politics
+- technology
 title: On the importance of confidence in voting systems
 type: wp
 wordpress_id: 776

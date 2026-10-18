@@ -5,6 +5,8 @@ subtitle: Scott Kirsner of the Innovation Economy blog, as well of the [Boston G
 tags:
 - boston
 - technology
+- personal
+- programming
 title: Boston tech scene could be more inviting to students
 type: wp
 wordpress_id: 953

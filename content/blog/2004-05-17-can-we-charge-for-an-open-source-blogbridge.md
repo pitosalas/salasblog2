@@ -4,6 +4,7 @@ date: '2004-05-17'
 subtitle: As you know we are developing BlogBridge, “a new kind of blog reader.” ...
 tags:
 - business
+- blogging
 title: Can we charge for an open source BlogBridge
 type: wp
 wordpress_id: 2002

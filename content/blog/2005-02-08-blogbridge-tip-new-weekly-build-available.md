@@ -3,8 +3,8 @@ category: '50'
 date: '2005-02-08'
 subtitle: We just put up a new weekly build of BlogBridge with many new features.
   Here are some of the more in...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: '[BlogBridge Tip] New Weekly Build Available'
 type: wp
 wordpress_id: 1852

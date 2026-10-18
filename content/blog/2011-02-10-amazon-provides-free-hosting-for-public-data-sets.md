@@ -5,6 +5,8 @@ subtitle: If you work with non-profit projects that collect or disseminate large
   of public data, you w...
 tags:
 - technology
+- amazon
+- personal
 title: Amazon provides free hosting for public data sets
 type: wp
 wordpress_id: 597

@@ -3,8 +3,8 @@ category: '298'
 date: '2008-06-17'
 subtitle: I am a LifeLock customer and so I follow developments in this arena pretty
   closely. Check this post ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: LifeLock and Identity Theft – again
 type: wp
 wordpress_id: 1029

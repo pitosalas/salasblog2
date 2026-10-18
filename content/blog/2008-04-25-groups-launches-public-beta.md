@@ -2,8 +2,8 @@
 category: '538'
 date: '2008-04-25'
 subtitle: Check this post Grou.ps Launches Public Beta
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Grou.ps Launches Public Beta
 type: wp
 wordpress_id: 1060

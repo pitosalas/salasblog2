@@ -6,6 +6,7 @@ subtitle: I am away from home, at my home in Curacao for a reunion of Salas folk
 tags:
 - curacao
 - personal
+- blogging
 title: What’s a blog anyway?
 type: wp
 wordpress_id: 1980

@@ -2,8 +2,9 @@
 category: '55'
 date: '2022-03-17'
 subtitle: Git Good – The magic of keeping a clean Git history | Blog | simplabs
-tag_review: no_fit
-tags: []
+tags:
+- cli
+- howto
 title: Git Good – The magic of keeping a clean Git history | Blog | simplabs
 type: wp
 wordpress_id: 3354

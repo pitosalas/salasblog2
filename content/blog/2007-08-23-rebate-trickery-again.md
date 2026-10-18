@@ -5,6 +5,7 @@ subtitle: Many consumer products, like cell phones, computers, and so on seem to
   with some kind of a [tag...
 tags:
 - business
+- personal
 title: Rebate trickery, again
 type: wp
 wordpress_id: 1223

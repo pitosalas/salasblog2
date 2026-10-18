@@ -5,6 +5,9 @@ subtitle: '!College photo 10842 130x0'
 tags:
 - education
 - personal
+- technology
+- startups
+- olin-college
 title: Teaching at Olin College next year
 type: wp
 wordpress_id: 262

@@ -5,6 +5,9 @@ subtitle: I have become a total Spotify addict. I have almost totally stopped do
   MP3s and am graduall...
 tags:
 - music
+- apple
+- personal
+- technology
 title: Update on Spotify II
 type: wp
 wordpress_id: 487

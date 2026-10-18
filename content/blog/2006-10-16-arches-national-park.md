@@ -4,6 +4,7 @@ date: '2006-10-16'
 subtitle: '![](http://www.flickr.co...'
 tags:
 - travel
+- personal
 title: Arches National Park
 type: wp
 wordpress_id: 1419

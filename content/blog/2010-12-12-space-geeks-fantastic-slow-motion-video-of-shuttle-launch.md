@@ -5,6 +5,7 @@ subtitle: I’ve always been a major space travel fan and geek. This video linke
   Engadget incredibly had m...
 tags:
 - science
+- technology
 title: 'Space Geeks: Fantastic slow motion video of Shuttle Launch'
 type: wp
 wordpress_id: 625

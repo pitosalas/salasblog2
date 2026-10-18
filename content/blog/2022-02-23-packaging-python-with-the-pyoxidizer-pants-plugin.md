@@ -4,6 +4,7 @@ date: '2022-02-23'
 subtitle: Packaging Python with the PyOxidizer Pants Plugin
 tags:
 - python
+- howto
 title: Packaging Python with the PyOxidizer Pants Plugin
 type: wp
 wordpress_id: 3269

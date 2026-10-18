@@ -2,8 +2,8 @@
 category: '298'
 date: '2004-12-12'
 subtitle: A week or so ago I posted an amusing picture, supposedly from Popul...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: I’m in good company
 type: wp
 wordpress_id: 1897

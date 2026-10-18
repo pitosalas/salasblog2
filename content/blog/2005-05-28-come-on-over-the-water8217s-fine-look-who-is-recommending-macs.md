@@ -5,6 +5,7 @@ subtitle: I love my **Mac**, as y’all know. I was amused to read about **Intel
   **Paul Otellini** who pub...
 tags:
 - apple
+- technology
 title: Come on over, the water’s fine! Look who is recommending Macs!
 type: wp
 wordpress_id: 1772

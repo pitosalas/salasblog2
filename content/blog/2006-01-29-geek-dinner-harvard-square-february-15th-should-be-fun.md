@@ -5,6 +5,7 @@ subtitle: Inspired by **Geek Dinners** popping up all over, we thought it might 
   **fun** to try it here
 tags:
 - boston
+- personal
 title: Geek Dinner? Harvard Square? February 15th? Should be fun!
 type: wp
 wordpress_id: 1607

@@ -5,6 +5,8 @@ subtitle: Instead of charging extra (‘congestion pricing’) to drive your car
   rush hour, how about givin...
 tags:
 - science
+- boston
+- navigation
 title: Carrots vs. Sticks in affecting behavior
 type: wp
 wordpress_id: 322

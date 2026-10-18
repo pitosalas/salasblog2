@@ -5,6 +5,7 @@ subtitle: For those who are following this narrative, this is a continuing narra
   of my experiences after h...
 tags:
 - apple
+- technology
 title: 'Switcher’s Log, Part 5: Man does this machine scream.'
 type: wp
 wordpress_id: 1831

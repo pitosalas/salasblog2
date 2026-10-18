@@ -2,8 +2,10 @@
 category: '298'
 date: '2010-11-17'
 subtitle: And, maybe, better than any ad that Apple has ever done….
-tag_review: no_fit
-tags: []
+tags:
+- apple
+- personal
+- technology
 title: Easily the best Microsoft advertisement EVER
 type: wp
 wordpress_id: 639

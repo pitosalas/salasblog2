@@ -5,6 +5,7 @@ subtitle: '> “Each morning when he arrives at the Oval Office, President Obama
   his staff to deliver him a ...'
 tags:
 - politics
+- personal
 title: Enjoyable article about BO in the Washington Post
 type: wp
 wordpress_id: 878

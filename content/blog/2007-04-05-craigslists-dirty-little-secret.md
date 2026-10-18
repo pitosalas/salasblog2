@@ -3,8 +3,8 @@ category: '298'
 date: '2007-04-05'
 subtitle: I love Craig’s List. If you’ve heard of it (!) and are interested in online
   factoids, you’ll may be ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Craigslist’s Dirty Little Secret
 type: wp
 wordpress_id: 1290

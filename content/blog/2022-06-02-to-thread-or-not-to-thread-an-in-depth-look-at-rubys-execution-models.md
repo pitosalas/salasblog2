@@ -4,6 +4,9 @@ date: '2022-06-02'
 subtitle: 'To Thread or Not to Thread: An In-Depth Look at Ruby’s Execution Models'
 tags:
 - ruby
+- brandeis
+- explainer
+- concurrency
 title: 'To Thread or Not to Thread: An In-Depth Look at Ruby’s Execution Models'
 type: wp
 wordpress_id: 3482

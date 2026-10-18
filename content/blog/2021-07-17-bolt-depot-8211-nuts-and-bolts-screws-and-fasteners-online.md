@@ -2,8 +2,9 @@
 category: '182'
 date: '2021-07-17'
 subtitle: Bolt Depot – Nuts and Bolts, Screws and Fasteners online
-tag_review: no_fit
-tags: []
+tags:
+- technology
+- shopping
 title: Bolt Depot – Nuts and Bolts, Screws and Fasteners online
 type: wp
 wordpress_id: 3003

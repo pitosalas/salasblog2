@@ -5,6 +5,7 @@ subtitle: '> “They stripped Mr Kumaran naked and left him by the side of the r
   – but not before **cutting of...'
 tags:
 - technology
+- personal
 title: Losing a finger over biometrics
 type: wp
 wordpress_id: 1802

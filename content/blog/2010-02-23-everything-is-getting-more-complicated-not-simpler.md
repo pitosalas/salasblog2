@@ -4,6 +4,7 @@ date: '2010-02-23'
 subtitle: Following on on my post yesterday about “What we don’t understand.”
 tags:
 - technology
+- personal
 title: Everything is getting more complicated not simpler
 type: wp
 wordpress_id: 737

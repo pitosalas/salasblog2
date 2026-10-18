@@ -5,6 +5,7 @@ subtitle: Dan Bricklin’s written a bit on a topic that’s been indirectly on 
   lately
 tags:
 - business
+- technology
 title: Thoughts about software licensing
 type: wp
 wordpress_id: 2021

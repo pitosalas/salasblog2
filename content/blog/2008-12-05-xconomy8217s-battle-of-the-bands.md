@@ -6,6 +6,7 @@ subtitle: 'As a favor I am posting this notice about an event that looks like it
 tags:
 - boston
 - music
+- personal
 title: XConomy’s Battle of the bands
 type: wp
 wordpress_id: 934

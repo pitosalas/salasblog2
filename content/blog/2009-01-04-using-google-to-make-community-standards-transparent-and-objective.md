@@ -5,6 +5,7 @@ subtitle: This New York Times article, “What’s Obscene? Google Could Have an
 tags:
 - technology
 - legal
+- personal
 title: Using Google to make community standards transparent and objective
 type: wp
 wordpress_id: 915

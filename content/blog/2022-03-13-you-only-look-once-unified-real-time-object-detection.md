@@ -5,6 +5,8 @@ subtitle: 'You Only Look Once: Unified, Real-Time Object Detection'
 tags:
 - robotics
 - ai
+- computer-vision
+- education
 title: 'You Only Look Once: Unified, Real-Time Object Detection'
 type: wp
 wordpress_id: 3332

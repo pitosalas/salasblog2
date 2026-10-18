@@ -2,8 +2,8 @@
 category: '538'
 date: '2010-10-08'
 subtitle: Check out Fort Knox vs. the Barking Dog
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: '[PRETTY-GEEKY] Interesting article about secure elections'
 type: wp
 wordpress_id: 654

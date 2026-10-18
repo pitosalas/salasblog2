@@ -5,6 +5,8 @@ subtitle: In the past, clever **[tag]entrepreneurs[/tag]** (yours truly not incl
   alas) have built compani...
 tags:
 - business
+- personal
+- technology
 title: Is Facebook the new Google of acquisition-lust?
 type: wp
 wordpress_id: 1190

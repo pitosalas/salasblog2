@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-10-04'
 subtitle: 'PART 1: THE ELDERS'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: '[story] This did happen'
 type: wp
 wordpress_id: 656

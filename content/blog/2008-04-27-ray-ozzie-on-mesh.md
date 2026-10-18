@@ -3,8 +3,8 @@ category: '538'
 date: '2008-04-27'
 subtitle: 'You might have missed the announcement of Microsoft Mesh. Cycnical me:
   these grand strategies come a...'
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Ray Ozzie on Mesh
 type: wp
 wordpress_id: 1058

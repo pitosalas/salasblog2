@@ -2,8 +2,8 @@
 category: '50'
 date: '2004-06-12'
 subtitle: I shoulda known…
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: BlogBridge Beta, part deux
 type: wp
 wordpress_id: 1982

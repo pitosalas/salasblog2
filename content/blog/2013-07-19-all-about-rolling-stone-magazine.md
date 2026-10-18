@@ -3,8 +3,8 @@ category: '1'
 date: '2013-07-19'
 subtitle: About a year ago I started reading Rolling Stone magazine. It’s true what
   Taibbi says, it’s definite...
-tag_review: no_fit
-tags: []
+tags:
+- boston
 title: All about Rolling Stone magazine
 type: wp
 wordpress_id: 184

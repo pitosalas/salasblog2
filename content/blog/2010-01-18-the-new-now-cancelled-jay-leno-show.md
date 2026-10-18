@@ -3,8 +3,9 @@ category: '298'
 date: '2010-01-18'
 subtitle: Finally I found someone expressing what I have been thinking about [the
   fracas about NBC, Jay Leno, ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- tv
 title: The new, now cancelled, Jay Leno Show
 type: wp
 wordpress_id: 753

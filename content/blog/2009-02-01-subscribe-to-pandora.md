@@ -5,6 +5,7 @@ subtitle: I’ve known about Pandora for ages, and the last month or so have bee
 tags:
 - music
 - technology
+- personal
 title: Subscribe to Pandora!
 type: wp
 wordpress_id: 899

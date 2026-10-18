@@ -4,6 +4,7 @@ date: '2021-06-16'
 subtitle: Making a ROS Controller
 tags:
 - robotics
+- howto
 title: Making a ROS Controller
 type: wp
 wordpress_id: 2955

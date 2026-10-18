@@ -4,6 +4,7 @@ date: '2006-07-09'
 subtitle: '!['
 tags:
 - design
+- technology
 title: A beautiful visualization of news across the world
 type: wp
 wordpress_id: 1498

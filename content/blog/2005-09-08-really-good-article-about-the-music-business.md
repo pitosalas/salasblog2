@@ -5,6 +5,7 @@ subtitle: 'Robin Good points to:'
 tags:
 - music
 - business
+- personal
 title: Really good article about the music business
 type: wp
 wordpress_id: 1702

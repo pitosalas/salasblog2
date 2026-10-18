@@ -4,6 +4,7 @@ date: '2008-10-15'
 subtitle: Halo, from HP. Really?
 tags:
 - technology
+- personal
 title: 'Halo: Supposed to be the most unbelievably great Video Conferencing system'
 type: wp
 wordpress_id: 968

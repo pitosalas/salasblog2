@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-04-17'
 subtitle: The Truth About Microservices
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  04/17/2018
 type: wp
 wordpress_id: 2247

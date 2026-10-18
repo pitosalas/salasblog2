@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-02-02'
 subtitle: Check out this post from [Autoblog...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Australian police testing super cruiser
 type: wp
 wordpress_id: 1120

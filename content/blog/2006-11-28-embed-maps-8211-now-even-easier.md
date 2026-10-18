@@ -5,6 +5,8 @@ subtitle: I wrote about this a little while back, but now it’s even easier! Do
   want to embed a map of some...
 tags:
 - maps
+- personal
+- technology
 title: Embed Maps – now even easier!
 type: wp
 wordpress_id: 1398

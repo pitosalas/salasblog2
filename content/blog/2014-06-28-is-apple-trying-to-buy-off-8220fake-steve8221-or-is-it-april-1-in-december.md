@@ -5,6 +5,7 @@ subtitle: I wrote [recently about Fake Steve and wondered aloud how he could get
   with what he gets away w...
 tags:
 - apple
+- personal
 title: Is Apple trying to buy off “Fake Steve” or is it April 1 in December?
 type: wp
 wordpress_id: 70

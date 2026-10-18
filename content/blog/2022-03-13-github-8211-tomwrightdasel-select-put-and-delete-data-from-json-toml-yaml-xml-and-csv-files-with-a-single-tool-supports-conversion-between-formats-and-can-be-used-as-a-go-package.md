@@ -5,6 +5,10 @@ subtitle: '[ GitHub – TomWright/dasel: Select, put and delete data from JSON, 
   YAML, XML and CSV files wit...'
 tags:
 - programming
+- cli
+- csv
+- json
+- tools
 title: 'GitHub – TomWright/dasel: Select, put and delete data from JSON, TOML, YAML,
   XML and CSV files with a single tool. Supports conversion between formats and can
   be used as a Go package.'

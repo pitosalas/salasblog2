@@ -5,6 +5,8 @@ subtitle: 'Here’s an interesting new product, just into beta: Inquisix. This i
   servi...'
 tags:
 - business
+- personal
+- technology
 title: Keep an eye on Inquisix
 type: wp
 wordpress_id: 1150

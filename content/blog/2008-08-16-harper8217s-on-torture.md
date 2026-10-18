@@ -4,6 +4,7 @@ date: '2008-08-16'
 subtitle: Came across this interesting article. You may agr...
 tags:
 - politics
+- personal
 title: Harper’s on torture
 type: wp
 wordpress_id: 994

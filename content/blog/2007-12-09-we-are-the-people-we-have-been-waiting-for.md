@@ -5,6 +5,8 @@ subtitle: Tom Friedman recently had a good column about global warming (“globa
   change”) and what is, ...
 tags:
 - politics
+- personal
+- technology
 title: “We are the people we have been waiting for.”
 type: wp
 wordpress_id: 1162

@@ -4,6 +4,7 @@ date: '2004-11-29'
 subtitle: Adam Bosworth’s speech
 tags:
 - software-engineering
+- technology
 title: Adam Bosworth on KISS
 type: wp
 wordpress_id: 1906

@@ -4,6 +4,8 @@ date: '2013-09-09'
 subtitle: Harvard Business School Case Study – Gender Equity – NYTimes.com
 tags:
 - education
+- business
+- harvard
 title: 'Gender Equity at Harvard: great article'
 type: wp
 wordpress_id: 164

@@ -5,6 +5,7 @@ subtitle: Here’s a tiny social conundrum. When someone writes you, calls you a
   a message, calls and do...
 tags:
 - personal
+- email
 title: When no response means “no”
 type: wp
 wordpress_id: 469

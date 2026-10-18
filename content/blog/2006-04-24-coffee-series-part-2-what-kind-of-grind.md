@@ -4,6 +4,7 @@ date: '2006-04-24'
 subtitle: This is an **interim report** on “Life with a Capresso espresso maker
 tags:
 - food
+- personal
 title: 'Coffee Series part 2: What kind of grind?'
 type: wp
 wordpress_id: 1548

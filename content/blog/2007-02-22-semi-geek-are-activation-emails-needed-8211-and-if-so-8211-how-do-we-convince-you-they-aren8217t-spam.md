@@ -2,8 +2,9 @@
 category: '50'
 date: '2007-02-22'
 subtitle: Here’s an odd but important problem, at least for us here at BlogBridge.
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- technology
 title: '[SEMI-GEEK] Are activation emails needed – and if so – how do we convince
   you they aren’t spam?'
 type: wp

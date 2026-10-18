@@ -4,6 +4,7 @@ date: '2022-04-24'
 subtitle: Creating A Modern Python Development Environment
 tags:
 - python
+- howto
 title: Creating A Modern Python Development Environment
 type: wp
 wordpress_id: 3450

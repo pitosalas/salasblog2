@@ -5,6 +5,7 @@ subtitle: '> “Without a doubt, the concepts behind AJAX are providing the cata
   to move the web from its old...'
 tags:
 - programming
+- technology
 title: '[GEEKY] BostonPHP Meeting: Ajax Update'
 type: wp
 wordpress_id: 1413

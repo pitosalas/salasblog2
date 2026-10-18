@@ -4,6 +4,7 @@ date: '2008-06-23'
 subtitle: '![](http://www.fli...'
 tags:
 - politics
+- personal
 title: I agree with Tom Friedman
 type: wp
 wordpress_id: 1026

@@ -4,6 +4,7 @@ date: '2008-09-09'
 subtitle: Maybe this is one more of the futile petitions
 tags:
 - politics
+- personal
 title: Sign the letter!
 type: wp
 wordpress_id: 977

@@ -5,6 +5,7 @@ subtitle: Esther Dyson wrote this very interesting [Wall Street Journal article 
 tags:
 - business
 - technology
+- personal
 title: Esther Dyson on the Coming Ad Revolution
 type: wp
 wordpress_id: 972

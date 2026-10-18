@@ -4,6 +4,8 @@ date: '2021-10-15'
 subtitle: 'Noteflakes: Embracing Infinite Loops with Ruby and Polyphony'
 tags:
 - ruby
+- concurrency
+- performance
 title: 'Noteflakes: Embracing Infinite Loops with Ruby and Polyphony'
 type: wp
 wordpress_id: 3089

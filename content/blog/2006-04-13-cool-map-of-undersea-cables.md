@@ -4,6 +4,7 @@ date: '2006-04-13'
 subtitle: This is just a really cool map.
 tags:
 - maps
+- technology
 title: Cool map of undersea cables
 type: wp
 wordpress_id: 1555

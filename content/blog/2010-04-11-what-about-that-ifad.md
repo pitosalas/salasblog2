@@ -5,6 +5,7 @@ subtitle: I am not going to spend bits talking about the iFad (other than deploy
   my snarky nickname for it)...
 tags:
 - apple
+- personal
 title: What about that iFad?
 type: wp
 wordpress_id: 731

@@ -3,8 +3,8 @@ category: '298'
 date: '2011-01-25'
 subtitle: I heard yesterday that there is “at least one farm” in Australia bigger
   than Texas. I guess this was...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: An Australian farm bigger than Texas. Really?
 type: wp
 wordpress_id: 603

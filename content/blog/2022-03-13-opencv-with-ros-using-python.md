@@ -5,6 +5,8 @@ subtitle: OpenCV with ROS using Python
 tags:
 - robotics
 - python
+- computer-vision
+- howto
 title: OpenCV with ROS using Python
 type: wp
 wordpress_id: 3336

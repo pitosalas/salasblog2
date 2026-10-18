@@ -5,6 +5,9 @@ subtitle: How to Monitor Network and Zoom Performance & Fix “Your Internet Con
   is Unstable” on Zoom
 tags:
 - technology
+- howto
+- performance
+- zoom
 title: How to Monitor Network and Zoom Performance & Fix “Your Internet Connection
   is Unstable” on Zoom
 type: wp

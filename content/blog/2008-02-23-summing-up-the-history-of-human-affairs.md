@@ -5,6 +5,7 @@ subtitle: In the context of the current Wall Street excitement, I received a let
   of assurance from a mutual...
 tags:
 - business
+- personal
 title: Summing up the history of human affairs
 type: wp
 wordpress_id: 1105

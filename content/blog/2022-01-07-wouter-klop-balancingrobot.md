@@ -4,6 +4,8 @@ date: '2022-01-07'
 subtitle: Wouter Klop / BalancingRobot
 tags:
 - robotics
+- cli
+- howto
 title: Wouter Klop / BalancingRobot
 type: wp
 wordpress_id: 3195

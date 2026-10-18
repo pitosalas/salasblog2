@@ -5,6 +5,8 @@ subtitle: Intro to web scraping with Ruby
 tags:
 - ruby
 - programming
+- howto
+- web
 title: Intro to web scraping with Ruby
 type: wp
 wordpress_id: 3107

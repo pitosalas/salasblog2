@@ -5,6 +5,7 @@ subtitle: Everything’s a camp today, Foo Camp, Bar Camp and now Transparency C
 tags:
 - politics
 - technology
+- personal
 title: Transparency Camp
 type: wp
 wordpress_id: 879

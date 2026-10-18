@@ -4,6 +4,8 @@ date: '2022-04-23'
 subtitle: navigation/Troubleshooting – ROS Wiki
 tags:
 - robotics
+- navigation
+- howto
 title: navigation/Troubleshooting – ROS Wiki
 type: wp
 wordpress_id: 3442

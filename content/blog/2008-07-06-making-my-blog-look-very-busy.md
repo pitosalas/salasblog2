@@ -2,8 +2,9 @@
 category: '51'
 date: '2008-07-06'
 subtitle: '!Wordpress Timestamp'
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
 title: Making my blog look very busy
 type: wp
 wordpress_id: 1017

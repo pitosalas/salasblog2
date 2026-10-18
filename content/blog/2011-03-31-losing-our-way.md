@@ -4,6 +4,8 @@ date: '2011-03-31'
 subtitle: This New York Times Op-Ed piece by Bob Herbert
 tags:
 - politics
+- personal
+- nyt
 title: Losing Our Way
 type: wp
 wordpress_id: 578

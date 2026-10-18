@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-04-03'
 subtitle: On Wednesday of next week,
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Do you like meaningless coincidences?
 type: wp
 wordpress_id: 1564

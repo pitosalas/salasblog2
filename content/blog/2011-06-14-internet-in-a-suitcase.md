@@ -5,6 +5,8 @@ subtitle: The U.S. government is helping create parallel internets
 tags:
 - politics
 - technology
+- web
+- personal
 title: Internet in a suitcase
 type: wp
 wordpress_id: 548

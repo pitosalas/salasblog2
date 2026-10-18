@@ -5,6 +5,8 @@ subtitle: PC Magazine’s newest issue has a retrospective of their past 25 year
   Lotus[ Improv gets mention...
 tags:
 - lotus
+- personal
+- technology
 title: 'Shamless self-promotion: Improv and moi mentioned in PC Magazine'
 type: wp
 wordpress_id: 1269

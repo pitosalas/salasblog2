@@ -2,8 +2,10 @@
 category: '249'
 date: '2021-08-01'
 subtitle: MicroK8s – Zero-ops Kubernetes for developers, edge and IoT | MicroK8s
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- technology
+- scalability
 title: MicroK8s – Zero-ops Kubernetes for developers, edge and IoT | MicroK8s
 type: wp
 wordpress_id: 3015

@@ -5,6 +5,8 @@ subtitle: If you were intrigued by my previous post about the Clock of the Long 
   I came across a [nice, ph...
 tags:
 - books
+- personal
+- technology
 title: More Long Now Clockery
 type: wp
 wordpress_id: 1407

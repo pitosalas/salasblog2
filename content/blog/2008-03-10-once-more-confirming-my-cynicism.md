@@ -4,6 +4,7 @@ date: '2008-03-10'
 subtitle: Sorry, but for some reason it seems that the cynics win out...
 tags:
 - politics
+- personal
 title: Once more confirming my cynicism
 type: wp
 wordpress_id: 1092

@@ -3,8 +3,10 @@ category: '298'
 date: '2011-09-10'
 subtitle: If you are interested in Game Design you have probably seen this video…
   I finally watched it and tho...
-tag_review: no_fit
-tags: []
+tags:
+- games
+- personal
+- technology
 title: Game Design talk by Jesse Schell
 type: wp
 wordpress_id: 502

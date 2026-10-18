@@ -5,6 +5,7 @@ subtitle: I just came back from the theatre, the [Huntington Theatre, Boston’s
   of a brand new play...
 tags:
 - boston
+- personal
 title: Go See “The Cry of the Reed” right now
 type: wp
 wordpress_id: 1073

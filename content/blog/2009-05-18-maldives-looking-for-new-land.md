@@ -3,8 +3,8 @@ category: '298'
 date: '2009-05-18'
 subtitle: 'A while back I wrote a post saying that it was “[Official: The Maldives
   is the most beautiful place ...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Maldives looking for new land
 type: wp
 wordpress_id: 844

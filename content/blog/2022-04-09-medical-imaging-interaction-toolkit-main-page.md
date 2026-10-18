@@ -2,8 +2,9 @@
 category: '101'
 date: '2022-04-09'
 subtitle: 'Medical Imaging Interaction Toolkit: Main Page'
-tag_review: no_fit
-tags: []
+tags:
+- computer-vision
+- tools
 title: 'Medical Imaging Interaction Toolkit: Main Page'
 type: wp
 wordpress_id: 3420

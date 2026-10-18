@@ -2,8 +2,8 @@
 category: '1'
 date: '2013-08-27'
 subtitle: I was rather pleased with myself!
-tag_review: no_fit
-tags: []
+tags:
+- security
 title: Trouble in password land, again?
 type: wp
 wordpress_id: 173

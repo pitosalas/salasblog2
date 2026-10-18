@@ -5,6 +5,8 @@ subtitle: The family of anonymous functions – blocks, procs and lambdas
 tags:
 - ruby
 - programming
+- explainer
+- howto
 title: The family of anonymous functions – blocks, procs and lambdas
 type: wp
 wordpress_id: 3109

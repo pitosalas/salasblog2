@@ -4,6 +4,7 @@ date: '2008-01-29'
 subtitle: You like Barnes and Noble? How about Border’s?
 tags:
 - books
+- personal
 title: Top bookstores around the world
 type: wp
 wordpress_id: 1129

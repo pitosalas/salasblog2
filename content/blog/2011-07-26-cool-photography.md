@@ -2,8 +2,9 @@
 category: '298'
 date: '2011-07-26'
 subtitle: '!NewImage'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- photography
 title: Cool Photography
 type: wp
 wordpress_id: 519

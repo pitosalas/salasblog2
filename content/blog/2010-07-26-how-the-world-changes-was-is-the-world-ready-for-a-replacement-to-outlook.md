@@ -3,8 +3,8 @@ category: '538'
 date: '2010-07-26'
 subtitle: Now that I’ve been blogging for a while, it’s fun and instructive sometimes
   to see some of the older...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: 'How the world changes (Was: Is the world ready for a replacement to Outlook?)'
 type: wp
 wordpress_id: 697

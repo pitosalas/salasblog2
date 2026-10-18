@@ -5,6 +5,7 @@ subtitle: Here’s a topic I have never written about before… Nation Building.
   want to point you to a gre...
 tags:
 - politics
+- personal
 title: Nation Building
 type: wp
 wordpress_id: 486

@@ -5,6 +5,7 @@ subtitle: I’ve been using mint.com for years now but every month I hate it a l
   bit more. It’s too big, to...
 tags:
 - technology
+- business
 title: Nerdwallet.com is not the site I have been looking for
 type: wp
 wordpress_id: 107

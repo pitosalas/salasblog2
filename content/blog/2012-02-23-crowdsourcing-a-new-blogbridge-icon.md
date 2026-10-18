@@ -5,6 +5,7 @@ subtitle: Well, it’s been about 5 years with the same (lovely) BlogBridge appl
   icon and as we are redes...
 tags:
 - design
+- blogging
 title: Crowdsourcing a new BlogBridge icon
 type: wp
 wordpress_id: 385

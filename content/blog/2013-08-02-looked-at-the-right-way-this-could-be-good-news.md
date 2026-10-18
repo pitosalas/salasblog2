@@ -3,8 +3,9 @@ category: '1'
 date: '2013-08-02'
 subtitle: I came across this article a few days ago. The Ticktock of the Death Clock
   – NYTimes.com
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- travel
 title: Looked at the right way, this could be good news!
 type: wp
 wordpress_id: 179

@@ -5,6 +5,7 @@ subtitle: There’s a lot of buzz right now about the leaked documents related t
   war in Afghanistan. I am n...
 tags:
 - politics
+- personal
 title: Behind the scenes @ Wikileaks
 type: wp
 wordpress_id: 696

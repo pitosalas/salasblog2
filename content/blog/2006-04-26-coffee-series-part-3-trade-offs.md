@@ -5,6 +5,7 @@ subtitle: '**First** I was an instant coffee guy. Then I got into brewing **whol
   pots, which led to my **was...'
 tags:
 - food
+- personal
 title: 'Coffee Series, Part 3: Trade offs'
 type: wp
 wordpress_id: 1547

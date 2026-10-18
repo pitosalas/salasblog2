@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-12-18'
 subtitle: I just thought [this
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: World’s Tallest Man Lends a Hand
 type: wp
 wordpress_id: 1380

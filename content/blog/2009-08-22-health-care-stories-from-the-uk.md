@@ -6,6 +6,7 @@ subtitle: Sure, one isolated story doesn’t prove anything, but then our health
 tags:
 - politics
 - health
+- personal
 title: Health Care Stories from the U.K.
 type: wp
 wordpress_id: 811

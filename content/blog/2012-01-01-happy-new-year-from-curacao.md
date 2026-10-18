@@ -5,6 +5,7 @@ subtitle: It felt like a war zone without the danger!
 tags:
 - curacao
 - personal
+- video
 title: Happy New Year from Curaçao!
 type: wp
 wordpress_id: 427

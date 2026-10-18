@@ -5,6 +5,7 @@ subtitle: Rails Extension Power Pack – Visual Studio Marketplace
 tags:
 - ruby
 - cli
+- howto
 title: Rails Extension Power Pack – Visual Studio Marketplace
 type: wp
 wordpress_id: 3472

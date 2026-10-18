@@ -5,6 +5,8 @@ subtitle: Here is [a good cheat sheet on how to build products that people reall
   want. It is cribbed from thi...
 tags:
 - business
+- startups
+- technology
 title: Good tips for building products that people want
 type: wp
 wordpress_id: 261

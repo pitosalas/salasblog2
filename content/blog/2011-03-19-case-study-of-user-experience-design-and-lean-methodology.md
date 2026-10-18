@@ -6,6 +6,7 @@ subtitle: 'A good read if you are interested in fast iteration in user experienc
 tags:
 - design
 - business
+- technology
 title: Case Study of User Experience Design and Lean Methodology
 type: wp
 wordpress_id: 581

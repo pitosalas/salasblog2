@@ -3,8 +3,9 @@ category: '298'
 date: '2007-05-15'
 subtitle: I’ve been **de-friending** one person after another on Twitter. Why? Because
   many of them are A-list...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Leaving my friends – Twitterspam
 type: wp
 wordpress_id: 1271

@@ -2,8 +2,8 @@
 category: '298'
 date: '2004-05-18'
 subtitle: I was scanning Jon Udell’s blog and came across...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Words DO matter
 type: wp
 wordpress_id: 2001

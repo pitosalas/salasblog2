@@ -5,6 +5,8 @@ subtitle: 'Overv/outrun: Execute a local command using the processing power of a
   Linux machine.'
 tags:
 - linux
+- cli
+- tools
 title: 'Overv/outrun: Execute a local command using the processing power of another
   Linux machine.'
 type: wp

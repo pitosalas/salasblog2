@@ -4,6 +4,7 @@ date: '2006-12-07'
 subtitle: Check out [this
 tags:
 - apple
+- personal
 title: 'Ask Lifehacker: The gift of a pre-loaded iPod'
 type: wp
 wordpress_id: 1393

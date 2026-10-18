@@ -5,6 +5,8 @@ subtitle: Just came across this odd link somewhere. He’s a good and clear writ
   enjoyable to read whether yo...
 tags:
 - ai
+- technology
+- personal
 title: Interesting old article by Marvin Minsky
 type: wp
 wordpress_id: 752

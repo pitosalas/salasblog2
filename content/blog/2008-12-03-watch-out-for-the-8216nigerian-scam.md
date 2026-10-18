@@ -2,8 +2,9 @@
 category: '298'
 date: '2008-12-03'
 subtitle: Yes, some people do fall for it
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- politics
 title: Watch out for the ‘Nigerian Scam
 type: wp
 wordpress_id: 935

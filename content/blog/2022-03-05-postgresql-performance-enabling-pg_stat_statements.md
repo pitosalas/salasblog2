@@ -2,8 +2,10 @@
 category: '104'
 date: '2022-03-05'
 subtitle: PostgreSQL Performance Enabling pg_stat_statements
-tag_review: no_fit
-tags: []
+tags:
+- configuration
+- performance
+- database
 title: PostgreSQL Performance Enabling pg_stat_statements
 type: wp
 wordpress_id: 3283

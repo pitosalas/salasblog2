@@ -2,8 +2,9 @@
 category: '298'
 date: '2006-03-26'
 subtitle: In The Economist, there’s an ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: 'Open Source: the space between Corporation and Commune?'
 type: wp
 wordpress_id: 1570

@@ -5,6 +5,7 @@ subtitle: 'This article: The Role of RSS in Science Publishing: Syndication and 
   on the Web'
 tags:
 - science
+- blogging
 title: The role of RSS in Science Publishing
 type: wp
 wordpress_id: 1472

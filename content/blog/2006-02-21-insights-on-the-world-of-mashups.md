@@ -2,8 +2,8 @@
 category: '538'
 date: '2006-02-21'
 subtitle: Adam Green has two very insightful posts about Mashups inspired at [Mashu...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Insights on the world of mashups
 type: wp
 wordpress_id: 1588

@@ -5,6 +5,7 @@ subtitle: 'Dave writes an enthousiastic review of this book: The Secret in Build
   26'
 tags:
 - books
+- personal
 title: The Secret in Building 26
 type: wp
 wordpress_id: 893

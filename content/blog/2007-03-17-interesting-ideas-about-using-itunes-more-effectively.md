@@ -4,6 +4,8 @@ date: '2007-03-17'
 subtitle: Check out this post
 tags:
 - apple
+- personal
+- technology
 title: Interesting ideas about using iTunes more effectively
 type: wp
 wordpress_id: 1302

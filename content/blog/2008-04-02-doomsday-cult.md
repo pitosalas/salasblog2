@@ -2,8 +2,8 @@
 category: '50'
 date: '2008-04-02'
 subtitle: Scott Adams as usual is hillarious in this post Doomsday Cult
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Doomsday Cult
 type: wp
 wordpress_id: 1075

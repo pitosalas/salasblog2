@@ -5,6 +5,7 @@ subtitle: As I said in the previous post, I am a bit of a promiscuous signer upp
   From a cursory look, Rhaps...
 tags:
 - music
+- personal
 title: Cancelled Rhapsody, Trying Spotify
 type: wp
 wordpress_id: 528

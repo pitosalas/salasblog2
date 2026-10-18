@@ -2,8 +2,8 @@
 category: '538'
 date: '2004-11-06'
 subtitle: I was lucky enough to meet and spend some time with **Ward Cunningham **
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: '[OOPSLA] Where Wikis come from'
 type: wp
 wordpress_id: 1917

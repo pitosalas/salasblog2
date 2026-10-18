@@ -5,6 +5,7 @@ subtitle: The thing about a bubble is that while people worry about it, no one i
   actually sure whether they a...
 tags:
 - business
+- personal
 title: Bubble Bubble Sign Of Trouble
 type: wp
 wordpress_id: 632

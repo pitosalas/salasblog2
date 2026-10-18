@@ -5,6 +5,7 @@ subtitle: It seems to me that all text and other Mac OS X user interface element
   *are a little bit bigger* th...
 tags:
 - apple
+- technology
 title: Do Mac users have eye problems – Switcher’s Log – Part 2
 type: wp
 wordpress_id: 1863

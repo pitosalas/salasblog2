@@ -5,6 +5,8 @@ subtitle: Here’s an interesting [article in “The Opinionator” of the New Y
   about blogging, scholarly ...
 tags:
 - education
+- blogging
+- web
 title: 'Digital Humanities: A fancy word for blogging?'
 type: wp
 wordpress_id: 421

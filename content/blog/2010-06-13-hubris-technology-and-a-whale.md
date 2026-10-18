@@ -5,6 +5,7 @@ subtitle: A couple of New York Times articles today that point out (what others 
   pointed out too) that the...
 tags:
 - technology
+- personal
 title: Hubris, Technology and a Whale
 type: wp
 wordpress_id: 710

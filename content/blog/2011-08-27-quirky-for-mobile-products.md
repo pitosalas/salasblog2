@@ -5,6 +5,9 @@ subtitle: I read about Quirky.com in the paper the other day.
 tags:
 - business
 - design
+- mobile
+- programming
+- technology
 title: Quirky for Mobile Products?
 type: wp
 wordpress_id: 503

@@ -3,6 +3,7 @@ date: '2026-02-28'
 tags:
 - technology
 - programming
+- software-engineering
 title: Rules of Thumb for Software Engineers
 type: blog
 ---

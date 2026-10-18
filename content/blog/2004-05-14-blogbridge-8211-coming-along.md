@@ -3,8 +3,8 @@ category: '51'
 date: '2004-05-14'
 subtitle: It’s been quiet but we’ve been busy. We are getting ready to put up a major
   new revision of [BlogBri...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: BlogBridge – coming along!
 type: wp
 wordpress_id: 2006

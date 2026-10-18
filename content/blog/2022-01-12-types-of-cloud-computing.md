@@ -4,6 +4,9 @@ date: '2022-01-12'
 subtitle: Types of cloud computing
 tags:
 - software-engineering
+- cloud
+- brandeis
+- explainer
 title: Types of cloud computing
 type: wp
 wordpress_id: 3209

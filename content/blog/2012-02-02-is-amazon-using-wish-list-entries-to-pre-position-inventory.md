@@ -4,6 +4,7 @@ date: '2012-02-02'
 subtitle: 'This happened: I had a book on my Amazon wish list for several months.'
 tags:
 - business
+- amazon
 title: Is Amazon using Wish List entries to pre-position inventory?
 type: wp
 wordpress_id: 401

@@ -3,8 +3,8 @@ category: '50'
 date: '2007-04-02'
 subtitle: I sometimes feel like I don’t multi-task quite as well as "everyone else".
   So I was interested in [t...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: The *myth* of multi-tasking
 type: wp
 wordpress_id: 1294

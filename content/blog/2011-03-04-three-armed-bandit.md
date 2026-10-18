@@ -5,6 +5,9 @@ subtitle: If I could fool you into believing that a fake rubber hand that you we
   looking at was really your ...
 tags:
 - science
+- personal
+- research
+- technology
 title: Three Armed Bandit?
 type: wp
 wordpress_id: 586

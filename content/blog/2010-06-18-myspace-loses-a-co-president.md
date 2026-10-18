@@ -2,8 +2,8 @@
 category: '51'
 date: '2010-06-18'
 subtitle: Check out MySpace Loses a Co-President(**...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: MySpace Loses a Co-President
 type: wp
 wordpress_id: 709

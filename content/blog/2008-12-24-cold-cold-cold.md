@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-12-24'
 subtitle: '!cold'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Cold, cold, cold
 type: wp
 wordpress_id: 920

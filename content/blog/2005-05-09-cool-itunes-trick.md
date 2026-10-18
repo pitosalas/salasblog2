@@ -5,6 +5,7 @@ subtitle: I like to come across music from my collection of CDs that I haven’t
   to in a while. Here’s ...
 tags:
 - apple
+- personal
 title: Cool iTunes trick
 type: wp
 wordpress_id: 1789

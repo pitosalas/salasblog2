@@ -4,6 +4,7 @@ date: '2022-03-23'
 subtitle: My guiding principles after 20 years of programming
 tags:
 - programming
+- software-engineering
 title: My guiding principles after 20 years of programming
 type: wp
 wordpress_id: 3374

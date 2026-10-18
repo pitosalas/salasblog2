@@ -5,6 +5,7 @@ subtitle: This is a topic of continuing interest to people who hear that I switc
   Here are some general com...
 tags:
 - apple
+- technology
 title: 'Switcher’s Log, Part 4: So what software DO I use on Mac?'
 type: wp
 wordpress_id: 1850

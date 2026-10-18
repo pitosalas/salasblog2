@@ -4,6 +4,9 @@ date: '2021-08-12'
 subtitle: Descript | All-in-one audio/video editing, as easy as a doc.
 tags:
 - technology
+- music
+- tools
+- video
 title: Descript | All-in-one audio/video editing, as easy as a doc.
 type: wp
 wordpress_id: 3023

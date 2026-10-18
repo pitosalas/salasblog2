@@ -4,6 +4,7 @@ date: '2021-07-29'
 subtitle: Preserving global state in a flask application
 tags:
 - python
+- web
 title: Preserving global state in a flask application
 type: wp
 wordpress_id: 3009

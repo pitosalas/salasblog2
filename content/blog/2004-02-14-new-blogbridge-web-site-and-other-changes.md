@@ -3,8 +3,8 @@ category: '50'
 date: '2004-02-14'
 subtitle: Happy Valentines Day. As you can see, there is a new web site design. This
   one was created by a desi...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: New BlogBridge Web Site and other changes
 type: wp
 wordpress_id: 2073

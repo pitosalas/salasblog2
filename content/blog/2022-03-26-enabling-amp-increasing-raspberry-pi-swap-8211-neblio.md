@@ -2,8 +2,9 @@
 category: '249'
 date: '2022-03-26'
 subtitle: Enabling & Increasing Raspberry Pi Swap – Neblio
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- technology
 title: Enabling & Increasing Raspberry Pi Swap – Neblio
 type: wp
 wordpress_id: 3382

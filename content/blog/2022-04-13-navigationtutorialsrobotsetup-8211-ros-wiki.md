@@ -4,6 +4,7 @@ date: '2022-04-13'
 subtitle: navigation/Tutorials/RobotSetup – ROS Wiki
 tags:
 - robotics
+- navigation
 title: navigation/Tutorials/RobotSetup – ROS Wiki
 type: wp
 wordpress_id: 3426

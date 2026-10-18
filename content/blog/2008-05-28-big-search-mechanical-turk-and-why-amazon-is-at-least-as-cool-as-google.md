@@ -4,6 +4,7 @@ date: '2008-05-28'
 subtitle: Adam Green points to Scoble who re-discover...
 tags:
 - technology
+- personal
 title: Big Search, Mechanical Turk and why Amazon is at least as cool as Google
 type: wp
 wordpress_id: 1039

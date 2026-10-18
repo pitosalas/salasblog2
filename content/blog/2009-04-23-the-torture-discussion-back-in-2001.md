@@ -6,6 +6,7 @@ subtitle: Recently of course, because of the ‘torture memos’, the topic is a
 tags:
 - politics
 - legal
+- personal
 title: The torture discussion back in 2001
 type: wp
 wordpress_id: 854

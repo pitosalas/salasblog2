@@ -4,6 +4,9 @@ date: '2021-05-21'
 subtitle: '[ Raspberry Pi Headless Setup Using Linux [Step by Step]](https://linuxhandbook.com/raspberry-pi-hea...'
 tags:
 - linux
+- howto
+- technology
+- robotics
 title: Raspberry Pi Headless Setup Using Linux [Step by Step]
 type: wp
 wordpress_id: 2907

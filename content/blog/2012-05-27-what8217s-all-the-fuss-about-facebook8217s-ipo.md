@@ -5,6 +5,7 @@ subtitle: I totally agree with Frank Bruni’s account of the Facebook’s IPO. 
   to me that if the current...
 tags:
 - business
+- social-media
 title: What’s all the fuss about Facebook’s IPO?
 type: wp
 wordpress_id: 327

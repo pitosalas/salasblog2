@@ -4,6 +4,7 @@ date: '2009-10-24'
 subtitle: Check out It’s Not My Company
 tags:
 - business
+- technology
 title: Those are not “your companies” dude
 type: wp
 wordpress_id: 787

@@ -3,8 +3,8 @@ category: '538'
 date: '2005-04-08'
 subtitle: Recently, GMail *raised *the free storage available to all subscribers to
   2 Gig! Amazing isn’t it? I...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Is Google setting the hook?
 type: wp
 wordpress_id: 1807

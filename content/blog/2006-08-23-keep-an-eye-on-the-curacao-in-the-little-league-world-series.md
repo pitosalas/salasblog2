@@ -5,6 +5,7 @@ subtitle: Curacao has in the past won or gotten very close to winning the overal
   Little League World Series!
 tags:
 - curacao
+- personal
 title: Keep an eye on the Curacao in the Little League World Series
 type: wp
 wordpress_id: 1444

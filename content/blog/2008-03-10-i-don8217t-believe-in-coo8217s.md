@@ -4,6 +4,7 @@ date: '2008-03-10'
 subtitle: I agree with this post
 tags:
 - business
+- personal
 title: I Don’t Believe in COO’s
 type: wp
 wordpress_id: 1091

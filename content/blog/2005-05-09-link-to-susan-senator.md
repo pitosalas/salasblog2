@@ -4,6 +4,7 @@ date: '2005-05-09'
 subtitle: '!Mpwacover300'
 tags:
 - books
+- personal
 title: Link to Susan Senator!
 type: wp
 wordpress_id: 1790

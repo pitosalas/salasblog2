@@ -5,6 +5,7 @@ subtitle: You know the old joke that today they say something is good for you, t
   it’s bad, and the day ...
 tags:
 - health
+- personal
 title: Stand up! No, Sit Down!
 type: wp
 wordpress_id: 308

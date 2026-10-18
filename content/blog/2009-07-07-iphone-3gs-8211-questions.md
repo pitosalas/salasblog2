@@ -5,6 +5,8 @@ subtitle: Ok so I’ve had the new iPhone for a little while now. This is my fir
   iPhone and I have some q...
 tags:
 - apple
+- personal
+- technology
 title: iPhone 3GS – Questions
 type: wp
 wordpress_id: 831

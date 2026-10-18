@@ -5,6 +5,7 @@ subtitle: I got many comments from people about my postings recently about
 tags:
 - wikipedia
 - lotus
+- personal
 title: Improv in Wikipedia
 type: wp
 wordpress_id: 1868

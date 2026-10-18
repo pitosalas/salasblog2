@@ -6,6 +6,7 @@ subtitle: Here’s an email I received recently. How many different languages do
 tags:
 - curacao
 - jewish
+- personal
 title: How many languages can you fit in one email?
 type: wp
 wordpress_id: 1268

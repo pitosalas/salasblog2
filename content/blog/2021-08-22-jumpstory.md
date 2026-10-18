@@ -4,6 +4,8 @@ date: '2021-08-22'
 subtitle: JumpStory
 tags:
 - design
+- tools
+- images
 title: JumpStory
 type: wp
 wordpress_id: 3037

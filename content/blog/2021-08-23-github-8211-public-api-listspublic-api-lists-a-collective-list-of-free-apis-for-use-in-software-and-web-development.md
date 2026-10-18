@@ -5,6 +5,8 @@ subtitle: '[ GitHub – public-api-lists/public-api-lists: A collective list of 
   APIs for use in software and...'
 tags:
 - programming
+- api
+- howto
 title: "GitHub – public-api-lists/public-api-lists: A collective list of free APIs
   for use in software and web development \U0001F680"
 type: wp

@@ -3,8 +3,9 @@ category: '298'
 date: '2008-12-23'
 subtitle: As you may have noticed, I am using Twitter a little more often now. As
   mu...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Is twitter for people or for marketing?
 type: wp
 wordpress_id: 921

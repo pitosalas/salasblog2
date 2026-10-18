@@ -2,8 +2,10 @@
 category: '82'
 date: '2021-08-22'
 subtitle: Wheel of Names
-tag_review: no_fit
-tags: []
+tags:
+- tools
+- education
+- zoom
 title: Wheel of Names
 type: wp
 wordpress_id: 3039

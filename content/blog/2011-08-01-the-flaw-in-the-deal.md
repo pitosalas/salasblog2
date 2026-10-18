@@ -5,6 +5,7 @@ subtitle: I am assuming that you’ve followed the nonsense that has been going 
   Washington D.C. about our ...
 tags:
 - politics
+- personal
 title: The flaw in the deal
 type: wp
 wordpress_id: 513

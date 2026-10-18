@@ -2,8 +2,8 @@
 category: '50'
 date: '2009-03-23'
 subtitle: Check out this post Incommunicado, probably
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Even Paul Krugman has to wait for the cable guy
 type: wp
 wordpress_id: 870

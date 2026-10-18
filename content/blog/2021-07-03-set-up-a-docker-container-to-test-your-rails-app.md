@@ -4,6 +4,8 @@ date: '2021-07-03'
 subtitle: Set Up A Docker Container To Test Your Rails App
 tags:
 - ruby
+- docker
+- howto
 title: Set Up A Docker Container To Test Your Rails App
 type: wp
 wordpress_id: 2985

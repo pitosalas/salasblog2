@@ -5,6 +5,7 @@ subtitle: Check out this post from [Between the Lines...
 tags:
 - business
 - technology
+- personal
 title: A cautionary utility computing tale – or the dark side of Mashups
 type: wp
 wordpress_id: 1361

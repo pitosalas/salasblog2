@@ -4,6 +4,8 @@ date: '2012-07-22'
 subtitle: 'I like this quote:'
 tags:
 - business
+- startups
+- nyt
 title: Hey, you’re an entrepreneur!
 type: wp
 wordpress_id: 310

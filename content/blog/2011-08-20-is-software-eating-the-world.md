@@ -6,6 +6,7 @@ subtitle: Marc Andreeson has a [really good, optimistic article in the Wall Stre
 tags:
 - technology
 - business
+- personal
 title: Is Software Eating the World
 type: wp
 wordpress_id: 507

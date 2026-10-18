@@ -4,6 +4,7 @@ date: '2021-09-05'
 subtitle: Second-order thinking
 tags:
 - personal
+- tools
 title: Second-order thinking
 type: wp
 wordpress_id: 3059

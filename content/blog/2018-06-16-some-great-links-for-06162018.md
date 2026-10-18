@@ -5,6 +5,7 @@ subtitle: '[An intro to Stimulus JS: well-factored JavaScript for server-rendere
   applications – Superset Blog]...'
 tags:
 - ruby
+- technology
 title: Some great links for  06/16/2018
 type: wp
 wordpress_id: 2353

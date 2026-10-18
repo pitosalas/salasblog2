@@ -3,8 +3,8 @@ category: '1'
 date: '2013-03-02'
 subtitle: I don’t know what’s going on, am I suddenly famous? LinkedIn invites are
   picking up. I think it’s mo...
-tag_review: no_fit
-tags: []
+tags:
+- social-media
 title: LinkedIn invites are flooding in?!
 type: wp
 wordpress_id: 230

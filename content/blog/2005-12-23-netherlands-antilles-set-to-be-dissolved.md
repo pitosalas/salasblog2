@@ -5,6 +5,7 @@ subtitle: I don’t know how I missed this article, bu...
 tags:
 - curacao
 - politics
+- personal
 title: Netherlands Antilles set to be dissolved
 type: wp
 wordpress_id: 1627

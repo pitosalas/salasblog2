@@ -5,6 +5,7 @@ subtitle: I’ve been using **Microsoft Money ** (their personal finance package
   years now (after having sw...
 tags:
 - technology
+- personal
 title: Suckered again by Microsoft?
 type: wp
 wordpress_id: 1878

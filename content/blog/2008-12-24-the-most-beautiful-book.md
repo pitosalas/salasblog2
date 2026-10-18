@@ -5,6 +5,7 @@ subtitle: 'Now here‘s a recommendation:'
 tags:
 - books
 - mathematics
+- personal
 title: The most beautiful book?
 type: wp
 wordpress_id: 919

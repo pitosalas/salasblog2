@@ -3,8 +3,8 @@ category: '298'
 date: '2009-11-27'
 subtitle: Ethan Zuckerman’s blog is more like a magazine of insightful, well written
   papers. I liked [From com...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: An interesting paper about compassion and action
 type: wp
 wordpress_id: 773

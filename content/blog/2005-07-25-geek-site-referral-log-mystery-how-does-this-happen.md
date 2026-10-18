@@ -3,8 +3,8 @@ category: '538'
 date: '2005-07-25'
 subtitle: Can someone explain why my referrer log for this site is full of spamish-looking
   like urls, none of ...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: '[GEEK] Site Referral Log Mystery: How does this happen?'
 type: wp
 wordpress_id: 1729

@@ -5,6 +5,8 @@ subtitle: Like everyone else, I’ve been following the drama on Wall Street, Ma
   Washington DC and so ...
 tags:
 - business
+- personal
+- politics
 title: Big Numbers
 type: wp
 wordpress_id: 973

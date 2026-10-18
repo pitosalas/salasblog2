@@ -5,6 +5,7 @@ subtitle: At a level of detail **only a geek could love** reading (or bother **w
   Dan Bricklin gives ...
 tags:
 - technology
+- personal
 title: '[QUASI-GEEK] Dan Bricklin describes how fiber to the home is installed in
   the real world'
 type: wp

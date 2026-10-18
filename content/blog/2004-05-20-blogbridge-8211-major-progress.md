@@ -3,8 +3,8 @@ category: '50'
 date: '2004-05-20'
 subtitle: This is getting interesting. In the last few weeks we’ve added a bunch of
   new features and we are no...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: BlogBridge – Major progress!
 type: wp
 wordpress_id: 2000

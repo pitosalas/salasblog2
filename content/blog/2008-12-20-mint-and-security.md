@@ -5,6 +5,7 @@ subtitle: 'I have a new favorite web service: Mint. It’s a really nice impleme
   o...'
 tags:
 - technology
+- personal
 title: MINT and security
 type: wp
 wordpress_id: 922

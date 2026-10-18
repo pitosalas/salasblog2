@@ -4,6 +4,7 @@ date: '2005-09-30'
 subtitle: '![Ss Inbox Tn'
 tags:
 - programming
+- technology
 title: '[GEEKY] Ajax? Flash? Java? What’s the best way to create a rich browser based
   application?'
 type: wp

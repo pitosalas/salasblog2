@@ -4,6 +4,8 @@ date: '2006-04-08'
 subtitle: To be honest, hardly followed the pages and pages
 tags:
 - apple
+- personal
+- technology
 title: 'Booting MS Windows on Intel Macs: Interesting bit of analysis'
 type: wp
 wordpress_id: 1559

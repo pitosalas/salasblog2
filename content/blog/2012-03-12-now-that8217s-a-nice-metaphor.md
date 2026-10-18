@@ -2,8 +2,8 @@
 category: '1'
 date: '2012-03-12'
 subtitle: 'I love this metaphor – or is it a simile – or a malapropism – who knows:'
-tag_review: no_fit
-tags: []
+tags:
+- nyt
 title: Now that’s a nice metaphor
 type: wp
 wordpress_id: 369

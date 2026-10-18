@@ -3,8 +3,10 @@ category: '298'
 date: '2010-02-11'
 subtitle: Who would think that an august publication like the Wall Street Journal
   would ...
-tag_review: no_fit
-tags: []
+tags:
+- games
+- personal
+- science
 title: It’s hard to cancel Wall Street Journal Online
 type: wp
 wordpress_id: 746

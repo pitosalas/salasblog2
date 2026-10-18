@@ -5,6 +5,7 @@ subtitle: No, just kidding, I am **not. **Some of my best friends are headhunter
   and I wouldn’t want to compe...
 tags:
 - personal
+- technology
 title: I am becoming a headhunter
 type: wp
 wordpress_id: 1617

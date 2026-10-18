@@ -6,6 +6,7 @@ subtitle: I’m an on and off [tag]Ruby[/tag] developer, and recently I’ve bee
 tags:
 - ruby
 - programming
+- technology
 title: TextMate and Ruby
 type: wp
 wordpress_id: 1225

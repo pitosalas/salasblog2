@@ -3,8 +3,8 @@ category: '298'
 date: '2008-02-25'
 subtitle: Do you get fund raising / spam phone calls from very persistent, insistent
   callers asking for money ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Giving till it hurts
 type: wp
 wordpress_id: 1103

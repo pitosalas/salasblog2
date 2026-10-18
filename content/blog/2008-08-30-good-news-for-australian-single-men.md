@@ -3,8 +3,8 @@ category: '298'
 date: '2008-08-30'
 subtitle: '[An analysis of new census figures has shown that Australia is suffering
   from an unprecedented “man ...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Good news for Australian single men?
 type: wp
 wordpress_id: 986

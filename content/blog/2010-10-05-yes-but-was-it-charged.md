@@ -4,6 +4,7 @@ date: '2010-10-05'
 subtitle: Check out Actor Tony Curtis Was Buried With His iPhone
 tags:
 - apple
+- personal
 title: Yes but was it charged?
 type: wp
 wordpress_id: 655

@@ -4,6 +4,8 @@ date: '2005-08-08'
 subtitle: 'Hey, I just came across this:'
 tags:
 - lotus
+- personal
+- technology
 title: A bit of personal PR (at least I labeled it so you can skip it)
 type: wp
 wordpress_id: 1721

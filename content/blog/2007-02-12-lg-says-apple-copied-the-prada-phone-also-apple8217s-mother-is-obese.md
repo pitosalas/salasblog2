@@ -5,6 +5,8 @@ subtitle: Actually the funniest part of this was the headline… **“Also, Appl
   is Obese”**
 tags:
 - apple
+- personal
+- technology
 title: LG Says Apple Copied the Prada Phone. Also, Apple’s Mother is Obese
 type: wp
 wordpress_id: 1333

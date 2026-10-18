@@ -6,6 +6,7 @@ subtitle: This is probably not high on your radar, but if you have interest in t
 tags:
 - curacao
 - politics
+- personal
 title: An excellent paper about Curaçao Politics
 type: wp
 wordpress_id: 858

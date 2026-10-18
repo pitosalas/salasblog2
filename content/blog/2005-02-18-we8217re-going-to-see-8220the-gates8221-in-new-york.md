@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-02-18'
 subtitle: '![snap.jpg'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: We’re going to see “The Gates” in New York
 type: wp
 wordpress_id: 1846

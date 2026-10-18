@@ -4,6 +4,8 @@ date: '2008-09-05'
 subtitle: The quote below is from this post
 tags:
 - business
+- blogging
+- technology
 title: Beware of Freeconomics
 type: wp
 wordpress_id: 979

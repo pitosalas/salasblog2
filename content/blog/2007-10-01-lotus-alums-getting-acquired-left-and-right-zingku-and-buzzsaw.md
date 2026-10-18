@@ -6,6 +6,8 @@ subtitle: In recent weeks there have been two exciting announcements of acquisit
 tags:
 - lotus
 - business
+- personal
+- technology
 title: 'Lotus alums getting acquired left and right: Zingku and Buzzsaw'
 type: wp
 wordpress_id: 1198

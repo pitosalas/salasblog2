@@ -4,6 +4,7 @@ date: '2011-12-25'
 subtitle: One of the lessons that Guy Kawasaki learned from Steve Jobs
 tags:
 - business
+- apple
 title: Experts are clueless
 type: wp
 wordpress_id: 434

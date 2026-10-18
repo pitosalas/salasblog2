@@ -5,6 +5,7 @@ subtitle: I’ve been a subscriber at the Huntington Theater for years and years
   and this new play is the be...
 tags:
 - boston
+- personal
 title: Great production of “All My Sons” in Boston
 type: wp
 wordpress_id: 758

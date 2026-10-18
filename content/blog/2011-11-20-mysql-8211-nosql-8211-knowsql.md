@@ -5,6 +5,7 @@ subtitle: A catchy headline, but is it true? “Facebook Trapped in MySql ‘a f
   than death’.
 tags:
 - programming
+- database
 title: Mysql – NoSql – KnowSql
 type: wp
 wordpress_id: 461

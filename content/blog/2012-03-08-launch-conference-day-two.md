@@ -5,6 +5,7 @@ subtitle: Yesterday was great. The buzz in the place is unbelievable. This place
   the Launch Conference. Org...
 tags:
 - boston
+- technology
 title: Launch Conference, Day Two
 type: wp
 wordpress_id: 370

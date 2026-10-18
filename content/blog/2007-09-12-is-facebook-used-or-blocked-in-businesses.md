@@ -3,8 +3,9 @@ category: '298'
 date: '2007-09-12'
 subtitle: It’s hard to get good data on this, and I keep get wildly varying opinions.
   I haven’t fully formed m...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Is Facebook used or blocked in businesses?
 type: wp
 wordpress_id: 1214

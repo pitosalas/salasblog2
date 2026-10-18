@@ -5,6 +5,7 @@ subtitle: '[ Nail Your Startup Pitch: Use Pixar’s Story Formula to Win Over In
   – by Ashwin Kumar – The S...'
 tags:
 - business
+- startups
 title: 'Nail Your Startup Pitch: Use Pixar’s Story Formula to Win Over Investors –
   by Ashwin Kumar – The Startup Pitch'
 type: wp

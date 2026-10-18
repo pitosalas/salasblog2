@@ -4,6 +4,8 @@ date: '2011-05-12'
 subtitle: Check this post Why Microsoft bought Skype
 tags:
 - business
+- personal
+- technology
 title: MSFT and Skype, my angle
 type: wp
 wordpress_id: 567

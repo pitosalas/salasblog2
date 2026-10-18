@@ -5,6 +5,7 @@ subtitle: I recently wondered out loud (on a couple of mailing lists) how much a
   there is with RSS and Bl...
 tags:
 - technology
+- personal
 title: RSS in the Academic/Research/Scientific community
 type: wp
 wordpress_id: 1728

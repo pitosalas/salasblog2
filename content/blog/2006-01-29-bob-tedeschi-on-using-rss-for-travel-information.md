@@ -4,6 +4,9 @@ date: '2006-01-29'
 subtitle: Here’s an interesting article
 tags:
 - travel
+- blogging
+- personal
+- technology
 title: Bob Tedeschi on using RSS for travel information
 type: wp
 wordpress_id: 1608

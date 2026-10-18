@@ -5,6 +5,8 @@ subtitle: Aren’t you glad, since every other blogger is blah-blah-blah’ing a
   But here is a link
 tags:
 - legal
+- blogging
+- technology
 title: I have nothing to add about the grokster decision
 type: wp
 wordpress_id: 1744

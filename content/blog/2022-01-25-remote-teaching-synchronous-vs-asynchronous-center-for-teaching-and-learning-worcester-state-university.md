@@ -5,6 +5,8 @@ subtitle: '[ Remote Teaching: Synchronous vs. Asynchronous | Center for Teaching
   Learning | Worcester State...'
 tags:
 - education
+- concurrency
+- otp
 title: 'Remote Teaching: Synchronous vs. Asynchronous | Center for Teaching and Learning
   | Worcester State University'
 type: wp

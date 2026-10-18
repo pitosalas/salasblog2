@@ -5,6 +5,7 @@ subtitle: Not that I care about Paprazzi countermeasures, but this is just c-l-e
   Check this post [Anti-...
 tags:
 - technology
+- personal
 title: Anti-paprazzi clutch bag gives pushy shutterbugs a taste of their own medicine
 type: wp
 wordpress_id: 829

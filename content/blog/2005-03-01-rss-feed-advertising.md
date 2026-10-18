@@ -4,6 +4,7 @@ date: '2005-03-01'
 subtitle: From News.com, about Kaboodle BrightAds RSS
 tags:
 - business
+- blogging
 title: RSS Feed Advertising
 type: wp
 wordpress_id: 1837

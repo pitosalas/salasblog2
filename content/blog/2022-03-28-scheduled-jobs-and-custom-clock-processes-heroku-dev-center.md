@@ -4,6 +4,10 @@ date: '2022-03-28'
 subtitle: Scheduled Jobs and Custom Clock Processes | Heroku Dev Center
 tags:
 - ruby
+- heroku
+- howto
+- careers
+- scalability
 title: Scheduled Jobs and Custom Clock Processes | Heroku Dev Center
 type: wp
 wordpress_id: 3402

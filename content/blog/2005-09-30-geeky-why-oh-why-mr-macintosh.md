@@ -4,6 +4,7 @@ date: '2005-09-30'
 subtitle: This is one of those handy dandy tips that you wish were not hidden
 tags:
 - apple
+- technology
 title: '[GEEKY] Why, oh, Why, Mr. Macintosh?'
 type: wp
 wordpress_id: 1684

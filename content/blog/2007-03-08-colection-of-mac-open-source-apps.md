@@ -4,6 +4,7 @@ date: '2007-03-08'
 subtitle: 'A handy list: “Open Source Apps on Mac from Linux and Open Source”'
 tags:
 - apple
+- technology
 title: Colection of Mac open source apps
 type: wp
 wordpress_id: 1311

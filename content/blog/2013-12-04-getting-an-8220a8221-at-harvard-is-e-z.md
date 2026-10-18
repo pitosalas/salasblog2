@@ -5,6 +5,7 @@ subtitle: Unfortunately students can be quite focused on their grades, and as a 
   I end up paying more at...
 tags:
 - education
+- harvard
 title: Getting an “A” at Harvard is e-z!
 type: wp
 wordpress_id: 135

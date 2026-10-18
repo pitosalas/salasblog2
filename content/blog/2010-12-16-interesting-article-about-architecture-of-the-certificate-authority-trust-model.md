@@ -5,6 +5,7 @@ subtitle: Check out The Flawed Legal Architecture of the Certificate Authority T
   Model
 tags:
 - legal
+- blogging
 title: Interesting article about Architecture of the Certificate Authority Trust Model
 type: wp
 wordpress_id: 619

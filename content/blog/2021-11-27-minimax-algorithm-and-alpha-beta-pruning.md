@@ -5,6 +5,8 @@ subtitle: Minimax algorithm and alpha-beta pruning
 tags:
 - computer-science
 - ai
+- explainer
+- python
 title: Minimax algorithm and alpha-beta pruning
 type: wp
 wordpress_id: 3125

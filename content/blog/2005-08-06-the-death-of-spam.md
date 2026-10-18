@@ -2,8 +2,9 @@
 category: '298'
 date: '2005-08-06'
 subtitle: My friend Paul English has written an interesting bit about
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: The death of spam?
 type: wp
 wordpress_id: 1722

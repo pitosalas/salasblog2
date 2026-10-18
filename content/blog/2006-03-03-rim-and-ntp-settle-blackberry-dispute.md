@@ -5,6 +5,8 @@ subtitle: From the Wall Street Journal
 tags:
 - legal
 - business
+- personal
+- technology
 title: Rim and NTP Settle Blackberry Dispute!
 type: wp
 wordpress_id: 1585

@@ -3,8 +3,9 @@ category: '298'
 date: '2008-10-23'
 subtitle: This has been my all time favorite conference. Unfortunately I can’t make
   it this year. However, her...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Pop!Tech live now!
 type: wp
 wordpress_id: 966

@@ -5,6 +5,7 @@ subtitle: If you keep up with what’s going on in Venezuela, you might want to 
   out this post
 tags:
 - politics
+- personal
 title: The New York Times looks at the Chavez Royal family
 type: wp
 wordpress_id: 1328

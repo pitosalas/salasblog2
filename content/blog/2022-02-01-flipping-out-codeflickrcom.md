@@ -4,6 +4,9 @@ date: '2022-02-01'
 subtitle: Flipping Out | code.flickr.com
 tags:
 - software-engineering
+- brandeis
+- explainer
+- howto
 title: Flipping Out | code.flickr.com
 type: wp
 wordpress_id: 3245

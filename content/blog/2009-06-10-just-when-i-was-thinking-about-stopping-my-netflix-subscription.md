@@ -2,8 +2,9 @@
 category: '298'
 date: '2009-06-10'
 subtitle: 'TIVO keeps on getting cooler and cooler:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Just when I was thinking about stopping my NetFlix subscription
 type: wp
 wordpress_id: 838

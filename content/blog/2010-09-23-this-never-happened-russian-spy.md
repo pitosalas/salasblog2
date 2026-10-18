@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-09-23'
 subtitle: This never happened…
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'This never happened: Russian Spy'
 type: wp
 wordpress_id: 665

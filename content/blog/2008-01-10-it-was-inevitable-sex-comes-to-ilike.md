@@ -4,6 +4,7 @@ date: '2008-01-10'
 subtitle: '!iLike iTunes'
 tags:
 - music
+- personal
 title: 'It was inevitable: Sex comes to iLike'
 type: wp
 wordpress_id: 1140

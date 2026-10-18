@@ -2,8 +2,8 @@
 category: '393'
 date: '2021-12-05'
 subtitle: 12ft – Hop any paywall
-tag_review: no_fit
-tags: []
+tags:
+- web
 title: 12ft – Hop any paywall
 type: wp
 wordpress_id: 3133

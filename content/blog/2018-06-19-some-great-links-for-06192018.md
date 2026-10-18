@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-06-19'
 subtitle: Smart Weather Station Indoor Outdoor | Netatmo
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  06/19/2018
 type: wp
 wordpress_id: 2354

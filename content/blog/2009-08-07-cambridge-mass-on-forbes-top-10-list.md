@@ -5,6 +5,7 @@ subtitle: 'Pretty cool report via Boston Globe, but see my minor complaint about
   at the end:'
 tags:
 - boston
+- personal
 title: Cambridge (Mass) on Forbes Top 10 list
 type: wp
 wordpress_id: 817

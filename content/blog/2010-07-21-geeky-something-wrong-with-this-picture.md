@@ -5,6 +5,7 @@ subtitle: This is from my OSX Activity Monitor.app. See how it shows that one pr
   is using 659.9% of the ...
 tags:
 - apple
+- personal
 title: '[GEEKY] Something wrong with this picture?'
 type: wp
 wordpress_id: 699

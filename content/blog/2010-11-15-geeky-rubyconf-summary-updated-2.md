@@ -5,6 +5,8 @@ subtitle: RubyConf 2010 was excellent. It was my first and probably not my last.
   general thoughts and the...
 tags:
 - ruby
+- programming
+- technology
 title: '[Geeky] RubyConf Summary (updated 2)'
 type: wp
 wordpress_id: 640

@@ -3,8 +3,9 @@ category: '298'
 date: '2006-10-13'
 subtitle: 'One **correspondent** **asked**: “Isn’t this what bb:library is about or
   Technorati Blog Directory o...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: More musings on the not-better-RSS-aggregator
 type: wp
 wordpress_id: 1421

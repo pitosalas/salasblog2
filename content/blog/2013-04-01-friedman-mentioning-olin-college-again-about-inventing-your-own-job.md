@@ -6,6 +6,9 @@ subtitle: Tom Friedman, quoting Tony Wagner, describes what he thinks should be 
 tags:
 - education
 - business
+- careers
+- nyt
+- olin-college
 title: 'Friedman, mentioning Olin College: again about inventing your own job'
 type: wp
 wordpress_id: 223

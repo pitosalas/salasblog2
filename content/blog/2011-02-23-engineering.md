@@ -2,8 +2,10 @@
 category: '298'
 date: '2011-02-23'
 subtitle: Some choice quotes to introduce a good lecture about Engineering
-tag_review: no_fit
-tags: []
+tags:
+- software-engineering
+- personal
+- technology
 title: Engineering
 type: wp
 wordpress_id: 593

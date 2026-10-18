@@ -4,6 +4,7 @@ date: '2018-06-29'
 subtitle: Ruby’s Powerful Method Arguments & How To Use Them Correctly – RubyGuides
 tags:
 - ruby
+- technology
 title: Some great links for  06/29/2018
 type: wp
 wordpress_id: 2372

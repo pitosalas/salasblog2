@@ -6,6 +6,7 @@ subtitle: The problems in our economy right now are real, I believe. Tons of peo
 tags:
 - politics
 - business
+- personal
 title: Who can I believe about the economy?
 type: wp
 wordpress_id: 892

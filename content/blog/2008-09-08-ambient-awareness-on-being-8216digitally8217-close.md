@@ -3,8 +3,9 @@ category: '298'
 date: '2008-09-08'
 subtitle: A good article in the New York Times Magazine about the so-called ‘ambient
   awareness’ phenomenon
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: 'Ambient Awareness: on being ‘digitally’ close'
 type: wp
 wordpress_id: 978

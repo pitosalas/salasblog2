@@ -4,6 +4,7 @@ date: '2010-05-28'
 subtitle: David Brooks of the New York Times writes about technology and risk
 tags:
 - technology
+- personal
 title: Interesting article about technology and risk
 type: wp
 wordpress_id: 715

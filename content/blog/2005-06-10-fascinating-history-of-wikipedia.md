@@ -4,6 +4,8 @@ date: '2005-06-10'
 subtitle: If you are interested and fascinated with the Wikipedia, h...
 tags:
 - wikipedia
+- personal
+- technology
 title: Fascinating history of Wikipedia
 type: wp
 wordpress_id: 1760

@@ -4,6 +4,7 @@ date: '2008-12-29'
 subtitle: I always love Kevin Kelly’s writing
 tags:
 - technology
+- personal
 title: Kevin Kelly writes about pervasive (or is it ubiquitous) screens
 type: wp
 wordpress_id: 917

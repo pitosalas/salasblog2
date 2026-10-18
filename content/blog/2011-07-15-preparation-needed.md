@@ -6,6 +6,9 @@ subtitle: I’ve been thinking a lot lately about what kind of preparation colle
 tags:
 - education
 - business
+- personal
+- nyt
+- startups
 title: Preparation needed
 type: wp
 wordpress_id: 531

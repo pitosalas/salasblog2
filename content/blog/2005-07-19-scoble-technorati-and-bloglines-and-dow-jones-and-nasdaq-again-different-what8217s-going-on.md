@@ -4,6 +4,7 @@ date: '2005-07-19'
 subtitle: '**Scoble** has been really picking on Te...'
 tags:
 - technology
+- blogging
 title: Scoble, Technorati and Bloglines (and Dow Jones and Nasdaq AGAIN different?!
   What’s going on?)
 type: wp

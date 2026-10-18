@@ -5,6 +5,8 @@ subtitle: I am a fairly avid fan of Mint.com. So it’s with mixed emotions that
   that [Mint is being acqu...
 tags:
 - business
+- personal
+- technology
 title: 'Mint being acquired by Intuit: Good or Bad?'
 type: wp
 wordpress_id: 802

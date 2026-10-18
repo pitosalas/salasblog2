@@ -5,6 +5,8 @@ subtitle: Jaron [is a brilliant thinker (and an amazing piano player as well) An
   he writes is interestin...
 tags:
 - wikipedia
+- personal
+- technology
 title: 'Jaron Lanier on Digital Maoism: interesting thoughts about Wikipedia and related
   site'
 type: wp

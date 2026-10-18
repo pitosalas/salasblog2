@@ -4,6 +4,7 @@ date: '2005-07-15'
 subtitle: 'Scripting News: 7/15/2005: Dave points to ...'
 tags:
 - technology
+- blogging
 title: Blogging 101 article in NYT
 type: wp
 wordpress_id: 1736

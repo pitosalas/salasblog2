@@ -4,6 +4,9 @@ date: '2012-03-02'
 subtitle: '!26GRAYMATTER-articleInline.jpg'
 tags:
 - science
+- humor
+- nyt
+- research
 title: Is this article a joke? “When Truisms are true”
 type: wp
 wordpress_id: 375

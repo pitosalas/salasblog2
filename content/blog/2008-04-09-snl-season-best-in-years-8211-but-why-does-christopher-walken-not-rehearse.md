@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-04-09'
 subtitle: Saturday Night Live is having the **best season in years*...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: SNL Season best in years – but why does Christopher Walken not rehearse?
 type: wp
 wordpress_id: 1070

@@ -2,8 +2,9 @@
 category: '298'
 date: '2008-11-29'
 subtitle: 'A few really quick links:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- politics
 title: What I am reading this morning
 type: wp
 wordpress_id: 937

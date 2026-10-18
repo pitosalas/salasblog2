@@ -2,8 +2,10 @@
 category: '405'
 date: '2021-10-18'
 subtitle: '[ Versions of Excel Explained [Updated 2021] » The Spreadsheet Page](https://spreadsheetpage.com/exc...'
-tag_review: no_fit
-tags: []
+tags:
+- technology
+- history
+- lotus
 title: Versions of Excel Explained [Updated 2021] » The Spreadsheet Page
 type: wp
 wordpress_id: 3095

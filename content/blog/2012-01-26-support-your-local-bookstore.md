@@ -6,6 +6,7 @@ subtitle: I have a **warm spot** in my heart for independent bookstores, as such
 tags:
 - books
 - personal
+- amazon
 title: Support your local bookstore
 type: wp
 wordpress_id: 408

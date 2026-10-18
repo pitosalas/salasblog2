@@ -5,6 +5,7 @@ subtitle: Brad Feld, **famous Venture Capitalis**t writes an interesting post ab
   how he might get to the po...
 tags:
 - business
+- blogging
 title: 'Brad Feld: “Why Am I Passing?” – At least you are passing'
 type: wp
 wordpress_id: 1099

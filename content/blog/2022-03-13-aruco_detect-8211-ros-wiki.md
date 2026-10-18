@@ -4,6 +4,8 @@ date: '2022-03-13'
 subtitle: aruco_detect – ROS Wiki
 tags:
 - robotics
+- howto
+- computer-vision
 title: aruco_detect – ROS Wiki
 type: wp
 wordpress_id: 3340

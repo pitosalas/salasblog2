@@ -2,8 +2,8 @@
 category: '298'
 date: '2011-07-22'
 subtitle: Check out The End of Free Will(**from** [Dilb...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: The End of Free Will
 type: wp
 wordpress_id: 523

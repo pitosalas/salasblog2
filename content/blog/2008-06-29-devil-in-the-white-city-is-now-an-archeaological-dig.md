@@ -4,6 +4,7 @@ date: '2008-06-29'
 subtitle: I am just finished reading Devil In The White City
 tags:
 - books
+- personal
 title: Devil in the White City is now an archeaological dig!
 type: wp
 wordpress_id: 1020

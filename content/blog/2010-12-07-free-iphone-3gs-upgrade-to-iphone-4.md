@@ -4,6 +4,8 @@ date: '2010-12-07'
 subtitle: So Radioshack is offering $50 off the price of an iPhone
 tags:
 - apple
+- personal
+- technology
 title: Free iPhone 3GS upgrade to iPhone 4?
 type: wp
 wordpress_id: 628

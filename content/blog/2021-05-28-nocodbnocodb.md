@@ -4,6 +4,9 @@ date: '2021-05-28'
 subtitle: nocodb/nocodb
 tags:
 - technology
+- api
+- database
+- otp
 title: nocodb/nocodb
 type: wp
 wordpress_id: 2925

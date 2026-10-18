@@ -2,8 +2,8 @@
 category: '50'
 date: '2004-07-24'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/archives/hdrservi...'
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Announcing… The BlogBridge Service ;-)
 type: wp
 wordpress_id: 1961

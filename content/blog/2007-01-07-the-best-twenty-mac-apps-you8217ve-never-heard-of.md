@@ -4,6 +4,7 @@ date: '2007-01-07'
 subtitle: Some good mac applications referenced in [this
 tags:
 - apple
+- technology
 title: The best twenty Mac apps you’ve never heard of
 type: wp
 wordpress_id: 1360

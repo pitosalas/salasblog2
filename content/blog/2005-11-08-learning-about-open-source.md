@@ -4,6 +4,8 @@ date: '2005-11-08'
 subtitle: '!Moldave'
 tags:
 - legal
+- personal
+- technology
 title: Learning about Open Source
 type: wp
 wordpress_id: 1660

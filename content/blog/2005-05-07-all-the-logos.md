@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-05-07'
 subtitle: 'Pretty neat little web site, via Ned Batchelder: [AllTheLogos....'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: All the logos
 type: wp
 wordpress_id: 1792

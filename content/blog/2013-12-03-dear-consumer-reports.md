@@ -2,8 +2,8 @@
 category: '1'
 date: '2013-12-03'
 subtitle: 'From an email I sent, just because:'
-tag_review: no_fit
-tags: []
+tags:
+- business
 title: Dear Consumer Reports
 type: wp
 wordpress_id: 136

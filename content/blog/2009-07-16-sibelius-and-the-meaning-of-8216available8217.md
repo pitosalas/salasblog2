@@ -4,6 +4,8 @@ date: '2009-07-16'
 subtitle: There aren’t many good options for Music notation software. Sibelius
 tags:
 - music
+- personal
+- technology
 title: Sibelius and the meaning of ‘available’
 type: wp
 wordpress_id: 823

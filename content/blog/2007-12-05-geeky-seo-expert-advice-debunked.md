@@ -3,8 +3,9 @@ category: '298'
 date: '2007-12-05'
 subtitle: Search Engine Optimization is a weird wacky world with experts, oracles,
   analysis, opinion and super...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: '[GEEKY] SEO Expert Advice, debunked'
 type: wp
 wordpress_id: 1165

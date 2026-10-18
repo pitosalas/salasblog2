@@ -4,6 +4,7 @@ date: '2007-01-15'
 subtitle: If you’veheard of Dilbert, then you may have heard about the author Scott
 tags:
 - health
+- personal
 title: Scott Adams writres about Spasmodic Dysphonia…
 type: wp
 wordpress_id: 1353

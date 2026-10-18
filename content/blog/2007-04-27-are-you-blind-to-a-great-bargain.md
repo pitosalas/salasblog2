@@ -5,6 +5,7 @@ subtitle: Here’s a column that I can really relate to, and a topic that I’ve
   about more than once befo...
 tags:
 - technology
+- personal
 title: Are you blind to a great bargain?
 type: wp
 wordpress_id: 1279

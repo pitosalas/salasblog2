@@ -3,8 +3,9 @@ category: '298'
 date: '2010-06-09'
 subtitle: Yay! One reason holding me to using FireFox on Mac was that I rely heavily
   on Scribefire
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Safari now has Scribefire
 type: wp
 wordpress_id: 711

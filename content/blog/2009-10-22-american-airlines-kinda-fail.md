@@ -5,6 +5,7 @@ subtitle: I am traveling on my *usually* favorite Airline; and of course everyon
   knows that they are sufferin...
 tags:
 - travel
+- personal
 title: American Airlines kinda-fail
 type: wp
 wordpress_id: 790

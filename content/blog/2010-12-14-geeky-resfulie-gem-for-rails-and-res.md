@@ -5,6 +5,8 @@ subtitle: 'This is really nice: Restfulie – Rest from Scratch. It’s a packag
 tags:
 - ruby
 - programming
+- technology
+- api
 title: '[GEEKY] Resfulie GEM for Rails and RESˇ'
 type: wp
 wordpress_id: 624

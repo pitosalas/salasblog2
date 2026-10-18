@@ -5,6 +5,7 @@ subtitle: There have been a number of articles taking shots at some of Malcolm G
   latest book, “Outlie...
 tags:
 - books
+- personal
 title: Joel on Software talks about Malcolm Gladwell and Tom Friedman
 type: wp
 wordpress_id: 931

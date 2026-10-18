@@ -4,6 +4,7 @@ date: '2021-05-21'
 subtitle: Checking Raspberry Pi Revision Number & Board Version – Raspberry Pi Spy
 tags:
 - linux
+- technology
 title: Checking Raspberry Pi Revision Number & Board Version – Raspberry Pi Spy
 type: wp
 wordpress_id: 2910

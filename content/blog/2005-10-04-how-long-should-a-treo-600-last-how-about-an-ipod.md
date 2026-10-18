@@ -4,6 +4,8 @@ date: '2005-10-04'
 subtitle: 'A confluence of five events:'
 tags:
 - apple
+- personal
+- technology
 title: How long should a Treo 600 last? How about an IPod?
 type: wp
 wordpress_id: 1682

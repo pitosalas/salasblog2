@@ -4,6 +4,7 @@ date: '2009-06-13'
 subtitle: I was shown a promising new site called TheRentables, for p...
 tags:
 - business
+- personal
 title: Check out TheRentables.com
 type: wp
 wordpress_id: 835

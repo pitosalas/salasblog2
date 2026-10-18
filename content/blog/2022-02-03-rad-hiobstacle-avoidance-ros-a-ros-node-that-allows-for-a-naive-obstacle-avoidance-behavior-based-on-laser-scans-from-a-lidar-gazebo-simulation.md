@@ -5,6 +5,7 @@ subtitle: '[ Rad-hi/Obstacle-Avoidance-ROS: A ROS node that allows for a naive o
   avoidance behavior base...'
 tags:
 - robotics
+- howto
 title: 'Rad-hi/Obstacle-Avoidance-ROS: A ROS node that allows for a naive obstacle
   avoidance behavior based on laser scans from a Lidar (Gazebo simulation).'
 type: wp

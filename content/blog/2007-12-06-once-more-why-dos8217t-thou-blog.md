@@ -2,8 +2,9 @@
 category: '51'
 date: '2007-12-06'
 subtitle: Recently there was a comment to one of my post asking the perennial question
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
 title: Once more, why dos’t thou blog?
 type: wp
 wordpress_id: 1164

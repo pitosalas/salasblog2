@@ -3,8 +3,8 @@ category: '298'
 date: '2007-09-26'
 subtitle: My friend Shelby has been living and blogging from Africa over the last
   year or so. From reading it ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Shelby is back from Liberia
 type: wp
 wordpress_id: 1202

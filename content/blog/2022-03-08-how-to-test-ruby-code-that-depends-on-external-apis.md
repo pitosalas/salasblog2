@@ -4,6 +4,8 @@ date: '2022-03-08'
 subtitle: How to Test Ruby Code That Depends on External APIs
 tags:
 - ruby
+- soa
+- software-engineering
 title: How to Test Ruby Code That Depends on External APIs
 type: wp
 wordpress_id: 3298

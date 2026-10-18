@@ -5,6 +5,7 @@ subtitle: I think the **Segway Human Transporter **is really cool, and I’ve re
   articles about how they ...
 tags:
 - technology
+- personal
 title: Four Hours on a Segway
 type: wp
 wordpress_id: 1871

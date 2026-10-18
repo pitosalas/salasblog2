@@ -4,6 +4,7 @@ date: '2005-06-04'
 subtitle: 'Another neat link I was shown:'
 tags:
 - programming
+- technology
 title: '[GEEK] Good bit about code commenting'
 type: wp
 wordpress_id: 1765

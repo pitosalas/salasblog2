@@ -4,6 +4,9 @@ date: '2022-03-04'
 subtitle: MiniTest – Writing Test Code In Ruby (2/3)
 tags:
 - ruby
+- brandeis
+- howto
+- software-engineering
 title: MiniTest – Writing Test Code In Ruby (2/3)
 type: wp
 wordpress_id: 3275

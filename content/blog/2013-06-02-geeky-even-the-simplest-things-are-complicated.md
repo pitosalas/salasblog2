@@ -5,6 +5,8 @@ subtitle: I love this article revealing the beautiful hidden complexity of the l
   magsafe connector.
 tags:
 - apple
+- technology
+- legal
 title: '[GEEKY] Even the simplest things are complicated'
 type: wp
 wordpress_id: 193

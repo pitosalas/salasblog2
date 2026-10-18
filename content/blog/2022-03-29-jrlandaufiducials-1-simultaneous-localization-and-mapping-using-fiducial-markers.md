@@ -5,6 +5,8 @@ subtitle: 'jrlandau/fiducials-1: Simultaneous localization and mapping using fid
   markers.'
 tags:
 - robotics
+- programming
+- howto
 title: 'jrlandau/fiducials-1: Simultaneous localization and mapping using fiducial
   markers.'
 type: wp

@@ -5,6 +5,9 @@ subtitle: It’s obvious if you think about it, but this article drives some poi
   home. If you use some kind o...
 tags:
 - technology
+- books
+- cloud
+- music
 title: The Cloud is Watching You
 type: wp
 wordpress_id: 117

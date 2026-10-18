@@ -5,6 +5,7 @@ subtitle: In the world of machine vision, the equivalent goal is to win the Imag
   Large-Scale Visual Recogn...
 tags:
 - ai
+- computer-science
 title: The Revolutionary Technique That Quietly Changed Machine Vision Forever
 type: wp
 wordpress_id: 2902

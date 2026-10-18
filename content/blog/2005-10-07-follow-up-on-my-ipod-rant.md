@@ -4,6 +4,8 @@ date: '2005-10-07'
 subtitle: After my rant a few days ago about the **quality** of new-fangled el...
 tags:
 - apple
+- personal
+- technology
 title: Follow-up on my iPod Rant
 type: wp
 wordpress_id: 1680

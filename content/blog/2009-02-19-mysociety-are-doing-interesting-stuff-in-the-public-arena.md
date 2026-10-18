@@ -5,6 +5,8 @@ subtitle: A british organization (or should I say organisation?) called mySociet
   has done some **really cool*...
 tags:
 - technology
+- personal
+- politics
 title: mySociety are doing  interesting stuff in the public arena
 type: wp
 wordpress_id: 887

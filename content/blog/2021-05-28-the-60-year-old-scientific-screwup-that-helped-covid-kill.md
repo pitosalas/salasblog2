@@ -4,6 +4,7 @@ date: '2021-05-28'
 subtitle: The 60-Year-Old Scientific Screwup That Helped Covid Kill
 tags:
 - science
+- health
 title: The 60-Year-Old Scientific Screwup That Helped Covid Kill
 type: wp
 wordpress_id: 2923

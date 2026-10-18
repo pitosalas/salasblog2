@@ -5,6 +5,9 @@ subtitle: Like many, I don’t know yet whether I **support or condemn** the Wik
   action that has been disc...
 tags:
 - politics
+- personal
+- security
+- technology
 title: Wikileaks
 type: wp
 wordpress_id: 623

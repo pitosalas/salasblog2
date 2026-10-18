@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-03-02'
 subtitle: This looks kind of neat – check out this post
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Slim down your wallet with Just One Club Card
 type: wp
 wordpress_id: 1317

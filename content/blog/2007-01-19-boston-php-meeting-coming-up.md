@@ -6,6 +6,7 @@ subtitle: 'A quick reminder of the upcoming BostonPHP meeting: BostonPHP will ho
 tags:
 - boston
 - programming
+- technology
 title: Boston PHP meeting coming up
 type: wp
 wordpress_id: 1346

@@ -6,6 +6,7 @@ subtitle: A recent post talked about creating a “Domain Specific Language” f
 tags:
 - ruby
 - programming
+- personal
 title: '[Geeky] RMagick and memory leaks'
 type: wp
 wordpress_id: 833

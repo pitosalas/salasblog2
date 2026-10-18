@@ -2,8 +2,9 @@
 category: '51'
 date: '2006-06-03'
 subtitle: The other day I complained about comment spam on my two blogs. Comme...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- technology
 title: Comment spam – solved for now?
 type: wp
 wordpress_id: 1531

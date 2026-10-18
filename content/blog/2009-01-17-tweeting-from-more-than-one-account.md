@@ -3,8 +3,10 @@ category: '298'
 date: '2009-01-17'
 subtitle: 'You might be interested in what BlogBridge is doing about twittering from
   more than one account:'
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
+- social-media
 title: Tweeting from more than one account?
 type: wp
 wordpress_id: 907

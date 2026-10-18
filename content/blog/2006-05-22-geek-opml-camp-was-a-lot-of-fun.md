@@ -2,8 +2,8 @@
 category: '538'
 date: '2006-05-22'
 subtitle: OPML Camp was yesterday and today, so it’s over now. We had **good atten...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: '[GEEK] OPML Camp was a lot of fun!'
 type: wp
 wordpress_id: 1540

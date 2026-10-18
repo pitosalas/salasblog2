@@ -3,8 +3,8 @@ category: '1'
 date: '2012-05-05'
 subtitle: On Facebook you may see something like “George Harrison is **watching a
   video on Socialcam**” follow...
-tag_review: no_fit
-tags: []
+tags:
+- social-media
 title: 'Warning Facebook users: Socialcam is dangerous'
 type: wp
 wordpress_id: 341

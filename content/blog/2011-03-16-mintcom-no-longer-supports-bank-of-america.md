@@ -5,6 +5,7 @@ subtitle: It’s **hard to believe**, but here is what I got from Mint.com when 
   why my Bank of America i...
 tags:
 - technology
+- personal
 title: Mint.com no longer supports Bank of America
 type: wp
 wordpress_id: 582

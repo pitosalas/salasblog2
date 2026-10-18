@@ -5,6 +5,7 @@ subtitle: By sheer coincidence, the day before leaving for Spain, two people ind
   mentioned to me tha...
 tags:
 - books
+- personal
 title: 'Great Read: Angels and Demons – Dan Brown'
 type: wp
 wordpress_id: 2024

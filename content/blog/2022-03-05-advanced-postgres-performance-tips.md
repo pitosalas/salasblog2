@@ -2,8 +2,11 @@
 category: '249'
 date: '2022-03-05'
 subtitle: Advanced Postgres Performance Tips
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- performance
+- database
+- tools
 title: Advanced Postgres Performance Tips
 type: wp
 wordpress_id: 3281

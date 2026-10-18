@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-03-07'
 subtitle: I thought this was an interesting article
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: This is not a religious blog
 type: wp
 wordpress_id: 1832

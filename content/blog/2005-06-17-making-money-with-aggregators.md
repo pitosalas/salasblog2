@@ -4,6 +4,7 @@ date: '2005-06-17'
 subtitle: Francois, reacting to something written by Jason Calcanis
 tags:
 - technology
+- blogging
 title: Making money with aggregators
 type: wp
 wordpress_id: 1753

@@ -5,6 +5,7 @@ subtitle: 'OpenCV: OpenCV-Python Tutorials'
 tags:
 - robotics
 - python
+- computer-vision
 title: 'OpenCV: OpenCV-Python Tutorials'
 type: wp
 wordpress_id: 3324

@@ -5,6 +5,7 @@ subtitle: 'It always happens and I really try not to have buyers remorse, but: ‚
   Updates MacBook Air‚Äù'
 tags:
 - apple
+- technology
 title: No Regrets? My Macbook Air is only 2 months old and already out-of-date
 type: wp
 wordpress_id: 525

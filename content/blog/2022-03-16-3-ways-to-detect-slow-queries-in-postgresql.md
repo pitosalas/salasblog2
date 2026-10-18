@@ -4,6 +4,9 @@ date: '2022-03-16'
 subtitle: 3 ways to detect slow queries in PostgreSQL
 tags:
 - software-engineering
+- performance
+- database
+- scalability
 title: 3 ways to detect slow queries in PostgreSQL
 type: wp
 wordpress_id: 3350

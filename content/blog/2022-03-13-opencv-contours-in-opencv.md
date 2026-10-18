@@ -5,6 +5,7 @@ subtitle: 'OpenCV: Contours in OpenCV'
 tags:
 - robotics
 - python
+- computer-vision
 title: 'OpenCV: Contours in OpenCV'
 type: wp
 wordpress_id: 3328

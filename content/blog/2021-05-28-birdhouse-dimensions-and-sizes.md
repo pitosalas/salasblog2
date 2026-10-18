@@ -2,8 +2,9 @@
 category: '47'
 date: '2021-05-28'
 subtitle: Birdhouse Dimensions and Sizes
-tag_review: no_fit
-tags: []
+tags:
+- woodworking
+- howto
 title: Birdhouse Dimensions and Sizes
 type: wp
 wordpress_id: 2921

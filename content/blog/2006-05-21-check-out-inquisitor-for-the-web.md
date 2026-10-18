@@ -4,6 +4,7 @@ date: '2006-05-21'
 subtitle: I’ve written about a **very cool** Safari (Mac OS X) add-on called I...
 tags:
 - apple
+- technology
 title: Check out Inquisitor for the web
 type: wp
 wordpress_id: 1541

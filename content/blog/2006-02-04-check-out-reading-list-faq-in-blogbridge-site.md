@@ -2,8 +2,8 @@
 category: '538'
 date: '2006-02-04'
 subtitle: I just posted an intro to Reading ...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Check out Reading List FAQ in BlogBridge site
 type: wp
 wordpress_id: 1600

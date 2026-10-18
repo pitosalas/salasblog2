@@ -4,6 +4,7 @@ date: '2013-07-11'
 subtitle: Very clever!
 tags:
 - technology
+- maps
 title: GPS Free car tracking
 type: wp
 wordpress_id: 187

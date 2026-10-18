@@ -5,6 +5,7 @@ subtitle: Just a quick reminder that we are having another super-informal-geeky-
   **Ge...
 tags:
 - boston
+- personal
 title: 'Reminder: Tomorrow, Geek Dinner, July 19 (tomorrow!)'
 type: wp
 wordpress_id: 1488

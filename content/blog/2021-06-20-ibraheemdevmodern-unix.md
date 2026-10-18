@@ -4,6 +4,8 @@ date: '2021-06-20'
 subtitle: ibraheemdev/modern-unix
 tags:
 - linux
+- cli
+- howto
 title: ibraheemdev/modern-unix
 type: wp
 wordpress_id: 2973

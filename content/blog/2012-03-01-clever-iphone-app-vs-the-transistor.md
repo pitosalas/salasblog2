@@ -6,6 +6,7 @@ subtitle: This interesting, and I think, correct [article, makes the argument th
 tags:
 - apple
 - technology
+- innovation
 title: Clever iPhone app vs. the Transistor
 type: wp
 wordpress_id: 377

@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-04-09'
 subtitle: '*So, what happened to Alfred E. Newman?*'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: An easy target…. funny
 type: wp
 wordpress_id: 1558

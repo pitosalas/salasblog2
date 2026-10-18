@@ -2,8 +2,9 @@
 category: '298'
 date: '2011-06-11'
 subtitle: Robert Krulwich gave this graduation speech
-tag_review: no_fit
-tags: []
+tags:
+- careers
+- personal
 title: Really good advice
 type: wp
 wordpress_id: 553

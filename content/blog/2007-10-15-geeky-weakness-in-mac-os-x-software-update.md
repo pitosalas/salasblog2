@@ -5,6 +5,7 @@ subtitle: Everyone loves how much easier Mac OS X makes it to install software. 
   sort of. It’s a place whe...
 tags:
 - apple
+- technology
 title: '[GEEKY] Weakness in Mac OS X Software Update'
 type: wp
 wordpress_id: 1194

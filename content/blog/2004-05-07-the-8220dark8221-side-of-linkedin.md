@@ -5,6 +5,7 @@ subtitle: 'Well, not really dark: This is in reference to Shel Isreal’s recent
   about LinkedIn.'
 tags:
 - business
+- personal
 title: The “dark” side of LinkedIn
 type: wp
 wordpress_id: 2015

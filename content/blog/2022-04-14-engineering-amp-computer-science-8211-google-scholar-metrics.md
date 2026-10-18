@@ -4,6 +4,7 @@ date: '2022-04-14'
 subtitle: Engineering & Computer Science – Google Scholar Metrics
 tags:
 - computer-science
+- research
 title: Engineering & Computer Science – Google Scholar Metrics
 type: wp
 wordpress_id: 3432

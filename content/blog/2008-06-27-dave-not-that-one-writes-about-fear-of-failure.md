@@ -4,6 +4,8 @@ date: '2008-06-27'
 subtitle: 'I just came across Dave Dupre’s blog. Some good reading there, for example:'
 tags:
 - business
+- programming
+- technology
 title: Dave (not that one) writes about Fear of Failure
 type: wp
 wordpress_id: 1022

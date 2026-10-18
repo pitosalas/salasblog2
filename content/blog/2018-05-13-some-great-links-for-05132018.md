@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-05-13'
 subtitle: 'Apache Cordova Tutorial: Developing Mobile Applications with Cordova'
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  05/13/2018
 type: wp
 wordpress_id: 2332

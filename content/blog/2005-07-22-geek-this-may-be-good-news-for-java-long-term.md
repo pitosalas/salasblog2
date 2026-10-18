@@ -3,8 +3,9 @@ category: '422'
 date: '2005-07-22'
 subtitle: '> “IBM has announced that it will be joining the Harmony open source Java
   project. Although right no...'
-tag_review: no_fit
-tags: []
+tags:
+- programming
+- technology
 title: '[GEEK] This may be good news for Java, long term'
 type: wp
 wordpress_id: 1730

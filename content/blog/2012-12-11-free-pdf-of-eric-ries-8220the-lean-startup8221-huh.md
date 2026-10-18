@@ -6,6 +6,7 @@ subtitle: I am a big fan of this book, so I was really surprised to find a freel
 tags:
 - business
 - books
+- startups
 title: 'Free pdf of Eric Ries: “The Lean Startup” (huh?)'
 type: wp
 wordpress_id: 259

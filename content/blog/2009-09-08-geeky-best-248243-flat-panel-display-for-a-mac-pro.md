@@ -4,6 +4,7 @@ date: '2009-09-08'
 subtitle: I was looking at the Apple LED Cinema Display 24
 tags:
 - apple
+- technology
 title: '[GEEKY] Best 24″ Flat Panel Display for a Mac Pro?'
 type: wp
 wordpress_id: 808

@@ -3,8 +3,9 @@ category: '298'
 date: '2007-10-02'
 subtitle: When you are selling or buying something on the web, say eBay or Craigslist,
   it always is a question...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Temporary phone numbers and eBay
 type: wp
 wordpress_id: 1196

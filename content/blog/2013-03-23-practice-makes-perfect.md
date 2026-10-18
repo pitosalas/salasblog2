@@ -5,6 +5,7 @@ subtitle: '![](https://i0.wp.com/www.cjspianos.com/piano_player.jpg?w=584)'
 tags:
 - personal
 - music
+- education
 title: Practice makes perfect?
 type: wp
 wordpress_id: 225

@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-07-25'
 subtitle: Orange Computers – HP ProLiant and Dell PowerEdge Servers
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  07/25/2018
 type: wp
 wordpress_id: 2411

@@ -3,8 +3,8 @@ category: '298'
 date: '2006-08-09'
 subtitle: Here’s an interesting new development to apply technology to voter fraud
   and better voting. Technolo...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Scratch and vote?
 type: wp
 wordpress_id: 1460

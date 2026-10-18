@@ -4,6 +4,7 @@ date: '2007-05-02'
 subtitle: Check out this post
 tags:
 - health
+- personal
 title: 'This has got to be a joke: “Appendectomy through the mouth”'
 type: wp
 wordpress_id: 1275

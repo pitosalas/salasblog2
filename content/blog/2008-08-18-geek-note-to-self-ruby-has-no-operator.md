@@ -5,6 +5,7 @@ subtitle: I don’t know why it don’t.
 tags:
 - programming
 - ruby
+- technology
 title: '[GEEK] Note to self: Ruby has no ++ operator'
 type: wp
 wordpress_id: 992

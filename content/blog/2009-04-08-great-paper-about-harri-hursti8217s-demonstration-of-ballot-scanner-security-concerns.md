@@ -4,6 +4,10 @@ date: '2009-04-08'
 subtitle: I recently saw the movie Hacking Democracy. It’s absolutely fasc...
 tags:
 - politics
+- technology
+- personal
+- programming
+- security
 title: Great paper about Harri Hursti’s demonstration of ballot scanner security concerns
 type: wp
 wordpress_id: 861

@@ -4,6 +4,7 @@ date: '2005-05-17'
 subtitle: Welcome back Chris Lydon! Those of you who have li...
 tags:
 - boston
+- personal
 title: 'New Radio Show: Open Source'
 type: wp
 wordpress_id: 1783

@@ -6,6 +6,7 @@ subtitle: Being a veteran of the groupware movement (worked at Lotus for years, 
 tags:
 - lotus
 - eroom
+- technology
 title: People are still doing groupware startups, believe it or not!
 type: wp
 wordpress_id: 1726

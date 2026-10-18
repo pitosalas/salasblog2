@@ -2,8 +2,9 @@
 category: '298'
 date: '2009-02-20'
 subtitle: 'Check out the “article: Getting “Open With” back under control'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: '[GEEKY] Solution to something that has annoyed me'
 type: wp
 wordpress_id: 886

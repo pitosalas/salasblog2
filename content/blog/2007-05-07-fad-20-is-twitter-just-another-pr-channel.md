@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-05-07'
 subtitle: You’ve seen and heard of Twitter, haven’t you? If not, congratulations fo...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: 'Fad 2.0: Is Twitter just another PR channel?'
 type: wp
 wordpress_id: 1273

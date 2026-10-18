@@ -4,6 +4,8 @@ date: '2022-03-14'
 subtitle: 'Faster Rails: Eliminating N+1 queries – Semaphore'
 tags:
 - ruby
+- performance
+- scalability
 title: 'Faster Rails: Eliminating N+1 queries – Semaphore'
 type: wp
 wordpress_id: 3342

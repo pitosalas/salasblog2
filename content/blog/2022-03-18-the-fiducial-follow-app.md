@@ -4,6 +4,7 @@ date: '2022-03-18'
 subtitle: The Fiducial Follow App
 tags:
 - robotics
+- howto
 title: The Fiducial Follow App
 type: wp
 wordpress_id: 3360

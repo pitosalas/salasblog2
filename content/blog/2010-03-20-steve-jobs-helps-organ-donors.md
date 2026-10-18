@@ -5,6 +5,7 @@ subtitle: 'Steve Jobs says: “I almost died” in interesting article: [Apple C
   Jobs joins Schwarzenegger ...'
 tags:
 - apple
+- personal
 title: Steve Jobs helps Organ Donors
 type: wp
 wordpress_id: 734

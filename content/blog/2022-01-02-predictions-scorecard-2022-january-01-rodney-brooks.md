@@ -5,6 +5,7 @@ subtitle: Predictions Scorecard, 2022 January 01 – Rodney Brooks
 tags:
 - robotics
 - ai
+- science
 title: Predictions Scorecard, 2022 January 01 – Rodney Brooks
 type: wp
 wordpress_id: 3169

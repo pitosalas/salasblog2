@@ -5,6 +5,7 @@ subtitle: Another tidbit I came across at RailsConf is Hobo. I haven’t tr...
 tags:
 - programming
 - ruby
+- technology
 title: '[GEEKY] Magic Rails Applications with Hobo'
 type: wp
 wordpress_id: 564

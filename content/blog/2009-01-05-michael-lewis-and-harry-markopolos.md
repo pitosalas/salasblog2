@@ -4,6 +4,7 @@ date: '2009-01-05'
 subtitle: In an excellent article on The End of The Financial World as We Know It
 tags:
 - business
+- personal
 title: Michael Lewis and Harry Markopolos
 type: wp
 wordpress_id: 914

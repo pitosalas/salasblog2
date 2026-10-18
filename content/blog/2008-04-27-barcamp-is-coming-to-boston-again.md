@@ -5,6 +5,7 @@ subtitle: 'Well it’s not really ‘coming’ – it was here all along, just d
   the down-lo:'
 tags:
 - boston
+- personal
 title: Barcamp is coming to Boston again!
 type: wp
 wordpress_id: 1057

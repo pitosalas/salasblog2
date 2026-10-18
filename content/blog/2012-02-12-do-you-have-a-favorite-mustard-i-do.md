@@ -2,8 +2,8 @@
 category: '1'
 date: '2012-02-12'
 subtitle: '!41drc4B3yOL._SL500_AA300_.jpg'
-tag_review: no_fit
-tags: []
+tags:
+- food
 title: Do you have a favorite mustard? I do!
 type: wp
 wordpress_id: 391

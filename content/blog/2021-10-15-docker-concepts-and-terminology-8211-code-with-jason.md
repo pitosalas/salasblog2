@@ -2,8 +2,10 @@
 category: '152'
 date: '2021-10-15'
 subtitle: Docker concepts and terminology – Code with Jason
-tag_review: no_fit
-tags: []
+tags:
+- docker
+- explainer
+- howto
 title: Docker concepts and terminology – Code with Jason
 type: wp
 wordpress_id: 3087

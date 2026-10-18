@@ -5,6 +5,7 @@ subtitle: I’ve said (and believe) that there’s **no other company on earth**
   has the capability to develo...
 tags:
 - business
+- technology
 title: XP SP2 Shows Why Microsoft Is A Great Company
 type: wp
 wordpress_id: 1950

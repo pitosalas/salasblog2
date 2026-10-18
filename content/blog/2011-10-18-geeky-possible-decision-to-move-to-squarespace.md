@@ -2,8 +2,9 @@
 category: '538'
 date: '2011-10-18'
 subtitle: I finally got my new blog on WordPress.com working. That should have bee...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- technology
 title: '[GEEKY] Possible Decision to move to SquareSpace'
 type: wp
 wordpress_id: 481

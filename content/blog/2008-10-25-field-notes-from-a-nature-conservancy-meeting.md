@@ -4,6 +4,7 @@ date: '2008-10-25'
 subtitle: Check out this post Field notes from a Nature Conservancy meeting
 tags:
 - science
+- personal
 title: Field notes from a Nature Conservancy meeting
 type: wp
 wordpress_id: 964

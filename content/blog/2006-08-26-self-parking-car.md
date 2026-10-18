@@ -5,6 +5,7 @@ subtitle: 'This one is totally cool for you gadget freaks: Lexus Self Parking Ca
   Video and Review – Gizmodo'
 tags:
 - technology
+- personal
 title: Self Parking Car?
 type: wp
 wordpress_id: 1440

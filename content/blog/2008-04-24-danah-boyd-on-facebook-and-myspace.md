@@ -2,8 +2,10 @@
 category: '298'
 date: '2008-04-24'
 subtitle: A really interesting article for anyone interested in social networks
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- politics
+- technology
 title: Danah Boyd on Facebook and Myspace
 type: wp
 wordpress_id: 1061

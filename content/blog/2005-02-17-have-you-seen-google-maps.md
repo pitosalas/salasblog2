@@ -5,6 +5,7 @@ subtitle: Unless you have been living under a **rock** (or have **better** thing
   to do with your time) you wi...
 tags:
 - maps
+- personal
 title: Have you seen Google Maps?
 type: wp
 wordpress_id: 1847

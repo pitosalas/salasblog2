@@ -5,6 +5,7 @@ subtitle: Leaving aside *what* exactly an Electronic Voting Machine *is*, the Ne
   York Times weighed in with t...
 tags:
 - politics
+- personal
 title: Can ‘Electronic Voting Machines’ be ‘Trusted’?
 type: wp
 wordpress_id: 832

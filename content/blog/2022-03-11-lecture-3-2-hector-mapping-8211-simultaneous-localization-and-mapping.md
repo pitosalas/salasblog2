@@ -4,6 +4,7 @@ date: '2022-03-11'
 subtitle: 'Lecture 3 2: Hector Mapping – Simultaneous Localization and Mapping'
 tags:
 - robotics
+- computer-science
 title: 'Lecture 3 2: Hector Mapping – Simultaneous Localization and Mapping'
 type: wp
 wordpress_id: 3316

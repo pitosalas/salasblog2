@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-09-20'
 subtitle: Just go to this link.
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Get a free shipping box from the US Postal Service
 type: wp
 wordpress_id: 666

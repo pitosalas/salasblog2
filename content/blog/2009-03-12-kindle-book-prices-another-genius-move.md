@@ -5,6 +5,11 @@ subtitle: Take a book that I was interested in, “The Lords of Finance”, by L
   Ahamed
 tags:
 - books
+- amazon
+- business
+- apple
+- personal
+- technology
 title: 'Kindle book prices: another genius move'
 type: wp
 wordpress_id: 872

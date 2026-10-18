@@ -3,8 +3,11 @@ category: '298'
 date: '2009-12-14'
 subtitle: I guess it’s not surprising that people’s Facebook and twitter accounts
   are getting compromised
-tag_review: no_fit
-tags: []
+tags:
+- social-media
+- personal
+- security
+- technology
 title: Facebook and Twitter Hacking
 type: wp
 wordpress_id: 765

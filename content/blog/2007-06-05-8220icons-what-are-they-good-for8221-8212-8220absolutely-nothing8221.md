@@ -4,6 +4,8 @@ date: '2007-06-05'
 subtitle: Jeremy Wagstaff, in his regular “Loose Wires”
 tags:
 - design
+- personal
+- technology
 title: '“Icons: What are they good for?” — “Absolutely Nothing!”'
 type: wp
 wordpress_id: 1260

@@ -4,6 +4,7 @@ date: '2007-11-19'
 subtitle: Two nights ago, Friday, I got to go to the **TechCrunch Boston party
 tags:
 - boston
+- technology
 title: TechCrunch Boston
 type: wp
 wordpress_id: 1180

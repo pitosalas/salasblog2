@@ -3,8 +3,8 @@ category: '298'
 date: '2010-01-29'
 subtitle: So I am trying to decide whether I should renew my subscription to Wall
   Street Journal online. I rea...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Sophsiticated (odd) paywall at the Wall Street Journal
 type: wp
 wordpress_id: 749

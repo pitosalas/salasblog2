@@ -2,8 +2,8 @@
 category: '149'
 date: '2022-01-22'
 subtitle: Portfolio or Resume? When To Use Each
-tag_review: no_fit
-tags: []
+tags:
+- careers
 title: Portfolio or Resume? When To Use Each
 type: wp
 wordpress_id: 3225

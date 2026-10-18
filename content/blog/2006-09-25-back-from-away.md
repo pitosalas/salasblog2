@@ -5,6 +5,8 @@ subtitle: I just returned from a trip in the American Southwest, starting in St.
   Utah, to Bryce Canyon ...
 tags:
 - travel
+- personal
+- blogging
 title: Back from away
 type: wp
 wordpress_id: 1434

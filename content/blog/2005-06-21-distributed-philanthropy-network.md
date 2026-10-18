@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-06-21'
 subtitle: I came across a good story about ModestNeeds.org from [Deborah Finn’s...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Distributed philanthropy network
 type: wp
 wordpress_id: 1751

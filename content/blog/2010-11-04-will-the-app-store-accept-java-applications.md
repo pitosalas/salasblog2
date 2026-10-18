@@ -4,6 +4,7 @@ date: '2010-11-04'
 subtitle: Check out Apple Begins Accepting Submissions for Mac App Store
 tags:
 - apple
+- blogging
 title: Will the App Store Accept Java Applications?
 type: wp
 wordpress_id: 647

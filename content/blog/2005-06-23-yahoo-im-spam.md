@@ -3,8 +3,8 @@ category: '538'
 date: '2005-06-23'
 subtitle: I have IM accounts on Yahoo, AOL and MSN. Actually I use the AOL by far
   the most, but I have an occa...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Yahoo IM Spam
 type: wp
 wordpress_id: 1749

@@ -5,6 +5,7 @@ subtitle: I’ve been living inside a couple of [tag]Google groups[/tag] lately,
   questions and waiting f...
 tags:
 - technology
+- programming
 title: '[geeky] Google Groups missing key functionality'
 type: wp
 wordpress_id: 1206

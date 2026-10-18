@@ -3,8 +3,10 @@ category: '298'
 date: '2011-09-23'
 subtitle: Some people are starting to wonder whether Google+ will continue to grow
   and become a major soc...
-tag_review: no_fit
-tags: []
+tags:
+- social-media
+- personal
+- technology
 title: Google+ – Professional Social Network?
 type: wp
 wordpress_id: 497

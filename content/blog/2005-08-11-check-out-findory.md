@@ -4,6 +4,7 @@ date: '2005-08-11'
 subtitle: I was talking about search engines the other day. I guess Findory i...
 tags:
 - technology
+- blogging
 title: Check out Findory
 type: wp
 wordpress_id: 1719

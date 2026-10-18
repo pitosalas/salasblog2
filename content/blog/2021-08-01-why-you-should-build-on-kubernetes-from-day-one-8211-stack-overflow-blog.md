@@ -2,8 +2,10 @@
 category: '108'
 date: '2021-08-01'
 subtitle: Why you should build on Kubernetes from day one – Stack Overflow Blog
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- technology
+- scalability
 title: Why you should build on Kubernetes from day one – Stack Overflow Blog
 type: wp
 wordpress_id: 3013

@@ -4,6 +4,9 @@ date: '2010-08-13'
 subtitle: The other day I wrote a post where I mentioned Google’s App Inventor
 tags:
 - technology
+- mobile
+- personal
+- nyt
 title: Android Inventor – not ready for prime time
 type: wp
 wordpress_id: 685

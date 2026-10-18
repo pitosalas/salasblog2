@@ -5,6 +5,7 @@ subtitle: I know that access to my blog is blocked at least by EMC (heard so fro
   friends there) so I will ref...
 tags:
 - science
+- personal
 title: Steven Pinker on Why We Curse
 type: wp
 wordpress_id: 1191

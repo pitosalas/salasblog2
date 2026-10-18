@@ -3,8 +3,11 @@ category: '410'
 date: '2010-04-23'
 subtitle: If you’ve been in computing for any time you may have been hit over the
   head by the slogan “Security...
-tag_review: no_fit
-tags: []
+tags:
+- technology
+- politics
+- programming
+- security
 title: Security by obscurity and other slogans
 type: wp
 wordpress_id: 728

@@ -4,6 +4,7 @@ date: '2008-08-13'
 subtitle: Here is a full article written by Jeremy Wagstaff…
 tags:
 - business
+- technology
 title: Blind to Bargains – Jeremy Wagstaff
 type: wp
 wordpress_id: 996

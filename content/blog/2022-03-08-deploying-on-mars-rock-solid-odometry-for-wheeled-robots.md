@@ -4,6 +4,7 @@ date: '2022-03-08'
 subtitle: 'Deploying on Mars: Rock solid Odometry for Wheeled Robots'
 tags:
 - robotics
+- howto
 title: 'Deploying on Mars: Rock solid Odometry for Wheeled Robots'
 type: wp
 wordpress_id: 3296

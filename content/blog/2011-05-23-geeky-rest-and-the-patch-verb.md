@@ -5,6 +5,7 @@ subtitle: Last year when teaching REST concepts at Brandeis Universi...
 tags:
 - programming
 - brandeis
+- technology
 title: '[GEEKY] REST and the PATCH verb'
 type: wp
 wordpress_id: 561

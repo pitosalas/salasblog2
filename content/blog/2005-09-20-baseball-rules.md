@@ -3,8 +3,8 @@ category: '298'
 date: '2005-09-20'
 subtitle: I guess it’s the time of year, but I came across this site for Baseball
   umpires
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Baseball rules
 type: wp
 wordpress_id: 1692

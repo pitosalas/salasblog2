@@ -3,8 +3,8 @@ category: '298'
 date: '2011-10-28'
 subtitle: That’s a great quote. And no, it’s not AT ALL autobiographical. It’s just
   something that I’ve though...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Plato: “Be Kind, for Everyone You Meet is Fighting a Great Battle.”'
 type: wp
 wordpress_id: 477

@@ -4,6 +4,7 @@ date: '2022-01-01'
 subtitle: Client — Paramiko documentation
 tags:
 - python
+- cli
 title: Client — Paramiko documentation
 type: wp
 wordpress_id: 3161

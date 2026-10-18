@@ -6,6 +6,7 @@ subtitle: If you are interested in the **Intelligent Design** debate, this is an
 tags:
 - science
 - politics
+- blogging
 title: 'ID: Part Deux'
 type: wp
 wordpress_id: 1694

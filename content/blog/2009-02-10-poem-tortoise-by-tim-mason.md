@@ -2,8 +2,9 @@
 category: '298'
 date: '2009-02-10'
 subtitle: '**Tortoise**'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- art
 title: 'Poem: Tortoise by Tim Mason'
 type: wp
 wordpress_id: 890

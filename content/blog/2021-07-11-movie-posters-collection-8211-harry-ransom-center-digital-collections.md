@@ -2,8 +2,11 @@
 category: '92'
 date: '2021-07-11'
 subtitle: Movie Posters Collection – Harry Ransom Center Digital Collections
-tag_review: no_fit
-tags: []
+tags:
+- art
+- design
+- images
+- movies
 title: Movie Posters Collection – Harry Ransom Center Digital Collections
 type: wp
 wordpress_id: 2991

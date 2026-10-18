@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-03-21'
 subtitle: '![](http://s3.media.squarespace.com/production/1075723/12829350/weblogs/busybodies/1101910812_400.jp...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Busybodies and Crybabies
 type: wp
 wordpress_id: 1822

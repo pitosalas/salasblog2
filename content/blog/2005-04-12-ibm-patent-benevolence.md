@@ -5,6 +5,7 @@ subtitle: Doc comments with grudging admiration
 tags:
 - business
 - legal
+- technology
 title: IBM Patent Benevolence?
 type: wp
 wordpress_id: 1805

@@ -4,6 +4,7 @@ date: '2006-01-15'
 subtitle: Amusingly, several
 tags:
 - health
+- personal
 title: Tylenol meme
 type: wp
 wordpress_id: 1615

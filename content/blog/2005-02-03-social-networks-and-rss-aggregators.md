@@ -2,8 +2,8 @@
 category: '50'
 date: '2005-02-03'
 subtitle: Dave Winer says that there’s a bit of buzz...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Social Networks and RSS Aggregators
 type: wp
 wordpress_id: 1855

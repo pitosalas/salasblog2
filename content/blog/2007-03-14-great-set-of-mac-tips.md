@@ -5,6 +5,7 @@ subtitle: If you are a Mac user, you might find a hint or three here to help you
   computer’s performance. [Che...
 tags:
 - apple
+- technology
 title: Great set of Mac Tips
 type: wp
 wordpress_id: 1308

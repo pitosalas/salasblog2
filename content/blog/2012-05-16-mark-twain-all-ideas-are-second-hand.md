@@ -3,8 +3,8 @@ category: '1'
 date: '2012-05-16'
 subtitle: 'I have often been heard to say: “Ideas are Cheap”, by which I mean to say
   that my admiration goes mo...'
-tag_review: no_fit
-tags: []
+tags:
+- innovation
 title: 'Mark Twain: All Ideas are Second-Hand'
 type: wp
 wordpress_id: 332

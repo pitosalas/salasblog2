@@ -4,6 +4,8 @@ date: '2010-09-30'
 subtitle: Finally someone writes about something
 tags:
 - personal
+- books
+- nyt
 title: I never remember anything
 type: wp
 wordpress_id: 657

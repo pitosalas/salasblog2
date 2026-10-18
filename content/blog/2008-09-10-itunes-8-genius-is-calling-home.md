@@ -5,6 +5,8 @@ subtitle: I just downloaded the new ITunes 8. It has this new thing called the i
   Genius which seems like ...
 tags:
 - apple
+- personal
+- technology
 title: iTunes 8 Genius is calling home
 type: wp
 wordpress_id: 976

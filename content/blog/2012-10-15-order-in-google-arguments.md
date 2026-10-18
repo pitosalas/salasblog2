@@ -5,6 +5,7 @@ subtitle: Does Google give a different answer if you reorder the words in the se
   What? A trivial question...
 tags:
 - computer-science
+- technology
 title: Order in Google arguments
 type: wp
 wordpress_id: 292

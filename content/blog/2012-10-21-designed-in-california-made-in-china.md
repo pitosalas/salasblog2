@@ -5,6 +5,7 @@ subtitle: James Dyson (the vacuum cleaner guy) said something which may seem obv
   but is nonetheless very c...
 tags:
 - apple
+- design
 title: Designed in California, Made in China
 type: wp
 wordpress_id: 285

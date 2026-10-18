@@ -4,6 +4,7 @@ date: '2008-10-27'
 subtitle: '![](https://i0.wp.com/s.wsj.net/public/resources/images/OB-CI045_noonan_D_20080912160135.jpg?resize=...'
 tags:
 - politics
+- personal
 title: Peggy Noonan columns are a pleasure to read
 type: wp
 wordpress_id: 963

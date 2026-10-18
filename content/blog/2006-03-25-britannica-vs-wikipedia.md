@@ -5,6 +5,7 @@ subtitle: I’m a big fan of Wikipedia, and of course traditionally (like anyone
   been an admirer of the En...
 tags:
 - wikipedia
+- personal
 title: Britannica vs. Wikipedia
 type: wp
 wordpress_id: 1571

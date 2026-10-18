@@ -3,8 +3,8 @@ category: '298'
 date: '2008-07-23'
 subtitle: So I received two new **Discover cards**, with supposed enhanced security
   features. I didn’t ask for...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Credit card activation: security or reverse marketing?'
 type: wp
 wordpress_id: 1003

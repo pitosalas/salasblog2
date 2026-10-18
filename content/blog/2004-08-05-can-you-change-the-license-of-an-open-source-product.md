@@ -5,6 +5,7 @@ subtitle: '**This puzzled me. **Once we released the BlogBridge source code unde
   ...'
 tags:
 - legal
+- blogging
 title: Can you change the license of an Open Source product?
 type: wp
 wordpress_id: 1954

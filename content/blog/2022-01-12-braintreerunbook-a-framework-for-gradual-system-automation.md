@@ -4,6 +4,9 @@ date: '2022-01-12'
 subtitle: 'braintree/runbook: A framework for gradual system automation'
 tags:
 - ruby
+- software-engineering
+- howto
+- tools
 title: 'braintree/runbook: A framework for gradual system automation'
 type: wp
 wordpress_id: 3211

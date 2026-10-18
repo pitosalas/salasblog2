@@ -4,6 +4,9 @@ date: '2022-03-28'
 subtitle: 'Comparing Ruby Background Processing Libraries: Delayed Job – SitePoint'
 tags:
 - ruby
+- concurrency
+- howto
+- performance
 title: 'Comparing Ruby Background Processing Libraries: Delayed Job – SitePoint'
 type: wp
 wordpress_id: 3396

@@ -3,8 +3,9 @@ category: '298'
 date: '2011-04-11'
 subtitle: No need to paraphrase or editorialize. Just read the whole thing, will ya?
   Lots of good advice that ...
-tag_review: no_fit
-tags: []
+tags:
+- art
+- personal
 title: Thoughtful advice
 type: wp
 wordpress_id: 573

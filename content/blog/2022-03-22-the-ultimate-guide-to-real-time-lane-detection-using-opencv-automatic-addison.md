@@ -6,6 +6,7 @@ subtitle: The Ultimate Guide to Real-Time Lane Detection Using OpenCV – Automa
 tags:
 - robotics
 - python
+- computer-vision
 title: The Ultimate Guide to Real-Time Lane Detection Using OpenCV – Automatic Addison
 type: wp
 wordpress_id: 3372

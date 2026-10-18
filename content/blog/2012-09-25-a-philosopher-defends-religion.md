@@ -6,6 +6,7 @@ subtitle: I recently subscribed to the New York Review of Books. Not sure this w
 tags:
 - books
 - science
+- philosophy
 title: A philosopher defends religion
 type: wp
 wordpress_id: 298

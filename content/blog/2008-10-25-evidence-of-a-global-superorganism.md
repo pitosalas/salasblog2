@@ -5,6 +5,8 @@ subtitle: Check out this post Evidence of a Global SuperOrganism
 tags:
 - technology
 - science
+- personal
+- politics
 title: Evidence of a Global SuperOrganism
 type: wp
 wordpress_id: 965

@@ -5,6 +5,8 @@ subtitle: In my graphic design work I’ve gotten to know scratchboard (aka clay
   It’s a very cool materia...
 tags:
 - design
+- art
+- personal
 title: A good scratchboard/clayboard tutorial
 type: wp
 wordpress_id: 766

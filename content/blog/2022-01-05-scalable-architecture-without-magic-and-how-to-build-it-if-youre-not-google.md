@@ -4,6 +4,9 @@ date: '2022-01-05'
 subtitle: Scalable architecture without magic (and how to build it if you’re not Google)
 tags:
 - software-engineering
+- programming
+- howto
+- scalability
 title: Scalable architecture without magic (and how to build it if you’re not Google)
 type: wp
 wordpress_id: 3187

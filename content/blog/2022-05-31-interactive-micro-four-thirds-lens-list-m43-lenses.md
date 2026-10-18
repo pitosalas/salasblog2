@@ -2,8 +2,11 @@
 category: '233'
 date: '2022-05-31'
 subtitle: Interactive Micro Four Thirds Lens List | M43 Lenses
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- photography
+- shopping
+- zoom
 title: Interactive Micro Four Thirds Lens List | M43 Lenses
 type: wp
 wordpress_id: 3480

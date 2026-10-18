@@ -3,8 +3,8 @@ category: '52'
 date: '2022-01-03'
 subtitle: 'STICKY: Is your Pi not booting? (The Boot Problems Sticky) – Raspberry
   Pi Forums'
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: 'STICKY: Is your Pi not booting? (The Boot Problems Sticky) – Raspberry Pi
   Forums'
 type: wp

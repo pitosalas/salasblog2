@@ -5,6 +5,8 @@ subtitle: "This is Grammar For Robots. What? Why? \U0001F916"
 tags:
 - robotics
 - ai
+- design
+- research
 title: "This is Grammar For Robots. What? Why? \U0001F916"
 type: wp
 wordpress_id: 2953

@@ -4,6 +4,7 @@ date: '2013-03-24'
 subtitle: '![](https://i0.wp.com/c.o0bg.com/rf/image_960w/Boston/2011-2020/2013/03/12/BostonGlobe.com/Regional/...'
 tags:
 - education
+- software-engineering
 title: Olin College of Engineering
 type: wp
 wordpress_id: 224

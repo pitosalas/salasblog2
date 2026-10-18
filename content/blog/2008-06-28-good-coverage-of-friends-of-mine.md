@@ -5,6 +5,8 @@ subtitle: 'Recently three friends of mine got nice press coverage, so I thought 
   share them:'
 tags:
 - boston
+- personal
+- technology
 title: Good coverage of friends of mine
 type: wp
 wordpress_id: 1021

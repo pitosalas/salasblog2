@@ -5,6 +5,7 @@ subtitle: 'If you get it, you may want to get it: Create UML Diagrams from the c
   line'
 tags:
 - programming
+- personal
 title: '[Geeky] Create UML Diagrams from the command line'
 type: wp
 wordpress_id: 793

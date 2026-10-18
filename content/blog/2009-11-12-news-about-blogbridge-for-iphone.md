@@ -4,6 +4,7 @@ date: '2009-11-12'
 subtitle: I just posted an update on our work on BlogBridge for the iPhone
 tags:
 - apple
+- personal
 title: News about BlogBridge for iPhone
 type: wp
 wordpress_id: 777

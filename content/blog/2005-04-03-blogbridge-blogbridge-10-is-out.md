@@ -3,8 +3,8 @@ category: '50'
 date: '2005-04-03'
 subtitle: '**It’s here! **We are officially declaring BlogBridge as a 1.0 product!
   The site is updated, the fea...'
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: '[BLOGBRIDGE] BlogBridge 1.0 is out!'
 type: wp
 wordpress_id: 1811

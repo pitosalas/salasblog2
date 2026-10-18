@@ -4,6 +4,8 @@ date: '2011-03-07'
 subtitle: Qwiki seems to create multi-media presentations on any topic at all. I picke...
 tags:
 - technology
+- blogging
+- personal
 title: Interesting search engines
 type: wp
 wordpress_id: 585

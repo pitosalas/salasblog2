@@ -5,6 +5,7 @@ subtitle: My friend Amy just recently arrived from an incredible trip through As
   If you are curious, check ...
 tags:
 - travel
+- personal
 title: Wandering through Asia
 type: wp
 wordpress_id: 843

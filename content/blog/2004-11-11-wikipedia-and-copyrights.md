@@ -4,6 +4,7 @@ date: '2004-11-11'
 subtitle: If you haven’t heard about Wikipedia, you should check it ...
 tags:
 - wikipedia
+- technology
 title: Wikipedia and copyrights
 type: wp
 wordpress_id: 1914

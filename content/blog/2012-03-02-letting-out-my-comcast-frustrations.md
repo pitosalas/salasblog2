@@ -2,8 +2,8 @@
 category: '1'
 date: '2012-03-02'
 subtitle: “Dear Kelley
-tag_review: no_fit
-tags: []
+tags:
+- tv
 title: Letting out my Comcast frustrations
 type: wp
 wordpress_id: 376

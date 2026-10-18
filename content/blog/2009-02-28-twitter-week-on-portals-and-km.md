@@ -3,8 +3,8 @@ category: '538'
 date: '2009-02-28'
 subtitle: Bill Ives has been running “twitter week” this week on his blog Portals
   and KM
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Twitter Week on Portals and KM
 type: wp
 wordpress_id: 881

@@ -4,6 +4,7 @@ date: '2022-01-02'
 subtitle: What Does It Mean for AI to Understand? | Quanta Magazine
 tags:
 - ai
+- tools
 title: What Does It Mean for AI to Understand? | Quanta Magazine
 type: wp
 wordpress_id: 3167

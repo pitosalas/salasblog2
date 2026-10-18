@@ -5,6 +5,7 @@ subtitle: Not than anyone is buying any stocks these days (are you?) but I happe
   to have a very small numbe...
 tags:
 - business
+- personal
 title: Bummer for Whole Foods
 type: wp
 wordpress_id: 944

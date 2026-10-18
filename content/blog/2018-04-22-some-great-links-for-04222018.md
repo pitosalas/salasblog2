@@ -4,6 +4,7 @@ date: '2018-04-22'
 subtitle: How to improve your workflow with VS Code and Jupyter Notebook
 tags:
 - design
+- technology
 title: Some great links for  04/22/2018
 type: wp
 wordpress_id: 2289

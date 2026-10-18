@@ -3,8 +3,9 @@ category: '298'
 date: '2011-10-01'
 subtitle: I’ve been using various Groupon-ish web sites to **great advantage.** Whether
   it’s Groupon
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Check out CityPockets
 type: wp
 wordpress_id: 489

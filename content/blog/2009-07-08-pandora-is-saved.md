@@ -4,6 +4,8 @@ date: '2009-07-08'
 subtitle: Pandora is one of my favorite music sites. It’s a quick way to ...
 tags:
 - music
+- personal
+- technology
 title: Pandora is saved!
 type: wp
 wordpress_id: 830

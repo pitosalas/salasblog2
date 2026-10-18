@@ -2,8 +2,11 @@
 category: '107'
 date: '2021-11-27'
 subtitle: Learning Containers From The Bottom Up – Ivan Velichko
-tag_review: no_fit
-tags: []
+tags:
+- docker
+- explainer
+- images
+- linux
 title: Learning Containers From The Bottom Up – Ivan Velichko
 type: wp
 wordpress_id: 3123

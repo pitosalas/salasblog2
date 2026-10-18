@@ -6,6 +6,7 @@ subtitle: I found this article to be a good primer on what’s going on with ope
 tags:
 - politics
 - technology
+- personal
 title: 'Open Government: Remixing Government Data'
 type: wp
 wordpress_id: 841

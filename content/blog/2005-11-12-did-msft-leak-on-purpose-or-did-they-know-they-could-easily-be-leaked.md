@@ -5,6 +5,8 @@ subtitle: I’ve read several accounts relating to Microsoft’s recently ‘lea
   about the new strateg...
 tags:
 - business
+- politics
+- technology
 title: Did MSFT leak on purpose, or did they know they could easily be leaked?
 type: wp
 wordpress_id: 1657

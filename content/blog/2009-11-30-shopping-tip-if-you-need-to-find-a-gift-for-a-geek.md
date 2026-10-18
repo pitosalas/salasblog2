@@ -3,8 +3,8 @@ category: '298'
 date: '2009-11-30'
 subtitle: I’ve occasionally shopped here. I got another bit of mail from them for
   ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Shopping Tip: if you need to find a gift for a GEEK'
 type: wp
 wordpress_id: 772

@@ -5,6 +5,7 @@ subtitle: If you haven’t seen this and you shoot a lot of digital photos, you 
   love this product; also see...
 tags:
 - technology
+- personal
 title: Eye-fi wireless enabled memory card for your camera
 type: wp
 wordpress_id: 1007

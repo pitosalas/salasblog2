@@ -5,6 +5,7 @@ subtitle: 'From the New York Times, How Exercise Benefits the Brain:'
 tags:
 - health
 - science
+- nyt
 title: Doing exercise makes you smarter. Finally!
 type: wp
 wordpress_id: 449

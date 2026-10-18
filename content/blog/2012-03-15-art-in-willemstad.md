@@ -4,6 +4,7 @@ date: '2012-03-15'
 subtitle: An annual event, the streets of Willemstad (Curaçao)
 tags:
 - curacao
+- art
 title: Art in Willemstad
 type: wp
 wordpress_id: 367

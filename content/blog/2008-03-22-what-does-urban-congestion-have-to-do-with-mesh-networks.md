@@ -4,6 +4,7 @@ date: '2008-03-22'
 subtitle: '![](https://i0.wp.com/www.baselinemag.com/images/stories/ArticleImages/BL_2008_03/TrafficChrt1.jpg?w...'
 tags:
 - technology
+- personal
 title: What does Urban Congestion have to do with Mesh Networks?
 type: wp
 wordpress_id: 1081

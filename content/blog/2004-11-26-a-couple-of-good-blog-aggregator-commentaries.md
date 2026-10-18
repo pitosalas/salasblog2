@@ -3,8 +3,8 @@ category: '51'
 date: '2004-11-26'
 subtitle: Here are two interesting bits that look at all the aggregators and have
   some interesting comments ab...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: A couple of good Blog aggregator commentaries
 type: wp
 wordpress_id: 1907

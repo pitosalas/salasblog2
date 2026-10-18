@@ -4,6 +4,7 @@ date: '2006-08-06'
 subtitle: A really great article in The Atlantic about Wikipedia. Very relevant ...
 tags:
 - wikipedia
+- technology
 title: Atlantic Magazine on Wikipedia
 type: wp
 wordpress_id: 1467

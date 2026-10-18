@@ -5,6 +5,7 @@ subtitle: I heard about this book, “Dreaming in Code”… it looks really int
 tags:
 - books
 - software-engineering
+- technology
 title: Dreaming in code
 type: wp
 wordpress_id: 1341

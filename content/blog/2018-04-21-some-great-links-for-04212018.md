@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-04-21'
 subtitle: 13 Noteworthy Points from Google’s JavaScript Style Guide
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  04/21/2018
 type: wp
 wordpress_id: 2282

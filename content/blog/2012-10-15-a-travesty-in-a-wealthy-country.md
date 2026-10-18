@@ -6,6 +6,7 @@ subtitle: From the New York Times, an [article by Nick Kristof, describing a rea
 tags:
 - health
 - politics
+- nyt
 title: A travesty in a wealthy country
 type: wp
 wordpress_id: 294

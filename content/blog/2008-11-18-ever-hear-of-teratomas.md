@@ -4,6 +4,7 @@ date: '2008-11-18'
 subtitle: Here’s a truly weird article
 tags:
 - health
+- personal
 title: Ever hear of teratomas?
 type: wp
 wordpress_id: 946

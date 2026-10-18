@@ -5,6 +5,7 @@ subtitle: Someone forwarded this
 tags:
 - design
 - business
+- technology
 title: 'Interesting article with a catchy title: “Surprising Truth about Ugly Websites”'
 type: wp
 wordpress_id: 1438

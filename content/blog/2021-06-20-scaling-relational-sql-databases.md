@@ -4,6 +4,10 @@ date: '2021-06-20'
 subtitle: Scaling relational SQL databases
 tags:
 - software-engineering
+- database
+- howto
+- performance
+- scalability
 title: Scaling relational SQL databases
 type: wp
 wordpress_id: 2975

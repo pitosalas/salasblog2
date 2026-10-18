@@ -5,6 +5,8 @@ subtitle: Yeah, why wouldn’t they? In Massachusetts, Saturday Aug 12 and Sunda
   13, there is no 5% Sales T...
 tags:
 - apple
+- personal
+- technology
 title: Apple Online Store honors the Massachusetts Tax Holiday
 type: wp
 wordpress_id: 1455

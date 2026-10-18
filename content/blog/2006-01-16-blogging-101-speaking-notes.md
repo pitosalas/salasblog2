@@ -2,8 +2,8 @@
 category: '538'
 date: '2006-01-16'
 subtitle: Over on the BlogBridge blog, I pos...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: 'Blogging 101: Speaking Notes'
 type: wp
 wordpress_id: 1613

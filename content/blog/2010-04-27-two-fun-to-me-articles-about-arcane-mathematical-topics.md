@@ -5,6 +5,7 @@ subtitle: Ok, probably to a mathematician these are not arcane, but to normal pe
   (oops, sorry, I love math...
 tags:
 - mathematics
+- personal
 title: Two fun (to me) articles about arcane mathematical topics
 type: wp
 wordpress_id: 725

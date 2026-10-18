@@ -4,6 +4,10 @@ date: '2021-09-05'
 subtitle: An Introduction to JQ
 tags:
 - programming
+- cli
+- tools
+- howto
+- json
 title: An Introduction to JQ
 type: wp
 wordpress_id: 3061

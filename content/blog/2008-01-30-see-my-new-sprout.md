@@ -4,6 +4,7 @@ date: '2008-01-30'
 subtitle: http://farm.sproutbuilder.com/2341/load/cACdIgrQADCA209Z.swf
 tags:
 - technology
+- personal
 title: See my new sprout
 type: wp
 wordpress_id: 1125

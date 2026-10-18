@@ -3,8 +3,8 @@ category: '1'
 date: '2012-01-01'
 subtitle: An interesting and fun to read article in Vanity Fair about the security
   check procedures
-tag_review: no_fit
-tags: []
+tags:
+- security
 title: 'TSA: Smokescreening'
 type: wp
 wordpress_id: 428

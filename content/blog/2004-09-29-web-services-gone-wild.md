@@ -5,6 +5,7 @@ subtitle: 'Here’s a **cool **idea: using the web services of **Google **and **
   **together to find oth...'
 tags:
 - programming
+- blogging
 title: Web Services gone wild
 type: wp
 wordpress_id: 1933

@@ -5,6 +5,7 @@ subtitle: Recently I visited Curaçao
 tags:
 - curacao
 - jewish
+- personal
 title: Curaçao’s Historic Synagogue
 type: wp
 wordpress_id: 1262

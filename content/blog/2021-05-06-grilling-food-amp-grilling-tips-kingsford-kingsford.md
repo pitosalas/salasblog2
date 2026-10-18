@@ -4,6 +4,7 @@ date: '2021-05-06'
 subtitle: Grilling Food & Grilling Tips | Kingsford | Kingsford®
 tags:
 - food
+- howto
 title: Grilling Food & Grilling Tips | Kingsford | Kingsford®
 type: wp
 wordpress_id: 2882

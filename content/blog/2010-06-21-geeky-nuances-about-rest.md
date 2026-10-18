@@ -4,6 +4,7 @@ date: '2010-06-21'
 subtitle: While teaching at Brandeis University this summer (see Cosi JBS Web Site
 tags:
 - programming
+- technology
 title: '[GEEKY] Nuances about REST'
 type: wp
 wordpress_id: 706

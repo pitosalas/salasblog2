@@ -5,6 +5,9 @@ subtitle: "secretGeek/AwesomeCSV: \U0001F576️A curated list of awesome tools f
   with CSV."
 tags:
 - programming
+- csv
+- howto
+- tools
 title: "secretGeek/AwesomeCSV: \U0001F576️A curated list of awesome tools for dealing
   with CSV."
 type: wp

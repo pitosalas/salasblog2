@@ -4,6 +4,8 @@ date: '2022-04-01'
 subtitle: demos/follow.py at master · UbiquityRobotics/demos
 tags:
 - robotics
+- programming
+- howto
 title: demos/follow.py at master · UbiquityRobotics/demos
 type: wp
 wordpress_id: 3408

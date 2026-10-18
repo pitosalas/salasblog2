@@ -5,6 +5,8 @@ subtitle: 'Check out this post In Defense of Raising Money: a Manifesto for NonP
   CEOs:'
 tags:
 - business
+- personal
+- politics
 title: 'In Defense of Raising Money: a Manifesto for NonProfit CEOs'
 type: wp
 wordpress_id: 961

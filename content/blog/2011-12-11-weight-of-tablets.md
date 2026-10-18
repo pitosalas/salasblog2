@@ -6,6 +6,9 @@ subtitle: "I’ve been playing around with each of the major tablets while consi
 tags:
 - technology
 - apple
+- amazon
+- books
+- mobile
 title: Weight of tablets
 type: wp
 wordpress_id: 442

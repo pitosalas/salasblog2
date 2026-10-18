@@ -4,6 +4,8 @@ date: '2022-01-01'
 subtitle: Python SSH Tutorial
 tags:
 - python
+- howto
+- cli
 title: Python SSH Tutorial
 type: wp
 wordpress_id: 3163

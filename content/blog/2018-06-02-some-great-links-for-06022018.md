@@ -5,6 +5,7 @@ subtitle: How to solve the Google recruiters’ puzzle about throwing eggs from 
   | Codementor
 tags:
 - computer-science
+- technology
 title: Some great links for  06/02/2018
 type: wp
 wordpress_id: 2346

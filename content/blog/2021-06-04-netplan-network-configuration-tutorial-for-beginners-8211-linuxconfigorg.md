@@ -4,6 +4,7 @@ date: '2021-06-04'
 subtitle: Netplan network configuration tutorial for beginners – LinuxConfig.org
 tags:
 - linux
+- howto
 title: Netplan network configuration tutorial for beginners – LinuxConfig.org
 type: wp
 wordpress_id: 2937

@@ -5,6 +5,8 @@ subtitle: This article is called “Fact and Folklore In Software Engineering”
 tags:
 - software-engineering
 - science
+- programming
+- technology
 title: A great article about scientific discourse
 type: wp
 wordpress_id: 598

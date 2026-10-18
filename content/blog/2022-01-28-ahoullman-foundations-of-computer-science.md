@@ -4,6 +4,7 @@ date: '2022-01-28'
 subtitle: Aho/Ullman Foundations of Computer Science
 tags:
 - computer-science
+- education
 title: Aho/Ullman Foundations of Computer Science
 type: wp
 wordpress_id: 3237

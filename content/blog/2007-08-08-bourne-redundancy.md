@@ -3,8 +3,8 @@ category: '298'
 date: '2007-08-08'
 subtitle: 'Quick movie review: two movies of more or less the same flavor: [[tag]The
   Bourne Ultimatum[/tag]](ht...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Bourne Redundancy?
 type: wp
 wordpress_id: 1230

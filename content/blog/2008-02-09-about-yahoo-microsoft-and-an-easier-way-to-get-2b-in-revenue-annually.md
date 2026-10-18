@@ -5,6 +5,8 @@ subtitle: You can read all about the potential acquisition of Yahoo by Microsoft
   here for example, where Marc...
 tags:
 - business
+- personal
+- technology
 title: About Yahoo / Microsoft and an easier way to get $2B in revenue annually
 type: wp
 wordpress_id: 1116

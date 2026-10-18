@@ -5,6 +5,7 @@ subtitle: 'Interesting article about counting blogs makes a **good point** right
   the bat:'
 tags:
 - technology
+- blogging
 title: Counting blog impact
 type: wp
 wordpress_id: 1771

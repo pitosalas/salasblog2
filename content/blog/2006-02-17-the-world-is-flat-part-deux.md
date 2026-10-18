@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-02-17'
 subtitle: '![](http://www.bobcongdon.net/media...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: The world is flat, part deux
 type: wp
 wordpress_id: 1592

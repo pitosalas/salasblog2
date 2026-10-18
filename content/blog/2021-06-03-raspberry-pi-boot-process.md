@@ -4,6 +4,7 @@ date: '2021-06-03'
 subtitle: Raspberry Pi Boot Process
 tags:
 - linux
+- technology
 title: Raspberry Pi Boot Process
 type: wp
 wordpress_id: 2935

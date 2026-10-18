@@ -6,6 +6,8 @@ subtitle: One of the tensions that I have seen in teaching software engineering 
 tags:
 - education
 - computer-science
+- software-engineering
+- research
 title: Ivory Tower or Trade school?
 type: wp
 wordpress_id: 287

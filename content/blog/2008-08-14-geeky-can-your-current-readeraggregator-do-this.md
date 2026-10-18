@@ -2,8 +2,10 @@
 category: '50'
 date: '2008-08-14'
 subtitle: Check out the latest summary of amazing feats
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
+- technology
 title: '[GEEKY] Can your current reader/aggregator do this?'
 type: wp
 wordpress_id: 995

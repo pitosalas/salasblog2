@@ -4,6 +4,9 @@ date: '2011-01-31'
 subtitle: Michael Arrington is a famous Tech-pundit-commenta...
 tags:
 - business
+- health
+- startups
+- technology
 title: Lies people tell themselves
 type: wp
 wordpress_id: 602

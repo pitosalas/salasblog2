@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-01-20'
 subtitle: Check out this post from [Saint
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Funny rant about internet advertising
 type: wp
 wordpress_id: 1345

@@ -2,8 +2,9 @@
 category: '298'
 date: '2008-03-02'
 subtitle: Another really interesting post
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Another interesting post at the ‘TSA’ Blog
 type: wp
 wordpress_id: 1098

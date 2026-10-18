@@ -5,6 +5,7 @@ subtitle: I bet you’ve not heard of another crazy-cool service from Google, Go
   Sets. I first read about Go...
 tags:
 - technology
+- personal
 title: Use Google Sets for competitive analysis
 type: wp
 wordpress_id: 1076

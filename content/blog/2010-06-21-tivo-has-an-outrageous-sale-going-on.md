@@ -2,8 +2,8 @@
 category: '538'
 date: '2010-06-21'
 subtitle: Right now, take a look at Tivo’s Site
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: TIvo has an outrageous sale going on
 type: wp
 wordpress_id: 707

@@ -3,8 +3,8 @@ category: '538'
 date: '2004-06-28'
 subtitle: I am here at JavaOne and living among a very different crowd than I’ve been
   in lately. It’s the gath...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: '[JAVAONE] Visiting the Java tribe'
 type: wp
 wordpress_id: 1976

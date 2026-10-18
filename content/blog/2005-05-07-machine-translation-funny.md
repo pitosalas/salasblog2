@@ -5,6 +5,8 @@ subtitle: The highly anticipated Mac OS X “Tiger” arrived in my hot little h
   and I’ve spent most of the d...
 tags:
 - apple
+- personal
+- technology
 title: 'Machine translation: Funny!'
 type: wp
 wordpress_id: 1791

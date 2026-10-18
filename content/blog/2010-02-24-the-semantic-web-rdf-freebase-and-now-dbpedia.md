@@ -4,6 +4,7 @@ date: '2010-02-24'
 subtitle: I was talking with Noah Mendelsohn this morning and we got into a di...
 tags:
 - wikipedia
+- technology
 title: The Semantic Web, RDF, Freebase and now, DBpedia
 type: wp
 wordpress_id: 736

@@ -3,8 +3,8 @@ category: '298'
 date: '2011-01-18'
 subtitle: As a naturalized citizen who’s lived here for most of his life, Football
   used to be foreign to me. I...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Football Lingo
 type: wp
 wordpress_id: 608

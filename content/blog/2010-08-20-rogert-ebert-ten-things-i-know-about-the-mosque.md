@@ -5,6 +5,7 @@ subtitle: I bet many of you didn’t realize that Roger Ebert is still writing a
   column, with movie re...
 tags:
 - politics
+- personal
 title: 'Rogert Ebert: Ten things I know about the mosque'
 type: wp
 wordpress_id: 683

@@ -4,6 +4,8 @@ date: '2008-02-04'
 subtitle: This is really cool! Check out this post
 tags:
 - technology
+- blogging
+- personal
 title: Virtual Cable takes your GPS and raises you a heads-up display
 type: wp
 wordpress_id: 1119

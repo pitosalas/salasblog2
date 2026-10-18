@@ -2,8 +2,9 @@
 category: '8'
 date: '2022-03-10'
 subtitle: 'Git Organized: A Better Git Flow | Render'
-tag_review: no_fit
-tags: []
+tags:
+- cli
+- howto
 title: 'Git Organized: A Better Git Flow | Render'
 type: wp
 wordpress_id: 3308

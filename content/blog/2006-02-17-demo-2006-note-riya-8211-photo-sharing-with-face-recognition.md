@@ -5,6 +5,7 @@ subtitle: This one was probably one of the most talked about sites. The principl
   is, F...
 tags:
 - ai
+- technology
 title: 'Demo 2006 Note: Riya – Photo Sharing with Face Recognition'
 type: wp
 wordpress_id: 1593

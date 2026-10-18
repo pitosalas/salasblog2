@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-02-08'
 subtitle: That was the old slogan of Jon Stewart’s Daily Show. This morning, w...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: When news breaks, we fix it
 type: wp
 wordpress_id: 748

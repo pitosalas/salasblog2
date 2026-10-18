@@ -4,6 +4,8 @@ date: '2006-03-04'
 subtitle: I’ve experimented with all kinds of novel music related services and products.
 tags:
 - music
+- personal
+- technology
 title: Pandora helps me discover Beth Nielsen Chapman
 type: wp
 wordpress_id: 1584

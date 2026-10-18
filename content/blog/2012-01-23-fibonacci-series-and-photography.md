@@ -5,6 +5,8 @@ subtitle: You can’t be a self-respecting computer or science geek and not have
   about the Fibonacci serie...
 tags:
 - mathematics
+- design
+- photography
 title: Fibonacci series and Photography
 type: wp
 wordpress_id: 411

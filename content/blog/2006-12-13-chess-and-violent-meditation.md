@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-12-13'
 subtitle: Check out this post from [empire
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Chess and Violent Meditation
 type: wp
 wordpress_id: 1384

@@ -5,6 +5,7 @@ subtitle: I’ve done a little research about what the Open Source really means,
   when it comes to [Blog...
 tags:
 - legal
+- blogging
 title: BlogBridge open source license
 type: wp
 wordpress_id: 1955

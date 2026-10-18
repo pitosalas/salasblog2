@@ -5,6 +5,7 @@ subtitle: 5 Programming Languages With the Least Competition Yet Command the Hig
   Salaries
 tags:
 - programming
+- careers
 title: 5 Programming Languages With the Least Competition Yet Command the Highest
   Salaries
 type: wp

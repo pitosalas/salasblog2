@@ -5,6 +5,7 @@ subtitle: Ok, I am on a [Frank Rich binge, but he does have one thought provokin
   article after another. In hi...
 tags:
 - politics
+- business
 title: 'Frank Rick (again): The other plot'
 type: wp
 wordpress_id: 755

@@ -4,6 +4,9 @@ date: '2021-07-29'
 subtitle: The Application Context — Flask Documentation (2.0.x)
 tags:
 - python
+- api
+- web
+- howto
 title: The Application Context — Flask Documentation (2.0.x)
 type: wp
 wordpress_id: 3011

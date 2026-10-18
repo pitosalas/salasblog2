@@ -4,6 +4,7 @@ date: '2008-04-11'
 subtitle: '!['
 tags:
 - apple
+- personal
 title: '[GEEKY] How to fix slow Skype on Leopard'
 type: wp
 wordpress_id: 1068

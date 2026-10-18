@@ -4,6 +4,8 @@ date: '2013-05-01'
 subtitle: In Venture Capital Deals, Not Every Founder Will Be a Zuckerberg – NYTimes.com
 tags:
 - business
+- startups
+- social-media
 title: Why can’t we all be as rich as Mark?
 type: wp
 wordpress_id: 206

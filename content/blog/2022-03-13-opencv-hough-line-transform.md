@@ -5,6 +5,7 @@ subtitle: 'OpenCV: Hough Line Transform'
 tags:
 - robotics
 - python
+- computer-vision
 title: 'OpenCV: Hough Line Transform'
 type: wp
 wordpress_id: 3330

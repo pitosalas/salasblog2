@@ -4,6 +4,7 @@ date: '2007-06-29'
 subtitle: 'Check out this post from [WSJ.com: He...'
 tags:
 - health
+- personal
 title: 'From the WSJ: A Summer Myth Debunked'
 type: wp
 wordpress_id: 1245

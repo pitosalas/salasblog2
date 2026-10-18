@@ -4,6 +4,7 @@ date: '2010-09-28'
 subtitle: Another old-wives-tail bunked. *(opposite of de-bunked?)*
 tags:
 - health
+- personal
 title: Really? Gargling With Salt Water Can Ease Cold Symptoms – NYTimes.com
 type: wp
 wordpress_id: 661

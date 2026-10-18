@@ -3,8 +3,8 @@ category: '298'
 date: '2004-04-15'
 subtitle: The true story comes out about the most excellent subservient chicken gimick.
   I mentioned it
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Follow-up to Subservient Chicken
 type: wp
 wordpress_id: 2029

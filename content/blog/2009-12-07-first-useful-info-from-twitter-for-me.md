@@ -2,8 +2,8 @@
 category: '298'
 date: '2009-12-07'
 subtitle: After sending an email to Terroir Coffee asking them to explain the...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: First useful info from Twitter for me :)
 type: wp
 wordpress_id: 767

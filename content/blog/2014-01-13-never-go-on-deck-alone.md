@@ -2,8 +2,8 @@
 category: '1'
 date: '2014-01-13'
 subtitle: This is just a great read.
-tag_review: no_fit
-tags: []
+tags:
+- nyt
 title: Never go on deck alone
 type: wp
 wordpress_id: 130

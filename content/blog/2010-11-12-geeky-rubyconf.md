@@ -4,6 +4,7 @@ date: '2010-11-12'
 subtitle: The problem with conferences is knowing what session to go to, right?
 tags:
 - ruby
+- programming
 title: '[GEEKY] RubyConf'
 type: wp
 wordpress_id: 644

@@ -4,6 +4,7 @@ date: '2009-04-03'
 subtitle: Check out this post Meeting24.tv Keeps Online Meetings Simple
 tags:
 - technology
+- blogging
 title: Meeting24.tv Keeps Online Meetings Simple
 type: wp
 wordpress_id: 866

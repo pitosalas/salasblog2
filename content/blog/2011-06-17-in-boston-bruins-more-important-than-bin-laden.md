@@ -4,6 +4,7 @@ date: '2011-06-17'
 subtitle: '!Compare Bin Laden to Bruins'
 tags:
 - boston
+- personal
 title: In Boston, Bruins more important than Bin Laden!
 type: wp
 wordpress_id: 545

@@ -5,6 +5,8 @@ subtitle: With all the unbelievable hoopla around the imminent release of the iP
   my thinking turns to the ...
 tags:
 - apple
+- personal
+- technology
 title: 'AAPL: Short or Long?'
 type: wp
 wordpress_id: 1250

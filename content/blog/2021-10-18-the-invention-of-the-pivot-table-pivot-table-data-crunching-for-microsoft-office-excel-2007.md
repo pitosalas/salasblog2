@@ -5,6 +5,7 @@ subtitle: The Invention of the Pivot Table | Pivot Table Data Crunching for Micr
   Office Excel 2007
 tags:
 - lotus
+- technology
 title: The Invention of the Pivot Table | Pivot Table Data Crunching for Microsoft
   Office Excel 2007
 type: wp

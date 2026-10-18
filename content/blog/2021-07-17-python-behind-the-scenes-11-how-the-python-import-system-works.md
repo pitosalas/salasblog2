@@ -4,6 +4,7 @@ date: '2021-07-17'
 subtitle: 'Python behind the scenes #11: how the Python import system works'
 tags:
 - python
+- explainer
 title: 'Python behind the scenes #11: how the Python import system works'
 type: wp
 wordpress_id: 3001

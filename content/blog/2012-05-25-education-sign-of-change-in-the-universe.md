@@ -5,6 +5,9 @@ subtitle: 'I would love to see this trend accelerate:'
 tags:
 - education
 - business
+- careers
+- startups
+- innovation
 title: '[EDUCATION] Sign of change in the universe'
 type: wp
 wordpress_id: 328

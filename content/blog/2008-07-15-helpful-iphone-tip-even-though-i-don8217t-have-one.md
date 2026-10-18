@@ -5,6 +5,8 @@ subtitle: 'I saw this somewhere and I thought I would share as it seems very use
   yet obscure:'
 tags:
 - apple
+- personal
+- technology
 title: Helpful iPhone tip (even though I don’t have one)
 type: wp
 wordpress_id: 1009

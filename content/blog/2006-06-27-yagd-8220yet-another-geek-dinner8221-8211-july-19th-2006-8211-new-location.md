@@ -5,6 +5,8 @@ subtitle: We are having another super-informal-geeky-but-not-exclusively-geeks *
   Dinner**, and we have a ...
 tags:
 - boston
+- personal
+- technology
 title: 'YAGD: “yet another geek dinner” – July 19th 2006 – NEW LOCATION'
 type: wp
 wordpress_id: 1506

@@ -2,8 +2,10 @@
 category: '298'
 date: '2005-10-19'
 subtitle: Pop!Tech is my favorite conference, and it starts tonight, in Camden Main...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- politics
+- technology
 title: Pop!Tech starts tonight
 type: wp
 wordpress_id: 1675

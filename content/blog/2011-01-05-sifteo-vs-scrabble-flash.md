@@ -4,6 +4,8 @@ date: '2011-01-05'
 subtitle: 'Scott Kirsner tweets:'
 tags:
 - technology
+- games
+- personal
 title: Sifteo vs. Scrabble Flash
 type: wp
 wordpress_id: 613

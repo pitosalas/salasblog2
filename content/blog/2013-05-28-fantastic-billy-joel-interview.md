@@ -5,6 +5,7 @@ subtitle: If you are, or ever were, a Billy Joel Fan you will really like this i
   Fascinating to read ...
 tags:
 - music
+- nyt
 title: Fantastic Billy Joel Interview
 type: wp
 wordpress_id: 197

@@ -2,8 +2,8 @@
 category: '538'
 date: '2007-09-28'
 subtitle: Finally, [welcome to the 20th century, [tag]LinkedIn[/tag]](http://www.techcrunch.com/2007/09/27/pi...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: LinkedIn has photos, finally
 type: wp
 wordpress_id: 1200

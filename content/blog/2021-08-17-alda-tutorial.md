@@ -4,6 +4,7 @@ date: '2021-08-17'
 subtitle: Alda tutorial
 tags:
 - music
+- howto
 title: Alda tutorial
 type: wp
 wordpress_id: 3031

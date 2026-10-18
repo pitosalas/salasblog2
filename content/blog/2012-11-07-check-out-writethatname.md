@@ -2,8 +2,9 @@
 category: '1'
 date: '2012-11-07'
 subtitle: I’ve been using a app called “WriteThatName
-tag_review: no_fit
-tags: []
+tags:
+- email
+- tools
 title: Check out WriteThatName
 type: wp
 wordpress_id: 270

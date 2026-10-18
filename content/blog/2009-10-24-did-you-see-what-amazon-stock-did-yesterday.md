@@ -5,6 +5,7 @@ subtitle: I have believed that Amazon is a much bigger deal than people realize.
   only are they the ultimat...
 tags:
 - business
+- personal
 title: Did you see what Amazon Stock did yesterday?
 type: wp
 wordpress_id: 786

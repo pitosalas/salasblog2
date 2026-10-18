@@ -5,6 +5,7 @@ subtitle: rubysolo/dentaku
 tags:
 - ruby
 - mathematics
+- howto
 title: rubysolo/dentaku
 type: wp
 wordpress_id: 2927

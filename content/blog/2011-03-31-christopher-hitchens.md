@@ -5,6 +5,7 @@ subtitle: 'A really excellent interview/review of Christopher Hitchens and his m
   “Hitch-22”:'
 tags:
 - books
+- personal
 title: Christopher Hitchens
 type: wp
 wordpress_id: 579

@@ -3,8 +3,8 @@ category: '298'
 date: '2009-03-24'
 subtitle: '[NASA’s online contest to name a new room at the international space station
   went awry. Comedian Ste...'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Funny: Nasa’s “Colbert Room”'
 type: wp
 wordpress_id: 868

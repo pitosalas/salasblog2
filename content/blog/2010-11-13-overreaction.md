@@ -4,6 +4,7 @@ date: '2010-11-13'
 subtitle: 'I tend to agree with this writer that:'
 tags:
 - politics
+- personal
 title: Overreaction
 type: wp
 wordpress_id: 642

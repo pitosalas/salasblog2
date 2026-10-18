@@ -6,6 +6,7 @@ subtitle: '[ Kalman Filter: An Algorithm for making sense from the insights of v
 tags:
 - robotics
 - computer-science
+- explainer
 title: 'Kalman Filter: An Algorithm for making sense from the insights of various
   sensors fused together.'
 type: wp

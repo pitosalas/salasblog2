@@ -5,6 +5,8 @@ subtitle: This post talks about the difference between owning, possessing and ac
   a book
 tags:
 - books
+- personal
+- technology
 title: Dan Lewis, on what it means to ‘own’ something
 type: wp
 wordpress_id: 770

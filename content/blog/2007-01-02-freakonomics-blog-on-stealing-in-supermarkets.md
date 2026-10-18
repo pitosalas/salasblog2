@@ -4,6 +4,7 @@ date: '2007-01-02'
 subtitle: Check out [this
 tags:
 - business
+- personal
 title: Freakonomics Blog on stealing in supermarkets
 type: wp
 wordpress_id: 1367

@@ -4,6 +4,7 @@ date: '2021-05-21'
 subtitle: Robot Web Tools
 tags:
 - robotics
+- web
 title: Robot Web Tools
 type: wp
 wordpress_id: 2908

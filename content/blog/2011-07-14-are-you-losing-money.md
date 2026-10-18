@@ -2,8 +2,8 @@
 category: '298'
 date: '2011-07-14'
 subtitle: 'From ABC News, but I’ve seen a similar story elsewhere:'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Are you losing money?
 type: wp
 wordpress_id: 534

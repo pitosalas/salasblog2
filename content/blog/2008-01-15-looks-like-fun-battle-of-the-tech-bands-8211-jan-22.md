@@ -5,6 +5,8 @@ subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/128
 tags:
 - boston
 - music
+- personal
+- technology
 title: 'Looks like fun: Battle of the Tech Bands – Jan 22'
 type: wp
 wordpress_id: 1137

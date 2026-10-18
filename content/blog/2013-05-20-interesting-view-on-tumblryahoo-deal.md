@@ -5,6 +5,8 @@ subtitle: Yahoo, Tumblr, and the Loyalty Factor – Ben Gomes-Casseres – Harva
   Review
 tags:
 - business
+- social-media
+- blogging
 title: Interesting view on Tumblr/Yahoo deal
 type: wp
 wordpress_id: 201

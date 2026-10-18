@@ -4,6 +4,8 @@ date: '2005-05-25'
 subtitle: Not that I’m an expert or anything…
 tags:
 - business
+- personal
+- technology
 title: 'VC: Rumors of its demise are probably premature'
 type: wp
 wordpress_id: 1773

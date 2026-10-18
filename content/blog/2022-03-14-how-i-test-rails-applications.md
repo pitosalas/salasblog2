@@ -4,6 +4,8 @@ date: '2022-03-14'
 subtitle: How I test Rails applications
 tags:
 - ruby
+- howto
+- software-engineering
 title: How I test Rails applications
 type: wp
 wordpress_id: 3344

@@ -5,6 +5,8 @@ subtitle: 'This article, “[Anatomy of a Trending Topic: How Twitter & the craf
   community put the smackdown ...'
 tags:
 - business
+- personal
+- social-media
 title: Urban Outfitters Rip Off Independent Artists?
 type: wp
 wordpress_id: 554

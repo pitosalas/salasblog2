@@ -4,6 +4,7 @@ date: '2022-02-03'
 subtitle: Merging data from multiple LIDAR(s) in ROS
 tags:
 - robotics
+- howto
 title: Merging data from multiple LIDAR(s) in ROS
 type: wp
 wordpress_id: 3255

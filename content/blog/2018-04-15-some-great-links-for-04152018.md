@@ -5,6 +5,7 @@ subtitle: JupyterLab is Ready for Users – Jupyter Blog
 tags:
 - python
 - ai
+- technology
 title: Some great links for  04/15/2018
 type: wp
 wordpress_id: 2223

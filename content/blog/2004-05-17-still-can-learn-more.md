@@ -4,6 +4,7 @@ date: '2004-05-17'
 subtitle: If you are doing Java programming, check out Hardcore Java
 tags:
 - programming
+- technology
 title: Still can learn more,,,
 type: wp
 wordpress_id: 2005

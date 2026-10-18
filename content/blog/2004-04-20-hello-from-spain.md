@@ -5,6 +5,7 @@ subtitle: Geeking out from an Internet Cafe in Granada, Spain. We´re here for a
   vacation, and we have a ...
 tags:
 - travel
+- personal
 title: Hello from Spain
 type: wp
 wordpress_id: 2026

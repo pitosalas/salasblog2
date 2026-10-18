@@ -5,6 +5,7 @@ subtitle: '!Wikipedia Vision'
 tags:
 - wikipedia
 - maps
+- personal
 title: Wikipedia on a map
 type: wp
 wordpress_id: 1168

@@ -2,8 +2,9 @@
 category: '249'
 date: '2021-08-12'
 subtitle: Removing sensitive data from a repository – GitHub Docs
-tag_review: no_fit
-tags: []
+tags:
+- cli
+- howto
 title: Removing sensitive data from a repository – GitHub Docs
 type: wp
 wordpress_id: 3027

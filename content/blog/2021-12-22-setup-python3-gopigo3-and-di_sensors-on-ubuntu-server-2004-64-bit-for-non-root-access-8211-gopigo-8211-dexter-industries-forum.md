@@ -6,6 +6,9 @@ subtitle: '[ Setup Python3 GoPiGo3 and DI_Sensors on Ubuntu Server 20.04 64-bit 
 tags:
 - python
 - robotics
+- howto
+- technology
+- linux
 title: Setup Python3 GoPiGo3 and DI_Sensors on Ubuntu Server 20.04 64-bit for non-root
   access – GoPiGo – Dexter Industries Forum
 type: wp

@@ -5,6 +5,7 @@ subtitle: Peggy Noonan is a great, albeit a little on the conservative side, col
   that I read whenever I ...
 tags:
 - politics
+- blogging
 title: Peggy Noonan on Media
 type: wp
 wordpress_id: 1870

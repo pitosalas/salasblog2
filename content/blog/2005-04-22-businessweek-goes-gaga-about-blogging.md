@@ -5,6 +5,8 @@ subtitle: In the continuing series of â€œthis blog things is really getting bigâ
   most recent issue of [Busi...
 tags:
 - business
+- blogging
+- technology
 title: BusinessWeek goes gaga about blogging
 type: wp
 wordpress_id: 1798

@@ -6,6 +6,8 @@ subtitle: The other day, [Amazon released a free application on the iPhone (and 
 tags:
 - apple
 - books
+- personal
+- technology
 title: Amazon’s kindle on iPhone – Genius
 type: wp
 wordpress_id: 873

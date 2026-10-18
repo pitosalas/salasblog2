@@ -5,6 +5,7 @@ subtitle: A column in the NYTimes that offers a very different perspective from 
   we might think of as the ...
 tags:
 - education
+- personal
 title: What Life Asks of Us
 type: wp
 wordpress_id: 900

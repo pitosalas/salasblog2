@@ -3,8 +3,9 @@ category: '1'
 date: '2012-01-24'
 subtitle: Do you receive tons of notification emails form your various subscriptions
   or social sites like Twit...
-tag_review: no_fit
-tags: []
+tags:
+- social-media
+- security
 title: Keeping emails and security under control
 type: wp
 wordpress_id: 409

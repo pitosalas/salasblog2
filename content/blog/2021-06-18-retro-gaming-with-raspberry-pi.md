@@ -2,8 +2,9 @@
 category: '109'
 date: '2021-06-18'
 subtitle: Retro Gaming with Raspberry Pi
-tag_review: no_fit
-tags: []
+tags:
+- howto
+- technology
 title: Retro Gaming with Raspberry Pi
 type: wp
 wordpress_id: 2965

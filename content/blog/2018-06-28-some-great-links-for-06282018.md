@@ -5,6 +5,7 @@ subtitle: '[Decoding Rails Magic: How Does ActiveJob work? â€“ Karol Galanciak â
   on Rails and Ember.js consu...'
 tags:
 - ruby
+- technology
 title: Some great links for  06/28/2018
 type: wp
 wordpress_id: 2371

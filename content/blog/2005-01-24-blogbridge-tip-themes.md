@@ -3,8 +3,8 @@ category: '50'
 date: '2005-01-24'
 subtitle: Did you know that BlogBridge has ‘themes’ ? Well today there are only two,
   but soon there will be ma...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: '[BlogBridge Tip] Themes'
 type: wp
 wordpress_id: 1864

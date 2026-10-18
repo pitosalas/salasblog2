@@ -4,6 +4,8 @@ date: '2008-04-08'
 subtitle: Last week I went to the monthly “WebInno” – web innovators group –
 tags:
 - boston
+- personal
+- technology
 title: Boston Tech Scene is cooking
 type: wp
 wordpress_id: 1071

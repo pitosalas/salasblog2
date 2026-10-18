@@ -6,6 +6,7 @@ subtitle: As you (don’t) know, I am [teaching a course at Brandeis University 
 tags:
 - technology
 - apple
+- personal
 title: Adobe Software Updates To Help Devs Build iOS, PlayBook And Android Apps
 type: wp
 wordpress_id: 544

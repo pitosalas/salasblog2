@@ -3,8 +3,8 @@ category: '1'
 date: '2012-04-14'
 subtitle: Ok, I don’t agree with all of “Don’t work. Avoid telling the truth. Be hated.
   Love someone”
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Don’t work. Avoid telling the truth. Be hated. Love someone.
 type: wp
 wordpress_id: 354

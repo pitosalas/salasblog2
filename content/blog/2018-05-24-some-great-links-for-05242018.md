@@ -4,6 +4,7 @@ date: '2018-05-24'
 subtitle: Caching in Ruby on Rails 5.2 – Ruby Inside – Medium
 tags:
 - ruby
+- technology
 title: Some great links for  05/24/2018
 type: wp
 wordpress_id: 2337

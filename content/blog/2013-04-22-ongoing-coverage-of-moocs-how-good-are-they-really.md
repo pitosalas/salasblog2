@@ -5,6 +5,7 @@ subtitle: This trend is now unstoppable – massive open online courses – or M
   are constantly in the news....
 tags:
 - education
+- nyt
 title: 'Ongoing coverage of MOOCs: How good are they really?'
 type: wp
 wordpress_id: 212

@@ -4,6 +4,7 @@ date: '2022-03-26'
 subtitle: '[ aruco/tutorials/aruco_detection/aruco_detection.markdown · 54e1b98ed694a1230086578265395e9b5c7efad...'
 tags:
 - robotics
+- howto
 title: aruco/tutorials/aruco_detection/aruco_detection.markdown · 54e1b98ed694a1230086578265395e9b5c7efada
   · Matvey Safroshkin / OSLab_aruco_calib
 type: wp

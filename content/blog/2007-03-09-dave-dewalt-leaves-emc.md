@@ -6,6 +6,8 @@ subtitle: I guess that many of you who read this blog are eRoom, Documentum and 
 tags:
 - eroom
 - business
+- personal
+- technology
 title: Dave DeWalt leaves EMC
 type: wp
 wordpress_id: 1310

@@ -6,6 +6,7 @@ subtitle: One of these two is from Apple and one is from Google. They both conta
 tags:
 - design
 - apple
+- technology
 title: These icons are too similar to be coincidences
 type: wp
 wordpress_id: 264

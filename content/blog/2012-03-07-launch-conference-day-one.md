@@ -4,6 +4,7 @@ date: '2012-03-07'
 subtitle: The Launch Conference is starting today. It is descended from many venerabl...
 tags:
 - business
+- technology
 title: 'Launch Conference: Day One'
 type: wp
 wordpress_id: 371

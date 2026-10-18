@@ -2,8 +2,8 @@
 category: '298'
 date: '2008-07-20'
 subtitle: Yeah I know all the reviews have been raving – “Best movi...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Heresy: Wall-E just so-so'
 type: wp
 wordpress_id: 1006

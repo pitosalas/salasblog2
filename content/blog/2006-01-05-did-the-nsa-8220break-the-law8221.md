@@ -5,6 +5,7 @@ subtitle: I know that this blog (Power Line) is pret...
 tags:
 - politics
 - legal
+- personal
 title: Did the NSA “break the law”?
 type: wp
 wordpress_id: 1621

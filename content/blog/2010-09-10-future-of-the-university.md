@@ -6,6 +6,7 @@ subtitle: I saw an article in the New York Times and other places about the futu
 tags:
 - education
 - brandeis
+- personal
 title: Future of the university
 type: wp
 wordpress_id: 670

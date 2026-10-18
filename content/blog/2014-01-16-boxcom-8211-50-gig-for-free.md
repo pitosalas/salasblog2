@@ -5,6 +5,7 @@ subtitle: '**Forget Dropbox**, I just heard that Box.com gives you **50gig for f
   **upon signup. I just signe...'
 tags:
 - technology
+- cli
 title: Box.com – 50 gig for free!
 type: wp
 wordpress_id: 129

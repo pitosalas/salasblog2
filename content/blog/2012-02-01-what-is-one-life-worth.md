@@ -2,8 +2,8 @@
 category: '1'
 date: '2012-02-01'
 subtitle: A fascinating article,...
-tag_review: no_fit
-tags: []
+tags:
+- science
 title: What is one life worth?
 type: wp
 wordpress_id: 402

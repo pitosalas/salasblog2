@@ -4,6 +4,7 @@ date: '2007-10-18'
 subtitle: Check out this post from Mashable!
 tags:
 - apple
+- technology
 title: 'Steve Jobs’ Change of Heart: iPhone SDK on its Way!'
 type: wp
 wordpress_id: 1193

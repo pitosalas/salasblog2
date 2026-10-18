@@ -5,6 +5,8 @@ subtitle: 'Threading in Python: The Complete Guide'
 tags:
 - python
 - programming
+- concurrency
+- howto
 title: 'Threading in Python: The Complete Guide'
 type: wp
 wordpress_id: 3440

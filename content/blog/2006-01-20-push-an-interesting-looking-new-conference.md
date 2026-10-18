@@ -3,8 +3,9 @@ category: '298'
 date: '2006-01-20'
 subtitle: I met Cecily Sommers at the Pop!Tech conference earlier this year. She heads
   up a new conference tha...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: 'Push: An interesting looking new conference'
 type: wp
 wordpress_id: 1612

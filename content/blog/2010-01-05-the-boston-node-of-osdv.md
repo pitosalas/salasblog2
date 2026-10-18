@@ -5,6 +5,12 @@ subtitle: I’ve been working quite a bit on the Open Source Digital Voting foun
   pr...
 tags:
 - boston
+- software-engineering
+- politics
+- personal
+- trustthevote
+- ruby
+- technology
 title: The Boston node of OSDV
 type: wp
 wordpress_id: 760

@@ -5,6 +5,7 @@ subtitle: If you keep up, you may have heard abou this. A new search engine comi
   from Wikipedia founder Jimm...
 tags:
 - wikipedia
+- personal
 title: New search engine from Wikipedia-land
 type: wp
 wordpress_id: 1374

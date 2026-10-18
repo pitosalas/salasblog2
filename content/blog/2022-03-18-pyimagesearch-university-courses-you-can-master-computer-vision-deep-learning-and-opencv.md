@@ -6,6 +6,8 @@ subtitle: 'PyImageSearch University Courses: You can master Computer Vision, Dee
 tags:
 - robotics
 - ai
+- education
+- computer-vision
 title: 'PyImageSearch University Courses: You can master Computer Vision, Deep Learning,
   and OpenCV'
 type: wp

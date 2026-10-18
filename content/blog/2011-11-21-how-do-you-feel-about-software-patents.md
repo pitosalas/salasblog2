@@ -5,6 +5,7 @@ subtitle: I am not dead set against software patents, although I’ve been on bo
   of the issue.
 tags:
 - legal
+- technology
 title: How do you feel about Software Patents?
 type: wp
 wordpress_id: 460

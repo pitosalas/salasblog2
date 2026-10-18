@@ -2,8 +2,8 @@
 category: '298'
 date: '2004-04-10'
 subtitle: Thanks to Chris Shipley for this link
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Your morning chuckle
 type: wp
 wordpress_id: 2031

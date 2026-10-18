@@ -2,8 +2,9 @@
 category: '298'
 date: '2006-06-18'
 subtitle: '![Dcp 1921'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Memories of OPML Camp
 type: wp
 wordpress_id: 1515

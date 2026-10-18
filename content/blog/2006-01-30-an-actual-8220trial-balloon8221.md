@@ -3,8 +3,9 @@ category: '298'
 date: '2006-01-30'
 subtitle: A company that was launched at the Demo conference (which i am going to
   this year) is deploying in N...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: An actual “trial balloon”
 type: wp
 wordpress_id: 1606

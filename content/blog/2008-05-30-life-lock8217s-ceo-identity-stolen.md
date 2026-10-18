@@ -2,8 +2,8 @@
 category: '50'
 date: '2008-05-30'
 subtitle: Check this post Life Lock’s CEO Identity Stolen
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Life Lock’s CEO Identity Stolen
 type: wp
 wordpress_id: 1037

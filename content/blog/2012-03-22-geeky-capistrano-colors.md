@@ -5,6 +5,7 @@ subtitle: 'A random, highly specific and geeky tip:'
 tags:
 - ruby
 - programming
+- technology
 title: '[GEEKY] Capistrano Colors'
 type: wp
 wordpress_id: 365

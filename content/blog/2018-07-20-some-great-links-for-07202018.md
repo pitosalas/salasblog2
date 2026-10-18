@@ -2,8 +2,8 @@
 category: '538'
 date: '2018-07-20'
 subtitle: The hotel bathroom puzzle
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Some great links for  07/20/2018
 type: wp
 wordpress_id: 2409

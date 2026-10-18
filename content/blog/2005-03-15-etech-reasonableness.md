@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-03-15'
 subtitle: A memorable quote (from George Bernard Shaw)
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: '[ETECH] Reasonableness'
 type: wp
 wordpress_id: 1827

@@ -6,6 +6,7 @@ subtitle: This article gives a [fascinating perspective on the disconnect betwee
 tags:
 - education
 - legal
+- nyt
 title: What they teach in lawschool
 type: wp
 wordpress_id: 457

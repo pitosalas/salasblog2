@@ -4,6 +4,7 @@ date: '2008-05-29'
 subtitle: 'This, from American Airlines:'
 tags:
 - travel
+- personal
 title: Why should do online check-in when flying?
 type: wp
 wordpress_id: 1038

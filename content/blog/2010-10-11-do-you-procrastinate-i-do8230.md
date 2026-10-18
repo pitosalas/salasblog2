@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-10-11'
 subtitle: Here’s an insightful New Yorker article about procrastination
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Do you procrastinate? I do…
 type: wp
 wordpress_id: 652

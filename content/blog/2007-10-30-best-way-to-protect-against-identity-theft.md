@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-10-30'
 subtitle: I’ve come across these two services, priced similarly, sound similar.
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Best way to protect against identity theft?
 type: wp
 wordpress_id: 1182

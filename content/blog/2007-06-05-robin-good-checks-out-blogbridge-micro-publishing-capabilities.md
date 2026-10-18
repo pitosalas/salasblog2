@@ -3,8 +3,9 @@ category: '51'
 date: '2007-06-05'
 subtitle: Today a major review came out in Robin Good’s influential Master New Media
   blog
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- technology
 title: Robin Good checks out BlogBridge micro publishing capabilities
 type: wp
 wordpress_id: 1259

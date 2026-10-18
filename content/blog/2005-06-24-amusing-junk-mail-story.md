@@ -2,8 +2,8 @@
 category: '298'
 date: '2005-06-24'
 subtitle: About 3 months ago I subscribed to Atlantic Magazine, which I really ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Amusing junk mail story
 type: wp
 wordpress_id: 1747

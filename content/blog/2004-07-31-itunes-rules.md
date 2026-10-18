@@ -5,6 +5,7 @@ subtitle: 'Here’s a nice bit of **civic participation**: the iTunes Music Stor
   offering single click, **FRE...'
 tags:
 - apple
+- personal
 title: iTunes Rules
 type: wp
 wordpress_id: 1959

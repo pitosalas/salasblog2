@@ -5,6 +5,7 @@ subtitle: 'An insightful article about higher education in the USA: The Disadvan
   of an Elite Education'
 tags:
 - education
+- personal
 title: Insightful article about education
 type: wp
 wordpress_id: 611

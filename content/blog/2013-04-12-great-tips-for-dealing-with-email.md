@@ -5,6 +5,8 @@ subtitle: This is a tired topic but this [article from the New York Times does h
   some good tips on managing...
 tags:
 - technology
+- email
+- nyt
 title: Great tips for dealing with email
 type: wp
 wordpress_id: 217

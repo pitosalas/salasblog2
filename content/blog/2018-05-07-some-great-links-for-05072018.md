@@ -4,6 +4,7 @@ date: '2018-05-07'
 subtitle: 'Frontier AI: How far are we from artificial “general” intelligence, really?'
 tags:
 - ai
+- technology
 title: Some great links for  05/07/2018
 type: wp
 wordpress_id: 2323

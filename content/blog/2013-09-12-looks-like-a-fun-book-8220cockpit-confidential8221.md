@@ -4,6 +4,7 @@ date: '2013-09-12'
 subtitle: The Many Mysteries of Air Travel – NYTimes.com
 tags:
 - books
+- travel
 title: 'Looks like a fun book: “Cockpit Confidential”'
 type: wp
 wordpress_id: 163

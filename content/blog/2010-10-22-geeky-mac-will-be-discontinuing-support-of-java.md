@@ -5,6 +5,9 @@ subtitle: This is a weird development. Java is a super well established language
   why would Apple decide to st...
 tags:
 - apple
+- blogging
+- programming
+- technology
 title: '[GEEKY] Mac will be discontinuing support of Java'
 type: wp
 wordpress_id: 649

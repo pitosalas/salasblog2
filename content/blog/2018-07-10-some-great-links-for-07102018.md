@@ -4,6 +4,7 @@ date: '2018-07-10'
 subtitle: LaTeX Tips n Tricks for Conference Papers
 tags:
 - ruby
+- technology
 title: Some great links for  07/10/2018
 type: wp
 wordpress_id: 2390

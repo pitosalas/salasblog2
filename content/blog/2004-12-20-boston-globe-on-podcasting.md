@@ -2,8 +2,8 @@
 category: '298'
 date: '2004-12-20'
 subtitle: The Boston Globe writes an insightful article
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Boston Globe on PodCasting
 type: wp
 wordpress_id: 1890

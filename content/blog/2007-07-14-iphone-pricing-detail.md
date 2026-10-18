@@ -5,6 +5,8 @@ subtitle: I was chatting with my neighborhood iPhone (Cingular/AT&T) dealer and 
   this interesting detai...
 tags:
 - apple
+- personal
+- technology
 title: iPhone pricing detail
 type: wp
 wordpress_id: 1240

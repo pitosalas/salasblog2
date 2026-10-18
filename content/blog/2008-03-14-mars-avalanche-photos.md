@@ -4,6 +4,8 @@ date: '2008-03-14'
 subtitle: '![](https://i0.wp.com/space.newscientist.com/data/images/ns/cms/dn13407/dn13407-1_250.jpg?w=584)'
 tags:
 - science
+- personal
+- technology
 title: Mars Avalanche photos
 type: wp
 wordpress_id: 1088

@@ -5,6 +5,7 @@ subtitle: I guess because **deep down** I am still a paranoid **Windows** user, 
   OS X is configured to **au...
 tags:
 - apple
+- technology
 title: How clever is Mac OS X?
 type: wp
 wordpress_id: 1586

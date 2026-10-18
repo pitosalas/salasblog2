@@ -5,6 +5,7 @@ subtitle: 'Chris Herot writes about a new product called RulesBase: Check out th
   post'
 tags:
 - business
+- technology
 title: Chris Herot on RulesBase
 type: wp
 wordpress_id: 1106

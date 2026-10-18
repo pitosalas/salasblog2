@@ -6,6 +6,8 @@ subtitle: Wikipedia appears to have banned all contributions and edits coming fr
 tags:
 - wikipedia
 - politics
+- personal
+- technology
 title: Interesting Wikipedia situation developing
 type: wp
 wordpress_id: 1605

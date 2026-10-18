@@ -4,6 +4,7 @@ date: '2006-06-18'
 subtitle: Guy Kawasaki — Bona tempora volvantu
 tags:
 - politics
+- blogging
 title: Cool links for June 17th
 type: wp
 wordpress_id: 1516

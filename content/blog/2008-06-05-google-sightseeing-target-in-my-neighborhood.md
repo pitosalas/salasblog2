@@ -4,6 +4,7 @@ date: '2008-06-05'
 subtitle: '!Picture 2-4'
 tags:
 - maps
+- personal
 title: 'Google Sightseeing: Target in my neighborhood'
 type: wp
 wordpress_id: 1034

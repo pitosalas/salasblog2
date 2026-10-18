@@ -5,6 +5,7 @@ subtitle: As you know, I am a big big fan of Spotify. Lately I’ve been playing
   the Last.FM integration. I...
 tags:
 - music
+- art
 title: What I want to see in Spotify
 type: wp
 wordpress_id: 389

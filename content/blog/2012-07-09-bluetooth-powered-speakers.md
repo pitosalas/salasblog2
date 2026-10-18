@@ -5,6 +5,7 @@ subtitle: I am considering these Bluetooth Wireless Powered Speakers… which sh
   I get?
 tags:
 - technology
+- apple
 title: Bluetooth Powered Speakers
 type: wp
 wordpress_id: 317

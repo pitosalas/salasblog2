@@ -4,6 +4,7 @@ date: '2022-04-02'
 subtitle: An Intuitive Guide to Linear Algebra – BetterExplained
 tags:
 - mathematics
+- explainer
 title: An Intuitive Guide to Linear Algebra – BetterExplained
 type: wp
 wordpress_id: 3410

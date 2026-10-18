@@ -2,8 +2,9 @@
 category: '51'
 date: '2005-05-11'
 subtitle: A really interesting article
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- technology
 title: Comment! Spam! Again!
 type: wp
 wordpress_id: 1787

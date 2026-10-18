@@ -4,6 +4,7 @@ date: '2013-05-01'
 subtitle: 'I picked up David Byrne’s new book: How Music Works'
 tags:
 - music
+- books
 title: Quote about improvisation (from David Byrne’s new book)
 type: wp
 wordpress_id: 208

@@ -5,6 +5,8 @@ subtitle: I came across this note that the fairly famous spat between Apple Goss
   site Think Secret and Apple...
 tags:
 - apple
+- personal
+- technology
 title: Oldish news, but interesting
 type: wp
 wordpress_id: 1104

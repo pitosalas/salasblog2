@@ -5,6 +5,8 @@ subtitle: A friend of mine has been experiencing debilitating back pain for a ye
   now. He’s seen pain special...
 tags:
 - health
+- personal
+- technology
 title: Back pain relief or fraud?
 type: wp
 wordpress_id: 1253

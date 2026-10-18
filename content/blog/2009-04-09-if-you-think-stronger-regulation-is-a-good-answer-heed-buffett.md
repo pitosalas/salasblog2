@@ -6,6 +6,8 @@ subtitle: Check out this post If you think stronger regulation is a good answer,
 tags:
 - business
 - politics
+- blogging
+- personal
 title: If you think stronger regulation is a good answer, heed Buffett
 type: wp
 wordpress_id: 860

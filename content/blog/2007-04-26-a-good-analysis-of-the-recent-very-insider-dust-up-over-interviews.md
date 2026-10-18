@@ -2,8 +2,8 @@
 category: '50'
 date: '2007-04-26'
 subtitle: Check out this post from [BuzzMachi...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: A good analysis of the recent (very insider) dust-up over interviews
 type: wp
 wordpress_id: 1281

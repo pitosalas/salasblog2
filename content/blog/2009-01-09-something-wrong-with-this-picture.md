@@ -2,8 +2,9 @@
 category: '298'
 date: '2009-01-09'
 subtitle: '!Take a close look at the url and the page'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- wsj
 title: Something wrong with this picture?
 type: wp
 wordpress_id: 911

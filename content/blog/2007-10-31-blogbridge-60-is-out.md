@@ -2,8 +2,10 @@
 category: '50'
 date: '2007-10-31'
 subtitle: We just released BlogBridge 6.0
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
+- technology
 title: BlogBridge 6.0 is out
 type: wp
 wordpress_id: 1181

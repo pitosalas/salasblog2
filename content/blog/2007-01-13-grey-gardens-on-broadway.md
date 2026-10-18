@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-01-13'
 subtitle: Here’s a show with a plot that is quite unusual, set as a m...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Grey Gardens, on broadway
 type: wp
 wordpress_id: 1354

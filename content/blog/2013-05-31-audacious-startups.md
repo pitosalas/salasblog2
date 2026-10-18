@@ -5,6 +5,7 @@ subtitle: I remember when this project was first announced and ‘PR’d. It’s
   good reminder about th...
 tags:
 - business
+- startups
 title: Audacious startups
 type: wp
 wordpress_id: 196

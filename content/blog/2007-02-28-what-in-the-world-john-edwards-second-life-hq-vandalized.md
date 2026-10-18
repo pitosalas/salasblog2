@@ -4,6 +4,7 @@ date: '2007-02-28'
 subtitle: Check out this post from [John Edwards ’08...
 tags:
 - politics
+- blogging
 title: What in the world??? John Edwards Second Life HQ vandalized.
 type: wp
 wordpress_id: 1318

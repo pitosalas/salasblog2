@@ -4,6 +4,7 @@ date: '2006-08-11'
 subtitle: Another great article in The Atlantic, Jame...
 tags:
 - politics
+- personal
 title: 'James Fallows: “The War on Terror is Over”'
 type: wp
 wordpress_id: 1457

@@ -6,6 +6,7 @@ subtitle: I went to RubyConf and heard a detailed presentation on a new possible
 tags:
 - ruby
 - programming
+- technology
 title: '[GEEKY] Ruby 2.0 Refinements in Practice'
 type: wp
 wordpress_id: 635

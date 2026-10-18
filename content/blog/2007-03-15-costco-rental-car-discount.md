@@ -5,6 +5,7 @@ subtitle: I’ve been a member of Costco for years. Yeah, you always buy more st
   th...
 tags:
 - travel
+- personal
 title: Costco rental car discount
 type: wp
 wordpress_id: 1305

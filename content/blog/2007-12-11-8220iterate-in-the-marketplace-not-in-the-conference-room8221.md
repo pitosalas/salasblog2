@@ -4,6 +4,8 @@ date: '2007-12-11'
 subtitle: Chris Herot tells the story of Convoq
 tags:
 - business
+- personal
+- technology
 title: “Iterate in the marketplace, not in the conference room”
 type: wp
 wordpress_id: 1160

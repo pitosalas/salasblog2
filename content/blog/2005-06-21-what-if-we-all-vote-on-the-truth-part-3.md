@@ -4,6 +4,8 @@ date: '2005-06-21'
 subtitle: Just a final follow up on this interesting story
 tags:
 - wikipedia
+- personal
+- politics
 title: What if we all vote on the truth, part 3
 type: wp
 wordpress_id: 1750

@@ -4,6 +4,8 @@ date: '2011-11-14'
 subtitle: I was excited to hear about the Kindle Fire.
 tags:
 - technology
+- amazon
+- books
 title: Pogue does not love the new Kindle Fire
 type: wp
 wordpress_id: 467

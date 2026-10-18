@@ -4,6 +4,9 @@ date: '2022-05-28'
 subtitle: The Practical Effects of the GVL on Scaling in Ruby
 tags:
 - ruby
+- howto
+- scalability
+- concurrency
 title: The Practical Effects of the GVL on Scaling in Ruby
 type: wp
 wordpress_id: 3470

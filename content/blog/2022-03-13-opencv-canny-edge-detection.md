@@ -5,6 +5,7 @@ subtitle: 'OpenCV: Canny Edge Detection'
 tags:
 - robotics
 - python
+- computer-vision
 title: 'OpenCV: Canny Edge Detection'
 type: wp
 wordpress_id: 3326

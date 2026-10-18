@@ -4,6 +4,7 @@ date: '2018-04-18'
 subtitle: Random Forest in Python – Towards Data Science
 tags:
 - ai
+- technology
 title: Some great links for  04/18/2018
 type: wp
 wordpress_id: 2250

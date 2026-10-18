@@ -5,6 +5,7 @@ subtitle: An interesting, quirky, though-provoking — memorable article in Wire
   Memory
 tags:
 - science
+- personal
 title: Towards better memory
 type: wp
 wordpress_id: 1005

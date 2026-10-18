@@ -4,6 +4,8 @@ date: '2021-10-14'
 subtitle: Import CSV File Into PosgreSQL Table
 tags:
 - programming
+- csv
+- database
 title: Import CSV File Into PosgreSQL Table
 type: wp
 wordpress_id: 3085

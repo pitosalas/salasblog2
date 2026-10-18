@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-12-04'
 subtitle: '!Amazing pictures'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Amazing pictures
 type: wp
 wordpress_id: 1166

@@ -4,6 +4,7 @@ date: '2005-09-13'
 subtitle: 'This is from a dictionary:'
 tags:
 - programming
+- personal
 title: 'Funny: Banana Problem'
 type: wp
 wordpress_id: 1698

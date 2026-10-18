@@ -2,8 +2,8 @@
 category: '298'
 date: '2009-05-08'
 subtitle: Check this post Thank you Jason Bay
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Manny being Manny
 type: wp
 wordpress_id: 846

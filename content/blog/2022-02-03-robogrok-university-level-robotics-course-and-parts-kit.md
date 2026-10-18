@@ -5,6 +5,7 @@ subtitle: RoboGrok University-Level Robotics Course and Parts Kit
 tags:
 - robotics
 - education
+- howto
 title: RoboGrok University-Level Robotics Course and Parts Kit
 type: wp
 wordpress_id: 3251

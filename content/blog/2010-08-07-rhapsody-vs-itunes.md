@@ -6,6 +6,9 @@ subtitle: I think I might be entering a new phase in my music listening. I liste
 tags:
 - music
 - apple
+- personal
+- business
+- technology
 title: Rhapsody vs. iTunes
 type: wp
 wordpress_id: 689

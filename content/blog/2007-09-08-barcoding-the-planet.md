@@ -4,6 +4,7 @@ date: '2007-09-08'
 subtitle: '![picture-1.png'
 tags:
 - technology
+- personal
 title: Barcoding the planet
 type: wp
 wordpress_id: 1217

@@ -4,6 +4,7 @@ date: '2021-05-06'
 subtitle: Acoustic Guitar Tuner Online | Tuning Acoustic | Fender
 tags:
 - music
+- howto
 title: Acoustic Guitar Tuner Online | Tuning Acoustic | Fender
 type: wp
 wordpress_id: 2886

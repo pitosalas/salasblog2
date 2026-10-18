@@ -5,6 +5,7 @@ subtitle: Awesome VS Code Extensions For Python
 tags:
 - cli
 - python
+- howto
 title: Awesome VS Code Extensions For Python
 type: wp
 wordpress_id: 3217

@@ -4,6 +4,8 @@ date: '2022-03-18'
 subtitle: Introduction – Docs – Foxglove Studio
 tags:
 - robotics
+- tools
+- technology
 title: Introduction – Docs – Foxglove Studio
 type: wp
 wordpress_id: 3366

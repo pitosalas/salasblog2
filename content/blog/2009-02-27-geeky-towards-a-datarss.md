@@ -3,8 +3,8 @@ category: '538'
 date: '2009-02-27'
 subtitle: I wrote this short paper to formulate some ideas that have been percolating
   in the back of my mind f...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: '[GEEKY] Towards a DataRSS'
 type: wp
 wordpress_id: 882

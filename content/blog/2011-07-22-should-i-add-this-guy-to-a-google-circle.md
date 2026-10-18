@@ -2,8 +2,10 @@
 category: '298'
 date: '2011-07-22'
 subtitle: '!Screen shot 2011 07 22 at 9 12 39 AM'
-tag_review: no_fit
-tags: []
+tags:
+- social-media
+- personal
+- technology
 title: Should I add this guy to a Google+ Circle?
 type: wp
 wordpress_id: 522

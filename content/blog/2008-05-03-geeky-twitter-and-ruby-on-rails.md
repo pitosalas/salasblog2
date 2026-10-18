@@ -4,6 +4,7 @@ date: '2008-05-03'
 subtitle: 'TechCrunch:'
 tags:
 - ruby
+- technology
 title: '[GEEKY] Twitter and Ruby on Rails'
 type: wp
 wordpress_id: 1053

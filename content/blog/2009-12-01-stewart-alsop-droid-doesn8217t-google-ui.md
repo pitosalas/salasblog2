@@ -4,6 +4,7 @@ date: '2009-12-01'
 subtitle: This is an insider’s three-fer
 tags:
 - technology
+- personal
 title: Stewart Alsop, Droid Doesn’t, Google UI
 type: wp
 wordpress_id: 771

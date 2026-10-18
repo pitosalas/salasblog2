@@ -3,8 +3,8 @@ category: '50'
 date: '2006-10-11'
 subtitle: Before I discuss this new product idea I am turning over in my mind, I want
   to say a few things abou...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: The answer is not a better RSS Aggregator
 type: wp
 wordpress_id: 1423

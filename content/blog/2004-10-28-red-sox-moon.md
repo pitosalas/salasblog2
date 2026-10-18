@@ -3,8 +3,8 @@ category: '298'
 date: '2004-10-28'
 subtitle: In honor of the **Red Sox**, the moon will turn red tonight. It will start
   melting into the dark sky...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Red Sox Moon
 type: wp
 wordpress_id: 1919

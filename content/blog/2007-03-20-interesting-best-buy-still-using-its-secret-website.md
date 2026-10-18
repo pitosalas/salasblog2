@@ -4,6 +4,7 @@ date: '2007-03-20'
 subtitle: Check out this post
 tags:
 - business
+- personal
 title: 'Interesting: Best Buy Still Using Its Secret Website'
 type: wp
 wordpress_id: 1300

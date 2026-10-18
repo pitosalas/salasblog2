@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-04-07'
 subtitle: '![Bal-825-39-S'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Amazing pictures of an old Russian Submarine Base
 type: wp
 wordpress_id: 1560

@@ -4,6 +4,7 @@ date: '2018-07-01'
 subtitle: How to Remotely Troubleshoot Your Relative’s Computer
 tags:
 - python
+- technology
 title: Some great links for  07/01/2018
 type: wp
 wordpress_id: 2380

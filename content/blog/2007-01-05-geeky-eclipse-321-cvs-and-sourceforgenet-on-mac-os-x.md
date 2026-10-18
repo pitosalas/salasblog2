@@ -6,6 +6,7 @@ subtitle: If you need this tip, it will save you a lot of time. 99% likely thoug
 tags:
 - apple
 - programming
+- technology
 title: '[GEEKY] Eclipse 3.2.1, CVS and SourceForge.net on Mac OS X'
 type: wp
 wordpress_id: 1363

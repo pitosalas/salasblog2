@@ -3,8 +3,8 @@ category: '298'
 date: '2009-01-09'
 subtitle: 'Check out this post Greg Mitchell: Bono Replacing Bill Kristol at New York
   Times?'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'I think Bono would have said: “What an honour”'
 type: wp
 wordpress_id: 910

@@ -6,6 +6,7 @@ subtitle: This link lets you see all the passages in Steve Jobs’ new biography
 tags:
 - technology
 - books
+- personal
 title: Kindle changes everything, no?
 type: wp
 wordpress_id: 478

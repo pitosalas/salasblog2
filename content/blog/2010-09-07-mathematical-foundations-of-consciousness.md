@@ -5,6 +5,9 @@ subtitle: Say what? I came across this paper; Mathematical Foundations of Consci
 tags:
 - mathematics
 - science
+- personal
+- research
+- technology
 title: Mathematical Foundations of Consciousness?
 type: wp
 wordpress_id: 673

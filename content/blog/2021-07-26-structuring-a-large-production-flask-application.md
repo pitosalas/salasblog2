@@ -4,6 +4,10 @@ date: '2021-07-26'
 subtitle: Structuring a Large Production Flask Application
 tags:
 - python
+- software-engineering
+- web
+- howto
+- scalability
 title: Structuring a Large Production Flask Application
 type: wp
 wordpress_id: 3007

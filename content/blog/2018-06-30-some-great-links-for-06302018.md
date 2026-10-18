@@ -5,6 +5,7 @@ subtitle: '[[EN][Keynote] Parallel and Thread-Safe Ruby at High-Speed with Truff
   / Benoit Daloze @eregont...'
 tags:
 - ruby
+- technology
 title: Some great links for  06/30/2018
 type: wp
 wordpress_id: 2373

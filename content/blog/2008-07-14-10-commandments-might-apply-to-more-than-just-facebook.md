@@ -2,8 +2,10 @@
 category: '50'
 date: '2008-07-14'
 subtitle: Check out these 10 Commandments for Facebook Applications
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- technology
+- politics
 title: 10 Commandments might apply to more than just Facebook!
 type: wp
 wordpress_id: 1011

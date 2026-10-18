@@ -4,6 +4,7 @@ date: '2006-05-11'
 subtitle: Our friend Dave Weinberger shares
 tags:
 - health
+- personal
 title: All you never wanted to know about colonoscopies
 type: wp
 wordpress_id: 1544

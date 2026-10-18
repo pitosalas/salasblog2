@@ -6,6 +6,8 @@ subtitle: Over the last several months I’ve been following a series of blog po
 tags:
 - computer-science
 - ruby
+- programming
+- technology
 title: '[GEEKY] Interesting collection of algorithms and great Ruby tutorial'
 type: wp
 wordpress_id: 596

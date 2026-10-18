@@ -2,8 +2,10 @@
 category: '111'
 date: '2021-08-07'
 subtitle: Getting Started on Okteto Cloud in 5 minutes | Okteto Documentation
-tag_review: no_fit
-tags: []
+tags:
+- tools
+- software-engineering
+- technology
 title: Getting Started on Okteto Cloud in 5 minutes | Okteto Documentation
 type: wp
 wordpress_id: 3017

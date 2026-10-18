@@ -6,6 +6,7 @@ subtitle: This is the Seaquarium beach area. It’s very beautiful as you can se
 tags:
 - curacao
 - travel
+- personal
 title: A nice panoramic photo of Curacao
 type: wp
 wordpress_id: 1330

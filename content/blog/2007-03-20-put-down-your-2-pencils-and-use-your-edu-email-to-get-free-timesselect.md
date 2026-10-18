@@ -2,8 +2,8 @@
 category: '298'
 date: '2007-03-20'
 subtitle: Check out this post
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'Put Down Your #2 Pencils And Use Your .EDU Email To Get Free TimesSelect'
 type: wp
 wordpress_id: 1301

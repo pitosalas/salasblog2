@@ -4,6 +4,7 @@ date: '2018-04-16'
 subtitle: Top 5 Python IDEs For Data Science (article) – DataCamp
 tags:
 - python
+- technology
 title: Some great links for  04/16/2018
 type: wp
 wordpress_id: 2240

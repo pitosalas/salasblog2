@@ -3,8 +3,9 @@ category: '298'
 date: '2008-09-02'
 subtitle: An interesting article from Bruce Schneier about why he believes that TSA
   requirement of photo IDs i...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: TSA and photo IDs
 type: wp
 wordpress_id: 982

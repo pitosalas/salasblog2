@@ -3,8 +3,8 @@ category: '298'
 date: '2007-12-14'
 subtitle: 'I discovered a new funny blog: it’s the List of Lists blog. For example,
   check out this post'
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 32 Places With Funny Names
 type: wp
 wordpress_id: 1157

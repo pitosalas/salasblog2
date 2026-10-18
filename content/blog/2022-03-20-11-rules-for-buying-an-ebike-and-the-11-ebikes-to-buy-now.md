@@ -4,6 +4,7 @@ date: '2022-03-20'
 subtitle: 11 rules for buying an ebike, and the 11 ebikes to buy now
 tags:
 - technology
+- shopping
 title: 11 rules for buying an ebike, and the 11 ebikes to buy now
 type: wp
 wordpress_id: 3370

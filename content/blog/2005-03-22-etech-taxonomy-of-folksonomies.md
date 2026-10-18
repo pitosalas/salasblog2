@@ -3,8 +3,8 @@ category: '51'
 date: '2005-03-22'
 subtitle: There’s been a lot of talk about tags, folksonomies, taxonomies, etc. Trying
   to make sense out of th...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: '[ETECH] Taxonomy of Folksonomies'
 type: wp
 wordpress_id: 1821

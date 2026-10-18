@@ -5,6 +5,7 @@ subtitle: 'Goodbye Microservices: From 100s of problem children to 1 superstar Â
   Blog'
 tags:
 - software-engineering
+- technology
 title: Some great links for  07/12/2018
 type: wp
 wordpress_id: 2392

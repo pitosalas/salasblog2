@@ -4,6 +4,9 @@ date: '2009-09-16'
 subtitle: Just found out that the WebInno group i...
 tags:
 - boston
+- startups
+- personal
+- technology
 title: Upcoming Web Innovators Group meeting
 type: wp
 wordpress_id: 801

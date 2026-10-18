@@ -5,6 +5,7 @@ subtitle: 'It’s just the title of this post that caught my eye: “[What Every
   Should Know About Memor...'
 tags:
 - programming
+- technology
 title: '[GEEKY] What every programmer should know about …'
 type: wp
 wordpress_id: 1138

@@ -3,8 +3,8 @@ category: '538'
 date: '2006-02-20'
 subtitle: Even as we speak, Mashup Camp is going on out on the West Coast. Looks like
   fun! It’s another in the...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: 'Mashup Camp: Wish I were there!'
 type: wp
 wordpress_id: 1590

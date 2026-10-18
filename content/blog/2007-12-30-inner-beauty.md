@@ -5,6 +5,7 @@ subtitle: If you know or remember the great Inner Beauty hot sauce, then you wil
   be interested in this artic...
 tags:
 - food
+- personal
 title: Inner Beauty
 type: wp
 wordpress_id: 1145

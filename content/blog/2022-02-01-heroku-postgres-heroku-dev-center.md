@@ -4,6 +4,11 @@ date: '2022-02-01'
 subtitle: Heroku Postgres | Heroku Dev Center
 tags:
 - software-engineering
+- brandeis
+- heroku
+- howto
+- scalability
+- ruby
 title: Heroku Postgres | Heroku Dev Center
 type: wp
 wordpress_id: 3247

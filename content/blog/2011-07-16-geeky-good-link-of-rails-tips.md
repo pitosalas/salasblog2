@@ -5,6 +5,7 @@ subtitle: 'Just a quick hit: Ruby on Rails tips that will male you a better prog
 tags:
 - programming
 - ruby
+- technology
 title: '[GEEKY] Good link of Rails Tips'
 type: wp
 wordpress_id: 530

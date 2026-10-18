@@ -3,8 +3,8 @@ category: '298'
 date: '2009-04-10'
 subtitle: I’ve been an American Idol fan for a while now, in fact from the very start.
   I’ve been commenting to...
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Has Paula gotten Smarter?
 type: wp
 wordpress_id: 859

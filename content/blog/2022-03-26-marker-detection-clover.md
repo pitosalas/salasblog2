@@ -4,6 +4,7 @@ date: '2022-03-26'
 subtitle: Marker detection · Clover
 tags:
 - robotics
+- howto
 title: Marker detection · Clover
 type: wp
 wordpress_id: 3388

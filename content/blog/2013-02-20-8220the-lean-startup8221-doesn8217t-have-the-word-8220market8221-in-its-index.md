@@ -6,6 +6,7 @@ subtitle: 'I am a really big fan of the book [The Lean Startup: How Today’s En
 tags:
 - business
 - education
+- startups
 title: “The Lean Startup” doesn’t have the word “market” in its index
 type: wp
 wordpress_id: 239

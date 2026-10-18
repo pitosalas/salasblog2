@@ -3,8 +3,8 @@ category: '538'
 date: '2007-04-19'
 subtitle: Ok it’s not exactly about that, but the answer to that question is answered.
   Check out this post
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Really interesting story about why good used cars don’t sell
 type: wp
 wordpress_id: 1283

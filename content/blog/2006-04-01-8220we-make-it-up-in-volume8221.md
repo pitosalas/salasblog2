@@ -4,6 +4,8 @@ date: '2006-04-01'
 subtitle: There’s a new **meme floating** around, “*...
 tags:
 - business
+- personal
+- technology
 title: “We make it up in volume”
 type: wp
 wordpress_id: 1566

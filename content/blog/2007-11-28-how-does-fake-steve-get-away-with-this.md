@@ -3,8 +3,9 @@ category: '298'
 date: '2007-11-28'
 subtitle: Everyone by now has heard that the Diary of Fake Steve Jobs is actually
   written
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: How does Fake Steve get away with this?
 type: wp
 wordpress_id: 1171

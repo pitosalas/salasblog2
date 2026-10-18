@@ -5,6 +5,7 @@ subtitle: 'Just a few handy links that, if you are a Rails developer you may be 
   in:'
 tags:
 - ruby
+- technology
 title: '[GEEKY] Some good Rails resources'
 type: wp
 wordpress_id: 1049

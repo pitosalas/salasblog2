@@ -4,6 +4,9 @@ date: '2022-01-04'
 subtitle: 'cantino/mcfly: Fly through your shell history. Great Scott!'
 tags:
 - linux
+- cli
+- history
+- tools
 title: 'cantino/mcfly: Fly through your shell history. Great Scott!'
 type: wp
 wordpress_id: 3179

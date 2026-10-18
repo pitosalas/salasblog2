@@ -5,6 +5,7 @@ subtitle: On September 11, 2007, the [tag]Boston PHP User Group[/tag] is meeting
   “Building the PHP-stack...
 tags:
 - boston
+- personal
 title: 'Announcement: September PHP User Group'
 type: wp
 wordpress_id: 1228

@@ -4,6 +4,7 @@ date: '2007-12-10'
 subtitle: You know I am a fan of Google. But lately I’ve had some conve...
 tags:
 - technology
+- personal
 title: What’s happening to Google?
 type: wp
 wordpress_id: 1161

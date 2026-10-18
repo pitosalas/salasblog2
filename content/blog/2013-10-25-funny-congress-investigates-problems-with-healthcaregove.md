@@ -4,6 +4,8 @@ date: '2013-10-25'
 subtitle: Really, this is NO JOKING MATTER
 tags:
 - politics
+- humor
+- health
 title: '[FUNNY] Congress investigates problems with healthcare.gove'
 type: wp
 wordpress_id: 146

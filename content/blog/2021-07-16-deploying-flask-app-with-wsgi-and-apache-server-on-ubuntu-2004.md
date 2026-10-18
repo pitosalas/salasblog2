@@ -4,6 +4,9 @@ date: '2021-07-16'
 subtitle: Deploying Flask App with WSGI and Apache Server on Ubuntu 20.04
 tags:
 - python
+- web
+- howto
+- linux
 title: Deploying Flask App with WSGI and Apache Server on Ubuntu 20.04
 type: wp
 wordpress_id: 2997

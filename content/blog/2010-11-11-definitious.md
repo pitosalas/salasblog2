@@ -5,6 +5,8 @@ subtitle: Check out this cool site developed by some Brandeis students who parti
 tags:
 - brandeis
 - education
+- personal
+- technology
 title: Definitious
 type: wp
 wordpress_id: 645

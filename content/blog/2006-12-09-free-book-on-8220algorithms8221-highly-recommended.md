@@ -5,6 +5,7 @@ subtitle: Check out [this
 tags:
 - computer-science
 - books
+- technology
 title: Free book on “Algorithms” highly recommended
 type: wp
 wordpress_id: 1389

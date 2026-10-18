@@ -3,8 +3,9 @@ category: '298'
 date: '2006-03-23'
 subtitle: Have you heard how Microsoft is shipping Windows **Live** and Office **Live**
   and **this-live** and ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: 'Office Live: Why am I not surprised?'
 type: wp
 wordpress_id: 1573

@@ -4,6 +4,8 @@ date: '2021-07-15'
 subtitle: How To Install the Apache Web Server on Ubuntu 20.04 | DigitalOcean
 tags:
 - linux
+- configuration
+- howto
 title: How To Install the Apache Web Server on Ubuntu 20.04 | DigitalOcean
 type: wp
 wordpress_id: 2993

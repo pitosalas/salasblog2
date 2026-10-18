@@ -5,6 +5,7 @@ subtitle: You might think it’s a bad idea for me to complain about Java Web St
   Well the truth is that I re...
 tags:
 - programming
+- technology
 title: '[GEEK] Java Web Start'
 type: wp
 wordpress_id: 1898

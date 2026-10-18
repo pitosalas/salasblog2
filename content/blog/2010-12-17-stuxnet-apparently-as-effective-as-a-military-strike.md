@@ -2,8 +2,9 @@
 category: '298'
 date: '2010-12-17'
 subtitle: Check out Stuxnet apparently as effective as a military strike
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Stuxnet apparently as effective as a military strike
 type: wp
 wordpress_id: 618

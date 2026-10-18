@@ -5,6 +5,8 @@ subtitle: Regular readers of this blog know about AllOfMp3.com, a Russian music 
 tags:
 - music
 - legal
+- personal
+- technology
 title: AllOfMp3 saga continues
 type: wp
 wordpress_id: 1264

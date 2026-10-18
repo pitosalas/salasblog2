@@ -5,6 +5,8 @@ subtitle: '![](https://i0.wp.com/farm1.static.flickr.com/95/209335822_ff4026fe2e
   other day I came...'
 tags:
 - computer-science
+- personal
+- technology
 title: Did you know what happened to Seymour Papert?
 type: wp
 wordpress_id: 1008

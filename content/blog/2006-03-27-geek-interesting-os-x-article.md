@@ -4,6 +4,7 @@ date: '2006-03-27'
 subtitle: Ever wonder how Mac’s OS X program launch and execution works? No? Hmm.
 tags:
 - apple
+- technology
 title: '[GEEK] Interesting OS X article'
 type: wp
 wordpress_id: 1569

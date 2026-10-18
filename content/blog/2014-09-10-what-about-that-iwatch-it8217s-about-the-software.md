@@ -4,6 +4,7 @@ date: '2014-09-10'
 subtitle: I’ve seen commentary that it’s “disappointingly familiar”
 tags:
 - apple
+- design
 title: What about that iWatch? It’s about the Software!
 type: wp
 wordpress_id: 11

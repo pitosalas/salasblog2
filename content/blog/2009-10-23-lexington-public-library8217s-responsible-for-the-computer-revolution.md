@@ -5,6 +5,7 @@ subtitle: Did you know of the Lexington Public Library’s role in the founding 
   (Digital Equipment Corpor...
 tags:
 - technology
+- personal
 title: Lexington Public Library’s responsible for the computer revolution?
 type: wp
 wordpress_id: 789

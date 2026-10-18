@@ -2,8 +2,8 @@
 category: '50'
 date: '2004-10-05'
 subtitle: Here’s a really cool idea (via Boing Boing – see their story
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Magic Links
 type: wp
 wordpress_id: 1931

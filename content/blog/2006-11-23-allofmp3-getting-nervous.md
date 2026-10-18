@@ -4,6 +4,8 @@ date: '2006-11-23'
 subtitle: I’ve written about AllOfMp3.com before. I can’t say other than it’s a pir...
 tags:
 - music
+- personal
+- technology
 title: AllofMp3 Getting nervous
 type: wp
 wordpress_id: 1399

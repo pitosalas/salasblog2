@@ -5,6 +5,7 @@ subtitle: When things go wrong is when you start seeing some of the disadvantage
   of being on the 5% pc platfo...
 tags:
 - apple
+- technology
 title: 'Switcher’s Log, Part 6: All is not honey and peaches in Mac OS X land'
 type: wp
 wordpress_id: 1814

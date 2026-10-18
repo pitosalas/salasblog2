@@ -4,6 +4,7 @@ date: '2007-01-15'
 subtitle: Check out [this
 tags:
 - apple
+- personal
 title: “I�_Tm going to wait for the iPhone Shuffle. You just clip it to your ear and
   call people at random.”
 type: wp

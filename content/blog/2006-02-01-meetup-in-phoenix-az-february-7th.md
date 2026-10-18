@@ -2,8 +2,9 @@
 category: '298'
 date: '2006-02-01'
 subtitle: I’m trying something – organize a bloggie meetup
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Meetup in Phoenix AZ, February 7th
 type: wp
 wordpress_id: 1604

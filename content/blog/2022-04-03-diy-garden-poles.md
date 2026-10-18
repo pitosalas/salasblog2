@@ -2,8 +2,9 @@
 category: '151'
 date: '2022-04-03'
 subtitle: DIY Garden Poles
-tag_review: no_fit
-tags: []
+tags:
+- woodworking
+- howto
 title: DIY Garden Poles
 type: wp
 wordpress_id: 3412

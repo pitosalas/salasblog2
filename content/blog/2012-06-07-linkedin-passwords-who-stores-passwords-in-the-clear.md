@@ -3,8 +3,9 @@ category: '1'
 date: '2012-06-07'
 subtitle: I am a pretty regular LinkedIn user, so the [news that some unspecified
   number of LinkedIn users had...
-tag_review: no_fit
-tags: []
+tags:
+- social-media
+- security
 title: 'LinkedIn Passwords: Who stores passwords in the clear'
 type: wp
 wordpress_id: 323

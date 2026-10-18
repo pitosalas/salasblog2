@@ -2,8 +2,10 @@
 category: '78'
 date: '2021-12-21'
 subtitle: Can I Let One Kid Play Violent Video Games and Not the Other? — The Information
-tag_review: no_fit
-tags: []
+tags:
+- education
+- games
+- video
 title: Can I Let One Kid Play Violent Video Games and Not the Other? — The Information
 type: wp
 wordpress_id: 3141

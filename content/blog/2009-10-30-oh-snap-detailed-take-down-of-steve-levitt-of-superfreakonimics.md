@@ -5,6 +5,7 @@ subtitle: I can’t vouch for the accuracy, but it is fun to see a [major league
   errupting between aca...
 tags:
 - science
+- personal
 title: Oh Snap! Detailed take down of Steve Levitt of SuperFreakonimics
 type: wp
 wordpress_id: 784

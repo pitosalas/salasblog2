@@ -3,8 +3,9 @@ category: '1'
 date: '2014-03-23'
 subtitle: I have been noticing more and more **serialized tweets**. In other words,
   someone tweets several tim...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- social-media
 title: When Twitter becomes a  blogging platform
 type: wp
 wordpress_id: 109

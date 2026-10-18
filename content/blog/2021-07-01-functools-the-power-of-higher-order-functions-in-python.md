@@ -4,6 +4,7 @@ date: '2021-07-01'
 subtitle: Functools — The Power of Higher-Order Functions in Python
 tags:
 - python
+- explainer
 title: Functools — The Power of Higher-Order Functions in Python
 type: wp
 wordpress_id: 2981

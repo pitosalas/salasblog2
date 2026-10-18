@@ -5,6 +5,7 @@ subtitle: This is too funny. Here’s a taste, but you should read the whole art
   saying [how an Israeli shou...
 tags:
 - jewish
+- personal
 title: Hilarious blog post teaching Israelis how to adapt to living in the USA
 type: wp
 wordpress_id: 560

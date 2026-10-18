@@ -4,6 +4,8 @@ date: '2005-11-21'
 subtitle: Hot news for Tivo and iPod Fans. Coming soon to a computer near you!
 tags:
 - apple
+- personal
+- technology
 title: Tivo will be able to transfer videos to Ipods… But…
 type: wp
 wordpress_id: 1648

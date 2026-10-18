@@ -4,6 +4,7 @@ date: '2004-07-10'
 subtitle: Dave Winer comments on the sale of OddPost to Yahoo. I’ve...
 tags:
 - business
+- technology
 title: Oddpost Sold to Yahoo!
 type: wp
 wordpress_id: 1967

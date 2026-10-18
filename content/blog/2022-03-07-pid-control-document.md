@@ -4,6 +4,7 @@ date: '2022-03-07'
 subtitle: Pid control document
 tags:
 - robotics
+- howto
 title: Pid control document
 type: wp
 wordpress_id: 3294

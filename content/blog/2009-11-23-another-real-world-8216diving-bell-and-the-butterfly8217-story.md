@@ -2,8 +2,8 @@
 category: '298'
 date: '2009-11-23'
 subtitle: Did you read the book “The Diving Bell and The Butterfly”
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: Another real-world ‘Diving Bell and the Butterfly’ story
 type: wp
 wordpress_id: 774

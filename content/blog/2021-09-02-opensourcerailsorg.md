@@ -4,6 +4,7 @@ date: '2021-09-02'
 subtitle: OpenSourceRails.org
 tags:
 - ruby
+- opensource
 title: OpenSourceRails.org
 type: wp
 wordpress_id: 3057

@@ -3,8 +3,9 @@ category: '1'
 date: '2012-05-03'
 subtitle: A SPANISH Teacher was explaining to her class that in Spanish, unlike English,
   nouns are designated ...
-tag_review: no_fit
-tags: []
+tags:
+- technology
+- humor
 title: 'Funny: Are computers boys or are they girls?'
 type: wp
 wordpress_id: 346

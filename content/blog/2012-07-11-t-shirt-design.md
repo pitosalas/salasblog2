@@ -5,6 +5,7 @@ subtitle: Code T-Shirt, © Pito Salas, 2012. Let me know if you want to order on
 tags:
 - design
 - personal
+- programming
 title: T-Shirt Design
 type: wp
 wordpress_id: 315

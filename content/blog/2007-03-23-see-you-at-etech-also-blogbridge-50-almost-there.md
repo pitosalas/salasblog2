@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-03-23'
 subtitle: Look for our BlogBridge Release 5.0 in the next several days. You will ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: See you at ETech! Also, BlogBridge 5.0 almost there
 type: wp
 wordpress_id: 1298

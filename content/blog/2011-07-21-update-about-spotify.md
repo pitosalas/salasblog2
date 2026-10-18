@@ -5,6 +5,7 @@ subtitle: So I have now been using Spotify for about a week after sumarily deser
   Rhapsody (no stickyness a...
 tags:
 - music
+- personal
 title: Update about Spotify
 type: wp
 wordpress_id: 524

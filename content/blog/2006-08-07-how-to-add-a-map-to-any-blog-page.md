@@ -4,6 +4,7 @@ date: '2006-08-07'
 subtitle: 'I came across this interesting bit in LifeHacker: [WikiMapia – The geo...'
 tags:
 - maps
+- personal
 title: How to add a map to any blog page
 type: wp
 wordpress_id: 1464

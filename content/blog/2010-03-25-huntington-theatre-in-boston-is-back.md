@@ -5,6 +5,7 @@ subtitle: They may not like me to say this, but as a longtime subscriber, I’ve
   very disappointed for the ...
 tags:
 - boston
+- personal
 title: Huntington Theatre in Boston IS BACK!
 type: wp
 wordpress_id: 732

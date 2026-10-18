@@ -5,6 +5,7 @@ subtitle: In the realm of interesting visualizations, check this one
 tags:
 - technology
 - programming
+- personal
 title: Incredibly cool visualizations
 type: wp
 wordpress_id: 1880

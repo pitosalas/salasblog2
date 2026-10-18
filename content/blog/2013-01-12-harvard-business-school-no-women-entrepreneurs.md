@@ -6,6 +6,8 @@ subtitle: I was surfing around preparing for my class and happened to look at [t
 tags:
 - business
 - education
+- startups
+- harvard
 title: 'Harvard Business School: No Women Entrepreneurs'
 type: wp
 wordpress_id: 256

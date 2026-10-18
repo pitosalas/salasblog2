@@ -4,6 +4,7 @@ date: '2008-02-26'
 subtitle: Here’s a new online light weight database product that picks up where QuickBase
 tags:
 - technology
+- personal
 title: Quickbase on steroids?
 type: wp
 wordpress_id: 1102

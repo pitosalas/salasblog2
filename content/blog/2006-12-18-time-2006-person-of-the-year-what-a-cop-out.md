@@ -2,8 +2,8 @@
 category: '298'
 date: '2006-12-18'
 subtitle: Time Magazine news "You?" as the person of the year? What a cop-out!
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: 'TIME 2006 Person Of The Year: What a cop out!'
 type: wp
 wordpress_id: 1381

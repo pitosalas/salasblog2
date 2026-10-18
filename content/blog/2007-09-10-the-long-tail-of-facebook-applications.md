@@ -2,8 +2,9 @@
 category: '298'
 date: '2007-09-10'
 subtitle: Check out this post about the distri...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: The Long Tail of Facebook Applications
 type: wp
 wordpress_id: 1215

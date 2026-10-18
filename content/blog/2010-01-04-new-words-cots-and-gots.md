@@ -2,8 +2,11 @@
 category: '538'
 date: '2010-01-04'
 subtitle: In my work with the Open Source Digital Voting foundation, and [TrustTheVote]...
-tag_review: no_fit
-tags: []
+tags:
+- politics
+- opensource
+- trustthevote
+- technology
 title: 'New words: COTS and GOTS'
 type: wp
 wordpress_id: 761

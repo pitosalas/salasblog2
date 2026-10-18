@@ -2,8 +2,9 @@
 category: '298'
 date: '2008-08-07'
 subtitle: '!Picture 1-43'
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- politics
 title: Why is this funny?
 type: wp
 wordpress_id: 999

@@ -4,6 +4,8 @@ date: '2022-03-07'
 subtitle: Release 2.5.0 · Shopify/ruby-style-guide
 tags:
 - ruby
+- programming
+- howto
 title: Release 2.5.0 · Shopify/ruby-style-guide
 type: wp
 wordpress_id: 3292

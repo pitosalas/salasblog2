@@ -6,6 +6,7 @@ subtitle: 'Breaking news from CNN: “Apple CEO Steve Jobs takes leave until end
 tags:
 - apple
 - health
+- personal
 title: More on Steve Jobs
 type: wp
 wordpress_id: 908

@@ -3,8 +3,9 @@ category: '298'
 date: '2008-11-24'
 subtitle: Ask The Pilot is a regular Salon column. Recently there was a good one,
   essentially about [how hard ...
-tag_review: no_fit
-tags: []
+tags:
+- personal
+- technology
 title: Ask the pilot how hard it is to fly a plane
 type: wp
 wordpress_id: 943

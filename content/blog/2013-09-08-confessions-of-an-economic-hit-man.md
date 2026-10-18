@@ -5,6 +5,7 @@ subtitle: 'You should read this book: Confessions of an Economic Hit Man'
 tags:
 - books
 - politics
+- business
 title: Confessions of an economic hit man
 type: wp
 wordpress_id: 165

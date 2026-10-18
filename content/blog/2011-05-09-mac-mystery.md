@@ -5,6 +5,7 @@ subtitle: Just reaching out you mac experts. I used to think I was one, but this
   has me stumped.
 tags:
 - apple
+- technology
 title: Mac Mystery
 type: wp
 wordpress_id: 569

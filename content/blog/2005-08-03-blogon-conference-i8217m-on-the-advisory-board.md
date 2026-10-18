@@ -2,8 +2,10 @@
 category: '51'
 date: '2005-08-03'
 subtitle: '!Blogonbuttonsm'
-tag_review: no_fit
-tags: []
+tags:
+- blogging
+- personal
+- technology
 title: 'BlogOn Conference: I’m on the advisory board'
 type: wp
 wordpress_id: 1723

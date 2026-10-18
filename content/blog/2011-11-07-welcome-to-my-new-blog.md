@@ -2,8 +2,8 @@
 category: '1'
 date: '2011-11-07'
 subtitle: So after some trouble porting the content I am now running my blog on Squarespace
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Welcome to my new blog
 type: wp
 wordpress_id: 475

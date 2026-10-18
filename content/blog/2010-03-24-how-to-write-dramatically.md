@@ -2,8 +2,8 @@
 category: '298'
 date: '2010-03-24'
 subtitle: David Mamet (supposedly) wrote this compelling note to tv writers
-tag_review: no_fit
-tags: []
+tags:
+- personal
 title: How to write dramatically
 type: wp
 wordpress_id: 733

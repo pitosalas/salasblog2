@@ -4,6 +4,9 @@ date: '2012-02-17'
 subtitle: 'Great review article:'
 tags:
 - computer-science
+- technology
+- programming
+- scalability
 title: MapReduce Patterns and Examples
 type: wp
 wordpress_id: 388

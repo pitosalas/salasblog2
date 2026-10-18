@@ -5,6 +5,7 @@ subtitle: Top 8 Data Structures for Coding Interviews and practice interview que
 tags:
 - computer-science
 - ai
+- technology
 title: Some great links for  07/17/2018
 type: wp
 wordpress_id: 2403

@@ -6,6 +6,7 @@ subtitle: 'Check out this really interesting [Pogue article in the New York Time
 tags:
 - technology
 - apple
+- personal
 title: Do you need to keep your cell phone in a protective case?
 type: wp
 wordpress_id: 626

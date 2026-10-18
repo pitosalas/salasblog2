@@ -2,8 +2,8 @@
 category: '50'
 date: '2004-06-06'
 subtitle: We are busy getting BlogBridge ready for beta (send email if you want t...
-tag_review: no_fit
-tags: []
+tags:
+- blogging
 title: Cross Platform, for real!
 type: wp
 wordpress_id: 1987

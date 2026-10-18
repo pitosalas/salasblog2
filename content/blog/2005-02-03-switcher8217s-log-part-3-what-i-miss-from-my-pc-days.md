@@ -5,6 +5,7 @@ subtitle: In the continuing saga of the switch from Windows XP to Mac OS X, here
   where we find our hero….
 tags:
 - apple
+- technology
 title: 'Switcher’s Log, Part 3: What I miss from my PC Days'
 type: wp
 wordpress_id: 1856

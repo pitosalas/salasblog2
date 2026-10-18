@@ -2,8 +2,9 @@
 category: '64'
 date: '2021-11-20'
 subtitle: Caddx Peanut Action Camera
-tag_review: no_fit
-tags: []
+tags:
+- photography
+- robotics
 title: Caddx Peanut Action Camera
 type: wp
 wordpress_id: 3115

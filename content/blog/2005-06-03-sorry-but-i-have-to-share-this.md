@@ -2,8 +2,8 @@
 category: '538'
 date: '2005-06-03'
 subtitle: What system is this from?
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Sorry, but I have to share this
 type: wp
 wordpress_id: 1769

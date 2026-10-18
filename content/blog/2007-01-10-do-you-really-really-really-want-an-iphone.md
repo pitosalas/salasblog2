@@ -4,6 +4,7 @@ date: '2007-01-10'
 subtitle: Check out [this
 tags:
 - apple
+- personal
 title: Do you really really really want an iPhone?
 type: wp
 wordpress_id: 1357

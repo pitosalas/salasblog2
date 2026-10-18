@@ -5,6 +5,7 @@ subtitle: I just saw references to these two books. I am putting them on my read
   list.
 tags:
 - books
+- personal
 title: These look like interesting books
 type: wp
 wordpress_id: 1767

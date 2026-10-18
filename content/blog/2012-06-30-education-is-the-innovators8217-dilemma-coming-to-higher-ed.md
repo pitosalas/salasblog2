@@ -5,6 +5,8 @@ subtitle: 'An interesting fact:'
 tags:
 - education
 - business
+- brandeis
+- harvard
 title: '[EDUCATION] Is the innovators’ dilemma coming to higher ed?'
 type: wp
 wordpress_id: 319

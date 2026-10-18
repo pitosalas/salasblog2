@@ -3,8 +3,8 @@ category: '538'
 date: '2007-04-20'
 subtitle: I’ve been setting up a new Windows Vista notebook over the last few days
   for use by a non technical ...
-tag_review: no_fit
-tags: []
+tags:
+- technology
 title: Steve Balmer read my blog (in my dream)
 type: wp
 wordpress_id: 1282

@@ -4,6 +4,7 @@ date: '2005-04-05'
 subtitle: '![Picture 1-2'
 tags:
 - maps
+- personal
 title: Wow! Google rocks!
 type: wp
 wordpress_id: 1809

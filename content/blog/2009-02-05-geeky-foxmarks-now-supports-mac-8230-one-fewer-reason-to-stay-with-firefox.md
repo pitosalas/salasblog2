@@ -6,6 +6,7 @@ subtitle: I read in [Personal Technology (Wall Street Journal) today that Foxmar
 tags:
 - technology
 - apple
+- blogging
 title: '[GEEKY] Foxmarks now supports Mac … one fewer reason to stay with Firefox'
 type: wp
 wordpress_id: 895
