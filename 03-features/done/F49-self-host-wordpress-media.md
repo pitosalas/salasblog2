@@ -1,10 +1,10 @@
 # F49 — Self-host WordPress-era Images
 **Priority**: Medium
 **Date Created:** 2026-10-18
-**Done:** no
+**Done:** yes
 **Tasks File Created:** yes
-**Tests Written:** no
-**Test Passing:** no
+**Tests Written:** yes
+**Test Passing:** yes
 **Description**: Old posts imported from the WordPress.com blog embed images
 through WordPress's `i0.wp.com` proxy. The originals on
 `salas.com/wp-content/uploads/` no longer exist, so these images are broken.

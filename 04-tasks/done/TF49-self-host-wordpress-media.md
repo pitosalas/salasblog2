@@ -62,7 +62,7 @@ then a full-suite run.
 
 ## TF49.4 — Production run
 
-**Status**: not done
+**Status**: done
 
 **Description**:
 
@@ -81,3 +81,21 @@ then a full-suite run.
 
 **Test**: manual. Record the command, the counts, and which posts were
 checked.
+
+**Result (2026-10-18)**:
+
+* `bg wp-media --extract` copied all 110 tar files (30 MB) into
+  `static/images/wp/`. They were committed in `51e68a0b` and deployed.
+* `https://salasblog2.fly.dev/static/images/wp/2014/08/f41d7-1407946425174.jpg`
+  returned 200 after the deploy.
+* On production:
+  `bg wp-media --content /data/content --media-dir /app/static/images/wp --apply`
+  rewrote **72 links**. The dry run beforehand gave the same count.
+* 4 links were left unmatched. They are 2023-07 screenshots that aren't in
+  the tar, and their old URLs return 404.
+* The site was regenerated with `bg generate`, and `sync_to_github()`
+  returned True.
+* Sync commit `ac9c3d93` changed 57 posts, 67 lines each way. Every
+  changed line is an image-URL line; nothing else changed.
+* Spot-checked three live posts (`2018-04-05-useful`, `2014-08-23-haven…`,
+  `2014-08-12-…rotisserie-chickens…`). Each repaired image returns 200.
