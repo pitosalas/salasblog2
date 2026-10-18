@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # test_generator.py — Tests for SiteGenerator
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
 
 import json
 import os
+from unittest.mock import patch
 
 
 def make_blog_post(directory, filename, title, date, content="Post body."):
@@ -642,6 +643,16 @@ class TestGapFreeStaticCopy:
         assert not (g.output_dir / "static" / "old.css").exists()
         assert not (g.output_dir / "static.new").exists()
         assert not (g.output_dir / "static.old").exists()
+
+    def test_copy_never_renames_the_static_directory(self, generator, tmp_path):
+        """Regression: production's overlay filesystem refuses to rename
+        image-layer directories (EXDEV), so the copy must update in place."""
+        g = generator
+        wire_small_site(g, tmp_path)
+        (g.output_dir / "static").mkdir()
+        with patch("pathlib.Path.rename", side_effect=OSError(18, "EXDEV")):
+            g.copy_static_files()
+        assert (g.output_dir / "static" / "site.css").exists()
 
     def test_leftover_staging_dirs_from_interrupted_run(self, generator, tmp_path):
         g = generator

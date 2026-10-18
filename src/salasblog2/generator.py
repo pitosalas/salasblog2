@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # generator — Static site generator: renders markdown+frontmatter content into HTML
 # Author: Pito Salas and Claude Code
-# Version: 5
+# Version: 6
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -251,38 +251,45 @@ class SiteGenerator:
     def copy_static_files(self):
         """Copy static files to output directory.
 
-        Builds the new tree beside the live one and swaps it in with two
-        renames, so pages served mid-regeneration never lose their CSS/JS.
+        Updates the live tree in place (copy over, then delete what's no
+        longer in the source) so pages served mid-regeneration never lose
+        their CSS/JS. A build-and-rename swap isn't possible: in the Docker
+        overlay filesystem, directories from the image layer can't be renamed.
         """
         static_output_dir = self.output_dir / "static"
-        staging_dir = self.output_dir / "static.new"
-        retired_dir = self.output_dir / "static.old"
-        for leftover in (staging_dir, retired_dir):
-            if leftover.exists():
-                shutil.rmtree(leftover)
+        for leftover in ("static.new", "static.old"):
+            if (self.output_dir / leftover).exists():
+                shutil.rmtree(self.output_dir / leftover)
+        static_output_dir.mkdir(exist_ok=True)
 
+        expected: set[Path] = set()
         if self.static_dir.exists():
-            shutil.copytree(self.static_dir, staging_dir)
+            shutil.copytree(self.static_dir, static_output_dir, dirs_exist_ok=True)
+            expected |= {
+                p.relative_to(self.static_dir)
+                for p in self.static_dir.rglob("*")
+                if p.is_file()
+            }
             print("✓ Copied static files")
         else:
-            staging_dir.mkdir()
             print("⚠️  No static files found")
 
         # Merge uploaded images from volume (survive redeploys)
         volume_uploads = Path("/data/static/images/uploads")
         if volume_uploads.exists():
-            output_uploads = staging_dir / "images" / "uploads"
+            output_uploads = static_output_dir / "images" / "uploads"
             output_uploads.mkdir(parents=True, exist_ok=True)
             for f in volume_uploads.iterdir():
                 if f.is_file():
                     shutil.copy2(f, output_uploads / f.name)
+                    expected.add(Path("images") / "uploads" / f.name)
             print("✓ Restored uploaded images from volume")
 
-        if static_output_dir.exists():
-            static_output_dir.rename(retired_dir)
-        staging_dir.rename(static_output_dir)
-        if retired_dir.exists():
-            shutil.rmtree(retired_dir)
+        for path in sorted(static_output_dir.rglob("*"), reverse=True):
+            if path.is_file() and path.relative_to(static_output_dir) not in expected:
+                path.unlink()
+            elif path.is_dir() and not any(path.iterdir()):
+                path.rmdir()
 
     def prune_stale_pages(self, run_started: float) -> list[Path]:
         """Delete generated pages this run didn't write.
