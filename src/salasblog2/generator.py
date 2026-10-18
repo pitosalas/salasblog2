@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # generator — Static site generator: renders markdown+frontmatter content into HTML
 # Author: Pito Salas and Claude Code
-# Version: 4
+# Version: 5
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -13,6 +13,7 @@ import json
 import os
 import shutil
 import subprocess
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -34,6 +35,12 @@ from salasblog2.utils import (
     slugify_tag,
     sort_posts_by_date,
 )
+
+# Output directories a full regeneration owns completely; stale pages there
+# are pruned. Root-level output (caches, stats, page HTML) is never pruned.
+PRUNED_OUTPUT_DIRS = ("blog", "raindrops", "tags")
+# Allows for coarse filesystem timestamps when comparing to the run start.
+MTIME_SLACK_SECONDS = 2
 
 
 class SiteGenerator:
@@ -242,29 +249,62 @@ class SiteGenerator:
             # Continue without 404 page - server will use fallback
 
     def copy_static_files(self):
-        """Copy static files to output directory"""
+        """Copy static files to output directory.
+
+        Builds the new tree beside the live one and swaps it in with two
+        renames, so pages served mid-regeneration never lose their CSS/JS.
+        """
         static_output_dir = self.output_dir / "static"
+        staging_dir = self.output_dir / "static.new"
+        retired_dir = self.output_dir / "static.old"
+        for leftover in (staging_dir, retired_dir):
+            if leftover.exists():
+                shutil.rmtree(leftover)
 
-        # Remove existing static directory
-        if static_output_dir.exists():
-            shutil.rmtree(static_output_dir)
-
-        # Copy static files
         if self.static_dir.exists():
-            shutil.copytree(self.static_dir, static_output_dir)
+            shutil.copytree(self.static_dir, staging_dir)
             print("✓ Copied static files")
         else:
+            staging_dir.mkdir()
             print("⚠️  No static files found")
 
         # Merge uploaded images from volume (survive redeploys)
         volume_uploads = Path("/data/static/images/uploads")
         if volume_uploads.exists():
-            output_uploads = static_output_dir / "images" / "uploads"
+            output_uploads = staging_dir / "images" / "uploads"
             output_uploads.mkdir(parents=True, exist_ok=True)
             for f in volume_uploads.iterdir():
                 if f.is_file():
                     shutil.copy2(f, output_uploads / f.name)
             print("✓ Restored uploaded images from volume")
+
+        if static_output_dir.exists():
+            static_output_dir.rename(retired_dir)
+        staging_dir.rename(static_output_dir)
+        if retired_dir.exists():
+            shutil.rmtree(retired_dir)
+
+    def prune_stale_pages(self, run_started: float) -> list[Path]:
+        """Delete generated pages this run didn't write.
+
+        Full regeneration rewrites every page unconditionally, so in the
+        directories it owns any `.html` older than `run_started` belongs to a
+        source that no longer exists. Root-level output is never touched.
+        Returns the removed paths.
+        """
+        removed = []
+        for subdir in PRUNED_OUTPUT_DIRS:
+            root = self.output_dir / subdir
+            if not root.exists():
+                continue
+            for html_file in root.rglob("*.html"):
+                if html_file.stat().st_mtime < run_started:
+                    html_file.unlink()
+                    removed.append(html_file)
+            for directory in sorted(root.rglob("*"), reverse=True):
+                if directory.is_dir() and not any(directory.iterdir()):
+                    directory.rmdir()
+        return removed
 
     def render_template(self, template_name, context):
         """Render a Jinja2 template with context"""
@@ -676,6 +716,7 @@ class SiteGenerator:
         # Create output directory
         self.output_dir.mkdir(exist_ok=True)
         print("✓ Created output directory")
+        run_started = time.time() - MTIME_SLACK_SECONDS
 
         # Load all content
         print("📖 Loading content...")
@@ -751,6 +792,9 @@ class SiteGenerator:
         print("📋 Copying static files...")
         self.copy_static_files()
         print()
+
+        removed = self.prune_stale_pages(run_started)
+        print(f"🧹 Removed {len(removed)} stale pages")
 
         total_files = len(blog_posts) + len(raindrops) + len(pages)
         print("✅ Site generation complete!")

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # scheduler — Background thread scheduling periodic GitHub and Raindrop.io sync
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -241,18 +241,22 @@ class Scheduler:
                 logger.warning("RAINDROP_TOKEN not configured, skipping raindrop sync")
                 return False
 
-            # Download new raindrops
             downloader = RaindropDownloader()
+            # Deletions first: if the full ID fetch fails, nothing has changed.
+            deleted_files = downloader.remove_deleted_raindrops()
             created_files = downloader.download_raindrops(reset=False, count=None)
 
-            if not created_files:
-                logger.info("No new raindrops to sync")
+            if not created_files and not deleted_files:
+                logger.info("No raindrop changes to sync")
                 return True
 
-            logger.info(f"Downloaded {len(created_files)} new raindrops")
+            logger.info(
+                f"Downloaded {len(created_files or [])} new raindrops, "
+                f"removed {len(deleted_files)} deleted on Raindrop.io"
+            )
 
-            # Regenerate site to include new raindrops
-            logger.info("Regenerating site with new raindrops...")
+            # Full regeneration also prunes pages of removed raindrops
+            logger.info("Regenerating site with raindrop changes...")
             generator = SiteGenerator()
             generator.generate_site()
 

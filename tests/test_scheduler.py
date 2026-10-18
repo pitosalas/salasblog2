@@ -403,12 +403,44 @@ class TestScheduler:
             patch("salasblog2.scheduler.RaindropDownloader") as mock_downloader,
         ):
             mock_instance = Mock()
+            mock_instance.remove_deleted_raindrops.return_value = []
             mock_instance.download_raindrops.return_value = []
             mock_downloader.return_value = mock_instance
 
             result = await scheduler.sync_raindrops()
 
             assert result is True
+
+    @pytest.mark.asyncio
+    async def test_sync_raindrops_regenerates_after_deletions_only(self, scheduler):
+        """F53: a bookmark deleted on Raindrop.io must reach the site even
+        when nothing new was downloaded."""
+        with (
+            patch.dict(os.environ, {"RAINDROP_TOKEN": "fake_token"}),
+            patch("salasblog2.scheduler.RaindropDownloader") as mock_downloader,
+            patch("salasblog2.scheduler.SiteGenerator") as mock_generator,
+        ):
+            mock_instance = Mock()
+            mock_instance.remove_deleted_raindrops.return_value = ["gone.md"]
+            mock_instance.download_raindrops.return_value = []
+            mock_downloader.return_value = mock_instance
+
+            assert await scheduler.sync_raindrops() is True
+            assert mock_generator.return_value.generate_site.called
+
+    @pytest.mark.asyncio
+    async def test_sync_raindrops_stops_when_deletion_check_fails(self, scheduler):
+        """F53: a failed full-ID fetch must stop the sync before any change."""
+        with (
+            patch.dict(os.environ, {"RAINDROP_TOKEN": "fake_token"}),
+            patch("salasblog2.scheduler.RaindropDownloader") as mock_downloader,
+        ):
+            mock_instance = Mock()
+            mock_instance.remove_deleted_raindrops.side_effect = RuntimeError("503")
+            mock_downloader.return_value = mock_instance
+
+            assert await scheduler.sync_raindrops() is False
+            mock_instance.download_raindrops.assert_not_called()
 
     @pytest.mark.asyncio
     async def test_sync_raindrops_success(self, scheduler):
@@ -419,6 +451,7 @@ class TestScheduler:
             patch("salasblog2.scheduler.SiteGenerator") as mock_generator,
         ):
             mock_dl_instance = Mock()
+            mock_dl_instance.remove_deleted_raindrops.return_value = []
             mock_dl_instance.download_raindrops.return_value = ["file1.md", "file2.md"]
             mock_downloader.return_value = mock_dl_instance
 

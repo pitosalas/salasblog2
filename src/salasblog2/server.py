@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 7
+# Version: 8
 # Created: 2026-09-08
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -1762,17 +1762,41 @@ async def sync_raindrops(request: Request):
     def do_sync():
         sync_status["running"] = True
         sync_status["message"] = "Downloading raindrops..."
+        try:
+            result = sync_and_regenerate()
+            sync_status["message"] = result["message"]
+            return result
+        except Exception as e:
+            logging.getLogger(__name__).exception("Raindrop sync failed")
+            sync_status["message"] = f"Raindrop sync failed: {e}"
+            raise
+        finally:
+            sync_status["running"] = False
 
-        # Download new raindrops
+    def sync_and_regenerate():
         downloader = RaindropDownloader()
+        # Deletions first: if the full ID fetch fails, nothing has changed.
+        deleted_filenames = downloader.remove_deleted_raindrops()
         new_filenames = downloader.download_raindrops()
 
         logging.getLogger(__name__).info(
-            f"Sync result: new_filenames = {new_filenames}"
+            f"Sync result: new_filenames = {new_filenames}, "
+            f"deleted_filenames = {deleted_filenames}"
         )
 
-        # Only regenerate if there are new raindrops
-        if new_filenames:
+        if deleted_filenames:
+            # Full regeneration prunes the removed raindrops' pages
+            sync_status["message"] = (
+                f"Removing {len(deleted_filenames)} raindrops deleted on "
+                "Raindrop.io and regenerating site..."
+            )
+            SiteGenerator().generate_site()
+            result = {
+                "status": "success",
+                "message": f"Synced {len(new_filenames or [])} new and removed "
+                f"{len(deleted_filenames)} deleted raindrops; regenerated site",
+            }
+        elif new_filenames:
             logging.getLogger(__name__).info(
                 f"Processing {len(new_filenames)} new raindrops"
             )
@@ -1813,8 +1837,6 @@ async def sync_raindrops(request: Request):
         else:
             result = {"status": "success", "message": "No new raindrops to sync"}
 
-        sync_status["running"] = False
-        sync_status["message"] = result["message"]
         return result
 
     # Check if already running

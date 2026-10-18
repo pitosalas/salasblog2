@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # raindrop — Raindrop.io API client: syncs bookmarks into markdown+frontmatter content
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-18
 # Open Source Under MIT license
 """
 Raindrop.io integration for downloading bookmarks and converting to markdown.
@@ -15,6 +15,7 @@ import shutil
 from datetime import datetime
 from pathlib import Path
 
+import frontmatter
 import requests
 from dotenv import load_dotenv
 
@@ -241,6 +242,40 @@ class RaindropDownloader:
         print(f"Total raindrops fetched: {len(all_raindrops)}")
         return all_raindrops
 
+    def fetch_all_ids(self) -> set[str]:
+        """Every current bookmark ID on Raindrop.io (trash excluded).
+
+        Unlike `fetch_raindrops`, a failed page raises instead of returning
+        what was fetched so far: callers use the result to decide what was
+        deleted, and a partial list would look like mass deletion.
+        """
+        ids: set[str] = set()
+        page = 0
+        while True:
+            raindrops = self._fetch_page(page, DEFAULT_PAGE_SIZE)
+            if not raindrops:
+                return ids
+            ids.update(str(r["_id"]) for r in raindrops)
+            page += 1
+
+    def remove_deleted_raindrops(self) -> list[str]:
+        """Delete local raindrops whose bookmark no longer exists on
+        Raindrop.io, and forget their IDs in the cache. Returns the removed
+        filenames; the caller regenerates the site."""
+        remote_ids = self.fetch_all_ids()
+        if not remote_ids:
+            raise ValueError("Raindrop.io returned no bookmarks; refusing to delete")
+        local_ids = local_raindrop_ids(self.drops_dir)
+        deleted = select_deleted_raindrops(local_ids, remote_ids)
+        for filename in deleted:
+            (self.drops_dir / filename).unlink()
+            print(f"Removed raindrop deleted on Raindrop.io: {filename}")
+        if deleted:
+            cache = self.load_cache()
+            cache["downloaded"] -= {local_ids[name] for name in deleted}
+            self.save_cache(cache)
+        return deleted
+
     def reset_data(self):
         """Delete all raindrops and cache to start fresh"""
         if self.drops_dir.exists():
@@ -383,3 +418,27 @@ class RaindropDownloader:
         except Exception as e:
             print(f"Error downloading raindrops: {e}")
             return []
+
+
+def local_raindrop_ids(drops_dir: Path) -> dict[str, str | None]:
+    """Map each raindrop file's name to its `raindrop_id`, or None if it has
+    none."""
+    ids = {}
+    for md_file in sorted(drops_dir.glob("*.md")):
+        raindrop_id = frontmatter.load(md_file).metadata.get("raindrop_id")
+        ids[md_file.name] = str(raindrop_id) if raindrop_id else None
+    return ids
+
+
+def select_deleted_raindrops(
+    local_ids: dict[str, str | None], remote_ids: set[str]
+) -> list[str]:
+    """Filenames whose raindrop ID is no longer on Raindrop.io. A file with no
+    ID is never selected, since there is nothing to check it against."""
+    deleted = []
+    for filename, raindrop_id in local_ids.items():
+        if raindrop_id is None:
+            print(f"Warning: {filename} has no raindrop_id; leaving it")
+        elif raindrop_id not in remote_ids:
+            deleted.append(filename)
+    return deleted

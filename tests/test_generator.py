@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # test_generator.py — Tests for SiteGenerator
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
 
 import json
+import os
 
 
 def make_blog_post(directory, filename, title, date, content="Post body."):
@@ -589,3 +590,65 @@ class TestNewPostAppearsOnHomePage:
 
         html = (g.output_dir / "index.html").read_text()
         assert "Brand New Post" in html
+
+
+def wire_small_site(g, tmp_path):
+    for name in ("blog", "raindrops", "pages", "static"):
+        (tmp_path / name).mkdir()
+    g.blog_dir = tmp_path / "blog"
+    g.raindrops_dir = tmp_path / "raindrops"
+    g.pages_dir = tmp_path / "pages"
+    g.static_dir = tmp_path / "static"
+    (g.static_dir / "site.css").write_text("body {}")
+    make_blog_post(g.blog_dir, "2025-03-01-hello.md", "Hello Post", "2025-03-01")
+    make_raindrop(g.raindrops_dir, "25-03-02-1-link.md", "A Link", "2025-03-02")
+
+
+def write_stale(path):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("<html>stale</html>")
+    os.utime(path, (1_000_000_000, 1_000_000_000))
+
+
+class TestPruneStalePages:
+    """F53: full regeneration removes pages whose source no longer exists."""
+
+    def test_stale_pages_removed_current_and_root_files_kept(self, generator, tmp_path):
+        g = generator
+        wire_small_site(g, tmp_path)
+        out = g.output_dir
+        write_stale(out / "blog" / "2001-01-01-deleted.html")
+        write_stale(out / "raindrops" / "01-01-01-1-deleted.html")
+        write_stale(out / "tags" / "obsolete-tag" / "index.html")
+        write_stale(out / "admin-stats.html")
+
+        g.generate_site()
+
+        assert not (out / "blog" / "2001-01-01-deleted.html").exists()
+        assert not (out / "raindrops" / "01-01-01-1-deleted.html").exists()
+        assert not (out / "tags" / "obsolete-tag").exists()
+        assert (out / "admin-stats.html").exists()
+        assert (out / "blog" / "2025-03-01-hello.html").exists()
+        assert (out / "raindrops" / "25-03-02-1-link.html").exists()
+
+
+class TestGapFreeStaticCopy:
+    def test_copy_replaces_static_and_leaves_no_staging_dirs(self, generator, tmp_path):
+        g = generator
+        wire_small_site(g, tmp_path)
+        write_stale(g.output_dir / "static" / "old.css")
+        g.copy_static_files()
+        assert (g.output_dir / "static" / "site.css").exists()
+        assert not (g.output_dir / "static" / "old.css").exists()
+        assert not (g.output_dir / "static.new").exists()
+        assert not (g.output_dir / "static.old").exists()
+
+    def test_leftover_staging_dirs_from_interrupted_run(self, generator, tmp_path):
+        g = generator
+        wire_small_site(g, tmp_path)
+        write_stale(g.output_dir / "static.old" / "x.css")
+        write_stale(g.output_dir / "static.new" / "y.css")
+        g.copy_static_files()
+        assert (g.output_dir / "static" / "site.css").exists()
+        assert not (g.output_dir / "static" / "y.css").exists()
+        assert not (g.output_dir / "static.old").exists()
