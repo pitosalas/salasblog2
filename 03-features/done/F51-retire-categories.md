@@ -1,10 +1,10 @@
 # F51 — Retire Post Categories
 **Priority**: Low
 **Date Created:** 2026-10-18
-**Done:** no
+**Done:** yes
 **Tasks File Created:** yes
-**Tests Written:** no
-**Test Passing:** no
+**Tests Written:** yes
+**Test Passing:** yes
 **Description**: Remove the `category` field from the blog. Tags take over
 everything it was for.
 

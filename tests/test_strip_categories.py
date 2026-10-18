@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # test_strip_categories — Tests for removing the retired category frontmatter line
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-18
 # Updated: 2026-10-18
 
@@ -71,3 +71,18 @@ def test_command_apply_strips(tmp_path):
     cmd_strip_categories(Namespace(content=str(tmp_path), apply=True))
     assert (blog / "a.md").read_text() == "---\ntitle: A\n---\nA\n"
     assert (blog / "b.md").read_text() == "---\ntitle: B\n---\nB\n"
+
+
+def test_crlf_and_mixed_line_endings_are_preserved():
+    """Regression: the first production run turned CRLF files into LF."""
+    text = "---\r\ntitle: T\r\ncategory: '1'\r\ntags: []\n---\r\nLine one\r\nLine two\n"
+    assert remove_frontmatter_key(text, "category") == (
+        "---\r\ntitle: T\r\ntags: []\n---\r\nLine one\r\nLine two\n"
+    )
+
+
+def test_command_preserves_crlf_on_disk(tmp_path):
+    blog = make_content(tmp_path)
+    (blog / "c.md").write_bytes(b"---\r\ntitle: C\r\ncategory: '1'\r\n---\r\nC\r\n")
+    cmd_strip_categories(Namespace(content=str(tmp_path), apply=True))
+    assert (blog / "c.md").read_bytes() == b"---\r\ntitle: C\r\n---\r\nC\r\n"

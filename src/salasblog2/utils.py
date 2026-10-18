@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 9
+# Version: 10
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -158,19 +158,24 @@ def split_frontmatter(text: str) -> tuple[str, str]:
 
 def remove_frontmatter_key(text: str, key: str) -> str:
     """Return `text` with the single-line top-level `key:` entry removed from
-    its frontmatter, every other byte unchanged. Raises if the value spans
-    more than one line, rather than guessing where it ends."""
-    frontmatter_block, body = split_frontmatter(text)
-    lines = frontmatter_block.split("\n")
-    kept = []
-    for i, line in enumerate(lines):
+    its frontmatter, every other byte unchanged - including each line's own
+    ending, so CRLF and mixed-ending files survive. Raises if the value
+    spans more than one line, rather than guessing where it ends."""
+    lines = text.splitlines(keepends=True)
+    if not lines or lines[0].rstrip("\r\n") != "---":
+        return text
+    kept = [lines[0]]
+    for i in range(1, len(lines)):
+        line = lines[i]
+        if line.rstrip("\r\n") == "---":
+            return "".join(kept + lines[i:])
         if not line.startswith(f"{key}:"):
             kept.append(line)
             continue
         next_line = lines[i + 1] if i + 1 < len(lines) else ""
-        if next_line.startswith((" ", "\t", "-")) and next_line != "---":
+        if next_line.startswith((" ", "\t", "-")) and next_line.rstrip("\r\n") != "---":
             raise ValueError(f"multi-line {key!r} value in frontmatter")
-    return "\n".join(kept) + body
+    raise ValueError("frontmatter opened with --- but never closed")
 
 
 def _parse_iso_date(date_str: str | None) -> datetime | None:

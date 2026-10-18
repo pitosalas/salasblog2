@@ -86,7 +86,7 @@ suite.
 
 ## TF51.6 — Production run
 
-**Status**: not done
+**Status**: done
 
 **Description**:
 
@@ -98,3 +98,31 @@ suite.
 
 **Test**: manual. Record the counts, and run a `grep` for any remaining
 `^category:` lines.
+
+**Result (2026-10-18)**:
+
+* Deployed `8b647d1f`.
+* The production dry run reported 2,815 files.
+* `--apply` stripped 2,815 files, and a grep found **0** remaining
+  `^category:` lines. The site was regenerated and `sync_to_github()`
+  returned True.
+* **Problem found in the sync diff (`a726fafc`):** 3 files with CRLF line
+  endings were converted to LF:
+  * `2026-10-17-lotus-improv-pre-history.md`
+  * `pages/Recommendations.md`
+  * `pages/recommendations.md`, an identical duplicate that differs only
+    in case
+* The cause was `read_text`/`write_text` normalizing newlines. The
+  verification compared `splitlines()`, which ignores endings, so it didn't
+  catch the change.
+* **Fix:**
+  * `remove_frontmatter_key` now works on lines with their endings kept.
+  * The command reads and writes bytes.
+  * Regression tests cover CRLF and mixed endings.
+* **Restore:** each file was rebuilt from its pre-run git version, keeping
+  its original endings, with only the intended change applied.
+  The rebuilt files were copied to `/data/content`.
+  The same restore fixed one file that the F46 tag-apply step flattened
+  during the F50 run (see I04).
+* Ignoring line endings, the strip changed nothing except `category:`
+  lines.

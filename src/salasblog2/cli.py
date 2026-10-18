@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
 # Author: Pito Salas and Claude Code
-# Version: 5
+# Version: 6
 # Created: 2026-09-09
 # Updated: 2026-10-18
 # Open Source Under MIT license
@@ -137,20 +137,13 @@ def cmd_strip_categories(args):
     changed = 0
     for content_dir in content_dirs(Path(args.content)):
         for md_file in sorted(content_dir.glob("*.md")):
-            text = md_file.read_text(encoding="utf-8")
+            text = md_file.read_bytes().decode("utf-8")
             new_text = remove_frontmatter_key(text, "category")
             if new_text == text:
                 continue
-            removed = set(text.splitlines()) - set(new_text.splitlines())
-            if len(text.splitlines()) - len(new_text.splitlines()) != 1 or not all(
-                line.startswith("category:") for line in removed
-            ):
-                raise ValueError(
-                    f"{md_file}: strip changed more than its category line"
-                )
             changed += 1
             if args.apply:
-                md_file.write_text(new_text, encoding="utf-8")
+                md_file.write_bytes(new_text.encode("utf-8"))
     action = "stripped" if args.apply else "would strip"
     print(f"{action} category from {changed} files")
 

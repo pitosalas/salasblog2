@@ -32,7 +32,7 @@ body { margin: 0; }
 .field-row { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
 .field { display: flex; flex-direction: column; margin-bottom: 20px; }
 .field-row .field { margin-bottom: 0; flex: 1; min-width: 160px; }
-.field-title { flex: 2 1 260px; }
+.field-title { flex: 1 1 100%; }
 
 .field-label { font-size: 0.85em; color: var(--muted); margin-bottom: 6px; }
 
