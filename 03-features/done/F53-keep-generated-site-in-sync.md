@@ -1,10 +1,10 @@
 # F53 — Keep the Generated Site in Sync with Its Sources
 **Priority**: High
 **Date Created:** 2026-10-18
-**Done:** no
+**Done:** yes
 **Tasks File Created:** yes
-**Tests Written:** no
-**Test Passing:** no
+**Tests Written:** yes
+**Test Passing:** yes
 **Description**: Three gaps let the live site drift from its sources, or
 glitch while it regenerates. All three were found on 2026-10-18, after the
 user deleted bookmarks on Raindrop.io and they stayed on the link blog.
@@ -22,7 +22,9 @@ user deleted bookmarks on Raindrop.io and they stayed on the link blog.
      whose source is gone.
    * After the three raindrops were removed, their HTML was still served
      until it was deleted by hand.
-   * Production had 1,639 files in `output/raindrops/` for 1,547 raindrops.
+   * An early count suggested about 90 more stale raindrop pages. That was
+     wrong: it counted directories and listing pages. TF53.5's
+     post-deploy regeneration found none.
 3. **Regeneration briefly removes all CSS, JS and images.**
    * `copy_static_files()` does `rmtree(output/static)` and then
      `copytree`, now including 30 MB of WordPress images.
@@ -44,9 +46,11 @@ user deleted bookmarks on Raindrop.io and they stayed on the link blog.
   * Root-level files are not touched: `index.html`, `admin-stats.html`,
     caches, and page HTML.
 * **The static-file copy never leaves a gap.**
-  * Copy into a temporary sibling directory, then swap it into place with
-    renames, so `output/static` is never missing for longer than two
-    renames.
+  * `output/static` is updated in place and never deleted. New files are
+    copied over it, then files no longer in the source are removed.
+  * A build-and-rename swap was planned but can't work on production: the
+    Docker overlay filesystem refuses to rename image-layer directories
+    (EXDEV). See TF53.3.
 
 ## Out of scope
 
