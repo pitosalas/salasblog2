@@ -1,6 +1,6 @@
 ---
-version: "1.0"
-generated: "2026-09-08"
+version: "1.1"
+generated: "2026-10-19"
 ---
 
 # `raindrop.py` — Syncing the Link Blog from Raindrop.io
@@ -321,16 +321,59 @@ sequenceDiagram
     RD-->>Caller: list of created filenames
 ```
 
+## Deletions: why the sync now removes as well as adds
+
+Everything above only ever **adds**. The timestamp watermark asks
+Raindrop.io for bookmarks *created* since the last sync, so a bookmark you
+delete on Raindrop.io is simply never mentioned again. Its file stays,
+and its page stays online. F53 found three such orphans: *Raindrop.io*,
+*Mailbrew*, and a Gmail inbox bookmark.
+
+Detecting a deletion needs the opposite of a watermark. You need the
+**complete** set of current IDs, and then you take a set difference:
+
+```python
+def fetch_all_ids(self) -> set[str]:
+    ids: set[str] = set()
+    page = 0
+    while True:
+        raindrops = self._fetch_page(page, DEFAULT_PAGE_SIZE)
+        if not raindrops:
+            return ids
+        ids.update(str(r["_id"]) for r in raindrops)
+        page += 1
+```
+
+The important difference from `fetch_raindrops()` is how failure behaves:
+
+- `fetch_raindrops()` catches a failed page and **returns what it has so
+  far**. For "what's new" that's harmless.
+- For "what's gone", a partial list is catastrophic. Every bookmark missing
+  from it would look deleted, and one 503 on page 3 would wipe most of the
+  link blog.
+- So `fetch_all_ids()` lets `_fetch_page()`'s exception propagate.
+  `remove_deleted_raindrops()` also refuses outright if Raindrop.io
+  returns no bookmarks at all.
+
+The decision itself is a pure function, `select_deleted_raindrops(local_ids,
+remote_ids)`:
+
+- It selects every local file whose `raindrop_id` is missing remotely.
+- A file with **no** `raindrop_id` is never selected, only warned about,
+  because there's nothing to compare it against. Deleting it on a guess
+  would be exactly the kind of silent repair the style guide forbids.
+
+The deleted IDs are also removed from the cache's `downloaded` set.
+
+The callers (`Scheduler.sync_raindrops()` and the admin sync route) run this
+**before** downloading, and regenerate the whole site when anything was
+removed. The generator's pruning step then deletes the orphaned pages.
+
 ## Observations for future improvement
 
-- **Relative import.** `raindrop.py` imports via `from .utils import ...`, but the
-  project's style guide (`.claude/style_guide.md`) states "Absolute imports only; no
-  relative imports." Several other modules (`cli.py`, `generator.py`, `scheduler.py`)
-  share this violation, while `server.py` and `blogger_api.py` correctly use
-  `from salasblog2.utils import ...` — worth a sweep across the package, not just this
-  file.
-- **Silent failure mode.** `download_raindrops()` catches all exceptions and returns
-  `[]`, which is indistinguishable from "nothing new to sync." Callers (especially the
+- **Silent failure mode.** `download_raindrops()` still catches all
+  exceptions and returns `None`, which looks like "nothing new to sync". The
+  new deletion path is the exception: it raises. Callers (especially the
   scheduler) can't currently tell a healthy no-op sync from an API outage without reading
   logs; a richer return type (or a raised, caught-at-the-boundary exception) would make
   failures observable.

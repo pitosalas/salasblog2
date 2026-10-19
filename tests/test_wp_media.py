@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_wp_media — Tests for self-hosting WordPress images and repairing post links
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-10-18
-# Updated: 2026-10-18
+# Updated: 2026-10-19
 
 import io
 import tarfile
@@ -12,6 +12,7 @@ from unittest.mock import patch
 
 import pytest
 
+from salasblog2.utils import split_frontmatter
 from salasblog2.wp_media import (
     available_media,
     extract_media,
@@ -20,7 +21,6 @@ from salasblog2.wp_media import (
     rewrite_wp_media,
     url_status,
 )
-from salasblog2.utils import split_frontmatter
 
 KEYS = {"2014/08/img.jpg", "2011/03/screen shot.png"}
 

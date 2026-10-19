@@ -1,6 +1,6 @@
 ---
 version: "1.1"
-generated: "2026-09-09"
+generated: "2026-10-19"
 ---
 
 # `utils.py` — Content Processing Foundation
@@ -10,7 +10,7 @@ generated: "2026-09-09"
 Salasblog2 stores every post as a Markdown file with YAML frontmatter and
 serves a pre-generated static site built from those files. Almost every
 other module — the site generator, the admin panel, the Raindrop importer,
-the `blogger_api.py` XML-RPC adapter — needs to do the same handful of
+the one-off content-repair commands — needs to do the same handful of
 things to that content: parse frontmatter, turn Markdown into HTML, produce
 a short excerpt for a listing page, sort posts by date, build a safe
 filename. `utils.py` is where all of that lives.
@@ -326,6 +326,42 @@ since `Exception` already covers `YAMLError`. It reads as intent
 ("we specifically expect YAML errors here, but catch anything") more than
 as a meaningful distinction, worth simplifying (see observations).
 
+### Editing frontmatter without re-serializing it
+
+Parsing and re-dumping frontmatter is lossy in ways that don't matter for
+display but do matter for a one-off repair. It reorders keys, changes
+quoting, and writes LF line endings. Two small text-level functions avoid
+that:
+
+- `split_frontmatter(text)` returns `(frontmatter block with its fences,
+  body)`. F49's image-URL rewrite uses it, so it never touches frontmatter.
+- `remove_frontmatter_key(text, key)` deletes one top-level `key:` line
+  and leaves **every other byte** alone, including each line's own ending.
+  F51 used it to strip `category:` from 2,815 files.
+
+The second one learned its lesson in production. The first version
+read the file with `read_text()` and split on `"\n"`. Python's universal
+newlines quietly turned three CRLF files into LF. Its check compared
+`splitlines()` output, which ignores endings, so it saw nothing wrong. The
+current version works on `splitlines(keepends=True)`, matches fences with
+`rstrip("\r\n")`, and is fed raw bytes by its caller:
+
+```python
+lines = text.splitlines(keepends=True)
+if not lines or lines[0].rstrip("\r\n") != "---":
+    return text
+kept = [lines[0]]
+for i in range(1, len(lines)):
+    line = lines[i]
+    if line.rstrip("\r\n") == "---":
+        return "".join(kept + lines[i:])
+    ...
+```
+
+It also **raises on a multi-line value**, such as a YAML list under the
+key. Guessing where such a value ends would be exactly the silent repair the
+style guide rules out.
+
 ## Dates: parse once, use everywhere
 
 Every date-handling function in this module — display formatting, sort
@@ -365,15 +401,25 @@ instead of having to reverse-engineer the sort key.
 
 `load_curated_tags()` reads the single curated tag vocabulary from
 `02-doc/tag-hints.md`'s "Curated Tags" section (via the generic
-`parse_tag_hints_section()` helper, which also backs the automated
-tag-cleanup pipeline's "Proposed Tags" queue — see `tag_cleanup.py`). This
-replaced a hand-maintained `BLOG_TAGS` Python constant that had drifted out
-of sync with a second, separately-curated list the tag-cleanup pipeline
-introduced — there's now exactly one list, editable by hand in a markdown
-file, not two. It's not a closed vocabulary — any tag can still be typed
-freely when authoring a post — but it's the seed list offered to a human
-picking tags, both in the post editor's picklist and (via `blogger_api.py`)
-MarsEdit's category list.
+`parse_tag_hints_section()` helper). This replaced a hand-maintained
+`BLOG_TAGS` Python constant that had drifted out of sync with a second,
+separately-curated list the tag-cleanup pipeline introduced — there's now
+exactly one list, editable by hand in a markdown file, not two. It's not a
+closed vocabulary — any tag can still be typed freely when authoring a
+post — but it's the seed list offered to a human picking tags in the post
+editor's picklist.
+
+Each curated line can also declare **aliases** in parentheses:
+`79 robotics (robot, ros, lidar)`. Two functions read and write that
+structure:
+
+- `parse_curated_tag_aliases()` maps every spelling, primary or alias, to
+  its primary.
+- `add_curated_aliases(text, {primary: [aliases]})` is the writer F50 uses.
+  It appends each new alias to its primary's parentheses and skips any
+  already there. It **raises** if a primary isn't on the list, rather than
+  inventing a line for it, because a typo in the caller should fail loudly,
+  not grow the vocabulary.
 
 `top_tags_by_frequency()` computes the *actual* ranking that backs that
 picklist, from real usage across existing posts rather than the static

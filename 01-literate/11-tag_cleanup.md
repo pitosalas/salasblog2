@@ -1,6 +1,6 @@
 ---
-version: "1.0"
-generated: "2026-09-11"
+version: "1.1"
+generated: "2026-10-19"
 ---
 
 # `tag_cleanup.py` — Automated Tag Cleanup for a 2,800-Post Archive
@@ -46,7 +46,7 @@ flowchart LR
     B -->|summaries_to_json| C[candidates.json]
     C -->|read by a human or assistant| D[decisions.json<br/>filename to tags]
     D -->|build_proposal, one per post| E[TagProposal list]
-    E -->|record_recurring_candidates| F[tag-hints.md<br/>Proposed Tags]
+    E -->|promote_recurring_candidates| F[tag-hints.md<br/>Curated Tags]
     E -->|apply_tag_batch| G[content/blog/*.md<br/>tags written]
 ```
 
@@ -99,9 +99,9 @@ introduced exactly the kind of drift this fix was written to eliminate.
 ## The curated-vocabulary rule, and where a rejected tag actually goes
 
 The blog keeps a single curated tag vocabulary in `02-doc/tag-hints.md`
-(loaded via `utils.load_curated_tags()` — shared with the post editor's
-suggestion picklist and MarsEdit's category list, so there's exactly one
-list, not two that can drift apart). The rule this pipeline enforces: a
+(loaded via `utils.load_curated_tags()` and shared with the post editor's
+suggestion picklist, so there's exactly one list, not two that can drift
+apart). The rule this pipeline enforces: a
 *new* tag only gets written to a post if it's in that curated list. An
 existing tag is never removed, regardless of whether it happens to be
 curated — that guarantee is unconditional.
@@ -119,17 +119,21 @@ def split_new_tags(existing_tags, new_tags, curated_tags):
 
 A tag proposed for a post falls into exactly one of three buckets: already
 there (ignored — nothing to add), curated (accepted, gets written), or
-neither (held back as a *candidate*). Candidates are never silently
-dropped — that would waste a real, possibly-good signal about a topic the
-curated list doesn't cover yet. Instead, `record_recurring_candidates()`
-tallies every candidate tag across a whole batch, and any tag that shows
-up on at least `MIN_RECURRENCE_FOR_PROPOSED_TAG` (3) separate posts gets
-appended to tag-hints.md's own "Proposed Tags" section — a queue the human
-maintaining the vocabulary reviews and promotes (or rejects) by hand,
-outside the pipeline entirely. A one-off candidate that never recurs just
-stays uncaptured; a genuinely emerging topic across the archive earns its
-way onto the list instead of the pipeline ever inventing vocabulary
-unilaterally.
+neither (held back as a *candidate*). Candidates aren't written, but they
+aren't wasted either: they're a signal about a topic the curated list
+doesn't cover yet.
+
+`promote_recurring_candidates()` tallies every candidate across a whole
+batch, counting a tag once per post. Any tag on at least
+`MIN_RECURRENCE_FOR_PROPOSED_TAG` (**4**, raised from 3 in TF46.14) posts is
+appended **directly to the Curated Tags list**, where the next batch can use
+it. An earlier design queued such tags in a separate "Proposed Tags" section
+for manual approval. That was reversed in favor of the one list. A one-off
+candidate that never recurs is simply not captured, so a topic has to recur
+across the archive to earn its place.
+
+F50's WordPress import (`wp_taxonomy.promote_terms`) reuses this same
+function, with the same threshold.
 
 ```mermaid
 flowchart TD
@@ -138,8 +142,8 @@ flowchart TD
     Q -->|no| C{in curated_tags?}
     C -->|yes| Accept[written to the post]
     C -->|no| Hold[held as a candidate]
-    Hold --> R{recurs 3+ times<br/>in this batch?}
-    R -->|yes, and not already listed| Queue[appended to<br/>Proposed Tags]
+    Hold --> R{on 4+ posts<br/>in this batch?}
+    R -->|yes, and not already listed| Queue[appended to<br/>Curated Tags]
     R -->|no| Drop[not written, not queued]
 ```
 
@@ -152,6 +156,8 @@ verifying rather than trusting:
 ```python
 def apply_tag_proposal(blog_dir, filename, tags):
     path = blog_dir / filename
+    if b"\r" in path.read_bytes():
+        raise ValueError(f"{filename}: has CR line endings; tags not written")
     with open(path, "r", encoding="utf-8") as f:
         post = frontmatter.load(f)
     original_body = post.content
@@ -185,20 +191,33 @@ a `"skip": true` escape hatch on top for a reviewed batch where a human
 decided a specific entry shouldn't be applied after all, without needing a
 separate code path to omit it upstream.
 
+### The check the read-back can't do: line endings
+
+The read-back compares *parsed* content, and parsing normalizes line
+endings. `frontmatter.dumps()` writes LF, so a post saved with CRLF endings
+came back with every line rewritten, and the comparison still passed. The
+F50 run flattened one post that way. That's issue I04.
+
+Re-serializing can't preserve CRLF or mixed endings. So the function now
+refuses any file containing `\r` before writing, which is the "report,
+don't repair" rule applied to a case it can't handle correctly. No blog post
+has CR endings today, so in practice the guard never fires.
+
 ## Observations for future improvement
 
-- **`record_recurring_candidates()` re-parses tag-hints.md's "Proposed
-  Tags" section from scratch on every batch** to check for already-listed
-  candidates, via a full file read and re-scan. Fine at the file's current
-  size; would be worth caching if the file grows enough that every batch
-  run pays for a repeated linear scan.
+- **Writes re-serialize the whole frontmatter.** Beyond the CR problem,
+  `frontmatter.dumps()` reorders keys and changes quoting on every post it
+  touches. That makes each batch's sync diff noisier than the real change.
+  A line-level tag edit, like the one F51's `remove_frontmatter_key()` uses,
+  would keep diffs to the tag lines and preserve line endings, which would
+  also remove the need for the CR guard.
 - **The no-fit marker is a plain string match** (`tag_review == "no_fit"`)
   rather than a small enum or constant class shared with anything that
   might read it elsewhere (e.g. an admin UI wanting to show "reviewed, no
   fit" as a post's status). Fine as an internal implementation detail
   today; worth promoting to a shared constant if a second consumer shows
   up.
-- **`MIN_RECURRENCE_FOR_PROPOSED_TAG` is a fixed module constant (3)**,
+- **`MIN_RECURRENCE_FOR_PROPOSED_TAG` is a fixed module constant (4)**,
   not configurable per run. If the archive's remaining un-tagged tail
   turns out to need a different threshold (larger batches might want a
   higher bar; a final small batch might want a lower one to still surface

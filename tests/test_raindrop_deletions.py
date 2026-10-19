@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_raindrop_deletions — Tests for removing raindrops deleted on Raindrop.io (F53)
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-18
-# Updated: 2026-10-18
+# Updated: 2026-10-19
 
 import json
 from unittest.mock import Mock, patch
@@ -47,9 +47,11 @@ class TestFetchAllIds:
 
     def test_failed_page_raises_instead_of_returning_partial(self, downloader):
         pages = [page_response([1, 2]), page_response([], status=503)]
-        with patch("salasblog2.raindrop.requests.get", side_effect=pages):
-            with pytest.raises(Exception, match="503"):
-                downloader.fetch_all_ids()
+        with (
+            patch("salasblog2.raindrop.requests.get", side_effect=pages),
+            pytest.raises(Exception, match="503"),
+        ):
+            downloader.fetch_all_ids()
 
 
 class TestSelectDeleted:
@@ -77,14 +79,18 @@ class TestRemoveDeletedRaindrops:
 
     def test_fetch_failure_deletes_nothing(self, downloader):
         write_drop(downloader.drops_dir, "a.md", "1")
-        with patch.object(downloader, "fetch_all_ids", side_effect=RuntimeError("503")):
-            with pytest.raises(RuntimeError):
-                downloader.remove_deleted_raindrops()
+        with (
+            patch.object(downloader, "fetch_all_ids", side_effect=RuntimeError("503")),
+            pytest.raises(RuntimeError),
+        ):
+            downloader.remove_deleted_raindrops()
         assert (downloader.drops_dir / "a.md").exists()
 
     def test_empty_remote_refuses_to_delete(self, downloader):
         write_drop(downloader.drops_dir, "a.md", "1")
-        with patch.object(downloader, "fetch_all_ids", return_value=set()):
-            with pytest.raises(ValueError, match="refusing"):
-                downloader.remove_deleted_raindrops()
+        with (
+            patch.object(downloader, "fetch_all_ids", return_value=set()),
+            pytest.raises(ValueError, match="refusing"),
+        ):
+            downloader.remove_deleted_raindrops()
         assert (downloader.drops_dir / "a.md").exists()

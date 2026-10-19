@@ -162,3 +162,60 @@ User handed off an external design spec (monospace UI, hairline rules, one amber
 - Regression tests: `tests/test_post_editor.py::TestPageRenderedBeforeResponse`. They stub the background job and fail without the fix.
 
 **Also**: applied `ruff format` and ruff's safe auto-fixes repo-wide as a separate commit, at the user's choice. The non-auto-fixable violations were logged as an open chore.
+
+## Session: 2026-10-18/19: WordPress export, categories retired, XML-RPC removed, site/source sync
+
+The user supplied the old WordPress.com export (`~/Desktop/wordpress-export/`): the WXR file, a 110-file media tar, and category/tag CSVs.
+
+### F49: Self-host WordPress-era images (done)
+
+* `bg wp-media --extract` put all 110 tar files (30 MB) in `static/images/wp/`. They were committed and deployed before any post was touched.
+* `--apply` on `/data/content` repaired 72 broken `salas.com/wp-content/uploads` links (mostly via the `i0.wp.com` proxy) in 57 posts.
+* 4 links stayed unmatched: 2023-07 screenshots not in the tar.
+
+### F50: WordPress categories/tags as a tag signal (done)
+
+* `bg wp-tags` matched 2,453 local posts by slug or title, unioning terms for posts WordPress held twice.
+* Reviewed merges live in `02-doc/wp-term-merges.json`.
+* It promoted 41 curated tags plus about 200 aliases, and added tags to 1,821 posts, additive only.
+* The promotion threshold rose to 4+ posts (TF46.14).
+* The earlier "60 misdated posts" finding turned out to be WordPress duplicates.
+
+### F51: Categories retired (done)
+
+* Category values were mostly raw WordPress IDs (`298`, `538`) that no code read.
+* The editor field, the server handling, `overview.html` display and the dead `search.js` were removed.
+* `bg strip-categories` removed `category:` from all 2,815 production files.
+* **Lesson:** its first version used `read_text`/`write_text` and flattened three CRLF files. It was fixed to work on raw bytes with line endings kept, and the files were restored on production.
+* The same flattening was found in F46's `apply_tag_proposal` (I04). It now refuses CR files.
+
+### F44 closed; F52: XML-RPC removed (done)
+
+* The user stopped using MarsEdit, so TF44.4 was waived.
+* `blogger_api.py`, `/xmlrpc`, `/rsd.xml`, the RSD links, an unreachable admin API pane and `RSD_API_TYPE` were deleted.
+* `POST /xmlrpc` now gets 405 from the GET-only catch-all, and `/rsd.xml` returns 404.
+
+### F53: Keep the generated site in sync with its sources (done)
+
+* The user deleted bookmarks on Raindrop.io and they stayed on the link blog, because the sync only ever added.
+* The raindrop sync now removes deleted bookmarks, after a complete, raising fetch of all remote IDs, and before downloading.
+* Full regeneration prunes stale `.html` in `output/blog`, `output/raindrops` and `output/tags` by modification time.
+* `output/static` is updated in place.
+* **Lesson:** a build-and-rename swap of `output/static` failed on production with EXDEV, because overlayfs can't rename image-layer directories. That run aborted harmlessly before any rename.
+
+### F46 finished its backlog
+
+* After F50, the last 12 untagged production posts were tagged.
+* `select_tag_candidates.py` now selects 0 posts.
+* The TF46.13 normalization dry run would change one post (Lotus Improv) and drop 0 tags. It's waiting on the user.
+
+### Issues I01–I04 resolved; smaller items
+
+* I01: incremental regeneration now loads all content types for search and home.
+* I02: VisitCounter reads under the lock, with a snapshot in `get_all`.
+* I03: dead scheduler startup-job code deleted.
+* I04: tag apply refuses CRLF posts.
+* Search: no longer matches queries against content type (TF33.4), with a Node-run test.
+* Post editor: the title field gets its own full-width row (chore).
+* The Improv roundup post was published.
+* Documentation: how curated tags interact with other tags, in `02-doc/notes.md`.

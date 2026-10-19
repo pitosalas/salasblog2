@@ -1,6 +1,6 @@
 ---
-version: "1.0"
-generated: "2026-09-08"
+version: "1.1"
+generated: "2026-10-19"
 ---
 
 # `stats.py` — A File-Backed Visit Counter
@@ -139,16 +139,29 @@ def increment(self, path: str, visitor_type: str):
         self._dirty = True
 ```
 
-That covers the two places the dict is *mutated*. It does **not** cover
-`get()` or `get_all()`, both of which iterate `self._counts` without
-acquiring the lock at all. Under CPython's GIL this mostly works by
-accident — a `for path, types in self._counts.items()` running concurrently
-with an `increment()` adding a new key is a known way to trigger `RuntimeError:
-dictionary changed size during iteration`, and it's not disallowed by
-anything here, just made statistically unlikely by FastAPI's single-process
-request handling and the read paths (stats page render, drop proposals)
-being infrequent relative to increments. It's a latent bug rather than an
-active one today.
+That covers the two places the dict is *mutated*. The read paths used to
+skip it. `get_all()` iterated `self._counts.items()` with no lock, and a
+first-ever visit to a new path arriving mid-iteration raised `RuntimeError:
+dictionary changed size during iteration` (issue I02).
+
+The fix takes the lock on reads too, with one twist for `get_all()`. Its
+period filter parses every timestamp, which is slow, so holding the lock
+for the whole computation would stall every incoming visit. Instead it
+**copies under the lock and computes outside it**:
+
+```python
+with self._lock:
+    snapshot = {
+        path: {vtype: list(ts) for vtype, ts in types.items()}
+        for path, types in self._counts.items()
+    }
+```
+
+The inner `list(ts)` matters. `increment()` appends to those lists in
+place, so a shallow copy of the outer dict alone would still share mutable
+lists with the writer. This is the classic *copy-on-read* trade: a
+short-lived second copy of the data in exchange for a lock held only
+briefly.
 
 The lock also only protects **this process's** view of `_counts`. There's
 no file lock around `stats.json` itself. If salasblog2 were ever run with
@@ -236,10 +249,10 @@ ordinary `from datetime import ...` style.
 
 ## Observations for future improvement
 
-- **`get()` and `get_all()` should acquire `self._lock`** the same way
-  `increment()` and `flush()` do. The current asymmetry is a latent race
-  (`RuntimeError: dictionary changed size during iteration`) that just
-  hasn't been hit yet because reads are infrequent relative to writes.
+- **The `get_all()` snapshot copies every timestamp list on each call.**
+  That's cheap while the stats page is cached for 60 seconds, but its cost
+  grows with `stats.json`, which already stands at 77 MB in production. A
+  rollup (below) would shrink it as a side effect.
 - **Multi-process or multi-machine deployment would silently corrupt
   `stats.json`** — there's no cross-process file lock, and the last flush
   to run wins, discarding any counts recorded by other processes since

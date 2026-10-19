@@ -1,5 +1,5 @@
 # Current State — salasblog2
-_Last updated: 2026-10-18_
+_Last updated: 2026-10-19_
 
 ---
 
@@ -95,7 +95,7 @@ Applied to: **stats page** (`output/admin-stats.html`, refreshed every 60s) and 
 All blocking operations (Claude API, URL fetch, directory scans, site generation) run via `BackgroundTasks` or `loop.run_in_executor(None, fn)` to avoid blocking the FastAPI event loop.
 
 ### Post/page editing (unified, F42)
-`templates/post_editor.html` handles both create and edit, for both blog posts and pages, via an `is_edit` context flag — replacing the previously hand-duplicated `new_post.html`/`edit_post.html`. Includes: category field, free-form comma-separated tags (with `<datalist>` suggestions from `BLOG_TAGS`, not a hard vocabulary), EasyMDE autosave + `beforeunload` unsaved-changes guard, inline preview (via `/admin/preview-markdown`, no more round-trip to a new tab), and mtime-based concurrency conflict detection (`409` on stale save). Delete is real (`/admin/delete-post`, `/admin/delete-page`, `/admin/delete-raindrop`), backed by `static/js/admin-delete.js` loaded globally via `base.html`.
+`templates/post_editor.html` handles both create and edit, for both blog posts and pages, via an `is_edit` context flag — replacing the previously hand-duplicated `new_post.html`/`edit_post.html`. Includes: free-form tags with a picklist of curated and most-used tags (F45; not a hard vocabulary until F55), a full-width title field, no category field (retired in F51), EasyMDE autosave + `beforeunload` unsaved-changes guard, inline preview (via `/admin/preview-markdown`, no more round-trip to a new tab), and mtime-based concurrency conflict detection (`409` on stale save). Delete is real (`/admin/delete-post`, `/admin/delete-page`, `/admin/delete-raindrop`), backed by `static/js/admin-delete.js` loaded globally via `base.html`.
 
 ### Draft workflow
 1. Propose tab → Popular Link Posts → "Generate Draft" button
@@ -125,86 +125,55 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 ## Open
 
-**F44 — Fix the MetaWeblog/XML-RPC Implementation**: closed 2026-10-18. TF44.4 (the manual MarsEdit check) was waived because MarsEdit is no longer used.
+**F55 — Closed curated tag list (16 tags)**: planned 2026-10-19, **waiting
+for the user's approval** (`03-features/notdone/F55-*`, `04-tasks/notdone/TF55-*`).
 
-**F52 — Remove XML-RPC / MarsEdit Support**: done 2026-10-18 (`03-features/done/F52-*`).
+* Only 16 tags may appear or be added anywhere: programming, business,
+  computing, internet, politics, blogging, culture, howto, science,
+  education, robotics, software-engineering, places, design, life, ai.
+* Every other known tag becomes one of their 429 aliases. The list is in
+  `02-doc/tag-hints-proposed.md`, ready to replace `tag-hints.md`.
+* Raindrop tags convert on write. Leftovers are dropped, and untagged
+  raindrops stay untagged.
+* Existing raindrops are converted **in place**, never with `--reset`. A
+  reset would pull all 2,608 bookmarks (about 1,060 more than the site has).
+* The blog needs judgment passes: 753 generic-`technology` posts and 350
+  generic-`personal` posts, each with a user-reviewed sample first.
+* Automatic tag promotion ends.
 
-**F53 — Keep the Generated Site in Sync**: done 2026-10-18 (`03-features/done/F53-*`).
+**F54 — Blog index sidebar (tags + year archive)**: written 2026-10-19. The
+user said no for now and asked to leave the files alone
+(`03-features/notdone/F54-*`).
 
-* The raindrop sync now removes bookmarks deleted on Raindrop.io, but only
-  after a complete fetch of every remote ID.
-* Full regeneration prunes stale pages in `output/blog/`,
-  `output/raindrops/` and `output/tags/`.
-* `output/static` is updated in place instead of being deleted and
-  recopied.
-* **Gotcha:** on fly.io, directories under `/app` come from the Docker
-  image's overlay layer and can't be renamed (EXDEV). Avoid any
-  rename-swap of them.
+**F46 — Tag cleanup**: TF46.6 is complete, and no post on production needs
+tags. TF46.13's normalization dry run would change only
+`2026-10-17-lotus-improv-pre-history.md` (`improv`, `pivot-table` →
+`lotus`). That's waiting on the user, and is likely superseded by F55.
 
-**F46 — Tag cleanup**: TF46.6 is complete, and no post on production needs tags. The TF46.13 normalization dry run would change only `2026-10-17-lotus-improv-pre-history.md` (`improv`, `pivot-table` → `lotus`). It is waiting on the user's decision.
+**F35 — Admin sync after a GIT_TOKEN rotation**: the token works. The code
+fix (rebuild the remote URL from the env var at sync time) is not done.
 
-**F45 — Tag Suggestion Picklist for Post Editor**: done, confirmed working live by the user (`03-features/done/F45-tag-suggestion-picklist.md`). The post editor's Tags field offers a searchable picklist backed by real tag-frequency data (`output/top-tags.json`) merged with the curated vocabulary — now sourced from `02-doc/tag-hints.md` (the standalone `BLOG_TAGS` constant was consolidated away this session; see F46 below).
-
-**F48 — Repair Legacy Internal Links**: done 2026-10-13, see `03-features/done/F48-legacy-link-repair.md` and `04-tasks/done/TF48-legacy-link-repair.md`.
-
-Old posts linked to each other with Movable Type, WordPress, Squarespace and Radio UserLand URLs that 404 on this site.
-
-* **The map**: `02-doc/legacy-url-map.json` is the reviewed old→new map, with 124 legacy paths, 119 of them with targets. Movable Type IDs were resolved through Wayback titles and dates; the other schemes through the date and slug in the URL. Every fuzzy entry was user-reviewed and is marked `"reviewed": true`.
-* **The map only grows.** Entries stay after their links are rewritten, because the server's 301 redirects (`legacy_redirect` in `server.py`) still need them for inbound links from other sites.
-* **Commands**: `bg legacy-map`, `bg legacy-rewrite [--apply]` and `bg check-links`.
-* **Production**: 142 links were rewritten on `/data/content`, and 21 dead self-links remain, none fixable.
-* **For a future run**: rewrite on production with `--content /data/content`, then regenerate, run `sync_to_github()` and pull. Don't edit and commit local content.
-
-**F49 — Self-host WordPress-era Images**: done 2026-10-18 (`03-features/done/F49-*`).
-
-* The WordPress media export (110 files) now lives in `static/images/wp/`.
-* `bg wp-media --apply` repaired 72 broken salas.com image links in 57
-  posts on production.
-* 4 links remain unmatched. They are 2023-07 screenshots not in the
-  export.
-
-**F50 — WordPress Categories/Tags as Tag Signal**: done 2026-10-18 (`03-features/done/F50-*`).
-
-* `bg wp-tags` maps the old WordPress terms onto the curated list.
-* Merge and ignore decisions live in `02-doc/wp-term-merges.json`.
-* It added 41 curated tags plus aliases to `tag-hints.md`.
-* It added curated tags to 1,821 production posts, additive only.
-* The tag-promotion threshold is now **4+ posts** (TF46.14) for both F46
-  and F50.
-
-**F51 — Retire Post Categories**: done 2026-10-18 (`03-features/done/F51-*`).
-
-* The Category field is gone from the editor, the server, `overview.html`
-  and the unused `search.js`.
-* `bg strip-categories` removed the `category:` line from all 2,815
-  production posts and pages.
-* Tags now carry what categories used to.
-
-**Post editor**: the title field now has its own full-width row (chore,
-2026-10-18).
-
-**F47 — Console Theme Visual Refresh**: done, `03-features/done/F47-console-theme-refresh.md` / `04-tasks/done/TF47-*.md` (20 tasks, all done). Replaced Bootstrap with a monospace "Console" theme (hairline rules, one amber accent, light/dark toggle persisted via `localStorage`) — design source was two screenshots the user provided directly, not the external `des-hand` handoff folder. Started scoped to the 9 public-facing templates only; mid-feature the user expanded scope to the 4 standalone admin/editor pages (`admin_login.html`, `post_editor.html`, `admin.html`, `stats_page.html`) as well, which had no design reference and were restyled by inference. CSS split into small single-concern files (`static/css/theme.css`, `header.css`, `layout.css`, `entries.css`, `post-detail.css`, plus one per template as needed) rather than one stylesheet, per the user's modular-files preference. `admin.html`'s extensive inline JS and its Bootstrap-class-named HTML-string generation were left untouched (no test coverage on that file's rendered output to safely refactor against); a CSS shim in `admin.css` redefines those class names against the Console tokens instead. Also deleted confirmed-dead templates found while scoping: `admin_new.html` and the three unused `templates/includes/*` partials. Built on `feature/site-redesign`, merged back into `main` and pushed (2026-09-11) after a full visual QA pass and the test suite going green (613 passed, 11 skipped).
-
-**F35 — Fix admin sync button after GIT_TOKEN rotation**: the immediate symptom is fixed — the production `GIT_TOKEN` secret was found to be genuinely invalid (not just stale-in-container as originally hypothesized), the user rotated it via `fly secrets set`, and `sync_to_github()` is now confirmed working end-to-end. The actual code fix this feature describes (reconstruct the git remote URL from the env var at sync time, so a *future* rotation doesn't require a restart) is still not implemented — feature stays open.
-
-**Other open features** (`03-features/notdone/`, no dependency on each other or on F44):
+**Other open features** (`03-features/notdone/`):
 
 | Feature | Description | Priority |
 |---------|-------------|----------|
 | F29 | Extract reusable utilities from raindrop.py | Medium |
 | F30 | Code quality improvements in raindrop.py | Low |
-| F33 | Fix web search (item.category → item.type bug + raindrop indexing) | Medium |
-| F41 | Codebase cleanup and architecture review | Medium |
+| F33 | Web search: TF33.0 and TF33.4 done; TF33.1–TF33.3 (raindrop indexing, full-body index, tests) remain | Medium |
+| F41 | Codebase cleanup and architecture review (TF41.10 not applicable since F52) | Medium |
 
-F33 TF33.0 (the category/type field name fix in `script.js`) is already done. F33 TF33.1–TF33.3 (raindrop indexing, content truncation, tests) remain.
+**Ruff debt (open chore)**: about 190 violations need hand fixes, such as
+`subprocess.run` without `check`, implicit `Optional`, and blocking calls in
+async routes. Tracked in `04-tasks/chores.md`.
 
-F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they don't redo or contradict work those two features already did) — see `04-tasks/notdone/TF41-codebase-cleanup-architecture.md`. Recommended order if picking F41 up: after F44, since TF41.3/TF41.10 assume F44 has landed.
+**Open issues**: none. I01–I04 were resolved 2026-10-18 and are in
+`05-issues/closed/`.
 
-**Ruff debt (open chore)**: after this session's safe auto-fixes, the repo still has ruff violations that need hand fixes (e.g. `subprocess.run` without `check`, implicit `Optional`, blocking calls in async routes). Tracked in `04-tasks/chores.md`.
+**Deferred**: F43, a token-authenticated REST API for posting from a phone
+(`03-features/deferred/`).
 
-**Open issues**: none. I01-I04 were resolved 2026-10-18 and are in `05-issues/closed/`.
-
-**Deferred**: F43 (token-authenticated REST API for posting from a phone, `03-features/deferred/`) — parked, not abandoned, independent of everything else.
+**Recently done** (details in `02-doc/history.md`): F44, F49, F50, F51,
+F52 and F53 (2026-10-18), plus F45, F47 and F48 earlier.
 
 ---
 
@@ -230,13 +199,17 @@ Deployed app: https://salasblog2.fly.dev
 
 **Startup sequence**: `startup.sh` runs `git checkout -f -B main origin/main` (overwrites `/app` with GitHub HEAD), then starts uvicorn. **Code changes must be committed and pushed to GitHub before `make deploy`**, or they will be silently overwritten at container startup — confirmed the hard way in an earlier session: three deploys in a row kept serving pre-session code because nothing had been pushed, verified via `fly ssh console` showing the running container on commit `e909c27` (pre-session HEAD) despite fresh deploy timestamps.
 
+**Overlay filesystem gotcha:** directories under `/app` come from the Docker image layer and can't be renamed (`OSError: [Errno 18] Invalid cross-device link`). Update them in place rather than build-and-swap (see F53).
+
+**Content repairs run on production**, not on a local checkout. Use `bg <command> --content /data/content` over `fly ssh console`, then regenerate, run `sync_to_github()` and pull (F48–F51).
+
 **`GIT_TOKEN` rotated and confirmed working (2026-09-11)** — see F35 above. `sync_to_github()` (production `/data/content` → GitHub backup) verified working end-to-end across six batch runs this session. To sync `/app`'s git checkout on a *running* container without a full redeploy (e.g. to pick up a doc/content-adjacent change without restarting the app): `fly ssh console -C "sh -c 'cd /app && git fetch --depth 1 origin main && git checkout -f -B main origin/main'"`.
 
 ---
 
 ## Known rough edges
 
-- `server.py` at 2221 lines is the biggest structural problem — nearly everything lives there. F41 TF41.8 covers decomposition.
+- `server.py` at about 2,150 lines is the biggest structural problem — nearly everything lives there. F41 TF41.8 covers decomposition.
 - Admin JS is still mostly inline in `admin.html` — hard to maintain, not testable. F41 TF41.2.
 - The three-way content sync (`/data` ↔ `/app` ↔ `output/`) adds operational complexity, and is also why deploys silently lose uncommitted work (see Deployment above). F41 TF41.11.
 - `mount_static_files()` is defined but intentionally disabled at startup (replaced by custom endpoints) — dead code. F41 TF41.12 candidate.

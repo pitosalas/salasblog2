@@ -1,6 +1,6 @@
 ---
-version: "1.0"
-generated: "2026-09-08"
+version: "1.1"
+generated: "2026-10-19"
 ---
 
 # `scheduler.py` — Background Sync for a Volume-First Blog
@@ -194,33 +194,40 @@ def _run_command_with_retry(self, cmd, retries: int = 2, timeout: int = 60):
             time.sleep(5)
 ```
 
-## Raindrop sync, and its lazy imports
+## Raindrop sync: deletions first, then downloads
 
-`sync_raindrops()` is comparatively simple: check for a `RAINDROP_TOKEN`,
-download any new raindrops, and if there were any, regenerate the static
-site so they actually appear. The one thing that stands out here is *where*
-its dependencies come from:
+`sync_raindrops()` is comparatively simple. It checks for a
+`RAINDROP_TOKEN`, then:
+
+1. **Removes raindrops deleted on Raindrop.io**
+   (`remove_deleted_raindrops()`, added in F53).
+2. **Downloads new ones.**
+3. **Regenerates the whole site** if either step changed anything.
 
 ```python
-# Import raindrop module
-from .raindrop import RaindropDownloader
-from .generator import SiteGenerator
+downloader = RaindropDownloader()
+# Deletions first: if the full ID fetch fails, nothing has changed.
+deleted_files = downloader.remove_deleted_raindrops()
+created_files = downloader.download_raindrops(reset=False, count=None)
+
+if not created_files and not deleted_files:
+    logger.info("No raindrop changes to sync")
+    return True
 ```
 
-These are imported **inside the method**, not at module top — and via
-**relative** import syntax. Both are deviations from this project's style
-guide, which calls for absolute imports collected at the top of the file.
-Neither deviation looks deliberate on inspection: `raindrop.py` and
-`generator.py` import nothing from `scheduler.py` (or from `server.py`), so
-there's no circular-import hazard forcing the import inward — the more
-usual justification for a lazy import. The more charitable reading is that
-it defers the cost of importing `requests`, `markdown`, `jinja2`, and
-friends until a sync actually runs (and only when `RAINDROP_TOKEN` is
-configured at all) — but that's a minor win on a module that's already
-loaded once at process startup via `server.py`'s `get_scheduler()` import
-chain elsewhere. On balance this reads as inconsistency rather than
-intent, and worth hoisting to the top with the rest of the imports the next
-time this file is touched.
+The ordering is the design. The deletion check needs a complete fetch of
+every bookmark ID, and that fetch raises on any failed page. Running it
+first means a flaky Raindrop.io response aborts the sync **before anything
+is written**. The method's broad `except` then logs it and returns `False`,
+and the next cycle simply tries again.
+
+A full `generate_site()` is used rather than per-file incremental
+regeneration because its pruning step is what removes a deleted raindrop's
+page.
+
+Both dependencies (`RaindropDownloader`, `SiteGenerator`) are now ordinary
+top-of-file absolute imports. An earlier version imported them lazily,
+inside the method.
 
 ## Shared mutable state and the `schedule` library's global registry
 
@@ -309,20 +316,13 @@ flowchart TD
 
 ## Observations for future improvement
 
-- **Dead "startup job" machinery.** `_handle_sync_result`, `_cleanup_startup_job`,
-  and the `is_startup` parameter on `_sync_wrapper` all exist to support a
-  one-time sync job tagged `'{sync_type}_startup'` that runs once at process
-  start and then removes itself — but nothing in `start_scheduler()` (or
-  anywhere else in the codebase) ever schedules a job with that tag or calls
-  `_sync_wrapper(..., is_startup=True)`. This looks like a partially removed
-  or never-finished feature; either wire it up (so a fresh deploy syncs
-  immediately rather than waiting up to `git_sync_hours` for the first
-  backup) or delete the dead branches.
-- **Style-guide deviations.** The lazy, relative imports in `sync_raindrops`
-  (`from .raindrop import RaindropDownloader`, `from .generator import
-  SiteGenerator`) should move to absolute imports at the top of the file per
-  this project's conventions — no circular-import dependency was found that
-  would justify keeping them inline.
+- **A fresh deploy waits a full interval for its first sync.** The old,
+  never-wired "run once at startup" machinery (`_cleanup_startup_job`, the
+  `is_startup` flag) was deleted as dead code (issue I03). Nothing replaced
+  it, so after a restart the first GitHub backup happens up to
+  `git_sync_hours` later. That's acceptable today. If it ever matters, a
+  one-shot job scheduled in `start_scheduler()` would be the place to add
+  it.
 - **`schedule.clear()` is a global blast radius.** `stop_scheduler()` clears
   every job registered process-wide via `schedule.every()`, not just the two
   this class owns — including `server.py`'s stats/posts-index cache-refresh
@@ -339,7 +339,3 @@ flowchart TD
   process) the phase resets, so sync timing isn't anchored to wall-clock
   time. For a single-instance deployment this is harmless, but it's worth
   knowing if the deploy topology ever changes.
-- **File header missing.** Per this project's style guide, every `.py` file
-  should start with a shebang and an `Author`/`Version`/`Created`/`Updated`
-  header block; `scheduler.py` currently opens directly with its module
-  docstring.

@@ -1,34 +1,35 @@
 ---
-version: "1.0"
-generated: "2026-09-08"
+version: "1.1"
+generated: "2026-10-19"
 ---
 
 # `cli.py` — The Local Command-Line Front Door
 
 ## What this module is for
 
-`cli.py` is a thin `argparse`-based dispatcher that turns a handful of shell
-commands (`generate`, `server`, `reset`, `deploy`, `sync-raindrops`, `help`)
-into calls on the two objects that do the real work: `SiteGenerator` and
-`RaindropDownloader`. It is the module a developer runs directly — `python
--m salasblog2.cli server --reload` or similar — when working on the blog
-locally, as opposed to the `Makefile`/`uv` targets that wrap the same
-commands for convenience during day-to-day development, and the Fly.io
-container entrypoint that starts the server for production.
+`cli.py` is a thin `argparse` dispatcher behind the `bg` command
+(`uv run bg <command>`). It has grown two kinds of command:
 
-Three entry points, one implementation each. `Makefile` targets exist so a
-developer doesn't have to remember `uv run python -m salasblog2.cli ...`;
-Fly.io's container start command doesn't go through this file at all — it
-imports `salasblog2.server:app` directly. `cli.py` is the layer in between:
-a single, scriptable, human-friendly surface that both of those can (and in
-the Makefile's case, do) call through, so the command-to-behavior mapping
-lives in exactly one place rather than being duplicated across a Makefile
-and a shell script.
+- **Everyday commands** that drive the two core objects:
+  - `generate` and `reset`, through `SiteGenerator`
+  - `server`, which starts uvicorn
+  - `deploy`
+  - `sync-raindrops`, through `RaindropDownloader`
+- **Content-repair commands**: one-off or occasional fixes run against a
+  content tree, locally or on production with `--content /data/content`.
+  - `legacy-map`, `legacy-rewrite` and `check-links` (F48)
+  - `wp-media` (F49)
+  - `wp-tags` (F50)
+  - `strip-categories` (F51)
+
+Fly.io's container doesn't start through this file; it imports
+`salasblog2.server:app` directly. On production the CLI is used over
+`fly ssh console` as `/app/.venv/bin/bg ...`.
 
 ## Commands as thin wrappers, not logic
 
-Every `cmd_*` function follows the same shape: construct a `SiteGenerator`
-or `RaindropDownloader`, call one method on it, done.
+Every `cmd_*` function has the same shape. It builds the right object or
+inputs from `args`, calls into a library module, and prints the result:
 
 ```python
 def cmd_generate(args):
@@ -37,79 +38,86 @@ def cmd_generate(args):
     generator.generate_site()
 ```
 
-None of these functions contain business logic — that discipline is
-deliberate. If `cli.py` started making decisions about *how* a site gets
-generated or *when* raindrops get synced, that logic would only be
-reachable from the command line, invisible to the FastAPI routes that also
-need to trigger generation and syncing. Keeping every `cmd_*` a one-line
-delegation means the CLI and the web server are just two callers of the
-same underlying classes, never two implementations of the same behavior.
+That discipline is deliberate. Logic that lived in `cli.py` would only be
+reachable from the shell, invisible to the FastAPI routes and the
+scheduler, which trigger the same work. Keeping each `cmd_*` thin means the
+CLI and the web server are two callers of the same code, never two
+implementations of it. It also keeps the logic testable without argparse.
+
+## The content-repair commands share a shape
+
+Each one is built to be safe to point at production content:
+
+- **Dry run by default.** `legacy-rewrite`, `wp-media` and
+  `strip-categories` only report what they would change until `--apply` is
+  given.
+- **`--content` selects the tree.** It defaults to the local `content/`,
+  and production uses `/data/content`.
+- **Byte-preserving edits.** `wp-media` rewrites only matched URLs in post
+  bodies. `strip-categories` removes only the `category:` line, reading and
+  writing raw bytes so line endings survive.
+
+```python
+def cmd_strip_categories(args):
+    for content_dir in content_dirs(Path(args.content)):
+        for md_file in sorted(content_dir.glob("*.md")):
+            text = md_file.read_bytes().decode("utf-8")
+            new_text = remove_frontmatter_key(text, "category")
+            ...
+            if args.apply:
+                md_file.write_bytes(new_text.encode("utf-8"))
+```
+
+The `read_bytes()`/`write_bytes()` pair is a fix, not a style choice. The
+first version used `read_text()`/`write_text()`. Their newline translation
+turned three CRLF files into LF on production, and the change surfaced
+only in the GitHub sync diff.
+
+`wp-media` has two separate modes:
+
+- `--extract TAR` copies the WordPress media export into
+  `static/images/wp/` and touches no posts.
+- Without it, the command rewrites links. It refuses to point a link at a
+  file that isn't present.
+
+That split is what allowed the images to be committed and deployed
+*before* any post was changed.
 
 ## `cmd_server`: two ways to start uvicorn
 
-`cmd_server` is the one command with a real branch in it, and the branch
-exists for a concrete reason — `uvicorn`'s `reload=True` mode requires an
-*importable module string* (`"salasblog2.server:app"`) rather than an
-already-constructed app object, because it needs to re-import the module
-on every file change:
+`cmd_server` is the one everyday command with a real branch.
+`reload=True` needs an *importable module string* rather than an app
+object, because uvicorn re-imports the module on every file change:
 
 ```python
 if args.reload:
     uvicorn.run("salasblog2.server:app", host="0.0.0.0", port=args.port, reload=True)
 else:
-    from .server import app
+    from salasblog2.server import app
     uvicorn.run(app, host="0.0.0.0", port=args.port)
 ```
 
-Without `--reload`, the app object is imported once up front and handed to
-`uvicorn.run()` directly — a simpler path with no re-import machinery,
-appropriate for the common case of just running the server without editing
-it live. The deferred `from .server import app` (inside the `else` branch
-rather than at module top) also means importing `cli.py` doesn't pull in
-the full server module unless the `server` command is actually used.
+The deferred import in the `else` branch also keeps `import cli` from
+pulling in the whole server module unless `server` is run.
 
 ## `main()`: argparse subcommands, `func` dispatch
 
-`main()` builds one `argparse` subparser per command and attaches the
-handler via `set_defaults(func=cmd_x)`, so dispatch at the end is a single
-line — `args.func(args)` — regardless of which command was chosen:
-
-```python
-generate_parser = subparsers.add_parser('generate', help='Generate static site')
-generate_parser.set_defaults(func=cmd_generate)
-```
-
-`add_help=False` on the top-level parser is intentional: the module defines
-its own `cmd_help`, printed both for an explicit `help` command and when no
-command is given at all, so `salasblog2` with no arguments is friendly
-rather than an argparse usage error. The trade-off is that this help text
-is hand-maintained prose, separate from argparse's own `--help` output —
-the two can drift if a flag is added to one subparser and not mentioned in
-`cmd_help`'s manually written `Options:` block.
-
-## A minor style-guide deviation
-
-This module imports `SiteGenerator` and `RaindropDownloader` via relative
-imports (`.generator`, `.raindrop`):
-
-```python
-from .generator import SiteGenerator
-from .raindrop import RaindropDownloader
-```
-
-The project's style guide calls for absolute imports only. It's a small
-inconsistency worth flagging rather than a functional problem — relative
-imports work correctly here since `cli.py` is always invoked as part of the
-`salasblog2` package — but bringing it in line with `import
-salasblog2.generator` / `import salasblog2.raindrop` style used elsewhere
-would remove the one exception to the rule.
+`main()` builds one subparser per command and attaches its handler with
+`set_defaults(func=cmd_x)`, so dispatch is a single `args.func(args)`.
+`add_help=False` on the top-level parser lets the module print its own
+`cmd_help` both for `help` and for no command at all.
 
 ## Observations for future improvement
 
-- **`cmd_help`'s option list is hand-synced with the subparsers above it**
-  and will silently go stale if a flag is added to one but not the other;
-  generating it from argparse's own subparser objects (or just relying on
-  `--help`) would remove the duplication.
-- **The relative imports** noted above are a straightforward one-line fix
-  to bring this file into line with the rest of the codebase's absolute-
-  import convention.
+- **`cmd_help` is hand-maintained** and drifts from the subparsers. Its
+  `Options:` block, for example, covers only the everyday commands.
+  Generating help from argparse, or relying on `--help`, would remove the
+  duplication.
+- **The repair commands are piling up in one file.** Six of the twelve
+  subcommands are content-repair commands, mostly one-off migrations. Once F55 lands, `wp-tags --promote` and
+  possibly `strip-categories` are candidates for removal, so the CLI
+  reflects what's still useful.
+- **`cmd_strip_categories` is the one command with a loop in it.** Moving
+  that walk into a library function, as `rewrite_media_content` does for
+  `wp-media`, would restore the thin-wrapper rule and make it unit-testable
+  without `argparse.Namespace`.

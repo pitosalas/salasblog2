@@ -1,6 +1,6 @@
 ---
-version: "1.1"
-generated: "2026-10-17"
+version: "1.2"
+generated: "2026-10-19"
 ---
 
 # `server.py` — The FastAPI Application
@@ -9,14 +9,20 @@ generated: "2026-10-17"
 
 `server.py` is the entire runtime surface of Salasblog2: one FastAPI `app`
 object carrying every HTTP route the deployed service answers. At roughly
-2,280 lines it is by a wide margin the largest module in the project, and
-that size is not an accident of neglect so much as a consequence of what
-the project actually needs to expose over HTTP — a public static site, a
-password-gated admin single-page app, a legacy XML-RPC endpoint for a
-desktop blogging client, and a handful of Fly.io-specific operational
-levers (volume sync, emergency restore, scheduler control).
+2,150 lines it is by a wide margin the largest module in the project. That
+size is not an accident of neglect so much as a consequence of what the
+project actually needs to expose over HTTP:
 
-Every other module in the project (`generator`, `raindrop`, `blogger_api`,
+- a public static site
+- a password-gated admin single-page app
+- a handful of Fly.io-specific operational levers (volume sync, emergency
+  restore, scheduler control)
+
+It used to carry a fourth surface too: an XML-RPC endpoint for the MarsEdit
+desktop client. That was removed in F52, after MarsEdit stopped being used,
+so the web admin editor is now the only authoring path.
+
+Every other module in the project (`generator`, `raindrop`,
 `scheduler`, `utils`, `stats`, `visitor_type`, `propose`,
 `draft_generator`) exists to be *called from* `server.py`. This module owns
 no business logic of its own beyond request plumbing, auth checks, and a
@@ -25,10 +31,10 @@ orchestration layer, not a place where anything is computed from first
 principles. Understanding `server.py` is largely understanding how those
 other modules are wired together, and why.
 
-## Architectural overview: three request families sharing two stores
+## Architectural overview: two request families sharing two stores
 
-Every request into this app belongs to one of three families, and each
-family touches the same two on-disk stores in a different way:
+Every request into this app belongs to one of two families, and each family
+touches the same on-disk stores in a different way:
 
 - **Public site routes** (`/`, `/blog/*`, `/pages/*`, `/tags/*`,
   `/raindrops/*`, `/static/*`) — read-only, serve pre-rendered files out of
@@ -36,22 +42,17 @@ family touches the same two on-disk stores in a different way:
 - **Admin routes** (`/admin`, `/admin/*`, most of `/api/*`) — a
   session-authenticated single-page app that reads and writes Markdown
   content under `/data/content`, and triggers regeneration of `output/`.
-- **XML-RPC** (`/xmlrpc`) — a third protocol entirely, for MarsEdit,
-  reaching the same content store through `BloggerAPI` rather than through
-  the admin form handlers.
 
 ```mermaid
 flowchart TB
     subgraph clients["Clients"]
         Browser["Browser (public reader)"]
         AdminUI["Admin SPA (/admin)"]
-        MarsEdit["MarsEdit (XML-RPC client)"]
     end
 
     subgraph server["server.py"]
         PublicRoutes["Public routes\n/, /blog, /pages, /tags,\n/raindrops, /static"]
         AdminRoutes["Admin routes\n/admin/*, /api/*"]
-        XmlRpc["/xmlrpc endpoint"]
     end
 
     subgraph stores["On-disk stores"]
@@ -62,7 +63,6 @@ flowchart TB
 
     subgraph modules["Collaborating modules"]
         Generator["generator.SiteGenerator"]
-        BloggerAPI["blogger_api.BloggerAPI"]
         Scheduler["scheduler.Scheduler"]
         Raindrop["raindrop.RaindropDownloader"]
         StatsMod["stats.VisitCounter"]
@@ -82,11 +82,6 @@ flowchart TB
     AdminRoutes --> Raindrop
     AdminRoutes --> Propose
     AdminRoutes -- "read" --> Stats
-
-    MarsEdit --> XmlRpc
-    XmlRpc --> BloggerAPI
-    BloggerAPI -- "read/write .md" --> Content
-    BloggerAPI -- "trigger" --> Generator
 ```
 
 The recurring shape: **admin writes go to `/data/content`; `SiteGenerator`
@@ -102,8 +97,7 @@ Three directories matter, and confusing them is the single easiest way to
 misunderstand a bug report in this project:
 
 - **`/data/content`** — a persistent Fly.io volume. This is the *source of
-  truth* at runtime: every admin edit, MarsEdit post, and raindrop sync
-  writes here.
+  truth* at runtime: every admin edit and raindrop sync writes here.
 - **`/app/content`** — baked into the Docker image from whatever was in git
   at build time. `startup.sh` runs `git checkout -f -B main origin/main`
   against this directory on every container boot, which means **anything
@@ -130,12 +124,11 @@ def get_content_directory(content_type: str) -> Path:
 ```
 
 The same `Path("/data/content").exists()` check appears independently in
-`SiteGenerator.__init__` and in `BloggerAPI.__init__` (see the
-`06-blogger_api.md` companion doc) — three copies of the same
-existence-check idiom rather than one shared helper imported by all three.
-It's a small duplication, but it's exactly the kind of thing that could
-silently drift: if the volume path or the fallback path ever changed, all
-three copies would need to change together. `startup.sh`'s own comment
+`SiteGenerator.__init__`, `RaindropDownloader.__init__` and several F46
+scripts. These are copies of the same existence-check idiom rather than one
+shared helper imported by all of them. It's a small duplication, but it's
+exactly the kind of thing that could silently drift: if the volume path or
+the fallback path ever changed, every copy would need to change together. `startup.sh`'s own comment
 calls this out as "volume-first architecture" — it's a deliberate,
 project-wide convention, just one that isn't factored into shared code.
 
@@ -305,7 +298,7 @@ can return `"started"` immediately and the caller polls
 `/api/sync-status`), the `/api/propose` and `/api/propose-drops` scans, and
 the Claude-backed `/api/generate-draft` call. Both mechanisms exist for the
 same underlying reason — FastAPI is a single event loop, and blocking
-operations (subprocess calls, directory scans, XML-RPC regeneration,
+operations (subprocess calls, directory scans, site regeneration,
 Claude API round-trips) must not run on it directly — but they answer
 different questions: *"does the caller need to wait for a result"* decides
 which one applies.
@@ -351,18 +344,21 @@ just a shared view:
 - `load_content_item()` parses frontmatter into a plain dict the template
   can render, and also returns the file's `mtime` at load time.
 - `save_content_item()` takes a `ContentFields` dataclass (title, date,
-  type, content, tags, image_size, category) and writes it back out with
-  `frontmatter.dumps()`, followed by `f.flush()` + `os.fsync()` — the same
-  durability discipline `BloggerAPI` uses for XML-RPC-originated writes,
-  applied here to admin-form writes too.
+  type, content, tags, image_size) and writes it back out with
+  `frontmatter.dumps()`, followed by `f.flush()` + `os.fsync()`.
+  - Because it rebuilds the frontmatter from those fields alone, any key
+    the form doesn't carry is dropped on save.
+  - That's how editing an old post now also strips its retired `category:`
+    line. The category field itself was removed in F51.
 - `delete_content_item()` and `regenerate_after_deletion_in_background()`
   are the deletion-side mirror of save + regenerate.
 
 ### Optimistic concurrency, not locking
 
 Because the admin editor is a plain HTML form with no live collaboration
-protocol, two browser tabs (or an admin editing while a MarsEdit sync
-happens) could both load the same post and both submit a save. Rather than
+protocol, two browser tabs (or an admin editing while a scripted batch
+rewrites tags on the volume) could both load the same post and both submit
+a save. Rather than
 implement real locking, `save_edited_post`/`save_edited_page` pass the
 `mtime` the edit form was rendered with back as a hidden field, and
 `check_no_concurrent_edit()` compares it against the file's current mtime
@@ -385,89 +381,46 @@ skips the check rather than blocking the save, so it protects against the
 common case (a stale tab) without introducing a hard failure mode for
 edge cases (an old cached page, or a client that never sends the field).
 
-## MarsEdit / XML-RPC
+## The admin raindrop sync: deletions first, status always reset
 
-`/xmlrpc` exists so MarsEdit — a native macOS blog editor many writers
-prefer over any web form — can post to this blog using two decades-old
-protocols, Blogger API and MetaWeblog API, that it still speaks natively.
-`server.py`'s job here is narrowly scoped: parse the wire format, dispatch
-to the right `BloggerAPI` method, and marshal the response — all the
-actual "write a post" logic lives in `blogger_api.py` (see
-`06-blogger_api.md`).
+`/api/sync-raindrops` runs the Raindrop.io sync in a thread
+(`run_in_executor`) and returns `"started"` at once. The browser then polls
+`/api/sync-status`. Since F53 the worker does three things, in a
+deliberate order:
 
-The parsing itself leans entirely on Python's standard library rather than
-a hand-rolled parser:
+1. **Remove raindrops deleted on Raindrop.io**, via
+   `RaindropDownloader.remove_deleted_raindrops()`. This needs a *complete*
+   fetch of every remote bookmark ID, so it runs **before** anything is
+   written. If that fetch fails, the sync stops with nothing changed.
+2. **Download new raindrops**, as before.
+3. **Regenerate.** If anything was deleted, it runs a full
+   `generate_site()`, whose pruning step removes the deleted raindrops'
+   pages. Otherwise it regenerates the new raindrops incrementally.
 
-```python
-try:
-    raw_params, method_name = xmlrpc_client.loads(body)
-except Exception as e:
-    ...
-```
-
-The comment in the code is worth repeating because it explains a real,
-previously-shipped bug: an earlier hand-built `ElementTree` parser only
-understood `string`/`boolean`/`int`/`base64`/one-level `struct`, and
-silently *dropped* anything else — `dateTime.iso8601` values, arrays,
-nested structs. Switching to `xmlrpc.client.loads()` fixed a whole class of
-"MarsEdit sends something valid, our parser mangles it" bugs at once,
-for the cost of one extra unwrapping step: the stdlib decodes `<base64>`
-payloads as `xmlrpc.client.Binary` wrapper objects, which `unwrap_xmlrpc_binary()`
-recursively strips back to plain `bytes` before anything downstream (which
-expects plain bytes) sees them.
-
-Dispatch is a small lookup-table pattern, and it's where the
-background-task-threading decision from the async section above shows up
-again at the protocol boundary:
+The worker is split into a thin wrapper and the real work. The wrapper
+exists for one reason: `sync_status["running"]` must be reset however the
+sync ends.
 
 ```python
-def call_xmlrpc_method(api, method_name, method_args, background_tasks):
-    regenerating_methods = {
-        "blogger.newPost": api.blogger_newPost,
-        "blogger.editPost": api.blogger_editPost,
-        "blogger.deletePost": api.blogger_deletePost,
-        "metaWeblog.newPost": api.metaweblog_newPost,
-        "metaWeblog.editPost": api.metaweblog_editPost,
-    }
-    other_methods = {
-        "blogger.getRecentPosts": api.blogger_getRecentPosts,
-        ...
-    }
-    if method_name in regenerating_methods:
-        return regenerating_methods[method_name](*method_args, background_tasks=background_tasks)
-    if method_name in other_methods:
-        return other_methods[method_name](*method_args)
-    ...
+def do_sync():
+    sync_status["running"] = True
+    sync_status["message"] = "Downloading raindrops..."
+    try:
+        result = sync_and_regenerate()
+        sync_status["message"] = result["message"]
+        return result
+    except Exception as e:
+        logging.getLogger(__name__).exception("Raindrop sync failed")
+        sync_status["message"] = f"Raindrop sync failed: {e}"
+        raise
+    finally:
+        sync_status["running"] = False
 ```
 
-Only the methods that mutate content receive `background_tasks` — so
-"Post" in MarsEdit returns promptly while regeneration happens after the
-response, exactly mirroring the admin form's save behavior, and read-only
-methods (`getRecentPosts`, `getPost`, `getCategories`) never pay for
-threading a parameter they don't need.
-
-Response marshalling gets the same care, wrapped in its own `try/except`
-even though the *business logic* already succeeded by that point:
-
-```python
-try:
-    response_xml = create_xmlrpc_response(result)
-except Exception:
-    logger.exception(...)
-    response_xml = xmlrpc_client.dumps(
-        xmlrpc_client.Fault(500, f"Server failed to marshal response for {method_name}")
-    )
-    return Response(content=response_xml, media_type="text/xml", status_code=200)
-```
-
-The reasoning is spelled out in the comment: if marshalling raised
-uncaught, FastAPI would return a plain HTML 500 error page — not XML — and
-MarsEdit's client-side parser has no way to recover from that gracefully;
-historically it surfaced as an opaque "XMLRPC Response Parsing Failed:
-(null)" in the MarsEdit UI. Every failure path in this route, whatever its
-origin, is deliberately routed back through `xmlrpc_client.dumps(Fault(...))`
-so the client always gets well-formed XML back, even when the server side
-is failing.
+Before this, an exception left `running` stuck at `True`. Every later click
+of the sync button was then answered with "already running", until the
+process restarted. The error is now visible on the status endpoint, and it
+is still raised so the executor logs it.
 
 ## The admin panel
 
@@ -617,16 +570,15 @@ won't block startup if the check itself can't run.
 
 ## Observations for future improvement
 
-- **This file should be split into routers.** At 2,280 lines, `server.py`
-  mixes route registration, business-adjacent helpers (`ContentFields`,
-  `save_content_item`), background-job scheduling, and low-level static
-  file serving in one module. FastAPI's `APIRouter` would let public
-  routes, admin/content routes, sync/scheduler routes, and the XML-RPC
-  endpoint each live in their own file, included into `app` from a much
-  smaller top-level module — the project's own comments already flag this
-  as a known gap.
+- **This file should be split into routers.** At about 2,150 lines,
+  `server.py` mixes route registration, business-adjacent helpers
+  (`ContentFields`, `save_content_item`), background-job scheduling, and
+  low-level static file serving in one module. FastAPI's `APIRouter` would
+  let public routes, admin/content routes and sync/scheduler routes each
+  live in their own file, included into `app` from a much smaller
+  top-level module. The project's own comments already flag this as a
+  known gap.
 - **The `if config["admin_password"] and not is_admin_authenticated(request): raise HTTPException(401, ...)` guard is duplicated across roughly twenty routes.** A FastAPI dependency (`Depends(require_admin)`) would collapse this to one declaration per route signature and remove the risk of a future route forgetting the check entirely — a straightforward win with no design tradeoff attached.
 - **Path-traversal protection is inconsistent.** `_safe_resolve()` guards `/static/*`, `/raindrops/*`, and the root catch-all, but `/blog/*`, `/pages/*`, and `/tags/*` build paths with a plain join. All paths currently resolve under the trusted, generated `output/` directory, so the practical risk is low today — but the inconsistency itself is worth closing so the safety property holds by construction rather than by which directory happens to be involved.
-- **Volume-first path resolution (`Path("/data/content").exists()`) is duplicated in three places** — `server.py`'s `get_content_directory()`, `SiteGenerator.__init__`, and `BloggerAPI.__init__` — rather than defined once and imported. A shared helper would guarantee all three modules agree on what "volume-first" means if the layout ever changes.
-- **`/xmlrpc`'s dispatch table (`call_xmlrpc_method`) and the admin form routes implement two independent write paths into the same content store**, one going through `BloggerAPI`, one through `save_content_item`/`ContentFields`. They already converge on the same durability practice (`flush()` + `fsync()`) and the same background-regeneration pattern, but that convergence is currently maintained by two authors remembering to keep them in sync rather than by shared code.
+- **Volume-first path resolution (`Path("/data/content").exists()`) is duplicated** in `server.py`'s `get_content_directory()`, `SiteGenerator.__init__`, `RaindropDownloader.__init__` and several F46 scripts, rather than defined once and imported. A shared helper would guarantee they all agree on what "volume-first" means if the layout ever changes.
 - **The stats and posts-index caches each have their own hand-written invalidation call sites** at every mutating route, rather than a single decorator or dependency that says "this route changes content, refresh the relevant caches." As more cached views get added (a likely direction given how well this pattern has worked twice already), the number of places that need to remember to call `background_tasks.add_task(generate_*_cache)` will keep growing linearly with the number of write routes.

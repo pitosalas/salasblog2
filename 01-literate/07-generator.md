@@ -1,6 +1,6 @@
 ---
-version: "1.1"
-generated: "2026-10-17"
+version: "1.2"
+generated: "2026-10-19"
 ---
 
 # `generator.py` — The Static Site Builder
@@ -27,13 +27,6 @@ regenerates everything from scratch, and an **incremental regeneration**
 (`incremental_regenerate_post()` / `incremental_regenerate_after_deletion()`)
 that touches only the handful of files a single post edit actually affects.
 
-One thing worth flagging up front: `generator.py` imports its helpers with
-`from .utils import (...)` — a *relative* import. The project's style guide
-(`.claude/style_guide.md`) mandates absolute imports only ("Absolute imports
-only; no relative imports"), so this is a small, mechanical style-guide
-violation worth fixing (`from salasblog2.utils import (...)`), even though
-it causes no functional problem today.
-
 ## Two sources of truth: the volume-first content directory
 
 Fly.io deployments mount a persistent volume at `/data`; a plain `git
@@ -54,11 +47,11 @@ git at build time — is **not** the source of truth. Every container boot
 runs a `git checkout -f` that would silently discard any post written after
 the image was built, so anything living only in `/app/content` is
 disposable. The **volume** at `/data/content` is what survives redeploys
-and restarts; it's where the web admin panel, the Blogger/MetaWeblog XML-RPC
-adapter (`blogger_api.py`), and the raindrop importer all write. This
-`Path("/data/content").exists()` check is how `SiteGenerator` finds that
-same durable location — it's the identical pattern `blogger_api.py` and
-`server.py`'s `get_content_directory()` use, kept consistent on purpose so
+and restarts; it's where the web admin panel and the raindrop importer
+write. This `Path("/data/content").exists()` check is how `SiteGenerator`
+finds that same durable location. It's the identical pattern
+`RaindropDownloader` and `server.py`'s `get_content_directory()` use, kept
+consistent on purpose so
 that "which directory is real" is never a question two parts of the
 codebase answer differently.
 
@@ -167,7 +160,8 @@ flowchart TD
     I --> J[generate_pages_listing]
     J --> K[generate_search_index]
     K --> L[generate_404_page]
-    L --> M[copy_static_files + merge volume uploads]
+    L --> M[copy_static_files: update static/ in place]
+    M --> N[prune_stale_pages: delete pages this run didn't write]
 ```
 
 A few design choices in this pipeline are worth calling out individually:
@@ -182,12 +176,17 @@ A few design choices in this pipeline are worth calling out individually:
   through to both `generate_listing_pages()` and
   `generate_collection_filtered_pages()`, since both need the same "how
   many raindrops per collection" numbers to render filter navigation.
-- **Static file copying happens last**, and it does more than a directory
-  copy: after `shutil.copytree()` from `static/`, it separately merges in
-  any images from `/data/static/images/uploads` — the volume location where
-  uploaded images persist across redeploys, since a `git checkout -f` on
-  boot would otherwise wipe any image uploaded outside of a commit. This is
-  the same volume-first idea as content, applied to media.
+- **Static file copying happens near the end**, and it does more than a
+  directory copy. After copying `static/`, it separately merges in any
+  images from `/data/static/images/uploads`. That's the volume location
+  where uploaded images persist across redeploys, since a `git checkout -f`
+  on boot would otherwise wipe any image uploaded outside of a commit. It is
+  the same volume-first idea as content, applied to media. See the
+  in-place update below for why it never deletes `output/static`.
+- **Pruning is the last step.** A full rebuild writes every page, so
+  anything in the directories it owns that it *didn't* write belongs to a
+  source that no longer exists. Without this step a deleted raindrop's
+  page stayed online indefinitely. See the next section.
 - **Template rendering failures don't abort the build.** `render_template()`
   catches exceptions, logs them, and returns an empty string rather than
   propagating — so one broken template call produces one blank page instead
@@ -195,6 +194,53 @@ A few design choices in this pipeline are worth calling out individually:
   batch job that might otherwise fail an entire deploy over one bad post,
   though it does mean a broken page can go live silently (see
   Observations).
+
+## Keeping `output/` honest: pruning and the in-place static copy
+
+Two F53 changes make a full rebuild leave `output/` matching its sources,
+without a visible glitch while it runs.
+
+### Pruning by modification time
+
+`generate_site()` notes the time just before it writes anything, less a
+small `MTIME_SLACK_SECONDS` for coarse filesystem timestamps. At the end,
+`prune_stale_pages()` walks the directories a full build owns completely
+(`PRUNED_OUTPUT_DIRS`: `blog`, `raindrops`, `tags`). It deletes every
+`.html` older than that mark, then removes any directory left empty.
+
+```python
+for html_file in root.rglob("*.html"):
+    if html_file.stat().st_mtime < run_started:
+        html_file.unlink()
+```
+
+This is a *mark-and-sweep* in miniature. The write pass is the mark, and
+the timestamp is the mark bit, so nothing has to record each written path.
+It works only because every writer here writes **unconditionally**. If a
+step ever learned to skip unchanged pages, this would delete them. Root-level
+output (`index.html`, `admin-stats.html`, caches, page HTML) is outside
+`PRUNED_OUTPUT_DIRS` and never touched.
+
+### Why the static copy updates in place
+
+The old `copy_static_files()` did `rmtree(output/static)` and then
+`copytree`. For the second or two between them, every page loaded rendered
+unstyled, with broken images. The obvious fix was to build `static.new`
+beside the live folder and swap it in with renames. **That failed on
+production** with `OSError: [Errno 18] Invalid cross-device link`:
+
+- Fly runs the app on Docker's overlay filesystem.
+- `output/static` is a directory from the image layer, and overlayfs
+  refuses to rename such a directory.
+
+So the copy now updates the live tree in place:
+
+1. `copytree(..., dirs_exist_ok=True)` copies the source over it.
+2. The volume uploads are merged in.
+3. Any file in neither source is deleted, then any empty directory.
+
+The folder itself never disappears. Leftover `static.new`/`static.old`
+directories from the failed attempt are cleared at the start of each copy.
 
 ## Templates and their custom Jinja2 filters
 
@@ -335,20 +381,14 @@ incremental regeneration for listings, home and search.
 ## Incremental regeneration: the fast path
 
 `incremental_regenerate_post()` is what runs after a single post is created
-or edited — called from the web admin's save handler, from
-`blogger_api.py`'s MarsEdit adapter, and from the raindrop-import flow in
-`server.py`. Its entire purpose is to avoid the full-site cost for a
-single-post change:
+or edited. It's called from the web admin's save handler and from the
+raindrop-import flow in `server.py`. Its entire purpose is to avoid the
+full-site cost for a single-post change:
 
 ```mermaid
 flowchart TD
-    A[changed_posts = load_posts of changed type] --> B{content_type}
-    B -->|blog| C[load raindrops from disk<br/>pages = empty]
-    B -->|raindrops| D[load blog from disk<br/>pages = empty]
-    B -->|pages| E[load blog from disk<br/>raindrops = empty]
-    C --> F[find changed_post by filename]
-    D --> F
-    E --> F
+    A[changed_posts = load_posts of changed type] --> B[load the other two types from disk]
+    B --> F[find changed_post by filename]
     F --> G[generate_individual_posts: just this one post]
     G --> H{blog or raindrops?}
     H -->|yes| I[generate_listing_pages target_filename=post]
@@ -360,25 +400,36 @@ flowchart TD
 
 Two economy measures are stacked here:
 
-1. **Only the changed content type is re-read from disk in full.** If a
-   blog post changed, raindrops are also loaded (because the home page and
-   search index need them), but blog posts are loaded via `changed_posts` —
-   already in memory — instead of a second disk read. `pages` is set to
-   `[]` for a blog or raindrops edit rather than loaded at all, on the
-   assumption that pages are irrelevant to this operation. But that same
-   empty list then flows into the search-index rebuild
-   (`blog_posts + raindrops + pages`), which means **a blog or raindrop
-   edit silently drops existing pages from the regenerated search index**
-   — a real gap, not a simplification; see Observations below.
+1. **The changed content type is read from disk once.** The other two
+   types are loaded too, because the home page and the search index cover
+   all of them. The changed type is reused from `changed_posts` rather than
+   read a second time.
 2. **Only the specific listing page containing the edited post is
    rewritten**, via the `target_filename` pagination shortcut described
    above.
 
-The home page and search index are always regenerated in full (not
-incrementally), because both are small — a handful of recent posts, or one
-JSON file covering the whole site — so there's no meaningful pagination
-shortcut available for them; the cost of rebuilding them is already
-minimal.
+There used to be a third economy, and it was a bug (issue I01). The types
+that hadn't changed were set to `[]` instead of being loaded. Those empty
+lists then flowed into the search index and the home page. So a blog edit
+dropped every page from `search.json`, and a page edit also emptied the
+home page's Link Blog column, until the next full rebuild. The fix loads
+all three types, reusing whichever one is already in memory:
+
+```python
+loaded = {content_type: changed_posts}
+for other_type in ("blog", "raindrops", "pages"):
+    if other_type not in loaded:
+        loaded[other_type] = self.load_posts(other_type)
+```
+
+The cost is that a page edit now also reads the roughly 1,500 raindrop
+files. That's a correct result bought with a slower edit, the right trade
+for a page that only changes rarely.
+
+The home page and search index are always regenerated in full, not
+incrementally, because both are small: a handful of recent posts, or one
+JSON file covering the whole site. There's no meaningful pagination
+shortcut for them, and the cost of rebuilding them is already minimal.
 
 ### Deletion: a slightly different shape
 
@@ -458,16 +509,6 @@ stops being the right design (see Observations).
 
 ## Observations for future improvement
 
-- **A blog/raindrops incremental edit regenerates the search index without
-  the `pages` content type.** In `incremental_regenerate_post()`, `pages`
-  is set to `[]` whenever `content_type` isn't `'pages'`, and that empty
-  list flows straight into `generate_search_index(blog_posts + raindrops +
-  pages)` — meaning any edit to a blog post or raindrop overwrites
-  `search.json` with all existing *pages* silently removed from search
-  results, until the next full `generate_site()` restores them. This looks
-  like a real, live bug rather than an intentional trade-off, since nothing
-  else in the incremental design suggests pages should be excluded from
-  search.
 - **Tag pages and collection-filtered pages have no incremental path.**
   Both are only rebuilt on a full `generate_site()` run, so a newly-tagged
   or re-tagged post won't appear under its tag page (or a raindrop's new
@@ -491,7 +532,9 @@ stops being the right design (see Observations).
   boundary without the incremental path detecting or handling that case —
   worth either detecting the date change explicitly, or documenting it as a
   known limitation that requires a full regenerate after a backdating edit.
-- **The `from .utils import (...)` relative import** violates this
-  project's absolute-imports-only style rule and should become `from
-  salasblog2.utils import (...)` for consistency with the rest of the
-  codebase, even though it has no functional effect today.
+- **Pruning silently depends on every page being rewritten.** The
+  mark-and-sweep in `prune_stale_pages()` is correct only while every
+  generator writes unconditionally. A future "skip unchanged pages"
+  optimization would make pruning delete live pages. A test pinning that
+  assumption, or tracking written paths explicitly, would make the
+  coupling visible.
