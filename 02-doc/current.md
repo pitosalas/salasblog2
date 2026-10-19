@@ -129,6 +129,18 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 **F52 — Remove XML-RPC / MarsEdit Support**: done 2026-10-18 (`03-features/done/F52-*`).
 
+**F53 — Keep the Generated Site in Sync**: done 2026-10-18 (`03-features/done/F53-*`).
+
+* The raindrop sync now removes bookmarks deleted on Raindrop.io, but only
+  after a complete fetch of every remote ID.
+* Full regeneration prunes stale pages in `output/blog/`,
+  `output/raindrops/` and `output/tags/`.
+* `output/static` is updated in place instead of being deleted and
+  recopied.
+* **Gotcha:** on fly.io, directories under `/app` come from the Docker
+  image's overlay layer and can't be renamed (EXDEV). Avoid any
+  rename-swap of them.
+
 **F46 — Tag cleanup**: TF46.6 is complete, and no post on production needs tags. The TF46.13 normalization dry run would change only `2026-10-17-lotus-improv-pre-history.md` (`improv`, `pivot-table` → `lotus`). It is waiting on the user's decision.
 
 **F45 — Tag Suggestion Picklist for Post Editor**: done, confirmed working live by the user (`03-features/done/F45-tag-suggestion-picklist.md`). The post editor's Tags field offers a searchable picklist backed by real tag-frequency data (`output/top-tags.json`) merged with the curated vocabulary — now sourced from `02-doc/tag-hints.md` (the standalone `BLOG_TAGS` constant was consolidated away this session; see F46 below).
@@ -199,7 +211,7 @@ F41 was reconciled against F42 and F44 (TF41.2, TF41.3, TF41.10 reworded so they
 ## Test status
 
 ```
-692 passed, 9 skipped, 1 warning
+705 passed, 9 skipped, 2 warnings
 ```
 
 No failures as of 2026-10-18 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
