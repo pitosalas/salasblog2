@@ -17,7 +17,10 @@ dropped.
 * `personal` split into `life` and `places`
 * `eroom`, `microsoft`, `lotus` and `amazon` go under `business`
 * raindrops left with no tags stay untagged
-* original raindrop tags are **not** kept
+* ~~original raindrop tags are **not** kept~~ **Reversed 2026-10-20:** every
+  converted file (raindrop and blog) keeps its pre-conversion tags in an
+  `original_tags:` frontmatter field. Nothing reads it; editor saves carry
+  it through.
 * automatic promotion of new tags ends
 
 ## The 16 tags

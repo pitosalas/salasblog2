@@ -1,5 +1,5 @@
 ---
-version: "1.0"
+version: "1.1"
 generated: "2026-10-20"
 ---
 
@@ -64,6 +64,25 @@ for start in range(1, len(lines)):
 
 This is the same technique as F51's `remove_frontmatter_key`, extended from
 deleting a line to replacing a block.
+
+### Keeping the old tags
+
+The conversion passes the file's tags from before as `original_tags`, and
+the replacement writes them as a second list right after the new one:
+
+```yaml
+tags:
+- programming
+original_tags:
+- ruby
+- rails
+```
+
+The finer old topics (`ruby` versus `python`) stay with the post, should
+they ever be wanted. A changing file that **already** has `original_tags` is
+refused rather than overwritten, so a rerun can never replace the true
+originals with already-converted tags. Because converted files don't change
+on a second run, that refusal only fires on a file someone edited by hand.
 
 ## Trust, but verify
 
@@ -133,6 +152,9 @@ than 48 applied and the batch in an unknown state.
   judgment passes are done, `convert_blog_tags` and the generic-pass
   helpers have no further use. They can be deleted, along with their CLI
   commands, keeping `replace_frontmatter_tags` if anything else needs it.
+- **`original_tags` is write-only.** Nothing displays or searches it. It
+  survives admin edits because `save_edited_post` copies it over, but any
+  other tool that rebuilds frontmatter from scratch would drop it.
 - **Two frontmatter writers now coexist.** `tag_cleanup.apply_tag_proposal`
   still re-serializes. Moving it onto `replace_frontmatter_tags` would
   remove its CRLF refusal and make every tag write diff-clean.

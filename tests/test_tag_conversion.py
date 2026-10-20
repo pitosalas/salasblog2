@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # test_tag_conversion — Tests for the in-place conversion onto curated tags (F55)
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-20
 # Updated: 2026-10-20
 # Open Source Under MIT license
@@ -101,15 +101,28 @@ class TestConvertDirectory:
         assert report.dropped == {"free": 2, "x": 1}
         assert {p.name: p.read_bytes() for p in drops.iterdir()} == before
 
-    def test_apply_changes_only_tag_lines(self, tmp_path):
+    def test_apply_changes_tag_lines_and_records_originals(self, tmp_path):
         drops = self.make_drops(tmp_path)
         convert_directory(drops, canonicalize_tags, ALIASES, is_apply=True)
-        assert (drops / "mixed.md").read_text() == post_text(["tags:", "- ai"])
-        assert (drops / "unknown.md").read_text() == post_text(["tags: []"])
+        assert (drops / "mixed.md").read_text() == post_text(
+            ["tags:", "- ai", "original_tags:", "- chatgpt", "- free"]
+        )
+        assert (drops / "unknown.md").read_text() == post_text(
+            ["tags: []", "original_tags:", "- free"]
+        )
         assert (drops / "untagged.md").read_text() == post_text(["tags: []"])
         assert (drops / "crlf.md").read_bytes() == post_text(
-            ["tags:", "- robotics"], eol="\r\n"
+            ["tags:", "- robotics", "original_tags:", "- robotics", "- x"],
+            eol="\r\n",
         ).encode("utf-8")
+
+    def test_existing_original_tags_is_refused_not_overwritten(self, tmp_path):
+        drops = tmp_path / "raindrops"
+        lines = ["tags:", "- chatgpt", "original_tags:", "- older"]
+        path = write(drops, "seen.md", post_text(lines))
+        with pytest.raises(ValueError, match="seen.md: already has original_tags"):
+            convert_directory(drops, canonicalize_tags, ALIASES, is_apply=True)
+        assert path.read_text() == post_text(lines)
 
     def test_second_run_changes_nothing(self, tmp_path):
         drops = self.make_drops(tmp_path)

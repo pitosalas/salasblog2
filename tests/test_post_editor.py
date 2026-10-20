@@ -265,6 +265,26 @@ class TestCuratedTagsOnSave:
         assert response.status_code == 400
         assert post_file.read_text() == before
 
+    def test_edit_keeps_original_tags(self, client, tmp_path):
+        post_file = write_post(tmp_path, "2026-01-01-my-post.md", tags=["ai"])
+        text = post_file.read_text().replace(
+            'tags: ["ai"]', 'tags: ["ai"]\noriginal_tags: ["chatgpt", "free"]'
+        )
+        post_file.write_text(text)
+        response = client.post(
+            "/admin/edit-post/2026-01-01-my-post.md",
+            data={
+                "title": "Test Post",
+                "date": "2026-01-01",
+                "type": "blog",
+                "content": "My edit",
+                "tags": ["ai"],
+            },
+        )
+        assert response.status_code == 200
+        metadata = frontmatter.load(post_file).metadata
+        assert metadata["original_tags"] == ["chatgpt", "free"]
+
 
 class TestConcurrencyProtection:
     """F42 point 9: two admin tabs editing the same post used to silently clobber."""

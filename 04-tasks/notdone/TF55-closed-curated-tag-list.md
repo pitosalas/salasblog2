@@ -123,6 +123,11 @@ raindrop file's `tags` frontmatter through TF55.0.
 The generic `technology`, and `personal` on posts with no other topic, are
 left in place, marked for TF55.7.
 
+**Added 2026-10-20 at the user's request:** each changed file also gets
+an `original_tags:` entry, written right after `tags:`, holding its tags
+before conversion. A file that already has `original_tags` is refused, not
+overwritten. Editing a post in the admin keeps the field.
+
 **Implemented as `bg convert-tags`, which handles raindrops and blog
 together.** `technology` is treated like `personal`: it is dropped when the
 post has a real topic. Otherwise pass A could never reach those posts,

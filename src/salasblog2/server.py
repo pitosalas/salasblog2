@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 9
+# Version: 10
 # Created: 2026-09-08
 # Updated: 2026-10-20
 # Open Source Under MIT license
@@ -623,6 +623,7 @@ class ContentFields:
     content: str
     tags: list
     image_size: str = ""
+    original_tags: list | None = None
 
 
 def save_content_item(filename: str, content_type: str, fields: ContentFields) -> float:
@@ -645,6 +646,8 @@ def save_content_item(filename: str, content_type: str, fields: ContentFields) -
         }
         if fields.image_size:
             item.metadata["image_size"] = fields.image_size
+        if fields.original_tags is not None:
+            item.metadata["original_tags"] = fields.original_tags
 
         with open(content_file, "w", encoding="utf-8") as f:
             f.write(frontmatter.dumps(item))
@@ -1433,11 +1436,13 @@ async def save_edited_post(
 
     check_no_concurrent_edit(content_file, loaded_mtime)
     tags = curate_submitted_tags(tags)
+    # The form doesn't carry the pre-F55 tags; keep them through an edit.
+    original_tags = frontmatter.load(content_file).metadata.get("original_tags")
 
     new_mtime = save_content_item(
         filename,
         "blog",
-        ContentFields(title, date, type, content, tags, image_size),
+        ContentFields(title, date, type, content, tags, image_size, original_tags),
     )
     await render_post_page_now(filename, "blog")
     background_tasks.add_task(_regenerate_in_background, filename, "blog")

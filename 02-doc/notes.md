@@ -80,6 +80,8 @@ The single source is the **Curated Tags** list in `02-doc/tag-hints.md`.
 * `bg convert-tags --content <root> [--apply]` rewrites existing raindrop
   and blog tags in place. Only the `tags:` lines change, line endings
   included, and each rewrite is re-parsed to check it.
+* Each changed file keeps its old tags in `original_tags:`. Nothing
+  displays it, and admin edit-saves carry it through.
 * On blog posts the generic `technology` and `personal` are dropped when
   the post has a real topic, and kept as markers otherwise.
 * `bg generic-tags` selects the marked posts for the judgment pass and

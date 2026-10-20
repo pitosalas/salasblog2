@@ -370,6 +370,9 @@ return canonical.kept
 ```
 
 - An alias is saved as its primary, so `iPhone` is stored as `computing`.
+- An editing save also copies the post's `original_tags` (its pre-F55
+  tags) into the rewritten frontmatter. The form doesn't carry that field,
+  so it would otherwise disappear on the first edit.
 - An unknown tag gets a **400 naming it**, and the post is not saved.
   Refusing rather than silently dropping means the author finds out at
   once instead of later discovering a tag quietly lost.

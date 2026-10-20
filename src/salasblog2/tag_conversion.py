@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # tag_conversion — One-time in-place conversion of existing content onto the curated tags
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-20
 # Updated: 2026-10-20
 # Open Source Under MIT license
@@ -12,8 +12,10 @@ curated list (F55), in place.
 Only the `tags:` entry of the frontmatter changes. `replace_frontmatter_tags`
 swaps exactly those lines (the key plus any `- item` lines under it) and
 keeps every other byte, including each line's own ending, so CRLF files
-survive. Each rewrite is checked by re-parsing: the other frontmatter keys
-and the body must be unchanged and the tags must be the new ones.
+survive. The conversion also records the tags the file had before in an
+`original_tags:` entry right after `tags:`, so the finer old topics stay
+with the post. Each rewrite is checked by re-parsing: the other frontmatter
+keys and the body must be unchanged and both tag lists must be as intended.
 
 Raindrops go straight through `canonicalize_tags`. Blog posts do too, except
 for the generic `technology` and `personal` tags: on a post with no other
@@ -33,6 +35,7 @@ import frontmatter
 from salasblog2.tag_vocabulary import CanonicalTags, canonicalize_tags
 
 GENERIC_BLOG_TAGS = ("technology", "personal")
+ORIGINAL_TAGS_KEY = "original_tags"
 
 TagConverter = Callable[[list[str], dict[str, str]], CanonicalTags]
 
@@ -56,17 +59,20 @@ def convert_blog_tags(tags: list[str], alias_map: dict[str, str]) -> CanonicalTa
     return CanonicalTags(kept=list(dict.fromkeys(generics)), dropped=dropped)
 
 
-def render_tags(tags: list[str], eol: str) -> str:
-    if not tags:
-        return f"tags: []{eol}"
-    return f"tags:{eol}" + "".join(f"- {tag}{eol}" for tag in tags)
+def render_list(key: str, values: list[str], eol: str) -> str:
+    if not values:
+        return f"{key}: []{eol}"
+    return f"{key}:{eol}" + "".join(f"- {value}{eol}" for value in values)
 
 
-def replace_frontmatter_tags(text: str, tags: list[str]) -> str:
-    """Return `text` with its frontmatter `tags:` entry replaced by `tags`.
+def replace_frontmatter_tags(
+    text: str, tags: list[str], original_tags: list[str] | None = None
+) -> str:
+    """Return `text` with its frontmatter `tags:` entry replaced by `tags`,
+    followed by an `original_tags:` entry when `original_tags` is given.
 
     The entry is the `tags:` line plus the indented or `- ` lines under it.
-    The new entry uses the old line's ending. Raises if the file has no
+    The new lines use the old line's ending. Raises if the file has no
     frontmatter or no `tags:` key, rather than inventing one.
     """
     lines = text.splitlines(keepends=True)
@@ -82,7 +88,10 @@ def replace_frontmatter_tags(text: str, tags: list[str]) -> str:
         while end < len(lines) and is_continuation(lines[end]):
             end += 1
         eol = line[len(line.rstrip("\r\n")) :] or "\n"
-        return "".join(lines[:start]) + render_tags(tags, eol) + "".join(lines[end:])
+        entry = render_list("tags", tags, eol)
+        if original_tags is not None:
+            entry += render_list(ORIGINAL_TAGS_KEY, original_tags, eol)
+        return "".join(lines[:start]) + entry + "".join(lines[end:])
     raise ValueError("frontmatter has no tags: key")
 
 
@@ -99,15 +108,27 @@ def read_tags(post: frontmatter.Post) -> list[str]:
     return [str(tag) for tag in raw]
 
 
-def verify_rewrite(original: str, rewritten: str, tags: list[str]) -> None:
+def verify_rewrite(
+    original: str,
+    rewritten: str,
+    tags: list[str],
+    original_tags: list[str] | None = None,
+) -> None:
     before = frontmatter.loads(original)
     after = frontmatter.loads(rewritten)
     if after.content != before.content:
         raise ValueError("body changed")
     if read_tags(after) != tags:
         raise ValueError(f"tags did not persist: {after.metadata.get('tags')!r}")
-    others_before = {k: v for k, v in before.metadata.items() if k != "tags"}
-    others_after = {k: v for k, v in after.metadata.items() if k != "tags"}
+    rewritten_keys = {"tags"}
+    if original_tags is not None:
+        rewritten_keys.add(ORIGINAL_TAGS_KEY)
+        if after.metadata.get(ORIGINAL_TAGS_KEY) != original_tags:
+            raise ValueError("original_tags did not persist")
+    others_before = {
+        k: v for k, v in before.metadata.items() if k not in rewritten_keys
+    }
+    others_after = {k: v for k, v in after.metadata.items() if k not in rewritten_keys}
     if others_after != others_before:
         raise ValueError("other frontmatter changed")
 
@@ -118,13 +139,16 @@ def convert_directory(
     alias_map: dict[str, str],
     is_apply: bool,
 ) -> ConversionReport:
-    """Convert every `*.md` file's tags in `content_dir`. Writes only when
-    `is_apply`; a dry run reports the same counts and writes nothing."""
+    """Convert every `*.md` file's tags in `content_dir`, recording the old
+    ones as `original_tags`. Writes only when `is_apply`; a dry run reports
+    the same counts and writes nothing. A changing file that already has
+    `original_tags` is refused rather than overwritten."""
     report = ConversionReport()
     for path in sorted(content_dir.glob("*.md")):
         text = path.read_bytes().decode("utf-8")
         try:
-            tags = read_tags(frontmatter.loads(text))
+            post = frontmatter.loads(text)
+            tags = read_tags(post)
             result = convert(tags, alias_map)
             report.tags_kept += len(result.kept)
             if result.kept == tags:
@@ -132,8 +156,10 @@ def convert_directory(
             report.dropped.update(result.dropped)
             report.files_changed += 1
             report.now_untagged += not result.kept
-            new_text = replace_frontmatter_tags(text, result.kept)
-            verify_rewrite(text, new_text, result.kept)
+            if ORIGINAL_TAGS_KEY in post.metadata:
+                raise ValueError(f"already has {ORIGINAL_TAGS_KEY}")
+            new_text = replace_frontmatter_tags(text, result.kept, tags)
+            verify_rewrite(text, new_text, result.kept, tags)
         except ValueError as e:
             raise ValueError(f"{path.name}: {e}") from e
         if is_apply:
