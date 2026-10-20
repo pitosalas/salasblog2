@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
 # test_wp_taxonomy — Tests for mapping WordPress terms onto curated tags
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-18
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 
 import pytest
 
-from salasblog2.utils import (
-    add_curated_aliases,
-    load_curated_tag_aliases,
-    parse_curated_tag_aliases,
-)
 from salasblog2.wp_taxonomy import (
     WpPost,
     build_wp_proposals,
@@ -19,7 +14,6 @@ from salasblog2.wp_taxonomy import (
     match_key,
     match_posts,
     parse_wxr,
-    promote_terms,
     resolve_terms,
 )
 
@@ -98,7 +92,7 @@ def test_match_posts_by_slug_then_title(tmp_path):
 ALIASES = {"robotics": "robotics", "robot": "robotics", "personal": "personal"}
 
 
-def test_resolve_terms_merges_aliases_and_drops_structural():
+def test_resolve_terms_merges_aliases_and_drops_structural_and_unknown():
     merges = {"robots": "robotics", "links": None}
     terms = [
         "robots",
@@ -109,62 +103,13 @@ def test_resolve_terms_merges_aliases_and_drops_structural():
         "119",
         "x",
     ]
-    assert resolve_terms(terms, merges, ALIASES) == ["robotics", "x"]
+    assert resolve_terms(terms, merges, ALIASES) == ["robotics"]
 
 
 HINTS = (
     "# Rules\n\n* stuff\n\n# Curated Tags\n\n"
     "79       robotics (robot)\n32       personal\n"
 )
-
-
-def test_add_curated_aliases_appends_without_repeats():
-    text = add_curated_aliases(
-        HINTS, {"robotics": ["robot", "robots"], "personal": ["life"]}
-    )
-    assert "79       robotics (robot, robots)\n" in text
-    assert "32       personal (life)\n" in text
-    assert parse_curated_tag_aliases(text)["life"] == "personal"
-
-
-def test_add_curated_aliases_rejects_unknown_primary():
-    with pytest.raises(ValueError):
-        add_curated_aliases(HINTS, {"nonexistent": ["x"]})
-
-
-def make_wp_posts(term_sets):
-    return [
-        WpPost(slug=f"p{i}", title="T", terms=terms)
-        for i, terms in enumerate(term_sets)
-    ]
-
-
-def test_promote_terms_threshold_and_aliases(tmp_path):
-    path = tmp_path / "tag-hints.md"
-    path.write_text(HINTS, encoding="utf-8")
-    merges = {"tool": "tools", "robots": "robotics", "life": "personal"}
-    wp_posts = make_wp_posts(
-        [
-            ["tool", "rare", "life"],
-            ["tools", "rare"],
-            ["tools", "rare"],
-            ["tool", "robots"],
-        ]
-    )
-    promoted, aliases = promote_terms(wp_posts, merges, path)
-    assert promoted == ["tools"]
-    assert aliases == {"personal": ["life"], "robotics": ["robots"], "tools": ["tool"]}
-    alias_map = load_curated_tag_aliases(path)
-    assert alias_map["tool"] == "tools"
-    assert "rare" not in alias_map
-
-
-def test_promote_terms_counts_a_term_once_per_post(tmp_path):
-    path = tmp_path / "tag-hints.md"
-    path.write_text(HINTS, encoding="utf-8")
-    wp_posts = make_wp_posts([["tool", "tools"]] * 3)
-    promoted, _ = promote_terms(wp_posts, {"tool": "tools"}, path)
-    assert promoted == []
 
 
 def test_build_wp_proposals_is_additive_and_curated_only(tmp_path):

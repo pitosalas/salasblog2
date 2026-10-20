@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # tag_cleanup — Selection and Claude-based tag proposals for the tag-cleanup pipeline
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 Pure logic for the automated tag-cleanup pipeline (F46): selecting posts that
@@ -12,18 +12,11 @@ post's title/excerpt for a human (or Claude, acting directly in an assisted
 session - no separate paid API call) to propose tags from, and sanitizing
 those proposals before they're written.
 
-Per the rules in `02-doc/tag-hints.md`: the ending state is that every tag
-on a post comes from that file's single "Curated Tags" list. A newly
-proposed tag outside that list is never applied to a post on its own batch -
-if it recurs across at least `MIN_RECURRENCE_FOR_PROPOSED_TAG` posts in a
-batch, `promote_recurring_candidates` appends it directly to that same
-Curated Tags list, so it's available to every batch after this one (there is
-no separate "awaiting approval" list - a prior design with a second,
-distinct "Proposed Tags" section was reversed in favor of one list).
-Existing tags are never removed regardless of curated-list membership - that
-rule is absolute, independent of the curated-vocabulary one. Sanitization
-also drops what's actually junk: numeric leftovers, empty strings, and
-duplicates.
+Per the rules in `02-doc/tag-hints.md`, every tag on a post comes from that
+file's closed "Curated Tags" list. A newly proposed tag outside that list is
+never applied; it is reported in the proposal's `candidate_tags` and nothing
+more (F55 ended automatic promotion onto the list). Sanitization also drops
+what's actually junk: numeric leftovers, empty strings, and duplicates.
 
 This pipeline is additive-only: a post's existing tags are never removed,
 only added to (`build_proposal` unions current tags with newly-accepted
@@ -41,27 +34,21 @@ byte-identical before and after, so a bug in this pipeline can't corrupt
 post content even if it writes wrong tags.
 
 A second, separate concern lives here too: `normalize_post_tags` rewrites
-tags a post *already has* through tag-hints.md's alias map (a curated tag
-can declare secondary spellings, e.g. `robotics (aka: robot, robots)`,
-loaded via `utils.load_curated_tag_aliases`). This is deliberately NOT
+tags a post *already has* through tag-hints.md's alias map, using
+`tag_vocabulary.canonicalize_tags`. This is deliberately NOT
 additive-only, unlike everything above - an existing tag matching neither
 a primary nor a declared secondary is dropped, on purpose, not preserved.
 """
 
 import json
 import logging
-from collections import Counter
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 import frontmatter
 
-from salasblog2.utils import (
-    CURATED_TAGS_HEADER,
-    create_excerpt,
-    format_tag_hints_line,
-    parse_tag_hints_section,
-)
+from salasblog2.tag_vocabulary import canonicalize_tags
+from salasblog2.utils import create_excerpt
 
 logger = logging.getLogger(__name__)
 
@@ -185,8 +172,7 @@ def build_proposal(
     Additive-only: the post's existing tags are always kept, regardless of
     curated-vocabulary membership - that rule is absolute. A newly proposed
     tag is applied only if it's in `curated_tags`; anything else lands in
-    `candidate_tags` instead of being written, for `promote_recurring_candidates`
-    to surface later. Numeric junk is sanitized away regardless of source.
+    `candidate_tags`, reported but never written. Numeric junk is sanitized away regardless of source.
     """
     accepted, candidates = split_new_tags(summary.current_tags, tags, curated_tags)
     merged = validate_proposed_tags(summary.current_tags + accepted)
@@ -197,38 +183,6 @@ def build_proposal(
         proposed_tags=merged,
         candidate_tags=candidates,
     )
-
-
-MIN_RECURRENCE_FOR_PROPOSED_TAG = 4
-
-
-def promote_recurring_candidates(
-    proposals: list[TagProposal], tag_hints_path: Path
-) -> list[str]:
-    """Tally candidate tags (proposed but outside the curated vocabulary)
-    across a batch. Any tag recurring on at least `MIN_RECURRENCE_FOR_PROPOSED_TAG`
-    posts gets appended directly to tag-hints.md's single "Curated Tags"
-    list - available to every batch after this one, not applied
-    retroactively to posts already decided in this batch. Already-listed
-    tags are skipped. Returns the newly added tags.
-    """
-    counts = Counter(tag for p in proposals for tag in p.candidate_tags)
-    recurring = sorted(
-        tag for tag, n in counts.items() if n >= MIN_RECURRENCE_FOR_PROPOSED_TAG
-    )
-    if not recurring:
-        return []
-
-    text = tag_hints_path.read_text(encoding="utf-8")
-    already_listed = set(parse_tag_hints_section(text, CURATED_TAGS_HEADER))
-    new_entries = [tag for tag in recurring if tag not in already_listed]
-    if not new_entries:
-        return []
-
-    new_lines = [format_tag_hints_line(0, tag) for tag in new_entries]
-    text = text.rstrip("\n") + "\n" + "\n".join(new_lines) + "\n"
-    tag_hints_path.write_text(text, encoding="utf-8")
-    return new_entries
 
 
 def proposals_to_json(proposals: list[TagProposal]) -> str:
@@ -318,10 +272,9 @@ def normalize_post_tags(
     filename: str, current_tags: list[str], alias_map: dict[str, str]
 ) -> TagNormalization:
     """Rewrite a post's existing tags to their canonical primaries per
-    `alias_map` (from `utils.load_curated_tag_aliases`): a tag that's
-    already a known primary is kept, a known secondary is replaced by its
-    primary, and a tag matching neither is dropped. Order-preserving,
-    de-duplicated (two tags collapsing onto the same primary keep one copy).
+    `alias_map` (from `utils.load_curated_tag_aliases`), via
+    `tag_vocabulary.canonicalize_tags`: a primary is kept, an alias becomes
+    its primary, and a tag matching neither is dropped.
 
     Unlike the rest of this module, this is deliberately NOT additive-only
     - dropping a tag nothing in the curated vocabulary recognizes is the
@@ -331,20 +284,10 @@ def normalize_post_tags(
     normal needs-cleanup pipeline for a real look rather than keeping
     stale, unrecognized tags forever.
     """
-    normalized: list[str] = []
-    removed: list[str] = []
-    seen: set[str] = set()
-    for tag in current_tags:
-        primary = alias_map.get(tag)
-        if primary is None:
-            removed.append(tag)
-            continue
-        if primary not in seen:
-            seen.add(primary)
-            normalized.append(primary)
+    canonical = canonicalize_tags(current_tags, alias_map)
     return TagNormalization(
         filename=filename,
         original_tags=current_tags,
-        normalized_tags=normalized,
-        removed_tags=removed,
+        normalized_tags=canonical.kept,
+        removed_tags=canonical.dropped,
     )

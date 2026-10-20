@@ -3,7 +3,7 @@
 
 ## TF55.0 — One shared tag-normalization function
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**: A single pure function converts a tag list through the
 curated alias map:
@@ -27,7 +27,7 @@ raindrop sync, generator and one-time conversions all use the same rule.
 
 ## TF55.1 — Install the 16-tag list; retire automatic promotion
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**:
 
@@ -49,7 +49,7 @@ raindrop sync, generator and one-time conversions all use the same rule.
 
 ## TF55.2 — Editor: picker limited to curated tags, server-side validation
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**:
 
@@ -66,7 +66,7 @@ raindrop sync, generator and one-time conversions all use the same rule.
 
 ## TF55.3 — Raindrop sync converts tags on write
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**: Before a raindrop's file is written
 (`_write_raindrops_to_files`), its Raindrop.io tags go through TF55.0.
@@ -78,7 +78,7 @@ with an empty tag list.
 
 ## TF55.4 — Generator shows only curated tags
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**:
 
@@ -93,7 +93,7 @@ with an empty tag list.
 
 ## TF55.5 — One-time in-place raindrop conversion
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**: A dry-run-by-default command converts every existing
 raindrop file's `tags` frontmatter through TF55.0.
@@ -112,7 +112,7 @@ raindrop file's `tags` frontmatter through TF55.0.
 
 ## TF55.6 — Blog mechanical conversion
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**: The same command, for blog posts:
 
@@ -123,12 +123,17 @@ raindrop file's `tags` frontmatter through TF55.0.
 The generic `technology`, and `personal` on posts with no other topic, are
 left in place, marked for TF55.7.
 
+**Implemented as `bg convert-tags`, which handles raindrops and blog
+together.** `technology` is treated like `personal`: it is dropped when the
+post has a real topic. Otherwise pass A could never reach those posts,
+since it selects posts tagged only `technology`.
+
 **Test**: fixtures for each rule, plus a byte-identical check outside the
 tag lines.
 
 ## TF55.7 — Judgment passes for generic `technology` and `personal`
 
-**Status**: not done
+**Status**: tooling done (2026-10-20); judgment passes run on production in TF55.9
 
 **Description**: Select the posts still carrying a generic tag: about 753
 `technology` and 350 `personal`.
@@ -141,13 +146,17 @@ tag lines.
   before the rest is applied.**
 * Posts with no fit stay untagged.
 
-**Test**: the selection predicate is unit-tested, and the apply step reuses
-the tested F46 apply logic. The tag decisions themselves are a judgment
+**Implemented as `bg generic-tags`.** `--tag technology|personal` writes
+title and excerpt summaries for a batch. `--decisions FILE [--apply]` then
+replaces each post's tags. F46's apply step can't be reused: it only adds
+tags and refuses CRLF files.
+
+**Test**: the selection predicate and the apply step are unit-tested. The tag decisions themselves are a judgment
 call that the user reviews; they have no automated test.
 
 ## TF55.8 — Tests
 
-**Status**: not done
+**Status**: done (2026-10-20)
 
 **Description**: Write the tests for TF55.0–TF55.6 as described in each
 step, update or remove the tests made obsolete by TF55.1, then run the full

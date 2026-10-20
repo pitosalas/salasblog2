@@ -1,5 +1,5 @@
 # Current State — salasblog2
-_Last updated: 2026-10-19_
+_Last updated: 2026-10-20_
 
 ---
 
@@ -125,21 +125,21 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 ## Open
 
-**F55 — Closed curated tag list (16 tags)**: planned 2026-10-19, **waiting
-for the user's approval** (`03-features/notdone/F55-*`, `04-tasks/notdone/TF55-*`).
+**F55 — Closed curated tag list (16 tags)**: code done 2026-10-20 and not
+yet committed. TF55.0–TF55.8 are done. **TF55.9 (deploy, convert on
+production, judgment passes) waits on the user's go-ahead.**
 
-* Only 16 tags may appear or be added anywhere: programming, business,
-  computing, internet, politics, blogging, culture, howto, science,
-  education, robotics, software-engineering, places, design, life, ai.
-* Every other known tag becomes one of their 429 aliases. The list is in
-  `02-doc/tag-hints-proposed.md`, ready to replace `tag-hints.md`.
-* Raindrop tags convert on write. Leftovers are dropped, and untagged
-  raindrops stay untagged.
-* Existing raindrops are converted **in place**, never with `--reset`. A
-  reset would pull all 2,608 bookmarks (about 1,060 more than the site has).
-* The blog needs judgment passes: 753 generic-`technology` posts and 350
-  generic-`personal` posts, each with a user-reviewed sample first.
-* Automatic tag promotion ends.
+* The 16-tag list is installed in `02-doc/tag-hints.md`, and automatic
+  promotion is gone.
+* The editor refuses unknown tags, raindrop sync converts tags, and the
+  generator shows only curated tags.
+* `bg convert-tags` (dry run unless `--apply`) converts existing content in
+  place. On the local copy it would change 5 raindrops and 1,580 posts, and
+  only tag lines change.
+* `bg generic-tags` runs the judgment passes for `technology` and
+  `personal`.
+* Between the deploy and the end of the judgment passes, posts tagged only
+  `technology` or `personal` show no tags.
 
 **F54 — Blog index sidebar (tags + year archive)**: written 2026-10-19. The
 user said no for now and asked to leave the files alone

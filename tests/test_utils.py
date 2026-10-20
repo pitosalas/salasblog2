@@ -20,7 +20,6 @@ from salasblog2.utils import (
     parse_frontmatter_file,
     process_markdown_to_html,
     sort_posts_by_date,
-    top_tags_by_frequency,
 )
 
 
@@ -590,52 +589,3 @@ class TestFormatRaindropAsMarkdown:
         }
         markdown = format_raindrop_as_markdown(raindrop)
         assert "⚠️ **Warning: Link may be broken**" in markdown
-
-
-class TestTopTagsByFrequency:
-    """F45: 100 most-used tags for the post editor's tag picklist."""
-
-    def test_ranks_by_frequency_descending(self):
-        tag_lists = [["ai"], ["ai"], ["robotics"], ["ai", "robotics"]]
-        result = top_tags_by_frequency(tag_lists)
-        assert result == ["ai", "robotics"]
-
-    def test_ties_broken_alphabetically(self):
-        tag_lists = [["zebra"], ["apple"]]
-        result = top_tags_by_frequency(tag_lists)
-        assert result == ["apple", "zebra"]
-
-    def test_excludes_numeric_tags(self):
-        """Regression: old WordPress-imported posts carry raw numeric category
-        IDs as tags, a leftover migration artifact — not real topical tags."""
-        tag_lists = [["1221"], ["1221"], ["ai"]]
-        result = top_tags_by_frequency(tag_lists)
-        assert result == ["ai"]
-
-    def test_respects_limit(self):
-        tag_lists = [[f"tag{i}"] for i in range(150)]
-        result = top_tags_by_frequency(tag_lists, limit=100)
-        assert len(result) == 100
-
-    def test_empty_input_returns_empty_list(self):
-        assert top_tags_by_frequency([]) == []
-
-    def test_ignores_empty_tag_strings(self):
-        tag_lists = [["", "ai"], [""]]
-        result = top_tags_by_frequency(tag_lists)
-        assert result == ["ai"]
-
-    def test_always_include_appended_after_ranked_tags(self):
-        """A curated tag with zero real usage still needs to be offered, or
-        it can never start being used — but must not crowd out a genuinely
-        popular tag within the ranked portion."""
-        tag_lists = [["ai"], ["ai"], ["robotics"]]
-        result = top_tags_by_frequency(
-            tag_lists, always_include=["curated-unused", "robotics"]
-        )
-        assert result == ["ai", "robotics", "curated-unused"]
-
-    def test_always_include_does_not_duplicate_ranked_tag(self):
-        tag_lists = [["ai"]]
-        result = top_tags_by_frequency(tag_lists, always_include=["ai"])
-        assert result.count("ai") == 1

@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 # cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
 # Author: Pito Salas and Claude Code
-# Version: 6
+# Version: 7
 # Created: 2026-09-09
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 Unified CLI for Salasblog2 - Static site generator with Raindrop.io integration.
 """
 
 import argparse
+import json
 import os
 from collections import Counter
 from pathlib import Path
@@ -29,8 +30,15 @@ from salasblog2.legacy_commands import (
 )
 from salasblog2.link_check import find_dead_self_links
 from salasblog2.raindrop import RaindropDownloader
-from salasblog2.utils import remove_frontmatter_key
-from salasblog2.tag_cleanup import proposals_to_json
+from salasblog2.tag_cleanup import proposals_to_json, summaries_to_json, summarize_post
+from salasblog2.tag_conversion import (
+    apply_tag_decisions,
+    convert_blog_tags,
+    convert_directory,
+    select_generic_posts,
+)
+from salasblog2.tag_vocabulary import TAG_HINTS_FILE, canonicalize_tags
+from salasblog2.utils import load_curated_tag_aliases, remove_frontmatter_key
 from salasblog2.wp_media import extract_media, rewrite_media_content, url_status
 from salasblog2.wp_taxonomy import (
     MERGES_FILE,
@@ -39,7 +47,6 @@ from salasblog2.wp_taxonomy import (
     load_merges,
     match_posts,
     parse_wxr,
-    promote_terms,
 )
 
 load_dotenv()
@@ -110,15 +117,10 @@ def cmd_wp_media(args):
 
 
 def cmd_wp_tags(args):
-    """Promote WordPress terms into tag-hints.md, or write tag proposals"""
+    """Write curated-tag proposals from WordPress terms"""
     wp_posts = parse_wxr(Path(args.wxr))
     merges = load_merges(MERGES_FILE)
     tag_hints = Path(args.tag_hints)
-    if args.promote:
-        promoted, aliases = promote_terms(wp_posts, merges, tag_hints)
-        print(f"promoted {len(promoted)} tags: {', '.join(promoted)}")
-        print(f"added aliases to {len(aliases)} curated tags")
-        return
     blog_dir = Path(args.content) / "blog"
     matched, unmatched = match_posts(wp_posts, *index_local_posts(blog_dir))
     proposals = build_wp_proposals(blog_dir, matched, merges, tag_hints)
@@ -146,6 +148,42 @@ def cmd_strip_categories(args):
                 md_file.write_bytes(new_text.encode("utf-8"))
     action = "stripped" if args.apply else "would strip"
     print(f"{action} category from {changed} files")
+
+
+def cmd_convert_tags(args):
+    """Convert existing raindrop and blog tags onto the curated list, in place"""
+    alias_map = load_curated_tag_aliases(TAG_HINTS_FILE)
+    content_root = Path(args.content)
+    action = "changed" if args.apply else "would change"
+    for subdir, convert in (
+        ("raindrops", canonicalize_tags),
+        ("blog", convert_blog_tags),
+    ):
+        report = convert_directory(
+            content_root / subdir, convert, alias_map, args.apply
+        )
+        print(
+            f"{subdir}: {action} {report.files_changed} files, "
+            f"{report.tags_kept} tags kept, {sum(report.dropped.values())} dropped, "
+            f"{report.now_untagged} now untagged"
+        )
+        for tag, count in report.dropped.most_common(args.top_dropped):
+            print(f"  {count:5} {tag}")
+
+
+def cmd_generic_tags(args):
+    """Select posts still carrying a generic tag, or apply tag decisions"""
+    blog_dir = Path(args.content) / "blog"
+    if args.decisions:
+        decisions = json.loads(Path(args.decisions).read_text(encoding="utf-8"))
+        alias_map = load_curated_tag_aliases(TAG_HINTS_FILE)
+        changed = apply_tag_decisions(blog_dir, decisions, alias_map, args.apply)
+        print(f"{'changed' if args.apply else 'would change'} {len(changed)} posts")
+        return
+    posts = select_generic_posts(blog_dir, args.tag, args.limit)
+    summaries = [summarize_post(path) for path in posts]
+    Path(args.out).write_text(summaries_to_json(summaries), encoding="utf-8")
+    print(f"selected {len(posts)} posts tagged {args.tag!r}; wrote {args.out}")
 
 
 def cmd_server(args):
@@ -181,10 +219,14 @@ def cmd_help(args):
     print("  legacy-rewrite     - Rewrite mapped legacy links (dry run unless --apply)")
     print("  check-links        - Report self-links that resolve to nothing")
     print("  wp-media           - Self-host WordPress images, repair links (--apply)")
-    print("  wp-tags            - WordPress terms -> tag-hints.md or tag proposals")
+    print("  wp-tags            - WordPress terms -> curated tag proposals")
     print(
         "  strip-categories   - Remove retired category lines (dry run unless --apply)"
     )
+    print(
+        "  convert-tags       - Convert tags onto the curated list (dry run unless --apply)"
+    )
+    print("  generic-tags       - Select generic-tagged posts or apply tag decisions")
     print("  help               - Show this help message")
     print()
     print("Options:")
@@ -306,9 +348,6 @@ def main():
         "--tag-hints", default="02-doc/tag-hints.md", help="Curated tag list"
     )
     wp_tags_parser.add_argument(
-        "--promote", action="store_true", help="Update tag-hints.md from the terms"
-    )
-    wp_tags_parser.add_argument(
         "--out", default="wp-tag-proposals.json", help="Proposals JSON to write"
     )
     wp_tags_parser.set_defaults(func=cmd_wp_tags)
@@ -321,6 +360,39 @@ def main():
         "--apply", action="store_true", help="Write changes (default: dry run)"
     )
     strip_parser.set_defaults(func=cmd_strip_categories)
+
+    convert_tags_parser = subparsers.add_parser(
+        "convert-tags", help="Convert raindrop and blog tags onto the curated list"
+    )
+    convert_tags_parser.add_argument(
+        "--content", default="content", help="Content root"
+    )
+    convert_tags_parser.add_argument(
+        "--apply", action="store_true", help="Write changes (default: dry run)"
+    )
+    convert_tags_parser.add_argument(
+        "--top-dropped", type=int, default=20, help="Most-dropped tags to list"
+    )
+    convert_tags_parser.set_defaults(func=cmd_convert_tags)
+
+    generic_parser = subparsers.add_parser(
+        "generic-tags", help="Judgment pass for generic technology/personal tags"
+    )
+    generic_parser.add_argument("--content", default="content", help="Content root")
+    generic_parser.add_argument(
+        "--tag", default="technology", help="Generic tag to select posts by"
+    )
+    generic_parser.add_argument("--limit", type=int, default=50, help="Batch size")
+    generic_parser.add_argument(
+        "--out", default="generic-candidates.json", help="Summaries JSON to write"
+    )
+    generic_parser.add_argument(
+        "--decisions", help="Decisions JSON [{filename, tags}] to apply instead"
+    )
+    generic_parser.add_argument(
+        "--apply", action="store_true", help="Write decisions (default: dry run)"
+    )
+    generic_parser.set_defaults(func=cmd_generic_tags)
 
     # Help command
     help_parser = subparsers.add_parser("help", help="Show help message")

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_tag_cleanup.py — Tests for the automated tag-cleanup pipeline (F46)
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 
 import json
@@ -21,7 +21,6 @@ from salasblog2.tag_cleanup import (
     has_numeric_tag,
     needs_tag_cleanup,
     normalize_post_tags,
-    promote_recurring_candidates,
     proposals_to_json,
     select_posts_needing_cleanup,
     split_new_tags,
@@ -29,7 +28,6 @@ from salasblog2.tag_cleanup import (
     summarize_post,
     validate_proposed_tags,
 )
-from salasblog2.utils import load_curated_tags
 
 
 def write_post(
@@ -223,39 +221,6 @@ class TestBuildProposal:
         )
         proposal = build_proposal(summary, [], set())
         assert proposal.no_fit is True
-
-
-class TestPromoteRecurringCandidates:
-    def make_hints(self, tmp_path, extra=""):
-        path = tmp_path / "tag-hints.md"
-        path.write_text("# Curated Tags\n\nrobotics\n" + extra, encoding="utf-8")
-        return path
-
-    def make_proposals(self, filenames, tag="mars"):
-        return [
-            TagProposal(filename=f, title="T", current_tags=[], candidate_tags=[tag])
-            for f in filenames
-        ]
-
-    def test_ignores_candidates_below_threshold(self, tmp_path):
-        path = self.make_hints(tmp_path)
-        proposals = self.make_proposals(
-            ["a.md", "b.md", "c.md"]
-        )  # 3 < MIN_RECURRENCE_FOR_PROPOSED_TAG
-        assert promote_recurring_candidates(proposals, path) == []
-        assert "mars" not in path.read_text(encoding="utf-8")
-
-    def test_appends_candidates_meeting_threshold_to_curated_list(self, tmp_path):
-        path = self.make_hints(tmp_path)
-        proposals = self.make_proposals(["a.md", "b.md", "c.md", "d.md"])
-        added = promote_recurring_candidates(proposals, path)
-        assert added == ["mars"]
-        assert load_curated_tags(path) == ["robotics", "mars"]
-
-    def test_does_not_duplicate_already_listed_tag(self, tmp_path):
-        path = self.make_hints(tmp_path, extra="mars\n")
-        proposals = self.make_proposals(["a.md", "b.md", "c.md", "d.md"])
-        assert promote_recurring_candidates(proposals, path) == []
 
 
 class TestTagProposal:

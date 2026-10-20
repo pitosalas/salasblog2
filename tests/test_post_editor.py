@@ -9,6 +9,7 @@ Run with: uv run pytest tests/test_post_editor.py -v
 import time
 from pathlib import Path
 
+import frontmatter
 import pytest
 from fastapi.testclient import TestClient
 
@@ -30,7 +31,7 @@ def client(tmp_path):
     tag_hints_dir = tmp_path / "02-doc"
     tag_hints_dir.mkdir()
     (tag_hints_dir / "tag-hints.md").write_text(
-        "# Curated Tags\n\ntechnology\nprogramming\nai\npersonal\ntravel\n",
+        "# Curated Tags\n\nprogramming (python)\ncomputing (iphone)\nai\n",
         encoding="utf-8",
     )
     return TestClient(app)
@@ -220,24 +221,49 @@ class TestPageRenderedBeforeResponse:
         assert (tmp_path / "output" / html_name).exists()
 
 
-class TestFreeFormTags:
-    """F42 point 6: tags were a fixed checkbox vocabulary; now free-form."""
+class TestCuratedTagsOnSave:
+    """F55: the curated list is closed. Aliases convert on save; anything
+    else is refused rather than silently dropped."""
 
-    def test_new_post_accepts_tag_not_in_blog_tags_vocabulary(self, client, tmp_path):
-        response = client.post(
+    def post_new(self, client, tags):
+        return client.post(
             "/admin/new-post",
             data={
-                "title": "Novel Tag Post",
+                "title": "Tag Post",
                 "date": "2026-01-01",
                 "type": "blog",
                 "content": "Body",
-                "tags": ["a-brand-new-tag-nobody-configured"],
+                "tags": tags,
             },
         )
+
+    def test_alias_is_saved_as_its_curated_tag(self, client, tmp_path):
+        response = self.post_new(client, ["iPhone", "ai", "computing"])
         assert response.status_code == 200
-        filename = response.json()["filename"]
-        saved = (tmp_path / "content" / "blog" / filename).read_text()
-        assert "a-brand-new-tag-nobody-configured" in saved
+        saved = tmp_path / "content" / "blog" / response.json()["filename"]
+        assert frontmatter.load(saved).metadata["tags"] == ["computing", "ai"]
+
+    def test_unknown_tag_is_refused_and_nothing_saved(self, client, tmp_path):
+        response = self.post_new(client, ["ai", "banana"])
+        assert response.status_code == 400
+        assert "banana" in response.json()["detail"]
+        assert not (tmp_path / "content" / "blog").exists()
+
+    def test_edit_with_unknown_tag_leaves_file_unchanged(self, client, tmp_path):
+        post_file = write_post(tmp_path, "2026-01-01-my-post.md", tags=["ai"])
+        before = post_file.read_text()
+        response = client.post(
+            "/admin/edit-post/2026-01-01-my-post.md",
+            data={
+                "title": "Test Post",
+                "date": "2026-01-01",
+                "type": "blog",
+                "content": "My edit",
+                "tags": ["banana"],
+            },
+        )
+        assert response.status_code == 400
+        assert post_file.read_text() == before
 
 
 class TestConcurrencyProtection:
@@ -339,86 +365,16 @@ class TestAdminPostsIndex:
         assert response.status_code == 401
 
 
-class TestTopTagsCache:
-    """F45: tag suggestion picklist is backed by output/top-tags.json, the
-    100 most-used real (non-numeric) tags across blog posts, computed by
-    generate_posts_index_cache() alongside admin-posts-index.json."""
-
-    def test_generate_posts_index_cache_writes_top_tags(self, client, tmp_path):
-        import json
-
-        from salasblog2.server import generate_posts_index_cache
-
-        write_post(tmp_path, "2026-01-01-a.md", tags=["ai", "robotics"])
-        write_post(tmp_path, "2026-01-02-b.md", tags=["ai"])
-        write_post(tmp_path, "2026-01-03-c.md", tags=["robotics", "personal"])
-
-        generate_posts_index_cache()
-
-        top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
-        assert top_tags[:3] == ["ai", "robotics", "personal"]
-
-    def test_generate_posts_index_cache_excludes_numeric_tags(self, client, tmp_path):
-        """Regression: old WordPress-imported posts carry raw numeric category
-        IDs as tags — real content confirmed this dominates a naive frequency
-        count. Numeric tags must not appear in the suggestion list."""
-        import json
-
-        from salasblog2.server import generate_posts_index_cache
-
-        write_post(tmp_path, "2026-01-01-a.md", tags=["1221", "1772"])
-        write_post(tmp_path, "2026-01-02-b.md", tags=["1221", "ai"])
-
-        generate_posts_index_cache()
-
-        top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
-        assert "1221" not in top_tags
-        assert "1772" not in top_tags
-        assert top_tags[0] == "ai"  # the one real, actually-used tag ranks first
-
-    def test_generate_posts_index_cache_appends_curated_blog_tags(
-        self, client, tmp_path
-    ):
-        """Curated tags (tag-hints.md's "Curated Tags" section) are always
-        offered even with zero real usage yet — otherwise a brand-new curated
-        tag could never start being used, since it would never appear in the
-        picklist."""
-        import json
-
-        from salasblog2.server import generate_posts_index_cache
-        from salasblog2.utils import load_curated_tags
-
-        write_post(tmp_path, "2026-01-01-a.md", tags=["some-unrelated-tag"])
-
-        generate_posts_index_cache()
-
-        top_tags = json.loads((tmp_path / "output" / "top-tags.json").read_text())
-        curated_tags = load_curated_tags(tmp_path / "02-doc" / "tag-hints.md")
-        for tag in curated_tags:
-            assert tag in top_tags
-
-    def test_load_top_tags_returns_empty_list_when_cache_missing(self, client):
-        from salasblog2.server import load_top_tags
-
-        assert load_top_tags() == []
-
-
 class TestTagPicklistUI:
-    """F45: the blog post editor offers a searchable picklist of the cached
-    top tags; the page editor (no tags field at all) must not."""
+    """The blog post editor's picklist offers exactly the curated tags (F55);
+    the page editor (no tags field at all) has no picklist."""
 
-    def test_new_post_page_includes_top_tags_and_picklist_controls(
-        self, client, tmp_path
-    ):
-        from salasblog2.server import generate_posts_index_cache
-
-        write_post(tmp_path, "2026-01-01-a.md", tags=["ai", "robotics"])
-        generate_posts_index_cache()
-
+    def test_new_post_page_offers_exactly_the_curated_tags(self, client):
         response = client.get("/admin/new-post")
         assert response.status_code == 200
-        assert "TOP_TAGS" in response.text
-        assert '"ai"' in response.text
+        assert 'const CURATED_TAGS = ["programming", "computing", "ai"];' in (
+            response.text
+        )
         assert 'id="tagPicklistToggle"' in response.text
         assert 'id="tagPicklistChips"' in response.text
 
@@ -428,7 +384,7 @@ class TestTagPicklistUI:
         response = client.get("/admin/new-page")
         assert response.status_code == 200
         assert 'id="tagPicklistToggle"' not in response.text
-        assert "TOP_TAGS" not in response.text
+        assert "CURATED_TAGS" not in response.text
 
 
 class TestUnifiedEditorTemplate:

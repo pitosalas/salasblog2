@@ -1,6 +1,6 @@
 ---
-version: "1.1"
-generated: "2026-10-19"
+version: "1.2"
+generated: "2026-10-20"
 ---
 
 # `tag_cleanup.py` — Automated Tag Cleanup for a 2,800-Post Archive
@@ -46,7 +46,7 @@ flowchart LR
     B -->|summaries_to_json| C[candidates.json]
     C -->|read by a human or assistant| D[decisions.json<br/>filename to tags]
     D -->|build_proposal, one per post| E[TagProposal list]
-    E -->|promote_recurring_candidates| F[tag-hints.md<br/>Curated Tags]
+    E -->|candidate_tags| F[reported only]
     E -->|apply_tag_batch| G[content/blog/*.md<br/>tags written]
 ```
 
@@ -123,17 +123,10 @@ neither (held back as a *candidate*). Candidates aren't written, but they
 aren't wasted either: they're a signal about a topic the curated list
 doesn't cover yet.
 
-`promote_recurring_candidates()` tallies every candidate across a whole
-batch, counting a tag once per post. Any tag on at least
-`MIN_RECURRENCE_FOR_PROPOSED_TAG` (**4**, raised from 3 in TF46.14) posts is
-appended **directly to the Curated Tags list**, where the next batch can use
-it. An earlier design queued such tags in a separate "Proposed Tags" section
-for manual approval. That was reversed in favor of the one list. A one-off
-candidate that never recurs is simply not captured, so a topic has to recur
-across the archive to earn its place.
-
-F50's WordPress import (`wp_taxonomy.promote_terms`) reuses this same
-function, with the same threshold.
+Until F55 a candidate recurring on 4 or more posts was appended to the
+curated list automatically. **F55 closed the list**, so that promotion is
+gone: a candidate is reported in the proposal and never written. Only the
+user grows the list, by editing `tag-hints.md`.
 
 ```mermaid
 flowchart TD
@@ -141,11 +134,17 @@ flowchart TD
     Q -->|yes| Skip[ignored]
     Q -->|no| C{in curated_tags?}
     C -->|yes| Accept[written to the post]
-    C -->|no| Hold[held as a candidate]
-    Hold --> R{on 4+ posts<br/>in this batch?}
-    R -->|yes, and not already listed| Queue[appended to<br/>Curated Tags]
-    R -->|no| Drop[not written, not queued]
+    C -->|no| Hold[reported as a candidate,<br/>never written]
 ```
+
+## Normalizing existing tags
+
+`normalize_post_tags()` is the one non-additive operation. It now delegates
+to the shared `tag_vocabulary.canonicalize_tags`, so its rule is the same
+one the editor, raindrop sync and generator use: aliases become primaries
+and unknown tags are dropped. F55's `bg convert-tags` (in
+`tag_conversion.py`) supersedes it for whole-archive conversion, because it
+edits only the tag lines instead of re-serializing the frontmatter.
 
 ## Applying a batch without ever risking the post body
 
@@ -217,12 +216,6 @@ has CR endings today, so in practice the guard never fires.
   fit" as a post's status). Fine as an internal implementation detail
   today; worth promoting to a shared constant if a second consumer shows
   up.
-- **`MIN_RECURRENCE_FOR_PROPOSED_TAG` is a fixed module constant (4)**,
-  not configurable per run. If the archive's remaining un-tagged tail
-  turns out to need a different threshold (larger batches might want a
-  higher bar; a final small batch might want a lower one to still surface
-  genuine signal), it would need to become a parameter rather than a
-  constant.
 - **No dry-run mode.** `apply_tag_batch()` always writes; testing a batch
   of decisions before committing to them currently means inspecting the
   `TagProposal` list built by `build_proposal()` separately and choosing

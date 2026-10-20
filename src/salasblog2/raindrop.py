@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # raindrop — Raindrop.io API client: syncs bookmarks into markdown+frontmatter content
 # Author: Pito Salas and Claude Code
-# Version: 3
+# Version: 4
 # Created: 2026-09-09
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 Raindrop.io integration for downloading bookmarks and converting to markdown.
@@ -19,10 +19,12 @@ import frontmatter
 import requests
 from dotenv import load_dotenv
 
+from salasblog2.tag_vocabulary import TAG_HINTS_FILE, canonicalize_tags
 from salasblog2.utils import (
     _parse_iso_date,
     format_raindrop_as_markdown,
     generate_raindrop_filename,
+    load_curated_tag_aliases,
 )
 
 # Constants
@@ -318,9 +320,14 @@ class RaindropDownloader:
             return new_drops, downloaded_ids
 
     def _write_raindrops_to_files(self, new_drops, collection_names):
-        """Write raindrops to markdown files and return created filenames."""
+        """Write raindrops to markdown files and return created filenames.
+
+        Each raindrop's Raindrop.io tags are converted onto the closed curated
+        list first; tags it doesn't know are dropped (F55).
+        """
         created_filenames = []
         counter = 1
+        alias_map = load_curated_tag_aliases(TAG_HINTS_FILE)
 
         # Get existing filenames to avoid overwrites
         existing_files = set()
@@ -347,6 +354,9 @@ class RaindropDownloader:
                 f"  [{i}/{len(new_drops)}] Writing: {filename} - {raindrop.get('title', 'Untitled')[:50]}..."
             )
 
+            raindrop["tags"] = canonicalize_tags(
+                raindrop.get("tags") or [], alias_map
+            ).kept
             markdown_content = format_raindrop_as_markdown(raindrop)
 
             with open(filepath, "w", encoding="utf-8") as f:

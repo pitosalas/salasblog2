@@ -1,6 +1,6 @@
 ---
-version: "1.1"
-generated: "2026-10-19"
+version: "1.2"
+generated: "2026-10-20"
 ---
 
 # `cli.py` — The Local Command-Line Front Door
@@ -19,8 +19,9 @@ generated: "2026-10-19"
   content tree, locally or on production with `--content /data/content`.
   - `legacy-map`, `legacy-rewrite` and `check-links` (F48)
   - `wp-media` (F49)
-  - `wp-tags` (F50)
+  - `wp-tags` (F50), which now only writes proposals
   - `strip-categories` (F51)
+  - `convert-tags` and `generic-tags` (F55)
 
 Fly.io's container doesn't start through this file; it imports
 `salasblog2.server:app` directly. On production the CLI is used over
@@ -48,8 +49,9 @@ implementations of it. It also keeps the logic testable without argparse.
 
 Each one is built to be safe to point at production content:
 
-- **Dry run by default.** `legacy-rewrite`, `wp-media` and
-  `strip-categories` only report what they would change until `--apply` is
+- **Dry run by default.** `legacy-rewrite`, `wp-media`,
+  `strip-categories`, `convert-tags` and `generic-tags --decisions` only
+  report what they would change until `--apply` is
   given.
 - **`--content` selects the tree.** It defaults to the local `content/`,
   and production uses `/data/content`.
@@ -83,6 +85,17 @@ only in the GitHub sync diff.
 That split is what allowed the images to be committed and deployed
 *before* any post was changed.
 
+F55's two commands follow the same shape, with the logic in
+`tag_conversion.py`:
+
+- `convert-tags` converts every raindrop and blog post's tags onto the
+  closed list and prints kept, dropped and now-untagged counts per
+  directory, plus the most-dropped tags.
+- `generic-tags` has two modes. Without `--decisions` it writes title and
+  excerpt summaries of a batch of posts still tagged `--tag technology` or
+  `personal`. With `--decisions FILE` it applies reviewed
+  `[{filename, tags}]` choices.
+
 ## `cmd_server`: two ways to start uvicorn
 
 `cmd_server` is the one everyday command with a real branch.
@@ -113,10 +126,11 @@ pulling in the whole server module unless `server` is run.
   `Options:` block, for example, covers only the everyday commands.
   Generating help from argparse, or relying on `--help`, would remove the
   duplication.
-- **The repair commands are piling up in one file.** Six of the twelve
-  subcommands are content-repair commands, mostly one-off migrations. Once F55 lands, `wp-tags --promote` and
-  possibly `strip-categories` are candidates for removal, so the CLI
-  reflects what's still useful.
+- **The repair commands are piling up in one file.** Eight of the
+  fourteen subcommands are content-repair commands, mostly one-off
+  migrations. Once F55's conversion is done, `wp-tags`, `strip-categories`
+  and `convert-tags` are candidates for removal, so the CLI reflects
+  what's still useful.
 - **`cmd_strip_categories` is the one command with a loop in it.** Moving
   that walk into a library function, as `rewrite_media_content` does for
   `wp-media`, would restore the thin-wrapper rule and make it unit-testable

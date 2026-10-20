@@ -47,56 +47,42 @@ case GitHub sync guards against for blog posts/pages.
 
 The single source is the **Curated Tags** list in `02-doc/tag-hints.md`.
 
-* Each line is a usage count, a primary tag, and optional aliases in
-  parentheses: `79       robotics (robot, ros, ros2, lidar, ...)`.
-* As of 2026-10-18 there are 80 primaries and 271 aliases.
+* Each line is a usage count, a primary tag, and its aliases in
+  parentheses: `0        robotics (robot, ros, ros2, lidar, ...)`.
+* As of 2026-10-20 (F55) there are **16 primaries and 429 aliases**.
+* **The list is closed.** Only the user adds a primary or an alias, by
+  editing the file. Automatic promotion was removed in F55.
 
-Three rules apply at different levels of strictness, **on purpose**.
+### One rule, one function
 
-### 1. Hand-entered tags: free-form
+`tag_vocabulary.canonicalize_tags` converts any tag list onto the list:
 
-* The post editor's picklist suggests curated tags plus the
-  most-used tags (`output/top-tags.json`).
-* Any tag can be typed. It is saved exactly as entered, never blocked or
-  rewritten.
+* an alias becomes its primary
+* an unknown tag is dropped and reported
+* tags are compared lowercased, with spaces as hyphens
+* the result is de-duplicated, in order
 
-### 2. Display: every tag is equal
+### Where it is enforced
 
-* Every tag on a post gets a badge and a `/tags/<slug>/` page, curated or
-  not (`SiteGenerator.generate_tag_pages`).
-* Raindrop tags come from Raindrop.io and are displayed the same way.
-* The only exception is numeric WordPress-import leftovers (`1221`). They
-  are hidden in templates and left out of the top-tags list.
+* **Post editor.** The picklist offers exactly the 16 tags. On save an
+  alias is converted, and any unknown tag gets a 400 naming it. Nothing is
+  saved.
+* **Raindrop sync.** Raindrop.io tags are converted as each file is
+  written. Unknown ones are dropped, and a raindrop with none left has no
+  `tags` key.
+* **Site generation.** Only curated tags are shown or get `/tags/` pages.
+  Any other tag in a file is skipped and printed once per run.
+* **Automated tagging** (`tag_cleanup.py`, `wp_taxonomy.py`) applies only
+  curated tags. Others are reported as candidates and never written.
 
-### 3. Automated tagging: curated-only and additive
+### One-time conversion
 
-This covers F46 tag cleanup (`tag_cleanup.py`) and F50's WordPress import
-(`wp_taxonomy.py`).
-
-* They add only curated tags, with an alias resolved to its primary
-  (`robots` → `robotics`).
-* They **never remove** a tag already on a post. The one exception is
-  numeric junk.
-* A wanted tag outside the list is held back. Once it recurs on **4 or
-  more** posts (`MIN_RECURRENCE_FOR_PROPOSED_TAG`), it is appended to the
-  curated list and usable from then on.
-* `apply_tag_proposal` refuses a post with CR line endings rather than
-  flatten it (I04).
-
-### The one strict tool: normalization (TF46.13)
-
-* `scripts/normalize_tag_aliases.py` rewrites an alias to its primary
-  (`pivot-table` → `lotus`), and drops any tag that is neither a primary nor
-  an alias.
-* It runs only by hand and has never been run for real.
-* Its 2026-10-18 dry run would change one post and drop no tags.
-
-### Consequences
-
-* **Hand-picked tags win.** They are stored and displayed as typed.
-* **The curated list steers automation** and feeds editor suggestions.
-* Aliases matter only to the automated tagging and to normalization.
-* **Aliases are not merged for display.** A hand-typed alias like `improv`
-  gets its own `/tags/improv/` page, separate from `/tags/lotus/`. Folding
-  aliases into their primary would mean running normalization, or a small
-  feature that resolves aliases in the editor or in tag-page generation.
+* `bg convert-tags --content <root> [--apply]` rewrites existing raindrop
+  and blog tags in place. Only the `tags:` lines change, line endings
+  included, and each rewrite is re-parsed to check it.
+* On blog posts the generic `technology` and `personal` are dropped when
+  the post has a real topic, and kept as markers otherwise.
+* `bg generic-tags` selects the marked posts for the judgment pass and
+  applies reviewed `[{filename, tags}]` decisions.
+* **Never `--reset` raindrops** to convert them. Nothing filters what a
+  reset downloads, so it would pull every bookmark on Raindrop.io.

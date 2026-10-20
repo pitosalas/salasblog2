@@ -1,6 +1,6 @@
 ---
-version: "1.1"
-generated: "2026-10-19"
+version: "1.2"
+generated: "2026-10-20"
 ---
 
 # `utils.py` — Content Processing Foundation
@@ -397,72 +397,22 @@ message spells out the consequence, which is a nice habit: a future reader
 grepping logs for "why is this post buried" gets the answer directly
 instead of having to reverse-engineer the sort key.
 
-## `load_curated_tags` and `top_tags_by_frequency`: a curated floor under real usage
+## Reading the curated tag list
 
-`load_curated_tags()` reads the single curated tag vocabulary from
-`02-doc/tag-hints.md`'s "Curated Tags" section (via the generic
-`parse_tag_hints_section()` helper). This replaced a hand-maintained
-`BLOG_TAGS` Python constant that had drifted out of sync with a second,
-separately-curated list the tag-cleanup pipeline introduced — there's now
-exactly one list, editable by hand in a markdown file, not two. It's not a
-closed vocabulary — any tag can still be typed freely when authoring a
-post — but it's the seed list offered to a human picking tags in the post
-editor's picklist.
+`load_curated_tags()` reads the curated primaries from
+`02-doc/tag-hints.md`'s "Curated Tags" section, via the generic
+`parse_tag_hints_section()` helper. Since F55 this is a **closed list of 16
+tags**: the editor picklist offers exactly these, and nothing else may be
+saved.
 
-Each curated line can also declare **aliases** in parentheses:
-`79 robotics (robot, ros, lidar)`. Two functions read and write that
-structure:
+Each line can also declare **aliases** in parentheses:
+`0 robotics (robot, ros, lidar)`. `parse_curated_tag_aliases()` maps every
+spelling, primary or alias, to its primary. That map is the input to
+`tag_vocabulary.canonicalize_tags`, which applies the rule.
 
-- `parse_curated_tag_aliases()` maps every spelling, primary or alias, to
-  its primary.
-- `add_curated_aliases(text, {primary: [aliases]})` is the writer F50 uses.
-  It appends each new alias to its primary's parentheses and skips any
-  already there. It **raises** if a primary isn't on the list, rather than
-  inventing a line for it, because a typo in the caller should fail loudly,
-  not grow the vocabulary.
-
-`top_tags_by_frequency()` computes the *actual* ranking that backs that
-picklist, from real usage across existing posts rather than the static
-list alone:
-
-```python
-def top_tags_by_frequency(tag_lists, limit=100, always_include=None):
-    counts = {}
-    for tags in tag_lists:
-        for tag in tags:
-            if tag and not tag.isdigit():
-                counts[tag] = counts.get(tag, 0) + 1
-    ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
-    top = [tag for tag, _count in ranked[:limit]]
-    for tag in always_include or []:
-        if tag not in top:
-            top.append(tag)
-    return top
-```
-
-Two details worth calling out:
-
-- **`not tag.isdigit()`** exists because real content review found that
-  many older, WordPress-imported posts carry raw numeric category IDs
-  (e.g. `"1221"`) as their `tags` frontmatter — a leftover migration
-  artifact, not a real topic. Left unfiltered, these numeric "tags" are
-  common enough among old posts to swamp genuinely useful ones in a
-  frequency ranking. The templates (`blog_post.html`/`blog_list.html`/
-  `home.html`) already exclude these the same way when rendering a post's
-  tag badges (`{% if not tag.isdigit() %}`) — this mirrors that existing
-  convention rather than inventing a new one.
-- **`always_include`** (the caller passes `load_curated_tags(...)`) is appended *after*
-  the ranked top-N, not folded into the ranking itself. A brand-new
-  curated tag has zero real usage by definition, so it would never surface
-  in a pure frequency ranking — and it could never start being used if
-  it's never offered in the picklist in the first place. Appending after
-  rather than ranking-with means a curated-but-unused tag can't crowd out
-  a genuinely popular one within `limit`.
-
-The actual cache generation (reading every post's frontmatter, writing the
-result to `output/top-tags.json`) lives in `server.py`, not here — this
-module stays a pure function operating on already-loaded tag lists,
-consistent with its "no filesystem, no framework" design.
+F55 removed the two writers that used to live here. `add_curated_aliases()`
+and the top-100 `top_tags_by_frequency()` ranking both served a list that
+grew from the data, which it no longer does.
 
 ## Naming and slugs: three call sites, one intent
 

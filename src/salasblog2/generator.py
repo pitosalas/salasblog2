@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # generator — Static site generator: renders markdown+frontmatter content into HTML
 # Author: Pito Salas and Claude Code
-# Version: 6
+# Version: 7
 # Created: 2026-09-09
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 Static site generator for Salas Blog.
@@ -20,6 +20,7 @@ from pathlib import Path
 import yaml as _yaml
 from jinja2 import Environment, FileSystemLoader
 
+from salasblog2.tag_vocabulary import TAG_HINTS_FILE
 from salasblog2.utils import (
     create_excerpt_with_info,
     extract_first_paragraph,
@@ -28,6 +29,7 @@ from salasblog2.utils import (
     generate_url_from_filename,
     get_markdown_processor,
     group_posts_by_month,
+    load_curated_tags,
     load_markdown_files_from_directory,
     parse_frontmatter_file,
     process_markdown_to_html,
@@ -75,6 +77,8 @@ class SiteGenerator:
         self.jinja_env.globals["NOTE_TRUNCATE_LENGTH"] = 300
         # Use the same markdown processor as utils.py for consistency
         self.markdown_processor = get_markdown_processor()
+        self.curated_tags = set(load_curated_tags(TAG_HINTS_FILE))
+        self.skipped_tags: set[str] = set()
 
     def format_date(self, date_str, format_str="%B %d, %Y"):
         """Custom Jinja2 filter for date formatting"""
@@ -111,6 +115,21 @@ class SiteGenerator:
         # Sort by date (newest first)
         return sort_posts_by_date(posts)
 
+    def curated_only(self, tags, md_file):
+        """Keep only tags on the closed curated list (F55), so a hand-edited
+        or git-restored file can't bring back a stray tag or its tag page.
+        Each distinct skipped tag is reported once per run."""
+        kept = []
+        for tag in tags or []:
+            if tag in self.curated_tags:
+                kept.append(tag)
+            elif tag not in self.skipped_tags:
+                self.skipped_tags.add(tag)
+                print(
+                    f"⚠️  Skipping non-curated tag {tag!r} (first seen in {md_file.name})"
+                )
+        return kept
+
     def load_post(self, md_file, content_type):
         """Parse one markdown file into a post dict; None for drafts."""
         parsed = parse_frontmatter_file(md_file)
@@ -133,7 +152,7 @@ class SiteGenerator:
             "raw_content": parsed["content"],
             "filename": filename,
             "url": generate_url_from_filename(filename, content_type),
-            "tags": parsed["metadata"].get("tags", []),
+            "tags": self.curated_only(parsed["metadata"].get("tags"), md_file),
             "image_size": parsed["metadata"].get("image_size", ""),
         }
 
@@ -169,7 +188,6 @@ class SiteGenerator:
                     "raindrop_type": parsed["metadata"].get("raindrop_type", ""),
                     "important": parsed["metadata"].get("important", False),
                     "broken": parsed["metadata"].get("broken", False),
-                    "tags": parsed["metadata"].get("tags", []),
                     "raindrop_url": parsed["metadata"].get("url", ""),  # Original URL
                     "collection": parsed["metadata"].get("collection", ""),
                     "note": note,

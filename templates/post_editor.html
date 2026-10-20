@@ -63,14 +63,14 @@
                 <div class="tags-row">
                     <input type="text" id="tags" name="tags_raw" class="field-input"
                            value="{{ (tags|default(prefill_tags|default([])))|join(', ') }}"
-                           placeholder="comma-separated, e.g. python, testing">
+                           placeholder="comma-separated, e.g. programming, ai">
                     <button type="button" id="tagPicklistToggle" class="btn">Browse tags</button>
                 </div>
                 <div id="tagPicklist" class="tag-picklist d-none">
                     <input type="text" id="tagPicklistFilter" class="field-input tag-picklist-filter" placeholder="Filter tags...">
                     <div id="tagPicklistChips" class="tag-picklist-chips"></div>
                 </div>
-                <div class="field-hint">Comma-separated. Existing tags are suggested, but any tag can be typed.</div>
+                <div class="field-hint">Comma-separated. Only the curated tags are allowed; a known alias (e.g. python) is saved as its tag.</div>
             </div>
             {% endif %}
 
@@ -99,7 +99,7 @@
         const ACTION_URL = {{ (action_url|default('/admin/new-post'))|tojson }};
         const AUTOSAVE_ID = {{ ('editor-' + (filename|default('new')))|tojson }};
         {% if content_type == 'blog' %}
-        const TOP_TAGS = {{ blog_tags|default([])|tojson }};
+        const CURATED_TAGS = {{ blog_tags|default([])|tojson }};
         {% endif %}
 
         const easyMDE = new EasyMDE({
@@ -145,13 +145,13 @@
             const container = document.getElementById('tagPicklistChips');
             const selected = new Set(getTags().map(t => t.toLowerCase()));
             const needle = filterText.trim().toLowerCase();
-            const matches = TOP_TAGS.filter(tag => !needle || tag.toLowerCase().includes(needle));
+            const matches = CURATED_TAGS.filter(tag => !needle || tag.toLowerCase().includes(needle));
 
             container.innerHTML = '';
             if (matches.length === 0) {
                 const empty = document.createElement('div');
                 empty.className = 'tag-picklist-empty';
-                empty.textContent = TOP_TAGS.length === 0 ? 'No tag suggestions yet.' : 'No matching tags.';
+                empty.textContent = CURATED_TAGS.length === 0 ? 'No tag suggestions yet.' : 'No matching tags.';
                 container.appendChild(empty);
                 return;
             }

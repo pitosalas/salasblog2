@@ -1,6 +1,6 @@
 ---
-version: "1.2"
-generated: "2026-10-19"
+version: "1.3"
+generated: "2026-10-20"
 ---
 
 # `generator.py` — The Static Site Builder
@@ -92,6 +92,11 @@ assembles a `post_data` dict with the fields templates expect: `title`,
   quiet" choice: a blank or generic title would be easy to miss on a
   listing page, but `placeholder title: ...` is impossible to mistake for a
   real one, which nudges the author to go fix the frontmatter.
+- **Only curated tags survive loading (F55).** `curated_only()` keeps the
+  tags that are primaries in `02-doc/tag-hints.md` and skips the rest,
+  printing each distinct skipped tag once per run. Every template and the
+  tag pages read `post["tags"]`, so this one filter guards them all
+  against a hand-edited or git-restored file bringing back a stray tag.
 
 ### Raindrops get extra fields, including a hand-rolled note extractor
 

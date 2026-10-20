@@ -1,6 +1,6 @@
 ---
-version: "1.1"
-generated: "2026-10-19"
+version: "1.2"
+generated: "2026-10-20"
 ---
 
 # `raindrop.py` — Syncing the Link Blog from Raindrop.io
@@ -185,6 +185,12 @@ The `raindrop_id` field deserves special mention: it round-trips back into this 
 the durable identity used for deduplication (see `rebuild_cache_from_files()` below), so
 the on-disk file is not just a rendering of the API data — it is also, incidentally, the
 cache's backing store of record.
+
+**Tags are converted before the file is written (F55).** `_write_raindrops_to_files()`
+loads the curated alias map once per run and replaces each raindrop's Raindrop.io tags
+with `canonicalize_tags(...).kept`. An alias becomes its primary (`chatgpt` → `ai`) and
+anything else is dropped, so a raindrop file never holds a tag outside the closed list.
+The original tags are not kept anywhere; Raindrop.io itself still has them.
 
 ## Filenames as a second layer of idempotency
 

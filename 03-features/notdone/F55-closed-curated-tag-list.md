@@ -3,8 +3,8 @@
 **Date Created:** 2026-10-19
 **Done:** no
 **Tasks File Created:** yes
-**Tests Written:** no
-**Test Passing:** no
+**Tests Written:** yes
+**Test Passing:** yes
 **Description**: Make the curated list **closed and short**. Only its 16
 tags may appear on, or be added to, any blog post or raindrop. Every other
 known tag becomes an alias that converts to one of the 16. Anything else is

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 8
+# Version: 9
 # Created: 2026-09-08
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 FastAPI server for Salasblog2 - serves static files + API endpoints.
@@ -50,10 +50,11 @@ from salasblog2.propose import DropFilter, get_proposed_drops, get_proposed_post
 from salasblog2.raindrop import RaindropDownloader
 from salasblog2.scheduler import get_scheduler
 from salasblog2.stats import get_counter
+from salasblog2.tag_vocabulary import canonicalize_tags
 from salasblog2.utils import (
+    load_curated_tag_aliases,
     load_curated_tags,
     process_markdown_to_html,
-    top_tags_by_frequency,
 )
 from salasblog2.visitor_type import classify_visitor
 
@@ -1324,18 +1325,12 @@ def generate_posts_index_cache():
     date, type) to output/admin-posts-index.json, so the admin "All Posts"
     list (TF42.2) loads instantly instead of scanning thousands of files per
     request — same pre-generated-static-file pattern as generate_stats_cache().
-
-    Also writes output/top-tags.json (TF45.0): the 100 most-used tags across
-    blog posts, for the post editor's tag picklist (F45). Computed here rather
-    than in a separate pass since every post's frontmatter is already being
-    read for the posts index — no extra file I/O to tally tags alongside it.
     """
     output_dir = config.get("output_dir")
     if not output_dir:
         return
 
     entries = []
-    blog_tag_lists = []
     for content_type in ("blog", "pages"):
         content_dir = get_content_directory(content_type)
         if not content_dir.exists():
@@ -1359,40 +1354,35 @@ def generate_posts_index_cache():
                     "content_type": content_type,
                 }
             )
-            if content_type == "blog":
-                blog_tag_lists.append(post.metadata.get("tags", []))
 
     entries.sort(key=lambda e: e["date"], reverse=True)
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "admin-posts-index.json").write_text(
         json.dumps(entries), encoding="utf-8"
     )
-    tag_hints_path = config["root_dir"] / "02-doc" / "tag-hints.md"
-    (output_dir / "top-tags.json").write_text(
-        json.dumps(
-            top_tags_by_frequency(
-                blog_tag_lists, always_include=load_curated_tags(tag_hints_path)
-            )
-        ),
-        encoding="utf-8",
-    )
 
 
-def load_top_tags() -> list:
-    """Read the cached top-100-tags list (TF45.0) for the post editor's tag
-    picklist. Falls back to an empty list before the cache is first
-    generated (fresh install) — tag suggestions are a convenience, not
-    critical data, so there's nothing to error on here.
+def curated_tag_hints_path() -> Path:
+    return config["root_dir"] / "02-doc" / "tag-hints.md"
+
+
+def curate_submitted_tags(tags: list[str]) -> list[str]:
+    """Convert a post's submitted tags onto the closed curated list (F55).
+
+    Aliases become their primary. Any tag the list doesn't know is refused
+    with a 400 naming it, so the post isn't saved with tags quietly lost.
     """
-    output_dir = config.get("output_dir")
-    tags_file = output_dir / "top-tags.json" if output_dir else None
-    if not tags_file or not tags_file.exists():
-        return []
-    try:
-        return json.loads(tags_file.read_text(encoding="utf-8"))
-    except Exception as e:
-        logging.getLogger(__name__).warning(f"Could not read top-tags.json: {e}")
-        return []
+    alias_map = load_curated_tag_aliases(curated_tag_hints_path())
+    canonical = canonicalize_tags(tags, alias_map)
+    if canonical.dropped:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Not curated tags: {', '.join(canonical.dropped)}. "
+                f"Use one of: {', '.join(load_curated_tags(curated_tag_hints_path()))}"
+            ),
+        )
+    return canonical.kept
 
 
 @app.get("/admin/edit-post/{filename}")
@@ -1412,7 +1402,7 @@ async def edit_post_page(filename: str, request: Request):
         "content_type_title": "Post",
         "action_url": f"/admin/edit-post/{filename}",
         "cancel_url": "/blog/",
-        "blog_tags": load_top_tags(),
+        "blog_tags": load_curated_tags(curated_tag_hints_path()),
         "is_edit": True,
         **post_data,
     }
@@ -1442,6 +1432,7 @@ async def save_edited_post(
         raise HTTPException(status_code=404, detail=f"Post not found: {filename}")
 
     check_no_concurrent_edit(content_file, loaded_mtime)
+    tags = curate_submitted_tags(tags)
 
     new_mtime = save_content_item(
         filename,
@@ -1473,7 +1464,7 @@ async def new_post_page(request: Request):
         "content_type_title": "Post",
         "action_url": "/admin/new-post",
         "cancel_url": "/blog/",
-        "blog_tags": load_top_tags(),
+        "blog_tags": load_curated_tags(curated_tag_hints_path()),
         "is_edit": False,
     }
     return HTMLResponse(content=render_template("post_editor.html", context))
@@ -1494,6 +1485,7 @@ async def create_new_post(
     if config["admin_password"] and not is_admin_authenticated(request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
+    tags = curate_submitted_tags(tags)
     try:
         filename = create_filename_for_content(title.strip(), date, "blog")
         content_dir = get_content_directory("blog")
@@ -2115,7 +2107,7 @@ async def repost_page(filename: str, request: Request):
         "content_type_title": "Post",
         "action_url": "/admin/new-post",
         "cancel_url": "/blog/",
-        "blog_tags": load_top_tags(),
+        "blog_tags": load_curated_tags(curated_tag_hints_path()),
         "is_edit": False,
         "prefill_title": post_data["title"],
         "prefill_content": post_data["content"],

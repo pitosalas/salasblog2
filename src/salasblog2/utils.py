@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # utils — Pure content-processing utilities: markdown, frontmatter, excerpts, filenames
 # Author: Pito Salas and Claude Code
-# Version: 11
+# Version: 12
 # Created: 2026-09-09
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 Pure utility functions for content processing and site generation.
@@ -46,51 +46,12 @@ def parse_tag_hints_section(text: str, header: str) -> list[str]:
     return tags
 
 
-TAG_HINTS_COUNT_FIELD_WIDTH = 9
 CURATED_TAGS_HEADER = "# Curated Tags"
 
 
-def format_tag_hints_line(count: int, tag: str, comment: str = "") -> str:
-    """Format one tag-hints.md line: a left-justified usage count, the tag
-    name, and an optional parenthetical comment - the inverse of
-    `parse_tag_hints_section`'s parsing.
-    """
-    line = f"{count:<{TAG_HINTS_COUNT_FIELD_WIDTH}}{tag}"
-    return f"{line} ({comment})" if comment else line
-
-
-def add_curated_aliases(text: str, new_aliases: dict[str, list[str]]) -> str:
-    """Return tag-hints.md text with each `{primary: [aliases]}` appended to
-    that primary's parenthetical alias list in the "Curated Tags" section.
-
-    Aliases already on the line are not repeated. Raises if a primary isn't
-    a curated tag, rather than inventing a line for it.
-    """
-    pending = {primary: list(aliases) for primary, aliases in new_aliases.items()}
-    lines = []
-    in_section = False
-    for line in text.splitlines():
-        stripped = line.strip()
-        if stripped.startswith("# "):
-            in_section = stripped == CURATED_TAGS_HEADER
-        match = re.match(r"^(\d+)\s+(.*?)(?:\s*\((.*)\))?\s*$", stripped)
-        if in_section and match and match.group(2) in pending:
-            count, primary, comment = match.groups()
-            existing = [a.strip() for a in (comment or "").split(",") if a.strip()]
-            added = [a for a in pending.pop(primary) if a not in existing]
-            line = format_tag_hints_line(
-                int(count), primary, ", ".join(existing + added)
-            )
-        lines.append(line)
-    if pending:
-        raise ValueError(f"not curated tags in tag-hints.md: {sorted(pending)}")
-    return "\n".join(lines) + "\n"
-
-
 def load_curated_tags(tag_hints_path: Path) -> list[str]:
-    """Load the single curated tag vocabulary from tag-hints.md's "Curated
-    Tags" section - the one list offered by the post editor picklist and
-    enforced by the F46 tag-cleanup pipeline.
+    """Load the closed curated tag vocabulary (its primaries) from
+    tag-hints.md's "Curated Tags" section - see `tag_vocabulary`.
     """
     text = tag_hints_path.read_text(encoding="utf-8")
     return parse_tag_hints_section(text, CURATED_TAGS_HEADER)
@@ -592,46 +553,6 @@ def extract_unique_collections(raindrops: list[dict[str, Any]]) -> list[str]:
 def slugify_collection(name: str) -> str:
     """Convert collection name to URL-safe slug."""
     return slugify_tag(name)
-
-
-def top_tags_by_frequency(
-    tag_lists: list[list[str]],
-    limit: int = 100,
-    always_include: list[str] | None = None,
-) -> list[str]:
-    """Return the `limit` most-used tags across all posts, most-used first,
-    followed by any `always_include` tags not already in that top set.
-
-    Skips purely-numeric tags: many older posts carry raw WordPress category
-    IDs (e.g. "1221") as their `tags` frontmatter, a leftover import artifact
-    — not real topical tags, and common enough among old posts to otherwise
-    swamp genuine tags in a frequency ranking. Templates already exclude these
-    the same way (`{% if not tag.isdigit() %}` in blog_post.html/blog_list.html/
-    home.html) when rendering a post's tag badges; this mirrors that convention.
-
-    `always_include` (e.g. load_curated_tags()) guarantees a curated tag is always
-    offered even if it's barely used yet — a brand-new curated tag would
-    otherwise never appear in a frequency ranking until posts start using it,
-    which nothing can do if it's never offered in the first place. These are
-    appended after the frequency-ranked tags rather than folded into the
-    ranking, so a curated-but-unused tag can't crowd out a genuinely popular
-    one within `limit`.
-
-    Ties broken alphabetically, so the result is deterministic between runs
-    (Python's Counter otherwise preserves first-seen order for ties, which
-    would depend on file iteration order — not what a stable cache wants).
-    """
-    counts: dict[str, int] = {}
-    for tags in tag_lists:
-        for tag in tags:
-            if tag and not tag.isdigit():
-                counts[tag] = counts.get(tag, 0) + 1
-    ranked = sorted(counts.items(), key=lambda item: (-item[1], item[0]))
-    top = [tag for tag, _count in ranked[:limit]]
-    for tag in always_include or []:
-        if tag not in top:
-            top.append(tag)
-    return top
 
 
 def format_raindrop_as_markdown(raindrop: dict[str, Any]) -> str:

@@ -1,6 +1,6 @@
 ---
-version: "1.2"
-generated: "2026-10-19"
+version: "1.3"
+generated: "2026-10-20"
 ---
 
 # `server.py` — The FastAPI Application
@@ -326,7 +326,7 @@ context = {
     "content_type_title": "Post",
     "action_url": f"/admin/edit-post/{filename}",
     "cancel_url": "/blog/",
-    "blog_tags": load_top_tags(),
+    "blog_tags": load_curated_tags(curated_tag_hints_path()),
     "is_edit": True,
     **post_data,
 }
@@ -352,6 +352,27 @@ just a shared view:
     line. The category field itself was removed in F51.
 - `delete_content_item()` and `regenerate_after_deletion_in_background()`
   are the deletion-side mirror of save + regenerate.
+
+### Tags: a closed list, enforced on save (F55)
+
+The picklist (`blog_tags`) is exactly the curated primaries from
+`02-doc/tag-hints.md`. It used to be a cached top-100 frequency list
+(`output/top-tags.json`), which F55 removed.
+
+Both blog save routes pass the submitted tags through
+`curate_submitted_tags()` before anything is written:
+
+```python
+canonical = canonicalize_tags(tags, alias_map)
+if canonical.dropped:
+    raise HTTPException(status_code=400, detail=f"Not curated tags: ...")
+return canonical.kept
+```
+
+- An alias is saved as its primary, so `iPhone` is stored as `computing`.
+- An unknown tag gets a **400 naming it**, and the post is not saved.
+  Refusing rather than silently dropping means the author finds out at
+  once instead of later discovering a tag quietly lost.
 
 ### Optimistic concurrency, not locking
 

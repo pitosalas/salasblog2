@@ -1,20 +1,18 @@
 #!/usr/bin/env python3
 # build_proposals.py — Sanitize tag decisions, build the review file
 # Author: Pito Salas and Claude Code
-# Version: 2
+# Version: 3
 # Created: 2026-09-09
-# Updated: 2026-10-17
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 CLI adapter for the tag-cleanup pipeline (F46). Combines a candidates file
 (from select_tag_candidates.py) with a decisions file - tag choices made by
 Claude acting directly in an assisted session, or by a human - into the
 reviewable proposals JSON. Per 02-doc/tag-hints.md's rules: a newly proposed
-tag is only applied to a post if it's already in that file's curated
-vocabulary; anything else that recurs across at least
-MIN_RECURRENCE_FOR_PROPOSED_TAG posts in the batch gets appended directly to
-that same Curated Tags list (available starting the next batch, not applied
-retroactively to this one). Sanitization also drops numeric junk, empty
+tag is only applied to a post if it's in that file's closed curated
+vocabulary; anything else is listed as a candidate and never written.
+Sanitization also drops numeric junk, empty
 strings, and duplicates before anything is written.
 
 Decisions file schema: a JSON list of {"filename": ..., "tags": [...]}.
@@ -28,12 +26,7 @@ import json
 import logging
 from pathlib import Path
 
-from salasblog2.tag_cleanup import (
-    PostSummary,
-    build_proposal,
-    promote_recurring_candidates,
-    proposals_to_json,
-)
+from salasblog2.tag_cleanup import PostSummary, build_proposal, proposals_to_json
 from salasblog2.utils import load_curated_tags
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
@@ -71,15 +64,6 @@ def main() -> None:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(proposals_to_json(proposals), encoding="utf-8")
     logger.info("Wrote %d proposals to %s", len(proposals), args.output)
-
-    new_candidates = promote_recurring_candidates(proposals, args.tag_hints)
-    if new_candidates:
-        logger.info(
-            "Promoted %d recurring candidate tag(s) into %s's Curated Tags list: %s",
-            len(new_candidates),
-            args.tag_hints,
-            ", ".join(new_candidates),
-        )
 
 
 if __name__ == "__main__":

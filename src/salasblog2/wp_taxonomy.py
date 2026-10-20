@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # wp_taxonomy — WordPress categories/tags as a curated-tag signal for posts
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-10-18
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 The WordPress export (WXR) records the categories and tags each old post
@@ -15,10 +15,7 @@ redirect it to another name (a near-synonym or misspelling) or to `null` to
 ignore it. Second, the result goes through tag-hints.md's alias map, so a
 declared synonym lands on its curated primary.
 
-`promote_terms` applies F46's recurrence rule to the WordPress data: a
-resolved term outside the curated list on enough published posts is added
-to the list, and every merge whose target is curated is recorded as an alias
-of that target. `build_wp_proposals` then proposes, for each local post
+`build_wp_proposals` proposes, for each local post
 matched to a WordPress post, its existing tags plus the curated tags its
 terms resolve to - additive only, via F46's `build_proposal`.
 """
@@ -32,13 +29,9 @@ from pathlib import Path
 
 import frontmatter
 
-from salasblog2.tag_cleanup import (
-    PostSummary,
-    TagProposal,
-    build_proposal,
-    promote_recurring_candidates,
-)
-from salasblog2.utils import add_curated_aliases, load_curated_tag_aliases
+from salasblog2.tag_cleanup import PostSummary, TagProposal, build_proposal
+from salasblog2.tag_vocabulary import canonicalize_tags
+from salasblog2.utils import load_curated_tag_aliases
 
 WXR_NAMESPACES = {"wp": "http://wordpress.org/export/1.2/"}
 MERGES_FILE = Path(__file__).parents[2] / "02-doc" / "wp-term-merges.json"
@@ -127,60 +120,17 @@ def load_merges(merges_path: Path) -> dict[str, str | None]:
 def resolve_terms(
     terms: list[str], merges: dict[str, str | None], alias_map: dict[str, str]
 ) -> list[str]:
-    """Resolve a post's WordPress terms to tag names, deduplicated.
+    """Resolve a post's WordPress terms to curated primaries, deduplicated.
 
     Structural terms (`uncategorized`, `post-format-*`, numeric IDs) and
-    terms merged to `null` are dropped. The rest are curated primaries when
-    the alias map knows them, otherwise the (merged) term itself.
+    terms merged to `null` are dropped, and so is anything the closed
+    curated list doesn't recognize.
     """
-    resolved = []
-    for term in terms:
-        if STRUCTURAL_TERM.match(term):
-            continue
-        target = merges.get(term, term)
-        if target is None:
-            continue
-        resolved.append(alias_map.get(target, target))
-    return list(dict.fromkeys(resolved))
-
-
-def promote_terms(
-    wp_posts: list[WpPost], merges: dict[str, str | None], tag_hints_path: Path
-) -> tuple[list[str], dict[str, list[str]]]:
-    """Update tag-hints.md from the WordPress terms.
-
-    Resolved terms outside the curated list that recur on enough published
-    posts are added as curated tags (F46's `promote_recurring_candidates`).
-    Then each merge whose target is now curated is recorded as an alias of
-    that target. Returns (promoted tags, {primary: aliases added}).
-    """
-    alias_map = load_curated_tag_aliases(tag_hints_path)
-    holders = [
-        TagProposal(
-            filename=wp_post.slug,
-            title=wp_post.title,
-            current_tags=[],
-            candidate_tags=[
-                tag
-                for tag in resolve_terms(wp_post.terms, merges, alias_map)
-                if tag not in alias_map
-            ],
-        )
-        for wp_post in wp_posts
+    merged = [
+        merges.get(term, term) for term in terms if not STRUCTURAL_TERM.match(term)
     ]
-    promoted = promote_recurring_candidates(holders, tag_hints_path)
-
-    alias_map = load_curated_tag_aliases(tag_hints_path)
-    new_aliases: dict[str, list[str]] = {}
-    for term, target in sorted(merges.items()):
-        if target is None or term in alias_map:
-            continue
-        primary = alias_map.get(target)
-        if primary is not None:
-            new_aliases.setdefault(primary, []).append(term)
-    text = tag_hints_path.read_text(encoding="utf-8")
-    tag_hints_path.write_text(add_curated_aliases(text, new_aliases), encoding="utf-8")
-    return promoted, new_aliases
+    targets = [target for target in merged if target is not None]
+    return canonicalize_tags(targets, alias_map).kept
 
 
 def build_wp_proposals(
