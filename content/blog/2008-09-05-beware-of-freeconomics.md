@@ -4,6 +4,9 @@ subtitle: The quote below is from this post
 tags:
 - business
 - blogging
+original_tags:
+- business
+- blogging
 - technology
 title: Beware of Freeconomics
 type: wp

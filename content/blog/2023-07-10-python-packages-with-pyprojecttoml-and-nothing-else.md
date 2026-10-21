@@ -2,6 +2,8 @@
 date: '2023-07-10'
 subtitle: Python packages with pyproject.toml and nothing else
 tags:
+- programming
+original_tags:
 - python
 title: Python packages with pyproject.toml and nothing else
 type: wp

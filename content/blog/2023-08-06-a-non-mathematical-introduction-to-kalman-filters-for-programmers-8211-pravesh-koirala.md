@@ -3,6 +3,8 @@ date: '2023-08-06'
 subtitle: A non-mathematical introduction to Kalman Filters for programmers – Pravesh
   Koirala
 tags:
+- science
+original_tags:
 - mathematics
 - computer-science
 title: A non-mathematical introduction to Kalman Filters for programmers – Pravesh

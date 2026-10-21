@@ -2,6 +2,8 @@
 date: '2020-03-05'
 subtitle: Library for stubbing and setting expectations on HTTP requests in Ruby.
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  03/06/2020
 type: wp

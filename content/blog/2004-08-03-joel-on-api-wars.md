@@ -3,6 +3,8 @@ date: '2004-08-03'
 subtitle: Joel writes a good analysis of some of the dyn...
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: Joel on API Wars
 type: wp

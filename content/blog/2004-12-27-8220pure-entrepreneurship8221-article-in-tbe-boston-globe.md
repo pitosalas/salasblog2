@@ -3,6 +3,8 @@ date: '2004-12-27'
 subtitle: “Pure Entrepeneurs”, according to this article in the Boston Globe,
 tags:
 - business
+original_tags:
+- business
 - personal
 title: “Pure Entrepreneurship” article in tbe Boston Globe
 type: wp

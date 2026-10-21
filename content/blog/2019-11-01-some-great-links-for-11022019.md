@@ -3,6 +3,9 @@ date: '2019-11-01'
 subtitle: 'PyRobot: An Open Source Robotics Research Platform'
 tags:
 - robotics
+- programming
+original_tags:
+- robotics
 - python
 title: Some great links for  11/02/2019
 type: wp

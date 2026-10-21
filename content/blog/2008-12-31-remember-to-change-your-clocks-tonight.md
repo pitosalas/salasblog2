@@ -3,6 +3,8 @@ date: '2008-12-31'
 subtitle: '> “Revelers will have an extra second to enjoy the New Year celebrations.'
 tags:
 - science
+original_tags:
+- science
 - personal
 title: Remember to change your clocks tonight
 type: wp

@@ -3,6 +3,8 @@ date: '2013-08-02'
 subtitle: I came across this article a few days ago. The Ticktock of the Death Clock
   – NYTimes.com
 tags:
+- places
+original_tags:
 - personal
 - travel
 title: Looked at the right way, this could be good news!

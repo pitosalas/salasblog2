@@ -3,6 +3,9 @@ date: '2010-05-28'
 subtitle: Very meta. Who rates the rating services?
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - politics
 title: We need a debt rating service rating service

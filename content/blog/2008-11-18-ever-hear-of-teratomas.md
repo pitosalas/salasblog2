@@ -2,6 +2,8 @@
 date: '2008-11-18'
 subtitle: Here’s a truly weird article
 tags:
+- life
+original_tags:
 - health
 - personal
 title: Ever hear of teratomas?

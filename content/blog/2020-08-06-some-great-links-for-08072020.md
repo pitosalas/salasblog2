@@ -2,6 +2,8 @@
 date: '2020-08-06'
 subtitle: 'Noticed Gem: Notifications for Ruby on Rails applications'
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  08/07/2020
 type: wp

@@ -2,6 +2,8 @@
 date: '2019-08-01'
 subtitle: piotrmurach/tty-box
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  08/02/2019
 type: wp

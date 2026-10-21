@@ -4,6 +4,9 @@ subtitle: '[ GitHub – TomWright/dasel: Select, put and delete data from JSON, 
   YAML, XML and CSV files wit...'
 tags:
 - programming
+- computing
+original_tags:
+- programming
 - cli
 - csv
 - json

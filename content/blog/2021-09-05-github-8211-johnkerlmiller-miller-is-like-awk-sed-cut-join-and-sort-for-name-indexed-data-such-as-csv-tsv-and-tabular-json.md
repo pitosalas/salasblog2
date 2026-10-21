@@ -4,6 +4,10 @@ subtitle: '[ GitHub – johnkerl/miller: Miller is like awk, sed, cut, join, and
   for name-indexed data such ...'
 tags:
 - programming
+- computing
+- howto
+original_tags:
+- programming
 - cli
 - tools
 - csv

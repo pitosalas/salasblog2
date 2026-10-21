@@ -3,6 +3,10 @@ date: '2022-01-05'
 subtitle: How an internet mapping glitch turned a random Kansas farm into a digital
   hell
 tags:
+- computing
+- life
+- programming
+original_tags:
 - maps
 - humor
 - web

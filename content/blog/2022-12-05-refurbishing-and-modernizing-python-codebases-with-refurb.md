@@ -2,6 +2,8 @@
 date: '2022-12-05'
 subtitle: Refurbishing and modernizing Python codebases with refurb –...
 tags:
+- programming
+original_tags:
 - python
 title: Refurbishing and modernizing Python codebases with refurb
 type: wp

@@ -2,6 +2,9 @@
 date: '2012-03-28'
 subtitle: This is from a play we saw last year at the Huntington Theatre. ...
 tags:
+- places
+- culture
+original_tags:
 - boston
 - art
 title: “We might as well have a good time while we’re here, don’t you think?”

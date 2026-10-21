@@ -2,6 +2,8 @@
 date: '2023-07-17'
 subtitle: Rails Generate Migration — Everything you need to know
 tags:
+- programming
+original_tags:
 - ruby
 title: Rails Generate Migration — Everything you need to know
 type: wp

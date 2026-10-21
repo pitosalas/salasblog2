@@ -2,6 +2,8 @@
 date: '2022-12-11'
 subtitle: Phlex — fast, object-oriented view framework for Ruby –If youve done a b...
 tags:
+- programming
+original_tags:
 - ruby
 title: Phlex — fast, object-oriented view framework for Ruby
 type: wp

@@ -3,6 +3,9 @@ date: '2013-02-23'
 subtitle: '![](https://i0.wp.com/0.tqn.com/d/foodreference/1/G/e/-/-/-/Sriracha.jpg?w=584)Just
   tonight I squirt...'
 tags:
+- life
+- science
+original_tags:
 - food
 - science
 title: I love sriracha sauce, do you?

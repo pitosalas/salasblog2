@@ -4,6 +4,9 @@ subtitle: Whether you agree or not, it is [thoughtful and thought provoking disc
   of Bubbles and Financia...
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - politics
 title: Interesting article by Mark Cuban about ‘the cause of bubbles’

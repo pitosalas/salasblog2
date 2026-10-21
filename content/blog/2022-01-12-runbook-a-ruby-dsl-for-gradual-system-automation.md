@@ -2,6 +2,11 @@
 date: '2022-01-12'
 subtitle: 'Runbook: A Ruby DSL for Gradual System Automation'
 tags:
+- programming
+- education
+- software-engineering
+- howto
+original_tags:
 - ruby
 - brandeis
 - software-engineering

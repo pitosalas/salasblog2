@@ -2,6 +2,8 @@
 date: '2007-09-07'
 subtitle: '!toprubybooks1.jpg'
 tags:
+- programming
+original_tags:
 - ruby
 - personal
 - technology

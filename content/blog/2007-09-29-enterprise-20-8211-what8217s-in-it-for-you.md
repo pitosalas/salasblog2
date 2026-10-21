@@ -3,6 +3,8 @@ date: '2007-09-29'
 subtitle: Enterprise 2.0 is one of those terms that is being ba...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Enterprise 2.0 – What’s in it for you?

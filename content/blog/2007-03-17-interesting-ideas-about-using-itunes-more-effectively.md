@@ -2,6 +2,8 @@
 date: '2007-03-17'
 subtitle: Check out this post
 tags:
+- computing
+original_tags:
 - apple
 - personal
 - technology

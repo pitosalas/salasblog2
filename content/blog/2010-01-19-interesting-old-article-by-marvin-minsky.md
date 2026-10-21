@@ -4,6 +4,8 @@ subtitle: Just came across this odd link somewhere. He’s a good and clear writ
   enjoyable to read whether yo...
 tags:
 - ai
+original_tags:
+- ai
 - technology
 - personal
 title: Interesting old article by Marvin Minsky

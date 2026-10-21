@@ -3,6 +3,8 @@ date: '2005-11-16'
 subtitle: Glad to see that Ray is blogging again. Now that he is at...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Ray Ozzie’s Blog V3
 type: wp

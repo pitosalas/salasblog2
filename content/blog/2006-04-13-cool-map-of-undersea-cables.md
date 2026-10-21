@@ -2,6 +2,8 @@
 date: '2006-04-13'
 subtitle: This is just a really cool map.
 tags:
+- computing
+original_tags:
 - maps
 - technology
 title: Cool map of undersea cables

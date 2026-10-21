@@ -2,6 +2,8 @@
 date: '2006-12-28'
 subtitle: Check out [this
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Cool underwater restaurant…

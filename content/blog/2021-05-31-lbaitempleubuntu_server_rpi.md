@@ -2,6 +2,9 @@
 date: '2021-05-31'
 subtitle: lbaitemple/ubuntu_server_rpi
 tags:
+- computing
+- howto
+original_tags:
 - linux
 - howto
 - technology

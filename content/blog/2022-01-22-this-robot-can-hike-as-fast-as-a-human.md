@@ -3,6 +3,10 @@ date: '2022-01-22'
 subtitle: This robot can hike as fast as a human
 tags:
 - robotics
+- education
+- culture
+original_tags:
+- robotics
 - navigation
 - research
 - video

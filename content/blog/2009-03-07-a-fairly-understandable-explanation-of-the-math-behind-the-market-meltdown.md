@@ -2,6 +2,9 @@
 date: '2009-03-07'
 subtitle: This article is somewhat mathematical but...
 tags:
+- science
+- business
+original_tags:
 - mathematics
 - business
 - personal

@@ -3,6 +3,8 @@ date: '2004-07-31'
 subtitle: 'Here’s a nice bit of **civic participation**: the iTunes Music Store is
   offering single click, **FRE...'
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: iTunes Rules

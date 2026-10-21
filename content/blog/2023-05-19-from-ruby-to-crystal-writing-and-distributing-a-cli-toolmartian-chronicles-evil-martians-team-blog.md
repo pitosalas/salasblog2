@@ -3,6 +3,8 @@ date: '2023-05-19'
 subtitle: '[ From Ruby to Crystal? Writing and distributing a CLI tool—Martian Chronicles,
   Evil Martians’ team ...'
 tags:
+- programming
+original_tags:
 - ruby
 title: From Ruby to Crystal? Writing and distributing a CLI tool—Martian Chronicles,
   Evil Martians’ team blog

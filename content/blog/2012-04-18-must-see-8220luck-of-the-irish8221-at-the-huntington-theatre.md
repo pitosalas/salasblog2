@@ -3,6 +3,9 @@ date: '2012-04-18'
 subtitle: If you are a theatre fan I strongly recommend a play I just saw last night.
   It’s called “Luck of the...
 tags:
+- places
+- culture
+original_tags:
 - boston
 - art
 title: 'Must See: “Luck of the Irish” at the Huntington Theatre'

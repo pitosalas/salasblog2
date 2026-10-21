@@ -2,6 +2,8 @@
 date: '2018-09-01'
 subtitle: westonganger (Weston Ganger)
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  09/02/2018
 type: wp

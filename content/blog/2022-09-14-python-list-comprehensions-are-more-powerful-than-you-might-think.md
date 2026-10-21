@@ -2,6 +2,8 @@
 date: '2022-09-14'
 subtitle: Python List Comprehensions Are More Powerful Than You Might Think
 tags:
+- programming
+original_tags:
 - python
 title: Python List Comprehensions Are More Powerful Than You Might Think
 type: wp

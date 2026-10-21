@@ -3,6 +3,8 @@ date: '2006-08-12'
 subtitle: Yeah, why wouldn’t they? In Massachusetts, Saturday Aug 12 and Sunday Aug
   13, there is no 5% Sales T...
 tags:
+- computing
+original_tags:
 - apple
 - personal
 - technology

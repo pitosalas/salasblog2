@@ -2,6 +2,8 @@
 date: '2011-07-17'
 subtitle: This site looks really good, but I am not signing up yet.
 tags:
+- internet
+original_tags:
 - personal
 - security
 - technology

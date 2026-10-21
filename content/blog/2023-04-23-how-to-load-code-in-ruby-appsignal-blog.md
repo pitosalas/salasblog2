@@ -2,6 +2,8 @@
 date: '2023-04-23'
 subtitle: How to Load Code in Ruby | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: How to Load Code in Ruby | AppSignal Blog
 type: wp

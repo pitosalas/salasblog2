@@ -3,6 +3,8 @@ date: '2008-06-23'
 subtitle: '![](http://www.fli...'
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: I agree with Tom Friedman
 type: wp

@@ -3,6 +3,8 @@ date: '2006-12-08'
 subtitle: I am at the 2006 Fall Leadership Forum in Sonoma, C...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: 2006 Fall Leadership Forum

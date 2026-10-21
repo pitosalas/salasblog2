@@ -3,6 +3,8 @@ date: '2010-04-28'
 subtitle: Scott Kirsner summarizes a new book “Mastering the VC game” and [re-...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Bring me different rocks
 type: wp

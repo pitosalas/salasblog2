@@ -3,6 +3,8 @@ date: '2006-03-03'
 subtitle: I guess because **deep down** I am still a paranoid **Windows** user, my
   OS X is configured to **au...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: How clever is Mac OS X?

@@ -3,6 +3,8 @@ date: '2004-12-14'
 subtitle: We all love reading blogs **(right?), **and some of us even use their valuable
   time writing blogs. I...
 tags:
+- blogging
+original_tags:
 - personal
 - blogging
 title: My social theory of blogging

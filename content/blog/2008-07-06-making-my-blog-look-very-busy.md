@@ -3,6 +3,8 @@ date: '2008-07-06'
 subtitle: '!Wordpress Timestamp'
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 title: Making my blog look very busy
 type: wp

@@ -2,6 +2,9 @@
 date: '2022-04-02'
 subtitle: An Intuitive Guide to Linear Algebra – BetterExplained
 tags:
+- science
+- howto
+original_tags:
 - mathematics
 - explainer
 title: An Intuitive Guide to Linear Algebra – BetterExplained

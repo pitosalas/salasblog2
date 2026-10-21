@@ -2,6 +2,9 @@
 date: '2022-08-09'
 subtitle: Top 20 Books a Software Developer Must Read (Updated) –A co...
 tags:
+- culture
+- software-engineering
+original_tags:
 - books
 - software-engineering
 title: Top 20 Books a Software Developer Must Read (Updated)

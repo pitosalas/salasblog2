@@ -2,6 +2,8 @@
 date: '2018-10-13'
 subtitle: Creating Powerful Command Line Tools in Ruby – via @codeship | via @codeship
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/14/2018
 type: wp

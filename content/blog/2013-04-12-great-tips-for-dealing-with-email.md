@@ -3,6 +3,9 @@ date: '2013-04-12'
 subtitle: This is a tired topic but this [article from the New York Times does have
   some good tips on managing...
 tags:
+- internet
+- culture
+original_tags:
 - technology
 - email
 - nyt

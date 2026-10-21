@@ -2,6 +2,8 @@
 date: '2007-02-19'
 subtitle: If you are a Ruby On Rails developer you might want to check out this post
 tags:
+- programming
+original_tags:
 - ruby
 - personal
 - technology

@@ -2,6 +2,8 @@
 date: '2018-03-31'
 subtitle: 5 Tips To Write Idiomatic Pandas Code (article) – DataCamp
 tags:
+- programming
+original_tags:
 - python
 - ruby
 title: Interesting Links

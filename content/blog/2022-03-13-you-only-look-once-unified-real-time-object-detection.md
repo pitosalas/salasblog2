@@ -4,6 +4,10 @@ subtitle: 'You Only Look Once: Unified, Real-Time Object Detection'
 tags:
 - robotics
 - ai
+- education
+original_tags:
+- robotics
+- ai
 - computer-vision
 - education
 title: 'You Only Look Once: Unified, Real-Time Object Detection'

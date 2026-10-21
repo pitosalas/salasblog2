@@ -4,6 +4,8 @@ subtitle: A theme that I have followed in this blog is the question of whether i
   a good idea to require a p...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Sudafed and Voting
 type: wp

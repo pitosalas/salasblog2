@@ -2,6 +2,8 @@
 date: '2011-07-22'
 subtitle: '!Screen shot 2011 07 22 at 9 12 39 AM'
 tags:
+- blogging
+original_tags:
 - social-media
 - personal
 - technology

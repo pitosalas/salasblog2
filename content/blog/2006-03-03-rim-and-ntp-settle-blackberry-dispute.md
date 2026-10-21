@@ -2,6 +2,9 @@
 date: '2006-03-03'
 subtitle: From the Wall Street Journal
 tags:
+- politics
+- business
+original_tags:
 - legal
 - business
 - personal

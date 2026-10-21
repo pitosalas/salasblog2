@@ -3,6 +3,9 @@ date: '2022-03-16'
 subtitle: 3 ways to detect slow queries in PostgreSQL
 tags:
 - software-engineering
+- programming
+original_tags:
+- software-engineering
 - performance
 - database
 - scalability

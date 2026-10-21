@@ -3,6 +3,8 @@ date: '2006-01-14'
 subtitle: Heard a lot about Ruby? Ruby on Rails? Wonder what the heck it is? Here’s
   a good intro
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 title: '[GEEK] What every Java programmer should know about Ruby'

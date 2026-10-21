@@ -2,6 +2,8 @@
 date: '2020-11-14'
 subtitle: Pauls Online Math Notes
 tags:
+- science
+original_tags:
 - mathematics
 title: Some great links for  11/15/2020
 type: wp

@@ -2,6 +2,9 @@
 date: '2021-11-20'
 subtitle: Caddx Peanut Action Camera
 tags:
+- design
+- robotics
+original_tags:
 - photography
 - robotics
 title: Caddx Peanut Action Camera

@@ -2,6 +2,9 @@
 date: '2012-11-07'
 subtitle: I’ve been using a app called “WriteThatName
 tags:
+- internet
+- computing
+original_tags:
 - email
 - tools
 title: Check out WriteThatName

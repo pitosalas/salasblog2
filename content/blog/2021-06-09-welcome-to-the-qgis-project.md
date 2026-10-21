@@ -2,6 +2,10 @@
 date: '2021-06-09'
 subtitle: Welcome to the QGIS project!
 tags:
+- computing
+- howto
+- design
+original_tags:
 - maps
 - howto
 - otp

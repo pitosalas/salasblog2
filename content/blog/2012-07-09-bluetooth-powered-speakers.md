@@ -3,6 +3,8 @@ date: '2012-07-09'
 subtitle: I am considering these Bluetooth Wireless Powered Speakers… which should
   I get?
 tags:
+- computing
+original_tags:
 - technology
 - apple
 title: Bluetooth Powered Speakers

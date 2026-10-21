@@ -3,6 +3,8 @@ date: '2011-11-21'
 subtitle: I am not dead set against software patents, although I’ve been on both sides
   of the issue.
 tags:
+- politics
+original_tags:
 - legal
 - technology
 title: How do you feel about Software Patents?

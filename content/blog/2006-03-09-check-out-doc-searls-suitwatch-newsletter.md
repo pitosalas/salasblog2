@@ -4,6 +4,8 @@ subtitle: There are a few **really good** newsletters that have not moved over t
   a blog which I read religio...
 tags:
 - politics
+original_tags:
+- politics
 - technology
 title: Check out Doc Searls Suitwatch newsletter
 type: wp

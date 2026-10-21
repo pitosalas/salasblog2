@@ -2,6 +2,8 @@
 date: '2023-01-26'
 subtitle: 'Laurence Tratt: Distinguishing an Interpreter from a Compiler'
 tags:
+- science
+original_tags:
 - computer-science
 title: 'Laurence Tratt: Distinguishing an Interpreter from a Compiler'
 type: wp

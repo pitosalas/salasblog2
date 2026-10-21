@@ -3,6 +3,10 @@ date: '2022-02-01'
 subtitle: Flipping Out | code.flickr.com
 tags:
 - software-engineering
+- education
+- howto
+original_tags:
+- software-engineering
 - brandeis
 - explainer
 - howto

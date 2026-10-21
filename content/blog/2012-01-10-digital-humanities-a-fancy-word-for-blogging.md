@@ -5,6 +5,10 @@ subtitle: Here’s an interesting [article in “The Opinionator” of the New Y
 tags:
 - education
 - blogging
+- programming
+original_tags:
+- education
+- blogging
 - web
 title: 'Digital Humanities: A fancy word for blogging?'
 type: wp

@@ -2,6 +2,8 @@
 date: '2023-06-16'
 subtitle: 'File: Advanced I/O with Polyphony — Documentation for polyphony (1.1.1)'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'File: Advanced I/O with Polyphony  Documentation for polyphony (1.1.1)'
 type: wp

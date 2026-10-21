@@ -3,6 +3,8 @@ date: '2007-08-20'
 subtitle: I’m an on and off [tag]Ruby[/tag] developer, and recently I’ve been trying
   to decide whether I shoul...
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 - technology

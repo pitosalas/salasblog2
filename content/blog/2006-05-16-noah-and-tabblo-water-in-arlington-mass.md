@@ -2,6 +2,8 @@
 date: '2006-05-16'
 subtitle: '!Picture 1-34'
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: Noah and Tabblo (Water in Arlington Mass)

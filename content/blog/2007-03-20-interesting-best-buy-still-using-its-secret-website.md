@@ -3,6 +3,8 @@ date: '2007-03-20'
 subtitle: Check out this post
 tags:
 - business
+original_tags:
+- business
 - personal
 title: 'Interesting: Best Buy Still Using Its Secret Website'
 type: wp

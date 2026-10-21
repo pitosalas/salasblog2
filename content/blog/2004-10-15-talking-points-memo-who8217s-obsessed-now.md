@@ -3,6 +3,8 @@ date: '2004-10-15'
 subtitle: I’m a huge fan of Talking Points Memo, Josh Marshall’s blog. In...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: 'Talking points memo: who’s obsessed now?'
 type: wp

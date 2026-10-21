@@ -2,6 +2,8 @@
 date: '2011-08-26'
 subtitle: Check this post One More Thing… from [T...
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: One More Thing…

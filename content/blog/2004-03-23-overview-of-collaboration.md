@@ -3,6 +3,8 @@ date: '2004-03-23'
 subtitle: I had the opportunity to be a guest lecturer at Brandeis University today,
   which was fun. Brandeis o...
 tags:
+- education
+original_tags:
 - brandeis
 title: Overview of Collaboration
 type: wp

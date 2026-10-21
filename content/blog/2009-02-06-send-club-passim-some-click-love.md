@@ -2,6 +2,9 @@
 date: '2009-02-06'
 subtitle: '!passimlogo'
 tags:
+- culture
+- places
+original_tags:
 - music
 - boston
 - personal

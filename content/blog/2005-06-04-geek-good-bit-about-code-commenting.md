@@ -3,6 +3,8 @@ date: '2005-06-04'
 subtitle: 'Another neat link I was shown:'
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[GEEK] Good bit about code commenting'
 type: wp

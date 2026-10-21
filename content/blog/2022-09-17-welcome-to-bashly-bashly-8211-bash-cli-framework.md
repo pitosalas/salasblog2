@@ -2,6 +2,9 @@
 date: '2022-09-17'
 subtitle: Welcome to Bashly | Bashly – Bash CLI Framework –Bashly is a command ...
 tags:
+- programming
+- computing
+original_tags:
 - ruby
 - linux
 title: Welcome to Bashly | Bashly – Bash CLI Framework

@@ -3,6 +3,8 @@ date: '2007-12-06'
 subtitle: Recently there was a comment to one of my post asking the perennial question
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 title: Once more, why dos’t thou blog?
 type: wp

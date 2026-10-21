@@ -3,6 +3,8 @@ date: '2007-08-02'
 subtitle: Scott Kirsner writes about VC’s this post
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Dirty Little Secrets About VCs
 type: wp

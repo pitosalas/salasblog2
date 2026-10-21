@@ -4,6 +4,8 @@ subtitle: Recently of course, because of the ‘torture memos’, the topic is a
   the papers and cable ‘news...
 tags:
 - politics
+original_tags:
+- politics
 - legal
 - personal
 title: The torture discussion back in 2001

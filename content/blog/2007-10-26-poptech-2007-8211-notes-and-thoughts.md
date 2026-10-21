@@ -4,6 +4,8 @@ subtitle: 'My purely biased view of the most memorable presenters, quotes and as
   links:'
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Pop!Tech 2007 – notes and thoughts

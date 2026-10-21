@@ -3,6 +3,9 @@ date: '2018-04-14'
 subtitle: 'Build a Text Classification Program: An NLP Tutorial'
 tags:
 - ai
+- programming
+original_tags:
+- ai
 - python
 - technology
 title: Some great links for  04/14/2018

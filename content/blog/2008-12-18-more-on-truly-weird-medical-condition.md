@@ -2,6 +2,8 @@
 date: '2008-12-18'
 subtitle: Suddenly when you learn about something once, you start seein...
 tags:
+- life
+original_tags:
 - health
 - personal
 title: More on truly weird medical condition

@@ -3,6 +3,8 @@ date: '2009-08-10'
 subtitle: A while ago I wrote about weapons of civic mass destruction
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: More weapons of civic mass destruction
 type: wp

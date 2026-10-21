@@ -2,6 +2,11 @@
 date: '2022-01-12'
 subtitle: 'braintree/runbook: A framework for gradual system automation'
 tags:
+- programming
+- software-engineering
+- howto
+- computing
+original_tags:
 - ruby
 - software-engineering
 - howto

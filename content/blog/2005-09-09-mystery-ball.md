@@ -2,6 +2,8 @@
 date: '2005-09-09'
 subtitle: 'Yesterday, this appeared on my Mac desktop:'
 tags:
+- computing
+original_tags:
 - apple
 - personal
 - technology

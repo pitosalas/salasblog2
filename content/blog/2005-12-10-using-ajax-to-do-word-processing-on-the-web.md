@@ -4,6 +4,8 @@ subtitle: You may not have heard of this, but we are now starting to see quite d
   word processing applicat...
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: Using AJAX to do word processing on the web
 type: wp

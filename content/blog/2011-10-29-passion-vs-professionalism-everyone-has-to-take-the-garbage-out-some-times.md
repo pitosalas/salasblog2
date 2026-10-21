@@ -4,6 +4,9 @@ subtitle: 'Interesting article with a provocative title: “[The Designer’s No
   Passion Versus Professional...'
 tags:
 - business
+- culture
+original_tags:
+- business
 - games
 - personal
 title: 'Passion vs. Professionalism: Everyone has to take the garbage out some times'

@@ -2,6 +2,8 @@
 date: '2006-12-30'
 subtitle: When I was a kid I remember reading about this pattern. I never knew it
 tags:
+- science
+original_tags:
 - mathematics
 - personal
 title: 'A Great Math Site: Understanding the Analemma'

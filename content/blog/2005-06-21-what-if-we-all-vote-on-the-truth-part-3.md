@@ -2,6 +2,9 @@
 date: '2005-06-21'
 subtitle: Just a final follow up on this interesting story
 tags:
+- blogging
+- politics
+original_tags:
 - wikipedia
 - personal
 - politics

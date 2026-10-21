@@ -4,6 +4,8 @@ subtitle: As David W. says, there’s a lot that’s been written in response to
   article by Larry ...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: 'Larry  Lessig: Beyond Transparency, and Net Triumphalism'
 type: wp

@@ -3,6 +3,8 @@ date: '2010-03-25'
 subtitle: They may not like me to say this, but as a longtime subscriber, I’ve been
   very disappointed for the ...
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: Huntington Theatre in Boston IS BACK!

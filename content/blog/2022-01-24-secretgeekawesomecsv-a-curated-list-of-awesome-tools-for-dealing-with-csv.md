@@ -4,6 +4,10 @@ subtitle: "secretGeek/AwesomeCSV: \U0001F576️A curated list of awesome tools f
   with CSV."
 tags:
 - programming
+- howto
+- computing
+original_tags:
+- programming
 - csv
 - howto
 - tools

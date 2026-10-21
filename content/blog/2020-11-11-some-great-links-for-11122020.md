@@ -2,6 +2,8 @@
 date: '2020-11-11'
 subtitle: App Downloads – GeoGebra
 tags:
+- science
+original_tags:
 - mathematics
 title: Some great links for  11/12/2020
 type: wp

@@ -2,6 +2,8 @@
 date: '2022-03-28'
 subtitle: The Rails Command Line — Ruby on Rails Guides
 tags:
+- programming
+original_tags:
 - ruby
 title: The Rails Command Line — Ruby on Rails Guides
 type: wp

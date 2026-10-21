@@ -3,6 +3,10 @@ date: '2021-08-20'
 subtitle: 5 Useful jq Commands to Parse JSON on the CLI
 tags:
 - programming
+- computing
+- howto
+original_tags:
+- programming
 - cli
 - tools
 - howto

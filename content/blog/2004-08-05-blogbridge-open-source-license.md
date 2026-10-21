@@ -3,6 +3,9 @@ date: '2004-08-05'
 subtitle: I’ve done a little research about what the Open Source really means, legally,
   when it comes to [Blog...
 tags:
+- politics
+- blogging
+original_tags:
 - legal
 - blogging
 title: BlogBridge open source license

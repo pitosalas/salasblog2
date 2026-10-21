@@ -2,6 +2,8 @@
 date: '2020-01-15'
 subtitle: Ruby From Other Languages
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  01/16/2020
 type: wp

@@ -2,6 +2,10 @@
 date: '2011-12-03'
 subtitle: 'From the New York Times, How Exercise Benefits the Brain:'
 tags:
+- life
+- science
+- culture
+original_tags:
 - health
 - science
 - nyt

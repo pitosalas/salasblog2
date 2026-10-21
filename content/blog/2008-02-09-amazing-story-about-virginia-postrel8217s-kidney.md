@@ -3,6 +3,8 @@ date: '2008-02-09'
 subtitle: This is a dramatic and well told story of one patient’s patient search for
   a kidney donor.
 tags:
+- life
+original_tags:
 - health
 - personal
 title: Amazing story about Virginia Postrel’s kidney

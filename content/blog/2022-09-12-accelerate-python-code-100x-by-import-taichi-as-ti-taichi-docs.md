@@ -2,6 +2,8 @@
 date: '2022-09-12'
 subtitle: Accelerate Python code 100x by import taichi as ti | Taichi Docs
 tags:
+- programming
+original_tags:
 - python
 title: Accelerate Python code 100x by import taichi as ti | Taichi Docs
 type: wp

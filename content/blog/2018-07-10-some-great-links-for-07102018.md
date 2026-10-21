@@ -2,6 +2,8 @@
 date: '2018-07-10'
 subtitle: LaTeX Tips n Tricks for Conference Papers
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  07/10/2018

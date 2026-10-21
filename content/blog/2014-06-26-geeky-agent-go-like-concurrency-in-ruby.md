@@ -3,6 +3,8 @@ date: '2014-06-26'
 subtitle: Really good article, albeit quite geeky, about concurrency in general, and
   using Go-like primitives ...
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 title: '[GEEKY] Agent: Go-Like Concurrency in Ruby'

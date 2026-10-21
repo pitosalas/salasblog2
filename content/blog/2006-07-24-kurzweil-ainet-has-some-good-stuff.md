@@ -3,6 +3,8 @@ date: '2006-07-24'
 subtitle: I knew about this site but recently came across a link to another quit...
 tags:
 - ai
+original_tags:
+- ai
 - personal
 title: Kurzweil AI.net has some good stuff
 type: wp

@@ -4,6 +4,10 @@ subtitle: I’ve spent the last few weeks in dribs and drabs building a new game
   Android. Lately I got deepe...
 tags:
 - programming
+- culture
+- design
+original_tags:
+- programming
 - games
 - design
 title: 'Game Design: Tiled Game Boards'

@@ -2,6 +2,8 @@
 date: '2022-09-10'
 subtitle: The What, the Why, and the How of Bloom Filter – The Lean Software Boutique
 tags:
+- science
+original_tags:
 - computer-science
 title: The What, the Why, and the How of Bloom Filter – The Lean Software Boutique
 type: wp

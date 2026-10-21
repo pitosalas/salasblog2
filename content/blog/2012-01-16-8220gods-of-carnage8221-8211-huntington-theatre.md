@@ -2,6 +2,9 @@
 date: '2012-01-16'
 subtitle: I Just came back from seeing “Gods Of Carnage”
 tags:
+- places
+- culture
+original_tags:
 - boston
 - art
 title: “Gods of Carnage” – Huntington Theatre

@@ -2,6 +2,8 @@
 date: '2005-04-11'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/tiger.jpg?...'
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: No women tigers?

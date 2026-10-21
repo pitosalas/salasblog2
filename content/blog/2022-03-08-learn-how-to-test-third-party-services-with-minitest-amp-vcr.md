@@ -2,6 +2,9 @@
 date: '2022-03-08'
 subtitle: Learn How to Test Third Party Services With Minitest & VCR
 tags:
+- programming
+- software-engineering
+original_tags:
 - ruby
 - api
 - software-engineering

@@ -4,6 +4,9 @@ subtitle: A fascinating although quite long article by Michael Lewis in Vanity F
   Michael Lewis is an amazi...
 tags:
 - business
+- politics
+original_tags:
+- business
 - legal
 title: Intellectual Property on Wall Street?
 type: wp

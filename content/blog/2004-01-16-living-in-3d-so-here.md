@@ -3,6 +3,8 @@ date: '2004-01-16'
 subtitle: '**Living in 3d? **So here are these really cool 3D Mars Pictures'
 tags:
 - science
+original_tags:
+- science
 - personal
 title: Living in 3d? So here
 type: wp

@@ -2,6 +2,8 @@
 date: '2012-02-12'
 subtitle: '!41drc4B3yOL._SL500_AA300_.jpg'
 tags:
+- life
+original_tags:
 - food
 title: Do you have a favorite mustard? I do!
 type: wp

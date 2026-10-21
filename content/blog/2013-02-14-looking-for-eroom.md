@@ -3,6 +3,8 @@ date: '2013-02-14'
 subtitle: Long time ago I worked at a company called eRoom Technology where we developed
   a product called… eRo...
 tags:
+- business
+original_tags:
 - eroom
 title: Looking for eRoom
 type: wp

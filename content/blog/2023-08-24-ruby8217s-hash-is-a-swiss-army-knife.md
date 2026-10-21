@@ -2,6 +2,8 @@
 date: '2023-08-24'
 subtitle: Ruby’s Hash is a Swiss-Army Knife
 tags:
+- programming
+original_tags:
 - ruby
 title: Ruby’s Hash is a Swiss-Army Knife
 type: wp

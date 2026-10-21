@@ -4,6 +4,8 @@ subtitle: While I was on vacation I often had an idea pop in my head and feel th
   urge to write about it my bl...
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 title: Why do I blog, anyway?
 type: wp

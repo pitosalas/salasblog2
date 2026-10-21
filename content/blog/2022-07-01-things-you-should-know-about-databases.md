@@ -2,6 +2,8 @@
 date: '2022-07-01'
 subtitle: Things You Should Know About Databases
 tags:
+- science
+original_tags:
 - computer-science
 title: Things You Should Know About Databases
 type: wp

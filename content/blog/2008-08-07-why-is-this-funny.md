@@ -2,6 +2,8 @@
 date: '2008-08-07'
 subtitle: '!Picture 1-43'
 tags:
+- politics
+original_tags:
 - personal
 - politics
 title: Why is this funny?

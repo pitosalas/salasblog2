@@ -2,6 +2,8 @@
 date: '2005-10-22'
 subtitle: Continuing my iPod thoughts, today I read that a [lawsuit has been b...
 tags:
+- computing
+original_tags:
 - apple
 - personal
 - technology

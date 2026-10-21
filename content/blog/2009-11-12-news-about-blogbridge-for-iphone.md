@@ -2,6 +2,8 @@
 date: '2009-11-12'
 subtitle: I just posted an update on our work on BlogBridge for the iPhone
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: News about BlogBridge for iPhone

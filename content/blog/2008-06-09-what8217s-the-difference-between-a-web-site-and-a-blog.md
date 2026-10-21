@@ -4,6 +4,8 @@ subtitle: This is a question I hear all the time. I thought I’d write a bit of
   introduction to the topic. C...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: What’s the difference between a web site and a blog?
 type: wp

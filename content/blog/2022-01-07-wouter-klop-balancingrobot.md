@@ -3,6 +3,10 @@ date: '2022-01-07'
 subtitle: Wouter Klop / BalancingRobot
 tags:
 - robotics
+- programming
+- howto
+original_tags:
+- robotics
 - cli
 - howto
 title: Wouter Klop / BalancingRobot

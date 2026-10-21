@@ -4,6 +4,9 @@ subtitle: 'I would love to see this trend accelerate:'
 tags:
 - education
 - business
+original_tags:
+- education
+- business
 - careers
 - startups
 - innovation

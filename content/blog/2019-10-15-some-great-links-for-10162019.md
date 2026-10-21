@@ -2,6 +2,8 @@
 date: '2019-10-15'
 subtitle: How to Write Fast Code in Ruby on Rails – Shopify Engineering
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/16/2019
 type: wp

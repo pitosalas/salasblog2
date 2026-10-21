@@ -3,6 +3,10 @@ date: '2021-09-08'
 subtitle: DiceBear Avatars
 tags:
 - design
+- programming
+- computing
+original_tags:
+- design
 - images
 - api
 - tools

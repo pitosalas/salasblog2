@@ -2,6 +2,8 @@
 date: '2011-12-14'
 subtitle: You may have noticed that this Blog is now hosted on SquareSpace. I’v...
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: 'Squarespace: What’s a comment spam filter to you?'

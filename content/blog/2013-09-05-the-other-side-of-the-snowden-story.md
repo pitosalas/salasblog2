@@ -3,6 +3,9 @@ date: '2013-09-05'
 subtitle: What Did Edward Snowden Get Wrong? Everything | RAND
 tags:
 - politics
+- internet
+original_tags:
+- politics
 - security
 title: The other side of the Snowden story
 type: wp

@@ -4,6 +4,8 @@ subtitle: 'Doctor Scoble poses a provocative question: “Which aggregator do yo
   best”? Quite an amazing va...'
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Talking about RSS Aggregators
 type: wp

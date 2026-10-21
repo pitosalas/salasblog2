@@ -3,6 +3,9 @@ date: '2005-04-12'
 subtitle: Doc comments with grudging admiration
 tags:
 - business
+- politics
+original_tags:
+- business
 - legal
 - technology
 title: IBM Patent Benevolence?

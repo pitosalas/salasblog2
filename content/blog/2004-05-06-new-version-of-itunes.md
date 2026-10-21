@@ -3,6 +3,8 @@ date: '2004-05-06'
 subtitle: Good evening sportsfans. There’s a new version (4.5) of iTunes for Windows.
   All I can see after a qu...
 tags:
+- computing
+original_tags:
 - technology
 - apple
 title: New version of iTunes

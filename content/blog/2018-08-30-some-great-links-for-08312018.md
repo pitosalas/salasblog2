@@ -2,6 +2,8 @@
 date: '2018-08-30'
 subtitle: iridakos – Creating a Linux Desktop application with Ruby
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  08/31/2018
 type: wp

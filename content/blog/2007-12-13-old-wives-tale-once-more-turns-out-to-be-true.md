@@ -4,6 +4,9 @@ subtitle: Have you had this debate? Does cold weather cause people to catch cold
   more easily or not? Well her...
 tags:
 - science
+- life
+original_tags:
+- science
 - health
 - personal
 title: Old wives tale, once more, turns out to be true

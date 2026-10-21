@@ -4,6 +4,10 @@ subtitle: I was a **volunteer** for the Democratic Committee in Arlington Mass. 
   have an **impressive** op...
 tags:
 - politics
+- places
+- programming
+original_tags:
+- politics
 - boston
 - database
 - technology

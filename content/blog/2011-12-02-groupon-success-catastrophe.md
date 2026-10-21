@@ -4,6 +4,8 @@ subtitle: I bought a Groupon for a local restaurant. About 1 week before it expi
   I went to make a dinner re...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Groupon success catastrophe
 type: wp

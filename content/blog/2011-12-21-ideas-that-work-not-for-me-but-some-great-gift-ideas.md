@@ -3,6 +3,8 @@ date: '2011-12-21'
 subtitle: I know my own Christmas/Channukah gifts have already been purchased by Santa.
   So this is not for me,...
 tags:
+- design
+original_tags:
 - photography
 title: Ideas that work! Not for me, but some great gift ideas
 type: wp

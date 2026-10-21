@@ -2,6 +2,8 @@
 date: '2023-06-16'
 subtitle: Rewriting the Ruby parser –At Sho...
 tags:
+- programming
+original_tags:
 - ruby
 title: Rewriting the Ruby parser
 type: wp

@@ -3,6 +3,9 @@ date: '2023-02-12'
 subtitle: GPT in 60 Lines of NumPy | Jay Mody –Implementing a...
 tags:
 - ai
+- programming
+original_tags:
+- ai
 - python
 title: GPT in 60 Lines of NumPy | Jay Mody
 type: wp

@@ -4,6 +4,9 @@ subtitle: I stopped posting thoughts about the mess that all of congress has mad
   of health care reform. There...
 tags:
 - politics
+- life
+original_tags:
+- politics
 - health
 - personal
 title: Health Care Letdown

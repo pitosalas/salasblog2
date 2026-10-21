@@ -2,6 +2,8 @@
 date: '2005-04-06'
 subtitle: '**I love the fact that I switched to Mac.**'
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: 'Switcher’s log, Part 8: In conclusion…'

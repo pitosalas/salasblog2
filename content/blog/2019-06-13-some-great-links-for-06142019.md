@@ -2,6 +2,8 @@
 date: '2019-06-13'
 subtitle: Enhanced Shell Scripting with Ruby
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  06/14/2019
 type: wp

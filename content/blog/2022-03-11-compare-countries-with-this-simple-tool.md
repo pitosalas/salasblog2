@@ -2,6 +2,8 @@
 date: '2022-03-11'
 subtitle: Compare Countries With This Simple Tool
 tags:
+- computing
+original_tags:
 - maps
 title: Compare Countries With This Simple Tool
 type: wp

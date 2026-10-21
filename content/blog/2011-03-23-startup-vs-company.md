@@ -4,6 +4,8 @@ subtitle: '**“Oh yeah, I’ve started 6 companies, and right now I have 3 star
   I just love starting co...'
 tags:
 - business
+original_tags:
+- business
 - personal
 - startups
 - technology

@@ -2,6 +2,8 @@
 date: '2006-09-28'
 subtitle: '![](http://www.flickr.co...'
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Bryce Canyon National Park

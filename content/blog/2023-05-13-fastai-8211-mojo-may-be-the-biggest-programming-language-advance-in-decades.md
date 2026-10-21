@@ -3,6 +3,8 @@ date: '2023-05-13'
 subtitle: fast.ai – Mojo may be the biggest programming language advance in decades
 tags:
 - programming
+original_tags:
+- programming
 - python
 title: fast.ai – Mojo may be the biggest programming language advance in decades
 type: wp

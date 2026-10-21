@@ -3,6 +3,9 @@ date: '2008-07-14'
 subtitle: Check out these 10 Commandments for Facebook Applications
 tags:
 - blogging
+- politics
+original_tags:
+- blogging
 - technology
 - politics
 title: 10 Commandments might apply to more than just Facebook!

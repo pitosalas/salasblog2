@@ -2,6 +2,9 @@
 date: '2022-03-17'
 subtitle: Git Good – The magic of keeping a clean Git history | Blog | simplabs
 tags:
+- programming
+- howto
+original_tags:
 - cli
 - howto
 title: Git Good – The magic of keeping a clean Git history | Blog | simplabs

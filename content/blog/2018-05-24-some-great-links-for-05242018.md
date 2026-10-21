@@ -2,6 +2,8 @@
 date: '2018-05-24'
 subtitle: Caching in Ruby on Rails 5.2 – Ruby Inside – Medium
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  05/24/2018

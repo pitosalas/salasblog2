@@ -3,6 +3,9 @@ date: '2022-03-13'
 subtitle: 'OpenCV: Contours in OpenCV'
 tags:
 - robotics
+- programming
+original_tags:
+- robotics
 - python
 - computer-vision
 title: 'OpenCV: Contours in OpenCV'

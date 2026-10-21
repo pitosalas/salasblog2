@@ -5,6 +5,9 @@ subtitle: In the continuing series of â€œthis blog things is really getting bigâ
 tags:
 - business
 - blogging
+original_tags:
+- business
+- blogging
 - technology
 title: BusinessWeek goes gaga about blogging
 type: wp

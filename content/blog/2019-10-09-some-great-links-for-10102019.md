@@ -2,6 +2,8 @@
 date: '2019-10-09'
 subtitle: Rails Performance Tips
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/10/2019
 type: wp

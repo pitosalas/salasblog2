@@ -2,6 +2,9 @@
 date: '2022-01-20'
 subtitle: Awesome VS Code Extensions For Python
 tags:
+- programming
+- howto
+original_tags:
 - cli
 - python
 - howto

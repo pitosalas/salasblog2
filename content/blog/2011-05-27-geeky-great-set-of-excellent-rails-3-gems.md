@@ -4,6 +4,8 @@ subtitle: Just a quick read of this post showed me several great gems that I wan
   to try right away! If you’re...
 tags:
 - programming
+original_tags:
+- programming
 - ruby
 - technology
 title: '[GEEKY] Great set of excellent Rails 3 Gems'

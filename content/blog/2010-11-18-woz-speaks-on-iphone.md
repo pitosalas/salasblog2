@@ -3,6 +3,9 @@ date: '2010-11-18'
 subtitle: I happen to be reading iWoz, which is Steve Wozniak’s memoir/biography/whatever.
   It’s a very breezy ...
 tags:
+- computing
+- blogging
+original_tags:
 - apple
 - mobile
 - blogging

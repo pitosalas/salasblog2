@@ -2,6 +2,8 @@
 date: '2018-09-22'
 subtitle: FREE Tutorials on React.js, Ruby on Rails, JavaScript
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  09/23/2018
 type: wp

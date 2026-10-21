@@ -4,6 +4,9 @@ subtitle: I’ve gotten interested in what is going on in the public sector, in 
   in the world of non p...
 tags:
 - programming
+- politics
+original_tags:
+- programming
 - ruby
 - api
 - opensource

@@ -4,6 +4,8 @@ subtitle: Both this blog and the BlogBridge have been getting spammed more and w
   both comment and trackback...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Help with movable type spam?
 type: wp

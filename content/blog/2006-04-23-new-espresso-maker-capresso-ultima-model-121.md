@@ -2,6 +2,8 @@
 date: '2006-04-23'
 subtitle: I’m a big coffee drinker, ok? I’ve been putting my Keurig
 tags:
+- life
+original_tags:
 - food
 - personal
 title: 'New espresso maker: Capresso Ultima (Model 121)'

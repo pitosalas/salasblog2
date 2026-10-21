@@ -4,6 +4,9 @@ subtitle: I feel really bad for President Obama and I am still a big fan. But. A
   we all know now, this is a t...
 tags:
 - politics
+- life
+original_tags:
+- politics
 - health
 title: Healthcare.gov not working yet (duh)
 type: wp

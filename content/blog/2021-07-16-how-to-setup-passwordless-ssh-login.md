@@ -2,6 +2,10 @@
 date: '2021-07-16'
 subtitle: How to Setup Passwordless SSH Login
 tags:
+- computing
+- howto
+- programming
+original_tags:
 - linux
 - configuration
 - cli

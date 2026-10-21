@@ -4,6 +4,8 @@ subtitle: I came across this very cool and simple set of [criteria or rules to a
   for funding from YCombina...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: YCombinator startup application form
 type: wp

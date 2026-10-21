@@ -3,6 +3,8 @@ date: '2019-12-07'
 subtitle: '[From ActiveRecord callbacks to Publish/Subscribe pattern and event-driven
   design – Karol Galanciak ...'
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  12/08/2019
 type: wp

@@ -4,6 +4,9 @@ subtitle: I was traveling this weekend and as I am wont to do, spent too much ti
   at bookstores and magazine ...
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - politics
 title: Are magazines committing suicide?

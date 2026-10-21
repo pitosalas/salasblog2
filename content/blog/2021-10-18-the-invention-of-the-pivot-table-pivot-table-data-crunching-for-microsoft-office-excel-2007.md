@@ -3,6 +3,8 @@ date: '2021-10-18'
 subtitle: The Invention of the Pivot Table | Pivot Table Data Crunching for Microsoft
   Office Excel 2007
 tags:
+- business
+original_tags:
 - lotus
 - technology
 title: The Invention of the Pivot Table | Pivot Table Data Crunching for Microsoft

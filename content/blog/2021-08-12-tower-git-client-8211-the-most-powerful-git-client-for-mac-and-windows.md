@@ -2,6 +2,9 @@
 date: '2021-08-12'
 subtitle: Tower Git Client – The most powerful Git client for Mac and Windows
 tags:
+- computing
+- programming
+original_tags:
 - tools
 - cli
 title: Tower Git Client – The most powerful Git client for Mac and Windows

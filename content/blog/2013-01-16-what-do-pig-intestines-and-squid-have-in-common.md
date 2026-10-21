@@ -2,6 +2,8 @@
 date: '2013-01-16'
 subtitle: This is just funny. Ok it’s also a little scary as I love Calamari!
 tags:
+- life
+original_tags:
 - food
 title: What do pig intestines and squid have in common
 type: wp

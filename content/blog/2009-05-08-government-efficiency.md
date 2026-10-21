@@ -3,6 +3,8 @@ date: '2009-05-08'
 subtitle: Check this post Government Efficiency from [...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Government Efficiency
 type: wp

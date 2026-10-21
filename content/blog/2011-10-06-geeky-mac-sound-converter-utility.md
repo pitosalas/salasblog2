@@ -3,6 +3,10 @@ date: '2011-10-06'
 subtitle: Apparently (not sure why yet) on Android, sound effects files using the
   OGG format work better than ...
 tags:
+- computing
+- culture
+- programming
+original_tags:
 - apple
 - music
 - programming

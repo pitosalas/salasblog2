@@ -2,6 +2,8 @@
 date: '2013-07-11'
 subtitle: Very clever!
 tags:
+- computing
+original_tags:
 - technology
 - maps
 title: GPS Free car tracking

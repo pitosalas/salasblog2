@@ -2,6 +2,8 @@
 date: '2013-01-09'
 subtitle: Here’s a new product I just saw, Igloo. It’s very nice and it r...
 tags:
+- business
+original_tags:
 - eroom
 title: What happens if you set up an eRoom on the North Pole?
 type: wp

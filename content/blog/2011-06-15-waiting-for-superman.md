@@ -5,6 +5,9 @@ subtitle: I recently saw the movie “Waiting for Superman” – yes I am late 
 tags:
 - education
 - politics
+original_tags:
+- education
+- politics
 - personal
 title: Waiting for Superman
 type: wp

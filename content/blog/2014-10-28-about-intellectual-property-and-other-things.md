@@ -3,6 +3,9 @@ date: '2014-10-28'
 subtitle: I came across a wonderful quote about intellectual property. I am not sure
   I agree with it myself bu...
 tags:
+- politics
+- culture
+original_tags:
 - legal
 - music
 title: About intellectual property and other things

@@ -2,6 +2,8 @@
 date: '2018-10-20'
 subtitle: A collection of awesome Ruby libraries, tools, frameworks and software
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/21/2018
 type: wp

@@ -3,6 +3,9 @@ date: '2011-10-03'
 subtitle: I have become a total Spotify addict. I have almost totally stopped downloading
   MP3s and am graduall...
 tags:
+- culture
+- computing
+original_tags:
 - music
 - apple
 - personal

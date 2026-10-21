@@ -3,6 +3,9 @@ date: '2010-09-06'
 subtitle: The more businesses reward me for showing up at their establishments, the
   more likely it will be tha...
 tags:
+- education
+- internet
+original_tags:
 - technology
 - personal
 - research

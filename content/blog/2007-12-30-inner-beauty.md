@@ -3,6 +3,8 @@ date: '2007-12-30'
 subtitle: If you know or remember the great Inner Beauty hot sauce, then you will
   be interested in this artic...
 tags:
+- life
+original_tags:
 - food
 - personal
 title: Inner Beauty

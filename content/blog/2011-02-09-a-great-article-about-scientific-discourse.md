@@ -5,6 +5,10 @@ tags:
 - software-engineering
 - science
 - programming
+original_tags:
+- software-engineering
+- science
+- programming
 - technology
 title: A great article about scientific discourse
 type: wp

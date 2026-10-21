@@ -3,6 +3,10 @@ date: '2021-09-05'
 subtitle: An Introduction to JQ
 tags:
 - programming
+- computing
+- howto
+original_tags:
+- programming
 - cli
 - tools
 - howto

@@ -2,6 +2,8 @@
 date: '2022-10-31'
 subtitle: Modern Alternatives to Some of the Classic Linux Commands – It’s FOSS
 tags:
+- computing
+original_tags:
 - linux
 title: Modern Alternatives to Some of the Classic Linux Commands – It’s FOSS
 type: wp

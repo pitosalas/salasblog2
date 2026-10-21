@@ -2,6 +2,8 @@
 date: '2022-01-02'
 subtitle: 'Drewsif/PiShrink: Make your pi images smaller!'
 tags:
+- technology
+original_tags:
 - images
 - technology
 title: 'Drewsif/PiShrink: Make your pi images smaller!'

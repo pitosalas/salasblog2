@@ -4,6 +4,8 @@ subtitle: I just wrote a few brief tutorials that I thought might be of interest
   you and, well, everyone. P...
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 - technology
 title: Great new information about blogging

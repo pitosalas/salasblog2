@@ -5,6 +5,9 @@ subtitle: I was surfing around preparing for my class and happened to look at [t
 tags:
 - business
 - education
+original_tags:
+- business
+- education
 - startups
 - harvard
 title: 'Harvard Business School: No Women Entrepreneurs'

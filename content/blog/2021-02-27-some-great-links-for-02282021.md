@@ -2,6 +2,8 @@
 date: '2021-02-27'
 subtitle: Different Ways to Handle JSON in a Linux Shell
 tags:
+- computing
+original_tags:
 - linux
 title: Some great links for  02/28/2021
 type: wp

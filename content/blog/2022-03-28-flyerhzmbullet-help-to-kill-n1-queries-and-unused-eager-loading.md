@@ -2,6 +2,9 @@
 date: '2022-03-28'
 subtitle: 'flyerhzm/bullet: help to kill N+1 queries and unused eager loading'
 tags:
+- programming
+- software-engineering
+original_tags:
 - ruby
 - database
 - performance

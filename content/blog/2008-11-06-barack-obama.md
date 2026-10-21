@@ -3,6 +3,8 @@ date: '2008-11-06'
 subtitle: '!['
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Barack Obama
 type: wp

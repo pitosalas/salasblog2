@@ -4,6 +4,8 @@ subtitle: Raspberry Pi Arduino Serial Communication – Everything You Need To K
   – The Robotics Back-End
 tags:
 - robotics
+original_tags:
+- robotics
 - technology
 title: Raspberry Pi Arduino Serial Communication – Everything You Need To Know – The
   Robotics Back-End

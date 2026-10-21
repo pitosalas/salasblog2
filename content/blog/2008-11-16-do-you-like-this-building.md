@@ -4,6 +4,9 @@ subtitle: '![](http://www.triplemint.com/.a/6a00d834517dbc69e2010534a36f66970b-p
   came across this ad in the ...'
 tags:
 - design
+- politics
+original_tags:
+- design
 - personal
 - politics
 title: Do you like this building?

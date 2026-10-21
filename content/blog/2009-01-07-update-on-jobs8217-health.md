@@ -3,6 +3,9 @@ date: '2009-01-07'
 subtitle: 'In case you didn’t see this, it’s kind of interesting if you follow Apple
   and our pal Steve Jobs:'
 tags:
+- computing
+- life
+original_tags:
 - apple
 - health
 - personal

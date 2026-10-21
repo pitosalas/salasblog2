@@ -3,6 +3,8 @@ date: '2006-07-09'
 subtitle: '!['
 tags:
 - design
+original_tags:
+- design
 - technology
 title: A beautiful visualization of news across the world
 type: wp

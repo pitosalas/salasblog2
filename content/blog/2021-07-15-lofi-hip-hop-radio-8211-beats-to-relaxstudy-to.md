@@ -2,6 +2,8 @@
 date: '2021-07-15'
 subtitle: lofi hip hop radio – beats to relax/study to
 tags:
+- culture
+original_tags:
 - music
 title: lofi hip hop radio – beats to relax/study to
 type: wp

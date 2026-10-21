@@ -2,6 +2,9 @@
 date: '2022-04-09'
 subtitle: 'Medical Imaging Interaction Toolkit: Main Page'
 tags:
+- robotics
+- computing
+original_tags:
 - computer-vision
 - tools
 title: 'Medical Imaging Interaction Toolkit: Main Page'

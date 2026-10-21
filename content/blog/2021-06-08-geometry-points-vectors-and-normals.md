@@ -2,6 +2,9 @@
 date: '2021-06-08'
 subtitle: Geometry (Points, Vectors and Normals)
 tags:
+- science
+- howto
+original_tags:
 - mathematics
 - explainer
 title: Geometry (Points, Vectors and Normals)

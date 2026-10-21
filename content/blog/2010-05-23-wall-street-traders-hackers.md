@@ -3,6 +3,8 @@ date: '2010-05-23'
 subtitle: 'Mark Cuban comes up with a very plausible analogy:'
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Wall Street Traders == Hackers
 type: wp

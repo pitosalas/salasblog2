@@ -4,6 +4,8 @@ subtitle: 'Interesting: I write in two blogs: this one and the BlogBridge blog. 
   this one, I have a much high...'
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Hello Google AdWords with FeedBurner

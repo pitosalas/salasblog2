@@ -2,6 +2,8 @@
 date: '2009-12-07'
 subtitle: Here’s a nice detailed review of the Kindle competitor, “Nook
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: 'e-Readers: First review I’ve seen of the Barnes and Nobel ‘Nook’'

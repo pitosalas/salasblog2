@@ -2,6 +2,8 @@
 date: '2018-04-03'
 subtitle: 'IMSLP/Petrucci Music Library: Free Public Domain Sheet Music'
 tags:
+- culture
+original_tags:
 - music
 title: Interesting links I found today 04/03/2018
 type: wp

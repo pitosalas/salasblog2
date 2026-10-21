@@ -3,6 +3,8 @@ date: '2013-10-19'
 subtitle: The only difference is that Amazon seems to know exactly every little item
   is in this crazy warehous...
 tags:
+- business
+original_tags:
 - amazon
 title: Amazon reminds me of Raiders of the Lost Ark
 type: wp

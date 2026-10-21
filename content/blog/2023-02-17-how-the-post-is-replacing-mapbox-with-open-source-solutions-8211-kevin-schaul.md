@@ -2,6 +2,8 @@
 date: '2023-02-17'
 subtitle: How The Post is replacing Mapbox with open source solutions – Kevin Schaul
 tags:
+- computing
+original_tags:
 - maps
 title: How The Post is replacing Mapbox with open source solutions – Kevin Schaul
 type: wp

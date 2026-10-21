@@ -4,6 +4,9 @@ subtitle: I am a big fan of this book, so I was really surprised to find a freel
   downloadable copy of the fil...
 tags:
 - business
+- culture
+original_tags:
+- business
 - books
 - startups
 title: 'Free pdf of Eric Ries: “The Lean Startup” (huh?)'

@@ -4,6 +4,8 @@ subtitle: You’ve heard about (or maybe you haven’t) President Obama’s turn
   at the White House Co...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Comedian in chief
 type: wp

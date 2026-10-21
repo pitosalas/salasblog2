@@ -3,6 +3,8 @@ date: '2005-08-13'
 subtitle: As you might have seen over at our **BlogBridge blog**, we are experim...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Who has a  life?
 type: wp

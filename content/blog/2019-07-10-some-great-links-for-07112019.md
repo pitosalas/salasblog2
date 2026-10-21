@@ -2,6 +2,8 @@
 date: '2019-07-10'
 subtitle: strong_password v0.0.7 rubygem hijacked
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  07/11/2019
 type: wp

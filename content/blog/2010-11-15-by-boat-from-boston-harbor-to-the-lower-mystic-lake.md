@@ -3,6 +3,8 @@ date: '2010-11-15'
 subtitle: This is very close to where I live, and people are amazed to know that you
   can actually go by boat f...
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: By boat from Boston Harbor to the Lower Mystic Lake

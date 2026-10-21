@@ -2,6 +2,8 @@
 date: '2013-01-29'
 subtitle: There’s something about this Gruve product that ...
 tags:
+- life
+original_tags:
 - health
 title: 'N.E.A.T. Product from Gruve: Fact or Fiction?'
 type: wp

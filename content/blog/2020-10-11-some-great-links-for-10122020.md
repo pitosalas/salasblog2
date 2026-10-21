@@ -2,6 +2,8 @@
 date: '2020-10-11'
 subtitle: Hello from Kuby | Kuby
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/12/2020
 type: wp

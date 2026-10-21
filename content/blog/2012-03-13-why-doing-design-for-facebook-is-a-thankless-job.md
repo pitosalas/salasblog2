@@ -3,6 +3,9 @@ date: '2012-03-13'
 subtitle: A friend of mine hates, HATES, the new Facebook timeline. She ...
 tags:
 - design
+- blogging
+original_tags:
+- design
 - social-media
 title: Why doing design for Facebook is a thankless job
 type: wp

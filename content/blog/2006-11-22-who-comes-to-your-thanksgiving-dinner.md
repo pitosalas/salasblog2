@@ -2,6 +2,8 @@
 date: '2006-11-22'
 subtitle: Kottke points to an amusing set of logic q...
 tags:
+- science
+original_tags:
 - mathematics
 - personal
 title: Who comes to your thanksgiving dinner?

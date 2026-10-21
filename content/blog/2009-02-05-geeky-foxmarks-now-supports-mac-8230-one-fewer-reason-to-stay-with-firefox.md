@@ -3,6 +3,9 @@ date: '2009-02-05'
 subtitle: I read in [Personal Technology (Wall Street Journal) today that Foxmarks,
   the handy, free utility th...
 tags:
+- computing
+- blogging
+original_tags:
 - technology
 - apple
 - blogging

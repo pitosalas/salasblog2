@@ -4,6 +4,10 @@ subtitle: Free Online Robotics Courses for 2022 – Asian Robotics Review
 tags:
 - robotics
 - education
+- programming
+original_tags:
+- robotics
+- education
 - web
 title: Free Online Robotics Courses for 2022 – Asian Robotics Review
 type: wp

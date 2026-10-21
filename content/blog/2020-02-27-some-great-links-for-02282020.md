@@ -2,6 +2,8 @@
 date: '2020-02-27'
 subtitle: How to write Javascript in Rails 6 | Webpacker, Yarn and Sprockets
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  02/28/2020
 type: wp

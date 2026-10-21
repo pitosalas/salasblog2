@@ -1,6 +1,9 @@
 ---
 date: '2026-02-28'
 tags:
+- programming
+- software-engineering
+original_tags:
 - technology
 - programming
 - software-engineering

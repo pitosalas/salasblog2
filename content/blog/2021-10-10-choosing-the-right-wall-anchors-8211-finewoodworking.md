@@ -2,6 +2,9 @@
 date: '2021-10-10'
 subtitle: Choosing the right wall anchors – FineWoodworking
 tags:
+- life
+- howto
+original_tags:
 - woodworking
 - howto
 title: Choosing the right wall anchors – FineWoodworking

@@ -3,6 +3,8 @@ date: '2012-04-17'
 subtitle: Listen, I **love** the New York Times. I read it cover to cover (or pixel
   to pixel) every day and ha...
 tags:
+- culture
+original_tags:
 - nyt
 - wsj
 title: New York Times Grammar and Style

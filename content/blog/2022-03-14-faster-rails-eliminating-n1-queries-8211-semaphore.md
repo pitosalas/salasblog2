@@ -2,6 +2,9 @@
 date: '2022-03-14'
 subtitle: 'Faster Rails: Eliminating N+1 queries – Semaphore'
 tags:
+- programming
+- software-engineering
+original_tags:
 - ruby
 - performance
 - scalability

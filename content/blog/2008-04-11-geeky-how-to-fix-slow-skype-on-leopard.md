@@ -2,6 +2,8 @@
 date: '2008-04-11'
 subtitle: '!['
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: '[GEEKY] How to fix slow Skype on Leopard'

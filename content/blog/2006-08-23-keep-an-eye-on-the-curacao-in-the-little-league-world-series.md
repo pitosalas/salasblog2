@@ -3,6 +3,8 @@ date: '2006-08-23'
 subtitle: Curacao has in the past won or gotten very close to winning the overall
   Little League World Series!
 tags:
+- places
+original_tags:
 - curacao
 - personal
 title: Keep an eye on the Curacao in the Little League World Series

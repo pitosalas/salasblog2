@@ -2,6 +2,9 @@
 date: '2006-01-29'
 subtitle: Here’s an interesting article
 tags:
+- places
+- blogging
+original_tags:
 - travel
 - blogging
 - personal

@@ -2,6 +2,8 @@
 date: '2022-09-22'
 subtitle: Why You Should Use Data Classes in Python | Giuliano Pertile
 tags:
+- programming
+original_tags:
 - python
 title: Why You Should Use Data Classes in Python | Giuliano Pertile
 type: wp

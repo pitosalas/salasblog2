@@ -4,6 +4,9 @@ subtitle: Why You Should Find Product-Market Fit Before Sniffing Around For Vent
   Money
 tags:
 - business
+- programming
+original_tags:
+- business
 - startups
 - ruby
 title: Why You Should Find Product-Market Fit Before Sniffing Around For Venture Money

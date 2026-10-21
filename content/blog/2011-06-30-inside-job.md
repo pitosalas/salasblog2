@@ -5,6 +5,10 @@ subtitle: It’s hard to comprehend people who feel that it is reasonable (let a
 tags:
 - business
 - politics
+- culture
+original_tags:
+- business
+- politics
 - movies
 - personal
 title: Inside Job

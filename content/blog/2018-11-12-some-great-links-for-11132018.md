@@ -2,6 +2,8 @@
 date: '2018-11-12'
 subtitle: A Safer RuboCop
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  11/13/2018
 type: wp

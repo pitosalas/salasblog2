@@ -2,6 +2,8 @@
 date: '2007-09-27'
 subtitle: Check out this post
 tags:
+- computing
+original_tags:
 - maps
 - personal
 title: Google Maps Causes US Navy To Change Its Swastika Building

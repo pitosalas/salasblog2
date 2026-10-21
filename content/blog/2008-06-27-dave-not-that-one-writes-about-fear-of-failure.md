@@ -4,6 +4,9 @@ subtitle: 'I just came across Dave Dupre’s blog. Some good reading there, for 
 tags:
 - business
 - programming
+original_tags:
+- business
+- programming
 - technology
 title: Dave (not that one) writes about Fear of Failure
 type: wp

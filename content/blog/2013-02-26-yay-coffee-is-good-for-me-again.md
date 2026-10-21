@@ -3,6 +3,9 @@ date: '2013-02-26'
 subtitle: Well these stories appear from time to time, either saying it’s good or
   bad for you. What’s an addic...
 tags:
+- life
+- education
+original_tags:
 - health
 - research
 title: Yay! Coffee is good for me (again)

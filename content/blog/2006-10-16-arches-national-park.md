@@ -2,6 +2,8 @@
 date: '2006-10-16'
 subtitle: '![](http://www.flickr.co...'
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Arches National Park

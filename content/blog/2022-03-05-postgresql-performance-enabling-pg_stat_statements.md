@@ -2,6 +2,10 @@
 date: '2022-03-05'
 subtitle: PostgreSQL Performance Enabling pg_stat_statements
 tags:
+- howto
+- software-engineering
+- programming
+original_tags:
 - configuration
 - performance
 - database

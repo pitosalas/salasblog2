@@ -4,6 +4,10 @@ subtitle: One of the tensions that I have seen in teaching software engineering 
   whether something should be...
 tags:
 - education
+- science
+- software-engineering
+original_tags:
+- education
 - computer-science
 - software-engineering
 - research

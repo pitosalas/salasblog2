@@ -2,6 +2,8 @@
 date: '2010-12-07'
 subtitle: So Radioshack is offering $50 off the price of an iPhone
 tags:
+- computing
+original_tags:
 - apple
 - personal
 - technology

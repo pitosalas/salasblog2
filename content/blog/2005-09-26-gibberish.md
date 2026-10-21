@@ -2,6 +2,8 @@
 date: '2005-09-26'
 subtitle: 'Interesting and **amusing** little article from ACM Queue:'
 tags:
+- science
+original_tags:
 - computer-science
 - personal
 title: Gibberish?

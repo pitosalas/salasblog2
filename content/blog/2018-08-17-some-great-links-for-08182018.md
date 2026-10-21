@@ -2,6 +2,8 @@
 date: '2018-08-17'
 subtitle: thisredone/rb
 tags:
+- science
+original_tags:
 - mathematics
 title: Some great links for  08/18/2018
 type: wp

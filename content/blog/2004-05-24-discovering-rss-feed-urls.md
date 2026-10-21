@@ -2,6 +2,8 @@
 date: '2004-05-24'
 subtitle: Scoble bemoans the fact that folks aren’t all using the XML Icon, and ...
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: Discovering RSS feed URLs

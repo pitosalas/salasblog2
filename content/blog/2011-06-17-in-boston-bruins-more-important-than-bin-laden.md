@@ -2,6 +2,8 @@
 date: '2011-06-17'
 subtitle: '!Compare Bin Laden to Bruins'
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: In Boston, Bruins more important than Bin Laden!

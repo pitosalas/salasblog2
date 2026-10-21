@@ -3,6 +3,10 @@ date: '2022-03-13'
 subtitle: OpenCV with ROS using Python
 tags:
 - robotics
+- programming
+- howto
+original_tags:
+- robotics
 - python
 - computer-vision
 - howto

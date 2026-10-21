@@ -3,6 +3,9 @@ date: '2006-10-06'
 subtitle: I don’t know if you followed the spat a few months ago. This [book, “A million
   little pieces” by Jam...
 tags:
+- culture
+- politics
+original_tags:
 - books
 - politics
 title: 'Book report: A million little pieces'

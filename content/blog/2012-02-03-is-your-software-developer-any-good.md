@@ -4,6 +4,8 @@ subtitle: Are you thinking about hiring a software developer to build your syste
   Here are “[8 Things You Oug...
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - technology
 title: Is your software developer any good?
 type: wp

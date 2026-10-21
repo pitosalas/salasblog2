@@ -4,6 +4,10 @@ subtitle: Build internal tools, remarkably fast.
 tags:
 - software-engineering
 - howto
+- computing
+original_tags:
+- software-engineering
+- howto
 - tools
 title: Build internal tools, remarkably fast.
 type: wp

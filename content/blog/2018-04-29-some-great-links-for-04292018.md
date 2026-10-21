@@ -2,6 +2,8 @@
 date: '2018-04-29'
 subtitle: 'Essential RubyOnRails patterns — part 4: Form Objects'
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  04/29/2018

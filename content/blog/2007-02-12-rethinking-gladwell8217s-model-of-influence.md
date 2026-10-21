@@ -2,6 +2,8 @@
 date: '2007-02-12'
 subtitle: Check out this post from [Influx Insights Weblog]...
 tags:
+- culture
+original_tags:
 - books
 - personal
 - technology

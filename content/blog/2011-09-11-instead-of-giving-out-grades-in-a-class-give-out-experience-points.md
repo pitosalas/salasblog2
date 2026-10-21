@@ -3,6 +3,10 @@ date: '2011-09-11'
 subtitle: If you watched (or didn’t) the preceding video by Jesse Schell you mi...
 tags:
 - education
+- culture
+- politics
+original_tags:
+- education
 - brandeis
 - games
 - personal

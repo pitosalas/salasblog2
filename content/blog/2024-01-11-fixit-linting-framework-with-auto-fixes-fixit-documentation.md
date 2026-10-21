@@ -2,6 +2,10 @@
 date: '2024-01-11'
 subtitle: 'Fixit: linting framework with auto-fixes — Fixit documentation'
 tags:
+- programming
+- computing
+- software-engineering
+original_tags:
 - python
 - tools
 - software-engineering

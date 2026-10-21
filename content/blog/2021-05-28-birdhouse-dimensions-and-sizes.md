@@ -2,6 +2,9 @@
 date: '2021-05-28'
 subtitle: Birdhouse Dimensions and Sizes
 tags:
+- life
+- howto
+original_tags:
 - woodworking
 - howto
 title: Birdhouse Dimensions and Sizes

@@ -4,6 +4,8 @@ subtitle: I recently saw a Nova episode about Hany Farid about so called “Digi
   Forensics”, that is how to d...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Photoshopping missles
 type: wp

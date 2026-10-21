@@ -2,6 +2,9 @@
 date: '2009-09-16'
 subtitle: Just found out that the WebInno group i...
 tags:
+- places
+- business
+original_tags:
 - boston
 - startups
 - personal

@@ -4,6 +4,8 @@ subtitle: Just a quick note of the **very nice** mention of BlogBridge by almost
   Dowbrigade
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 title: Dowbrigade and Bridge BlogBridge
 type: wp

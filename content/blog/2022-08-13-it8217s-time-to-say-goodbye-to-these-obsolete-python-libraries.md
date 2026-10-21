@@ -2,6 +2,8 @@
 date: '2022-08-13'
 subtitle: It’s Time to Say Goodbye to These Obsolete Python Libraries –p
 tags:
+- programming
+original_tags:
 - python
 title: It’s Time to Say Goodbye to These Obsolete Python Libraries
 type: wp

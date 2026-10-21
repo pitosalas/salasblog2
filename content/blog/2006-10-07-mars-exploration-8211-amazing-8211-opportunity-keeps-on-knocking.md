@@ -4,6 +4,8 @@ subtitle: Saw this in the newspaper today – “Mars Rover Visits Crater, Then 
   for a Picture.
 tags:
 - science
+original_tags:
+- science
 - technology
 title: Mars exploration – amazing – Opportunity keeps on knocking
 type: wp

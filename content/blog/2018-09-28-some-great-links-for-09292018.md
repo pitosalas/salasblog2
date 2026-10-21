@@ -2,6 +2,8 @@
 date: '2018-09-28'
 subtitle: ebobby/has-many-with-set
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  09/29/2018
 type: wp

@@ -3,6 +3,8 @@ date: '2011-07-18'
 subtitle: Actually it’s about Twitter Support in BlogBridge
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 - technology
 - social-media

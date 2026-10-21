@@ -2,6 +2,10 @@
 date: '2022-01-04'
 subtitle: 'cantino/mcfly: Fly through your shell history. Great Scott!'
 tags:
+- computing
+- programming
+- culture
+original_tags:
 - linux
 - cli
 - history

@@ -3,6 +3,8 @@ date: '2006-01-29'
 subtitle: Inspired by **Geek Dinners** popping up all over, we thought it might be
   **fun** to try it here
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: Geek Dinner? Harvard Square? February 15th? Should be fun!

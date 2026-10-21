@@ -3,6 +3,9 @@ date: '2004-06-18'
 subtitle: I am away from home, at my home in Curacao for a reunion of Salas folks
   from around the world. I saw...
 tags:
+- places
+- blogging
+original_tags:
 - curacao
 - personal
 - blogging

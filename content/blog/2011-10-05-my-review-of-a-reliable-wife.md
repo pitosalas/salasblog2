@@ -2,6 +2,8 @@
 date: '2011-10-05'
 subtitle: '!A Reliable Wife'
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: My review of A Reliable Wife

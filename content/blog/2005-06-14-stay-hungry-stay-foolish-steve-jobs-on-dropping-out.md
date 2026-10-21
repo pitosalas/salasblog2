@@ -2,6 +2,8 @@
 date: '2005-06-14'
 subtitle: I came across what is supposed to be the ...
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: 'Stay hungry, stay foolish: Steve Jobs on dropping out'

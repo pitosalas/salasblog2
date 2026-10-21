@@ -2,6 +2,8 @@
 date: '2008-01-10'
 subtitle: '!iLike iTunes'
 tags:
+- culture
+original_tags:
 - music
 - personal
 title: 'It was inevitable: Sex comes to iLike'

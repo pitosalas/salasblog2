@@ -4,6 +4,9 @@ subtitle: Michael Lewis writes a [great article in Portfolio online about the, l
   say, inevitability, of wh...
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - politics
 title: It’s even worse than you think

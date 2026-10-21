@@ -3,6 +3,9 @@ date: '2012-04-07'
 subtitle: A provocatively titled article (Why Youth Has an Advantage In Innovation)
 tags:
 - business
+- education
+original_tags:
+- business
 - innovation
 - education
 title: Why You Want To Be A Learn-it-All

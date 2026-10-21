@@ -3,6 +3,8 @@ date: '2008-10-25'
 subtitle: Check out this post Field notes from a Nature Conservancy meeting
 tags:
 - science
+original_tags:
+- science
 - personal
 title: Field notes from a Nature Conservancy meeting
 type: wp

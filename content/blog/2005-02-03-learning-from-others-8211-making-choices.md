@@ -2,6 +2,9 @@
 date: '2005-02-03'
 subtitle: Dave Winer makes a point which I **totally...
 tags:
+- business
+- blogging
+original_tags:
 - eroom
 - blogging
 title: Learning from others – Making choices

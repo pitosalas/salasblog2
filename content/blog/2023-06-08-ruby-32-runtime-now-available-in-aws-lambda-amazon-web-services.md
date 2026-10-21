@@ -2,6 +2,8 @@
 date: '2023-06-08'
 subtitle: Ruby 3.2 runtime now available in AWS Lambda | Amazon Web Services
 tags:
+- programming
+original_tags:
 - ruby
 title: Ruby 3.2 runtime now available in AWS Lambda | Amazon Web Services
 type: wp

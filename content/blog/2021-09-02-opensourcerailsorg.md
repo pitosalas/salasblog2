@@ -2,6 +2,8 @@
 date: '2021-09-02'
 subtitle: OpenSourceRails.org
 tags:
+- programming
+original_tags:
 - ruby
 - opensource
 title: OpenSourceRails.org

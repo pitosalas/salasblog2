@@ -2,6 +2,8 @@
 date: '2018-10-24'
 subtitle: https://link.medium.com/0oNpyGJ4gR
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/25/2018
 type: wp

@@ -3,6 +3,8 @@ date: '2011-06-20'
 subtitle: As you (don’t) know, I am [teaching a course at Brandeis University about
   mobile and game developmen...
 tags:
+- computing
+original_tags:
 - technology
 - apple
 - personal

@@ -2,6 +2,8 @@
 date: '2010-06-18'
 subtitle: Check out Introducing the Google Command Line Tool
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: 'We go full circle: Google Command Line Tool'

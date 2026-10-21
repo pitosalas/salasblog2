@@ -3,6 +3,8 @@ date: '2005-05-31'
 subtitle: 'Interesting article about counting blogs makes a **good point** right off
   the bat:'
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: Counting blog impact

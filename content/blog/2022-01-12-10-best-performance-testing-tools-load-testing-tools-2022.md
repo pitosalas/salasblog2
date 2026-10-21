@@ -3,6 +3,11 @@ date: '2022-01-12'
 subtitle: 10 BEST Performance Testing Tools | Load Testing Tools (2022)
 tags:
 - software-engineering
+- education
+- howto
+- computing
+original_tags:
+- software-engineering
 - brandeis
 - howto
 - performance

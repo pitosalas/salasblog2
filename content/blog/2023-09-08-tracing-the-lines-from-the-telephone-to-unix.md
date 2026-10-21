@@ -2,6 +2,8 @@
 date: '2023-09-08'
 subtitle: 'Tracing the Lines: From the Telephone to Unix'
 tags:
+- computing
+original_tags:
 - linux
 title: 'Tracing the Lines: From the Telephone to Unix'
 type: wp

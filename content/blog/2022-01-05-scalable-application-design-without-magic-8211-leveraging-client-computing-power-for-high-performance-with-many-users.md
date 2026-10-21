@@ -4,6 +4,9 @@ subtitle: '[ Scalable application design without magic – Leveraging client com
   power for high performance...'
 tags:
 - software-engineering
+- howto
+original_tags:
+- software-engineering
 - cloud
 - howto
 - scalability

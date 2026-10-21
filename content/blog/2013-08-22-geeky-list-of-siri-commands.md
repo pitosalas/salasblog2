@@ -2,6 +2,8 @@
 date: '2013-08-22'
 subtitle: How to Use Siri – Full list of Siri Commands for iPhone, iPad, Video
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: '[GEEKY] List of Siri Commands'

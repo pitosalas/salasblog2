@@ -2,6 +2,8 @@
 date: '2023-02-07'
 subtitle: 'Inter-process communication in Linux: Using pipes and message queues'
 tags:
+- computing
+original_tags:
 - linux
 title: 'Inter-process communication in Linux: Using pipes and message queues'
 type: wp

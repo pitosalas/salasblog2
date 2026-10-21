@@ -3,6 +3,8 @@ date: '2006-11-03'
 subtitle: If you were intrigued by my previous post about the Clock of the Long Now,
   I came across a [nice, ph...
 tags:
+- culture
+original_tags:
 - books
 - personal
 - technology

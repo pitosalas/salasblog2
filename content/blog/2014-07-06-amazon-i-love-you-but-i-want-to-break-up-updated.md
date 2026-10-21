@@ -2,6 +2,8 @@
 date: '2014-07-06'
 subtitle: Email I just sent to Amazon.
 tags:
+- business
+original_tags:
 - amazon
 title: Amazon, I love you, But I want to break up [UPDATED]
 type: wp

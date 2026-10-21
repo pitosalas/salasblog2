@@ -6,6 +6,10 @@ tags:
 - business
 - politics
 - blogging
+original_tags:
+- business
+- politics
+- blogging
 - personal
 title: If you think stronger regulation is a good answer, heed Buffett
 type: wp

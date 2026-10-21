@@ -3,6 +3,9 @@ date: '2012-11-25'
 subtitle: '!College photo 10842 130x0'
 tags:
 - education
+- business
+original_tags:
+- education
 - personal
 - technology
 - startups

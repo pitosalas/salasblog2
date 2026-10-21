@@ -4,6 +4,9 @@ subtitle: aruco_detect – ROS Wiki
 tags:
 - robotics
 - howto
+original_tags:
+- robotics
+- howto
 - computer-vision
 title: aruco_detect – ROS Wiki
 type: wp

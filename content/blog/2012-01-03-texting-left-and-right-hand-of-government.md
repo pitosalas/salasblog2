@@ -4,6 +4,9 @@ subtitle: Do you agree that prohibiting texting while driving is **contradictory
   to texting as a way to deli...
 tags:
 - politics
+- computing
+original_tags:
+- politics
 - apple
 title: 'Texting: Left and Right Hand of Government'
 type: wp

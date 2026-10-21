@@ -3,6 +3,8 @@ date: '2011-10-02'
 subtitle: I’ve been looking into changing up the primary (and only) disk in my 2 year
   old Mac Pro to a Solid S...
 tags:
+- computing
+original_tags:
 - technology
 - apple
 title: Solid State Disk (SSD) links

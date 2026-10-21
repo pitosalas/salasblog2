@@ -3,6 +3,8 @@ date: '2011-03-31'
 subtitle: 'A really excellent interview/review of Christopher Hitchens and his memoir,
   “Hitch-22”:'
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: Christopher Hitchens

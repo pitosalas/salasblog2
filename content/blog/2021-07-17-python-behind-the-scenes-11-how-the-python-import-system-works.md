@@ -2,6 +2,9 @@
 date: '2021-07-17'
 subtitle: 'Python behind the scenes #11: how the Python import system works'
 tags:
+- programming
+- howto
+original_tags:
 - python
 - explainer
 title: 'Python behind the scenes #11: how the Python import system works'

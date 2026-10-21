@@ -4,6 +4,8 @@ subtitle: 'Here’s an interesting new product, just into beta: Inquisix. This i
   servi...'
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Keep an eye on Inquisix

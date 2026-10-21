@@ -2,6 +2,8 @@
 date: '2013-07-02'
 subtitle: My favorite mustard these days is the Dijon from Trader Joes’s!
 tags:
+- life
+original_tags:
 - food
 title: Mustard from Trader Joe’s
 type: wp

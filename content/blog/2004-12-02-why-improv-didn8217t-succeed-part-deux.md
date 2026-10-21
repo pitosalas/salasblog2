@@ -3,6 +3,8 @@ date: '2004-12-02'
 subtitle: Seems like a dredged up some “old” (you know who you are) **Improv fans
   **with my earlier posting
 tags:
+- business
+original_tags:
 - lotus
 - business
 title: Why Improv didn’t succeed, Part Deux

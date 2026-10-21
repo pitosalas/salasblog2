@@ -3,6 +3,9 @@ date: '2023-05-22'
 subtitle: Memory Allocation –For those of you learning C or C++, th...
 tags:
 - programming
+- science
+original_tags:
+- programming
 - computer-science
 title: Memory Allocation
 type: wp

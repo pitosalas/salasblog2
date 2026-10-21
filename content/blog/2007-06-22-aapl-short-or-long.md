@@ -3,6 +3,8 @@ date: '2007-06-22'
 subtitle: With all the unbelievable hoopla around the imminent release of the iPhone
   my thinking turns to the ...
 tags:
+- computing
+original_tags:
 - apple
 - personal
 - technology

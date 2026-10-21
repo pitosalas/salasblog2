@@ -3,6 +3,8 @@ date: '2012-01-21'
 subtitle: I am going to share my **secret technology** for losing weight. It’s a mental
   exercise that really w...
 tags:
+- life
+original_tags:
 - health
 title: Secret trick for losing weight
 type: wp

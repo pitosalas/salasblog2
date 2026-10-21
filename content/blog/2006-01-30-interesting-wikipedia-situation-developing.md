@@ -3,6 +3,9 @@ date: '2006-01-30'
 subtitle: Wikipedia appears to have banned all contributions and edits coming from
   the US Congress!
 tags:
+- blogging
+- politics
+original_tags:
 - wikipedia
 - politics
 - personal

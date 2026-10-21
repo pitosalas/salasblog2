@@ -3,6 +3,9 @@ date: '2007-12-08'
 subtitle: Joel Spolsky of Joel on Software gave an outstanding talk at Yale which
   he has written up on his blo...
 tags:
+- science
+- programming
+original_tags:
 - computer-science
 - personal
 - programming

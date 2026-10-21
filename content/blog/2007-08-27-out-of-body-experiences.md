@@ -4,6 +4,8 @@ subtitle: A really interesting experiment reported in various places trigger the
   of an [tag]out of b...
 tags:
 - science
+original_tags:
+- science
 - personal
 - technology
 title: Out of body experiences

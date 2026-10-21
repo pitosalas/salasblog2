@@ -4,6 +4,10 @@ subtitle: An interesting article about how to think about [designing Artificial 
   for playing poker...
 tags:
 - ai
+- culture
+- programming
+original_tags:
+- ai
 - games
 - personal
 - programming

@@ -3,6 +3,8 @@ date: '2011-11-23'
 subtitle: 'Heads up: “Phone Bill Fees: How to identify 3rd-party charges and protect
   yourself'
 tags:
+- internet
+original_tags:
 - security
 title: Watch out for fake 3d party charges on your phone bill
 type: wp

@@ -4,6 +4,8 @@ subtitle: You’ve heard me bemoan the death of magazines, newspapers, and other
   things (radio? small s...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Going, going, gone…
 type: wp

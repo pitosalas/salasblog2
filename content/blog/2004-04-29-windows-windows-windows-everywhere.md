@@ -3,6 +3,8 @@ date: '2004-04-29'
 subtitle: In the accompanying photo you can see one of the **ubiquitous TV screens
   **sprinkled all around the ...
 tags:
+- places
+original_tags:
 - travel
 - technology
 title: Windows, Windows, Windows Everywhere

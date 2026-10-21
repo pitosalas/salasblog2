@@ -2,6 +2,9 @@
 date: '2011-04-06'
 subtitle: Here’s how we make Garoza (Charoset) in Curaçao.
 tags:
+- life
+- places
+original_tags:
 - jewish
 - curacao
 - food

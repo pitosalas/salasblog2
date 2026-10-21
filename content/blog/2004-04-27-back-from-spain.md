@@ -3,6 +3,8 @@ date: '2004-04-27'
 subtitle: So as not to leave you hanging, I just want to report that we are back and
   had a great time in Spain...
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Back from spain

@@ -3,6 +3,9 @@ date: '2022-03-18'
 subtitle: Calibrating a Monocular Camera with ROS – Robotics with ROS
 tags:
 - robotics
+- design
+original_tags:
+- robotics
 - photography
 - technology
 title: Calibrating a Monocular Camera with ROS – Robotics with ROS

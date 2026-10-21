@@ -3,6 +3,8 @@ date: '2013-09-17'
 subtitle: '**Good news**: I looked up what the trade-in value is for my iPhone 4S
   32Gig. Much to my pleasant su...'
 tags:
+- computing
+original_tags:
 - apple
 title: Engraving an iPhone knocks $25 off resale value
 type: wp

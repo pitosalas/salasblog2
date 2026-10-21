@@ -4,6 +4,10 @@ subtitle: If you are interested in design and especially design and architecture
   software, and you have a p...
 tags:
 - design
+- science
+- software-engineering
+original_tags:
+- design
 - computer-science
 - software-engineering
 - technology

@@ -3,6 +3,8 @@ date: '2007-09-21'
 subtitle: I’ve been living inside a couple of [tag]Google groups[/tag] lately, posting
   questions and waiting f...
 tags:
+- programming
+original_tags:
 - technology
 - programming
 title: '[geeky] Google Groups missing key functionality'

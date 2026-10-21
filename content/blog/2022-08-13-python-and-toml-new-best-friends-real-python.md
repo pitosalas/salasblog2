@@ -2,6 +2,8 @@
 date: '2022-08-13'
 subtitle: 'Python and TOML: New Best Friends – Real Python'
 tags:
+- programming
+original_tags:
 - python
 title: 'Python and TOML: New Best Friends – Real Python'
 type: wp

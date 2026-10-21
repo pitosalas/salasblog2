@@ -2,6 +2,8 @@
 date: '2019-06-21'
 subtitle: 'Open-sourcing Sorbet: a fast, powerful type checker for Ruby · Sorbet'
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  06/22/2019
 type: wp

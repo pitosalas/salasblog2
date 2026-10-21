@@ -4,6 +4,9 @@ subtitle: Chris Shipley of Guidewire Group has a [great post bemoaning how entre
   are driven to invest ...
 tags:
 - business
+- culture
+original_tags:
+- business
 - tv
 - startups
 title: Make it matter

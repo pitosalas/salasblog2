@@ -3,6 +3,8 @@ date: '2010-11-12'
 subtitle: Odd thing happened in a talk at RubyConf. Speaker asks all attendees who
   ...
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 - technology

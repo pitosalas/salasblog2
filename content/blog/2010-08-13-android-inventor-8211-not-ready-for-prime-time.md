@@ -2,6 +2,9 @@
 date: '2010-08-13'
 subtitle: The other day I wrote a post where I mentioned Google’s App Inventor
 tags:
+- computing
+- culture
+original_tags:
 - technology
 - mobile
 - personal

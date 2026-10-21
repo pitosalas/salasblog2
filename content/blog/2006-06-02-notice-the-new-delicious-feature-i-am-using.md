@@ -4,6 +4,8 @@ subtitle: The feature isn’t new, it’s actually pretty **old**. It’s also v
   documented. But it’s **ne...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Notice the new del.icio.us feature I am using?
 type: wp

@@ -2,6 +2,10 @@
 date: '2013-09-08'
 subtitle: 'You should read this book: Confessions of an Economic Hit Man'
 tags:
+- culture
+- politics
+- business
+original_tags:
 - books
 - politics
 - business

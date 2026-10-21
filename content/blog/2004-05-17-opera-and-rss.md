@@ -2,6 +2,8 @@
 date: '2004-05-17'
 subtitle: Various people are [saying tha...
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: Opera and RSS

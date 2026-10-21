@@ -2,6 +2,8 @@
 date: '2006-12-29'
 subtitle: A million years ago I used Lotus Notes … I think it was version 3 and 4.
 tags:
+- business
+original_tags:
 - lotus
 - technology
 title: 'OMG: Lotus Notes still alive and kicking ?'

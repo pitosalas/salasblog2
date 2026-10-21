@@ -5,6 +5,9 @@ subtitle: All software has bugs, no doubt. So pulling out one story to make a po
 tags:
 - business
 - blogging
+original_tags:
+- business
+- blogging
 - technology
 title: Business opportunities in blogville?
 type: wp

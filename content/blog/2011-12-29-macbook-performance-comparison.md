@@ -3,6 +3,9 @@ date: '2011-12-29'
 subtitle: Due to an unusual set of coincidences I have 3 different Macintosh computers
   in my office today so I...
 tags:
+- computing
+- software-engineering
+original_tags:
 - apple
 - technology
 - performance

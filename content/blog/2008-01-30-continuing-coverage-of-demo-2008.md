@@ -4,6 +4,8 @@ subtitle: Yesterday was a busy day! I saw lots of excellent products and ideas. 
   don’t know how useful the Li...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Continuing coverage of Demo 2008
 type: wp

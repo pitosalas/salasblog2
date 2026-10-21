@@ -3,6 +3,8 @@ date: '2013-02-19'
 subtitle: Last year we went with National Geographic to the Galapagos islands for
   an amazing journey of discov...
 tags:
+- places
+original_tags:
 - travel
 title: Galapagos article from one my my fellow travelers
 type: wp

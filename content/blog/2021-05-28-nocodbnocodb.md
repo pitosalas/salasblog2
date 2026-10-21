@@ -2,6 +2,8 @@
 date: '2021-05-28'
 subtitle: nocodb/nocodb
 tags:
+- programming
+original_tags:
 - technology
 - api
 - database

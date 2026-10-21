@@ -5,6 +5,9 @@ subtitle: Went to hear Ray Kurzweil yesterday at MIT, at an [event jointly spons
 tags:
 - ai
 - robotics
+original_tags:
+- ai
+- robotics
 - personal
 - technology
 title: Ray Kurzweil @ MIT

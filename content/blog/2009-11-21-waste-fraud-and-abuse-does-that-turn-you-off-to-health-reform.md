@@ -4,6 +4,9 @@ subtitle: An article from Canadian Healthcare Technology notes that [US Healthca
   wastes up to $800 billion a...
 tags:
 - politics
+- life
+original_tags:
+- politics
 - health
 - personal
 - technology

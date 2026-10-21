@@ -3,6 +3,8 @@ date: '2008-12-07'
 subtitle: There have been a number of articles taking shots at some of Malcolm Gladwell’s
   latest book, “Outlie...
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: Joel on Software talks about Malcolm Gladwell and Tom Friedman

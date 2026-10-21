@@ -2,6 +2,8 @@
 date: '2022-11-25'
 subtitle: Object-Oriented Discrete Event Simulation — with SimPy –Dis...
 tags:
+- programming
+original_tags:
 - python
 title: Object-Oriented Discrete Event Simulation — with SimPy
 type: wp

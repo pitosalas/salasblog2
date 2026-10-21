@@ -2,6 +2,8 @@
 date: '2008-11-29'
 subtitle: 'A few really quick links:'
 tags:
+- politics
+original_tags:
 - personal
 - politics
 title: What I am reading this morning

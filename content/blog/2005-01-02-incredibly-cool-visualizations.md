@@ -2,6 +2,8 @@
 date: '2005-01-02'
 subtitle: In the realm of interesting visualizations, check this one
 tags:
+- programming
+original_tags:
 - technology
 - programming
 - personal

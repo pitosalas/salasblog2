@@ -2,6 +2,8 @@
 date: '2019-04-14'
 subtitle: How do I know whether my Rails app is thread-safe or not?
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  04/15/2019
 type: wp

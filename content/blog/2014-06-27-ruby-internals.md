@@ -3,6 +3,8 @@ date: '2014-06-27'
 subtitle: Here’s an interesting article about how Ruby (the programming language not
   the gem) is interpretted ...
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 title: Ruby Internals

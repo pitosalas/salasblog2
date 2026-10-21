@@ -2,6 +2,8 @@
 date: '2006-12-07'
 subtitle: Check out [this
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: 'Ask Lifehacker: The gift of a pre-loaded iPod'

@@ -2,6 +2,11 @@
 date: '2022-03-04'
 subtitle: MiniTest – Writing Test Code In Ruby (2/3)
 tags:
+- programming
+- education
+- howto
+- software-engineering
+original_tags:
 - ruby
 - brandeis
 - howto

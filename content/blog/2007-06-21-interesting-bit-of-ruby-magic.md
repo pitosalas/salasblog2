@@ -2,6 +2,8 @@
 date: '2007-06-21'
 subtitle: Check out this post
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Interesting bit of Ruby magic

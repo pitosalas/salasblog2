@@ -2,6 +2,8 @@
 date: '2022-10-09'
 subtitle: Markdown in Ruby on Rails with RedCarpet – Mitch Craver
 tags:
+- programming
+original_tags:
 - ruby
 title: Markdown in Ruby on Rails with RedCarpet – Mitch Craver
 type: wp

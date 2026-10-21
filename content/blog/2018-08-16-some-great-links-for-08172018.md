@@ -2,6 +2,8 @@
 date: '2018-08-16'
 subtitle: Python Tuples and Tuple Methods | Codementor
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  08/17/2018
 type: wp

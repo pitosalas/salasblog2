@@ -2,6 +2,8 @@
 date: '2008-11-17'
 subtitle: A really good article in the New York Times Magazine today about Lewis Hyde
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: What is Art For?

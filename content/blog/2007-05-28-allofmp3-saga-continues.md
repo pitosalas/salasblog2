@@ -2,6 +2,9 @@
 date: '2007-05-28'
 subtitle: Regular readers of this blog know about AllOfMp3.com, a Russian music si...
 tags:
+- culture
+- politics
+original_tags:
 - music
 - legal
 - personal

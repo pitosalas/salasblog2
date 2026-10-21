@@ -2,6 +2,9 @@
 date: '2007-06-04'
 subtitle: Recently I visited Curaçao
 tags:
+- places
+- life
+original_tags:
 - curacao
 - jewish
 - personal

@@ -2,6 +2,8 @@
 date: '2023-06-07'
 subtitle: Alternate Python REPL – bpython –
 tags:
+- programming
+original_tags:
 - python
 title: Alternate Python REPL – bpython
 type: wp

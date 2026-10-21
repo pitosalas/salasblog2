@@ -3,6 +3,8 @@ date: '2010-11-23'
 subtitle: 'Check out ‘Like a Full-Body Massage’: Thinking About the TSA'
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: '‘Like a Full-Body Massage’: Thinking About the TSA'
 type: wp

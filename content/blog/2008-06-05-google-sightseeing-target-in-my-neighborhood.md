@@ -2,6 +2,8 @@
 date: '2008-06-05'
 subtitle: '!Picture 2-4'
 tags:
+- computing
+original_tags:
 - maps
 - personal
 title: 'Google Sightseeing: Target in my neighborhood'

@@ -2,6 +2,8 @@
 date: '2022-10-20'
 subtitle: Building a Rails CI pipeline with GitHub Actions
 tags:
+- programming
+original_tags:
 - ruby
 title: Building a Rails CI pipeline with GitHub Actions
 type: wp

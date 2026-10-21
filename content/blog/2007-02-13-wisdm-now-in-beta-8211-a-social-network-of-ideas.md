@@ -3,6 +3,8 @@ date: '2007-02-13'
 subtitle: '![Picture 2-26'
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: wis.dm now in beta – A social network of ideas

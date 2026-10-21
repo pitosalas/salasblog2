@@ -2,6 +2,10 @@
 date: '2022-03-28'
 subtitle: Partial rendering performance in Rails
 tags:
+- programming
+- howto
+- software-engineering
+original_tags:
 - ruby
 - howto
 - performance

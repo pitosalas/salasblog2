@@ -3,6 +3,9 @@ date: '2007-01-05'
 subtitle: If you need this tip, it will save you a lot of time. 99% likely though,
   you don’t need it and it wi...
 tags:
+- computing
+- programming
+original_tags:
 - apple
 - programming
 - technology

@@ -3,6 +3,8 @@ date: '2013-05-24'
 subtitle: Do you watch Mad Men? I know it’s very good. I always watch it. But sometimes,
   it doesn’t make sense...
 tags:
+- culture
+original_tags:
 - tv
 title: Mad Men Going Nuts
 type: wp

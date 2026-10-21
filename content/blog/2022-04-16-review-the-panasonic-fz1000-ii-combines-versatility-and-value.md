@@ -2,6 +2,8 @@
 date: '2022-04-16'
 subtitle: 'Review: The Panasonic FZ1000 II combines versatility and value'
 tags:
+- design
+original_tags:
 - photography
 title: 'Review: The Panasonic FZ1000 II combines versatility and value'
 type: wp

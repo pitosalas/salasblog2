@@ -2,6 +2,9 @@
 date: '2005-05-25'
 subtitle: '!Htcfalsettosprod'
 tags:
+- culture
+- places
+original_tags:
 - music
 - boston
 - personal

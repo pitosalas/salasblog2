@@ -4,6 +4,8 @@ subtitle: There are people in our government who are **strongly pushing** for mo
   openness and who are very f...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: What I learned at Transparency Camp
 type: wp

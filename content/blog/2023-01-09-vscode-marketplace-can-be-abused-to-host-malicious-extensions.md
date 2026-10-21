@@ -2,6 +2,8 @@
 date: '2023-01-09'
 subtitle: VSCode Marketplace can be abused to host malicious extensions
 tags:
+- programming
+original_tags:
 - cli
 title: VSCode Marketplace can be abused to host malicious extensions
 type: wp

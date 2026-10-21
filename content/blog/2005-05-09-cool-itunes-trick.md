@@ -3,6 +3,8 @@ date: '2005-05-09'
 subtitle: I like to come across music from my collection of CDs that I haven’t listened
   to in a while. Here’s ...
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: Cool iTunes trick

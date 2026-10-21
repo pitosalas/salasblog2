@@ -2,6 +2,8 @@
 date: '2009-07-08'
 subtitle: Pandora is one of my favorite music sites. It’s a quick way to ...
 tags:
+- culture
+original_tags:
 - music
 - personal
 - technology

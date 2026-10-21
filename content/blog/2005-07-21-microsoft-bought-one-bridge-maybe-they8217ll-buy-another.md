@@ -4,6 +4,9 @@ subtitle: 'Check this out: Microsoft Announces Plans to Acquire FrontBridge'
 tags:
 - business
 - blogging
+original_tags:
+- business
+- blogging
 - technology
 title: Microsoft bought one Bridge, maybe they’ll buy another
 type: wp

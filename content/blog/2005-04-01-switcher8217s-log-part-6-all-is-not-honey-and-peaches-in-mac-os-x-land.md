@@ -3,6 +3,8 @@ date: '2005-04-01'
 subtitle: When things go wrong is when you start seeing some of the disadvantages
   of being on the 5% pc platfo...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: 'Switcher’s Log, Part 6: All is not honey and peaches in Mac OS X land'

@@ -2,6 +2,10 @@
 date: '2021-06-20'
 subtitle: ibraheemdev/modern-unix
 tags:
+- computing
+- programming
+- howto
+original_tags:
 - linux
 - cli
 - howto

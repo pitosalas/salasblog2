@@ -2,6 +2,8 @@
 date: '2007-06-20'
 subtitle: Check out this post from [The Unofficial A...
 tags:
+- computing
+original_tags:
 - apple
 - personal
 - technology

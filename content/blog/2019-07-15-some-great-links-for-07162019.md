@@ -2,6 +2,8 @@
 date: '2019-07-15'
 subtitle: 'Linux Applications Performance: Introduction – Unixism'
 tags:
+- computing
+original_tags:
 - linux
 title: Some great links for  07/16/2019
 type: wp

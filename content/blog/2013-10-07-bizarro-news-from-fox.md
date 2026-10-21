@@ -3,6 +3,8 @@ date: '2013-10-07'
 subtitle: Fox News debuts bizarre, giant tablets in its outrageous new newsroom |
   The Verge
 tags:
+- culture
+original_tags:
 - technology
 - tv
 title: Bizarro News from Fox

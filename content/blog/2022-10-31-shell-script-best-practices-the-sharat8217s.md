@@ -2,6 +2,8 @@
 date: '2022-10-31'
 subtitle: Shell Script Best Practices — The Sharat’s
 tags:
+- computing
+original_tags:
 - linux
 title: Shell Script Best Practices — The Sharat’s
 type: wp

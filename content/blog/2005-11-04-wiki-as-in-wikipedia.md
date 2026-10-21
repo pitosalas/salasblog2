@@ -2,6 +2,8 @@
 date: '2005-11-04'
 subtitle: I assume you know about Wikis and the Wikipedia
 tags:
+- blogging
+original_tags:
 - wikipedia
 - personal
 - technology

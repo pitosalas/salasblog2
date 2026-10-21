@@ -2,6 +2,8 @@
 date: '2009-02-01'
 subtitle: I’ve known about Pandora for ages, and the last month or so have been usin...
 tags:
+- culture
+original_tags:
 - music
 - technology
 - personal

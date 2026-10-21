@@ -2,6 +2,8 @@
 date: '2023-09-09'
 subtitle: Let’s Implement the Map Method from First Principles
 tags:
+- programming
+original_tags:
 - ruby
 title: Let’s Implement the Map Method from First Principles
 type: wp

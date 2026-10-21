@@ -2,6 +2,8 @@
 date: '2022-10-13'
 subtitle: Testing Rails Apps with FactoryBot and MiniTest
 tags:
+- programming
+original_tags:
 - ruby
 title: Testing Rails Apps with FactoryBot and MiniTest
 type: wp

@@ -3,6 +3,8 @@ date: '2009-02-07'
 subtitle: 'Dave writes an enthousiastic review of this book: The Secret in Building
   26'
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: The Secret in Building 26

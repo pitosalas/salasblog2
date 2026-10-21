@@ -4,6 +4,9 @@ subtitle: One of these two is from Apple and one is from Google. They both conta
   coupons and cards. Which i...
 tags:
 - design
+- computing
+original_tags:
+- design
 - apple
 - technology
 title: These icons are too similar to be coincidences

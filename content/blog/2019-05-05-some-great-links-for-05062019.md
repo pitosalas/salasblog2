@@ -2,6 +2,8 @@
 date: '2019-05-05'
 subtitle: How to Schedule Cron Jobs in Ruby With the Whenever Gem
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  05/06/2019
 type: wp

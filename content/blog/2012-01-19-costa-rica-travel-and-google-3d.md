@@ -3,6 +3,9 @@ date: '2012-01-19'
 subtitle: We are thinking of planning a trip to Costa Rica. Part of the trip is to
   get from Tabacon to Monteve...
 tags:
+- places
+- computing
+original_tags:
 - travel
 - maps
 title: Costa Rica Travel and Google 3D

@@ -5,6 +5,9 @@ subtitle: Have you noticed how man how many new apps that have appeared of late 
 tags:
 - business
 - politics
+original_tags:
+- business
+- politics
 - technology
 title: Why is everything free?
 type: wp

@@ -3,6 +3,9 @@ date: '2010-12-06'
 subtitle: I just returned from my mother’s birthday party with about 300 photos –
   I would say 70% of them are ...
 tags:
+- computing
+- blogging
+original_tags:
 - apple
 - social-media
 - personal

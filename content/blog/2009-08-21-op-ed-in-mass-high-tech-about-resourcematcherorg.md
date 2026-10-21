@@ -3,6 +3,8 @@ date: '2009-08-21'
 subtitle: Gavin Murphy (of Annkissam) a...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Op-ed in Mass High Tech about ResourceMatcher.org
 type: wp

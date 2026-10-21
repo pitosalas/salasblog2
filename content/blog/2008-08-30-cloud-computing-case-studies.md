@@ -3,6 +3,8 @@ date: '2008-08-30'
 subtitle: I’ve written about some of the [considerations that go into the choice between
   physical infrastructu...
 tags:
+- business
+original_tags:
 - technology
 - business
 title: Cloud Computing case studies

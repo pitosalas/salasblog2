@@ -2,6 +2,9 @@
 date: '2022-01-28'
 subtitle: Aho/Ullman Foundations of Computer Science
 tags:
+- science
+- education
+original_tags:
 - computer-science
 - education
 title: Aho/Ullman Foundations of Computer Science

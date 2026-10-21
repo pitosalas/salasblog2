@@ -4,6 +4,8 @@ subtitle: Guy Kawasaki writes a nice little bit about VCs (some of my best frien
   are VCs) and about entrepre...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: What Venture Capitalists say

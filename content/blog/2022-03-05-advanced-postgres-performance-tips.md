@@ -3,6 +3,11 @@ date: '2022-03-05'
 subtitle: Advanced Postgres Performance Tips
 tags:
 - howto
+- software-engineering
+- programming
+- computing
+original_tags:
+- howto
 - performance
 - database
 - tools

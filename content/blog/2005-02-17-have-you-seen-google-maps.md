@@ -3,6 +3,8 @@ date: '2005-02-17'
 subtitle: Unless you have been living under a **rock** (or have **better** things
   to do with your time) you wi...
 tags:
+- computing
+original_tags:
 - maps
 - personal
 title: Have you seen Google Maps?

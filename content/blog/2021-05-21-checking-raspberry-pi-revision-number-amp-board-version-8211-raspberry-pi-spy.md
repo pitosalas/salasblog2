@@ -2,6 +2,8 @@
 date: '2021-05-21'
 subtitle: Checking Raspberry Pi Revision Number & Board Version – Raspberry Pi Spy
 tags:
+- computing
+original_tags:
 - linux
 - technology
 title: Checking Raspberry Pi Revision Number & Board Version – Raspberry Pi Spy

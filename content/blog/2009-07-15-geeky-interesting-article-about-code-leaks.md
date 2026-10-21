@@ -3,6 +3,8 @@ date: '2009-07-15'
 subtitle: Check out this interesting case study of how one awful memory leak was tracked
   down and killed
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 - technology

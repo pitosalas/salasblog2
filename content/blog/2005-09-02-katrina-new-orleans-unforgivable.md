@@ -3,6 +3,8 @@ date: '2005-09-02'
 subtitle: '!Images-2'
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: 'Katrina, New Orleans: Unforgivable'
 type: wp

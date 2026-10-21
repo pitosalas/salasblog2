@@ -2,6 +2,8 @@
 date: '2012-10-22'
 subtitle: http://images.travelpod.com/bin/tripwow/flash/tripwow.swf
 tags:
+- places
+original_tags:
 - travel
 title: Video made by and for robots
 type: wp

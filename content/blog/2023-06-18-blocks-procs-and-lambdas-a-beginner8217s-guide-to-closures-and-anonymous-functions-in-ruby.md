@@ -3,6 +3,8 @@ date: '2023-06-18'
 subtitle: 'Blocks, Procs, and Lambdas: A Beginner’s Guide to Closures and Anonymous
   Functions in Ruby'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'Blocks Procs and Lambdas: A Beginner’s Guide to Closures and Anonymous Functions
   in Ruby'

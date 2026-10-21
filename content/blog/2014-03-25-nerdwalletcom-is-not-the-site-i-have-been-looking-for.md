@@ -3,6 +3,8 @@ date: '2014-03-25'
 subtitle: I’ve been using mint.com for years now but every month I hate it a little
   bit more. It’s too big, to...
 tags:
+- business
+original_tags:
 - technology
 - business
 title: Nerdwallet.com is not the site I have been looking for

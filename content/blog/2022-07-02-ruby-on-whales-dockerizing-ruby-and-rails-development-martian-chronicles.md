@@ -2,6 +2,8 @@
 date: '2022-07-02'
 subtitle: 'RUby on Whales: Dockerizing Ruby and Rails'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'Ruby on Whales: Dockerizing Ruby and Rails development — Martian Chronicles'
 type: wp

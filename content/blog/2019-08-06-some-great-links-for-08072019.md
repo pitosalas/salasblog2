@@ -2,6 +2,8 @@
 date: '2019-08-06'
 subtitle: Installing Ubuntu on an external SSD drive on a Macbook – Floris van Breugel
 tags:
+- computing
+original_tags:
 - linux
 title: Some great links for  08/07/2019
 type: wp

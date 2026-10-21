@@ -2,6 +2,8 @@
 date: '2023-01-17'
 subtitle: Ruby 3.2’s YJIT is Production-Ready –...
 tags:
+- programming
+original_tags:
 - ruby
 title: Ruby 3.2’s YJIT is Production-Ready
 type: wp

@@ -2,6 +2,8 @@
 date: '2006-01-10'
 subtitle: I recently had occasion to learn all about a really cool MMORPG
 tags:
+- politics
+original_tags:
 - personal
 - politics
 title: Gaia Gold and Taxes?

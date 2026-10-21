@@ -3,6 +3,9 @@ date: '2021-08-01'
 subtitle: MicroK8s – Zero-ops Kubernetes for developers, edge and IoT | MicroK8s
 tags:
 - howto
+- software-engineering
+original_tags:
+- howto
 - technology
 - scalability
 title: MicroK8s – Zero-ops Kubernetes for developers, edge and IoT | MicroK8s

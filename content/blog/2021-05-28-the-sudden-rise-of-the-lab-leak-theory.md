@@ -3,6 +3,10 @@ date: '2021-05-28'
 subtitle: The Sudden Rise of the Lab-Leak Theory
 tags:
 - science
+- life
+- internet
+original_tags:
+- science
 - health
 - security
 title: The Sudden Rise of the Lab-Leak Theory

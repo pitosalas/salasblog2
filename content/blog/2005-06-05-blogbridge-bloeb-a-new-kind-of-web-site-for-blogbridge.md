@@ -4,6 +4,8 @@ subtitle: We’ve been experimenting with a **switcharoo** of the BlogBridge web
   – a major overhaul conceiv...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: '[BLOGBRIDGE] Bloeb: A new kind of web site for BlogBridge'
 type: wp

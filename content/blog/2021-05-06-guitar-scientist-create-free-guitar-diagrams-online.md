@@ -2,6 +2,9 @@
 date: '2021-05-06'
 subtitle: 'Guitar Scientist: Create Free Guitar Diagrams Online'
 tags:
+- culture
+- howto
+original_tags:
 - music
 - howto
 title: 'Guitar Scientist: Create Free Guitar Diagrams Online'

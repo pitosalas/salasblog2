@@ -2,6 +2,8 @@
 date: '2006-08-10'
 subtitle: Check out this picture!
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: St Maarten is such a small island that the airport runs right up to the beach

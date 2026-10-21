@@ -3,6 +3,8 @@ date: '2006-06-03'
 subtitle: The other day I complained about comment spam on my two blogs. Comme...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Comment spam – solved for now?
 type: wp

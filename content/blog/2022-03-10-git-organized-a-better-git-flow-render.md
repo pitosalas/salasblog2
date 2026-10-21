@@ -2,6 +2,9 @@
 date: '2022-03-10'
 subtitle: 'Git Organized: A Better Git Flow | Render'
 tags:
+- programming
+- howto
+original_tags:
 - cli
 - howto
 title: 'Git Organized: A Better Git Flow | Render'

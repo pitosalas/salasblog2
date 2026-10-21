@@ -2,6 +2,8 @@
 date: '2013-08-27'
 subtitle: I was rather pleased with myself!
 tags:
+- internet
+original_tags:
 - security
 title: Trouble in password land, again?
 type: wp

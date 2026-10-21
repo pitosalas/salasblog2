@@ -3,6 +3,8 @@ date: '2009-03-03'
 subtitle: Check out this post The Stimulus Gets Its Own Logo
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: The Stimulus Gets Its Own Logo
 type: wp

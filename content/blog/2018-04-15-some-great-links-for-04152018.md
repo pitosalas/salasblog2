@@ -2,6 +2,9 @@
 date: '2018-04-15'
 subtitle: JupyterLab is Ready for Users – Jupyter Blog
 tags:
+- programming
+- ai
+original_tags:
 - python
 - ai
 - technology

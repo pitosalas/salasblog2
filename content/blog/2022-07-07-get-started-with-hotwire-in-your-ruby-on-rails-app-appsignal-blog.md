@@ -2,6 +2,8 @@
 date: '2022-07-07'
 subtitle: Get Started with Hotwire in Your Ruby on Rails App | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: Get Started with Hotwire in Your Ruby on Rails App | AppSignal Blog
 type: wp

@@ -2,6 +2,8 @@
 date: '2011-03-07'
 subtitle: Qwiki seems to create multi-media presentations on any topic at all. I picke...
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 - personal

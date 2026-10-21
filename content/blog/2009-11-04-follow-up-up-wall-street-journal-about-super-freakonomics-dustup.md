@@ -4,6 +4,9 @@ subtitle: I wrote the other day about the ‘amusing’ dust-up between
 tags:
 - science
 - politics
+original_tags:
+- science
+- politics
 - technology
 title: Follow-up up Wall Street Journal about Super Freakonomics Dustup
 type: wp

@@ -3,6 +3,8 @@ date: '2010-11-13'
 subtitle: 'I tend to agree with this writer that:'
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Overreaction
 type: wp

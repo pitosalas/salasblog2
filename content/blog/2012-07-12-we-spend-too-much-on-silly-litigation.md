@@ -3,6 +3,8 @@ date: '2012-07-12'
 subtitle: Lucky Me! After **tortured litigation** and lots of legal fees (not mine,
   of course), I am receiving...
 tags:
+- politics
+original_tags:
 - legal
 title: We spend too much on silly litigation
 type: wp

@@ -2,6 +2,8 @@
 date: '2006-05-11'
 subtitle: Our friend Dave Weinberger shares
 tags:
+- life
+original_tags:
 - health
 - personal
 title: All you never wanted to know about colonoscopies

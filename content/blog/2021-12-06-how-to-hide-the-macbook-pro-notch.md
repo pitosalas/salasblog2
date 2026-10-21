@@ -2,6 +2,8 @@
 date: '2021-12-06'
 subtitle: How to Hide the MacBook Pro Notch
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: How to Hide the MacBook Pro Notch

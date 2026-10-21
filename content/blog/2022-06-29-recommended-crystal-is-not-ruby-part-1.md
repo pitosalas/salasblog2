@@ -2,6 +2,8 @@
 date: '2022-06-29'
 subtitle: I recommended Crystal is not Ruby Part 1
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 title: 'Recommended: Crystal is not Ruby Part 1'

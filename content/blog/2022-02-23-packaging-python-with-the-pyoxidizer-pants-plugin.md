@@ -2,6 +2,9 @@
 date: '2022-02-23'
 subtitle: Packaging Python with the PyOxidizer Pants Plugin
 tags:
+- programming
+- howto
+original_tags:
 - python
 - howto
 title: Packaging Python with the PyOxidizer Pants Plugin

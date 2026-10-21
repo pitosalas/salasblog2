@@ -3,6 +3,8 @@ date: '2011-09-10'
 subtitle: If you are interested in Game Design you have probably seen this video…
   I finally watched it and tho...
 tags:
+- culture
+original_tags:
 - games
 - personal
 - technology

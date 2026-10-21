@@ -2,6 +2,8 @@
 date: '2023-02-03'
 subtitle: Unlock the Potential of VS Code for Ruby Programming
 tags:
+- programming
+original_tags:
 - cli
 - ruby
 title: Unlock the Potential of VS Code for Ruby Programming

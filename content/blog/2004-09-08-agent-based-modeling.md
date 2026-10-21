@@ -4,6 +4,8 @@ subtitle: 'And now for something completely different. I was reading this book: 
   Alive'
 tags:
 - science
+original_tags:
+- science
 - technology
 title: Agent Based Modeling
 type: wp

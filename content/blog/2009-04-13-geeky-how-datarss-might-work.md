@@ -3,6 +3,9 @@ date: '2009-04-13'
 subtitle: '**Editors Note (that’s me, Pito): I’ve decided to change the name of this
   thing to “Decentralized Da...'
 tags:
+- programming
+- blogging
+original_tags:
 - api
 - blogging
 - programming

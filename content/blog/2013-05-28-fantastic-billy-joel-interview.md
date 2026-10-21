@@ -3,6 +3,8 @@ date: '2013-05-28'
 subtitle: If you are, or ever were, a Billy Joel Fan you will really like this interview.
   Fascinating to read ...
 tags:
+- culture
+original_tags:
 - music
 - nyt
 title: Fantastic Billy Joel Interview

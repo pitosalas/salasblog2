@@ -3,6 +3,9 @@ date: '2013-04-13'
 subtitle: '![](https://i0.wp.com/www.vias.org/glazebrook_practphys/img/glazebrook_practical_physics-584.png?w=5...'
 tags:
 - education
+- culture
+original_tags:
+- education
 - nyt
 - olin-college
 title: What do you learn in college?

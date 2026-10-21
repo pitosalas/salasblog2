@@ -4,6 +4,8 @@ subtitle: Maybe I’ve been out of the corporate world for too long. And I do wi
   well because Google...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Corporate doublespeak or inspiration?
 type: wp

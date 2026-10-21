@@ -3,6 +3,9 @@ date: '2021-10-11'
 subtitle: Every Woodworker—From Rookie to Pro—Needs These Essential Hand Tools in
   Their Arsenal – Wood
 tags:
+- life
+- computing
+original_tags:
 - woodworking
 - tools
 title: Every Woodworker—From Rookie to Pro—Needs These Essential Hand Tools in Their

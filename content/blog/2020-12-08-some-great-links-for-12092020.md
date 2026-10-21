@@ -2,6 +2,8 @@
 date: '2020-12-08'
 subtitle: 7 Deadly Sins Python Developers Do
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  12/09/2020
 type: wp

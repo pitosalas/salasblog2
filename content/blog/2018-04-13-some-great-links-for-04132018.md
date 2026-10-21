@@ -2,6 +2,8 @@
 date: '2018-04-13'
 subtitle: 'TechRabbit: Makara: a read-write splitting adapter for Active Record'
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  04/13/2018

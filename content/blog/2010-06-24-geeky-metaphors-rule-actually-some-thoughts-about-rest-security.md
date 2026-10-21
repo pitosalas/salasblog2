@@ -4,6 +4,8 @@ subtitle: I don’t know yet whether I agree with or disagree with what is said 
   Security (or lack ther...
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[GEEKY] Metaphors Rule! Actually, some thoughts about REST Security'
 type: wp

@@ -2,6 +2,9 @@
 date: '2021-05-21'
 subtitle: 'nmcli: NetworkManager Reference Manual'
 tags:
+- computing
+- howto
+original_tags:
 - linux
 - howto
 - technology

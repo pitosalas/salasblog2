@@ -2,6 +2,8 @@
 date: '2019-08-15'
 subtitle: Advanced multi-db techniques in Rails 6
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  08/16/2019
 type: wp

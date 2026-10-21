@@ -4,6 +4,8 @@ subtitle: 'From ZDNet: Federal judge orders halt to NSA spy program | Tech News 
   ZDNet'
 tags:
 - politics
+original_tags:
+- politics
 - legal
 title: Federal judge orders halt to NSA spy program
 type: wp

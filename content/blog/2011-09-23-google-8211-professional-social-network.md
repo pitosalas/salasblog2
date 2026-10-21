@@ -3,6 +3,8 @@ date: '2011-09-23'
 subtitle: Some people are starting to wonder whether Google+ will continue to grow
   and become a major soc...
 tags:
+- blogging
+original_tags:
 - social-media
 - personal
 - technology

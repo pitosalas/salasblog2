@@ -1,6 +1,8 @@
 ---
 date: '2026-10-17'
 tags:
+- business
+original_tags:
 - improv
 - lotus
 - pivot-table

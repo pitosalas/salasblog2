@@ -2,6 +2,11 @@
 date: '2022-06-02'
 subtitle: 'To Thread or Not to Thread: An In-Depth Look at Ruby’s Execution Models'
 tags:
+- programming
+- education
+- howto
+- software-engineering
+original_tags:
 - ruby
 - brandeis
 - explainer

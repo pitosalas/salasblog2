@@ -3,6 +3,9 @@ date: '2019-03-14'
 subtitle: Myo | How I learned to Stop Worrying and Love Quaternions
 tags:
 - robotics
+- science
+original_tags:
+- robotics
 - mathematics
 title: Some great links for  03/15/2019
 type: wp

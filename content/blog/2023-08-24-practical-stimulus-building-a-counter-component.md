@@ -2,6 +2,8 @@
 date: '2023-08-24'
 subtitle: 'Practical Stimulus: Building a Counter Component'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'Practical Stimulus: Building a Counter Component'
 type: wp

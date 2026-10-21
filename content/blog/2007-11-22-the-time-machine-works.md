@@ -2,6 +2,8 @@
 date: '2007-11-22'
 subtitle: Check out this post from [blog...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: The Time Machine Works!

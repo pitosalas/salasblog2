@@ -2,6 +2,8 @@
 date: '2012-01-12'
 subtitle: I just finished reading the book Seabiscuit
 tags:
+- culture
+original_tags:
 - books
 title: Words borrowed from horse racing
 type: wp

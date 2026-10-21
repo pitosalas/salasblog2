@@ -3,6 +3,8 @@ date: '2021-06-17'
 subtitle: I absolutely adored Spock. Loving Dad was much more complicated. – The Boston
   Globe
 tags:
+- places
+original_tags:
 - boston
 title: I absolutely adored Spock. Loving Dad was much more complicated. – The Boston
   Globe

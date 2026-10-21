@@ -2,6 +2,8 @@
 date: '2009-05-02'
 subtitle: 'This is from his blog:'
 tags:
+- life
+original_tags:
 - health
 - personal
 title: A touching piece by Curt Schilling

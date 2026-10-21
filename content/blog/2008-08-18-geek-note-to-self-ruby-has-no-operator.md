@@ -3,6 +3,8 @@ date: '2008-08-18'
 subtitle: I don’t know why it don’t.
 tags:
 - programming
+original_tags:
+- programming
 - ruby
 - technology
 title: '[GEEK] Note to self: Ruby has no ++ operator'

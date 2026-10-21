@@ -3,6 +3,8 @@ date: '2004-05-29'
 subtitle: 'Note to self:'
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[Geek] Getting ftp task to work in Ant / Eclipse'
 type: wp

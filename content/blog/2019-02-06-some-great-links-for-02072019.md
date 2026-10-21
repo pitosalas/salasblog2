@@ -2,6 +2,8 @@
 date: '2019-02-06'
 subtitle: Design follows data structures
 tags:
+- science
+original_tags:
 - computer-science
 title: Some great links for  02/07/2019
 type: wp

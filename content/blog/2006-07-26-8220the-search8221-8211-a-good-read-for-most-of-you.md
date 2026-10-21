@@ -3,6 +3,8 @@ date: '2006-07-26'
 subtitle: 'If you read my blog chances are you’ll **really enjoy** John Batelle’s
   book [The Search: How Google ...'
 tags:
+- culture
+original_tags:
 - books
 - personal
 - technology

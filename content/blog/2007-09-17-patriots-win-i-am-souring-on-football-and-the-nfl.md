@@ -2,6 +2,8 @@
 date: '2007-09-17'
 subtitle: Reading this article about The Casualties Of the NFL, in Men’s Journal
 tags:
+- life
+original_tags:
 - health
 - personal
 title: Patriots win, I am souring on Football and the NFL

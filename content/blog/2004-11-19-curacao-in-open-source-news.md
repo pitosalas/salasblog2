@@ -2,6 +2,8 @@
 date: '2004-11-19'
 subtitle: There’s this little island in the Caribean called Curacao....
 tags:
+- places
+original_tags:
 - curacao
 - technology
 title: Curacao in Open Source News?!

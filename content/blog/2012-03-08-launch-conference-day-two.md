@@ -3,6 +3,8 @@ date: '2012-03-08'
 subtitle: Yesterday was great. The buzz in the place is unbelievable. This place is
   the Launch Conference. Org...
 tags:
+- places
+original_tags:
 - boston
 - technology
 title: Launch Conference, Day Two

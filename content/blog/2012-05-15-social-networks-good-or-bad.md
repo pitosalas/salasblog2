@@ -4,6 +4,9 @@ subtitle: I’ve been doing quite a bit of reading about social networks in prep
   for the 2012 edition of ...
 tags:
 - education
+- blogging
+original_tags:
+- education
 - brandeis
 - social-media
 title: 'Social Networks: Good or Bad?'

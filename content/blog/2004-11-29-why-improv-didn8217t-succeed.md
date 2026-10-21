@@ -2,6 +2,8 @@
 date: '2004-11-29'
 subtitle: It’s been a while.
 tags:
+- business
+original_tags:
 - lotus
 - business
 - technology

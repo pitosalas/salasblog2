@@ -2,6 +2,9 @@
 date: '2021-07-11'
 subtitle: Movie Posters Collection – Harry Ransom Center Digital Collections
 tags:
+- culture
+- design
+original_tags:
 - art
 - design
 - images

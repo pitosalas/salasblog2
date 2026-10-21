@@ -2,6 +2,8 @@
 date: '2022-12-03'
 subtitle: 5 ways to make HTTP requests in Ruby...
 tags:
+- programming
+original_tags:
 - ruby
 title: 5 ways to make HTTP requests in Ruby
 type: wp

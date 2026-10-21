@@ -4,6 +4,8 @@ subtitle: Today a major review came out in Robin Good’s influential Master New
   blog
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Robin Good checks out BlogBridge micro publishing capabilities
 type: wp

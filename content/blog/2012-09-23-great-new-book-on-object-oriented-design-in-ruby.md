@@ -3,6 +3,10 @@ date: '2012-09-23'
 subtitle: 'I first came across Sandy Metz in this video:'
 tags:
 - programming
+- culture
+- design
+original_tags:
+- programming
 - ruby
 - books
 - design

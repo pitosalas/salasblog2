@@ -3,6 +3,9 @@ date: '2012-10-21'
 subtitle: James Dyson (the vacuum cleaner guy) said something which may seem obvious
   but is nonetheless very c...
 tags:
+- computing
+- design
+original_tags:
 - apple
 - design
 title: Designed in California, Made in China

@@ -2,6 +2,8 @@
 date: '2023-01-08'
 subtitle: Docker on MacOS is slow and how to fix it · Paolo Mainardi
 tags:
+- computing
+original_tags:
 - apple
 title: Docker on MacOS is slow and how to fix it · Paolo Mainardi
 type: wp

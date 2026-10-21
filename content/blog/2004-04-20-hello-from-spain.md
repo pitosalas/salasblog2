@@ -3,6 +3,8 @@ date: '2004-04-20'
 subtitle: Geeking out from an Internet Cafe in Granada, Spain. We´re here for a short
   vacation, and we have a ...
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Hello from Spain

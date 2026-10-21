@@ -2,6 +2,8 @@
 date: '2005-11-11'
 subtitle: '![Sb-M1000-Small'
 tags:
+- culture
+original_tags:
 - music
 - personal
 title: 'Roku Roku Roku: Aint Technology Great?'

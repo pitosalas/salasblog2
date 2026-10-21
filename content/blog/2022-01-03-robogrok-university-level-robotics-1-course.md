@@ -4,6 +4,10 @@ subtitle: RoboGrok University-Level Robotics 1 Course
 tags:
 - robotics
 - education
+- culture
+original_tags:
+- robotics
+- education
 - video
 title: RoboGrok University-Level Robotics 1 Course
 type: wp

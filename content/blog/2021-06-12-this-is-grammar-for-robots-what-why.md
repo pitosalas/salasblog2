@@ -5,6 +5,11 @@ tags:
 - robotics
 - ai
 - design
+- education
+original_tags:
+- robotics
+- ai
+- design
 - research
 title: "This is Grammar For Robots. What? Why? \U0001F916"
 type: wp

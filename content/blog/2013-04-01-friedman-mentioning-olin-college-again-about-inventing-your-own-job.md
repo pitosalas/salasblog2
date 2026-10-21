@@ -5,6 +5,10 @@ subtitle: Tom Friedman, quoting Tony Wagner, describes what he thinks should be 
 tags:
 - education
 - business
+- culture
+original_tags:
+- education
+- business
 - careers
 - nyt
 - olin-college

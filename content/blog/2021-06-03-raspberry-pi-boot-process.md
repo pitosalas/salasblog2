@@ -2,6 +2,8 @@
 date: '2021-06-03'
 subtitle: Raspberry Pi Boot Process
 tags:
+- computing
+original_tags:
 - linux
 - technology
 title: Raspberry Pi Boot Process

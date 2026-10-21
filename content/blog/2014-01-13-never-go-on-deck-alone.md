@@ -2,6 +2,8 @@
 date: '2014-01-13'
 subtitle: This is just a great read.
 tags:
+- culture
+original_tags:
 - nyt
 title: Never go on deck alone
 type: wp

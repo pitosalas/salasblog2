@@ -3,6 +3,8 @@ date: '2008-11-14'
 subtitle: 'A neat article in Salon, by Garrison Keillor – America is cool:'
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: 'Garrison Keillor: America is cool!'
 type: wp

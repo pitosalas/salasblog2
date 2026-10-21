@@ -2,6 +2,8 @@
 date: '2011-12-27'
 subtitle: I saw this movie, Altered States, again last night. It’s eve...
 tags:
+- culture
+original_tags:
 - movies
 title: Altered States
 type: wp

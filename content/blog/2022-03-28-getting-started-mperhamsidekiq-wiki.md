@@ -2,6 +2,10 @@
 date: '2022-03-28'
 subtitle: Getting Started · mperham/sidekiq Wiki
 tags:
+- programming
+- software-engineering
+- howto
+original_tags:
 - ruby
 - concurrency
 - howto

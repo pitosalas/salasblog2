@@ -2,6 +2,8 @@
 date: '2023-04-25'
 subtitle: The Ruby on Rails SaaS Template | Bullet Train –Bullet Train is a Ruby ...
 tags:
+- programming
+original_tags:
 - ruby
 title: The Ruby on Rails SaaS Template | Bullet Train
 type: wp

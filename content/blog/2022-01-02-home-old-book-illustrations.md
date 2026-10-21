@@ -3,6 +3,9 @@ date: '2022-01-02'
 subtitle: Home | Old Book Illustrations
 tags:
 - design
+- computing
+original_tags:
+- design
 - tools
 - images
 title: Home | Old Book Illustrations

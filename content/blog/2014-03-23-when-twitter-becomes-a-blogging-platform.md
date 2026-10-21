@@ -4,6 +4,8 @@ subtitle: I have been noticing more and more **serialized tweets**. In other wor
   someone tweets several tim...
 tags:
 - blogging
+original_tags:
+- blogging
 - social-media
 title: When Twitter becomes a  blogging platform
 type: wp

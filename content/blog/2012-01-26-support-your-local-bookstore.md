@@ -3,6 +3,9 @@ date: '2012-01-26'
 subtitle: I have a **warm spot** in my heart for independent bookstores, as such a
   store **paid for my college...
 tags:
+- culture
+- business
+original_tags:
 - books
 - personal
 - amazon

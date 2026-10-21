@@ -3,6 +3,8 @@ date: '2008-05-05'
 subtitle: SnapLogic is an open source product (at least in it’s base edition) prov...
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[GEEKY] Cool open source product analogous to Yahoo Pipes'
 type: wp

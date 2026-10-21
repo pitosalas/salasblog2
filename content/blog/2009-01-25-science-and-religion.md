@@ -4,6 +4,9 @@ subtitle: Now there’s a big topic, eh? A magazine that I don’t normally read
   [good, in depth, thoughtful...
 tags:
 - science
+- politics
+original_tags:
+- science
 - personal
 - politics
 title: Science and Religion

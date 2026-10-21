@@ -2,6 +2,8 @@
 date: '2020-10-04'
 subtitle: One-liner introduction – Ruby one-liners cookbook
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/05/2020
 type: wp

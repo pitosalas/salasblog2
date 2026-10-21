@@ -4,6 +4,8 @@ subtitle: I encounter more and more organizations or people who are collecting l
   of feeds or blogs for one...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: '[GEEKY] Using OPML for master lists of feeds'
 type: wp

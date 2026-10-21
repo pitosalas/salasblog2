@@ -2,6 +2,8 @@
 date: '2020-02-08'
 subtitle: Dicts are now ordered, get used to it
 tags:
+- programming
+original_tags:
 - python
 title: Dicts are now ordered, get used to it
 type: wp

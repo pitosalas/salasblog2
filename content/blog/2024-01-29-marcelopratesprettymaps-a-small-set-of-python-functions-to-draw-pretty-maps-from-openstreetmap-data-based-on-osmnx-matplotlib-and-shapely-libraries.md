@@ -1,6 +1,9 @@
 ---
 date: '2025-07-03'
 tags:
+- programming
+- computing
+original_tags:
 - python
 - maps
 title: 'prettymaps: Simple access to OpenStreetmaps'

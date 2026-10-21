@@ -3,6 +3,8 @@ date: '2009-04-17'
 subtitle: '![datagov_front'
 tags:
 - politics
+original_tags:
+- politics
 - technology
 title: 'Great proposal re: http://data.gov from Sunlight Foundation'
 type: wp

@@ -2,6 +2,8 @@
 date: '2008-06-09'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/imagew...'
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: June in Paradise

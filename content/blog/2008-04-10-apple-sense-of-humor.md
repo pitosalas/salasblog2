@@ -2,6 +2,8 @@
 date: '2008-04-10'
 subtitle: '!Funny comment by Apple about Windoze'
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: Apple sense of humor

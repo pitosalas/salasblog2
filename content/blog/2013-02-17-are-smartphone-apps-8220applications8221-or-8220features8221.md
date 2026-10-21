@@ -4,6 +4,9 @@ subtitle: Andy Payne wrote an interesting analysis about the future of the “so
   industry”
 tags:
 - business
+- computing
+original_tags:
+- business
 - mobile
 title: Are smartphone apps “applications” or “features”?
 type: wp

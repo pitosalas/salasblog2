@@ -4,6 +4,8 @@ subtitle: 'You might be interested in what BlogBridge is doing about twittering 
   more than one account:'
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 - social-media
 title: Tweeting from more than one account?

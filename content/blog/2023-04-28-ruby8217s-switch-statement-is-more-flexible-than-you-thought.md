@@ -2,6 +2,8 @@
 date: '2023-04-28'
 subtitle: Ruby’s Switch Statement is More Flexible Than You Thought
 tags:
+- programming
+original_tags:
 - ruby
 title: Ruby’s Switch Statement is More Flexible Than You Thought
 type: wp

@@ -3,6 +3,8 @@ date: '2010-04-26'
 subtitle: CAPTCHA is the nickname of the venerable (ok only a few years of veneration)
   technique of verifying ...
 tags:
+- internet
+original_tags:
 - personal
 - security
 - technology

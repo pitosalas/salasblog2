@@ -4,6 +4,8 @@ subtitle: I’ve gotten more interested in logos and graphic design lately so I 
   I am noticing stuff like t...
 tags:
 - design
+original_tags:
+- design
 - personal
 title: How are the New England Patriots like the United States Post Office?
 type: wp

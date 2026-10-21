@@ -3,6 +3,8 @@ date: '2011-07-21'
 subtitle: So I have now been using Spotify for about a week after sumarily deserting
   Rhapsody (no stickyness a...
 tags:
+- culture
+original_tags:
 - music
 - personal
 title: Update about Spotify

@@ -3,6 +3,8 @@ date: '2006-04-19'
 subtitle: '![](https://i0.wp.com/www.typenow.net/images/themed/priceright.gif?w=584)![](https://i0.wp.com/www.t...'
 tags:
 - design
+original_tags:
+- design
 - personal
 title: Fun movie and TV fonts
 type: wp

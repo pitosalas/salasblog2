@@ -2,6 +2,9 @@
 date: '2021-08-17'
 subtitle: Alda tutorial
 tags:
+- culture
+- howto
+original_tags:
 - music
 - howto
 title: Alda tutorial

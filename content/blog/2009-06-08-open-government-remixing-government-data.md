@@ -4,6 +4,8 @@ subtitle: I found this article to be a good primer on what’s going on with ope
   data. [Remixing Gov...
 tags:
 - politics
+original_tags:
+- politics
 - technology
 - personal
 title: 'Open Government: Remixing Government Data'

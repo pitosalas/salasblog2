@@ -3,6 +3,9 @@ date: '2023-03-03'
 subtitle: The Missing Semester of Your CS Education
 tags:
 - programming
+- science
+original_tags:
+- programming
 - computer-science
 title: The Missing Semester of Your CS Education
 type: wp

@@ -3,6 +3,9 @@ date: '2007-02-26'
 subtitle: Yeah a weird thought. So when I came across an [analysis called The Dutch
   Defend Their World Empire]...
 tags:
+- places
+- politics
+original_tags:
 - curacao
 - politics
 - personal

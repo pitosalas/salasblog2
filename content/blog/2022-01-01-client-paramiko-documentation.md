@@ -2,6 +2,8 @@
 date: '2022-01-01'
 subtitle: Client — Paramiko documentation
 tags:
+- programming
+original_tags:
 - python
 - cli
 title: Client — Paramiko documentation

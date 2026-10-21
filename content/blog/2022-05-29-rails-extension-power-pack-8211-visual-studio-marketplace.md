@@ -2,6 +2,9 @@
 date: '2022-05-29'
 subtitle: Rails Extension Power Pack – Visual Studio Marketplace
 tags:
+- programming
+- howto
+original_tags:
 - ruby
 - cli
 - howto

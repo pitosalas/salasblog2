@@ -3,6 +3,9 @@ date: '2022-12-05'
 subtitle: Robotics Lab @ Brandeis
 tags:
 - robotics
+- education
+original_tags:
+- robotics
 - brandeis
 title: Robotics Lab @ Brandeis
 type: wp

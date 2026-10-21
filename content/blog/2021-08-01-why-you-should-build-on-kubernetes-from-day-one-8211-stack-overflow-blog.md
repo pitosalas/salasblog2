@@ -3,6 +3,9 @@ date: '2021-08-01'
 subtitle: Why you should build on Kubernetes from day one – Stack Overflow Blog
 tags:
 - howto
+- software-engineering
+original_tags:
+- howto
 - technology
 - scalability
 title: Why you should build on Kubernetes from day one – Stack Overflow Blog

@@ -2,6 +2,9 @@
 date: '2007-01-22'
 subtitle: I heard about this book, “Dreaming in Code”… it looks really inter...
 tags:
+- culture
+- software-engineering
+original_tags:
 - books
 - software-engineering
 - technology

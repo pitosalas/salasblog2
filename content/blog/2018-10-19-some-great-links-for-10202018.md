@@ -2,6 +2,8 @@
 date: '2018-10-19'
 subtitle: 'Minitest Tutorial: Getting Started with Minitest | Codeship | via @codeship'
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/20/2018
 type: wp

@@ -2,6 +2,8 @@
 date: '2006-02-13'
 subtitle: 'Just a quick reminder of a Geek Dinner organized by three of us: Ada...'
 tags:
+- places
+original_tags:
 - boston
 - personal
 - technology

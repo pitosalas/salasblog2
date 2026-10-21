@@ -3,6 +3,9 @@ date: '2009-04-11'
 subtitle: This is probably not high on your radar, but if you have interest in the
   island of Curaçao you may h...
 tags:
+- places
+- politics
+original_tags:
 - curacao
 - politics
 - personal

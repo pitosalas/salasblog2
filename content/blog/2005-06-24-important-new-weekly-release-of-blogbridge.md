@@ -4,6 +4,8 @@ subtitle: Just in the unlikely event that you didn’t pick it up, a couple of d
   ago we released BlogBridge 1...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Important new (weekly) release of BlogBridge
 type: wp

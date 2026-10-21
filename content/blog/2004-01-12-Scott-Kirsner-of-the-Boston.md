@@ -2,6 +2,8 @@
 date: '2004-01-12'
 subtitle: '**Scott Kirsner of the Boston Globe:'
 tags:
+- business
+original_tags:
 - eroom
 title: Scott Kirsner of the Boston
 type: wp

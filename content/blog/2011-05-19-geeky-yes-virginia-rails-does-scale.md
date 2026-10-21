@@ -4,6 +4,9 @@ subtitle: Why doesn’t every one **love Rails**? I am surprised when I run into
   (Pat?) who’s not so sur...
 tags:
 - programming
+- software-engineering
+original_tags:
+- programming
 - ruby
 - scalability
 - technology

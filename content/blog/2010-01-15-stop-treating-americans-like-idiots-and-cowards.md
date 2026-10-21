@@ -4,6 +4,9 @@ subtitle: An [excellent article in the Wall Street Journal about the way the med
   and politicians want us to ...
 tags:
 - politics
+- internet
+original_tags:
+- politics
 - personal
 - security
 - technology

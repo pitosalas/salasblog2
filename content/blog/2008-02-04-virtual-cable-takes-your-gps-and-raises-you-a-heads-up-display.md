@@ -2,6 +2,8 @@
 date: '2008-02-04'
 subtitle: This is really cool! Check out this post
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 - personal

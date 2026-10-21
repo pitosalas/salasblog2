@@ -4,6 +4,8 @@ subtitle: Who would think that our advanced space fairing craft have a YERO (Yea
   End Rollover) problem?
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - technology
 title: 'Space Shuttle Software: YERO'
 type: wp

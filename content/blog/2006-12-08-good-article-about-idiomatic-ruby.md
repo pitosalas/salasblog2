@@ -2,6 +2,8 @@
 date: '2006-12-08'
 subtitle: I’ve been learning Ruby and Rails in my copious spare time. I found this
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Good article about idiomatic Ruby

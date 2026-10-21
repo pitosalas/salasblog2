@@ -2,6 +2,8 @@
 date: '2010-11-12'
 subtitle: The problem with conferences is knowing what session to go to, right?
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 title: '[GEEKY] RubyConf'

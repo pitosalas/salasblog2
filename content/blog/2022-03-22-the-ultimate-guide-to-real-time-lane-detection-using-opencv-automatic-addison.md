@@ -4,6 +4,9 @@ subtitle: The Ultimate Guide to Real-Time Lane Detection Using OpenCV – Automa
   Addison
 tags:
 - robotics
+- programming
+original_tags:
+- robotics
 - python
 - computer-vision
 title: The Ultimate Guide to Real-Time Lane Detection Using OpenCV – Automatic Addison

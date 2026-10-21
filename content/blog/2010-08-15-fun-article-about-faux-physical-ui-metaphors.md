@@ -4,6 +4,9 @@ subtitle: Ok, that’s my own curious headline for this interesting article in t
   York Times
 tags:
 - design
+- computing
+original_tags:
+- design
 - mobile
 - apple
 - personal

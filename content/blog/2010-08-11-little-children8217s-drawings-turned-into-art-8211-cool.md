@@ -2,6 +2,8 @@
 date: '2010-08-11'
 subtitle: Check this link out, there are lots of really fun drawings
 tags:
+- culture
+original_tags:
 - personal
 - art
 title: Little children’s drawings turned into art – COOL!

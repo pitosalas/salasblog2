@@ -2,6 +2,9 @@
 date: '2011-09-13'
 subtitle: I got some of this list from Lee Sheldon’s course syllabus.
 tags:
+- culture
+- design
+original_tags:
 - books
 - design
 - games

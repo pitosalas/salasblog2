@@ -2,6 +2,8 @@
 date: '2023-06-14'
 subtitle: Get the most out of Python dicts
 tags:
+- programming
+original_tags:
 - python
 title: Get the most out of Python dicts
 type: wp

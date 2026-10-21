@@ -3,6 +3,8 @@ date: '2006-09-27'
 subtitle: If you’re looking for a really wonderful place to stay while in Bar Harbor,
   you should check out the...
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Best little Inn in Maine

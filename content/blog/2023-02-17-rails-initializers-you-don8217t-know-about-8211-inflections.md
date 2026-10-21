@@ -2,6 +2,8 @@
 date: '2023-02-17'
 subtitle: Rails initializers you don’t know about – Inflections
 tags:
+- programming
+original_tags:
 - ruby
 title: Rails initializers you don’t know about – Inflections
 type: wp

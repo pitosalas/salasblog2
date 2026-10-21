@@ -3,6 +3,8 @@ date: '2009-01-24'
 subtitle: From Bob Herbert, in today’s New York Times
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: More than Charisma
 type: wp

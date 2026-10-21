@@ -3,6 +3,8 @@ date: '2009-06-01'
 subtitle: My friend Amy just recently arrived from an incredible trip through Asia.
   If you are curious, check ...
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Wandering through Asia

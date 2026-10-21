@@ -3,6 +3,8 @@ date: '2007-01-23'
 subtitle: Check out [this
 tags:
 - programming
+original_tags:
+- programming
 - personal
 title: Is Eclipse too “Windows-esque”?
 type: wp

@@ -3,6 +3,8 @@ date: '2018-06-30'
 subtitle: '[[EN][Keynote] Parallel and Thread-Safe Ruby at High-Speed with TruffleRuby
   / Benoit Daloze @eregont...'
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  06/30/2018

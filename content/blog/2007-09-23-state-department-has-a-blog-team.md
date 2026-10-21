@@ -4,6 +4,8 @@ subtitle: Apparently the US State Department has a team of bloggers who get into
   on boards and blo...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: State department has a blog team
 type: wp

@@ -2,6 +2,8 @@
 date: '2023-08-22'
 subtitle: Swallow Boathouse – Wikipedia –
 tags:
+- blogging
+original_tags:
 - wikipedia
 title: Swallow Boathouse – Wikipedia
 type: wp

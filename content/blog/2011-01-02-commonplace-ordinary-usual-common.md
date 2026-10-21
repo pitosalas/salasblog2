@@ -4,6 +4,8 @@ subtitle: I just came across an excellent speech given by William Deresiewics (I
   know who he was either...
 tags:
 - education
+original_tags:
+- education
 - personal
 title: commonplace, ordinary, usual, common
 type: wp

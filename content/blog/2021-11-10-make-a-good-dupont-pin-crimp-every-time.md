@@ -4,6 +4,10 @@ subtitle: Make a Good Dupont Pin-Crimp EVERY TIME!
 tags:
 - robotics
 - howto
+- computing
+original_tags:
+- robotics
+- howto
 - tools
 title: Make a Good Dupont Pin-Crimp EVERY TIME!
 type: wp

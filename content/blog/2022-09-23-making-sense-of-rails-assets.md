@@ -2,6 +2,8 @@
 date: '2022-09-23'
 subtitle: Making Sense of Rails Assets –Rails ...
 tags:
+- programming
+original_tags:
 - ruby
 title: Making Sense of Rails Assets
 type: wp

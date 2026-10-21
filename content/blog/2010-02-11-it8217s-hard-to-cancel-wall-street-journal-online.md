@@ -3,6 +3,9 @@ date: '2010-02-11'
 subtitle: Who would think that an august publication like the Wall Street Journal
   would ...
 tags:
+- culture
+- science
+original_tags:
 - games
 - personal
 - science

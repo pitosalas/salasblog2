@@ -3,6 +3,8 @@ date: '2008-05-19'
 subtitle: Check out Arduino, a totally cool tiny embedded computer suitable for crea...
 tags:
 - robotics
+original_tags:
+- robotics
 - technology
 title: 'Arduino: Open source hardware'
 type: wp

@@ -2,6 +2,8 @@
 date: '2021-12-26'
 subtitle: Wandermap – Your hiking routes online
 tags:
+- places
+original_tags:
 - travel
 title: Wandermap – Your hiking routes online
 type: wp

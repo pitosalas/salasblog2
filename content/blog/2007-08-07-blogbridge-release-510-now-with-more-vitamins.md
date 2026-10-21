@@ -3,6 +3,8 @@ date: '2007-08-07'
 subtitle: Over on BlogBridge we just announced that release 5.10 just came out
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: BlogBridge release 5.10 now with more vitamins
 type: wp

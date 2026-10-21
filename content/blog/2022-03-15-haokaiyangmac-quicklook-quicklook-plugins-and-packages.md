@@ -2,6 +2,9 @@
 date: '2022-03-15'
 subtitle: 'haokaiyang/Mac-QuickLook: QuickLook plugins and packages'
 tags:
+- computing
+- programming
+original_tags:
 - apple
 - cli
 title: 'haokaiyang/Mac-QuickLook: QuickLook plugins and packages'

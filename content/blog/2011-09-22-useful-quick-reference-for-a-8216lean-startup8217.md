@@ -3,6 +3,8 @@ date: '2011-09-22'
 subtitle: Check this post How To Build a Web Startup – Lean LaunchPad Edition
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Useful quick reference for a ‘lean startup’

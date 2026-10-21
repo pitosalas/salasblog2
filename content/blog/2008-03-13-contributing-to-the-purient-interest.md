@@ -4,6 +4,8 @@ subtitle: No less an authority as the **Freakonomics dudes** offer an article ab
   “[A Call Girl’s View of th...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Contributing to the purient interest
 type: wp

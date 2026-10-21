@@ -2,6 +2,8 @@
 date: '2007-02-05'
 subtitle: Check out [this
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: I was away when Boston and Fox both embarassed themselves

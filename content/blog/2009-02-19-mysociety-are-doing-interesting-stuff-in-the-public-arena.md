@@ -3,6 +3,8 @@ date: '2009-02-19'
 subtitle: A british organization (or should I say organisation?) called mySociety
   has done some **really cool*...
 tags:
+- politics
+original_tags:
 - technology
 - personal
 - politics

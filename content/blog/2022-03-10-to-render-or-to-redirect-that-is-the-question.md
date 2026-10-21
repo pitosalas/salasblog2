@@ -2,6 +2,9 @@
 date: '2022-03-10'
 subtitle: To Render or to Redirect, that is the Question…
 tags:
+- programming
+- howto
+original_tags:
 - ruby
 - programming
 - howto

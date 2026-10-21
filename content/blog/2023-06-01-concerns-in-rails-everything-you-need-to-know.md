@@ -2,6 +2,8 @@
 date: '2023-06-01'
 subtitle: 'Concerns in Rails: Everything You Need to Know'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'Concerns in Rails: Everything You Need to Know'
 type: wp

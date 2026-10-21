@@ -5,6 +5,9 @@ subtitle: Mike Taibi writes in [Rolling Stone about some fairly outrageous doing
 tags:
 - politics
 - business
+original_tags:
+- politics
+- business
 - personal
 title: “The Real Housewives of Wall Street”
 type: wp

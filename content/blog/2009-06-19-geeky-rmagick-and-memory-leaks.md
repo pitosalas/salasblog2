@@ -3,6 +3,8 @@ date: '2009-06-19'
 subtitle: A recent post talked about creating a “Domain Specific Language” for image
   processing of ballots
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 - personal

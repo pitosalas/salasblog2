@@ -2,6 +2,9 @@
 date: '2021-06-18'
 subtitle: Types in Python
 tags:
+- programming
+- howto
+original_tags:
 - python
 - howto
 title: Types in Python

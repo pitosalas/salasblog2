@@ -2,6 +2,8 @@
 date: '2022-07-15'
 subtitle: Introducing scikit-geometry –...
 tags:
+- programming
+original_tags:
 - python
 title: Introducing scikit-geometry
 type: wp

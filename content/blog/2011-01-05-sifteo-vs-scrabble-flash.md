@@ -2,6 +2,8 @@
 date: '2011-01-05'
 subtitle: 'Scott Kirsner tweets:'
 tags:
+- culture
+original_tags:
 - technology
 - games
 - personal

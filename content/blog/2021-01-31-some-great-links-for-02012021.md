@@ -3,6 +3,8 @@ date: '2021-01-31'
 subtitle: '[5 Quick & Easy Hacks to Write More Computationally Efficient Code | by
   Andre Ye | Analytics Vidhya ...'
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  02/01/2021
 type: wp

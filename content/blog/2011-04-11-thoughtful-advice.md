@@ -3,6 +3,8 @@ date: '2011-04-11'
 subtitle: No need to paraphrase or editorialize. Just read the whole thing, will ya?
   Lots of good advice that ...
 tags:
+- culture
+original_tags:
 - art
 - personal
 title: Thoughtful advice

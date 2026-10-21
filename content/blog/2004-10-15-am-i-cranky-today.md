@@ -2,6 +2,8 @@
 date: '2004-10-15'
 subtitle: Here I go again, picking a out quote from a blogger who I really like ...
 tags:
+- business
+original_tags:
 - eroom
 - technology
 title: Am I cranky today?

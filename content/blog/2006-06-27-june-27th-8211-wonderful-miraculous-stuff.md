@@ -2,6 +2,8 @@
 date: '2006-06-27'
 subtitle: Wikipedia – How to milk the ole cow
 tags:
+- blogging
+original_tags:
 - wikipedia
 - personal
 - technology

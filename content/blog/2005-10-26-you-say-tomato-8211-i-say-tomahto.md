@@ -2,6 +2,8 @@
 date: '2005-10-26'
 subtitle: filled with tomatoes,
 tags:
+- life
+original_tags:
 - food
 - personal
 title: You say tomato – I say tomahto

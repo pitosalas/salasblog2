@@ -3,6 +3,8 @@ date: '2005-06-04'
 subtitle: I just saw references to these two books. I am putting them on my reading
   list.
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: These look like interesting books

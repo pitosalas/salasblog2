@@ -2,6 +2,8 @@
 date: '2023-07-06'
 subtitle: How to diagnose and control login and background items
 tags:
+- computing
+original_tags:
 - apple
 title: How to diagnose and control login and background items
 type: wp

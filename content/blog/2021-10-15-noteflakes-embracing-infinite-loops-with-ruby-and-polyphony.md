@@ -2,6 +2,9 @@
 date: '2021-10-15'
 subtitle: 'Noteflakes: Embracing Infinite Loops with Ruby and Polyphony'
 tags:
+- programming
+- software-engineering
+original_tags:
 - ruby
 - concurrency
 - performance

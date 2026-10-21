@@ -5,6 +5,8 @@ source_raindrop: 21-04-06-752-CodeCombat---Learn-how-to-code.md
 source_url: https://codecombat.com
 tags:
 - programming
+original_tags:
+- programming
 - cli
 title: CodeCombat - Learn how to code by playing a game
 type: blog

@@ -4,6 +4,8 @@ subtitle: Funny thing, I like many people are trying to figure out what Pinteres
   is good...
 tags:
 - design
+original_tags:
+- design
 - images
 title: What is Pinterest good for?
 type: wp

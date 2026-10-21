@@ -2,6 +2,8 @@
 date: '2006-10-03'
 subtitle: '![](http://www.flickr.com...'
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Capitol Reef

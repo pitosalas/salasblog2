@@ -4,6 +4,9 @@ subtitle: 'This book looks good: “Founder’s Dilemmas: Anticipating and Avoid
   pitfalls that can sink a st...'
 tags:
 - business
+- culture
+original_tags:
+- business
 - books
 - startups
 title: 'New Book: Founder’s Dilemmas'

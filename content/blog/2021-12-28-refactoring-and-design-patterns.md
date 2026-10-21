@@ -5,6 +5,10 @@ tags:
 - programming
 - software-engineering
 - howto
+original_tags:
+- programming
+- software-engineering
+- howto
 - ruby
 title: Refactoring and Design Patterns
 type: wp

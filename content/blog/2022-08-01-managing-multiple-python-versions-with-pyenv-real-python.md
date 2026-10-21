@@ -2,6 +2,8 @@
 date: '2022-08-01'
 subtitle: Managing Multiple Python Versions With pyenv – Real Python
 tags:
+- programming
+original_tags:
 - python
 title: Managing Multiple Python Versions With pyenv – Real Python
 type: wp

@@ -3,6 +3,9 @@ date: '2009-03-09'
 subtitle: The other day, [Amazon released a free application on the iPhone (and iPod
   Touch.) On the surface, j...
 tags:
+- computing
+- culture
+original_tags:
 - apple
 - books
 - personal

@@ -2,6 +2,8 @@
 date: '2019-12-14'
 subtitle: Why NUKEMAP isn’t on Google Maps anymore | Restricted Data
 tags:
+- computing
+original_tags:
 - maps
 title: Some great links for  12/15/2019
 type: wp

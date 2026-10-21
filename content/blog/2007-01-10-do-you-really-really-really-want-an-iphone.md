@@ -2,6 +2,8 @@
 date: '2007-01-10'
 subtitle: Check out [this
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: Do you really really really want an iPhone?

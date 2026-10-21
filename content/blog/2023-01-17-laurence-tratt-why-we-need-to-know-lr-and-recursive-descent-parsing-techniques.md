@@ -2,6 +2,8 @@
 date: '2023-01-17'
 subtitle: 'Laurence Tratt: Why We Need to Know LR and Recursive Descent Parsing Techniques'
 tags:
+- science
+original_tags:
 - computer-science
 title: 'Laurence Tratt: Why We Need to Know LR and Recursive Descent Parsing Techniques'
 type: wp

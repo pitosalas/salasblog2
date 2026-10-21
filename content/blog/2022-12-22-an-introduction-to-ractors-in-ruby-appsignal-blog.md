@@ -2,6 +2,8 @@
 date: '2022-12-22'
 subtitle: An Introduction to Ractors in Ruby | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: An Introduction to Ractors in Ruby | AppSignal Blog
 type: wp

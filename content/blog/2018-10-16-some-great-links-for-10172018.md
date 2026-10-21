@@ -2,6 +2,8 @@
 date: '2018-10-16'
 subtitle: alexmojaki/birdseye
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  10/17/2018
 type: wp

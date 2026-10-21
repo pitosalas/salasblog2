@@ -4,6 +4,8 @@ subtitle: You know that I follow what’s going on in Venezuela. Here’s an int
   [article from the Washing...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Interesting (not good) news from Venezuela
 type: wp

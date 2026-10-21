@@ -3,6 +3,8 @@ date: '2012-02-18'
 subtitle: 'A simple question that for some reason does not have a simple answer:'
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 - social-media
 title: RSS feed for for twitter

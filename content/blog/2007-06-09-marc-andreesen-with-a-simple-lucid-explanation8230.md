@@ -4,6 +4,8 @@ subtitle: This is an explanation (part 1 of 2) of why and who should seek VC for
   new business. From what...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Marc Andreesen with a simple lucid explanation…

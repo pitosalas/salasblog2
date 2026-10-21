@@ -4,6 +4,9 @@ subtitle: 'Check out this post In Defense of Raising Money: a Manifesto for NonP
   CEOs:'
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - politics
 title: 'In Defense of Raising Money: a Manifesto for NonProfit CEOs'

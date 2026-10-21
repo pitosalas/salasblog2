@@ -3,6 +3,9 @@ date: '2023-04-06'
 subtitle: Line maze algorithm –If you are exper...
 tags:
 - robotics
+- science
+original_tags:
+- robotics
 - computer-science
 title: Line maze algorithm
 type: wp

@@ -2,6 +2,11 @@
 date: '2022-03-14'
 subtitle: 'Sinatra Best Practices: Part One'
 tags:
+- programming
+- software-engineering
+- design
+- howto
+original_tags:
 - ruby
 - software-engineering
 - design

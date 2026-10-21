@@ -2,6 +2,9 @@
 date: '2021-08-08'
 subtitle: 'New in Git: switch and restore'
 tags:
+- programming
+- howto
+original_tags:
 - cli
 - howto
 title: 'New in Git: switch and restore'

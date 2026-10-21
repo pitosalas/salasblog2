@@ -2,6 +2,8 @@
 date: '2022-09-12'
 subtitle: Why Use MongoDB with Ruby
 tags:
+- programming
+original_tags:
 - ruby
 title: Why Use MongoDB with Ruby
 type: wp

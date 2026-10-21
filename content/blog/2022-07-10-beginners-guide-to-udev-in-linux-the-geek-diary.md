@@ -2,6 +2,8 @@
 date: '2022-07-10'
 subtitle: Beginners Guide to Udev in Linux – The Geek Diary
 tags:
+- computing
+original_tags:
 - linux
 title: Beginners Guide to Udev in Linux – The Geek Diary
 type: wp

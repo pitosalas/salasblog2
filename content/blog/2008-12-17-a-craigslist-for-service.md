@@ -4,6 +4,8 @@ subtitle: Something I’ve been thinking about a lot lately is the need for some
   of platform to match local...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: A Craigslist for Service?
 type: wp

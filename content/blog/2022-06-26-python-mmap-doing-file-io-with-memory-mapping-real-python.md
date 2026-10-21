@@ -2,6 +2,8 @@
 date: '2022-06-26'
 subtitle: 'Python mmap: Doing File I/O With Memory Mapping – Real Python'
 tags:
+- programming
+original_tags:
 - python
 title: 'Python mmap: Doing File I/O With Memory Mapping – Real Python'
 type: wp

@@ -3,6 +3,8 @@ date: '2007-10-15'
 subtitle: Everyone loves how much easier Mac OS X makes it to install software. Well
   sort of. It’s a place whe...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: '[GEEKY] Weakness in Mac OS X Software Update'

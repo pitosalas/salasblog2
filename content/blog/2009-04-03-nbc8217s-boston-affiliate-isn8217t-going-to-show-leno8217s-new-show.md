@@ -3,6 +3,8 @@ date: '2009-04-03'
 subtitle: Check out this post NBC’s Boston affiliate isn’t going to show Leno’s new
   show
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: NBC’s Boston affiliate isn’t going to show Leno’s new show

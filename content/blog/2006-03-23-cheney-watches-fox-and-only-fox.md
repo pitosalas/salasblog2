@@ -3,6 +3,8 @@ date: '2006-03-23'
 subtitle: This is just silly-funny. Here are what ...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Cheney watches Fox and Only Fox
 type: wp

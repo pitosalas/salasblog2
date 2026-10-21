@@ -2,6 +2,8 @@
 date: '2007-04-02'
 subtitle: Today we hear that EMI is going to sell DRM-free music over the iTunes Store
 tags:
+- culture
+original_tags:
 - music
 - personal
 title: A great look back at Napster’s history

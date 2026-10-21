@@ -3,6 +3,9 @@ date: '2019-05-09'
 subtitle: '[Podcast: Can Machine Learning Solve the Challenges of Cloud Computing?
   | Graduate School of Arts an...'
 tags:
+- education
+- ai
+original_tags:
 - brandeis
 - ai
 title: Some great links for  05/10/2019

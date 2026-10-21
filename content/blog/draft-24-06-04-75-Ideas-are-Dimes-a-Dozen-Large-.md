@@ -1,6 +1,8 @@
 ---
 date: '2026-04-19'
 tags:
+- ai
+original_tags:
 - technology
 - ai
 title: 'Ideas are Dimes a Dozen: Large Language Models for Idea Generation in Innovation'

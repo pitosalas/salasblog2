@@ -4,6 +4,8 @@ subtitle: I am constantly downloading applications and utilities off the web to 
   this or that out. I am as ...
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 - technology
 title: A True Horror Story About Why We Need Authentication Standards

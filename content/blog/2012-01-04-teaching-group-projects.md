@@ -3,6 +3,8 @@ date: '2012-01-04'
 subtitle: I’ve had occasion as you know to teach a few times at Brandeis University.
 tags:
 - education
+original_tags:
+- education
 - brandeis
 title: 'Teaching: Group Projects'
 type: wp

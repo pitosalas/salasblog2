@@ -2,6 +2,8 @@
 date: '2007-04-11'
 subtitle: Check out this post
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: From Lifehacker, for TV Addicts, this is just too good.

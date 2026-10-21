@@ -4,6 +4,8 @@ subtitle: I’ve gotten very interested in Election Reform lately, and I’ve de
   how the overall voting s...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: How easy is it to cheat?
 type: wp

@@ -3,6 +3,8 @@ date: '2018-05-16'
 subtitle: 'Weekly Command: managing processes with htop'
 tags:
 - design
+original_tags:
+- design
 - technology
 title: Some great links for  05/16/2018
 type: wp

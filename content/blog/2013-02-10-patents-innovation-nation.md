@@ -2,6 +2,9 @@
 date: '2013-02-10'
 subtitle: An interesting view on patents from Judge Posner
 tags:
+- politics
+- culture
+original_tags:
 - legal
 - nyt
 title: 'Patents: Innovation Nation'

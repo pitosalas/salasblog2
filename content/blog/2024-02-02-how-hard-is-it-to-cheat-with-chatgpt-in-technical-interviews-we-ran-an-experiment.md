@@ -3,6 +3,9 @@ date: '2025-07-04'
 subtitle: An experiment on how hard it is to cheat with ChatGPT during technical interviews
 tags:
 - ai
+- business
+original_tags:
+- ai
 - careers
 title: Cheating using ChatGPT
 type: blog

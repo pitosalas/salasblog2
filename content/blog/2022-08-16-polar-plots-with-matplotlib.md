@@ -2,6 +2,8 @@
 date: '2022-08-16'
 subtitle: Polar plots with Matplotlib –If y...
 tags:
+- programming
+original_tags:
 - python
 title: Polar plots with Matplotlib
 type: wp

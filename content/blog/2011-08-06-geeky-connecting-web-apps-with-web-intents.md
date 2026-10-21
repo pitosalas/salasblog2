@@ -3,6 +3,8 @@ date: '2011-08-06'
 subtitle: Check this post Connecting Web Apps with Web Intents
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[GEEKY] Connecting Web Apps with Web Intents'
 type: wp

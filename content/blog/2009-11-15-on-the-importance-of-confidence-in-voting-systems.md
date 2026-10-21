@@ -4,6 +4,8 @@ subtitle: I was following a series of articles about the Brazilian e-voting syst
   which apparently underwent...
 tags:
 - politics
+original_tags:
+- politics
 - technology
 title: On the importance of confidence in voting systems
 type: wp

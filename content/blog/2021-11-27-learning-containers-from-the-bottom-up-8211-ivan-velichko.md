@@ -2,6 +2,10 @@
 date: '2021-11-27'
 subtitle: Learning Containers From The Bottom Up – Ivan Velichko
 tags:
+- software-engineering
+- howto
+- computing
+original_tags:
 - docker
 - explainer
 - images

@@ -4,6 +4,8 @@ subtitle: I am **not at all sure** what to make of this. But a friend of mine po
   me to some of the follow...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Election shenanigans?
 type: wp

@@ -4,6 +4,8 @@ subtitle: I stumbled across this article while waiting for a meeting to start. I
   is a bit “inside baseball”, ...
 tags:
 - education
+original_tags:
+- education
 - brandeis
 title: '[teaching] A student’s perspective on course selection'
 type: wp

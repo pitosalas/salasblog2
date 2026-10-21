@@ -3,6 +3,8 @@ date: '2006-11-16'
 subtitle: Came across Jonathan Coulton, the songwriter who embarked on a ridiculous
   challenge to write a song ...
 tags:
+- culture
+original_tags:
 - music
 - personal
 title: 'Code Monkey: Funny'

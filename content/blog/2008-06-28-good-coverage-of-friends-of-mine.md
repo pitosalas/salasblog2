@@ -3,6 +3,8 @@ date: '2008-06-28'
 subtitle: 'Recently three friends of mine got nice press coverage, so I thought I’d
   share them:'
 tags:
+- places
+original_tags:
 - boston
 - personal
 - technology

@@ -4,6 +4,8 @@ subtitle: Continuing the post from the other day about Wikileaks, I found some e
   further links that mi...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: 'Wikileaks: Some good further links'
 type: wp

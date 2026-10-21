@@ -3,6 +3,11 @@ date: '2010-01-05'
 subtitle: I’ve been working quite a bit on the Open Source Digital Voting foundation
   pr...
 tags:
+- places
+- software-engineering
+- politics
+- programming
+original_tags:
 - boston
 - software-engineering
 - politics

@@ -3,6 +3,8 @@ date: '2008-12-15'
 subtitle: 'The irony and paradox confounds:'
 tags:
 - business
+original_tags:
+- business
 - personal
 title: How come are these two swindlers also huge philanthropists?
 type: wp

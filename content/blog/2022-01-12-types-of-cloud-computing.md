@@ -3,6 +3,10 @@ date: '2022-01-12'
 subtitle: Types of cloud computing
 tags:
 - software-engineering
+- education
+- howto
+original_tags:
+- software-engineering
 - cloud
 - brandeis
 - explainer

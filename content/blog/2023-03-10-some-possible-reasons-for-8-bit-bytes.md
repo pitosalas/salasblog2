@@ -3,6 +3,9 @@ date: '2023-03-10'
 subtitle: Some possible reasons for 8-bit bytes
 tags:
 - programming
+- science
+original_tags:
+- programming
 - computer-science
 title: Some possible reasons for 8-bit bytes
 type: wp

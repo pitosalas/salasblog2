@@ -2,6 +2,10 @@
 date: '2021-07-23'
 subtitle: How to speed up Python application startup time
 tags:
+- programming
+- howto
+- software-engineering
+original_tags:
 - python
 - howto
 - performance

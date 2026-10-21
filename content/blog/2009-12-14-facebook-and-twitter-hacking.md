@@ -3,6 +3,9 @@ date: '2009-12-14'
 subtitle: I guess it’s not surprising that people’s Facebook and twitter accounts
   are getting compromised
 tags:
+- blogging
+- internet
+original_tags:
 - social-media
 - personal
 - security

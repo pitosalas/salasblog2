@@ -2,6 +2,10 @@
 date: '2021-07-03'
 subtitle: Set Up A Docker Container To Test Your Rails App
 tags:
+- programming
+- software-engineering
+- howto
+original_tags:
 - ruby
 - docker
 - howto

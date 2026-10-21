@@ -3,6 +3,9 @@ title: Everything I've Written About Lotus Improv
 date: '2026-10-18'
 type: blog
 tags:
+- business
+- culture
+original_tags:
 - lotus
 - history
 ---

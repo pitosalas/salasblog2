@@ -2,6 +2,8 @@
 date: '2022-01-22'
 subtitle: Portfolio or Resume? When To Use Each
 tags:
+- business
+original_tags:
 - careers
 title: Portfolio or Resume? When To Use Each
 type: wp

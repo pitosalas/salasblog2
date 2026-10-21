@@ -2,6 +2,8 @@
 date: '2018-11-23'
 subtitle: Fibers Are the Right Solution
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  11/24/2018
 type: wp

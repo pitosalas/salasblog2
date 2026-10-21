@@ -3,6 +3,9 @@ date: '2008-07-13'
 subtitle: 'Check out “Forget Photoshop: 15 Online Graphics Generators'
 tags:
 - design
+- programming
+original_tags:
+- design
 - personal
 - programming
 - technology

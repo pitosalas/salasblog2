@@ -2,6 +2,9 @@
 date: '2022-03-27'
 subtitle: Managing remote repositories – GitHub Docs
 tags:
+- programming
+- howto
+original_tags:
 - cli
 - howto
 title: Managing remote repositories – GitHub Docs

@@ -4,6 +4,8 @@ subtitle: I saw an article in the New York Times and other places about the futu
   of the University, and even...
 tags:
 - education
+original_tags:
+- education
 - brandeis
 - personal
 title: Future of the university

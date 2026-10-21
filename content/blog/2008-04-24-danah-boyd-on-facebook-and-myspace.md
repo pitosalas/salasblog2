@@ -2,6 +2,8 @@
 date: '2008-04-24'
 subtitle: A really interesting article for anyone interested in social networks
 tags:
+- politics
+original_tags:
 - personal
 - politics
 - technology

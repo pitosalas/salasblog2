@@ -3,6 +3,8 @@ date: '2009-03-01'
 subtitle: Everything’s a camp today, Foo Camp, Bar Camp and now Transparency Camp
 tags:
 - politics
+original_tags:
+- politics
 - technology
 - personal
 title: Transparency Camp

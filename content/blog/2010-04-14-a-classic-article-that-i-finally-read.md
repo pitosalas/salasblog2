@@ -2,6 +2,9 @@
 date: '2010-04-14'
 subtitle: The article “Reflections on Trusting Trust” is often m...
 tags:
+- science
+- programming
+original_tags:
 - computer-science
 - programming
 - technology

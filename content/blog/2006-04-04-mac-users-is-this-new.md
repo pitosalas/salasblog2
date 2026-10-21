@@ -2,6 +2,8 @@
 date: '2006-04-04'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/weblogs/images/Picture%25...'
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: 'Mac users: is this new?'

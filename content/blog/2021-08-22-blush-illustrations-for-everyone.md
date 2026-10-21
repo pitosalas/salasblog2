@@ -4,6 +4,9 @@ subtitle: 'Blush: Illustrations for everyone'
 tags:
 - design
 - howto
+original_tags:
+- design
+- howto
 - images
 title: 'Blush: Illustrations for everyone'
 type: wp

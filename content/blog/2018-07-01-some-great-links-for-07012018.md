@@ -2,6 +2,8 @@
 date: '2018-07-01'
 subtitle: How to Remotely Troubleshoot Your Relative’s Computer
 tags:
+- programming
+original_tags:
 - python
 - technology
 title: Some great links for  07/01/2018

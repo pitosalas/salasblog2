@@ -2,6 +2,8 @@
 date: '2019-01-10'
 subtitle: Bindings and Lexical Scope in Ruby
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  01/11/2019
 type: wp

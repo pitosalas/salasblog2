@@ -3,6 +3,8 @@ date: '2011-10-28'
 subtitle: This link lets you see all the passages in Steve Jobs’ new biography that
   were underlined
 tags:
+- culture
+original_tags:
 - technology
 - books
 - personal

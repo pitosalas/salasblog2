@@ -2,6 +2,8 @@
 date: '2021-05-09'
 subtitle: 'WikiCFP : Call For Papers of Conferences, Workshops and Journals'
 tags:
+- science
+original_tags:
 - computer-science
 title: 'WikiCFP : Call For Papers of Conferences, Workshops and Journals'
 type: wp

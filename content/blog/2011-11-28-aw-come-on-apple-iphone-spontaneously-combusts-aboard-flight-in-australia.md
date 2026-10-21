@@ -2,6 +2,8 @@
 date: '2011-11-28'
 subtitle: 'This is just a weird story:'
 tags:
+- computing
+original_tags:
 - apple
 title: 'Aw, come on: Apple iPhone spontaneously combusts aboard flight in Australia'
 type: wp

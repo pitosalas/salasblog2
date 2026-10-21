@@ -3,6 +3,10 @@ date: '2009-04-08'
 subtitle: I recently saw the movie Hacking Democracy. It’s absolutely fasc...
 tags:
 - politics
+- programming
+- internet
+original_tags:
+- politics
 - technology
 - personal
 - programming

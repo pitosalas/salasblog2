@@ -4,6 +4,8 @@ subtitle: If you know anyone in graduate school (oops, or if you are in graduate
   yourself, or planning ...
 tags:
 - education
+original_tags:
+- education
 - personal
 title: Advice for New Graduate Students
 type: wp

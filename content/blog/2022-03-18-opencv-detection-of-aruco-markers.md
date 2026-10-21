@@ -3,6 +3,10 @@ date: '2022-03-18'
 subtitle: 'OpenCV: Detection of ArUco Markers'
 tags:
 - robotics
+- education
+- howto
+original_tags:
+- robotics
 - computer-vision
 - education
 - howto

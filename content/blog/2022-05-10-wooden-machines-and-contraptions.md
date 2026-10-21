@@ -2,6 +2,9 @@
 date: '2022-05-10'
 subtitle: Wooden machines and contraptions
 tags:
+- life
+- howto
+original_tags:
 - woodworking
 - howto
 title: Wooden machines and contraptions

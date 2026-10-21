@@ -2,6 +2,10 @@
 date: '2021-07-03'
 subtitle: red-data-tools/YouPlot
 tags:
+- programming
+- howto
+- computing
+original_tags:
 - ruby
 - cli
 - howto

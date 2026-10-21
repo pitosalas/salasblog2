@@ -3,6 +3,8 @@ date: '2009-10-24'
 subtitle: Check out It’s Not My Company
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Those are not “your companies” dude
 type: wp

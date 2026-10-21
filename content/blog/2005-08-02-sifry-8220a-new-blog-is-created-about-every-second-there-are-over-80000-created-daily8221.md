@@ -2,6 +2,8 @@
 date: '2005-08-02'
 subtitle: Dave Sifry of Technorati has an **interesting analysis** of the curr...
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: 'Sifry: “A new blog is created about every second, there are over 80,000 created

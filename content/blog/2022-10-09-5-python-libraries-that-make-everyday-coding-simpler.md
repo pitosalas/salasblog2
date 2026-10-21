@@ -2,6 +2,8 @@
 date: '2022-10-09'
 subtitle: 5 Python Libraries That Make Everyday Coding Simpler –A bun...
 tags:
+- programming
+original_tags:
 - python
 title: 5 Python Libraries That Make Everyday Coding Simpler
 type: wp

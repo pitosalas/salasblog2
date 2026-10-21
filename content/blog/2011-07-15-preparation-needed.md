@@ -5,6 +5,10 @@ subtitle: I’ve been thinking a lot lately about what kind of preparation colle
 tags:
 - education
 - business
+- culture
+original_tags:
+- education
+- business
 - personal
 - nyt
 - startups

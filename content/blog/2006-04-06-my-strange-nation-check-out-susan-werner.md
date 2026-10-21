@@ -2,6 +2,8 @@
 date: '2006-04-06'
 subtitle: '![Sw-00039-T'
 tags:
+- culture
+original_tags:
 - music
 - personal
 title: My Strange Nation? Check out Susan Werner

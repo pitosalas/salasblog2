@@ -2,6 +2,8 @@
 date: '2021-09-05'
 subtitle: Second-order thinking
 tags:
+- computing
+original_tags:
 - personal
 - tools
 title: Second-order thinking

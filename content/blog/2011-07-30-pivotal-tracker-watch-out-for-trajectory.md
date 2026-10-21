@@ -3,6 +3,8 @@ date: '2011-07-30'
 subtitle: I’ve been an avid user and recommender of Pivotal Tracker, an exce...
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - technology
 title: Pivotal Tracker, watch out for Trajectory
 type: wp

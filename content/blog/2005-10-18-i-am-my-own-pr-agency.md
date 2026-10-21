@@ -4,6 +4,8 @@ subtitle: Over the last week or so I’ve been working around the clock preparin
   BlogBridge’s
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: I am my own PR agency
 type: wp

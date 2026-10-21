@@ -2,6 +2,8 @@
 date: '2006-12-23'
 subtitle: A bit of a debate is developing regarding Microsoft’s recent patent for
 tags:
+- politics
+original_tags:
 - legal
 - technology
 title: In-depth analysis of Microsoft content syndication platform patent application

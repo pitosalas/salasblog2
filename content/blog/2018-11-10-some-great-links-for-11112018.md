@@ -2,6 +2,8 @@
 date: '2018-11-10'
 subtitle: Crystal is not Ruby Pt. 2 – Runtime Revolution
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  11/11/2018
 type: wp

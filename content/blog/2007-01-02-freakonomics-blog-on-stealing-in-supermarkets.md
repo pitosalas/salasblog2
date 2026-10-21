@@ -3,6 +3,8 @@ date: '2007-01-02'
 subtitle: Check out [this
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Freakonomics Blog on stealing in supermarkets
 type: wp

@@ -2,6 +2,8 @@
 date: '2022-01-23'
 subtitle: Custom vinyl stickers, decals, labels. High quality printing at low prices!
 tags:
+- programming
+original_tags:
 - web
 title: Custom vinyl stickers, decals, labels. High quality printing at low prices!
 type: wp

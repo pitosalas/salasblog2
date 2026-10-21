@@ -3,6 +3,8 @@ date: '2010-01-12'
 subtitle: Another great column from Frank Rich — Tiger Woods, Person of The Year
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: 'About our credulousness: another great Frank Rich article'
 type: wp

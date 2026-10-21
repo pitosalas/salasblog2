@@ -2,6 +2,9 @@
 date: '2023-06-25'
 subtitle: Rails design patterns –This article i...
 tags:
+- programming
+- software-engineering
+original_tags:
 - ruby
 - software-engineering
 title: Rails design patterns

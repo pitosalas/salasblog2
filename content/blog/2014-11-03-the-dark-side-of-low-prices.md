@@ -3,6 +3,8 @@ date: '2014-11-03'
 subtitle: I spent over an frustrating hour on the phone yesterday with Bank Of America
   and Paypal trying to so...
 tags:
+- culture
+original_tags:
 - personal
 - tv
 title: The dark side of low prices

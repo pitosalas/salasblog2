@@ -3,6 +3,9 @@ date: '2011-06-26'
 subtitle: JavaScript is the language of the future. Why do I say this?
 tags:
 - programming
+- politics
+original_tags:
+- programming
 - personal
 - politics
 title: '[GEEKY] JavaScript – Universal Language of the Future'

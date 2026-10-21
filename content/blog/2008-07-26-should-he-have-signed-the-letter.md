@@ -3,6 +3,8 @@ date: '2008-07-26'
 subtitle: Ok this is a bit irreverent.
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Should he have signed the letter?
 type: wp

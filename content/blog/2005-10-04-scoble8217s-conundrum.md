@@ -4,6 +4,8 @@ subtitle: His conundrum is that he loves both Web services (browser based applic
   and Windows applicatio...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Scoble’s conundrum
 type: wp

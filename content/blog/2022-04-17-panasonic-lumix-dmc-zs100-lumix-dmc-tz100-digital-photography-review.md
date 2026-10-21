@@ -2,6 +2,8 @@
 date: '2022-04-17'
 subtitle: 'Panasonic Lumix DMC-ZS100 (Lumix DMC-TZ100): Digital Photography Review'
 tags:
+- design
+original_tags:
 - photography
 - zoom
 title: 'Panasonic Lumix DMC-ZS100 (Lumix DMC-TZ100): Digital Photography Review'

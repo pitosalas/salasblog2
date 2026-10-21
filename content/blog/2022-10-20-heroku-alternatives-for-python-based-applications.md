@@ -2,6 +2,8 @@
 date: '2022-10-20'
 subtitle: Heroku Alternatives for Python-based Applications
 tags:
+- programming
+original_tags:
 - python
 title: Heroku Alternatives for Python-based Applications
 type: wp

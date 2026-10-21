@@ -4,6 +4,8 @@ subtitle: If you read this blog at all, you know that I’ve been working on a p
   of software (BlogBridge
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Coding as Writing
 type: wp

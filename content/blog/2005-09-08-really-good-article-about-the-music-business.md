@@ -2,6 +2,9 @@
 date: '2005-09-08'
 subtitle: 'Robin Good points to:'
 tags:
+- culture
+- business
+original_tags:
 - music
 - business
 - personal

@@ -3,6 +3,8 @@ date: '2005-02-05'
 subtitle: An interesting article in News.Com
 tags:
 - business
+original_tags:
+- business
 - technology
 title: VCs and Aggregators
 type: wp

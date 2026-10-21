@@ -2,6 +2,9 @@
 date: '2023-09-08'
 subtitle: Writing an Operating System From Scratch
 tags:
+- science
+- programming
+original_tags:
 - computer-science
 - programming
 title: Writing an Operating System From Scratch

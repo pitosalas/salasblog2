@@ -3,6 +3,8 @@ date: '2022-01-05'
 subtitle: Six Rules of Thumb for Scaling Software Architectures
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - scalability
 - technology
 title: Six Rules of Thumb for Scaling Software Architectures

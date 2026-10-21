@@ -4,6 +4,8 @@ subtitle: Ok, I am adjusting to the new reality of the lost election. The amount
   coverage in the blogs I fr...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: At least we have the Redsox
 type: wp

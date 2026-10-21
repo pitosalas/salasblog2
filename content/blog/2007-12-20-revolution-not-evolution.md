@@ -3,6 +3,8 @@ date: '2007-12-20'
 subtitle: Check out this post from [I, ...
 tags:
 - science
+original_tags:
+- science
 - technology
 title: Revolution, Not Evolution
 type: wp

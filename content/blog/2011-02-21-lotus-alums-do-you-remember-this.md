@@ -2,6 +2,8 @@
 date: '2011-02-21'
 subtitle: '!Visonary'
 tags:
+- business
+original_tags:
 - lotus
 - personal
 - technology

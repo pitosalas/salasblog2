@@ -3,6 +3,11 @@ date: '2022-02-01'
 subtitle: Heroku Postgres | Heroku Dev Center
 tags:
 - software-engineering
+- education
+- howto
+- programming
+original_tags:
+- software-engineering
 - brandeis
 - heroku
 - howto

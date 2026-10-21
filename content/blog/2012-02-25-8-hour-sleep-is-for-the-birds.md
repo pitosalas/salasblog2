@@ -3,6 +3,8 @@ date: '2012-02-25'
 subtitle: Do you believe that you require 8 hours of sleep to be rested and effective.
   Well, in this really in...
 tags:
+- life
+original_tags:
 - health
 title: 8 Hour Sleep is for the birds?
 type: wp

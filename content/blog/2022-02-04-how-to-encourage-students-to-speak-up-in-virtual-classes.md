@@ -4,6 +4,9 @@ subtitle: How to Encourage Students to Speak Up in Virtual Classes
 tags:
 - education
 - howto
+original_tags:
+- education
+- howto
 - otp
 - zoom
 title: How to Encourage Students to Speak Up in Virtual Classes

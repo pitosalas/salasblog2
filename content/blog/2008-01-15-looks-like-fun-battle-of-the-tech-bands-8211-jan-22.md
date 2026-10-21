@@ -2,6 +2,9 @@
 date: '2008-01-15'
 subtitle: '![](https://i0.wp.com/s3.media.squarespace.com/production/1075723/12829350/wp-content/uploads/imagew...'
 tags:
+- places
+- culture
+original_tags:
 - boston
 - music
 - personal

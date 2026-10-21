@@ -3,6 +3,10 @@ date: '2008-12-19'
 subtitle: Hey! If you live in Boston or Cambridge, and you like music, especially
   Folk music, then you’ve prob...
 tags:
+- culture
+- places
+- blogging
+original_tags:
 - music
 - boston
 - blogging

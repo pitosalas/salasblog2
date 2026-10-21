@@ -2,6 +2,9 @@
 date: '2010-11-24'
 subtitle: '![screen-shot-2010-11-23-at-84149-pm'
 tags:
+- blogging
+- internet
+original_tags:
 - social-media
 - personal
 - security

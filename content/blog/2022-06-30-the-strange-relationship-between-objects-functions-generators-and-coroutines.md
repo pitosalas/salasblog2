@@ -2,6 +2,8 @@
 date: '2022-06-30'
 subtitle: The strange relationship between objects, functions, generators and coroutines
 tags:
+- programming
+original_tags:
 - python
 - programming
 title: The strange relationship between objects, functions, generators and coroutines

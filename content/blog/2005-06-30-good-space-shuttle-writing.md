@@ -4,6 +4,8 @@ subtitle: If you, like me, are a space buff, you will find these pieces about sp
   safety very intere...
 tags:
 - science
+original_tags:
+- science
 - technology
 title: Good space shuttle writing
 type: wp

@@ -3,6 +3,8 @@ date: '2005-05-28'
 subtitle: I love my **Mac**, as y’all know. I was amused to read about **Intel CEO**
   **Paul Otellini** who pub...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: Come on over, the water’s fine! Look who is recommending Macs!

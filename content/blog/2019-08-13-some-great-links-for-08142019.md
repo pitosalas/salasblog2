@@ -2,6 +2,8 @@
 date: '2019-08-13'
 subtitle: A Complete Guide to the Ruby Programming World – Learn Worthy
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  08/14/2019
 type: wp

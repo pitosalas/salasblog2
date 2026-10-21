@@ -3,6 +3,8 @@ date: '2008-08-21'
 subtitle: I wonder about this.
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Democrat vs. Democratic
 type: wp

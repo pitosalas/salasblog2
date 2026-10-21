@@ -4,6 +4,10 @@ subtitle: As you may know, I’ve been working on launching **Bootup Academy**, 
 tags:
 - education
 - business
+- culture
+original_tags:
+- education
+- business
 - nyt
 title: '[EDUCATION] Booting up experienced technical talent who have dated skills'
 type: wp

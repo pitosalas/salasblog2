@@ -3,6 +3,8 @@ date: '2005-11-29'
 subtitle: There’s been a lot
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: '[GEEK] Unified name space for aggregator extensions for OPML?'
 type: wp

@@ -2,6 +2,9 @@
 date: '2007-12-01'
 subtitle: '!Wikipedia Vision'
 tags:
+- blogging
+- computing
+original_tags:
 - wikipedia
 - maps
 - personal

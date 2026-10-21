@@ -2,6 +2,8 @@
 date: '2021-01-08'
 subtitle: 'Python Code Tips: 4 Ways to Debug Your Python Code Without IDE'
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  01/09/2021
 type: wp

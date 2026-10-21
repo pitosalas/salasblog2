@@ -2,6 +2,8 @@
 date: '2022-07-03'
 subtitle: Ruby Style Guide –Shopify’s Ruby Style Guide. Always usef...
 tags:
+- programming
+original_tags:
 - ruby
 title: Ruby Style Guide
 type: wp

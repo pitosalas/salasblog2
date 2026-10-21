@@ -2,6 +2,8 @@
 date: '2005-11-18'
 subtitle: Did you know that Curacao is the 7th favorite
 tags:
+- places
+original_tags:
 - curacao
 - travel
 - personal

@@ -2,6 +2,8 @@
 date: '2009-10-05'
 subtitle: Interesting commentary
 tags:
+- politics
+original_tags:
 - legal
 - personal
 title: You Commit Three Felonies a Day

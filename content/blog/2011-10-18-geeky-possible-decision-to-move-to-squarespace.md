@@ -3,6 +3,8 @@ date: '2011-10-18'
 subtitle: I finally got my new blog on WordPress.com working. That should have bee...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: '[GEEKY] Possible Decision to move to SquareSpace'
 type: wp

@@ -3,6 +3,8 @@ date: '2007-04-30'
 subtitle: Lately, for some crazy reason, I’ve found myself, multiple times, in Toronto,
   Canada, and Willemstad...
 tags:
+- places
+original_tags:
 - travel
 - personal
 - technology

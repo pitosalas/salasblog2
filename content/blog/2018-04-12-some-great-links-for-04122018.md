@@ -3,6 +3,8 @@ date: '2018-04-12'
 subtitle: 'Micromessaging: Connecting Heroku Microservices w/Redis and RabbitMQ'
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - technology
 title: Some great links for  04/12/2018
 type: wp

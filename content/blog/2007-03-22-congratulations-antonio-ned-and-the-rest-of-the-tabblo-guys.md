@@ -3,6 +3,8 @@ date: '2007-03-22'
 subtitle: 'I just stumbled (get it?) across this:'
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Congratulations Antonio, Ned, and the rest of the Tabblo guys!

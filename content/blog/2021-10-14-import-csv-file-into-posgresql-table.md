@@ -3,6 +3,8 @@ date: '2021-10-14'
 subtitle: Import CSV File Into PosgreSQL Table
 tags:
 - programming
+original_tags:
+- programming
 - csv
 - database
 title: Import CSV File Into PosgreSQL Table

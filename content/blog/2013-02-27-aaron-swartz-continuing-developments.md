@@ -3,6 +3,8 @@ date: '2013-02-27'
 subtitle: 'In the continuing stories around Aaron Swartz and events that led to his
   tragic suicide recently:'
 tags:
+- politics
+original_tags:
 - legal
 title: 'Aaron Swartz: continuing developments'
 type: wp

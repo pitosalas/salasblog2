@@ -2,6 +2,9 @@
 date: '2022-03-08'
 subtitle: How to Test Ruby Code That Depends on External APIs
 tags:
+- programming
+- software-engineering
+original_tags:
 - ruby
 - soa
 - software-engineering

@@ -4,6 +4,9 @@ subtitle: How much do you want to bet that somewhere someone in this country a m
   or other attack is bein...
 tags:
 - politics
+- life
+original_tags:
+- politics
 - health
 title: I wouldn’t put it past them
 type: wp

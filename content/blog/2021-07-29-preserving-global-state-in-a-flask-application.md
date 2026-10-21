@@ -2,6 +2,8 @@
 date: '2021-07-29'
 subtitle: Preserving global state in a flask application
 tags:
+- programming
+original_tags:
 - python
 - web
 title: Preserving global state in a flask application

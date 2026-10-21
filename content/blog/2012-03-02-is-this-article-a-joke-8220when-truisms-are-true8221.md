@@ -3,6 +3,11 @@ date: '2012-03-02'
 subtitle: '!26GRAYMATTER-articleInline.jpg'
 tags:
 - science
+- life
+- culture
+- education
+original_tags:
+- science
 - humor
 - nyt
 - research

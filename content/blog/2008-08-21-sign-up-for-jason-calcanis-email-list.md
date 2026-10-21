@@ -3,6 +3,8 @@ date: '2008-08-21'
 subtitle: Jason Calcanis has stopped blogging and instead is d...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Sign up for Jason Calcanis email list!
 type: wp

@@ -3,6 +3,8 @@ date: '2008-05-02'
 subtitle: Seven Do’s And Three Don’ts For Creating New Web Products
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Seven Do’s And Three Don’ts For Creating New Web Products
 type: wp

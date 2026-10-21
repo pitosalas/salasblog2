@@ -3,6 +3,8 @@ date: '2007-04-14'
 subtitle: Check out this post from BuzzMachine
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Jeff Jarvis on the whole Imus situation
 type: wp

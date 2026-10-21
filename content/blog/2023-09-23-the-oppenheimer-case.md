@@ -2,6 +2,10 @@
 date: '2023-09-23'
 subtitle: The Oppenheimer Case
 tags:
+- culture
+- science
+- politics
+original_tags:
 - history
 - science
 - politics

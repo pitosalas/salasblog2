@@ -4,6 +4,8 @@ subtitle: 'You know I am a fan of the cool **little Mars Rovers**. Here’s an i
   little bit from Nasa:'
 tags:
 - science
+original_tags:
+- science
 - technology
 title: Mars Rover tracks seen from space
 type: wp

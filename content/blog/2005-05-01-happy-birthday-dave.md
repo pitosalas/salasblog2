@@ -2,6 +2,8 @@
 date: '2005-05-01'
 subtitle: '!Picture 1-3'
 tags:
+- blogging
+original_tags:
 - personal
 - blogging
 title: Happy Birthday Dave!

@@ -2,6 +2,8 @@
 date: '2023-04-15'
 subtitle: Why I Stopped Using Sorbet in All My Ruby Projects –And why...
 tags:
+- programming
+original_tags:
 - ruby
 title: Why I Stopped Using Sorbet in All My Ruby Projects
 type: wp

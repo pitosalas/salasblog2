@@ -3,6 +3,8 @@ date: '2005-09-28'
 subtitle: Here’s a survey
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Help us find out what’s going on in enterprise blogging

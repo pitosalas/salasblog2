@@ -2,6 +2,8 @@
 date: '2007-06-11'
 subtitle: '![Events in Madrid'
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: I love Madrid!

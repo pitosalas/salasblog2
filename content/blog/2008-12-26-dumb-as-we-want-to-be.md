@@ -5,6 +5,9 @@ subtitle: Thomas Friedman with another thought provoking column. I know not ever
 tags:
 - politics
 - business
+original_tags:
+- politics
+- business
 - personal
 title: Dumb as we want to be?
 type: wp

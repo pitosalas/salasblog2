@@ -4,6 +4,8 @@ subtitle: '[**Note**: don’t assume you know what a Charitable Mutual Fund is. 
   an evocative but really misl...'
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Charitable Mutual Funds (updated)
 type: wp

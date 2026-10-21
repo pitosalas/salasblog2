@@ -2,6 +2,8 @@
 date: '2022-10-05'
 subtitle: Security Best Practices for Your Rails Application | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: Security Best Practices for Your Rails Application | AppSignal Blog
 type: wp

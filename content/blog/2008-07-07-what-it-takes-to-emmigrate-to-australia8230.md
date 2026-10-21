@@ -3,6 +3,8 @@ date: '2008-07-07'
 subtitle: Aleksey (my colleague on BlogBridge) is planning to move from the Ukraine
   to Australia. Here’s a fai...
 tags:
+- places
+original_tags:
 - travel
 title: What it takes to emmigrate to Australia…
 type: wp

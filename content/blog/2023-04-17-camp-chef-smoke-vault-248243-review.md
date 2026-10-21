@@ -2,6 +2,8 @@
 date: '2023-04-17'
 subtitle: Camp Chef Smoke Vault 24″ Review
 tags:
+- life
+original_tags:
 - food
 title: Camp Chef Smoke Vault 24″ Review
 type: wp

@@ -2,6 +2,8 @@
 date: '2022-12-08'
 subtitle: Database Performance Optimization and Scaling in Rails | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: Database Performance Optimization and Scaling in Rails | AppSignal Blog
 type: wp

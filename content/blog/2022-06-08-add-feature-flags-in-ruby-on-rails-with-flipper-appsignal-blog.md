@@ -2,6 +2,8 @@
 date: '2022-06-08'
 subtitle: Add Feature Flags in Ruby on Rails with Flipper | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: Add Feature Flags in Ruby on Rails with Flipper | AppSignal Blog
 type: wp

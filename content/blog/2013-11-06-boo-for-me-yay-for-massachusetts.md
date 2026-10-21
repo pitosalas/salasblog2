@@ -3,6 +3,9 @@ date: '2013-11-06'
 subtitle: Today my first Amazon order with sales tax. Too bad for me, but good for
   our state!![](https://i0.wp...
 tags:
+- business
+- places
+original_tags:
 - amazon
 - boston
 title: Boo for me! Yay! for Massachusetts

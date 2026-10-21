@@ -3,6 +3,9 @@ date: '2011-12-08'
 subtitle: Interesting article by famous Guy Kawasaki about what he learned from Steve
   Jobs
 tags:
+- computing
+- business
+original_tags:
 - apple
 - business
 title: 'Guy Kawasaki: What I learned from Steve Jobs'

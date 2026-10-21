@@ -4,6 +4,8 @@ subtitle: I know basic Javascript. I think I will be learning more soon. I think
   is the language of...
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: I wish I knew more JavaScript
 type: wp

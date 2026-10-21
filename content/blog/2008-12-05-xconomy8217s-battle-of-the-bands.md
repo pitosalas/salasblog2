@@ -3,6 +3,9 @@ date: '2008-12-05'
 subtitle: 'As a favor I am posting this notice about an event that looks like it might
   be fun:'
 tags:
+- places
+- culture
+original_tags:
 - boston
 - music
 - personal

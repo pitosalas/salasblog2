@@ -3,6 +3,8 @@ date: '2005-06-01'
 subtitle: 'This can’t be good: Google closed at $288 today.'
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Time to short Google?
 type: wp

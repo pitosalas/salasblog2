@@ -2,6 +2,8 @@
 date: '2022-11-29'
 subtitle: A Complete Guide to Lock Convoys | Dave Kilian’s Blog
 tags:
+- science
+original_tags:
 - computer-science
 title: A Complete Guide to Lock Convoys | Dave Kilian’s Blog
 type: wp

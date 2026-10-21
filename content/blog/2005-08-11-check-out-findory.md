@@ -2,6 +2,8 @@
 date: '2005-08-11'
 subtitle: I was talking about search engines the other day. I guess Findory i...
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: Check out Findory

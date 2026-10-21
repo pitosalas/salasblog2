@@ -4,6 +4,8 @@ subtitle: '> “IBM has announced that it will be joining the Harmony open sourc
   project. Although right no...'
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[GEEK] This may be good news for Java, long term'
 type: wp

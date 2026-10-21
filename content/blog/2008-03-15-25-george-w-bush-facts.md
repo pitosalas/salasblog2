@@ -4,6 +4,8 @@ subtitle: List of Lists is an entertaining blog. He doesn’t post that often bu
   he does it’s usually inte...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: 25 George W. Bush Facts
 type: wp

@@ -3,6 +3,8 @@ date: '2005-06-04'
 subtitle: 'Just add this one to your reading list:'
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - technology
 title: Good article about software design
 type: wp

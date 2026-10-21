@@ -2,6 +2,8 @@
 date: '2011-07-26'
 subtitle: '!NewImage'
 tags:
+- design
+original_tags:
 - personal
 - photography
 title: Cool Photography

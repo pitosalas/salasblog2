@@ -2,6 +2,8 @@
 date: '2005-06-17'
 subtitle: Francois, reacting to something written by Jason Calcanis
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: Making money with aggregators

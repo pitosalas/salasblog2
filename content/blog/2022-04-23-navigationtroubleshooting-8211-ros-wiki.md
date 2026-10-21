@@ -3,6 +3,9 @@ date: '2022-04-23'
 subtitle: navigation/Troubleshooting – ROS Wiki
 tags:
 - robotics
+- howto
+original_tags:
+- robotics
 - navigation
 - howto
 title: navigation/Troubleshooting – ROS Wiki

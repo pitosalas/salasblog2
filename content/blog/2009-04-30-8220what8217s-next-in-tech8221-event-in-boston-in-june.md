@@ -3,6 +3,9 @@ date: '2009-04-30'
 subtitle: If you live in the Boston area and somehow connected to technology professions
   you should be interes...
 tags:
+- places
+- business
+original_tags:
 - boston
 - technology
 - startups

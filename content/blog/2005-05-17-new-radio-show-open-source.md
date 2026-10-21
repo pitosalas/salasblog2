@@ -2,6 +2,8 @@
 date: '2005-05-17'
 subtitle: Welcome back Chris Lydon! Those of you who have li...
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: 'New Radio Show: Open Source'

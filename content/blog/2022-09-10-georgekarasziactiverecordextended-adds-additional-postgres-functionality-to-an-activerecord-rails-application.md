@@ -3,6 +3,8 @@ date: '2022-09-10'
 subtitle: '[ GeorgeKaraszi/ActiveRecordExtended: Adds additional postgres functionality
   to an ActiveRecord / Ra...'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'GeorgeKaraszi/ActiveRecordExtended: Adds additional postgres functionality
   to an ActiveRecord / Rails application'

@@ -2,6 +2,9 @@
 date: '2010-09-07'
 subtitle: Say what? I came across this paper; Mathematical Foundations of Consciousness
 tags:
+- science
+- education
+original_tags:
 - mathematics
 - science
 - personal

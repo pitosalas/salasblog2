@@ -3,6 +3,8 @@ date: '2013-01-13'
 subtitle: If you are in the tech community you’ve likely heard that Aaron Swartz committed
   suicide yesterday i...
 tags:
+- politics
+original_tags:
 - legal
 title: Aaron Swartz Links
 type: wp

@@ -3,6 +3,8 @@ date: '2006-04-22'
 subtitle: A friend of mine who used to work at **Microsoft** sent me a link to a very
   interesting posting
 tags:
+- politics
+original_tags:
 - personal
 - politics
 - technology

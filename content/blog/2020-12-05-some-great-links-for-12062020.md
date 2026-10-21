@@ -2,6 +2,8 @@
 date: '2020-12-05'
 subtitle: 4 Advanced Tricks With Python Functions You Might Not Know
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  12/06/2020
 type: wp

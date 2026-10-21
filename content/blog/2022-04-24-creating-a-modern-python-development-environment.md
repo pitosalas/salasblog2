@@ -2,6 +2,9 @@
 date: '2022-04-24'
 subtitle: Creating A Modern Python Development Environment
 tags:
+- programming
+- howto
+original_tags:
 - python
 - howto
 title: Creating A Modern Python Development Environment

@@ -4,6 +4,8 @@ subtitle: From XConomy Seattle, this article covers ‘[an inspiring talk by Nic
   of Seattle-based Secon...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Ideas are still cheap, right?

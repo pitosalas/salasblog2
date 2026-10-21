@@ -3,6 +3,9 @@ date: '2012-01-23'
 subtitle: You can’t be a self-respecting computer or science geek and not have heard
   about the Fibonacci serie...
 tags:
+- science
+- design
+original_tags:
 - mathematics
 - design
 - photography

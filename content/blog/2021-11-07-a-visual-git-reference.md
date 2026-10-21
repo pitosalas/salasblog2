@@ -2,6 +2,9 @@
 date: '2021-11-07'
 subtitle: A Visual Git Reference
 tags:
+- howto
+- programming
+original_tags:
 - explainer
 - cli
 - howto

@@ -3,6 +3,8 @@ date: '2009-09-18'
 subtitle: I wrote about the Mint/Intuit deal the oth...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Interesting further commentary on Intuit purchase of Mint
 type: wp

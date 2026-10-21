@@ -3,6 +3,8 @@ date: '2006-04-26'
 subtitle: '**First** I was an instant coffee guy. Then I got into brewing **whole**
   pots, which led to my **was...'
 tags:
+- life
+original_tags:
 - food
 - personal
 title: 'Coffee Series, Part 3: Trade offs'

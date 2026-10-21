@@ -2,6 +2,9 @@
 date: '2023-04-17'
 subtitle: Farnsworth House – Wikipedia –
 tags:
+- blogging
+- design
+original_tags:
 - wikipedia
 - design
 title: Farnsworth House – Wikipedia

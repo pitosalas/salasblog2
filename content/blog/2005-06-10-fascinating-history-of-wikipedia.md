@@ -2,6 +2,8 @@
 date: '2005-06-10'
 subtitle: If you are interested and fascinated with the Wikipedia, h...
 tags:
+- blogging
+original_tags:
 - wikipedia
 - personal
 - technology

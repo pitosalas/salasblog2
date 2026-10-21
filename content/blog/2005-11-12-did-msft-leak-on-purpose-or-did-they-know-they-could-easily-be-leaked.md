@@ -5,6 +5,9 @@ subtitle: I’ve read several accounts relating to Microsoft’s recently ‘lea
 tags:
 - business
 - politics
+original_tags:
+- business
+- politics
 - technology
 title: Did MSFT leak on purpose, or did they know they could easily be leaked?
 type: wp

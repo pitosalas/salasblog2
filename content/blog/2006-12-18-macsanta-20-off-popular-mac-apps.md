@@ -2,6 +2,8 @@
 date: '2006-12-18'
 subtitle: Check out [this
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: 'MacSanta: 20% off popular Mac Apps'

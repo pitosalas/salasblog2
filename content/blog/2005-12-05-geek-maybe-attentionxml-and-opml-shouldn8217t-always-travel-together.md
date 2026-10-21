@@ -3,6 +3,8 @@ date: '2005-12-05'
 subtitle: Cori Schiegel convinced me
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: '[GEEK] Maybe Attention.xml and OPML shouldn’t always travel together'
 type: wp

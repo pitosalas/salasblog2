@@ -4,6 +4,8 @@ date: '2026-04-18'
 source_raindrop: 24-03-16-114-zauberzeugnicegui-Create-web-b.md
 source_url: https://github.com/zauberzeug/nicegui
 tags:
+- programming
+original_tags:
 - python
 title: 'zauberzeug/nicegui: Create web-based user interfaces with Python. The nice
   way.'

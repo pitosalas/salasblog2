@@ -2,6 +2,8 @@
 date: '2021-06-06'
 subtitle: 5 Python Libraries That You Don’t Know, But Should
 tags:
+- programming
+original_tags:
 - python
 title: 5 Python Libraries That You Don’t Know, But Should
 type: wp

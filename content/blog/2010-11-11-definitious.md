@@ -2,6 +2,8 @@
 date: '2010-11-11'
 subtitle: Check out this cool site developed by some Brandeis students who participa...
 tags:
+- education
+original_tags:
 - brandeis
 - education
 - personal

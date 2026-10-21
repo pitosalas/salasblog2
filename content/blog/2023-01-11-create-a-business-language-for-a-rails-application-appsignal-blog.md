@@ -2,6 +2,8 @@
 date: '2023-01-11'
 subtitle: Create a Business Language for a Rails Application | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: Create a Business Language for a Rails Application | AppSignal Blog
 type: wp

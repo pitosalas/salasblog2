@@ -2,6 +2,8 @@
 date: '2010-02-21'
 subtitle: I came across VentureFizz. It’s a broad resource for Boston area techies:...
 tags:
+- places
+original_tags:
 - boston
 - technology
 title: Handy site for Boston area techies

@@ -2,6 +2,8 @@
 date: '2022-10-09'
 subtitle: Try These 8 Modern Alternatives to Common Unix Commands –I ...
 tags:
+- computing
+original_tags:
 - linux
 title: Try These 8 Modern Alternatives to Common Unix Commands
 type: wp

@@ -4,6 +4,8 @@ subtitle: Robert Cringely has a relatively little known **quasi blog**, for some
   on www.pbs.org. The st...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Who will buy Skype, and why…
 type: wp

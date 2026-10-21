@@ -2,6 +2,10 @@
 date: '2021-06-29'
 subtitle: Python Modules and Packages – An Introduction – Real Python
 tags:
+- programming
+- howto
+- software-engineering
+original_tags:
 - python
 - howto
 - software-engineering

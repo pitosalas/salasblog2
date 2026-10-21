@@ -2,6 +2,8 @@
 date: '2023-06-01'
 subtitle: Introduction to Rails Engines – FastRuby.io | Rails Upgrade Service
 tags:
+- programming
+original_tags:
 - ruby
 title: Introduction to Rails Engines – FastRuby.io | Rails Upgrade Service
 type: wp

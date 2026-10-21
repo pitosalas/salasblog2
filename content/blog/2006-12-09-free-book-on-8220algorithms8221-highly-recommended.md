@@ -2,6 +2,9 @@
 date: '2006-12-09'
 subtitle: Check out [this
 tags:
+- science
+- culture
+original_tags:
 - computer-science
 - books
 - technology

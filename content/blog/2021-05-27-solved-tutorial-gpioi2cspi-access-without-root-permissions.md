@@ -2,6 +2,9 @@
 date: '2021-05-27'
 subtitle: '[ [Solved] Tutorial: GPIO/I2C/SPI-access without root-permissions](https://forum.up-community.org/di...'
 tags:
+- computing
+- howto
+original_tags:
 - linux
 - howto
 - technology

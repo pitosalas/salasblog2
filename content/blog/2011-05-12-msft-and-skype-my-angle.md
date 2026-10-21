@@ -3,6 +3,8 @@ date: '2011-05-12'
 subtitle: Check this post Why Microsoft bought Skype
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: MSFT and Skype, my angle

@@ -3,6 +3,8 @@ date: '2008-06-01'
 subtitle: I’m in Portland Oregon for a few days for a conference, and this may be
   an unfair sample, but I was ...
 tags:
+- places
+original_tags:
 - travel
 - personal
 title: Portland OR smokes

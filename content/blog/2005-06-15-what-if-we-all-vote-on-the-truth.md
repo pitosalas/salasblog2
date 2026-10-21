@@ -2,6 +2,8 @@
 date: '2005-06-15'
 subtitle: 'A couple of interesting related articles on facts and non-facts:'
 tags:
+- blogging
+original_tags:
 - wikipedia
 - personal
 title: What if we all vote on the truth?

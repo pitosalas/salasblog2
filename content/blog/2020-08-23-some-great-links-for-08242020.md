@@ -2,6 +2,8 @@
 date: '2020-08-23'
 subtitle: 'Rodauth: A Refreshing Authentication Solution for Ruby | Janko’s Blog'
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  08/24/2020
 type: wp

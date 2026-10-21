@@ -3,6 +3,8 @@ date: '2010-11-15'
 subtitle: RubyConf 2010 was excellent. It was my first and probably not my last. Some
   general thoughts and the...
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 - technology

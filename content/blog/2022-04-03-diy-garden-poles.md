@@ -2,6 +2,9 @@
 date: '2022-04-03'
 subtitle: DIY Garden Poles
 tags:
+- life
+- howto
+original_tags:
 - woodworking
 - howto
 title: DIY Garden Poles

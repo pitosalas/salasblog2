@@ -3,6 +3,8 @@ date: '2023-05-30'
 subtitle: '[ pawurb/rails-brotli-cache: Rails cache using the Brotli algorithm offers
   better compression and pe...'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'pawurb/rails-brotli-cache: Rails cache using the Brotli algorithm offers better
   compression and performance.'

@@ -3,6 +3,10 @@ date: '2010-04-23'
 subtitle: If you’ve been in computing for any time you may have been hit over the
   head by the slogan “Security...
 tags:
+- politics
+- programming
+- internet
+original_tags:
 - technology
 - politics
 - programming

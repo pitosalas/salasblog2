@@ -2,6 +2,8 @@
 date: '2005-08-08'
 subtitle: 'Hey, I just came across this:'
 tags:
+- business
+original_tags:
 - lotus
 - personal
 - technology

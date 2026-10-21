@@ -4,6 +4,8 @@ subtitle: If you work with software developers you’ll **appreciate** these two
   by **Paul Graham**, auth...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Good stuff from Paul Graham
 type: wp

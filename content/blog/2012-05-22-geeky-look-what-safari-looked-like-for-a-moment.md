@@ -3,6 +3,8 @@ date: '2012-05-22'
 subtitle: I can’t explain it but I was just scrolling around some pdf in Safari and
   it actually turned my worl...
 tags:
+- computing
+original_tags:
 - technology
 - apple
 title: '[GEEKY] Look what Safari looked like for a moment'

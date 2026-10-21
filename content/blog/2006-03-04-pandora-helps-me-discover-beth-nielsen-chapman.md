@@ -2,6 +2,8 @@
 date: '2006-03-04'
 subtitle: I’ve experimented with all kinds of novel music related services and products.
 tags:
+- culture
+original_tags:
 - music
 - personal
 - technology

@@ -3,6 +3,8 @@ date: '2008-11-27'
 subtitle: Robert X. Cringely’s prescription for Detroit automakers
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: It’s the cars, stupid

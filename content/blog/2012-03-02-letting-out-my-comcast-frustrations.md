@@ -2,6 +2,8 @@
 date: '2012-03-02'
 subtitle: “Dear Kelley
 tags:
+- culture
+original_tags:
 - tv
 title: Letting out my Comcast frustrations
 type: wp

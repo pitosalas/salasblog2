@@ -4,6 +4,10 @@ subtitle: Solving Problems for Real World, Using Design – NYTimes.com
 tags:
 - design
 - business
+- culture
+original_tags:
+- design
+- business
 - startups
 - nyt
 title: Design Thinking vs. Lean Startup

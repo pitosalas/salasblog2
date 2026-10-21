@@ -2,6 +2,10 @@
 date: '2021-05-31'
 subtitle: rubysolo/dentaku
 tags:
+- programming
+- science
+- howto
+original_tags:
 - ruby
 - mathematics
 - howto

@@ -3,6 +3,8 @@ date: '2012-01-14'
 subtitle: I was recently visiting Curaçao and remembered that I had read that **Netflix
   was now available in S...
 tags:
+- places
+original_tags:
 - curacao
 title: 'Netflix in Curaçao: “The Hour”, the BBC, and content licensing'
 type: wp

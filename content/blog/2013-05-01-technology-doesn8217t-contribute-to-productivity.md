@@ -3,6 +3,10 @@ date: '2013-05-01'
 subtitle: 'Here’s what I think: If economic analysis says that technology does not
   contribute to the overall pr...'
 tags:
+- business
+- culture
+- science
+original_tags:
 - technology
 - business
 - nyt

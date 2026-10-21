@@ -3,6 +3,9 @@ date: '2010-01-19'
 subtitle: I get asked from time to time to recommend ruby, rails, and other developers
   in the Boston area, eit...
 tags:
+- programming
+- places
+original_tags:
 - ruby
 - boston
 - programming

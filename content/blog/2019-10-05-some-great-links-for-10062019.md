@@ -2,6 +2,8 @@
 date: '2019-10-05'
 subtitle: Automate the Little Things Too | Technical Explorations
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/06/2019
 type: wp

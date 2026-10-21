@@ -2,6 +2,8 @@
 date: '2007-01-07'
 subtitle: Some good mac applications referenced in [this
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: The best twenty Mac apps you’ve never heard of

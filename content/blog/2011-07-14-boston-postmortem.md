@@ -2,6 +2,10 @@
 date: '2011-07-14'
 subtitle: We just got back from the monthly meeting of “Boston Postmortem“...
 tags:
+- places
+- culture
+- programming
+original_tags:
 - boston
 - games
 - personal

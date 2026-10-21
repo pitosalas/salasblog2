@@ -2,6 +2,8 @@
 date: '2019-04-01'
 subtitle: Untangling Ruby Threads
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  04/02/2019
 type: wp

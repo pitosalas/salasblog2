@@ -2,6 +2,8 @@
 date: '2007-05-01'
 subtitle: Check out this post from [The Unofficial A...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: 'Something I’ve been looking for: Finder Window Manager'

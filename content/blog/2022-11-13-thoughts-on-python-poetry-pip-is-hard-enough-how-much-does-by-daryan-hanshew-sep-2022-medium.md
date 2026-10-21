@@ -3,6 +3,8 @@ date: '2022-11-13'
 subtitle: '[ Thoughts on Python Poetry. Pip is hard enough, how much does… | by Daryan
   Hanshew | Sep, 2022 | Me...'
 tags:
+- programming
+original_tags:
 - python
 - ruby
 title: Thoughts on Python Poetry. Pip is hard enough, how much does… | by Daryan Hanshew

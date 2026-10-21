@@ -4,6 +4,8 @@ subtitle: This has been picked up all over the place, so you might have already 
   it. I thought it was good...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Good judgement?
 type: wp

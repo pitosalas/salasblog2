@@ -2,6 +2,8 @@
 date: '2021-12-05'
 subtitle: 12ft – Hop any paywall
 tags:
+- programming
+original_tags:
 - web
 title: 12ft – Hop any paywall
 type: wp

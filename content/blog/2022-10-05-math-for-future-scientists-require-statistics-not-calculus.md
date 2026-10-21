@@ -2,6 +2,9 @@
 date: '2022-10-05'
 subtitle: 'Math for Future Scientists: Require Statistics, Not Calculus'
 tags:
+- science
+- education
+original_tags:
 - mathematics
 - education
 title: 'Math for Future Scientists: Require Statistics, Not Calculus'

@@ -3,6 +3,8 @@ date: '2006-11-28'
 subtitle: I wrote about this a little while back, but now it’s even easier! Do you
   want to embed a map of some...
 tags:
+- computing
+original_tags:
 - maps
 - personal
 - technology

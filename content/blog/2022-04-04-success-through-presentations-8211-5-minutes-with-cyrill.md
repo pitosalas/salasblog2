@@ -4,6 +4,10 @@ subtitle: Success Through Presentations – 5 Minutes with Cyrill
 tags:
 - howto
 - education
+- culture
+original_tags:
+- howto
+- education
 - video
 title: Success Through Presentations – 5 Minutes with Cyrill
 type: wp

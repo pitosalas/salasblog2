@@ -3,6 +3,8 @@ date: '2012-04-07'
 subtitle: I **love** this article. It’s by an actual author talking about whether
   it ...
 tags:
+- culture
+original_tags:
 - books
 title: Do you finish books?
 type: wp

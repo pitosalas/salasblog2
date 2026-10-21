@@ -3,6 +3,9 @@ date: '2013-10-01'
 subtitle: Zegart joins scholars at NSA for rare briefing on spy agency’s woes – CISAC
 tags:
 - politics
+- internet
+original_tags:
+- politics
 - security
 title: Interesting behind-the-scenes look at NSA
 type: wp

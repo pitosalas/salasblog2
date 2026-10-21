@@ -3,6 +3,8 @@ date: '2008-08-14'
 subtitle: Check out the latest summary of amazing feats
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 - technology
 title: '[GEEKY] Can your current reader/aggregator do this?'

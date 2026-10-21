@@ -5,6 +5,9 @@ subtitle: I don’t know if you need [an account to see the amazingly useful, el
 tags:
 - design
 - politics
+original_tags:
+- design
+- politics
 - wsj
 title: Wall Street Journal has some sensational data visualization
 type: wp

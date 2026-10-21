@@ -2,6 +2,8 @@
 date: '2007-01-04'
 subtitle: Check out [this
 tags:
+- science
+original_tags:
 - mathematics
 - personal
 title: FooPlot – looks quite cool!

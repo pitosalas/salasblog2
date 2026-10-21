@@ -2,6 +2,8 @@
 date: '2019-10-01'
 subtitle: Understanding Zeitwerk in Rails 6
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/02/2019
 type: wp

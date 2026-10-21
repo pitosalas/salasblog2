@@ -3,6 +3,8 @@ date: '2012-01-29'
 subtitle: I just received this notification from AT&T. Pretty innocuous, but, what’s
   up with using Hebrew lett...
 tags:
+- internet
+original_tags:
 - email
 title: Why is AT&T talking to me in Hebrew bullets?
 type: wp

@@ -3,6 +3,8 @@ date: '2010-01-10'
 subtitle: I’ve been a subscriber at the Huntington Theater for years and years now
   and this new play is the be...
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: Great production of “All My Sons” in Boston

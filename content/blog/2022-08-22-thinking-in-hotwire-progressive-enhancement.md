@@ -2,6 +2,8 @@
 date: '2022-08-22'
 subtitle: 'Thinking in Hotwire: Progressive Enhancement'
 tags:
+- programming
+original_tags:
 - ruby
 title: 'Thinking in Hotwire: Progressive Enhancement'
 type: wp

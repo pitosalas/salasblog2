@@ -4,6 +4,9 @@ subtitle: Tell me how this is simple word completion. Can this be broadened to a
   complicated network. Cou...
 tags:
 - ai
+- science
+original_tags:
+- ai
 - computer-science
 title: 'Daily ChatGPT: Solve a simple network traversal'
 type: wp

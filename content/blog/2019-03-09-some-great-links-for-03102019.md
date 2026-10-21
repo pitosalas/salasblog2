@@ -2,6 +2,8 @@
 date: '2019-03-09'
 subtitle: David Dollar
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  03/10/2019
 type: wp

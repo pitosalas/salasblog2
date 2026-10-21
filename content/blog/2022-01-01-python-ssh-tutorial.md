@@ -2,6 +2,9 @@
 date: '2022-01-01'
 subtitle: Python SSH Tutorial
 tags:
+- programming
+- howto
+original_tags:
 - python
 - howto
 - cli

@@ -3,6 +3,8 @@ date: '2010-01-18'
 subtitle: Finally I found someone expressing what I have been thinking about [the
   fracas about NBC, Jay Leno, ...
 tags:
+- culture
+original_tags:
 - personal
 - tv
 title: The new, now cancelled, Jay Leno Show

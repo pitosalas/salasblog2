@@ -3,6 +3,8 @@ date: '2011-03-02'
 subtitle: After attending the Lean Startup Machine weekend a few d...
 tags:
 - business
+original_tags:
+- business
 - technology
 - personal
 title: Greplin, actually a rather cool product!

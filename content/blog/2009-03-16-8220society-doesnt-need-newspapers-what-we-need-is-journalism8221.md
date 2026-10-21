@@ -3,6 +3,9 @@ date: '2009-03-16'
 subtitle: Clay Shirkey writes an article called “Newspapers and Thinking the Unthinkable”.
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - politics
 - technology

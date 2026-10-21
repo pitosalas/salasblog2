@@ -4,6 +4,8 @@ subtitle: Who said “y**our TSA don’t dance and your USPTO don’t rock and r
   (One free copy of BlogBridge...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 - technology
 title: Two examples of great Web 2.0 by USA government

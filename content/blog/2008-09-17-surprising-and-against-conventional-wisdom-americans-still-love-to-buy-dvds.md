@@ -3,6 +3,8 @@ date: '2008-09-17'
 subtitle: Interesting article about the sale of DVDs
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: 'Surprising and against conventional wisdom: Americans still love to buy DVDs'

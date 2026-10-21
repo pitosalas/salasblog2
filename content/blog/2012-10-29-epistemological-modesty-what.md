@@ -3,6 +3,8 @@ date: '2012-10-29'
 subtitle: I was listening to an interview with David Brooks the other day. The interview
   was conducted by, of ...
 tags:
+- culture
+original_tags:
 - philosophy
 title: Epistemological Modesty… What?
 type: wp

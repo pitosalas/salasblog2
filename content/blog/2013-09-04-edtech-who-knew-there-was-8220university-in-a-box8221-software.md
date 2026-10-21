@@ -4,6 +4,8 @@ subtitle: I stumbled across this web site. I can’t say anything about their st
   or quality but I was supris...
 tags:
 - education
+original_tags:
+- education
 - technology
 title: '[edtech] Who knew there was “university in a box” software!'
 type: wp

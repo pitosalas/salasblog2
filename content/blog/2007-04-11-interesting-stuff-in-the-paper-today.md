@@ -4,6 +4,8 @@ subtitle: Here are some random goodies that caught my eye this morning. Don’ t
   on my being your clipping...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: interesting stuff in the paper today
 type: wp

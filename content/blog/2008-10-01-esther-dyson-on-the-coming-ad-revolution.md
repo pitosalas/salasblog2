@@ -3,6 +3,8 @@ date: '2008-10-01'
 subtitle: Esther Dyson wrote this very interesting [Wall Street Journal article a...
 tags:
 - business
+original_tags:
+- business
 - technology
 - personal
 title: Esther Dyson on the Coming Ad Revolution

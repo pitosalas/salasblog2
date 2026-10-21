@@ -4,6 +4,8 @@ subtitle: I continue to be fascinated by this. Is WikiLeaks a good guy or a bad 
   I don’t know how I feel y...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 - technology
 title: Wikileaks, continued

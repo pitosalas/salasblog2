@@ -2,6 +2,8 @@
 date: '2022-11-22'
 subtitle: Introduction · Linux Inside
 tags:
+- computing
+original_tags:
 - linux
 title: Introduction · Linux Inside
 type: wp

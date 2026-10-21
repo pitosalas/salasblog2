@@ -2,6 +2,8 @@
 date: '2020-07-11'
 subtitle: PEP 622 — Structural Pattern Matching | Python.org
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  07/12/2020
 type: wp

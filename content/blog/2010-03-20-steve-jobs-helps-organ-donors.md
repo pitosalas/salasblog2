@@ -3,6 +3,8 @@ date: '2010-03-20'
 subtitle: 'Steve Jobs says: “I almost died” in interesting article: [Apple CEO Steve
   Jobs joins Schwarzenegger ...'
 tags:
+- computing
+original_tags:
 - apple
 - personal
 title: Steve Jobs helps Organ Donors

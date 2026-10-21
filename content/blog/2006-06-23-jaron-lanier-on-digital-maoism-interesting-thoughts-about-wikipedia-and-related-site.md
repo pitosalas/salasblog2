@@ -3,6 +3,8 @@ date: '2006-06-23'
 subtitle: Jaron [is a brilliant thinker (and an amazing piano player as well) Anything
   he writes is interestin...
 tags:
+- blogging
+original_tags:
 - wikipedia
 - personal
 - technology

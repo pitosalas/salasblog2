@@ -4,6 +4,8 @@ subtitle: Check out these amusing images which I came across on the Advertising/
   Goodness Blog
 tags:
 - design
+original_tags:
+- design
 - personal
 title: They are all fake…
 type: wp

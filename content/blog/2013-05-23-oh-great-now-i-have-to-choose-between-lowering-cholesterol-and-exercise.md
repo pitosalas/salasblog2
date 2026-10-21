@@ -2,6 +2,8 @@
 date: '2013-05-23'
 subtitle: Can Cholesterol Drugs Undo Exercise Benefits? – NYTimes.com
 tags:
+- life
+original_tags:
 - health
 title: Oh, great, now I have to choose between lowering cholesterol and exercise
 type: wp

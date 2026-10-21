@@ -3,6 +3,8 @@ date: '2005-05-11'
 subtitle: A really interesting article
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Comment! Spam! Again!
 type: wp

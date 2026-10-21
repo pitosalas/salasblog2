@@ -3,6 +3,10 @@ date: '2009-03-12'
 subtitle: Take a book that I was interested in, “The Lords of Finance”, by Liaquat
   Ahamed
 tags:
+- culture
+- business
+- computing
+original_tags:
 - books
 - amazon
 - business

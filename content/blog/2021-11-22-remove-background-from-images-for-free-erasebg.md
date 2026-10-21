@@ -3,6 +3,8 @@ date: '2021-11-22'
 subtitle: Remove Background From Images For Free – Erase.bg
 tags:
 - design
+original_tags:
+- design
 - images
 title: Remove Background From Images For Free – Erase.bg
 type: wp

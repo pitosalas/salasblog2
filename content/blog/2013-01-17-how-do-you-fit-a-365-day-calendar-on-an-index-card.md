@@ -2,6 +2,9 @@
 date: '2013-01-17'
 subtitle: '!['
 tags:
+- culture
+- design
+original_tags:
 - personal
 - music
 - design

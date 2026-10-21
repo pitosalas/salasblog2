@@ -4,6 +4,8 @@ subtitle: Yesterday the [New York Times had an interesting article about our exp
   that software (and we...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: The downside of free software
 type: wp

@@ -2,6 +2,8 @@
 date: '2022-08-09'
 subtitle: 10 Awesome Modern Unix Command-Line Tools –Are you Using Li...
 tags:
+- computing
+original_tags:
 - linux
 title: 10 Awesome Modern Unix Command-Line Tools
 type: wp

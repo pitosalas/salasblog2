@@ -3,6 +3,9 @@ date: '2021-08-22'
 subtitle: JumpStory
 tags:
 - design
+- computing
+original_tags:
+- design
 - tools
 - images
 title: JumpStory

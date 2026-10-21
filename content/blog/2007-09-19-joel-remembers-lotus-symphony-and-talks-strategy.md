@@ -2,6 +2,8 @@
 date: '2007-09-19'
 subtitle: Check out this post from Joel on Software
 tags:
+- business
+original_tags:
 - lotus
 - business
 - technology

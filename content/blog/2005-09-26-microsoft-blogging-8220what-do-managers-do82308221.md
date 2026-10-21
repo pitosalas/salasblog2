@@ -3,6 +3,8 @@ date: '2005-09-26'
 subtitle: I often cite Microsoft as an exa...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: 'Microsoft blogging: “What do managers do…”'

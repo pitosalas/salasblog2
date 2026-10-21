@@ -5,6 +5,10 @@ tags:
 - software-engineering
 - programming
 - howto
+original_tags:
+- software-engineering
+- programming
+- howto
 - scalability
 title: Scalable architecture without magic (and how to build it if you’re not Google)
 type: wp

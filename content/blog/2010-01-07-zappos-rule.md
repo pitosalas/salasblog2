@@ -4,6 +4,8 @@ subtitle: I don’t own or buy many shoes. Recently I needed to replace a shoe a
   my previously favorit...
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Zappos Rule
 type: wp

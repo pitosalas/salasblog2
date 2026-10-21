@@ -4,6 +4,9 @@ subtitle: Sure, one isolated story doesn’t prove anything, but then our health
   debate often seems to be c...
 tags:
 - politics
+- life
+original_tags:
+- politics
 - health
 - personal
 title: Health Care Stories from the U.K.

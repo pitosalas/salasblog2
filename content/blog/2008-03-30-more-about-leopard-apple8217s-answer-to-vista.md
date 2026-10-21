@@ -3,6 +3,8 @@ date: '2008-03-30'
 subtitle: For you slow pokes who have not yet upgraded to Leopard, my continuing experience
   might be of intere...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: More about Leopard, Apple’s answer to Vista

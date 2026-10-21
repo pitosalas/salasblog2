@@ -3,6 +3,8 @@ date: '2005-05-03'
 subtitle: '!['
 tags:
 - design
+original_tags:
+- design
 - personal
 - technology
 title: 'Too much good stuff: makes me feel inadequate :-)'

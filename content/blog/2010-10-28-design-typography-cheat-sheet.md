@@ -4,6 +4,8 @@ subtitle: If you are into fonts and typography, you might enjoy this Infographic
   will help you choose
 tags:
 - design
+original_tags:
+- design
 - personal
 title: '[DESIGN] Typography Cheat Sheet'
 type: wp

@@ -3,6 +3,8 @@ date: '2008-04-06'
 subtitle: I just came back from the theatre, the [Huntington Theatre, Boston’s, production
   of a brand new play...
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: Go See “The Cry of the Reed” right now

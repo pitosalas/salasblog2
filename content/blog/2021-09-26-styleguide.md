@@ -2,6 +2,8 @@
 date: '2021-09-26'
 subtitle: styleguide
 tags:
+- programming
+original_tags:
 - python
 - technology
 title: styleguide

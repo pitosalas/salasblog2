@@ -2,6 +2,8 @@
 date: '2022-10-23'
 subtitle: Welcome to Hypothesis! — Hypothesis 6.56.3 documentation
 tags:
+- programming
+original_tags:
 - python
 title: Welcome to Hypothesis! — Hypothesis 6.56.3 documentation
 type: wp

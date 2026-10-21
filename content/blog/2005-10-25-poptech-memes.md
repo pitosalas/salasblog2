@@ -3,6 +3,8 @@ date: '2005-10-25'
 subtitle: Pop!Tech 2005 was a great conference, again. I made notes only when somet...
 tags:
 - science
+original_tags:
+- science
 - personal
 title: Pop!Tech Memes
 type: wp

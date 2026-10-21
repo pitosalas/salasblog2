@@ -4,6 +4,8 @@ subtitle: This isn’t a huge new insight but it’s interesting to see **histor
   of repeating itself**.
 tags:
 - business
+original_tags:
+- business
 - lotus
 - technology
 - personal

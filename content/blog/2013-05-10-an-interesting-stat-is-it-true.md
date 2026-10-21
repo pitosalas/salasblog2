@@ -2,6 +2,9 @@
 date: '2013-05-10'
 subtitle: 'Kirk McDonald: Sorry, College Grads, I Probably Won’t Hire You – WSJ.com'
 tags:
+- science
+- education
+original_tags:
 - computer-science
 - education
 title: 'An interesting stat: Is it true?'

@@ -2,6 +2,9 @@
 date: '2012-01-01'
 subtitle: It felt like a war zone without the danger!
 tags:
+- places
+- culture
+original_tags:
 - curacao
 - personal
 - video

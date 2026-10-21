@@ -4,6 +4,8 @@ subtitle: Daylife is a new news oriented web site that came onto the scene a lit
   ...
 tags:
 - design
+original_tags:
+- design
 - personal
 - technology
 title: 'Daylife’s Universe: Eye Candy or Brain Food?'

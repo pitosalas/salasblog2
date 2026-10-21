@@ -4,6 +4,8 @@ subtitle: Two very contrasting ways of looking at our **relationship with Pakist
   **I don’t know where I sta...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Robot wars
 type: wp

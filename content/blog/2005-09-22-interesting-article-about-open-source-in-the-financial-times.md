@@ -2,6 +2,8 @@
 date: '2005-09-22'
 subtitle: And in classic **Blogosphere** form, you can find a report on the report
 tags:
+- business
+original_tags:
 - technology
 - business
 - personal

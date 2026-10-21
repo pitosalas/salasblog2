@@ -2,6 +2,8 @@
 date: '2023-07-14'
 subtitle: What is the difference between Turbo and Stimulus, and what exactly is Hotwire?
 tags:
+- programming
+original_tags:
 - ruby
 title: What is the difference between Turbo and Stimulus, and what exactly is Hotwire?
 type: wp

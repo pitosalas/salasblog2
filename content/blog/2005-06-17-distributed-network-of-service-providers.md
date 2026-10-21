@@ -3,6 +3,8 @@ date: '2005-06-17'
 subtitle: Not computer service providers, but folks like carpenters and plumbers….
 tags:
 - business
+original_tags:
+- business
 - personal
 title: Distributed network of service providers
 type: wp

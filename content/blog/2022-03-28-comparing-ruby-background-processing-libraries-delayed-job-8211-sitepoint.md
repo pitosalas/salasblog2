@@ -2,6 +2,10 @@
 date: '2022-03-28'
 subtitle: 'Comparing Ruby Background Processing Libraries: Delayed Job – SitePoint'
 tags:
+- programming
+- software-engineering
+- howto
+original_tags:
 - ruby
 - concurrency
 - howto

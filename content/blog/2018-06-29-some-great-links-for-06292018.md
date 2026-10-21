@@ -2,6 +2,8 @@
 date: '2018-06-29'
 subtitle: Ruby’s Powerful Method Arguments & How To Use Them Correctly – RubyGuides
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  06/29/2018

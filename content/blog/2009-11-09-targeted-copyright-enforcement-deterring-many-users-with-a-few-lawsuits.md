@@ -3,6 +3,8 @@ date: '2009-11-09'
 subtitle: 'Check out Targeted Copyright Enforcement: Deterring Many Users with a Few
   Lawsuits'
 tags:
+- politics
+original_tags:
 - legal
 - politics
 - technology

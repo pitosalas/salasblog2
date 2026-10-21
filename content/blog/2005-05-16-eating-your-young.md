@@ -2,6 +2,8 @@
 date: '2005-05-16'
 subtitle: 'I came across this bit:'
 tags:
+- business
+original_tags:
 - lotus
 - technology
 title: Eating your young

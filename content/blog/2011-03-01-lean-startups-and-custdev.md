@@ -5,6 +5,9 @@ subtitle: I had the interesting experience this weekend to attend the “[Lean S
 tags:
 - business
 - blogging
+original_tags:
+- business
+- blogging
 - startups
 - technology
 title: Lean Startups and Custdev

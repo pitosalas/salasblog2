@@ -3,6 +3,8 @@ date: '2008-09-05'
 subtitle: I read the New York Times, and magazines like The Atlantic
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Where can I find non-shrill political coverage?
 type: wp

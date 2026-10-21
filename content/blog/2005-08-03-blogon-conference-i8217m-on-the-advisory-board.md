@@ -3,6 +3,8 @@ date: '2005-08-03'
 subtitle: '!Blogonbuttonsm'
 tags:
 - blogging
+original_tags:
+- blogging
 - personal
 - technology
 title: 'BlogOn Conference: I’m on the advisory board'

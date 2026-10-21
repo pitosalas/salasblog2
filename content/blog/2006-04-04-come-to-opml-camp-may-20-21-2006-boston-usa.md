@@ -3,6 +3,8 @@ date: '2006-04-04'
 subtitle: There is a *lot of stuff going on with OPML* these days. OPML stands for
   Out...
 tags:
+- places
+original_tags:
 - boston
 - technology
 title: 'Come to OPML Camp: May 20-21, 2006, Boston, USA!'

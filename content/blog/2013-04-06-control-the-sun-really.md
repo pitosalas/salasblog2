@@ -3,6 +3,8 @@ date: '2013-04-06'
 subtitle: Control The Sun!
 tags:
 - education
+original_tags:
+- education
 - olin-college
 title: Control the Sun, really
 type: wp

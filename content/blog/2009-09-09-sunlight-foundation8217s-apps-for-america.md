@@ -4,6 +4,9 @@ subtitle: Sunlight Foundation is a very cool organization that I’ve been close
   They are involved with many...
 tags:
 - politics
+- programming
+original_tags:
+- politics
 - technology
 - api
 - personal

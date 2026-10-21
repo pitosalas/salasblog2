@@ -2,6 +2,8 @@
 date: '2021-07-17'
 subtitle: Bolt Depot – Nuts and Bolts, Screws and Fasteners online
 tags:
+- business
+original_tags:
 - technology
 - shopping
 title: Bolt Depot – Nuts and Bolts, Screws and Fasteners online

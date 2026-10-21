@@ -2,6 +2,8 @@
 date: '2007-03-08'
 subtitle: 'A handy list: “Open Source Apps on Mac from Linux and Open Source”'
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: Colection of Mac open source apps

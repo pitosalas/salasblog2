@@ -2,6 +2,8 @@
 date: '2007-06-29'
 subtitle: 'Check out this post from [WSJ.com: He...'
 tags:
+- life
+original_tags:
 - health
 - personal
 title: 'From the WSJ: A Summer Myth Debunked'

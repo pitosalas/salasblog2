@@ -5,6 +5,9 @@ subtitle: Jim Manzi (of Lotus fame) has an interesting article in â€œThe Nationâ
 tags:
 - business
 - politics
+original_tags:
+- business
+- politics
 - personal
 - technology
 title: Invest in Innovation

@@ -3,6 +3,9 @@ date: '2011-12-04'
 subtitle: A lot has been written about Siri (the new voice activated assistant in
   the iPhone 4s)
 tags:
+- computing
+- ai
+original_tags:
 - apple
 - ai
 - technology

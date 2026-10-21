@@ -2,6 +2,11 @@
 date: '2021-11-27'
 subtitle: Minimax algorithm and alpha-beta pruning
 tags:
+- science
+- ai
+- howto
+- programming
+original_tags:
 - computer-science
 - ai
 - explainer

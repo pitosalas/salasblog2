@@ -2,6 +2,9 @@
 date: '2021-05-06'
 subtitle: Grilling Food & Grilling Tips | Kingsford | Kingsford®
 tags:
+- life
+- howto
+original_tags:
 - food
 - howto
 title: Grilling Food & Grilling Tips | Kingsford | Kingsford®

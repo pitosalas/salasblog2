@@ -2,6 +2,8 @@
 date: '2012-03-22'
 subtitle: 'A random, highly specific and geeky tip:'
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 - technology

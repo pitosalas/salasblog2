@@ -2,6 +2,8 @@
 date: '2018-10-21'
 subtitle: danburzo/percollate
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  10/22/2018
 type: wp

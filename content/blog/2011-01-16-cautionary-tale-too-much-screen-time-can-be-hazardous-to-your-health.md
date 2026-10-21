@@ -3,6 +3,9 @@ date: '2011-01-16'
 subtitle: 'From Science Daily: [Couch Potatoes Beware: Too Much Time Spent Watching
   TV Is Harmful to Heart Heal...'
 tags:
+- life
+- culture
+original_tags:
 - health
 - personal
 - technology

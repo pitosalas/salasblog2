@@ -2,6 +2,8 @@
 date: '2013-04-18'
 subtitle: A long long time ago there was a product called Lotus Improv
 tags:
+- business
+original_tags:
 - lotus
 title: 88% of spreadsheets have errors — Still!
 type: wp

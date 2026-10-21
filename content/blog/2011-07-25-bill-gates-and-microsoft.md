@@ -4,6 +4,9 @@ subtitle: I still **don’t love Microsoft**. I used to, actually, use Windows d
   and day out, for years. Bu...
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - technology
 - politics

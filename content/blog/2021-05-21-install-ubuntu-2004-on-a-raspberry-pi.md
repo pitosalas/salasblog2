@@ -2,6 +2,9 @@
 date: '2021-05-21'
 subtitle: Install Ubuntu 20.04 on a Raspberry Pi
 tags:
+- computing
+- culture
+original_tags:
 - linux
 - technology
 - video

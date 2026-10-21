@@ -3,6 +3,8 @@ date: '2005-02-09'
 subtitle: '!capt.rom10501301246.vatican_pope_rom105.jpg'
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Two really interesting bits missed by MSM
 type: wp

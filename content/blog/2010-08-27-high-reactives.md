@@ -3,6 +3,8 @@ date: '2010-08-27'
 subtitle: What are high reactives?
 tags:
 - science
+original_tags:
+- science
 - personal
 title: High Reactives
 type: wp

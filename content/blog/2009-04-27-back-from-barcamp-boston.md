@@ -2,6 +2,8 @@
 date: '2009-04-27'
 subtitle: '![](h...'
 tags:
+- places
+original_tags:
 - boston
 - technology
 - personal

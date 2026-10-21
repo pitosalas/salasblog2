@@ -3,6 +3,8 @@ date: '2011-11-08'
 subtitle: I am a big fan of Facebook. They are doing so many things well. They have
   become so pervasive that i...
 tags:
+- blogging
+original_tags:
 - social-media
 title: Facebook – Group your Place on a List and Put it on A page … or something
 type: wp

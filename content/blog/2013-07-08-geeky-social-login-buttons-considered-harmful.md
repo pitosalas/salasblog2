@@ -3,6 +3,10 @@ date: '2013-07-08'
 subtitle: You probably don’t know what a social login button is so forgive this bit
   of geekyness. I am sure yo...
 tags:
+- internet
+- blogging
+- design
+original_tags:
 - technology
 - security
 - social-media

@@ -2,6 +2,9 @@
 date: '2023-09-23'
 subtitle: What We Propose –T...
 tags:
+- culture
+- politics
+original_tags:
 - history
 - politics
 title: What We Propose

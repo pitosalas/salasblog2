@@ -4,6 +4,10 @@ subtitle: Mechanical & Wheels – Hands On Ground Robot Design – Robots For Ro
 tags:
 - robotics
 - design
+- howto
+original_tags:
+- robotics
+- design
 - technology
 - howto
 title: Mechanical & Wheels – Hands On Ground Robot Design – Robots For Roboticists

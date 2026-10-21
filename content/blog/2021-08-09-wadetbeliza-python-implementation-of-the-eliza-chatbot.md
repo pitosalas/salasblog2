@@ -2,6 +2,9 @@
 date: '2021-08-09'
 subtitle: 'wadetb/eliza: Python implementation of the Eliza chatbot'
 tags:
+- programming
+- ai
+original_tags:
 - python
 - ai
 title: 'wadetb/eliza: Python implementation of the Eliza chatbot'

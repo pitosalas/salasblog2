@@ -2,6 +2,8 @@
 date: '2005-11-24'
 subtitle: Irene goodnight, Irene goodnight
 tags:
+- culture
+original_tags:
 - music
 - personal
 title: Goodnight Irene – Huddie Ledbetter, aka Leadbelly

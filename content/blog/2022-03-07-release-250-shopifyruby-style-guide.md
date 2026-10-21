@@ -2,6 +2,9 @@
 date: '2022-03-07'
 subtitle: Release 2.5.0 · Shopify/ruby-style-guide
 tags:
+- programming
+- howto
+original_tags:
 - ruby
 - programming
 - howto

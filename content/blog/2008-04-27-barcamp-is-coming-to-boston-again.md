@@ -3,6 +3,8 @@ date: '2008-04-27'
 subtitle: 'Well it’s not really ‘coming’ – it was here all along, just dormant. Here’s
   the down-lo:'
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: Barcamp is coming to Boston again!

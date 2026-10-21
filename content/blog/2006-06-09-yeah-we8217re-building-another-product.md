@@ -4,6 +4,8 @@ subtitle: I couldn’t **resist**, and so who knows why, we (Aleksey and I) have
   a new product **in the ...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Yeah, we’re building another product
 type: wp

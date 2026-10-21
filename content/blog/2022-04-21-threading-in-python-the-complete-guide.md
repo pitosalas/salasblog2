@@ -2,6 +2,10 @@
 date: '2022-04-21'
 subtitle: 'Threading in Python: The Complete Guide'
 tags:
+- programming
+- software-engineering
+- howto
+original_tags:
 - python
 - programming
 - concurrency

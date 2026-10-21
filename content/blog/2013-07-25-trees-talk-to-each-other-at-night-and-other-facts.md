@@ -2,6 +2,8 @@
 date: '2013-07-25'
 subtitle: 'Cory Doctorow: Lies I’ve Told My 3 Year Old Recently Trees talk…'
 tags:
+- culture
+original_tags:
 - art
 title: Trees talk to each other at night and other facts
 type: wp

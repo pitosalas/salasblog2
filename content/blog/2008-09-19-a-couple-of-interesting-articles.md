@@ -4,6 +4,8 @@ subtitle: A very interesting article in Edge.org (by the way, an always interest
   site.) This one is called ...
 tags:
 - science
+original_tags:
+- science
 - personal
 title: A couple of interesting articles
 type: wp

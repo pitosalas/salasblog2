@@ -2,6 +2,10 @@
 date: '2022-05-28'
 subtitle: The Practical Effects of the GVL on Scaling in Ruby
 tags:
+- programming
+- howto
+- software-engineering
+original_tags:
 - ruby
 - howto
 - scalability

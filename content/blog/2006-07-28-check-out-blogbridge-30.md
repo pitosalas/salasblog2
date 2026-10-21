@@ -3,6 +3,8 @@ date: '2006-07-28'
 subtitle: Just announced over on the BlogBridge site, BlogBridge 3.0
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Check out BlogBridge 3.0
 type: wp

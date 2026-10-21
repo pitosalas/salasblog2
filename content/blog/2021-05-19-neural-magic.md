@@ -3,6 +3,11 @@ date: '2021-05-19'
 subtitle: Neural Magic
 tags:
 - ai
+- robotics
+- programming
+- howto
+original_tags:
+- ai
 - computer-vision
 - cli
 - howto

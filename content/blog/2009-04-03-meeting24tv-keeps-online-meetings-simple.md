@@ -2,6 +2,8 @@
 date: '2009-04-03'
 subtitle: Check out this post Meeting24.tv Keeps Online Meetings Simple
 tags:
+- blogging
+original_tags:
 - technology
 - blogging
 title: Meeting24.tv Keeps Online Meetings Simple

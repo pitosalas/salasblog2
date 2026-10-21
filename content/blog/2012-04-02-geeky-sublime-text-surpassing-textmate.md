@@ -2,6 +2,8 @@
 date: '2012-04-02'
 subtitle: I’ve been doing some more coding these days in Ruby.
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 - technology

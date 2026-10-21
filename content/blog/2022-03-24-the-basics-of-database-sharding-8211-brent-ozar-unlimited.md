@@ -3,6 +3,9 @@ date: '2022-03-24'
 subtitle: The Basics of Database Sharding – Brent Ozar Unlimited®
 tags:
 - software-engineering
+- programming
+original_tags:
+- software-engineering
 - database
 - scalability
 title: The Basics of Database Sharding – Brent Ozar Unlimited®

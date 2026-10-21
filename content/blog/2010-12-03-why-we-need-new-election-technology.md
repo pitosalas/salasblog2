@@ -4,6 +4,8 @@ subtitle: I work at the Open Source Digital Voting Foundation, where we are crea
   ne...
 tags:
 - politics
+original_tags:
+- politics
 - trustthevote
 - technology
 title: Why we need new election technology

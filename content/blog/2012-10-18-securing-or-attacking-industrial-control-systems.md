@@ -3,6 +3,8 @@ date: '2012-10-18'
 subtitle: It turns out that Kaspersky Labs is developing a [brand new operating system
   specifically designed t...
 tags:
+- internet
+original_tags:
 - technology
 - security
 title: Securing or attacking Industrial Control Systems

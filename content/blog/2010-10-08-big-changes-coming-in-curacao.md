@@ -3,6 +3,9 @@ date: '2010-10-08'
 subtitle: You may not follow the news, but Curaçao is undergoing major constitutional
   changes, as are all the ...
 tags:
+- places
+- politics
+original_tags:
 - curacao
 - politics
 - personal

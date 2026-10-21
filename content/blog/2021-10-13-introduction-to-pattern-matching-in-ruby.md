@@ -2,6 +2,8 @@
 date: '2021-10-13'
 subtitle: Introduction to Pattern Matching in Ruby
 tags:
+- programming
+original_tags:
 - ruby
 title: Introduction to Pattern Matching in Ruby
 type: wp

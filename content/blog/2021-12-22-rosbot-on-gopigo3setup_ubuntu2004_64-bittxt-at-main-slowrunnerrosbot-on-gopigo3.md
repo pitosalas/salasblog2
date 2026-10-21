@@ -4,6 +4,10 @@ subtitle: rosbot-on-gopigo3/Setup_Ubuntu20.04_64-bit.txt at main · slowrunner/r
 tags:
 - robotics
 - howto
+- computing
+original_tags:
+- robotics
+- howto
 - technology
 - linux
 title: rosbot-on-gopigo3/Setup_Ubuntu20.04_64-bit.txt at main · slowrunner/rosbot-on-gopigo3

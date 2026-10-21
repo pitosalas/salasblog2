@@ -2,6 +2,9 @@
 date: '2022-03-10'
 subtitle: Sinatra Forms Params – Learn.co
 tags:
+- programming
+- howto
+original_tags:
 - ruby
 - programming
 - howto

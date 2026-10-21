@@ -3,6 +3,10 @@ date: '2014-07-25'
 subtitle: Check out this article that shows off how visualizations can help you understand
   how algorithms work...
 tags:
+- science
+- programming
+- design
+original_tags:
 - computer-science
 - programming
 - design

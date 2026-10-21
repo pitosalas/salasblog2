@@ -2,6 +2,9 @@
 date: '2021-08-12'
 subtitle: Removing sensitive data from a repository – GitHub Docs
 tags:
+- programming
+- howto
+original_tags:
 - cli
 - howto
 title: Removing sensitive data from a repository – GitHub Docs

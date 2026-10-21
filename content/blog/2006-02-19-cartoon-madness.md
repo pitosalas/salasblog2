@@ -2,6 +2,8 @@
 date: '2006-02-19'
 subtitle: The Freakonomics blog often has good stuff in it, even if you haven’...
 tags:
+- life
+original_tags:
 - jewish
 - personal
 title: Cartoon Madness

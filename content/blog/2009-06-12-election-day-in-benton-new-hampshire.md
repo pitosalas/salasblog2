@@ -4,6 +4,8 @@ subtitle: My post about Barack Obama’s election was getting a bit long, so I t
   I’d break it up and get s...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Election day in Benton, New Hampshire
 type: wp

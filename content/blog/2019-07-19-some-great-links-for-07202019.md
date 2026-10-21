@@ -2,6 +2,8 @@
 date: '2019-07-19'
 subtitle: Goodbye ActiveRecord! – Inside Aircall – Medium
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  07/20/2019
 type: wp

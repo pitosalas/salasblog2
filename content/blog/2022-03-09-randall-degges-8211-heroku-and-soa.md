@@ -4,6 +4,11 @@ subtitle: Randall Degges – Heroku and SOA
 tags:
 - software-engineering
 - design
+- howto
+- programming
+original_tags:
+- software-engineering
+- design
 - heroku
 - howto
 - soa

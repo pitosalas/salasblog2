@@ -3,6 +3,9 @@ date: '2013-05-22'
 subtitle: 'Starters Guide to iOS Design:'
 tags:
 - design
+- computing
+original_tags:
+- design
 - apple
 title: Useful document about design for iOS (iPad and IPhone)
 type: wp

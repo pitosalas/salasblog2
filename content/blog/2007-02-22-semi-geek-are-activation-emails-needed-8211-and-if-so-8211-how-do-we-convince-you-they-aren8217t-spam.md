@@ -3,6 +3,8 @@ date: '2007-02-22'
 subtitle: Here’s an odd but important problem, at least for us here at BlogBridge.
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: '[SEMI-GEEK] Are activation emails needed – and if so – how do we convince
   you they aren’t spam?'

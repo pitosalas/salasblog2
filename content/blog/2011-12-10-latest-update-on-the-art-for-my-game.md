@@ -3,6 +3,9 @@ date: '2011-12-10'
 subtitle: I continue to spend spare time on developing my Android tablet game. As
   you may remember from my las...
 tags:
+- culture
+- design
+original_tags:
 - games
 - design
 title: Latest update on the art for my game

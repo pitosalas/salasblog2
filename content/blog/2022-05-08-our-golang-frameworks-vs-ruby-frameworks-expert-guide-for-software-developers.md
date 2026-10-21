@@ -2,6 +2,8 @@
 date: '2022-05-08'
 subtitle: Our Golang Frameworks vs Ruby Frameworks Expert Guide for Software Developers
 tags:
+- programming
+original_tags:
 - ruby
 - web
 title: Our Golang Frameworks vs Ruby Frameworks Expert Guide for Software Developers

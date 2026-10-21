@@ -3,6 +3,8 @@ date: '2012-01-11'
 subtitle: Where in the US is hottest for Cloud Computing, or for Big Data, or for
   No Sql? Curious? Yeah, then ...
 tags:
+- business
+original_tags:
 - technology
 - business
 title: Software Technology hotspots in the USA

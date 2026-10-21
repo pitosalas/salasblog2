@@ -2,6 +2,8 @@
 date: '2020-06-07'
 subtitle: 'datas-frame – Modern Pandas (Part 2): Method Chaining'
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  06/08/2020
 type: wp

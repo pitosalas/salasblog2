@@ -2,6 +2,10 @@
 date: '2022-01-12'
 subtitle: The Anatomy of a GraphQL Query – Apollo GraphQL Blog
 tags:
+- programming
+- education
+- howto
+original_tags:
 - api
 - brandeis
 - howto

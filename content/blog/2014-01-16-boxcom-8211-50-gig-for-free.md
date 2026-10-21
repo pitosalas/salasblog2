@@ -3,6 +3,8 @@ date: '2014-01-16'
 subtitle: '**Forget Dropbox**, I just heard that Box.com gives you **50gig for free
   **upon signup. I just signe...'
 tags:
+- programming
+original_tags:
 - technology
 - cli
 title: Box.com – 50 gig for free!

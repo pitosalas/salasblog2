@@ -3,6 +3,9 @@ date: '2021-08-22'
 subtitle: 'Overv/outrun: Execute a local command using the processing power of another
   Linux machine.'
 tags:
+- computing
+- programming
+original_tags:
 - linux
 - cli
 - tools

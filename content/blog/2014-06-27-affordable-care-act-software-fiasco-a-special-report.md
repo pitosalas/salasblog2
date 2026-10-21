@@ -3,6 +3,8 @@ date: '2014-06-27'
 subtitle: I came across this video by Armando Fox with his views of what went wrong
   with the Obamacare website...
 tags:
+- politics
+original_tags:
 - technology
 - politics
 title: 'Affordable Care Act Software Fiasco: A Special Report'

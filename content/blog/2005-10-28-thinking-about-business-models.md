@@ -3,6 +3,8 @@ date: '2005-10-28'
 subtitle: Inquisitor is a really cool program that augments the search b...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Thinking about business models

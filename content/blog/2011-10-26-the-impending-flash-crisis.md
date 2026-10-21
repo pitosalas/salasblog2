@@ -2,6 +2,8 @@
 date: '2011-10-26'
 subtitle: An interesting article about this impending crisis. Although it’s im...
 tags:
+- programming
+original_tags:
 - technology
 - programming
 title: The Impending Flash Crisis?

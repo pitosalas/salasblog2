@@ -4,6 +4,9 @@ subtitle: What do you think, are younger people better programmers? Are they mor
   productive, more clever, wor...
 tags:
 - programming
+- education
+original_tags:
+- programming
 - research
 title: Debunking the conventional wisdom
 type: wp

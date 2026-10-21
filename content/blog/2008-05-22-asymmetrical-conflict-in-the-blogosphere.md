@@ -5,6 +5,9 @@ subtitle: I met with a potential client the other day who was on red alert becau
 tags:
 - business
 - blogging
+original_tags:
+- business
+- blogging
 - personal
 - technology
 title: Asymmetrical  conflict in the blogosphere

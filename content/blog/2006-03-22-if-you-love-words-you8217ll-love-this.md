@@ -4,6 +4,8 @@ subtitle: All the words of the english language, ordered by frequency, coupled w
   some really nifty graphic ...
 tags:
 - design
+original_tags:
+- design
 - personal
 - technology
 title: If you love words you’ll love this

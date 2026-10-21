@@ -3,6 +3,8 @@ date: '2011-12-25'
 subtitle: 'I just finished reading a great book, “Everything Is Obvious: *Once You
   Know the Answer'
 tags:
+- culture
+original_tags:
 - books
 title: Common Non-sense
 type: wp

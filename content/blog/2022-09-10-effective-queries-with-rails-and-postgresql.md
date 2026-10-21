@@ -2,6 +2,8 @@
 date: '2022-09-10'
 subtitle: Effective Queries with Rails and PostgreSQL
 tags:
+- programming
+original_tags:
 - ruby
 title: Effective Queries with Rails and PostgreSQL
 type: wp

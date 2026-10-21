@@ -3,6 +3,8 @@ date: '2018-04-25'
 subtitle: 'Microservice boundaries: five characteristics to guide your design'
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - technology
 title: Some great links for  04/25/2018
 type: wp

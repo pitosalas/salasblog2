@@ -2,6 +2,9 @@
 date: '2022-01-04'
 subtitle: AWK-ward Ruby
 tags:
+- programming
+- howto
+original_tags:
 - ruby
 - programming
 - howto

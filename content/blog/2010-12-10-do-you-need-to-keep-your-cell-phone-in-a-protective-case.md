@@ -3,6 +3,8 @@ date: '2010-12-10'
 subtitle: 'Check out this really interesting [Pogue article in the New York Times:
   “Gorilla Glass, the Smartpho...'
 tags:
+- computing
+original_tags:
 - technology
 - apple
 - personal

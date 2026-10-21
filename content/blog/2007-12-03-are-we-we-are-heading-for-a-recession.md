@@ -4,6 +4,9 @@ subtitle: Just check out this well argued, detailed piece, “[Wake up to the da
   of a deepening crisis”, by...
 tags:
 - business
+- politics
+original_tags:
+- business
 - personal
 - politics
 title: Are we (we are) heading for a recession?

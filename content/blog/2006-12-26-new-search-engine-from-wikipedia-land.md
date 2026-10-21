@@ -3,6 +3,8 @@ date: '2006-12-26'
 subtitle: If you keep up, you may have heard abou this. A new search engine coming
   from Wikipedia founder Jimm...
 tags:
+- blogging
+original_tags:
 - wikipedia
 - personal
 title: New search engine from Wikipedia-land

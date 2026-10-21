@@ -5,6 +5,9 @@ subtitle: My head is full of democracy and elections these days. How come, you a
 tags:
 - design
 - politics
+original_tags:
+- design
+- politics
 - personal
 title: How (not) to design a ballot
 type: wp

@@ -3,6 +3,8 @@ date: '2006-10-29'
 subtitle: From LifeHacker (o...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: '[SEMI GEEKY] Blogs That Matter: really interesting'
 type: wp

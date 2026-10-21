@@ -3,6 +3,8 @@ date: '2007-01-09'
 subtitle: I say it’s the Newton of the 21st century. I love my mac as much as the
   next guy, but [mac fanatics]...
 tags:
+- computing
+original_tags:
 - apple
 title: It’s official global “bow-down-and-genuflect-while-facing-cupertino” day
 type: wp

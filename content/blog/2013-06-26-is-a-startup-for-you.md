@@ -4,6 +4,8 @@ subtitle: I always thought that startups are over glamorized. They are not for e
   On the other hand, so...
 tags:
 - business
+original_tags:
+- business
 - careers
 - startups
 title: Is a startup for you?

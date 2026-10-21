@@ -4,6 +4,9 @@ subtitle: If you are interested in graphics programming and gaming, let me stron
   recommend you take a look ...
 tags:
 - programming
+- computing
+original_tags:
+- programming
 - mobile
 - technology
 title: '[GEEKY] Best Tutorial for Android OpenGL'

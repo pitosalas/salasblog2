@@ -3,6 +3,8 @@ date: '2012-07-25'
 subtitle: You know the old joke that today they say something is good for you, tomorrow
   it’s bad, and the day ...
 tags:
+- life
+original_tags:
 - health
 - personal
 title: Stand up! No, Sit Down!

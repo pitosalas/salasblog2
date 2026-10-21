@@ -3,6 +3,8 @@ date: '2007-12-19'
 subtitle: Andrew Sullivan of The Atlantic with a interesting article about torture.
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: What the world has come to
 type: wp

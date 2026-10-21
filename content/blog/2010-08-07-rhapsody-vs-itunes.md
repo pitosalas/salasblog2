@@ -3,6 +3,10 @@ date: '2010-08-07'
 subtitle: I think I might be entering a new phase in my music listening. I listen
   to a ton of music, on my iPh...
 tags:
+- culture
+- computing
+- business
+original_tags:
 - music
 - apple
 - personal

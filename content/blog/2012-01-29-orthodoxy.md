@@ -3,6 +3,8 @@ date: '2012-01-29'
 subtitle: I’d be the last one to wade into commentary on religious topics, so I just
   share this link
 tags:
+- life
+original_tags:
 - jewish
 title: Orthodoxy
 type: wp

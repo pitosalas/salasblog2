@@ -3,6 +3,8 @@ date: '2007-02-16'
 subtitle: This is the Seaquarium beach area. It’s very beautiful as you can see. Click
   on the photo if you dar...
 tags:
+- places
+original_tags:
 - curacao
 - travel
 - personal

@@ -3,6 +3,8 @@ date: '2005-08-23'
 subtitle: I’ve subscribed to this list from OCI
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[Geek] Good Java Mailing List'
 type: wp

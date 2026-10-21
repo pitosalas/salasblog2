@@ -2,6 +2,8 @@
 date: '2006-07-09'
 subtitle: 'A typewriter, you know: **a printer with a keyboard built right into it**?'
 tags:
+- politics
+original_tags:
 - personal
 - politics
 title: Can you believe these dudes still use typewriters?

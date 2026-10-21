@@ -3,6 +3,8 @@ date: '2006-07-18'
 subtitle: Just a quick reminder that we are having another super-informal-geeky-but-not-exclusively-geeks
   **Ge...
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: 'Reminder: Tomorrow, Geek Dinner, July 19 (tomorrow!)'

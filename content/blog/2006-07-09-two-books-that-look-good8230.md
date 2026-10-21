@@ -3,6 +3,9 @@ date: '2006-07-09'
 subtitle: I saw these two books in Barnes and Noble. They look quite interesting.
   I might get them.
 tags:
+- culture
+- science
+original_tags:
 - books
 - science
 - personal

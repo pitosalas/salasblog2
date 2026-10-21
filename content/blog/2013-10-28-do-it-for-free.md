@@ -4,6 +4,8 @@ subtitle: Tim Kreider’s essay could apply as easily to all those people who co
   that an iPhone app is not...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Do it for free!
 type: wp

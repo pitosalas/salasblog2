@@ -2,6 +2,9 @@
 date: '2007-09-09'
 subtitle: Check out this post
 tags:
+- computing
+- business
+original_tags:
 - apple
 - business
 - personal

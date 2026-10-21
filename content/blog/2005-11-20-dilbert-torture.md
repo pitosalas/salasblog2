@@ -3,6 +3,8 @@ date: '2005-11-20'
 subtitle: According to Dilbert (or is it Scott Adams
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Dilbert Torture
 type: wp

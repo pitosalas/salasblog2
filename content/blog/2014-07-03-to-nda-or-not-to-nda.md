@@ -4,6 +4,8 @@ subtitle: We all have heard more than once that “VCs will NOT sign NDAs, don�
   ask!”. And we’ve also hear...
 tags:
 - business
+original_tags:
+- business
 - startups
 title: To NDA or Not to NDA?
 type: wp

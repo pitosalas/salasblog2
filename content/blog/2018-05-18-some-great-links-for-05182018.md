@@ -2,6 +2,8 @@
 date: '2018-05-18'
 subtitle: Python Multithreading and Multiprocessing Tutorial
 tags:
+- programming
+original_tags:
 - python
 - technology
 title: Some great links for  05/18/2018

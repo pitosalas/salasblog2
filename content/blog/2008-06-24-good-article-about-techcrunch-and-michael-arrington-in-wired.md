@@ -3,6 +3,8 @@ date: '2008-06-24'
 subtitle: I haven’t seen anyone pointing to this article about TechCrunch and Professor
   Arrington
 tags:
+- politics
+original_tags:
 - personal
 - politics
 - technology

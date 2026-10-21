@@ -3,6 +3,8 @@ date: '2006-03-06'
 subtitle: glenn has been busy today. A series of very intriguing pos...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: RSS is not a goal…
 type: wp

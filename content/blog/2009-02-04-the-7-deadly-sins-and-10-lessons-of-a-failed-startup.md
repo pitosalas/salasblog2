@@ -3,6 +3,8 @@ date: '2009-02-04'
 subtitle: Check this post The 7 deadly sins and 10 lessons of a failed startup
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 - startups

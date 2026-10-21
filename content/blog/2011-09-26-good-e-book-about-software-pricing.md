@@ -4,6 +4,8 @@ subtitle: Pricing software is a perennial challenge. I came across this ebook, [
   just roll the dice” by ...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Good e-book about software pricing
 type: wp

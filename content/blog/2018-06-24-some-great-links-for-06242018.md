@@ -2,6 +2,8 @@
 date: '2018-06-24'
 subtitle: Active Job Basics — Ruby on Rails Guides
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  06/24/2018

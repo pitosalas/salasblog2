@@ -4,6 +4,10 @@ subtitle: This article gives a [fascinating perspective on the disconnect betwee
   what they teach in law schoo...
 tags:
 - education
+- politics
+- culture
+original_tags:
+- education
 - legal
 - nyt
 title: What they teach in lawschool

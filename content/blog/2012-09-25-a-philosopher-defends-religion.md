@@ -3,6 +3,9 @@ date: '2012-09-25'
 subtitle: I recently subscribed to the New York Review of Books. Not sure this was
   a good decision as the last...
 tags:
+- culture
+- science
+original_tags:
 - books
 - science
 - philosophy

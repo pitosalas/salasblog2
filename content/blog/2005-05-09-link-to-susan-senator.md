@@ -2,6 +2,8 @@
 date: '2005-05-09'
 subtitle: '!Mpwacover300'
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: Link to Susan Senator!

@@ -2,6 +2,9 @@
 date: '2005-01-17'
 subtitle: I got many comments from people about my postings recently about
 tags:
+- blogging
+- business
+original_tags:
 - wikipedia
 - lotus
 - personal

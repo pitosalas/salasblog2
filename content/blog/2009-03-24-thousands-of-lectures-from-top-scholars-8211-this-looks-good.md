@@ -3,6 +3,8 @@ date: '2009-03-24'
 subtitle: I spent 5 minutes perusing this site, and it looks really good. Wow, ma...
 tags:
 - education
+original_tags:
+- education
 - personal
 title: Thousands of lectures from top scholars – this looks GOOD!
 type: wp

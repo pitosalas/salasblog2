@@ -2,6 +2,9 @@
 date: '2021-08-22'
 subtitle: Wheel of Names
 tags:
+- computing
+- education
+original_tags:
 - tools
 - education
 - zoom

@@ -2,6 +2,9 @@
 date: '2021-10-15'
 subtitle: Docker concepts and terminology – Code with Jason
 tags:
+- software-engineering
+- howto
+original_tags:
 - docker
 - explainer
 - howto

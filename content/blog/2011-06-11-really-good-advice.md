@@ -2,6 +2,8 @@
 date: '2011-06-11'
 subtitle: Robert Krulwich gave this graduation speech
 tags:
+- business
+original_tags:
 - careers
 - personal
 title: Really good advice

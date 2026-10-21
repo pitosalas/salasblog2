@@ -4,6 +4,10 @@ subtitle: A **useful** article in the New York Times today, just in time for the
   A[ new site that tr...
 tags:
 - ai
+- culture
+- business
+original_tags:
+- ai
 - nyt
 - shopping
 title: Getting the best deals… Check out decide.com

@@ -2,6 +2,8 @@
 date: '2020-05-25'
 subtitle: The Definitive Guide to Python import Statements | Chris Yeh
 tags:
+- programming
+original_tags:
 - python
 title: Some great links for  05/26/2020
 type: wp

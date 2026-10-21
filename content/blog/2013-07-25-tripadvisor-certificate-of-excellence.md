@@ -3,6 +3,8 @@ date: '2013-07-25'
 subtitle: We were on vacation in Greece and Turkey a few weeks ago and I noticed many
   TripAdvisor Certificate ...
 tags:
+- places
+original_tags:
 - travel
 title: Tripadvisor Certificate of Excellence
 type: wp

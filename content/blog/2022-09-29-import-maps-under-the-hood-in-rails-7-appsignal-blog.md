@@ -2,6 +2,8 @@
 date: '2022-09-29'
 subtitle: Import Maps Under the Hood in Rails 7 | AppSignal Blog
 tags:
+- programming
+original_tags:
 - ruby
 title: Import Maps Under the Hood in Rails 7 | AppSignal Blog
 type: wp

@@ -2,6 +2,9 @@
 date: '2022-01-11'
 subtitle: Ruby 3.1 – Pattern Matching – Lee Jarvis
 tags:
+- programming
+- howto
+original_tags:
 - ruby
 - programming
 - howto

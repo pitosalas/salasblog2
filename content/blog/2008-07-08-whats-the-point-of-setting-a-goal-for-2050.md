@@ -4,6 +4,8 @@ subtitle: How lame and do-nothing can you get when the best you can do is to set
   goal to be met in 2050,
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Whats the point of setting a goal for 2050?
 type: wp

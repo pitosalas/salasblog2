@@ -3,6 +3,8 @@ date: '2011-07-20'
 subtitle: 'It always happens and I really try not to have buyers remorse, but: “Apple
   Updates MacBook Air”'
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: No Regrets? My Macbook Air is only 2 months old and already out-of-date

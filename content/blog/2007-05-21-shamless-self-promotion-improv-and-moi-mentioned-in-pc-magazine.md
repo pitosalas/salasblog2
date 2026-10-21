@@ -3,6 +3,8 @@ date: '2007-05-21'
 subtitle: PC Magazine’s newest issue has a retrospective of their past 25 years and
   Lotus[ Improv gets mention...
 tags:
+- business
+original_tags:
 - lotus
 - personal
 - technology

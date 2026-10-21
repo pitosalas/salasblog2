@@ -2,6 +2,8 @@
 date: '2006-08-07'
 subtitle: 'I came across this interesting bit in LifeHacker: [WikiMapia – The geo...'
 tags:
+- computing
+original_tags:
 - maps
 - personal
 title: How to add a map to any blog page

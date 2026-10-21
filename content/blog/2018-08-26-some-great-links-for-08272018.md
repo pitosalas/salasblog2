@@ -2,6 +2,8 @@
 date: '2018-08-26'
 subtitle: How to configure RSpec in Ruby on Rails
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  08/27/2018
 type: wp

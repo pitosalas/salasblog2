@@ -2,6 +2,9 @@
 date: '2013-02-06'
 subtitle: '!Screen Shot 2013 02 06 at 3 38 32 PM'
 tags:
+- culture
+- science
+original_tags:
 - games
 - science
 title: 'Awesome: Big Blizzard Coming'

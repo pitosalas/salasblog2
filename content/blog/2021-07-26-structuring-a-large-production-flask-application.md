@@ -2,6 +2,10 @@
 date: '2021-07-26'
 subtitle: Structuring a Large Production Flask Application
 tags:
+- programming
+- software-engineering
+- howto
+original_tags:
 - python
 - software-engineering
 - web

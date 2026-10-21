@@ -3,6 +3,8 @@ date: '2006-01-05'
 subtitle: I know that this blog (Power Line) is pret...
 tags:
 - politics
+original_tags:
+- politics
 - legal
 - personal
 title: Did the NSA “break the law”?

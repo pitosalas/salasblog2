@@ -3,6 +3,8 @@ date: '2009-08-07'
 subtitle: 'Pretty cool report via Boston Globe, but see my minor complaint about it
   at the end:'
 tags:
+- places
+original_tags:
 - boston
 - personal
 title: Cambridge (Mass) on Forbes Top 10 list

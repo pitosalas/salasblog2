@@ -3,6 +3,8 @@ date: '2011-02-23'
 subtitle: Some choice quotes to introduce a good lecture about Engineering
 tags:
 - software-engineering
+original_tags:
+- software-engineering
 - personal
 - technology
 title: Engineering

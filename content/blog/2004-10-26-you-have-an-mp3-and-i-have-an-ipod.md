@@ -3,6 +3,8 @@ date: '2004-10-26'
 subtitle: You have an MP3 and I have an IPod. I want to listen to that MP3 while driving,
   walking, or working ...
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: You have an MP3 and I have an IPod

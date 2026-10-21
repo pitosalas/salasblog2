@@ -3,6 +3,8 @@ date: '2019-01-11'
 subtitle: '[Did you know that you can use Bundler without Gemfile? | Blog | Victor
   Afanasev — Web Developer and...'
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  01/12/2019
 type: wp

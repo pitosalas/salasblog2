@@ -3,6 +3,8 @@ date: '2007-01-06'
 subtitle: Check out this post from [Between the Lines...
 tags:
 - business
+original_tags:
+- business
 - technology
 - personal
 title: A cautionary utility computing tale – or the dark side of Mashups

@@ -3,6 +3,10 @@ date: '2021-06-20'
 subtitle: Scaling relational SQL databases
 tags:
 - software-engineering
+- programming
+- howto
+original_tags:
+- software-engineering
 - database
 - howto
 - performance

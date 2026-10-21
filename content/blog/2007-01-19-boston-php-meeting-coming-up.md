@@ -3,6 +3,9 @@ date: '2007-01-19'
 subtitle: 'A quick reminder of the upcoming BostonPHP meeting: BostonPHP will host
   a panel'
 tags:
+- places
+- programming
+original_tags:
 - boston
 - programming
 - technology

@@ -2,6 +2,8 @@
 date: '2022-08-22'
 subtitle: Open-source data multitool | VisiData
 tags:
+- programming
+original_tags:
 - python
 title: Open-source data multitool | VisiData
 type: wp

@@ -4,6 +4,9 @@ subtitle: I created this quick and dirty list of useful resources for some frien
   who wanted to dig into the ...
 tags:
 - design
+- culture
+original_tags:
+- design
 - books
 title: A list of UI and UX books, articles and links
 type: wp

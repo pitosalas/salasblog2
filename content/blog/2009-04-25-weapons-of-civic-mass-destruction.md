@@ -4,6 +4,8 @@ subtitle: I am struck by how broken our political process is. I’m not the firs
   the last to make this obse...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: Weapons of civic mass destruction
 type: wp

@@ -2,6 +2,8 @@
 date: '2020-01-19'
 subtitle: My Favorite Macbook Tools
 tags:
+- computing
+original_tags:
 - apple
 title: Some great links for  01/20/2020
 type: wp

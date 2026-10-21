@@ -3,6 +3,9 @@ date: '2011-11-12'
 subtitle: 'An interesting commentary on a couple of patents that issued from the US
   Patent Office:'
 tags:
+- politics
+- science
+original_tags:
 - legal
 - mathematics
 - science

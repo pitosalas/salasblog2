@@ -2,6 +2,8 @@
 date: '2011-05-12'
 subtitle: 'Funny to read this:'
 tags:
+- computing
+original_tags:
 - apple
 - technology
 - personal

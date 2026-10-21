@@ -2,6 +2,8 @@
 date: '2021-03-02'
 subtitle: Standard Deviation is an Inferior Measurement*
 tags:
+- science
+original_tags:
 - mathematics
 title: Some great links for  03/03/2021
 type: wp

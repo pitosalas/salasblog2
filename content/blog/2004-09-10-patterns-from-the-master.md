@@ -3,6 +3,8 @@ date: '2004-09-10'
 subtitle: I came across a fascinating article, a t...
 tags:
 - design
+original_tags:
+- design
 - technology
 title: Patterns from the master
 type: wp

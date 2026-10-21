@@ -3,6 +3,8 @@ date: '2012-01-08'
 subtitle: David Colletta shared this link in comments to my [rece...
 tags:
 - education
+original_tags:
+- education
 - brandeis
 title: On the importance of learning to work in teams
 type: wp

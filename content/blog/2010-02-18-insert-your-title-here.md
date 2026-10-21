@@ -3,6 +3,8 @@ date: '2010-02-18'
 subtitle: “I am so disappointed in the government”
 tags:
 - politics
+original_tags:
+- politics
 - personal
 title: '[insert your title here]'
 type: wp

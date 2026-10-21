@@ -2,6 +2,8 @@
 date: '2023-07-26'
 subtitle: The costly mistake so many make with numpy and pandas
 tags:
+- programming
+original_tags:
 - python
 title: The costly mistake so many make with numpy and pandas
 type: wp

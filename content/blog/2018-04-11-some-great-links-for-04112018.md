@@ -2,6 +2,8 @@
 date: '2018-04-11'
 subtitle: Regexper
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: Some great links for  04/11/2018

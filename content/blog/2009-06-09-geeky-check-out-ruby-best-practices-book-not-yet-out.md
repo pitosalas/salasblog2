@@ -3,6 +3,8 @@ date: '2009-06-09'
 subtitle: As you know from a previous post, I’ve been working on a “domain specific
   language” for election bal...
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 title: '[GEEKY] Check out Ruby Best Practices book (not yet out ! :)'

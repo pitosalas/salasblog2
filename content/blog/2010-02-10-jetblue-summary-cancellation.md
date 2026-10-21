@@ -3,6 +3,10 @@ date: '2010-02-10'
 subtitle: I was supposed to fly from San Fransisco to Boston today. Monday (2 days
   ago) I got an email from [J...
 tags:
+- places
+- culture
+- science
+original_tags:
 - travel
 - games
 - personal

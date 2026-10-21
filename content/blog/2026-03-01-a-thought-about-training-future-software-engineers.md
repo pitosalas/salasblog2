@@ -1,6 +1,9 @@
 ---
 date: '2026-03-01'
 tags:
+- programming
+- education
+original_tags:
 - technology
 - programming
 - education

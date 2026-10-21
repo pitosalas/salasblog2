@@ -2,6 +2,8 @@
 date: '2008-05-03'
 subtitle: 'TechCrunch:'
 tags:
+- programming
+original_tags:
 - ruby
 - technology
 title: '[GEEKY] Twitter and Ruby on Rails'

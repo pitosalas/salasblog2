@@ -3,6 +3,9 @@ date: '2013-09-03'
 subtitle: 'Enjoy: [Amazon.com: 50 Ways to Protect Your Identity in a Digital Age:
   New Financial Threats You Nee...'
 tags:
+- culture
+- business
+original_tags:
 - books
 - amazon
 title: Free Kindle book about Identity Theft

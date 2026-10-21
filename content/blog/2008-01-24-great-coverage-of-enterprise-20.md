@@ -4,6 +4,8 @@ subtitle: In the Portals and KM blog, a pair of great articles about “Enterpri
   Bill Ives has been foll...
 tags:
 - business
+original_tags:
+- business
 - personal
 - technology
 title: Great coverage of Enterprise 2.0

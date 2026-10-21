@@ -2,6 +2,8 @@
 date: '2023-07-09'
 subtitle: Collections –We curate collections of images, books,...
 tags:
+- culture
+original_tags:
 - books
 title: Collections
 type: wp

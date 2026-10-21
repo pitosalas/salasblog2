@@ -2,6 +2,8 @@
 date: '2005-10-23'
 subtitle: For you Apple and iPod afficionados, here’s an **interesting** article
 tags:
+- computing
+original_tags:
 - apple
 - technology
 title: Apple Video iPod Strategy

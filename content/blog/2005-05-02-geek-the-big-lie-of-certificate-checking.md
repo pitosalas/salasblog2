@@ -3,6 +3,8 @@ date: '2005-05-02'
 subtitle: '!['
 tags:
 - programming
+original_tags:
+- programming
 - technology
 title: '[GEEK] The BIG LIE of certificate checking'
 type: wp

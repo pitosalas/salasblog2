@@ -4,6 +4,9 @@ subtitle: How to build authentication into Rails applications? Well, at least at
   2011, the buzz was ...
 tags:
 - programming
+- internet
+original_tags:
+- programming
 - ruby
 - security
 - technology

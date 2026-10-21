@@ -4,6 +4,10 @@ subtitle: Make a ROS Launch Start on Boot (robot_upstart) – The Robotics Back-
 tags:
 - robotics
 - howto
+- computing
+original_tags:
+- robotics
+- howto
 - linux
 title: Make a ROS Launch Start on Boot (robot_upstart) – The Robotics Back-End
 type: wp

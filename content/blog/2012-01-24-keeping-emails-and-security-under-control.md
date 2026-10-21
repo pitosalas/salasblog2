@@ -3,6 +3,9 @@ date: '2012-01-24'
 subtitle: Do you receive tons of notification emails form your various subscriptions
   or social sites like Twit...
 tags:
+- blogging
+- internet
+original_tags:
 - social-media
 - security
 title: Keeping emails and security under control

@@ -2,6 +2,9 @@
 date: '2021-11-05'
 subtitle: The family of anonymous functions – blocks, procs and lambdas
 tags:
+- programming
+- howto
+original_tags:
 - ruby
 - programming
 - explainer

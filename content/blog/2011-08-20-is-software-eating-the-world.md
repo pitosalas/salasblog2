@@ -3,6 +3,8 @@ date: '2011-08-20'
 subtitle: Marc Andreeson has a [really good, optimistic article in the Wall Street
   Journal about the future fo...
 tags:
+- business
+original_tags:
 - technology
 - business
 - personal

@@ -2,6 +2,9 @@
 date: '2021-06-29'
 subtitle: Creating Local Python Packages with __init__.py
 tags:
+- programming
+- software-engineering
+original_tags:
 - python
 - software-engineering
 - programming

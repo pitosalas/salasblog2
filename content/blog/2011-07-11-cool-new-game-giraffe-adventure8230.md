@@ -3,6 +3,9 @@ date: '2011-07-11'
 subtitle: If you’re interested in computer games for Android, see what you think of
   this one’s potential… Comi...
 tags:
+- computing
+- culture
+original_tags:
 - mobile
 - games
 - personal

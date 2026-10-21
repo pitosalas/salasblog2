@@ -4,6 +4,11 @@ subtitle: I read about Quirky.com in the paper the other day.
 tags:
 - business
 - design
+- computing
+- programming
+original_tags:
+- business
+- design
 - mobile
 - programming
 - technology

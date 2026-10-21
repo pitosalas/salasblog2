@@ -2,6 +2,8 @@
 date: '2019-03-10'
 subtitle: How to scale Ruby on Rails with Redis | Opensource.com
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  03/11/2019
 type: wp

@@ -2,6 +2,8 @@
 date: '2013-08-30'
 subtitle: A really useful link. For Ruby programmers only.
 tags:
+- programming
+original_tags:
 - ruby
 - programming
 title: '[GEEKY] Using bundler to create and publish a gem'

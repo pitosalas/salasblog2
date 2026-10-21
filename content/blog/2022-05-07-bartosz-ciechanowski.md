@@ -3,6 +3,9 @@ date: '2022-05-07'
 subtitle: Bartosz Ciechanowski
 tags:
 - science
+- howto
+original_tags:
+- science
 - mathematics
 - explainer
 title: Bartosz Ciechanowski

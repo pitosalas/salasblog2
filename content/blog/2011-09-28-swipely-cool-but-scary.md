@@ -3,6 +3,8 @@ date: '2011-09-28'
 subtitle: So there’s this rather cool new service that says they will find and give
   you special deals to the s...
 tags:
+- internet
+original_tags:
 - security
 - personal
 - technology

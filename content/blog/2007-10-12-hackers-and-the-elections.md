@@ -3,6 +3,8 @@ date: '2007-10-12'
 subtitle: In New Scientist Tech, an interesting article about [h...
 tags:
 - politics
+original_tags:
+- politics
 - personal
 - technology
 title: Hackers and the elections

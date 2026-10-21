@@ -2,6 +2,8 @@
 date: '2023-07-22'
 subtitle: Shale – Ruby object mapper and serializer for XML, JSON, TOML and YAML...
 tags:
+- programming
+original_tags:
 - ruby
 title: Shale – Ruby object mapper and serializer for XML, JSON, TOML and YAML
 type: wp

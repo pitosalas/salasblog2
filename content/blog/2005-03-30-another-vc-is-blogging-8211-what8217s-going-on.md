@@ -4,6 +4,8 @@ subtitle: If you are interested in some **thoughtful** perspectives about the wo
   of **Venture Capital**, fr...
 tags:
 - business
+original_tags:
+- business
 - technology
 title: Another VC is blogging – what’s going on?
 type: wp

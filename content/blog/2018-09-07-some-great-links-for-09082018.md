@@ -2,6 +2,8 @@
 date: '2018-09-07'
 subtitle: 'A few less-known Ruby (on Rails) methods, pt 1.: Array'
 tags:
+- programming
+original_tags:
 - ruby
 title: Some great links for  09/08/2018
 type: wp

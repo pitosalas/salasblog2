@@ -4,6 +4,8 @@ subtitle: Sadly we are to the last of the Demo 2008 events. I am writing at the 
   point and so far it has be...
 tags:
 - blogging
+original_tags:
+- blogging
 - technology
 title: Demo 2008 – Liveblog, final installment
 type: wp

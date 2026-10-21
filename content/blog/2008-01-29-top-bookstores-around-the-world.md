@@ -2,6 +2,8 @@
 date: '2008-01-29'
 subtitle: You like Barnes and Noble? How about Border’s?
 tags:
+- culture
+original_tags:
 - books
 - personal
 title: Top bookstores around the world
