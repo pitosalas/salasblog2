@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # server — FastAPI app: static site serving, admin panel, XML-RPC, sync/regen triggers
 # Author: Pito Salas and Claude Code
-# Version: 10
+# Version: 11
 # Created: 2026-09-08
 # Updated: 2026-10-20
 # Open Source Under MIT license
@@ -49,6 +49,7 @@ from salasblog2.legacy_links import normalize_legacy_url
 from salasblog2.propose import DropFilter, get_proposed_drops, get_proposed_posts
 from salasblog2.raindrop import RaindropDownloader
 from salasblog2.scheduler import get_scheduler
+from salasblog2.site_jobs import run_generation
 from salasblog2.stats import get_counter
 from salasblog2.tag_vocabulary import canonicalize_tags
 from salasblog2.utils import (
@@ -257,21 +258,10 @@ async def lifespan(app: FastAPI):
         except Exception as ex:
             logging.getLogger(__name__).warning("Stats cache refresh failed: %s", ex)
 
-    def posts_index_cache_job():
-        try:
-            generate_posts_index_cache()
-        except Exception as ex:
-            logging.getLogger(__name__).warning(
-                "Posts index cache refresh failed: %s", ex
-            )
-
     import schedule as _sched
 
     _sched.every(_cfg("stats", "cache_refresh_seconds", default=60)).seconds.do(
         _stats_cache_job
-    )
-    _sched.every(_cfg("posts_index", "cache_refresh_seconds", default=300)).seconds.do(
-        posts_index_cache_job
     )
 
     yield
@@ -663,16 +653,21 @@ def save_content_item(filename: str, content_type: str, fields: ContentFields) -
         )
 
 
+def record_generation(args: list[str]):
+    """Run `bg <args>` in a child process and count it for the admin
+    process-activity panel."""
+    global _generation_count, _last_generation_time
+    run_generation(args)
+    _generation_count += 1
+    _last_generation_time = datetime.now()
+
+
 def _regenerate_in_background(filename: str, content_type: str):
     """Run incremental site regeneration — intended for use as a background task."""
-    global _generation_count, _last_generation_time
     logger = logging.getLogger(__name__)
     logger.info(f"Background regeneration START for {content_type}: {filename}")
     try:
-        generator = SiteGenerator()
-        generator.incremental_regenerate_post(filename, content_type)
-        _generation_count += 1
-        _last_generation_time = datetime.now()
+        record_generation(["regen-post", filename, content_type])
         logger.info(f"Background regeneration DONE for {content_type}: {filename}")
     except Exception as e:
         logger.error(
@@ -708,8 +703,7 @@ def regenerate_after_deletion_in_background(filename: str, content_type: str):
         f"Background deletion regeneration START for {content_type}: {filename}"
     )
     try:
-        generator = SiteGenerator()
-        generator.incremental_regenerate_after_deletion(filename, content_type)
+        run_generation(["regen-deleted", filename, content_type])
         logger.info(
             f"Background deletion regeneration DONE for {content_type}: {filename}"
         )
@@ -1114,6 +1108,8 @@ async def emergency_restore_from_github():
         shutil.rmtree(backup_path)
 
     logger.warning("EMERGENCY RESTORE: Successfully restored /data/content from GitHub")
+    # Content changed outside the editor, and the posts index has no timed refresh
+    generate_posts_index_cache()
 
     return JSONResponse(
         content={
@@ -1178,6 +1174,7 @@ async def sync_pages_from_repo():
     synced_files = list(data_pages.rglob("*.md"))
 
     logger.info(f"Successfully synced {len(synced_files)} page files from repository")
+    generate_posts_index_cache()
 
     return JSONResponse(
         content={
@@ -1787,7 +1784,7 @@ async def sync_raindrops(request: Request):
                 f"Removing {len(deleted_filenames)} raindrops deleted on "
                 "Raindrop.io and regenerating site..."
             )
-            SiteGenerator().generate_site()
+            record_generation(["generate"])
             result = {
                 "status": "success",
                 "message": f"Synced {len(new_filenames or [])} new and removed "
@@ -1808,8 +1805,7 @@ async def sync_raindrops(request: Request):
                 sync_status["message"] = (
                     f"First sync: doing full site regeneration for {len(new_filenames)} raindrops..."
                 )
-                generator = SiteGenerator()
-                generator.generate_site()
+                record_generation(["generate"])
                 result = {
                     "status": "success",
                     "message": f"First sync: regenerated entire site with {len(new_filenames)} new raindrops",
@@ -1819,13 +1815,11 @@ async def sync_raindrops(request: Request):
                 sync_status["message"] = (
                     f"Regenerating {len(new_filenames)} raindrop pages..."
                 )
-                generator = SiteGenerator()
-
                 for i, filename in enumerate(new_filenames, 1):
                     sync_status["message"] = (
                         f"Regenerating {i}/{len(new_filenames)}: {filename[:30]}..."
                     )
-                    generator.incremental_regenerate_post(filename, "raindrops")
+                    record_generation(["regen-post", filename, "raindrops"])
 
                 result = {
                     "status": "success",
@@ -1871,11 +1865,7 @@ async def regenerate_site(request: Request):
         raise HTTPException(status_code=401, detail="Authentication required")
 
     def do_regenerate():
-        global _generation_count, _last_generation_time
-        generator = SiteGenerator()
-        generator.generate_site()
-        _generation_count += 1
-        _last_generation_time = datetime.now()
+        record_generation(["generate"])
         return {"status": "success", "message": "Site regenerated successfully"}
 
     # Run regeneration in thread pool
@@ -2067,8 +2057,10 @@ async def publish_draft(request: Request):
         app_post.metadata["date"] = date.today().isoformat()
         app_blog.write_text(frontmatter.dumps(app_post), encoding="utf-8")
 
-    generator = SiteGenerator()
-    generator.incremental_regenerate_post(filename, "blog")
+    loop = asyncio.get_event_loop()
+    await loop.run_in_executor(
+        None, record_generation, ["regen-post", filename, "blog"]
+    )
 
     return JSONResponse(content={"status": "published", "filename": filename})
 

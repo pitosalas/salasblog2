@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # test_drafts_api.py — Tests for draft generation and publishing endpoints
 # Author: Pito Salas and Claude Code
-# Version: 1
+# Version: 2
 # Created: 2026-09-09
-# Updated: 2026-09-09
+# Updated: 2026-10-20
 # Open Source Under MIT license
 
 from pathlib import Path
@@ -77,14 +77,14 @@ class TestPublishDraft:
 
         with (
             patch("salasblog2.server.get_content_directory", return_value=blog_dir),
-            patch("salasblog2.server.SiteGenerator") as mock_gen,
+            patch("salasblog2.server.run_generation") as mock_generation,
         ):
-            mock_gen.return_value.incremental_regenerate_post.return_value = None
             resp = client.post("/api/publish-draft", json={"filename": "draft-one.md"})
 
         assert resp.status_code == 200
         post = frontmatter.loads((blog_dir / "draft-one.md").read_text())
         assert "draft" not in post.metadata
+        mock_generation.assert_called_once_with(["regen-post", "draft-one.md", "blog"])
 
     def test_returns_404_for_missing_draft(self, client, tmp_path):
         blog_dir = tmp_path / "data" / "content" / "blog"

@@ -418,7 +418,7 @@ class TestScheduler:
         with (
             patch.dict(os.environ, {"RAINDROP_TOKEN": "fake_token"}),
             patch("salasblog2.scheduler.RaindropDownloader") as mock_downloader,
-            patch("salasblog2.scheduler.SiteGenerator") as mock_generator,
+            patch("salasblog2.scheduler.run_generation") as mock_generation,
         ):
             mock_instance = Mock()
             mock_instance.remove_deleted_raindrops.return_value = ["gone.md"]
@@ -426,7 +426,7 @@ class TestScheduler:
             mock_downloader.return_value = mock_instance
 
             assert await scheduler.sync_raindrops() is True
-            assert mock_generator.return_value.generate_site.called
+            mock_generation.assert_called_once_with(["generate"])
 
     @pytest.mark.asyncio
     async def test_sync_raindrops_stops_when_deletion_check_fails(self, scheduler):
@@ -448,21 +448,18 @@ class TestScheduler:
         with (
             patch.dict(os.environ, {"RAINDROP_TOKEN": "fake_token"}),
             patch("salasblog2.scheduler.RaindropDownloader") as mock_downloader,
-            patch("salasblog2.scheduler.SiteGenerator") as mock_generator,
+            patch("salasblog2.scheduler.run_generation") as mock_generation,
         ):
             mock_dl_instance = Mock()
             mock_dl_instance.remove_deleted_raindrops.return_value = []
             mock_dl_instance.download_raindrops.return_value = ["file1.md", "file2.md"]
             mock_downloader.return_value = mock_dl_instance
 
-            mock_gen_instance = Mock()
-            mock_generator.return_value = mock_gen_instance
-
             result = await scheduler.sync_raindrops()
 
             assert result is True
             assert scheduler.last_raindrop_sync is not None
-            assert mock_gen_instance.generate_site.called
+            mock_generation.assert_called_once_with(["generate"])
 
     def test_sync_wrapper_git_success(self, scheduler):
         """Test sync wrapper for git sync"""

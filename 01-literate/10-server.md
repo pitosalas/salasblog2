@@ -1,5 +1,5 @@
 ---
-version: "1.3"
+version: "1.4"
 generated: "2026-10-20"
 ---
 
@@ -200,10 +200,12 @@ The "All Posts" admin tab needs a list of every blog post and page —
 filename, title, date, type — to render a table. Scanning every Markdown
 file's frontmatter on each request is exactly the kind of directory-walk
 that gets slower as the blog grows. `generate_posts_index_cache()` builds
-that list once into `output/admin-posts-index.json`; every create, edit,
-and delete route schedules a background regeneration of it, and a separate
-`schedule` job also refreshes it every `posts_index.cache_refresh_seconds`
-(default 300s) as a backstop:
+that list once into `output/admin-posts-index.json`. Every create, edit
+and delete route schedules a background rebuild of it, and so do the two
+routes that change content outside the editor (emergency restore and pages
+sync). There is no timed backstop any more: F56 removed the 5-minute
+rescan, which re-read 2,800 files' frontmatter to catch changes that every
+write path already reported.
 
 ```python
 @app.get("/api/admin-posts")
@@ -304,11 +306,42 @@ different questions: *"does the caller need to wait for a result"* decides
 which one applies.
 
 One asymmetry worth noting: `_regenerate_in_background` (used by the admin
-form routes) always spawns a *new* `SiteGenerator()` and calls
-`incremental_regenerate_post`, while `/api/regenerate` calls the heavier
-`generate_site()` — the full-site rebuild is reserved for explicit "rebuild
-everything" requests and first-time raindrop syncs, never triggered
-implicitly by a single edit.
+form routes) runs the incremental `regen-post`, while `/api/regenerate` runs
+the heavier full `generate` — the full-site rebuild is reserved for explicit
+"rebuild everything" requests and raindrop syncs, never triggered implicitly
+by a single edit.
+
+## Generation runs in a child process (F56)
+
+Moving work off the event loop is not enough when the work is CPU-bound
+Python. A thread-pool thread rendering 4,400 pages holds the GIL for most
+of its run, so the event loop, which needs the GIL too, gets only scraps.
+Measured on production: `/` takes 0.07–0.10 s when quiet, but spiked to
+19–33 s while an admin Regenerate ran on the single shared CPU.
+
+So every site generation now goes through `site_jobs.run_generation`,
+wrapped here to keep the admin's generation counters:
+
+```python
+def record_generation(args: list[str]):
+    global _generation_count, _last_generation_time
+    run_generation(args)
+    _generation_count += 1
+    _last_generation_time = datetime.now()
+```
+
+`run_generation(["generate"])`, `["regen-post", filename, type]` or
+`["regen-deleted", filename, type]` launches `python -m salasblog2.cli` with
+those arguments and waits. The waiting thread sleeps in `subprocess.run`,
+which releases the GIL, so the server keeps answering requests while the
+child renders. The child gets its own interpreter and its own GIL.
+
+The callers are unchanged in shape: they still run in `BackgroundTasks` or
+the thread pool, because they still wait for the child. Only
+`render_post_page_now` stays in process. It renders one page, and the
+editor's redirect needs it before the request returns, so a process launch
+(about a second of interpreter start-up and imports) would cost more than
+it saves.
 
 ## Content management: one editor, two content types
 

@@ -1,5 +1,5 @@
 ---
-version: "1.2"
+version: "1.3"
 generated: "2026-10-20"
 ---
 
@@ -12,6 +12,8 @@ generated: "2026-10-20"
 
 - **Everyday commands** that drive the two core objects:
   - `generate` and `reset`, through `SiteGenerator`
+  - `regen-post` and `regen-deleted`, the incremental regenerations after
+    one item is saved or deleted (F56)
   - `server`, which starts uvicorn
   - `deploy`
   - `sync-raindrops`, through `RaindropDownloader`
@@ -26,6 +28,14 @@ generated: "2026-10-20"
 Fly.io's container doesn't start through this file; it imports
 `salasblog2.server:app` directly. On production the CLI is used over
 `fly ssh console` as `/app/.venv/bin/bg ...`.
+
+The server also calls it. Since F56 every site generation runs as a child
+process, `python -m salasblog2.cli generate | regen-post | regen-deleted`,
+launched by `site_jobs.run_generation`. That keeps CPU-bound rendering off
+the server's GIL. `regen-post` and `regen-deleted` exist only for that
+caller. They take a filename and a content type (`blog`, `pages` or
+`raindrops`, enforced by argparse `choices`) and map one-to-one onto
+`SiteGenerator`'s two incremental methods.
 
 ## Commands as thin wrappers, not logic
 

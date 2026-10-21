@@ -1,6 +1,6 @@
 ---
-version: "1.1"
-generated: "2026-10-19"
+version: "1.2"
+generated: "2026-10-20"
 ---
 
 # `scheduler.py` — Background Sync for a Volume-First Blog
@@ -221,11 +221,15 @@ first means a flaky Raindrop.io response aborts the sync **before anything
 is written**. The method's broad `except` then logs it and returns `False`,
 and the next cycle simply tries again.
 
-A full `generate_site()` is used rather than per-file incremental
-regeneration because its pruning step is what removes a deleted raindrop's
-page.
+A full generation is used rather than per-file incremental regeneration
+because its pruning step is what removes a deleted raindrop's page. Since
+F56 it runs as a child process, `run_generation(["generate"])` from
+`site_jobs`, so rendering the whole site no longer competes with the
+server's request handling for the GIL. The scheduler thread just waits for
+the child, and a failed child raises into the method's broad `except`,
+which logs it and returns `False` like any other sync failure.
 
-Both dependencies (`RaindropDownloader`, `SiteGenerator`) are now ordinary
+Both dependencies (`RaindropDownloader`, `run_generation`) are ordinary
 top-of-file absolute imports. An earlier version imported them lazily,
 inside the method.
 
@@ -310,7 +314,7 @@ flowchart TD
     RD1 -->|no| ERR
     RD1 -->|yes| RD2[download_raindrops]
     RD2 -->|none new| OK2[return True, no regen]
-    RD2 -->|new files| RD3[SiteGenerator.generate_site]
+    RD2 -->|new files| RD3[run_generation generate<br/>child process]
     RD3 --> OK3[last_raindrop_sync updated]
 ```
 

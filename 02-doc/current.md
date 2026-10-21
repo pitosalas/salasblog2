@@ -58,9 +58,6 @@ salasblog2/
 stats:
   cache_refresh_seconds: 60
 
-posts_index:
-  cache_refresh_seconds: 300
-
 home:
   posts_count: 5
 
@@ -88,11 +85,14 @@ The preferred pattern for any data that changes infrequently is:
 2. Serve that file directly on GET — zero computation
 3. Invalidate/regenerate immediately on writes
 
-Applied to: **stats page** (`output/admin-stats.html`, refreshed every 60s) and **admin posts index** (`output/admin-posts-index.json`, refreshed every 5 min + after every create/edit/delete, F42).
+Applied to: **stats page** (`output/admin-stats.html`, refreshed every 60s) and **admin posts index** (`output/admin-posts-index.json`, rebuilt at startup, after every create/edit/delete, and after emergency restore or pages sync; the 5-minute rescan was removed in F56).
 **Not yet applied to**: propose lists, draft list (F41 TF41.5/TF41.6).
 
 ### Non-blocking I/O
-All blocking operations (Claude API, URL fetch, directory scans, site generation) run via `BackgroundTasks` or `loop.run_in_executor(None, fn)` to avoid blocking the FastAPI event loop.
+All blocking operations (Claude API, URL fetch, directory scans) run via `BackgroundTasks` or `loop.run_in_executor(None, fn)` to avoid blocking the FastAPI event loop.
+
+### Site generation runs in a child process (F56)
+A thread isn't enough for generation: it is CPU-bound Python and holds the GIL, so page requests stalled behind it (measured 19–33 s spikes on `/` during a Regenerate). Every full or incremental generation now goes through `site_jobs.run_generation`, which runs `python -m salasblog2.cli generate | regen-post | regen-deleted` as a child process under a lock. Only `render_post_page_now` (the one saved page, before the editor's redirect) still renders in the server.
 
 ### Post/page editing (unified, F42)
 `templates/post_editor.html` handles both create and edit, for both blog posts and pages, via an `is_edit` context flag — replacing the previously hand-duplicated `new_post.html`/`edit_post.html`. Includes: free-form tags with a picklist of curated and most-used tags (F45; not a hard vocabulary until F55), a full-width title field, no category field (retired in F51), EasyMDE autosave + `beforeunload` unsaved-changes guard, inline preview (via `/admin/preview-markdown`, no more round-trip to a new tab), and mtime-based concurrency conflict detection (`409` on stale save). Delete is real (`/admin/delete-post`, `/admin/delete-page`, `/admin/delete-raindrop`), backed by `static/js/admin-delete.js` loaded globally via `base.html`.
@@ -125,21 +125,19 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 ## Open
 
-**F55 — Closed curated tag list (16 tags)**: code done 2026-10-20 and not
-yet committed. TF55.0–TF55.8 are done. **TF55.9 (deploy, convert on
-production, judgment passes) waits on the user's go-ahead.**
+**F56 — Site generation out of the server process**: code done and
+committed 2026-10-20. TF56.0–TF56.5 are done. Baseline measured on
+production: `/` takes 0.07–0.10 s when quiet but spiked to 19–33 s during
+an admin Regenerate. **Next: TF56.6, deploy and repeat the measurement.**
 
-* The 16-tag list is installed in `02-doc/tag-hints.md`, and automatic
-  promotion is gone.
-* The editor refuses unknown tags, raindrop sync converts tags, and the
-  generator shows only curated tags.
-* `bg convert-tags` (dry run unless `--apply`) converts existing content in
-  place. On the local copy it would change 5 raindrops and 1,580 posts, and
-  only tag lines change.
-* `bg generic-tags` runs the judgment passes for `technology` and
-  `personal`.
-* Between the deploy and the end of the judgment passes, posts tagged only
-  `technology` or `personal` show no tags.
+**F55 — Closed curated tag list (16 tags)**: deployed, and production
+content converted 2026-10-20 (original tags kept in `original_tags`).
+Remaining in TF55.9:
+* The user clicks "Sync to GitHub Now" (admin Scheduler tab), then `git pull`
+  locally.
+* The judgment passes for posts still tagged only `technology` or
+  `personal` (`bg generic-tags`, run over `fly ssh` by the user).
+* Final tally, walk the demo, close F55.
 
 **F54 — Blog index sidebar (tags + year archive)**: written 2026-10-19. The
 user said no for now and asked to leave the files alone
@@ -180,10 +178,10 @@ F52 and F53 (2026-10-18), plus F45, F47 and F48 earlier.
 ## Test status
 
 ```
-705 passed, 9 skipped, 2 warnings
+732 passed, 9 skipped, 2 warnings
 ```
 
-No failures as of 2026-10-18 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
+No failures as of 2026-10-20 (the previously-noted `test_raindrop.py::TestRaindropDownloader::test_load_cache_from_env` failure is not currently reproducing). Skipped tests require a live server (`https://salasblog2.fly.dev`).
 
 ---
 

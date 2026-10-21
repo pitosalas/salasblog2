@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # cli — Local dev CLI: generate/server/reset/deploy/sync-raindrops commands
 # Author: Pito Salas and Claude Code
-# Version: 7
+# Version: 8
 # Created: 2026-09-09
 # Updated: 2026-10-20
 # Open Source Under MIT license
@@ -56,6 +56,16 @@ def cmd_generate(args):
     """Generate the static site"""
     generator = SiteGenerator()
     generator.generate_site()
+
+
+def cmd_regen_post(args):
+    """Regenerate one saved item's page plus the listings that show it"""
+    SiteGenerator().incremental_regenerate_post(args.filename, args.type)
+
+
+def cmd_regen_deleted(args):
+    """Remove a deleted item's page and regenerate the listings"""
+    SiteGenerator().incremental_regenerate_after_deletion(args.filename, args.type)
 
 
 def cmd_reset(args):
@@ -254,6 +264,18 @@ def main():
     # Generate command
     generate_parser = subparsers.add_parser("generate", help="Generate static site")
     generate_parser.set_defaults(func=cmd_generate)
+
+    # Incremental regeneration commands (run by the server as child processes)
+    for name, func, help_text in (
+        ("regen-post", cmd_regen_post, "Regenerate after one item is saved"),
+        ("regen-deleted", cmd_regen_deleted, "Regenerate after one item is deleted"),
+    ):
+        regen_parser = subparsers.add_parser(name, help=help_text)
+        regen_parser.add_argument("filename", help="Content file name")
+        regen_parser.add_argument(
+            "type", choices=["blog", "pages", "raindrops"], help="Content type"
+        )
+        regen_parser.set_defaults(func=func)
 
     # Server command
     server_parser = subparsers.add_parser("server", help="Start FastAPI server")

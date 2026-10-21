@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # scheduler — Background thread scheduling periodic GitHub and Raindrop.io sync
 # Author: Pito Salas and Claude Code
-# Version: 4
+# Version: 5
 # Created: 2026-09-09
-# Updated: 2026-10-18
+# Updated: 2026-10-20
 # Open Source Under MIT license
 """
 Scheduled tasks for automatic Git synchronization and Raindrop sync
@@ -20,8 +20,8 @@ from threading import Thread
 
 import schedule
 
-from salasblog2.generator import SiteGenerator
 from salasblog2.raindrop import RaindropDownloader
+from salasblog2.site_jobs import run_generation
 
 logger = logging.getLogger(__name__)
 
@@ -257,8 +257,7 @@ class Scheduler:
 
             # Full regeneration also prunes pages of removed raindrops
             logger.info("Regenerating site with raindrop changes...")
-            generator = SiteGenerator()
-            generator.generate_site()
+            run_generation(["generate"])
 
             logger.info("Successfully synced raindrops and regenerated site")
             self.last_raindrop_sync = datetime.now()
