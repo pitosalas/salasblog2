@@ -39,9 +39,7 @@ def run_generation(args: list[str]) -> None:
     command = generation_command(args)
     with GENERATION_LOCK:
         logger.info(f"Generation START: bg {' '.join(args)}")
-        result = subprocess.run(
-            command, check=False, capture_output=True, text=True
-        )
+        result = subprocess.run(command, check=False, capture_output=True, text=True)
     if result.returncode != 0:
         raise RuntimeError(...)
 ```

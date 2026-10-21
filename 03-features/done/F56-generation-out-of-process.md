@@ -1,7 +1,7 @@
 # F56 — Run site generation out of the server process
 **Priority**: High
 **Date Created:** 2026-10-20
-**Done:** no
+**Done:** yes
 **Tasks File Created:** yes
 **Tests Written:** yes
 **Test Passing:** yes

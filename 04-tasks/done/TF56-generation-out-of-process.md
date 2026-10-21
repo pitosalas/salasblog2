@@ -62,7 +62,7 @@ Test: a test that `lifespan` schedules no posts-index job.
 **Description**: Write the tests named in TF56.1–TF56.4 and run the full suite.
 
 ## TF56.6 — Deploy and verify
-**Status**: not done
+**Status**: done
 
 **Description**: Deploy, repeat the TF56.0 measurement, confirm a separate
 `bg` process appears during Regenerate, and walk F56's demo. No automated
@@ -82,3 +82,13 @@ test: it is a production check.
   about 20:20): 180 requests to `/`, all 200. Quiet: 0.07–0.10 s. During
   the regeneration: 12 over 1 s, spikes of 19 s, 24 s and 33 s, and
   0.5–2 s for most of the 4 minutes. Average 0.72 s.
+- TF56.6 first re-measurement (2026-10-20, 20:33–20:37, Regenerate clicked
+  about 20:33:30): 180 requests, all 200, average 0.38 s, 6 over 1 s. The
+  regeneration itself now finishes in under a minute (was ~4) and `/` stayed
+  at ~0.08 s while it ran. But spikes of 11–20 s came **after** it finished
+  (20:35:01, 20:35:21, 20:36:21). Suspected Fly shared-CPU throttling after
+  two back-to-back full generations, or memory pressure; to be confirmed in
+  Fly metrics. TF56.6 stays open.
+- TF56.6 closed 2026-10-20: the user accepted the performance as is. The
+  after-regeneration spikes are not investigated; if they matter later,
+  check Fly metrics for CPU throttling or memory first.

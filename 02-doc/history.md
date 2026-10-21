@@ -219,3 +219,27 @@ The user supplied the old WordPress.com export (`~/Desktop/wordpress-export/`): 
 * Post editor: the title field gets its own full-width row (chore).
 * The Improv roundup post was published.
 * Documentation: how curated tags interact with other tags, in `02-doc/notes.md`.
+
+---
+
+## Session: 2026-10-20 — F56 site generation out of the server process
+
+### Why the site was "slow sometimes"
+
+* Every page, including `/`, is served by one uvicorn process on one shared
+  CPU. Site generation ran in that process's threads and held the GIL.
+* Baseline during an admin Regenerate: `/` went from 0.07–0.10 s to
+  0.5–2 s for about 4 minutes, with spikes of 19, 24 and 33 s.
+
+### F56 (done)
+
+* `site_jobs.run_generation` runs `python -m salasblog2.cli generate |
+  regen-post | regen-deleted` as a child process under one lock. Every full
+  and incremental generation in the server and scheduler goes through it.
+  Only the saved item's own page still renders in process.
+* The 5-minute posts-index rescan was removed. Emergency restore and pages
+  sync now refresh the index themselves.
+* After deploy: Regenerate takes under a minute (was about 4), and `/`
+  stayed at about 0.08 s while it ran. Spikes of 11–20 s still came a
+  minute or two after it finished, probably Fly shared-CPU throttling or
+  memory. The user accepted the performance as is, so that wasn't pursued.

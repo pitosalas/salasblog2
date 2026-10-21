@@ -125,11 +125,6 @@ Single-page app at `/admin`. Tabs: Stats, Propose, Drafts, **All Posts** (F42), 
 
 ## Open
 
-**F56 — Site generation out of the server process**: code done and
-committed 2026-10-20. TF56.0–TF56.5 are done. Baseline measured on
-production: `/` takes 0.07–0.10 s when quiet but spiked to 19–33 s during
-an admin Regenerate. **Next: TF56.6, deploy and repeat the measurement.**
-
 **F55 — Closed curated tag list (16 tags)**: deployed, and production
 content converted 2026-10-20 (original tags kept in `original_tags`).
 Remaining in TF55.9:
@@ -138,6 +133,10 @@ Remaining in TF55.9:
 * The judgment passes for posts still tagged only `technology` or
   `personal` (`bg generic-tags`, run over `fly ssh` by the user).
 * Final tally, walk the demo, close F55.
+
+The user asked to close F55 on 2026-10-20. It wasn't closed because TF55.7
+and TF55.9 are open. **Waiting on the user** to choose: finish the passes
+now, move them to a new feature, or waive them.
 
 **F54 — Blog index sidebar (tags + year archive)**: written 2026-10-19. The
 user said no for now and asked to leave the files alone
@@ -170,8 +169,8 @@ async routes. Tracked in `04-tasks/chores.md`.
 **Deferred**: F43, a token-authenticated REST API for posting from a phone
 (`03-features/deferred/`).
 
-**Recently done** (details in `02-doc/history.md`): F44, F49, F50, F51,
-F52 and F53 (2026-10-18), plus F45, F47 and F48 earlier.
+**Recently done** (details in `02-doc/history.md`): F56 (2026-10-20); F44,
+F49, F50, F51, F52 and F53 (2026-10-18); plus F45, F47 and F48 earlier.
 
 ---
 
